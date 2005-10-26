@@ -1,14 +1,12 @@
-#/*****************************************************/
-#/* ALVER.NAM                                         */
-#/* Namnfil f”r alv-namn                              */
-#/* av Johan Danforth                                 */
-#/* rader som b”rjar med / „r kommentar-rader         */
-#/* varje section b”rjar med [xxx] enlig filen nedan  */
-#/*****************************************************/
-[RULES]
-100[startstav][mittstav][slutstav]
-[FULL]
+/*****************************************************/
+/* ALVER.NAM                                         */
+/* Namnfil f”r alv-namn                              */
+/* av Johan Danforth                                 */
+/* rader som b”rjar med / „r kommentar-rader         */
+/* varje section b”rjar med [xxx] enlig filen nedan  */
+/*****************************************************/
 [startstav]
+/* startstavelser skall sluta med en konsonant som b,k,t etc... */
 An
 Bel
 Cel
@@ -30,6 +28,7 @@ T
 Thr
 Tin
 [mittstav]
+/* mittstavelser skall b”rja och sluta med en vokal som a,o,u,i,e,y etc... */
 a
 á
 adrie
@@ -48,6 +47,7 @@ orfi
 u
 y
 [slutstav]
+/* slutstavelser skall b”rja med en konsonant som b,k,t etc... */
 l
 las
 lad
@@ -74,3 +74,4 @@ viel
 wen
 wyn
 [stop]
+/* h„r „r filen slut */

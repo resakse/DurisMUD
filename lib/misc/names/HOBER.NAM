@@ -1,21 +1,13 @@
-#/*****************************************************/
-#/* HOBER.NAM                                         */
-#/* Namnfil f”r hob-namn                              */
-#/* av Johan Danforth                                 */
-#/* rader som b”rjar med / „r kommentar-rader         */
-#/* varje section b”rjar med [xxx] enlig filen nedan  */
-#/*****************************************************/
-#/* Frodo Bilbo Sam Meriadoc Peregrin */
-[RULES]
-25[FULL]
-100[startstav][mittstav][slutstav]
-[FULL]
-Frodo
-Bilbo
-Sam
-Meriadoc
-Peregrin
+/*****************************************************/
+/* HOBER.NAM                                         */
+/* Namnfil f”r hob-namn                              */
+/* av Johan Danforth                                 */
+/* rader som b”rjar med / „r kommentar-rader         */
+/* varje section b”rjar med [xxx] enlig filen nedan  */
+/*****************************************************/
+/* Frodo Bilbo Sam Meriadoc Peregrin */
 [startstav]
+/* startstavelser skall sluta med en konsonant som b,k,t etc... */
 B
 Dr
 Fr
@@ -24,6 +16,7 @@ Per
 R
 S
 [mittstav]
+/* mittstavelser skall b”rja och sluta med en vokal som a,o,u,i,e,y etc... */
 a
 e
 i
@@ -32,6 +25,7 @@ o
 oi
 u
 [slutstav]
+/* slutstavelser skall b”rja med en konsonant som b,k,t etc... */
 bo
 do
 doc
@@ -41,3 +35,4 @@ m
 ppi
 rry
 [stop]
+/* h„r „r filen slut */
