@@ -64,7 +64,7 @@ physical damage.
 ===========================================================================
 
 #
-"ACID BLOOD" (Innate Skill)
+"ACID BLOOD" (Innate)
 ===========================================================================
 Sacrifice and rituals preformed to create the Dreadlords have so imbued
 their undead bodies with unholy malice that even their blood drips with the
@@ -111,15 +111,15 @@ process.
 ===========================================================================
 
 #
-AFK BRB BBL (World Command)
+AFK BRB BBL (Command)
 ===========================================================================
 Common acronyms used by players. These terms are commonly used on Duris by
 players rather than typing out the full words. They mean:
 
-     AFK   -   away from keyboard
-     BRB   -   be right back
-     BBL   -   be back later
-     OMG   -   oh my goodness
+     AFK   -away from keyboard
+     BRB   -be right back
+     BBL   -be back later
+     OMG   -oh my goodness
 
 They are also socials that can be used by simply typing them, announcing to
 a person or the room. You can type "command socials" for a full list.
@@ -151,7 +151,7 @@ left until it rots away by examining it.
 See also: EXAMINE
 
 #
-AGGR AGGRESSIVE (World Command)
+AGGR AGGRESSIVE (Command)
 ===========================================================================
 "Aggr" lets you make yourself aggressive to aggressive monsters, meaning
 you will automatically attack them first when you enter a room or when an
@@ -160,7 +160,7 @@ aggressive monster walks in on you.
 Syntax: > aggr          : Check aggressiveness
         > aggr off      : Turn off aggressiveness
         > aggr 120      : You will only be aggressive to monsters when
-                        : your hitpoints >= 120
+                        : your hitpoints >=120
 
 NOTE: Paladins may *not* have this option set to ON, as it goes against all
 their training and principles.
@@ -243,7 +243,7 @@ communication and regular breathing possible.
 See also: "WATER BREATHING", WATERBREATH
 
 #
-ALCHEMIST ALCHEMISTS (Information)
+ALCHEMIST (Sub-Class of: Magic-User)
 ===========================================================================
 Alchemists are a class that can make things out of seemingly mundane
 materials. They have the ability to craft items of all types including body
@@ -390,7 +390,7 @@ There are whispered hints of further mysteries within this spell.
 See also: ORDER, PRESERVE, "MASS PRESERVE", PETS, EMBALM
 
 #
-ANSI COLORS (Information)
+ANSI COLORS (General Information)
 ===========================================================================
 Duris is a world of color and in order to better understand how to add
 color to certain things (such as guild titles) you need to know the ANSI
@@ -398,11 +398,11 @@ codes for it.
 
 There are 3 basic types of ANSI color control sequences:
 
-	&+<color>  -  Sets the foreground color. If the letter is
+	&+<color>  -Sets the foreground color. If the letter is
                       uppercase, the color is bold.
-	&-<color>  -  Sets the background color. If the letter is
+	&-<color>  -Sets the background color. If the letter is
 		      uppercase, the text will blink. 
-	&=<bg><fg> -  Sets both background <bg> and foreground <fg> color,
+	&=<bg><fg> -Sets both background <bg> and foreground <fg> color,
                       exactly as setting the background and foreground
                       separately.
 
@@ -484,7 +484,7 @@ it.
 ===========================================================================
 
 #
-"ARCANE BLOCK" (Reflexive Skill)
+"ARCANE BLOCK" (Skill)
 ===========================================================================
 With this skill, the Wizard has the potential to block some or possibly all 
 of the effect of a magical attack. As the Wizard becomes more proficient in
@@ -493,7 +493,7 @@ extent.
 ===========================================================================
 
 #
-"ARCANE RIPOSTE" (Reflexive Skill)
+"ARCANE RIPOSTE" (Skill)
 ===========================================================================
 "Arcane Riposte" is similar to "Arcane Block", but, the Wizard has the 
 chance to deflect aggressive spells being cast at him back to the caster.
@@ -528,7 +528,7 @@ be engaged in battle to use this skill.
 See also: "RANGE WEAPONS", FIRE, THROW
 
 #
-"AREA MAKING" AREAS BUILDING (Information)
+"AREA MAKING" AREAS BUILDING (General Information)
 ===========================================================================
 The world of Duris is made up of various "zones" or areas, created by a
 number of different people. Each zone is normally set around a theme, and
@@ -585,7 +585,7 @@ Type of spell:  Protection
 See also: "ARMOR CLASS"
 
 #
-ARTIFACT ARTIFACTS (Information)
+ARTIFACT ARTIFACTS (General Information)
 ===========================================================================
 Artifacts are ultimately powerful items on Duris. The artifacts grant the
 wielder/wearer awesome powers. Currently there are twenty-five separate
@@ -779,7 +779,7 @@ Grants the holder increased wisdom.
 Increases the attack speed of the holder.
 
 &+ca pair of pale, misty gloves&n
----------------------------------------------------------- ----------------
+---------------------------------------------------------------------------
 &+RKnown Special Powers:&n
 Wraps the wearer in a shell of stone.
 Grants the wearer the ability to move silently.
@@ -819,7 +819,7 @@ To see a list of artifacts and their owners, type "artifact".
 See also: UNIQUE, IOUN, FEEDING
 
 #
-ASSASSIN (Sub-class of: Rogue)
+ASSASSIN (Specialization)
 ===========================================================================
 Assassins are practitioners of death and stealth, always lurking down dark
 alleys and just around the corner, ready to commit a convenient act of
@@ -862,7 +862,7 @@ monster in a room.
 ===========================================================================
 
 #
-ASTRAL AFFINITY (Innate Ability)
+ASTRAL AFFINITY (Innate)
 ===========================================================================
 As the Psycheporter progresses in power, the inhabitants of his native 
 plane become enamoured with him, and therefore resist the urge to attack.
@@ -885,7 +885,7 @@ possible effects are bestowed upon reaching 10th circle.
 ===========================================================================
 
 #
-AVATAR (Information)
+AVATAR (General Information)
 ===========================================================================
 An Avatar is created by the spell "channel", which requires four clerics
 over level 50 to create. All four clerics begin casting the spell until the
@@ -901,7 +901,7 @@ avatar will be lost.
 See also: CHANNEL
 
 #
-AVENGER (Information)
+AVENGER (General Information)
 ===========================================================================
 Avengers are the faithful servants of Gods, bringing justice to their evil
 enemies. They are recruited from the most dedicated paladins willing to
@@ -1024,7 +1024,7 @@ magical creations will simply cease to be.
 ===========================================================================
 
 # 
-BARBARIAN (Information)
+BARBARIAN (General Information)
 ===========================================================================
 Barbarians are ill-tempered beings that co-exist within clans of the
 northern plains. They are sturdier and possess more stamina than their
@@ -1043,7 +1043,7 @@ Equipment Usage:	Barbarians have their own classification of item
 See also: RACES, BODYSLAM, DOORBASH, INNATE, BREATHE
 
 #
-BARD (Sub-Class of:  Rogue)
+BARD (Sub-Class of: Rogue)
 ===========================================================================
 Blessed with the talent of music, Bards can, with practice, play any
 instrument. These instruments can invoke magical tunes and songs that act
@@ -1094,7 +1094,7 @@ NOTE: Bash will not work in places where there is no footing.
 ===========================================================================
 
 #
-BATTLEAID (Innate Ability)
+BATTLEAID (Innate)
 ===========================================================================
 Battleaid improves the potency of the Mercenary's "First Aid" and
 "Bandage" skills, 
@@ -1156,7 +1156,7 @@ fray to be at their most deadly.
 See also: DREADLORD, SKILL_DREADLORD
 
 #
-BEARHUG (Innate Skill)
+BEARHUG (Innate)
 ===========================================================================
 Syntax:	bearhug <victim>
 ===========================================================================
@@ -1204,7 +1204,7 @@ below -10 hitpoints, you will die.
 ===========================================================================
 
 #
-BERSERKER (Information)
+BERSERKER (Sub-Class of: Fighter)
 ===========================================================================
 Howling Screams, whirling whips, snacking on danger and dining on death. 
 Berserkers attack in a focused battle rage that can grant them many
@@ -1294,7 +1294,7 @@ protection, the barrier can be worn down if repeatedly attacked enough.
 See also: "STONE SKIN"
 
 #
-BITE (Innate Skill)
+BITE (Innate)
 ===========================================================================
 Syntax: 	innate bite <victim>
 Aggressive: 	Yes
@@ -1312,12 +1312,12 @@ for various ores and minerals then engaging in warfare like his
 counter-part. 
 
 Skills 
---------------------------------------------------------------------------- 
+---------------------------------------------------------------------------
 41st level: Forge 
 41st level: Smelting (Smelt) 
 
 Innates/Passive Abilities 
---------------------------------------------------------------------------- 
+---------------------------------------------------------------------------
 36th level: Miner's Sight 
 41st level: Foundry
 
@@ -1342,7 +1342,7 @@ Skills
 See also: "DOUBLE STRIKE", WHIRLWIND
 
 #
-BLAST (Innate Skill)
+BLAST (Innate)
 ===========================================================================
 Syntax: innate blast <victim>
 Aggressive: Yes
@@ -1369,7 +1369,7 @@ proficiency of the caster.
 ===========================================================================
 
 #
-BLINDFIGHTING (Reflexive Skill)
+BLINDFIGHTING (Skill)
 ===========================================================================
 Your proficiency at blindfighting will affect your success at fighting
 while blind or in the dark. A skilled blindfighter suffers little loss in
@@ -1478,7 +1478,7 @@ not dispel the "Slowness" spell, but can counter its effects.
 See also: "DOUBLE ATTACK", "DUAL WIELD", SLOWNESS
 
 #
-BODYSLAM (Innate Ability)
+BODYSLAM (Innate)
 ===========================================================================
 Syntax:         bodyslam <victim>
 
@@ -1533,7 +1533,7 @@ Innate Abilities
 See also: PERCEPTION, BATTLEAID, LISTEN, TRAP, MERCENARY
 
 #
-BRAVO (Sub-class of: Rogue)
+BRAVO (Specialization)
 ===========================================================================
 The Bravo is a Rogue sub-class with enhanced melee abilties. Bravos
 are quite agile allowing them to strike their foes with exceptional speed
@@ -1552,9 +1552,9 @@ Skills
 See also: ROGUE, SKILL_ROGUE, CLASSES, SKILLS, ASSASSIN, THIEF 
 
 #
-BREATHE "INNATE BREATHE" (Innate Skill)
+BREATHE "INNATE BREATHE" (Innate)
 ===========================================================================
-Syntax:		innate breathe <victim>
+Syntax:		inn breathe <victim>
 
 This command sends a shuddering burst of cold from the barbarian's mouth
 towards his/her victim.
@@ -1610,7 +1610,7 @@ spell caster's fingertips, burning the victim.
 ===========================================================================
 
 #
-BURY (World Command)
+BURY (Command)
 ===========================================================================
 Syntax: drop <item>
         bury <item>
@@ -1624,7 +1624,7 @@ NOTE: Buried items will not survive crashes or reboots
 See also: DIG
 
 #
-BUY SELL (World Command)
+BUY SELL (Command)
 ===========================================================================
 These commands are used for making purchases or selling items in the
 various shops found around Faerun. The prices in these shops will be
@@ -1656,7 +1656,7 @@ CALENDAR MONTHS
 See also: DAY, TIME
 
 #
-"CALL LIGHTNING" (Spell/Innate Ability)
+"CALL LIGHTNING" (Spell)
 ===========================================================================
 Area of effect: <victim>
 Aggressive:     Yes
@@ -1668,7 +1668,7 @@ This spell causes a massive bolt of lightning to hurl itself from the rain
 clouds overhead, striking the intended victim and causing considerable 
 damage. Storm Giants innately possess a stronger version of the Druid spell.
 NOTE: Both the innate and the spell must be cast outdoors in order to work.
-==== ======================================================================
+===========================================================================
 
 #
 "CALL OF THE GRAVE" (Skill)
@@ -1846,7 +1846,7 @@ Type of spell:  Generic
 
 "Cause Serious" inflicts damage on the victim, more than the similar spell
 "Cause Light" but less than the similar spell "Cause Critical".
-================================================================= =========
+===========================================================================
 See also: "CAUSE CRITICAL", "CAUSE LIGHT"
 
 #
@@ -1991,34 +1991,34 @@ by this song becomes charmed until charm breaks or victim is killed.
 See also: SONGS, INSTRUMENT, WAIL, PIPER, SKILL_PIPER
 
 #
-CHANTS (Information)
+CHANTS (General Information)
 ===========================================================================
 Chanting is a talent developed by monks used to further enhance their
 martial arts skills. There are a number of different chants available to
 monks, all varying in power and purpose.
 
-Heroism - Heroism elevates the amount of adrenaline produced by the chanter 
+Heroism -Heroism elevates the amount of adrenaline produced by the chanter 
 and stimulates the centers of the mind controlling dexterity and balance, 
 resulting in increased combat abilities. For the follower of the 'Way of
 the Snake' this rush of adrenaline also increases speed and movement while
 the Dragon Disciples become immune to fear.
 
-Calm - Calm soothes whoever or whatever might be angry at the chanter or 
+Calm -Calm soothes whoever or whatever might be angry at the chanter or 
 his friends. This chant has the capability of ceasing combat in certain 
 situations.
 
-Quivering Palm - This chant causes the chanter's hand to vibrate so fast it 
+Quivering Palm -This chant causes the chanter's hand to vibrate so fast it 
 can barely be seen. The hand then strikes out at equally fast speeds, 
 inflicting formidable damage upon its target.
 
-Cell Adjustment - The chant allows the monk to rearrange the cellular
+Cell Adjustment -The chant allows the monk to rearrange the cellular
 makeup of his body to his own liking. This comes in handy when afflicted 
 with various maladies.
 
-Regenerate - When chanting Regenerate, the monk heals at a much faster
+Regenerate -When chanting Regenerate, the monk heals at a much faster
 rate.
 
-Buddha Palm - Buddha Palm, much like Quivering Palm, causes the monk's
+Buddha Palm -Buddha Palm, much like Quivering Palm, causes the monk's
 hands to vibrate at unbelievable speeds. However, the Buddha Palm strikes
 out with both hands at lightning speed at as many adversaries as it can.
 ===========================================================================
@@ -2040,7 +2040,7 @@ blindness, stun and paralysis often occur.
 See also: BLINDNESS, "LIGHTNING BOLT", FIREBALL, "CURE BLIND"
 
 #
-CHARGE (Innate Ability)
+CHARGE (Innate)
 ==========================================================================
 Syntax:	        charge <victim>
 	        charge <victim> <direction>
@@ -2111,7 +2111,7 @@ one of the major attributes for Bards, Necromancers and Conjurers.
 See also: STATISTICS, PULCHRITUDE
 
 #
-"CHARM ANIMAL" (Innate Ability)
+"CHARM ANIMAL" (Innate)
 ===========================================================================
 "Charm Animal" allows you to enchant an animal mob, causing it to follow 
 you around and follow your orders to an extent. They will neither attack you
@@ -2176,7 +2176,7 @@ Priests, Rogues and Magic-Users) available, and the available classes are
 listed below the headings of each one.
 
 Fighter         Priest          Rogue           Magic-User
-=======         ======          =====           ==========
+=======        ======         =====          ==========
 Warrior         Cleric          Thief           Sorcerer
 Ranger          Druid           Assassin        Necromancer
 Paladin         Shaman          Mercenary       Conjurer
@@ -2263,8 +2263,8 @@ This is a more powerful version of mask allowing the caster to take on the
 appearance of ANY mob or player in the room. Anyone with detect illusion
 has a chance to see that this is an illusion
 
-syntax: cast 'clone' victim name in room - to change your appearance
-        cast 'clone' self or me - to remove the illusion 
+syntax: cast 'clone' victim name in room -to change your appearance
+        cast 'clone' self or me -to remove the illusion 
 ===========================================================================
 See also: MASK, "DETECT ILLUSION", DISGUISE
 
@@ -2353,7 +2353,7 @@ unconscious.
 
 #
 COMET (Spell) 
-=========================================================================== 
+===========================================================================
 Area of effect: <victim> 
 Aggressive: Yes 
 Cumulative: No 
@@ -2423,7 +2423,7 @@ options for the command.
 See also: INDEX
 
 #
-COMMUNE (General Information/Command)
+COMMUNE (Skill)
 ===========================================================================
 Unlike most spellcasters, Druids do not need to memorize or pray. They have
 allied themselves with the natural world so well that they commune with 
@@ -2548,16 +2548,16 @@ summons a much larger and much stronger elemental than its counterpart,
 See also: "CONJURE ELEMENTAL"
 
 #
-"CONJURE WATER" (Innate Ability)
+"CONJURE WATER" (Innate)
 ===========================================================================
-Syntax:         innate conjure water
+Syntax:         inn conjure water
 
 This innate ability will allow the Water Magus to conjure a spring of 
 water.
 ===========================================================================
 
 #
-CONJURER (General Information)
+CONJURER (Sub-Class of: Magic-User)
 ===========================================================================
 Conjurers are the creative branch of the magic-users. They specialize in
 enchantments, conjuring creatures and objects. They  re the only ones able
@@ -2600,9 +2600,9 @@ player (victim) is agreeing to the action being performed upon him or her
 by another player.
 
 Usage:
-consent <name> - you give your undying trust to <name>
-consent        - you revoke consent
-consent who    - lists all players that have given you consent
+consent <name> -you give your undying trust to <name>
+consent        -you revoke consent
+consent who    -lists all players that have given you consent
 
 You may only consent to one person at a time, but you can change it as
 often as you wish. The person you are consenting to need not be in the
@@ -2636,7 +2636,7 @@ See also: STATISTICS, "ENHANCE CONSTITUTION"
 
 #
 CONSTRUCT (Command)
-=========================================================================== 
+===========================================================================
 Construct is the basis for building both houses and guildhalls. Funds must
 be kept on hand while using this command. It takes a varying amount of
 money and time to construct something, dependent on where you would like to
@@ -2767,9 +2767,10 @@ her inventory.) erupts the carrier in flames.
 ===========================================================================
 
 #
-"CONTROL WEATHER" (Inactive Spell)
+"CONTROL WEATHER" (Spell)
 ===========================================================================
-Area of effect: Zone 
+&+RThis spell is currently inactive.&n
+Area of effect: Zone
 Aggressive:     No
 Cumulative:     Yes, but only once per hour
 Duration:       Until the weather changes again (on the hour)
@@ -2822,7 +2823,7 @@ See also: ETHERMANCER, COSMOMANCER
 
 #
 COSMOMANCER (Specialization)
-=========================================================================== 
+===========================================================================
 The ultimate and most devastating Ethermancer specializes in the long 
 forgotten and near shunned arts of cosmocy, the ability the control the 
 planets and satellites themselves. By following this course in 
@@ -2837,7 +2838,7 @@ Spells
 11th Circle : Supernova 
 
 
-=========================================================================== 
+===========================================================================
 See also: ETHERMANCER, "COSMIC VACUUM", "ETHEREAL DISCHARGE", COMET, 
 	  "PLANETARY ALIGNMENT", SUPERNOVA
 
@@ -2886,9 +2887,9 @@ If the Necromancer has a suitable corpse at his feet, "Create Dracolich"
 will transform the corpse into a powerful winged dragon. You can order a pet
 dracolich to use the following special attacks:
 
-- Roar
-- Sweep (tail sweep)
-- Breath (breath attack - i.e.: fire breath)
+-Roar
+-Sweep (tail sweep)
+-Breath (breath attack -i.e.: fire breath)
 
 Effectiveness of some of these attacks may be hindered by the dracolich's
 ability to maneuver whist in combat, and in the general struggle to obey
@@ -2909,7 +2910,7 @@ Type of spell:  Summoning
 If the Necromancer has a suitable corpse at his feet, "Create Golem"
 will raise one of three types of powerful golems, with their abilities 
 depending on the type of golem raised.
-================================= =========================================
+===========================================================================
 See also: ORDER, PETS, PRESERVE, "MASS PRESERVE", EMBALM
 
 #
@@ -2983,7 +2984,7 @@ victims.
 See also: "MAGMA BURST", "DREAD WAVE"
 
 #
-"CRIPPLING STRIKE" (Reflexive Skill)
+"CRIPPLING STRIKE" (Skill)
 ===========================================================================
 "Crippling Strike" unleashes a bodily assault on the victim when they
 change position to stand during battle, sapping their movements.
@@ -3012,7 +3013,7 @@ Innate Abilities
 30th level:     2x Lay Hands
 
 Skills
------------------------------------------------------------ ---------------
+---------------------------------------------------------------------------
 41st level:     Skewer
 
 ===========================================================================
@@ -3141,7 +3142,7 @@ Type of spell:  Wind
 When cast, "Cyclone" will cause the victim instantaneous damage. The 
 vicious winds summoned from the ethereal plane can sometimes be so strong 
 as to knock a victim off his/her feet.
-======================================================== ==================
+===========================================================================
 See also: BASH
 
 #
@@ -3192,9 +3193,9 @@ Spells
 See also: ANTI-PALADIN, SKEWER, ARMAGEDDON
 
 #
-DARKNESS (Spell/Innate Ability)
+DARKNESS (Spell)
 ===========================================================================
-Syntax:         innate darkness (for Drow Elf and Shades)
+Syntax:         inn darkness (for Drow Elf and Shades)
 Area of Effect: <room>
 Aggressive:     No
 Cumulative:     No
@@ -3209,7 +3210,7 @@ will smother the light emanating from it.
 See also: "CONTINUAL LIGHT"
 
 #
-DAY DAYS (Information)
+DAY DAYS (General Information)
 ===========================================================================
         Day of the Moon
         Day of the Bull
@@ -3222,7 +3223,7 @@ DAY DAYS (Information)
 See also: MONTHS, TIME
 
 #
-DAYVISION (Innate Ability)
+DAYVISION (Innate)
 ===========================================================================
 Dayvision is the ability that allows an individual to see in the daylight,
 unlike other Neutral, Evil or Undead races.
@@ -3289,7 +3290,7 @@ message if someone casts this.
 ===========================================================================
 
 #
-"DEATH KNIGHT" (Information)
+"DEATH KNIGHT" (General Information)
 ===========================================================================
 The Death Knight is a twisted form of a Lich. A race of undead warriors
 spawned by a demon prince (popular thought credits Demogorgon), from fallen
@@ -3394,7 +3395,7 @@ deal with the simple reality of direction is lost.
 See also: ILLUSIONIST, SKILL_ILLUSIONIST
 
 #
-DELETE REROLL (Information)
+DELETE REROLL (General Information)
 ===========================================================================
 Player files can be deleted at the login menu. Once a character is deleted,
 you can NOT get it back. You may have several characters and often times
@@ -3436,7 +3437,7 @@ Undead players and mobs.
 ===========================================================================
 
 #
-"DETECT EVIL" (Spell/Innate Ability)
+"DETECT EVIL" (Spell)
 ===========================================================================
 Area of effect: <victim>
 Aggressive:     No
@@ -3446,11 +3447,13 @@ Type of spell:  Divination
 
 "Detect Evil" allows the victim to detect the glowing red auras of evil
 creatures.
+
+This can also be an innate ability.
 ===========================================================================
 See also: "DETECT GOOD", "DETECT MAGIC"
 
 #
-"DETECT GOOD" (Spell/Innate Ability)
+"DETECT GOOD" (Spell)
 ===========================================================================
 Area of effect: <victim>
 Aggressive:     No
@@ -3460,6 +3463,8 @@ Type of spell:  Divination
 
 "Detect Good" allows the victim to detect the glowing golden auras of good
 creatures.
+
+This can also be an innate ability.
 ===========================================================================
 See also: "DETECT EVIL", "DETECT MAGIC"
 
@@ -3568,7 +3573,7 @@ Mummify
 See also: NECROMANCER, "CREATE GOLEM"
 
 #
-DIG (World Command)
+DIG (Command)
 ===========================================================================
 Syntax: Dig
 
@@ -3578,7 +3583,7 @@ the ground.
 See also: BURY
 
 #
-DIKUEDIT (Information)
+DIKUEDIT (General Information)
 ===========================================================================
 Duris has its very own zone editor called dikuEdit, created by Tavril. This
 allows zones to be created much easier if you are familiar with the Duris
@@ -3690,7 +3695,7 @@ Syntax:         disengage
 
 Typing "Disengage" while assisting in combat allows you to withdraw from
 the fight. Disengage will not work if you are the tank.
-=========================== ===============================================
+===========================================================================
 See also: FLEE, RETREAT
 
 #
@@ -3809,7 +3814,7 @@ surrounding the victim or remove any enchantments on an object.
 ===========================================================================
 
 #
-"DISPERSE FLAMES" (Reflexive Skill)
+"DISPERSE FLAMES" (Skill)
 ===========================================================================
 When in a state of pure mental focus, the Pyrokinetic can twist and bend
 any fire based onslaught, negating the damage entirely. 
@@ -3825,26 +3830,26 @@ Syntax:         display  (will list display options)
 The "Display" command allows you to view various attributes of your
 character at all times. The options available are as follows:
 
-        all             -- displays hits/maxhits, moves/maxmoves
-        off             -- turns off display
-        hits            -- displays current hit points
-        maxhits         -- displays maximum hit points
-        mana            -- displays current mana points
-        maxmana         -- displays maximum mana points
-        slots           -- displays current spell slots
-        maxslots        -- displays maximum spell slots
-        moves           -- displays current movement points
-        maxmoves        -- displays maximum movement points
-        tankname        -- shows name of tank in the group
-        tankcond        -- shows condition of tank in group
-        enemy           -- shows name of enemy
-        enemycond       -- shows condition of enemy
-        twoline         -- divides display into two-line prompt
+        all             --displays hits/maxhits, moves/maxmoves
+        off             --turns off display
+        hits            --displays current hit points
+        maxhits         --displays maximum hit points
+        mana            --displays current mana points
+        maxmana         --displays maximum mana points
+        slots           --displays current spell slots
+        maxslots        --displays maximum spell slots
+        moves           --displays current movement points
+        maxmoves        --displays maximum movement points
+        tankname        --shows name of tank in the group
+        tankcond        --shows condition of tank in group
+        enemy           --shows name of enemy
+        enemycond       --shows condition of enemy
+        twoline         --divides display into two-line prompt
 ===========================================================================
 See also: TANK, TOGGLE
 
 #
-"DISRUPTIVE BLOW" (Reflexive Skill)
+"DISRUPTIVE BLOW" (Skill)
 ===========================================================================
 This skill, when successful, will automatically launch an attack targeting 
 the throat of the victim as they begin to cast a spell.
@@ -3864,7 +3869,7 @@ Type of spell:  Enchantment
 ===========================================================================
 
 #
-DODGE (Reflexive Skill)
+DODGE (Skill)
 ===========================================================================
 The "Dodge" skill benefits those of all classes by allowing them to 
 occasionally dodge attacks from opponents, based on the proficiency of this
@@ -3872,7 +3877,7 @@ skill.
 ===========================================================================
 
 #
-DOORBASH (Innate Skill)
+DOORBASH (Innate)
 ===========================================================================
 Syntax:         doorbash <direction>
 Aggressive:     No
@@ -3883,7 +3888,7 @@ waiting in the room. Unpickable doors cannot be bashed in.
 ===========================================================================
 
 #
-"DOUBLE ATTACK" (Reflexive Skill)
+"DOUBLE ATTACK" (Skill)
 ===========================================================================
 This skill is automatic and occasionally gives you an extra attack for each
 combat round. The likelihood of the extra attack is dependent upon your
@@ -3892,7 +3897,7 @@ proficiency in this area.
 See also: "TRIPLE ATTACK", "QUADRUPLE ATTACK"
 
 #
-"DOUBLE STRIKE" (Reflexive Skill)
+"DOUBLE STRIKE" (Skill)
 ===========================================================================
 "Double Strike" allows the Blademaster a potential hit on a random second 
 target in the room, other than the intended primary target.
@@ -3986,7 +3991,7 @@ causing considerable damage.
 See also: "CREEPING DOOM", "MAGMA BURST"
 
 #
-DREADLORD (Information)
+DREADLORD (Sub-Class of: Fighter)
 ===========================================================================
 Dreadlords, also knows as the Eyeless, are the warlords of the undead. They
 are the result of a dark and terrible ritual performed on a person. The end
@@ -4030,10 +4035,10 @@ one in their group not in combat that has consented the caster will
 fall into a deep sleep causing them to dream of the caster and after 
 wakening they will be in the same room as the caster.
 
-syntax: cast 'dream travel' playername - to travel to any player on your
+syntax: cast 'dream travel' playername -to travel to any player on your
         side of the race wars.
 
-	cast 'dream travel' self or me - to cause all consented group
+	cast 'dream travel' self or me -to cause all consented group
         members to travel to your location. 
 ===========================================================================
 
@@ -4281,7 +4286,7 @@ sample the viands, whereas eat and drink let you ingest your fill.
 See also: QUAFF
 
 #
-ECHO (Innate Skill)
+ECHO (Innate)
 ===========================================================================
 With their advanced vocal capacities, Disharmonists are able to play their
 sounds with a resounding echo. This can cause their songs action to
@@ -4403,11 +4408,11 @@ the onslaught of earth, ice and burning air.
 See also: ELEMENTALIST
 
 #
-"ELEMENTAL POWER" (Innate Ability)
+"ELEMENTAL POWER" (Innate)
 ===========================================================================
 This skill causes all elemental spells to do more damage. It is a passive
 innate and is always active.
-========================================== ================================
+===========================================================================
 See also: ELEMENTALIST
 
 #
@@ -4645,9 +4650,9 @@ This spell imbues the caster with great strength.
 ===========================================================================
 
 #
-ENLARGE (Spell/Innate Ability)
+ENLARGE (Spell)
 ===========================================================================
-Syntax:         innate enlarge (for Duergar Dwarf and Shadow Beast)
+Syntax:         inn enlarge (for Duergar Dwarf and Shadow Beast)
 Area of effect: <victim> (for spell) | <self> (for innate)
 Aggressive:     No
 Cumulative:    	Yes 
@@ -4809,7 +4814,7 @@ Releases all ethereal magic from the cosmomancer, by violently removing
 the ethereal effect from caster. Sends cosmic waves of the cosmomancers 
 ethereal form exploding outwards, that shatters the magical fiber, 
 acting as a mass dispel to everyone and everything in the room. 
-=========================================================================== 
+===========================================================================
 See also: ETHERMANCER, COSMOMANCER
 
 #
@@ -4951,7 +4956,7 @@ This command can be shorted to simply "eq".
 See also: INVENTORY
 
 #
-EVASION (Innate ability)
+EVASION (Innate)
 ===========================================================================
 This extraordinary ability allows the target of an area spell attack to 
 twist out of the way avoiding all damage. 
@@ -5010,9 +5015,9 @@ Examples of monetary exchange:
         
 The standard Duris currency values equate as:
 
-        10 copper = 1 silver
-        10 silver = 1 gold
-        10 gold = 1 platinum
+        10 copper =1 silver
+        10 silver =1 gold
+        10 gold =1 platinum
         
         Be aware that many banks will have a higher exchange rate as they
         like to charge an processing fee!
@@ -5029,7 +5034,7 @@ You will have to use a little ingenuity to locate those.
 ===========================================================================
 
 #
-EXPERIENCE XP LEVELS (General Information/Command)
+EXPERIENCE XP LEVELS (General Information)
 ===========================================================================
 Syntax:   exp (to see how much experience you currently have)
 
@@ -5041,18 +5046,18 @@ in zones.
 
 Here are a few things you should know about experience points:
 
-	- Each pulse you hit or miss a monster when you are engaged
+	-Each pulse you hit or miss a monster when you are engaged
 	  you get experience points. 
-	- Healing a person who is in combat and grouped with you will 
+	-Healing a person who is in combat and grouped with you will 
 	  give you a lot of experience points.
-   	- You get exp for each spell you cast upon a monster or a player
+   	-You get exp for each spell you cast upon a monster or a player
 	  in your group if you are in combat. The amount of experience
  	  points received depends on which circle the spells is in. You
 	  also receive experience points for using skills in combat, such
 	  as bash, backstab, kick and so on.
-	- If you kill a monster of a higher level than yourself, you get 
+	-If you kill a monster of a higher level than yourself, you get 
  	  bonus experience points.
-	- If you kill a monster of a lower level, you will gain less 
+	-If you kill a monster of a lower level, you will gain less 
           experience points.
 	
 ===========================================================================
@@ -5069,9 +5074,9 @@ the ground with the "exhume" command.
 See also: PETS
 
 #
-"FAERIE FIRE" (Spell/Innate Ability)
+"FAERIE FIRE" (Spell)
 ===========================================================================
-Syntax:         innate faerie <victim> (for Drow Elf)
+Syntax:         inn faerie <victim> (for Drow Elf)
 Area of effect: <victim>
 Aggressive:     Yes
 Cumulative:     No
@@ -5115,7 +5120,7 @@ corresponding risks.
 See also: FARSEE
 
 #
-FARSEE (Spell/Innate Ability)
+FARSEE (Spell)
 ===========================================================================
 Syntax:         look <direction>
 Area of effect: <self>
@@ -5126,6 +5131,8 @@ Type of spell:  Enchantment
 
 "Farsee" enables the caster to look into an adjacent room, as if the
 caster were actually there, but without the corresponding risks.
+
+This can also be an innate ability.
 ===========================================================================
 See also: LOOK
 
@@ -5157,7 +5164,7 @@ currently memorized.
 ===========================================================================
 
 #
-FEEDING (Information)
+FEEDING (General Information)
 ===========================================================================
 On Duris, artifacts, uniques, and iouns are in need of "feeding", which
 means killing someone of the opposite racewar in order to gain a full frag.
@@ -5238,9 +5245,9 @@ range weapons.
 See also: "RANGE WEAPONS", THROW
 
 #
-FIREBALL (Spell/Innate Ability)
+FIREBALL (Spell)
 ===========================================================================
-Syntax:         innate fireball (for Drow Elf)
+Syntax:         inn fireball (for Drow Elf)
 Area of effect: <victim> | <victim> <direction>
 Aggressive:     Yes
 Cumulative:     No
@@ -5253,9 +5260,9 @@ explodes in a huge blast, burning the victim quite profoundly.
 ===========================================================================
 
 #
-FIRESHIELD (Spell/Innate Ability)
+FIRESHIELD (Spell)
 ===========================================================================
-Syntax:         innate fireshield (for innate)
+Syntax:         inn fireshield (for innate)
 Area of effect: <self>
 Aggressive:     No
 Cumulative:     No
@@ -5269,9 +5276,9 @@ attacker. It is similar to the spell "Coldshield."
 See also: COLDSHIELD, INNATE
 
 #
-FIRESTORM (Spell/Innate Ability)
+FIRESTORM (Spell)
 ===========================================================================
-Syntax:         innate firestorm (for Death Knight)
+Syntax:         inn firestorm (for Death Knight)
 Area of effect: <room>
 Aggressive:     Ye 
 Cumulative:     No
@@ -5368,7 +5375,7 @@ a large mussel
 ===========================================================================
 
 #
-"FIST OF DRAGON" (Chant)
+"FIST OF DRAGON"
 ===========================================================================
 The monk harnesses his inner chi-powers using it to cause his hands to 
 harden. For the duration the monk can apply full force while hitting on 
@@ -5469,7 +5476,7 @@ See also: DREADLORD, SKILL_DREADLORD
 
 #
 FLEE (Command)
-============ ==============================================================
+===========================================================================
 Syntax:         flee
 
 If, for instance, the minor daemon you so carefully considered turns out to 
@@ -5519,7 +5526,7 @@ See also: FLY
 #
 FLURRY "INNATE FLURRY" (Innate)
 ===========================================================================
-Syntax:	innate flurry
+Syntax:	inn flurry
 
 "Flurry" causes the victim to move much more quickly for a limited amount
 of time, increasing their number of attacks.  
@@ -5539,7 +5546,7 @@ able to unleash a flurry of blows of devastating proportions.
 See also: MONK, MARTIAL ART
 
 #
-FLUTTER (Reflexive Skill)
+FLUTTER (Skill)
 ===========================================================================
 The fluttering movements of a harpies slight build gives them a naturally
 increased ability to quickly move out of the way and dodge melee attacks.
@@ -5547,8 +5554,8 @@ increased ability to quickly move out of the way and dodge melee attacks.
 See also: HARPY, DODGE
 
 #
-FLY (Spell/Innate Ability)
-===========================================================================      
+FLY (Spell)
+===========================================================================     
 Area of effect: <victim>
 Aggressive:     No
 Cumulative:     No
@@ -5558,9 +5565,7 @@ Type of spell:  Enchantment
 "Fly" will allow you to fly around wherever you want, regardless of
 terrain.
 
-&+RWarning:&n If your spell expires while you are high in the air,
-        the fall will hurt or kill you.  This could result in the 
-        possibility of an irretrievable corpse.
+This can also be an innate ability.
 ===========================================================================
 See also: FLIGHT
 
@@ -5593,8 +5598,8 @@ type:
 See also: GROUP 
 
 #
-"FOLLOW-UP RIPOSTE" (Reflexive Skill)
-================================= =========================================
+"FOLLOW-UP RIPOSTE" (Skill)
+===========================================================================
 Specialized Warriors have the additional reflexive ability for an extra
 damage riposte. A riposte is a fencing move made when you successfully 
 parry your opponent's attack and manage to score a minor hit of your own in 
@@ -5676,7 +5681,7 @@ damage.
 ===========================================================================
 
 #
-FORMATIONS (General)
+FORMATIONS (General Information)
 ===========================================================================
 Syntax: <group formation>
 	<group formation _choice_>
@@ -5715,7 +5720,7 @@ latest news on the MUD. They are located at: www.durismud.org
 See also: WEBSITE
 
 #
-FRAG FRAGS (General Information/Command)
+FRAG FRAGS (General Information)
 ===========================================================================
 Syntax:     frag 
             frag <classname>
@@ -5864,14 +5869,14 @@ is totally random and cannot be directed.
 
 The planes that may be directly gated are:
 
-	- &+yThe Elemental Plane Of Earth&N
-	- &+bThe Elemental Plane Of Water&N
-	- &+CThe Elemental Plane Of Air&N
-	- &+rThe Elemental Plane Of Fire&N
-	- &+RThe Plane Of Avernus On The Nine Hells&N
-	- &+LThe Negative Material Plane&N
-	- &+LThe Ethereal Plane&N
-	- The Astral Plane
+	-&+yThe Elemental Plane Of Earth&N
+	-&+bThe Elemental Plane Of Water&N
+	-&+CThe Elemental Plane Of Air&N
+	-&+rThe Elemental Plane Of Fire&N
+	-&+RThe Plane Of Avernus On The Nine Hells&N
+	-&+LThe Negative Material Plane&N
+	-&+LThe Ethereal Plane&N
+	-The Astral Plane
 ===========================================================================
 
 #
@@ -6032,7 +6037,7 @@ Statistics: Gnomes have very quick minds, but seem to lack the wisdom to
             which is probably good, because they are also weak, and not
             very appealing.
 Innates:    Infravision, Farsee.
-====================================================================== ====
+===========================================================================
 See also: RACES, INFRAVISION, INNATE
 
 #
@@ -6088,7 +6093,7 @@ as it will NOT be easy.
 See also: RACES, ULTRAVISION, INFRAVISION, INNATE
 
 #
-"GOD CALL" (Innate Ability)
+"GOD CALL" (Innate)
 ===========================================================================
 Syntax:         innate god call
 
@@ -6337,9 +6342,9 @@ See also: "GOD, GSHOUT", "GOD, ECHO", "GOD, ECHOA"
 ===========================================================================
 &+m"Goto" lets you change your location to the target's location.&n
 
-&+mExamples: goto 1201         - takes you to room 1201&n
-&+m          goto poofbrain    - takes you to Poofbrain&n
-&+m          goto lamp         - takes you to the top lamp in the database&n
+&+mExamples: goto 1201         -takes you to room 1201&n
+&+m          goto poofbrain    -takes you to Poofbrain&n
+&+m          goto lamp         -takes you to the top lamp in the database&n
 ===========================================================================
 See also: "GOD, TELEPORT", "GOD, TRANS"
 
@@ -6380,9 +6385,9 @@ See also: SHOUT
 
 &+m<string> should contain 1 occurrence of ONE of the following:&n
 
-&+m    %p - all players in the room&n
-&+m    %m - all mobs in the room&n
-&+m    %a - both mobs and players in the room&n
+&+m    %p -all players in the room&n
+&+m    %m -all mobs in the room&n
+&+m    %a -both mobs and players in the room&n
 
 &+mExample: inroom teleport %p 19617 (Teleports everyone in the room to room&n
 &+m19617).&n
@@ -6718,7 +6723,7 @@ Syntax:  string <type> <name> <field> [<string> | <keyword>]
 
 <field> is one of the following (the names may be abbreviated):
 
-Name                    (the call-name of an obj/char - e.g., "giant")
+Name                    (the call-name of an obj/char -e.g., "giant")
 Short                   (for inventory lists (obj's) and actions (char's))
 Long                    (for when obj/character is seen in room)
 Title                   (for players)
@@ -6809,7 +6814,7 @@ limit.
 Example:
   > vis         : Returns current minimum visibility level.
   > vis 10      : Sets minimum visibility level so that players with
-                  levels <= 10 cannot see you.
+                  levels <=10 cannot see you.
 ===========================================================================
 See also: DISPLAY, VIS
 
@@ -7229,7 +7234,7 @@ See also: RESCUE, "SHIELD PUNCH", "FOLLOW-UP RIPOSTE", "RESCUE ALL"
 
 #
 GUILD GUILDS ASSOCIATION ASSOCIATIONS CLAN CLANS (General Information)
-=========================================================================== 
+===========================================================================
 This document is designed to answer any questions regarding the creation
 of player guilds on Duris. Under the current guild system players are
 responsible for the organization of their own guilds. 
@@ -7240,28 +7245,28 @@ How To Begin A Guild
 ---------------------------------------------------------------------------
 
 a) The requirements for forming a guild are as follows :
-    - All guild members must be at least 25th level or above. The level
+    -All guild members must be at least 25th level or above. The level
       requirement is simply to ensure that the people in the guild are
       familiar with Duris and how it's run.
-    - A guild may have upto, but no more than, 3 shared characters.
+    -A guild may have upto, but no more than, 3 shared characters.
       These characters can be accessable by some/all members of the guild,
       but are not directly owned by anybody in the guild.
-    - Guilds must also keep a member count of at least 5 members, 
+    -Guilds must also keep a member count of at least 5 members, 
       this 5 does &+RNOT&n include the 3 shared characters.  The guild is
       also limited to a maximum of 35 members in the guild at a time.
-    - A one time fee of 1,000 platinum is required to start the guild.
+    -A one time fee of 1,000 platinum is required to start the guild.
       This not does include a guildhall.
 
 IMPORTANT
-    - You may only have one character in a guild, and at most one alt in the
+    -You may only have one character in a guild, and at most one alt in the
       &+RSAME GUILD&n, at a time.  No exceptions.
-    - You as a player can only secede from three different guilds EVER.
+    -You as a player can only secede from three different guilds EVER.
       If you leave your third different guild, that's it.
-    - If you leave a guild you must wait one real week before joining
+    -If you leave a guild you must wait one real week before joining
       another.
-    - You may only kick out one member per mud month at a time.
+    -You may only kick out one member per mud month at a time.
 
-b) What this allows - Once this happens the guild will be created and the
+b) What this allows -Once this happens the guild will be created and the
    person forming the guild will be flagged as a guild 'leader'. This will
    allow him/her to recruit members into the guild and promote/demote them
    accordingly. This is done completely without god interference and
@@ -7280,27 +7285,27 @@ Guild Structure
 Guilds have specific ranks within them which give their members to ability
 do different things depending on their rank. How this works is as follows :
 
-Leader - A leader can change the names of all the ranks (this allows an
+Leader -A leader can change the names of all the ranks (this allows an
 guild of sorcerers to name the leader as "ArchMage" rather than "Leader".
 These titles must be realistic in a &+Yfantasy world&n. A leader also has the
 ability to flag a player as an enemy to the guild (leaders are the only
 ones that can remove this flag as well). The leader can also add on an
 'on parole' flag to members.
 
-Deputy - A deputy (or higher) can delete, promote and demote members and
+Deputy -A deputy (or higher) can delete, promote and demote members and
 also has access to withdraw money from the guild's bank account.
 
-Officer - An officer (or higher) has the right to fine lower members
+Officer -An officer (or higher) has the right to fine lower members
 (dealing out punishments etc).
 
-Senior member - A senior member (or higher) has the right to enroll new
+Senior member -A senior member (or higher) has the right to enroll new
 members.
 
-Normal member - A Normal member just has general abilities, access to any
+Normal member -A Normal member just has general abilities, access to any
 guildhalls that might be available etc. They can also see what other guild
 members are online.
 
-Enemy - The guild leader has the ability to flag a member as a guild enemy
+Enemy -The guild leader has the ability to flag a member as a guild enemy
 as well. This will cause the guild npc's (if any) to attack the player on
 sight and is used for betrayal etc.
 
@@ -7318,11 +7323,11 @@ locker with &+Yenter locker guild&n.  All members share access to this
 locker.  This replaces the need for guild chests in guildhalls.
 
 ===========================================================================
-See also: CONSTRUCT, SOCIETY, GUILDHALL
+See also: CONSTRUCT, SOCIETY, GUILDHALL, TITLE
 
 #
 GUILDHALL (General Information)
-=========================================================================== 
+===========================================================================
 After you start a guild you will most likely want to start saving money to
 start building your guild somewhere to hang out and organize your next
 adventuring trip. For this purpose you can build your guild a guildhall.
@@ -7716,10 +7721,10 @@ alone to see a list of major topics.
 See also: VERSION
 
 #
-HIDE (Skill/Command)
+HIDE (Skill)
 ===========================================================================
 
-Hide - Rogue Class Skill
+Hide -Rogue Class Skill
 ---------------------------------------------------------------------------
 Syntax:         hide
 
@@ -7731,7 +7736,7 @@ attempt to hide is successful, you can only be detected by "Sense Life",
 "Infravision" or "Faerie Fog" . To break the hiding, issue any command. The 
 effect will wear off after a period of time.
 
-Hide - General Command
+Hide -General Command
 ---------------------------------------------------------------------------
 Syntax:         hide <object>
 
@@ -7761,13 +7766,14 @@ See also: "DOUBLE ATTACK", "DUAL WIELD"
 #
 HOLYMAN (Specialization)
 ===========================================================================
-The Holyman Cleric is a master of defensive capabilities. He has the ability
-to invoke his God to calm a room, when needed. And, under the effect of the 
-spell "Lesser Sanctuary", the Healer will take less physical damage than 
-normal. When soulshielded, it is said that mysterious things may happen.
+The Holyman Cleric is a master of defensive capabilities. He has the
+ability to invoke his God to calm a room, when needed. And, under the
+effect of the spell "Lesser Sanctuary", the Healer will take less physical
+damage than normal. When soulshielded, it is said that mysterious things
+may happen.
 
 Innate Abilities
-------------------------------------------------------------- -------------
+---------------------------------------------------------------------------
 30th level:     Calm God Call
 
 Spells
@@ -7827,8 +7833,8 @@ place (see help home).
 
 Some of these Hometowns include:
 
-   - Tharnadia, the Birthplace of Humans
-   - Charing, City of Elves
+   -Tharnadia, the Birthplace of Humans
+   -Charing, City of Elves
 
 ===========================================================================
 See also: HOME, THARNADIA, CHARING
@@ -7997,10 +8003,8 @@ thus negating the effects.
 ===========================================================================
 
 #
-ILLUSIONIST (General Information)
+ILLUSIONIST (Sub-Class of: Magic-User)
 ===========================================================================
-Sub-Class of:  Magic-User
-
 Illusionist are the magical masters of the unreal and the shadow. They
 are capable of illusions so powerful no one can help but believe they are 
 real. They are also masters of deception and many have foolishly let them
@@ -8194,10 +8198,12 @@ This spells fires a mental bolt to the victim's brain causing damage.
 ===========================================================================
 
 #
-INFRAVISION (Spell/Innate Ability)
+INFRAVISION (Spell)
 ===========================================================================
 Infravision is the ability to sense the presence of creatures in a dark
 room by the means of heat.
+
+This can be a spell or an innate ability.
 ===========================================================================
 See also: INNATE, ULTRAVISION
 
@@ -8254,7 +8260,7 @@ until it wears off or is neutralized.
 ===========================================================================
 
 #
-"INSTANT KILL" (Reflexive Skill)
+"INSTANT KILL" (Skill)
 ===========================================================================
 As the name implies, "instant kill" provides the character with a very
 minuscule chance of killing a player or mob instantly, upon the application
@@ -8373,11 +8379,11 @@ HOW JUSTICE WORKS:
 
 JUSTICE ONLY APPLIES IN GOOD ALIGNED HOMETOWNS!
 
-- Any player that witnesses a crime in a hometown can report it to the
+-Any player that witnesses a crime in a hometown can report it to the
   justice.
-- If you commit a crime within a hometown and a citizen sees you he/she will
+-If you commit a crime within a hometown and a citizen sees you he/she will
   report it to the justice.
-- When a crime is reported to the justice, guards will be sent to arrest the
+-When a crime is reported to the justice, guards will be sent to arrest the
   criminal (if he/she is still in town).
 
 If a guard arrests you, you will be brought to jail and you will be judged
@@ -8412,13 +8418,13 @@ live criminal in.
 Nothing prevents you from escaping jail, but if you do you will pay the price.
 
 &+RIMPORTANT&N
-- Pardoning a person for a crime against you does not prevent this person from
+-Pardoning a person for a crime against you does not prevent this person from
   going to jail but it will be used by the judge when he gives his/her
   sentence.
-- You cannot report a murder against yourself. 
-- If someone commits a crime against you, you are not allowed to attack him, 
+-You cannot report a murder against yourself. 
+-If someone commits a crime against you, you are not allowed to attack him, 
   let justice take care of it.
-- A witnessed event is erased after a month, so dont wait too long to report a 
+-A witnessed event is erased after a month, so dont wait too long to report a 
   crime.
 ===========================================================================
 See also: RULES LAWS OUTCAST PKILL STEAL BIND
@@ -8473,7 +8479,7 @@ One way to initiate a fight.
 ===========================================================================
 
 #
-KNIGHT (Innate Ability)
+KNIGHT (Innate)
 ===========================================================================
 This innate ability improves the horseman's proficiency with lance-type
 weapons and his capability to "Trample".
@@ -8666,9 +8672,9 @@ portion of all physical damage that is successfully inflicted upon them.
 ===========================================================================
 
 #
-LEVITATE (Spell/Innate Ability)
+LEVITATE (Spell)
 ===========================================================================
-Syntax:         innate levitate (for Githyanki and Drow Elf)
+Syntax:         inn levitate (for Githyanki and Drow Elf)
 Area of effect: <victim> (for spell) | <self> (for innate)
 Aggressive:     No
 Cumulative:     No
@@ -8898,7 +8904,7 @@ locker, including guild lockers, at any one time.
 The Storage Locker Safety Commission, a group of other-world agents 
 summoned by the immortals of this realm, have been called forth to guard 
 these magical lockers from unauthorized intrusion. They are responsible 
-for the protection of these lockers - any illegal entry or attempts at 
+for the protection of these lockers -any illegal entry or attempts at 
 subterfuge will be punished. 
 
 Anything you drop in a locker room will be stored and saved as if you were 
@@ -8985,7 +8991,7 @@ its duration expires.
 
 #
 MAGIC (General Information)
-=========================================== ===============================
+===========================================================================
 Magic is the broad category of phenomena that goes above and beyond normal
 mortal powers. This can range from spells with an immensely wide variety
 of effects to the uncanny abilities of a particular type of creature to the
@@ -9054,7 +9060,7 @@ time causing additional damage.
 See also: "CREEPING DOOM", "DREAD WAVE"
 
 #
-"MAJOR PARALYSIS" (Effect)
+"MAJOR PARALYSIS"
 ===========================================================================
 When effected by "Major Paralysis", the victim is prevented from entering
 any new commands for a limited time. This is a more powerful version of 
@@ -9150,8 +9156,8 @@ This spell works similar to the disguise skill allowing the caster to take
 on the appearance of any player in the game. Anyone with detect illusion
 has a chance to see that this is an illusion.
 
-syntax: cast 'mask' playername - to change your appearance
-        cast 'mask' self or me - to remove the illusion 
+syntax: cast 'mask' playername -to change your appearance
+        cast 'mask' self or me -to remove the illusion 
 ===========================================================================
 See also: "DETECT ILLUSION", DISGUISE
 
@@ -9170,8 +9176,9 @@ the caster receives the spell's benefits with one casting.
 See also: BARKSKIN
 
 #
-"MASS CHARM" (Inactive Spell)
+"MASS CHARM" (Spell)
 ===========================================================================
+&+RThis spell is currently inactive.&n
 Area of effect: Room
 Aggressive:     Yes
 Cumulative:     N/A
@@ -9368,7 +9375,7 @@ to perceive the caster.
 ===========================================================================
 
 #
-"MIND OF DRAGON" (Innate ability)
+"MIND OF DRAGON" (Innate)
 ===========================================================================
 The monk has after years of mental training developed something of a sixth 
 sense that makes him aware of things that normal people would overlook. 
@@ -9534,7 +9541,7 @@ All Alchemists will start with a basic recipe list in their inventory to
 aid them in creating potions. To mix a potion simply put the needed items
 into your inventory and type mix bottle.   
 
-As an example here is the recipe for the potion of Ice Missile - garlic,
+As an example here is the recipe for the potion of Ice Missile -garlic,
 mandrake root. Make sure have 1 garlic and 1 mandrake root in your
 inventory and type: mix bottle
 ===========================================================================
@@ -9605,7 +9612,7 @@ him considerably.
 ===========================================================================
 
 #
-"MONK" (General Information)
+"MONK" (Sub-Class of: Fighter)
 ===========================================================================
 Monks are practitioners of ancient martial arts which allows them to be
 lethal adversaries without the benefit of cumbersome weaponry. Their hands
@@ -9627,7 +9634,7 @@ Equipment usage:        Monks fall under a unique set of restrictions for
                         can wear slightly heavier garments. Monks usually 
                         favor very light warrior equipment to assist them 
                         in combat.
-====================== ====================================================
+===========================================================================
 See also: FIGHTER, CLASSES, CHANTS, SKILL_MONK
 
 #
@@ -9809,7 +9816,7 @@ Multi-Class Names
 -&+YCenobite&n -Cleric/Druid
 -&+cWar Priest&n -Warrior/Cleric
 -&+LS&+wo&+WulRend&+we&+Lr&n -Reaver/Shaman
--&+WSpiritmaster&n - Cleric/Shaman
+-&+WSpiritmaster&n -Cleric/Shaman
 ===========================================================================
 See also: SPEC_LIST, SPECIALIZATION
 
@@ -9968,7 +9975,7 @@ used.
 
 #
 NAME NAMES (General Information)
-=============================================================== ===========
+===========================================================================
 This is a medieval based fantasy mud, if you pick a name that is NOT suited
 to a mud of that theme, you will be asked to change it. Common names like
 Bob, Tomas, Mike are not acceptable, nor are names of famous fictional
@@ -10013,7 +10020,7 @@ See also: NEWBIE, TOGGLE_NCHAT
 
 #
 NECROLYTE (Specialization)
-=========================================================================== 
+===========================================================================
 The Necrolyte possesses heightened senses capable of detecting the dead. He
 is a master in the use of staves and can summon the very shadows to serve
 him.
@@ -10205,9 +10212,9 @@ old effects of group ranking are no longer.
       which group rank the caster and target are in.
 
   *)  Area spells are still in the game, with a few modifications:
-	- Casting time has been increased for all areas
-	- Area spells do significantly less damage than before
-	- Area spells hit ALL ranks in front of you.  This means if you are
+	-Casting time has been increased for all areas
+	-Area spells do significantly less damage than before
+	-Area spells hit ALL ranks in front of you.  This means if you are
 	  grouped to the back rank, you will hit your front rank as well as
 	  both enemy ranks.  If you are ranked front, you will hit only the
 	  enemy group.
@@ -10344,7 +10351,7 @@ See also: RACES, INNATE, DOORBASH, INFRAVISION, BODYSLAM
 OGREROAR
 ===========================================================================
      Syntax:	ogreroar <victim>
-================================= =========================================
+===========================================================================
 
 #
 OPEN CLOSE LOCK UNLOCK
@@ -10431,7 +10438,7 @@ considered invaders to Charing and will be killed on sight.
 See also: SCORE, RACES
 
 # 
-"OUTDOOR SNEAK" (Innate Ability)
+"OUTDOOR SNEAK" (Innate)
 ===========================================================================
 This allows you to move silently from one place to another while outdoors. 
 While sneaking, you will be able to travel without anyone taking notice of 
@@ -10495,7 +10502,7 @@ maximum movements slightly more, based on the proficiency of the caster.
 See also: WOLFSPEED
 
 #
-PARRY (Reflexive Skill)
+PARRY (Skill)
 ===========================================================================
 This skill is very similar to the "Dodge" skill, but the one performing the parry deflects the person's incoming attack rather than avoiding it.
 ===========================================================================
@@ -10545,7 +10552,7 @@ creating icy frost that freezes very ground they walk on.
 ===========================================================================
 
 #
-PERCEPTION (Innate Ability)
+PERCEPTION (Innate)
 ===========================================================================
 Due to the Harpies natural enhanced senses they are able to perceive more
 than other races, giving them longer and wider views of the open terrain
@@ -10655,10 +10662,8 @@ Examples:
 See also: OPEN CLOSE LOCK UNLOCK
 
 #
-PIPER "UNHOLY-PIPER" (Information)
+PIPER "UNHOLY-PIPER" (Sub-Class of: Rogue)
 ===========================================================================
-Sub-Class of:  Rogue
-
 Blessed with the talent of music, pipers can, with practice, play any
 instrument. These instruments can invoke magical tunes and songs that act
 as spells, aiding a party during their adventures. Pipers are a thief/mage/
@@ -10688,9 +10693,9 @@ healing spells.
 ===========================================================================
 
 #
-"PLANE SHIFT" (Spell/Innate Ability)
+"PLANE SHIFT" (Spell)
 ===========================================================================
-Syntax:         innate plane <planename>
+Syntax:         inn plane <planename>
 Area of effect: <caster>
 Aggressive:     No
 Cumulative:     No
@@ -10703,14 +10708,14 @@ another means of teleportation.
 
 The planes that may be shifted to are:
 
-	- &+yThe Elemental Plane Of Earth&N
-	- &+bThe Elemental Plane Of Water&N
-	- &+CThe Elemental Plane Of Air&N
-	- &+rThe Elemental Plane Of Fire&N
-	- &+RThe Plane Of Avernus On The Nine Hells&N
-	- &+LThe Negative Material Plane&N
-	- &+LThe Ethereal Plane&N
-	- The Astral Plane
+	-&+yThe Elemental Plane Of Earth&N
+	-&+bThe Elemental Plane Of Water&N
+	-&+CThe Elemental Plane Of Air&N
+	-&+rThe Elemental Plane Of Fire&N
+	-&+RThe Plane Of Avernus On The Nine Hells&N
+	-&+LThe Negative Material Plane&N
+	-&+LThe Ethereal Plane&N
+	-The Astral Plane
 
 &+RWarning:&n Shifting can be dangerous, as you just may land on a aggro
         mob!
@@ -10719,7 +10724,7 @@ See also: GATE
 
 #
 "PLANETARY ALIGNMENT" (Spell) 
-=========================================================================== 
+===========================================================================
 Area of effect: <self> 
 Aggressive: no 
 Cumulative: no 
@@ -10888,7 +10893,7 @@ This allows the caster to extend the process of decay in a corpse.
 See also: EMBALM, "MASS PRESERVE", CORPSE
 
 #
-PRESSURE POINT (Innate ability)
+PRESSURE POINT (Innate)
 ===========================================================================
 Once the monk reaches a certain level of power he has mastered the physiology 
 of the body and uses this knowledge to strike where it will be the most 
@@ -11045,7 +11050,7 @@ target less prone to attacks from evilly aligned monsters and characters.
 See also: "PROTECTION FROM GOOD"
 
 #
-"PROTECTION FROM FIRE" (Spell/Innate Ability)
+"PROTECTION FROM FIRE" (Spell)
 ===========================================================================
 Area of effect: <victim> | <self> 
 Aggressive:     No
@@ -11055,6 +11060,8 @@ Type of spell:  Protection
 
 "Protection from Fire" offers some protection from fire-type beings,
 fire-based attacks and heat in general.
+
+This can also be an innate ability.
 ===========================================================================
 
 #
@@ -11134,7 +11141,7 @@ chance of lowing the power and vigor of everyone in the room.
 ===========================================================================
 
 #
-PSIONICIST (General Information)
+PSIONICIST (Sub-Class of: Magic-User)
 ===========================================================================
 Psionicist are a class that has amazing control over their minds, allowing
 them to master the hidden power of the mind itself.  Psionicist can use
@@ -11316,7 +11323,7 @@ the victim (doing minor damage) and possibly poisoning the victim.
 See also: "GREATER PYTHONSTING"
 
 #
-"QUADRUPLE ATTACK" (Reflexive Skill) 
+"QUADRUPLE ATTACK" (Skill) 
 ===========================================================================
 This skill is automatic and gives you an extra attack for each combat
 round, on top of the extra attacks you already get from triple attack. The
@@ -11371,7 +11378,7 @@ QUIT (General Information)
 ===========================================================================
 Just like in real life, in the game you cannot just "quit" life. Your
 character must find a safe place such as an Inn or setup camp for the night. 
-There are two commands your character can therefore use to leave the game - 
+There are two commands your character can therefore use to leave the game -
 rent (at an Inn only) and camp. If you simply close your client and leave 
 your character "link dead", it will remain in the game, which is obviously 
 very dangerous, as it will then leave your character defenseless from 
@@ -11458,7 +11465,7 @@ more intricate details will be revealed as they unfold.
 See also: RACES
 
 #
-RAID (Information)
+RAID (General Information)
 ===========================================================================
 If you are trying to retrieve your corpse/EQ after dying in PvP combat you
 CANNOT return unless you are fully re-equipped as outlined below.
@@ -11597,7 +11604,7 @@ the corpse to return to existence as a wraith. Wraiths by nature are
 Sorcerers, but their power varies from animation to animation. They are 
 somewhat physically weak and cannot withstand much damage to their fragile 
 forms, but they have the potential to be deadly foes.
-============= =============================================================
+===========================================================================
 See also: ORDER, PETS, PRESERVE, "MASS PRESERVE", EMBALM, "SENSE FOLLOWER"
 
 #
@@ -11663,7 +11670,7 @@ may lurk hidden and lie within.
 See also: ZONE, MOB, EQUIPMENT, DIG
 
 #
-"RANGE SPECIALIST" (Reflexive Skill)
+"RANGE SPECIALIST" (Skill)
 ===========================================================================
 This lets you specialize in missile weapons, and makes you more likely
 to hit opponents with them.
@@ -11671,7 +11678,7 @@ to hit opponents with them.
 See also: ARCHERY, "RANGE WEAPONS"
 
 #
-RANGER (Sub-Class of Fighter)
+RANGER (Sub-Class of: Fighter)
 ===========================================================================
 Rangers are Fighters who are trained and skilled at woodland survival and
 techniques. They are one with nature and they are the best in the world at
@@ -11794,7 +11801,7 @@ Spells
 See also: "UNHOLY ALLIANCE", UNMAKING, UNMAKING, "DOOM BLADE"
 
 #
-REAVER REAVERS (Information)
+REAVER (Sub-Class of: Fighter)
 ===========================================================================
 Reavers are a unique mix of both warrior and spell-caster. They have left
 behind their sorcerous professions, and have instead turned to the powers
@@ -11970,7 +11977,7 @@ target, no matter how far away his target may be.
 ===========================================================================
 
 #
-REMORT (General)
+REMORT (General Information)
 ===========================================================================
 Necromancers once they have gained their 35th level now are able to use
 their knowledge of death and rebirth to transform and remort themselves 
@@ -12128,7 +12135,7 @@ restoring most of the experience lost in death.
 See also: "HAND OF DEATH", "LESSER RESURRECT"
 
 #
-RESURRECTION (Innate Ability)
+RESURRECTION (Innate)
 ===========================================================================
 This ability grants the chance to defeat death itself. At the moment of
 death, your soul will have a chance to re-enter your body. This is a
@@ -12223,7 +12230,7 @@ Innate abilities:   Ultravision, Regeneration, Bodyslam, Shadow Door
 See also: UNDEAD, WARRIOR, MERCENARY
 
 #
-RIPOSTE (Reflexive Skill)
+RIPOSTE (Skill)
 ===========================================================================
 A riposte is a fencing move made when you successfully parry your
 opponent's attack and manage to score a minor hit of your own in reply. The
@@ -12245,7 +12252,7 @@ chances are you are running a robot.
 See also: MULTI, RULES, LAWS
 
 #
-ROGUE (Class)
+ROGUE (Sub-class of: Rogue)
 ===========================================================================
 Rogues utilize the art of concealment and deception to gain an advantage 
 over their foes. They are known to be those you'll find hiding in the
@@ -12409,7 +12416,7 @@ Type of spell:  Elemental
 This spell causes a column of scalding hot water to fly from the caster's
 outstretched arms, striking the victim and doing a sizable amount of 
 damage.
-=========================================================================== 
+===========================================================================
 
 #
 "SCATHING WIND" (Spell)
@@ -12581,7 +12588,7 @@ although you will be unable to discern their true nature.
 See also: HIDE, INVISIBILITY
 
 #
-"SENSE WEAKNESS" (Innate Skill)
+"SENSE WEAKNESS" (Innate)
 ===========================================================================
 Syntax:         kill
 
@@ -12651,7 +12658,7 @@ intensified.
 See also: "SOUL LINK"
 
 #
-"SHADOW BEAST" (Information)
+"SHADOW BEAST" (General Information)
 ===========================================================================
 The Shadow Beast is rumored to be a higher form of lycanthrope that was
 killed in its lycanthropic state, and quickly raised as a shadow. These
@@ -12696,7 +12703,7 @@ When cast, "Shadow Monster" creates one illusionary monster out of thin air
 that attacks the victim. The illusion will end when the victim dies or 
 leaves the area for a time and if the caster dies or the duration of the 
 spell ends. The illusion will also end after it has taken enough damage.
-===========================================================================         
+===========================================================================       
 	
 
 #
@@ -12732,7 +12739,7 @@ Type of spell:  Teleportation
 It transforms the caster and allows them to instantly travel using shadows
 to any player or mob within a distance-specific area, distance is dependant 
 on the proficiency of the caster.
-===================== =====================================================
+===========================================================================
 See also: TELEPORT, GATE, "SPIRIT JUMP", "DIMENSION DOOR"
 
 #
@@ -12785,7 +12792,7 @@ being cast by others.
 See also: "SORCEROUS SPELL KNOWLEDGE", "CLERICAL SPELL KNOWLEDGE"
 
 #
-SHAPECHANGE SHAPE (Innate Ability)
+SHAPECHANGE SHAPE (Innate)
 ===========================================================================
 Syntax:         To shapechange:              shapechange <target>
                 To return to normal:         shapechange me
@@ -12831,7 +12838,7 @@ without a shield, leaving their hands available for weapons.
 See also: BASH
 
 #
-"SHIELD BLOCK" (Reflexive Skill)
+"SHIELD BLOCK" (Skill)
 ===========================================================================
 When wearing a shield, you have a chance of blocking attacks during combat.
 "Shield Block" is similar to parry, except you must be wearing a shield for 
@@ -12851,23 +12858,23 @@ See also: GUARDIAN
 
 #
 SHIP SHIPS 
-=========================================================================== 
+===========================================================================
 
-Table of Contents for Ships - Type "Help <Ship_category>" to view 
+Table of Contents for Ships -Type "Help <Ship_category>" to view 
 ---------------------------------------------------------------------------
-  SHIP_BASIC      -  Buying a ship and preparing to go to sea 
-  SHIP_LIST       -  The "List" command when at a docks 
-  SHIP_MOVEMENT   -  Moving around in the docks and on the world 
-  SHIP_COMBAT     -  Almost everything you need to know about combat 
-  SHIP_CARGO      -  Almost everything you need to know about running cargo 
-  SHIP_LOOKS      -  All the different ways to "look around" 
-  SHIP_COMMANDS   -  A thorough list of all ship commands 
+  SHIP_BASIC      -Buying a ship and preparing to go to sea 
+  SHIP_LIST       -The "List" command when at a docks 
+  SHIP_MOVEMENT   -Moving around in the docks and on the world 
+  SHIP_COMBAT     -Almost everything you need to know about combat 
+  SHIP_CARGO      -Almost everything you need to know about running cargo 
+  SHIP_LOOKS      -All the different ways to "look around" 
+  SHIP_COMMANDS   -A thorough list of all ship commands 
   
 ===========================================================================
 
 #
 SHIP_BASIC
-=========================================================================== 
+===========================================================================
 A dock is much like any other shop, you use "buy #" and "list" to see what 
 ships and ship accessories are available at the docks.  You can only buy 
 a ship at one of the major docks in the world.  An example is Tharnadia on 
@@ -12887,20 +12894,20 @@ hull.  You are PERMANENTLY stuck with that shipname for this character.
 
 Next suggested reading: "help SHIP_LIST" 
 
-=========================================================================== 
+===========================================================================
 See also: ANSI, TESTCOLOR, SHIP_LIST, SHIP
 
 #
 SHIP_LIST
-=========================================================================== 
+===========================================================================
 This is one of few single commands that will be covered in a helpfile, 
 simply because this command holds so much information. When you type 
 "list" at a dock, after you have purchased a ship, you see 4 sections: 
 
-- Hull Upgrades 
-- Sail 
-- Weapons 
-- and then a set of sample commands. 
+-Hull Upgrades 
+-Sail 
+-Weapons 
+-and then a set of sample commands. 
 
 
 Hull Upgrades
@@ -12942,12 +12949,12 @@ items.
 
 Next suggested reading: "help SHIP_MOVEMENT" 
 
-=========================================================================== 
+===========================================================================
 See also: SHIP_COMBAT, SHIP_COMMANDS, SHIP
 
 #
 SHIP_MOVEMENT
-=========================================================================== 
+===========================================================================
 Once you have purchased your ship and sail, you are ready to sail the seas,
 pillage ships, run cargo, and travel the world. 
 
@@ -12999,12 +13006,12 @@ ship is already docked there, this is a good indicator. To test a spot,
 simply sail alongside the square, slow to 10 speed or less, and attempt to
 maneuver onto the shore. If it works, you found it, if not, DON'T CRASH! :) 
          
-=========================================================================== 
+===========================================================================
 See also: SHIP_COMMNDS, SHIP
 
 #
 SHIP_COMBAT SHIP_BATTLE 
-=========================================================================== 
+===========================================================================
 Combat on the ship system works on the principle of firing arcs, range, 
 targets, and damage. 
 
@@ -13052,7 +13059,7 @@ quite vulnerable there. Also when a ship gets hit, it has a chance of
 getting hit in the sails which makes the ship not able to move as fast 
 (can't move if your sails have big holes in it), and even possibly, with 
 enough hits, the sail can get completely destroyed, making the ship 
-immobile, or basically dead in the water - a sitting duck. 
+immobile, or basically dead in the water -a sitting duck. 
 
 Next suggested reading: "help SHIP_CARGO" 
 If you don't like cargo: "help SHIP_LOOKS" 
@@ -13071,12 +13078,12 @@ afterwards. You can also do this yourself (just don't die on THEIR ship).
 After Sinking a ship, use the command "Get Money" to collect the prize
 money for sinking your enemy.
 
-=========================================================================== 
+===========================================================================
 See also: SHIP_LOOKS, SHIP_COMMANDS, SHIP
 
 #
 SHIP_CARGO 
-=========================================================================== 
+===========================================================================
 
 Space
 ---------------------------------------------------------------------------
@@ -13106,7 +13113,7 @@ Half and half
      (tune your ship to travel about 40-70 when hauling cargo) 
 Maximum cargo, Minimum speed 
      (tune your ship to barely any sails or speed, but once you get there, 
-      you'll be RICH - this is very hard without weapons - which take up 
+      you'll be RICH -this is very hard without weapons -which take up 
       valuable cargo space) 
 
 Finally, to buy cargo, stand on the dock, and type "buy cargo #" where # is 
@@ -13138,7 +13145,7 @@ Would rather live and escape than sink to the bottom of the ocean, you can
 type "order jettison cargo" and your actual top speed will now match your
 listed top speed, allowing you to escape. 
 
-=========================================================================== 
+===========================================================================
 See also: SHIP_COMMANDS, SHIP
 
 #
@@ -13156,21 +13163,21 @@ Commands at a Dock (Most of these only at a Main dock)
 ---------------------------------------------------------------------------
 List
 List Cargo
-Summon Ship - only main docks in a ZONE
-Buy <*> {Name in ANSI} - for buying ship or upgrading ship
+Summon Ship -only main docks in a ZONE
+Buy <*> {Name in ANSI} -for buying ship or upgrading ship
 Buy Sail <*>
 Buy Weapon <*> <F/R/P/S>
 Buy Cargo <*>
 Sell Cargo
 Repair <armor/internal/sail/weapon> <F/R/P/S/All>
 Reload <Weapon */All>
-Enter *.ship -or- Enter <owner name> -or- Enter *.<shiptype>
+Enter *.ship -or-Enter <owner name> -or-Enter *.<shiptype>
 
 Commands on a Ship
 ---------------------------------------------------------------------------
 Order Undock
 Order Maneuver <D>
-Order Heading <*> or <D> - * is an angle measured clockwise from north
+Order Heading <*> or <D> -* is an angle measured clockwise from north
 Order Speed <*>
 Order Anchor
 Order Ram
@@ -13190,13 +13197,13 @@ Scan <ID>
 Fire <Weapon *>
 Frag Ship
 Get Money
-Disembark - only from the edge of a ship for large ships
+Disembark -only from the edge of a ship for large ships
 ===========================================================================
 See also: SHIP
 
 #
 SHIP_LOOKS 
-=========================================================================== 
+===========================================================================
 
 Look Out
 ---------------------------------------------------------------------------
@@ -13211,7 +13218,7 @@ Look Tactical
 look tactical (optional parameters are <X> <Y>) 
 
 This will show you a tactical map centered on you (or x,y with 50,50 
-being the center of the map - ie YOU). It is displayed as a hex grid and 
+being the center of the map -ie YOU). It is displayed as a hex grid and 
 any nearby ships will be displayed according to their ID. The Hex grid is 
 the square setup basically "converted" to a hex grid, so it is not always 
 perfect in appearance. If the optional parameters <X> and <Y> are given the
@@ -13246,17 +13253,17 @@ This will show your percent chance to hit with a specific weapon.
 
 Look Sight <weapon number> 
 ---------------------------------------------------------------------------
-If your have a target this command will show you your percentage to hit 
+If your have a target this command will show you your percentage to hit
 the current locked target with that particular weapon. 
 
 Look Contacts
 ---------------------------------------------------------------------------
 This will display a list of all ships within a 35 square radius of your 
 ship. This is the heart of getting info on your target. The list is broken 
-into several parts and will look kinda like this: 
+into several parts and will look kinda like this:
 
 Contact listing 
-=============================================== 
+===============================================
 [AN] 'NorgDog'         X:53  Y:50  Z:0   R:3.0   B:90  H:0   S:0 |S 
 
 "AN" is the ship's ID this is the parameter you pass to lock to lock onto 
@@ -13284,7 +13291,7 @@ Norgdog.
 
 Next suggested reading: "help SHIP_COMMANDS" 
 
-=========================================================================== 
+===========================================================================
 See also: SHIP_COMMANDS, SHIP
 
 # 
@@ -13348,7 +13355,7 @@ causing him to be less of a threat to the caster.
 See also: LIONRAGE
 
 #
-SHRIEK (Innate Skill)
+SHRIEK (Innate)
 ===========================================================================
 Area of effect: <victim>
 Aggressive:     Yes
@@ -13365,7 +13372,7 @@ before they can again strain their range to such a high limit.
 See also: DISHARMONIST, BARD
 
 #
-SIDESTEP (Reflexive Skill)
+SIDESTEP (Skill)
 ===========================================================================
 "Sidestep" is a reflexive skill that improves the mount's success at 
 dodging attacks, with or without a rider. 
@@ -13456,7 +13463,7 @@ NOTE: Type "skill" to see a list of your character's skills are current
 ===========================================================================
 
 #
-SKILL_ALCHEMIST (Information)
+SKILL_ALCHEMIST (General Information)
 ===========================================================================
 
 The following is a list of all the skills available to the Alchemist
@@ -13537,7 +13544,7 @@ Anti-Paladin Specializations
 See also: ANTI-PALADIN
 
 #
-SKILL_AVENGER (Information)
+SKILL_AVENGER (General Information)
 ===========================================================================
 The following is a list of all skills available to the Avenger class:
 
@@ -13677,7 +13684,7 @@ NOTE:           Spell circles are gained at levels 6, 11, 16, 21, 26, 31,
                 <specname> for more information.
 
 Cleric Specializations
----------------------------------------------------------------------------  
+---------------------------------------------------------------------------
 Healer, Holyman, Zealot
 
 ===========================================================================
@@ -13726,7 +13733,7 @@ Air Magus, Fire Magus, Earth Magus, Water Magus
 See also: CONJURER
                 
 #
-SKILL_DREADLORD (Information)
+SKILL_DREADLORD (General Information)
 ===========================================================================
 The following is a list of all skills available to the Dreadlord class:
 
@@ -13753,7 +13760,7 @@ See also: DREADLORD
 
 #
 SKILL_DRUID (General Information)
-===========================================================================                                                                              
+===========================================================================                                                                             
 The following is a list of all the skills and spells available to the
 Druid class:
 
@@ -13792,7 +13799,7 @@ NOTE:           Spell circles are gained at levels 6, 11, 16, 21, 26, 31,
                 <specname> for more information.
                
 Druid Specializations
----------------------------------------------------------------------------  
+---------------------------------------------------------------------------
 Forest Druid, Storm Druid
 
 ===========================================================================
@@ -13800,7 +13807,7 @@ See also: DRUID, COMMUNE, TERRAIN
 
 #
 SKILL_ETHERMANCER (General Information)
-=========================================================================== 
+===========================================================================
 The following is a list of all the skills and spells available to the
 Ethermancer class:
 
@@ -13831,10 +13838,10 @@ NOTE:            Spell circles are gained at levels 6, 11, 16, 21, 26, 31,
                  information.
 
 Ethermancer Specializations
----------------------------------------------------------------------------  
+---------------------------------------------------------------------------
 Windtalker, Frost Magus, Cosmomancer
 
-=========================================================================== 
+===========================================================================
 See also: ETHERMANCER, TUPOR
 
 #
@@ -13957,7 +13964,7 @@ Spells
 12th circle:    Create Greater Dracolich
 
 Necromancer Specializations
----------------------------------------------------------------------------  
+---------------------------------------------------------------------------
 Diabolis, Necrolyte, Reaper
 
 ===========================================================================
@@ -14003,7 +14010,7 @@ NOTE:           Spell circles are gained at levels 6, 11, 16, 21, 26, 31,
                 <specname> for more information.
 
 Paladin Specializations
----------------------------------------------------------------------------  
+---------------------------------------------------------------------------
 Cavalier, Crusader
                 
 ===========================================================================
@@ -14145,7 +14152,7 @@ See also: FIGHTER, RANGER, "SPELL CIRCLE", "SPELL SYSTEM", "SPELL SLOT",
           CAST, "SPELL FAILURE", CASTER, MEMORIZE, SKILLS, WEAPONS, SCRIBE
 
 #
-SKILL_REAVER (Information)
+SKILL_REAVER (General Information)
 ===========================================================================
 The following is a list of all the skills available to the Reaver class.
 
@@ -14182,7 +14189,7 @@ See also: WARRIOR, SORCERER, WEAPONS, SKILLS, "FLAME REAVER",
           "BLOOD REAVER"
 
 #
-SKILL_ROGUE (Information)
+SKILL_ROGUE (General Information)
 ===========================================================================
 The following is a list of all skills available to the Rogue class:
 
@@ -14248,7 +14255,7 @@ Anguish&n,
 12th circle:    &+WGreater Spirit Anguish&n
 
 Shaman Specializations
----------------------------------------------------------------------------  
+---------------------------------------------------------------------------
 Elementalist, Animalist, Spiritualist
 
 ===========================================================================
@@ -14334,7 +14341,7 @@ NOTE:           Spell circles are gained at levels 6, 11, 16, 21, 26, 31,
                 Use help <spellname> | <skillname>  for more information.
 
 Warlock Specializations
----------------------------------------------------------------------------  
+---------------------------------------------------------------------------
 There are no specializations available to Warlocks at this time.
 
 ===========================================================================
@@ -14423,7 +14430,7 @@ amount dependent on the proficiency of the caster.
 ===========================================================================
 
 #
-SNEAK (Skill/Innate Ability)
+SNEAK (Skill)
 ===========================================================================
 Syntax:         sneak (for Assassin, Unholy-Piper, Bard)
                 sneak off
@@ -14506,70 +14513,70 @@ List of subcommands
 -------------------
 
 &+Wsociety&n
-soc - displays a list of members and various info about them depending
+soc -displays a list of members and various info about them depending
       on your rank. Members higher in rank than you are only shown if online.
       Also displays some info on the association to higher ranks.
       Finally it gives a list of people ostracized by your association.
 
 &+Wsociety apply member&n
-soc a Hero - applies to the (senior or higher) member Hero of an association
+soc a Hero -applies to the (senior or higher) member Hero of an association
              for membership in his association.
-soc a me - clears an existing application to an association.
+soc a me -clears an existing application to an association.
 
 &+Wsociety enroll applicant&n
-soc e Newone - enrolls Newone to the association, if he has applied for
+soc e Newone -enrolls Newone to the association, if he has applied for
                membership first.
 
 &+Wsociety kickout member&n
-soc k Twink - kicks member Twink out of the association, erasing his name
+soc k Twink -kicks member Twink out of the association, erasing his name
               in the member list. Is also used to delete names from the
               ostracism list.
 
 &+Wsociety secede [confirm]&n
-soc s - just displays a warning message that "soc s confirm" has to be typed
-soc s confirm - the member leaves the association. All his data is erased
-                from the member list - except if he was a declared enemy.
+soc s -just displays a warning message that "soc s confirm" has to be typed
+soc s confirm -the member leaves the association. All his data is erased
+                from the member list -except if he was a declared enemy.
                 Then he is automatically put on the ostracism list.
 
 &+Wsociety ostracize name&n
-soc o Anti - puts the name "Anti" on the ostracism list. The association's
+soc o Anti -puts the name "Anti" on the ostracism list. The association's
              guards will then attack any person with the name "Anti" as
              if they had the rank enemy in the association.
 
 &+Wsociety rank name change&n
-soc r Lucky 2 - the member Lucky is promoted by two ranks.
-soc r Noluck -3 - the member Noluck is demoted by three ranks.
+soc r Lucky 2 -the member Lucky is promoted by two ranks.
+soc r Noluck -3 -the member Noluck is demoted by three ranks.
                    Note that the minimum mortal rank obtainable with this
                    normal (member) and the maximum is leader.
 
 &+Wsociety punish name&n
-soc p Arrggh - the first punish puts member Arrggh on parole.
-soc p Arrggh - the second one declares Arrggh as enemy, thus making the
+soc p Arrggh -the first punish puts member Arrggh on parole.
+soc p Arrggh -the second one declares Arrggh as enemy, thus making the
                association guards aggressive to him. The rank subcommand
                (see above) can be used to reinstate Arrggh, but only a
                leader can do this once he is of enemy rank.
 
 &+Wsociety challenge member&n
-soc c Bigger - (this is not allowed by all association) this challenges a
+soc c Bigger -(this is not allowed by all association) this challenges a
                member of the next higher rank for his position. This is
                a political command, there is no auto-attack. The outcome
                of the challenge depends mainly on experience and the
                looser faces tough penalties.
 
 &+Wsociety name rank_keyword new_rank_name&n
-soc n enemy Hunted by - the new rank name of the enemy rank is "Hunted by".
+soc n enemy Hunted by -the new rank name of the enemy rank is "Hunted by".
                         A list of rank_keywords and current names for them
                         is shown to the leader with the "soc" list.
-soc n l Master of - the rank keywords can be abbreviated as well, here "l"
+soc n l Master of -the rank keywords can be abbreviated as well, here "l"
                     stands for leader rank, now called "Master of".
-soc n normal - without a new rank name, the rank name is wiped and in the
+soc n normal -without a new rank name, the rank name is wiped and in the
                title only the association name is shown.
                ANSI can be used in rank names. Note that the association name
                is pasted directly behind the rank name, so often a trailing
                space is necessary in the given rank name.
 
 &+Wsociety home&n
-soc h - set your hometown and birthplace to your guild hall. You must be 
+soc h -set your hometown and birthplace to your guild hall. You must be 
         inside your hall for it to work.
 
 * The following money commands accept multiple arguments for "money" and
@@ -14577,34 +14584,34 @@ soc h - set your hometown and birthplace to your guild hall. You must be
 * example would be: "10 plat 2 gc 3 s 5 copper".
 
 &+Gsociety fine name money&n
-soc f Wrong 20 p 10 sc - issues a fine of 20 platinum and 10 silver coins to
+soc f Wrong 20 p 10 sc -issues a fine of 20 platinum and 10 silver coins to
                          member Wrong of the association.
-soc f Wrong -30 plat - subtracts 30 plat from the debt Wrong has. If he has
+soc f Wrong -30 plat -subtracts 30 plat from the debt Wrong has. If he has
                        less than 30 p debts, then his debt is set to zero.
-soc f all 20 gold - issues a fine of 20 gold (for example as membership fee)
+soc f all 20 gold -issues a fine of 20 gold (for example as membership fee)
                     to everybody. Note that one can fine only lower ranks, so
                     in truth this would give only fines to all lower ranks.
 
 &+Gsociety deposit money&n
-soc d 12 platinum 30 cc - deposits 12 plat and 30 copper into the association
+soc d 12 platinum 30 cc -deposits 12 plat and 30 copper into the association
                           account. Any debts the member has are lessened
                           accordingly. This subcommand can be used by
                           applicants to pay an entrance fee.
 
 &+Wsociety withdraw money&n
-soc w 100 plat - withdraws 100 platinum coins from the association account.
+soc w 100 plat -withdraws 100 platinum coins from the association account.
 
 &+Wsociety title name new_title
-soc t billybob &+YCorn&+WHusker &+CSupreme&n - sets BillyBob's 'rank'
+soc t billybob &+YCorn&+WHusker &+CSupreme&n -sets BillyBob's 'rank'
 title to CornHusker Supreme.  this title is never overwritten by new
 rank titles as long as the "no title change" toggle is set (see below).
 this command can only be used by guild leaders (to title other players),
 or deputies and officers (to title themselves).
 
 &+Wsociety toggle_title_flag
-soc g - toggles your 'no title change' flag
+soc g -toggles your 'no title change' flag
 ===========================================================================
-See also: CONSTRUCT, GUILD, GUILDHALL, "SOCIETY EXAMPLES"
+See also: CONSTRUCT, GUILD, GUILDHALL, "SOCIETY EXAMPLES", TITLE
 
 #
 "SOCIETY EXAMPLES"
@@ -14612,8 +14619,8 @@ See also: CONSTRUCT, GUILD, GUILDHALL, "SOCIETY EXAMPLES"
 
 Becoming a founding leader:
 
-1) soc secede - to secede from the association one is joined up in
-2) soc apply me - to clear applications to other associations
+1) soc secede -to secede from the association one is joined up in
+2) soc apply me -to clear applications to other associations
 3) decide on the association name and whether challenge will be allowed
 4) talk to association god(s).
 
@@ -14666,8 +14673,8 @@ God: tell Dumbone Nice try, goodbye.   *... a god caught him trying.*
 God: society punish Dumbone    *Dumbone is made enemy and since he is in
 God: society punish Dumbone     guildhall the guards kill him.*
 
-<Note - gods can access all your mortal commands and outrank everybody!
-Furthermore gods can BAN a mortal from all associations - this happens
+<Note -gods can access all your mortal commands and outrank everybody!
+Furthermore gods can BAN a mortal from all associations -this happens
 to Dumbone now after the god had his fun having him killed.>
 ===========================================================================
 See also: SOCIETY, ASSOCIATIONS, GUILDHALL, GUILD
@@ -15143,7 +15150,7 @@ taking the potency for its own.
 See also: DEATHLORD
 
 #
-SPACIAL FOCUS (Innate Ability)
+SPACIAL FOCUS (Innate)
 ===========================================================================
 With the power of this ability, the Psycheporter can open his mind to a
 much wider range of wormhole targets within a certain distance. They have 
@@ -15194,26 +15201,26 @@ See also: LANGUAGES
 #
 SPEC_LIST (General Information)
 ===========================================================================
-  - Alchemist: Battle-Forger
-  - Anti-Paladin: Hellspawn, Dark Knight, Demonic Rider
-  - Bard: Disharmonist, Scoundrel, Minstrel
-  - Berserker: Mauler, Ragelord
-  - Cleric: Healer, Holyman, Zealot
-  - Conjurer: Air Magus, Water Magus, Fire Magus, Earth Magus
-  - Dreadlord: Deathlord, Shadowlord
-  - Druid: Storm Druid, Forest Druid
-  - Ethermancer: Windtalker, Frost Magus, Cosmomancer
-  - Mercenary: Brigand, Bounty Hunter
-  - Monk: Dragon disciple, Elaphidist
-  - Necromancer: Diabolis, Necrolyte, Reaper
-  - Paladin: Crusader, Cavalier
-  - Ranger: Blademaster, Huntsman
-  - Reaver: Flame reaver, Blood reaver
-  - Rogue: Assassin, Bravo, Thief
-  - Shaman: Elementalist, Animalist, Spiritualist
-  - Sorcerer: Shadowmage, Wizard, Wildmage
-  - Unholy-Piper: Disharmonist, Scoundrel, Minstrel
-  - Warrior: Swordsman, Guardian
+  -Alchemist: Battle-Forger
+  -Anti-Paladin: Hellspawn, Dark Knight, Demonic Rider
+  -Bard: Disharmonist, Scoundrel, Minstrel
+  -Berserker: Mauler, Ragelord
+  -Cleric: Healer, Holyman, Zealot
+  -Conjurer: Air Magus, Water Magus, Fire Magus, Earth Magus
+  -Dreadlord: Deathlord, Shadowlord
+  -Druid: Storm Druid, Forest Druid
+  -Ethermancer: Windtalker, Frost Magus, Cosmomancer
+  -Mercenary: Brigand, Bounty Hunter
+  -Monk: Dragon disciple, Elaphidist
+  -Necromancer: Diabolis, Necrolyte, Reaper
+  -Paladin: Crusader, Cavalier
+  -Ranger: Blademaster, Huntsman
+  -Reaver: Flame reaver, Blood reaver
+  -Rogue: Assassin, Bravo, Thief
+  -Shaman: Elementalist, Animalist, Spiritualist
+  -Sorcerer: Shadowmage, Wizard, Wildmage
+  -Unholy-Piper: Disharmonist, Scoundrel, Minstrel
+  -Warrior: Swordsman, Guardian
 
 NOTE: Use help <specname> for information on a specific specialization.
 ===========================================================================
@@ -15269,18 +15276,18 @@ of spells in each circle which fit into "Spell Slots". As a caster's level
 increases he learns more magic and can draw from more circles as well as 
 regenerate more spells from each circle. The circles are gained as follows:
 
-        Level 1 -  1st Circle
-        Level 6 -  2nd Circle
-        Level 11 - 3rd Circle
-        Level 16 - 4th Circle
-        Level 21 - 5th Circle
-        Level 26 - 6th Circle
-        Level 31 - 7th Circle
-        Level 36 - 8th Circle
-        Level 41 - 9th Circle
-        Level 46 - 10th Circle
-        Level 51 - 11th Circle
-        Level 56 - 12th Circle
+        Level 1 -1st Circle
+        Level 6 -2nd Circle
+        Level 11 -3rd Circle
+        Level 16 -4th Circle
+        Level 21 -5th Circle
+        Level 26 -6th Circle
+        Level 31 -7th Circle
+        Level 36 -8th Circle
+        Level 41 -9th Circle
+        Level 46 -10th Circle
+        Level 51 -11th Circle
+        Level 56 -12th Circle
 
 See the specific help files on each class to find out which spells belong
 to each circle for any given class. There is a slight chance of spell
@@ -15355,9 +15362,9 @@ This spell will temporarily increase the recipient's dexterity.
 See also: "ENHANCE DEXTERITY", DEXTERITY, STATISTICS
 
 #
-"SPELL, STRENGTH" (Spell/Innate Ability)
+"SPELL, STRENGTH" (Spell)
 ===========================================================================
-Syntax:         innate strength (for innate)
+Syntax:         inn strength (for innate)
 Area of effect: <victim> (for spell) | <self> (for innate)
 Aggressive:     No
 Cumulative:     No 
@@ -15555,7 +15562,7 @@ Type of spell:  Protection
 This spell provides you with the ability to fade and turn invisibile from
 the view of others, and grants you the ability to move silently and travel 
 from place to place without others noticing.
-============================================================= =============
+===========================================================================
 See also: SNEAK, UD-SNEAK, "OUTDOOR SNEAK", INVISIBILITY, 
           "DETECT INVISIBILITY"
 
@@ -15568,7 +15575,7 @@ weapon.
 See also: NECROLYTE, WEAPONS
 
 #
-STANCES (Grouping)
+STANCES
 ===========================================================================
 Syntax: <stance none|offensive|defensive>
 
@@ -15658,9 +15665,9 @@ transformed into snakes.
 ===========================================================================
 
 #
-"STONE SKIN" (Spell/Innate Ability)
+"STONE SKIN" (Spell)
 ===========================================================================
-Syntax:         innate stone (for Wights)
+Syntax:         inn stone (for Wights)
 Area of effect: <victim> (for spell)  | <self> (for innate)
 Aggressive:     No
 Cumulative:     No
@@ -15862,7 +15869,7 @@ imbued with their name.
 ===========================================================================
 
 #
-"SUMMON HORDE" (Innate Skill)
+"SUMMON HORDE" (Innate)
 ===========================================================================
 Syntax:         summon horde
 Aggressive:     on demand
@@ -15874,7 +15881,7 @@ a short amount of time to help the Orc in his battles.
 ===========================================================================
 
 #
-"SUMMON MOUNT" (Innate Skill)
+"SUMMON MOUNT" (Innate)
 ===========================================================================
 Syntax:         summon mount
 
@@ -15900,7 +15907,7 @@ See also: BLINDNESS, "CURE BLIND"
 
 #
 "SUPERNOVA" (Spell) 
-===========================================================================  
+=========================================================================== 
 Area of effect: <room> 
 Aggressive: Yes 
 Cumulative: No 
@@ -15914,7 +15921,7 @@ in disalignment.
 See also: ETHERMANCER, COSMOMANCER
 
 #
-SURPRISE (Reflexive Skill)
+SURPRISE (Skill)
 ===========================================================================
 High proficiency at this skill increases the odds of a first hit when
 attacking an opponent.
@@ -16113,7 +16120,7 @@ Foot Inn. The inn is located roughly in the center of the city, directly in
 front of the city's constantly-bubbling fountain. To the west of the Inn 
 you will find the city's resident cleric-physician, who will tend to your 
 wounds for a small fee. Further west are the stairs to the Shr'nn Mesa, 
-which leads to the city's prison - Caer Tannad. Upon further exploration
+which leads to the city's prison -Caer Tannad. Upon further exploration
 you'll be happy to find many guild towers complete with shops and teachers,
 and also the main cargo port for Tharnadia lies here. The northenmost part
 of the city opens up to Tharnadia's port beaches, where one can take a
@@ -16138,7 +16145,7 @@ walking trails.
 See also: HOMETOWNS
 
 #
-"THOUGHT BEACON" (Psycheporter Spell)
+"THOUGHT BEACON" (Spell)
 ===========================================================================
 Area of effect: <room>
 Aggressive:     No
@@ -16180,7 +16187,7 @@ vulnerability from magical attacks.
 ===========================================================================
 
 #
-THIEF (Sub-class of: Rogue)
+THIEF (Specialization)
 ===========================================================================
 Thieves are masters of stealth, deceit, concealment, and they'll relieve
 you of your valuables if you don't watch your purse. The main cause of
@@ -16287,7 +16294,7 @@ hand-to-hand.
 See also: "RANGE WEAPONS", FIRE
 
 #
-"THROW LIGHTNING" (Innate Ability)
+"THROW LIGHTNING" (Innate)
 ===========================================================================
 Area of effect: <victim>
 Aggressive:     Yes
@@ -16347,22 +16354,22 @@ the victim dies or the illusion has taken enough damage!
 ===========================================================================
 
 #
-TITLE (Misc)
+TITLE (General Information)
 ===========================================================================
 Duris is a fantasy based mud and as such we expect the players to have 
 fantasy based titles, if they have them at all. What a proper title is
 might be different for most but there are some basics. 
 
-	- Do not use foul language
-	- Do not use racial slurs
- 	- Keep it in character
+	-Do not use foul language
+	-Do not use racial slurs
+ 	-Keep it in character
 
 Duris may not be a role-play mud but that does not mean we don't work hard 
 to try to cultivate a good fantasy feeling while online. Any title that 
 breaks this is considered a bad title and may be subject to change. If guild 
 ranks are out of line the guild is subject to be disbanded.
 ===========================================================================
-See also: GUILD 
+See also: GUILD
 
 #
 TOGGLE (Command)
@@ -16654,8 +16661,9 @@ cut down on spam.
 See also: TOGGLE
 
 #
-TOGGLE_WIMPY (Disabled Command)
+TOGGLE_WIMPY (Command)
 ===========================================================================
+&+RThis command is currently disabled&n
 Syntax:         toggle wimpy <number of hitpoints>
 
 This is an auto-flee option. If your hitpoints drop below the specified
@@ -16700,7 +16708,7 @@ option is set to OFF. It is by default OFF.
 See also: TOGGLE, WEBSITE
 
 #
-TOLM (Information)
+TOLM (General Information)
 ===========================================================================
 "Tolm" is often referred to a player on Duris, who can often be found
 repeating such phrases as "wuss", "enjoy", "rofl", and "at once". If in
@@ -16722,15 +16730,15 @@ TOTEMS (General Information)
 Totems are required by Shamans to cast their spells, as they allow them to
 focus their energies into magic.
 
-Shaman spells are divided into "spheres" - animal, elemental, and
+Shaman spells are divided into "spheres" -animal, elemental, and
 spiritual. Lesser totems are used to cast spells in a certain sphere below
 6th circle, while greater totems are used to cast those spells 6th and
 over. Totems can also grant more than one sphere or high/low-level spells.
 Totems must be held while casting (but not required during memorizing).
 
 Newbie Shamans load with three totems (raven, limestone, ivory), each of
-which grants the lower spells for a certain sphere. (raven = animal,
-limestone = elemental, ivory = spiritual).
+which grants the lower spells for a certain sphere. (raven =animal,
+limestone =elemental, ivory =spiritual).
 
 Higher totems can be bought at various Shaman-related stores around the
 mud, as well as created by the "Minor Creation" spell.
@@ -16826,7 +16834,7 @@ long enough for the thief to make a quick retreat.
 See also: BASH, SPRINGLEAP
 
 #
-"TRIPLE ATTACK" (Reflexive Skill) 
+"TRIPLE ATTACK" (Skill) 
 ===========================================================================
 This skill is automatic and gives you an extra attack for each combat
 round, on top of the extra attacks you already get from double attack. The
@@ -16875,7 +16883,7 @@ is NOT easy.
 See also: RACES, RACEWARS, INNATE, INFRAVISION, BODYSLAM
 
 #
-TROPHY (General Information/Command)
+TROPHY (General Information)
 ===========================================================================
 Syntax:    trophy
 
@@ -16912,7 +16920,7 @@ See also: "DETECT GOOD", "DETECT EVIL", "DETECT MAGIC", "SENSE LIFE",
           "DETECT INVISIBILITY", "SHADOW VISION"
 
 #
-TUPOR (Innate Ability)
+TUPOR (Innate)
 ===========================================================================
 Syntax:         tupor (while resting or reclined and sleeping)
 
@@ -16946,7 +16954,7 @@ advantage, and/or makes requests that are against the rules because
 he/she can't accept his/her own mistakes.
 
 #
-UD-SNEAK "UD SNEAK" (Innate Ability)
+UD-SNEAK "UD SNEAK" (Innate)
 ===========================================================================
 This signifies the ability to naturally sneak in the underdark and
 underground terrain.
@@ -16954,7 +16962,7 @@ underground terrain.
 See also: SNEAK, "OUTDOOR SNEAK", "SQUERRIKS SNEAKY WAYS"
 
 #
-ULTRAVISION (Innate Ability)
+ULTRAVISION (Innate)
 ===========================================================================
 Ultravision is the ability to see in darkness as though it were broad
 daylight.
@@ -16962,7 +16970,7 @@ daylight.
 See also: INNATE, INFRAVISION
 
 #
-"UNARMED DAMAGE" (Reflexive Skill)
+"UNARMED DAMAGE" (Skill)
 ===========================================================================
 When proficient in this skill, the hitter may do extra damage while not
 wielding weapons.
@@ -16988,7 +16996,7 @@ to harness them unto itself, protecting it from lesser beings of Undead.
 See also: DREADLORD, SKILL_DREADLORD
 
 #
-"UNHOLY ALLIANCE" (Innate Ability)
+"UNHOLY ALLIANCE" (Innate)
 ===========================================================================
 "Unholy Alliance" is a passive innate ability possessed by the Reaper
 Necromancer that insures that their pets will never go "rogue".
@@ -17109,7 +17117,7 @@ Innate Abilities: ultravision, vampiric touch, bite
 See also: WARLOCK, SKILL_WARLOCK
 
 #
-"VAMPIRIC TOUCH" (Spell/Innate Ability)
+"VAMPIRIC TOUCH" (Spell)
 ===========================================================================
 Area of effect: <self>
 Aggressive:     No
@@ -17120,6 +17128,8 @@ Type of spell:  Generic
 This spell temporarily transforms the person's hands into magical lifeforce 
 leeches.  If in battle and unarmed, your hands will suck away your 
 opponent's life force, granting some of it to you.
+
+This can also be an innate ability.
 ===========================================================================
 
 #
@@ -17203,7 +17213,7 @@ Help Files Last updated by: &+BWeebler&n
 See also: HELP
 
 #
-"VICIOUS ATTACK" (Reflexive Skill)
+"VICIOUS ATTACK" (Skill)
 ===========================================================================
 "Vicious Attack", when it occurs, reaches under the guard of the victim, 
 dealing a vicious blow.
@@ -17278,7 +17288,7 @@ this spell to take effect.
 See also: FORAGE, INGREDIENTS
 
 #
-"VISION OF THE DEAD" (Innate Ability)
+"VISION OF THE DEAD" (Innate)
 ===========================================================================
 This passive innate ability allows the Necrolyte to sense any corpses that
 are within his range of view while traversing the world.
@@ -17582,7 +17592,7 @@ order for this spell to be beneficial.
 See also: HEAL
 
 #
-WATERBREATH (Innate Ability)
+WATERBREATH (Innate)
 ===========================================================================
 This passive innate ability will allow the Water Magus to breathe normally
 while underwater.
@@ -17764,7 +17774,7 @@ weapons (unless you are a thri-kreen).
 See also: WEAR, REMOVE, EQUIPMENT, INVENTORY, "DUAL WIELD"
 
 #
-WIGHT (Information)
+WIGHT (General Information)
 ===========================================================================
 Wights are a race of undead creatures that appear to be a cross between a
 zombie and a skeleton. A wight is about the same height as an ogre but
@@ -17798,12 +17808,12 @@ Spells
 See also: SORCERER, WILDMAGIC, "CHAOTIC RIPPLE"
 
 #
-WILDMAGIC (Innate Ability)
+WILDMAGIC (Innate)
 ===========================================================================
 This chaotic innate ability grants the specialized Sorcerer vastly more 
 powerful magical attacks, with the drawback that these attacks may randomly 
 strike others in the room, whether they are friend or foe.
-====================================================================== ====
+===========================================================================
 
 #
 WIMPY (Disabled)
@@ -17843,7 +17853,7 @@ required to "Tupor".
 See also: TUPOR
 
 #
-WINDTALK (Innate Ability)
+WINDTALK (Innate)
 ===========================================================================
 "Windtalk" allows the Ethermancer to communicate with members of their 
 group while tuporing.
@@ -18035,11 +18045,11 @@ to the ground.
 ===========================================================================
 
 #
-WRITE (World Command)&n
+WRITE (Command)
 ===========================================================================
-Syntax:  board write <subject>    <-- one line, then press ENTER
-         <balance of message>     <-- your message
-         /s                       <-- to exit message, then press ENTER
+Syntax:  board write <subject>    <--one line, then press ENTER
+         <balance of message>     <--your message
+         /s                       <--to exit message, then press ENTER
 
 This is used to write a message on a bulletin board or a piece of paper.
 Please keep profanity out of your messages, as they can be read by anyone
