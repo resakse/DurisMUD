@@ -7,7 +7,8 @@ ulimit -c unlimited
 while [ $RESULT != 0 ]; do
   if [ $RESULT != 52 ]; then
     if [ -f src/dms_new ]; then
-      mv dms dms.old
+			DATESTR=`date +%C%y-%m-%d_%H.%M.%S`
+		  mv dms dms.$DATESTR
       mv src/dms_new dms
     fi
     if [ -f areas/tworld.wld ]; then
@@ -37,8 +38,8 @@ while [ $RESULT != 0 ]; do
   rm -rf /var/www/html/duris_files/*
   cp /duris/mud/lib/information/news /var/www/html/duris_files/
 
-  echo "Creating cvs log file.."
-  bin/cvs2cl.pl -f lib/information/changelog.cvs src lib/duris.properties
+  echo "Creating svn log file.."
+  /usr/local/bin/svn2cl -f lib/information/changelog.svn src
 
   echo "Generating list of functions.."
   nm --demangle dms | grep " T " | sed -e 's/[(].*[)]//g' > lib/event_names
