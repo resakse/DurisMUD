@@ -313,22 +313,20 @@ int MonkAcBonus(P_char ch)
 {
   int      b;
 
-  if (IS_PC(ch) && GET_CLASS(ch, CLASS_MONK))
+  if(GET_CLASS(ch, CLASS_MONK))
   {
     /*
        base bonus level * 2
      */
     b = -(2 * GET_LEVEL(ch));
+    // Bonus based on martial arts skill
+    b -= GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS) / 2;
     /*
        4x penalty for encumbering worn items (small allowance for low levels
      */
     b += MAX(0, (4 * (wornweight(ch) - ((66 - GET_LEVEL(ch)) / 6))));
 
-    return BOUNDED(-100, b, 0);
-    /*
-       ??      a = MIN((b * GET_LEVEL(ch) / 20), (2 * b)) - 3 * GET_LEVEL(ch);
-       return a;
-     */
+    return BOUNDED(-175, b, 0);
   }
   else
     return 0;
@@ -336,8 +334,11 @@ int MonkAcBonus(P_char ch)
 
 void MonkSetSpecialDie(P_char ch)
 {
-  if (IS_PC(ch) && (ch->equipment[WIELD] || ch->equipment[WEAR_SHIELD] ||
-                    ch->equipment[HOLD] || ch->equipment[SECONDARY_WEAPON]))
+  if(IS_PC(ch) &&
+     (ch->equipment[WIELD] ||
+      ch->equipment[WEAR_SHIELD] ||
+      ch->equipment[HOLD] ||
+      ch->equipment[SECONDARY_WEAPON]))
   {
     ch->points.damnodice = 1;
     ch->points.damsizedice = 1;
@@ -345,105 +346,105 @@ void MonkSetSpecialDie(P_char ch)
   }
   switch (GET_LEVEL(ch))
   {
-  case 1:
-  case 2:
-  case 3:
-    ch->points.damnodice = 1;
-    ch->points.damsizedice = 5;
-    break;
-  case 4:
-  case 5:
-  case 6:
-  case 7:
-    ch->points.damnodice = 1;
-    ch->points.damsizedice = 6;
-    break;
-  case 8:
-  case 9:
-  case 10:
-  case 11:
-  case 12:
-  case 13:
-  case 14:
-    ch->points.damnodice = 1;
-    ch->points.damsizedice = 8;
-    break;
-  case 15:
-  case 16:
-  case 17:
-  case 18:
-  case 19:
-  case 20:
-  case 21:
-    ch->points.damnodice = 3;
-    ch->points.damsizedice = 5;
-    break;
-  case 22:
-  case 23:
-  case 24:
-  case 25:
-  case 26:
-  case 27:
-  case 28:
-  case 29:
-    ch->points.damnodice = 4;
-    ch->points.damsizedice = 5;
-    break;
-  case 30:
-  case 31:
-  case 32:
-  case 33:
-  case 34:
-    ch->points.damnodice = 4;
-    ch->points.damsizedice = 6;
-    break;
-  case 35:
-  case 36:
-  case 37:
-  case 38:
-    ch->points.damnodice = 4;
-    ch->points.damsizedice = 7;
-    break;
-  case 39:
-  case 40:
-  case 41:
-  case 42:
-  case 43:
-  case 44:
-    ch->points.damnodice = 5;
-    ch->points.damsizedice = 6;
-    break;
-  case 45:
-  case 46:
-  case 47:
-  case 48:
-  case 49:
-    ch->points.damnodice = 5;
-    ch->points.damsizedice = 7;
-    break;
-  case 50:
-  case 51:
-  case 52:
-  case 53:
-  case 54:
-  case 55:
-    ch->points.damnodice = 7;
-    ch->points.damsizedice = 5;
-    break;
-  case 56:
-  case 57:
-  case 58:
-  case 59:
-  case 60:
-  case 61:
-  case 62:
-    ch->points.damnodice = 8;
-    ch->points.damsizedice = 5;
-    break;
-  default:
-    ch->points.damnodice = 1;
-    ch->points.damsizedice = 4;
-    break;
+    case 1:
+    case 2:
+    case 3:
+      ch->points.damnodice = 2;
+      ch->points.damsizedice = 5;
+      break;
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+      ch->points.damnodice = 2;
+      ch->points.damsizedice = 6;
+      break;
+    case 8:
+    case 9:
+    case 10:
+    case 11:
+    case 12:
+    case 13:
+    case 14:
+      ch->points.damnodice = 2;
+      ch->points.damsizedice = 8;
+      break;
+    case 15:
+    case 16:
+    case 17:
+    case 18:
+    case 19:
+    case 20:
+    case 21:
+      ch->points.damnodice = 4;
+      ch->points.damsizedice = 5;
+      break;
+    case 22:
+    case 23:
+    case 24:
+    case 25:
+    case 26:
+    case 27:
+    case 28:
+    case 29:
+      ch->points.damnodice = 5;
+      ch->points.damsizedice = 5;
+      break;
+    case 30:
+    case 31:
+    case 32:
+    case 33:
+    case 34:
+      ch->points.damnodice = 5;
+      ch->points.damsizedice = 6;
+      break;
+    case 35:
+    case 36:
+    case 37:
+    case 38:
+      ch->points.damnodice = 5;
+      ch->points.damsizedice = 7;
+      break;
+    case 39:
+    case 40:
+    case 41:
+    case 42:
+    case 43:
+    case 44:
+      ch->points.damnodice = 6;
+      ch->points.damsizedice = 6;
+      break;
+    case 45:
+    case 46:
+    case 47:
+    case 48:
+    case 49:
+      ch->points.damnodice = 6;
+      ch->points.damsizedice = 7;
+      break;
+    case 50:
+    case 51:
+    case 52:
+    case 53:
+    case 54:
+    case 55:
+      ch->points.damnodice = 7;
+      ch->points.damsizedice = 7;
+      break;
+    case 56:
+    case 57:
+    case 58:
+    case 59:
+    case 60:
+    case 61:
+    case 62:
+      ch->points.damnodice = 8;
+      ch->points.damsizedice = 8;
+      break;
+    default:
+      ch->points.damnodice = 1;
+      ch->points.damsizedice = 4;
+      break;
   }
 }
 
