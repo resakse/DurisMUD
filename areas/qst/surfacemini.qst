@@ -392,6 +392,15 @@ chronomancer wicked scepter~
 &+Wyou must travel to the &+gIsland &+Wof &+BCeothia&+W. There you must brave the very city of time
 &+Wto confront the &+LChronomancer &+Whimself.&+g'&n
 ~
+M
+spiked mace vampire~
+&+GMugflog&+g, the &+yshaman &+gsays to you, '&+WThe mace is one of my favorite items! It grants
+&+Wthe wielder the ability to syphon the lifeforce from the victim with each blow.
+&+WIt is wieldable by all priests and mages. If you're looking for me to make you
+&+Wone, you will have to bring me a &+Yscimitar named &+W'Woundhealer'. This item can
+&+Wonly be found deep within the &+LForest of Mir&+W. I will also require payment in
+&+Wthe form of three &+Rgn&+romi&+Rsh &+Lshopkeeper tokens&+W.'&n
+~
 Q
 ~
 R I 97934
@@ -415,4 +424,11 @@ G I 55552
 G I 55553
 G I 55554
 G I 55238
+Q
+~
+R I 55075
+G I 41916
+G I 55033
+G I 55033
+G I 55033
 S

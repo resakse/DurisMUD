@@ -771,19 +771,6 @@ MA
 qc_action 120~
 &+WBipplewizzlille says to you, 'With the right ingredients, I can make you some really nice potions..'&n
 ~
-MA
-qc_action 90~
-&+WBipplewizzlille says to you, "Have you come across any of the &+Lessences &+Wof the
-&+Wplanes?"
-~
-M
-essence essences~
-&+WBipplewizzlille says, 'Yes, I've been trying to mix up a batch of some
-&+Wreally power potions, but the recipe requires the six distinct essences of
-&+Wthe planar worlds... &+YOgremoch&+W, &+MImix&+W, &+GDemogorgon&+W, &+CYan-c-bin&+W, &+BOlhydra&+W, and
-&+rMenzellon&+W. I will also require a &+Mpro&+mtect&+mion &+Wpotion, an &+Yac&+Wcel&+Yera&+Wtio&+Yn
-&+Wpotion, a &+Lgr&+wa&+Lni&+wt&+Le &+Wpotion, a &+Cfr&+Bos&+Cty &+Wpotion, and a &+Rfi&+re&+Rry &+Wpotion.'&n
-~
 M
 qc_action 80~
 &+WBipplewizzlille says to you, "If you come across any of the &+Lincarnates&+W, you
@@ -831,12 +818,6 @@ Q
 ~
 R I 55204
 R I 55204
-G I 55198
-G I 55199
-G I 55200
-G I 55201
-G I 55202
-G I 55203
 G I 55137
 G I 55136
 G I 55140
@@ -959,16 +940,6 @@ case display~
 &+mdisappointed.&+W'
 
 &+W'&+mIf you are interested, don't hesitate to ask me about specific items..&+W'
-~
-M
-portrait~
-&+WSootfoot sighs and says, 'It's been nearly twelve years since
-&+Wlast saw my family. We lived happily once on a farm far to the
-&+WWest...'
-
-&+W'I went back and looked for my sisters and father, but did not
-&+Wfind any sign of them.. I only hope that my portrait isn't the
-&+Wonly remainder of my family....'&n
 ~
 M
 flaming axe illithid lords~
@@ -1213,10 +1184,6 @@ G I 55169
 G I 55323
 G I 55324
 G I 55325
-Q
-~
-R I 55066
-G I 55077
 S
 #55104
 S
@@ -1491,6 +1458,12 @@ scroll~
 &+WBranay says to you, '&+LI'm not sure where the scroll are from, but
 &+Lthe last adventurer mentioned it was a gift from an Ambassador..&+W'&n
 ~
+M
+nightshade~
+&+WBranay says to you, '&+LFor a small nightshade earring, I will require some nightshade,
+&+Land &+ga &+Lpsychomia &+gp&+Gla&+gnt&+L. I will also require two &+Rgn&+romi&+Rsh &+Lshopkeeper tokens as payment.
+&+LOnce finished, you will have an earring that will periodically mend your wounds.&+W'&n
+~
 Q
 ~
 R I 55343
@@ -1558,6 +1531,13 @@ G I 55346
 G I 55345
 G I 55344
 G I 55343
+Q
+~
+R I 55077
+G I 821
+G I 55246
+G I 55033
+G I 55033
 S
 #55116
 M
@@ -2542,23 +2522,43 @@ seal zarbonesti bronze~
 &+Loften difficult to find. You must speak with him to find out more.&+W'&n
 ~
 M
-~
+gnomish blueprints improvement~
+&+WLancer says to you, 'Ahh, the &+bblueprints&+W! Those are quite valuable, especially
+&+Wto weaponsmiths and armorers. They have used them for years to greatly improve
+&+Wthe quality of their work. Kzantha has something of great value that I want, but
+&+Wis only willing to give me what I ask in return for one of those &+bblueprints&+W. If
+&+Wyou could bring me one, I would be willing to give you a &+Lmask &+Wof high quality.
+&+WThe only place I know where you can obtain one of these is on &+GEvermeet&+W, by visiting
+&+Wthe &+RGr&+rea&+Rt Sc&+rie&+Rnt&+ri&+Rst&+W, Chibbleniffle.'&n
 ~
 M
 wand spider queen~
-&+WLancer says to you, 'Well, those wands are quite powerful. If you happen to bring one
-&+Wto me, I would be willing to give you a weapon of great power, &+Lthe mighty &+Mwar&+mmace
-&+Lnamed '&+MSm&+mi&+Mte&+L'&+W. You must brave a region of the &+MUnderdark &+Wknown as &+bMazzolin&+W.'
+&+WLancer says to you, 'Well, those wands are quite powerful. If you happen to bring
+&+Wone to me, I would be willing to give you a piece of a very powerful weapon. You
+&+Wmust brave a region of the &+MUnderdark &+Wknown as &+bMazzolin&+W.'
 
 &+W'Deep within the &+Ldungeons &+Wof &+bMazzolin &+Wyou will find a young &+cGrey Elf &+Wnamed &+cAeirayne&+W.
 &+WShe is a friend of mine and last I heard, she requires help. Unfortunately the
 &+Wminions of that realm are all to aware of who I am, making it all but impossible to
 &+Wgo help. Please, you must travel through the city and collect all five pieces of
 &+Whematite. Bring them to her. If you tell her I sent you, I'm sure she'll give you
-&+Wone of her famous wands. Bring me this &+Lwand&+W.'
-
-&+W'You must also bring me &+Ma mace named "squidbane"&+W. This is an important part of
-&+Wmaking the warmace. Once I have these items, I will give you this lovely &+Mwar&+mmace&+W.'&n
+&+Wone of her famous wands. Bring me this &+Lwand&+W.'&n
+~
+M
+gem studded dragon hide~
+&+WLancer says to you, 'Many years ago, while I was traveling in the &+yN&+gorth&+yern W&+gild&+ys&+W,
+&+WI came across a strange dungeon within the Treasure Caves. Deep within the cave
+&+Wlives a dangerous red dragon. The hide of this magnificent beast is very valuable,
+&+Wand I would love to give this as a gift to my wife, &+YSierra&+W. Please, bring me this
+&+yhide &+Wand I will gladly give you five artifacts I collected from five different
+&+WIncarnates.'&n
+~
+M
+live snake necklace~
+&+WLancer says to you, 'The &+Gsnake &+Lnecklace &+Wis quite a fancy piece. I used to
+&+Whave one before the clasp broke. Unfortunately, the only place that these
+&+Wnecklaces are found are within &+gThe Chasm of the &+LMisty &+GVale&+W. Please bring
+&+Wme one and I'll reward you with a powerful rod that can mend wounds.'&n
 ~
 Q
 &+W   Lancer cackles an insane glee, '&+LWell done! With this seal I can
@@ -2576,12 +2576,20 @@ R C 350000
 G I 67116
 Q
 ~
-R I 55053
-G I 21320
+R I 55029
+G I 55154
 Q
 ~
-R I 55337
-G I 0
+R I 55550
+R I 55551
+R I 55552
+R I 55553
+R I 55554
+G I 93011
+Q
+~
+R I 33719
+G I 15012
 S
 #55166
 MA
@@ -3459,10 +3467,53 @@ G I 55286
 S
 #55244
 MA
-qc_action 90~
+qc_action~
 &+LA traeling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Lsays, '&+WI prefer flying around to walking
 &+Won the ground!&+L'&n
 ~
+M
+hey hello hi howdy~
+&+LA traveling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Wsays to you, 'Flying around like this takes a lot of energy.
+&+WIt requires quite a bit of &+yplanar &+Ydust &+Wto get one off the ground. You wouldn't
+&+Whappen to have a &+Lpouch &+Wto spare, would you? It would save me a bit of time.'&n
+~
+M
+pouch planar dust~
+&+LA traveling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Wsays to you, 'They're not the easiest to get, but they are definitely
+&+Wworth the effort. If you have one, I would be interested in buying it from you. Unfortunately
+&+WI don't have much to offer in the form of payment, other than a trinket and a few words
+&+Wof wisdom.'&n
+~
+Q
+~
+R E 250000
+R I 0
+G I 55198
+Q
+~
+R E 250000
+R I 0
+G I 55199
+Q
+~
+R E 250000
+R I 0
+G I 55200
+Q
+~
+R E 250000
+R I 0
+G I 55201
+Q
+~
+R E 250000
+R I 0
+G I 55202
+Q
+~
+R E 250000
+R I 0
+G I 55203
 S
 #55251
 S

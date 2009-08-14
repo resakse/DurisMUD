@@ -699,10 +699,8 @@ G 1 826 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 827 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 828 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 421 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 74210 2 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 1715 2 0 100 0 0 0             *    (object type not in this .obj file)
-G 1 1715 2 0 100 0 0 0             *    (object type not in this .obj file)
-G 1 74210 2 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 1715 1 0 100 0 0 0             *    (object type not in this .obj file)
+G 1 74210 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 55393 1 0 100 0 0 0            *    a small vial full of green sludge
 G 1 55394 1 0 100 0 0 0            *    the potion of spiritual protection
 G 1 55395 1 0 100 0 0 0            *    the opaque white potion of regeneration

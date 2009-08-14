@@ -36,6 +36,7 @@ O 0 15001 1 15039 100 0 0 0        * a small spring
 O 0 15002 1 15041 100 0 0 0        * an ancient well
 O 0 15003 1 15052 100 0 0 0        * a granite head
 O 0 15004 1 15063 100 0 0 0        * some ruins
+O 0 67273 2 15063 100 0 0 0        * (object type not in this .obj file)
 O 0 15010 1 15078 100 0 0 0        * a burial casket
 P 1 15011 1 15010 100 0 0 0        *   a skeletal corpse
 P 1 15012 1 15010 100 0 0 0        *   a live snake necklace
@@ -109,6 +110,7 @@ M 0 15002 3 15061 100 0 0 0        * a mud dweller
 E 1 15005 3 9 100 0 0 0            *   a pair of bone razored talons
 M 0 15008 1 15063 100 0 0 0        * the Banshee of Xtlpal
 E 1 15013 1 3 100 0 0 0            *   a necklace of drow testicles
+G 1 67273 2 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 15002 3 15064 100 0 0 0        * a mud dweller
 E 1 15005 3 9 100 0 0 0            *   a pair of bone razored talons
 M 0 15003 4 15065 100 0 0 0        * a mud dweller

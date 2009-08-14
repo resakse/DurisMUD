@@ -1019,3 +1019,19 @@ E
 rack~
 &+cAn iron rack for holding weapons - a standard equipment in a smithy.&n
 ~
+#1465
+large runestone~
+&+ya large &+Lrunestone&n~
+&+yA large &+Lrunestone &+ysits against the East wall here.&n~
+~
+13 11 3 0 7 0 1 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+large runestone~
+&+yThis very large runestone has some extremely odd markings on it. Unfortunately, most
+&+yof the marking have been worn away from years of exposure to the elements. However,
+&+yyou are able to make out a few phrases...&n
+
+                J>|hht            i>|uub            ^aan&h
+~

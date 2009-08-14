@@ -318,13 +318,17 @@ corpse well preserved~
 &+Lof life left within the body.&n
 ~
 #55029
-object unnamed _noquest_~
-&+Wkzantha's thing&n~
-An unnamed object lies here, looking lonely and forelorn.~
+mask svirfneblin scrotum _noquest_~
+&+La &+ymask &+Lmade from a &+ysvirfneblin &+Yscrotum&n~
+&+LA very small looking &+ymask &+Llies here.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+9 15 3 0 7 0 8192 262145 64 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 67108864 0 0 0
+A
+24 -2
+A
+34 2
 #55030
 venom sack puffadder~
 &+Lthe &+gvenom &+Gsack &+Lof a &+rpuff&+Radder&n~
@@ -544,7 +548,7 @@ glorious ring underdark _noquest_~
 ~
 9 1 3 0 7 0 1 3 64 0 0
 0 0 0 0 0 0 0 0
-0 0 100 0 2 0 0
+0 0 100 8 2 0 0
 A
 20 -4
 A
@@ -726,13 +730,17 @@ The ultimate item of pwn~
 0 0 0 0 0 0 0 0
 0 0 100
 #55075
-deed _noquest_~
-&+Wthe &+cdeed &+Wto a house~
-&+WA rolled up &+cpiece of paper &+Wtied with a &+rred ribbon &+Wlies on the ground.~
+spiked mace vampire _noquest_~
+&+Lthe &+rspiked &+Lmace named '&+rVam&+Rp&+rire&+L'&n~
+&+LA dangerous looking &+rspiked &+Lmace lies here.&n~
 ~
-13 28 3 0 7 0 0 1 64 0 0
-0 0 0 0 0 0 0 0
+9 18 3 0 11 0 8192 8193 64 0 0
+0 3 3 0 0 0 0 0
 0 0 100
+A
+18 5
+A
+33 3
 #55076
 steel bands~
 &+La set of &+Wsteel &+Lbands&n~
@@ -742,11 +750,11 @@ steel bands~
 0 0 0 0 0 0 0 0
 50 15000 100
 #55077
-letter _noquest_~
-&+Wa &+cletter &+Wsealed in &+rwax&n~
-&+WA folded &+cletter &+Wsealed in &+rwax &+Wlies on the ground.&n~
+small nightshade earring _noquest_~
+&+La small &+gnight&+Gshade &+Learring&n~
+&+LA small &+gnight&+Gshade &+Learring lies here.&n~
 ~
-13 28 3 0 7 0 0 1 64 0 0
+9 28 3 0 7 0 8192 524289 64 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 E
@@ -754,6 +762,10 @@ letter~
 &+L   This letter seems to have been closed tight with
 &+Lthe wax emblem of the Blackburn family seal.&n
 ~
+A
+13 15
+A
+24 -2
 #55078
 note small _noquest_~
 &+Wa &+csmall &+Wnote~
@@ -2648,7 +2660,7 @@ power elixir _noquest_~
 &+LA really &+mpowerful &+Melixir &+Llies here.&n~
 ~
 10 7 1 0 7 0 0 8404993 0 0 0
-56 292 180 314 0 0 0 0
+56 227 56 355 0 0 0 0
 0 25000 100
 T
 2 0 0 0

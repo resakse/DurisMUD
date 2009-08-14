@@ -15,19 +15,19 @@ D 0 35819 1 0 100 0 0 0
 *
 D 0 35818 0 2 100 0 0 0
 *     north exit from "Courtyard of the Keep" to
-*     "Courtyard of the Inter-Sanctum" - closed/locked
+*     "Courtyard of the Inner Sanctum" - closed/locked
 *
 D 0 35820 2 1 100 0 0 0
-*     south exit from "Courtyard of the Inter-Sanctum" to
+*     south exit from "Courtyard of the Inner Sanctum" to
 *     "Courtyard of the Keep" - closed
 *
 D 0 35820 1 1 100 0 0 0
-*     east exit from "Courtyard of the Inter-Sanctum" to
+*     east exit from "Courtyard of the Inner Sanctum" to
 *     "Cobweb Covered Hallway" - closed
 *
 D 0 35823 3 1 100 0 0 0
 *     west exit from "Cobweb Covered Hallway" to
-*     "Courtyard of the Inter-Sanctum" - closed
+*     "Courtyard of the Inner Sanctum" - closed
 *
 D 0 35821 3 1 100 0 0 0
 *     west exit from "Grand Dining Room" to
@@ -38,12 +38,12 @@ D 0 35822 1 1 100 0 0 0
 *     "Grand Dining Room" - closed
 *
 D 0 35827 0 2 100 0 0 0
-*     north exit from "Hall of Redemntion" to
+*     north exit from "Hall of Redemption" to
 *     "War Room" - closed/locked
 *
 D 0 35828 2 1 100 0 0 0
 *     south exit from "War Room" to
-*     "Hall of Redemntion" - closed
+*     "Hall of Redemption" - closed
 *
 D 0 35829 4 1 100 0 0 0
 *     up exit from "Leading toward the Master Room" to
