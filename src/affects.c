@@ -335,11 +335,21 @@ int calculate_hitpoints(P_char ch)
     hps = GET_LEVEL(ch) + 10 + MAX(GET_C_CON(ch), 100) - 100;
   }
 
-  if(toughness > 0)
+  if(toughness > 0 &&
+     !GET_CLASS(ch, CLASS_MONK))
   {
     hps += (int) (toughness * get_property("epic.skill.toughness", 0.500));
   }
-
+  else
+  {
+    if(toughness < 50)
+      hps += (int) (toughness * get_property("epic.skill.toughness.monk", 0.800));
+    else if(toughness >= 50 &&
+             toughness <= 90)
+      hps += (int) (toughness * get_property("epic.skill.toughness.monk", 1.000));
+    else
+      hps += (int) (toughness * get_property("epic.skill.toughness.monk", 1.250));    
+  }
   if (hps < 0)
   {
     logit(LOG_DEBUG, "%s has negative hitpoints bonus: %d (%d, %d)",
