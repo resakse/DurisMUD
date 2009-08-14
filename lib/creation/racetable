@@ -2,13 +2,12 @@
 
   [0;32m(h) Human[11C(H for help)[14C[1;31m(o) Orc[12C(O for help)
   [0;32m(b) Barbarian[7C(B for help) [37m------------ [1;31m(d) Drow Elf[7C(D for help)
-  [0;32m(f) Half Elf[8C(F for help) [37mPick ------- [1;31m(u) Duergar Dwarf  (U for help)
   [0;32m(e) Grey Elf[8C(E for help) [37m- Your ----- [1;31m(t) Swamp Troll    (T for help)
   [0;32m(m) Mountain Dwarf  (M for help) [37m--- Race --- [1;31m(r) Ogre[11C(R for help)
   [0;32m(l) Halfling[8C(L for help) [37m----- Mortal [1;31m(j) Githyanki[6C(J for help)
   [0;32m(g) Gnome[11C(G for help) [37m------------ [1;31m(v) Goblin[9C(V for help)
-  [0;32m(c) Centaur[9C(C for Help)[14C[1;31m(p) Orog[11C(P for help)
-  [0;32m(n) Githzerai[7C(N for Help)
+  [0;32m(c) Centaur[9C(C for Help) [37m------------ [1;31m(p) Orog[11C(P for help)
+  [0;32m(n) Githzerai[7C(N for Help) [37m------------ [1;31m(u) Duergar Dwarf  (U for help)
 
 [15C[1;33m---- [32mNeutral Races [33mC[32man Pick Evil [33mO[32mr Good Side [33m----
 [25C([32mk) Thri-kreen[5C(K for help)
