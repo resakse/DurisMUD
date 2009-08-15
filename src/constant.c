@@ -1479,7 +1479,10 @@ const int hometown[] = {
 
  /* first column is always all zeroes */
 
-/* N  Hu Ba Dr Gr Mo Du Ha Gn Og Tr H2 Il Or Th Ce Gi Mi Ae Su Gb Li Va Dk Sb */
+// Human, Barbarian, Drow, Grey, Mountain, Duergar, Halfling, Gnome, Ogre, Troll
+// Half-elf, Illithid, Orc, Thri-kreen, Centaur, Githyanki, Minotaur, Shade,
+// Revenant, Goblin, Plich, Vampire, Death Knight, Shadow Beast, Storm Giant,
+// Wright, Phantom, Harpy, Orog, Githzerai
 
 extern const int avail_hometowns[][LAST_RACE + 1];
 const int avail_hometowns[][LAST_RACE + 1] = {
@@ -1497,7 +1500,7 @@ const int avail_hometowns[][LAST_RACE + 1] = {
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Ghore  */
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Ugta */
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Bloodstone */
-  {0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Shady */
+  {0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0},   /* * Shady */
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* NaxVaran */
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* Fort Marigot */
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},   /* * Charing */

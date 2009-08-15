@@ -3832,12 +3832,12 @@ void select_hometown(P_desc d, char *arg)
   for (int i = 0; i <= LAST_HOME; i++)
   {
     char town_letter = LOWER(town_name_list[i][0]);
-    if (i == HOME_SHADY)
-      town_letter = 'a';
-    else if (i == HOME_GOBLIN)
-      town_letter = 'g';
-    else if (i == HOME_SYLVANDAWN)
-      town_letter = 's';
+    // if (i == HOME_SHADY)
+      // town_letter = 'a';
+    // else if (i == HOME_GOBLIN)
+      // town_letter = 'g';
+    // else if (i == HOME_SYLVANDAWN)
+      // town_letter = 's';
 
     if ((avail_hometowns[i][GET_RACE(d->character)] == 1) &&
         (LOWER(*arg) == LOWER(town_name_list[i][0])))
@@ -4067,22 +4067,22 @@ void show_avail_hometowns(P_desc d)
   {
     if (avail_hometowns[i][race] == 1)
     {
-      if (i == HOME_SHADY)
-      {
-        strcpy(Gbuf1, "A) Shady\r\n");
-        SEND_TO_Q(Gbuf1, d);
-      }
-      else if (i == HOME_GOBLIN)
-      {
-        strcpy(Gbuf1, "G) Moregeeth\r\n");
-        SEND_TO_Q(Gbuf1, d);
-      }
-      else
-      {
+      // if (i == HOME_SHADY)
+      // {
+        // strcpy(Gbuf1, "S) Shady\r\n");
+        // SEND_TO_Q(Gbuf1, d);
+      // }
+      // else if (i == HOME_GOBLIN)
+      // {
+        // strcpy(Gbuf1, "G) Moregeeth\r\n");
+        // SEND_TO_Q(Gbuf1, d);
+      // }
+      // else
+      // {
         sprintf(Gbuf1, "%c)%s\r\n", town_name_list[i][0],
                 &town_name_list[i][1]);
         SEND_TO_Q(Gbuf1, d);
-      }
+      // }
     }
   }
 }
