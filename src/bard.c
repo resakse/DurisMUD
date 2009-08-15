@@ -1187,17 +1187,17 @@ void bard_dragons(int l, P_char ch, P_char victim, int song)
     affect_to_char(victim, &af);
     send_to_char("&+CYou feel protected from the lightning!\r\n", victim);
   }
-  if(!affected_by_spell(victim, SPELL_INDOMITABILITY) &&
-    (empower > 50) &&
-    !number(0, 49))
-  {
-    bzero(&af, sizeof(af));
-    af.type = SPELL_INDOMITABILITY;
-    af.duration = (int) (x / 3);
-    af.bitvector4 = AFF4_NOFEAR;
-    affect_to_char(victim, &af);
-    send_to_char("&+WYou feel your fear of &+Rdragons &+Wdisappear!&n\r\n", victim);
-  }
+  // if(!affected_by_spell(victim, SPELL_INDOMITABILITY) &&
+    // (empower > 50) &&
+    // !number(0, 49))
+  // {
+    // bzero(&af, sizeof(af));
+    // af.type = SPELL_INDOMITABILITY;
+    // af.duration = (int) (x / 3);
+    // af.bitvector4 = AFF4_NOFEAR;
+    // affect_to_char(victim, &af);
+    // send_to_char("&+WYou feel your fear of &+Rdragons &+Wdisappear!&n\r\n", victim);
+  // }
   if(!affected_by_spell(victim, song))
   {
     memset(&af, 0, sizeof(af));
