@@ -1491,9 +1491,7 @@ int newbie_spellup_mob(P_char ch, P_char victim, int cmd, char *arg)
         return MobCastSpell(ch, tch, 0, spells[i], GET_LEVEL(ch));
       }
     }
-    
   }
- 
   return FALSE; 
 }
 

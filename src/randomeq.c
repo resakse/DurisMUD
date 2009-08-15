@@ -622,29 +622,22 @@ P_obj create_stones(P_char ch)
 
 int check_random_drop(P_char ch, P_char mob, int piece)
 {
-  int      dropprocent = 0;
-  int      x, i = 0;
-  int      trophy_mod, char_lvl, mob_lvl;
+  int x, i = 0, trophy_mod = 0;
+  int luck = GET_C_LUCK(ch);
+  int chance = (int)(luck / get_property("random.drop.luck.divisor", 10));
   struct trophy_data *tr;
 
+  if (!(ch) ||
+      IS_ALIVE(ch) ||
+      IS_SET(world[ch->in_room].room_flags, GUILD_ROOM) ||
+      IS_SET(world[ch->in_room].room_flags, SAFE_ZONE) ||
+      !(mob) ||
+      !GET_EXP(mob))
+          return 0;
 
-  if (!ch || !mob)
-    return 0;
-  
-  char_lvl = GET_LEVEL(ch);
-  mob_lvl = GET_LEVEL(mob);
-
-  if (!GET_EXP(mob))
-    return 0;
-
-  if (IS_SET(world[ch->in_room].room_flags, GUILD_ROOM))
-    return 0;
-
-  if (CHAR_IN_TOWN(ch) && (mob_lvl > 25))
-    return 0;
-
-  if ((char_lvl - mob_lvl) > 10)
-    return 0;
+  if(CHAR_IN_TOWN(ch) &&
+    (GET_LEVEL(mob) > 25))
+        return 0;
 
   while (i < 15)
   {
@@ -657,55 +650,20 @@ int check_random_drop(P_char ch, P_char mob, int piece)
     }
     i++;
   }
-
-//  if (!IS_TRUSTED(ch) && !IS_NPC(ch))
-//    for (tr = ch->only.pc->trophy; tr; tr = tr->next)
-//    {
-//      if (tr && GET_VNUM(mob) == tr->vnum)
-//      {
-//        trophy_mod = tr->kills > 0 ? tr->kills / 100 : 0;
-//        break;
-//      }
-//      else
-//        trophy_mod = 0;
-//    }
-//  else
-    trophy_mod = 0;
-
-  int luck = (int) GET_C_LUCK(ch);
-  int chance;
-  int charmobdiv = (mob_lvl / char_lvl);
-
- /* nix this for now for a more lenient formula - Jexni 07/12/08 // put the luck on a curve
-  chance -= 50;
-  chance *= 2;
-  // but no more then 175!
-  if (chance > 175.0)
-    chance = 175.0;
-   */
   
-    chance = (int) ((luck / get_property("random.drop.luck.divisor", 10)) * charmobdiv);
-    chance += number(0, 20);
-    if(char_lvl < 20)
-     chance += number(0, 30);
-	if(IS_ELITE(mob)) //another boost for elite npcs
-	 chance += number(5, 35);
+  chance += number(0, 20);
+  
+  if(GET_LEVEL(ch) < 20)
+   chance += number(0, 30);
+  
+  if(IS_ELITE(mob))
+   chance += number(5, 35);
 
- /* if (piece)
-    chance *= (get_property("random.drop.piece.percentage", 20.0f) / 100.0);
-  else
-    chance *= (get_property("random.drop.equip.percentage", 2.0f) / 100.0);
-
-  if (IS_HARDCORE(ch))
-    chance = chance * (get_property("random.drop.modifier.hardcore", 150.0f) / 100.0);
-  */  //more nixing - Jexni
-
-  if (chance > number(0, 100 + (trophy_mod * 2)))
+  if(chance > number(0, 100 + (int)(get_property("random.drop.rate", 0))))
     return 1;
 
   return 0;
 }
-
 
 P_obj create_random_eq_new(P_char killer, P_char mob, int object_type,
                            int material_type)

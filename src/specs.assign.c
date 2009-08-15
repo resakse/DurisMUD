@@ -226,7 +226,7 @@ void assign_mobiles(void)
   mob_index[real_mobile0(55022)].func.mob = wh_guard;
   mob_index[real_mobile0(55022)].func.mob = wh_guard;
   mob_index[real_mobile0(55003)].func.mob = wh_guard;
-  mob_index[real_mobile0(55184)].func.mob = wh_guard;
+//  mob_index[real_mobile0(55184)].func.mob = wh_guard;
   mob_index[real_mobile0(55057)].func.mob = wh_guard;
   mob_index[real_mobile0(55126)].func.mob = rentacleric;
   mob_index[real_mobile0(55500)].func.mob = wh_corpse_to_object;
