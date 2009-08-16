@@ -2,7 +2,7 @@
 /*
  * ***************************************************************************
  * *  File: limits.c                                           Part of Duris *
- * *  Usage: Procedures controling gain and limit.
+ * *  Usage: Procedures controlling gain and limit.
  * * *  Copyright  1990, 1991 - see 'license.doc' for complete information.
  *  * *  Copyright 1994 - 2008 - Duris Systems Ltd.
  * *
@@ -529,7 +529,7 @@ void githyanki_weapon(P_char ch)
     }
   }
 	else
-      send_to_char("&+Cyou should've gotten a special item..  let a god know.\r\n",
+      send_to_char("&+CYou should have gotten a special item.  Let a god know.\r\n",
                    ch);
 }
 
@@ -1029,14 +1029,19 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   }
 
   XP = check_nexus_bonus(ch, (int)(XP), NEXUS_BONUS_EXP);
-  
-  XP *= (get_property("gain.exp.mod.player.level.thirtyone", 1.000));
-  XP *= (get_property("gain.exp.mod.player.level.fortyone", 1.000));
-  XP *= (get_property("gain.exp.mod.player.level.fiftyone", 1.000));
-  XP *= (get_property("gain.exp.mod.player.level.fiftyfive", 1.000));
+ 
+// This multipliers are accumulative... 
+  if(GET_LEVEL(ch) >= 31)
+    XP *= (get_property("gain.exp.mod.player.level.thirtyone", 1.000));
+  if(GET_LEVEL(ch) >= 41)
+    XP *= (get_property("gain.exp.mod.player.level.fortyone", 1.000));
+  if(GET_LEVEL(ch) >= 51)
+    XP *= (get_property("gain.exp.mod.player.level.fiftyone", 1.000));
+  if(GET_LEVEL(ch) >= 55)
+    XP *= (get_property("gain.exp.mod.player.level.fiftyfive", 1.000));
   XP *= (get_property("gain.exp.mod.TotalOverall", 1.00));
 
-  // increase exp only to some limit (comulative exp till 61)
+  // increase exp only to some limit (cumulative exp till 61)
   if (XP < 0 || GET_EXP(ch) < global_exp_limit)
   {
     GET_EXP(ch) += (int)(XP);
