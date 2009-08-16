@@ -1,6 +1,6 @@
 #831
 &+CAlatorin &+L- the &N&+rForge &+LCity~
-83713 2 0 40 50 1
+83758 2 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -965,6 +965,14 @@ D 0 83702 1 1 100 0 0 0
 *     east exit from "A Short Hallway" to
 *     "A Small Merchant Cove" - closed
 *
+D 0 83695 0 1 100 0 0 0
+*     north exit from "A Turn in the Trail" to
+*     "A Small Dwelling" - closed
+*
+D 0 83742 2 1 100 0 0 0
+*     south exit from "A Small Dwelling" to
+*     "A Turn in the Trail" - closed
+*
 D 0 83701 1 1 100 0 0 0
 *     east exit from "A Secret Merchant Stall" to
 *     "End of a Hallway" - closed
@@ -972,6 +980,30 @@ D 0 83701 1 1 100 0 0 0
 D 0 83703 3 5 100 0 0 0
 *     west exit from "End of a Hallway" to
 *     "A Secret Merchant Stall" - closed/secret
+*
+D 0 83746 2 1 100 0 0 0
+*     south exit from "A Stone Thorough-Fare" to
+*     "A Rickety Shack" - closed
+*
+D 0 83748 0 1 100 0 0 0
+*     north exit from "A Rickety Shack" to
+*     "A Stone Thorough-Fare" - closed
+*
+D 0 83749 3 1 100 0 0 0
+*     west exit from "A Long Fence Around a Port" to
+*     "The Promenade of Deramuth Port" - closed
+*
+D 0 83751 1 1 100 0 0 0
+*     east exit from "The Promenade of Deramuth Port" to
+*     "A Long Fence Around a Port" - closed
+*
+D 0 83750 0 1 100 0 0 0
+*     north exit from "The Promenade, Before Rocks Arranged as Steps" to
+*     "The Front Office of Deramuth Port" - closed
+*
+D 0 83754 2 1 100 0 0 0
+*     south exit from "The Front Office of Deramuth Port" to
+*     "The Promenade, Before Rocks Arranged as Steps" - closed
 *
 *
 O 0 83100 1 83103 100 0 0 0        * a giant statue of a dwarven warrior
@@ -1417,6 +1449,8 @@ O 0 83375 4 83639 100 0 0 0        * a flax torch burning a golden flame
 O 0 83375 4 83640 100 0 0 0        * a flax torch burning a golden flame
 O 0 83375 4 83641 100 0 0 0        * a flax torch burning a golden flame
 O 0 83379 1 83655 100 0 0 0        * a large mithril sign
+O 0 83393 1 83697 100 0 0 0        * a small sign
+O 0 83402 1 83745 100 0 0 0        * a small stone fountain
 *
 M 0 83100 4 83103 100 0 0 0        * an entry guard of Alatorin
 E 1 83112 999 11 100 0 0 0         *   an iron shield bearing the crest of Alatorin
@@ -2688,5 +2722,28 @@ M 0 83356 1 83704 100 0 0 0        * a shady clansdwarf
 G 1 83391 999 0 100 0 0 0          *    a potion of remedying
 G 1 83392 999 0 100 0 0 0          *    a potion of improved vision
 G 1 83401 1 0 100 0 0 0            *    a potion of ultimate protection
+M 0 4530 11 83717 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83717 100 0 0 0        * (mob type not in this .mob file)
+M 0 15224 3 83717 100 0 0 0        * (mob type not in this .mob file)
+M 0 15224 3 83721 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83722 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83722 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83722 100 0 0 0        * (mob type not in this .mob file)
+M 0 15224 3 83724 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83726 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83726 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83726 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83727 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83727 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 11 83727 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
+M 0 15517 9 83736 100 0 0 0        * (mob type not in this .mob file)
 *
 S

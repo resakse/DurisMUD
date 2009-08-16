@@ -4565,6 +4565,19 @@ E
 potion improved vision~
    &+LThis thick viscid potion sits heavily in a black bottle.
 ~
+#83393
+small sign~
+&+ya small &+Wsign&N~
+&+gPosted next to the &+ycliff&+g, a small &+Wsign&+g is here.~
+~
+13 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 94
+E
+small sign~
+   &+yThis small sign reads:
+&+WBEWARE OF CLIFF!  LONG WAY DOWN!
+~
 #83394
 mithril bladed battle axe mithril-bladed battle-axe~
 &+Wa &n&+mmithril-bladed &+Wbattle-axe&N~
@@ -4681,4 +4694,18 @@ potion ultimate protection~
 E
 potion ultimate protection~
    &+LThis small glass potion &N&+bsw&+Lir&+Yls &+Bwi&+Rth &+Gdi&+Bff&N&+bere&+cnt &+Bcolors.
+~
+#83402
+stone fountain~
+&+Wa small stone fountain&N~
+&+WThis small stone fountain &+Bbubbles a fresh clear water.~
+~
+17 15 3 0 7 0 0 0 0 0 0
+-1 -1 16 0 0 0 0 0
+0 0 100
+E
+stone fountain~
+   &+WThis stone fountain is quite simple - circlular in shape with a
+&+Wtwo-layered rim around from which a pool of fountain water is splashed
+&+Wup by a geyser in the middle.
 ~

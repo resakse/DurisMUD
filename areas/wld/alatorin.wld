@@ -12080,6 +12080,11 @@ S
 &+gthat this terrain may be the result of a recent shift in the world's makeup.
 ~
 831 32768 2
+D0
+&+yA rickety wooden door to a makeshift dwelling.
+~
+door~
+1 0 83742
 D1
 ~
 ~
@@ -12118,6 +12123,10 @@ D1
 ~
 ~
 0 0 83693
+D3
+~
+~
+0 0 83739
 S
 #83698
 &+yA Rocky Cliff Face~
@@ -12131,6 +12140,10 @@ D0
 ~
 ~
 0 0 83696
+D3
+~
+~
+0 0 83743
 S
 #83699
 &+LA Dark, &NAncient &+LChamber&n~
@@ -12548,4 +12561,853 @@ insignia~
 	 <__      \
 	    \______>
 ~
+S
+#83714
+&+LTop of a &NR&+Lo&Nc&+Lk&Ny &+LDescent&N~
+   &+LThis rocky rescend starts with fine grass glowing along the broken,
+&+Lgravel-ridden ground.  It eventually sinks deeper and deeper within the
+&+Lmountain as it enters a vaulted cavern in which numerous stalagmites hang.
+~
+831 9 13
+D0
+~
+~
+0 0 519847
+D5
+~
+~
+0 0 83715
+S
+#83715
+&+LA &NR&+Lo&Nc&+Lk&Ny &+LDescent&N~
+   &+LThis rocky rescend starts with fine grass glowing along the broken,
+&+Lgravel-ridden ground.  It eventually sinks deeper and deeper within the
+&+Lmountain as it enters a vaulted cavern in which numerous stalagmites hang.
+~
+831 9 13
+D4
+~
+~
+0 0 83714
+D5
+~
+~
+0 0 83716
+S
+#83716
+&+LBefore a &+WStalagmite &+LCavern&N~
+   &+LThis wide-open cavern has numerous large stalagmites hanging from
+&+Lthe rocky, vaulted ceiling.  The floor is covered with dirt, rocks,
+&+Land bat guano, atop a jagged layer of stalagtites.  There are howling
+&+Lmoans in the distance that are unhuman in nature.  The air here is
+&+Lthick and musty.
+~
+831 13 13
+D2
+~
+~
+0 0 83719
+D4
+~
+~
+0 0 83715
+S
+#83717
+&+LThe Corner of a &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D1
+~
+~
+0 0 83718
+D2
+~
+~
+0 0 83720
+S
+#83718
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D1
+~
+~
+0 0 83719
+D2
+~
+~
+0 0 83721
+D3
+~
+~
+0 0 83717
+S
+#83719
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83716
+D2
+~
+~
+0 0 83722
+D3
+~
+~
+0 0 83718
+S
+#83720
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83717
+D1
+~
+~
+0 0 83721
+D2
+~
+~
+0 0 83723
+D3
+~
+~
+0 0 83737
+S
+#83721
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83718
+D1
+~
+~
+0 0 83722
+D2
+~
+~
+0 0 83724
+D3
+~
+~
+0 0 83720
+S
+#83722
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83719
+D2
+~
+~
+0 0 83725
+D3
+~
+~
+0 0 83721
+S
+#83723
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83720
+D1
+~
+~
+0 0 83724
+D2
+~
+~
+0 0 83726
+S
+#83724
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83721
+D1
+~
+~
+0 0 83725
+D2
+~
+~
+0 0 83727
+D3
+~
+~
+0 0 83723
+S
+#83725
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83722
+D2
+~
+~
+0 0 83728
+D3
+~
+~
+0 0 83724
+S
+#83726
+&+LThe Corner of a &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83723
+D1
+~
+~
+0 0 83727
+S
+#83727
+&+LA Vau&Nlted &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83724
+D1
+~
+~
+0 0 83728
+D2
+~
+~
+0 0 83729
+D3
+~
+~
+0 0 83726
+S
+#83728
+&+LCorner of a &+WStalagmite &+LCavern&N~
+   &+LThe ceiling of this cavern is covered with many stone stalagmites
+&+Lof varying sizes, all equally deadly.  The rocky cavern floor is quite
+&+Luneven, although consistently-large.  Covered in guano, bits of rocks,
+&+Lfallen stalagmites, and even some bone, this brutal terrain hints at
+&+Lthe danger one may face deeper through the pass.
+~
+831 9 13
+D0
+~
+~
+0 0 83725
+D3
+~
+~
+0 0 83727
+S
+#83729
+&+mAn Opening Alongside a Fetid Pool&N~
+   &+LThis rocky tunnel opening comes along side that of a large, fetid
+&+Lunderground pool.  The stalagmites seem to have ceased, above, as this
+&+Lnatural tunnel begins its ascent south and upwards.  The ground seems
+&+Lto be harder and darker the further one traverses up the southern
+&+Ltunnel, as the ceiling seems to be higher and more vaulted the further
+&+Lnorth one travels.
+~
+831 13 13
+D0
+~
+~
+0 0 83727
+D1
+~
+~
+0 0 83736
+D2
+~
+~
+0 0 83730
+S
+#83730
+&+mAn Slimey Tunnel&N~
+   &+LThis rocky tunnel opening comes along side that of a large, fetid
+&+Lunderground pool.  The stalagmites seem to have ceased, above, as this
+&+Lnatural tunnel begins its ascent south and upwards.  The ground seems
+&+Lto be harder and darker the further one traverses up the southern
+&+Ltunnel, as the ceiling seems to be higher and more vaulted the further
+&+Lnorth one travels.
+~
+831 9 13
+D0
+~
+~
+0 0 83729
+D2
+~
+~
+0 0 83731
+S
+#83731
+&+mBelow a Tunnel Ascent&N~
+   &+LThis rocky tunnel opening comes along side that of a large, fetid
+&+Lunderground pool.  The stalagmites seem to have ceased, above, as this
+&+Lnatural tunnel begins its ascent south and upwards.  The ground seems
+&+Lto be harder and darker the further one traverses up the southern
+&+Ltunnel, as the ceiling seems to be higher and more vaulted the further
+&+Lnorth one travels.
+~
+831 9 13
+D0
+~
+~
+0 0 83730
+D4
+~
+~
+0 0 83732
+S
+#83732
+&+LAbove a Tunnel Ascent&N~
+   &+LThis rocky tunnel opening comes along side that of a large, fetid
+&+Lunderground pool.  The stalagmites seem to have ceased, above, as this
+&+Lnatural tunnel begins its ascent south and upwards.  The ground seems
+&+Lto be harder and darker the further one traverses up the southern
+&+Ltunnel, as the ceiling seems to be higher and more vaulted the further
+&+Lnorth one travels.
+~
+831 9 13
+D2
+~
+~
+0 0 83733
+D5
+~
+~
+0 0 83731
+S
+#83733
+&+LA &N&+mJa&+bgg&+med &+LTunnel&N~
+   &+LThis rocky tunnel opening comes along side that of a large, fetid
+&+Lunderground pool.  The stalagmites seem to have ceased, above, as this
+&+Lnatural tunnel begins its ascent south and upwards.  The ground seems
+&+Lto be harder and darker the further one traverses up the southern
+&+Ltunnel, as the ceiling seems to be higher and more vaulted the further
+&+Lnorth one travels.
+~
+831 9 13
+D0
+~
+~
+0 0 83732
+D2
+~
+~
+0 0 83734
+S
+#83734
+&+LA &N&+mJa&+bgg&+med &+LTunnel&N~
+   &+LThis rocky tunnel opening comes along side that of a large, fetid
+&+Lunderground pool.  The stalagmites seem to have ceased, above, as this
+&+Lnatural tunnel begins its ascent south and upwards.  The ground seems
+&+Lto be harder and darker the further one traverses up the southern
+&+Ltunnel, as the ceiling seems to be higher and more vaulted the further
+&+Lnorth one travels.
+~
+831 9 13
+D0
+~
+~
+0 0 83733
+D2
+~
+~
+0 0 83735
+S
+#83735
+&+LOpening of a &+mJa&+bgg&+med &+LTunnel&N~
+   &+LThis rocky tunnel opening comes along side that of a large, fetid
+&+Lunderground pool.  The stalagmites seem to have ceased, above, as this
+&+Lnatural tunnel begins its ascent south and upwards.  The ground seems
+&+Lto be harder and darker the further one traverses up the southern
+&+Ltunnel, as the ceiling seems to be higher and more vaulted the further
+&+Lnorth one travels.
+~
+831 9 13
+D0
+~
+~
+0 0 83734
+D2
+~
+~
+0 0 120110
+S
+#83736
+&+gA Fetid Pool&N~
+   &+gThis fetid pool sits here in a small niche outside of the tunnel to the
+&+gwest.  The waters of the pool of the pool are dark green and fetid, clearly
+&+ghaving been sitting here, gathering pollution for some time.  The cavern
+&+gceiling is very low and there are numerous parasites infecting the waters.
+~
+831 1073741833 9
+D3
+~
+~
+0 0 83729
+S
+#83737
+&+mA Wide Ledge&N~
+   &+mThis wide ledge overlooks a small, dark egress from the stalagmite
+&+mcavern just west below.  Although quite steep and unstable, this ledge
+&+mis rather wide and should not impede the movement of any travelers who
+&+mhave ventured into these depths of the cavern.
+~
+831 9 13
+D1
+~
+~
+0 0 83720
+D5
+~
+~
+0 0 83738
+S
+#83738
+&+LA Dark &nEgress&N~
+   &+LThis dark egress, located deep within a mountainous stalagmite cavern,
+&+Llooks to be reclusive from the rest of the unforgiving terrain of this
+&+Lsubterranean nightmare.
+~
+831 5 13
+D4
+~
+~
+0 0 83737
+S
+#83739
+&+WAn Expanse Above a Clearing~
+   &+WThis windy expanse in the sky exists just above a rocky clearing below.
+&+WThe cliff face to the east is visible beyond the expanse, growing with grass
+&+Wover a rocky ledge.
+~
+831 0 8
+D5
+~
+~
+0 0 83741
+F
+100
+S
+#83740
+&+WAn Expanse Above a Clearing~
+   &+WThis windy expanse in the sky exists just above a rocky clearing below.
+&+WThe cliff face to the east is visible beyond the expanse, growing with grass
+&+Wover a rocky ledge.
+~
+831 1 8
+S
+#83741
+&+WMid-Air Above a Clearing&N~
+   &+WThis windy expanse in the sky exists just above a rocky clearing below.
+&+WThe cliff face to the east is visible beyond the expanse, growing with grass
+&+Wover a rocky ledge.
+~
+831 0 8
+D5
+~
+~
+0 0 83698
+F
+100
+S
+#83742
+&+gA Small &+yDwelling&N~
+   &+yThis small makeshift shack has been composed of various types of wood
+&+ythat has been cut down into planks and pieced together into a small
+&+ylivable structure.  There is no furniture in this dwelling aside from a
+&+ysmall pile of tattered, filthy rags.  The exterior of this dwelling is
+&+ynearly over-grown, having been unkept and forgotten in its location off
+&+ythe thoroughfare.
+~
+831 1 0
+D2
+&+yA makeshift wooden door leading back to the thoroughfare.
+~
+door~
+1 0 83695
+S
+#83743
+&+gA &+LSt&N&+gon&+Le Th&N&+gor&+Lou&N&+ggh&+L-Fa&N&+gre&N~
+   &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
+&+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
+&+Lhad been planted purposely rather then from natural growth.  This small
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+~
+831 0 2
+D1
+~
+~
+0 0 83698
+D3
+~
+~
+0 0 83744
+S
+#83744
+&+gA &+LSt&N&+gon&+Le Th&N&+gor&+Lou&N&+ggh&+L-Fa&N&+gre&N~
+   &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
+&+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
+&+Lhad been planted purposely rather then from natural growth.  This small
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+~
+831 0 2
+D1
+~
+~
+0 0 83743
+D3
+~
+~
+0 0 83745
+S
+#83745
+&+LA &+WStone Fountain &+LIn the &N&+gTh&+Lor&N&+gou&+Lgh-&N&+gFa&+Lre&N~
+   &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
+&+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
+&+Lhad been planted purposely rather then from natural growth.  This small
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.   &+LIn this portion of the thoroughfare, a small stone fountain sits
+&+Lat the center of the cobblestone roadway.  About four feet tall in a five-
+&+Lfoot wide pool, the fountain gushes out clear water softly, creating a
+&+Lsense of peace and harmony amongst this twisted place.  The port of &+WDeramuth&+L
+&+Lcan be seen to the west.
+~
+831 0 2
+D1
+~
+~
+0 0 83744
+D3
+~
+~
+0 0 83746
+S
+#83746
+&+gA &+LSt&N&+gon&+Le Th&N&+gor&+Lou&N&+ggh&+L-Fa&N&+gre&N~
+   &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
+&+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
+&+Lhad been planted purposely rather then from natural growth.  This small
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+~
+831 0 2
+D1
+~
+~
+0 0 83745
+D2
+&+LThe &N&+ydoor&+L to a rickety shack sits behind overgrown vegetation.
+~
+door~
+1 0 83748
+D3
+~
+~
+0 0 83747
+S
+#83747
+&+gA &+LSt&N&+gon&+Le Th&N&+gor&+Lou&N&+ggh&+L-Fa&N&+gre&N~
+   &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
+&+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
+&+Lhad been planted purposely rather then from natural growth.  This small
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+~
+831 0 2
+D1
+~
+~
+0 0 83746
+D3
+~
+~
+0 0 83749
+S
+#83748
+&+LA Rickety &N&+yShack&N~
+   &+yThis small makeshift shack has been composed of various types of wood
+&+ythat has been cut down into planks and pieced together into a small
+&+ylivable structure.  There is no furniture in this dwelling aside from a
+&+ysmall pile of tattered, filthy rags.  The exterior of this dwelling is
+&+ynearly over-grown, having been unkept and forgotten in its location off
+&+ythe thoroughfare.
+~
+831 1 0
+D0
+&+LThe &N&+ydoor &+Lout of this shack.
+~
+door~
+1 0 83746
+S
+#83749
+&+YA Long Fence Around a Port&N~
+   &+yA long wooden fence extends the dock of a small port just west of here
+&+yknown as Deramuth after Captain Deramuth, the dwarven sailor who settled
+&+yhere.  The wooden fence is made of thick brittle planks brought together
+&+yby metal fastening.
+~
+831 0 2
+D1
+~
+~
+0 0 83747
+D3
+&+yA long wooden fence extends around the perimeter of Deramuth port.
+~
+fence~
+1 0 83751
+S
+#83750
+&+WThe Promenade, Before Rocks Arranged as Steps&N~
+   &+WDeramuth is a small, yet busy port.  Featuring a large merchant
+&+Wdistrict and a vast ship yard, this miniature town sits within
+&+Wthe protection of &N&+cAlatorin&+L, nested within the &N&+yShanatar
+&+Wmountains.  The promenade is covered with thick imported cobblestones,
+&+Wfrom which thick bright green grass grows between.
+   &+WSeeral large rocks are arranged as huge steps down to the dock
+&+Warea below.
+~
+831 0 1
+D0
+&+LA &N&+ylarge wooden door &+Lwith a small &+Wsign &+Lreading:
+&n&+cWelcome to Deramuth Port
+~
+door~
+1 0 83754
+D1
+~
+~
+0 0 83751
+D2
+~
+~
+0 0 83752
+S
+#83751
+&+WThe Promenade of Deramuth Port&N~
+   &+WDeramuth is a small, yet busy port.  Featuring a large merchant
+&+Wdistrict and a vast ship yard, this miniature town sits within
+&+Wthe protection of &N&+cAlatorin&+L, nested within the &N&+yShanatar
+&+Wmountains.  The promenade is covered with thick imported cobblestones,
+&+Wfrom which thick bright green grass grows between.
+~
+831 0 1
+D1
+&+yA long fence extends around the perimeter of Deramuth port.
+~
+fence~
+1 0 83749
+D2
+~
+~
+0 0 83753
+D3
+~
+~
+0 0 83750
+S
+#83752
+&+WThe Promenade of Deramuth Port&N~
+   &+WDeramuth is a small, yet busy port.  Featuring a large merchant
+&+Wdistrict and a vast ship yard, this miniature town sits within
+&+Wthe protection of &N&+cAlatorin&+L, nested within the &N&+yShanatar
+&+Wmountains.  The promenade is covered with thick imported cobblestones,
+&+Wfrom which thick bright green grass grows between.
+~
+831 0 1
+D0
+~
+~
+0 0 83750
+D1
+~
+~
+0 0 83753
+D2
+~
+~
+0 0 83755
+S
+#83753
+&+WThe Promenade of Deramuth Port&N~
+   &+WDeramuth is a small, yet busy port.  Featuring a large merchant
+&+Wdistrict and a vast ship yard, this miniature town sits within
+&+Wthe protection of &N&+cAlatorin&+L, nested within the &N&+yShanatar
+&+Wmountains.  The promenade is covered with thick imported cobblestones,
+&+Wfrom which thick bright green grass grows between.
+~
+831 0 1
+D0
+~
+~
+0 0 83751
+D3
+~
+~
+0 0 83752
+S
+#83754
+&+LThe &N&+cFront Office &+Lof &+WDeramuth Port&N~
+   &+LThis medium-sized structure is furnished with hard-wood
+&+Lchairs and tables along with a couple racks for weapons and
+&+Leven a small hearth.  Acting as an office between the Alatorin
+&+Lofficials and the Deramuth guildmasters, this chamber sees
+&+Lmany trade and contract negotiations.
+~
+831 0 0
+D2
+&+LA &N&+ylarge wooden door.
+~
+door~
+1 0 83750
+S
+#83755
+&+LA &NTw&+yi&+Ls&Nti&+yng &+LC&No&N&+yb&+Lb&Nl&+ys&+Lt&No&+yn&+Le &NSt&+yr&Nee&+yt&N~
+   &+LThis long street is made up of huge cobblestones of different shapes,
+&+Lsizes, colors, and origins.  Leading through &+WDeramuth Port&+L, this
+&+ycobblestone &+Lroad sees much traffic by its diverse users.  This street
+&+yleads behind several huge sand dunes protecting the inner port and
+&+ydock area from flooding during times of high tide.
+~
+831 0 1
+D0
+~
+~
+0 0 83752
+D1
+~
+~
+0 0 83756
+S
+#83756
+&+LA &NTw&+yi&+Ls&Nti&+yng &+LC&No&N&+yb&+Lb&Nl&+ys&+Lt&No&+yn&+Le &NSt&+yr&Nee&+yt&N~
+   &+LThis long street is made up of huge cobblestones of different shapes,
+&+Lsizes, colors, and origins.  Leading through &+WDeramuth Port&+L, this
+&+ycobblestone &+Lroad sees much traffic by its diverse users.  This street
+&+yleads behind several huge sand dunes protecting the inner port and
+&+ydock area from flooding during times of high tide.
+~
+831 0 1
+D2
+~
+~
+0 0 83757
+D3
+~
+~
+0 0 83755
+S
+#83757
+&+LA &NTw&+yi&+Ls&Nti&+yng &+LC&No&N&+yb&+Lb&Nl&+ys&+Lt&No&+yn&+Le &NSt&+yr&Nee&+yt&N~
+   &+LThis long street is made up of huge cobblestones of different shapes,
+&+Lsizes, colors, and origins.  Leading through &+WDeramuth Port&+L, this
+&+ycobblestone &+Lroad sees much traffic by its diverse users.  This street
+&+yleads behind several huge sand dunes protecting the inner port and
+&+ydock area from flooding during times of high tide.
+~
+831 0 1
+D0
+~
+~
+0 0 83756
+D2
+~
+~
+0 0 83758
+S
+#83758
+&+LA &NCo&+ybb&+Lle&Nst&+yon&+Le St&n&+yre&Net&N~
+   &+LThis long street is made up of huge cobblestones of different shapes,
+&+Lsizes, colors, and origins.  Leading through &+WDeramuth Port&+L, this
+&+ycobblestone &+Lroad sees much traffic by its diverse users.  This street
+&+yleads behind several huge sand dunes protecting the inner port and
+&+ydock area from flooding during times of high tide.
+~
+831 0 1
+D0
+~
+~
+0 0 83757
 S
