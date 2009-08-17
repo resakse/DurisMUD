@@ -937,6 +937,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     if(GET_RACE(victim) == RACE_PLICH)
       XP *= (get_property("gain.exp.mod.victim.race.plich", 1.00));
       
+// Careful with the breath modifier since many greater race mobs have a breathe weapon.
     if(CAN_BREATHE(victim))
       XP *= (get_property("gain.exp.mod.victim.ability.breath.weapon", 1.00));
       
