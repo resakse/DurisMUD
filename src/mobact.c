@@ -247,6 +247,10 @@ int char_deserves_helping(const P_char ch, const P_char candidate,
 
   if(IS_PC_PET(ch))
     return FALSE;
+    
+  if(GET_VNUM(ch) == IMAGE_RELFECTION_VNUM ||
+     GET_VNUM(candidate) == IMAGE_RELFECTION_VNUM)
+        return false;
 
   if((ch->specials.fighting == candidate) ||
       (candidate->specials.fighting == ch))
@@ -270,9 +274,9 @@ int char_deserves_helping(const P_char ch, const P_char candidate,
 
   /* don't spell up non-followers/groupees under level 15 */
 
-  if((GET_LEVEL(candidate) < 15) &&
-      !((candidate->following == ch) || (ch->following == candidate) ||
-        (ch->group && (ch->group == candidate->group))))
+  if(!((candidate->following == ch) ||
+       (ch->following == candidate) ||
+       (ch->group && (ch->group == candidate->group))))
     return FALSE;
     
 // This is a hack to prevent the Winterhaven high priest from spelling up
@@ -281,7 +285,7 @@ int char_deserves_helping(const P_char ch, const P_char candidate,
      GET_VNUM(ch) == WH_HIGH_PRIEST_VNUM) ||
      GET_VNUM(candidate) == WH_HIGH_PRIEST_VNUM)
         return false;
-    
+  
 // The following prevents mobs from buffing non-guard mobs in hometowns.
 // This has a desired effect: do not buff low level exp mobs.
 // At the moment, mobs 20th level and higher in hometowns have a
