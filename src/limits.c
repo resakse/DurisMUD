@@ -926,6 +926,11 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // Exp penalty for classes that advance too quickly.
     if(GET_CLASS(ch, CLASS_MERCENARY))
       XP *= (get_property("gain.exp.mod.player.merc", 1.00));
+      
+// Exp bonus for clerics, since we really need this class above all else.
+    if(!IS_MULTICLASS(ch) &&
+       GET_CLASS(ch, CLASS_CLERIC))
+        XP *= (get_property("gain.exp.mod.player.cleric", 1.00));
     
 // Careful with the breath modifier since many greater race mobs have a breathe weapon.
     if(CAN_BREATHE(victim))
@@ -1026,19 +1031,24 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     XP = modify_exp_by_zone_trophy(ch, type, (int)(XP));    
   }
 
-  XP = check_nexus_bonus(ch, (int)(XP), NEXUS_BONUS_EXP);
- 
-// This multipliers are accumulative... 
-  if(GET_LEVEL(ch) >= 31)
-    XP *= (get_property("gain.exp.mod.player.level.thirtyone", 1.000));
-  if(GET_LEVEL(ch) >= 41)
-    XP *= (get_property("gain.exp.mod.player.level.fortyone", 1.000));
-  if(GET_LEVEL(ch) >= 51)
-    XP *= (get_property("gain.exp.mod.player.level.fiftyone", 1.000));
-  if(GET_LEVEL(ch) >= 55)
-    XP *= (get_property("gain.exp.mod.player.level.fiftyfive", 1.000));
-  XP *= (get_property("gain.exp.mod.TotalOverall", 1.00));
+  if(XP > 0 &&
+     type != EXP_WORLD_QUEST)
+  {
+    XP = check_nexus_bonus(ch, (int)(XP), NEXUS_BONUS_EXP);
+  
+  // This multipliers are accumulative... 
+    if(GET_LEVEL(ch) >= 31)
+      XP *= (get_property("gain.exp.mod.player.level.thirtyone", 1.000));
+    if(GET_LEVEL(ch) >= 41)
+      XP *= (get_property("gain.exp.mod.player.level.fortyone", 1.000));
+    if(GET_LEVEL(ch) >= 51)
+      XP *= (get_property("gain.exp.mod.player.level.fiftyone", 1.000));
+    if(GET_LEVEL(ch) >= 55)
+      XP *= (get_property("gain.exp.mod.player.level.fiftyfive", 1.000));
+  }
 
+  XP *= (get_property("gain.exp.mod.TotalOverall", 1.00));
+  
   // increase exp only to some limit (cumulative exp till 61)
   if (XP < 0 || GET_EXP(ch) < global_exp_limit)
   {
