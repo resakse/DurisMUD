@@ -8,7 +8,7 @@ A tiny golden hoop is barely visible here.~
 1 4999 100
 E
 hoop tiny golden~
-This small golden hoop has been fashined into a perfect circle.
+This small golden hoop has been fashioned into a perfect circle.
 ~
 A
 1 3
@@ -112,7 +112,7 @@ platemail giant plate mail~
 ~
 9 16 3 0 7 0 1024 9 0 119144889 7420
 45 0 0 0 0 0 0 0
-22 28585 100
+22 5000 100
 E
 platemail giant~
 This platemail is extremely large on anyone and needs to be strapped onto
@@ -284,9 +284,9 @@ The statue of Anne, the savior of the village stands here.~
 0 2 100
 E
 statue~
-This statue seems to have been carved of pure stone, and is kept reguraly
+This statue seems to have been carved of pure stone, and is kept regularly
 clean by the towns people. A small garden grows around the statue, which
-looks odly enough that it enjoys this area, and the garden.
+looks oddly enough that it enjoys this area, and the garden.
 ~
 #99525
 note~
@@ -314,8 +314,8 @@ A half &+Lburnt &nnote lies here in the ashes.~
 0 825 100
 E
 note~
-&+LThis note seems to contiain more information on the where abouts of more
-&+Lof the evils scalps, however it has been almost totall burnt, and the
+&+LThis note seems to contain more information on the where abouts of more
+&+Lof the evils scalps, however it has been almost totally burnt, and the
 &+Lonly clue on it is... &+mdis &+L..and the rest is burnt.
 ~
 #99527
