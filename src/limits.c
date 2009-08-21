@@ -814,13 +814,13 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     {      
       new_xp = 0;
     }
-    else if (GET_LEVEL(ch) > 50)
+    else if (GET_LEVEL(ch) >= 51)
     {
-      new_xp = -(new_exp_table[GET_LEVEL(ch) + 1] >> 5);      
+      new_xp = -(new_exp_table[GET_LEVEL(ch) + 1] * (get_property("gain.exp.mod.player.death.level.51.andOver", 0.12)));      
     }
     else
     {
-      new_xp = -(new_exp_table[GET_LEVEL(ch) + 1] >> 3);          
+      new_xp = -(new_exp_table[GET_LEVEL(ch) + 1] * (get_property("gain.exp.mod.player.death.level.50.andUnder", 0.10) ));          
     }
   }
   else if (type == EXP_KILL)
@@ -1047,7 +1047,8 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
       XP *= (get_property("gain.exp.mod.player.level.fiftyfive", 1.000));
   }
 
-  XP *= (get_property("gain.exp.mod.TotalOverall", 1.00));
+  if(XP > 0)
+    XP *= (get_property("gain.exp.mod.TotalOverall", 1.00));
   
   // increase exp only to some limit (cumulative exp till 61)
   if (XP < 0 || GET_EXP(ch) < global_exp_limit)
