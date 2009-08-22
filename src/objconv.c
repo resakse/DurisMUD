@@ -830,23 +830,108 @@ void material_restrictions(P_obj obj)
     return;
   }
   
+  if(isname("quiver", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("badge", obj->name))
+  {
+    return;
+  }
+  
   if(isname("robe", obj->name))
   {
     return;
   }
+  
+  if(isname("tunic", obj->name))
+  {
+    return;
+  }
 
+  if(isname("cloak", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("pants", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("belt", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("earring", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("moccasins", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("ring", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("band", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("signet", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("hat", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("cap", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("bracelet", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("stud", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("amulet", obj->name))
+  {
+    return;
+  }
+  
+  if(isname("bodycloak", obj->name))
+  {
+    return;
+  }
+  
   if (IS_RIGID(mat) && (obj->wear_flags & ITEM_WEAR_BODY))
   {
     anti = ALL_MAGES | ALL_ROGUES | CLASS_MONK;
   }
 
-  if (IS_RIGID(mat) && (obj->wear_flags & (ITEM_WEAR_ARMS | ITEM_WEAR_LEGS)))
+  if (IS_RIGID(mat) && (obj->wear_flags & (ITEM_WEAR_FACE | ITEM_WEAR_ARMS | ITEM_WEAR_HEAD | ITEM_WEAR_LEGS)))
   {
     anti |= CLASS_MONK;
   }
 
   if (IS_METAL(mat) && mat != MAT_MITHRIL &&
-      (obj->wear_flags & (ITEM_WEAR_ARMS | ITEM_WEAR_LEGS)))
+      (obj->wear_flags & (ITEM_WEAR_FACE |ITEM_WEAR_ARMS | ITEM_WEAR_HEAD | ITEM_WEAR_LEGS)))
   {
     anti |= ALL_MAGES;
   }
@@ -1390,3 +1475,5 @@ void convertObj(P_obj obj)
   obj->curr_sp = obj->max_sp;   /* temporary */
 #endif
 }
+
+  
