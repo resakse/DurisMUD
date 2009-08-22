@@ -838,9 +838,7 @@ void do_rage(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(GET_CHAR_SKILL(ch, SKILL_RAGE) < number(28, 110)) 
-  // Gives berserkers about 25% no fail at any level.
-  // At 100 skill, rage fails no more than 10% of the time.
+  if(GET_CHAR_SKILL(ch, SKILL_RAGE) < number(-10, 110)) 
   {
     send_to_char("&+RYou are unable to call forth the rage within you...\r\n", ch);
     CharWait(ch, 2 * PULSE_VIOLENCE);

@@ -4486,7 +4486,7 @@ int backstab(P_char ch, P_char victim)
   if(IS_IMMOBILE(victim) ||
     GET_STAT(victim) <= STAT_SLEEPING)
   {
-    percent_chance = 100;
+    percent_chance = 101;
   }
   
   CharWait(ch, (int) (PULSE_VIOLENCE * 0.8));
@@ -4523,7 +4523,8 @@ int backstab(P_char ch, P_char victim)
     stabbed = TRUE;
     if(notch_skill(ch, SKILL_BACKSTAB,
                     get_property("skill.notch.offensive", 15)) ||
-        percent_chance > number(0, 100))
+        percent_chance > number(0, 100) ||
+        GET_STAT(victim) <= STAT_SLEEPING)
     {
       if(single_stab(ch, victim, first_w))
         return TRUE;
@@ -4544,7 +4545,8 @@ int backstab(P_char ch, P_char victim)
       second_w &&
       IS_BACKSTABBER(second_w))
   {
-    if(percent_chance > number(0, 100))
+    if(percent_chance > number(0, 100) ||
+       GET_STAT(victim) <= STAT_SLEEPING)
     {
       if(stabbed)
       {
