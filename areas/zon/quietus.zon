@@ -329,11 +329,11 @@ E 1 1701 20 24 100 0 0 0           *   badge of the Darvanu
 M 0 1749 1 1784 100 0 0 0          * a mercenary captain
 E 1 1701 20 24 100 0 0 0           *   badge of the Darvanu
 P 1 1742 1 1701 100 0 0 0          *   a gold key
+M 0 1751 1 1784 100 0 0 0          * Aresliean
+G 1 1746 1 0 100 0 0 0             *    the bloody head of Aresliean
 M 0 1724 7 1788 100 0 0 0          * a sleeping dockhand
 M 0 1724 7 1788 100 0 0 0          * a sleeping dockhand
 M 0 1750 1 1790 100 0 0 0          * a muscular Flind
 E 1 1745 1 18 100 0 0 0            *   a globe of swirling smoke
-M 0 1751 1 1794 100 0 0 0          * Aresliean
-G 1 1746 1 0 100 0 0 0             *    the bloody head of Aresliean
 *
 S
