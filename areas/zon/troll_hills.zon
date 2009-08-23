@@ -24,7 +24,7 @@ M 0 1800 15 1810 100 0 0 0         * an ugly troll
 M 0 1808 8 1810 100 0 0 0          * the giant dragonfly
 M 0 1801 12 1811 100 0 0 0         * the two-headed troll
 M 0 1819 1 1812 100 0 0 0          * the massive half-breed troll
-E 1 1800 2 6 100 0 0 0             *   (object type not in this .obj file)
+E 1 1800 2 6 100 0 0 0             *   a gem studded silver headband
 E 1 283 99999 16 100 0 0 0         *   (object type not in this .obj file)
 M 0 1818 2 1814 100 0 0 0          * the giant skeleton
 E 1 283 99999 16 100 0 0 0         *   (object type not in this .obj file)
@@ -44,9 +44,9 @@ E 1 283 99999 16 100 0 0 0         *   (object type not in this .obj file)
 M 0 1808 8 1834 100 0 0 0          * the giant dragonfly
 M 0 1806 12 1836 100 0 0 0         * a wild boar
 M 0 1802 3 1837 100 0 0 0          * the giant troll
-E 1 1801 100 16 100 0 0 0          *   (object type not in this .obj file)
+E 1 1801 100 16 100 0 0 0          *   a huge wooden club
 M 0 1802 3 1844 100 0 0 0          * the giant troll
-E 1 1801 100 16 100 0 0 0          *   (object type not in this .obj file)
+E 1 1801 100 16 100 0 0 0          *   a huge wooden club
 M 0 1808 8 1844 100 0 0 0          * the giant dragonfly
 M 0 1801 12 1845 100 0 0 0         * the two-headed troll
 M 0 1800 15 1846 100 0 0 0         * an ugly troll
@@ -70,8 +70,8 @@ M 0 1806 12 1868 100 0 0 0         * a wild boar
 M 0 1803 2 1869 100 0 0 0          * the spectral troll
 M 0 1803 2 1869 100 0 0 0          * the spectral troll
 M 0 1804 1 1873 100 0 0 0          * the ogre magi
-E 1 1804 2 18 100 0 0 0            *   (object type not in this .obj file)
-G 1 1803 2 0 100 0 0 0             *    (object type not in this .obj file)
+E 1 1804 2 18 100 0 0 0            *   a small stone ogre idol
+G 1 1803 2 0 100 0 0 0             *    a small key
 M 0 1805 1 1873 100 0 0 0          * the ogre
 E 1 283 99999 16 100 0 0 0         *   (object type not in this .obj file)
 M 0 1801 12 1877 100 0 0 0         * the two-headed troll
@@ -89,7 +89,7 @@ M 0 1806 12 1889 100 0 0 0         * a wild boar
 M 0 1800 15 1890 100 0 0 0         * an ugly troll
 M 0 1808 8 1890 100 0 0 0          * the giant dragonfly
 M 0 1802 3 1892 100 0 0 0          * the giant troll
-E 1 1801 100 16 100 0 0 0          *   (object type not in this .obj file)
+E 1 1801 100 16 100 0 0 0          *   a huge wooden club
 M 0 1806 12 1893 100 0 0 0         * a wild boar
 M 0 1807 2 1896 100 0 0 0          * the huge boa constrictor
 M 0 1806 12 1905 100 0 0 0         * a wild boar
@@ -97,9 +97,9 @@ M 0 1806 12 1905 100 0 0 0         * a wild boar
 M 0 1801 12 1905 100 0 0 0         * the two-headed troll
 M 0 1801 12 1905 100 0 0 0         * the two-headed troll
 M 0 1815 5 1908 100 0 0 0          * a lizard man
-E 1 1806 100 16 100 0 0 0          *   (object type not in this .obj file)
+E 1 1806 100 16 100 0 0 0          *   a metal spear
 M 0 1815 5 1908 100 0 0 0          * a lizard man
-E 1 1806 100 16 100 0 0 0          *   (object type not in this .obj file)
+E 1 1806 100 16 100 0 0 0          *   a metal spear
 M 0 1815 5 1908 100 0 0 0          * a lizard man
 M 0 1815 5 1910 100 0 0 0          * a lizard man
 M 0 1815 5 1911 100 0 0 0          * a lizard man
