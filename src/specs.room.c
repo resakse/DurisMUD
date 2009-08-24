@@ -168,7 +168,7 @@ int multiclass_proc(int room, P_char ch, int cmd, char *arg)
   {
     return FALSE;
   }
-  else if (GET_LEVEL(ch) < 46)
+  else if (GET_LEVEL(ch) >= (int)(get_property("multiclass.level.req.min", 41)))
   {
     do_multiclass(ch, "", -1);  // show list of available secondary classes
   }

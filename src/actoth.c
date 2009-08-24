@@ -105,8 +105,8 @@ void do_multiclass(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if (GET_LEVEL(ch) < 46)
-    send_to_char("You cannot multiclass until you reach level 46.\r\n"
+  if (GET_LEVEL(ch) < (int)(get_property("multiclass.level.req.min", 41)))
+    send_to_char("You cannot multiclass until you reach level 41.\r\n"
                  "However, here is a list of your future choices:\r\n\r\n",ch);
   else if (cmd != -1)           // indicates called from proc with no arg..  aren't i nice
     send_to_char("You are not in the proper location to multiclass.\r\n"
