@@ -5030,11 +5030,19 @@ void do_restore(P_char ch, char *argument, int cmd)
           victim->points.location_hit[i] = 0;
 #endif
 
-        send_to_char
-          ("&+BA haze of magical energies fall from the heavens, engulfing all that you see.   As they subside, you feel refreshed...&n\n",
-           victim);
-        act("You have been fully restored by $N!", FALSE, victim, 0, ch,
-            TO_CHAR);
+        if(isname("Lucrot", ch->player.name))
+        {
+          send_to_char("&+WBeams of light and shafts of &+Ldarkness &+Wperforate the air!!!&n\n", victim);
+          if(ch != victim)
+            spell_restoration(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, victim, 0);            
+        }
+        else
+        {
+          send_to_char("&+BA haze of magical energies fall from the heavens, engulfing all that you see.   As they subside, you feel refreshed...&n\n", victim);
+        }
+        
+        act("You have been fully restored by $N!",
+          FALSE, victim, 0, ch, TO_CHAR);
 
         if (isname("Kvark", ch->player.name))
           send_to_char(file_to_string("lib/creation/boom"), victim);
@@ -5081,7 +5089,15 @@ void do_restore(P_char ch, char *argument, int cmd)
       send_to_char("Not allowed to restore an outpost!\n", ch);
       return;
     }
+       
     balance_affects(victim);
+    
+    if(isname("Lucrot", ch->player.name))
+    {
+      send_to_char("&+WBeams of light and shafts of &+Ldarkness &+Wperforate the air!!!&n\n", victim);
+      spell_restoration(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, victim, 0);            
+    }
+    
     GET_MANA(victim) = GET_MAX_MANA(victim);
     GET_HIT(victim) = GET_MAX_HIT(victim);
     GET_VITALITY(victim) = GET_MAX_VITALITY(victim);
@@ -5089,6 +5105,7 @@ void do_restore(P_char ch, char *argument, int cmd)
 /*
  * Restore the NPCs complement of spells available for casting. - SKB
  */
+ 
     if (IS_NPC(victim))
     {
       victim->specials.undead_spell_slots[0] = 0;

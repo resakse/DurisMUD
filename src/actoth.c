@@ -85,7 +85,8 @@ void do_terrain(P_char ch, char *arg, int cmd)
 void do_multiclass(P_char ch, char *arg, int cmd)
 {
   int found_one = FALSE, i;
-
+  int min_level = get_property("multiclass.level.req.min", 41);
+  
   if (IS_MULTICLASS_PC(ch))
   {
     send_to_char
@@ -100,12 +101,13 @@ void do_multiclass(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if (GET_RACE(ch) != RACE_ORC && GET_RACE(ch) != RACE_HUMAN) {
+  if (GET_RACE(ch) != RACE_ORC && GET_RACE(ch) != RACE_HUMAN)
+  {
     send_to_char("Your race is not versatile enough to learn that much.\n", ch);
     return;
   }
 
-  if (GET_LEVEL(ch) < (int)(get_property("multiclass.level.req.min", 41)))
+  if (GET_LEVEL(ch) < min_level)
     send_to_char("You cannot multiclass until you reach level 41.\r\n"
                  "However, here is a list of your future choices:\r\n\r\n",ch);
   else if (cmd != -1)           // indicates called from proc with no arg..  aren't i nice

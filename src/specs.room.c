@@ -153,13 +153,15 @@ int multiclass_proc(int room, P_char ch, int cmd, char *arg)
 {
   int      i;
   int skls[MAX_SKILLS];
+  int min_level = get_property("multiclass.level.req.min", 41);  
 
   if ((cmd == CMD_SET_PERIODIC) || (ch == NULL) || IS_NPC(ch) || IS_MORPH(ch) ||
       !((cmd == CMD_MULTICLASS)))
     return FALSE;
 
 // SET_BIT(ch->specials.act2, PLR2_HARDCORE_CHAR);
-  if (GET_RACE(ch) != RACE_ORC && GET_RACE(ch) != RACE_HUMAN) {
+  if (GET_RACE(ch) != RACE_ORC && GET_RACE(ch) != RACE_HUMAN)
+  {
     send_to_char("Your race is not versatile enough to learn that much.\n", ch);
     return FALSE;
   }
@@ -168,7 +170,7 @@ int multiclass_proc(int room, P_char ch, int cmd, char *arg)
   {
     return FALSE;
   }
-  else if (GET_LEVEL(ch) >= (int)(get_property("multiclass.level.req.min", 41)))
+  else if (GET_LEVEL(ch) < min_level)
   {
     do_multiclass(ch, "", -1);  // show list of available secondary classes
   }
