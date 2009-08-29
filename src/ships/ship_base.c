@@ -4090,7 +4090,7 @@ void check_contraband(P_ship ship, int to_room)
             else*/ 
             if (ship->frags >= cargo_data[type].frag_threshold)
             {
-                conf_chance = 25.0 + (float)crates; // the more contraband you have, the bigger confiscation chance
+                conf_chance = 25.0 + (float)crates / 2; // the more contraband you have, the bigger confiscation chance
                 conf_chance -= sqrt(ship->frags) / 5.0;
                 conf_chance += (100.0 - conf_chance) * (1.0 - total_load); // the more total cargo onboard, the less confiscation chance
                 if (conf_chance > 100) conf_chance = 100;
