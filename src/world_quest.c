@@ -152,7 +152,7 @@ void quest_reward(P_char ch, P_char quest_mob, int type)
 
   if(type != FIND_AND_KILL) // less exp but some money
   {
-    sprintf(Gbuf1, "You gain some experience.");
+    sprintf(Gbuf1, "&=LGYou gain some experience.&n");
     act(Gbuf1, FALSE, quest_mob, 0, ch, TO_VICT);
 
     reward =  read_object(real_object(getItemFromZone(real_zone(ch->only.pc->quest_zone_number))), REAL);
@@ -182,7 +182,7 @@ void quest_reward(P_char ch, P_char quest_mob, int type)
   }
   else // no money but an item.
   {
-    sprintf(Gbuf1, "You gain some experience.");
+    sprintf(Gbuf1, "&=LGYou gain some experience.&n");
     act(Gbuf1, FALSE, quest_mob, 0, ch, TO_VICT);
 
     reward =  read_object(real_object(getItemFromZone(real_zone(ch->only.pc->quest_zone_number))), REAL);
@@ -272,7 +272,7 @@ void quest_ask(P_char ch, P_char quest_mob)
 
   wizlog(56, "%s finished quest @%s (ask quest)", GET_NAME(ch), quest_mob->player.short_descr );
   do_action(quest_mob, 0, CMD_NOD);
-  send_to_char("Congratulations, you finished your quest!\r\n", ch);
+  send_to_char("&=LWCongratulations&n&n&+W, you finished your quest!&n\r\n", ch);
   quest_reward(ch, quest_mob, FIND_AND_ASK);
 
 }
@@ -297,7 +297,7 @@ void quest_kill(P_char ch, P_char quest_mob)
 
   if(ch->only.pc->quest_accomplished ==1)
   {
-    send_to_char("This quest is already finished, go visit your quest master for your reward!\r\n", ch);
+    send_to_char("&+RThis quest is already finished, go visit your quest master for your reward!\r\n", ch);
     return;
   }
 
@@ -306,12 +306,12 @@ void quest_kill(P_char ch, P_char quest_mob)
   if(ch->only.pc->quest_kill_how_many - ch->only.pc->quest_kill_original == 0)
   {
     ch->only.pc->quest_accomplished = 1;
-    send_to_char("Congratulations, you finished your quest!\r\n", ch);
+    send_to_char("&=LWCongratulations&n&n&+W, you finished your quest!&n\r\n", ch);
     wizlog(56, "%s finished quest @%s (kill quest)", GET_NAME(ch), quest_mob->player.short_descr );
   }
   else
   {
-    send_to_char("Congratulations, you found the right mob, but you're not done yet.\r\n", ch);
+    send_to_char("&+YCongratulations&+y, you found the right mob, but you're not done yet.\r\n", ch);
   }
 }
 
