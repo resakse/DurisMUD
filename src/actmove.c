@@ -262,7 +262,7 @@ int leave_by_exit(P_char ch, int exitnumb)
   if (IS_PC(ch) && IS_RIDING(ch))
   {
     t_ch = get_linked_char(ch, LNK_RIDING);
-    if(IS_IMMOBILE(t_ch));
+    if(!IS_IMMOBILE(t_ch));
     {
       send_to_char("Alas, your mount is not quite in the shape for that.\n", ch);
       return FALSE;
