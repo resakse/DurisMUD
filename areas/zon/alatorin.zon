@@ -150,20 +150,20 @@ D 0 83398 3 1 100 0 0 0
 *     "A Neat and Tidy Chamber" - closed
 *
 D 0 83146 0 1 100 0 0 0
-*     north exit from "East Wall of the Seige Court" to
+*     north exit from "East Wall of the Siege Court" to
 *     "A Plate and Shield Storage Hold" - closed
 *
 D 0 83147 2 1 100 0 0 0
 *     south exit from "A Plate and Shield Storage Hold" to
-*     "East Wall of the Seige Court" - closed
+*     "East Wall of the Siege Court" - closed
 *
 D 0 83146 2 1 100 0 0 0
-*     south exit from "East Wall of the Seige Court" to
+*     south exit from "East Wall of the Siege Court" to
 *     "A Sword and Hammer Storage Hold" - closed
 *
 D 0 83148 0 1 100 0 0 0
 *     north exit from "A Sword and Hammer Storage Hold" to
-*     "East Wall of the Seige Court" - closed
+*     "East Wall of the Siege Court" - closed
 *
 D 0 83158 2 1 100 0 0 0
 *     south exit from "The Royal BrightAxe Receiving Room" to
@@ -510,12 +510,12 @@ D 0 83343 1 1 100 0 0 0
 *     "A Gateway of Total and Utter Darkness" - closed
 *
 D 0 83349 5 5 100 0 0 0
-*     down exit from "A Seering Landing Below the Great Anvil" to
+*     down exit from "A Searing Landing Below the Great Anvil" to
 *     "A Dark, Cramped Staircase" - closed/secret
 *
 D 0 83654 4 1 100 0 0 0
 *     up exit from "A Dark, Cramped Staircase" to
-*     "A Seering Landing Below the Great Anvil" - closed
+*     "A Searing Landing Below the Great Anvil" - closed
 *
 D 0 83353 1 1 100 0 0 0
 *     east exit from "Entrance of Dweefniggle's Workshop" to
@@ -879,10 +879,10 @@ D 0 83606 5 1 100 0 0 0
 *
 D 0 83600 1 2 100 0 0 0
 *     east exit from "An Adamantite-Reinforced Tunnel" to
-*     "A Huge Grimey Cavern" - closed/locked
+*     "A Huge Grimy Cavern" - closed/locked
 *
 D 0 83602 3 2 100 0 0 0
-*     west exit from "A Huge Grimey Cavern" to
+*     west exit from "A Huge Grimy Cavern" to
 *     "An Adamantite-Reinforced Tunnel" - closed/locked
 *
 D 0 83600 2 8 100 0 0 0
@@ -1038,20 +1038,20 @@ D 0 83754 2 1 100 0 0 0
 *     "The Promenade, Before Rocks Arranged as Steps" - closed
 *
 D 0 83756 1 1 100 0 0 0
-*     east exit from "A Twisting Cobblstone Street" to
+*     east exit from "A Twisting Cobblestone Street" to
 *     "Entrance of the Golden Pearl Tavern" - closed
 *
 D 0 83759 3 1 100 0 0 0
 *     west exit from "Entrance of the Golden Pearl Tavern" to
-*     "A Twisting Cobblstone Street" - closed
+*     "A Twisting Cobblestone Street" - closed
 *
 D 0 83757 3 1 100 0 0 0
-*     west exit from "A Cobbletone Street BBeside a Beach Staircase" to
+*     west exit from "A Cobblestone Street Beside a Beach Staircase" to
 *     "A Small Shop" - closed
 *
 D 0 83790 1 1 100 0 0 0
 *     east exit from "A Small Shop" to
-*     "A Cobbletone Street BBeside a Beach Staircase" - closed
+*     "A Cobblestone Street Beside a Beach Staircase" - closed
 *
 D 0 83758 1 1 100 0 0 0
 *     east exit from "A Cobblestone Street" to
@@ -1103,10 +1103,10 @@ D 0 83770 1 1 100 0 0 0
 *
 D 0 83776 0 1 100 0 0 0
 *     north exit from "The Docks of Deramuth Port" to
-*     "A Moneychanger's Stand" - closed
+*     "A Money changer's Stand" - closed
 *
 D 0 83795 2 1 100 0 0 0
-*     south exit from "A Moneychanger's Stand" to
+*     south exit from "A Money changer's Stand" to
 *     "The Docks of Deramuth Port" - closed
 *
 D 0 83792 0 5 100 0 0 0
@@ -1760,24 +1760,24 @@ M 0 83232 1 83134 100 0 0 0        * a minotaur
 E 1 83234 8 16 100 0 0 0           *   a massive tauren battle-axe
 M 0 83197 1 83135 100 0 0 0        * Gradden the Dwarf Bounty Hunter
 G 1 94336 5 0 100 0 0 0            *    (object type not in this .obj file)
-M 0 83128 5 83138 100 0 0 0        * a battle-ready seige dwarf
-E 1 83176 1 5 100 0 0 0            *   a suit of heavy spiked seige armor
+M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
+E 1 83176 1 5 100 0 0 0            *   a suit of heavy spiked siege armor
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
-M 0 83128 5 83138 100 0 0 0        * a battle-ready seige dwarf
+M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
-M 0 83128 5 83138 100 0 0 0        * a battle-ready seige dwarf
+M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
-M 0 83128 5 83138 100 0 0 0        * a battle-ready seige dwarf
+M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
-M 0 83128 5 83138 100 0 0 0        * a battle-ready seige dwarf
+M 0 83128 5 83138 100 0 0 0        * a battle-ready siege dwarf
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
 M 0 83129 5 83138 100 0 0 0        * a battlerager
-E 1 83213 1 8 100 0 0 0            *   some spiked seige boots
+E 1 83213 1 8 100 0 0 0            *   some spiked siege boots
 E 1 83175 12 16 100 0 0 0          *   a barbed longsword
 E 1 83173 8 17 100 0 0 0           *   a spiked stone mace
 M 0 83129 5 83138 100 0 0 0        * a battlerager
@@ -1796,7 +1796,7 @@ M 0 83147 1 83145 100 0 0 0        * Sturb Ironhead
 E 1 83228 1 14 100 0 0 0           *   a spiked mithril wristguard
 E 1 83229 2 16 100 0 0 0           *   a spiked mithril mace
 E 1 83229 2 17 100 0 0 0           *   a spiked mithril mace
-F 1 83175 1 83145 100 0 0 0        * a commander of the seige army (following)
+F 1 83175 1 83145 100 0 0 0        * a commander of the siege army (following)
 M 0 83174 1 83145 100 0 0 0        * Birch Scruden
 E 1 83173 8 16 100 0 0 0           *   a spiked stone mace
 E 1 83173 8 17 100 0 0 0           *   a spiked stone mace
@@ -1870,11 +1870,11 @@ E 1 83111 999 16 100 0 0 0         *   an iron broadsword
 M 0 83120 16 83168 100 0 0 0       * an Alatorin elite guard
 E 1 83112 999 11 100 0 0 0         *   an iron shield bearing the crest of Alatorin
 E 1 83111 999 16 100 0 0 0         *   an iron broadsword
-M 0 83125 1 83170 100 0 0 0        * Rzayk the githzerai planestraveler
+M 0 83125 1 83170 100 0 0 0        * Rzayk the githzerai planes traveler
 G 1 22944 2 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 22944 2 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 83298 1 0 15 0 0 0             *    a tiny rune-inscribed ring
-M 0 83186 1 83171 100 0 0 0        * Grem the hooded prophecizer
+M 0 83186 1 83171 100 0 0 0        * Grem the hooded prophesier
 M 0 83177 1 83175 100 0 0 0        * a tiny gnome summoner
 E 1 83179 1 18 100 0 0 0           *   a staff of golem creation
 F 1 83179 2 83175 100 0 0 0        * a flesh golem (following)
@@ -2278,7 +2278,7 @@ E 1 83166 1 1 100 0 0 0            *   a crystal ring set with a jade
 E 1 83167 1 16 100 0 0 0           *   a crystal longsword
 G 1 94336 5 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83185 1 83295 30 0 0 0         * Mishanen, the centaur herbalist
-E 1 83186 1 37 100 0 0 0           *   a tail ring of gilded sunpetals
+E 1 83186 1 37 100 0 0 0           *   a tail ring of gilded sun petals
 G 1 83187 1 0 100 0 0 0            *    a gnarled wooden wand
 M 0 83157 18 83295 100 0 0 0       * an Alatorin peacekeeper
 E 1 83112 999 11 100 0 0 0         *   an iron shield bearing the crest of Alatorin
@@ -2324,9 +2324,9 @@ M 0 83180 1 83311 100 0 0 0        * Sharsta the shadowmage
 M 0 83135 3 83318 100 0 0 0        * a regal zebra
 M 0 83135 3 83318 100 0 0 0        * a regal zebra
 M 0 83135 3 83318 100 0 0 0        * a regal zebra
-M 0 83133 3 83319 100 0 0 0        * a savannah lion
-M 0 83133 3 83319 100 0 0 0        * a savannah lion
-M 0 83133 3 83319 100 0 0 0        * a savannah lion
+M 0 83133 3 83319 100 0 0 0        * a savanna lion
+M 0 83133 3 83319 100 0 0 0        * a savanna lion
+M 0 83133 3 83319 100 0 0 0        * a savanna lion
 M 0 83134 5 83323 100 0 0 0        * a prairie dog
 M 0 83134 5 83323 100 0 0 0        * a prairie dog
 M 0 83134 5 83323 100 0 0 0        * a prairie dog
@@ -2695,7 +2695,7 @@ M 0 83305 4 83517 100 0 0 0        * a starving warrior
 G 1 88823 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 38303 2 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83104 2 83517 100 0 0 0        * a fat dwarf
-M 0 83314 1 83518 100 0 0 0        * a massive seige dwarf
+M 0 83314 1 83518 100 0 0 0        * a massive siege dwarf
 E 1 83174 10 16 100 0 0 0          *   a bloody warhammer
 M 0 83303 2 83518 83 0 0 0         * a raucous goblin drunk
 M 0 83297 1 83520 100 0 0 0        * the Hammer and Shield bartender
@@ -2771,19 +2771,19 @@ F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
 E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
-M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowmnan
-M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowmnan
-M 0 83323 8 83587 100 0 0 0        * a Helgor crossbowmnan
-M 0 83323 8 83587 100 0 0 0        * a Helgor crossbowmnan
-M 0 83323 8 83589 100 0 0 0        * a Helgor crossbowmnan
-M 0 83323 8 83589 100 0 0 0        * a Helgor crossbowmnan
+M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowman
+M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowman
+M 0 83323 8 83587 100 0 0 0        * a Helgor crossbowman
+M 0 83323 8 83587 100 0 0 0        * a Helgor crossbowman
+M 0 83323 8 83589 100 0 0 0        * a Helgor crossbowman
+M 0 83323 8 83589 100 0 0 0        * a Helgor crossbowman
 M 0 83334 4 83589 100 0 0 0        * a burly guard of Helgor outpost
 E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
 E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
 E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
 R 1 83321 6 83589 100 0 0 0        * a huge warg (being ridden)
-M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowmnan
-M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowmnan
+M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowman
+M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowman
 M 0 83324 4 83594 100 0 0 0        * an outpost clansdwarf
 G 1 44404 9 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 44404 9 0 100 0 0 0            *    (object type not in this .obj file)
