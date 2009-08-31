@@ -59,7 +59,7 @@ D3
 0 0 83101
 S
 #83103
-&+CThe &+cEntry &+Cto Altorin~
+&+CThe &+cEntry &+Cto Alatorin~
    &+CThis massive entryway stands in an arch in the shape of a dwarven
 &+Cwarrior wielding a sword and carrying a massive shield.  This marks
 &+Cthe entry point to the great shield dwarf city Alatorin.  Built into
@@ -82,8 +82,8 @@ S
 &+Ltwo most popular places of Alatorin.  The &+WStone&+YBrew&+L tavern is
 &+Lmultiple levels, with an inn on the top floor and a bar below, with
 &+La storage chamber below in the basement.  Dwarves from all over Duris
-&+Ltravel to this bar for their exquisite taste in meade and spirits.  The
-&+Lfloor is carpetted with heavy &+colyx &+Lhide and the walls decorated with
+&+Ltravel to this bar for their exquisite taste in mead and spirits.  The
+&+Lfloor is carpeted with heavy &+colyx &+Lhide and the walls decorated with
 &+Lpaintings of dwarven lords and deities.
 ~
 831 0 14
@@ -110,8 +110,8 @@ S
 &+Ltwo most popular places of Alatorin.  The &+WStone&+YBrew&+L tavern is
 &+Lmultiple levels, with an inn on the top floor and a bar below, with
 &+La storage chamber below in the basement.  Dwarves from all over Duris
-&+Ltravel to this bar for their exquisite taste in meade and spirits.  The
-&+Lfloor is carpetted with heavy &+colyx &+Lhide and the walls decorated with
+&+Ltravel to this bar for their exquisite taste in mead and spirits.  The
+&+Lfloor is carpeted with heavy &+colyx &+Lhide and the walls decorated with
 &+Lpaintings of dwarven lords and deities.
 ~
 831 0 14
@@ -131,8 +131,8 @@ S
 &+Ltwo most popular places of Alatorin.  The &+WStone&+YBrew&+L tavern is
 &+Lmultiple levels, with an inn on the top floor and a bar below, with
 &+La storage chamber below in the basement.  Dwarves from all over Duris
-&+Ltravel to this bar for their exquisite taste in meade and spirits.  The
-&+Lfloor is carpetted with heavy &+colyx &+Lhide and the walls decorated with
+&+Ltravel to this bar for their exquisite taste in meed and spirits.  The
+&+Lfloor is carpeted with heavy &+colyx &+Lhide and the walls decorated with
 &+Lpaintings of dwarven lords and deities.
 ~
 831 0 14
@@ -228,7 +228,7 @@ S
 &+WThe Stone&+YBrew Inn&N~
    &+WThis small chamber is located on the second floor of the StoneBrew
 &+WTavern.  There are identical doors to the north and south, each leading
-&+Wto bunked lodging chambers for passerbys and dwarves of Alatorin.
+&+Wto bunked lodging chambers for passersby and dwarves of Alatorin.
 &+WAlthough there are very rarely visitors to this underground civilization
 &+Wthat are not of dwarven blood, the inn will graciously welcome their
 &+Wpatronage, as well as their gold.
@@ -292,7 +292,7 @@ S
 &+WAn &+MElegant &+WBedchamber&N~
    &+WThis room is almost as big as the entire rest of the inn.  A large
 &+Wluxurious bed and fine imported wooden furniture grace this chamber.
-&+WClearly reserved for the highest of royalty that begraces this inn
+&+WClearly reserved for the highest of royalty that graces this inn
 &+Wof Alatorin, this chamber is fit for a king.
 ~
 831 0 14
@@ -590,9 +590,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -615,7 +615,7 @@ S
 &+Wtable and dozens of small stools set around it.  This serves as the
 &+Wgrand banquet hall of the league of Adventurers.  Various paintings
 &+Wadorn this wall in much greater size then other parts of Alatorin.
-&+WThe floor beneath the banquet table is uncarpetted, which must see
+&+WThe floor beneath the banquet table is uncarpeted, which must see
 &+Wconstant abuse from sloppy dwarves who devour their meals hungrily.
 &+WSeeing as how there is no real kitchen in the Hall of Guilds, several
 &+Wstone hearths rest in the far corner of the chamber to keep food
@@ -642,9 +642,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -731,7 +731,7 @@ S
 &+WA Polished, Elegant Chamber&N~
    &+WThis elegant chamber has been polished to a pristine perfection.
 &+WThere are numerous pieces of furniture, each baring the same glossy
-&+Wwhite paint job.  The floor in this chamber is carpetted with a
+&+Wwhite paint job.  The floor in this chamber is carpeted with a
 &+Wfine &+Bvelvet &+Wrug.  A wide-open practice area is located next to
 &+Wa small sleeping abode.
 ~
@@ -785,7 +785,7 @@ S
 &+Ybattle-hammer and an axe accordingly in constant struggle.  This
 &+Ychamber opens up from several large, wide steps into the War
 &+YChamber of Alatorin, east of here.  This chamber serves as the
-&+Ypivitol location for the movement of the shield dwarf army and
+&+Ypivotal location for the movement of the shield dwarf army and
 &+Yabove all else, the protection of the Alatorians.
 ~
 831 134250496 14
@@ -801,9 +801,9 @@ S
 #83137
 &+YThe &+rSiege &+YCourt~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -828,9 +828,9 @@ S
 #83138
 &+LBelow the Officers' Platform~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -847,9 +847,9 @@ S
 #83139
 &+YThe &+rSiege &+YCourt~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -866,9 +866,9 @@ S
 #83140
 &+YThe &+rSiege &+YCourt~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -885,9 +885,9 @@ S
 #83141
 &+CThe Hall of Arms&N~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -904,9 +904,9 @@ S
 #83142
 &+CThe Hall of Arms&N~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -923,9 +923,9 @@ S
 #83143
 &+CThe Hall of Arms&N~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -942,9 +942,9 @@ S
 #83144
 &+CThe Hall of Arms&N~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -961,11 +961,11 @@ S
 #83145
 &+WThe Officers' Platform&N~
    &+WThis large platform is a simple continuation of the Hall of Arms
-&+Won the second floor of the Council of War, overlooking the Seige
+&+Won the second floor of the Council of War, overlooking the Siege
 &+WCourt.  A large circular scaled map of a portion of Ice Crag tundra
 &+Wrests at the center of the chamber, receiving the harsh demands of
 &+Wthe dwarven generals and war emissaries.  This platform overlooks the
-&+WSeige Court below, giving officials of the Alatorin army the ability
+&+WSiege Court below, giving officials of the Alatorin army the ability
 &+Wto address huge gatherings of troops all at once.
 ~
 831 134250496 14
@@ -979,11 +979,11 @@ D2
 0 0 83144
 S
 #83146
-&+LEast Wall of the &+rSeige &+YCourt~
+&+LEast Wall of the &+rSiege &+YCourt~
    &+YThis giant hall, known as the Council of War, is made up of the open
-&+Yfloor area called the &+rSeige &+YCourt, as well as the officers'
+&+Yfloor area called the &+rSiege &+YCourt, as well as the officers'
 &+Yplatform above, overlooking the council.  Two identical ramps lead
-&+Yup either side of the &+rSeige &+YCourt to the upper overlook.  This
+&+Yup either side of the &+rSiege &+YCourt to the upper overlook.  This
 &+YCouncil of War chamber acts as both a staging ground for the Alatorin
 &+Ymilitia as well as a central location for drills.
 ~
@@ -1037,7 +1037,7 @@ door~
 S
 #83149
 &+LNorth &+CBrightAxe &+LPass&N~
-   &+CThis pass connects the outter halls of Alatorin to BrightAxe Hall,
+   &+CThis pass connects the outer halls of Alatorin to BrightAxe Hall,
 &+Cthe leader Taark Shanat's hall.  This pass is a vaulted arch that
 &+Csuddenly shoots straight up into the vast domain of BrightAxe.  These
 &+Cmithril walls are quite old, but well-kept.  This pass leads back out
@@ -1055,7 +1055,7 @@ D2
 S
 #83150
 &+LSouth &+CBrightAxe &+LPass~
-   &+CThis pass connects the outter halls of Alatorin to BrightAxe Hall,
+   &+CThis pass connects the outer halls of Alatorin to BrightAxe Hall,
 &+Cthe leader Taark Shanat's hall.  This pass is a vaulted arch that
 &+Csuddenly shoots straight up into the vast domain of BrightAxe.  These
 &+Cmithril walls are quite old, but well-kept.  This pass leads back out
@@ -1080,7 +1080,7 @@ S
 &+Ctunnels feed outward deeper into this palace.
    &+CIt is dwarven lore that this hall was formerly known as Rringlor
 &+CNoroth, and home of a blue dragon horde.  During the Cloaker Wars,
-&+CTaark Shanat himself slaid the four rulers of Rringlor Noroth, and
+&+CTaark Shanat himself slayed the four rulers of Rringlor Noroth, and
 &+Cclaimed the great city as their own.
 ~
 831 134250496 14
@@ -1110,7 +1110,7 @@ S
 &+Ctunnels feed outward deeper into this palace.
    &+CIt is dwarven lore that this hall was formerly known as Rringlor
 &+CNoroth, and home of a blue dragon horde.  During the Cloaker Wars,
-&+CTaark Shanat himself slaid the four rulers of Rringlor Noroth, and
+&+CTaark Shanat himself slayed the four rulers of Rringlor Noroth, and
 &+Cclaimed the great city as their own.
 ~
 831 134250496 14
@@ -1132,7 +1132,7 @@ S
 &+Ctunnels feed outward deeper into this palace.
    &+CIt is dwarven lore that this hall was formerly known as Rringlor
 &+CNoroth, and home of a blue dragon horde.  During the Cloaker Wars,
-&+CTaark Shanat himself slaid the four rulers of Rringlor Noroth, and
+&+CTaark Shanat himself slayed the four rulers of Rringlor Noroth, and
 &+Cclaimed the great city as their own.
 ~
 831 134250496 14
@@ -1162,7 +1162,7 @@ S
 &+Ctunnels feed outward deeper into this palace.
    &+CIt is dwarven lore that this hall was formerly known as Rringlor
 &+CNoroth, and home of a blue dragon horde.  During the Cloaker Wars,
-&+CTaark Shanat himself slaid the four rulers of Rringlor Noroth, and
+&+CTaark Shanat himself slayed the four rulers of Rringlor Noroth, and
 &+Cclaimed the great city as their own.
 ~
 831 134250496 14
@@ -1188,7 +1188,7 @@ S
 &+Ctunnels feed outward deeper into this palace.
    &+CIt is dwarven lore that this hall was formerly known as Rringlor
 &+CNoroth, and home of a blue dragon horde.  During the Cloaker Wars,
-&+CTaark Shanat himself slaid the four rulers of Rringlor Noroth, and
+&+CTaark Shanat himself slayed the four rulers of Rringlor Noroth, and
 &+Cclaimed the great city as their own.
 ~
 831 134250496 14
@@ -1218,7 +1218,7 @@ S
 &+Ctunnels feed outward deeper into this palace.
    &+CIt is dwarven lore that this hall was formerly known as Rringlor
 &+CNoroth, and home of a blue dragon horde.  During the Cloaker Wars,
-&+CTaark Shanat himself slaid the four rulers of Rringlor Noroth, and
+&+CTaark Shanat himself slayed the four rulers of Rringlor Noroth, and
 &+Cclaimed the great city as their own.
 ~
 831 134250496 14
@@ -1236,9 +1236,9 @@ S
    &+LThis large, vaulted hallway leads east deeper into the BrightAxe
 &+LHall.  This elegant hallway is decorated with portraits of Taark
 &+LShanat and axes decoratively mounted to the walls.  The floor is
-&+Lcarpetted with a thick fur rug, dyed bright blue - the color of
+&+Lcarpeted with a thick fur rug, dyed bright blue - the color of
 &+Ltempered mithril-steel.  This hallway leads to a large receiving
-&+Lroom in which messangers are sent and gathered, visitors consult
+&+Lroom in which messengers are sent and gathered, visitors consult
 &+Lthe king, peasants petitioning, and lordly dues.
 ~
 831 134250496 14
@@ -1257,7 +1257,7 @@ S
 &+Wcastle, King Taark Shanat himself.  Standing with an imposing presence
 &+Wjust east of here, the Wyrmskull Throne seats the Dragonslayer himself.
 &+WThis open court has several rows of stone benches set for waiting
-&+Wpetitioners and courtsmen.  The center aisle is carpetted with a
+&+Wpetitioners and courtsmen.  The center aisle is carpeted with a
 &+Wthick &+rred &+Wcarpet, most likely imported or given as a gift.
 &+WThis chamber has a vaulted ceiling, its highest point being shrouded
 &+Win darkness.  One's voice booms incredibly loudly in this chamber.
@@ -1417,7 +1417,7 @@ S
 ~
 831 134250496 14
 D1
-   &+WThis door leads into the kitchen of the King's Banquest Hall.
+   &+WThis door leads into the kitchen of the King's Banquets Hall.
 ~
 door~
 1 0 83166
@@ -1510,8 +1510,8 @@ S
 &+LA Niche in the Cavern&N~
    &+LThis small, wet cavern niche is located between two
 &+Lshelves of these natural, unmined caverns.  This small
-&+Lniche serves as the location for an Alatorian prophecizer
-&+Lwho caretakes and basks in these Caverns, at the Pools of
+&+Lniche serves as the location for an Alatorian prophesiers
+&+Lwho caretakers and basks in these Caverns, at the Pools of
 &+LForesight.
 ~
 831 134217728 14
@@ -1522,7 +1522,7 @@ D3
 S
 #83171
 &+CT&+Gh&+Ce &+CPools &+Go&+Cf &+GForesight&N~
-   &+GThese misty pools move like water in slow-motion, tideless
+   &+GThese misty pools move like water in slow-motion, tide-less
 &+Gand magical.  A faint green haze settles just above the waters
 &+Gof these pools.  Occasionally, the waters may churn with energy
 &+Gcausing an actual &+Wfountain&+G to appear.  These pools rest
@@ -1596,7 +1596,7 @@ S
    &+LThis long, almost dismal-seeming hallway stretches through the
 &+LMystic Ward, joining the west pass to the north pass through the
 &+Lpillared ward itself.  Every other stone block on the walls facing
-&+Leach other is a large, inscrubed &+Mglyph&+L, each giving off a faint
+&+Leach other is a large, inscribed &+Mglyph&+L, each giving off a faint
 &+Lmagical glow.
 ~
 831 134250496 14
@@ -1622,7 +1622,7 @@ S
    &+LThis long, almost dismal-seeming hallway stretches through the
 &+LMystic Ward, joining the west pass to the north pass through the
 &+Lpillared ward itself.  Every other stone block on the walls facing
-&+Leach other is a large, inscrubed &+Mglyph&+L, each giving off a faint
+&+Leach other is a large, inscribed &+Mglyph&+L, each giving off a faint
 &+Lmagical glow.
 ~
 831 134250496 14
@@ -1645,7 +1645,7 @@ S
    &+LThis long, almost dismal-seeming hallway stretches through the
 &+LMystic Ward, joining the west pass to the north pass through the
 &+Lpillared ward itself.  Every other stone block on the walls facing
-&+Leach other is a large, inscrubed &+Mglyph&+L, each giving off a faint
+&+Leach other is a large, inscribed &+Mglyph&+L, each giving off a faint
 &+Lmagical glow.
 ~
 831 134250496 14
@@ -1865,7 +1865,7 @@ D2
 S
 #83187
 &+MWithin the Mystic's Tower&N~
-   &+MSmall regeant pouches, bottles, herbs, roots, stones, and bones
+   &+MSmall reagent pouches, bottles, herbs, roots, stones, and bones
 &+Mlie in small piles or shelves throughout the chaos of this organized
 &+Mtower.  The spiral staircase of this mystic tower matches the
 &+Mgnomish design of the other spiral staircase found within this
@@ -1884,7 +1884,7 @@ D5
 S
 #83188
 &+MAtop the Mystic's Tower~
-   &+MSmall regeant pouches, bottles, herbs, roots, stones, and bones
+   &+MSmall reagent pouches, bottles, herbs, roots, stones, and bones
 &+Mlie in small piles or shelves throughout the chaos of this organized
 &+Mtower.  The spiral staircase of this mystic tower matches the
 &+Mgnomish design of the other spiral staircase found within this
@@ -2517,7 +2517,7 @@ D3
 S
 #83219
 &+yMuntz &+rBlood&+Rbore's &+YTrade Goods~
-   &+yMuntz &+rBlood&+Rbore&+L, a noble and once-wirey adventurer,
+   &+yMuntz &+rBlood&+Rbore&+L, a noble and once-wiry adventurer,
 &+Lhas set up a trade shop here within &+CAlatorin&+L.  There are
 &+Lvarious items of all origins strewn about the area, covered in
 &+La light layer of dust.  Most of the items up front, however
@@ -2540,7 +2540,7 @@ S
 &+Ldecorated halls found in Alatorin.  There are huge stone and marble
 &+Lblocked pillars supporting this grand court.  This chamber is
 &+Lheavily guarded, as this Hall holds some important officials of
-&+LAlatorin, including the messager carrier and the clerk.
+&+LAlatorin, including the massager carrier and the clerk.
 ~
 831 134250496 14
 D0
@@ -2562,7 +2562,7 @@ S
 &+Ldecorated halls found in Alatorin.  There are huge stone and marble
 &+Lblocked pillars supporting this grand court.  This chamber is
 &+Lheavily guarded, as this Hall holds some important officials of
-&+LAlatorin, including the messager carrier and the clerk.
+&+LAlatorin, including the massager carrier and the clerk.
 ~
 831 134250496 14
 D2
@@ -2575,12 +2575,12 @@ D4
 0 0 121314
 S
 #83222
-&+CThe Messanger's &+cStand~
+&+CThe Messenger's &+cStand~
    &+LThis open hall is somewhat dismal compared to the other more-
 &+Ldecorated halls found in Alatorin.  There are huge stone and marble
 &+Lblocked pillars supporting this grand court.  This chamber is
 &+Lheavily guarded, as this Hall holds some important officials of
-&+LAlatorin, including the messager carrier and the clerk.
+&+LAlatorin, including the messenger carrier and the clerk.
 ~
 831 134250496 14
 D1
@@ -2598,7 +2598,7 @@ S
 &+Ldecorated halls found in Alatorin.  There are huge stone and marble
 &+Lblocked pillars supporting this grand court.  This chamber is
 &+Lheavily guarded, as this Hall holds some important officials of
-&+LAlatorin, including the messager carrier and the clerk.
+&+LAlatorin, including the messenger carrier and the clerk.
 ~
 831 134250496 14
 D1
@@ -2621,7 +2621,7 @@ S
 &+Ldecorated halls found in Alatorin.  There are huge stone and marble
 &+Lblocked pillars supporting this grand court.  This chamber is
 &+Lheavily guarded, as this Hall holds some important officials of
-&+LAlatorin, including the messager carrier and the clerk.
+&+LAlatorin, including the messenger carrier and the clerk.
 ~
 831 134250496 14
 D0
@@ -2639,7 +2639,7 @@ S
 &+Ldecorated halls found in Alatorin.  There are huge stone and marble
 &+Lblocked pillars supporting this grand court.  This chamber is
 &+Lheavily guarded, as this Hall holds some important officials of
-&+LAlatorin, including the messager carrier and the clerk.
+&+LAlatorin, including the messenger carrier and the clerk.
 ~
 831 134250496 14
 D1
@@ -2661,7 +2661,7 @@ S
 &+Ldecorated halls found in Alatorin.  There are huge stone and marble
 &+Lblocked pillars supporting this grand court.  This chamber is
 &+Lheavily guarded, as this Hall holds some important officials of
-&+LAlatorin, including the messager carrier and the clerk.
+&+LAlatorin, including the messenger carrier and the clerk.
 ~
 831 134250496 14
 D0
@@ -2689,7 +2689,7 @@ D0
 S
 #83228
 &+LEntrance to the &+WHammer&+Yhelm &+LBarracks&N~
-   &+LA small stepped pavillion leads to the banner-framed entrance of
+   &+LA small stepped pavilion leads to the banner-framed entrance of
 &+Lthe &+WHammer&+Yhelm &+LBarracks.  The &+WHammer&+Yhelm &+Lbarracks
 &+Lhouses and trains the great army of &+WClund Hammer&+Yhelm&+L, the
 &+Lfourth son of Taark Shanat himself.  This army serves as the great
@@ -2727,7 +2727,7 @@ S
 &+LA Corner in the &+WHammer&+Yhelm &+LBarracks~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -2750,7 +2750,7 @@ S
 &+LThe &+WHammer&+Yhelm &+LBarracks&N~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -2815,7 +2815,7 @@ S
 &+CA Reflecting Pool &+Lin the &+WHammer&+Yhelm &+LBarracks~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -2842,7 +2842,7 @@ S
 &+LThe &+WHammer&+Yhelm &+LBarracks&N~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -2881,7 +2881,7 @@ S
 &+LA &+CMithril-Railed &+LBridge&N~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -2904,7 +2904,7 @@ S
 &+WA Statue Hall~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -2935,7 +2935,7 @@ S
 &+LThe &+WHammer&+Yhelm &+LBarracks&N~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -2962,7 +2962,7 @@ S
 &+LA Corner in the &+WHammer&+Yhelm &+LBarracks~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -3009,7 +3009,7 @@ S
 &+LA Corner in the &+WHammer&+Yhelm &+LBarracks~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -3032,7 +3032,7 @@ S
 &+LThe &+WHammer&+Yhelm &+LBarracks&N~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -3063,7 +3063,7 @@ S
 &+LA Corner in the &+WHammer&+Yhelm &+LBarracks~
    &+LThis, the &+WHammer&+Yhelm &+LBarracks resides nested here
 &+Lwithin the &+YMilitary District&+L.  Under the command of the
-&+Lpowerful and renowened &+WClund Hammer&+Yhelm&+L, fourth son
+&+Lpowerful and renowned &+WClund Hammer&+Yhelm&+L, fourth son
 &+Lof Taark Shanat the savior of Alatorin.  This barracks serves
 &+Las a lodging for the great army of Alatorin.  Several rows of
 &+Lbunk beds made of carved stone and reinforced wooden planks
@@ -3204,7 +3204,7 @@ S
 #83250
 &+WAn El&Neg&+Want Corridor&N~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3224,7 +3224,7 @@ S
 #83251
 &+WA Bend in an Ele&Nga&+Wnt Corridor~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3244,7 +3244,7 @@ S
 #83252
 &+WAn El&Neg&+Want Corridor&N~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3264,7 +3264,7 @@ S
 #83253
 &+WAn Intersection in an E&Nl&+We&Ng&+Wa&Nn&+Wt Corridor~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3288,7 +3288,7 @@ S
 #83254
 &+WAn El&Neg&+Want Corridor&N~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3313,7 +3313,7 @@ S
 #83255
 &+WA Bend in an El&Ne&+Wg&Na&+Wnt Corridor~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3333,7 +3333,7 @@ S
 #83256
 &+WAn El&Neg&+Want Corridor&N~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3353,7 +3353,7 @@ S
 #83257
 &+WAn El&Neg&+Want Corridor&N~
    &+WThis elegant corridor stretches beneath the far depths
-&+Wof Alatorin.  The carpetted floor turns as it stretches
+&+Wof Alatorin.  The carpeted floor turns as it stretches
 &+Wpast the quarters of the three generals of the &+WHammer&+Yhelm
 &+Warmy as well as that of Clund Hammer&+Yhelm&+W himself, the exalted
 &+Wleader of the army and second in command to Taark Shanat.  The
@@ -3634,7 +3634,7 @@ S
 #83270
 &+WThe Emissaries' Hall&N~
    &+MThis mithril hall is identical to the perimeter hall of Shanat
-&+MCitadel except for one detail, the drapery.  Illustrous white curtains
+&+MCitadel except for one detail, the drapery.  Lustrous white curtains
 &+Mare hung evenly-spaced throughout either side of this hallway, decorating
 &+Mit with a silky, white, flowing presence.  While the only other tapestries
 &+Mexperienced in this entire city have been standard wall-hangings depicting
@@ -3663,7 +3663,7 @@ S
 #83271
 &+WA &NSt&+La&Ntu&+Le &+Wof &+YUrtengor&N~
    &+MThis mithril hall is identical to the perimeter hall of Shanat
-&+MCitadel except for one detail, the drapery.  Illustrous white curtains
+&+MCitadel except for one detail, the drapery.  Lustrous white curtains
 &+Mare hung evenly-spaced throughout either side of this hallway, decorating
 &+Mit with a silky, white, flowing presence.  While the only other tapestries
 &+Mexperienced in this entire city have been standard wall-hangings depicting
@@ -3690,7 +3690,7 @@ S
 #83272
 &+WThe Emissaries' Hall&N~
    &+MThis mithril hall is identical to the perimeter hall of Shanat
-&+MCitadel except for one detail, the drapery.  Illustrous white curtains
+&+MCitadel except for one detail, the drapery.  Illustrious white curtains
 &+Mare hung evenly-spaced throughout either side of this hallway, decorating
 &+Mit with a silky, white, flowing presence.  While the only other tapestries
 &+Mexperienced in this entire city have been standard wall-hangings depicting
@@ -4197,7 +4197,7 @@ S
 &+Lpersonal bedchamber, this closet exists as a small niche behind an armoire.
 &+LThis closet is a simple, dark room.
    &+LSitting on a small &Nstone &+Lpedestal is an odd &+Rred &+Lcomposite
-&+Lbutton, most likely a comissioned installment by the &+Rgnomish&+L friends
+&+Lbutton, most likely a commissioned installment by the &+Rgnomish&+L friends
 &+Land distant cousins of the &+WSh&Nie&+Wld &+YDwarves&+L.
 ~
 831 134250497 14
@@ -4230,8 +4230,8 @@ D3
 E
 arch~
 &+YA huge arch in the blocked wall to the west.  A closer inspection reveals
-&+Ythat the blockwork making up this wall is actually &+cmechanical&+Y and
-&+Yoperated by a system of cogs and pullies from another point in this
+&+Ythat the block-work making up this wall is actually &+cmechanical&+Y and
+&+Yoperated by a system of cogs and pulleys from another point in this
 &+YCitadel more private for the King.
 ~
 S
@@ -4289,7 +4289,7 @@ S
 #83302
 &+WThe &+mRelic &+WHold of Clangeddin &+CSilver&+Wbeard&N~
    &+WThis bricked chamber, deep within the bowels of &+cAlatorin&+W, bares
-&+Wan overwelming amount of iconoclast scripture of Clangeddin &+CSilver&+Wbeard
+&+Wan overwhelming amount of iconoclast scripture of Clangeddin &+CSilver&+Wbeard
 &+Was decoration across literally everything.  Each step has carefully intricate
 &+Wrunes cut from leaf sheets and forged onto each individual step.  The rail
 &+Waround the center dome has tiny characters representing silver hammers
@@ -4307,7 +4307,7 @@ S
    &+WThis antique hall is literally covered in iconoclastic words and images
 &+Wall in worship and praise of Berronar Truesilver, Dwarven Deity of
 &+Wjustice and holy vengeance.  The detail in this art-deco is incredible.
-&+WFrom the tiles on the floor to the etchings on the bases of the colums,
+&+WFrom the tiles on the floor to the etchings on the bases of the columns,
 &+WBerronar True&+Csilver &+Wis displayed in great glory.
 ~
 831 134250496 14
@@ -4372,7 +4372,7 @@ S
 &+WElements&+L.  Strange, old tomes fill the shelves of the bookcases
 &+Lin this ancient library.  Books of elemental summoning and demon
 &+Lposessions as well as holy rituals and healing ceremonies are all
-&+Loutlined in this seemingly neverending wall of &N&+cknowledge&+L.
+&+Loutlined in this seemingly never ending wall of &N&+cknowledge&+L.
 ~
 831 134250512 14
 D0
@@ -4473,7 +4473,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4500,7 +4500,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4527,7 +4527,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 6
 D0
@@ -4554,7 +4554,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4581,7 +4581,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4608,7 +4608,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4635,7 +4635,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4662,7 +4662,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4689,7 +4689,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4716,7 +4716,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4743,7 +4743,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4770,7 +4770,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4793,9 +4793,9 @@ S
 #83324
 &NA Small Oasis&N~
    &NThe tall grass of this mystical field come to halt at the foot of
-&nthis small oasis.  Dirt beckoms stones which become rocks which become
+&nthis small oasis.  Dirt becomes stones which become rocks which become
 &nlarger rocks, encompassing a small, &+bbubbling &Nspring.  This oasis
-&Nsits in the center of this grassy savannah.
+&Nsits in the center of this grassy savanna.
 ~
 831 176324608 2
 D0
@@ -4822,7 +4822,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4849,7 +4849,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4876,7 +4876,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4903,7 +4903,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4930,7 +4930,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4957,7 +4957,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -4984,7 +4984,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -5011,7 +5011,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -5038,7 +5038,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -5065,7 +5065,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -5092,7 +5092,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -5119,7 +5119,7 @@ S
 &+gin one uniform motion, as an essence of magic wafts through the air as chilling
 &+gand as crisp as a summer breeze.  A small brook the northwest and several
 &+glarge rock formations to the southeast is all that can be seen in this
-&+gdesolate savannah.
+&+gdesolate savanna.
 ~
 831 176193536 2
 D0
@@ -5146,7 +5146,7 @@ S
 &+Learth, water for water, and air for air.  Each of these four dens
 &+Lare simple one-on-one areas by which four of the seven sages of
 &+cAlatorin&+L, in particular the elemental magi, may meet with pupils.
-&+LThis simple chamber sits here burried in the magma, coral, crystal,
+&+LThis simple chamber sits here buried in the magma, coral, crystal,
 &+Land earth, accessed only through portal.
 ~
 831 1249935360 15
@@ -5162,7 +5162,7 @@ S
 &+Learth, water for water, and air for air.  Each of these four dens
 &+Lare simple one-on-one areas by which four of the seven sages of
 &+cAlatorin&+L, in particular the elemental magi, may meet with pupils.
-&+LThis simple chamber sits here burried in the magma, coral, crystal,
+&+LThis simple chamber sits here buried in the magma, coral, crystal,
 &+Land earth, accessed only through portal.
 ~
 831 1249935360 15
@@ -5178,7 +5178,7 @@ S
 &+Learth, water for water, and air for air.  Each of these four dens
 &+Lare simple one-on-one areas by which four of the seven sages of
 &+cAlatorin&+L, in particular the elemental magi, may meet with pupils.
-&+LThis simple chamber sits here burried in the magma, coral, crystal,
+&+LThis simple chamber sits here buried in the magma, coral, crystal,
 &+Land earth, accessed only through portal.
 ~
 831 1249935360 15
@@ -5206,7 +5206,7 @@ S
 #83341
 &+WA &+CG&+Wl&+Cas&+Ws &+CPrison&N~
 &+C   This magical orb of glass completely surrounds the area like a massive
-&+Ccavern.  Peering outside the sphereical glass walls one sees the massive
+&+Ccavern.  Peering outside the spherical glass walls one sees the massive
 &+Coutlines of a swirling foyer not unlike the stepped foyer previously
 &+Cencountered.  This eerie glass prison appears to be the interior of the
 &+Cbauble that was floating high above the stepped foyer.  This clever,
@@ -5326,7 +5326,7 @@ S
    &+YThis huge anvil sits at the heart of &+cAlatorin&+Y.  This chamber
 &+Ysits in a circular shape with identical stepped pathways leading down
 &+Yfrom the massive bridge between the ramparts.  The huge melting pot of
-&+Ymolten steel flows below this seering gorge where only the strongest of
+&+Ymolten steel flows below this searing gorge where only the strongest of
 &+Ythe Alatorin blacksmiths come to forge the strongest of metals known to man
 &+Ythrough Duris.
    &+YA massive staircase leads deep below the heart of Alatorin on the northern
@@ -5355,7 +5355,7 @@ D5
 0 0 83349
 S
 #83349
-&+LA &+RSeering &+LLanding Below the Great Anvil&N~
+&+LA &+RSearing &+LLanding Below the Great Anvil&N~
    &+LThis stone landing, located on some steps just north and below the
 &+LGreat Anvil, opens up to the mining, smelting, and blacksmithing factions
 &+Lof the Alatorin people.  This ancient and legendary forge guild is known
@@ -5451,7 +5451,7 @@ door~
 S
 #83354
 &+cDweefniggle's &+MWorkshop&N~
-   &+GThis workshop is quite hot, but not unbarable as one might imagine.
+   &+GThis workshop is quite hot, but not unbearable as one might imagine.
 &+GLocated deep within the rock aside the liquid adamantite forge of
 &+GAlatorin itself, this deep workshop serves as a place of business for
 &+Gmany nearby dwarves, but also as the glorious wonderland of many
@@ -5478,7 +5478,7 @@ door~
 S
 #83355
 &+cDweefniggle's &+MWorkshop&N~
-   &+GThis workshop is quite hot, but not unbarable as one might imagine.
+   &+GThis workshop is quite hot, but not unbearable as one might imagine.
 &+GLocated deep within the rock aside the liquid adamantite forge of
 &+GAlatorin itself, this deep workshop serves as a place of business for
 &+Gmany nearby dwarves, but also as the glorious wonderland of many
@@ -5505,7 +5505,7 @@ door~
 S
 #83356
 &+cDweefniggle's &+MWorkshop&N~
-   &+GThis workshop is quite hot, but not unbarable as one might imagine.
+   &+GThis workshop is quite hot, but not unbearable as one might imagine.
 &+GLocated deep within the rock aside the liquid adamantite forge of
 &+GAlatorin itself, this deep workshop serves as a place of business for
 &+Gmany nearby dwarves, but also as the glorious wonderland of many
@@ -5532,7 +5532,7 @@ D3
 S
 #83357
 &+yA &+BCluttered &+MWorskhop &+yCorner&N~
-   &+GThis workshop is quite hot, but not unbarable as one might imagine.
+   &+GThis workshop is quite hot, but not unbearable as one might imagine.
 &+GLocated deep within the rock aside the liquid adamantite forge of
 &+GAlatorin itself, this deep workshop serves as a place of business for
 &+Gmany nearby dwarves, but also as the glorious wonderland of many
@@ -5554,7 +5554,7 @@ D3
 S
 #83358
 &+cDw&+Mee&+cfn&+Mig&+cgl&+ce's &+MCh&+cam&+Mbe&+cr&N~
-   &+GThis workshop is quite hot, but not unbarable as one might imagine.
+   &+GThis workshop is quite hot, but not unbearable as one might imagine.
 &+GLocated deep within the rock aside the liquid adamantite forge of
 &+GAlatorin itself, this deep workshop serves as a place of business for
 &+Gmany nearby dwarves, but also as the glorious wonderland of many
@@ -5573,7 +5573,7 @@ door~
 S
 #83359
 &+LA &+MWorkshop &+LStorage Hall&N~
-   &+GThis workshop is quite hot, but not unbarable as one might imagine.
+   &+GThis workshop is quite hot, but not unbearable as one might imagine.
 &+GLocated deep within the rock aside the liquid adamantite forge of
 &+GAlatorin itself, this deep workshop serves as a place of business for
 &+Gmany nearby dwarves, but also as the glorious wonderland of many
@@ -5595,7 +5595,7 @@ S
    &+LThis deep chamber within the city of Alatorin has four large stalls, each
 &+Lwhich can fit at least two or three tethered beasts.  These stables, located
 &+Ljust beyond the great bridge of Alatorin, not only house the mounts of
-&+Lvisiting adventurers who needed to tether their compaions, but it also
+&+Lvisiting adventurers who needed to tether their companions, but it also
 &+Lacts as a shop to sell the locale rams that get shipped to the city.
 ~
 831 176193540 15
@@ -5604,7 +5604,7 @@ D1
 ~
 0 0 121715
 D2
- &+LSomw swinging &+ywooden doors&+L to the &+cAlatorin &+Lstable stalls.
+ &+LSome swinging &+ywooden doors&+L to the &+cAlatorin &+Lstable stalls.
 ~
 door~
 1 0 83361
@@ -5614,7 +5614,7 @@ S
    &+LThis deep chamber within the city of Alatorin has four large stalls, each
 &+Lwhich can fit at least two or three tethered beasts.  These stables, located
 &+Ljust beyond the great bridge of Alatorin, not only house the mounts of
-&+Lvisiting adventurers who needed to tether their compaions, but it also
+&+Lvisiting adventurers who needed to tether their companions, but it also
 &+Lacts as a shop to sell the locale rams that get shipped to the city.
 ~
 831 176193536 15
@@ -5701,7 +5701,7 @@ S
 &+Rof artwork, including brilliant &+Ypa&+Wi&+Bnt&+gin&+Lg&+gs &+Rseperated by burning &+Ytorches&+L.
    &+RThis red hallway leads across the &+bLair&+R connecting to the southern
 &+Rexits.  The carpet itself is made of furry hide that has been dyed red.  Most
-&+Rlikely another piece of stolen furnishings, commonon throughout.
+&+Rlikely another piece of stolen furnishings, common throughout.
 ~
 831 176193536 15
 D0
@@ -5726,7 +5726,7 @@ S
 &+Rof artwork, including brilliant &+Ypa&+Wi&+Bnt&+gin&+Lg&+gs &+Rseperated by burning &+Ytorches&+L.
    &+RThis red hallway leads across the &+bLair&+R connecting to the southern
 &+Rexits.  The carpet itself is made of furry hide that has been dyed red.  Most
-&+Rlikely another piece of stolen furnishings, commonon throughout.
+&+Rlikely another piece of stolen furnishings, common throughout.
 ~
 831 176193536 15
 D1
@@ -6024,9 +6024,9 @@ S
    &+LThis large, vaulted hallway leads east deeper into the BrightAxe
 &+LHall.  This elegant hallway is decorated with portraits of Taark
 &+LShanat and axes decoratively mounted to the walls.  The floor is
-&+Lcarpetted with a thick fur rug, dyed bright blue - the color of
+&+Lcarpeted with a thick fur rug, dyed bright blue - the color of
 &+Ltempered mithril-steel.  This hallway leads to a large receiving
-&+Lroom in which messangers are sent and gathered, visitors consult
+&+Lroom in which messengers are sent and gathered, visitors consult
 &+Lthe king, peasants petitioning, and lordly dues.
 ~
 831 134250496 14
@@ -6044,7 +6044,7 @@ S
    &+LThis long, almost dismal-seeming hallway stretches through the
 &+LMystic Ward, joining the west pass to the north pass through the
 &+Lpillared ward itself.  Every other stone block on the walls facing
-&+Leach other is a large, inscrubed &+Mglyph&+L, each giving off a faint
+&+Leach other is a large, inscribed &+Mglyph&+L, each giving off a faint
 &+Lmagical glow.
 ~
 831 134250496 14
@@ -6119,9 +6119,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -6138,9 +6138,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -6157,9 +6157,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -6176,9 +6176,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -6195,9 +6195,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -6214,9 +6214,9 @@ S
 &+cA Guild Hallway&n~
    &+cThis elegant hallway leads through the Hall of Adventurers of
 &+cAlatorin and connects the main meeting hall to the masters quarters
-&+cbelow.  It is rumored that these masters train those dilligent enough
+&+cbelow.  It is rumored that these masters train those diligent enough
 &+cto speak with them and travel to Alatorin to do so.  The walls are
-&+cdecorated with fine dwarven tapestries depicting hardfought victories
+&+cdecorated with fine dwarven tapestries depicting hard fought victories
 &+cover invaders.  This hallway continues throughout this guild chamber.
 ~
 831 134250496 14
@@ -6283,9 +6283,9 @@ S
 &+Ylocation for good fortune of the explorers in this Hall of
 &+YAdventurers, deep within &N&+cAlatorin&+Y.  This shrine has
 &+Ya circular set-up, where two sides of pews are built in curve
-&+Yquarter-circle benches, all facing a central pavillion.  This
-&+Ypavillion, however, only has a single podium without a real altar.
-&+YInstead, moreover, a grand altar faces inwards towards the central
+&+Yquarter-circle benches, all facing a central pavilion.  This
+&+Ypavilion, however, only has a single podium without a real altar.
+&+YInstead, moreover, a grand altar faces inward towards the central
 &+Ypodium.  This grand altar is that of Dumathoin, God of Buried Wealth,
 &+YOre, Gems, and Exploration.
 ~
@@ -6360,9 +6360,9 @@ S
 #83401
 &+LA Sword&n&+cpl&+Cay &+LPractice &NHall&N~
    &+LThis huge hall has large weapon racks set up on either east and west wall,
-&+Lwhile the northern wall sits far below where some stepps lead down into a
+&+Lwhile the northern wall sits far below where some steps lead down into a
 &+Ldescended washing, bathing, and changing foyer.  The racks on either side of
-&+Lthe main practice chamber are full of swords, lined up in perfect fashin.
+&+Lthe main practice chamber are full of swords, lined up in perfect fashion.
 &+LThere are all types of blades here, from wooden practice swords to huge
 &+Ltwo-handed steel bastard swords.  Each has a rubber grip handle and a mark
 &+Lof the &N&+cAlatorin &+Lguard.  It is no wonder that the swordplay taught in
@@ -6452,7 +6452,7 @@ S
 #83406
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6479,7 +6479,7 @@ S
 #83407
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6503,7 +6503,7 @@ S
 &+LAn Ancient &N&+yS&+Lt&N&+ya&+Li&N&+rr&+Lc&N&+ya&+Ls&N&+ye~
    &+LThis long staircase gets marginally narrower as it leads deeper
 &+Ldown into this dark magical unknown.  There are numerous torches
-&+Lsconsed on the wall, burning with &n&+ggreen &+Gflame&+L.  The staircase
+&+Lsconced on the wall, burning with &n&+ggreen &+Gflame&+L.  The staircase
 &+Lis uncarpeted and bare, made of blocked black stone.
 ~
 831 134250496 13
@@ -6519,7 +6519,7 @@ S
 #83409
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing  from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6542,7 +6542,7 @@ S
 #83410
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing  from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6573,7 +6573,7 @@ S
 #83411
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing  from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6600,7 +6600,7 @@ S
 #83412
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing  from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6628,7 +6628,7 @@ S
 #83413
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing  from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6651,7 +6651,7 @@ S
 #83414
 &N&+yThe Rocky Floor of the Dumathoin Mine&N~
    &+yThis expansive cavern almost goes on for miles as it stretches into the
-&+Lmists, dissapearing from sight.  The entire cavern is growing with a dark
+&+Lmists, disappearing  from sight.  The entire cavern is growing with a dark
 &+Lmagenta colored lichen, which continuously releases gaseous spores into
 &+Lthe air.  Huge rocks jut out of the ground and into the air, and occasionally
 &+Lgrowing right out of the side of one of these rocks one might find a full
@@ -6892,7 +6892,7 @@ S
 #83426
 &+cAn Officers' &+CConference Hall~
    &+RThis assault and planning chamber, located deep within Shanat Citadel
-&+Rin the military wing of Alatorin, serves as the royaling preliminary
+&+Rin the military wing of Alatorin, serves as the royal preliminary
 &+Rmilitary staging area for the shield dwarves of Alatorin.  There are huge
 &+Rworld, continent, and sea maps hanging from all the walls with huge
 &+Rbullseye lanterns illuminating them.
@@ -6911,7 +6911,7 @@ S
 #83427
 &+RThe &N&+cShanat &+RWar Room&N~
    &+RThis assault and planning chamber, located deep within Shanat Citadel
-&+Rin the military wing of Alatorin, serves as the royaling preliminary
+&+Rin the military wing of Alatorin, serves as the royal preliminary
 &+Rmilitary staging area for the shield dwarves of Alatorin.  There are huge
 &+Rworld, continent, and sea maps hanging from all the walls with huge
 &+Rbullseye lanterns illuminating them.
@@ -6989,7 +6989,7 @@ D1
 0 0 83433
 D2
    &+mTwo huge mithril doors stand here, bearing a huge lock.  The grim dwarven
-&+mmarkings, in their ancient reverred language, reads 'Prison Caves'
+&+mmarkings, in their ancient revered language, reads 'Prison Caves'
 ~
 doors~
 3 83258 83447
@@ -7223,9 +7223,9 @@ S
 &+WA Spanning Bridge Over a Vast Underworld Chasm~
    &+WThis massive stone bridges arches high over a massive stone chasm, sitting at
 &+Wthe center of this deep shield dwarf city.  The cavern is very deep, but seems
-&+Wto be exhuding &+Rheat&+W from its black depths.  The bridge is massive and
+&+Wto be exhuming &+Rheat&+W from its black depths.  The bridge is massive and
 &+Wquite crucial for the architecture of Shanat Citadel.  The cavern walls have
-&+Wbeen chiseled out over time, and a few small balcons extend out of various
+&+Wbeen chiseled out over time, and a few small balconies extend out of various
 &+Wparts of these walls.
 ~
 831 32768 14
@@ -7271,7 +7271,7 @@ S
 #83447
 &+LTop of a Dark &N&+mMithril Staircase~
    &+LThis dark staircase leads deep within the bowels of &N&+cShanat Citadel&+L.  The
-&+Lfloor is carpetted with a thick fur over mithril-blocked steps.  There are torch
+&+Lfloor is carpeted with a thick fur over mithril-blocked steps.  There are torch
 &+Lsconces ever-so-often on the mithril walls leading deeper and more and more sparse
 &+Linto the depths of the citadel.
 ~
@@ -7560,7 +7560,7 @@ S
 #83464
 &+LBottom of a Dark &N&+mMithril Staircase~
    &+LThis dark staircase leads deep within the bowels of &N&+cShanat Citadel&+L.  The
-&+Lfloor is carpetted with a thick fur over mithril-blocked steps.  There are torch
+&+Lfloor is carpeted with a thick fur over mithril-blocked steps.  There are torch
 &+Lsconces ever-so-often on the mithril walls leading deeper and more and more sparse
 &+Linto the depths of the citadel.
 ~
@@ -7578,7 +7578,7 @@ S
 &+LA Rocky Landing~
    &+LThis rocky landing sits at the great bottom of the Shanat prison,
 &+Lformed out of the natural cavernous deep of Lower Shanatar.  This naturally-
-&+Lformed davern is full of churning &+Rl&N&+ra&+Rv&N&+ra&+L, with a few small
+&+Lformed cavern is full of churning &+Rl&N&+ra&+Rv&N&+ra&+L, with a few small
 &+Lisland peaks jutting out of the &+Rmolten&+L rock.
 ~
 831 32768 14
@@ -7592,7 +7592,7 @@ D2
 0 0 83466
 S
 #83466
-&+LA Narrow Rocky Bridge &+ROver &+YSeering &N&+rM&+Ragm&N&+ra&N~
+&+LA Narrow Rocky Bridge &+ROver &+YSearing &N&+rM&+Ragm&N&+ra&N~
    &+LThis natural rock bridge was perhaps part of the body of a much larger
 &+Lpeak that has since been eaten and assimilated by the churning magma below,
 &+Lheated by the &N&+rburn &+Lof Lower Shanatar.  This narrow rocky bridge
@@ -7638,7 +7638,7 @@ D3
 0 0 83470
 S
 #83468
-&+LA Narrow Rocky Bridge &+ROver &+YSeering &N&+rM&+Ragm&N&+ra&N~
+&+LA Narrow Rocky Bridge &+ROver &+YSearing &N&+rM&+Ragm&N&+ra&N~
    &+LThis natural rock bridge was perhaps part of the body of a much larger
 &+Lpeak that has since been eaten and assimilated by the churning magma below,
 &+Lheated by the &N&+rburn &+Lof Lower Shanatar.  This narrow rocky bridge
@@ -7659,7 +7659,7 @@ D3
 0 0 83478
 S
 #83469
-&+LA Narrow Rocky Bridge &+ROver &+YSeering &N&+rM&+Ragm&N&+ra&N~
+&+LA Narrow Rocky Bridge &+ROver &+YSearing &N&+rM&+Ragm&N&+ra&N~
    &+LThis natural rock bridge was perhaps part of the body of a much larger
 &+Lpeak that has since been eaten and assimilated by the churning magma below,
 &+Lheated by the &N&+rburn &+Lof Lower Shanatar.  This narrow rocky bridge
@@ -7680,7 +7680,7 @@ D3
 0 0 83468
 S
 #83470
-&+LA Narrow Rocky Bridge &+ROver &+YSeering &N&+rM&+Ragm&N&+ra&N~
+&+LA Narrow Rocky Bridge &+ROver &+YSearing &N&+rM&+Ragm&N&+ra&N~
    &+LThis natural rock bridge was perhaps part of the body of a much larger
 &+Lpeak that has since been eaten and assimilated by the churning magma below,
 &+Lheated by the &N&+rburn &+Lof Lower Shanatar.  This narrow rocky bridge
@@ -7701,7 +7701,7 @@ D3
 0 0 83471
 S
 #83471
-&+LA Narrow Rocky Bridge &+ROver &+YSeering &N&+rM&+Ragm&N&+ra&N~
+&+LA Narrow Rocky Bridge &+ROver &+YSearing &N&+rM&+Ragm&N&+ra&N~
    &+LThis natural rock bridge was perhaps part of the body of a much larger
 &+Lpeak that has since been eaten and assimilated by the churning magma below,
 &+Lheated by the &N&+rburn &+Lof Lower Shanatar.  This narrow rocky bridge
@@ -7727,7 +7727,7 @@ S
 &+Lwithin this massive &N&+yrealm&+L.  Four huge mithril dwarf golems stand
 &+Lin this room, one in each corner facing the center pedestal.  The walls
 &+Lfloor and ceiling alike are all great examples of ancient dwarven
-&+Larchitecture - stout, blocky figures carved in segmentec right angles in
+&+Larchitecture - stout, blocky figures carved in segmented right angles in
 &+Lbands around huge columns and vaulted ceilings.
 ~
 831 32768 14
@@ -7748,7 +7748,7 @@ S
    &+LA huge &+cmetal &+Lcage gate of immensely-thick &+Wplatinum &+Lbars,
 &+Lholding the beast within at bay.  Although the construction of these gates
 &+Lto the beast &N&+ccage&+L in the Shanat prison look rather recent, the
-&+Lcaves in which they recide have been the ancient home to the &+Bblue dragons
+&+Lcaves in which they reside have been the ancient home to the &+Bblue dragons
 &+Lfor their entire existence before the infamous &N&+rRringlor &+Lattacks and
 &N&+rdefeat &+Ltowards near this very location.
 ~
@@ -7771,7 +7771,7 @@ S
    &+LA huge &+cmetal &+Lcage gate of immensely-thick &+Wplatinum &+Lbars,
 &+Lholding the beast within at bay.  Although the construction of these gates
 &+Lto the beast &N&+ccage&+L in the Shanat prison look rather recent, the
-&+Lcaves in which they recide have been the ancient home to the &+Bblue dragons
+&+Lcaves in which they reside have been the ancient home to the &+Bblue dragons
 &+Lfor their entire existence before the infamous &N&+rRringlor &+Lattacks and
 &N&+rdefeat &+Ltowards near this very location.
 ~
@@ -7925,7 +7925,7 @@ S
 &+Lmithril stairs.  Sitting in the shadow of the central spire, this crumbling
 &+Lnook is quite dark and has seen very little life in its awesome existence.
 &+LThe northern wall, although completely black and devoid of light, has a
-&+Lstrange &N&+rwarmth&+L eminating from deep within.
+&+Lstrange &N&+rwarmth&+L emanating from deep within.
    &+LThe lava deep within the Shanatar Mountain city of Alatorin, warms the
 &+Lrocks and cooks everything within it.  The northern &+Rwall &+Ljust resonates
 &+Lwith this natural heat.
@@ -7967,7 +7967,7 @@ S
 #83483
 &+LA Massive, &N&+cCaged &+LCavern&N~
    &+LThis massive cavern, sitting in the deepest parts of Lower Shanatar,
-&+Lis etraordinarily huge.  It has a small spring on the far southwestern
+&+Lis extraordinarily huge.  It has a small spring on the far southwestern
 &+Lcorner, sprinkling gently.  It is a wonder at the amazing life this
 &+Ltiny spring has been able to support..  A massive nesting area sits within
 &+Lthis huge cave, which has been transformed into a naturally-formed dungeon
@@ -7983,7 +7983,7 @@ S
 #83484
 &+LA Massive, &N&+cCaged &+LCavern&N~
    &+LThis massive cavern, sitting in the deepest parts of Lower Shanatar,
-&+Lis etraordinarily huge.  It has a small spring on the far southwestern
+&+Lis extraordinarily huge.  It has a small spring on the far southwestern
 &+Lcorner, sprinkling gently.  It is a wonder at the amazing life this
 &+Ltiny spring has been able to support..  A massive nesting area sits within
 &+Lthis huge cave, which has been transformed into a naturally-formed dungeon
@@ -7999,7 +7999,7 @@ S
 #83485
 &+LA Dark, &N&+mGlo&+Lomy Cave&N~
    &+LThis deep cave, off-set within the Caverns of &+YT&+Li&+Ym&+Le, is dark and
-&+Lsecluded, foregotten by most of the elders of &N&+cAlatorin&+L and unknown
+&+Lsecluded, forgotten by most of the elders of &N&+cAlatorin&+L and unknown
 &+Lby all of the youths.  This secret, misty cave is naturally formed, having
 &+Lbeen unaltered, like the rest of the Caverns of &+YT&+Li&+Ym&+Le, by the masons of
 &+Lthe &N&+cAlatorin &+Larchitecture.
@@ -8017,7 +8017,7 @@ S
 #83486
 &+LUpper Vaults of a &N&+mG&+Ll&N&+mo&+Lo&N&+mm&+Ly &+LCave&N~
    &+LThis deep cave, off-set within the Caverns of &+YT&+Li&+Ym&+Le, is dark and
-&+Lsecluded, foregotten by most of the elders of &N&+cAlatorin&+L and unknown
+&+Lsecluded, forgetten by most of the elders of &N&+cAlatorin&+L and unknown
 &+Lby all of the youths.  This secret, misty cave is naturally formed, having
 &+Lbeen unaltered, like the rest of the Caverns of &+YT&+Li&+Ym&+Le, by the masons of
 &+Lthe &N&+cAlatorin &+Larchitecture.
@@ -8115,7 +8115,7 @@ S
    &+LThe staircase above leads to a stone landing, traveling a brief tunnel
 &+Lnorth and eastward before leading out into the core of Shanatar, the central
 &+Lcavern and heart of the ancient mountain.  The lava flow below is
-&+Lraging hot, seering with burning flame.
+&+Lraging hot, searing with burning flame.
 ~
 831 1073741825 13
 D0
@@ -8132,7 +8132,7 @@ S
    &+LThe staircase above leads to a stone landing, traveling a brief tunnel
 &+Lnorth and eastward before leading out into the core of Shanatar, the central
 &+Lcavern and heart of the ancient mountain.  The lava flow below is
-&+Lraging hot, seering with burning flame.
+&+Lraging hot, searing with burning flame.
 ~
 831 1073741825 13
 D1
@@ -8149,7 +8149,7 @@ S
    &+LThe staircase above leads to a stone landing, traveling a brief tunnel
 &+Lnorth and eastward before leading out into the core of Shanatar, the central
 &+Lcavern and heart of the ancient mountain.  The lava flow below is
-&+Lraging hot, seering with burning flame.
+&+Lraging hot, searing with burning flame.
 ~
 831 1073741825 13
 D0
@@ -8166,7 +8166,7 @@ S
    &+LThe staircase above leads to a stone landing, traveling a brief tunnel
 &+Lnorth and eastward before leading out into the core of Shanatar, the central
 &+Lcavern and heart of the ancient mountain.  The lava flow below is
-&+Lraging hot, seering with burning flame.
+&+Lraging hot, searing with burning flame.
 ~
 831 1073741825 13
 D2
@@ -8183,7 +8183,7 @@ S
    &+LThe staircase above leads to a stone landing, traveling a brief tunnel
 &+Lnorth and eastward before leading out into the core of Shanatar, the central
 &+Lcavern and heart of the ancient mountain.  The lava flow below is
-&+Lraging hot, seering with burning flame.
+&+Lraging hot, searing with burning flame.
 ~
 831 1073741825 13
 D0
@@ -8200,7 +8200,7 @@ S
    &+LThe staircase above leads to a stone landing, traveling a brief tunnel
 &+Lnorth and eastward before leading out into the core of Shanatar, the central
 &+Lcavern and heart of the ancient mountain.  The lava flow below is
-&+Lraging hot, seering with burning flame.
+&+Lraging hot, searing with burning flame.
 ~
 831 1073741825 13
 D1
@@ -8217,7 +8217,7 @@ S
    &+LThe staircase above leads to a stone landing, traveling a brief tunnel
 &+Lnorth and eastward before leading out into the core of Shanatar, the central
 &+Lcavern and heart of the ancient mountain.  The lava flow below is
-&+Lraging hot, seering with burning flame.
+&+Lraging hot, searing with burning flame.
 ~
 831 1073741825 13
 D1
@@ -8235,7 +8235,7 @@ S
 &+La massive natural &+Yl&N&+ra&+Yv&N&+ra &+Lflow.  A huge double-railed
 &+Lpicketed fence surrounds this natural phenomenon, having been designed around
 &+Lthe lava flow from the inception of &N&+cAlatorin&+L.  The ground here is
-&+Lcarpetted with a thick, black carpet.
+&+Lcarpeted with a thick, black carpet.
 ~
 831 1073741825 13
 D0
@@ -8258,7 +8258,7 @@ S
 &+La massive natural &+Yl&N&+ra&+Yv&N&+ra &+Lflow.  A huge double-railed
 &+Lpicketed fence surrounds this natural phenomenon, having been designed around
 &+Lthe lava flow from the inception of &N&+cAlatorin&+L.  The ground here is
-&+Lcarpetted with a thick, black carpet.
+&+Lcarpeted with a thick, black carpet.
 ~
 831 1073741825 13
 D0
@@ -8276,7 +8276,7 @@ S
 &+La massive natural &+Yl&N&+ra&+Yv&N&+ra &+Lflow.  A huge double-railed adamantite-barred
 &+Lpicketed fence surrounds this natural phenomenon, having been designed around
 &+Lthe lava flow from the inception of &N&+cAlatorin&+L.  The ground here is
-&+Lcarpetted with a thick, black carpet.
+&+Lcarpeted with a thick, black carpet.
 ~
 831 1073741825 14
 D0
@@ -8294,7 +8294,7 @@ S
 &+La massive natural &+Yl&N&+ra&+Yv&N&+ra &+Lflow.  A huge double-railed adamantite-barred
 &+Lpicketed fence surrounds this natural phenomenon, having been designed around
 &+Lthe lava flow from the inception of &N&+cAlatorin&+L.  The ground here is
-&+Lcarpetted with a thick, black carpet.
+&+Lcarpeted with a thick, black carpet.
 ~
 831 1073741825 14
 D0
@@ -8319,7 +8319,7 @@ S
 &+La massive natural &+Yl&N&+ra&+Yv&N&+ra &+Lflow.  A huge double-railed adamantite-barred
 &+Lpicketed fence surrounds this natural phenomenon, having been designed around
 &+Lthe lava flow from the inception of &N&+cAlatorin&+L.  The ground here is
-&+Lcarpetted with a thick, black carpet.
+&+Lcarpeted with a thick, black carpet.
 ~
 831 1073741825 14
 D0
@@ -8337,7 +8337,7 @@ S
 &+La massive natural &+Yl&N&+ra&+Yv&N&+ra &+Lflow.  A huge double-railed adamantite-barred
 &+Lpicketed fence surrounds this natural phenomenon, having been designed around
 &+Lthe lava flow from the inception of &N&+cAlatorin&+L.  The ground here is
-&+Lcarpetted with a thick, black carpet.
+&+Lcarpeted with a thick, black carpet.
 ~
 831 1073741825 14
 D0
@@ -8359,7 +8359,7 @@ S
 &+La massive natural &+Yl&N&+ra&+Yv&N&+ra &+Lflow.  A huge double-railed adamantite-barred
 &+Lpicketed fence surrounds this natural phenomenon, having been designed around
 &+Lthe lava flow from the inception of &N&+cAlatorin&+L.  The ground here is
-&+Lcarpetted with a thick, black carpet.
+&+Lcarpeted with a thick, black carpet.
 ~
 831 1073741825 14
 D0
@@ -8507,7 +8507,7 @@ same demands regardless of their dwarven bloodlines.  Along the blocked-brick wa
 of the tavern are huge sets of armor, set poised in proud positions.  The floor is
 carpeted with a deep &+Lblack &Nrug, dirtied and mashed with hundreds of years of
 &+Lwear&N.  At the heart of the tavern in the center, a huge fire pit sits with a
-bar around in, behind which dwarves disperge huge racks of lamb, mead, ram, boar,
+bar around in, behind which dwarves disperse huge racks of lamb, mead, ram, boar,
 and other favorites to their customers.  On the south wall of the &+cHammer &Nand &+WShield
 is the bar itself, containing two huge shelves of exotic liquors.  Huge barrels of
 dwarven ale sit atop the bar in the corners, allowing dwarves easy access to their
@@ -9380,7 +9380,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9402,7 +9402,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9423,7 +9423,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9444,7 +9444,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9465,7 +9465,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9486,7 +9486,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9507,7 +9507,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9528,7 +9528,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9549,7 +9549,7 @@ S
 &+Cdown the mithril Steps of Honour.  This staircase, crafted from imported
 &+Cblocked &N&+mmithril&+C, goes deep into the mountain known as &N&+yShanatar&+L.
 &+CThe walls are bare, and the steps seem endless as they descend a rocky below
-&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is seering and the
+&+Calongside numerous &+Rflows &+Cof &N&+rmagma&+C.  The heat is searing and the
 &+Catmosphere is punishing, however the &N&+ytanned &+Chide of the &Nsh&+Wie&Nld
 &+Ydwarf &+Chero that would be so honored access down these stairs would surely
 &+Cbe of great blood, as so it is written in &n&+cAlatorin &+Clore.
@@ -9810,7 +9810,7 @@ S
    &+LThis great stone dias, naturally formed from the rock of &N&+cShanatar's
 &+Lcore, below, holds the &+Ckey &Nof &+ckings&+L, granting access to the great
 &+Ltreasures contained in the &+Ccases &+Lof the great hall.  Just to be standing
-&+Lin this location is considerd a great heralded honour that only the most
+&+Lin this location is considered a great heralded honour that only the most
 &+Lproven and worthy adventurers have shown to the shield dwarves.  Showing the
 &+Lcity and people of &N&+cAlatorin&+L such justice has granted those access to
 &+Lthe cities most sacred treasure - the personal items of the shield dwarven
@@ -10288,7 +10288,7 @@ D2
 S
 #83598
 &+LThe Bottom of a &N&+cLookout Tower&N &+CLadder&N~
-   &+LA large &+Ciron &+Lladder climbs a the rocky spire uptwards into a lookout
+   &+LA large &+Ciron &+Lladder climbs a the rocky spire upward into a lookout
 &+Lpost atop &N&+rHel&+Rgor &+WOutpost&+L.  The granite walls are dirty and the
 &+Lladder &N&+crailing &+Lis dirty and worn.  The heavy wear on this place suggests
 &+Lfrequent and heavy usage by the villainous &N&+rclansdwarves &+Lwithin.
@@ -10311,7 +10311,7 @@ S
 #83599
 &NThe Top of a &N&+cLookout Tower &+CLadder&N~
 &+LThe top of the &+ciron &+Lladder reaches the top here before the lookout post.
-&+LA large &+Ciron &+Lladder climbs a the rocky spire uptwards into a lookout
+&+LA large &+Ciron &+Lladder climbs a the rocky spire upward into a lookout
 &+Lpost atop &N&+rHel&+Rgor &+WOutpost&+L.  The granite walls are dirty and the
 &+Lladder &N&+crailing &+Lis dirty and worn.  The heavy wear on this place suggests
 &+Lfrequent and heavy usage by the villainous &N&+rclansdwarves &+Lwithin.
@@ -10645,7 +10645,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestibles littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10664,7 +10664,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestibles littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10687,7 +10687,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestible littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10706,7 +10706,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestibles littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10756,7 +10756,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestibles littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10779,7 +10779,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestibles littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10798,7 +10798,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestibles littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10825,7 +10825,7 @@ S
    &+LThis deep, ancient mountain cave sits at the head of &N&+yShanatar &+Lvalley.
 &+CIce &+Land &+Wsnow &+Lpack the rock below, while dangerous frozen icicles
 &+Ldangle from the cave ceiling.  There are numerous scattered chunks of bone
-&+Las well as bloody bits of fur and undigestibles littering this cave.  The
+&+Las well as bloody bits of fur and indigestibles littering this cave.  The
 &+Ldeeper recesses of this ancient mountain cave perhaps house a more vicious
 &+Lfoe then just the bitter cold of this region.
 ~
@@ -10844,8 +10844,8 @@ S
    &+CThis spacious chamber - office of the constable, serves its master
 &+Cwell with a spacious setting and several reinforced chain posts on which
 &+Cto shackle prisoners for questioning.  A large desk sits atop a blue carpet
-&+Cjust bairly large enough to hold it.  A massive carved stone chair sits
-&+Cunmovable behind the desk, looking outward onto the shackling posts.
+&+Cjust barely large enough to hold it.  A massive carved stone chair sits
+&+Cimmovable behind the desk, looking outward onto the shackling posts.
 ~
 831 32768 14
 D3
@@ -11377,7 +11377,7 @@ S
    &+LThis deep forge sits deep within the heart of &N&+cAlatorin&+L.  A blocked
 &+Lstone staircase leads to a small leedge admist a torrential flow of molten lava,
 &+Lflowing deep within the volcano of &N&+yShana&+Lt&N&+yar&+L, at the heart of which &N&+cAlatorin &+Lsits.
-   &+LThe air here is dry and hot, as the chundering &N&+rmagma &+Lflows with a
+   &+LThe air here is dry and hot, as the thundering &N&+rmagma &+Lflows with a
 &+Lsteady, blood-like consistency.  The extreme, raging heat is very intense,
 &+Lburning anything that comes too close.
 ~
@@ -11477,7 +11477,7 @@ S
 &+LAn Intersection in the &+CFort &n&+cHallway&N~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11503,7 +11503,7 @@ S
 &+CA Turn in the Fort Hallway&N~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11520,7 +11520,7 @@ S
 &+CA Turn in the Fort Hallway~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11537,7 +11537,7 @@ S
 &+CA Hallway of &+WKhor&N&+calator &+CFort&N~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11554,7 +11554,7 @@ S
 &+CA Hallway of &+WKhor&N&+calator &+CFort&N~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11571,7 +11571,7 @@ S
 &+CA Hallway of &+WKhor&N&+calator &+CFort&N~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11588,7 +11588,7 @@ S
 &+CA Hallway of &+WKhor&N&+calator &+CFort&N~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11605,7 +11605,7 @@ S
 &+CA Turn in a Fort Hallway~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32772 0
@@ -11626,7 +11626,7 @@ S
 &+BA Guard Post&N~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11652,7 +11652,7 @@ S
 &+CA Turn in a Fort Hallway~
    &+CThis deep, carved out tunnel serves as a critical hallway of
 &+WKhor&N&+calator &+CFort.  Several huge planning chambers and war halls
-&+Csit deep beneath the surface of the mountain.  Every fiften paces a
+&+Csit deep beneath the surface of the mountain.  Every fifteen paces a
 &+Ctorch sconce sts unused, posted on the rocky fort walls.
 ~
 831 32768 0
@@ -11689,7 +11689,7 @@ S
    &+LThis long &+Csteel &+Lladder reaches all the way up this narrow, natural
 &+Lshaft giving access to the griffon platform above.  This thick steel ladder
 &+Lcan only be traversed in a single-file formation through this long, dark
-&+Lsubterannean shaft.
+&+Lsubterennean shaft.
 ~
 831 32772 0
 D0
@@ -11706,7 +11706,7 @@ S
    &+LThis long &+Csteel &+Lladder reaches all the way up this narrow, natural
 &+Lshaft giving access to the griffon platform above.  This thick steel ladder
 &+Lcan only be traversed in a single-file formation through this long, dark
-&+Lsubterannean shaft.
+&+Lsubterranean shaft.
 ~
 831 32768 0
 D4
@@ -11723,7 +11723,7 @@ S
    &+LThis long &+Csteel &+Lladder reaches all the way up this narrow, natural
 &+Lshaft giving access to the griffon platform above.  This thick steel ladder
 &+Lcan only be traversed in a single-file formation through this long, dark
-&+Lsubterannean shaft.
+&+Lsubterranean shaft.
 ~
 831 32768 0
 D4
@@ -11740,7 +11740,7 @@ S
    &+LThis long &+Csteel &+Lladder reaches all the way up this narrow, natural
 &+Lshaft giving access to the griffon platform above.  This thick steel ladder
 &+Lcan only be traversed in a single-file formation through this long, dark
-&+Lsubterannean shaft.
+&+Lsubterranean shaft.
 ~
 831 32768 0
 D4
@@ -11757,7 +11757,7 @@ S
    &+LThis long &+Csteel &+Lladder reaches all the way up this narrow, natural
 &+Lshaft giving access to the griffon platform above.  This thick steel ladder
 &+Lcan only be traversed in a single-file formation through this long, dark
-&+Lsubterannean shaft.
+&+Lsubterranean shaft.
 ~
 831 32768 0
 D4
@@ -11774,7 +11774,7 @@ S
    &+LThis long &+Csteel &+Lladder reaches all the way up this narrow, natural
 &+Lshaft giving access to the griffon platform above.  This thick steel ladder
 &+Lcan only be traversed in a single-file formation through this long, dark
-&+Lsubterannean shaft.
+&+Lsubterranean shaft.
 ~
 831 32768 0
 D4
@@ -11807,7 +11807,7 @@ S
 &+Lwith the &+Cfort&+L.  A full &N&+ytrough&+L full of horse and animal meal is
 &+Lset up across from a large &N&+cbar&+L, which the mounts are typically
 &n&+ytethered&+L to on their owner's accord.  A maintenance crew frequents this
-&+Lunderstandabily-filthy cave.
+&+Lunderstandably-filthy cave.
 ~
 831 32768 0
 D2
@@ -12056,7 +12056,7 @@ S
 #83694
 &+LA Trail &N&+yAround a Cliff~
    &+gA grassy trail descends around a rocky bluff topped with grass above.  The
-&+gdrop seems rather signifigant, as the cliff face is completely vertical.  There
+&+gdrop seems rather significant, as the cliff face is completely vertical.  There
 &+gare tree roots hanging out from various spots of the cliff face, suggesting
 &+gthat this terrain may be the result of a recent shift in the world's makeup.
 ~
@@ -12073,7 +12073,7 @@ S
 #83695
 &+LA Turn in the Trail~
    &+gA grassy trail descends around a rocky bluff topped with grass above.  The
-&+gdrop seems rather signifigant, as the cliff face is completely vertical.  There
+&+gdrop seems rather significant, as the cliff face is completely vertical.  There
 &+gare tree roots hanging out from various spots of the cliff face, suggesting
 &+gthat this terrain may be the result of a recent shift in the world's makeup.
 ~
@@ -12095,7 +12095,7 @@ S
 #83696
 &+LA Trail &N&+yAround a Cliff~
    &+gA grassy trail descends around a rocky bluff topped with grass above.  The
-&+gdrop seems rather signifigant, as the cliff face is completely vertical.  There
+&+gdrop seems rather significant, as the cliff face is completely vertical.  There
 &+gare tree roots hanging out from various spots of the cliff face, suggesting
 &+gthat this terrain may be the result of a recent shift in the world's makeup.
 ~
@@ -12112,7 +12112,7 @@ S
 #83697
 &+gA Grassy &+WCliff&N~
    &+gA grassy trail descends around a rocky bluff topped with grass above.  The
-&+gdrop seems rather signifigant, as the cliff face is completely vertical.  There
+&+gdrop seems rather significant, as the cliff face is completely vertical.  There
 &+gare tree roots hanging out from various spots of the cliff face, suggesting
 &+gthat this terrain may be the result of a recent shift in the world's makeup.
 ~
@@ -12194,7 +12194,7 @@ sign~
 S
 #83702
 &NA Short &+LHallway&N~
-   &+LA short hallway stretches north and south, endinag at an empty wall
+   &+LA short hallway stretches north and south, ending at an empty wall
 &+Lshrouded in darkness.  The start of the hallway features the secret
 &+Ldoor behind the Fort merchant stall.  There are numerous dark footprints
 &+Lin the dirty, unkept floor below - all dwarfish in side.
@@ -12215,7 +12215,7 @@ sign~
 S
 #83703
 &NEnd of a &+LHallway&N~
-   &+LA short hallway stretches north and south, endinag at an empty wall
+   &+LA short hallway stretches north and south, ending at an empty wall
 &+Lshrouded in darkness.  The start of the hallway features the secret
 &+Ldoor behind the Fort merchant stall.  There are numerous dark footprints
 &+Lin the dirty, unkept floor below - all dwarfish in side.
@@ -12565,7 +12565,7 @@ insignia~
 S
 #83714
 &+LTop of a &NR&+Lo&Nc&+Lk&Ny &+LDescent&N~
-   &+LThis rocky rescend starts with fine grass glowing along the broken,
+   &+LThis rocky descend starts with fine grass glowing along the broken,
 &+Lgravel-ridden ground.  It eventually sinks deeper and deeper within the
 &+Lmountain as it enters a vaulted cavern in which numerous stalagmites hang.
 ~
@@ -12581,7 +12581,7 @@ D5
 S
 #83715
 &+LA &NR&+Lo&Nc&+Lk&Ny &+LDescent&N~
-   &+LThis rocky rescend starts with fine grass glowing along the broken,
+   &+LThis rocky descend starts with fine grass glowing along the broken,
 &+Lgravel-ridden ground.  It eventually sinks deeper and deeper within the
 &+Lmountain as it enters a vaulted cavern in which numerous stalagmites hang.
 ~
@@ -12599,7 +12599,7 @@ S
 &+LBefore a &+WStalagmite &+LCavern&N~
    &+LThis wide-open cavern has numerous large stalagmites hanging from
 &+Lthe rocky, vaulted ceiling.  The floor is covered with dirt, rocks,
-&+Land bat guano, atop a jagged layer of stalagtites.  There are howling
+&+Land bat guano, atop a jagged layer of stalactites.  There are howling
 &+Lmoans in the distance that are unhuman in nature.  The air here is
 &+Lthick and musty.
 ~
@@ -12905,7 +12905,7 @@ D2
 0 0 83730
 S
 #83730
-&+mAn Slimey Tunnel&N~
+&+mAn Slimy Tunnel&N~
    &+LThis rocky tunnel opening comes along side that of a large, fetid
 &+Lunderground pool.  The stalagmites seem to have ceased, above, as this
 &+Lnatural tunnel begins its ascent south and upwards.  The ground seems
@@ -13117,7 +13117,7 @@ S
    &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
 &+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
 &+Lhad been planted purposely rather then from natural growth.  This small
-&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visible to the west.
 ~
 831 0 2
 D1
@@ -13134,7 +13134,7 @@ S
    &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
 &+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
 &+Lhad been planted purposely rather then from natural growth.  This small
-&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visible to the west.
 ~
 831 0 2
 D0
@@ -13155,7 +13155,7 @@ S
    &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
 &+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
 &+Lhad been planted purposely rather then from natural growth.  This small
-&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.   &+LIn this portion of the thoroughfare, a small stone fountain sits
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visible to the west.   &+LIn this portion of the thoroughfare, a small stone fountain sits
 &+Lat the center of the cobblestone roadway.  About four feet tall in a five-
 &+Lfoot wide pool, the fountain gushes out clear water softly, creating a
 &+Lsense of peace and harmony amongst this twisted place.  The port of &+WDeramuth&+L
@@ -13180,7 +13180,7 @@ S
    &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
 &+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
 &+Lhad been planted purposely rather then from natural growth.  This small
-&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visible to the west.
 ~
 831 0 2
 D1
@@ -13202,7 +13202,7 @@ S
    &+LThis stone thoroughfare has bits of green &+Ggrass&+L growing out from
 &+Lbetween the cracks.  Small trees line the thoroughfare that one can assume
 &+Lhad been planted purposely rather then from natural growth.  This small
-&+Lroadway leads east-west, with the port of &+WDeramuth&+L visable to the west.
+&+Lroadway leads east-west, with the port of &+WDeramuth&+L visible to the west.
 ~
 831 0 2
 D1
@@ -13255,7 +13255,7 @@ S
 &+Wthe protection of &N&+cAlatorin&+L, nested within the &N&+yShanatar
 &+Wmountains.  The promenade is covered with thick imported cobblestones,
 &+Wfrom which thick bright green grass grows between.
-   &+WSeeral large rocks are arranged as huge steps down to the dock
+   &+WSeveral large rocks are arranged as huge steps down to the dock
 &+Warea below.
 ~
 831 0 1
@@ -13562,8 +13562,8 @@ S
    &+cThe inn of the Golden Pearl is quite lavish for what it is, a simple
 &+cwooden dwelling with simple but effective craftsmanship.  The walls are
 &+csupported by concrete while the floors are fully carpeted with thick
-&+ctreated fur carpetting.  This inn often sees many faces of the pirates,
-&+cpassangers, adventurers, and warriors of the many ships that cross
+&+ctreated fur carpeting.  This inn often sees many faces of the pirates,
+&+cpassengers, adventurers, and warriors of the many ships that cross
 &+cthrough these parts.
 ~
 831 524288 0
@@ -13600,8 +13600,8 @@ S
    &+cThe inn of the Golden Pearl is quite lavish for what it is, a simple
 &+cwooden dwelling with simple but effective craftsmanship.  The walls are
 &+csupported by concrete while the floors are fully carpeted with thick
-&+ctreated fur carpetting.  This inn often sees many faces of the pirates,
-&+cpassangers, adventurers, and warriors of the many ships that cross
+&+ctreated fur carpeting.  This inn often sees many faces of the pirates,
+&+cpassengers, adventurers, and warriors of the many ships that cross
 &+cthrough these parts.
 ~
 831 0 0
@@ -13629,8 +13629,8 @@ S
    &+cThe inn of the Golden Pearl is quite lavish for what it is, a simple
 &+cwooden dwelling with simple but effective craftsmanship.  The walls are
 &+csupported by concrete while the floors are fully carpeted with thick
-&+ctreated fur carpetting.  This inn often sees many faces of the pirates,
-&+cpassangers, adventurers, and warriors of the many ships that cross
+&+ctreated fur carpeting.  This inn often sees many faces of the pirates,
+&+cpassengers, adventurers, and warriors of the many ships that cross
 &+cthrough these parts.
 ~
 831 0 0
@@ -13720,7 +13720,7 @@ S
    &+LThese &N&+ywooden steps&+L have been built in an elaborate manner,
 &+Ldouble-reinforced and bound with thick woven cordage.  These wooden
 &+Lsteps lead from the &Nmerchant street &+Lof &+WDeramuth Port &+Ldown to the
-&N&+ydocks&+L.  They are creeky, yet sturdy and able to support quite a hefty
+&N&+ydocks&+L.  They are creakly, yet sturdy and able to support quite a hefty
 &+Lmass, having been constructed to withstand cargo shipments.
 ~
 831 0 4
@@ -13738,7 +13738,7 @@ S
    &+LThese &N&+ywooden steps&+L have been built in an elaborate manner,
 &+Ldouble-reinforced and bound with thick woven cordage.  These wooden
 &+Lsteps lead from the &Nmerchant street &+Lof &+WDeramuth Port &+Ldown to the
-&N&+ydocks&+L.  They are creeky, yet sturdy and able to support quite a hefty
+&N&+ydocks&+L.  They are creakly, yet sturdy and able to support quite a hefty
 &+Lmass, having been constructed to withstand cargo shipments.
 ~
 831 0 4
@@ -14284,7 +14284,7 @@ D1
 S
 #83800
 &+LA Short &N&+yHallway&N~
-   &+LA short hallway stretches north and south, endinag at an empty wall
+   &+LA short hallway stretches north and south, ending at an empty wall
 &+Lshrouded in darkness.  The start of the hallway features the secret
 &+Ldoor behind the Fort merchant stall.  There are numerous dark footprints
 &+Lin the dirty, unkept floor below - all dwarfish in side.
@@ -14525,7 +14525,7 @@ D3
 S
 #83812
 &+LEntrance to a Contraband &N&+yStorage Cave&N~
-   &+LThis ancient, dark cavern has severl large &N&+mmithril &+Land adamantite
+   &+LThis ancient, dark cavern has several large &N&+mmithril &+Land adamantite
 &+Lsupports fastened, giving the cavern an almost dwarven hall-like feeling.
 &+LThe ground is quite level, and perhaps doctored by the inhabiting dwarves.
 &+LFilling this massive cavern are massive crates, old and new, of all sizes
@@ -14544,7 +14544,7 @@ D3
 S
 #83813
 &+LWithin a Contraband &N&+yStorage Cave&N~
-   &+LThis ancient, dark cavern has severl large &N&+mmithril &+Land adamantite
+   &+LThis ancient, dark cavern has several large &N&+mmithril &+Land adamantite
 &+Lsupports fastened, giving the cavern an almost dwarven hall-like feeling.
 &+LThe ground is quite level, and perhaps doctored by the inhabiting dwarves.
 &+LFilling this massive cavern are massive crates, old and new, of all sizes
@@ -14873,7 +14873,7 @@ S
 &+CAn &N&+rEle&N&+bmen&+ytal &+CPrison&N~
    &+RSwirling pillars of flame surround &+Wcolossal columns of water&+B.
 &+BGushing waterfalls fall through massive &N&+ychunks of rocky earth
-&+cas tornados swirl amongst a &n&+rflaming maelstrom.  &+BLightning
+&+cas tornadoes swirl amongst a &n&+rflaming maelstrom.  &+BLightning
 &+Bcrackles across &N&+cwindy turbines of &n&+rflaming meteors and
 &+Bpowerful whirlpools.
 ~
@@ -14889,7 +14889,7 @@ S
    &+WA large chamber of &N&+mvelvet pillows&+W and fancy &+Ycandles&+L burning
 &+Wmagical flames are arranged around in a circular pattern in the center
 &+Wof this meditation chamber.  Other then the flames of the candles, this
-&+Wchamber seems to bec ompletely devoid of &N&+mmagic&+W.
+&+Wchamber seems to be compeltely devoid of &N&+mmagic&+W.
 ~
 831 33587328 0
 D0
@@ -14901,10 +14901,10 @@ S
 #83831
 &+WA Shimmering Po&+Crt&+Wal&N~
    &+WThis small atrium, secluded from the eastern &+mMystic Ward&+W of
-&+cAlatorin&+W is illumiated by the bright light of the blazing portal
+&+cAlatorin&+W is illuminated by the bright light of the blazing portal
 &+Wfocused on the western wall of this simple stone hold.  The portal here
 &+Wseems to be focused into a magical workshop amongst numerous other
-&+Wportals all leaidng to other strange places.
+&+Wportals all leading to other strange places.
 ~
 831 33587328 0
 D1
