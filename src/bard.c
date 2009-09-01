@@ -706,7 +706,8 @@ void bard_calm(int l, P_char ch, P_char victim, int song)
 {
   if(victim->specials.fighting)
   {
-    if(!bard_saves(ch, victim, song))
+    if(!bard_saves(ch, victim, song) ||
+       IS_TRUSTED(ch))
     {
       stop_fighting(victim);
       clearMemory(victim);
@@ -1046,8 +1047,9 @@ void bard_cowardice(int l, P_char ch, P_char victim, int song)
 
 void bard_forgetfulness(int l, P_char ch, P_char victim, int song)
 {
-  if(bard_saves(ch, victim, song))
-    return;
+  if(bard_saves(ch, victim, song) &&
+     !IS_TRUSTED(ch))
+        return;
   clearMemory(victim);
 }
 
@@ -1057,8 +1059,10 @@ void bard_peace(int l, P_char ch, P_char victim, int song)
 
   if(affected_by_spell(victim, song))
     return;
-  if(bard_saves(ch, victim, song))
-    return;
+  if(bard_saves(ch, victim, song) &&
+     !IS_TRUSTED(ch))
+        return;
+        
   bzero(&af, sizeof(af));
   af.type = song;
   af.duration = 1;
