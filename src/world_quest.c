@@ -468,9 +468,17 @@ void do_quest(P_char ch, char *args, int cmd)
       }
 
 
-      if(ch->only.pc->quest_level < GET_LEVEL(victim) - 6)
+      if(ch->only.pc->quest_level < GET_LEVEL(victim) -
+          get_property("worldQuest.level.high.value", 6))
       {
         send_to_char("They are much too experienced for that quest!\r\n", ch);
+        return;
+      }
+      
+      if(ch->only.pc->quest_level > GET_LEVEL(victim) +
+          get_property("worldQuest.level.low.value", 6))
+      {
+        send_to_char("They are too inexperienced for that quest!\r\n", ch);
         return;
       }
 
