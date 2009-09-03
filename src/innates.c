@@ -3926,7 +3926,8 @@ void do_immolate(P_char ch, char *argument, int cmd)
 void event_halfling_check(P_char ch, P_char victim, P_obj obj, void *data)
 {
   if (!ch->equipment[WEAR_FEET] && !
-      affected_by_spell(ch, TAG_BAREFEET)) {
+      affected_by_spell(ch, TAG_BAREFEET))
+  {
     struct affected_type af;
     memset(&af, 0, sizeof(af));
     af.type = TAG_BAREFEET;
@@ -3936,8 +3937,10 @@ void event_halfling_check(P_char ch, P_char victim, P_obj obj, void *data)
     affect_to_char(ch, &af);
     send_to_char("&+yYou stretch your toes feeling much more comfortable "
         "with unconstrained feet.&n\n", ch);
-  } else if (ch->equipment[WEAR_FEET] &&
-      affected_by_spell(ch, TAG_BAREFEET)) {
+  }
+  else if (ch->equipment[WEAR_FEET] &&
+          affected_by_spell(ch, TAG_BAREFEET))
+  {
     affect_from_char(ch, TAG_BAREFEET);
   }
 

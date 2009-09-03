@@ -4554,6 +4554,7 @@ SPELL_ADD(CLASS_NONE, 1);
   			   "The dreadful aura surrounding you fades away.","");
   TAG_CREATE("firing arrows", TAG_FIRING);
   TAG_CREATE("do not proc", TAG_STOP_PROC);
+  TAG_CREATE("bare feet", TAG_BAREFEET);
 
   TAG_CREATE_WITH_MESSAGES("recently fragged", TAG_PLR_RECENT_FRAG, 
                            "&+rThe thrill of the &+Lrecent &+Rkill &+rleaves your veins.", "");

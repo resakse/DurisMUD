@@ -1929,37 +1929,42 @@ void display_room_auras(P_char ch, int room_no)
        (IS_SET(world[room_no].room_flags, HEAL) ||
        get_spell_from_room(&world[room_no], SPELL_CONSECRATE_LAND)))
   {
+    buffer[0] = 0;
     sprintf(buffer, "&+WA &+Bsoothing&+W aura fills the area.&n\n");
     send_to_char(buffer, ch);
   }
-
+    
   if ((IS_AFFECTED2(ch, AFF2_DETECT_EVIL) ||
       affected_by_spell(ch, SPELL_AURA_SIGHT) ||
       affected_by_spell(ch, SPELL_FAERIE_SIGHT)) &&
       IS_SET(world[room_no].room_flags, NO_HEAL))
   {
+    buffer[0] = 0;  
     sprintf(buffer, "&+LAn &n&+revil&+L aura fills the area.&n\n");
     send_to_char(buffer, ch);
   }
-
+  
   if ((IS_AFFECTED2(ch, AFF2_DETECT_MAGIC) || 
       affected_by_spell(ch, SPELL_AURA_SIGHT) ||
       affected_by_spell(ch, SPELL_FAERIE_SIGHT)) &&
       IS_SET(world[room_no].room_flags, NO_MAGIC))
   {
+    buffer[0] = 0;
     sprintf(buffer, "&+bThis area seems to be &+Ldevoid&n&+b of &+Bmagic&n&+b!&n\n");
     send_to_char(buffer, ch);
   }
-
+    
   if((world[room_no].room_flags & SINGLE_FILE) ||
     (world[room_no].room_flags & TUNNEL))
   {
+    buffer[0] = 0;
     sprintf(buffer, "&+WThis area seems to be exceptionally &+ynarrow!&n\n");
     send_to_char(buffer, ch);
   }
-    
+  
   if (IS_SET(world[room_no].room_flags, ROOM_SILENT))
   {
+    buffer[0] = 0;
     strcat(buffer, "&+wAn &+yunnatural&+w silence fills this area.&n\r\n");
     send_to_char(buffer, ch);
   }
