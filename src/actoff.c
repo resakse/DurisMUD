@@ -8,7 +8,6 @@
  * ***************************************************************************
  */
 
-#define NEW_CHARGE  1
 #define DEFAULT     0
 #define AIR_ELEMENTAL   BIT_1
 #define FIRE_ELEMENTAL    BIT_2
@@ -1393,9 +1392,12 @@ void do_charge(P_char ch, char *argument, int cmd)
   }
   if(get_takedown_size(victim) < (get_takedown_size(ch) - 3))
   {
-    act("$n topples over $mself as $e tries to charge into $N.", FALSE, ch, 0, victim, TO_ROOM);
-    act("$n topples over $mself as $e tries to charge into you.", FALSE, ch, 0, victim, TO_VICT);
-    act("$N is too small to charge.&n", FALSE, ch, 0, victim, TO_CHAR);
+    act("$n topples over $mself as $e tries to charge into $N.",
+      FALSE, ch, 0, victim, TO_ROOM);
+    act("$n topples over $mself as $e tries to charge into you.",
+      FALSE, ch, 0, victim, TO_VICT);
+    act("$N is too small to charge.&n",
+      FALSE, ch, 0, victim, TO_CHAR);
 
     if(number(0, 1))
     {
@@ -1410,7 +1412,6 @@ void do_charge(P_char ch, char *argument, int cmd)
     return;
   }
 
-#ifdef NEW_CHARGE
   percent_chance = 95;
 
   if(GET_C_LUCK(ch) / 2 > number(0, 100))
@@ -1444,18 +1445,12 @@ void do_charge(P_char ch, char *argument, int cmd)
     IS_IMMOBILE(victim) ||
     !AWAKE(victim))
 
-#else
-
-  int second_check = (int) (get_takedown_size(victim) * 10 + GET_LEVEL(ch) + GET_C_DEX(ch) - GET_C_AGI(victim) / 2)
-
-  if(number(1, 100) < second_check)
-#endif
-
   {  
     if(get_takedown_size(victim) <= get_takedown_size(ch) && 
       !number(0,2))
     {
-      act("&+yYou charge wildly into&n $N &+yknocking $M to the &+Yground!&n", 0, ch, 0, victim, TO_CHAR);
+      act("&+yYou charge wildly into&n $N &+yknocking $M to the &+Yground!&n",
+        0, ch, 0, victim, TO_CHAR);
       act("$n &+ycharges through the room and crashes into&n $N &+yknocking $M to the &+Yground!",
           0, ch, 0, victim, TO_NOTVICT);
       act("$n &+ycharges into you, knocking you to the &+Yground!&n &+yYou hear a crunching noise as &+Wbones break!&n",
@@ -1527,10 +1522,24 @@ void do_charge(P_char ch, char *argument, int cmd)
         act("$n curses under $s breath.&n", 0, ch, 0, victim, TO_ROOM);
       }
     }
-    else
+    else if(IS_RIDING(ch))
     {
       act("$n &+ycharges in and $s mount maneuvers too quickly!", 0, ch, 0, victim, TO_ROOM);
       send_to_char("&+yYou &=LRcharge&n&n &+yand your mount adjusts its course too quickly!\r\n", ch);
+      SET_POS(ch, POS_PRONE + GET_STAT(ch));
+    }
+    else if(has_innate(ch, INNATE_CHARGE))
+    {
+      act("$n &+ycharges&n and ends up on $s face!&n",
+        0, ch, 0, victim, TO_ROOM);
+      send_to_char("&+yYou &=LRcharge&n&n &+yand end up on your face!\r\n", ch);
+      SET_POS(ch, POS_PRONE + GET_STAT(ch));
+    }
+    else 
+    {
+      act("$n &+ycharges&n and stumbles!&n",
+        0, ch, 0, victim, TO_ROOM);
+      send_to_char("&+yYou &=LRcharge&n&n &+yand stumble!\r\n", ch);
       SET_POS(ch, POS_PRONE + GET_STAT(ch));
     }
   }
