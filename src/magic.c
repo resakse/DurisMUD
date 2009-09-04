@@ -11034,7 +11034,7 @@ void spell_endurance(int level, P_char ch, char *arg, int type, P_char victim,
 {
   struct affected_type af;
   char     Gbuf1[100];
-  double skl_lvl;
+  int skl_lvl;
 
   if(affected_by_spell(victim, SPELL_ENDURANCE))
   {
@@ -11050,7 +11050,7 @@ void spell_endurance(int level, P_char ch, char *arg, int type, P_char victim,
     return;
   }
   
-  skl_lvl = MAX(3, ((level / 4) - 1)) * get_property("spell.endurance.modifiers", 1.000);
+  skl_lvl = (int)(MAX(3, ((level / 4) - 1)) * get_property("spell.endurance.modifiers", 1.000));
   
   sprintf(Gbuf1, "You feel energy begin to surge through your limbs.\n");
 
