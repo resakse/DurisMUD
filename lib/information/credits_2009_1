@@ -1,4 +1,4 @@
-3 September 2009
+07/19/07
                           &+L*****************
                           &+L* &+RC R E D I T S &+L*
                           &+L*****************
@@ -33,7 +33,7 @@
 &+YThe Black Thorne Mountains        &+L* &+Y20-50      &+w-&+L=&+C  Sniktiorg
 &+YThe Black Tunnels                 &+L* &+Y25-45      &+w-&+L=&+C  Dryzkul
 &+YThe Bloody Plains                 &+L* &+Y20-50      &+w-&+L=&+C  Ilienze
-&+gBraddistock Mansion               &+L* &+g 1-15      &+w-&+L=&+C  Rand
+&+gBraddistock Mansion               &+L* &+g30-50      &+w-&+L=&+C  Rand, Kharne
 &+gThe Broken Blade Tavern           &+L* &+g10-50      &+w-&+L=&+C  Unknown
 &+rThe Bronze Citadel                &+L* &+r45-50      &+w-&+L=&+C  Mabort
 &+gBugentolen                        &+L*  &+g1-20      &+w-&+L=&+C  Clavados
@@ -45,13 +45,14 @@
 &+rCeothia                           &+L* &+r45-50      &+w-&+L=&+C  Cy
 &+rCeothia - the past                &+L* &+r45-50      &+w-&+L=&+C  Cy
 &+rCeothia - the future              &+L* &+r45-50      &+w-&+L=&+C  Cy
-&+RThe Charcoal Palace               &+L*     &+R51+    &+w-&+L=&+C  Unknown/Jexni
+&+RThe Charcoal Palace               &+L*    &+R51+    &+w-&+L=&+C  Unknown/Jexni
 &+gCity of Breale                    &+L* &+g 5-50      &+w-&+L=&+C  Unknown
-&+RCity of Brass (Efreeti)           &+L*     &+R51+    &+w-&+L=&+C  Cython
+&+RCity of Brass (Efreeti)           &+L*    &+R51+    &+w-&+L=&+C  Cython
 &+YCity of BogenTok                  &+L* &+Y10-50      &+w-&+L=&+C  Clavados
 &+YCity of Torrhan                   &+L* &+Y20-50      &+w-&+L=&+C  Denel
-&+gCity of Verspin                   &+L*  &+g3-50      &+w-&+L=&+C  Zepline/Mren
+&+gCity of Verspin                   &+L*  &+g3-50      &+w-&+L=&+C  Zepline
 &+YCity of Wemics                    &+L* &+Y10-40      &+w-&+L=&+C  Clavados
+&+gCity of Winterhaven               &+L* &+g 1-50      &+w-&+l=&+C  Seif
 &+gThe Clawed Caverns                &+L* &+g 5-20      &+w-&+L=&+C  Xueqin
 &+YThe Cloud Giant Kingdom           &+L* &+Y10-50      &+w-&+L=&+C  Clavados
 &+YConnection Zones                  &+L* &+Y10-50      &+w-&+L=&+C  Clavados/Fotenak/Seif
@@ -107,6 +108,7 @@
 &+gThe Great Mushroom Forest         &+L* &+g35-50      &+w-&+L=&+C  Clavados
 &+gHalfcut Hills                     &+L* &+g15-50      &+w-&+L=&+C  Unknown
 &+RHall of Ancients                  &+L*    &+R51+     &+w-&+L=&+C  Akyura
+&+YHarrow - The Gnome Village        &+L* &+Y20-40      &+w-&+L=&+C  Unknown
 &+gThe Haunted Woods                 &+L*  &+g1-35      &+w-&+L=&+C  Clavados
 &+RThe Plane of Avernus              &+L*    &+R51+     &+w-&+L=&+C  Mabort
 &+rHigh Moors                        &+L* &+r45-50      &+w-&+L=&+C  Unknown
@@ -136,7 +138,9 @@
 &+gThe Misty Chasm                   &+L* &+g25-50      &+w-&+L=&+C  Sniktiorg/Beretorn
 &+gMistywood Forest                  &+L* &+g15-22      &+w-&+L=&+C  Rylar
 &+gMoonshae Islands                  &+L*  &+g1-50      &+w-&+L=&+C  Lathander
+&+YMorg's Place                      &+L* &+Y20-35      &+w-&+L=&+C  Unknown/Jexni
 &+gMoria                             &+L* &+g10-50      &+w-&+L=&+C  Miax
+&+YMotte and Bailey of Duke Delwyn   &+L* &+Y20-50      &+w-&+L=&+C  Gharl
 &+rMount Banishment                  &+L*    &+r45+     &+w-&+L=&+C  Kolut
 &+gMount Olympus                     &+L*  &+g1-50      &+w-&+L=&+C  Zod
 &+YMount Sknak                       &+L* &+Y30-50      &+w-&+L=&+C  Kharne
@@ -149,7 +153,6 @@
 &+RNew Cave City                     &+L*    &+R51+     &+w-&+L=&+C  Ilienze
 &+gNewhaven                          &+L* &+g20-40      &+w-&+L=&+C  Drevarr/Ilshadrial
 &+gNeverwind Valley                  &+L* &+g15-30      &+w-&+L=&+C  Halcyon
-&+RNexus: Marduk/Antu/Enlil/Ningishzida            &+w-&+L=&+C  Kitsero
 &+gNhavan Island                     &+L* &+g10-30      &+w-&+L=&+C  Oghma
 &+YNizari                            &+L* &+Y20-40      &+w-&+L=&+C  Shadowy
 &+YNorthern Lakes and Settlements    &+L* &+Y20-40      &+w-&+L=&+C  Melkivar
@@ -159,7 +162,6 @@
 &+rThe Obsidian Citadel              &+L* &+r40-50      &+w-&+L=&+C  Zileas
 &+rThe Old Citadel                   &+L* &+r30-50      &+w-&+L=&+C  Shadowy
 &+YOutcast Tower                     &+L* &+Y25-50      &+w-&+L=&+C  Clavados
-&+ROrraks Tower                      &+L*    &+R51+     &+w-&+L=&+C  Zepline/Mren
 &+YThe Outpost                       &+L* &+Y30-50      &+w-&+L=&+C  Kharne
 &+RPalace of the Sultan              &+L*    &+R51+     &+w-&+L=&+C  Cython
 &+gThe Peasant Village of Ako        &+L*  &+g1-50      &+w-&+L=&+C  Arylin
@@ -177,6 +179,7 @@
 &+gRaiders                           &+L*  &+g1-10      &+w-&+L=&+C  Zaeru
 &+RRa`Tutirama                       &+L*    &+R51+     &+w-&+L=&+C  Falari
 &+RThe Realm of Barovia              &+L*    &+R51+     &+w-&+L=&+C  Krzzn
+&+RThe Realm of Barovia Continued    &+L*    &+R51+     &+w-&+L=&+C  Fotenak
 &+rThe Realms of Thetis              &+L* &+r30-50      &+w-&+L=&+C  Falari
 &+gThe Rift Valley Jungle            &+L* &+g15-50      &+w-&+L=&+C  Xueqin
 &+rThe River Styx                    &+L* &+r40-50      &+w-&+L=&+C  Zarland
@@ -192,8 +195,8 @@
 &+YShadowclave                       &+L* &+Y20-40      &+w-&+L=&+C  Clavados
 &+YShafts of the Underdark           &+L* &+Y25-50      &+w-&+L=&+C  Ilienze
 &+RShadamehr Keep                    &+L*    &+R51+     &+w-&+L=&+C  Cyric
-&+YThe Shaughin Settlement           &+L* &+Y25-50      &+w-&+L=&+C  Unknown/Kharne
-&+rThe Shaughin Hunting Grounds      &+L* &+r45-50      &+w-&+L=&+C  Unknown/Kharne
+&+YThe Shaughin Settlement           &+L* &+Y25-50      &+w-&+L=&+C  Dravin
+&+rThe Shaughin Hunting Grounds      &+L* &+r45-50      &+w-&+L=&+C  Dravin
 &+gShipyards                         &+L* &+g 1-50      &+w-&+L=&+C  Melkivar
 &+RShrine of the Orrak               &+L*    &+R51+     &+w-&+L=&+C  Unknown
 &+RSkrentherlog's Temple             &+L*    &+R51+     &+w-&+L=&+C  Xueqin
@@ -201,6 +204,7 @@
 &+gSmokeveil Forest                  &+L*  &+g1-50      &+w-&+L=&+C  Berethorn&+L(Beretorn)
 &+gSplit Shield Slave Encampment     &+L*  &+g1-20      &+w-&+L=&+C  Truposz
 &+gSplit Shield Village              &+L*  &+g1-20      &+w-&+L=&+C  Aki
+&+rThe Stone Romb of Kelek           &+L* &+r40-50      &+w-&+L=&+C  Unknown
 &+rThe Stone Tower of Teka           &+L* &+r45-50      &+w-&+L=&+C  Melkivar
 &+YStorm Port                        &+L* &+Y20-50      &+w-&+L=&+C  Alachest
 &+YStorm Port Stronghold             &+L* &+Y20-50      &+w-&+L=&+C  Alachest
@@ -210,7 +214,7 @@
 &+YThe Temple of Lizizania           &+L* &+Y20-40      &+w-&+L=&+C  Ssseri
 &+rThe Temple of the Sun             &+L* &+r40-50      &+w-&+L=&+C  Gnosha
 &+rTemple of the Earth               &+L* &+r40-50      &+w-&+L=&+C  Teruaf
-&+RTezcatlipoca                      &+L*     &+R51+    &+w-&+L=&+C  Beretorn
+&+RTezcatlipoca                      &+L*    &+R51+    &+w-&+L=&+C  Beretorn
 &+rTikitzopl                         &+L* &+r30-50      &+w-&+L=&+C  Orthaz
 &+YTower of High Sorcery             &+L* &+Y30-50      &+w-&+L=&+C  Prodigy/Miax/Beretorn
 &+gThe Town of Miaeril               &+L*  &+g1-40      &+w-&+L=&+C  Sizan
@@ -314,16 +318,16 @@
                                 &+RCURRENT DURIS
                                 &+L*************
 
-      &+rDuris Currently Run By: &+cTorgal, Lucrot
+      &+rDuris Currently Run By: &+cTorgal, Zion, Lucrot
 
-      &+rDuris Coders: &+cTorgal, Odorf, Lom, Lucrot
-      &+rDuris Areas &+rGroup: &+cFotenak, Seif, Kitsero, Lucrot
+      &+rDuris Coders: &+cTorgal, Kvark, Venthix, Lom, Zion, Jexni, Lucrot
+      &+rDuris Areas &+rGroup: &+cFotenak, Kharne, Zion, Jexni, Lucrot
       &+rCaretakers of Custom DE Editor: &+cTharkun
       &+rDuris Server and Machine: &+cTorgal
       &+rDuris Site provided by: &+cTorgal
-      &+rDuris Quest Creators: &+cFotenak, Seif, Kitsero
-      &+rDuris Help Files: &+cLucrot
-      &+rDuris Zone Credits: &+cLucrot
+      &+rDuris Quest Creators: &+cKotil, Aceldama
+      &+rDuris Help Files: &+cAxxa, Weebler, Illuminati, Kharne, Jexni, Zion, Lucrot
+      &+rDuris Zone Credits: &+cBeretorn, Jexni
 
       &+rDuris Website: &+Whttp://www.durismud.com      
          &+rWebsite run by: &+cTorgal
