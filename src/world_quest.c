@@ -799,8 +799,11 @@ int getItemFromZone(int zone)
             IS_SET(t_obj->bitvector2, AFF2_GLOBE) ||
             IS_ARTIFACT(t_obj) ||
             isname("_noquest_", t_obj->name) ||
-            GET_OBJ_WEIGHT(t_obj) > 99  
-           ) {
+            GET_OBJ_WEIGHT(t_obj) > 99 ||
+            IS_SET(t_obj->bitvector, AFF_HASTE) ||
+            IS_SET(t_obj->bitvector, AFF_DETECT_INVISIBLE) ||
+            IS_SET(t_obj->bitvector4, AFF4_DETECT_ILLUSION))
+        {
           extract_obj(t_obj, FALSE);
           continue;
         }
