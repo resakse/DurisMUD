@@ -1,0 +1,41 @@
+#700036
+M
+roper skin bloody~
+&+rKryz'kyssik &+Lsays to you, '&+WYes, the ropers. Those filthy animals. Bring
+&+Wme their skins and I will reward your efforts. How does fifty platinum
+&+Wcoins sound?&+L'&n
+~
+M
+qc_action 100~
+&+mKryz'kyssik &nsnarls at some nearby &+Groper &ntracks.&n
+~
+M
+hi hello hey howdy~
+&+mKryz'kyssik &+Lsays to you, '&+WInexperienced one, what brings you to my humble
+&+Wcaverns? I hope that you have sought me out to bring me the two halves of
+&+Wan &+Mancient &+Wamulet.&+L'&n
+~
+M
+first second half halves ancient amulet amulets~
+&+mKryz'kyssik &+Lsays to you, '&+WThere are two drows who are keeping a pair
+&+Wof valuable artifacts from me. &+mOzman'dyzus &+Wand &+mHaz'on'wyz &+Wtravel the
+&+MUnderdark and each have in their possession a piece of an amulet. Bring
+&+Wme the two pieces and I shall reward you handsomely.'
+
+&+LHe pauses for a second..
+
+&+L'&+WIf you happen to cross paths with any &+Gropers&+L, slay them.&+L'&n
+~
+Q
+&+mKryz'kyssik &+Lsays, '&+WWonderful! The more of these filthy &+Gropers &+Wwe get rid
+&+Wof, the better. Take this as merit to your efforts.&+L'&n
+~
+R C 100000
+G I 700008
+Q
+~
+R I 700005
+R E 250000
+G I 700000
+G I 700001
+S
