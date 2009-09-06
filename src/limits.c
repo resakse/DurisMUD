@@ -1039,13 +1039,18 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
       XP = (int) (XP * (float) get_property("exp.factor.racewar.undead", 0.7));          
   }
 
-  range = (int) (new_exp_table[GET_LEVEL(ch) + 1] / 3);
-  XP = BOUNDED(-range, (int)(XP), range);
-
+  if(type != EXP_RESURRECT)
+  {
+    range = (int) (new_exp_table[GET_LEVEL(ch) + 1] / 3);
+    XP = BOUNDED(-range, (int)(XP), range);
+  }
+  
   if( pvp )
   {
-    debug("pvp exp gain: %d", XP);
-    logit(LOG_DEBUG, "pvp exp gain: %d", XP);    
+    debug("&+RPVP&n: (%s) gained (%d) exps by killing (%s): %d",
+      GET_NAME(ch), (int)(XP), GET_NAME(victim));
+    logit(LOG_DEBUG, "&+RPVP&n: (%s) gained (%d) exps by killing (%s): %d",
+      GET_NAME(ch), (int)(XP), GET_NAME(victim));
   }
   
   if(XP < 0 &&
@@ -1054,14 +1059,16 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 
   if(!(pvp) &&
      type != EXP_DEATH &&
-     type != EXP_WORLD_QUEST)
+     type != EXP_WORLD_QUEST &&
+     type != EXP_RESURRECT)
   {
     XP = modify_exp_by_zone_trophy(ch, type, (int)(XP));    
   }
 
   if(XP > 0 &&
      type != EXP_WORLD_QUEST &&
-     type != EXP_DEATH)
+     type != EXP_DEATH &&
+     type != EXP_RESURRECT)
   {
     XP = check_nexus_bonus(ch, (int)(XP), NEXUS_BONUS_EXP);
   
@@ -1088,8 +1095,9 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     }
   }
 
-  if(XP > 0)
-    XP *= (get_property("gain.exp.mod.TotalOverall", 1.00));
+  if(XP > 0 &&
+     type != EXP_RESURRECT)
+     XP *= (get_property("gain.exp.mod.TotalOverall", 1.00));
   
   // increase exp only to some limit (cumulative exp till 61)
   if(XP < 0 ||

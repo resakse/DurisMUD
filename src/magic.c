@@ -13676,6 +13676,10 @@ void spell_resurrect(int level, P_char ch, char *arg, int type, P_char victim,
           "Resu debug: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
           GET_NAME(t_ch), GET_LEVEL(t_ch), GET_NAME(ch), GET_LEVEL(ch),
           GET_EXP(t_ch), GET_EXP(t_ch) + resu_exp, resu_exp);
+    debug("Resu debug: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
+          GET_NAME(t_ch), GET_LEVEL(t_ch), GET_NAME(ch), GET_LEVEL(ch),
+          GET_EXP(t_ch), GET_EXP(t_ch) + resu_exp, resu_exp);
+          
     gain_exp(t_ch, NULL, resu_exp, EXP_RESURRECT);
   }
   GET_HIT(t_ch) = GET_MAX_HIT(t_ch);
@@ -14043,21 +14047,26 @@ void spell_lesser_resurrect(int level, P_char ch, char *arg, int type, P_char vi
    */
   clevel = obj->value[2];
 
+  /*
   if(IS_PC(t_ch) && !IS_TRUSTED(t_ch))
   {
-     resu_exp = 0;
-/*
-    else if(EVIL_RACE(t_ch)) resu_exp >>= 1;
-    */
+    resu_exp = 0;
+  else if(EVIL_RACE(t_ch))
+    resu_exp >>= 1;
 
     logit(LOG_DEATH,
-          "Resu debug: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
+          "Lesser Res debug: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
           GET_NAME(t_ch), GET_LEVEL(t_ch), GET_NAME(ch), GET_LEVEL(ch),
           GET_EXP(t_ch), GET_EXP(t_ch) + resu_exp, resu_exp);
+    debug("Lesser Res debug: %s (%d) by %s (%d): old exp: %d, new exp: %d, +exp: %d",
+      GET_NAME(t_ch), GET_LEVEL(t_ch), GET_NAME(ch), GET_LEVEL(ch),
+      GET_EXP(t_ch), GET_EXP(t_ch) + resu_exp, resu_exp);
     
     if(!RACE_EVIL(t_ch))
        gain_exp(t_ch, NULL, resu_exp, EXP_RESURRECT);
   }
+  */
+
   GET_HIT(t_ch) = GET_MAX_HIT(t_ch);
   GET_MANA(t_ch) = MAX(0, GET_MAX_MANA(t_ch) >> 2);
   GET_VITALITY(t_ch) = MIN(0, GET_MAX_VITALITY(t_ch));
