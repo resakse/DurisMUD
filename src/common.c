@@ -23,7 +23,7 @@ const char *specdata[][MAX_SPEC] = {
   {"&+rPyr&+Rokine&+rtic", "&+MEn&+mslav&+Mer", "&+bPsyche&+Lporter", ""},         //Psionicist
   {"&+wCrusa&+Wder", "&+WCavalier", "", ""},    //Paladin
   {"&+LDark Knight", "&+LDem&+ronic Ri&+Lder", "", ""},  //Anti-Paladin
-  {"&+YZealot", "&+WHealer", "&+cHoly&+Wperson", ""},      //Cleric
+  {"&+YZealot&n", "&+WHealer&n", "&+cPas&+Wtor&n", ""},      //Cleric
   {"&+rRe&+Rd Dra&+rgon", "&+gElap&+Ghi&+gdist", "", ""},   //Monk
   {"&+gFo&+Gre&+gst Druid", "&+cStorm &+CDruid", "", ""},       //Druid
   {"&+rEl&+Rem&+Lenta&+Rli&n&+rst", "&+WSpir&+Citua&+Wlist", "&+yAni&+Ymal&n&+yist", ""},       //Shaman
