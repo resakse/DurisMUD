@@ -466,11 +466,21 @@ int takedown_check(P_char ch, P_char victim, int chance, int skill,
     return TAKEDOWN_CANCELLED;
   }
 
-  if((applicable & GHOST) && 
-    IS_INCORPOREAL(victim))
+  if((applicable & GHOST) &&
+      IS_IMMATERIAL(victim))
   {
-    show_failed_takedown_messages(ch, victim, skill, GHOST);
-    return TAKEDOWN_PENALTY;
+    if(IS_NPC(victim))
+    {
+      show_failed_takedown_messages(ch, victim, skill, GHOST);
+      return TAKEDOWN_PENALTY;
+    }
+    
+    if(IS_PC(victim) &&
+       !number(0, 9))
+    {
+      show_failed_takedown_messages(ch, victim, skill, GHOST);
+      return TAKEDOWN_PENALTY;
+    }
   }
 
   if(affected_by_spell(victim, SPELL_DISPLACEMENT) && 
