@@ -7491,7 +7491,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
     goto quick;
   }
 
-
+PROFILE_START(mundane1);
   if(mob_index[ch->only.npc->R_num].qst_func && !IS_FIGHTING(ch))
   {
     // works in about 5% cases, but extremely ineffective!
@@ -7499,6 +7499,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
     // TODO: replace binary search inside with direct pointer and extract number of pulses directly instead of sscanf!
     if (execute_quest_routine(ch, CMD_NONE))
     {
+PROFILE_END(mundane1);
       goto normal;
     }
   }
@@ -7531,7 +7532,9 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
   /* If we are a vehicle navigator, lets get moving */
   // TODO: add the corresponding flag to the mob and check it here before running through the list  -Odorf
   check_for_wagon(ch);
+PROFILE_END(mundane1);
 
+PROFILE_START(mundane2);
   /*
    * quickie check, for sounds of combat in room waking 'normal'
    * sleepers.  JAB
@@ -7548,12 +7551,14 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
       {
         do_wake(ch, 0, -4);
         send_to_char("Who can sleep with all this noise?\r\n", ch);
+PROFILE_END(mundane2);
         goto normal;
       }
     }
   }
   if(JusticeGuardAct(ch))  // Justice hook.
   {// 0%
+PROFILE_END(mundane2);
     goto normal;
   }
 
@@ -7562,7 +7567,9 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
     // made a separate procedure for mobs, w/o sprintfs and all  -Odorf
     do_npc_commune(ch);
   }
+PROFILE_END(mundane2);
 
+PROFILE_START(mundane3);
   /*
    * mob is sitting because either a god forced em to, or because of a
    * battle maneuver.  if it's unnatural for the mob to be sitting,
@@ -7573,6 +7580,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
     if(IS_FIGHTING(ch))
     {
       do_stand(ch, 0, 0);
+PROFILE_END(mundane3);
       goto normal;
     }
     else if((ch->only.npc->default_pos & 3) != GET_POS(ch))
@@ -7592,14 +7600,18 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
     }
     else if((*mob_index[ch->only.npc->R_num].func.mob) (ch, 0, CMD_MOB_MUNDANE, 0))
     { // 0.1%
+PROFILE_END(mundane3);
       goto normal;
     }
   }
   if(!MIN_POS(ch, POS_STANDING + STAT_NORMAL))
   { // 3%
+PROFILE_END(mundane3);
     goto normal;                /* not much we can do, if they can't stand */
   }
+PROFILE_END(mundane3);
 
+PROFILE_START(mundane4);
   if(!(IS_SET(ch->specials.act, ACT_SENTINEL) && CHAR_IN_SAFE_ZONE(ch)) &&
       !(IS_PC_PET(ch) && (ch->in_room == GET_MASTER(ch)->in_room)))
   { // 100%
@@ -7615,10 +7627,13 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
         if (MobSpellUp(ch))
         {
             goto normal;
-	}
+PROFILE_END(mundane4);
+    	}
     }
   }
+PROFILE_END(mundane4);
 
+PROFILE_START(mundane5);
   if(IS_SET(ch->specials.act, ACT_MEMORY) && !IS_FIGHTING(ch))
   { // 85%
     if(IS_SET(ch->specials.act, ACT_HUNTER)) 
@@ -7626,25 +7641,39 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
       if (GET_MEMORY(ch) != NULL) // guardcheck (no hunt will happen if mob has no memory)  -Odorf
       {
         if(InitNewMobHunt(ch))
+        {
+PROFILE_END(mundane5);
           goto normal;
+        }
       }
       else if (TryToGetHome(ch))  // if mob has no memory it might still want to go back  -Odorf
+      {
+PROFILE_END(mundane5);
         goto normal;
+      }
     }
 
     if (GET_MEMORY(ch) != NULL) // guardcheck (no real action will happen in either function if mob has no memory) -Odorf
     {
       CheckForRemember(ch);
       if(/*!ch - no need -Odorf ||*/ !CAN_ACT(ch)) //  do we really need to check CAN_ACT here? -Odorf
+      {
+PROFILE_END(mundane5);
         goto normal;
+      }
 
       mobact_memoryHandle(ch);
       if(/*!ch - no need -Odorf ||*/ !CAN_ACT(ch)) //  do we really need to check CAN_ACT here? -Odorf
+      {
+PROFILE_END(mundane5);
         goto normal;
+      }
     }
   }
+PROFILE_END(mundane5);
   /* check for mobs that can break charm - DCL */
 
+PROFILE_START(mundane6);
   if(IS_AFFECTED(ch, AFF_CHARM) && IS_SET(ch->specials.act, ACT_BREAK_CHARM)
       && ((!number(0, 3) && NewSaves(ch, SAVING_PARA, 0)
       && ch->only.npc->R_num != real_mobile(6)) || IS_SHOPKEEPER(ch)))
@@ -7669,6 +7698,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
              FALSE, ch, 0, 0, TO_ROOM);
         }
         MobStartFight(ch, tmp_ch);
+PROFILE_END(mundane6);
         goto normal;
       }
     }
@@ -7684,11 +7714,13 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
       if(number(1, 101) > 90)
       {
         MobCastSpell(ch, ch, 0, SPELL_REMOVE_POISON, GET_LEVEL(ch));
+PROFILE_END(mundane6);
         goto normal;
       }
       else
         do_action(ch, 0, CMD_CURSE);
     }
+PROFILE_END(mundane6);
 /* sadly, dispel magic no longer works on self, so this code doesn't work */
 
 /*
@@ -7704,6 +7736,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
   }
   /* remove blocking walls */
   // annoying, but not much to do here. Maybe should add a room flag WALLED?  -Odorf
+PROFILE_START(mundane7);
   if(!IS_PATROL(ch))
   { // 99.95%
     for (i = 0; i < NUMB_EXITS; i++)
@@ -7713,11 +7746,13 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
       {
         if(MobDestroyWall(ch, i))
         {
+PROFILE_END(mundane7);
           goto normal;
         }
       }
     }
   }
+PROFILE_END(mundane7);
 #if 0
   if(IS_SET(world[ch->in_room].room_flags, MAGIC_DARK))
   {
@@ -7762,9 +7797,11 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
    * attacks.  JAB
    */
 
+PROFILE_START(mundane8);
   if((GET_POS(ch) > POS_SITTING) && !IS_FIGHTING(ch) && !ALONE(ch) && (tmp_ch = PickTarget(ch)))
   {
     add_event(event_agg_attack, 1, ch, tmp_ch, 0, 0, 0, 0);
+PROFILE_END(mundane8);
     goto normal;
   }
   /*
@@ -7785,9 +7822,11 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
 
       /* * switch targets (if we can) */
       attack(ch, tmp_ch);
+PROFILE_END(mundane8);
       goto normal;
     }
   }
+PROFILE_END(mundane8);
   /*
    * ok, quick scan through room, just to see if combat is going on
    * there.
@@ -7795,6 +7834,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
 
   CombatInRoom = FALSE;
 
+PROFILE_START(mundane9);
   LOOP_THRU_PEOPLE(tmp_ch, ch)
   { // 400%
     if(IS_FIGHTING(tmp_ch))
@@ -7834,6 +7874,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
             ch->only.npc->last_direction = door;
             do_move(ch, 0, exitnumb_to_cmd(door));
             REMOVE_BIT(ch->specials.act2, ACT2_COMBAT_NEARBY );
+PROFILE_END(mundane9);
             goto normal;
           }
         }
@@ -7844,6 +7885,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
 
   if(CombatInRoom)
     handle_npc_assist(ch);
+PROFILE_END(mundane9);
 
 /*  commenting this out, see below...
  
@@ -7966,6 +8008,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
   }
   /* random wanderings */
 
+PROFILE_START(mundane10);
   if(!IS_FIGHTING(ch) && !IS_PATROL(ch) && !GET_MASTER(ch) &&
       !get_linking_char(ch, LNK_RIDING))
   { // 96%
@@ -7992,6 +8035,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
               (world[EXIT(ch, door)->to_room].sector_type !=
                world[ch->in_room].sector_type))
           { // 0.0001%
+PROFILE_END(mundane10);
             goto quick;
           }
           ch->only.npc->last_direction = door;
@@ -8000,6 +8044,7 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
           /* if mob died while moving (e.g., died through lightning curtain) just cancel and return */
           if( !IS_ALIVE(ch) )
           {
+PROFILE_END(mundane10);
             return;
           }
 
@@ -8007,14 +8052,17 @@ void event_mob_mundane(P_char ch, P_char victim, P_obj object, void *data)
           if(IS_RANDOM_MOB(ch) && EXIT(ch, door) &&
               (world[EXIT(ch, door)->to_room].sector_type == SECT_CITY))
           { // 0%
+PROFILE_END(mundane10);
             goto quick;
           }
+PROFILE_END(mundane10);
           goto normal;
         }
       }
     }
   }
   // 84.2%
+PROFILE_END(mundane10);
 
 normal:  // 99.999%
   if (remember_array[world[ch->in_room].zone])

@@ -14,7 +14,17 @@
   PROFILE_##action(combat) \
   PROFILE_##action(pulse_reset) \
   PROFILE_##action(event_loop) \
-  PROFILE_##action(event_func)
+  PROFILE_##action(event_func) \
+  PROFILE_##action(mundane1) \
+  PROFILE_##action(mundane2) \
+  PROFILE_##action(mundane3) \
+  PROFILE_##action(mundane4) \
+  PROFILE_##action(mundane5) \
+  PROFILE_##action(mundane6) \
+  PROFILE_##action(mundane7) \
+  PROFILE_##action(mundane8) \
+  PROFILE_##action(mundane9) \
+  PROFILE_##action(mundane10)
 
    
 
