@@ -532,11 +532,12 @@ void heal(P_char ch, P_char healer, int hits, int cap)
   
   hits = vamp(ch, hits, cap);
 
+debug("Hitting heal function in fight with (%d) hits.", hits);
   if(IS_PC(healer) &&
-     ch->specials.fighting &&
+     IS_FIGHTING(ch) &&
      hits > 5)
   {
-    gain_exp(healer, ch->specials.fighting, 0, EXP_HEALING);
+    gain_exp(healer, ch, hits, EXP_HEALING);
   }
 }
 

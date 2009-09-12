@@ -1048,23 +1048,14 @@ debug("damage 9 exp gain EXIT (%d)", XP);
   }
   else if(type == EXP_HEALING)
   {
-    if(!(victim))
-    {
-      return 0;
-    }
-    
-// Do not provide exps for healing enemies in racewar.
-    if(IS_PC(ch) &&
-       IS_PC(victim) &&
-       pvp)
+// No exps for healing pets.
+    if(IS_NPC(victim))
     {
       return 0;
     }
 
     XP = (int)(XP *
-               GET_LEVEL(ch) *
-               GET_LEVEL(victim) *
-               get_property("exp.factor.healing", 1.000));
+               get_property("exp.factor.healing", 0.100));
     
     if(!GET_CLASS(ch, CLASS_CLERIC) &&
        !GET_SPEC(ch, CLASS_SHAMAN, SPEC_SPIRITUALIST))
@@ -1076,8 +1067,8 @@ debug("damage 9 exp gain EXIT (%d)", XP);
     {
       XP >> 1;
     }
-    
-    XP = (int)(gain_exp_modifiers_race_only(ch, victim, XP, NULL));
+debug(" healing 1 (%d).", XP);
+    XP = (int)(gain_exp_modifiers_race_only(ch, NULL, XP, NULL));
     XP = (int)(modify_exp_by_zone_trophy(ch, type, (int)(XP)));    
   }
   else if(type == EXP_MELEE)
