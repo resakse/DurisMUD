@@ -114,10 +114,6 @@ extern int new_exp_table[];
 extern const mcname multiclass_names[];
 extern void displayShutdownMsg(P_char);
 
-#define FIND_AND_SOMETHING   0
-#define FIND_AND_KILL   1
-#define FIND_AND_ASK   2
-
 
 void resetQuest(P_char ch)
 {
@@ -927,14 +923,14 @@ int suggestQuestMob(int zone_num, P_char ch, int QUEST_TYPE)
 
   if(KIND_OF_QUEST == FIND_AND_KILL) //FIND AND KILL A MOB
   {
-    MAX_LEVEL = MAX_LEVEL - 1;
+    MAX_LEVEL = MAX_LEVEL + 8;
   }
   if(KIND_OF_QUEST == FIND_AND_ASK) //FIND AND TALK TO HIM
   {
     MAX_LEVEL = 62;
   }
 
-  //wizlog(56, "Looking for a vald mob in: %s KIND_OF_QUEST = %d MAX_LEVEL=%d", zone_table[zone_num].name, KIND_OF_QUEST, MAX_LEVEL);
+//debug("Looking for a vald mob in: %s KIND_OF_QUEST = %d MAX_LEVEL=%d", zone_table[zone_num].name, KIND_OF_QUEST, MAX_LEVEL);
   for (i = 0; i <= top_of_mobt; i++)
   {
     if ((mob_index[i].virtual_number >= world[zone_table[zone_num].real_bottom].number) &&
@@ -950,7 +946,7 @@ int suggestQuestMob(int zone_num, P_char ch, int QUEST_TYPE)
         char_to_room(t_mob, 1, -2);
 
         if(GET_LEVEL(t_mob) < MAX_LEVEL  &&
-           GET_LEVEL(t_mob) > MAX_LEVEL - 1 &&
+           GET_LEVEL(t_mob) > (GET_LEVEL(ch) - 5) &&
            KIND_OF_QUEST == FIND_AND_KILL ||
            GET_LEVEL(t_mob) < MAX_LEVEL &&
            KIND_OF_QUEST == FIND_AND_ASK
@@ -963,10 +959,16 @@ int suggestQuestMob(int zone_num, P_char ch, int QUEST_TYPE)
 
             if(KIND_OF_QUEST == FIND_AND_KILL)
             {
-              ch->only.pc->quest_kill_how_many = 0;/*
+              ch->only.pc->quest_kill_how_many = 0;
               ch->only.pc->quest_kill_original =  MIN(number(7,9) , mob_index[i].limit - 1);
-              debug("Quest Kill Original Value: %d, mob_index number: %d, mob_index limit: %d, mob_vnum: %d", 
-               ch->only.pc->quest_kill_original, mob_index[i].number, mob_index[i].limit -1, mob_index[i].virtual_number);*/
+              
+              if(ch->only.pc->quest_kill_original < 1 ||
+                 mob_index[i].virtual_number < 1)
+              {
+                continue;
+              }
+              
+// debug("Quest Kill Original Value: %d, mob_index number: %d, mob_index limit: %d, mob_vnum: %d", ch->only.pc->quest_kill_original, mob_index[i].number, mob_index[i].limit -1, mob_index[i].virtual_number);
             }
 
             if(KIND_OF_QUEST == FIND_AND_ASK &&

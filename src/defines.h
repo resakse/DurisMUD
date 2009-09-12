@@ -1207,4 +1207,10 @@ struct material_data {
 #define WH_HIGH_PRIEST_VNUM 55184
 #define IMAGE_RELFECTION_VNUM 250
 
+// world_quest_.c
+#define FIND_AND_SOMETHING   0
+#define FIND_AND_KILL   1
+#define FIND_AND_ASK   2
+
+
 #endif /* _DURIS_DEFINES_H_ */
