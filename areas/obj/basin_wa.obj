@@ -479,7 +479,7 @@ source of the oasis is a underground lake.  The water is very likely the
 only unsullied thing in this godforsaken waste.
 ~
 #34024
-heart stone heartstone~
+heart stone heartstone _noquest_~
 &+Rthe heartstone &nof &+LSakaslan&n~
 &+rA &-L&+Rpulsing&+r reddish &+Lstone&+r lies here.&n~
 ~
@@ -493,7 +493,7 @@ inner red light, and seems almost to be alive.  The magic that infuses
 the object is so strong that there is an aura about it.
 ~
 A
-12 150
+12 100
 A
 13 50
 #34025
