@@ -6178,9 +6178,9 @@ void spell_natures_touch(int level, P_char ch, char *arg, int type,
     affect_to_char(victim, &af);
     
     if(MIN(healpoints, GET_MAX_HIT(victim) - GET_HIT(victim)) > 30 &&
-       GET_OPPONENT(victim))
+       IS_FIGHTING(victim))
       {
-        gain_exp(ch, GET_OPPONENT(victim), 30, EXP_HEALING);
+        gain_exp(ch, GET_OPPONENT(victim), (int)(GET_LEVEL(ch) / 2), EXP_HEALING);
         update_pos(victim);
       } 
   }
@@ -6272,7 +6272,8 @@ void event_healing_salve(P_char ch, P_char vict, P_obj obj, void *data)
   
   update_pos(vict);
   
-  if(x > 0)
+  if(x > 0 &&
+     IS_FIGHTING(vict))
   {
     gain_exp(ch, vict, x, EXP_HEALING);
   }
