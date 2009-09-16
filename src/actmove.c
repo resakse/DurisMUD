@@ -3510,6 +3510,15 @@ void do_stand(P_char ch, char *argument, int cmd)
           continue;
         }
         
+        if(IS_IMMOBILE(kala) ||
+           !AWAKE(kala) ||
+           IS_STUNNED(kala) ||
+           !IS_HUMANOID(ch) ||
+           IS_ELITE(ch))
+        {
+          continue;
+        }
+        
         skl = GET_CHAR_SKILL(kala, SKILL_CRIPPLING_STRIKE);
         int      success = 0;
 

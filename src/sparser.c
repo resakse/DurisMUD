@@ -1841,30 +1841,59 @@ bool check_disruptive_blow(P_char ch)
     "$n lunges, slamming $s fist into your throat. That did it.",
     "$n lunges, slamming $s fist into $N larynx. $E's dead."
   };
-  int skl;
+  int skl = GET_CHAR_SKILL(ch, SKILL_DISRUPTIVE_BLOW);
+  int success;
 
+  if(!(ch) ||
+     !ch->specials.fighting ||
+     IS_IMMOBILE(ch) ||
+     !AWAKE(ch) ||
+     IS_STUNNED(ch) ||
+     !IS_HUMANOID(ch))
+  {
+    return false;
+  }
+  
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
     if (tch == ch)
+    {
       continue;
+    }
+    
+    if(IS_IMMATERIAL(tch) ||
+       IS_GREATER_RACE(tch) ||
+       IS_ELITE(tch) ||
+       !IS_HUMANOID(tch))
+    {
+      continue;
+    }
+    
     if (GET_POS(tch) != POS_STANDING)
+    {
       continue;
+    }
 
-    if (tch->specials.fighting != ch)
+    if(tch->specials.fighting == ch)
+    {
       continue;
-
-    skl = GET_CHAR_SKILL(ch, SKILL_DISRUPTIVE_BLOW);
-    int      success = 0;
+    }
+    
+    if(ch->specials.fighting != tch)
+    {
+      continue;
+    }
 
     success = skl - number(0, 130);
 
     if (skl && success)
     {
       notch_skill(ch, SKILL_DISRUPTIVE_BLOW, 5);
+      
       if (success > 75)
       {
-        if (melee_damage(tch, ch, 4 * (dice(5, 10)), 0, &messages) ==
-            DAM_NONEDEAD) {
+        if (melee_damage(tch, ch, 4 * (dice(5, 10)), 0, &messages) == DAM_NONEDEAD)
+        {
           StopCasting(ch);
           return TRUE;
         }
