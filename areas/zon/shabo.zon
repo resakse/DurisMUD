@@ -490,8 +490,8 @@ F 1 32880 1 32915 100 0 0 0        * Shaharazar, the efreeti (following)
 M 0 32881 1 32916 100 0 0 0        * the Grand Savant
 E 1 32861 1 2 100 0 0 0            *   a ring of invisibility
 E 1 32862 1 3 100 0 0 0            *   the pendant of the aboleth
-E 1 32864 1 7 33 0 0 0             *   a pair of aboleth leggings
-E 1 32863 1 9 50 0 0 0             *   the claws of the dead
+E 1 32864 1 7 10 0 0 0             *   a pair of aboleth leggings
+E 1 32863 1 9 20 0 0 0             *   the claws of the dead
 E 1 32830 1 19 50 0 0 0            *   a platinum-encrusted sapphire eye
 G 1 32836 1 0 100 0 0 0            *    the totem of Mox
 G 1 32865 1 0 100 0 0 0            *    a bright yellow potion
