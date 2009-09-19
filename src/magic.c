@@ -6268,7 +6268,7 @@ void event_healing_salve(P_char ch, P_char vict, P_obj obj, void *data)
   waves = *((int *) data);
 
   if(GET_HIT(vict) < GET_MAX_HIT(vict))
-    send_to_char("You feel a &+Wwarm wave&n going through your body.\n", ch);
+    send_to_char("You feel a &+Wwarm wave&n going through your body.\n", vict);
 
   x = vamp(vict, number(GET_LEVEL(vict), (GET_LEVEL(vict) * 2)), GET_MAX_HIT(vict));
   
