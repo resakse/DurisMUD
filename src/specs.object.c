@@ -2605,28 +2605,16 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
     add_event(event_dragonlord_check, (int)(0.5 * PULSE_VIOLENCE), ch, 0, 0, 0, 0, 0); 
     return;
   }
-  else
-  {
-    ch->player.race = af->modifier;
-    affect_remove(ch, af);
-    GET_AGE(ch) = racial_data[(int) GET_RACE(ch)].base_age*2;
-    send_to_char
-      ("The curse of the dark powers fade and your soul restores the body.\r\n",
-       ch);
-    int k = 0;
-    P_obj temp_obj;
-    for (k = 0; k < MAX_WEAR; k++)
-    {
-      temp_obj = ch->equipment[k];
-      if(temp_obj)
-        obj_to_char(unequip_char(ch, k), ch);
-    }
-    send_to_char
-      ("Brr, you suddenly feel very naked.\r\n",
-       ch);
-
-    return;
-  }
+  
+  ch->player.race = af->modifier;
+  
+  affect_remove(ch, af);
+  
+  GET_AGE(ch) = (int) (racial_data[(int) GET_RACE(ch)].base_age * 2.25);
+  
+  send_to_char
+    ("&+LThe dragon flesh is absorbed and your body returns to normal.&n\r\n", ch);
+  return;
   // int k = 0;
   // P_obj temp_obj;
   // for (k = 0; k < MAX_WEAR; k++)
@@ -4951,7 +4939,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
   }
 
   if(cmd == CMD_MELEE_HIT &&
-    !number(0, 24) &&
+    !number(0, 32) &&
     CheckMultiProcTiming(ch))
   {
     vict = (P_char) arg;
@@ -4994,13 +4982,13 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
     {
       act("You are filled with &+WHOLY&n power!", FALSE, ch, obj, 0, TO_CHAR);
       act("$n is filled with &+WHOLY&n power!", FALSE, ch, obj, 0, TO_ROOM);
-      spell_holy_word(60, ch, NULL, 0, vict, 0);
+      spell_holy_word(GET_LEVEL(ch), ch, NULL, 0, vict, 0);
     }
     else if( alignment == 1 && ( IS_GOOD(vict) || RACE_GOOD(vict) ) )
     {
       act("You are filled with &+LUNHOLY&n power!", FALSE, ch, obj, 0, TO_CHAR);
       act("$n is filled with &+LUNHOLY&n power!", FALSE, ch, obj, 0, TO_ROOM);
-      spell_unholy_word(60, ch, NULL, 0, vict, 0);
+      spell_unholy_word(GET_LEVEL(ch), ch, NULL, 0, vict, 0);
     }
 
     return TRUE;
@@ -5058,7 +5046,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
               obj, tch, TO_NOTVICT);
           act("$p &=LCshimmers&n and blasts $n as it leaps to you!", FALSE,
               ch, obj, tch, TO_VICT);
-      		spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+          spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
           obj_to_char(obj, tch);
           break;
         }
@@ -5070,7 +5058,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
            FALSE, ch, obj, 0, TO_CHAR);
         act("$p &=LCshimmers&n and blasts $n before vanishing!", FALSE, ch,
             obj, 0, TO_ROOM);
-      	spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+        spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         extract_obj(obj, TRUE);
       }
       return TRUE;
@@ -5078,28 +5066,28 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
 
     if (ch->equipment[WIELD] == obj && number(0,10) == 0 )
     {
-			act("Your $p&n hums quietly.",
+      act("Your $p&n hums quietly.",
           FALSE, ch, obj, 0, TO_CHAR);
-			act("$n's $p&n hums quietly.",
+      act("$n's $p&n hums quietly.",
           FALSE, ch, obj, 0, TO_ROOM);
 
       for( struct group_list *tgl = ch->group; tgl && tgl->ch; tgl = tgl->next )
-			{
-				if( tgl->ch->in_room != ch->in_room ) continue;
+      {
+        if( tgl->ch->in_room != ch->in_room ) continue;
 
-				if( !affected_by_spell(tgl->ch, SPELL_ARMOR) )
-				{
+        if( !affected_by_spell(tgl->ch, SPELL_ARMOR) )
+        {
           spell_armor(60, ch, 0, 0, tgl->ch, 0);
-			  }
+        }
 
-				if( !affected_by_spell(tgl->ch, SPELL_BLESS) )
-				{
+        if( !affected_by_spell(tgl->ch, SPELL_BLESS) )
+        {
           spell_bless(60, ch, 0, 0, tgl->ch, 0);
-				}
+        }
 
-			}
+      }
 
-			return TRUE;
+      return TRUE;
 
     }
   }

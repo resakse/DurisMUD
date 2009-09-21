@@ -1022,11 +1022,11 @@ int mace(P_obj obj, P_char ch, int cmd, char *arg)
         else
         {
           act("&+yThe earth and rock heals&n $N!",
-	    FALSE, 0, obj, vict, TO_CHAR);
+            FALSE, 0, obj, vict, TO_CHAR);
           act("$n &+yheals you with the power of the earth and rock.&n",
-	    FALSE, 0, obj, vict, TO_VICT);
+            FALSE, 0, obj, vict, TO_VICT);
           act("$n &+yheals&n $N &+ywith the power of earth and rock.&n",
-	    FALSE, 0, obj, vict, TO_NOTVICT);
+            FALSE, 0, obj, vict, TO_NOTVICT);
           vamp(vict, 100, (int) (GET_MAX_HIT(ch) * 1.3));
         }
       }
