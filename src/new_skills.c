@@ -168,6 +168,12 @@ int CanDoFightMove(P_char ch, P_char victim)
     return FALSE;
   }
 
+  if(IS_AFFECTED5(ch, AFF5_NOT_OFFENSIVE))
+  {
+    send_to_char("Since you are not being offensive... try something else.\r\n", ch);
+    return false;
+  }
+
   return TRUE;
 }
 
