@@ -484,7 +484,9 @@ extern struct ShipFragData shipfrags[10];
 #define SHIPMAXCONTRA(shipdata) SHIPTYPECONTRA(SHIPCLASS(shipdata))
 #define SHIPCARGO(shipdata) ((shipdata)->slot_weight(SLOT_CARGO) / 2)
 #define SHIPCONTRA(shipdata) ((shipdata)->slot_weight(SLOT_CONTRABAND) / 2)
-#define SHIPAVAILCARGO(shipdata) MIN( (SHIPMAXCARGO(shipdata) - (SHIPCARGO(shipdata) + SHIPCONTRA(shipdata))), (SHIPAVAILWEIGHT(shipdata) / 2) )
+#define SHIPAVAILCARGOLOAD(shipdata) MIN( (SHIPMAXCARGO(shipdata) - (SHIPCARGO(shipdata) + SHIPCONTRA(shipdata))), (SHIPAVAILWEIGHT(shipdata) / 2) )
+#define SHIPCARGOLOAD(shipdata) (SHIPCARGO(shipdata) + SHIPCONTRA(shipdata))
+#define SHIPMAXCARGOLOAD(shipdata) (SHIPCARGOLOAD(shipdata) + SHIPAVAILCARGOLOAD(shipdata))
 
 // Prototyping for ships
 void newship_activity();

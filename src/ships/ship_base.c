@@ -1827,7 +1827,7 @@ int look_cargo(P_char ch, P_ship ship)
         }
     }
 
-    sprintf(buf, "\r\nCargo capacity: &+W%d&n/&+W%d\r\n", SHIPAVAILCARGO(ship), SHIPMAXCARGO(ship));
+    sprintf(buf, "\r\nCargo capacity: &+W%d&n/&+W%d\r\n", SHIPAVAILCARGOLOAD(ship), SHIPMAXCARGOLOAD(ship));
     send_to_char(buf, ch);
 
     return TRUE;
@@ -3607,7 +3607,7 @@ int list_cargo(P_char ch, P_ship ship, int owned)
         }
     }
 
-    sprintf(buf, "\r\nCapacity: &+W%d&n/&+W%d\r\n", SHIPAVAILCARGO(ship), SHIPMAXCARGO(ship));
+    sprintf(buf, "\r\nCapacity: &+W%d&n/&+W%d\r\n", SHIPAVAILCARGOLOAD(ship), SHIPMAXCARGOLOAD(ship));
     send_to_char(buf, ch);
 
     return TRUE;
@@ -4071,7 +4071,7 @@ void check_contraband(P_ship ship, int to_room)
         return;
 
     act_to_all_in_ship(ship, "The port authorities boarded the ship in search of contraband");
-    float total_load = (float)(SHIPCARGO(ship) + SHIPCONTRA(ship)) / (float)SHIPMAXCARGO(ship);
+    float total_load = (float)SHIPCARGOLOAD(ship) / (float)SHIPMAXCARGOLOAD(ship);
     bool did_confiscate = false;
     for (int slot = 0; slot < MAXSLOTS; slot++)
     {
@@ -4558,14 +4558,14 @@ int buy_cargo(P_char ch, P_ship ship, char* arg)
         return TRUE;
     }
 
-    if (SHIPAVAILCARGO(ship) <= 0)
+    if (SHIPAVAILCARGOLOAD(ship) <= 0)
     {
         send_to_char("You don't have any space left on your ship!\r\n", ch);
         return TRUE;
     }
-    else if (asked_for > SHIPAVAILCARGO(ship))
+    else if (asked_for > SHIPAVAILCARGOLOAD(ship))
     {
-        sprintf(buf, "You only have space for %d more crates!\r\n", SHIPAVAILCARGO(ship));
+        sprintf(buf, "You only have space for %d more crates!\r\n", SHIPAVAILCARGOLOAD(ship));
         send_to_char(buf, ch);
         return TRUE;
     }
@@ -4678,18 +4678,20 @@ int buy_contra(P_char ch, P_ship ship, char* arg)
         return TRUE;
     }
 
-    if (SHIPAVAILCARGO(ship) <= 0)
+    if (SHIPAVAILCARGOLOAD(ship) <= 0)
     {
         send_to_char("You don't have any space left on your ship!\r\n", ch);
         return TRUE;
     }
-    int contra_avail = SHIPMAXCONTRA(ship) - SHIPCONTRA(ship);
-    if (contra_avail == 0)
+    // max contraband amount reduced proportionally to total available cargo load
+    int contra_max = int ((float)SHIPMAXCONTRA(ship) * ((float)SHIPMAXCARGOLOAD(ship) / (float)SHIPMAXCARGO(ship)));
+    int contra_avail = contra_max - SHIPCONTRA(ship);
+    if (contra_avail <= 0)
     {
         send_to_char("You don't have any space left on your ship to hide contraband!\r\n", ch);
         return TRUE;
     }
-    int max_avail = MIN(SHIPAVAILCARGO(ship), contra_avail);
+    int max_avail = MIN(SHIPAVAILCARGOLOAD(ship), contra_avail);
     if (asked_for > max_avail)
     {
         sprintf(buf, "You only have space for %d more crates of contraband to hide!\r\n", max_avail);

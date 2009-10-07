@@ -641,7 +641,7 @@ void ShipData::show(P_char ch) const
   sprintf(buf, "Hull weight: %d, Max load: %d, Slot weight: %d, Available weight: %d\r\n", SHIPHULLWEIGHT(this), SHIPMAXWEIGHT(this), slot_weight(-1), SHIPAVAILWEIGHT(this));
   send_to_char(buf, ch);
   
-  sprintf(buf, "Max cargo: %d, Current cargo: %d, Available cargo: %d\r\n", SHIPMAXCARGO(this), SHIPCARGO(this), SHIPAVAILCARGO(this) );
+  sprintf(buf, "Max cargo: %d, Current cargo: %d, Available cargo: %d\r\n", SHIPMAXCARGO(this), SHIPCARGO(this), SHIPAVAILCARGOLOAD(this) );
   send_to_char(buf, ch);
   
   send_to_char("\r\nSlots:\r\n---------------------------------------------------\r\n", ch);
