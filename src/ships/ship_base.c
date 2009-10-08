@@ -2871,16 +2871,8 @@ void finish_sinking(P_ship ship)
     else if (ship->m_class >= MAXSHIPCLASSMERCHANT)
         insurance = (int)(SHIPTYPECOST(ship->m_class) * 0.50);  // only partial insurance for warships
 
-    if (P_char owner = get_char2(str_dup(SHIPOWNER(ship))))
-    {
-        GET_BALANCE_PLATINUM(owner) += insurance / 1000;
-    }
-    else
-    {
-        ship->money = insurance; // if owner is not online, money go into ships coffer
-    }
-
-
+// Insurance now goes directly to coffers to stop double payment bug. Oct09 -Lucrot
+    ship->money = insurance;
 
     int old_class = ship->m_class;
     ship->m_class = 0; // all ships become sloops after sinking
