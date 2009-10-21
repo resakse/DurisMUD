@@ -1662,7 +1662,6 @@ void spell_ethereal_discharge(int level, P_char ch, char *arg, int type, P_char 
   };
 
   if(!(ch) ||
-     !(victim) ||
      !IS_ALIVE(ch))
   {
     return;
