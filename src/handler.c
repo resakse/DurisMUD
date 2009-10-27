@@ -742,7 +742,7 @@ void char_from_room(P_char ch)
   {
     return;
   }
-
+/*
   if (ch->in_room == NOWHERE)
   {
     logit(LOG_DEBUG, "call to char_from_room() when already NOWHERE (%s)", GET_NAME(ch));
@@ -760,7 +760,7 @@ void char_from_room(P_char ch)
     
     return;
   }
-
+*/
   DelCharFromZone(ch);
 
   if (IS_AFFECTED2(ch, AFF2_CASTING))
