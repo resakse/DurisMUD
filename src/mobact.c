@@ -9990,8 +9990,7 @@ void remember(P_char ch, P_char victim, bool check_group_remember)
   struct group_list *gl;
 
   if(IS_PC(ch) ||
-    (IS_NPC(victim) && 
-    !IS_PC_PET(victim)) ||
+    IS_NPC(victim) ||
      IS_TRUSTED(victim) ||
     !HAS_MEMORY(ch) ||
     !IS_ALIVE(ch) ||
