@@ -669,13 +669,13 @@ D 0 83445 1 1 100 0 0 0
 *     east exit from "The Chamber of Frahzel Thunderfist" to
 *     "A Gold and Mithril Hallway" - closed
 *
-D 0 83472 2 8 100 0 0 0
-*     south exit from "An Ancient Hall of Statues" to
-*     "A Rocky Landing" - open/blocked
-*
-D 0 83465 0 0 100 0 0 0
+D 0 83465 0 2 100 0 0 0
 *     north exit from "A Rocky Landing" to
-*     "An Ancient Hall of Statues" - open
+*     "An Ancient Hall of Statues" - closed/locked
+*
+D 0 83472 2 2 100 0 0 0
+*     south exit from "An Ancient Hall of Statues" to
+*     "A Rocky Landing" - closed/locked
 *
 D 0 83473 3 2 100 0 0 0
 *     west exit from "A Deep Clearing Before the Western Cage" to
@@ -916,6 +916,14 @@ D 0 83614 1 1 100 0 0 0
 D 0 83706 3 1 100 0 0 0
 *     west exit from "The Private Quarters of General Helgor" to
 *     "General Helgor's Chamber" - closed
+*
+D 0 83627 2 2 100 0 0 0
+*     south exit from "The Constable's Office" to
+*     "The Brig" - closed/locked
+*
+D 0 83880 0 2 100 0 0 0
+*     north exit from "The Brig" to
+*     "The Constable's Office" - closed/locked
 *
 D 0 83629 2 1 100 0 0 0
 *     south exit from "Before a Huge Storage Hold" to
@@ -2140,7 +2148,8 @@ M 0 83143 8 83258 100 0 0 0        * a gate guard of Shanat Citadel
 E 1 83142 999 16 100 0 0 0         *   a huge warhammer
 E 1 83111 999 17 100 0 0 0         *   an iron broadsword
 M 0 83205 1 83259 100 0 0 0        * Clund Hammerhelm
-E 1 83260 1 1 100 0 0 0            *   the signet ring of Hammerhelm
+E 1 83260 1 1 100 0 0 0            *   the signet of Hammerhelm
+E 1 83469 1 8 100 0 0 0            *   some heavily-spiked stone-soled boots
 E 1 83261 3 16 100 0 0 0           *   a mammoth stone dwarven warhammer
 G 1 83345 1 0 100 0 0 0            *    the bloody head of Clund Hammerhelm
 F 1 83206 4 83259 100 0 0 0        * an elite Hammerhelm soldier (following)
@@ -2831,36 +2840,36 @@ E 1 83362 11 16 100 0 0 0          *   a slender adamantite dagger
 E 1 83362 11 17 100 0 0 0          *   a slender adamantite dagger
 M 0 83319 1 83582 100 0 0 0        * Grukadak the watcher
 E 1 83353 1 24 100 0 0 0           *   a war banner of Helgor
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
 F 1 83318 4 83582 100 0 0 0        * a gate guard of Helgor outpost (following)
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
 M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83585 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83587 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83587 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83589 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83589 100 0 0 0        * a Helgor crossbowmnan
-M 0 83334 4 83589 100 0 0 0        * a burly guard of Helgor outpost
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
-R 1 83321 6 83589 100 0 0 0        * a huge warg (being ridden)
+M 0 83334 5 83589 100 0 0 0        * a burly guard of Helgor outpost
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
+R 1 83321 7 83589 100 0 0 0        * a huge warg (being ridden)
 M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowmnan
 M 0 83323 8 83590 100 0 0 0        * a Helgor crossbowmnan
 M 0 83324 4 83594 100 0 0 0        * an outpost clansdwarf
@@ -2873,11 +2882,16 @@ M 0 83332 8 83594 100 0 0 0        * an elite Helgor sentinel
 E 1 83281 16 16 100 0 0 0          *   a mithril dwarven halberd
 M 0 83332 8 83594 100 0 0 0        * an elite Helgor sentinel
 E 1 83281 16 16 100 0 0 0          *   a mithril dwarven halberd
-M 0 83334 4 83595 100 0 0 0        * a burly guard of Helgor outpost
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
-R 1 83321 6 83595 100 0 0 0        * a huge warg (being ridden)
+M 0 83334 5 83594 100 0 0 0        * a burly guard of Helgor outpost
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
+R 1 83321 7 83594 100 0 0 0        * a huge warg (being ridden)
+M 0 83334 5 83595 100 0 0 0        * a burly guard of Helgor outpost
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
+R 1 83321 7 83595 100 0 0 0        * a huge warg (being ridden)
 M 0 83320 1 83600 100 0 0 0        * the Helgor taskmaster
 E 1 83355 2 16 100 0 0 0           *   a barbed bull whip
 E 1 83355 2 17 100 0 0 0           *   a barbed bull whip
@@ -2893,17 +2907,17 @@ M 0 83327 3 83603 100 0 0 0        * a mountain dwarf slave
 M 0 83329 2 83603 100 0 0 0        * a halfling slave
 M 0 83330 3 83603 100 0 0 0        * a gnome slave
 M 0 83355 1 83603 85 0 0 0         * a grey elf prisoner
-M 0 83334 4 83604 100 0 0 0        * a burly guard of Helgor outpost
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
-R 1 83321 6 83604 100 0 0 0        * a huge warg (being ridden)
+M 0 83334 5 83604 100 0 0 0        * a burly guard of Helgor outpost
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
+R 1 83321 7 83604 100 0 0 0        * a huge warg (being ridden)
 M 0 17197 2 83605 45 0 0 0         * (mob type not in this .mob file)
 M 0 17206 2 83605 45 0 0 0         * (mob type not in this .mob file)
-M 0 83321 6 83605 80 0 0 0         * a huge warg
+M 0 83321 7 83605 80 0 0 0         * a huge warg
 M 0 17197 2 83605 65 0 0 0         * (mob type not in this .mob file)
 M 0 17206 2 83605 55 0 0 0         * (mob type not in this .mob file)
-M 0 83321 6 83605 35 0 0 0         * a huge warg
+M 0 83321 7 83605 35 0 0 0         * a huge warg
 M 0 97563 1 83605 20 0 0 0         * (mob type not in this .mob file)
 M 0 1231 2 83605 10 0 0 0          * (mob type not in this .mob file)
 M 0 83331 1 83606 100 0 0 0        * a clansdwarf lookout
@@ -2915,11 +2929,11 @@ G 1 368 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 83356 999 0 100 0 0 0          *    a vial of adder venom
 G 1 2020 999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
-M 0 83334 4 83609 100 0 0 0        * a burly guard of Helgor outpost
-E 1 83350 9 5 100 0 0 0            *   a full suit of heavy adamantite
-E 1 83351 9 6 100 0 0 0            *   a heavy adamantite full-faced helmet
-E 1 83352 9 16 100 0 0 0           *   a huge dwarven battle axe
-R 1 83321 6 83609 100 0 0 0        * a huge warg (being ridden)
+M 0 83334 5 83609 100 0 0 0        * a burly guard of Helgor outpost
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83352 10 16 100 0 0 0          *   a huge dwarven battle axe
+R 1 83321 7 83609 100 0 0 0        * a huge warg (being ridden)
 M 0 83325 1 83613 100 0 0 0        * an officer of Helgor
 E 1 83174 10 16 100 0 0 0          *   a bloody warhammer
 E 1 83174 10 17 100 0 0 0          *   a bloody warhammer
@@ -2948,6 +2962,7 @@ G 1 83377 1 0 100 0 0 0            *    some silver dragonscales
 M 0 83348 1 83627 100 0 0 0        * Ulster Stonehammer the constable
 E 1 83462 1 5 100 0 0 0            *   a suit of spiked platemail bearing the symbol of Alatorin
 E 1 83261 3 16 100 0 0 0           *   a mammoth stone dwarven warhammer
+G 1 83472 1 0 100 0 0 0            *    the brig key
 F 1 83157 19 83627 100 0 0 0       * an Alatorin peacekeeper (following)
 E 1 83111 999 16 100 0 0 0         *   an iron broadsword
 E 1 83111 999 17 100 0 0 0         *   an iron broadsword
@@ -3087,6 +3102,10 @@ G 1 83392 999 0 100 0 0 0          *    a potion of improved vision
 G 1 83401 1 0 100 0 0 0            *    a potion of ultimate protection
 G 1 66723 999 0 100 0 0 0          *    (object type not in this .obj file)
 M 0 83362 1 83706 100 0 0 0        * General Helgor
+E 1 83471 1 21 80 0 0 0            *   a dangling bloodstone earring
+E 1 83350 11 5 100 0 0 0           *   a full suit of heavy adamantite
+E 1 83351 11 6 100 0 0 0           *   a heavy adamantite full-faced helmet
+E 1 83470 1 16 100 0 0 0           *   a huge spiked bloody battle-axe
 G 1 83414 1 0 100 0 0 0            *    the bloody head of General Helgor
 F 1 83332 8 83706 100 0 0 0        * an elite Helgor sentinel (following)
 E 1 83281 16 16 100 0 0 0          *   a mithril dwarven halberd
@@ -3097,20 +3116,17 @@ E 1 83281 16 16 100 0 0 0          *   a mithril dwarven halberd
 F 1 83332 8 83706 100 0 0 0        * an elite Helgor sentinel (following)
 E 1 83281 16 16 100 0 0 0          *   a mithril dwarven halberd
 F 1 83377 1 83706 100 0 0 0        * a pet cave bear (following)
-M 0 4530 11 83717 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83717 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 8 83717 100 0 0 0         * (mob type not in this .mob file)
+M 0 4530 8 83717 100 0 0 0         * (mob type not in this .mob file)
 M 0 15224 3 83717 100 0 0 0        * (mob type not in this .mob file)
 M 0 15224 3 83721 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83722 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83722 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83722 100 0 0 0        * (mob type not in this .mob file)
 M 0 15224 3 83724 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83726 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83726 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83726 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83727 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83727 100 0 0 0        * (mob type not in this .mob file)
-M 0 4530 11 83727 100 0 0 0        * (mob type not in this .mob file)
+M 0 4530 8 83726 100 0 0 0         * (mob type not in this .mob file)
+M 0 4530 8 83726 100 0 0 0         * (mob type not in this .mob file)
+M 0 4530 8 83726 100 0 0 0         * (mob type not in this .mob file)
+M 0 4530 8 83727 100 0 0 0         * (mob type not in this .mob file)
+M 0 4530 8 83727 100 0 0 0         * (mob type not in this .mob file)
+M 0 4530 8 83727 100 0 0 0         * (mob type not in this .mob file)
 M 0 83373 1 83743 100 0 0 0        * an Alatorin captain
 E 1 83112 999 11 100 0 0 0         *   an iron shield bearing the crest of Alatorin
 E 1 83142 999 16 100 0 0 0         *   a huge warhammer

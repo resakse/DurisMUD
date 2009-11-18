@@ -406,6 +406,10 @@ MA
 trapping osquips osquip tooth rat rats~
 &N$n grins, &+Wsalivating&N, then says to $N 'Tok trap rats for dwarves.  Tok love osquips, but not like big city and duergars!  $N, you will help Tok collect tooth rats?  Bring me freshly-killed tooth rat corpses, Tok repay you with silly metal bits!'
 ~
+M
+qc_action 90~
+&N$n looks under cracks and cornices throughout the promenade in search of vermin.
+~
 QA
 &N$n smiles, &+Rtongue &Nhanging out.
 'Tok happy!  Take silly metal bits!'

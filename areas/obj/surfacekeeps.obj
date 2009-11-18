@@ -690,6 +690,83 @@ A
 34 4
 A
 24 -4
+#120044
+skull shoulder guard lined feathers~
+&+Wa skull shoulder guard &n&+ylined with &+Wf&+Ye&N&+yat&Nh&+Le&Nr&+ys&N~
+&+WA skull shoulder guard &N&+ylined with &+Yfe&N&+yea&+Lth&N&+yer&Ns has been left here.~
+~
+9 10 3 0 2 0 0 257 0 0 0
+15 0 0 3 0 0 0 0
+1 15332 100
+E
+skull shoulder guard lined feathers~
+   &+yThis simple shoulder guard is made of the de-&+rbr&+Mai&N&+mned &+Wskull &N&+yof a huge
+&+yhumanoid, most likely a hill giant or &+bogre&n&+y.  A thick &+Rsinew&N
+&+ycordage has been looped through the eyes and is tied off around the
+&+yopposite torso.  Thick &+Wf&+Ye&N&+yath&+Ye&+Wrs &N&+yline the skull, most likely
+&+ytaken from rocs or &+rcock&+Yatr&N&+rice&N&+y corpses.
+~
+A
+19 3
+A
+14 30
+#120045
+skull knee guards lined feathers~
+&+Wsome skull knee guards&N&+y lined with f&Ne&+La&Nt&+yhe&+Yr&+Ws&N~
+&+WSome skull knee guards lined with &N&+yfeathers&+W have been left here.~
+~
+9 10 3 0 2 0 0 33 0 0 0
+15 0 0 3 0 0 0 0
+1 15332 100
+E
+skull knee guards lined feathers~
+   &+yThese fine knee guards are basically just two large humanoid &+Wskulls
+&N&+ythat are tied off behind ones knees through tight cordage made of
+&+rsinew&n&+y.  Huge &+Yfe&N&+yathe&+Yr&+Ws &N&+yjut out from all sides around the &+Wskulls
+&N&+yplucked from the wings of slain rocs and &N&+rcoc&+Ykat&N&+rrices&N.
+~
+A
+19 3
+A
+14 30
+#120046
+skull-faced warmask mask skull faced lined feathers~
+&+Wa skull-faced &N&+rwar&+Rmask &N&+ylined with &+Wf&+Ye&N&+yat&+Yh&+We&+Yr&N&+ys&N~
+&+WA skull-faced &N&+rmask &N&+yhas been left here.~
+~
+9 15 3 0 7 0 0 262145 0 0 0
+7 0 0 3 0 0 0 0
+0 0 100
+E
+skull-faced warmask mask skull faced lined feathers~
+   &+WThis brutal mask is made of the front portion of a &+Ydwarf &+Wskull,
+&+Ydyed with splashes of &N&+rred blood&+Y in a ceremonial fashion.
+   &+yHuge &+Yfe&N&+yat&+Lhe&+Wrs &N&+yjut out from all sides of the mask in an extravagant
+&+yfashion.
+~
+A
+19 3
+A
+14 30
+#120047
+plush saddle embroided lightning bolts~
+&+ma plush &+ysaddle &N&+bembroided with &+Cl&+Bi&+Cg&+Bh&+Ct&+Bn&+Ci&+Bn&+Cg &+Bb&+Co&N&+bl&N&+Ct&+Bs&N~
+&+yA fine silk-lined &+ysaddle &N&+bwith fine embroidering has been left here.~
+~
+9 14 4 0 7 0 1 16777217 64 0 0
+5 0 0 0 0 0 0 0
+0 143223 100 0 128 0 0
+E
+plush saddle embroided lightning bolts~
+   &+yThis fine leather saddle has been lined with exquisite &+msilk.
+&+yAlong the side of the saddle are huge multi-stitched &N&+bblue embroideries
+&+yof bright &+Blightning bolts&N&+y that seem to have a hint of magic in
+&+btheir thread.
+~
+A
+55 2
+A
+24 -4
 #120051
 freshly killed osquip remains~
 &n&+ya fr&+re&+yshl&+ry-&+ykil&+rl&+ye&+rd &+Yosquip&N~

@@ -2413,7 +2413,7 @@ A
 19 2
 #83260
 signet ring hammerhelm~
-&+Wthe signet &+Yring &+Wof Hammer&+Yhelm&N~
+&+Wthe signet &+Yof &+WHammer&+Yhelm&N~
 &+WThe signet ring of &+WHammer&+Yhelm has been left here.~
 ~
 9 11 3 0 7 0 4096 3 64 0 0
@@ -5155,9 +5155,9 @@ _id_desc_~
 &+WA bone band of infinite power has been left here.
 ~
 A
-35 4
+35 5
 A
-37 4
+37 5
 #83427
 etched stone key~
 &+Lan &Ne&+Ltc&Nh&+Led&+L stone key&n~
@@ -5452,8 +5452,8 @@ A
 A
 19 4
 #83447
-signet ring symbol baphomet~
-&+La &+Wsignet &+Lring bearing the &+Wsymbol&+L of &N&+rBaphomet&N~
+signet ring baphomet~
+&+Lthe &+Ws&Ni&+Wg&Nn&+We&Nt &+Lof &N&+rBaphomet&N~
 &n&+rA &+Wsignet &N&+rring of Baphomet&+L has been left here.~
 ~
 9 16 1 0 8 0 0 3 64 0 0
@@ -5466,7 +5466,7 @@ signet ring symbol baphomet~
 &+Lof undead &+Rfire&+L.
 ~
 A
-19 3
+19 4
 A
 20 -3
 #83448
@@ -5701,7 +5701,7 @@ A
 A
 19 5
 #83461
-marble statue of taark shanat~
+marble statue~
 &+Wa ma&nrb&+Ll&+We st&+La&Nt&+Wu&Ne &+Wof &NT&+Waa&+Lr&Nk &+WSha&Nn&+La&+Wt~
 &+WPoised centrally upon the vestibule, a &+Lm&Na&+Wrb&+Ll&Ne &+Wsta&+Lt&Nu&+We of &+WTaa&Nr&+Lk &+WSh&+La&Nn&+Wat stands poised in combat.~
 ~
@@ -5831,3 +5831,72 @@ A
 32 3
 A
 24 -3
+#83469
+heavily-spiked stone-soled heavily spiked stone soled boots~
+&+Wsome heavily-spiked stone-soled boots&N~
+&+WSome heavily-spiked boots lined with thick stone are lying here.~
+~
+9 11 4 0 7 0 0 65 0 0 0
+10 0 0 0 0 0 0 0
+5 22331 100
+E
+heavily-spiked stone-soled heavily spiked stone soled boots~
+   &+WThese thick leather boots have been fastened around huge sheets of
+&+Wstone on the bottoms and tips.  These boots stand to be extraordinarily
+&+Wprotective when moving across harsh terrains while also providing
+&+Wadditional damage in attacks against those who get too close.
+~
+A
+17 -35
+A
+19 3
+#83470
+huge spiked bloody battle-axe axe~
+&+La huge &+Cs&+Lp&+Ci&+Lk&+Ce&+Ld &N&N&+rbloody &+Lbattle-&N&+caxe&N~
+&+LA huge spiked bloody battle-axe has been left here.~
+~
+5 19 5 0 7 0 4194304 8193 64 0 0
+1 4 7 0 0 0 0 0
+7 14332 100
+E
+huge spiked bloody battle-axe axe~
+   &+LThis huge, spiked battle-axe is nearly covered in &N&+rblood &+Lfrom
+&+Lmany victims.  Crafted with dwarven design, this adamantium axe is quite
+&+Lheavy, but not nearly as heavy as its massive size would imply.
+~
+A
+18 6
+A
+19 6
+#83471
+dangling bloodstone earring~
+&+La dangling &N&+rb&+Rlo&N&+rods&+Rto&N&+rne &+Learring&N~
+&+LA dangling earring is laying here.~
+~
+9 39 1 0 8 0 1 524289 64 0 0
+5 0 0 0 0 0 0 0
+0 17332 100
+E
+dangling bloodstone earring~
+   &+LThese earrings are rather simple in design; shards of &+Rbloodstone&L are
+&+Lattached to adamantite posts by tiny &+Ygold chains&+L.
+   &+LThe magical glowing aura of the &N&+rblood&+Rstones &+Lmay give these earrings
+&+Lsome value that they may otherwise be aesthetially lacking.
+~
+A
+13 20
+A
+19 3
+#83472
+brig key~
+&+Rthe brig key&N~
+&+RThe brig key has been left here.~
+~
+18 15 1 0 5 0 8388608 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+brig key~
+   &+RThis large mithril key has been completed painted red, much like the
+&+Rlocks and cell interior of the Alatorin Brig for which it grants access.
+~

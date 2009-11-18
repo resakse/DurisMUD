@@ -2908,6 +2908,10 @@ D0
 ~
 ~
 0 0 54718
+D3
+~
+~
+0 0 54842
 D5
 ~
 ~
@@ -5100,4 +5104,61 @@ D5
 0 0 4557
 F
 30
+S
+#54842
+&+LBottom of an Adamantite Ladder&N~
+&+L   This small cavern recess off the wide shaft opening to the east
+&+Leventually sees the surface above this ladder.  The rock here is very
+&+Lthick and dense, and quite overgrown with &N&+mfungus&+L.  The ladder
+&+Lthat has been fashioned into this seemingly dwarf-made shaft is made
+&+Lof thick, evenly-pronged adamantite.
+~
+546 32768 13
+D1
+~
+~
+0 0 54733
+D4
+~
+~
+0 0 54843
+S
+#54843
+&+LAn Adamantite Ladder In a Narrow Crevice&N~
+   &+LThis large adamantite ladder clings to the rocky walls of a
+&+Lcrevice creating this steep shaft.  All around there is a large
+&+Lamount of &N&+mfungus&+L which suggests that these cavern walls
+&+Lhave been here for quite some time.  The ladder is fastened to
+&+Lthe crevice walls every few feet, extending seemingly endlessly
+&+Lup and down in this steep ascent.
+~
+546 32768 13
+D4
+~
+~
+0 0 54844
+D5
+~
+~
+0 0 54842
+S
+#54844
+&+LAn Adamantite Ladder in a Narrow Crevice&N~
+   &+LThis adamantite ladder leads down into a rocky crevie below.  It does
+&+Lnot seem like a very safe journy down into the rock of this mountain but
+&+Lone seems to have little choice when staring at the impossible peaks
+&+Lon the surface.  The ladder below is made of thick adamantite and is
+&+Lsecurely fastened to the crevice walls - however the trick is to get
+&+Loneself securely fastened to the ladder.
+~
+546 32768 13
+D4
+&+LThe ladder leads up to the &N&+yopening of the rocky crevice.
+~
+~
+0 0 631412
+D5
+~
+~
+0 0 54843
 S

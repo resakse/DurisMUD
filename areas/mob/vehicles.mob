@@ -413,3 +413,18 @@ d 0 513 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#47030
+saddled white drake~
+&+Wa saddled white drake&N~
+&+WA saddled white drake flies here, its massive wings spread.
+~
+   &+WThis young white dragon has for some reason taken into the
+&+Wconstant profession of traversing the airways above the great
+&+Wrealms.  This young dragon is quite intelligent, speaking to
+&+Wmost of its passangers of both common and ancient lore.
+~
+2250 0 0 134217728 0 0 0 0 S
+d 0 513 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

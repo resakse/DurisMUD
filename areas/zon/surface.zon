@@ -315,7 +315,6 @@ M 0 500203 1 539268 100 0 0 0      * Valyn
 E 1 500109 1 8 100 0 0 0           *   a pair of moss-covered boots
 M 0 500190 1 540903 100 0 0 0      * the elementalist, Mugtogg the great
 E 1 500112 1 10 100 0 0 0          *   a pair of short horsehide sleeves
-M 0 500051 20 542065 100 0 0 0     * a mountaineer
 M 0 500067 18 542289 100 0 0 0     * a caribou
 M 0 500067 18 542289 100 0 0 0     * a caribou
 M 0 500067 18 542289 100 0 0 0     * a caribou
@@ -487,6 +486,7 @@ F 1 500051 20 544452 100 0 0 0     * a mountaineer (following)
 M 0 500051 20 544459 100 0 0 0     * a mountaineer
 M 0 500051 20 544465 100 0 0 0     * a mountaineer
 M 0 500023 1 544842 100 0 0 0      * a powerful mystic
+M 0 500051 20 544865 100 0 0 0     * a mountaineer
 M 0 500196 1 544895 100 0 0 0      * the barbarian Brigand, Branok
 M 0 500191 1 544900 100 0 0 0      * Keira, the great shamaness of Ugta
 M 0 500051 20 545261 100 0 0 0     * a mountaineer

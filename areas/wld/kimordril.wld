@@ -3026,6 +3026,10 @@ D1
 ~
 ~
 0 0 95651
+D2
+~
+~
+0 0 95657
 D4
 ~
 ~
@@ -3141,4 +3145,40 @@ D0
 ~
 ~
 0 0 95642
+S
+#95657
+&NA Short, &+yNarrow Trail&N~
+   &+yThis short, narrow trail splits off from the main path east and west
+&+yinto the city of Kimordril, but rather leads back into the Rigmorak
+&+yMountains of the Great Divide just within the city's protection.
+&+yFrom this vantage point one can become quite familiar with the sight
+&+yof flying beasts traversing the friends of Kimordril across the realms.
+~
+955 0 4
+D0
+~
+~
+0 0 95650
+D2
+~
+~
+0 0 95658
+S
+#95658
+&NA Short, &+yNarrow Trail&N~
+   &+yThis short, narrow trail splits off from the main path east and west
+&+yinto the city of Kimordril, but rather leads back into the Rigmorak
+&+yMountains of the Great Divide just within the city's protection.
+&+yFrom this vantage point one can become quite familiar with the sight
+&+yof flying beasts traversing the friends of Kimordril across the realms.
+~
+955 0 4
+D0
+~
+~
+0 0 95657
+D2
+~
+~
+0 0 543661
 S

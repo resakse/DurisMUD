@@ -799,14 +799,14 @@ tok barbarian exterminator~
 &+ydwarves for a much lower price then the other mercenaries he is in
 &+ycompetition with.  This is due to two factors, the first of which being
 &+ythat Tok is unintimidated by the hairless &+Yosquips &N&+ythat he seems
-&+yto be &+Ltrapping &N&+yfor, while his &Nsh&+Wie&Nld &+Ydwarf &N&+yhosts are a
+&+yto be &+Ltrapping &N&+yfor, while his &Nsh&+Wie&Nld &+Ydwarf &N&+yhosts are much more than a
 &+ybit more reserved.  The second main reason why Tok has been hired by the
 &+cAlatorin &+yofficials is the fact that he bid for the position at a much
 &+ylower price then the other mercenaries - seeking only the opportunity to
 &+ydispose of the rats for himself.  Nevertheless, Tok is young and able-
 &+ybodied, and has gained some appreciation by his hosts.
 ~
-1073743944 0 0 402653400 14528 64 0 600 S
+1073743880 0 0 402653400 14528 64 0 600 S
 pb 0 16384 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -947,7 +947,7 @@ trag-guka-kag trag guka kag trog troglodyte hunt leader~
 &+ydistinguished from the other Shan&+La&N&+yt&+La&N&+yr troglodytes by his size alone.
 ~
 1073744072 1 0 134217752 0 0 0 -1000 S
-h 0 24577 -1
+h 0 1064961 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -976,7 +976,7 @@ tall golden knight~
 &+Yan equally-pure two-handed bastard sword.  He has flowing blonde hair to
 &+Ymatch his lustrous armor, walking with poise and pride.
 ~
-1073743882 0 0 939524120 14552 0 0 1000 S
+1073743880 0 0 939524120 14552 0 0 1000 S
 PH 0 24 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
