@@ -13,6 +13,14 @@ D 0 13428 0 5 100 0 0 0
 *     north exit from "Before an Underground Waterspray" to
 *     "Behind a Waterfall" - closed/secret
 *
+D 0 13349 0 8 100 0 0 0
+*     north exit from "A Peaceful Interlude" to
+*     "Within the Twisting Caverns" - open/blocked
+*
+D 0 13413 2 5 100 0 0 0
+*     south exit from "Within the Twisting Caverns" to
+*     "A Peaceful Interlude" - closed/secret
+*
 D 0 13368 2 6 100 0 0 0
 *     south exit from "Before the Vault" to
 *     "The Vault" - closed/locked/secret
@@ -132,6 +140,14 @@ D 0 13419 1 2 100 0 0 0
 D 0 13420 3 2 100 0 0 0
 *     west exit from "A Huge Cavern" to
 *     "Before a Large Cavern" - closed/locked
+*
+D 0 13439 5 8 100 0 0 0
+*     down exit from "Up the Rescue Rope Ladder" to
+*     "The Throne Room" - open/blocked
+*
+D 0 13431 4 4 100 0 0 0
+*     up exit from "The Throne Room" to
+*     "Up the Rescue Rope Ladder" - open/secret
 *
 *
 O 0 13300 1 13313 100 0 0 0        * a campfire

@@ -961,6 +961,10 @@ S
 &+Land makes no aggressive attempts.&n
 ~
 133 142606412 15
+D0
+~
+~
+8 0 13413
 D2
 ~
 stone~
@@ -2239,7 +2243,7 @@ D0
 D2
 ~
 stone~
-4 0 13349
+5 0 13349
 D3
 ~
 ~
@@ -2783,6 +2787,10 @@ D4
 ~
 ~
 0 0 13440
+D5
+~
+~
+8 0 13431
 S
 #13440
 &+yUp the Rescue Rope Ladder~

@@ -2027,7 +2027,7 @@ massive tauren battle-axe axe~
 &+LA huge mino&N&+rtauren &+Lbattle-axe has been left here.~
 ~
 5 15 5 0 3 0 4194304 8193 64 0 0
-1 3 13 0 0 0 0 0
+1 2 13 0 0 0 0 0
 15 16 100
 E
 massive tauren battle-axe axe~
@@ -5155,7 +5155,7 @@ _id_desc_~
 &+WA bone band of infinite power has been left here.
 ~
 A
-35 5
+35 4
 A
 37 5
 #83427
@@ -5268,7 +5268,7 @@ scroll revelations~
 &+La &N&+yscroll &+Lof &N&+cr&+Ce&n&+cv&+Ce&N&+cl&+Ca&N&+ct&+Ci&N&+co&+Cn&N&+cs&N~
 &+LA strange &n&+mmagical &+yscroll&+L has been left here.~
 ~
-10 29 2 0 7 0 1 8404993 64 0 0
+2 29 2 0 7 0 1 8404993 64 0 0
 51 45 262 0 0 0 0 0
 0 8333 100
 E
@@ -5593,7 +5593,7 @@ smouldering forge hammer urtengor~
 &+LA massive &N&+rsmouldering &+Lhammer sits here on its head.~
 ~
 5 11 4 0 15 0 33554944 8193 66 0 48
-4 4 4 0 0 167023 40 33
+4 4 4 0 0 167023 40 25
 1 332230 100
 E
 smouldering forge hammer urtengor~
@@ -5619,7 +5619,7 @@ righteous warhammer hammer clangeddin silverbeard~
 &+WThe righteous warhammer of &NClang&+Weddin &+CSilver&+Wbeard&N sits here on its head.~
 ~
 5 39 4 0 15 0 513 8193 66 0 48
-4 4 4 0 0 243015 33 40
+4 4 4 0 0 243015 33 25
 1 328338 100
 E
 righteous warhammer clangeddin silverbeard~
@@ -5964,3 +5964,83 @@ A
 18 4
 A
 19 2
+#83476
+pink yellow umbrella~
+&+Ya pi&+Mnk &+Yan&+Md yel&+Ylow &+Mumb&+Yrel&+Mla&N~
+&+MA pink and &+Yyellow umbrella &+Mhas been &+Yleft here.~
+~
+8 3 3 0 13 0 0 8404993 0 0 0
+0 0 0 0 0 0 0 0
+0 54332 100 67108864 0 0 0
+E
+pink yellow umbrella~
+   &+YThis fine umbrella is made of finely-stitched pink and yellow silk
+&+Mover a wired frame.  The collapsable umbrella - a rare innovation in such
+&+Ya device, was most notably added by a local gnomish craftsman.  One feels
+&+Mincredibly lifted when holding such a proper accessory.
+~
+A
+14 35
+A
+28 10
+#83477
+blue crystalline band~
+&N&+ba blue &+Bcr&+Wy&+Bs&+Wt&+Bal&+Wl&+Bi&+Wn&+Be &N&+bband&N~
+&+BA blue crystalline band has been left here.~
+~
+9 8 1 0 11 0 4097 3 64 0 0
+5 0 0 0 0 0 0 0
+0 22339 100
+E
+blue crystalline band~
+   &+bThis small band is made out of a strange crystal that has grown around
+&+bperfectly to the shape of one's finger.  A strange light blinks inside the
+&+bcrystal itself.
+~
+A
+13 20
+A
+24 -1
+#83478
+huge ancient wooden crate~
+&+ya HUGE a&+Ln&N&+yc&+Li&n&+ye&+Ln&N&+yt wooden &+Rcrate&N~
+&+yA HUGE and &+Lancient &N&+ywooden &+Rcrate &N&+Ysits in the corner, covered in dust.~
+~
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#83479
+old wire-framed wire framed spectacles~
+&+ysome old wire-framed &+Wspectacles&N~
+&+ySome old wire-framde spectacles &+Whave been left here.~
+~
+9 7 2 0 7 0 0 131073 0 0 0
+0 0 0 0 0 0 0 0
+0 342 100
+E
+old wire-framed wire framed spectacles~
+   &+yThis small pair of spectacles is framed by a thin bronze wiring.  They
+&+yare made of thick concave &+Wglass &Nlenses&N&+y and have been pretty
+&+ywithstanding through time.
+~
+A
+3 6
+A
+4 6
+#83480
+long roc-feather roc feather quill~
+&+ya long roc-fe&+Yat&+Wher quill&N~
+&+yA long roc-fea&+Yth&+Wer quill has been left here.~
+~
+21 50 2 0 7 0 67117056 8404993 64 0 0
+0 0 0 0 0 0 0 0
+0 3002 100
+E
+long roc-feather roc feather quill~
+   &+yThe long dorsal feather of a mountain roc has been transformed into
+&+ya long scribable &Nquill pen&N.
+~
+A
+3 8
+A
+26 8

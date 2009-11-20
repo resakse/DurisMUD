@@ -1624,7 +1624,7 @@ O 0 89008 4 83518 100 0 0 0        * (object type not in this .obj file)
 O 0 83428 1 83519 100 0 0 0        * a cask of vintage Hammer and Shield brand ale
 O 0 95527 1 83523 100 0 0 0        * (object type not in this .obj file)
 O 0 83114 6 83535 100 0 0 0        * a closet
-P 1 40444 4 83114 100 0 0 0        *   (object type not in this .obj file)
+P 1 40444 5 83114 100 0 0 0        *   (object type not in this .obj file)
 O 0 83114 6 83536 100 0 0 0        * a closet
 P 1 500 999 83114 100 0 0 0        *   (object type not in this .obj file)
 P 1 500 999 83114 100 0 0 0        *   (object type not in this .obj file)
@@ -1753,9 +1753,9 @@ M 0 83151 1 83117 100 0 0 0        * Glab'grol the goblin auctioneer
 M 0 83152 4 83117 100 0 0 0        * a young commoner
 M 0 83152 4 83117 100 0 0 0        * a young commoner
 M 0 83153 2 83117 100 0 0 0        * a greedy merchant
-G 1 40442 2 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40442 3 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83153 2 83117 100 0 0 0        * a greedy merchant
-G 1 40442 2 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40442 3 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83120 16 83118 100 0 0 0       * an Alatorin elite guard
 E 1 83112 999 11 100 0 0 0         *   an iron shield bearing the crest of Alatorin
 E 1 83119 999 16 100 0 0 0         *   a polished iron broadsword
@@ -2177,9 +2177,9 @@ E 1 83304 12 16 100 0 0 0          *   an illusionary dagger
 E 1 83304 12 17 100 0 0 0          *   an illusionary dagger
 M 0 83267 1 83267 100 0 0 0        * a royal shield dwarf delegate
 F 1 83268 1 83267 100 0 0 0        * an ambassador of Kimordril (following)
-G 1 40444 4 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40444 5 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 83274 1 83267 100 0 0 0        * a visiting duergar guild leader (following)
-G 1 40444 4 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40444 5 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 83273 2 83267 100 0 0 0        * an elite guard (following)
 F 1 83273 2 83267 100 0 0 0        * an elite guard (following)
 F 1 83275 2 83267 100 0 0 0        * a clansdwarf (following)
@@ -2492,7 +2492,7 @@ G 1 83275 6 0 100 0 0 0            *    a concealed dirk
 M 0 83384 4 83377 100 0 0 0        * a derro rogue
 M 0 83384 4 83377 100 0 0 0        * a derro rogue
 M 0 83383 1 83378 100 0 0 0        * a huge sloppy fat dwarf
-G 1 40444 4 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40444 5 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83303 4 83378 100 0 0 0        * a raucous goblin drunk
 M 0 83360 3 83379 100 0 0 0        * a Deramuth mercenary
 M 0 83384 4 83379 100 0 0 0        * a derro rogue
@@ -3163,12 +3163,15 @@ M 0 83411 4 83751 100 0 0 0        * a wandering mercenary
 M 0 43137 7 83752 100 0 0 0        * (mob type not in this .mob file)
 M 0 43152 1 83752 100 0 0 0        * (mob type not in this .mob file)
 M 0 83399 3 83752 100 0 0 0        * a merchant sailor
-G 1 40441 5 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40441 6 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83411 4 83752 100 0 0 0        * a wandering mercenary
 M 0 83358 4 83753 100 0 0 0        * a Deramuth guard
 E 1 83403 6 16 100 0 0 0           *   a wooden spear with a tied off red flag
 M 0 83399 3 83753 100 0 0 0        * a merchant sailor
-G 1 40441 5 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40441 6 0 100 0 0 0            *    (object type not in this .obj file)
+M 0 83422 1 83754 100 0 0 0        * Dortweimer Cuttlebuck the Deramuth Port clerk
+E 1 83480 1 18 100 0 0 0           *   a long roc-feather quill
+E 1 83479 1 19 100 0 0 0           *   some old wire-framed spectacles
 M 0 83358 4 83755 100 0 0 0        * a Deramuth guard
 E 1 83403 6 16 100 0 0 0           *   a wooden spear with a tied off red flag
 M 0 43132 1 83756 100 0 0 0        * (mob type not in this .mob file)
@@ -3181,7 +3184,7 @@ M 0 83360 3 83760 100 0 0 0        * a Deramuth mercenary
 M 0 83360 3 83760 100 0 0 0        * a Deramuth mercenary
 M 0 43133 1 83760 100 0 0 0        * (mob type not in this .mob file)
 M 0 83370 1 83760 100 0 0 0        * a tohr-kreen patron
-G 1 94730 1 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 94730 4 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83371 1 83760 100 0 0 0        * a burly dwarf bartender
 M 0 93183 2 83761 100 0 0 0        * (mob type not in this .mob file)
 M 0 93183 2 83761 100 0 0 0        * (mob type not in this .mob file)
@@ -3189,9 +3192,9 @@ M 0 43183 1 83761 100 0 0 0        * (mob type not in this .mob file)
 M 0 83392 1 83761 100 0 0 0        * Bimk the goblin seafarer
 M 0 83102 4 83761 100 0 0 0        * a stumbling drunk goblin
 M 0 43134 2 83762 100 0 0 0        * (mob type not in this .mob file)
-G 1 40441 5 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40441 6 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 43134 2 83762 100 0 0 0        * (mob type not in this .mob file)
-G 1 40441 5 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40441 6 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83406 1 83762 100 0 0 0        * Ravi Bjornson
 E 1 83446 1 16 100 0 0 0           *   a silver scimitar
 M 0 83367 1 83764 100 0 0 0        * a cheerful dwarven receptionist
@@ -3207,26 +3210,27 @@ M 0 43149 2 83771 60 0 0 0         * (mob type not in this .mob file)
 M 0 43150 2 83771 60 0 0 0         * (mob type not in this .mob file)
 M 0 83411 4 83775 100 0 0 0        * a wandering mercenary
 M 0 83399 3 83777 100 0 0 0        * a merchant sailor
-G 1 40441 5 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 40441 6 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83358 4 83778 100 0 0 0        * a Deramuth guard
 E 1 83403 6 16 100 0 0 0           *   a wooden spear with a tied off red flag
 M 0 83375 3 83778 100 0 0 0        * a shield dwarf
 M 0 83411 4 83778 100 0 0 0        * a wandering mercenary
 M 0 83361 7 83782 100 0 0 0        * a halfling dock hand
 M 0 43137 7 83782 100 0 0 0        * (mob type not in this .mob file)
-M 0 83361 7 83786 100 0 0 0        * a halfling dock hand
-M 0 83361 7 83786 100 0 0 0        * a halfling dock hand
+M 0 83361 7 83784 100 0 0 0        * a halfling dock hand
+M 0 83361 7 83785 100 0 0 0        * a halfling dock hand
 M 0 83361 7 83786 100 0 0 0        * a halfling dock hand
 M 0 43137 7 83786 100 0 0 0        * (mob type not in this .mob file)
 M 0 43137 7 83786 100 0 0 0        * (mob type not in this .mob file)
 M 0 83401 1 83787 100 0 0 0        * a beautiful human maiden
 E 1 83398 1 3 100 0 0 0            *   a green and blue silk scarf
+E 1 83476 1 18 100 0 0 0           *   a pink and yellow umbrella
 F 1 83402 2 83787 100 0 0 0        * a Winterhaven bodyguard (following)
 F 1 83402 2 83787 100 0 0 0        * a Winterhaven bodyguard (following)
+M 0 83361 7 83787 100 0 0 0        * a halfling dock hand
 M 0 43137 7 83788 100 0 0 0        * (mob type not in this .mob file)
 M 0 43137 7 83788 100 0 0 0        * (mob type not in this .mob file)
-M 0 83361 7 83789 100 0 0 0        * a halfling dock hand
-M 0 83361 7 83789 100 0 0 0        * a halfling dock hand
+M 0 83361 7 83788 100 0 0 0        * a halfling dock hand
 M 0 83361 7 83789 100 0 0 0        * a halfling dock hand
 M 0 83359 1 83790 100 0 0 0        * a wide-eyed shopkeeper
 G 1 83405 999 0 100 0 0 0          *    a crude map of the Shanatar mountains
@@ -3270,20 +3274,28 @@ E 1 83403 6 16 100 0 0 0           *   a wooden spear with a tied off red flag
 M 0 83403 1 83796 100 0 0 0        * a huge storm giant sentinel
 G 1 83427 1 0 100 0 0 0            *    an etched stone key
 M 0 83407 8 83797 100 0 0 0        * an angry guard
+G 1 94730 4 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83407 8 83797 100 0 0 0        * an angry guard
 M 0 83407 8 83797 100 0 0 0        * an angry guard
 M 0 83407 8 83797 100 0 0 0        * an angry guard
 M 0 83407 8 83797 100 0 0 0        * an angry guard
 M 0 83407 8 83797 100 0 0 0        * an angry guard
+M 0 83421 1 83797 100 0 0 0        * a bound halfling with no hands
 M 0 83408 1 83799 100 0 0 0        * a dwarf captain
 E 1 83449 1 5 100 0 0 0            *   a breastplate of gold-trimmed mithril
+G 1 40441 6 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 83407 8 83799 100 0 0 0        * an angry guard (following)
+G 1 94730 4 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 83407 8 83799 100 0 0 0        * an angry guard (following)
+G 1 94730 4 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83405 1 83801 100 0 0 0        * Lord Deramuth the portmaster
 E 1 83448 1 3 100 0 0 0            *   a string of disembodied hands
 E 1 83394 18 16 100 0 0 0          *   a mithril-bladed battle-axe
 E 1 83394 18 17 100 0 0 0          *   a mithril-bladed battle-axe
+G 1 40444 5 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 83409 1 83801 100 0 0 0        * a crooked advisor (following)
+E 1 83477 1 1 100 0 0 0            *   a blue crystalline band
+G 1 40442 3 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 83404 1 83801 100 0 0 0        * a brutal-looking storm giant bodyguard
 E 1 83416 1 14 60 0 0 0            *   the spiked stone bracer of storms
 M 0 83380 8 83813 100 0 0 0        * a human smuggler

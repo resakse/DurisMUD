@@ -212,7 +212,6 @@ E 1 120010 20 11 100 0 0 0         *   a well-polished mithril body shield
 E 1 120011 20 16 100 0 0 0         *   a heavy mithril dwarven hammer
 R 1 120037 10 121373 100 0 0 0     * a huge, furry saddled ram (being ridden)
 M 0 120058 9 121382 80 0 0 0       * a troglodyte hunter
-G 1 53618 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 11619 22 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 11619 22 0 100 0 0 0           *    (object type not in this .obj file)
 M 0 120009 1 121412 100 0 0 0      * an elven peddler

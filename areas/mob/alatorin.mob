@@ -4141,8 +4141,8 @@ halfling dockhand dock hand~
 &+ybody and a youthful exhuberance shining brightly in his day-to-day
 &+yactivities.
 ~
-2248 0 0 0 0 0 0 1000 S
-pf 0 1 -1
+2250 0 0 0 0 0 0 1000 S
+pf 0 16384 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4471,8 +4471,8 @@ skull ancient demi lich demilich~
 &+Wultimate and fiendish power in its ancient age, having culiminated over
 &+Wmany years of mummification.
 ~
-1074813064 1 0 671613080 276672 524288 0 -1000 S
-ud 0 1540 1
+1360026760 1 0 2819162136 276672 524288 33558528 -1000 S
+ud 0 1536 1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -4815,7 +4815,7 @@ sg 0 16385 -1
 #83405
 lord deramuth~
 &+WLord Deramuth &N&+rthe portmaster&N~
-&+WLord Deramuth&n&+r, the infamous dockmaster sits here, pondering.
+&+WLord Deramuth &N&+rsits behind a desk, pondering about you.
 ~
    &N&+rAs very few are able to be priveledged with looking upon
 &+WLord Deramuth &N&+rdue to the heavy protection at the entrance
@@ -4861,8 +4861,8 @@ angry guard~
 &+rabout through the &+WLord's &N&+rmanor, alerted at the presence of
 &+ra trespasser.
 ~
-1140852808 1 0 402653464 14416 0 0 600 S
-pm 0 1 -1
+1140852808 1 0 134217984 14416 0 0 600 S
+pm 0 1048576 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -4877,7 +4877,7 @@ dwarf captain~
 &+ymountaineer brigade - perhaps a former position for this guardian.
 ~
 1140852808 1 0 8408 14528 0 0 1000 S
-pm 0 1 -1
+pm 0 16385 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -5076,5 +5076,36 @@ dezik goblin hunter~
 1073744072 0 0 134217752 0 0 0 -1000 S
 hg 0 20480 -1
 54 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#83421
+bound halfling~
+&+La bound &N&+yhalfling &+Lwith &N&+rno hands&N~
+&+LA quivering &N&+yhalfling &+Lis &N&+cch&+Cai&N&+cn&+Ce&N&+cd &+Lto a post with &N&+rbloody &+Rstumps &+Lwhere his hands were.
+~
+   &+LThis nearly-incapacitated halfling has been chained by his neck to a
+&+Lpost at the center of the compound.  His hands have been recently chopped
+&+Loff, as all that remains at the end of his arms are &N&+rbloody &+Rstumps&+L.
+~
+2058 0 0 0 0 0 0 -400 S
+pf 0 65536 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#83422
+dortweimer cuttlebuck gully dwarf clerk~
+&+YDortw&N&+yeim&Ner &n&+yCut&+Ytl&N&+yeb&Nuck&N the &+WDeramuth Port &N&+cclerk&N~
+&+YDort&N&+ywei&Nmer &+yCut&+ytl&N&+yeb&Nuck the &+WDeramuth Port &N&+cclerk &Nsits behind a desk, feverishly ruffling through papers.
+~
+&+YDortweimer Cuttlebuck, a &N&+ggully &+Ydwarf &+Yof Kimordril, has taken
+&+y'office' here in &+WDeramuth Port &+Yunder the great authority of the
+&+Yport's lord.  Dortweimer himself is a fat dwarf who is very talkative.
+&+YOften going on and on about his days as a sailor, Dortweimer Cuttlebuck
+&+Yhas much to say and quite a few different faces to say it to.  At present
+&+Ytime, however, he seems to be frustrated with the paperwork in front of him.
+~
+2250 0 0 8 0 0 0 1000 S
+pm 0 16385 -1
+53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

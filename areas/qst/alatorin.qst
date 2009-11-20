@@ -2350,3 +2350,42 @@ D
 &N$n sneaks off into the &+Ldarkness.
 ~
 S
+#83421
+M
+qc_action 150~
+&+LA halfling with no &N&+rhands &+Lgroans and squirms in agonizing pain.
+~
+M
+qc_action 200~
+&N$n gathers enough air to yell out '&+RCOWARDS!&N'
+~
+S
+#83422
+M
+qc_action 600~
+&N$n shuffles through several stacks of mixed up papers on his desk.
+~
+M
+qc_action 600~
+&N$n adjusts his spectacles and brings the pointy tip of his quill to his tongue.
+~
+M
+qc_action 600~
+&N$n sniffles a bit, shuffling his large furry &N&+ybrown moustache &Nas he twitches his &+Rrosey red nose&N.
+~
+M
+qc_action 600~
+&N$n comes across a certain document, which he holds high and quickly reads from top to bottom.
+He makes a few marks on it, flips it over, and makes a few marks on the back.
+After a few more moments staring at the piece of paper, $N slides it under one of many stacks on his desk and continues shuffling through.
+~
+M
+qc_action 600~
+&N$n holds up two pages of notes, examining both closely.
+After leaning bringing each extremely close a few times, he tosses them behind himself and continues.
+~
+M
+qc_action 600~
+&N$n peers out the window for a moment at the sound of a large &+yship &Ndocking.
+~
+S
