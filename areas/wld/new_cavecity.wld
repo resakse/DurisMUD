@@ -60,7 +60,7 @@ You see what looks to be an old stone bridge.
 D2
 ~
 ~
-0 0 584583
+0 0 749656
 S
 #15103
 &+rThe Gates to the Cavern of Death&n~
@@ -1030,7 +1030,11 @@ portal in the ceiling.
 D1
 ~
 ~
-0 0 749257
+0 0 584184
+D2
+~
+~
+0 0 584583
 D3
 ~
 ~

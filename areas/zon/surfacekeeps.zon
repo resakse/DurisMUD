@@ -79,7 +79,7 @@ M 0 53642 23 120874 100 0 0 0      * (mob type not in this .mob file)
 M 0 120060 1 120880 100 0 0 0      * a roaming white dragon
 G 1 83376 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 120062 1 120880 80 0 0 0       * Blendyl the storm druid
-E 1 120047 1 35 40 0 0 0           *   a plush saddle embroided with lightning bolts
+G 1 120047 1 0 40 0 0 0            *    a plush saddle embroided with lightning bolts
 M 0 120061 1 120880 100 0 0 0      * Trag-guka-kag the troglodyte hunt leader
 E 1 120045 1 7 33 0 0 0            *   some skull knee guards lined with feathers
 E 1 120044 1 10 33 0 0 0           *   a skull shoulder guard lined with feathers

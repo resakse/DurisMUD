@@ -88564,7 +88564,7 @@ S
 #749257
 &+LA &+rWarm &+LCavern in the Upper Strata of the &+mUnderdark&n~
 ~
-7000 0 13 0
+7000 0 27 0
 D0
 ~
 ~
@@ -88577,10 +88577,6 @@ D2
 ~
 ~
 0 0 749657
-D3
-~
-~
-0 0 15161
 S
 #749258
 &+LA &+rWarm &+LCavern in the Upper Strata of the &+mUnderdark&n~
@@ -89551,11 +89547,11 @@ S
 #749656
 &+LThe Massive Mountain Walls of the &+mUnderdark&n~
 ~
-7000 0 27 0
+7000 0 13 0
 D0
 ~
 ~
-0 0 749256
+0 0 15102
 D1
 ~
 ~
