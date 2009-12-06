@@ -1305,7 +1305,7 @@ tempered mithril breastplate breast plate~
 &n&+ma te&+Mmp&N&+mer&+Med &+Cmithril &N&+mbr&+Mea&N&+mst&+Mpl&N&+mate&N~
 &+mA tempered &+Cmithril &+Mbreastplate&N has been left here.~
 ~
-9 18 3 0 11 0 0 9 64 0 0
+9 18 3 0 11 0 134217728 9 64 0 0
 20 0 0 5 0 0 0 0
 5 20111 100
 A
@@ -1317,7 +1317,7 @@ tempered mithril helmet~
 &+Ma te&N&+mmpe&+Mred &+Cmithril &+Mhel&N&+mmet&N~
 &+MA tempered &+Cmithril &+Chelmet has been left here.~
 ~
-9 18 3 0 11 0 0 17 64 0 0
+9 18 3 0 11 0 134217728 17 64 0 0
 15 0 0 5 0 0 0 0
 5 17000 100
 A
@@ -1329,7 +1329,7 @@ tempered mithril arm plates~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+ma&+Mrm &N&+mp&+Mla&N&+mtes&N~
 &+CSome templered &+Cmithril &N&+carm plates have been left here.~
 ~
-9 18 3 0 11 0 0 257 64 0 0
+9 18 3 0 11 0 134217728 257 64 0 0
 15 0 0 5 0 0 0 0
 5 18000 100
 A
@@ -1341,7 +1341,7 @@ tempered mithril leg plates~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+mle&+Mg &N&+mp&+Mla&N&+mtes&N~
 &+CSome tempered &+Cmithril &+Cleg plates have been left here.~
 ~
-9 18 3 0 11 0 0 33 64 0 0
+9 18 3 0 11 0 134217728 33 64 0 0
 15 0 0 5 0 0 0 0
 5 18000 100
 A
@@ -1353,7 +1353,7 @@ tempered mithril boots~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+mbo&+Mots&N~
 &+CSome tempered &+Cmithril &+Cboots have been left here.~
 ~
-9 18 3 0 11 0 0 65 64 0 0
+9 18 3 0 11 0 134217728 65 64 0 0
 15 0 0 5 0 0 0 0
 5 18000 100
 A
@@ -6240,3 +6240,37 @@ A
 18 2
 A
 19 2
+#83491
+black dagger reckoning _noquest_~
+&+Lthe black dagger of reckoning&N~
+&+LThe black dagger of reckoning floats here on a &N&+rwisp of &+Yhell&N&+rfire&N.~
+~
+5 19 3 0 14 0 33554432 8193 70 0 0
+2 2 8 0 7 324064321 40 35
+0 66666 100 0 28 0 0
+E
+black dagger reckoning _noquest_~
+&+LThis black dagger is long, sleek, and thick.  Pitch-black in
+&+Lcolor from top to base, this weapon is dark beyond its own
+&+Lexistence, humming with a dark and ancient evil.  Along the
+&+Wskull &+Lthat serves as the base of the dagger's pommel are
+&+Lis the word &N&+r'reckoning.'
+~
+E
+_char_msg~
+Your $q &N&+rglows blood red!
+You feel the &+Llifeforce &Nof $N &+Lflow through your body&N&+r, you want more..
+~
+E
+_room_msg~
+&n$n's $q &n&+rglows blood red&+L, draining the lifeforce of &N$N!
+~
+E
+_victim_msg~
+&N$n's $n &+rglows blood red!
+&+LYou feel your lifeforce being drained from your body as $N &N&+rgrins&+L.
+~
+A
+18 4
+A
+19 4

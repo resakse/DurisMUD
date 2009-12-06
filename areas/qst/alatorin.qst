@@ -2330,6 +2330,7 @@ QA
 ~
 R E 200000
 R I 83463
+R I 83491
 G I 83242
 G I 83260
 D
@@ -2369,6 +2370,56 @@ qc_action 400~
 &+WA huge fat disgusting dwarf finishes off a large plate of food and promptly swabs up the remaining fat and juices on his plate with a whole loaf of bread.
 &+WA huge fat disgusting dwarf stuff the juice-soaked bread into his mouth.
 ~
+QA
+&+WHis mouth salivates as $n grabs the &N&+Rmeat &+Wand wastes no time ripping and biting.
+~
+R E 10000
+G I 83116
+QA
+&n$n takes the &+Rhaunch &N&+rand bites right in&+W, chewing and hurridly devouring it.
+~
+R E 10000
+G I 83201
+QA
+&N$n grins and &+Rbites &Ninto the &+Rmeat&N, hurridly devouring it.
+~
+R E 10000
+G I 83117
+QA
+&n$n smiles at $N and picks apart the &+Rribs &None at a time, devouring the meat on each and licking the &+Wbones &Nclean from tip to tip.
+~
+R E 15000
+G I 83143
+QA
+&N$n takes the &N&+rrib nuggets &Nand picks them apart, gnawing off all the succulent &+Rmeat &None piece at a &N&+ytime&N.
+~
+R E 15000
+G I 83221
+QA
+&N$n rips off length after length of sticky &+Ltheezak &N&+rrib &nwith his huge, &+ystained &Nteeth.  Savoring every bite, he quickly chews and bites the rib meat going from one &+Wbone&N to the next.
+~
+R E 15000
+G I 83169
+QA
+&N$n pulls out a huge &N&+ydirty &+cmetal fork &Nand begins shoveling the &N&+ymash &ninto his mouth; huge strands of &+Ycheese &Nstretch down to his dish.
+~
+R E 40000
+G I 83168
+QA
+&N$n reaches in and grabs handful after handful of &+yfish 'n chips&N, stuffing the greasy &+Lf&+yr&+Li&+ye&+Ld &N&+yfoods &Ninto his wanting &+Mmouth&N.
+~
+R E 45000
+G I 83170
+QA
+&N$n &Ngulps the &+Ysoup &Ndown with several huge, &+Y_mighty_ &Nchomps, slurping, burping, and gargling as he goes.
+~
+R E 50000
+G I 83224
+QA
+&N$n grabs the &+rmeatloaf &Nand takes several large bites, periodicaly washing his over-sized mouthfuls of &+Bfood &Nwith &+ydwarven ale&n.
+~
+R E 50000
+G I 83225
 S
 #83385
 MA
