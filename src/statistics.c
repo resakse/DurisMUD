@@ -39,7 +39,6 @@ extern struct sector_data *sector_table;
 extern P_desc descriptor_list;
 extern int top_of_world;
 
-
 void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 {
   P_desc   d;
@@ -56,6 +55,8 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
   int      evils_lvl = 0;
   int      illithids_lvl = 0;
   int      undeads_lvl = 0;
+  int      unique_ips = 0;
+  vector<const char *> seen_ips;
 
   long     ct;
   char    *tmstr;
@@ -81,7 +82,7 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 
 
     if (t_ch && !IS_TRUSTED(t_ch))
-    {
+    {       
       if (world[t_ch->in_room].zone == 50)
         inhalls++;
 
@@ -106,6 +107,18 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
         illithids++;
         illithids_lvl = illithids_lvl + GET_LEVEL(t_ch);
       }
+      
+      vector<const char *>::iterator it;
+      for( it = seen_ips.begin(); it != seen_ips.end(); it++ )
+      {
+        if (!strcmp(d->host, *it))
+          break;
+      }
+      if (it == seen_ips.end())
+      {
+        seen_ips.push_back(d->host);
+        unique_ips++;
+      }      
     }
     else if (t_ch && IS_TRUSTED(t_ch))
       gods++;
@@ -117,9 +130,7 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
 
   strftime(mdate, 10, "%H", lt);
 
-  fprintf(f, "%s %d %d %d %d %d %d %d %d %d %d\r\n", mdate, goodies, evils,
-          illithids, undeads, gods, inhalls, goodies_lvl, evils_lvl,
-          undeads_lvl, illithids_lvl);
+  fprintf(f, "%s %d %d %d %d %d %d %d %d %d %d %d\r\n", mdate, goodies, evils, illithids, undeads, gods, inhalls, goodies_lvl, evils_lvl, undeads_lvl, illithids_lvl, unique_ips);
   fclose(f);
 
   add_event(event_write_statistic, PULSES_IN_TICK, NULL, NULL, NULL, 0, NULL, 0);
@@ -179,6 +190,7 @@ void do_statistic(P_char ch, char *argument, int val)
   int      evils_lvl = 0;
   int      illithids_lvl = 0;
   int      undeads_lvl = 0;
+  int      unique_ips = 0;
   int      i = 0;
   int      j = 0;
   int      hour = 0;
@@ -242,9 +254,9 @@ void do_statistic(P_char ch, char *argument, int val)
     {
       i++;
       if (sscanf
-          (buf2, "%d %d %d %d %d %d %d %d %d %d %d", &hour, &goodies, &evils,
+          (buf2, "%d %d %d %d %d %d %d %d %d %d %d %d", &hour, &goodies, &evils,
            &illithids, &undeads, &gods, &inhalls, &goodies_lvl, &evils_lvl,
-           &undeads_lvl, &illithids_lvl) == 11)
+           &undeads_lvl, &illithids_lvl, &unique_ips) == 12)
       {
         day[hour].hour = hour;
         day[hour].goodies = day[hour].goodies + goodies;
