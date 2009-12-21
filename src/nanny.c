@@ -302,9 +302,6 @@ void load_obj_to_newbies(P_char ch)
                                                {
                                                1101, 1102, 1103, 1104, 1106,
                                                1107, 1108, 1112, -1}));
-  CREATE_KIT(RACE_BARBARIAN, CLASS_CLERIC, ((int[])
-                                               {
-                                               1144, 1145, 1146, -1}));
 
 /*Githzerai Basics*/
   CREATE_KIT(RACE_GITHZERAI, 0, ((int[])
@@ -1338,11 +1335,6 @@ void load_obj_to_newbies(P_char ch)
   CREATE_KIT(RACE_TROLL, CLASS_SHAMAN, ((int[])
                                         {
                                         105, 106, 107, 1144, 1145, 1146, 1127,
-                                        -1}));
-                                        
-    CREATE_KIT(RACE_TROLL, CLASS_CLERIC, ((int[])
-                                        {
-                                        255, 1109,
                                         -1}));
 
   CREATE_KIT(RACE_TROLL, CLASS_WARRIOR, ((int[])
