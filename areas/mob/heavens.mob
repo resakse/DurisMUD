@@ -936,6 +936,19 @@ UG 0 1048576 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#76
+void elemental~
+&+La vo&+wid elemen&+Ltal&n~
+&+LA Void Elemental lurks here, phasing in and out of existence.&n
+~
+&+LThis being composed of solid negative energy from the negative material plan,
+&+Ldoes not look to happy to be here, and seems a tad upset.
+~
+2 0 0 134742024 0 0 537133056 0 S
+VE 1 0 -1
+39 2 -34 39d80+819 4d7+10
+0.0.0.0 50544
+8 8 0
 #99
 (null)~
 something~
@@ -2136,8 +2149,8 @@ ice elemental~
 &+cThis being is composed of solid &+Cice&+c. It does not look happy to be standing
 &+cin your company.&n
 ~
-2 0 0 134217752 128 0 0 0 S
-EA 1 0 -1
+2 0 0 8 192 2097152 0 0 S
+IE 1 1 -1
 39 2 -34 39d80+819 4d7+10
 0.0.0.0 50544
 8 8 0
@@ -2149,8 +2162,8 @@ large ice elemental~
 &+cThis being is composed of solid &+Cice&+c, and does not look happy to be
 &+cstanding in your company.&n
 ~
-65538 0 0 167772184 192 0 0 0 S
-EA 0 1 4
+65538 0 0 8 192 2097152 0 0 S
+IE 0 1 4
 51 1 -120 1d1+2000 1d7+10
 0.0.0.0 0
 8 8 0
