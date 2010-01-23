@@ -481,7 +481,7 @@ void show_stop_memorizing(P_char ch)
      is_wearing_necroplasm(ch))
   {
     send_to_char("Your mind reels in confusion as your link with &+Lnegative powers&N is disturbed!\n", ch);
-    act("$n moans loadly in confusion as $s contact with &+Ldark powers&n is disturbed.", FALSE, ch, 0, 0, TO_ROOM);
+    act("$n moans loudly in confusion as $s contact with &+Ldark powers&n is disturbed.", FALSE, ch, 0, 0, TO_ROOM);
     CharWait(ch, WAIT_SEC * 2);
   }
   else if (IS_HARPY(ch) || GET_CLASS(ch, CLASS_ETHERMANCER))
