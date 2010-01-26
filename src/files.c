@@ -3467,14 +3467,14 @@ P_obj read_one_object(char *read_buf)
 
     V_num = GET_INTE(buf);
     obj = read_object(V_num, VIRTUAL);
-    obj->g_key = 1;
  
-	if (!obj)
+    if (!obj)
     {
-		logit(LOG_DEBUG, "read_one_object(): could not load object %d\n", V_num);
-		return NULL;
+      logit(LOG_DEBUG, "read_one_object(): could not load object %d\n", V_num);
+      return NULL;
     }
 
+    obj->g_key = 1;
     obj->craftsmanship = GET_SHORT(buf);
     obj->condition = GET_SHORT(buf);
 
