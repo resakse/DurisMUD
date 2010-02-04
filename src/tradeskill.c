@@ -971,14 +971,14 @@ bool load_one_mine(int map)
   
   if( random < 1 )
   {
-    mine->value[0] = number( 5, 10);
-    mine->value[1] = number(20, 30);
+    mine->value[0] = number( 8, 12);
+    mine->value[1] = number(25, 35);
     mine->description = str_dup("&+LThe &+yearth &+Lhere is &+cbr&+Lim&+Cm&+Ling with &+Yore&+L - it's the &+GMother &+LLode!&n");
   }
   else if( random < 3 )
   {
-    mine->value[0] = number( 2,  7);
-    mine->value[1] = number(30, 40);
+    mine->value[0] = number( 5,  10);
+    mine->value[1] = number(35, 50);
     mine->description = str_dup("&+LThe &+yearth &+Lhere is &+cbr&+Lim&+Cm&+Ling with &+Yore&+L - it's the &+GMother &+LLode!&n");
   }  
   else if( random < 11 )
