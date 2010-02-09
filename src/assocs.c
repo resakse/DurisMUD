@@ -23,16 +23,18 @@
 #include "timers.h"
 #include "alliances.h"
 #include "assocs.h"
-#include "guildhalls.h"
 #include "nexus_stones.h"
-#include "outposts.h"
+#include "utility.h"
+#include "guildhall.h"
+#include "epic.h"
 
 /* EXTERNALS for assoc.c */
 extern P_char get_pc_vis(P_char, const char *);
+string trim(string const& str, char const* sep_chars);
 
 extern char *guild_frags;
 extern P_char character_list;
-extern P_house first_house;
+//extern P_house first_house;
 extern P_room world;
 extern struct zone_data *zone_table;
 extern struct mm_ds *dead_mob_pool;
@@ -851,7 +853,8 @@ void do_society(P_char member, char *argument, int cmd)
   byte     temp_nb;
   char    *timestr;
   char     time_left[128];
-  P_house  house = NULL;
+  // old guildhalls (deprecated)
+//  P_house  house = NULL;
 
   /* why is this proc called at all? */
   if (!member)
@@ -1087,43 +1090,77 @@ void do_society(P_char member, char *argument, int cmd)
     break;
     /* set hometown to guild room you are in */
   case 'h':
-    if (IS_APPLICANT(GET_A_BITS(member)))
     {
-      send_to_char("Try joining a guild first!\r\n", member);
-      return;
+      if (IS_APPLICANT(GET_A_BITS(member)))
+      {
+        send_to_char("Try joining a guild first!\r\n", member);
+        return;
+      }
+      if (IS_ILLITHID(member))
+      {
+        send_to_char("You'd miss the Elder Brain too much...\r\n", member);
+        return;
+      }
+
+      //
+      // Set player's home/orighome to their guildhall's inn room
+      //
+      Guildhall* gh = Guildhall::find_by_vnum(world[member->in_room].number);
+
+      if(!gh)
+      {
+        send_to_char("You can only home inside of your guildhall!\r\n", member);
+        return;
+      }
+        
+      if( !IS_MEMBER(GET_A_BITS(member)) || GET_A_NUM(member) != gh->assoc_id )
+      {
+        send_to_char("You can only home inside of YOUR guildhall!\r\n", member);
+        return;
+      }
+        
+      int inn_vnum = gh->inn_vnum();
+        
+      if(!inn_vnum)
+      {
+        send_to_char("Your guildhall doesn't have an inn!\r\n", member);
+        return;
+      }
+        
+      sprintf(buf, "char %s home %d", J_NAME(member), inn_vnum);
+      do_setbit(member, buf, CMD_SETHOME);
+      sprintf(buf, "char %s orighome %d", J_NAME(member), inn_vnum);
+      do_setbit(member, buf, CMD_SETHOME);
+
+      break;
     }
-    if (IS_ILLITHID(member))
-    {
-      send_to_char("You'd miss the Elder Brain too much...\r\n", member);
-      return;
-    }
-    house = house_ch_is_in(member);
-    if (!house)
-    {
-      send_to_char("You cannot home here.\r\n", member);
-      return;
-    }
-    if ((GET_A_NUM(member) != house->owner_guild) && (!IS_TRUSTED(member)) &&
-        (house->type == HCONTROL_GUILD))
-    {
-      send_to_char("You don't have the authority to home here.\r\n", member);
-      return;
-    }
-    else if (house->type == HCONTROL_HOUSE &&
-             !strcmp(house->owner, GET_NAME(member)))
-    {
-      send_to_char("This isn't your house bucko.\r\n", member);
-      return;
-    }
+// old guildhalls (deprecated)
+//    house = house_ch_is_in(member);
+//    if (!house)
+//    {
+//      send_to_char("You cannot home here.\r\n", member);
+//      return;
+//    }
+//    if ((GET_A_NUM(member) != house->owner_guild) && (!IS_TRUSTED(member)) &&
+//        (house->type == HCONTROL_GUILD))
+//    {
+//      send_to_char("You don't have the authority to home here.\r\n", member);
+//      return;
+//    }
+//    else if (house->type == HCONTROL_HOUSE &&
+//             !strcmp(house->owner, GET_NAME(member)))
+//    {
+//      send_to_char("This isn't your house bucko.\r\n", member);
+//      return;
+//    }
 /*    sprintf(buf, "char %s home %d", J_NAME(member), house->room_vnums[0]);*/
-    sprintf(buf, "char %s home %d", J_NAME(member),
-            world[member->in_room].number);
-    do_setbit(member, buf, CMD_SETHOME);
+//    sprintf(buf, "char %s home %d", J_NAME(member),
+//            world[member->in_room].number);
+//    do_setbit(member, buf, CMD_SETHOME);
 /*    sprintf(buf, "char %s orighome %d", J_NAME(member), house->room_vnums[0]);*/
-    sprintf(buf, "char %s orighome %d", J_NAME(member),
-            world[member->in_room].number);
-    do_setbit(member, buf, CMD_SETHOME);
-    break;
+//    sprintf(buf, "char %s orighome %d", J_NAME(member),
+//            world[member->in_room].number);
+//    do_setbit(member, buf, CMD_SETHOME);
     /* pop up help for gods only */
   case 'l':
     do_soc_ledger(member);
@@ -1384,6 +1421,7 @@ int enrol_asc(P_char member, P_char newone)
     send_to_char("Your association cannot grow any further until you gain some prestige!\r\n", member);
     return (0);
   }
+  
   /* write newone at end of list */
   f = fopen(Gbuf1, "a");
   if (!f)
@@ -1431,7 +1469,8 @@ void update_member(P_char member, int full)
   char     rank_name[8][MAX_STR_RANK];
   char     title[MAX_STR_TITLE], *new_title;
   int      i, flag, x;
-  P_house  temp_house;
+  // old guildhalls (deprecated)
+//  P_house  temp_house;
 
   ush_int  asc_number;
   int      dummy2, dummy3, dummy4, dummy5;
@@ -1447,32 +1486,43 @@ void update_member(P_char member, int full)
   /* can we fix this guy from a file? */
   asc_number = GET_A_NUM(member);
   temp = GET_A_BITS(member);
-  if (!asc_number || !IS_MEMBER(temp))
+  
+  // check to see if they are homed in a guildhall
+  // and reset to their original birthplace if they are no longer a guild member, or are homed in the wrong guildhall
+  Guildhall *gh = Guildhall::find_by_vnum(GET_BIRTHPLACE(member));
+  if (!asc_number || !IS_MEMBER(temp) || (gh && gh->assoc_id != asc_number) )
   {
-    /* let's check to see they are not still sethomed to a guildhall */
-    temp_house = first_house;
-    flag = 0;
-
-    while (!flag && temp_house)
-    {
-      for (x = 0; x < temp_house->num_of_rooms; x++)
-      {
-        if (temp_house->room_vnums[x] == member->player.birthplace)
-        {
-          sprintf(home, "char %s home %d", J_NAME(member),
-                  member->player.orig_birthplace);
-          do_setbit(member, home, CMD_SETHOME);
-          sprintf(home, "char %s orighome %d", J_NAME(member),
-                  member->player.orig_birthplace);
-          do_setbit(member, home, CMD_SETHOME);
-          flag = 1;
-        }
-      }
-      if (!flag)
-        temp_house = temp_house->next;
-    }
+    sprintf(home, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+    do_setbit(member, home, CMD_SETHOME);
+    sprintf(home, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+    do_setbit(member, home, CMD_SETHOME);
     return;
   }
+  
+// old guildhalls (deprecated)
+//    /* let's check to see they are not still sethomed to a guildhall */
+//    temp_house = first_house;
+//    flag = 0;
+//
+//    while (!flag && temp_house)
+//    {
+//      for (x = 0; x < temp_house->num_of_rooms; x++)
+//      {
+//        if (temp_house->room_vnums[x] == member->player.birthplace)
+//        {
+//          sprintf(home, "char %s home %d", J_NAME(member),
+//                  member->player.orig_birthplace);
+//          do_setbit(member, home, CMD_SETHOME);
+//          sprintf(home, "char %s orighome %d", J_NAME(member),
+//                  member->player.orig_birthplace);
+//          do_setbit(member, home, CMD_SETHOME);
+//          flag = 1;
+//        }
+//      }
+//      if (!flag)
+//        temp_house = temp_house->next;
+//    }
+//    return;
 
   /* test for MIN_LEVEL */
   level_check(member);
@@ -2878,10 +2928,9 @@ void member_list(P_char member)
     strcat(buf, "\r\n");    
   }
   
-  sprintf(buf + strlen(buf), "Prestige points: %d\r\n", get_assoc_prestige(asc_number));
+  sprintf(buf + strlen(buf), "Prestige: %d\r\n", get_assoc_prestige(asc_number));
+  sprintf(buf + strlen(buf), "Construction points: &+W%d&n\r\n", get_assoc_cps(asc_number));
 
-  if (IS_TRUSTED(member))
-    //sprintf(buf + strlen(buf), "Outpost resources: Wood(%d) Stone(%d) asc# %d\r\n", get_guild_resources(asc_number, WOOD), get_guild_resources(asc_number, STONE), asc_number);
   sprintf(buf + strlen(buf), "Maximum members: %d\r\n", max_assoc_size(asc_number));
 
   /* display associations cash if player is senior or bigger -
@@ -3796,12 +3845,25 @@ int get_assoc_prestige(int assoc_id)
   return 0;
 }
 
+int get_assoc_cps(int assoc_id)
+{
+  return 0;
+}
+
 void add_assoc_prestige(int assoc_id, int prestige) 
 {
 }
 
 void set_assoc_prestige(int assoc_id, int prestige)
 {
+}
+
+void add_assoc_cps(int assoc_id, int cps) 
+{
+}
+
+void set_assoc_cps(int assoc_id, int cps)
+{  
 }
 
 void show_prestige_list(P_char ch)
@@ -3855,6 +3917,29 @@ int get_assoc_prestige(int assoc_id)
   return prestige;
 }
 
+int get_assoc_cps(int assoc_id)
+{
+  if( !qry("SELECT construction_points FROM associations WHERE id = %d AND active = 1", assoc_id) )
+  {
+    return 0;
+  }
+  
+  MYSQL_RES *res = mysql_store_result(DB);
+  
+  if( mysql_num_rows(res) < 1 )
+  {
+    mysql_free_result(res);
+    return 0;
+  }
+  
+  MYSQL_ROW row = mysql_fetch_row(res);
+  
+  int cps = atoi(row[0]);
+  mysql_free_result(res);
+  
+  return cps;
+}
+
 void add_assoc_prestige(int assoc_id, int prestige_delta) 
 {
   int prestige = get_assoc_prestige(assoc_id);
@@ -3870,11 +3955,33 @@ void add_assoc_prestige(int assoc_id, int prestige_delta)
   qry("UPDATE associations SET prestige = prestige + %d WHERE id = %d AND active = 1", prestige_delta, assoc_id);
   statuslog(GREATER_G, "Association %s &ngained %d prestige points.", get_assoc_name(assoc_id).c_str(), prestige_delta);
   logit(LOG_STATUS, "Association %s &ngained %d prestige points.", get_assoc_name(assoc_id).c_str(), prestige_delta);
+  
+  // add construction points  
+  int cp_notch_step = get_property("prestige.constructionPoints.notch", 100);  
+  int cps_notches = MAX(0, (int) ((prestige+prestige_delta)/cp_notch_step) - (prestige/cp_notch_step));
+  
+  if( cps_notches )
+  {
+    statuslog(GREATER_G, "Association %s &ngained %d construction points.", get_assoc_name(assoc_id).c_str(), cps_notches);
+    logit(LOG_STATUS, "Association %s &ngained %d construction points.", get_assoc_name(assoc_id).c_str(), cps_notches);
+    add_assoc_cps(assoc_id, cps_notches);
+  }
+  
 }
 
 void set_assoc_prestige(int assoc_id, int prestige)
 {
-  qry("UPDATE associations SET prestige = %d WHERE id = %d AND active = 1", prestige, assoc_id);
+  qry("UPDATE associations SET prestige = %d WHERE id = %d AND active = 1", MAX(0, prestige), assoc_id);
+}
+
+void add_assoc_cps(int assoc_id, int cps)
+{
+  qry("UPDATE associations SET construction_points = construction_points + %d WHERE id = %d AND active = 1", cps, assoc_id);
+}
+
+void set_assoc_cps(int assoc_id, int cps)
+{
+  qry("UPDATE associations SET construction_points = %d WHERE id = %d AND active = 1", cps, assoc_id);
 }
 
 void do_prestige(P_char ch, char *argument, int cmd)
@@ -3882,12 +3989,10 @@ void do_prestige(P_char ch, char *argument, int cmd)
   show_prestige_list(ch);
 }
 
-string trim(string const& str, char const* sep_chars);
-
 void show_prestige_list(P_char ch)
 {
   
-  if( !qry("SELECT id, name, prestige FROM associations WHERE active = 1 ORDER BY prestige DESC, id asc") )
+  if( !qry("SELECT id, name, prestige, construction_points FROM associations WHERE active = 1 ORDER BY prestige DESC, id asc") )
   {
     send_to_char("Disabled.\r\n", ch);
     return;
@@ -3910,12 +4015,13 @@ void show_prestige_list(P_char ch)
   while( row = mysql_fetch_row(res) )
   {
     int id = atoi(row[0]);
-    string name = trim(string(row[1]), " \t\n");
+    string name = pad_ansi(trim(string(row[1]), " \t\n").c_str(), 40);
     int prestige = atoi(row[2]);
+    int cps = atoi(row[3]);
     
     if( IS_TRUSTED(ch) )
     {
-      sprintf(buff, "&+W%2d. &n%s &n(&+b%d&n)\n", id, name.c_str(), prestige);
+      sprintf(buff, "&+W%2d. &n%s &n(&+b%d&n:&+W%d&n)\n", id, name.c_str(), prestige, cps);
     }
     else
     {
@@ -3981,8 +4087,10 @@ void reload_assoc_table()
     
 }
 
+// DEPRECATED - prestige is no longer automatically subtracted
 void prestige_update()
 {
+  return;
   struct alliance_data *alliance;
 
   if( !has_elapsed("prestige_update", (int) get_property("prestige.update.secs", 60) ) )
@@ -3996,8 +4104,8 @@ void prestige_update()
   MYSQL_RES *res = mysql_store_result(DB);
   MYSQL_ROW row;
 
-  int kingdom_prestige = (int) get_property("guild.prestige.kingdom", 400000);
-  int guild_prestige = (int) get_property("guild.prestige.guild", 200000);
+  int kingdom_prestige = (int) get_property("prestige.kingdom.required", 400000);
+  int guild_prestige = (int) get_property("prestige.guild.required", 200000);
 
   while( row = mysql_fetch_row(res) )
   {
@@ -4061,76 +4169,50 @@ string get_assoc_name(int assoc_id)
 
 void check_assoc_prestige_epics(P_char ch, int epics, int epic_type)
 {
-  if( !IS_PC(ch) || !GET_A_NUM(ch) || !ch->group ||
-     epics < (int) get_property("guild.prestige.epicPointMinimum", 3.000) )
+  if( !IS_PC(ch) || !GET_A_NUM(ch) || !ch->group || (epics < (int) get_property("prestige.epicsMinimum", 4.000)) )
     return;
 
-  struct alliance_data *alliance = get_alliance(GET_A_NUM(ch));
   int assoc_members = 1;
-  int alli_members = 0;
-  int tempprest = 100;
-  int primary_gain, passive_gain, bonus_gain = 0;
-  int bonus_gain_req = (int)get_property("prestige.bonus.gain.requirement", 2);
 
-  // Go through list in persons group
+  // Count group members in same guild
   for( struct group_list *gl = ch->group; gl; gl = gl->next )
   {
-    if( ch != gl->ch && 
-       IS_PC(gl->ch) && 
-       ch->in_room == gl->ch->in_room)
+    if( ch != gl->ch && IS_PC(gl->ch) && ch->in_room == gl->ch->in_room)
     {
-      // Count group members in same guild
       if (GET_A_NUM(gl->ch) == GET_A_NUM(ch))
       {
         assoc_members++;
       }
-      // Count group members in same alliance
-      if (is_allied_with(GET_A_NUM(ch), GET_A_NUM(gl->ch)))
-      {
-        alli_members++;
-      }
     }
   }
   
-  debug("assoc_members: %d, allied_members: %d", assoc_members, alli_members);
- 
-  passive_gain = (int)(100. * get_property("prestige.gain.passive", .300));
-  primary_gain = 100 - passive_gain;
-  if ((assoc_members >= bonus_gain_req) && (alli_members >= bonus_gain_req))
-  {
-    bonus_gain = (int)(100. * get_property("prestige.gain.bonus", .100));
-    primary_gain += bonus_gain;
-    passive_gain += bonus_gain;
-  }
-
-  tempprest = check_nexus_bonus(ch, tempprest, NEXUS_BONUS_PRESTIGE);
-  primary_gain = check_nexus_bonus(ch, primary_gain, NEXUS_BONUS_PRESTIGE);
-  passive_gain = check_nexus_bonus(ch, passive_gain, NEXUS_BONUS_PRESTIGE);
-
+  debug("check_assoc_prestige_epics(): assoc_members: %d, epics: %d, epic_type: %d", assoc_members, epics, epic_type);
+  
   // If members in group are above 3...
-  if( (assoc_members + alli_members) >= (int) get_property("guild.prestige.groupSizeMinimum", 3.000) )
+  if( assoc_members >= (int) get_property("prestige.guildedInGroupMinimum", 3.000) )
   {
-    // If we are in an alliance
-    if (alli_members)
+    int prestige = 0;
+
+    switch( epic_type )
     {
-      // If this is the joining guild, we tax it
-      if (IS_JOINING_ASSOC(alliance, GET_A_NUM(ch)))
-      {
-        send_to_char("&+bYour guild gained some prestige!\r\n", ch);
-        add_assoc_prestige( alliance->forging_assoc_id, passive_gain);
-        add_assoc_prestige( alliance->joining_assoc_id, primary_gain);
-      }
-      else
-      {
-        send_to_char("&+bYour guild gained some prestige!\r\n", ch);
-        add_assoc_prestige( GET_A_NUM(ch), tempprest + bonus_gain);
-      }
-    }
-    else
-    {
-      send_to_char("&+bYour guild gained some prestige!\r\n", ch);
-      add_assoc_prestige( GET_A_NUM(ch), tempprest);
-    }
+      case EPIC_PVP:
+        prestige = (int) get_property("prestige.gain.pvp", 20);
+        break;
+
+      case EPIC_ZONE:
+      case EPIC_QUEST:
+      case EPIC_RANDOM_ZONE:
+      case EPIC_NEXUS_STONE:
+      default:
+        prestige = (int) get_property("prestige.gain.default", 10);
+    }    
+    
+    prestige = check_nexus_bonus(ch, prestige, NEXUS_BONUS_PRESTIGE);
+
+    debug("check_assoc_prestige_epics(): gain: %d", prestige);
+
+    send_to_char("&+bYour guild gained prestige!\r\n", ch);
+    add_assoc_prestige( GET_A_NUM(ch), prestige);
   }
 }
 
@@ -4138,7 +4220,7 @@ bool is_clan(int asc_number)
 {
   int prestige = get_assoc_prestige(asc_number);  
 
-  if( prestige < (int) get_property("guild.prestige.guild", 2000) )
+  if( prestige < (int) get_property("prestige.guild.required", 2000) )
   {
     return TRUE;
   }
@@ -4150,8 +4232,8 @@ bool is_guild(int asc_number)
 {
   int prestige = get_assoc_prestige(asc_number);  
   
-  if( prestige >= (int) get_property("guild.prestige.guild", 2000) &&
-      prestige < (int) get_property("guild.prestige.kingdom", 4000) )
+  if( prestige >= (int) get_property("prestige.guild.required", 2000) &&
+      prestige < (int) get_property("prestige.kingdom.required", 4000) )
   {
     return TRUE;
   }
@@ -4163,7 +4245,7 @@ bool is_kingdom(int asc_number)
 {
   int prestige = get_assoc_prestige(asc_number);  
   
-  if( prestige >= (int) get_property("guild.prestige.kingdom", 2000) )
+  if( prestige >= (int) get_property("prestige.kingdom.required", 2000) )
   {
     return TRUE;
   }
@@ -4179,25 +4261,17 @@ int max_assoc_size(int asc_number)
   int max_size = 1;
   int prestige = get_assoc_prestige(asc_number);  
 
-// Allowing 30 players per guild. Sep09 -Lucrot
-  return 30;
-
-
-  /* Commenting out kingdom code guild size for now. Jan08 -Lucrot
-     There is a bug in the alliance code that causes guild prestige
-     to drop when allied. Jan08 -Lucrot
-  
   if( is_kingdom(asc_number) )
   {
     members = (int) get_property("guild.size.base.kingdom", 35);
-    base_prestige = (int) get_property("guild.prestige.kingdom", 4000);
+    base_prestige = (int) get_property("prestige.kingdom.required", 4000);
     max_size = (int) get_property("guild.size.max.kingdom", 40);
     step_size = (int) get_property("guild.size.step.kingdom", 500);
   }
   else if( is_guild(asc_number) )
   {
     members = (int) get_property("guild.size.base.guild", 25);
-    base_prestige = (int) get_property("guild.prestige.guild", 2000);
+    base_prestige = (int) get_property("prestige.guild.required", 2000);
     max_size = (int) get_property("guild.size.max.guild", 34);
     step_size = (int) get_property("guild.size.step.guild", 200);    
   }
@@ -4211,7 +4285,7 @@ int max_assoc_size(int asc_number)
 
   members += (int) ( (float) ( MAX(0, prestige - base_prestige) ) / (float) MAX(1, step_size) );
   
-  return MIN(members, max_size); */
+  return MIN(members, max_size);
 }
 
 void get_assoc_name(int assoc, char *buf)
@@ -4233,20 +4307,22 @@ void get_assoc_name(int assoc, char *buf)
   fclose(f);
 }
 
-int is_in_own_guild(P_char member)
-{
-  P_house  house = NULL;
-
-  if (IS_APPLICANT(GET_A_BITS(member)))
-    return FALSE;
-  house = house_ch_is_in(member);
-  if (!house)
-    return FALSE;
-  if ((GET_A_NUM(member) != house->owner_guild) && (!IS_TRUSTED(member)) &&
-      (house->type == HCONTROL_GUILD))
-    return FALSE;
-  return TRUE;
-}
+// old guildhalls (deprecated)
+//int is_in_own_guild(P_char member)
+//{
+//  P_house  house = NULL;
+//
+//  if (IS_APPLICANT(GET_A_BITS(member)))
+//    return FALSE;
+//  house = house_ch_is_in(member);
+//  if (!house)
+//    return FALSE;
+//  if ((GET_A_NUM(member) != house->owner_guild) && (!IS_TRUSTED(member)) &&
+//      (house->type == HCONTROL_GUILD))
+//    return FALSE;
+//  return TRUE;
+//  return FALSE;
+//}
 
 //Init guild frags
 void init_guild_frags()

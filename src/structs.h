@@ -75,8 +75,9 @@ typedef unsigned short int     ush_int;
 typedef struct witness_data    wtns_rec;
 typedef struct crime_info      crime_rec;
 typedef struct crime_data      crm_rec;
-typedef struct house_control_rec *P_house;
-typedef struct house_upgrade_rec *P_house_upgrade;
+// old guildhalls (deprecated)
+//typedef struct house_control_rec *P_house;
+//typedef struct house_upgrade_rec *P_house_upgrade;
 typedef struct acct_entry *P_acct;
 typedef void(*event_func_type)( P_char , P_char , P_obj , void * );
 
@@ -769,7 +770,7 @@ struct room_data {
   struct extra_descr_data
    *ex_description;             /* for examine/look                   */
   struct room_direction_data
-   *dir_option[NUMB_EXITS];     /* Directions                         */
+   *dir_option[NUM_EXITS];     /* Directions                         */
   ulong room_flags;             /* DEATH, DARK ... etc                */
 //  ulong resources;            /* what resources the room contains   */
 //  ubyte kingdom_num;          /* matches guild or town number       */

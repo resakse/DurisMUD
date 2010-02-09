@@ -593,11 +593,10 @@ void gain_epic(P_char ch, int type, int data, int amount)
   // feed artifacts
   epic_feed_artifacts(ch, amount, type);
 
-  if(old / notch < (old + amount) / notch )
+  int skill_notches = MAX(0, (int) ((old+amount)/notch) - (old/notch));
+  
+  if( skill_notches )
   {
-    int skill_notches = MAX(1, (amount/notch));
-    if(amount > notch)
-      skill_notches++; 
     send_to_char("&+WYou have gained an epic skill point!&n\n", ch);
     epic_gain_skillpoints(ch, skill_notches);
   }

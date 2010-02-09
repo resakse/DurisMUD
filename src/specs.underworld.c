@@ -26,7 +26,7 @@
 #include "utils.h"
 #include "range.h"
 #include "damage.h"
-#include "guildhalls.h"
+#include "guildhall.h"
 #include "nexus_stones.h"
 #include "map.h"
 
@@ -1338,7 +1338,7 @@ int purple_worm(P_char ch, P_char pl, int cmd, char *arg)
     {
       // swallow the bastard
       vict = ch->specials.fighting;
-      if (!IS_TRUSTED(vict) && !IS_ELITE(vict) && !IS_ASSOC_GOLEM(vict) && !IS_NEXUS_GUARDIAN(vict) )
+      if (!IS_TRUSTED(vict) && !IS_ELITE(vict) && !IS_NEXUS_GUARDIAN(vict) && !IS_GH_GOLEM(vict) )
       {
         if (vict->in_room == ch->in_room)
         {

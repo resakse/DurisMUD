@@ -70,7 +70,6 @@ OBJS	=  \
 	bard.o \
   beh_magic.o \
 	boards.o \
-  buildings.o \
 	comm.o \
 	common.o \
 	condition.o \
@@ -92,7 +91,11 @@ OBJS	=  \
   genrand.o \
 	group.o \
 	guild.o \
-	guildhalls.o \
+  guildhall.o \
+  guildhall_rooms.o \
+  guildhall_cmds.o \
+  guildhall_procs.o \
+  guildhall_db.o \
 	grapple.o \
 	handler.o \
 	hardcore.o \
@@ -124,8 +127,6 @@ OBJS	=  \
 	nq.o \
 	objconv.o \
 	objmisc.o \
-	op_resources.o \
-	outposts.o \
 	period.list.o \
 	prompt.o \
 	properties.o \
@@ -209,7 +210,7 @@ OBJS	=  \
   reavers.o \
   avengers.o \
   multiplay_whitelist.o
-
+  
 SHARED_PFILE_OBJS=pf-skills.o \
 					 pf-files.o
 

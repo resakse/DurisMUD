@@ -567,7 +567,7 @@ int wagon_pull(P_char ch, int mob)
   next_step =
     find_first_step(ch->in_room, navi_info[mob].destination, 0, 0, WAGON_TYPE_WAGON, &dum);
 
-  if ((next_step >= 0) && (next_step < NUMB_EXITS))
+  if ((next_step >= 0) && (next_step < NUM_EXITS))
   {
     strcpy(Gbuf3, dirs[next_step]);
   }

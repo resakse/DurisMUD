@@ -28,13 +28,13 @@
 #include "specs.prototypes.h"
 #include "sound.h"
 #include "graph.h"
-#include "guildhalls.h"
 #include "guard.h"
 #include "epic.h"
 #include "ships.h"
 #include "grapple.h"
 #include "sql.h"
 #include "profile.h"
+#include "guildhall.h"
 
 /*
    external variables
@@ -242,14 +242,9 @@ int is_racewar_in_room(P_char ch)
     {
       return TRUE;
     }
-    if (IS_NPC(t_char))
+    if( IS_GH_GOLEM(t_char) )
     {
-      if (GET_VNUM(t_char) == MAGE_GOLEM_VNUM ||
-          GET_VNUM(t_char) == CLERIC_GOLEM_VNUM ||
-          GET_VNUM(t_char) == WARRIOR_GOLEM_VNUM )
-      {
-        return TRUE;
-      }
+      return TRUE;
     }
     t_char = t_char->next_in_room;
   }
@@ -320,7 +315,7 @@ int get_number_allies_within_range(P_char ch)
   int allies = get_number_allies_in_room(ch, ch->in_room);
   int i, troom;
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
   {
     if (world[ch->in_room].dir_option[i])
     {

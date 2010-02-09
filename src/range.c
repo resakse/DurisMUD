@@ -1442,7 +1442,7 @@ int range_scan(P_char ch, P_char target, int distance, int type_scan)
 
  source_room = ch->in_room;
 
- for (door = 0; door < NUMB_EXITS; door++)
+ for (door = 0; door < NUM_EXITS; door++)
  {
    for (i = 1; i <= distance; i++)
    {
@@ -1536,7 +1536,7 @@ int range_scan_track(P_char ch, int distance, int type_scan)
 
  source_room = ch->in_room;
 
- for (door = 0; door < NUMB_EXITS; door++)
+ for (door = 0; door < NUM_EXITS; door++)
  {
    for (i = 1; i <= distance; i++)
    {

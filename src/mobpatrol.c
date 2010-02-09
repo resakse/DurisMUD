@@ -35,11 +35,10 @@ extern int equipment_pos_table[CUR_MAX_WEAR][3];
 extern int no_specials;
 extern int spl_table[TOTALLVLS][MAX_CIRCLE];
 extern int top_of_world;
-extern const int rev_dir[NUMB_EXITS];
+extern const int rev_dir[NUM_EXITS];
 extern struct str_app_type str_app[];
 extern struct zone_data *zone_table;
 extern const char *undead_type[];
-extern int is_in_own_guild(P_char member);
 extern struct potion potion_data[];
 
 struct PatrolData
@@ -210,10 +209,10 @@ void event_patrol_move(P_char ch, P_char vict, P_obj obj, void *data)
         do
         {
           dir += (huntData->dirPref == PatrolData::PATROL_LEFT ? -1 : 1);
-          if (dir >= NUMB_EXITS)
+          if (dir >= NUM_EXITS)
             dir = 0;
           else if (dir < 0)
-            dir = NUMB_EXITS -1;
+            dir = NUM_EXITS -1;
             
           if (world[ch->in_room].dir_option[dir] &&
               VALID_PATROL_ROOM(TOROOM(ch->in_room, dir)))

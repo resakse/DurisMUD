@@ -54,7 +54,7 @@ extern P_nevent get_scheduled(P_char ch, event_func func);
 //#define LOCKERS_MAX             2
 
 #define LOCKERS_SECT_TYPE       SECT_INSIDE
-#define LOCKERS_ROOMFLAGS       (NO_MOB | INDOORS | ROOM_SILENT | NORECALL | NO_MAGIC | NO_TELEPORT | LOCKER | \
+#define LOCKERS_ROOMFLAGS       (NO_MOB | INDOORS | ROOM_SILENT | NO_RECALL | NO_MAGIC | NO_TELEPORT | LOCKER | \
                                  SAFE_ZONE | NO_HEAL | NO_SUMMON | NO_PSI | NO_GATE | BLOCKS_SIGHT)
 
 #define LOCKERS_DOORSIGN        "The door has a sign with the current occupant's name on it: "
@@ -993,7 +993,7 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
       return TRUE;
     }
     
-    if (get_assoc_prestige(GET_A_NUM(ch)) < (int)get_property("guild.prestige.locker", 1000))
+    if (get_assoc_prestige(GET_A_NUM(ch)) < (int)get_property("prestige.locker.required", 1000))
     {
       send_to_char("Your association is not yet prestigious enough to have a locker!\r\n", ch);
       return TRUE;
@@ -1735,7 +1735,7 @@ static int create_new_locker(P_char ch, P_char locker)
 
     pLocker->MakeChests(ch, "none");
 
-    for (dir = 1; dir < NUMB_EXITS; dir++)
+    for (dir = 1; dir < NUM_EXITS; dir++)
     {
       if (world[realNum].dir_option[dir])
         world[realNum].dir_option[dir]->to_room = -1;

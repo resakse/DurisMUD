@@ -27,12 +27,15 @@
 #include "assocs.h"
 #include "specs.prototypes.h"
 #include "map.h"
-#include "guildhalls.h"
+#include "old_guildhalls.h"
+#include "utility.h"
 
 /* external variables */
 extern struct kingdom_global kingdom[];
 extern int mini_mode;
 extern P_char character_list;
+extern struct mm_ds *dead_mob_pool;
+extern struct mm_ds *dead_pconly_pool;
 
 extern P_desc descriptor_list;
 extern P_event current_event;
@@ -473,74 +476,6 @@ void parse_connection(P_house house, P_char ch, char *arg)
   }
   connect_rooms(v1, v2, dir);
 }
-
-void disconnect_exit(int v1, int dir)
-{
-  int r1 = real_room0(v1);
-  
-  if( !r1 || dir < 0 || dir >= NUMB_EXITS || !VIRTUAL_EXIT(r1, dir) )
-    return;
-    
-  FREE( VIRTUAL_EXIT(r1, dir) );
-  VIRTUAL_EXIT(r1, dir) = NULL;  
-}
-
-void disconnect_rooms(int v1, int v2)
-{
-  int r1 = real_room0(v1);
-  int r2 = real_room0(v2);
-  
-  if( !r1 || !r2 )
-    return;
-
-  int d1 = -1, d2 = -1;
-  
-  for( int i = 0; i < NUMB_EXITS; i++ )
-  {
-    if( VIRTUAL_EXIT(r1, i) && VIRTUAL_EXIT(r1, i)->to_room == r2 )
-      d1 = i;
-    
-    if( VIRTUAL_EXIT(r2, i) && VIRTUAL_EXIT(r2, i)->to_room == r1 )
-      d2 = i;  
-  }
-
-  if( d1 < 0 || d2 < 0 )
-    return;
-  
-  FREE( VIRTUAL_EXIT(r1, d1) );
-  VIRTUAL_EXIT(r1, d1) = NULL;
-
-  FREE( VIRTUAL_EXIT(r2, d2) );
-  VIRTUAL_EXIT(r2, d2) = NULL;
-}
-
-void connect_rooms(int v1, int v2, int dir)
-{                               /* create exits from room1<->room2 */
-
-  int      r1, r2, rdir;;
-
-  r1 = real_room0(v1);
-  r2 = real_room0(v2);
-  rdir = rev_dir[dir];
-  if (!r1 || !r2)
-  {
-    logit(LOG_HOUSE, "Something missing in connect_rooms(%d, %d, %d)", v1, v2,
-          dir);
-    return;
-  }
-  if (!world[r1].dir_option[dir])
-    CREATE(world[r1].dir_option[dir], room_direction_data, 1, MEM_TAG_DIRDATA);
-
-  if (!world[r2].dir_option[rdir])
-    CREATE(world[r2].dir_option[rdir], room_direction_data, 1, MEM_TAG_DIRDATA);
-
-  world[r1].dir_option[dir]->to_room = r2;
-  world[r1].dir_option[dir]->exit_info = 0;
-  world[r2].dir_option[rdir]->to_room = r1;
-  world[r2].dir_option[rdir]->exit_info = 0;
-  return;
-}
-
 
 /* Parse 3 args from hcontrol
  * cmd <house|guild|castle> <name> <dir> <guild_number>
@@ -1175,7 +1110,7 @@ void destroy_castle(P_house temp_house)
   for (temp = 0; temp < MAX_HOUSE_ROOMS; temp++)
   {
     if (temp_house->room_vnums[temp] != -1)
-      for (i = 0; i < NUMB_EXITS; i++)
+      for (i = 0; i < NUM_EXITS; i++)
         world[real_room0(temp_house->room_vnums[temp])].dir_option[i] = 0;
   }
   if (temp_house->type == HCONTROL_HOUSE)
@@ -2194,12 +2129,12 @@ void read_guild_room(int vnum, int guild)
   world[room_nr].description = tmp;
   SET_BIT(world[room_nr].room_flags, ROOM_HOUSE);
   SET_BIT(world[room_nr].room_flags, NO_TELEPORT);
-  SET_BIT(world[room_nr].room_flags, NORECALL);
+  SET_BIT(world[room_nr].room_flags, NO_RECALL);
   SET_BIT(world[room_nr].room_flags, NO_SUMMON);
   SET_BIT(world[room_nr].room_flags, NO_GATE);
   SET_BIT(world[room_nr].room_flags, TWILIGHT);
   SET_BIT(world[room_nr].room_flags, GUILD_ROOM);
-  for (x = 0; x < NUMB_EXITS; x++)
+  for (x = 0; x < NUM_EXITS; x++)
     world[room_nr].dir_option[x] = 0;
   for (;;)
   {
@@ -2270,7 +2205,7 @@ void write_guild_room(int vnum, int guild)
     world[room_nr].name = str_dup("A Barren Room");
   fprintf(hfile, "%s~\n", world[room_nr].name);
   fprintf(hfile, "%s~\n", world[room_nr].description);
-  for (x = 0; x < NUMB_EXITS; x++)
+  for (x = 0; x < NUM_EXITS; x++)
   {
     if (world[room_nr].dir_option[x] &&
         world[world[room_nr].dir_option[x]->to_room].number >= 48000 &&
@@ -2421,7 +2356,7 @@ void do_delete_room(P_house house, P_char ch, char *arg)
   }
 
   numb_exits = 0;
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
     if (target->dir_option[i])
       numb_exits++;
 
@@ -3667,15 +3602,6 @@ void do_sack(P_char ch, char *arg, int cmd)
         GET_NAME(ch));
 }
 
-P_char get_char_online(char *name)
-{
-  P_char   i;
-
-  for (i = character_list; i; i = i->next)
-    if (isname(name, GET_NAME(i)))
-      return i;
-  return 0;
-}
 void nuke_portal(int rnum)
 {
 
@@ -4001,4 +3927,530 @@ void do_construct_guild(P_char ch, int type)
 void do_stathouse(P_char ch, char *argument, int cmd)
 {
   return;
+}
+
+int guild_chest(P_obj obj, P_char ch, int cmd, char *argument)
+{
+  P_house  house = NULL;
+  P_obj    s_obj = NULL;
+  char     GBuf1[MAX_STRING_LENGTH], GBuf2[MAX_STRING_LENGTH];
+  
+  *GBuf1 = '\0';
+  *GBuf2 = '\0';
+  
+  if (cmd == CMD_SET_PERIODIC)               /*
+                                              Events have priority
+                                              */
+    return FALSE;
+  
+  if (!ch || !obj)              /*
+                                 If the player ain't here, why are we?
+                                 */
+    return FALSE;
+  
+  if (argument && cmd == CMD_GET || cmd == CMD_TAKE)
+  {
+    argument_interpreter(argument, GBuf1, GBuf2);
+    if (!*GBuf2)
+      return FALSE;
+    s_obj = get_obj_in_list_vis(ch, GBuf2, ch->carrying);
+    if (!s_obj)
+      s_obj = get_obj_in_list_vis(ch, GBuf2, world[ch->in_room].contents);
+    if (s_obj != obj)
+      return FALSE;
+    
+    /* ok they are attempting to get something from this chest */
+    house = house_ch_is_in(ch);
+    if (!house)
+      return FALSE;
+    if ((GET_A_NUM(ch) != house->owner_guild) && (!IS_TRUSTED(ch)) &&
+        (house->type == HCONTROL_GUILD))
+    {
+      act("&+L$n &+Lis &+Rzapped&+L as $e tries to get something from $p!",
+          FALSE, ch, obj, 0, TO_ROOM);
+      act("&+LYou are &+Rzapped&+L as you try to get something from $p!",
+          FALSE, ch, obj, 0, TO_CHAR);
+      return TRUE;
+    }
+    
+  }
+  return FALSE;
+}
+
+void enemy_hall_check(P_char ch, int room)
+{
+  P_char   owner;
+  P_house  house = NULL;
+  char     buf1[MAX_STR_NORMAL];
+  char     buf2[MAX_STR_NORMAL];
+  int      i1, i2, i3, i4;
+  uint     u1;
+  FILE    *f;
+  
+  // first unhome if someone is homed in not his guildhall
+  // this is to get rid of unsolicited guests at gh
+  if (GET_BIRTHPLACE(ch) > 0 && GET_BIRTHPLACE(ch) < top_of_world)
+    house = find_house(world[GET_BIRTHPLACE(ch)].number);
+  if (house && house->type == HCONTROL_GUILD &&
+      GET_A_NUM(ch) != house->owner_guild)
+    GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch);
+  
+  if (room <= 0 || room > top_of_world)
+    return;
+  
+  house = find_house(world[room].number);
+  if (!house || house->type != HCONTROL_GUILD)
+    return;
+  
+  sprintf(buf1, "%sasc.%u", ASC_DIR, house->owner_guild);
+  f = fopen(buf1, "r");
+  
+  if (f == NULL)
+    return;
+  
+  for (i1 = 0; i1 < 11; i1++)
+  {
+    fgets(buf1, MAX_STR_NORMAL, f);
+  }
+  while (fgets(buf1, MAX_STR_NORMAL, f))
+  {
+    sscanf(buf1, "%s %u %i %i %i %i\r\n", buf2, &u1, &i1, &i2, &i3, &i4);
+    if (!IS_ENEMY(u1) && IS_MEMBER(u1))
+    {
+      owner = (struct char_data *) mm_get(dead_mob_pool);
+      if (!owner)
+        break;
+      owner->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
+      if (restoreCharOnly(owner, skip_spaces(buf2)) >= 0)
+      {
+        //send_to_char("You voided in a hall....!\r\n", ch);
+        //wizlog(56, "%s moved to his original birthplace cause he voided in hall. ",                                      GET_NAME(ch), GET_NAME(owner));
+        room = real_room(GET_ORIG_BIRTHPLACE(ch));
+        
+        if (opposite_racewar(ch, owner) && FALSE) // NOTICE && FALSE
+        {
+          send_to_char("You were rented in an enemy hall!\r\n", ch);
+          room = real_room(GET_ORIG_BIRTHPLACE(ch));
+          wizlog(56, "%s moved to his original birthplace due to "
+                 "racewar conflict with guildhall owner - %s",
+                 GET_NAME(ch), GET_NAME(owner));
+        }
+        free_char(owner);
+      }
+      else
+      {
+        mm_release(dead_pconly_pool, owner->only.pc);
+        mm_release(dead_mob_pool, owner);
+      }
+      break;
+    }
+  }
+  fclose(f);
+}
+
+/*
+ * This is the golem for associations.
+ * keyword "assocX_Y_Z" expected in char names, X gives association
+ * number, Y dir to block (neswud) and Z the #vnum of badge
+ * Z=0 is used as sign that not badge but rather player info
+ * is checked
+ */
+
+int assoc_golem(P_char ch, P_char pl, int cmd, char *arg)
+{
+  ush_int  assoc;
+  uint     bits;
+  char    *tmp;
+  int      dir = -1;
+  int      badge = 0;
+  int      allowed = 0, allowed2 = 0;
+  P_char   tch, next_ch;
+  P_desc   desc;
+  char     buf[MAX_STRING_LENGTH];
+  char     temp[MAX_STRING_LENGTH];
+  int      is_avatar = FALSE;
+  int      virt = 0;
+  int      online;
+  
+  /*
+   * try to set up this mobs "assoc" number now, so it can be used
+   * in future checks...
+   */
+  
+  if (cmd == CMD_SET_PERIODIC)
+    return TRUE;
+  
+  /* 
+   if(cmd == CMD_DRAG && pl)
+   {
+   send_to_char("The golem whisper to you 'Drag your self in or out'", pl);
+   return TRUE;
+   }
+   */  
+  if (!GET_A_NUM(ch))
+  {
+    tmp = strstr(GET_NAME(ch), "assoc");
+    if (!tmp)
+    {
+      logit(LOG_MOB,
+            "assoc_golem() assigned to %s in %d without assocX_Y_Z keyword!",
+            ch->player.short_descr, world[ch->in_room].number);
+      REMOVE_BIT(ch->specials.act, ACT_SPEC);
+      return FALSE;
+    }
+    assoc = (ush_int) atoi(tmp + 5);
+    if ((assoc < 1) || (assoc > MAX_ASC))
+    {
+      logit(LOG_MOB,
+            "assoc_golem() assigned to %s in %d has bad association number %u!",
+            ch->player.short_descr, world[ch->in_room].number, assoc);
+      REMOVE_BIT(ch->specials.act, ACT_SPEC);
+      return FALSE;
+    }
+    GET_A_NUM(ch) = assoc;
+    SET_MEMBER(GET_A_BITS(ch));
+    SET_NORMAL(GET_A_BITS(ch));
+  }
+  /* find the association keyword */
+  tmp = strstr(GET_NAME(ch), "assoc");
+  
+  assoc = GET_A_NUM(ch);
+  sprintf(temp, "%d", world[ch->in_room].zone);
+  // ENBALE NEXT LINE WHEN SACKING IS ENABLED
+  
+  //  assoc = readGuildFile(ch, world[ch->in_room].zone);
+  sprintf(temp, "%d", assoc);
+  /* now decode which direction to block */
+  
+  tmp = strchr(tmp, '_');
+  if (!tmp)
+  {
+    logit(LOG_MOB,
+          "assoc_golem() assigned to %s in %d has no blocking direction.",
+          ch->player.short_descr, world[ch->in_room].number);
+    REMOVE_BIT(ch->specials.act, ACT_SPEC);
+    return (FALSE);
+  }
+  switch (*(++tmp))
+  {
+    case 'a':
+      dir = 'a';
+      break;                      /* handled later. stands for 'all' */
+    case 'n':
+      dir = CMD_NORTH;
+      break;
+    case 'e':
+      dir = CMD_EAST;
+      break;
+    case 's':
+      dir = CMD_SOUTH;
+      break;
+    case 'w':
+      dir = CMD_WEST;
+      break;
+    case 'u':
+      dir = CMD_UP;
+      break;
+    case 'd':
+      dir = CMD_DOWN;
+      break;
+    default:
+      logit(LOG_MOB,
+            "assoc_iron_golem() assigned to %s in %d has wrong direction.",
+            ch->player.short_descr, world[ch->in_room].number);
+      REMOVE_BIT(ch->specials.act, ACT_SPEC);
+      return (FALSE);
+  }
+  
+  /* now look for the vnum of the badge */
+  tmp = strchr(tmp, '_');
+  if (!tmp)
+  {
+    logit(LOG_MOB,
+          "assoc_iron_golem() assigned to %s in %d has no badge to check.",
+          ch->player.short_descr, world[ch->in_room].number);
+    REMOVE_BIT(ch->specials.act, ACT_SPEC);
+    return (FALSE);
+  }
+  /* If I'm fighting, alert the guild! */
+  if (IS_FIGHTING(ch) && !cmd && !number(0, 3))
+  {
+    strcpy(buf, " The guildhall is under attack!  Come at once!");
+    do_gcc(ch, buf, CMD_GCC);
+    return TRUE;
+  }
+  badge = atoi(tmp + 1);
+  
+  if (!cmd && !pl && !IS_FIGHTING(ch))
+  {                             /* periodic call */
+    /*
+     * okay.. loop through all the characters in the room, and attack the first
+     * one we find thats an enemy of the guild
+     */
+    
+    //Demand cash
+    
+    /*if(!number(0,20))
+     {
+     if(withdraw_asc(ch, 1, 0, 0 , 0 ) || withdraw_asc(ch, 0, 15, 0 , 0 ) ||
+     withdraw_asc(ch, 0, 0, 165 , 0 ) || withdraw_asc(ch, 0, 0, 0 , 1815))
+     {
+     if(!number(0,20)){
+     sprintf(buf, "Thank you for my salary master.");
+     do_gcc(ch, buf, CMD_GCC); 
+     return 0;         
+     }
+     }
+     else
+     {
+     if(number(0,10)){
+     sprintf(buf, "Where is my cash master, pay me or i shall leave!");
+     do_gcc(ch, buf, CMD_GCC);
+     }
+     else{
+     sprintf(buf, "I'm tired of this, go find your self a new golem, bye, bye!");
+     do_gcc(ch, buf, CMD_GCC);
+     remove_a_golem_from_house(ch->in_room);
+     send_to_room
+     ("&+yThe ground begins to shake as the golem leaves the room.&n\n",
+     ch->in_room);
+     
+     extract_char(ch);
+     ch = NULL;
+     return 0;                        
+     //LEAVE
+     }
+     
+     }
+     
+     }*/
+    
+    for (tch = world[ch->in_room].people; tch; tch = next_ch)
+    {
+      next_ch = tch->next_in_room;
+      
+      if (find_enemy(tch, (ush_int) (assoc)) && CAN_SEE(ch, tch))
+      {
+        sprintf(buf, " Alert, my masters, %s is invading!", GET_NAME(tch));
+        do_gcc(ch, buf, CMD_GCC);
+        MobStartFight(ch, tch); /* attack..  */
+        if (IS_FIGHTING(ch))    /* if attack succeeded, break out of the loop */
+          return (TRUE);
+      }
+    }
+    
+    online = 0;
+    for (desc = descriptor_list; desc; desc = desc->next)
+    {
+      if (!desc->connected && GET_A_NUM(desc->character) == GET_A_NUM(ch))
+      {
+        forget(ch, desc->character);
+        online++;
+      }
+    }
+    
+    if (online < 10)
+    {
+      SET_BIT(ch->specials.affected_by3, AFF3_INERTIAL_BARRIER);
+      SET_BIT(ch->specials.affected_by2, AFF2_VAMPIRIC_TOUCH);
+      SET_BIT(ch->specials.affected_by4, AFF4_VAMPIRE_FORM);
+    }
+    else
+    {
+      REMOVE_BIT(ch->specials.affected_by3, AFF3_INERTIAL_BARRIER);
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_VAMPIRIC_TOUCH);
+      REMOVE_BIT(ch->specials.affected_by4, AFF4_VAMPIRE_FORM);
+    }
+    
+    return (FALSE);
+  }
+  /* okay.. its not periodic...  */
+  /* bogus call */
+  if (!cmd || !pl)
+    return (FALSE);
+  
+  if (IS_NPC(pl))
+  {
+    virt = GET_VNUM(pl);
+    if (virt == EVIL_AVATAR_MOB || virt == GOOD_AVATAR_MOB)
+      is_avatar = TRUE;
+  }
+  
+  
+  /* if it is not the blocked direction command, we don't give a dang...  */
+  if ((cmd != dir) &&
+      !((dir == 'a') &&
+        ((cmd == CMD_NORTH) || (cmd == CMD_WEST) || (cmd == CMD_EAST) ||
+         (cmd == CMD_SOUTH) || (cmd == CMD_DOWN) || (cmd == CMD_UP) ||
+         (cmd == CMD_NORTHWEST) || (cmd == CMD_SOUTHWEST) ||
+         (cmd == CMD_NORTHEAST) || (cmd == CMD_SOUTHEAST) || (cmd == CMD_NW)
+         || (cmd == CMD_SW) || (cmd == CMD_SE) || (cmd == CMD_NE))) &&
+      (is_avatar == FALSE))
+    return (FALSE);
+  
+  /*
+   * if badge isn't zero, we check if player has the right badge, else we check
+   * player assoiation info
+   */
+  allowed = 0;
+  if (badge)
+  {
+    if (pl->equipment[GUILD_INSIGNIA])
+      allowed =
+      (badge ==
+       obj_index[pl->equipment[GUILD_INSIGNIA]->R_num].virtual_number);
+  }
+  else
+  {
+    P_char   t_ch = pl;
+    
+    /*
+     * we allow entry if player has the right association number and is member
+     * and is higher in rank than parole or if it's a god
+     */
+    
+    if (IS_PC_PET(pl))
+      t_ch = pl->following;
+    
+    if(!t_ch)
+      return FALSE;
+    
+    bits = GET_A_BITS(t_ch);
+    
+    
+    allowed = (((GET_A_NUM(t_ch) == assoc) && IS_MEMBER(bits) && GT_PAROLE(bits)) || IS_TRUSTED(t_ch)); 
+		/*                                                                                       (GET_CLASS(t_ch) == CLASS_ROGUE && IS_AFFECTED(t_ch, AFF_SNEAK)));                            */
+    
+    struct alliance_data *alliance = get_alliance(GET_A_NUM(ch));
+    
+    if (alliance)
+    {
+      allowed2 = ((GET_A_NUM(t_ch) == alliance->forging_assoc_id) || 
+                  (GET_A_NUM(t_ch) == alliance->joining_assoc_id)); 
+    }
+    
+  }
+  if (is_avatar)
+    allowed = 0;
+  
+  if (allowed || allowed2)
+  {
+    if( IS_TRUSTED(pl) )
+    {
+      return FALSE;
+    }
+    
+    if (IS_PC(pl) && GT_DEPUTY(bits))
+    {
+      act("$N snaps to attention and salutes as $n passes by.",
+          FALSE, pl, 0, ch, TO_ROOM);
+      act("$N respectfully salutes you as you pass by.",
+          FALSE, pl, 0, ch, TO_CHAR);
+    }
+    else
+    {
+      act("$N nods in acknowledgment, stands aside and lets $n pass.",
+          FALSE, pl, 0, ch, TO_ROOM);
+      act("$N nods at you and stands aside to let you pass.",
+          FALSE, pl, 0, ch, TO_CHAR);
+    }
+    return (FALSE);
+  }
+  /*
+   * BLOCK!
+   */
+  act("$N pushes you back so hard that you fall down.",
+      FALSE, pl, 0, ch, TO_CHAR);
+  act("$n is sent to the floor by $N's mighty push.",
+      FALSE, pl, 0, ch, TO_NOTVICT);
+  SET_POS(pl, POS_PRONE + GET_STAT(pl));
+  CharWait(pl, (int) get_property("guild.golems.pushDuration.secs", (PULSE_VIOLENCE * 2)));
+  if (is_avatar)
+    MobStartFight(ch, pl);
+  
+  return (TRUE);
+}
+
+int house_guard(P_char ch, P_char pl, int cmd, char *arg)
+{
+  ush_int  assoc;
+  uint     bits;
+  char    *tmp;
+  int      dir = -1;
+  int      badge = 0;
+  int      allowed = 0;
+  P_char   tch, next_ch;
+  char     buf[MAX_STRING_LENGTH];
+  char     temp[MAX_STRING_LENGTH];
+  char     tmp2[MAX_STRING_LENGTH];
+  int      is_avatar = FALSE;
+  int      virt = 0;
+  
+  if (cmd == CMD_SET_PERIODIC)
+    return TRUE;
+  
+  /* if it is not the blocked direction command, we don't give a dang...  */
+  
+  /*
+   * if badge isn't zero, we check if player has the right badge, else we check
+   * player assoiation info
+   */
+  
+  allowed = 0;
+  
+  if (!ch)
+    return 0;
+  
+  if (!pl)
+    return 0;
+  
+  sprintf(tmp2, "%s_123", GET_NAME(pl));
+  
+  *tmp2 = tolower(*tmp2);
+  
+  
+  
+  tmp = strstr(GET_NAME(ch), tmp2);
+  if (!(cmd == CMD_NORTH))
+    return 0;
+  
+  if (!tmp)
+    allowed = 0;
+  else
+    allowed = 1;
+  
+  if (GET_LEVEL(pl) > MINLVLIMMORTAL)
+    allowed = 1;
+  
+  if (allowed)
+  {
+    if ((IS_TRUSTED(pl) || GT_DEPUTY(bits)) && IS_PC(pl))
+    {
+      act("$N snaps to attention and salutes as $n passes by.",
+          FALSE, pl, 0, ch, TO_ROOM);
+      act("$N respectfully salutes you as you pass by.",
+          FALSE, pl, 0, ch, TO_CHAR);
+    }
+    else
+    {
+      act("$N nods in acknowledgment, stands aside and lets $n pass.",
+          FALSE, pl, 0, ch, TO_ROOM);
+      act("$N nods at you and stands aside to let you pass.",
+          FALSE, pl, 0, ch, TO_CHAR);
+    }
+    return (FALSE);
+  }
+  /*
+   * BLOCK!
+   */
+  act("$N pushes you back so hard that you fall down.",
+      FALSE, pl, 0, ch, TO_CHAR);
+  act("$n is sent to the floor by $N's mighty push.",
+      FALSE, pl, 0, ch, TO_NOTVICT);
+  SET_POS(pl, POS_PRONE + GET_STAT(pl));
+  CharWait(pl, PULSE_VIOLENCE * 3);
+  if (is_avatar)
+    MobStartFight(ch, pl);
+  
+  return (TRUE);
 }

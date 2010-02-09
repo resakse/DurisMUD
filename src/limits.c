@@ -586,16 +586,15 @@ void advance_level(P_char ch)
     int group_size = 1;
     for( struct group_list *gl = ch->group; gl; gl = gl->next )
     {
-      if( IS_PC(gl->ch) && 
-          gl->ch != ch &&
-          ( (GET_A_NUM(gl->ch) == GET_A_NUM(ch)) || is_allied_with(GET_A_NUM(ch), GET_A_NUM(gl->ch)) ) &&
-         gl->ch->in_room == ch->in_room )
+      if( IS_PC(gl->ch) && gl->ch != ch && (GET_A_NUM(gl->ch) == GET_A_NUM(ch)) && gl->ch->in_room == ch->in_room )
         group_size++;
     }
     
-    if( group_size >= (int) get_property("guild.prestige.groupSizeMinimum", 3) )
+    if( group_size >= (int) get_property("prestige.guildedInGroupMinimum", 3) )
     {
-      send_to_char("&+bYour guild gained some prestige!\r\n", ch);
+      int prestige = (int) get_property("prestige.gain.leveling", 10);
+
+      send_to_char("&+bYour guild gained prestige!\r\n", ch);
       prestige = check_nexus_bonus(ch, prestige, NEXUS_BONUS_PRESTIGE);
       add_assoc_prestige(GET_A_NUM(ch), prestige);      
     }
@@ -967,7 +966,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // debug("check 1 exp (%d).", XP);  
   if(GET_LEVEL(ch) >= MINLVLIMMORTAL ||
      CHAR_IN_ARENA(ch) ||
-     IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | ROOM_HOUSE | SAFE_ZONE))
+     IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE))
   {
     return 0;
   }
@@ -977,7 +976,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   {
     if(IS_PC_PET(victim) ||
       IS_SHOPKEEPER(victim) ||
-      IS_SET(world[victim->in_room].room_flags, GUILD_ROOM | ROOM_HOUSE | SAFE_ZONE))
+      IS_SET(world[victim->in_room].room_flags, GUILD_ROOM | SAFE_ZONE))
     {
       return 0;
     }

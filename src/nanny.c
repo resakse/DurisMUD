@@ -27,13 +27,13 @@
 #include "sound.h"
 #include "assocs.h"
 #include "account.h"
-#include "guildhalls.h"
 #include "files.h"
 #include "sql.h"
 #include "paladins.h"
 #include "ships.h"
 #include "specializations.h"
 #include "multiplay_whitelist.h"
+#include "guildhall.h"
 
 /* external variables */
 
@@ -1759,77 +1759,6 @@ int alt_hometown_check(P_char ch, int room, int count)
   return room;
 }
 
-void enemy_hall_check(P_char ch, int room)
-{
-  P_char   owner;
-  P_house  house = NULL;
-  char     buf1[MAX_STR_NORMAL];
-  char     buf2[MAX_STR_NORMAL];
-  int      i1, i2, i3, i4;
-  uint     u1;
-  FILE    *f;
-
-  // first unhome if someone is homed in not his guildhall
-  // this is to get rid of unsolicited guests at gh
-  if (GET_BIRTHPLACE(ch) > 0 && GET_BIRTHPLACE(ch) < top_of_world)
-    house = find_house(world[GET_BIRTHPLACE(ch)].number);
-  if (house && house->type == HCONTROL_GUILD &&
-      GET_A_NUM(ch) != house->owner_guild)
-    GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch);
-
-  if (room <= 0 || room > top_of_world)
-    return;
-
-  house = find_house(world[room].number);
-  if (!house || house->type != HCONTROL_GUILD)
-    return;
-
-  sprintf(buf1, "%sasc.%u", ASC_DIR, house->owner_guild);
-  f = fopen(buf1, "r");
-
-  if (f == NULL)
-    return;
-
-  for (i1 = 0; i1 < 11; i1++)
-  {
-    fgets(buf1, MAX_STR_NORMAL, f);
-  }
-  while (fgets(buf1, MAX_STR_NORMAL, f))
-  {
-    sscanf(buf1, "%s %u %i %i %i %i\r\n", buf2, &u1, &i1, &i2, &i3, &i4);
-    if (!IS_ENEMY(u1) && IS_MEMBER(u1))
-    {
-      owner = (struct char_data *) mm_get(dead_mob_pool);
-      if (!owner)
-        break;
-      owner->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
-      if (restoreCharOnly(owner, skip_spaces(buf2)) >= 0)
-      {
-        //send_to_char("You voided in a hall....!\r\n", ch);
-        //wizlog(56, "%s moved to his original birthplace cause he voided in hall. ",                                      GET_NAME(ch), GET_NAME(owner));
-        room = real_room(GET_ORIG_BIRTHPLACE(ch));
-
-        if (opposite_racewar(ch, owner) && FALSE) // NOTICE && FALSE
-        {
-          send_to_char("You were rented in an enemy hall!\r\n", ch);
-          room = real_room(GET_ORIG_BIRTHPLACE(ch));
-          wizlog(56, "%s moved to his original birthplace due to "
-                 "racewar conflict with guildhall owner - %s",
-                 GET_NAME(ch), GET_NAME(owner));
-        }
-        free_char(owner);
-      }
-      else
-      {
-        mm_release(dead_pconly_pool, owner->only.pc);
-        mm_release(dead_mob_pool, owner);
-      }
-      break;
-    }
-  }
-  fclose(f);
-}
-
 void schedule_pc_events(P_char ch)
 {
   add_event(event_autosave, 1200, ch, 0, 0, 0, 0, 0);
@@ -1858,8 +1787,8 @@ void enter_game(P_desc d)
   struct  zone_data *zone;
   struct affected_type af1, *afp1;
   crm_rec *crec = NULL;
-  P_house  house;
-  int      cost, r_room;
+  int      cost;
+  int r_room = NOWHERE;
   long     time_gone = 0, hit_g, move_g, heal_time;
   int      mana_g;
   char     Gbuf1[MAX_STRING_LENGTH];
@@ -1931,7 +1860,8 @@ void enter_game(P_desc d)
     REMOVE_BIT(ch->specials.act, PLR_MORPH | PLR_WRITE | PLR_MAIL);
 
     /* remove any sacking events */
-    clear_sacks(ch);
+    // old guildhalls (deprecated)
+    //    clear_sacks(ch);
 
     /* this may fix the disguise not showing on who bug */
     if (PLR_FLAGGED(ch, PLR_NOWHO))
@@ -1998,15 +1928,15 @@ void enter_game(P_desc d)
   }
   else
   {
-    if((r_room = real_room(ch->specials.was_in_room)) == NOWHERE)
+    r_room = real_room(ch->specials.was_in_room);
+
+    if(r_room == NOWHERE)
       r_room = ch->in_room;
   }
-
+  
   if (zone_table[world[r_room].zone].flags & ZONE_CLOSED)
     r_room = real_room(GET_BIRTHPLACE(ch));
-
-  enemy_hall_check(ch, r_room);
-
+    
   if (ch->only.pc->pc_timer[PC_TIMER_HEAVEN] > time(NULL))
   {
     if (IS_ILLITHID(ch))
@@ -2037,13 +1967,14 @@ void enter_game(P_desc d)
     if (r_room == NOWHERE)
       r_room = real_room0(11);
   }
-  else if (world[r_room].number >= 48000 &&
-           world[r_room].number <= 48999 &&
-           find_house(world[r_room].number) == NULL)
-  {
-    GET_HOME(ch) = GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch);
-    r_room = real_room(GET_HOME(ch));
-  }
+  // old guildhalls (deprecated)
+//  else if (world[r_room].number >= 48000 &&
+//           world[r_room].number <= 48999 &&
+//           find_house(world[r_room].number) == NULL)
+//  {
+//    GET_HOME(ch) = GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch);
+//    r_room = real_room(GET_HOME(ch));
+//  }
   else if (world[r_room].number >= SHIP_ZONE_START &&
            world[r_room].number <= SHIP_ZONE_END)
   {
@@ -2053,6 +1984,9 @@ void enter_game(P_desc d)
   if (r_room > top_of_world)
     r_room = real_room(11);
 
+  // check home/birthplace/spawn room to see if it's in a GH and if ch is allowed
+  r_room = check_gh_home(ch, r_room);
+  
   ch->in_room = NOWHERE;
   char_to_room(ch, r_room, -1);
   ch->specials.x_cord = 0;

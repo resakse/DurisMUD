@@ -464,7 +464,7 @@ void olc_room_menu(char *buf1, struct olc_data *data)
             " &+WE&N. Edit room extra descriptions (&+y%d keyword%s exist&N)\r\n",
             i, (i == 1) ? "" : "s");
     strcat(buf1, " &+WF&N. Edit room exits (&+yexits existing:");
-    for (i = 0; i < NUMB_EXITS; i++)
+    for (i = 0; i < NUM_EXITS; i++)
       if (world[data->rnum].dir_option[i])
         sprintf(buf1 + strlen(buf1), " %c", *olc_dirs[i]);
 
@@ -532,7 +532,7 @@ void olc_room_menu(char *buf1, struct olc_data *data)
   case OLC_MODE_EXIT:
     strcpy(buf1, "&+YRoom Exit Editor&N\r\n\r\n");
     j = 0;
-    for (i = 0; i < NUMB_EXITS; i++)
+    for (i = 0; i < NUM_EXITS; i++)
       if (world[data->rnum].dir_option[i])
       {
         j++;
@@ -634,7 +634,7 @@ static void olc_save_room(FILE * f1, int real_num)
    <door flag> <key_number> <to-room>
  */
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
     if (world[real_num].dir_option[i])
     {
       struct room_direction_data *ddata;

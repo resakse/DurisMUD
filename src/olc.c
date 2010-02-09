@@ -128,7 +128,7 @@ void olc_del_exit_menu(struct olc_data *data)
 
   buf1[0] = 0;
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
     if (world[data->rnum].dir_option[i])
       sprintf(buf1 + strlen(buf1),
               " &+W%d.&N Delete %s exit\r\n", i, dirs[i]);

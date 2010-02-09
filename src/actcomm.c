@@ -188,7 +188,7 @@ void check_magic_doors(P_char ch, const char *word)
   char    *arg;
   struct room_direction_data *back;
 
-  for (door = 0; door < NUMB_EXITS; door++)
+  for (door = 0; door < NUM_EXITS; door++)
   {
     if (EXIT(ch, door) && (EXIT(ch, door)->key == -2) &&
         IS_SET(EXIT(ch, door)->exit_info, EX_LOCKED) &&

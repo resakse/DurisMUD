@@ -283,7 +283,7 @@ extern const int rowing_crew_list[MAXCREWS];
 
 struct ShipRoom
 {
-  int roomnum, exit[NUMB_EXITS];
+  int roomnum, exit[NUM_EXITS];
 };
 
 struct ShipData

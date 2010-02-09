@@ -1427,7 +1427,7 @@ static byte FFS_ship(int src, int target, int *ttl_steps)
   bfs_clear_marks();
   BFSMARK(src);
 
-  for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+  for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
     if (VALID_SHIP_EDGE(src, curr_dir))
     {
       BFSMARK(TOROOM(src, curr_dir));
@@ -1451,7 +1451,7 @@ static byte FFS_ship(int src, int target, int *ttl_steps)
     }
     else
     {
-      for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+      for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
       {
         if (VALID_SHIP_EDGE(queue_head->room, curr_dir)) 
         {
@@ -1488,7 +1488,7 @@ static byte FFS_wagon(int src, int target, int *ttl_steps)
   bfs_clear_marks();
   BFSMARK(src);
 
-  for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+  for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
     if (VALID_WAGON_EDGE(src, curr_dir))
     {
       BFSMARK(TOROOM(src, curr_dir));
@@ -1510,7 +1510,7 @@ static byte FFS_wagon(int src, int target, int *ttl_steps)
     }
     else
     {
-      for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+      for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
       {
         BFSMARK(TOROOM(queue_head->room, curr_dir));
         bfs_enqueue(TOROOM(queue_head->room, curr_dir), queue_head->dir,
@@ -1547,7 +1547,7 @@ static byte FFS_flying(int src, int target, int *ttl_steps)
   bfs_clear_marks();
   BFSMARK(src);
   
-  for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+  for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
     if (VALID_FLYING_EDGE(src, curr_dir))
     {
       BFSMARK(TOROOM(src, curr_dir));
@@ -1572,7 +1572,7 @@ static byte FFS_flying(int src, int target, int *ttl_steps)
         }
         else
         {
-          for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+          for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
           {
             if (VALID_FLYING_EDGE(queue_head->room, curr_dir)) 
             {
@@ -1655,7 +1655,7 @@ byte find_first_step(int src, int target, long hunt_flags,
   BFSMARK(src);
 
   // first, enqueue the first steps, saving which direction we're going. 
-  for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+  for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
   {
     if(VALID_EDGE(src, curr_dir) && 
       (can_fly || !NEEDS_FLY(src, curr_dir)) &&
@@ -1714,7 +1714,7 @@ byte find_first_step(int src, int target, long hunt_flags,
     }
     else
     {
-      for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+      for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
       {
         if (VALID_EDGE(queue_head->room, curr_dir) &&
             (can_fly || !NEEDS_FLY(queue_head->room, curr_dir)) &&
@@ -1769,7 +1769,7 @@ int how_close(int src, int target, int max_steps)
   BFSMARK(src);
 
   /* first, enqueue the first steps, saving which direction we're going. */
-  for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+  for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
     if (VALID_DIST_EDGE(src, curr_dir))
     {
       BFSMARK(TOROOM(src, curr_dir));
@@ -1799,7 +1799,7 @@ int how_close(int src, int target, int max_steps)
     }
     else
     {
-      for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+      for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
         if (VALID_DIST_EDGE(queue_head->room, curr_dir))
         {
           BFSMARK(TOROOM(queue_head->room, curr_dir));
@@ -1904,7 +1904,7 @@ byte line_of_sight_dir(int src, int target)
   /*
    * first, enqueue the first steps, saving which direction we're going. 
    */
-  for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+  for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
   {
     if (VALID_EDGE(src, curr_dir))
     {
@@ -1933,7 +1933,7 @@ byte line_of_sight_dir(int src, int target)
     }
     else
     {
-      for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+      for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
       {
         if (VALID_EDGE(queue_head->room, curr_dir))
         {
@@ -2029,7 +2029,7 @@ bool find_ship_path(int from_room, int to_room, vector<int>& path) {
     }
 
     // push all valid neighbors onto the queue
-    for( int dir = 0; dir < NUMB_EXITS; dir++ ) {
+    for( int dir = 0; dir < NUM_EXITS; dir++ ) {
       if( VALID_SHIP_EDGE(cur_node->room_num, dir) ) {
         BFSMARK(TOROOM(cur_node->room_num, dir));
         cur_node = new BFSNode(TOROOM(cur_node->room_num, dir), cur_node, dir);
@@ -2116,7 +2116,7 @@ bool dijkstra(int from_room, int to_room, valid_edge_func *valid_edge, vector<in
       break;
     }
     
-    for( int dir = 0; dir < NUMB_EXITS; dir++ ) {
+    for( int dir = 0; dir < NUM_EXITS; dir++ ) {
       if( !valid_edge(node.room_id, dir) ) continue;
       
       int tmp = TOROOM(node.room_id, dir);
@@ -2165,9 +2165,9 @@ struct RMFR_QUEUE_ITEM
 
 RMFR_QUEUE_ITEM *rmfr_queue_head = NULL, *rmfr_queue_tail = NULL;
 
-const int x_delta[NUMB_EXITS] = { 0, 1, 0, -1, 0, 0, -1, -1, 1, 1 };
-const int y_delta[NUMB_EXITS] = { 1, 0, -1, 0, 0, 0, 1, -1, 1, -1 };
-const int z_delta[NUMB_EXITS] = { 0, 0, 0, 0, 1, -1, 0, 0, 0, 0 };
+const int x_delta[NUM_EXITS] = { 0, 1, 0, -1, 0, 0, -1, -1, 1, 1 };
+const int y_delta[NUM_EXITS] = { 1, 0, -1, 0, 0, 0, 1, -1, 1, -1 };
+const int z_delta[NUM_EXITS] = { 0, 0, 0, 0, 1, -1, 0, 0, 0, 0 };
 
 void rmfr_enqueue(int room, int dir, RMFR_Q_TYPE qt)
 {
@@ -2397,7 +2397,7 @@ void radiate_message_from_room(int room, char* message, int radius, RMFR_FLAGS f
   BFSMARK(src);
 
   // enqueue the first steps
-  for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+  for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
   {
     if (rmfr_valid_exit(src, curr_dir, radius, flags, RMFR_Q_FIRST))
     {
@@ -2442,7 +2442,7 @@ void radiate_message_from_room(int room, char* message, int radius, RMFR_FLAGS f
     }
 
     // enqueue all valid exits from here too
-    for (curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+    for (curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
     {
       if (rmfr_valid_exit(rmfr_queue_head->room, curr_dir, radius, flags, RMFR_Q_OTHER))
       {

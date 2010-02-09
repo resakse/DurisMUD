@@ -7,7 +7,7 @@
 
 Changelog
 -----------
-3-20-06 - Initial implementation by Torgal (kennonballou@gmail.com)
+3-20-06 - Initial implementation by Torgal (torgal@durismud.com)
 
 
 
@@ -301,7 +301,7 @@ void Ferry::move() {
 	int next_step = route[cur_route_leg].path[cur_route_leg_step];
 	cur_route_leg_step++;
 		
-	if( next_step >= 0 && next_step < NUMB_EXITS ) {
+	if( next_step >= 0 && next_step < NUM_EXITS ) {
 		int to_room = world[obj->loc.room].dir_option[next_step]->to_room;
 		
 		if( !to_room ) {

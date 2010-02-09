@@ -34,6 +34,7 @@
 #include "vnum.obj.h"
 #include "epic.h"
 #include "map.h"
+#include "utility.h"
 
 /*
  * external variables

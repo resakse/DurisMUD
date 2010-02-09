@@ -661,7 +661,7 @@ int mir_fire(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
   /* spread like wildfire */
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
     if (VIRTUAL_CAN_GO(obj->loc.room, i))
     {
       room = VIRTUAL_EXIT(obj->loc.room, i)->to_room;

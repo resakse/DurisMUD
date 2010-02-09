@@ -55,7 +55,6 @@ extern const char *crime_list[];
 extern const char *crime_rep[];
 extern const char *specdata[][MAX_SPEC];
 extern struct class_names class_names_table[];
-extern P_house thouse;
 extern P_obj    object_list;
 extern int pulse;
 
@@ -1675,7 +1674,7 @@ int wh_janitor(P_char ch, P_char pl, int cmd, char *arg)
     int move_to_loot = 0;
     int a;
 
-    for (a = 0; a < NUMB_EXITS; a++)
+    for (a = 0; a < NUM_EXITS; a++)
       if (!number(0, 3) && EXIT(ch, a) && CAN_GO(ch, a))
       {
         for (o = world[EXIT(ch, a)->to_room].contents; o; o = o->next_content)

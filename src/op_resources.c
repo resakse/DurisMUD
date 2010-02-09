@@ -1,3 +1,9 @@
+//
+// Outposts and buildings are not attached to the mud, but is here in case someone wants to clean up and finish the code,
+// which was started by Torgal in 2008 and then continued by Venthix in 2009.
+// - Torgal 1/29/2010
+//
+
 /* op_resources.c
    - Property of Duris
      Apr 09
@@ -75,7 +81,7 @@ void load_one_tree(int room)
   P_obj tree;
   int i, edge = 0;
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
   {
     if (world[room].dir_option[i] && world[room].dir_option[i]->to_room > 0)
       if (world[world[room].dir_option[i]->to_room].sector_type != SECT_FOREST)
@@ -156,7 +162,7 @@ void event_tree_growth(P_char ch, P_char victim, P_obj xobj, void *data)
       continue;
 
     // Ok, so this room has a tree in it, run through exits of this room
-    for (i = 0; i < NUMB_EXITS; i++)
+    for (i = 0; i < NUM_EXITS; i++)
     {
       troom = 0;
       

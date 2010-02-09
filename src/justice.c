@@ -1070,7 +1070,7 @@ int justice_send_guards(int to_rroom, P_char victim, int type, int how_many)
   town = zone_table[world[to_rroom].zone].hometown;
 
   /* now find the best place to send the guards FROM */
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
   {
     int      rr, dist, dir;
 
@@ -1469,7 +1469,7 @@ witness_scan(P_char attacker, P_char victim, int rroom, int crime,
       return;
   }
 
-  for (door = 0; door < NUMB_EXITS; door++)
+  for (door = 0; door < NUM_EXITS; door++)
   {
     if (CAN_GO(attacker, door))
     {

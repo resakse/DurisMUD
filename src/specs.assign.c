@@ -28,7 +28,6 @@
 #include "specs.keleks.h"
 #include "specs.caertannad.h"
 #include "specs.firep.h"
-#include "outposts.h"
 
 extern int top_of_world;
 extern P_index mob_index;
@@ -1065,41 +1064,6 @@ void assign_mobiles(void)
   mob_index[real_mobile0(25101)].func.mob = guild_guard;
   mob_index[real_mobile0(25104)].func.mob = guild_guard;
 
-  /* Player guilds */// no longer needed
-  mob_index[real_mobile0(11001)].func.mob = house_guard;
-  mob_index[real_mobile0(11002)].func.mob = assoc_golem;
-  mob_index[real_mobile0(11003)].func.mob = assoc_golem;
-  mob_index[real_mobile0(11004)].func.mob = assoc_golem;
-/*
-  mob_index[real_mobile0(30501)].func.mob = assoc_golem;
-  mob_index[real_mobile0(30502)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29900)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29901)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29700)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29300)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29301)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29302)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29101)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29102)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29502)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29503)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29500)].func.mob = assoc_golem;
-  mob_index[real_mobile0(30100)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29200)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29201)].func.mob = assoc_golem;
-  mob_index[real_mobile0(30300)].func.mob = assoc_golem;
-  mob_index[real_mobile0(30302)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29400)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29401)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29402)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29600)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29903)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29820)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29821)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29822)].func.mob = assoc_golem;
-  mob_index[real_mobile0(29823)].func.mob = assoc_golem;
-
-*/
 /*
      Prison
 */
@@ -1336,7 +1300,7 @@ void assign_objects(void)
   obj_index[real_object0(354)].func.obj = artifact_monolith;
 
   /* outposts */
-  obj_index[real_object0(97800)].func.obj = outpost_rubble;
+//  obj_index[real_object0(97800)].func.obj = outpost_rubble;
   
   /* ailvio */
   obj_index[real_object0(29328)].func.obj = burbul_map_obj;
@@ -1428,7 +1392,8 @@ void assign_objects(void)
   obj_index[real_object0(97118)].func.obj = artifact_hide;
   obj_index[real_object0(44170)].func.obj = artifact_hide;
 
-  obj_index[real_object0(115)].func.obj = guild_chest;
+  // old guildhalls (deprecated)
+//  obj_index[real_object0(115)].func.obj = guild_chest;
   // obj_index[real_object0(96443)].func.obj = illithid_sack;
 
   obj_index[real_object0(70963)].func.obj = pathfinder;

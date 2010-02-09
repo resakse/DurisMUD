@@ -50,6 +50,7 @@
 #include "guard.h"
 #include "paladins.h"
 #include "grapple.h"
+#include "guildhall.h"
 
 /*
  * external variables
@@ -959,7 +960,7 @@ void lance_charge(P_char ch, char *argument)
         continue_dir = dir;
   else
   {
-    for (i = 0; i < NUMB_EXITS; i++)
+    for (i = 0; i < NUM_EXITS; i++)
     {
       if(world[ch->in_room].dir_option[i])
       {
@@ -974,7 +975,7 @@ void lance_charge(P_char ch, char *argument)
 
     choice = number(0, available_exits - 1);
 
-    for (i = 0; i < NUMB_EXITS; i++)
+    for (i = 0; i < NUM_EXITS; i++)
     {
       if(world[ch->in_room].dir_option[i])
       {
@@ -996,7 +997,7 @@ void lance_charge(P_char ch, char *argument)
   // Lom:
   // 1) dont let them charge out guild golems or charge past them
   //--------------------------------------
-  if( IS_ACT(victim, ACT_GUILD_GOLEM) || GET_RACE(victim) == RACE_CONSTRUCT )
+  if( IS_GH_GOLEM(victim) || GET_RACE(victim) == RACE_CONSTRUCT )
     continue_dir = -1;
 
   CharWait(ch, (int) (PULSE_VIOLENCE * get_property("skill.lance.charge.CharLag", 1.500)));
@@ -2289,7 +2290,7 @@ void do_flee(P_char ch, char *argument, int cmd)
 
   available_exits = 0;
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
     if(world[ch->in_room].dir_option[i])
       if(CAN_GO(ch, i) && !bad_flee_dir(ch, EXIT(ch, i)->to_room) &&
         can_enter_room(ch, EXIT(ch, i)->to_room, 0))
@@ -2326,7 +2327,7 @@ void do_flee(P_char ch, char *argument, int cmd)
   {
     int  picked = number(0, available_exits - 1);
 
-    for (i = 0; i < NUMB_EXITS; i++)
+    for (i = 0; i < NUM_EXITS; i++)
     {
       if(world[ch->in_room].dir_option[i])
       {
@@ -5494,7 +5495,7 @@ void do_tackle(P_char ch, char *arg, int cmd)
        GET_POS(vict) == POS_STANDING &&
        !IS_SET(world[ch->in_room].room_flags, GUILD_ROOM)) // Prevents tackling past golems.
     {
-      door = number(0, NUMB_EXITS - 1);
+      door = number(0, NUM_EXITS - 1);
       
       if(CAN_GO(ch, door) &&
          !check_wall(ch->in_room, door) &&
@@ -6986,7 +6987,7 @@ void do_rearkick(P_char ch, char *argument, int cmd)
     door = number(0, 9);
     if((door == UP) || (door == DOWN))
       door = number(0, 3);
-
+    // TODO: make sure doesn't get roomkicked past guildhall golem
     if((CAN_GO(victim, door)) && (!check_wall(victim->in_room, door)))
     {
       act("&+LYour mighty rearkick sends&n $N &+Lflying out of the room!&n",

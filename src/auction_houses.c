@@ -1,6 +1,6 @@
 /*
  auction_houses.c
- -- torgal april 2006 (kennonballou@gmail.com)
+ -- torgal april 2006 (torgal@durismud.com)
 */
 
 #include "auction_houses.h"

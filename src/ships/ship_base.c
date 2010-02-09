@@ -324,7 +324,7 @@ int loadship(P_ship ship, int to_room)
          }
 
          world[rroom].funct = newshiproom_proc;
-         for (dir = 0; dir < NUMB_EXITS; dir++) 
+         for (dir = 0; dir < NUM_EXITS; dir++) 
          {
             if (SHIPROOMEXIT(ship, i, dir) != -1) 
             {
@@ -429,7 +429,7 @@ struct ShipData *newship(int m_class)
       shiperror = 17;
       return NULL;
    }
-   for (j = 0; j <= NUMB_EXITS; j++) 
+   for (j = 0; j <= NUM_EXITS; j++) 
    {
       ship->room[0].exit[j] = -1;
    }
@@ -497,7 +497,7 @@ void clear_ship_layout(P_ship ship)
 {
    for (int j = 0; j < MAX_SHIP_ROOM; j++) 
    {
-      for (int k = 0; k < NUMB_EXITS; k++) 
+      for (int k = 0; k < NUM_EXITS; k++) 
       {
          SHIPROOMEXIT(ship, j, k) = -1;
       }
@@ -737,7 +737,7 @@ void reset_ship_physical_layout(P_ship ship)
 
             world[rroom].name = str_dup(buf);
             world[rroom].funct = newshiproom_proc;
-            for (int dir = 0; dir < NUMB_EXITS; dir++) 
+            for (int dir = 0; dir < NUM_EXITS; dir++) 
             {
                 if (SHIPROOMEXIT(ship, j, dir) != -1) 
                 {

@@ -552,7 +552,7 @@ extern unsigned int game_locked;
 #define CMD_APPRAISE       525
 #define CMD_COVER          526
 #define CMD_HOUSE          527
-#define CMD_HCONTROL       528
+#define CMD_GUILDHALL      528
 #define CMD_DOORKICK       529
 #define CMD_BUCK           530
 #define CMD_STAMPEDE       531

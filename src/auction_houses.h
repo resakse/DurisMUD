@@ -3,7 +3,7 @@
 
 /*
  auction_houses.h
- -- torgal april 2006 (kennonballou@gmail.com)
+ -- torgal april 2006 (torgal@durismud.com)
 */
 
 #include "files.h"

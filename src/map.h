@@ -28,17 +28,21 @@
 
 #define CONT_GC 1
 #define CONT_EC 2
-#define CONT_EM 3
+#define CONT_UC 3
 #define CONT_IC 4
 #define CONT_KK 5
+#define CONT_JADE 6
+#define CONT_DRAGONS 7
+#define CONT_CEOTHIA 8
+#define CONT_BOYARD 9
+#define CONT_VENAN 10
+#define CONT_SHADOW 11
+#define CONT_SCORCHED 12
+#define CONT_TEZCAT 13
+#define CONT_MOONSHAE 14
 
 #define CONTINENT(r) ( world[r].continent )
-
-#define IS_GOOD_MAP(r) ( CONTINENT(r) == CONT_GC )
-#define IS_EVIL_MAP(r) ( CONTINENT(r) == CONT_EC )
-#define IS_EM_MAP(r)   ( CONTINENT(r) == CONT_EM )
-#define IS_IC_MAP(r)   ( CONTINENT(r) == CONT_IC )
-#define IS_KK_MAP(r)   ( CONTINENT(r) == CONT_KK )
+#define IS_CONTINENT(r, cont) ( CONTINENT(r) == cont )
 
 //  adding defines for the planes for rewrite of plane_shift -  Jexni 1/26/08
 

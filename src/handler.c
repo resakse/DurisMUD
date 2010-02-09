@@ -873,7 +873,7 @@ int char_to_room(P_char ch, int room, int dir)
   }
   else
   {
-    for (j = 0; j < NUMB_EXITS; j++)
+    for (j = 0; j < NUM_EXITS; j++)
       if (world[room].dir_option[j])
         if (exit1 == -1)
           exit1 = j;

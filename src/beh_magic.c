@@ -137,7 +137,7 @@ void spell_beholder_telekinesis(int level, P_char ch, P_char victim,
   
   /* check for doors to close */
 
-  for(door = 0; door < NUMB_EXITS; door++)
+  for(door = 0; door < NUM_EXITS; door++)
   {
     if(EXIT(ch, door))
     {

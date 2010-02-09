@@ -72,7 +72,7 @@ int lucrot_mindstone(P_obj obj, P_char ch, int cmd, char *arg)
         act("\n$n's &n$q &+cpulses!&n\n",
           TRUE, ch, obj, NULL, TO_ROOM);
       
-        if(IS_SET(world[ch->in_room].room_flags, NORECALL))
+        if(IS_SET(world[ch->in_room].room_flags, NO_RECALL))
         {
           send_to_char("&+WThere is something about this area that prevents your journey home.&n\r\n", ch);
           CharWait(ch, PULSE_VIOLENCE * 1);

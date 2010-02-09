@@ -26,7 +26,8 @@
 #include "files.h"
 #include "sql.h"
 #include "specs.winterhaven.h"
-#include "guildhalls.h"
+#include "guildhall.h"
+#include "assocs.h"
 
 /*
    external variables
@@ -294,18 +295,25 @@ int inn(int room, P_char ch, int cmd, char *arg)
 
     if(cmd == CMD_RENT)
     {
-      for(tch = world[ch->in_room].people; tch; tch = next_ch)
+      Guildhall *gh = Guildhall::find_by_vnum(world[ch->in_room].number);
+      if( gh && (!IS_MEMBER(GET_A_BITS(ch)) || GET_A_NUM(ch) != gh->assoc_id) )
       {
-        next_ch = tch->next_in_room;
-        if(tch &&
-          IS_ASSOC_GOLEM(tch)) // Let's not allow inns in the guard room -Lucrot Oct08
-        {
-          send_to_char
-            ("What innkeeper? The golem standing right here has shut this place down!\r\n",
-             ch);
-          return true;
-        }
+        send_to_char("You're just a guest here, so you should probably stay awake!\r\n", ch);
+        return TRUE;
       }
+// old guildhalls (deprecated)
+//      for(tch = world[ch->in_room].people; tch; tch = next_ch)
+//      {
+//        next_ch = tch->next_in_room;
+//        if(tch &&
+//          IS_ASSOC_GOLEM(tch)) // Let's not allow inns in the guard room -Lucrot Oct08
+//        {
+//          send_to_char
+//            ("What innkeeper? The golem standing right here has shut this place down!\r\n",
+//             ch);
+//          return true;
+//        }
+//      }
       if(IS_FIGHTING(ch))
       {
         send_to_char

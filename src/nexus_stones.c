@@ -1,5 +1,5 @@
 /* nexus_stones.c
-   - Torgal (kennonballou@gmail.com)
+   - Torgal (torgal@durismud.com)
      Feb 2007
 
 */
@@ -127,7 +127,7 @@ struct NexusBonusData {
   {"epics", 1},   //  1 Marduk
   {"exp", 1},     //  2 Enki 
   {"cargo", 10},
-  {"prestige", 100},
+  {"prestige", 1},
   {"\0", 0}
 };
 
@@ -259,7 +259,7 @@ int check_nexus_bonus(P_char ch, int amount, int type)
      case NEXUS_BONUS_EXP:
        break;
      case NEXUS_BONUS_CARGO:
-       sprintf(buff2, "Your ownership of the nexus stone of &+yEnlil&n grants you an additional %s&n.\r\n", coin_stringv(newamnt));
+       sprintf(buff2, "&+yEnlil&n grants you an additional %s&n.\r\n", coin_stringv(newamnt));
        send_to_char(buff2, ch);
        break;
      default:

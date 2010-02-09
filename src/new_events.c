@@ -402,7 +402,8 @@ void ne_init_events(void)
   //AddEvent(EVENT_SPECIAL, 500 - pulse, FALSE, another_hour, 0);
 
   /* timed house control stuff */
-  add_event(event_housekeeping, 500, NULL, NULL, NULL, 0, NULL, 0);
+  // old guildhalls (deprecated)
+  //add_event(event_housekeeping, 500, NULL, NULL, NULL, 0, NULL, 0);
   //AddEvent(EVENT_SPECIAL, 500 - pulse, FALSE, do_housekeeping, 0);
 
   /* sunrise, sunset, etc informer */

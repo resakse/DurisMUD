@@ -2,7 +2,7 @@
  *  trophy.c
  *  Duris
  *
- *  Created by Kennon Ballou on 1/6/08.
+ *  Created by Torgal on 1/6/08.
  *
  */
 

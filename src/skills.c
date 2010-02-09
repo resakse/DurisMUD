@@ -4593,6 +4593,9 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("firing arrows", TAG_FIRING);
   TAG_CREATE("do not proc", TAG_STOP_PROC);
   TAG_CREATE("bare feet", TAG_BAREFEET);
+  TAG_CREATE("troll burn", TAG_TROLL_BURN);
+  TAG_CREATE("guildhall tag", TAG_GUILDHALL);
+  TAG_CREATE("direction tag", TAG_DIRECTION);
 
   TAG_CREATE_WITH_MESSAGES("recently fragged", TAG_PLR_RECENT_FRAG, 
                            "&+rThe thrill of the &+Lrecent &+Rkill &+rleaves your veins.", "");

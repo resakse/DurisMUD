@@ -27,7 +27,6 @@ using namespace std;
 #include "weather.h"
 #include "justice.h"
 #include "assocs.h"
-#include "guildhalls.h"
 #include "graph.h"
 #include "damage.h"
 #include "reavers.h"
@@ -309,7 +308,6 @@ int guildhome(P_obj obj, P_char ch, int cmd, char *argument)
 
 int illithid_sack(P_obj obj, P_char ch, int cmd, char *argument)
 {
-  P_house  house = NULL;
   P_obj    s_obj = NULL;
   char     GBuf1[MAX_STRING_LENGTH], GBuf2[MAX_STRING_LENGTH];
 
@@ -640,53 +638,6 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
   }
 }
 
-int guild_chest(P_obj obj, P_char ch, int cmd, char *argument)
-{
-  P_house  house = NULL;
-  P_obj    s_obj = NULL;
-  char     GBuf1[MAX_STRING_LENGTH], GBuf2[MAX_STRING_LENGTH];
-
-  *GBuf1 = '\0';
-  *GBuf2 = '\0';
-
-  if (cmd == CMD_SET_PERIODIC)               /*
-                                   Events have priority
-                                 */
-    return FALSE;
-
-  if (!ch || !obj)              /*
-                                   If the player ain't here, why are we?
-                                 */
-    return FALSE;
-
-  if (argument && cmd == CMD_GET || cmd == CMD_TAKE)
-  {
-    argument_interpreter(argument, GBuf1, GBuf2);
-    if (!*GBuf2)
-      return FALSE;
-    s_obj = get_obj_in_list_vis(ch, GBuf2, ch->carrying);
-    if (!s_obj)
-      s_obj = get_obj_in_list_vis(ch, GBuf2, world[ch->in_room].contents);
-    if (s_obj != obj)
-      return FALSE;
-
-    /* ok they are attempting to get something from this chest */
-    house = house_ch_is_in(ch);
-    if (!house)
-      return FALSE;
-    if ((GET_A_NUM(ch) != house->owner_guild) && (!IS_TRUSTED(ch)) &&
-        (house->type == HCONTROL_GUILD))
-    {
-      act("&+L$n &+Lis &+Rzapped&+L as $e tries to get something from $p!",
-          FALSE, ch, obj, 0, TO_ROOM);
-      act("&+LYou are &+Rzapped&+L as you try to get something from $p!",
-          FALSE, ch, obj, 0, TO_CHAR);
-      return TRUE;
-    }
-
-  }
-  return FALSE;
-}
 // pathfinder from KT
 int pathfinder(P_obj obj, P_char ch, int cmd, char *argument)
 {
@@ -1004,7 +955,7 @@ int magic_mouth(P_obj obj, P_char ch, int cmd, char *arg)
 int floating_pool(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      num_choices = 0, i;
-  int      pos_dirs[NUMB_EXITS];
+  int      pos_dirs[NUM_EXITS];
   int      my_room;
 
   if (cmd == CMD_SET_PERIODIC)
@@ -1021,7 +972,7 @@ int floating_pool(P_obj obj, P_char ch, int cmd, char *arg)
 
   my_room = obj->loc.room;
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
     if ((world[my_room].dir_option[i]) &&
         (FLT_TOROOM(my_room, i) != NOWHERE) &&
         (!IS_SET(world[(my_room)].dir_option[(i)]->exit_info,
@@ -1519,7 +1470,7 @@ int item_switch(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
   door = obj->value[2];
-  if ((door < 0) || (door >= NUMB_EXITS))
+  if ((door < 0) || (door >= NUM_EXITS))
   {
     send_to_char
       ("This item is broken (exit # out of range).  Talk to a god!\n", ch);

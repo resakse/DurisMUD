@@ -20,19 +20,16 @@
 #include "mm.h"
 #include "utils.h"
 #include "prototypes.h"
-#include "guildhalls.h"
 #include "ships.h"
 #include "random.zone.h"
 #include "necromancy.h"
 #include "sql.h"
-#include "buildings.h"
 #include "trophy.h"
 
 #include <iostream>
 using namespace std;
 
 extern P_char character_list;
-extern P_house_upgrade house_upgrade_list;
 extern P_event event_list;
 extern int mini_mode;
 extern P_index mob_index;
@@ -49,12 +46,12 @@ static int stat_vers, obj_vers, aff_vers, skill_vers, witness_vers;
 extern struct shop_data *shop_index;
 extern struct hold_data TmpAffs;
 extern struct mm_ds *dead_mob_pool;
-extern struct mm_ds *dead_construction_pool;
+//extern struct mm_ds *dead_construction_pool;
 extern struct mm_ds *dead_trophy_pool;
 extern struct mm_ds *dead_witness_pool;
 extern struct mm_ds *dead_crime_pool;
 extern struct mm_ds *dead_house_pool;
-extern P_house first_house;
+//extern P_house first_house;
 extern int LOADED_RANDOM_ZONES;
 extern struct random_zone random_zone_data[101];
 
@@ -1257,20 +1254,20 @@ void writeCorpse(P_obj corpse)
       ADD_INT(buf, CORPSE_STORAGE); //store corpses in godroom if something goes wrong with buildings
     }
   }
-  else if( IS_BUILDING_ROOM(room) )
-  {
-    Building *building = get_building_from_room(room);
-    
-    if( building )
-    {
-      ADD_INT(buf, building->room_vnum);
-    }
-    else
-    {
-      ADD_INT(buf, CORPSE_STORAGE); //store corpses in godroom if something goes wrong with buildings
-    }
-    
-  }
+//  else if( IS_BUILDING_ROOM(room) )
+//  {
+//    Building *building = get_building_from_room(room);
+//    
+//    if( building )
+//    {
+//      ADD_INT(buf, building->room_vnum);
+//    }
+//    else
+//    {
+//      ADD_INT(buf, CORPSE_STORAGE); //store corpses in godroom if something goes wrong with buildings
+//    }
+//    
+//  }
   else if( IS_RANDOM_ROOM(room) )
   {
     if( random_entrance_vnum(room) )
@@ -5835,478 +5832,478 @@ int restoreJailItems(P_char ch)
   return TRUE;
 }
 
-
-/* house construction Q */
-int writeConstructionQ()
-{
-  FILE    *f;
-  char    *buf;
-  static char buff[SAV_MAXSIZE * 2];
-  P_house_upgrade current_job;
-  char     fname[MAX_STRING_LENGTH];
-  int      count = 0;
-
-  buf = buff;
-  current_job = house_upgrade_list;
-
-  while (current_job)
-  {
-    count++;
-    current_job = current_job->next;
-  }
-  current_job = house_upgrade_list;
-
-  ADD_INT(buf, count);
-  while (current_job)
-  {
-    ADD_INT(buf, current_job->vnum);
-    ADD_LONG(buf, current_job->time);
-    ADD_INT(buf, current_job->type);
-    ADD_INT(buf, current_job->location);
-    ADD_INT(buf, current_job->guild);
-    ADD_INT(buf, current_job->exit_dir);
-    ADD_INT(buf, current_job->door);
-    ADD_STRING(buf, current_job->door_keyword);
-    current_job = current_job->next;
-  }
-  if ((int) (buf - buff) > SAV_MAXSIZE)
-  {
-    logit(LOG_HOUSE, "Could not save contruction Q");
-    return 0;
-  }
-  sprintf(fname, "%s/House/HouseConstructionQ", SAVE_DIR);
-  if (!(f = fopen(fname, "w")))
-    return 0;
-  fwrite(buff, 1, (unsigned) (buf - buff), f);
-  fclose(f);
-  return 1;
-}
-
-int loadConstructionQ()
-{
-  FILE    *f;
-  char     buff[SAV_MAXSIZE * 2];
-  char    *buf = buff;
-  struct house_upgrade_rec *current_job;
-  char     fname[MAX_STRING_LENGTH];
-  int      size, count;
-
-  house_upgrade_list = NULL;
-  current_job = 0;
-  sprintf(fname, "%s/House/HouseConstructionQ", SAVE_DIR);
-  if (!(f = fopen(fname, "r")))
-    return 0;
-  size = fread(buf, 1, SAV_MAXSIZE, f);
-  fclose(f);
-  count = GET_INTE(buf);
-  for (size = 0; size < count; size++)
-  {
-    if (!dead_construction_pool)
-      dead_construction_pool =
-        mm_create("CONSTRUCTION", sizeof(struct house_upgrade_rec),
-                  offsetof(struct house_upgrade_rec, next), 1);
-    current_job = (struct house_upgrade_rec *) mm_get(dead_construction_pool);
-    current_job->vnum = GET_INTE(buf);
-    current_job->time = GET_LONG(buf);
-    current_job->type = GET_INTE(buf);
-    current_job->location = GET_INTE(buf);
-    current_job->guild = GET_INTE(buf);
-    current_job->exit_dir = GET_INTE(buf);
-    current_job->door = GET_INTE(buf);
-    current_job->door_keyword = GET_STRING(buf);
-    if (current_job->type != HCONTROL_DESC_ROOM)
-    {
-      current_job->next = house_upgrade_list;
-      house_upgrade_list = current_job;
-    }
-  };
-  return 1;
-}
-
-int moveHouse(P_house house, int new_vnum)
-{
-  char Gbuf1[256], Gbuf2[256];
-  struct stat statbuf;
-  int      tmp_errno;
-
-  sprintf(Gbuf1, "%s/House/HouseRoom/house.%d", SAVE_DIR, house->vnum);
-  sprintf(Gbuf2, "%s/House/HouseRoom/house.%d", SAVE_DIR, new_vnum);
-    
-  if (stat(Gbuf1, &statbuf) == 0)
-  {
-    if (rename(Gbuf1, Gbuf2) == -1)
-    {
-      
-      tmp_errno = errno;
-      logit(LOG_HOUSE, "Couldn't rename house!\n");
-      logit(LOG_HOUSE, "   rename failed, errno = %d\n", tmp_errno);
-      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error renaming house file %d!",
-             house->vnum);
-      return 0;
-    }
-  }
-  else
-  {
-    tmp_errno = errno;
-    logit(LOG_HOUSE, "Problem with house save files directory, couldn't find house in rename!\n");
-    logit(LOG_HOUSE, "   stat failed, errno = %d\n", tmp_errno);
-    wizlog(OVERLORD, "&+R&-LPANIC!&N  Error renaming house for %d!",
-           house->vnum);
-    return 0;
-  }
-
-  logit(LOG_HOUSE, "House %d moved to %d", house->vnum, new_vnum);  
-  return 1;
-}
-
-/*************************************************************/
-/* fonction to save and restore house */
-int writeHouse(P_house house)
-{
-  FILE    *f;
-  char    *buf, housefile[MAX_STRING_LENGTH];
-  char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
-  int      bak;
-  static char buff[SAV_MAXSIZE * 2];
-  struct stat statbuf;
-  int      count = 0, tmp, count2 = 0;
-
-  if ((sizeof(char) != 1) || (int_size != long_size))
-  {
-    logit(LOG_HOUSE,
-          "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
-    return 0;
-  }
-  buf = buff;
-
-  ADD_BYTE(buf, (char) SAV_HOUSEVERS);
-  ADD_BYTE(buf, (char) (short_size));
-  ADD_BYTE(buf, (char) (int_size));
-  ADD_BYTE(buf, (char) (long_size));
-
-  ADD_INT(buf, house->vnum);
-  ADD_INT(buf, house->built_on);
-  ADD_SHORT(buf, house->mode);
-  ADD_SHORT(buf, house->type);
-  ADD_BYTE(buf, house->construction);
-  ADD_STRING(buf, house->owner);
-
-  ADD_INT(buf, house->num_of_guests);
-
-  for (count = 0; count < house->num_of_guests; count++)
-    ADD_STRING(buf, house->guests[count]);
-
-  ADD_INT(buf, MAX_HOUSE_ROOMS);
-  for (count = 0; count < MAX_HOUSE_ROOMS; count++)
-  {
-    ADD_INT(buf, house->room_vnums[count]);
-    if (house->room_vnums[count] != -1)
-      write_guild_room(house->room_vnums[count], house->owner_guild);
-  }
-  ADD_INT(buf, house->owner_guild);
-  ADD_INT(buf, house->last_payment);
-  ADD_SHORT(buf, house->size);
-  ADD_LONG(buf, house->upgrades);
-  ADD_INT(buf, house->exit_num);
-  ADD_STRING(buf, house->entrance_keyword);
-  ADD_INT(buf, house->mouth_vnum);
-  ADD_INT(buf, house->teleporter1_room);
-  ADD_INT(buf, house->teleporter1_dest);
-  ADD_INT(buf, house->teleporter2_room);
-  ADD_INT(buf, house->teleporter2_dest);
-  ADD_INT(buf, house->inn_vnum);
-  ADD_INT(buf, house->fountain_vnum);
-  ADD_INT(buf, house->heal_vnum);
-  ADD_INT(buf, house->board_vnum);
-  ADD_INT(buf, house->wizard_golems);
-  ADD_INT(buf, house->warrior_golems);
-  ADD_INT(buf, house->cleric_golems);
-  ADD_INT(buf, house->guard_golems);
-  ADD_INT(buf, house->shop_vnum);
-  ADD_INT(buf, house->holy_fount_vnum);
-  ADD_INT(buf, house->unholy_fount_vnum);
-  ADD_INT(buf, house->secret_entrance);
-  if (house->type == HCONTROL_CASTLE)
-  {
-    ADD_SHORT(buf, (short) MAX_CONTROLLED_LAND);
-    for (tmp = 0; tmp < MAX_CONTROLLED_LAND; tmp++)
-      ADD_INT(buf, house->controlled_land[tmp]);
-  }
-  if ((int) (buf - buff) > SAV_MAXSIZE)
-  {
-    logit(LOG_HOUSE, "Could not save %d, file too large (%d bytes)",
-          house->vnum, (int) (buf - buff));
-    return 0;
-  }
-  sprintf(housefile, "house.%d", house->vnum);
-  sprintf(Gbuf1, "%s/House/HouseRoom/%s", SAVE_DIR, housefile);
-
-  strcpy(Gbuf2, Gbuf1);
-  strcat(Gbuf2, ".bak");
-
-  if (stat(Gbuf1, &statbuf) == 0)
-  {
-    if (rename(Gbuf1, Gbuf2) == -1)
-    {
-      int      tmp_errno;
-
-      tmp_errno = errno;
-      logit(LOG_HOUSE, "Problem with house save files directory!\n");
-      logit(LOG_HOUSE, "   rename failed, errno = %d\n", tmp_errno);
-      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error backing up house for %d!",
-             house->vnum);
-      return 0;
-    }
-    bak = 1;
-  }
-  else
-  {
-    if (errno != ENOENT)
-    {
-      int      tmp_errno;
-
-      tmp_errno = errno;
-      logit(LOG_HOUSE, "Problem with house save files directory!\n");
-      logit(LOG_HOUSE, "   stat failed, errno = %d\n", tmp_errno);
-      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error finding house for %d!",
-             house->vnum);
-      return 0;
-    }
-    bak = 0;
-  }
-
-  f = fopen(Gbuf1, "w");
-
-  if (!f)
-  {
-    int      tmp_errno;
-
-    tmp_errno = errno;
-    logit(LOG_HOUSE, "Couldn't create house save file!\n");
-    logit(LOG_HOUSE, "   fopen failed, errno = %d\n", tmp_errno);
-    wizlog(OVERLORD, "&+R&-LPANIC!&N  Error creating house for %d!",
-           house->vnum);
-    bak -= 2;
-  }
-  else
-  {
-    if (fwrite(buff, 1, (unsigned) (buf - buff), f) != (buf - buff))
-    {
-      int      tmp_errno;
-
-      tmp_errno = errno;
-      logit(LOG_HOUSE, "Couldn't write to house save file!\n");
-      logit(LOG_HOUSE, "   fwrite failed, errno = %d\n", tmp_errno);
-      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error writing house for %d!",
-             house->vnum);
-      fclose(f);
-      bak -= 2;
-    }
-    else
-      fclose(f);
-  }
-
-  switch (bak)
-  {
-  case 1:                      /* save worked, just get rid of the backup */
-    if (unlink(Gbuf2) == -1)    /* not a critical error  */
-      logit(LOG_HOUSE, "Couldn't delete backup of house file.\n");
-
-  case 0:                      /* save worked, no backup was made to begin with */
-    break;
-
-  case -1:                     /* save FAILED, but we have a backup */
-    if (rename(Gbuf2, Gbuf1) == -1)
-    {
-      int      tmp_errno;
-
-      tmp_errno = errno;
-      logit(LOG_HOUSE, " Unable to restore backup!  Argh!");
-      logit(LOG_HOUSE, "    rename failed, errno = %d\n", tmp_errno);
-      logit(LOG_EXIT, "unable to restore backup");
-			raise(SIGSEGV);
-    }
-    else
-      wizlog(OVERLORD, "        Backup restored.");
-    /*
-     * restored or not, the save still failed, so return 0
-     */
-    return 0;
-
-  case -2:                     /* save FAILED, and we have NO backup! */
-    logit(LOG_HOUSE, " No restore file was made!");
-    wizlog(OVERLORD, "        No backup file available");
-    return 0;
-  }
-  return 1;
-}
-
-int restoreHouse(char *file_name)
-{
-  FILE    *f;
-  char     buff[SAV_MAXSIZE];
-  char    *buf = buff;
-  int      start, size, count, tmp, s, dummy_int, version;
-  char     Gbuf1[MAX_STRING_LENGTH];
-  P_house  house;
-  P_obj    obj = NULL;
-
-  if (!file_name)
-  {
-    return 0;
-  }
-  sprintf(Gbuf1, "%s/House/HouseRoom/%s", SAVE_DIR, file_name);
-
-  f = fopen(Gbuf1, "r");
-  if (!f)
-  {
-    logit(LOG_HOUSE, "House %s savefile does not exist!", file_name);
-    return 0;
-  }
-  size = fread(buf, 1, SAV_MAXSIZE, f);
-  fclose(f);
-  if (size < 4)
-  {
-    logit(LOG_HOUSE, "Warning: Save file less than 4 bytes.");
-  }
-  version = GET_BYTE(buf);
-
-  if ((GET_BYTE(buf) != short_size) || (GET_BYTE(buf) != int_size) ||
-      (GET_BYTE(buf) != long_size))
-  {
-    wizlog(OVERLORD, "Ouch. Bad file sizing for %s", file_name);
-    return 0;
-  }
-  if (size < 5 * int_size + 5 * sizeof(char) + long_size)
-  {
-    logit(LOG_HOUSE, "Warning: Save file is only %d bytes.", size);
-  }
-  if (!dead_house_pool)
-    dead_house_pool = mm_create("HOUSE", sizeof(struct house_control_rec),
-                                offsetof(struct house_control_rec, next), 1);
-  house = (struct house_control_rec *) mm_get(dead_house_pool);
-  house->vnum = GET_INTE(buf);
-  house->built_on = GET_INTE(buf);
-  house->mode = GET_SHORT(buf);
-  house->type = GET_SHORT(buf);
-  if (version > 4)
-    house->construction = GET_BYTE(buf);
-  else
-    house->construction = 0;
-  house->owner = GET_STRING(buf);
-  house->num_of_guests = GET_INTE(buf);
-
-  for (count = 0; count < house->num_of_guests; count++)
-    house->guests[count] = GET_STRING(buf);
-
-  house->num_of_rooms = GET_INTE(buf);
-  for (count = 0; count < house->num_of_rooms; count++)
-  {
-    house->room_vnums[count] = GET_INTE(buf);
-    if (house->room_vnums[count] == -1)
-      continue;
-    if (house->room_vnums[count] < START_HOUSE_VNUM ||
-        house->room_vnums[count] > END_HOUSE_VNUM)
-    {
-      logit(LOG_HOUSE, "Troubles with room number for house %d.",
-            house->vnum);
-      logit(LOG_HOUSE, "TEST, %d.", house->num_of_rooms);
-      logit(LOG_HOUSE, "TEST, %d.", house->room_vnums[count]);
-      house->room_vnums[count] = -1;
-    }
-  }
-  house->owner_guild = GET_INTE(buf);
-  house->last_payment = GET_INTE(buf);
-/*  house->last_payment = 0;                 temp to clear them all */
-  house->size = GET_SHORT(buf);
-  house->upgrades = GET_LONG(buf);
-  house->exit_num = GET_INTE(buf);
-  house->entrance_keyword = GET_STRING(buf);
-  house->mouth_vnum = GET_INTE(buf);
-  house->teleporter1_room = GET_INTE(buf);
-  house->teleporter1_dest = GET_INTE(buf);
-  house->teleporter2_room = GET_INTE(buf);
-  house->teleporter2_dest = GET_INTE(buf);
-  house->inn_vnum = GET_INTE(buf);
-  house->fountain_vnum = GET_INTE(buf);
-  house->heal_vnum = GET_INTE(buf);
-  house->board_vnum = GET_INTE(buf);
-  house->wizard_golems = GET_INTE(buf);
-  house->warrior_golems = GET_INTE(buf);
-  house->cleric_golems = GET_INTE(buf);
-  house->guard_golems = GET_INTE(buf);
-  house->shop_vnum = GET_INTE(buf);
-  house->holy_fount_vnum = GET_INTE(buf);
-  house->unholy_fount_vnum = GET_INTE(buf);
-  if (version > 4)
-    house->secret_entrance = GET_INTE(buf);
-  else
-    house->secret_entrance = 0;
-  if (house->type == HCONTROL_CASTLE)
-  {
-    s = GET_SHORT(buf);         /* number of controlled lands */
-    for (tmp = 0; tmp < MAX(s, MAX_CONTROLLED_LAND); tmp++)
-    {
-      if ((tmp < s) && (tmp < MAX_CONTROLLED_LAND))
-      {
-        house->controlled_land[tmp] = GET_INTE(buf);
-        if ((obj = read_object(HOUSE_FLAG, VIRTUAL))) ;
-        obj_to_room(obj, real_room0(house->controlled_land[tmp]));
-      }
-      else
-      {
-        if (tmp < s)
-        {
-          /* MAX_CONTROLLED_LAND is smaller than saved version, so read and
-           * discard the extra bytes */
-          dummy_int = GET_INTE(buf);
-        }
-        else
-        {
-          /* number has grown, make sure new ones are nulled */
-          house->controlled_land[tmp] = -1;
-        }
-      }
-    }
-  }
-  house->sack_list = 0;
-  house->next = first_house;
-  first_house = house;
-
-  /* fix incomplete houses */
-  if (house->upgrades == -1)
-    house->upgrades = 0;
-  if (house->owner_guild == -1)
-    house->owner_guild = 0;
-
-  /* sets the flags, builds the walls, etc */
-  construct_castle(house);
-
-  return (int) (buf - start);
-}
-
-void restore_houses(void)
-{
-  DIR     *house_dir;
-  struct dirent *house_entry;
-  char     house_dir_name[MAX_STRING_LENGTH];
-
-  sprintf(house_dir_name, "%s/House/HouseRoom", SAVE_DIR);
-  house_dir = opendir(house_dir_name);
-  if (!house_dir)
-  {
-    logit(LOG_HOUSE, "House dir");
-    return;
-  }
-
-  while (house_entry = readdir(house_dir))
-  {
-    if (strstr(house_entry->d_name, "house."))
-      restoreHouse(house_entry->d_name);
-  }
-
-  closedir(house_dir);
-}
+// old guildhalls (deprecated) - Torgal 1/2010
+///* house construction Q */
+//int writeConstructionQ()
+//{
+//  FILE    *f;
+//  char    *buf;
+//  static char buff[SAV_MAXSIZE * 2];
+//  P_house_upgrade current_job;
+//  char     fname[MAX_STRING_LENGTH];
+//  int      count = 0;
+//
+//  buf = buff;
+//  current_job = house_upgrade_list;
+//
+//  while (current_job)
+//  {
+//    count++;
+//    current_job = current_job->next;
+//  }
+//  current_job = house_upgrade_list;
+//
+//  ADD_INT(buf, count);
+//  while (current_job)
+//  {
+//    ADD_INT(buf, current_job->vnum);
+//    ADD_LONG(buf, current_job->time);
+//    ADD_INT(buf, current_job->type);
+//    ADD_INT(buf, current_job->location);
+//    ADD_INT(buf, current_job->guild);
+//    ADD_INT(buf, current_job->exit_dir);
+//    ADD_INT(buf, current_job->door);
+//    ADD_STRING(buf, current_job->door_keyword);
+//    current_job = current_job->next;
+//  }
+//  if ((int) (buf - buff) > SAV_MAXSIZE)
+//  {
+//    logit(LOG_HOUSE, "Could not save contruction Q");
+//    return 0;
+//  }
+//  sprintf(fname, "%s/House/HouseConstructionQ", SAVE_DIR);
+//  if (!(f = fopen(fname, "w")))
+//    return 0;
+//  fwrite(buff, 1, (unsigned) (buf - buff), f);
+//  fclose(f);
+//  return 1;
+//}
+//
+//int loadConstructionQ()
+//{
+//  FILE    *f;
+//  char     buff[SAV_MAXSIZE * 2];
+//  char    *buf = buff;
+//  struct house_upgrade_rec *current_job;
+//  char     fname[MAX_STRING_LENGTH];
+//  int      size, count;
+//
+//  house_upgrade_list = NULL;
+//  current_job = 0;
+//  sprintf(fname, "%s/House/HouseConstructionQ", SAVE_DIR);
+//  if (!(f = fopen(fname, "r")))
+//    return 0;
+//  size = fread(buf, 1, SAV_MAXSIZE, f);
+//  fclose(f);
+//  count = GET_INTE(buf);
+//  for (size = 0; size < count; size++)
+//  {
+//    if (!dead_construction_pool)
+//      dead_construction_pool =
+//        mm_create("CONSTRUCTION", sizeof(struct house_upgrade_rec),
+//                  offsetof(struct house_upgrade_rec, next), 1);
+//    current_job = (struct house_upgrade_rec *) mm_get(dead_construction_pool);
+//    current_job->vnum = GET_INTE(buf);
+//    current_job->time = GET_LONG(buf);
+//    current_job->type = GET_INTE(buf);
+//    current_job->location = GET_INTE(buf);
+//    current_job->guild = GET_INTE(buf);
+//    current_job->exit_dir = GET_INTE(buf);
+//    current_job->door = GET_INTE(buf);
+//    current_job->door_keyword = GET_STRING(buf);
+//    if (current_job->type != HCONTROL_DESC_ROOM)
+//    {
+//      current_job->next = house_upgrade_list;
+//      house_upgrade_list = current_job;
+//    }
+//  };
+//  return 1;
+//}
+//
+//int moveHouse(P_house house, int new_vnum)
+//{
+//  char Gbuf1[256], Gbuf2[256];
+//  struct stat statbuf;
+//  int      tmp_errno;
+//
+//  sprintf(Gbuf1, "%s/House/HouseRoom/house.%d", SAVE_DIR, house->vnum);
+//  sprintf(Gbuf2, "%s/House/HouseRoom/house.%d", SAVE_DIR, new_vnum);
+//    
+//  if (stat(Gbuf1, &statbuf) == 0)
+//  {
+//    if (rename(Gbuf1, Gbuf2) == -1)
+//    {
+//      
+//      tmp_errno = errno;
+//      logit(LOG_HOUSE, "Couldn't rename house!\n");
+//      logit(LOG_HOUSE, "   rename failed, errno = %d\n", tmp_errno);
+//      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error renaming house file %d!",
+//             house->vnum);
+//      return 0;
+//    }
+//  }
+//  else
+//  {
+//    tmp_errno = errno;
+//    logit(LOG_HOUSE, "Problem with house save files directory, couldn't find house in rename!\n");
+//    logit(LOG_HOUSE, "   stat failed, errno = %d\n", tmp_errno);
+//    wizlog(OVERLORD, "&+R&-LPANIC!&N  Error renaming house for %d!",
+//           house->vnum);
+//    return 0;
+//  }
+//
+//  logit(LOG_HOUSE, "House %d moved to %d", house->vnum, new_vnum);  
+//  return 1;
+//}
+//
+///*************************************************************/
+///* fonction to save and restore house */
+//int writeHouse(P_house house)
+//{
+//  FILE    *f;
+//  char    *buf, housefile[MAX_STRING_LENGTH];
+//  char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
+//  int      bak;
+//  static char buff[SAV_MAXSIZE * 2];
+//  struct stat statbuf;
+//  int      count = 0, tmp, count2 = 0;
+//
+//  if ((sizeof(char) != 1) || (int_size != long_size))
+//  {
+//    logit(LOG_HOUSE,
+//          "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
+//    return 0;
+//  }
+//  buf = buff;
+//
+//  ADD_BYTE(buf, (char) SAV_HOUSEVERS);
+//  ADD_BYTE(buf, (char) (short_size));
+//  ADD_BYTE(buf, (char) (int_size));
+//  ADD_BYTE(buf, (char) (long_size));
+//
+//  ADD_INT(buf, house->vnum);
+//  ADD_INT(buf, house->built_on);
+//  ADD_SHORT(buf, house->mode);
+//  ADD_SHORT(buf, house->type);
+//  ADD_BYTE(buf, house->construction);
+//  ADD_STRING(buf, house->owner);
+//
+//  ADD_INT(buf, house->num_of_guests);
+//
+//  for (count = 0; count < house->num_of_guests; count++)
+//    ADD_STRING(buf, house->guests[count]);
+//
+//  ADD_INT(buf, MAX_HOUSE_ROOMS);
+//  for (count = 0; count < MAX_HOUSE_ROOMS; count++)
+//  {
+//    ADD_INT(buf, house->room_vnums[count]);
+//    if (house->room_vnums[count] != -1)
+//      write_guild_room(house->room_vnums[count], house->owner_guild);
+//  }
+//  ADD_INT(buf, house->owner_guild);
+//  ADD_INT(buf, house->last_payment);
+//  ADD_SHORT(buf, house->size);
+//  ADD_LONG(buf, house->upgrades);
+//  ADD_INT(buf, house->exit_num);
+//  ADD_STRING(buf, house->entrance_keyword);
+//  ADD_INT(buf, house->mouth_vnum);
+//  ADD_INT(buf, house->teleporter1_room);
+//  ADD_INT(buf, house->teleporter1_dest);
+//  ADD_INT(buf, house->teleporter2_room);
+//  ADD_INT(buf, house->teleporter2_dest);
+//  ADD_INT(buf, house->inn_vnum);
+//  ADD_INT(buf, house->fountain_vnum);
+//  ADD_INT(buf, house->heal_vnum);
+//  ADD_INT(buf, house->board_vnum);
+//  ADD_INT(buf, house->wizard_golems);
+//  ADD_INT(buf, house->warrior_golems);
+//  ADD_INT(buf, house->cleric_golems);
+//  ADD_INT(buf, house->guard_golems);
+//  ADD_INT(buf, house->shop_vnum);
+//  ADD_INT(buf, house->holy_fount_vnum);
+//  ADD_INT(buf, house->unholy_fount_vnum);
+//  ADD_INT(buf, house->secret_entrance);
+//  if (house->type == HCONTROL_CASTLE)
+//  {
+//    ADD_SHORT(buf, (short) MAX_CONTROLLED_LAND);
+//    for (tmp = 0; tmp < MAX_CONTROLLED_LAND; tmp++)
+//      ADD_INT(buf, house->controlled_land[tmp]);
+//  }
+//  if ((int) (buf - buff) > SAV_MAXSIZE)
+//  {
+//    logit(LOG_HOUSE, "Could not save %d, file too large (%d bytes)",
+//          house->vnum, (int) (buf - buff));
+//    return 0;
+//  }
+//  sprintf(housefile, "house.%d", house->vnum);
+//  sprintf(Gbuf1, "%s/House/HouseRoom/%s", SAVE_DIR, housefile);
+//
+//  strcpy(Gbuf2, Gbuf1);
+//  strcat(Gbuf2, ".bak");
+//
+//  if (stat(Gbuf1, &statbuf) == 0)
+//  {
+//    if (rename(Gbuf1, Gbuf2) == -1)
+//    {
+//      int      tmp_errno;
+//
+//      tmp_errno = errno;
+//      logit(LOG_HOUSE, "Problem with house save files directory!\n");
+//      logit(LOG_HOUSE, "   rename failed, errno = %d\n", tmp_errno);
+//      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error backing up house for %d!",
+//             house->vnum);
+//      return 0;
+//    }
+//    bak = 1;
+//  }
+//  else
+//  {
+//    if (errno != ENOENT)
+//    {
+//      int      tmp_errno;
+//
+//      tmp_errno = errno;
+//      logit(LOG_HOUSE, "Problem with house save files directory!\n");
+//      logit(LOG_HOUSE, "   stat failed, errno = %d\n", tmp_errno);
+//      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error finding house for %d!",
+//             house->vnum);
+//      return 0;
+//    }
+//    bak = 0;
+//  }
+//
+//  f = fopen(Gbuf1, "w");
+//
+//  if (!f)
+//  {
+//    int      tmp_errno;
+//
+//    tmp_errno = errno;
+//    logit(LOG_HOUSE, "Couldn't create house save file!\n");
+//    logit(LOG_HOUSE, "   fopen failed, errno = %d\n", tmp_errno);
+//    wizlog(OVERLORD, "&+R&-LPANIC!&N  Error creating house for %d!",
+//           house->vnum);
+//    bak -= 2;
+//  }
+//  else
+//  {
+//    if (fwrite(buff, 1, (unsigned) (buf - buff), f) != (buf - buff))
+//    {
+//      int      tmp_errno;
+//
+//      tmp_errno = errno;
+//      logit(LOG_HOUSE, "Couldn't write to house save file!\n");
+//      logit(LOG_HOUSE, "   fwrite failed, errno = %d\n", tmp_errno);
+//      wizlog(OVERLORD, "&+R&-LPANIC!&N  Error writing house for %d!",
+//             house->vnum);
+//      fclose(f);
+//      bak -= 2;
+//    }
+//    else
+//      fclose(f);
+//  }
+//
+//  switch (bak)
+//  {
+//  case 1:                      /* save worked, just get rid of the backup */
+//    if (unlink(Gbuf2) == -1)    /* not a critical error  */
+//      logit(LOG_HOUSE, "Couldn't delete backup of house file.\n");
+//
+//  case 0:                      /* save worked, no backup was made to begin with */
+//    break;
+//
+//  case -1:                     /* save FAILED, but we have a backup */
+//    if (rename(Gbuf2, Gbuf1) == -1)
+//    {
+//      int      tmp_errno;
+//
+//      tmp_errno = errno;
+//      logit(LOG_HOUSE, " Unable to restore backup!  Argh!");
+//      logit(LOG_HOUSE, "    rename failed, errno = %d\n", tmp_errno);
+//      logit(LOG_EXIT, "unable to restore backup");
+//			raise(SIGSEGV);
+//    }
+//    else
+//      wizlog(OVERLORD, "        Backup restored.");
+//    /*
+//     * restored or not, the save still failed, so return 0
+//     */
+//    return 0;
+//
+//  case -2:                     /* save FAILED, and we have NO backup! */
+//    logit(LOG_HOUSE, " No restore file was made!");
+//    wizlog(OVERLORD, "        No backup file available");
+//    return 0;
+//  }
+//  return 1;
+//}
+//
+//int restoreHouse(char *file_name)
+//{
+//  FILE    *f;
+//  char     buff[SAV_MAXSIZE];
+//  char    *buf = buff;
+//  int      start, size, count, tmp, s, dummy_int, version;
+//  char     Gbuf1[MAX_STRING_LENGTH];
+//  P_house  house;
+//  P_obj    obj = NULL;
+//
+//  if (!file_name)
+//  {
+//    return 0;
+//  }
+//  sprintf(Gbuf1, "%s/House/HouseRoom/%s", SAVE_DIR, file_name);
+//
+//  f = fopen(Gbuf1, "r");
+//  if (!f)
+//  {
+//    logit(LOG_HOUSE, "House %s savefile does not exist!", file_name);
+//    return 0;
+//  }
+//  size = fread(buf, 1, SAV_MAXSIZE, f);
+//  fclose(f);
+//  if (size < 4)
+//  {
+//    logit(LOG_HOUSE, "Warning: Save file less than 4 bytes.");
+//  }
+//  version = GET_BYTE(buf);
+//
+//  if ((GET_BYTE(buf) != short_size) || (GET_BYTE(buf) != int_size) ||
+//      (GET_BYTE(buf) != long_size))
+//  {
+//    wizlog(OVERLORD, "Ouch. Bad file sizing for %s", file_name);
+//    return 0;
+//  }
+//  if (size < 5 * int_size + 5 * sizeof(char) + long_size)
+//  {
+//    logit(LOG_HOUSE, "Warning: Save file is only %d bytes.", size);
+//  }
+//  if (!dead_house_pool)
+//    dead_house_pool = mm_create("HOUSE", sizeof(struct house_control_rec),
+//                                offsetof(struct house_control_rec, next), 1);
+//  house = (struct house_control_rec *) mm_get(dead_house_pool);
+//  house->vnum = GET_INTE(buf);
+//  house->built_on = GET_INTE(buf);
+//  house->mode = GET_SHORT(buf);
+//  house->type = GET_SHORT(buf);
+//  if (version > 4)
+//    house->construction = GET_BYTE(buf);
+//  else
+//    house->construction = 0;
+//  house->owner = GET_STRING(buf);
+//  house->num_of_guests = GET_INTE(buf);
+//
+//  for (count = 0; count < house->num_of_guests; count++)
+//    house->guests[count] = GET_STRING(buf);
+//
+//  house->num_of_rooms = GET_INTE(buf);
+//  for (count = 0; count < house->num_of_rooms; count++)
+//  {
+//    house->room_vnums[count] = GET_INTE(buf);
+//    if (house->room_vnums[count] == -1)
+//      continue;
+//    if (house->room_vnums[count] < START_HOUSE_VNUM ||
+//        house->room_vnums[count] > END_HOUSE_VNUM)
+//    {
+//      logit(LOG_HOUSE, "Troubles with room number for house %d.",
+//            house->vnum);
+//      logit(LOG_HOUSE, "TEST, %d.", house->num_of_rooms);
+//      logit(LOG_HOUSE, "TEST, %d.", house->room_vnums[count]);
+//      house->room_vnums[count] = -1;
+//    }
+//  }
+//  house->owner_guild = GET_INTE(buf);
+//  house->last_payment = GET_INTE(buf);
+///*  house->last_payment = 0;                 temp to clear them all */
+//  house->size = GET_SHORT(buf);
+//  house->upgrades = GET_LONG(buf);
+//  house->exit_num = GET_INTE(buf);
+//  house->entrance_keyword = GET_STRING(buf);
+//  house->mouth_vnum = GET_INTE(buf);
+//  house->teleporter1_room = GET_INTE(buf);
+//  house->teleporter1_dest = GET_INTE(buf);
+//  house->teleporter2_room = GET_INTE(buf);
+//  house->teleporter2_dest = GET_INTE(buf);
+//  house->inn_vnum = GET_INTE(buf);
+//  house->fountain_vnum = GET_INTE(buf);
+//  house->heal_vnum = GET_INTE(buf);
+//  house->board_vnum = GET_INTE(buf);
+//  house->wizard_golems = GET_INTE(buf);
+//  house->warrior_golems = GET_INTE(buf);
+//  house->cleric_golems = GET_INTE(buf);
+//  house->guard_golems = GET_INTE(buf);
+//  house->shop_vnum = GET_INTE(buf);
+//  house->holy_fount_vnum = GET_INTE(buf);
+//  house->unholy_fount_vnum = GET_INTE(buf);
+//  if (version > 4)
+//    house->secret_entrance = GET_INTE(buf);
+//  else
+//    house->secret_entrance = 0;
+//  if (house->type == HCONTROL_CASTLE)
+//  {
+//    s = GET_SHORT(buf);         /* number of controlled lands */
+//    for (tmp = 0; tmp < MAX(s, MAX_CONTROLLED_LAND); tmp++)
+//    {
+//      if ((tmp < s) && (tmp < MAX_CONTROLLED_LAND))
+//      {
+//        house->controlled_land[tmp] = GET_INTE(buf);
+//        if ((obj = read_object(HOUSE_FLAG, VIRTUAL))) ;
+//        obj_to_room(obj, real_room0(house->controlled_land[tmp]));
+//      }
+//      else
+//      {
+//        if (tmp < s)
+//        {
+//          /* MAX_CONTROLLED_LAND is smaller than saved version, so read and
+//           * discard the extra bytes */
+//          dummy_int = GET_INTE(buf);
+//        }
+//        else
+//        {
+//          /* number has grown, make sure new ones are nulled */
+//          house->controlled_land[tmp] = -1;
+//        }
+//      }
+//    }
+//  }
+//  house->sack_list = 0;
+//  house->next = first_house;
+//  first_house = house;
+//
+//  /* fix incomplete houses */
+//  if (house->upgrades == -1)
+//    house->upgrades = 0;
+//  if (house->owner_guild == -1)
+//    house->owner_guild = 0;
+//
+//  /* sets the flags, builds the walls, etc */
+//  construct_castle(house);
+//
+//  return (int) (buf - start);
+//}
+//
+//void restore_houses(void)
+//{
+//  DIR     *house_dir;
+//  struct dirent *house_entry;
+//  char     house_dir_name[MAX_STRING_LENGTH];
+//
+//  sprintf(house_dir_name, "%s/House/HouseRoom", SAVE_DIR);
+//  house_dir = opendir(house_dir_name);
+//  if (!house_dir)
+//  {
+//    logit(LOG_HOUSE, "House dir");
+//    return;
+//  }
+//
+//  while (house_entry = readdir(house_dir))
+//  {
+//    if (strstr(house_entry->d_name, "house."))
+//      restoreHouse(house_entry->d_name);
+//  }
+//
+//  closedir(house_dir);
+//}
 
 /* Ship registeration Support Funcs */
 

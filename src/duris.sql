@@ -508,19 +508,19 @@ INSERT INTO `mud_info` (name, content) VALUES ('wizmotd', 'Wizmotd');
 -- Table structure for table 'outposts'
 --
 
-DROP TABLE IF EXISTS `outposts`;
-CREATE TABLE `outposts` (
-  `id` int(11) NOT NULL,
-  `owner_id` int(11) NOT NULL default '0',
-  `level` int(11) NOT NULL default '1',
-  `walls` int(11) NOT NULL default '0',
-  `archers` int(11) NOT NULL default '0',
-  `hitpoints` int(11) NOT NULL default '0',
-  `territory` int(11) NOT NULL default '0',
-  `portal_room` int(11) NOT NULL default '0',
-  `portal_dest` int(11) NOT NULL default '0',
-  `resources` int(11) NOT NULL default '0',
-  `applied_resources` int(11) NOT NULL default '100000',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+--DROP TABLE IF EXISTS `outposts`;
+--CREATE TABLE `outposts` (
+--  `id` int(11) NOT NULL,
+--  `owner_id` int(11) NOT NULL default '0',
+--  `level` int(11) NOT NULL default '1',
+--  `walls` int(11) NOT NULL default '0',
+--  `archers` int(11) NOT NULL default '0',
+--  `hitpoints` int(11) NOT NULL default '0',
+--  `territory` int(11) NOT NULL default '0',
+--  `portal_room` int(11) NOT NULL default '0',
+--  `portal_dest` int(11) NOT NULL default '0',
+--  `resources` int(11) NOT NULL default '0',
+--  `applied_resources` int(11) NOT NULL default '100000',
+--  PRIMARY KEY (`id`)
+--) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 

@@ -18,6 +18,8 @@ using namespace std;
 #   include <varargs.h>
 #endif
 
+#include "utility.h"
+
 #include "comm.h"
 #include "db.h"
 #include "events.h"
@@ -66,6 +68,7 @@ extern const char *god_list[];
 extern const char *specdata[][MAX_SPEC];
 uint     debugcount = 0;
 extern P_index mob_index;
+extern const int rev_dir[];
 extern void event_spellcast(P_char, P_char, P_obj, void *);
 
 char     GS_buf1[MAX_STRING_LENGTH];
@@ -73,7 +76,6 @@ char     GS_buf1[MAX_STRING_LENGTH];
 
 int      is_ice(P_char ch, int room);
 int      CheckFor_remember(P_char ch, P_char victim);
-int GET_LVL_FOR_SKILL(P_char ch, int skill);
 
 /*
 * vis_mode: 1 - god sight, sees everything 2 - normal in light, ultra
@@ -1783,7 +1785,7 @@ int move_cost(P_char ch, int dir)
   P_char   mount;
   int      moves, a, b;
 
-  if ((dir < 0) || (dir > (NUMB_EXITS - 1)))
+  if ((dir < 0) || (dir > (NUM_EXITS - 1)))
     return -1;
 
   a = movement_loss[(int) world[ch->in_room].sector_type];
@@ -2892,7 +2894,7 @@ int maproom_of_zone(int zone_num)
   zone = &zone_table[zone_num];
 
   for (i = zone->real_bottom; (i != NOWHERE) && (i <= zone->real_top); i++)
-    for (i2 = 0; i2 < NUMB_EXITS; i2++)
+    for (i2 = 0; i2 < NUM_EXITS; i2++)
       if (world[i].dir_option[i2])
         if (world[world[i].dir_option[i2]->to_room].zone != world[i].zone)
           if (world[i].dir_option[i2]->to_room != NOWHERE &&
@@ -2907,7 +2909,7 @@ int distance_from_shore(int room)
 {
   int      dir, distance;
 
-  for (dir = 0; dir < NUMB_EXITS; dir++)
+  for (dir = 0; dir < NUM_EXITS; dir++)
   {
     for (distance = 0; distance <= 10; distance++)
     {
@@ -2952,7 +2954,7 @@ int dir_from_keyword(char *keyword)
 
   if ((dir >= 10) && (dir <= 13))
     dir -= 4;
-  if (dir >= NUMB_EXITS)
+  if (dir >= NUM_EXITS)
     return -1;
 
   return dir;
@@ -3091,7 +3093,7 @@ int room_has_valid_exit(const int rnum)
     return FALSE;
   }
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
   {
     if (world[rnum].dir_option[i] &&
         !(world[rnum].dir_option[i]->exit_info & EX_CLOSED) &&
@@ -4587,4 +4589,160 @@ bool match_pattern(const char *pat, const char *str)
   } /* endwhile */
   while (*pat == '*') ++pat;
   return !*pat;
+}
+
+void connect_rooms(int v1, int v2, int to_dir, int from_dir)
+{
+  /* create exits from room1<->room2 */
+
+  int      r1, r2, rdir;
+
+  r1 = real_room0(v1);
+  r2 = real_room0(v2);
+
+  if (!r1 || !r2 || to_dir >= NUM_EXITS || from_dir >= NUM_EXITS )
+  {
+    logit(LOG_DEBUG, "Error: connect_rooms(%d, %d, %d, %d)", v1, v2, to_dir, from_dir);
+    return;
+  }
+
+  if (to_dir >= 0 && !world[r1].dir_option[to_dir])
+  {
+    CREATE(world[r1].dir_option[to_dir], room_direction_data, 1, MEM_TAG_DIRDATA);
+    world[r1].dir_option[to_dir]->to_room = r2;
+    world[r1].dir_option[to_dir]->exit_info = 0;        
+  }
+
+  if (from_dir >= 0 && !world[r2].dir_option[from_dir])
+  {
+    CREATE(world[r2].dir_option[from_dir], room_direction_data, 1, MEM_TAG_DIRDATA);
+    world[r2].dir_option[from_dir]->to_room = r1;
+    world[r2].dir_option[from_dir]->exit_info = 0;    
+  }
+}
+
+void connect_rooms(int v1, int v2, int dir)
+{                               
+  connect_rooms(v1, v2, dir, rev_dir[dir]);
+}
+
+void disconnect_exit(int v1, int dir)
+{
+  int r1 = real_room0(v1);
+
+  if( !r1 || dir < 0 || dir >= NUM_EXITS || !VIRTUAL_EXIT(r1, dir) )
+  return;
+
+  FREE( VIRTUAL_EXIT(r1, dir) );
+  VIRTUAL_EXIT(r1, dir) = NULL;  
+}
+
+void disconnect_rooms(int v1, int v2)
+{
+  int r1 = real_room0(v1);
+  int r2 = real_room0(v2);
+
+  if( !r1 || !r2 )
+    return;
+
+  int d1 = -1, d2 = -1;
+
+  for( int i = 0; i < NUM_EXITS; i++ )
+  {
+    if( VIRTUAL_EXIT(r1, i) && VIRTUAL_EXIT(r1, i)->to_room == r2 )
+      d1 = i;
+
+    if( VIRTUAL_EXIT(r2, i) && VIRTUAL_EXIT(r2, i)->to_room == r1 )
+      d2 = i;  
+  }
+
+  if( d1 >= 0 && d1 < NUM_EXITS )
+  {
+    FREE( VIRTUAL_EXIT(r1, d1) );
+    VIRTUAL_EXIT(r1, d1) = NULL;
+  }
+
+  if( d2 >= 0 && d2 < NUM_EXITS )
+  {
+    FREE( VIRTUAL_EXIT(r2, d2) );
+    VIRTUAL_EXIT(r2, d2) = NULL;    
+  }
+}
+
+P_char get_char_online(char *name)
+{
+  P_char   i;
+
+  for (i = character_list; i; i = i->next)
+    if (isname(name, GET_NAME(i)))
+      return i;
+  return 0;
+}
+
+/* returns the CMD_ corresponding to the given direction */
+int cmd_from_dir(int dir)
+{
+  switch(dir)
+  {
+    case NORTH:
+      return CMD_NORTH;
+    case EAST:
+      return CMD_EAST;
+    case SOUTH:
+      return CMD_SOUTH;
+    case WEST:
+      return CMD_WEST;
+    case UP:
+      return CMD_UP;
+    case DOWN:
+      return CMD_DOWN;
+    case NORTHWEST:
+      return CMD_NORTHWEST;
+    case SOUTHWEST:
+      return CMD_SOUTHWEST;
+    case NORTHEAST:
+      return CMD_NORTHEAST;
+    case SOUTHEAST:
+      return CMD_SOUTHEAST;
+  }
+  return CMD_NONE;
+}
+
+int direction_tag(P_char ch)
+{
+  for (struct affected_type *afp = ch->affected; afp; afp = afp->next)
+  {
+    if (afp->type == TAG_DIRECTION)
+    {
+      return afp->modifier;
+    }
+  }
+  return -1;  
+}
+
+const char *condition_str(P_char ch)
+{
+  int percent;
+  
+  if (GET_MAX_HIT(ch) > 0 && GET_HIT(ch) > 0)
+    percent = (100 * GET_HIT(ch)) / GET_MAX_HIT(ch);
+  else
+    percent = -1;
+  
+  if (percent >= 100)
+    return "&+gexcellent";
+  else if (percent >= 90)
+    return "&+Yfew scratches";
+  else if (percent >= 75)
+    return "&+Ysmall wounds";
+  else if (percent >= 50)
+    return "&+Mfew wounds";
+  else if (percent >= 30)
+    return "&+mnasty wounds";
+  else if (percent >= 15)
+    return "&+Rpretty hurt";
+  else if (percent >= 0)
+    return "&+rawful";
+  else
+    return "&+rbleeding, close to death";
 }

@@ -66,7 +66,7 @@ bool has_elapsed(const char *name, int seconds)
 
 void timers_activity()
 {
-  prestige_update();
+//  prestige_update();
   zone_trophy_update();
   update_epic_zone_mods();
 }

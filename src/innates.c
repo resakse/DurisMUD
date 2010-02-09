@@ -4103,7 +4103,7 @@ void do_fade(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (IS_SET(world[ch->in_room].room_flags, NORECALL) ||
+  if (IS_SET(world[ch->in_room].room_flags, NO_RECALL) ||
       (world[ch->in_room].sector_type == SECT_OCEAN))
   {
     send_to_char("You cannot fade from this room.\n", ch);

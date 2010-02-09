@@ -2135,6 +2135,17 @@ int affect_from_obj(P_obj obj, sh_int spell)
 //=== AFFECTS - FOR ADDING TIMER AFFECT
 //=================================================================================
 
+void add_tag_to_char(P_char ch, int tag, int modifier, int flags)
+{
+  struct affected_type af;
+  memset(&af, 0, sizeof(af));
+  af.type = tag;
+  af.flags = flags;
+  af.modifier = modifier;
+  af.duration = -1;
+  affect_to_char(ch, &af);  
+}
+
 //---------------------------------------------------------------------------------
 bool affect_timer(P_char ch, int time, int spell)
 {

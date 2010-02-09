@@ -221,7 +221,7 @@ int leave_by_exit(P_char ch, int exitnumb)
    */
 
   if (!SanityCheck(ch, "leave_by_exit") ||
-      (exitnumb < 0) || (exitnumb > (NUMB_EXITS - 1)))
+      (exitnumb < 0) || (exitnumb > (NUM_EXITS - 1)))
     return FALSE;
 
   room_to = world[ch->in_room].dir_option[exitnumb]->to_room;
@@ -463,7 +463,7 @@ int leave_by_exit(P_char ch, int exitnumb)
      * this list is exit1, second is exit2, always.
      */
 
-    for (j = 0; j < NUMB_EXITS; j++)
+    for (j = 0; j < NUM_EXITS; j++)
       if (world[ch->in_room].dir_option[(int) j])       /*
                                                          * * it's an exit
                                                          */
@@ -957,7 +957,7 @@ char    *enter_message(P_char ch, P_char people, int exitnumb, char *amsg,
   else
   {
     if((exitnumb >= 0) &&
-      (exitnumb < NUMB_EXITS))
+      (exitnumb < NUM_EXITS))
     {
       rev = rev_dir[exitnumb];
 
@@ -1229,7 +1229,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
   if(ch->in_room == NOWHERE)
     return 0;
 
-  if ((exitnumb < 0) || (exitnumb >= NUMB_EXITS))
+  if ((exitnumb < 0) || (exitnumb >= NUM_EXITS))
     return FALSE;
 
   if (!EXIT(ch, exitnumb) ||
@@ -1754,15 +1754,16 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
   {
     REMOVE_BIT(ch->specials.affected_by3, AFF3_COVER);
   }
-  
-  if(!IS_SET(world[ch->in_room].room_flags, GUILD_ROOM) &&
-     IS_SET(ch->specials.affected_by4, AFF4_SACKING))
-  {
-    /* they are not in a guild room, but are set as sacking */
-    REMOVE_BIT(ch->specials.affected_by4, AFF4_SACKING);
-    send_to_char("You stop your sacking.\n", ch);
-    //clear_sacks(ch);
-  }
+
+// old guildhalls (deprecated)
+//  if(!IS_SET(world[ch->in_room].room_flags, GUILD_ROOM) &&
+//     IS_SET(ch->specials.affected_by4, AFF4_SACKING))
+//  {
+//    /* they are not in a guild room, but are set as sacking */
+//    REMOVE_BIT(ch->specials.affected_by4, AFF4_SACKING);
+//    send_to_char("You stop your sacking.\n", ch);
+//    //clear_sacks(ch);
+//  }
   if (ch->in_room == NOWHERE)
   {
     return 0;
@@ -1931,7 +1932,7 @@ int do_simple_move(P_char ch, int exitnumb, unsigned int flags)
   if (ch->in_room == NOWHERE)
     return 0;
 
-  if ((exitnumb < 0) || (exitnumb >= NUMB_EXITS))
+  if ((exitnumb < 0) || (exitnumb >= NUM_EXITS))
     return FALSE;
 
   if (special(ch, exitnumb_to_cmd(exitnumb), 0))        /* Check for special routines */
@@ -2102,7 +2103,7 @@ int find_door(P_char ch, char *type, char *dir)
   else
   {
     /* try to locate the keyword */
-    for (door = 0; door <= (NUMB_EXITS - 1); door++)
+    for (door = 0; door <= (NUM_EXITS - 1); door++)
       if (EXIT(ch, door) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_SECRET) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_BLOCKED))
@@ -2829,7 +2830,7 @@ void do_enter(P_char ch, char *argument, int cmd)
                                  * an argument was supplied, search for
                                  * door keyword
                                  */
-    for (door = 0; door <= (NUMB_EXITS - 1); door++)
+    for (door = 0; door <= (NUM_EXITS - 1); door++)
       if (EXIT(ch, door) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_SECRET) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_BLOCKED))
@@ -2837,14 +2838,15 @@ void do_enter(P_char ch, char *argument, int cmd)
           if (!str_cmp(EXIT(ch, door)->keyword, Gbuf1) && dirs[door])
           {
             strcpy(Gbuf1, dirs[door]);
-            if (IS_SET(world[ch->in_room].room_flags, ROOM_ATRIUM))
-            {
-              if (!House_can_enter(ch, world[ch->in_room].number, door))
-              {
-                send_to_char("You cannot enter this private house!\n", ch);
-                return;
-              }
-            }
+            // old guildhalls (deprecated)
+//            if (IS_SET(world[ch->in_room].room_flags, ROOM_ATRIUM))
+//            {
+//              if (!House_can_enter(ch, world[ch->in_room].number, door))
+//              {
+//                send_to_char("You cannot enter this private house!\n", ch);
+//                return;
+//              }
+//            }
             command_interpreter(ch, Gbuf1);
             return;
           }
@@ -2858,7 +2860,7 @@ void do_enter(P_char ch, char *argument, int cmd)
     /*
      * try to locate an entrance
      */
-    for (door = 0; door <= (NUMB_EXITS - 1); door++)
+    for (door = 0; door <= (NUM_EXITS - 1); door++)
       if (EXIT(ch, door) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_SECRET) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_BLOCKED))
@@ -2867,14 +2869,15 @@ void do_enter(P_char ch, char *argument, int cmd)
               IS_SET(world[EXIT(ch, door)->to_room].room_flags,
                      INDOORS) && dirs[door])
           {
-            if (IS_SET(world[ch->in_room].room_flags, ROOM_ATRIUM))
-            {
-              if (!House_can_enter(ch, world[ch->in_room].number, -1))
-              {
-                send_to_char("You cannot enter this private house!\n", ch);
-                return;
-              }
-            }
+            // old guildhalls (deprecated
+//            if (IS_SET(world[ch->in_room].room_flags, ROOM_ATRIUM))
+//            {
+//              if (!House_can_enter(ch, world[ch->in_room].number, -1))
+//              {
+//                send_to_char("You cannot enter this private house!\n", ch);
+//                return;
+//              }
+//            }
             strcpy(Gbuf1, dirs[door]);
             command_interpreter(ch, Gbuf1);
             return;
@@ -2900,7 +2903,7 @@ void do_leave(P_char ch, char *argument, int cmd)
     send_to_char("You are outside.. where do you want to go?\n", ch);
   else
   {
-    for (door = 0; door <= (NUMB_EXITS - 1); door++)
+    for (door = 0; door <= (NUM_EXITS - 1); door++)
       if (EXIT(ch, door) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_SECRET) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_BLOCKED))

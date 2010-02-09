@@ -1189,7 +1189,7 @@ void cast_prismatic_cube(int level, P_char ch, char *arg, int type,
      !(room = ch->in_room))
         return;
 
-  for (dir = 0; dir < NUMB_EXITS; dir++)
+  for (dir = 0; dir < NUM_EXITS; dir++)
   {
     if (!exit_wallable(room, dir, NULL))
     {
@@ -1240,7 +1240,7 @@ void event_earthen_tomb(P_char ch, P_char victim, P_obj obj, void *data)
 
   available_exits = 0;
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
   {
     if (exit_wallable(room, i, NULL) && i != UP && i != DOWN)
     {
@@ -1260,7 +1260,7 @@ void event_earthen_tomb(P_char ch, P_char victim, P_obj obj, void *data)
 
   picked = number(0, available_exits - 1);
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
   {
     if (exit_wallable(room, i, NULL) && i != UP && i != DOWN)
     {
@@ -2128,8 +2128,7 @@ void cast_grow(int level, P_char ch, char *arg, int type, P_char tar_ch,
 
   }
   
-  if(IS_SET(world[ch->in_room].room_flags, ROOM_HOUSE) ||
-     IS_SET(world[ch->in_room].room_flags, GUILD_ROOM))
+  if(IS_SET(world[ch->in_room].room_flags, GUILD_ROOM))
   {
     send_to_char("This terrain is not fit for a forest.\n", ch);
     return;

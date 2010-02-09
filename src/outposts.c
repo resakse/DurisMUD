@@ -1,3 +1,9 @@
+//
+// Outposts and buildings are not attached to the mud, but is here in case someone wants to clean up and finish the code,
+// which was started by Torgal in 2008 and then continued by Venthix in 2009.
+// - Torgal 1/29/2010
+//
+
 /* outposts.c
    - Property of Duris
      Mar 09
@@ -36,7 +42,7 @@ extern P_obj object_list;
 extern const char *apply_names[];
 extern BuildingType building_types[];
 extern const char *dirs[];
-extern const int rev_dir[NUMB_EXITS];
+extern const int rev_dir[NUM_EXITS];
 extern bool create_walls(int room, int exit, P_char ch, int level, int type,
                          int power, int decay, char *short_desc, char *desc,
                          ulong flags);
@@ -477,7 +483,7 @@ int outpost_generate_walls(Building* building, int type, int gate)
   walllocal[UP] = 0;
   walllocal[DOWN] = 0;
 
-  for (x = 0; x < NUMB_EXITS; x++)
+  for (x = 0; x < NUM_EXITS; x++)
   {
     if (x == gate)
     {

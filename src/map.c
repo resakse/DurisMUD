@@ -27,6 +27,7 @@ using namespace std;
 #include "map.h"
 #include "tradeskill.h"
 #include "ships/ships.h"
+#include "guildhall.h"
 
 struct continent
 {
@@ -34,13 +35,20 @@ struct continent
   const char name[64];
   int seed_room;
 } continents[] = {
-/*
-  {CONT_GC, "&+WGood Continent", 223531},
-  {CONT_EC, "&+LEvil Continent", 268760},
-  {CONT_EM, "&+GEvermeet", 222250},
-  {CONT_IC, "&+WIce &+CCrag", 226364},
-  {CONT_KK, "&+gKhomani &+LKhan", 248510},
-*/
+  {CONT_GC, "&+WGood Continent", 546926},
+  {CONT_EC, "&+LEvil Continent", 607066},
+  {CONT_IC, "&+WIce &+CCrag", 521504},
+  {CONT_KK, "&+gKhomani-Khan", 608451},
+  {CONT_UC, "Undead Continent", 567408},
+  {CONT_JADE, "&+GJade &+gEmpire", 644892},
+  {CONT_DRAGONS, "&+cIsland &+yof &+cDragons", 643968},
+  {CONT_CEOTHIA, "&+bCeothia", 628685},
+  {CONT_BOYARD, "&+rFort &+RBoyard", 562323},
+  {CONT_VENAN, "&+YVenan'Trut", 545016},
+  {CONT_SHADOW, "&+LShadow Island", 513382},
+  {CONT_SCORCHED, "&+rSc&+Ro&+Yrc&+Rh&+red &+rIsland", 576166},
+  {CONT_TEZCAT, "&+rT&+Rez&+rca&+Rtl&+rip&+Ro&+rca", 575445},
+  {CONT_MOONSHAE, "&+YMoonshae &+GIsland", 556818},
   {0, 0, 0}
 };
 
@@ -93,6 +101,11 @@ void     add_quest_data(char *map);
 #define CONTAINS_BUILDING    18
 #define CONTAINS_GROUP       19
 #define CONTAINS_WITCH       20
+#define CONTAINS_GUILDHALL   21
+
+#define HIDDEN_BY_FOREST(from_room,to_room) ( world[to_room].sector_type == SECT_FOREST && world[from_room].sector_type != SECT_FOREST )
+
+#define VNUM_WITCH 15
 
 const char *sector_symbol[NUM_SECT_TYPES] = {
   "^",                          /* * larger towns */
@@ -137,44 +150,6 @@ const char *sector_symbol[NUM_SECT_TYPES] = {
 };
 
 // whee..  'typedef char bool'?  BAH!
-
-mapSymbolInfo color_symbol_kingdom[NUM_SECT_TYPES] = {
-  {"=wl", true},
-  {"=rl", true},
-  {"=rg", true},
-  {"=rl", true},
-  {"=ry", true},
-  {"=ry", true},
-  {"=cl", true},
-  {"=bB", true},
-  {"+w", false},
-  {"+w", false},
-  {"+w", false},
-  {"=rR", true},
-  {"=bB", true},
-  {"=rL", true},
-  {"=rm", true},
-  {"=bB", true},
-  {"=bB", true},
-  {"+w", false},
-  {"+w", false},
-  {"+L", false},
-  {"+w", false},
-  {"+W", false},
-  {"=RW", true},
-  {"=rY", true},
-  {"=rY", true},
-  {"=rL", true},
-  {"+L", false},
-  {"+LR", true},
-  {"+M", false},
-  {"=wW", true},
-  {"+M", false},
-  {"=wW", true},
-  {"=wL", true},
-  {"+r", false},
-  {"=wl", true}
-};
 
 mapSymbolInfo color_symbol[NUM_SECT_TYPES] = {
   {"=wl", true},
@@ -303,7 +278,6 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
     return 0;
   }
   
-  /*  room = real_room0(where); */
   if(!room)
   {
     return 0;
@@ -319,6 +293,8 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
     return 0;
   }
 
+  int from_room = ch->in_room;
+  
   if(IS_SET(world[room].room_flags, MAGIC_DARK) &&
     !IS_SET(world[room].room_flags, MAGIC_LIGHT))
   {
@@ -353,7 +329,7 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
               val = MIN(val, CONTAINS_EVIL_SHIP);
         }
       }
-      if (obj->type == ITEM_CORPSE)
+      else if (obj->type == ITEM_CORPSE)
       {
         if ((!str_cmp(ch->player.name, obj->action_description) ||
             IS_TRUSTED(ch) ||
@@ -391,12 +367,16 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
           val = MIN(val, CONTAINS_OLD_BLOOD);
         }
       }
-       else if (obj->type == ITEM_TELEPORT &&
-              obj_index[obj->R_num].virtual_number >= 99800 &&
-              obj_index[obj->R_num].virtual_number <= 99899)
-       {
+      else if (obj->type == ITEM_TELEPORT &&
+            obj_index[obj->R_num].virtual_number >= 99800 &&
+            obj_index[obj->R_num].virtual_number <= 99899)
+      {
         val = MIN(val, CONTAINS_PORTAL);
-       }
+      }
+      else if(obj_index[obj->R_num].virtual_number == GH_DOOR_VNUM)
+      {
+        val = MIN(val, CONTAINS_GUILDHALL);
+      }
     }
   }
   
@@ -407,17 +387,16 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
       who_next = who->next_in_room;
 
       if(who == ch)
-      {
         continue;
-      }
       
+      if(IS_TRUSTED(who))
+        continue;
+
       if(IS_PC_PET(ch))
         continue;
       
       if(!CAN_SEE_Z_CORD(ch, who))
-      {
         continue;
-      }
       
       if(affected_by_spell(who, TAG_BUILDING))
       {
@@ -427,16 +406,14 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
       
       zw = who->specials.z_cord;
       z = ch->specials.z_cord;
-
-	  if(IS_TRUSTED(who))
-		continue;
 	  
-      if(GET_ALT_SIZE(who) <= SIZE_MEDIUM && 
-        ((IS_AFFECTED3(who, AFF3_PASS_WITHOUT_TRACE) && 
-        world[who->in_room].sector_type == SECT_FOREST) ||
-        affected_by_spell(who, SKILL_EXPEDITIOUS_RETREAT)))
+      if(GET_ALT_SIZE(who) <= SIZE_MEDIUM)
       {
-        continue;
+        if(IS_AFFECTED3(who, AFF3_PASS_WITHOUT_TRACE) && SECTOR_TYPE(who->in_room) == SECT_FOREST)
+          continue;
+        
+        if(affected_by_spell(who, SKILL_EXPEDITIOUS_RETREAT))
+          continue;
       }
       
       if(GET_SPEC(who, CLASS_ROGUE, SPEC_THIEF) &&
@@ -446,81 +423,92 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
         continue;
       }
       
-      if(IS_NPC(who) &&
-         GET_VNUM(who) == 15)
+      if(IS_NPC(who) && GET_VNUM(who) == VNUM_WITCH)
       {
         val = CONTAINS_WITCH;
-        break;
       }
       
       /* if room contains PC, show PC regardless of order - ditto
          for dragons, but show PCs before dragons (note that val is
          initialized to 0) */
       
-      if(IS_DRAGON(who) ||
-         IS_DEMON(who) ||
-         GET_RACE(who) == RACE_DEVIL)
+      if(IS_DRAGON(who) || IS_DEMON(who) || IS_DEVIL(who))
       {
         val = CONTAINS_DRAGON;
       }
 
-      if(IS_PC(who) &&
-        !IS_DISGUISE_PC(who) &&
-        !IS_TRUSTED(who) &&
-        !IS_DISGUISE_NPC(who))
+      if(IS_DISGUISE_PC(who) || IS_DISGUISE_NPC(who))
       {
-        if(grouped(ch, who) && // Group at highest priority.
-          distance < 8)
+        val = CONTAINS_MOB;
+        break;        
+      }
+
+      if(IS_PC(who) && !IS_DISGUISE_PC(who) && !IS_DISGUISE_NPC(who))
+      {
+        if(distance < 8 && grouped(ch, who))
         {
           val = CONTAINS_GROUP;
           break;
         }
         
-        if(distance <= 4)
+        if( distance <= 4 )
         {
-          if(!number(0, 1)) // Randomizing evil and good priority.
+          // randomize priority of good/evil
+          if(!number(0,1))
           {
-            if(IS_GOOD(who)) // See good align first.
+            if( IS_GOOD(who) && IS_AFFECTED2(ch, AFF2_DETECT_GOOD) )
+            {
               val = CONTAINS_GOOD_PC;
-            else if(IS_EVIL(who))
+            }
+            else if( IS_EVIL(who) && IS_AFFECTED2(ch, AFF2_DETECT_EVIL) )
+            {
               val = CONTAINS_EVIL_PC;
+            }
+            else
+            {
+              val = CONTAINS_PC;
+            }
           }
           else
           {
-            if(IS_EVIL(who)) // See evil align first.
+            if( IS_EVIL(who) && IS_AFFECTED2(ch, AFF2_DETECT_EVIL) )
+            {
               val = CONTAINS_EVIL_PC;
-            else if(IS_GOOD(who))
+            }
+            else if( IS_GOOD(who) && IS_AFFECTED2(ch, AFF2_DETECT_GOOD) )
+            {
               val = CONTAINS_GOOD_PC;
+            }
+            else
+            {
+              val = CONTAINS_PC;
+            }
           }
         }
         else
+        {
           val = CONTAINS_PC;
-        // if(get_linking_char(who, LNK_RIDING) &&
-          // IS_NPC(get_linking_char(who, LNK_RIDING)))
-        // {
-          // val = MIN(val, CONTAINS_MOB);
-        // }
+        }
 
         break;
       }
       
-      if(IS_NPC(who) &&
-        (GET_SIZE(who) >= SIZE_SMALL))
-          val = CONTAINS_MOB;
-      
-      if(IS_DISGUISE_PC(who) ||
-         IS_DISGUISE_NPC(who))
+      if(IS_NPC(who) && GET_SIZE(who) >= SIZE_SMALL)
           val = CONTAINS_MOB;
       
     }
   }
+  
+  if(HIDDEN_BY_FOREST(from_room, room))
+    return 0;
+  
   if(val)
     return val;
 }
 
-void display_map_room(P_char ch, int room, int n, int show_map_regardless)
+void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
 {
-  int      x, y, where, what, prev = -1, temp;
+  int      x, y, where, what, from_what, prev = -1, temp;
   int      where_rnum, whats_in, distance;
   bool     hadbg = false, map_tile;
   char     buf[MAX_STRING_LENGTH];
@@ -531,12 +519,14 @@ void display_map_room(P_char ch, int room, int n, int show_map_regardless)
   {
     return;
   }
-
+  
   if(n > 500)
   {
     send_to_char("lines too wide, can't show map safely\n", ch);
     return;
   }
+
+  from_what = SECTOR_TYPE(from_room);
 
   if(ch &&
     ch->desc &&
@@ -573,12 +563,12 @@ void display_map_room(P_char ch, int room, int n, int show_map_regardless)
 
     for (x = -n; x <= n; x++)
     {
-      where_rnum = calculate_relative_room(room, x, y);
+      where_rnum = calculate_relative_room(from_room, x, y);
       distance = (int)sqrt(x * x + y * y);
 
-      if(!where_rnum && IS_UD_MAP(room))
+      if(!where_rnum && IS_UD_MAP(from_room))
       {
-        what = SECT_EARTH_PLANE;              /* ocean */
+        what = SECT_EARTH_PLANE;
       }
       else if(!where_rnum )
       {
@@ -586,7 +576,7 @@ void display_map_room(P_char ch, int room, int n, int show_map_regardless)
       }
       else
       {
-        what = world[where_rnum].sector_type;
+        what = SECTOR_TYPE(where_rnum);
       }
       
       what = BOUNDED(0, (int) what, (NUM_SECT_TYPES-1));
@@ -597,6 +587,8 @@ void display_map_room(P_char ch, int room, int n, int show_map_regardless)
         strcat(buf, "&n");
       }
       
+      whats_in = whats_in_maproom(ch, where_rnum, distance, show_map_regardless);
+      
       if (horizontal_factor * y * y + vertical_factor * x * x > n * n * 0.6)
       {
         strcat(buf, " ");
@@ -605,78 +597,59 @@ void display_map_room(P_char ch, int room, int n, int show_map_regardless)
       {                         /* you */
         strcat(buf, "&+W@&n");
       }
-      else if (((whats_in =
-              whats_in_maproom(ch, where_rnum, distance,
-                show_map_regardless)) == CONTAINS_MAGIC_DARK))
+      else if (whats_in == CONTAINS_MAGIC_DARK)
       {
         strcat(buf, "&+LD&n");
       }
-      else if (((whats_in =
-              whats_in_maproom(ch, where_rnum, distance,
-                show_map_regardless)) == CONTAINS_MAGIC_LIGHT))
+      else if (whats_in == CONTAINS_MAGIC_LIGHT)
       {
         strcat(buf, "&+WL&n");
       }
-      else if (((whats_in =
-              whats_in_maproom(ch, where_rnum, distance,
-                show_map_regardless)) == CONTAINS_GOOD_SHIP))
+      else if (whats_in == CONTAINS_GOOD_SHIP)
       {
         strcat(buf, "&+YS&n");
       }
-      else if (((whats_in =
-              whats_in_maproom(ch, where_rnum, distance,
-                show_map_regardless)) == CONTAINS_EVIL_SHIP))
+      else if (whats_in == CONTAINS_EVIL_SHIP)
       {
         strcat(buf, "&+RS&n");
       }
-      else if (((whats_in =
-              whats_in_maproom(ch, where_rnum, distance,
-                show_map_regardless)) == CONTAINS_SHIP))
+      else if (whats_in == CONTAINS_SHIP)
       {
         strcat(buf, "&+WS&n");
       }
-      else if (((whats_in =
-              whats_in_maproom(ch, where_rnum, distance,
-                show_map_regardless)) == CONTAINS_FERRY))
+      else if (whats_in == CONTAINS_FERRY)
       {
         strcat(buf, "&+WF&n");
       }
-      else if ((whats_in == CONTAINS_DRAGON))
+      else if (whats_in == CONTAINS_DRAGON)
       {
         strcat(buf, "&=LRD&n");
       }
-      else if ((whats_in == CONTAINS_WITCH))
+      else if (whats_in == CONTAINS_WITCH)
       {
         strcat(buf, "&=LWW&n");
       }
-      else if ((whats_in == CONTAINS_BUILDING))
+      else if (whats_in == CONTAINS_BUILDING)
       {
         strcat(buf, "&+C#&n");
       }
-      else if(whats_in == CONTAINS_MOB &&
-            (what != SECT_FOREST ||
-            world[room].sector_type == SECT_FOREST))
+      else if(whats_in == CONTAINS_GUILDHALL)
+      {
+        strcat(buf, "&+CG&n");
+      }
+      else if(whats_in == CONTAINS_MOB)
       {
         strcat(buf, "&=LBM&n");
       }
-      else if ( whats_in == CONTAINS_TRACK &&
-          ((what != SECT_FOREST && world[room].sector_type != SECT_FOREST) ||
-           (what == SECT_FOREST && world[room].sector_type == SECT_FOREST) ||
-           IS_TRUSTED(ch)) )
+      else if (whats_in == CONTAINS_TRACK && IS_TRUSTED(ch))
       {
         strcat(buf, "&+Y.");
       }
-      else if ( whats_in == CONTAINS_OLD_BLOOD &&
-          ((what != SECT_FOREST && world[room].sector_type != SECT_FOREST) ||
-           (what == SECT_FOREST && world[room].sector_type == SECT_FOREST) ||
-           IS_TRUSTED(ch)) )
+      else if (whats_in == CONTAINS_OLD_BLOOD && IS_TRUSTED(ch))
       {
         strcat(buf, "&+r.");
       }
-      else if ( whats_in == CONTAINS_BLOOD &&
-          ((what != SECT_FOREST && world[room].sector_type != SECT_FOREST) ||
-           (what == SECT_FOREST && world[room].sector_type == SECT_FOREST) ||
-           IS_TRUSTED(ch)) )
+      else if (whats_in == CONTAINS_BLOOD && IS_TRUSTED(ch))
       {
         strcat(buf, "&+R.");
       }
@@ -684,33 +657,23 @@ void display_map_room(P_char ch, int room, int n, int show_map_regardless)
       {
         strcat(buf, "&+MO");
       }
-      else if((whats_in == CONTAINS_PC ||
-              whats_in == CONTAINS_GOOD_PC ||
-              whats_in == CONTAINS_EVIL_PC ||
-              whats_in == CONTAINS_GROUP) && 
-              (what != SECT_FOREST || 
-              world[room].sector_type == SECT_FOREST))
+      else if(whats_in == CONTAINS_GROUP)
       {
-        if(whats_in == CONTAINS_GROUP)
-        {
-          strcat(buf, "&=LGP&n");
-        }
-        else if(IS_AFFECTED2(ch, AFF2_DETECT_GOOD) &&
-                whats_in == CONTAINS_GOOD_PC)
-        {
-          strcat(buf, "&=LYP&n");
-        }
-        else if(IS_AFFECTED2(ch, AFF2_DETECT_EVIL) &&
-                whats_in == CONTAINS_EVIL_PC)
-        {
-          strcat(buf, "&=LRP&n");
-        }
-        else
-        {
-          strcat(buf, "&=LWP&n");
-        }
+        strcat(buf, "&=LGP&n");
       }
-      else if ((whats_in == CONTAINS_CORPSE))
+      else if(whats_in == CONTAINS_GOOD_PC)
+      {
+        strcat(buf, "&=LYP&n");
+      }
+      else if(whats_in == CONTAINS_EVIL_PC)
+      {
+        strcat(buf, "&=LRP&n");
+      }
+      else if(whats_in == CONTAINS_PC)
+      {
+        strcat(buf, "&=LWP&n");
+      }
+      else if (whats_in == CONTAINS_CORPSE)
       {
         strcat(buf, "&+rC");
       } 
@@ -718,8 +681,7 @@ void display_map_room(P_char ch, int room, int n, int show_map_regardless)
       {
         strcat(buf, "&+Ym");
       }
-      else if (ch->specials.z_cord < 0 && what != 12 &&
-          what != 7 && what != 8)
+      else if (ch->specials.z_cord < 0 && what != SECT_OCEAN && what != SECT_WATER_NOSWIM && what != SECT_NO_GROUND)
       {                         /* underwater */
         strcat(buf, "&+L ");
       }
@@ -994,9 +956,9 @@ bool is_in_line_of_sight_dir(P_char ch, P_char target, int current_room)
 
     start = where;
 
-    if (world[real_room0(start)].sector_type == SECT_HILLS ||
-        world[real_room0(start)].sector_type == SECT_FOREST ||
-        world[real_room0(start)].sector_type == SECT_MOUNTAIN)
+    if (SECTOR_TYPE(real_room0(start)) == SECT_HILLS ||
+        SECTOR_TYPE(real_room0(start)) == SECT_FOREST ||
+        SECTOR_TYPE(real_room0(start)) == SECT_MOUNTAIN)
       return FALSE;
 
     if (start == current_room)
@@ -1016,7 +978,7 @@ void assign_continents()
 
   for( int i = 0; continents[i].id; i++ )
   {
-    fprintf(stderr, "-- %s ", strip_ansi(continents[i].name).c_str());
+    fprintf(stderr, " - %s ", strip_ansi(continents[i].name).c_str());
     set_continent(real_room0(continents[i].seed_room), continents[i].id);    
   }
 }
@@ -1025,38 +987,40 @@ bool set_continent(int start_room, int continent)
 {       
   if( !start_room )
     return FALSE;
-
-        list<int> rooms_left;
-        
-        rooms_left.push_back(start_room);
-        
+  
+  list<int> rooms_left;
+  
+  rooms_left.push_back(start_room);
+  
   int room = -1;
   int count = 0;
-        while( !rooms_left.empty() ) 
+  while( !rooms_left.empty() ) 
   {
     room = rooms_left.front();
     rooms_left.pop_front();
-                
+    
     world[room].continent = continent;
     count++;
-        
-                for( int dir = 0; dir < NUMB_EXITS; dir++ ) 
+    
+    for( int dir = 0; dir < NUM_EXITS; dir++ ) 
     {
       if( !world[room].dir_option[dir] ) continue;
       if( !TOROOM(room, dir) ) continue;      
       if( world[TOROOM(room, dir)].continent ) continue;
       if( TOROOM(room, dir) == NOWHERE ) continue;
+      if( !world[TOROOM(room,dir)].dir_option[rev_dir[dir]] ) continue;
+      if( TOROOM(TOROOM(room, dir), rev_dir[dir]) != room ) continue;      
       if( TO_OCEAN(room, dir) ) continue;
       if( !SAME_ZONE(room, dir) ) continue;
       
       rooms_left.push_front( TOROOM(room, dir) );
-                }
-                
-        }
+    }
+    
+  }
   
   fprintf(stderr, "(%d rooms)\n", count);
   
-        return TRUE;
+  return TRUE;
 }
 
 const char *continent_name(int continent_id)
@@ -1107,7 +1071,7 @@ void calculate_map_coordinates()
       for (unsigned rs_pointer1 = rs_start; rs_pointer1 != rs_pointer; rs_pointer1++)
       {
         int curr_room = room_stack[rs_pointer1];
-        for (int curr_dir = 0; curr_dir < NUMB_EXITS; curr_dir++)
+        for (int curr_dir = 0; curr_dir < NUM_EXITS; curr_dir++)
         {
           if(world[curr_room].dir_option[curr_dir])
           {

@@ -136,7 +136,7 @@ int notch_skill(P_char ch, int skill, int chance)
      IS_TRUSTED(ch))
         return 0;
   
-  if(IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | ROOM_HOUSE | SAFE_ZONE))
+  if(IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE))
     return 0;
   
   if(IS_FIGHTING(ch))

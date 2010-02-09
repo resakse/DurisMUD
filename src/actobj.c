@@ -5234,7 +5234,7 @@ void do_search(P_char ch, char *argument, int cmd)
    * but only when searching room, not containers in room. JAB
    */
   if (!*name)
-    for (door = 0; (door < NUMB_EXITS) &&
+    for (door = 0; (door < NUM_EXITS) &&
          (!found_something || IS_TRUSTED(ch)); door++)
       if (EXIT(ch, door) && IS_SET(EXIT(ch, door)->exit_info, EX_SECRET) &&
           !IS_SET(EXIT(ch, door)->exit_info, EX_BLOCKED))

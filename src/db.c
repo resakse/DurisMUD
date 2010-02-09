@@ -714,11 +714,13 @@ void boot_db(int mini_mode)
     load_justice_area();
   }
 
-  logit(LOG_STATUS, "Loading house.");
-  restore_houses();
+// old guildhalls (deprecated)
+//  logit(LOG_STATUS, "Loading house.");
+//  restore_houses();
 
-  logit(LOG_STATUS, " ... loading house construction Q");
-  loadConstructionQ();
+  // old guildhalls (deprecated)
+//  logit(LOG_STATUS, " ... loading house construction Q");
+//  loadConstructionQ();
 
   logit(LOG_STATUS, "Setting up player-side artifact list.");
   setupMortArtiList();
@@ -1263,7 +1265,7 @@ void boot_world(int mini_mode)
       world[room_nr].people = 0;
       world[room_nr].light = 0;
       world[room_nr].justice_area = 0;
-      for (tmp = 0; tmp <= (NUMB_EXITS - 1); tmp++)
+      for (tmp = 0; tmp <= (NUM_EXITS - 1); tmp++)
         world[room_nr].dir_option[tmp] = 0;
       world[room_nr].ex_description = 0;
       world[room_nr].chance_fall = 0;
@@ -1401,7 +1403,7 @@ void free_world()
       FREE(world[room].ex_description);
     }
 
-    for( int dir = 0; dir < NUMB_EXITS; dir++ )
+    for( int dir = 0; dir < NUM_EXITS; dir++ )
     {
       if( world[room].dir_option[dir] )
       {
@@ -1510,7 +1512,7 @@ void renum_world(void)
   register int room, door, to_room;
 
   for (room = 0; room <= top_of_world; room++)
-    for (door = 0; door <= (NUMB_EXITS - 1); door++)
+    for (door = 0; door <= (NUM_EXITS - 1); door++)
       if (world[room].dir_option[door])
       {
         to_room = real_room0(world[room].dir_option[door]->to_room);
@@ -2609,14 +2611,6 @@ P_char read_mobile(int nr, int type)
   {
     SET_BIT(mob->specials.act, ACT_BREAK_CHARM);
     SET_BIT(mob->specials.act, ACT_SPEC_DIE);
-  }
-
-  /* is there a better place to do this?  ah well */
-
-  if (IS_ACT(mob, ACT_GUILD_GOLEM) && !mob_index[nr].func.mob)
-  {
-    mob_index[nr].func.mob = assoc_golem;
-    SET_BIT(mob->specials.act, ACT_SPEC);
   }
 
   if (IS_ACT(mob, ACT_TEACHER) && !mob_index[nr].func.mob)

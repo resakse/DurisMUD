@@ -287,8 +287,8 @@ const char *missileweapons[] = {
   "\n"
 };
 
-extern const int rev_dir[NUMB_EXITS];
-const int rev_dir[NUMB_EXITS] = {
+extern const int rev_dir[NUM_EXITS];
+const int rev_dir[NUM_EXITS] = {
   2,
   3,
   0,
@@ -315,7 +315,7 @@ const char *dirs[] = {
   "\n"
 };
 
-const char *dirs2[NUMB_EXITS + 1] = {
+const char *dirs2[NUM_EXITS + 1] = {
   "the north",
   "the east",
   "the south",
@@ -329,7 +329,7 @@ const char *dirs2[NUMB_EXITS + 1] = {
   "\n"
 };
 
-const char *short_dirs[NUMB_EXITS + 1] = {
+const char *short_dirs[NUM_EXITS + 1] = {
   "n",
   "e",
   "s",

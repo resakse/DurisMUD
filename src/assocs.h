@@ -76,6 +76,7 @@
 #define SET_MEMBER(asn) (SET_M_BITS((asn),A_SF_MASK,A_SF2))
 #define IS_BANNED(asn) (IS_M_BITS((asn),A_SF_MASK,A_SF_MASK))
 #define SET_BANNED(asn) (SET_M_BITS((asn),A_SF_MASK,A_SF_MASK))
+#define IS_ASSOC_MEMBER(ch, asn) ( GET_A_NUM(ch) == asn && IS_MEMBER(GET_A_BITS(ch)) && GT_PAROLE(GET_A_BITS(ch)) )
 
 /* protect higher routines from knowing rank bits */
 #define IS_ENEMY(asn) (IS_M_BITS((asn),A_RK_MASK,0))
@@ -135,6 +136,9 @@ void insert_guild_transaction(int soc_id, char *buff);
 
 int get_assoc_prestige(int assoc_id);
 void add_assoc_prestige(int assoc_id, int prestige);
+int get_assoc_cps(int assoc_id);
+void add_assoc_cps(int assoc_id, int cps);
+void set_assoc_cps(int assoc_id, int cps);
 void show_prestige_list(P_char ch);
 void reload_assoc_table();
 void prestige_update();

@@ -232,7 +232,8 @@ void do_order_target(P_char ch, P_char vict, char *arg, int cmd)
 void do_camp(P_char ch, char *arg, int cmd)
 {
   struct affected_type af;
-  P_house house;
+  // old guildhalls (deprecated)
+//  P_house house;
   if (!SanityCheck(ch, "do_camp"))
     return;
 
@@ -241,13 +242,13 @@ void do_camp(P_char ch, char *arg, int cmd)
     send_to_char("Ok, you are now a happy camper!\r\n", ch);
     return;
   }
-
-  house = house_ch_is_in(ch);
-  if (house)
-      {
-      send_to_char("You cannot camp in a hall. Use inn like everyone else!\r\n", ch);
-      return;
-      }
+  // old guildhalls (deprecated)
+//  house = house_ch_is_in(ch);
+//  if (house)
+//      {
+//      send_to_char("You cannot camp in a hall. Use inn like everyone else!\r\n", ch);
+//      return;
+//      }
 
   if (IS_AFFECTED2(ch, AFF2_SCRIBING))
   {
@@ -410,6 +411,12 @@ void do_camp(P_char ch, char *arg, int cmd)
       ("Just relax Jailbird, you are gonna be here for a while.\r\n", ch);
     return;
   }
+  if (IS_SET(world[ch->in_room].room_flags, GUILD_ROOM))
+  {
+    send_to_char
+    ("You're not allowed to camp here!\r\n", ch);
+    return;
+  }  
   if (IS_SET(zone_table[world[ch->in_room].zone].flags, ZONE_TOWN))
   {
     send_to_char
@@ -2088,12 +2095,12 @@ void listen(P_char ch, char *argument)
      * the argument must be one of the cardinal directions: north,  * south,
      * etc.
      */
-    for (dir = 0; dir < NUMB_EXITS; dir++)
+    for (dir = 0; dir < NUM_EXITS; dir++)
     {
       if (!strncmp(buf, dirs[dir], strlen(buf)))
         break;
     }
-    if (dir == NUMB_EXITS)
+    if (dir == NUM_EXITS)
     {
       send_to_char("Listen where?\r\n", ch);
       return;

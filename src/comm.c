@@ -44,12 +44,11 @@
 #include "player_log.h"
 #include "tradeskill.h"
 #include "map.h"
-#include "buildings.h"
 #include "assocs.h"
 #include "timers.h"
-#include "outposts.h"
 #include "graph.h"
 #include "profile.h"
+#include "guildhall.h"
 
 /* external variables */
 
@@ -367,7 +366,10 @@ void run_the_game(int port)
 
   initialize_transport();
   
-  initialize_buildings();
+  //initialize_buildings();
+
+  Guildhall::initialize();
+  fprintf(stderr, "-- Done loading guildhalls\r\n");
   
   init_auction_houses();
 
@@ -895,6 +897,8 @@ void game_loop(int s)
   shutdown_newships();
 
   shutdown_auction_houses();
+  
+  Guildhall::shutdown();
   
   for (point = descriptor_list; point; point = point->next)
   {

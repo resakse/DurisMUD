@@ -232,7 +232,7 @@ void MoveShadower(P_char ch, int to_room)
       do_hide(sh_ptr->shadower, 0, CMD_SHADOW);
       sh_ptr->dir_last_move = NOWHERE;
     } else if (sh_ptr->dir_last_move && (sh_ptr->dir_last_move == NOWHERE)) {
-      for (i = 0; i < NUMB_EXITS; i++) {
+      for (i = 0; i < NUM_EXITS; i++) {
         /* check for existence pointer added -- DTS 7/9/95 */
         if (world[ch->specials.shadow.room_last_in].dir_option[i] &&
             world[ch->specials.shadow.room_last_in].dir_option[i]->to_room == to_room) {
@@ -256,7 +256,7 @@ void MoveShadower(P_char ch, int to_room)
       }
       j = sh_ptr->dir_last_move;
 
-      for (i = 0; i < NUMB_EXITS; i++) {
+      for (i = 0; i < NUM_EXITS; i++) {
         if (world[ch->specials.shadow.room_last_in].dir_option[i] &&
         (world[ch->specials.shadow.room_last_in].dir_option[i]->to_room ==
          to_room)) {

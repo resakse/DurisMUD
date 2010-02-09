@@ -42,7 +42,6 @@
 #include "grapple.h"
 #include "map.h"
 #include "dreadlord.h"
-#include "buildings.h"
 
 /*
  * external variables
@@ -1785,10 +1784,10 @@ void death_cry(P_char ch)
   was_in = ch->in_room;
   play_sound(SOUND_DEATH_CRY, NULL, was_in, TO_ROOM);
 
-  add_track(ch, NUMB_EXITS);
+  add_track(ch, NUM_EXITS);
 
   if (was_in != NOWHERE)
-    for (door = 0; door <= (NUMB_EXITS - 1); door++)
+    for (door = 0; door <= (NUM_EXITS - 1); door++)
     {
       if (VIRTUAL_CAN_GO(was_in, door))
       {
@@ -1825,10 +1824,10 @@ void death_rattle(P_char ch)
   was_in = ch->in_room;
   play_sound(SOUND_DEATH_CRY, NULL, was_in, TO_ROOM);
 
-  add_track(ch, NUMB_EXITS);
+  add_track(ch, NUM_EXITS);
 
   if (was_in != NOWHERE)
-    for (door = 0; door <= (NUMB_EXITS - 1); door++)
+    for (door = 0; door <= (NUM_EXITS - 1); door++)
     {
       if (VIRTUAL_CAN_GO(was_in, door))
       {
@@ -2079,9 +2078,9 @@ void die(P_char ch, P_char killer)
     remove_disguise(ch, TRUE);
   }
   
-  if (ch && killer)
-    if (check_outpost_death(ch, killer))
-      return;
+//  if (ch && killer)
+//    if (check_outpost_death(ch, killer))
+//      return;
 
   act("$n is dead! &+RR.I.P.&n", TRUE, ch, 0, 0, TO_ROOM);
   act("&-L&+rYou feel yourself falling to the ground.&n", FALSE, ch, 0, 0, TO_CHAR);
@@ -2442,7 +2441,7 @@ void die(P_char ch, P_char killer)
     ch->only.pc->pc_timer[1] = 0;       // reset flee timer
   }
 
-  add_track(ch, NUMB_EXITS);
+  add_track(ch, NUM_EXITS);
 
   if(!CHAR_IN_ARENA(ch) ||
     IS_NPC(ch))
@@ -8439,7 +8438,7 @@ void perform_violence(void)
      each room once. We don't add any checks here, since they will
      be done by the flagged mobs. */
   for ( it = room_rnums.begin(); it != room_rnums.end(); it++ ) {
-    for ( door = 0; door < NUMB_EXITS; door++ )
+    for ( door = 0; door < NUM_EXITS; door++ )
     {
       if( !VIRTUAL_EXIT( *it, door ) )
       {

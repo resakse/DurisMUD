@@ -317,7 +317,7 @@ int get_map_room(int zone_id)
 
   for (i3 = 0, i = zone->real_bottom;
       (i != NOWHERE) && (i <= zone->real_top); i++)
-    for (i2 = 0; i2 < NUMB_EXITS; i2++)
+    for (i2 = 0; i2 < NUM_EXITS; i2++)
       if (world[i].dir_option[i2])
       {
         if ((world[i].dir_option[i2]->to_room == NOWHERE) ||

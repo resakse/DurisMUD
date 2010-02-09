@@ -265,7 +265,7 @@ void do_alliance(P_char ch, char *arg, int cmd)
     //----------------------------
     //valid to propose?
     //----------------------------
-    int needed_prestige = (int)get_property("guild.prestige.alliances", 3000.000);
+    int needed_prestige = (int)get_property("prestige.alliance.required", 3000.000);
     prestige1 = get_assoc_prestige(assoc_id);
     prestige2 = get_assoc_prestige(assoc_id2);
 

@@ -48,7 +48,6 @@ extern const char *crime_list[];
 extern const char *crime_rep[];
 extern const char *specdata[][MAX_SPEC];
 extern struct class_names class_names_table[];
-extern P_house thouse;
 int      range_scan_track(P_char ch, int distance, int type_scan);
 extern P_obj    object_list;
 

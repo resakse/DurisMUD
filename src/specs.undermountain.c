@@ -362,7 +362,7 @@ int magebane_falchion(P_obj obj, P_char ch, int cmd, char *arg)
       if (IS_MAGE(tmp_vict) && (tmp_vict != ch))
       break;
 
-    for (i = 0; i < NUMB_EXITS; i++)    /*
+    for (i = 0; i < NUM_EXITS; i++)    /*
                                            search neighboring rooms... muhaha 
                                          */
       if (!tmp_vict && (world[ch->in_room].dir_option[i]))
@@ -1739,7 +1739,7 @@ int um_kevlar(P_char ch, P_char pl, int cmd, char *arg)
   if (!ch || !AWAKE(ch) || IS_FIGHTING(ch) || cmd)
     return FALSE;
 
-  for (i = 0; i < NUMB_EXITS; i++)
+  for (i = 0; i < NUM_EXITS; i++)
   {
     if (EXIT(ch, i) && (EXIT(ch, i)->to_room != NOWHERE) &&
         IS_SET(EXIT(ch, i)->exit_info, EX_CLOSED))

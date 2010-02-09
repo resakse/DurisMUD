@@ -41,11 +41,10 @@
 #include "disguise.h"
 #include "grapple.h"
 #include "map.h"
-#include "buildings.h"
 #include "alliances.h"
 #include "avengers.h"
-#include "outposts.h"
 #include "multiplay_whitelist.h"
+#include "guildhall.h"
 
 /*
  * external variables
@@ -769,7 +768,7 @@ const char *command[] = {
   "appraise",
   "cover",
   "house",
-  "hcontrol",
+  "guildhall",
   "doorkick",
   "buck",                       /* 530 */
   "stampede",
@@ -2183,7 +2182,6 @@ void assign_command_pointers(void)
   CMD_GRT(CMD_AFFECT_PURGE, STAT_DEAD + POS_PRONE, do_affectpurge, LESSER_G);
   CMD_GRT(CMD_DEPISS, STAT_DEAD + POS_PRONE, do_depiss, FORGER);
   CMD_GRT(CMD_REPISS, STAT_DEAD + POS_PRONE, do_repiss, FORGER);
-  CMD_GRT(CMD_HCONTROL, STAT_DEAD + POS_PRONE, do_hcontrol, GREATER_G);
   CMD_GRT(CMD_ASCLIST, STAT_DEAD + POS_PRONE, do_asclist, IMMORTAL);
   CMD_GRT(CMD_INVITE, STAT_DEAD + POS_PRONE, do_invite, FORGER);
   CMD_GRT(CMD_UNINVITE, STAT_DEAD + POS_PRONE, do_uninvite, FORGER);
@@ -2285,7 +2283,9 @@ void assign_command_pointers(void)
   CMD_N(CMD_FLY, STAT_NORMAL + POS_SITTING, do_fly, IMMORTAL);
   CMD_N(CMD_FORAGE, STAT_NORMAL + POS_STANDING, do_forage, 0);
   CMD_N(CMD_CONSTRUCT, STAT_NORMAL + POS_STANDING, do_construct, 20);
-  CMD_N(CMD_SACK, STAT_NORMAL + POS_STANDING, do_sack, 25);
+  CMD_N(CMD_GUILDHALL, STAT_DEAD + POS_PRONE, do_guildhall, 25);
+  // old guildhalls (deprecated)
+//  CMD_N(CMD_SACK, STAT_NORMAL + POS_STANDING, do_sack, 25);
   CMD_N(CMD_FRAGLIST, STAT_DEAD + POS_PRONE, displayFragList, 0);
 //  CMD_N(CMD_HARDCORE, STAT_DEAD + POS_PRONE, displayHardCore, 0);
 //  CMD_N(CMD_RELIC, STAT_DEAD + POS_PRONE, displayRelic, 0);
@@ -2365,7 +2365,8 @@ void assign_command_pointers(void)
   CMD_N(CMD_COVER, STAT_NORMAL + POS_STANDING, do_cover, 0);
   CMD_N(CMD_STAMPEDE, STAT_NORMAL + POS_STANDING, do_stampede, 0);
   CMD_N(CMD_CHARGE, STAT_NORMAL + POS_STANDING, do_charge, 0);
-  CMD_N(CMD_HOUSE, STAT_NORMAL + POS_PRONE, do_house, 0);
+  // old guildhalls (deprecated)
+//  CMD_N(CMD_HOUSE, STAT_NORMAL + POS_PRONE, do_house, 0);
   CMD_N(CMD_LORE, STAT_NORMAL + POS_STANDING, do_lore, 0);
   CMD_N(CMD_CRAFT, STAT_NORMAL + POS_STANDING, do_craft, 0);
   CMD_N(CMD_ENCRUST, STAT_NORMAL + POS_STANDING, do_encrust, 0);
@@ -2531,12 +2532,12 @@ void assign_command_pointers(void)
   CMD_Y(CMD_GROUNDSLAM, STAT_NORMAL + POS_STANDING, do_groundslam, 0);
   CMD_Y(CMD_LEGLOCK, STAT_NORMAL + POS_PRONE, do_leglock, 0);
 
-  CMD_N(CMD_BUILD, STAT_NORMAL + POS_STANDING, do_build, 0);
+//  CMD_N(CMD_BUILD, STAT_NORMAL + POS_STANDING, do_build, 0);
   CMD_Y(CMD_PRESTIGE, STAT_NORMAL + POS_STANDING, do_prestige, 0);
   CMD_N(CMD_ALLIANCE, STAT_RESTING + POS_PRONE, do_alliance, 0);
   CMD_Y(CMD_ACC, STAT_SLEEPING + POS_PRONE, do_acc, 0);
   CMD_Y(CMD_SMITE, STAT_NORMAL + POS_STANDING, do_holy_smite, 0);
-  CMD_N(CMD_OUTPOST, STAT_RESTING + POS_PRONE, do_outpost, 0);
+//  CMD_N(CMD_OUTPOST, STAT_RESTING + POS_PRONE, do_outpost, 0);
   CMD_Y(CMD_OFFENSIVE, STAT_RESTING + POS_PRONE, do_offensive, 0);
   
   /*

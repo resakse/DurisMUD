@@ -25,7 +25,7 @@ void do_makeexit(P_char ch, char *arg, int cmd)
 
   int dir = dir_from_keyword(buf);
 
-  if( dir < 0 || dir >= NUMB_EXITS )
+  if( dir < 0 || dir >= NUM_EXITS )
   {
     send_to_char("Invalid direction.\r\n", ch);
     return;

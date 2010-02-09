@@ -362,7 +362,7 @@ typedef unsigned int uint;
 #define INDOORS     BIT_4       /* Room is considered to be 'indoors'  */
 #define ROOM_SILENT BIT_5
 #define UNDERWATER  BIT_6
-#define NORECALL    BIT_7
+#define NO_RECALL   BIT_7
 #define NO_MAGIC    BIT_8       /* Casting magic is not permitted.        */
 #define TUNNEL      BIT_9
 #define PRIVATE     BIT_10      /* No more than two ppl can move in here  */
@@ -384,7 +384,7 @@ typedef unsigned int uint;
 #define TWILIGHT    BIT_26
 #define NO_PSI      BIT_27      /* can psis cast in here? */
 #define NO_GATE     BIT_28      /* disallow gate/planeshift? */
-#define ROOM_HOUSE  BIT_29      /* (R) Room is a house  */
+#define ROOM_UNUSED  BIT_29     
 #define ROOM_ATRIUM BIT_30      /* (R) The door to a house      */
 #define BLOCKS_SIGHT BIT_31     /* can't scan/farsee through it, for fog, etc */
 #define BFS_MARK    BIT_32      /* used internally for find_the_path code */
@@ -402,7 +402,7 @@ typedef unsigned int uint;
 #define NORTHEAST      8
 #define SOUTHEAST      9
 
-#define NUMB_EXITS     10
+#define NUM_EXITS     10
 
 #define EX_ISDOOR      BIT_1
 #define EX_CLOSED      BIT_2

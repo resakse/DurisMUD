@@ -1,3 +1,9 @@
+//
+// Outposts and buildings are not attached to the mud, but is here in case someone wants to clean up and finish the code,
+// which was started by Torgal in 2008 and then continued by Venthix in 2009.
+// - Torgal 1/29/2010
+//
+
 #ifndef _BUILDINGS_H_
 #define _BUILDINGS_H_
 

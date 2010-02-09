@@ -200,6 +200,8 @@ SECS_PER_MUD_DAY)
 
 #define LIMITED_TELEPORT_ZONE(r) (world[r].number >= 5700 && world[r].number <= 5999)
 
+#define SECTOR_TYPE(rroom) ( world[rroom].sector_type )
+
 #define IS_HOMETOWN(r) ( zone_table[world[r].zone].hometown != 0 )
 
 #define IS_SHIP_ROOM(r) (world[r].number >= 60000 && world[r].number <= 64999)
@@ -307,6 +309,7 @@ int IS_TWILIGHT_ROOM(int r);
 #define GET_PID(ch) ( !IS_PC(ch) ? raise(SIGSEGV) : (ch)->only.pc->pid )
 #define GET_RNUM(ch) ( !IS_NPC(ch) ? raise(SIGSEGV) : (ch)->only.npc->R_num )
 #define GET_VNUM(ch) ( !IS_NPC(ch) ? raise(SIGSEGV) : mob_index[(ch)->only.npc->R_num].virtual_number )
+#define NPC_SPEC(ch, index) ( !IS_NPC(ch) ? raise(SIGSEGV) : (ch)->only.npc->spec[index] )
 
 #define GET_IDNUM(ch)   (ch->only.npc->idnum)
 
@@ -676,6 +679,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_SLIME(ch) (GET_RACE(ch) == RACE_SLIME)
 #define IS_DEMON(ch)  (GET_RACE(ch) == RACE_DEMON)
+#define IS_DEVIL(ch) (GET_RACE(ch) == RACE_DEVIL)
 
 #define IS_GIANT(ch)  ((GET_RACE(ch) == RACE_GIANT) || (GET_RACE(ch) == RACE_OGRE) || \
                        (GET_RACE(ch) == RACE_SGIANT) || \

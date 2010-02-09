@@ -636,7 +636,7 @@ int zion_dispator(P_obj obj, P_char ch, int cmd, char *arg)
 
     // pick a random direction to deflect the incoming blow; if the direction
     // is wallable, cast wall of iron
-    int random_dir = number(0, NUMB_EXITS-1);
+    int random_dir = number(0, NUM_EXITS-1);
 
     char buff[128];
     sprintf(buff, "&+y$n's $q &+ydeflects the blow, and channels a torrent of magical energy %s!&n", dirs[random_dir]);

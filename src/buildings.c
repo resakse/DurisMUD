@@ -1,3 +1,9 @@
+//
+// Outposts and buildings are not attached to the mud, but is here in case someone wants to clean up and finish the code,
+// which was started by Torgal in 2008 and then continued by Venthix in 2009.
+// - Torgal 1/29/2010
+//
+
 #include "db.h"
 #include "structs.h"
 #include "prototypes.h"
@@ -364,7 +370,7 @@ int Building::unload()
     world[real_room0(room->number)].funct = NULL;
     
     // reset room exits
-    for( int j = 0; j < NUMB_EXITS; j++ )
+    for( int j = 0; j < NUM_EXITS; j++ )
     {
       if( !room->dir_option[j] )
         continue;

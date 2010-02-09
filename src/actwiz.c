@@ -1518,6 +1518,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 
   if ((*arg1 == 'r') || (*arg1 == 'R'))
   {
+    // TODO: add guildhall room stats?
     if (!*arg2)
       i = ch->in_room;
     else
@@ -1612,7 +1613,7 @@ void do_stat(P_char ch, char *argument, int cmd)
       strcat(o_buf, buf);
     }
     strcat(o_buf, "&+Y------- Exits defined -------\n");
-    for (i = 0; i <= (NUMB_EXITS - 1); i++)
+    for (i = 0; i <= (NUM_EXITS - 1); i++)
     {
       if (rm->dir_option[i])
       {
@@ -1786,7 +1787,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     for (i3 = 0, i = zone->real_bottom;
          (i != NOWHERE) && (i <= zone->real_top) && (exits_shown < 1000); i++)
     {
-      for (i2 = 0; i2 < NUMB_EXITS; i2++)
+      for (i2 = 0; i2 < NUM_EXITS; i2++)
       {
         if (world[i].dir_option[i2])
         {
@@ -1849,7 +1850,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 
       for (i3 = 0, i = zone->real_bottom;
            (i != NOWHERE) && (i <= zone->real_top); i++)
-        for (i2 = 0; i2 < NUMB_EXITS; i2++)
+        for (i2 = 0; i2 < NUM_EXITS; i2++)
           if (world[i].dir_option[i2])
           {
             if ((world[i].dir_option[i2]->to_room == NOWHERE) ||
@@ -3045,10 +3046,11 @@ void do_stat(P_char ch, char *argument, int cmd)
   {
     do_trapstat(ch, arg2, 0);
   }
-  else if ((*arg1 == 'h') || (*arg1 == 'H'))
-  {
-    do_stathouse(ch, arg2, 0);
-  }
+  // old guildhalls (deprecated)
+//  else if ((*arg1 == 'h') || (*arg1 == 'H'))
+//  {
+//    do_stathouse(ch, arg2, 0);
+//  }
   else if ((*arg1 == 's') || (*arg1 == 'S'))
   {
 

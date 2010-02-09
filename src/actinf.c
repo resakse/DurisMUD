@@ -2010,6 +2010,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     "sw",
     "ne",
     "se",
+    "inside",
     "\n"
   };
 
@@ -2240,7 +2241,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
 
     if ((!world[temp].dir_option[rev_dir[keyword_no]] ||
          (world[temp].dir_option[rev_dir[keyword_no]]->to_room != room_no))
-        && (vis_mode > 1) && !IS_TRUSTED(ch))
+        && (vis_mode > 1) && !IS_TRUSTED(ch) && !IS_SET(world[ch->in_room].room_flags, GUILD_ROOM) )
     {
       /* sight blocked */
       send_to_char("Something seems to be blocking your line of sight.\n",
@@ -2506,6 +2507,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
   case 8:                      /* look COMMAND, with NULL args, brief is forced */
   case 9:                      /* look 'room', brief is overridden */
   case 20:                     /* look called with cmd -4, brief mode is honored */
+  case 18:                     // looking 'inside' something - so we can show a room w/o the map
 
     switch (keyword_no)
     {
@@ -2689,7 +2691,7 @@ void show_exits_to_char(P_char ch, int room_no, int mode)
   if (mode == 1)
   {
 
-    for (count = 0, i = 0; i < NUMB_EXITS; i++)
+    for (count = 0, i = 0; i < NUM_EXITS; i++)
     {
       if (!(world[room_no].dir_option[i]) ||
           (((world[room_no].dir_option[i])->to_room == NOWHERE) &&
@@ -2771,7 +2773,7 @@ void show_exits_to_char(P_char ch, int room_no, int mode)
   {
     strcat(buffer, "\n");
 
-    for (count = 0, i = 0; i < NUMB_EXITS; i++)
+    for (count = 0, i = 0; i < NUM_EXITS; i++)
     {
       if (!EXIT(ch, i) ||
           ((EXIT(ch, i)->to_room == NOWHERE) && (vis_mode != 1)))
@@ -7634,7 +7636,7 @@ void do_scan(P_char ch, char *argument, int cmd)
 
   basemod -= (int)((GET_C_WIS(ch) - 80) / 2);
 
-  for (dir = 0; dir < NUMB_EXITS; dir++)
+  for (dir = 0; dir < NUM_EXITS; dir++)
   {
     visibility = 2;
     dirmod = 0;

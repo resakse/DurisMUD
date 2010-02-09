@@ -26,7 +26,6 @@
 #include "utils.h"
 #include "weather.h"
 #include "sound.h"
-#include "guildhalls.h"
 #include "assocs.h"
 #include "justice.h"
 #include "mm.h"
@@ -2949,7 +2948,7 @@ void spell_cyclone(int level, P_char ch, char *arg, int type, P_char victim,
     GET_LEVEL(victim) < (GET_LEVEL(ch) + 10) &&
                 !IS_ELITE(victim))
   {
-    //door = number(0, NUMB_EXITS - 1);
+    //door = number(0, NUM_EXITS - 1);
     
                 affchance = number(1, 100);
     
@@ -7404,7 +7403,7 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type,
     send_to_char("The word dies aborning.\n", ch);
     return;
   }
-  if(IS_SET(world[ch->in_room].room_flags, NORECALL)
+  if(IS_SET(world[ch->in_room].room_flags, NO_RECALL)
 /* Allowing players to gate, portal, recall, and shift from ocean tiles
  * to enchance naval conflict: 22Aug08 Lucrot
  * ||(world[ch->in_room].sector_type == SECT_OCEAN)
@@ -10267,7 +10266,6 @@ bool check_item_teleport(P_char ch, char *arg, int cmd)
   int      pos;
   int      vnum;
   int      virt;
-  P_house  house;
   char     Gbuf1[100];
 
   room = ch->in_room;
@@ -10325,43 +10323,45 @@ bool check_item_teleport(P_char ch, char *arg, int cmd)
   else
     to_room = real_room(to_room);
 
-  if(IS_SET(world[ch->in_room].room_flags, ROOM_ATRIUM))
-  {
-    if(!House_can_enter(ch, world[ch->in_room].number, -1))
-    {
-      send_to_char("You may not enter this private house!\n", ch);
-      return TRUE;
-    }
-  }
+  // old guildhalls (deprecated)
+//  if(IS_SET(world[ch->in_room].room_flags, ROOM_ATRIUM))
+//  {
+//    if(!House_can_enter(ch, world[ch->in_room].number, -1))
+//    {
+//      send_to_char("You may not enter this private house!\n", ch);
+//      return TRUE;
+//    }
+//  }
 
   /* alternate (non-automated construction) guild-only teleporter checking */
 
-  if(obj->value[7] && (obj->value[7] != GET_A_NUM(ch)) && !IS_TRUSTED(ch))
-  {
-    send_to_char("Nothing happens.\n", ch);
-    return TRUE;
-  }
+//  if(obj->value[7] && (obj->value[7] != GET_A_NUM(ch)) && !IS_TRUSTED(ch))
+//  {
+//    send_to_char("Nothing happens.\n", ch);
+//    return TRUE;
+//  }
 
-  if(obj_index[obj->R_num].virtual_number == 11001)
-  {
-    /* guild teleporter */
-    house = house_ch_is_in(ch);
-    if(house)
-    {
-      struct group_list *tgroup;
-
-      for (tgroup = ch->group; tgroup; tgroup = tgroup->next)
-        if(GET_A_NUM(tgroup->ch) == house->owner_guild &&
-            !IS_APPLICANT(GET_A_BITS(tgroup->ch)))
-          break;
-      if((GET_A_NUM(ch) != house->owner_guild) && !tgroup &&
-          !(IS_TRUSTED(ch)))
-      {                         /* only guildies can use porters */
-        send_to_char("Nothing happens.\n", ch);
-        return TRUE;
-      }
-    }
-  }
+  // old guildhalls (deprecated)
+//  if(obj_index[obj->R_num].virtual_number == 11001)
+//  {
+//    /* guild teleporter */
+//    house = house_ch_is_in(ch);
+//    if(house)
+//    {
+//      struct group_list *tgroup;
+//
+//      for (tgroup = ch->group; tgroup; tgroup = tgroup->next)
+//        if(GET_A_NUM(tgroup->ch) == house->owner_guild &&
+//            !IS_APPLICANT(GET_A_BITS(tgroup->ch)))
+//          break;
+//      if((GET_A_NUM(ch) != house->owner_guild) && !tgroup &&
+//          !(IS_TRUSTED(ch)))
+//      {                         /* only guildies can use porters */
+//        send_to_char("Nothing happens.\n", ch);
+//        return TRUE;
+//      }
+//    }
+//  }
   if(!obj->value[2] ||
       (IS_SET(world[ch->in_room].room_flags, ARENA) !=
        IS_SET(world[to_room].room_flags, ARENA)))
@@ -10927,10 +10927,11 @@ void spell_greater_heal_undead(int level, P_char ch, char *arg, int type,
 {
   int      healpoints = 300;
 
-  if(!IS_UNDEADRACE(victim) && IS_PC(ch) && IS_NPC(victim) &&
-      mob_index[GET_RNUM(victim)].virtual_number != WARRIOR_GOLEM_VNUM &&
-      mob_index[GET_RNUM(victim)].virtual_number != MAGE_GOLEM_VNUM &&
-      mob_index[GET_RNUM(victim)].virtual_number != CLERIC_GOLEM_VNUM)
+  if(!IS_UNDEADRACE(victim) && IS_PC(ch) && IS_NPC(victim) )
+     // old guildhalls (deprecated)
+//     && mob_index[GET_RNUM(victim)].virtual_number != WARRIOR_GOLEM_VNUM &&
+//      mob_index[GET_RNUM(victim)].virtual_number != MAGE_GOLEM_VNUM &&
+//      mob_index[GET_RNUM(victim)].virtual_number != CLERIC_GOLEM_VNUM
   {
     act
       ("$N chants something odd and takes a look at $n, a weird look in $S eyes.",
@@ -15542,7 +15543,7 @@ void spell_oldjudgement(int level, P_char ch, P_char victim, P_obj obj)
 
           if(!NewSaves(t, SAVING_FEAR, MIN((GET_LEVEL(ch) - GET_LEVEL(t)), 5)))
           {
-            door = number(0, NUMB_EXITS - 1);
+            door = number(0, NUM_EXITS - 1);
             
             if((CAN_GO(t, door)) &&
               (!check_wall(t->in_room, door)))

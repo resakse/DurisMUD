@@ -31,11 +31,11 @@
 #include "objmisc.h"
 #include "vnum.obj.h"
 #include "nexus_stones.h"
-#include "guildhalls.h"
 #include "paladins.h"
 #include "grapple.h"
 #include "map.h"
 #include "profile.h"
+#include "guildhall.h"
 
 /*
  * external variables
@@ -61,7 +61,6 @@ extern const char rev_dir[];
 extern struct str_app_type str_app[];
 extern struct zone_data *zone_table;
 extern const char *undead_type[];
-extern int is_in_own_guild(P_char member);
 extern struct potion potion_data[];
 extern bool can_banish(P_char ch, P_char victim);
 extern bool has_skin_spell(P_char);
@@ -565,7 +564,7 @@ bool In_Adjacent_Room(P_char ch, P_char vict)
 {
   int      a;
 
-  for (a = 0; a < NUMB_EXITS; a++)
+  for (a = 0; a < NUM_EXITS; a++)
     if(CAN_GO(ch, a))
       if(EXIT(ch, a)->to_room == vict->in_room)
         return exitnumb_to_cmd(a);
@@ -3611,8 +3610,8 @@ bool CastClericSpell(P_char ch, P_char victim, int helping)
   if(!spl && IS_FIGHTING(ch) && (GET_HIT(ch) < (GET_MAX_HIT(ch) >> 2)) &&
       (world[ch->in_room].number != GET_BIRTHPLACE(ch)) &&
       npc_has_spell_slot(ch, SPELL_WORD_OF_RECALL) &&
-      !IS_SET(world[ch->in_room].room_flags, NORECALL) &&
-      !IS_SET(world[real_room0(GET_BIRTHPLACE(ch))].room_flags, NORECALL))
+      !IS_SET(world[ch->in_room].room_flags, NO_RECALL) &&
+      !IS_SET(world[real_room0(GET_BIRTHPLACE(ch))].room_flags, NO_RECALL))
     spl = SPELL_WORD_OF_RECALL;
 
   if(!spl && (ch == target) && !IS_AFFECTED2(ch, AFF2_SOULSHIELD) &&
@@ -5125,7 +5124,7 @@ void BreathWeapon(P_char ch, int dir)
       continue;
     }
     
-    if(IS_ASSOC_GOLEM(tch) || 
+    if(IS_GH_GOLEM(tch) ||
        IS_NEXUS_GUARDIAN(tch) || 
        IS_ELITE(tch) || 
        IS_IMMATERIAL(tch) ||
@@ -7795,7 +7794,7 @@ PROFILE_END(mundane_track);
   // annoying, but not much to do here. Maybe should add a room flag WALLED?  -Odorf
   if(!IS_PATROL(ch))
   { // 99.95%
-    for (i = 0; i < NUMB_EXITS; i++)
+    for (i = 0; i < NUM_EXITS; i++)
     { // x10
       // there's a wall!
       if(EXIT(ch, i) && IS_WALLED(ch->in_room, i))
@@ -7904,7 +7903,7 @@ PROFILE_END(mundane_track);
       !IS_SET(zone_table[world[ch->in_room].zone].flags, ZONE_SILENT) &&
       (MIN_POS(ch, POS_STANDING + STAT_NORMAL)))
   {
-    for (door = 0; door < NUMB_EXITS; door++)
+    for (door = 0; door < NUM_EXITS; door++)
     {
       if(CAN_GO(ch, door) && !IS_SET(world[EXIT(ch, door)->to_room].room_flags, NO_MOB) &&
         (world[EXIT(ch, door)->to_room].zone == world[ch->in_room].zone) &&
@@ -8063,7 +8062,7 @@ PROFILE_END(mundane_track);
           IS_AGGRESSIVE(ch) &&
           GET_HIT(ch) > GET_MAX_HIT(ch) / 2)) &&
         (MIN_POS(ch, POS_STANDING + STAT_RESTING)) &&
-        ((door = number(0, NUMB_EXITS)) < NUMB_EXITS) && CAN_GO(ch, door) &&
+        ((door = number(0, NUM_EXITS)) < NUM_EXITS) && CAN_GO(ch, door) &&
         !IS_SET(world[EXIT(ch, door)->to_room].room_flags, NO_MOB) &&
         world[EXIT(ch, door)->to_room].sector_type != SECT_NO_GROUND)
     { // 13%
@@ -8273,7 +8272,7 @@ void mobact_rescueHandle(P_char mob, P_char attacker)
  */
   }
 
-  for (door = 0; door < NUMB_EXITS; door++)
+  for (door = 0; door < NUM_EXITS; door++)
   {
 
     if((door == UP) || (door == DOWN))
@@ -9465,7 +9464,7 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
   {
     if(number(0, 120) > (GET_LEVEL(ch) + 60))
     {
-      next_step = number(0, NUMB_EXITS - 1);
+      next_step = number(0, NUM_EXITS - 1);
       if(!world[ch->in_room].dir_option[(int) next_step])
       {
         add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));
@@ -9556,10 +9555,10 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
    */
 
   if(IS_CLERIC(ch) && (dummy > 6) &&
-      !IS_SET(world[cur_room].room_flags, (NO_MAGIC | NORECALL | ROOM_SILENT))
+      !IS_SET(world[cur_room].room_flags, (NO_MAGIC | NO_RECALL | ROOM_SILENT))
       &&
       GET_BIRTHPLACE(ch) && (real_room(GET_BIRTHPLACE(ch)) != NOWHERE) &&
-      !IS_SET(world[real_room0(GET_BIRTHPLACE(ch))].room_flags, NORECALL))
+      !IS_SET(world[real_room0(GET_BIRTHPLACE(ch))].room_flags, NO_RECALL))
   {
     if(targ_room == real_room(GET_BIRTHPLACE(ch)))
       dummy2 = 0;
@@ -9950,7 +9949,6 @@ void remember(P_char ch, P_char victim)
 /* make ch remember victim */
 void remember(P_char ch, P_char victim, bool check_group_remember)
 {
-  P_house  house = NULL;
   Memory  *tmp;
   struct group_list *gl;
   
@@ -9983,12 +9981,9 @@ void remember(P_char ch, P_char victim, bool check_group_remember)
   }
 
   /* don't let golems aggro their own guildees */
-  if(IS_ACT(ch, ACT_GUILD_GOLEM))
+  if( IS_GH_GOLEM(ch) && (GET_A_NUM(ch) == GET_A_NUM(victim)) )
   {
-    if(GET_A_NUM(ch) == GET_A_NUM(victim))
-    {
-      return;
-    }
+    return;
   }
 
   for (tmp = ch->only.npc->memory; tmp; tmp = tmp->next)
@@ -10181,7 +10176,7 @@ void event_agg_attack(P_char ch, P_char victim, P_obj obj, void *data)
       return;                   /* damn, missed again */
     }
     
-    for(door = 0; door < NUMB_EXITS; door++)
+    for(door = 0; door < NUM_EXITS; door++)
       if(CAN_GO(ch, door) &&
         (victim->in_room == EXIT(ch, door)->to_room) &&
         CAN_SEE(ch, victim))
