@@ -7403,6 +7403,13 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type,
     send_to_char("The word dies aborning.\n", ch);
     return;
   }
+
+  if(IS_GRAPPLED(ch))
+  {
+    send_to_char("&+WYou are being grappled! Wording is not possible!&n\n", ch);
+    return;
+  }
+
   if(IS_SET(world[ch->in_room].room_flags, NO_RECALL)
 /* Allowing players to gate, portal, recall, and shift from ocean tiles
  * to enchance naval conflict: 22Aug08 Lucrot
