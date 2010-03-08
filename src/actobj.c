@@ -2691,7 +2691,7 @@ void do_eat(P_char ch, char *argument, int cmd)
       af.modifier = 0 + temp->value[1];
       affect_to_char(ch, &af);
      
-
+/*  We need to review the existing food items and set some sort of guidelines before granting stat bonuses via the code below. Mar10 -Lucrot
       af.location = APPLY_STR;
       af.modifier = 0 + temp->value[2];
       affect_to_char(ch, &af);
@@ -2737,7 +2737,7 @@ void do_eat(P_char ch, char *argument, int cmd)
       affect_to_char_with_messages(ch, &af,
            "You feel hungry again.&n", "");
 
-
+*/
     } else {
       act("You feel sated already.", FALSE, ch, 0, 0, TO_CHAR);
       return;
