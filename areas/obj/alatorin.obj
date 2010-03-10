@@ -33,8 +33,8 @@ wyrmskull throne~
 &+ythe &+gw&+yy&+gr&+ym&+Wskull &+ythrone&N~
 &+yThe &+gW&+yy&+gr&+ym&+Wskull &+yThrone sits here, &+Mglowing&+y with the essence of &+Bblue dragons&+y.~
 ~
-25 35 3 0 7 0 0 0 0 0 0
-83882 43 -1 0 0 0 0 0
+8 35 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
 0 0 100
 E
 wyrmskull throne~
@@ -184,7 +184,7 @@ iron broadsword sword~
 &+LA heavy &+ciron &+Lbroadsword has been dropped here.~
 ~
 5 15 3 0 7 0 0 8193 0 0 0
-5 3 4 0 0 0 0 0
+5 4 4 0 0 0 0 0
 4 1598 100
 E
 iron broadsword sword~
@@ -203,7 +203,7 @@ iron shield bearing crest alatorin~
 &+LAn &+ciron &+Lshield bearing the &+ycrest&+L of &+cAlatorin &+Lhas been dropped here.~
 ~
 37 15 3 0 7 0 0 513 0 0 0
-1 7 4 150 5 0 0 0
+1 7 4 25 5 0 0 0
 16 9434 100
 A
 5 5
@@ -629,7 +629,7 @@ small concealed chest~
 &+YA small, &+Lconcealed &+Ychest is here, &+cbolted &+Yto the corner of the floor.~
 ~
 15 6 3 0 7 0 4096 0 0 0 0
-10 29 83145 5 0 0 0 0
+10 25 83145 5 0 0 0 0
 0 0 100
 E
 small concealed chest~
@@ -705,7 +705,7 @@ small concealed chest~
 &+YA small, &+Lconcealed &+Ychest is here, &+cbolted &+Yto the corner of the floor.~
 ~
 15 6 3 0 7 0 4096 0 0 0 0
-10 29 83145 5 0 0 0 0
+10 25 83145 5 0 0 0 0
 0 0 100
 E
 small concealed chest~
@@ -728,11 +728,11 @@ well-polished well moorwood lyre instrument~
 &+Lvery well-polished moorwood.
 ~
 A
-13 25
+13 10
 A
-20 -4
+20 -2
 #83152
-drums drum moorwood stretched orc skin instrument~
+moorwood drums stretched orc skin instrument~
 &+Lsome mooorwood drums with stretched &+gorc &+Lskin&N~
 &+LSome moorwood drums have been left here.~
 ~
@@ -740,14 +740,13 @@ drums drum moorwood stretched orc skin instrument~
 188 70 0 1 0 0 0 0
 0 16549 100
 E
-moorwood drums stretched orc skin instrument~
- &+LThese finely-crafted moorwood drums have been topped with the
- &+Lstretched skin of a vile &N&+gorc&+L.
+moorwood drums stretched orc skin~
+   &+LThese drums have been stretched with the tanned hide of &+gORCS&+L!!
 ~
 A
-13 25
+13 10
 A
-20 -4
+20 -2
 #83153
 flute human bone instrument~
 &+La &Nflute &+Lmade of a &+Chuman &+Wbone&N~
@@ -761,9 +760,9 @@ flute human bone~
    &+WThis flute is made out of a single human bone.  It is marked with cursed drow elven runes.
 ~
 A
-13 25
+13 10
 A
-22 -4
+22 -2
 #83154
 spidersilk backpack bp silver buckles~
 &+La s&Np&+Li&Nd&+Le&Nr&+Ls&Ni&+Ll&Nk &+Lbackpack with &+Csilver &+Lbuckles&N~
@@ -790,9 +789,9 @@ twisted horn instrument~
    &+LThis twisted horn looks to be one of the head-horns of a baatezu demon.
 ~
 A
-13 25
+13 10
 A
-24 -4
+24 -2
 #83156
 long robe starbursts~
 &+La long robe of &+Ystarbursts&N~
@@ -817,7 +816,7 @@ shining suit platemail~
 &+WA shining suit of platemail has been left here.~
 ~
 9 16 4 0 13 0 262144 9 66 0 0
-77 0 0 0 0 0 0 0
+25 0 0 0 0 0 0 0
 15 54034 100
 E
 shining suit platemail~
@@ -825,7 +824,7 @@ shining suit platemail~
 &+Wvery protective.  It carries a great blessing and shines with holy light.
 ~
 A
-13 25
+13 10
 A
 5 5
 #83158
@@ -841,13 +840,13 @@ shining helmet~
    &+WThis brilliant steel helm glows with a magical blessing.
 ~
 A
-13 15
+13 10
 A
 5 5
 #83159
 shining steel holy avenger~
 &+Wa s&nh&+Wi&Nn&+Wi&Nng &+Wsteel holy avenger&N~
-An unnamed object lies here, looking lonely and forelorn.~
+&+WA s&+wh&+Wi&+wn&+Wi&+wng &+Wsteel holy avenger has been dropped here, forgotten.&n~
 ~
 5 16 4 0 11 0 4456448 8193 66 0 0
 13 7 4 0 0 0 0 0
@@ -858,9 +857,9 @@ shining steel holy avenger~
 &+Wbrilliant light.
 ~
 A
-19 6
+19 5
 A
-18 6
+18 5
 #83160
 scroll soulshield~
 &+ya scroll of &+Wsoulshield&N~
@@ -895,7 +894,7 @@ gleaming dwarven hammer warhammer~
 &+Ca gleaming dwarven warhammer covered with runic script&N~
 &+CA gleaming dwarven warhammer lies here.~
 ~
-5 11 2 0 15 0 512 8193 126 0 48
+5 11 2 0 15 0 512 8193 66 0 48
 4 4 5 0 0 325016 40 40
 0 100434 100 0 80 0 0
 E
@@ -954,14 +953,14 @@ huge stone club~
 &+LA huge &Nstone &+Lclub has been left here.~
 ~
 5 11 6 0 7 0 4194304 8193 64 0 0
-10 3 9 0 0 0 0 0
+10 3 6 0 0 0 0 0
 15 40 100
 E
 huge stone club~
    &+LThis massive stone club looks like it could pulverize whatever it strikes.
 ~
 A
-19 6
+19 7
 A
 19 4
 #83165
@@ -1086,7 +1085,7 @@ spiked stone mace~
 &+LA &+rspiked &+Lstone &nmace &+Lhas been left here.~
 ~
 5 11 3 0 7 0 0 8193 64 0 0
-7 3 4 0 0 0 0 0
+7 4 4 0 0 0 0 0
 5 15943 100
 E
 spiked stone mace~
@@ -1103,7 +1102,7 @@ bloody warhammer hammer~
 &+LA &+rbloody warhammer&+L has been left here.~
 ~
 5 11 3 0 7 0 0 8193 64 0 0
-4 2 8 0 0 0 0 0
+4 4 4 0 0 0 0 0
 4 15943 100
 E
 bloody warhammer hammer~
@@ -1258,7 +1257,7 @@ bottomless bag shield dwarves~
 &+Ba bottomless bag of the &Nsh&+Wie&Nld &+Ydwarves&N~
 &+WA bottomless bag of the &Nsh&+Wie&Nld &+Ydwarves &+Whas been left here.~
 ~
-15 3 3 0 7 0 134217728 16385 0 0 0
+15 3 3 0 7 0 0 0 0 0 0
 600 1 0 600 0 0 0 0
 -150 550000 100
 E
@@ -1305,11 +1304,11 @@ tempered mithril breastplate breast plate~
 &n&+ma te&+Mmp&N&+mer&+Med &+Cmithril &N&+mbr&+Mea&N&+mst&+Mpl&N&+mate&N~
 &+mA tempered &+Cmithril &+Mbreastplate&N has been left here.~
 ~
-9 18 3 0 11 0 134217728 9 64 0 0
+9 18 3 0 11 0 0 9 66 0 0
 20 0 0 5 0 0 0 0
-5 74332 100
+5 20111 100
 A
-17 -50
+5 4
 A
 1 4
 #83189
@@ -1317,23 +1316,23 @@ tempered mithril helmet~
 &+Ma te&N&+mmpe&+Mred &+Cmithril &+Mhel&N&+mmet&N~
 &+MA tempered &+Cmithril &+Chelmet has been left here.~
 ~
-9 18 3 0 11 0 134217728 17 64 0 0
+9 18 3 0 11 0 0 17 66 0 0
 15 0 0 5 0 0 0 0
-5 70118 100
+5 17000 100
 A
-17 -30
+31 4
 A
 1 4
 #83190
-tempered mithril arm plates~
+tempered mithril helmet~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+ma&+Mrm &N&+mp&+Mla&N&+mtes&N~
 &+CSome templered &+Cmithril &N&+carm plates have been left here.~
 ~
-9 18 3 0 11 0 134217728 257 64 0 0
+9 18 3 0 11 0 0 257 66 0 0
 15 0 0 5 0 0 0 0
-5 75332 100
+5 18000 100
 A
-17 -30
+31 2
 A
 1 4
 #83191
@@ -1341,11 +1340,11 @@ tempered mithril leg plates~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+mle&+Mg &N&+mp&+Mla&N&+mtes&N~
 &+CSome tempered &+Cmithril &+Cleg plates have been left here.~
 ~
-9 18 3 0 11 0 134217728 33 64 0 0
+9 18 3 0 11 0 0 33 66 0 0
 15 0 0 5 0 0 0 0
-5 75339 100
+5 18000 100
 A
-17 -30
+18 2
 A
 1 4
 #83192
@@ -1353,11 +1352,11 @@ tempered mithril boots~
 &+Mso&N&+mme te&+Mmp&+Mere&N&+md &+Cmithril &n&+mbo&+Mots&N~
 &+CSome tempered &+Cmithril &+Cboots have been left here.~
 ~
-9 18 3 0 11 0 134217728 65 64 0 0
+9 18 3 0 11 0 0 65 66 0 0
 15 0 0 5 0 0 0 0
-5 72443 100
+5 18000 100
 A
-17 -35
+14 15
 A
 1 4
 #83193
@@ -1365,7 +1364,7 @@ well-balanced mithril longsword sword~
 &+Ma &n&+cwell-balanced &+mm&+Mi&N&+mt&+Mh&N&+mr&+Mi&N&+ml &+Wlongsword&N~
 &+MA well-balanced mithril longsword has been left here.~
 ~
-5 18 3 0 14 0 0 8193 64 0 0
+5 18 3 0 14 0 1 8193 64 0 0
 5 4 4 0 0 0 0 0
 2 15993 100
 A
@@ -1377,8 +1376,8 @@ two-handed mithril bastard sword~
 &+Ma &N&+ctwo-handed &+mm&+Mi&n&+mt&+Mh&N&+mr&+Mi&N&+ml &+Wbastard sword&N~
 &+MA &N&+ctwo-handed &N&+mm&+Mi&N&+mt&+Mh&N&+mr&+Mi&N&+ml &+Wbastard sword &Nhas been left here.~
 ~
-5 18 3 0 14 0 4194304 8193 64 0 0
-13 4 7 0 0 0 0 0
+5 18 3 0 14 0 4194305 8193 64 0 0
+13 4 8 0 0 0 0 0
 4 28000 100
 A
 18 4
@@ -1446,7 +1445,7 @@ small concealed chest~
 &+YA small, &+Lconcealed &+Ychest is here, &+cbolted &+Yto the corner of the floor.~
 ~
 15 6 3 0 7 0 4096 0 0 0 0
-10 13 83200 5 0 0 0 0
+10 9 83200 5 0 0 0 0
 0 0 100
 E
 small concealed chest~
@@ -1567,8 +1566,8 @@ gnomish harm prevention belt~
 &+yA gnomish harm prevention belt has been left here.~
 ~
 9 14 2 0 9 0 1 2049 64 0 0
-30 0 0 5 0 0 0 0
-1 4333 100 64 0 0 0
+5 0 0 5 0 0 0 0
+1 4333 100 64 0 64 0
 E
 gnomish harm prevention belt~
    &+yThis strange gnomish belt is made of taught, cured leather.  There
@@ -1577,16 +1576,16 @@ gnomish harm prevention belt~
 &+yand buzzes.
 ~
 A
-17 -60
+54 1
 A
-13 25
+13 10
 #83207
 steel cutlass~
 &+La &+Csteel &+Lcutlass&N~
 &+LA steel cutlass has been left here.~
 ~
 5 16 3 0 7 0 0 8193 0 0 0
-5 3 7 0 0 0 0 0
+5 3 4 0 0 0 0 0
 0 15330 100
 E
 steel cutlass~
@@ -1602,7 +1601,7 @@ platinum telescope studded crystal shrimp~
 &+WA platinum telescope &N&+ystudded &+Wwith &+Ccrystal shrimp&N has been left here.~
 ~
 3 8 2 0 14 0 1 8404993 64 0 0
-51 5 5 69 0 0 0 0
+51 9 9 69 0 0 0 0
 0 414339 100 4 0 0 1048576
 E
 platinum telescope studded crystal shrimp~
@@ -1620,7 +1619,7 @@ derroskin derro skin admiral's admiral hat~
 &+rA &+yderro&+rskin &+Wadmiral's hat &nhas been left here.~
 ~
 9 2 2 0 5 0 0 17 0 0 0
-10 0 0 1 0 0 0 0
+0 0 0 1 0 0 0 0
 0 200 100 65536 76 0 0
 E
 derroskin derro skin admiral's admiral hat~
@@ -1628,7 +1627,7 @@ derroskin derro skin admiral's admiral hat~
 &+rsmoothed out and sewn over with illustrious &+Wfe&+Yat&+Rhe&+Wrs.
 ~
 A
-13 25
+2 5
 A
 32 5
 #83210
@@ -1637,7 +1636,7 @@ pair chromium dragonscale vambraces~
 &+LA pair of &+Cchromium &+Cdragonscale &N&+cvambraces have been left here.~
 ~
 9 35 3 0 11 0 1024 257 64 121258427 0
-20 0 0 5 0 0 0 0
+5 0 0 5 0 0 0 0
 6 44339 100 0 192 0 0
 E
 pair chromium dragonscale vambraces~
@@ -1685,7 +1684,7 @@ spiked seige boots~
 &+LSome spiked &+Yseige &+Lboots have been left here.~
 ~
 9 15 3 0 9 0 0 65 0 0 0
-20 0 0 5 1 0 0 0
+0 0 0 5 1 0 0 0
 10 10222 100
 E
 spiked seige boots~
@@ -1702,7 +1701,7 @@ old heavy mithril hammer~
 &n&+mAn old heavy mithril hammer has been left here, forgotten.~
 ~
 5 18 3 0 5 0 4194304 8193 0 0 0
-4 7 4 0 0 0 0 0
+4 4 5 0 0 0 0 0
 20 6000 62
 E
 old heavy mithril hammer~
@@ -1719,7 +1718,7 @@ old heavy mithril hammer _id_~
 &+LAn old heavy mithril hammer has been left here, forgotten.~
 ~
 5 18 4 0 5 0 37748736 8193 127 0 0
-4 8 4 0 0 0 0 0
+4 3 4 0 0 0 0 0
 20 60000 62 0 32768 0 0
 E
 old heavy mithril hammer~
@@ -1893,7 +1892,7 @@ polished wooden desk~
 &+yA well-&+Wpolished&N&+y wooden desk &Nis pushed against the far wall.~
 ~
 15 15 3 0 7 0 0 0 0 0 0
-20 5 83145 0 0 0 0 0
+20 13 83145 0 0 0 0 0
 0 0 100
 E
 small wooden desk~
@@ -1928,7 +1927,7 @@ spiked mithril wristguard~
    &+mThis wristguard is covered in thick &+Ygolden &n&+mspikes.
 ~
 A
-17 -20
+18 3
 A
 19 4
 #83229
@@ -1937,7 +1936,7 @@ spiked mithril mace~
 &+YA &N&+rspiked &n&+mmithril &+Ymace has been left here.~
 ~
 5 18 3 0 7 0 0 8193 64 0 0
-11 3 5 0 0 0 0 0
+11 5 5 0 0 0 0 0
 4 3999 100
 E
 spiked mithril mace~
@@ -1953,7 +1952,7 @@ bright silver warhammer hammer~
 &+Ca bright silver warhammer has been left sitting here.~
 ~
 5 22 3 0 7 0 0 8193 64 0 0
-4 3 7 0 0 0 0 0
+4 3 6 0 0 0 0 0
 1 14332 100
 E
 bright silver warhammer hammer~
@@ -1969,7 +1968,7 @@ gnomish explosive launcher prototype contraption crystal~
 &+CA crystal contraption made of a tube and a firing device has been left here.~
 ~
 3 8 2 0 11 0 0 16385 0 0 0
-60 6 6 167 0 0 0 0
+60 6 6 26 0 0 0 0
 1 62434 100
 E
 gnomish explosive launcher prototype contraption crystal~
@@ -1998,9 +1997,7 @@ gnomish rocket boots~
 &+Rfeet when they build enough speed.
 ~
 A
-55 4
-A
-14 44
+55 3
 #83233
 catseye inventor's goggles~
 &+ysome cat&+Ys&N&+yeye &+Yi&N&+cn&+Yv&N&+ce&+Yn&N&+ct&+Yo&N&+cr&+Y'&N&+cs &+ygoggles&N~
@@ -2026,8 +2023,8 @@ massive tauren battle-axe axe~
 &+La massive &N&+yta&+rur&+yen &+Lbattle-axe&N~
 &+LA huge mino&N&+rtauren &+Lbattle-axe has been left here.~
 ~
-5 15 5 0 3 0 4194304 8193 64 0 0
-1 2 13 0 0 0 0 0
+5 15 5 0 3 0 4194432 8192 64 0 0
+1 3 13 0 0 0 0 0
 15 16 100
 E
 massive tauren battle-axe axe~
@@ -2073,7 +2070,7 @@ plaque mithril~
 #83237
 huge golden weapon rack~
 &+Ya huge golden weapon rack~
-&+YA golden weapon rack sits here positioned against the northern wall.~
+&+YA huge golden weapon rack sits facing the bed, shining with glory.~
 ~
 15 24 5 0 14 0 1 0 0 0 0
 500 0 0 0 0 0 0 0
@@ -2091,10 +2088,10 @@ enchanted mithril shield shanat~
 &+LThe &N&+me&+Ln&N&+mc&+Lh&N&+ma&+Ln&N&+mt&+Le&N&+md &+Mmithril &+Lshield of &N&+cShanat &+Lhas been left here.~
 ~
 37 18 4 0 15 0 33555456 513 66 129941947 0
-1 3 5 220 5 0 0 0
-17 69333 100 0 12480 128 0
+1 3 5 30 5 0 0 0
+17 69333 100 0 12480 64 0
 A
-17 -80
+13 20
 A
 35 5
 #83239
@@ -2103,8 +2100,8 @@ enchanted mithril full plate suit shanat mail~
 &+Lthe &N&+me&+Ln&N&+mc&+Lh&N&+ma&+Ln&n&+mt&+Le&N&+md &+Lfull plate of &N&+cShanat &+Lhas been left here.~
 ~
 9 18 4 0 15 0 570426368 9 66 121553339 0
-160 0 0 5 0 0 0 0
-10 165433 100 0 2048 0 0
+50 0 0 5 0 0 0 0
+10 165433 100
 E
 enchanted mithril full plate suit shanat mail~
    &+LThis glorious full suit of platemail has massive shoulder guards and huge
@@ -2113,17 +2110,17 @@ enchanted mithril full plate suit shanat mail~
 &+Lhammer and sword, humming faintly.
 ~
 A
-17 -150
+1 10
 A
-13 80
+13 20
 #83240
 enchanted mithril plumed helm shanat~
 &+Lthe &N&+men&+Lc&N&+mh&+La&N&+mn&+Lte&N&+md &+Mmithril &+Lplumed helm of &N&+cShanat&N~
 &+LThe &N&+men&+Lchan&N&+mted &+Mmithril &+Lplumed helm of &N&+cShanat &Nhas been left here.~
 ~
 9 18 3 0 15 0 1107297280 17 66 129941947 0
-90 0 0 5 0 0 0 0
-6 33433 100 268435716 0 0 1048576
+10 0 0 5 0 0 0 0
+6 33433 100 268435716 0 0 0
 E
 enchanted mithril helmet plumed~
    &+LThis large helmet has a huge visor and a rich flowing feather plume.
@@ -2131,9 +2128,9 @@ enchanted mithril helmet plumed~
 &+Land-hammer insignia of &N&+cAlatorin&+L.
 ~
 A
-17 -45
+5 10
 A
-35 9
+35 5
 #83241
 tiny velvet case~
 &+La tiny &N&+mvelvet &+Lcase&N~
@@ -2149,7 +2146,7 @@ tiny velvet case~
 ~
 #83242
 royal signet ring alatorin~
-&+Ythe &N&+mr&+Mo&N&+my&+Ma&N&+ml &+Ysignet of &N&+cAl&+Cator&N&+cin&N~
+&+Ythe &N&+mr&+Mo&N&+my&+Ma&N&+ml &+Ysignet ring of &n&+cAlatorin&N~
 &+YThe &+Mroyal &+Ysignet ring of &N&+cAlatorin &+Yhas been left here.~
 ~
 9 24 0 0 7 0 1 3 64 0 0
@@ -2164,16 +2161,16 @@ royal signet ring alatorin~
 &+Yand wisdom.
 ~
 A
-13 35
+13 15
 A
-14 35
+14 15
 #83243
 heavy mithril bastard sword~
 &+La &Nheavy &N&+mmithril &+Lbastard sword&N~
 &+LA &Nheavy &+mmithril &+Lbastard sword has been left here.~
 ~
 5 18 3 0 11 0 0 8193 64 0 0
-5 5 3 0 0 0 0 0
+5 5 4 0 0 0 0 0
 6 15343 100
 E
 heavy mithril bastard sword~
@@ -2294,20 +2291,11 @@ large sign tokens~
 0 0 100
 E
 large sign tokens~
-&+L------------------------------
+&+L---------------------------
 
-&+W     Tokens! &N(see Modan)
+&+W     Tokens!  Ask Modan
 
-&+L------------------------------
-&+g  Dragon&+rslaying &+L-&+W 10 tokens
-&+y  Cooking      &+L -&+W 10 tokens
-&+L  Stealth      &+L -&+W 10 tokens
-&+b  Mining     &+L   -&+W 10 tokens
-&+y  C&No&+yl&nl&+ye&Nc&+yt&Ni&+yn&Ng   &+L -&+W 10 tokens
-&+L------------------------------
-&+CAlatorin Medals of Honor - 10
-
-&+L------------------------------
+&+L---------------------------
 ~
 #83252
 golden claw~
@@ -2340,8 +2328,8 @@ earthen chest~
 &+Lan &N&+yearthen &+Lchest&N~
 &+LA huge chest of stone and &N&+yearth &+Lwith a huge keyhole is here.~
 ~
-15 11 3 0 7 0 134221824 0 0 0 0
-5000 29 83253 500 0 0 0 0
+15 11 3 0 7 0 4096 0 0 0 0
+50 29 83253 40 0 0 0 0
 0 0 100
 E
 earthen chest~
@@ -2414,7 +2402,7 @@ A
 19 2
 #83260
 signet ring hammerhelm~
-&+Wthe signet &+Yof &+WHammer&+Yhelm&N~
+&+Wthe signet &+Yring &+Wof Hammer&+Yhelm&N~
 &+WThe signet ring of &+WHammer&+Yhelm has been left here.~
 ~
 9 11 3 0 7 0 4096 3 64 0 0
@@ -2434,7 +2422,7 @@ mammoth stone dwarven hammer warhammer war~
 &+WA mammoth stone warhammer sits here.~
 ~
 5 11 5 0 7 0 4194305 8193 66 0 0
-4 8 5 0 0 0 0 0
+4 8 3 0 0 0 0 0
 20 34332 100
 E
 mammoth stone dwarven hammer warhammer war~
@@ -2478,14 +2466,14 @@ sharp mithril shortsword sword short~
 &+LA sharp &N&+mmithril shortsword has been left here.~
 ~
 5 15 3 0 7 0 1 8193 64 0 0
-9 3 5 0 0 0 0 0
+9 4 5 0 0 0 0 0
 0 0 100
 E
 sharp mithril shortsword sword short~
    &+LThis mithril shortsword has been sharped to a deadly edge.
 ~
 A
-18 4
+18 5
 A
 19 5
 #83265
@@ -2494,7 +2482,7 @@ granite warhammer hammer headed spiked~
 &+LA huge spiked warhammer has been left here.~
 ~
 5 11 3 0 7 0 0 8193 64 0 0
-4 4 5 0 0 0 0 0
+4 5 5 0 0 0 0 0
 10 3322 100
 E
 granite warhammer hammer headed spiked~
@@ -2510,7 +2498,7 @@ drop droplet baobob sap~
 &+LA small &N&+cdroplet &+Lof gooey &+Ytree sap&+L lies here, adhered to the &N&+yearth&+L.~
 ~
 10 40 3 0 7 0 4096 8404993 64 0 0
-55 141 237 515 0 0 0 0
+55 141 398 515 0 0 0 0
 0 15343 100
 E
 drop droplet baobob sap~
@@ -2566,8 +2554,8 @@ book entitled sol~
 &+Ya book entitled &+Y'Sol'~
 &+YA bright yellow book with huge letters spelling 'Sol' has been left here.~
 ~
-4 28 2 0 7 0 0 8404993 64 0 0
-40 3 3 359 0 0 0 0
+4 28 2 0 7 0 4096 8404993 64 0 0
+40 3 3 18 0 0 0 0
 0 343 100
 E
 book entitled sol~
@@ -2612,7 +2600,7 @@ heart ancient baobob tree~
 ~
 8 6 3 0 7 0 33558528 16385 66 0 0
 0 0 0 0 0 0 0 0
-0 55343 100 16777216 0 32 0
+0 55343 100 285212672 0 32 0
 E
 heart ancient baobob tree~
    &+gThis deep-green heart glows with a deeply-seeded, ancient magic.
@@ -2620,7 +2608,7 @@ heart ancient baobob tree~
 &+gpower.
 ~
 A
-54 55
+13 20
 A
 23 -5
 #83272
@@ -2645,7 +2633,7 @@ heavy oaken mallet~
 &+yA heavy oaken &+Lmallet &nhas been left here.~
 ~
 5 6 5 0 4 0 4194304 8193 0 0 0
-4 8 4 0 0 0 0 0
+0 6 4 0 0 0 0 0
 20 1500 100
 E
 heavy oaken mallet~
@@ -2721,14 +2709,14 @@ fur-lined fur ram skull horned shoulder guards~
 A
 19 4
 A
-55 3
+55 4
 #83278
 huge club single bloodied bone shard~
 &N&+ya huge club with a single &n&+rbloodied &+Wbone shard&N~
 &+yA huge wooden club with a single bloodied shard has been left here.~
 ~
 5 15 3 0 7 0 4194304 8193 0 0 0
-8 4 8 0 0 0 0 0
+8 4 6 0 0 0 0 0
 0 0 100
 E
 huge club single bloodied bone shard~
@@ -2739,7 +2727,7 @@ huge club single bloodied bone shard~
 A
 19 6
 A
-18 6
+18 5
 #83279
 gold mithril key~
 &+La &+Ygold&+L and &N&+mmithril &+Lkey&N~
@@ -2826,13 +2814,13 @@ ethereal lily~
 &+Cpetals and a pungeant, magical scent.
 ~
 #83285
-ethereal symbiote inner planes _noquest_~
+ethereal symbiote inner planes~
 &+Lan &n&+me&+Lt&N&+mh&+Le&N&+mr&+Le&N&+ma&+Ll &+Gsymbiote &+Lof the &+Yi&N&+gnn&+Ye&N&+gr &+Yp&N&+gla&+Yn&N&+ges&N~
 &+LA strange &N&+met&+Lhe&N&+mre&+Lal &+Gsymbiote &+Lfloats here, awaiting a new &+Mhost&+L.~
 ~
 9 1 3 0 15 0 33554464 1025 64 0 0
 10 0 0 3 0 0 0 0
--100 400392 100 524290 8388608 0 0
+-100 400392 100 134217730 0 0 0
 E
 ethereal symbiote inner planes~
    &+LThis strange, sentient alien organism bonds with other living organisms
@@ -2934,7 +2922,7 @@ mithril sword longsword~
 &+mA mithril longsword has been left here.~
 ~
 5 18 3 0 11 0 0 8193 64 0 0
-5 3 7 0 0 0 0 0
+5 3 6 0 0 0 0 0
 3 33333 100
 E
 mithril sword longsword~
@@ -2966,7 +2954,7 @@ two handed two-handed mithril broadsword sword~
 &+mA two-handed mithril broadsword has been left here.~
 ~
 5 18 4 0 11 0 4194304 8193 64 0 0
-13 5 6 0 0 0 0 0
+13 3 7 0 0 0 0 0
 8 60544 100
 E
 two handed two-handed mithril broadsword sword~
@@ -2995,7 +2983,7 @@ tiny wand weapon enchantment~
 ~
 3 44 1 0 7 0 1 16385 64 0 0
 60 1 1 24 0 0 0 0
-0 11222 100
+0 15434 100
 E
 tiny wand weapon enchantment~
    &+cThis tiny wand has a slight &+Rred hue&n&+c when light shines throug hit,
@@ -3029,7 +3017,7 @@ massive red bladed mithril battle axe battle-axe~
 &+LA massive &N&+rred-bladed &N&+mmithril battle-axe&N has been left here.~
 ~
 5 18 3 0 7 0 4194304 8193 64 0 0
-13 5 7 0 0 0 0 0
+13 5 6 0 0 0 0 0
 8 159309 100
 E
 massive red bladed mithril battle axe battle-axe~
@@ -3059,13 +3047,13 @@ tiny rune-inscribed ring rune inscribed~
 A
 24 -4
 #83299
-flaming halo combustion _noquest_~
+flaming halo combustion~
 &N&+rthe &+Yf&+Rl&N&+rami&+Rn&+Yg &+Whalo &n&+rof &+Rcom&N&+rb&+Wus&N&+rt&+Rion&N~
 &+rThe &+Yf&+Rl&N&+rami&+Rn&+Yg &+Whalo &N&+rof &+Rcom&N&+rbus&+Wtu&N&+ri&+Ron &+Lhas been left here!!~
 ~
 9 1 2 0 7 0 33555457 17 64 12619268 0
 10 0 0 3 0 0 0 0
-0 1000000 100 536870912 4194333 0 0
+0 1000000 100 536870912 29 0 0
 E
 flaming halo combustion~
    &+rThis magically &+Rburning &+Whalo &N&+rswirls in a magical fire around the
@@ -3140,7 +3128,7 @@ illusionary dagger~
 &+LAn illusionary dagger somehow floats here.~
 ~
 5 1 3 0 7 0 524288 8193 0 0 0
-2 2 7 0 0 0 0 0
+2 1 7 0 0 0 0 0
 -10 0 100
 E
 illusionary dagger~
@@ -3151,8 +3139,8 @@ A
 A
 1 15
 #83305
-bloody heart blue drake~
-&+rthe bloody heart of a &+Bblue drake&N~
+bloody heart blue dragon welp~
+&+rthe bloody heart of a &+Bblue dragon welp&N~
 &+rThe huge, bloody heart of a &+Bblue dragon&N&+r has been left here.~
 ~
 8 2 3 0 7 0 4096 16385 0 0 0
@@ -3164,9 +3152,9 @@ bloody heart melbe~
 &+rutterly &+Wglistens &N&+rwith the blood of its former owner.
 ~
 #83306
-bloody heart blue drake~
-&+rthe bloody heart of a &+bblue drake&N~
-&+rThe bloody herat of a &+rblue drake&+r lies here in a pool of blood.~
+bloody heart blue dragon welp~
+&+rthe bloody heart of a &+bblue dragon welp&N~
+&+rThe huge, bloody heart of a &+Bblue dragon&N&+r has been left here.~
 ~
 8 2 3 0 7 0 4096 16385 0 0 0
 0 0 0 0 0 0 0 0
@@ -3177,12 +3165,12 @@ bloody heart melbe~
 &+rutterly &+Wglistens &N&+rwith the blood of its former owner.
 ~
 #83307
-key shanat~
-&+Lthe &N&+ckey &+Lof &+RShanat&N~
-&+LThe &N&+ckey &+Lof &+RShanat&+L has been left here.~
+key taark private hall~
+&+La &N&+ckey&+L to &+RTaark Shanat's Private Hall&N~
+An unnamed object lies here, looking lonely and forelorn.~
 ~
-18 22 2 0 7 0 8388609 16385 64 0 0
-0 0 0 0 0 0 0 0
+18 22 2 0 7 0 1 16385 64 0 0
+0 100 0 0 0 0 0 0
 0 15343 100
 E
 key taark private hall~
@@ -3225,7 +3213,7 @@ gold-rimmed ruby goggles~
 ~
 9 31 3 0 14 0 262144 131073 64 0 0
 4 0 0 3 0 0 0 0
-1 255433 100 0 28 0 0
+1 255433 100
 E
 gold-rimmed ruby goggles~
    &+LThese goggles have been crafted with total perfection.  The rims of the
@@ -3337,9 +3325,9 @@ A
 A
 24 -4
 #83317
-commendation token mining~
-&+Wa commendation &+Ytoken &+Wof &N&+bmining&N~
-&+YA commendation token of &N&+bmining&+Y has been left here.~
+commendation token blacksmithing~
+&+Wa commendation &+Ytoken &+Wof &N&+bblacksmithing&N~
+&+WA shimmering commendation &+Ytoken &+Wof &N&+bblacksmithing &+Whas been left here.~
 ~
 8 8 1 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
@@ -3410,7 +3398,7 @@ gnarled wooden club~
 &+LA &N&+ygnarled wooden club&N has been left here.~
 ~
 5 5 3 0 0 0 0 8193 0 0 0
-10 2 6 0 0 0 0 0
+10 2 10 0 0 0 0 0
 7 2 87
 E
 gnarled wooden club~
@@ -3450,3102 +3438,3 @@ bloody heart birch scruden orc~
 &+rturned general of Khildarak's military, who had then joined with the shield dwarves of the
 &+cAlatorin &+Yseige &n&+rarmy.
 ~
-#83324
-mithril silver neckguard guard neck~
-&n&+ma mi&+Mth&N&+mri&+Ml &N&+cand &+Csi&N&+clv&+Cer &N&+mneck&+cguard&N~
-&+LA &N&+mmithril &+cand silver &+Lneckguard&N has been left here.~
-~
-9 18 3 0 10 0 1025 5 64 121127355 0
-5 0 0 0 0 0 0 0
-3 15343 100
-E
-mithril silver neckguard guard neck~
-   &+cThis thick mithril collar has huge silver inlaid designs etched upon it.
-~
-A
-17 -22
-A
-1 5
-#83325
-engraved dwarven mithril bracer~
-&+man &Ne&+mn&ng&+mr&Na&+mv&Ne&+md dwarven &+Cmithril &N&+mbracer&N~
-&+mA thick, mithril bracer engraved with &N&+ydwarven &n&+mrunes has been left here.~
-~
-9 18 3 0 4 0 1 4097 64 0 0
-5 0 0 0 0 0 0 0
-3 16448 100
-E
-engraved dwarven mithril bracer~
-   &+yThis old mithril bracer is quite thick, and typical in design of
-&+ymountain dwarf ancestry.  This particular bracer bears some faint runes
-&+ywhich seem to light up and &+Mglow &N&+yin the presence of dwarves.
-~
-A
-1 8
-A
-2 8
-#83326
-orb mental toughness~
-&n&+can &+Corb &N&+cof &+mmen&+Mt&+Mal t&+Woughnes&+Ms&N~
-&+cAn orb of mental toughness has been left here.~
-~
-4 15 3 0 7 0 33554432 8404993 64 0 0
-51 3 3 182 0 0 0 0
-0 0 100
-E
-orb mental toughness~
-   &+cThis strange crystalline &+morb &+chums with a powerful inner magic,
-&+ccausing the bearer of this jewel to feel an increased sense of &+Mpower&n&+c.
-~
-A
-27 5
-A
-37 5
-#83327
-well crafted pouch spidersilk~
-&+La well-crafted pouch of &+Ws&+Lp&+Wi&+Ld&+We&+Lr&+Ws&+Li&+Wl&+Lk~
-&+LA well-crafted pouch of light spidersilk has been left here.~
-~
-15 3 2 0 13 0 0 9453569 0 0 0
-300 5 0 300 0 0 0 0
--150 23222 100
-E
-well crafted pouch spidersilk~
- &+LThis pouch has been dual stitched and has a huge embroidered spider across
- &+Lits main flap.  This pouch is incredibly light weight and has been made with
- &+Lthe delicate, but precise hands of a drow.
-~
-A
-28 10
-#83328
-hooded black cape~
-&+La hooded black cape&N~
-&+LA hooded black cape glows with a faint &+Mmagic&+L.~
-~
-9 3 3 0 14 0 1 1025 64 0 0
-10 0 0 0 0 0 0 0
-0 17889 100
-E
-hooded black cape~
-   &+LThis well-made cape has a hood that is made of a fine material able to
-&+Lstretch snugly around the wearers head.  Covered in &+Mglowing &+Lgithzerai
-&+Lrunes, this lightweight and magical cape radiates with power.
-~
-A
-26 13
-A
-36 4
-#83329
-crimson hooded cape~
-&n&+ra crimson hooded cape&N~
-&+rA crimson hooded cape lies here, glowing with a faint magic.~
-~
-9 3 3 0 13 0 1 1025 64 0 0
-10 0 0 0 0 0 0 0
-0 18773 100
-E
-crimson hooded cape~
-   &+rThis crimson cape bears a tight hood, and is stitched with the finest
-&+rsilk.  Blessed with the stitched runes of the githzerai people, this
-&+rhooded cape blesses its wearer with a deep magic.
-~
-A
-2 13
-A
-32 3
-#83330
-pile rubble~
-&+La pile of &N&+yr&Nu&+yb&Nb&+yl&Ne&N~
-&+LA pile of &N&+yr&nu&+yb&nb&+yl&Ne &+Lclutters the cavern.~
-~
-15 11 3 0 7 0 0 0 0 0 0
-500 0 0 0 0 0 0 0
-0 0 100
-E
-pile rubble~
-   &+LThis huge pile of rubble sits here after some part of this massive
-&+Lcavern experienced a cave-in.
-~
-#83331
-circular boulder~
-&+La &Nc&+Lircula&Nr &+Lboulder&N~
-&+LA huge &nc&+Lircula&Nr &+Lboulder sits on the eastern side of the cavern.~
-~
-29 15 3 0 7 0 4096 0 0 0 0
-270 83544 1 1 0 0 0 0
-0 0 100
-E
-circular boulder~
-   &+LThis massive boulder sitting on the eastern side of the cavern is completely
-&+Lcircular in at least one diameters width, consistently wide.  Such a smoothness
-&+Lallows this circular boulder to roll back and forth with much better ease.
-~
-#83332
-engraving small wooden~
-&+ya small wooden &+Lengraving&N~
-&+yAn engraving on the western door reads 'The Frothing Mug.'~
-~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-engraving small wooden~
-&+y"THE FROTHING MUG"
-~
-#83333
-adamantite sign~
-&+Lan adamantite sign &N&+rwith blood-red lettering&N~
-&+LAn adamantite sign reading &N&+r'Clan Stealth Hunter'&+L is posted before the eastern structure entrance.~
-~
-13 19 3 0 7 0 1 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-adamantite sign~
-&+r-=- &+RClan Stealth Hunter &+r-=-
-&+r-                         -
-&+r-  Enter only those with  -
-&+r- the blood of the clans  -
-&+r- dwarves.                -
-&+r---------------------------
-~
-#83334
-rugged gloves thick hide~
-&nsome rugged gloves of thick &+Yhide&N~
-&NSome rugged gloves of thick &N&+yhide&N have been left here.~
-~
-9 12 2 0 2 0 0 129 0 0 0
-5 0 0 0 0 0 0 0
-0 666 82
-E
-rugged gloves thick hide~
-   &+yThese thick gloves are made from the tanned &+Yhide &N&+yof a &+Cnorthland
-&+Yram&N&+y, the native &+Whorned &N&+ybeasts of the &N&+cSh&+Lan&N&+cat&+Lar &N&+yand surrounding mountains.
-~
-A
-13 8
-A
-1 4
-#83335
-electrum hoop~
-&+Yan &+Celectrum hoop&N~
-&+YAn &+Celectrum hoop&N has been left here.~
-~
-9 23 2 0 9 0 266240 524289 0 0 0
-1 0 0 0 0 0 0 0
-0 44932 100
-E
-electrum hoop~
-   &+CThis fine electrum hoop sparkles in the light.  It fits in ones ear
-&+Ceasily, as it is not too large to be uncomfortable but bright enough to
-&+Ccherish.
-~
-A
-13 13
-A
-20 -2
-#83336
-hide bound hide-bound spellbook book glowing alatorin insignia~
-&+La &+Yhide&n-bound &+Lspellbook with a &n&+mgl&+Mo&+Ww&+Mi&N&+mng &N&+cAl&+Cator&N&+cin &+Linsignia&N~
-&+LAn &N&+cAlatorin &+Lspellbook bound by &+Yhide&+L has been left here.~
-~
-33 28 2 0 11 0 1 8404993 64 0 0
-0 0 270 0 0 0 0 0
-0 755003 100
-E
-hide bound hide-bound spellbook book glowing alatorin insignia~
-   &+LThis thick spellbook is bound by huge protective flaps made of &+Yhide &+Lthat
-   &+Ltie around the entire book.  A huge glowing &N&+chammer&+L and &+csword&+L emblem
-   &+Lof &N&+cAlatorin&+L is emblazoned on the front, &+Gburning &+Lwith magic.
-~
-A
-24 -4
-#83337
-dwarven inscription~
-&+Ca &N&+ydwarven &+Cinscription&N~
-&+CA small &N&+ydwarven &+Cinscription is scrolled onto the eastern wall.~
-~
-8 18 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-dwarven inscription~
- &+mScrolled in the mithril, this inscription reads:
-       &+CStrength <> Honour <> Valour <> Pride
-~
-#83338
-alatorin key honor~
-&n&+cthe Ala&+Ctor&N&+cin &+Ykey &n&+cof &+Whonor&N~
-&N&+cThe Ala&+Ctor&N&+cin &+Gkey &N&+cof &+Whonor &N&+csits before you.~
-~
-18 18 3 0 15 0 33554433 8404993 64 0 0
-0 100 0 0 0 0 0 0
-0 10555 100
-E
-alatorin key honor~
-&+CA small engraving on the side of this simple, yet powerfully-&n&+mmagical &+Ckey reads:
-&+CTo Thee Who Receiveth This Key;
-&+CHonour Has Been Proven By Thine;
-&+CStrength Has Been In Thy Blade;
-&+CPride Has Been In Thy Hammer;
-&+CHero's Blood Pumps In Thy Heart.
-
-&+CA large, yet simple key made of solid mithril &+Mglows &+Cand &N&+rhums &+Cwith an
-&+Cintensly-&N&+mmagical &+Csensation.
-~
-#83339
-huge sign~
-&+Ca huge &+Ysign&N~
-&+CA huge &+Ysign sits above a large &+Lkeyhole &+Con the door to the north.~
-~
-13 15 3 0 7 0 1 0 64 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-huge sign~
-&+CThis huge &+Ysign&+C, whish seems to be made of &N&+gcrystal&+C reads:
-&+YThe strongest and most honored dwarves
-&+Yrecognized by the king and lord of Alatorin
-&+Ywill solemnly grant access to the Steps of Honour
-&+Yand the Hall of Shanatar.  Fight with Honour, Pride,
-&+Yand Valor dwarves of Alatorin.  -Modan Shanat
-
-&+CThe &+Lkeyhole&+C on the center of the door below this sign has a large
-&+Copening with a rather simple looking mechanism.  A strange &+Mmagic&+C pulses
-&+Cfrom this &+Lkeyhole&+C, however, suggesting a special component to this &nlock&+C.
-~
-#83340
-crystal ball~
-&+La &+mcr&+My&+Ys&+Mt&N&+mal &+Wball&N~
-&+MMiboli &+WSn&+Cob&n&+cls&+Lniz's &N&+mcry&+Mstal &+Wball&N has been left here.~
-~
-4 8 3 0 15 0 1024 16385 64 46960548 0
-60 2 2 364 0 0 0 0
-0 15439 100
-E
-crystal ball~
-   &+mThis crystal ball has a small &+Yrune &n&+mbearing the magical imprint of its
-&+mowner, Miboli Snoblsniz.  This crystal ball does not seem to project quite as
-&+mmuch magical vision as one would expect from the master wizard.
-~
-A
-3 8
-A
-13 17
-#83341
-mithril axe dwarven lords~
-&N&+mthe mithril &+Caxe&N&+m of the &N&+ydwarven &+Ylords&N~
-&+mThe mithril axe of the dwarven lords has been left here.~
-~
-5 18 4 0 15 0 37749505 8193 127 0 48
-13 6 6 0 0 1015016057 40 28
-10 459888 100 268435456 0 0 0
-E
-axe dwarvish lords~
-&N&+yThis legendary &+mmithril &+ylong-handled single-bladed axe is backed with
-&+ya &+rclawed &+yhammer head.  The handle is nearly six feet in length, while the
-&+yblade is quite heavy.  This massive weapon has only been wielded by the
-&+ystrongest of dwarven &+Ylords&N&+y.
-~
-E
-_room_msg~
-&N&+y$q &N&+ysuddenly &+Wglows &N&+yunder $n's &N&+Ydwarven &N&+ytouch.
-~
-E
-_victim_msg~
-&N&+y$n's $q suddenly &+Wglows&N&+y!
-~
-E
-_char_msg~
-&N&+yYour $q &N&+ysuddenly &+Wglows &N&+yunder your &+Ydwarven &N&+ytouch.
-~
-A
-18 6
-A
-19 6
-#83342
-silk cloak alatorin royalty~
-&+Ca silk cloak of &N&+cAla&+Cto&N&+crin &+Yro&N&+myal&+Yty&N~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-9 3 3 0 12 0 0 1025 0 0 0
-10 0 0 2 0 0 0 0
-0 162433 100 0 0 0 1048576
-E
-silk cloak alatorin royalty~
-   &+cThis long silk cloak is &+Wfurred &N&+caround the top and bottom.  The entire
-&+cback of the cloak is &+membroided &+cwith the hammer and shield symbol of
-&+cAlatorin topped with a &+Ygolden crown&n&+c.
-~
-A
-31 4
-A
-22 -4
-#83343
-string duergar dwarf ears~
-&+La string of &n&+rduergar dwarf &N&+years&N~
-&+LA disgusting string of rotting &N&+rduergar dwarf &+years&N has been left here.~
-~
-9 2 3 0 7 0 0 16389 0 0 0
-5 0 0 0 0 0 0 0
-0 500 100
-E
-string duergar dwarf ears~
-   &+yThis foul, disgusting string is haphazardly made of the rotting ears
-&+ythat have been cut from the heads of several unfortunate duergar dwarves.
-~
-A
-1 4
-A
-35 3
-#83344
-brudo brudos brudo's emerald shortsword sword~
-&n&+gBrudo's emerald &+Gs&N&+gh&+Go&N&+gr&+Gt&N&+gs&+Gw&N&+go&+Gr&N&+gd&N~
-&+gA magical emerald shortsword&n has been left here..~
-~
-5 32 3 0 12 0 1 8193 66 0 0
-9 3 6 0 0 0 0 0
-0 33228 100 0 28 0 0
-E
-magical emerald shortsword sword~
-   &+gEngraved on the handle of this &+Mglowing &N&+gshortsword is the word 'Shortstack.'  A long double-edged blade, shimmering brightly end-to-end; this blade is not one to be reckoned with.
-~
-A
-18 5
-A
-19 4
-#83345
-bloody head clund hammerhelm~
-&n&+rthe bloody head of &+WClund &+YHammer&+Whelm&N~
-&+rThe bloody head of &+WClund &+YHammer&+Whelm &n&+rlies here in a pool of blood and &+Wpuss&n&+r.~
-~
-15 10 2 0 7 0 4096 8404993 0 0 0
-10 0 0 10 0 0 0 0
-0 5 100
-E
-bloody head clund hammerhelm~
-   &+rThis &+Rgorey &N&+rhead of &+WClund &+YHammer&+Whelm &N&+ris quite large for
-&+ra dwarven head; all of its hair still in tact.  The eyes are rolled back and the
-&+rskin is paled.  The jaw has been locked in a somewhat open position and the
-&+rtongue is beginning to turn &+Lblack&N&+r.
-~
-#83346
-polished mithril gorget hammerhelm~
-&+Wa polished &+Cmithril &+Wgorget of &+YHammer&+Whelm&N~
-&+WA polished &+Cmithril &+Wgorget has been left here.~
-~
-9 15 3 0 7 0 262144 5 64 0 0
-5 0 0 4 0 0 0 0
-0 0 100
-E
-polished mithril gorget hammerhelm~
-   &+WThis shiny mithril neck protector has been made with enchanted metals
-&+Wand crafted with masterful precision.  Clearly worn by one of the highest
-&+Wand most-honored of &+YHammer&+Whelm&+W, the dwarven military faction of
-&N&+cAlatorin&+W.
-~
-A
-17 -40
-#83347
-all seeing demonic eye all-seeing~
-&+Lan &+Call&+L-seeing &N&+rd&+Le&n&+rm&+Lo&N&+rn&+Li&N&+rc &+Weye&N~
-&+LAn &+Call&+Lseeing &N&+rdemonic &+Weye &Nhas been left here, &+Mstaring at &+Yyou&+W!~
-~
-9 2 1 0 7 0 67117184 131073 64 0 0
-5 0 0 2 0 0 0 0
-0 4 100 40 28 0 0
-E
-all seeing demonic eye all-seeing~
-   &+rThis gorey, disgusting &+Weyeball &N&+rhas been carved out of a poor victim's
-&+rhead.  The eye is &+Mever&+R-living&N&+r, and can be re-implanted into a new
-&+Rhead, as long as the new doner's natural &+Weye &N&+rhas been properly removed.
-~
-A
-33 4
-A
-22 -2
-#83348
-crucified dwarf~
-&+La &n&+rcrucified &+Ydwarf&N~
-&+LA &N&+Wc&+Rr&N&+ruc&+Ri&+Wf&+Ri&N&+red &+Ymountain dwarf &+Ldangless lifelessly from an &N&+ciron cross&+L.~
-~
-13 2 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-crucified dwarf~
-   &+LThis &+Rbrutal &+Lscene - a &N&+cpale, &+Mnaked &+Land lifeless &+Ydwarf &+Lhanging crucified on
-&+Lan &N&+ciron cross&+L warns of grave danger beyond this point.
-~
-#83349
-red flame torch~
-&+La &+Rred-flame &+Ltorch&N~
-&+LA &N&+rtorch &+Lburning a &n&+rred &+Rflame &+Lis posted along the rocky trail.~
-~
-8 15 3 0 7 0 262144 0 64 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-red flame torch~
-   &+LThis magical &+Rtorch &+Lburns a strange &N&+rred flame&+L atop a metal post.
-&+LThe post juts out from between rocks on this rocky trail.
-~
-#83350
-full suit heavy adamantite~
-&na full suit of &+Lheavy adamantite~
-&nA full suit of &+Lheavy adamantite &Nhas been left here.~
-~
-9 19 4 0 9 0 536870912 9 64 0 0
-150 0 0 5 0 0 0 0
-20 88443 100
-A
-17 -80
-A
-14 -25
-#83351
-heavy adamantite full-faced helmet full~
-&+La heavy adamantite full-faced helmet~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-9 19 3 0 7 0 1073741824 17 64 0 0
-5 0 0 0 0 0 0 0
-19 33222 100
-E
-heavy adamantite full-faced helmet full~
-   &+LThis glorious helmet is full-faced and quite heavy, although very protective.
-~
-A
-17 -75
-A
-14 -15
-#83352
-huge dwarven battle axe~
-&+La huge dwarven &n&+rbattle axe&N~
-&+LA huge dwarven &N&+rbattle axe &Nhas been left here, smeared with dried blood.~
-~
-5 19 5 0 7 0 4194304 8193 64 0 0
-1 6 6 0 0 0 0 0
-10 19332 100
-E
-huge dwarven battle axe~
-   &+LThis massive adamantite battle axe is smeared with the blood of numerous victims.
-~
-A
-18 6
-A
-19 6
-#83353
-war banner helgor~
-&+La &N&+rwar &+Wbanner &+Lof &N&+rHel&+Rgor&N~
-&+LA &N&+rwar &+Wbanner &+Lof &N&+rHel&+Rgor&N lies here.~
-~
-9 3 3 0 9 0 0 2097153 64 0 0
-1 0 0 0 0 0 0 0
-2 15343 100
-E
-war banner helgor~
-   &+LThis masive flag is set on a wooden pole that attaches to ones backpack.
-&+LThe standard itself is that of &N&+rHel&+Rgor &+Woutpost&+L, the duergar
-&+Lmilitary base on &N&+yShanatar&+L.
-~
-A
-18 1
-A
-19 2
-#83354
-key adamantite cell~
-&+Lan adamantite &N&+ccell &+Lkey&N~
-&+LA single key on a huge adamantite ring sits here.~
-~
-18 19 1 0 7 0 0 16385 0 0 0
-0 0 0 0 0 0 0 0
-0 100 100
-E
-key adamantite cell~
-   &+LThis small &n&+ciron &+Lkey hangs from a huge adamantite ring.  Made possibly
-&+Lby a key craftsman that makes rings for dungeonmasters, the lone prison key
-&+Lsits on this keyring.
-~
-#83355
-barbed bull whip~
-&+La &N&+rb&+La&N&+rr&+Lb&N&+re&+Ld &+Lbull whip&N~
-&+LA barbed bull whip is lying here.~
-~
-5 13 3 0 7 0 0 8193 0 0 0
-14 4 4 0 0 0 0 0
-2 5999 100
-E
-barbed bull whip~
-   &+LThis long, twined leather whip has a few huge bloody &N&+rbarbs &+Lwoven
-&+Lfurther down the ends of its length.  Huge frayed ends extend quite far out,
-&+Lgiving this old, yet &+Rviolent &+Lweapon quite deadly with range.
-~
-A
-18 4
-A
-19 5
-#83356
-vial adder venom poison~
-&+La vial of &Nadder venom&N~
-&+LA vial of venom has been left here.~
-~
-17 7 1 0 6 0 0 8404993 0 0 0
-8 8 27 1111 0 0 0 0
-0 2333 100
-E
-vial adder venom poison~
-   &+LThis small vial has the symbol of a single snake &+Wfang&+L.
-~
-#83357
-broad sign~
-&+ya &+Lbroad &N&+ysign&N~
-&+LA broad &N&+ywooden sign &+Lis posted &Nbeside the gates.~
-~
-13 6 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-broad sign~
-&+y           ___________________
-&+y          /if thy hands wish to\
-&+y         |    K E e P, O u  T   |
-&+y         |of this place thee    |
-&+y          \_______will creep___/
-&+y                  \________/
-~
-#83358
-hammer warhammer bloodstained spike headed~
-&n&+ra bloodstained s&+Rp&+Wi&+Rk&N&+re&N&+y-headed &+Rwarhammer&N~
-&N&+rA bloodstained hammer lies here.~
-~
-5 11 4 0 9 0 1 0 0 0 0
-4 5 4 0 0 0 0 0
-9 18429 100
-E
-hammer warhammer bloodstained spike-headed~
-   &+rThis massive stone hammer is shaped into a huge spike on one side, which is
-&+rcompleted red with bloodstains of victims past.  The hammer itself is made of
-&+rdwarven design, standing about four feet tall with a heavy head.
-~
-A
-18 4
-A
-19 4
-#83359
-wall~
-&N&+mthe wall&N~
-&N&+mThe wall is pushable.~
-~
-29 11 3 0 7 0 2 0 0 0 0
-270 83600 2 0 0 0 0 0
-0 0 100
-E
-wall~
-   &+mThe southern wall of this chamber looks very &+Wloose&n&+m; free enough to slide.
-~
-#83360
-wall~
-&N&+mthe wall&N~
-&+mThe mithril wall to the north sits loosely.~
-~
-29 11 3 0 7 0 2 0 0 0 0
-270 83601 0 1 0 0 0 0
-0 0 100
-E
-wall~
-   &+mThe northern wall of this chamber looks very &+Wloose&n&+m; free enough to slide.
-~
-#83361
-long bloody whip~
-&+ra long bl&+Ro&n&+ro&+Rdy &N&+rw&+Rhi&N&+rp&N~
-&N&+rA long bloody whip has been left here.~
-~
-5 13 3 0 7 0 0 8193 0 0 0
-14 3 4 0 0 0 0 0
-1 5003 100
-E
-long bloody whip~
-   &+rThis long leather whip is soaked in blood from hours of torture.
-~
-A
-18 4
-A
-19 4
-#83362
-slender adamantite dagger~
-&+La slender adamantite dagger&N~
-&+LA slender adamantite dagger has been left here.~
-~
-5 19 3 0 9 0 0 8193 64 0 0
-2 2 8 0 0 0 0 0
-1 11232 100
-E
-slender adamantite dagger~
-   &+LThis long, slender adamantite blade is attached to a short, thick
-&+Lgrip.
-~
-A
-18 4
-A
-19 4
-#83363
-bloodstained black leather belt~
-&+La &N&+rbl&+Loo&N&+rd&+Lst&N&+ra&+Li&N&+rne&+Ld &+Lblack l&N&+rea&+Lth&N&+re&+Lr &N&+rb&+Lelt&N~
-&+LA black leather belt, stained with &N&+rblood&+L lies here.~
-~
-9 13 3 0 9 0 0 2049 64 0 0
-5 0 0 3 0 0 0 0
-0 14332 100
-E
-bloodstained black leather belt~
-   &+LThis black leather belt is dripping with blood splatters.
-~
-A
-13 10
-A
-22 -2
-#83364
-string dwarven ears~
-&+La string of &+Ymountain dwarf &N&+years&N~
-&+LA string of &+Ydwarven ears&+L has been left here.~
-~
-9 2 3 0 0 0 0 5 0 0 0
-4 0 0 0 0 0 0 0
-0 405 100
-E
-string dwarven ears~
-   &+LThis string is merely a long twined leather cord, with several
-&+Lears of &+Ymountain dwarves&+L bunched across.
-~
-A
-5 4
-A
-31 3
-#83365
-runed adamantite key~
-&+La runed adamantite key&N~
-&+LA runed adamantite key has been left here.~
-~
-18 15 3 0 7 0 1 16385 0 0 0
-0 100 0 0 0 0 0 0
-0 0 100
-E
-runed adamantite key~
-   &+LThis adamantite key has some intricate &n&+mrunes &+Labout it, giving off a
-&+Lvery faint, but noticable &+Mglow&+L.
-~
-#83366
-antiquated silver dragon egg~
-&+Wan antiquated &+Csilver dragon egg&N~
-&+WAn antiquated &+Csilver dragon egg&N has been left here.~
-~
-8 8 2 0 7 0 4096 16385 64 0 0
-0 0 0 0 0 0 0 0
-1 78332 100
-E
-antiquated silver dragon egg~
-   &+LThis large &+Cdragon egg &+Lis quite old and from an ancient
-&+Lspecies of wyrm.  The entire egg is covered in crystalline, making
-&+Lit shine and seem quite luxorious.
-~
-A
-23 -3
-#83367
-display case~
-&+Wa display case&N~
-&+WA shiny glass display case &N&+msits atop a mithril column.~
-~
-15 7 3 0 7 0 1 0 0 0 0
-20 29 83371 5 0 0 0 0
-0 0 100
-E
-display case~
-&+WThis display case sits atop a sturdy &N&+mmithril column&+W.
-&+WWithin this case one sees a smooth torque.
-~
-#83368
-display case~
-&+Wa display case&N~
-&+WA shiny glass display case &N&+msits atop a mithril column.~
-~
-15 7 3 0 7 0 1 0 0 0 0
-20 29 83371 0 0 0 0 0
-0 0 100
-E
-display case~
-&+WThis display case sits atop a sturdy &N&+mmithril column&+W.
-&+WWithin this case one sees a smooth bracelet&N.
-~
-#83369
-display case~
-&+Wa display case&N~
-&+WA shiny glass display case &N&+msits atop a mithril column.~
-~
-15 7 3 0 7 0 1 0 0 0 0
-20 29 83371 0 0 0 0 0
-0 0 100
-E
-display case~
-&+WThis display case sits atop a sturdy &N&+mmithril column&+W.
-&+WWithin this case one sees a spiked bracelet.
-~
-#83370
-display case~
-&+Wa display case&N~
-&+WA shiny glass display case &N&+msits atop a mithril column.~
-~
-15 15 3 0 7 0 1 0 0 0 0
-20 29 83368 83371 0 0 0 0
-0 0 100
-E
-display case~
-&+WThis display case sits atop a sturdy &N&+mmithril column&+W.
-&+WWithin this case one sees a spiked torque.
-~
-#83371
-key kings~
-&+Cthe &+Wkey &+Cof &+Ykings&N~
-&+CThe &+Wkey &+Cof &+Ykings &+Csits atop the holy &+Bdias&+W.~
-~
-18 18 2 0 15 0 33554433 16385 66 0 0
-0 100 0 0 0 0 0 0
-0 100232 100
-E
-key kings~
-   &+CThis sacred key is left for an individual who has shown enough promise in
-&+Ctheir path of honor and righteousness to select an item of the dwarvenkind.
-~
-#83372
-marksman's goggles~
-&+Lsome &n&+rm&+La&N&+rr&+Lk&N&+rs&+Lm&N&+ra&+Ln&N&+r'&+Ls &N&+cgo&+Cgg&N&+cle&+Cs&+L~
-&+LSome marksman's goggles have been left here.~
-~
-9 44 2 0 11 0 0 131073 64 0 0
-5 0 0 0 0 0 0 0
-0 66558 100 4 0 0 1048576
-E
-marksman's goggles~
-   &+LThese beautiful glassteel goggles are lightweight and increase the accuracy
-&+Lof the wearer's attacks.  What appear to be emerald lenses sit over the fragile,
-&+Lyet intricate frame of these tightly-worn goggles.
-~
-A
-18 4
-A
-36 5
-#83373
-mound platinum coin coins~
-&Na great mound of &+Wplatinum&N~
-&+WA great mound of platinum coins covers the floor, filling the room.~
-~
-20 25 6 0 7 0 0 1 0 0 0
-0 0 0 2250 0 0 0 0
-0 0 100
-E
-platinum coin coins~
-   &+WThis massive pile of platinum coins absolutely fills this entire room.
-~
-#83374
-tome lore~
-&+La &N&+ytome &+Lof &N&+bClan Stealth Hunter&N&+r lore&N~
-&+yAn old tome written in &N&+rduergar&N&+y lies here.~
-~
-33 28 3 0 7 0 4096 8404993 0 0 0
-0 0 200 0 0 0 0 0
-1 44332 100
-E
-tome lore~
-   &+LThis tome, quite large for a duergar, bares the logged memoirs of
-&+Lthe notorious clansdwarf guild &n&+bClan Stealth Hunter&+L.
-&+LExcerpts from this ancient script contain the alliance between the dark
-&+Liron dwarves and &N&+bClan Stealth Hunter&+L as well as the alliance
-&+Lwith the &N&+cAlatorin &+Lrogus' guild.  Many accounts of &N&+rGeneral
-&+rBakarakh &+Lare logged, cataloguing his many assassination expeditions
-&+Land brutal &+Rmurders&+L.  Although just a simple tome, this book could
-&+Lbe much more valuable to the &N&+bClan Stealth Hunter &N&+rduergars.
-~
-#83375
-flax torch burning golden flame~
-&+ya flax torch &+Yburning a golden flame&N~
-&+yA flax torch is posted here, &+Yburning a golden flame.~
-~
-1 5 3 0 7 0 262145 0 64 0 0
-0 0 -1 0 0 0 0 0
-0 0 100
-E
-flax torch burning golden flame~
-   &+yThis flax torch, made much easier to burn but more expensive then mundane
-&+ywooden torches, has been blessed with a magical burning flame ablw ro maintain
-&+yits &+Yluminescense &N&+yfor much longer durations.
-~
-#83376
-disembodied head white dragon~
-&+Wthe &n&+rdis&+Rem&N&+rbod&+Rie&N&+rd head &+Wof a white dragon&N~
-&+WThe &N&+rdisembodied head &+Wof a white dragon lies here &N&+rin a pool of blood.~
-~
-8 2 6 0 4 0 8392704 16385 0 0 0
-0 0 0 0 0 0 0 0
-0 22312 69
-E
-disembodied head white dragon~
-   &+WThis massive white dragon head has been chopped off at the neck.
-&+WThe huge &N&+rbloody &+Wspine hangs out from the back of this disembodied
-&+Whead.
-~
-#83377
-silver dragon scales~
-&+Wsome sil&+Cv&N&+cer dragonscales&N~
-&+WSome sil&+Cver &N&+cdragon scales &nhave been left here.~
-~
-8 35 4 0 7 0 4097 16385 64 0 0
-0 0 0 0 0 0 0 0
-10 20322 100
-E
-silver dragon scales~
-   &+CThese large, silver dragon scales once belonged to the body of an ancient
-&+Csilver dragon.
-~
-#83378
-sleeves scale scalemail~
-&+Wrazorsharp sleeves of white-dragon scalemail&N~
-&+WGlistening white scales formed into snug arm wear.~
-~
-9 35 3 0 7 0 0 257 0 0 0
-8 0 0 5 0 0 0 0
-3 9898 100
-E
-sleeves scale scalemail~
-&+WGlistening white dragon scales have been arranged together to form
-&+Wa pair of protective sleeves.
-~
-A
-19 3
-A
-23 -2
-#83379
-mithril sign~
-&+La large &+Mmithril &N&+msign&N~
-&n&+mA large mithril sign &+Lis posted beside the ancient &+Rforge&N.~
-~
-8 15 3 0 7 0 1 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-mithril sign~
-&+m+-----------------------------------+
-&+m| &+MMundorno - Master of Dragon Scale&N&+m |
-&+m|           *-*-*-*-*-*-*           |
-&+m| &+LALL Smithery requires &+W100 &+Lplat !!&N&+m |
-&+m|   &+LMundorno will fasten the most&N&+m   |
-&+m| &+Lselect dragon scales from various&N&+m |
-&+m| &+Lbeasts around the world onto the&N&+m  |
-&+m|   &+Lfinest mithril of Alatorin.    &N&+m |
-&+m|          *-*-*-*-*-*-*-*         &n&+m |
-&+m|  leg plates, arm plates, helmet  &N&+m |
-&+m|    breastplate -into platemail-  &N&+m |
-&+m|          *-*-*-*-*-*-*-*          |
-&+m|  &+Wc&nh&+Cr&+Rom&+Ci&+Wu&nm &+Ldragon&N&+cs&+Lc&N&+ca&+Ll&N&+ce&+Lss&n&+m           |
-&+m|        &+Wsome si&+Cl&N&+cver dragonscales&+m   |
-&+m|           &+Ldragon scales&N x4   &N&+m     |
-&+m|          *-*-*-*-*-*-*-*          |
-&+m+-----------------------------------+
-~
-#83380
-spiked white dragon scalemail helmet~
-&+Wa spiked white dragon scalemail helmet&N~
-&+WA spiked white dragon scalemail helmet has been left here.~
-~
-9 35 3 0 7 0 0 0 0 0 0
-10 0 0 0 0 0 0 0
-3 18433 100
-E
-spiked white dragon scalemail helmet~
-&+WGlistening white dragon scalemail has been forged into the form
-&+Wof a spiked protective helmet.
-~
-A
-18 4
-A
-24 -3
-#83381
-mithril dragonscale arm plates~
-&+msome mithril and &+Ldragon&N&+ms&+Lc&N&+ma&+Ll&N&+me &n&+marm plates&N~
-&+mSome mithril and &+Ldragon&N&+ms&n&+mc&+La&N&+ml&+Le &N&+marm plates have been left here.~
-~
-9 35 4 0 7 0 0 257 64 0 0
-5 0 0 0 0 0 0 0
-3 16448 100
-E
-mithril dragonscale arm plates~
-   &+LThick scales of all varieties of dragons back been fused across some blessed
-&+mmithril arm plates&+L.  This fine piece of blacksmithing is a result of the finest
-&+Lsmithery of &N&+cAlatorin&+L.
-~
-A
-17 -40
-A
-23 -3
-#83382
-mithril dragonscale dragon scale leg plates~
-&+msome mithril and &+Ldragon&N&+ms&+Lc&N&+ma&+Ll&N&+me leg plates&N~
-&+mSome mithril and &+Ldragon&N&+ms&n&+mc&+La&N&+ml&+Le &N&+marm plates have been left here.~
-~
-9 35 4 0 7 0 0 33 64 0 0
-5 0 0 0 0 0 0 0
-3 16448 100
-E
-mithril dragonscale dragon scale leg plates~
-   &+LThese &N&+mmithril leggings&+L have been plated with the scales of various
-&+Ldragons slain throughout the realms.
-~
-A
-17 -40
-A
-23 -3
-#83383
-mithril dragonscale dragon scale helmet~
-&n&+ma polished mithril and &+Ldragon&N&+ms&+Lc&N&+ma&+Ll&N&+me &N&+mhelmet&N~
-&+mSome mithril and &+Ldragon&N&+ms&n&+mc&+La&N&+ml&+Le &N&+marm plates have been left here.~
-~
-9 35 4 0 7 0 0 17 64 0 0
-5 0 0 0 0 0 0 0
-3 16448 100
-E
-mithril dragonscale dragon scale helmet~
-   &+mThis fine, polished mithril helmet &+Lis emblazoned with some thick, various
-&+Ldragonscales.
-~
-A
-17 -40
-A
-23 -3
-#83384
-suit mithril dragonscale platemail~
-&N&+ma suit of mithril and &+Ldragon&N&+ms&+Lc&N&+ma&+Ll&N&+me platemail&N~
-&+mA suit of mithril and dragonscale platemail has been left here.~
-~
-9 35 3 0 7 0 0 9 64 0 0
-5 0 0 5 0 0 0 0
-5 22332 100
-E
-suit mithril dragonscale platemail~
-   &+mA large, fine mithril breastplate with two large dragonscale shoulder guards
-&+mand equally-sizable dragon-scale back plates.
-~
-A
-17 -60
-A
-23 -4
-#83385
-hide bound hide-bound notebook~
-&+La &N&+yhide&+L-bound &+Wnotebook&N~
-&+yA hide-&+Lbound &+Wnotebook&N has been left here.~
-~
-23 12 2 0 5 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 40 100
-E
-hide bound hide-bound notebook~
-&+yA simple &+Wparchment &n&+ynotebook has been bound in a cover of thick hide.
-&+yThere are some detailed notes on the first &+Wfive pages&n&+y of this notebook.
-&+y&+WPage1, page2, page3, page4, page5
-~
-E
-page1 1~
-&+WSslitheran
-&+W----------
-&+WA devious drow mage from the depths of Arachdrathos.  This drow
-&+Wis responsible for the covert murders of numerous Alatorin guards
-&+Wto allow contraband be brought into the city.  This powerful mage
-&+Wwas last spotted in a cave somewhere in the Caverns of Time.
-~
-E
-page2 2~
-&+WMelbe
-&+W----------
-&+WMelbe is a deviously-evil githyanki who has been rumored to shift into
-&+Wthe Caverns of Time and poison the young minds of the hooded dwarves that
-&+Wlurk there within.  Melbe is a terrifying adversary able to spread death
-&+Wand influence minds with his mental powers.
-~
-E
-page3 3~
-&+WBirch Scruden
-&+W----------
-&+WA fearsome duergar tactitian who has been taken under the wing of the
-&+Wseige dwarf army.  Birch Scruden is responsible for the murder of several
-&+Whundred mountain dwarf friends of Alatorin and his sanction will cause a
-&+Wrift in the Kimordril-Alatorin alliance.  Birch Scruden will need to be
-&+Wapproached with utmost caution as he and the seige army are very powerful.
-~
-E
-page5 5~
-&+WGru'Dank
-&+W----------
-&+WA half-orc who was once welcomed by the shield dwarves has outcasted himself
-&+Wdue to the violence he brings to the local Alatorin taverns.  Often spotted
-&+Wat Barlow's Brewery, this hunter-turned-drunk has been connected with
-&+Wnumerous late-night murders amongst the Trade and Commerce districts.
-~
-E
-page4 4~
-&+WJenk
-&+W----------
-&+WJenk is a shield dwarf who has gone by many other aliases and faces,
-&+Wpickpocketing the streets of Alatorin.  Although of the same blood as
-&+Wthe king and people of Alatorin, Jenk has ostracized himself from his
-&+Wdevious ways and fast-fingers.  His wereabouts are currently unknown, but
-&+Wis suspected to be seeking refuge in an unseen rogue hideout.
-~
-#83386
-large mithril key~
-&+La large &+Cmithril &+Lkey&N~
-&+LA large &+Cmithril &+Lkey has been left here.~
-~
-18 18 3 0 7 0 8388608 16385 0 0 0
-0 100 0 0 0 0 0 0
-1 1000 100
-E
-large mithril key~
-   &+mThis large mithril key looks like it could open a large mithril lock.
-~
-#83387
-bloody heart jenk~
-&+rthe bloody heart of Jenk&N~
-&+rThe bloody heart of Jenk has been left here.~
-~
-8 2 2 0 7 0 4096 16385 0 0 0
-0 0 0 0 0 0 0 0
-1 10 100
-E
-bloody heart jenk~
-   &+rThis heart has been dug out of the chest of a goblin named Jenk - a
-&+rnotorious thief.
-~
-#83388
-wanted list parchment~
-&+ya &+Rwanted &N&+ylist&N~
-&+yA parchment &+Rwanted list &N&+yis posted on the wall.~
-~
-13 29 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-wanted list parchment~
-&+y---------------------------
-&+y-         WANTED          -
-&+y-                         -
-&+y-  BIRCH SCRUDEN          -
-&+y-  SSLITHERAN             -
-&+y-  MELBE                  -
-&+y-  GRU'DANK               -
-&+y-  JENK                   -
-&+y-                         -
-&+y- SEE ULSTER STONEHAMMER  -
-&+y---------------------------
-~
-#83389
-morning star morningstar mithril headed mithril-headed~
-&+La &N&+mmithril-headed &+Lmorningstar&N~
-&+LA &N&+mmithril-headed &+Lmorningstar&N has been left here.~
-~
-5 18 5 0 9 0 0 8193 64 0 0
-3 3 6 0 0 0 0 0
-6 18223 100
-E
-morning star morningstar mithril headed mithril-headed~
-   &+LThis finely-crafted morning star has a heavy, magical mithril head.  The
-&+Lhead of this flail has huge &N&+rspikes &+Lwhich appear to be well-used.
-~
-A
-18 4
-A
-19 4
-#83390
-potion insane strength~
-&+La &N&+cpotion &+Lof &N&+miN&+MSa&N&+mNe &+YSTrEnGTh&N~
-&+LA &n&+cpotion &+Lof &N&+miN&+MSa&N&+mNe &+YSTReNGTH&N has been left here.~
-~
-10 7 2 0 7 0 33554433 8404993 64 0 0
-60 175 221 255 0 0 0 0
-0 50443 100
-E
-potion insane strength~
-   &+LThis large &+Wglass &+Lbottle contains a &+Wfizzing &n&+rred liquid&+L.
-&+LScrolled across the front of the &N&+cpotion &+Lin bright &+Yyellow paint&+L:
-&+YiNSaNe STrEnGTh&N
-~
-#83391
-potion remedying~
-&+La &N&+cpotion &+Lof &+Yremedying~
-&+LA &N&+cpotion &+Lof &+Yremedying &+Lhas been left here.~
-~
-10 7 2 0 5 0 0 16385 64 0 0
-60 354 275 162 0 0 0 0
-1 14332 100
-E
-potion remedying~
-   &+LThis small &+Cglass &+Lpotion smells faintly like flowers and &N&+rblood&+L.
-~
-#83392
-potion improved vision~
-&+La &N&+cpotion &+Lof improved &N&+cvi&Nsi&+Con&N~
-&+LA &N&+cpotion &+Lof improved &+Cvision &+Lhas been left here.~
-~
-10 7 2 0 7 0 0 8404993 64 0 0
-60 158 204 0 0 0 0 0
-1 21222 100
-E
-potion improved vision~
-   &+LThis thick viscid potion sits heavily in a black bottle.
-~
-#83393
-small sign~
-&+ya small &+Wsign&N~
-&+gPosted next to the &+ycliff&+g, a small &+Wsign&+g is here.~
-~
-13 6 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 94
-E
-small sign~
-   &+yThis small sign reads:
-&+WBEWARE OF CLIFF!  LONG WAY DOWN!
-~
-#83394
-mithril bladed battle axe mithril-bladed battle-axe~
-&+Wa &n&+mmithril-bladed &+Wbattle-axe&N~
-&+WA polished mithril axe has been left here.~
-~
-5 18 3 0 7 0 0 8193 64 0 0
-1 3 4 0 0 0 0 0
-4 11229 100
-E
-mithril bladed battle axe mithril-bladed battle-axe~
-   &+LThis thick, heavy axe has a massive mithril blade and a &+Wsteel shaft.
-~
-A
-18 3
-A
-19 5
-#83395
-bloody leather eyepatch~
-&N&+ra bloody leather eyepatch&N~
-&n&+rA bloody leather eyepatch has been left here.~
-~
-9 13 2 0 7 0 0 131073 0 0 0
-3 0 0 0 0 0 0 0
-0 164 100
-E
-bloody leather eyepatch~
-&+rThis leather eyepatch has been splattered with the blood of hundreds of unfortunate victims..
-~
-A
-19 2
-A
-18 1
-#83396
-full suit mithril plate~
-&na full suit of &N&+mmithril plate&N~
-&nA full suit of &N&+mmithril plate&N has been left here.~
-~
-9 18 4 0 9 0 536870912 9 64 0 0
-15 0 0 0 0 0 0 0
-6 16332 100
-E
-full suit mithril plate~
-   &+mThis thick suit of mithril plate is much lighter then typical metals.  It is
-&+mmade with fine dwarven craftsmanship.
-~
-A
-17 -55
-#83397
-war banner khoralator~
-&n&+ca &+rwar &+Wbanner &n&+cof &+WKhor&N&+calator&N~
-&+cA war banner of Khoralator Fort&N has been left here, crumbled.~
-~
-9 3 3 0 9 0 0 2097153 64 0 0
-1 0 0 0 0 0 0 0
-2 15343 100
-E
-war banner khoralator~
-   &+LThis masive flag is set on a wooden pole that attaches to ones backpack.
-&+LThe standard itself is that of &+WKhor&N&+calator &+CFort, the mountain dwarf
-&+Lmilitary base on &N&+yShanatar&+L.
-~
-A
-18 3
-A
-19 1
-#83398
-green blue silk scarf~
-&+Ga gr&N&+gee&+Gn a&+Bnd b&N&+blue &+Csilk &+Bscarf&N~
-&+gA vibrant blue and green silk scarf lies here.~
-~
-9 3 3 0 14 0 0 5 64 0 0
-2 0 0 0 0 0 0 0
-0 55443 100
-E
-green blue silk scarf~
-   &+GThis vibrant scarf is made of blue and green dyed silk
-&+Bthreads.  It wraps around ones neck and shimmers in the light
-&+Bwith its lustrous sheen.
-~
-A
-13 13
-A
-28 10
-#83399
-mithril two-handed warhammer hammer~
-&+ma mithril two-handed warhammer&N~
-&+mA mithril two-handed warhammer has been left here.~
-~
-5 18 3 0 5 0 4194304 8193 0 0 0
-4 6 4 0 0 0 0 0
-20 6000 62
-E
-old heavy mithril hammer~
-   &+mThis old, heavy warhammer has a massive head that is covered in little
-&+mcuts and dings from a lifetime of use.
-~
-A
-18 5
-A
-19 5
-#83400
-full-headed full mithril helmet~
-&Na full-headed &N&+mmithril helmet&N~
-&+mA full-headed mithril helmet and faceplate has been left here.~
-~
-9 18 3 0 7 0 1073741824 17 0 0 0
-1 0 0 0 0 0 0 0
-5 14332 100
-E
-full-headed full mithril helmet~
-   &+mThis finely-crafted mithril helmet has a full-faced plate and armor around the
-&+meyes, with vision coming from two large slits.
-~
-A
-17 -55
-#83401
-potion ultimate protection~
-&+La &N&+cpotion &+Lof &N&+yu&+Yl&n&+mt&+Mi&+Cm&+Ma&N&+mt&+Ye &n&+bprotection&n~
-&+LA &N&+cpotion of ulimate protection has been left here.~
-~
-10 7 2 0 7 0 1 2049 64 0 0
-60 179 400 174 0 0 0 0
-1 75043 100
-E
-potion ultimate protection~
-   &+LThis small glass potion &N&+bsw&+Lir&+Yls &+Bwi&+Rth &+Gdi&+Bff&N&+bere&+cnt &+Bcolors.
-~
-#83402
-stone fountain~
-&+Wa small stone fountain&N~
-&+WThis small stone fountain &+Bbubbles a fresh clear water.~
-~
-17 15 3 0 7 0 0 0 0 0 0
--1 -1 16 0 0 0 0 0
-0 0 100
-E
-stone fountain~
-   &+WThis stone fountain is quite simple - circlular in shape with a
-&+Wtwo-layered rim around from which a pool of fountain water is splashed
-&+Wup by a geyser in the middle.
-~
-#83403
-wooden spear red flag~
-&n&+ya wooden spear with a tied off &+Rred flag&N~
-&+yA wooden spear with a tied off &N&+rred flag&N&+y has been left here.~
-~
-5 15 3 0 7 0 4194304 8193 0 0 0
-15 3 8 0 0 0 0 0
-0 0 100
-E
-wooden spear red flag~
-   &+yThis simple wooden spear has a single red flag tied off near the &+Cblade&n&+y.
-&+yThe &+Rflag &N&+ybares the hammer over a sea-line insignia of Deramuth Port.
-~
-A
-18 3
-A
-19 4
-#83404
-jodani wood sign~
-&+ya &+rjodani &+ywood sign&N~
-&+yHanging by a thick &n&+cchain&+y, a &+rjodani &+ywood sign reads '&+YThe Golden Pearl&N&+y' in vibrant letters.~
-~
-8 5 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-jodani wood sign~
-&N&+y __&N&+c||&+y__________&+c||&+y__
-&N&+y|                  |
-&N&+y| &N&+YTHE GOLDEN PEARL&N&+y |
-&N&+y|                  |
-&N&+y|__________________|
-~
-#83405
-crude map shanatar mountains~
-&N&+ya crude map of the Shan&+La&N&+yt&+La&N&+yr mountains&N~
-&+yA crude map of the Shanatar mountains has been left here.~
-~
-8 29 3 0 0 0 0 8404993 0 0 0
-0 0 0 0 0 0 0 0
-0 5332 89
-E
-crude map shanatar mountains~
-&+L________________________________________________________
-&+L|                                                       |
-&+L|&N&+y       ____________________                           &+L  |
-&+L|&N&+y      / ^^^^^^^^^^^^^^^^^^^\_                          &+L |
-&+L|&N&+y     / &+Yo&+W.....&N&+y^^^&+W...&N&+y^^&+W....&N&+y^^&+Bo&N&+y^\                         &+L |
-&+L|&N&+y    |^^&+W.&N&+y^^^^&+W:....&N&+y^&+W:..:&N&+y^^&+W:..:&N&+y^^|   &+Yo&+L -&+Y Alatorin         &+L |
-&+L|&N&+y    /^^&+W.&N&+y^^^^^^^^^^^&+W:&N&+y^^^^&+W:&N&+y^^&+W:&N&+y^^|   &+Co &+L- &+CKhoralator Fort  &+L |
-&+L|&N&+y   |^&+W..&N&+y^^&+Ro&N&+y^ ^^^^^^^ ^^^ &+W:\&N&+y^^^^|   &N&+ro &+L-&N&+r Helgor Outpost   &+L |
-&+L|&N&+y   |^&+W:&N&+y^^^            ^  &+W:&N&+y^&+W\&N&+y^^^|   &+Go &+L-&+G Deramuth Port    &+L |
-&+L|&N&+y   |^&+W:&N&+y^^     ^^ ^        &+W\&n&+y^&+Co&N&+y^^|   &+Lo - Troglodytes' Cave&+L |
-&+L|&N&+y   |^&+W:&n&+y^^   ^^^ ^^        ^&+W\&N&+y^^<    &+Ro&+L -&+R Dragon's Cave    &+L |
-&+L|&N&+y   |&+W.:.&N&+y^    ^  ^      ^ ^&+W/&N&+y^&+W\&N&+y^^|                        &+L |
-&+L|&N&+y   |&+W:&N&+y^&+W:&N&+y^^            ^^  &+W|&N&+y^&+W|&N&+y^^| o88o 0 0  0  8  0      &+L |
-&+L|&N&+y   |&+W:&N&+y^&+W:&N&+y^^^^        ^^^  ^&+W|&N&+y^&+Lo&N&+y^^| 8  8 8 8 0 0 80 8  <>  &+L |
-&+L|&N&+y   |&+W:&N&+y^&+W:&N&+y^^^^^^^   ^^^  ^^^&+W|&N&+y^^^^| 8    8 8 8 8 80 8  ><  &+L |
-&+L|&N&+y   |&+W:&N&+y^&+W:&N&+y^^^^^^^^      ^^^&+W/&N&+y^&+W\&N&+y^^^| 8000 808 808 8 88  <>  &+L |
-&+L|&N&+y   |&+W:&N&+y^&+W:&N&+y^^&+W....&N&+y^^^^^^^^^^&+W/&N&+y^^&+W/\&N&+y^^|    8 8 8 8 8 8 08  ><  &+L |
-&+L|&N&+y   &+W=&+Go&+W.:..:&N&+y^^&N&+ro&+y^^^^^^^^^&+W/&N&+y^^&+W|&N&+y^^&+W\&N&+y^| 8  8 8 8 8 8 8  8  <>  &+L |
-&+L|&N&+y   |^^^^^&+W:&N&+y^^^^^&+W...&N&+y^^^&+W/&N&+y^^^&+W|&N&+y^^^^| 0008 0 0 0 0 0  0  ><  &+L |
-&+L|&N&+y    \^^^^&+W:..&N&+y^^^&+W:&N&+y^&+W.&N&+y^^^&+W:&N&+y^^^^&+W\&N&+y^^^|                    <>  &+L |
-&+L|&N&+y     \^^^^^&+W:&N&+y^^^&+W:&N&+y^^^^^&+W:&N&+y^^^^^&+W\&N&+y^^|  0 00800 0  000    ><  &+L |
-&+L|&N&+y      \^^^^&+W:...:.....:&N&+y^^^^^^&+Bo&N&+y^| 0 0  8  0 0 8  8   <>  &+L |
-&+L|&N&+y       \_^^^^^^^^^^^^^^^^^^^^/  8 8  8  8 8 8  8   ><  &+L |
-&+L|&N&+y         \___^^^^^^^^^^^^^__/   808  8  808 888    <>  &+L |
-&+L|&N&+y 	      \^^^^^^^^^^^/      8 8  8  8 8 8  8   >< &+L  |
-&+L|&N&+y              \_________/       8 8  8  8 8 8  8   <>  &+L |
-&+L|                               &N&+y 0 0  0  0 0 0  80      &+L |
-&+L|_______________________________________________________|
-~
-#83406
-earring entwined roots~
-&n&+gan earring of &+ye&+Ln&N&+yt&+Lw&N&+yi&+Ln&N&+ye&+Ld &N&+groots&N~
-&+yAn earring of &+yen&+Ltw&+Gined &N&+yroots&N has been left here.~
-~
-9 6 3 0 7 0 0 524289 64 0 0
-2 0 0 3 0 0 0 0
-2 100 100
-E
-earring entwined roots~
-   &+gThis simple earring of wrought, entiled roots resonates an
-&+gaura of earthly magic.
-~
-A
-23 -3
-A
-20 -3
-#83407
-moorwood harp~
-&+La moorwood harp&N~
-&+LA moorwood harp has been left here.~
-~
-32 6 3 0 7 0 33554432 16385 64 0 0
-187 70 0 1 0 0 0 0
-0 16553 100
-E
-moorwood harp~
-   &+LThis harp is carefully crafted from polished moorwood.
-~
-A
-5 5
-A
-20 -3
-#83408
-moorwood pan pipes flute~
-&+La set of moorwood pan pipes&N~
-&+LA set of moorwood pan pipes has been left here.~
-~
-32 6 3 0 7 0 33554432 16385 64 0 0
-184 70 0 1 0 0 0 0
-0 16553 100
-E
-moorwood pan pipes flute~
-  &+LThese small pan pipes are bound together by a single well-stitched
-&+Lhide band.  The flutes themself are well-polished and produce an
-&+Lextraordinary sound.
-~
-A
-5 5
-A
-20 -3
-#83409
-moorwood mandolin~
-&+La moorwood mandolin&N~
-&+LA moorwood mandolin has been left here.~
-~
-32 6 3 0 7 0 33554432 16385 64 0 0
-186 70 0 1 0 0 0 0
-0 16553 100
-E
-moorwood mandolin~
-   &+LThis moorwood mandolin has fine strings made of &+Wspidersilk.
-~
-A
-5 5
-A
-20 -3
-#83410
-moorwood drums drum instrument~
-&+Lsome moorwood drums&N~
-&+LSome moorwood drums are lying here.~
-~
-32 6 3 0 14 0 0 16385 64 0 0
-188 70 0 1 0 0 0 0
-0 16549 100
-E
-moorwood drums stretched orc skin~
-   &+LThese drums have been stretched with the tanned hide of &+gORCS&+L!!
-~
-A
-5 5
-A
-20 -3
-#83411
-moorwood horn~
-&+La moorwood horn&N~
-&+LA moorwood horn has been left here.~
-~
-32 6 3 0 7 0 33554432 16385 64 0 0
-189 70 0 1 0 0 0 0
-0 16553 100
-E
-moorwood horn~
-  &+LThis long, elongated horn has a very strange sound to it, yet very soothing.
-~
-A
-5 5
-A
-20 -3
-#83412
-moorwood lyre~
-&+La moorwood lyre&N~
-&+LA moorwood lyre has been left here.~
-~
-32 6 3 0 7 0 33554432 16385 64 0 0
-185 70 0 1 0 0 0 0
-0 16553 100
-E
-moorwood lyre~
-   &+LThis fine moorwood lyre has several strings made of the finest &Nsilk.
-~
-A
-5 5
-A
-20 -3
-#83413
-sign~
-&Na &+Ysign&N~
-&nA small &+Ysign &Nis peaking out behind a thick &N&+gpatch of grass.~
-~
-13 6 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-sign~
-&+y        ________________________
-&+y       .                        .
-&+y      /                          \
-&+y    ./   &+WW E L C O M E      &N&+y      \.
-&+y    |        &+W            TO    &N&+y    |
-&+y    |   &N&+b ,,&N&+y\__/&N&+b,,&+y                  |
-&+y    |     &+b,,,,,,  &+W DERAMUTH PORT&N&+y   |
-&+y    |                &+C. &+B. &N&+b. &+B. &+C.&N&+y     |
-&+y    .\                            /.
-&+y      \.________________________./
-&+y                  |   |
-&+y                  |   |
-&+y                  |   |
-&+g\\\|&+G||&n&+g///\&+G\\||&N&+g|/&+G//&N&+y|   |&+G\\/&N&+g/||\\&+G//&N&+g||//\//
-~
-#83414
-bloody head helgor~
-&+rthe bloody head of General &+RHel&N&+rgor&N~
-&+rThe bloody head of a duergar has been left here.~
-~
-8 2 3 0 7 0 8392704 16385 0 0 0
-0 0 0 0 0 0 0 0
-2 10 100
-E
-bloody head helgor~
-   &+rThis bloody, decapitated head is that of the legendary duergar
-&+rwarlord-turned-general Helgor.  His face is frozen in a terrified
-&+ropen-mouthed visage.
-~
-#83415
-bloody head borhad khoralator~
-&+rthe bloody head of Borhad &+WKhor&N&+calator&N~
-&+rThe bloody head of Borhad &+WKhor&N&+calator&N has been left here.~
-~
-8 2 3 0 7 0 4096 16385 0 0 0
-0 0 0 0 0 0 0 0
-2 10 100
-E
-bloody head borhad khoralator~
-   &+rThis is the disembodied head of Borhad Khoralator, the legendary
-&+rmountain dwarf lord and battlemaster.
-~
-#83416
-spiked stone bracer storms~
-&+Lthe &Nspiked &+Lstone &N&+cbracer of storms&N~
-&+LThe spiked &Nstone &+Lbracer of &N&+cstorms&+L has been left here.~
-~
-9 11 4 0 7 0 1 4097 64 0 0
-4 0 0 5 1 0 0 0
-4 11223 100 0 128 0 0
-E
-spiked stone bracer storms~
-   &+LThis heavy, stone bracer is covered in huge spikes that surge
-&+Lwith &+Belectrical &+Lpower.  Strange &N&+gdruidic &+Lmarkings of
-&+cstorms&+L and &+Blightning&+L cover this magical bracer.
-~
-A
-19 3
-A
-22 -2
-#83417
-ancient cask frothing mug ale~
-&+Lan ancient cask of &N&+y'Frothing Mug' ale&N~
-&+LAn ancient cask of &N&+yale&N has been left here.~
-~
-17 6 4 0 7 0 4096 16385 0 0 0
-60 60 3 0 0 0 0 0
-7 33222 100
-E
-ancient cask frothing mug ale~
-   &+yThis ancient cask of ale is nearly petrified with age.  Once
-&+ya prosperous tavern of the shield dwarves, the Frothing Mug has
-&+ylong since been forgotten by the Alatorin public and remains only
-&+ya memory in most of the heads of the commonfolk.  This particular
-&+ycask of ale, however, has withstood the test of time and now
-&+yexists in extreme rarity.
-~
-#83418
-potion minor invisibility~
-&+La &N&+cpotion&+L of &Nminor &+Linvisibility&N~
-&+LA &N&+cpotion&+L of &Nminor&+L invisibility&N has been left here.~
-~
-10 7 2 0 7 0 0 8404993 64 0 0
-50 29 0 0 0 0 0 0
-0 1445 100
-E
-potion minor invisibility~
-   &+LThis &N&+cglass vial&+L contains a thick, black gooey potion.
-~
-#83419
-potion greater invisibility~
-&+La &N&+cpotion&+L of &+Wgreater &+Linvisibility&N~
-&+LA potion of &+Wgreater invisibility&+L has been left here.~
-~
-10 7 2 0 7 0 0 8404993 64 0 0
-50 412 0 0 0 0 0 0
-0 80555 100
-E
-potion greater invisibility~
-   &+LThis &N&+cglass vial&+L contains a thick, black gooey potion.
-~
-#83420
-potion bloodrage~
-&+La &N&+cpotion &+Lof &N&+rblood&+Rrage&N~
-&+LA potion of &N&+rblood&+Rrage&+L has been left here.~
-~
-10 7 2 0 7 0 0 8404993 64 0 0
-51 321 215 0 0 0 0 0
-0 18223 100
-E
-potion bloodrage~
-   &+LThis tiny &n&+c'potion'&+L is more like a shot.  The vial is very tiny
-&+Lbut the fluid within is quite &N&+rpotent&+L existing in a thick, viscid
-&n&+rblood-red &+Lcolor.
-~
-#83421
-bottle crimson poison~
-&+La bottle of &N&+Rc&N&+rr&+Ri&N&+rm&+Rs&N&+ro&+Rn &n&+mpoison&N~
-&+LA bottle of &+Rcrimson poison&N has been left here.~
-~
-17 7 3 0 7 0 0 8404993 0 0 0
-12 12 27 17 0 0 0 0
-0 900 100
-E
-bottle crimson poison~
-   &+LThis bottle is full of a thick &+Rcrimson &+Lliquid and has
-&+La large label written in common reading '&+RPoIsOn&+L'
-~
-#83422
-huge boulder~
-&+ya huge boulder&N~
-&+yA huge boulder sits here filling the eastern end of the tunnel.~
-~
-29 11 5 0 7 0 4096 0 0 0 0
-270 83549 1 1 0 0 0 0
-0 0 100
-E
-huge boulder~
-&+yThis massive stone boulder fills the entire eastern end of the tunnel.
-~
-#83423
-smuggler's black smuggler mask~
-&+La smuggler's black mask&N~
-&+LA smuggler's black mask has been left here.~
-~
-9 13 2 0 8 0 0 262145 0 0 0
-5 0 0 3 0 0 0 0
-0 3434 100
-E
-smuggler's black smuggler mask~
-   &+LThis tight mask is one of the signature garments from which the
-&+Ldangerous smugglers of the realm are known to wear.  It is made of
-&+Ltight black leather and conceals the wearers face and head in a
-&+Lsleek fashion.
-~
-A
-18 3
-A
-19 2
-#83424
-thick orog-hide orog hide moccasins~
-&n&+csome thick &N&+yo&+Lr&N&+yo&+Lg&N-&+yhide &N&+cmoccasins&N~
-&+cSome thick &N&+yorog-hide &+cmoccasins have been left here.~
-~
-9 12 2 0 7 0 0 65 0 0 0
-5 0 0 0 0 0 0 0
-2 153 100
-E
-thick orog-hide orog hide moccasins~
-   &+cThese thick moccasins are made of the stiff, hardened hide of
-&+can orog.
-~
-A
-13 17
-A
-19 2
-#83425
-ancient petrified casket~
-&+Lan ancient petrified &N&+ycasket&N~
-&+LAn ancient, petrified &N&+ycasket&+L sits here in the center of the chamber.~
-~
-29 15 3 0 7 0 0 0 0 0 0
-99 83814 0 0 0 0 0 0
-0 0 100
-E
-ancient petrified casket~
-&+LThis ancient casket was at one time made of a thick &N&+yoak&+L&+L,
-&+Lhowever years of aging has caused the wood to become petrified and
-&+Lstone-like.  The casket is very heavy and large, clearly having
-&+Lcontained a figure of former prestige.  An uneasy feeling of ancient
-&+Levil seems to resonate from this casket.
-~
-#83426
-bone band infinite power _id_~
-&+Wa bone band&N~
-&+WA bone band has been left here.~
-~
-9 10 1 0 4 0 33558528 3 64 0 0
-5 0 0 3 0 0 0 0
-0 33223 100
-E
-bone band infinite power~
-   &+WThis tiny bone band hums with extreme ancient power.
-~
-E
-_id_name_~
-bone band infinite power
-~
-E
-_id_short_~
-&+Wa bone band of &N&+bin&+Mf&N&+bin&+Mi&N&+bte &+mp&+Mo&+Yw&+Me&N&+mr&N
-~
-E
-_id_desc_~
-&+WA bone band of infinite power has been left here.
-~
-A
-35 4
-A
-37 5
-#83427
-etched stone key~
-&+Lan &Ne&+Ltc&Nh&+Led&+L stone key&n~
-&+LAn etched &Nstone key&+L has been left here.~
-~
-18 11 3 0 7 0 0 16385 0 0 0
-0 100 0 0 0 0 0 0
-0 0 100
-E
-etched stone key~
-   &+LThis stone key is etched with strange markings of &N&+cstorms.
-~
-#83428
-cask vintage hammer shield ale~
-&N&+ya cask of vintage &n&+cHammer&N&+y and &+WShield &N&+ybrand ale&N~
-&+yA cask of vintage &N&+cHammer&N&+y and &+WShield &N&+ybrand dwarven ale has been left here.~
-~
-17 6 4 0 7 0 4096 16385 0 0 0
-120 120 1 0 0 0 0 0
-9 20333 100
-E
-cask vintage hammer shield ale~
-   &+yThis heavy &+Liron-bound &N&+ywooden cask has a huge insignia of a
-&+chammer&N&+y and &+Wshield&N&+y - that of the legendary military dwarven
-&+ytavern of the same name.  The fine dwarven beer is quite rare and very
-&+ysought-after.
-~
-#83429
-cluttered bookshelf~
-&+ya cl&+Lu&N&+yt&+Lt&N&+ye&+Lr&N&+ye&+Ld &N&+ybookshelf&N~
-&+yA bookshelf stands here, &+Lcluttered &N&+ywith books and magical objects.~
-~
-15 6 3 0 7 0 0 0 0 0 0
-40 0 0 40 0 0 0 0
-0 0 87
-E
-cluttered bookshelf~
-   &+yThis large, wooden bookshelf is full of tomes and spellbooks of all
-&+ysizes.  There are various scrolls and other articles, some magical, others
-&+ymeaningless scattered about and tucked beneath books as well.  The chaos
-&+ychallenges that of Duris itself.
-~
-#83430
-thick elemental key~
-&+La thick &N&+rel&+bem&+Cen&n&+ytal &+Lkey&N~
-&+LA thick &N&+rel&+Bem&+Cent&n&+yal &+Lkey is &N&+cfloating &+Lhere.~
-~
-18 15 3 0 7 0 41943041 16385 64 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-thick elemental key~
-   &+LThis swirling key is made with &+Rfire &N&+Land &+Bwater &+Lteeth over
-&+Lan &N&+yearthen &+Lbase, from which around a swirling &N&n&+cwind &+Lblows.
-~
-#83431
-large rusty key~
-&+La large &N&+yrusty &+Lgate key&N~
-&+LA large &N&+yrusty &+Lgate key has been left here.~
-~
-18 15 4 0 7 0 0 16385 0 0 0
-0 100 0 0 0 0 0 0
-0 0 47
-E
-large rusty key~
-   &+LThis old iron gate key is covered in a thick layer of &N&+yrust&+L and decay.
-~
-#83432
-swirling portal mist~
-&+La swirling portal of mist&N~
-&+LA swirling portal of mist floats here.~
-~
-25 1 3 0 7 0 0 0 64 0 0
-12511 7 -1 0 0 0 0 0
-0 0 100
-E
-swirling portal mist~
-&+LThis dark, two-dimensional portal is that of perpetual swirling mist,
-&+Ldisappearing as it reaches its eye.  One sees &Nan&+Lti&N-m&+Lat&Nter &+Lfloating
-&+Lthrough this strange, magical portal.
-~
-#83433
-shimmering portal~
-&+Wa s&+Wh&+Ci&+Wm&+Cm&+We&+Cr&+Wi&+Cn&+Wg p&+Co&+Wr&+Ct&+Wa&+Cl&N~
-&+WA sh&+Cim&+Wme&+Cri&+Wng portal burns with &+Yblazing &+Wlight&N.~
-~
-25 1 3 0 7 0 0 0 64 0 0
-83823 7 -1 0 0 0 0 0
-0 0 100
-E
-shimmering portal~
-   &+WThis shimmering portal is bright and flickers with crackling light.
-~
-#83434
-shimmering portal~
-&+Wa s&+Wh&+Ci&+Wm&+Cm&+We&+Cr&+Wi&+Cn&+Wg p&+Co&+Wr&+Ct&+Wa&+Cl&N~
-&+WA sh&+Cim&+Wme&+Cri&+Wng portal burns with &+Yblazing &+Wlight&N.~
-~
-25 1 3 0 7 0 0 0 64 0 0
-83831 7 -1 0 0 0 0 0
-0 0 100
-E
-shimmering portal~
-   &+WThis shimmering portal is bright and flickers with crackling light.
-~
-#83435
-scroll revelations~
-&+La &N&+yscroll &+Lof &N&+cr&+Ce&n&+cv&+Ce&N&+cl&+Ca&N&+ct&+Ci&N&+co&+Cn&N&+cs&N~
-&+LA strange &n&+mmagical &+yscroll&+L has been left here.~
-~
-2 29 2 0 7 0 1 8404993 64 0 0
-51 45 262 0 0 0 0 0
-0 8333 100
-E
-scroll revelations~
-   &+yThis parchment scroll was transcribed with a magical, &n&+mglowing
-&n&+yink and bound with animal &n&+rsinew&+y.
-~
-#83436
-key shimmering light~
-&+La &N&+ckey &+Lof &+Wshimmering &+Ylight&N~
-&+LA key of &+Wshimmering &+light &+Lburns brilliantly.~
-~
-18 24 2 0 7 0 0 16385 0 0 0
-0 0 0 0 0 0 0 0
-0 195000 100
-E
-key shimmering light~
-   &+LThis small stone key burns with a brilliant magical light.
-~
-#83437
-beautiful blue silk robe~
-&+Ba beautiful blue silk robe&N~
-&+BA beautiful blue silk robe has been left here.~
-~
-9 3 3 0 11 0 1 9 64 0 0
-10 0 0 0 0 0 0 0
--10 44333 100
-E
-beautiful blue silk robe~
-   &+BThis beautifulk silken garment fits loosely.  It is made of the finest
-&+Bsilk and dyed a pure deep blue.
-~
-A
-38 7
-A
-33 3
-#83438
-sun-glasses glasses pink pink-painted painted frames~
-&+Msome &+Lsun-glasses &+Mwith pink-painted &Nframes&N~
-&+MSome sun-glasses with pink-painted frames have been left here.~
-~
-9 51 3 0 7 0 0 131073 64 0 0
-0 0 0 0 0 0 0 0
-0 44332 100
-E
-sun-glasses glasses pink pink-painted painted frames~
-&+MThese pink sunglasses are gloriously breathtakingly beautifully maginificent.
-~
-A
-28 15
-A
-24 -4
-#83439
-spiked torque dwarven kind~
-&+La &N&+rs&+Lp&N&+ri&+Lk&N&+re&+Ld &N&+ctorque &+Lof the &N&+ydwarven kind&N~
-&+LA &N&+rspiked &n&+ctorque &+Lof the &N&+ydwarven kind&N has been left here.~
-~
-9 18 3 0 14 0 0 5 64 0 0
-5 0 0 0 0 0 0 0
-0 22333 100 536870912 64 0 0
-E
-spiked torque dwarven kind~
-   &+LThis perfect mithril spiked dwarven torque is a thick neckpiece
-&+Lthat extends down to the top of the shoulders.  Huge spikes surround
-&+Lthe neck and upper nest area, pointed to screw-tips.
-~
-A
-13 20
-A
-31 5
-#83440
-spiked bracelet dwarven kind~
-&+La &N&+rs&+Lp&N&+ri&+Lk&N&+re&+Ld &N&+cbracelet&+L of the &N&+ydwarven kind&N~
-&+LA &N&+rspiked &+Lbracelet of &N&+ydwarven kind&N has been left here.~
-~
-9 18 3 0 7 0 0 0 0 0 0
-5 0 0 0 0 0 0 0
-0 44332 100 536870912 64 0 0
-E
-spiked bracelet dwarven kind~
-   &+LThis spiked bracelet contains the inner power of the ancient dwarven
-&+Lspirits.  A circular stone band covered with intricate designs is surrounded
-&+Lby several massive mithril spikes with screw tips.
-~
-A
-13 20
-A
-31 5
-#83441
-smooth torque dwarven kind~
-&N&+ma &+Csmooth &N&+ctorque &N&+mof the &+ydwarven kind&N~
-&+mA &+Csmooth torque&N&+m of the dwarven kind&N has been left here.~
-~
-9 18 3 0 14 0 0 5 66 0 0
-5 0 0 0 0 0 0 0
-0 33333 100 536870912 64 0 0
-E
-smooth torque dwarven kind~
-&+mThis beautiful, polished mithril &+ctorque &+mis polished and &+Wsmooth&+L.
-&N&+mIt glows with an ancient dwarven magic, enchanted with the power of the
-&+mages.
-~
-A
-13 20
-A
-35 5
-#83442
-smooth bracelet dwarven kind~
-&N&+ma &+Csmooth &N&+cbracelet&+m of the &N&+ydwarven kind&N~
-&+mA &+Csmooth &N&+cbracelet&+m of the &+ydwarven kind has been left here.~
-~
-9 18 3 0 14 0 0 4097 66 0 0
-5 0 0 0 0 0 0 0
-0 33333 100 536870912 64 0 0
-E
-smooth bracelet dwarven kind~
-&+mThis fine, pure mithril bracelet has been polished to an incredible
-&+msmoothness.  Dwarven letters encircle this bracelet, with runes of
-&+mvarious dwarven forgers.
-~
-A
-13 20
-A
-35 5
-#83443
-huge golden key~
-&na huge &+Ygolden key&N~
-&NA huge &+Ygolden key&N sits atop a pedestal of &+Lstone&N.~
-~
-18 24 4 0 7 0 0 0 0 0 0
-0 100 0 0 0 0 0 0
-6 4433 100
-E
-huge golden key~
-&+YThis huge golden key is covered in fuzzily-&+Mglowing &+Yrunes.
-~
-#83444
-emblem dragonslayer~
-&+Lan &+Rem&N&+rbl&+Re&N&+rm &+Lof the &N&+gdragon&+rslayer&N~
-&+LThe emblem of the &N&+gdragon&+rslayer &+Lhas been left here.~
-~
-9 35 1 0 7 0 0 2097153 66 0 0
-5 0 0 0 0 0 0 0
-0 100223 100 0 0 0 4096
-E
-emblem dragonslayer~
-   &+LThis small emblem made of a dragonscale base, completely encrusted with
-&+Lvarious &+Wg&+Ye&+Rm&+Bs &+Lfound only in the deepest reaches of Duris earth.
-~
-A
-23 -4
-#83445
-bottomless bag collector~
-&+Gthe bottomless bag of the &Nc&+yo&Nl&+yl&Ne&+yc&Nt&+yo&nr&N~
-&+GA bottomless bag of the &N&+ycollector&N&+G has been left here.~
-~
-15 3 4 0 15 0 1 8388609 64 0 0
-4000 5 0 4000 0 0 0 0
--300 0 100
-E
-bottomless bag collector~
-   &+GThis glorious, massive bag is stitched with fine, magical fabric.
-&+GIt stretches and gives seemingly endlessly to withstand any amount
-&+Gof space, or so it is advertised.
-~
-#83446
-silver scimitar~
-&+La &N&+csilver &+Lscimitar&N~
-&+LA &N&+csilver &+Lscimitar has been left here, &+Wgleaming in the light.~
-~
-5 22 3 0 7 0 1 8193 65 0 0
-5 3 4 0 0 0 0 0
-0 0 100
-E
-silver scimitar~
-   &+cThis elegant, well-balanced scimitar is made of &+Cpolished
-&+Csilver&N&+c, fastened to a &+mmithril &+chilt.
-~
-A
-18 4
-A
-19 4
-#83447
-signet ring baphomet~
-&+Lthe &+Ws&Ni&+Wg&Nn&+We&Nt &+Lof &N&+rBaphomet&N~
-&n&+rA &+Wsignet &N&+rring of Baphomet&+L has been left here.~
-~
-9 16 1 0 8 0 0 3 64 0 0
-5 0 0 0 0 0 0 0
-0 14332 100
-E
-signet ring symbol baphomet~
-   &+LThis jagged &+Wsteel &+Lring is shaped like two large &N&+yhorns
-&+Lcurling around a single humanoid &+Wskull&+L, which has burning eyes
-&+Lof undead &+Rfire&+L.
-~
-A
-19 4
-A
-20 -3
-#83448
-string disembodied hands~
-&+La string of &N&+rdis&+Rem&N&+ybod&N&+ri&N&+re&N&+yd &+Yhands&N~
-&+LA disgusting string of disembodied &+Yhands&+L has been left here in a heap.~
-~
-9 2 3 0 7 0 0 5 0 0 0
-5 0 0 0 0 0 0 0
-0 14332 100
-E
-string disembodied hands~
-   &+rThis disgusting string of &+Rsinew &N&+rhas been skewered into several
-&+rdisembodied &+Yhands &N&+yof numerous shapes and sizes.
-~
-A
-32 4
-A
-36 4
-#83449
-breastplate gold trimmed mithril plate~
-&+ma breastplate of &+Ygold-trimmed &N&+mmithril&N~
-&+mA breastplate of &+Ygold-trimmed &N&+mmithril has been left here.~
-~
-9 18 3 0 7 0 0 9 0 0 0
-20 0 0 0 0 0 0 0
-4 44332 100
-E
-breastplate gold trimmed mithril plate~
-   &+mThis fine mithirl breastplate has been lined with a thick rim of
-&+Ygold&N&+m, which has also been etched into the &N&+mmithril in
-&+mmany locations depicting legendary dwarven heros and biblical lore.
-~
-A
-13 32
-A
-24 -1
-#83450
-horned ritualistic mask moregeeth~
-&+La &+Yhorned &N&+cr&+mi&+ct&+mu&+ca&+ml&+ci&+ms&+ct&+mi&+cc &+Lmask of &+GMo&N&+gre&+Gg&N&+ge&+Ge&N&+gth&N~
-&+LA strange &+Yhorned &+Lmask has been left here.~
-~
-9 50 2 0 2 0 1 262145 64 0 0
-5 0 0 3 0 0 0 0
-0 603 100 8 28 0 0
-E
-horned ritualistic mask moregeeth~
-   &+yThis poorly-made, yet ancient mask of the &N&+gMoregeeth &N&+ygoblins
-&+yis infused with generations of dark withcery.  The mask is made of several
-&+ylong feathers, most likely local &+Wstorks &n&+yor &+Lcrows&N&+y, attached to
-&+ya center wooden cross-piece, from which other feathers are bent around one
-&+yanother to form eye-holes.  The entire thing is painted with stripes of
-&+rdark red&+y, which one can only assume to be &+rblood&+y, and &+Lblack&N&+y from an
-&+yunknown origin.  This tattered, old feather mask may seem flimsy and even
-&+ymistaken as garbage, however it resonante with a deep strange magic passed
-&+yon from its former users.
-~
-A
-34 2
-A
-33 2
-#83451
-hooded flowing black robe~
-&+La hooded flowing black robe&N~
-&+LA crumbled heap lies here looking to be a large heavy robe.~
-~
-9 3 4 0 9 0 0 1033 64 0 0
-5 0 0 1 0 0 0 0
-3 11222 73
-E
-hooded flowing black robe~
-   &+LThis huge, heavy robe is actually made of thin material that has simply been
-&+Lrestitched overself again and again to form a ballooning, massive black gown.
-&+LThe robe is loose enough to wear directly upon, or about ones body, made of a
-&+Lthick black fur material.
-~
-A
-13 18
-A
-3 6
-#83452
-massive studded mithril fists~
-&+msome massive &+ys&+mt&+yu&+md&+yd&+me&+yd &+mmithril fists&N~
-&+mA huge pair of studded mithril fists are laying here.~
-~
-9 18 5 0 5 0 0 129 64 0 0
-5 0 0 0 0 0 0 0
-9 22332 100
-E
-massive studded mithril fists~
-   &+mThese simple, massive fists are covered with huge jagged studs.
-~
-A
-1 12
-A
-31 5
-#83453
-stacks gold silver coins~
-&+WMassive stacks of &+Ygold &+Wand &N&+csilver &+Wcoins&N~
-&+WMassive stacks of &+Ygold &+Wand &+Csilver &+Wcoins are piled high.~
-~
-20 15 3 0 7 0 0 0 0 0 0
-0 3455 2840 0 0 0 0 0
-0 0 100
-E
-stacks gold silver coins~
-   &+YThese massive stacks of gold coins are all of the same shield dwarven
-&+Ycurrency.  Lesser silver coins are also stacked enormously high, which in
-&+Yitself is quite a feat.
-~
-#83454
-collar razor-sharp mithril blades sharp~
-&+La co&N&+mllar &+Lof &N&+mrazor&+L-sharp &N&+mmithril &+Lblades&N~
-&+LA collar of razor-sharp mithril blades has been left here.~
-~
-9 18 2 0 8 0 1 5 64 0 0
-5 0 0 5 1 0 0 0
-2 5444 100
-E
-collar razor-sharp mithril blades sharp~
-   &+LThis thick, collar has several huge &+mmithril blades &+Ljutting outwards.
-~
-A
-18 3
-A
-19 4
-#83455
-smouldering forge hammer urtengor~
-&+Lthe &N&+rsmouldering &+Lforge &N&+rha&+Rmm&+Yer &+Lof &N&+rUrt&+Ren&+Yg&+Ro&+Yr&N~
-&+LA massive &N&+rsmouldering &+Lhammer sits here on its head.~
-~
-5 11 4 0 15 0 33554944 8193 66 0 48
-4 4 4 0 0 167023 40 25
-1 332230 100
-E
-smouldering forge hammer urtengor~
-   &+LThis heavy stone thick-headed hammer is forever churning in a
-&+Lfantastic liquid-stone state, made graspable by the power of
-&+LUrtengor himself.
-~
-E
-_char_msg~
-With a mighty swing, you smash $N with $q, &+Rsending out a &+Ydestructive &+Rsho&n&+cckw&+Rave of &+Yforce&N!
-~
-E
-_room_msg~
-&n$n's $q &+Yexplodes &+Rwith a massive &n&+cshockwave&+R!
-~
-A
-58 -1
-A
-31 5
-#83456
-righteous warhammer hammer clangeddin silverbeard~
-&+Wthe righteous warhammer of &NClang&+Weddin &+CSilver&+Wbeard&N~
-&+WThe righteous warhammer of &NClang&+Weddin &+CSilver&+Wbeard&N sits here on its head.~
-~
-5 39 4 0 15 0 513 8193 66 0 48
-4 4 4 0 0 243015 33 25
-1 328338 100
-E
-righteous warhammer clangeddin silverbeard~
-   &+WThis glorious, magical stone hammer is that of Clangeddin Silverbeard,
-&+WDwarven god of strength and justice.  The hammer itself shimmers with a
-&+Wglowing holiness.
-~
-E
-_char_msg~
-&NYour $q &+Wexplodes with holy light, smiting $N!
-~
-E
-_room_msg~
-&+WSuddenly, $n's hammer explodes into a brilliant flash of light, smiting $N!
-~
-E
-_victim_msg~
-&n$n's $q &+Wexplodes in a painfully-blinding blast of light, smiting you!
-~
-A
-57 -1
-A
-35 5
-#83457
-golden miner's helmet~
-&+Ya golden miner's helmet&N~
-&+YA golden miner's helmet has been left here.~
-~
-9 24 4 0 9 0 1073741825 17 64 0 0
-0 0 0 0 0 0 0 0
-6 32333 100
-E
-golden miner's helmet~
-   &+YThis miner's helmet is of standard, average dwarven design.
-&+YThe entire thing, however, has been casted in shimmering gold
-&+Ythat seems to be glowing with a special radiance.
-~
-A
-14 20
-#83458
-tinkerer's tinkerer token~
-&+La &+Rtinkerer's &+Ytoken&N~
-&+LA &+Rtinkerer's &+Ytoken&+L has been left here.~
-~
-8 16 0 0 13 0 0 8404993 0 0 0
-0 0 0 0 0 0 0 0
-0 1000 100
-E
-tinkerer's tinkerer token~
-   &+RThis tiny, steel token is hexagonal in shape, with a square
-&+Rspace at its center.  There are intricate etchings along the
-&+Rinner ring of the token, signifying this as a gnomish token
-&+Rcollected by Dweefniggle's tinkerers in &N&+cAlatorin&+R.
-~
-#83459
-pair gold rimmed gold-rimmed tinted spectacles~
-&+Ya pair of gold-rimmed &N&+mtinted spectacles&N~
-&+mA pair of &+Ygold-rimmed &N&+mtinted spectacles has been left here.~
-~
-9 24 2 0 13 0 0 131073 0 0 0
-3 0 0 0 0 0 0 0
-0 222222 100
-E
-pair gold rimmed gold-rimmed tinted spectacles~
-   &+mThese spectacles appear to be fashioned from extraordinarily-thin
-&+mslides of cooled mithril, perhaps the result of drawing out the metal
-&+min its liquid state and adding glass.  These tinted glasses are framed
-&+mby an intricate woven array of super-thin strands of &+Ypure gold.
-&+mCloser examination reveals that the patterns made in these gold frames
-&+mare completely &+Ysymmetrical&N&+m.
-~
-A
-28 7
-A
-30 7
-#83460
-whitestone cudgel~
-&+Wa whi&Ntest&+Wone &+rcudgel&N~
-&+WA whitestone &N&+rcudgel has been left here.~
-~
-5 39 4 0 8 0 0 8396801 67 0 0
-10 3 6 0 0 0 0 0
-1 20322 100
-E
-whitestone cudgel~
-   &+WThis cudgel, made entirely out of whitestone, is long and heavy.
-&+WA huge club that comes to a smoothed-off head, this cudgel has some
-&+Wfaint signs of &+Mpink &+Wstreaked across its body, dyed over time
-&+Wfrom &N&+rblood &+Win earlier encounters.  The &N&+rcudgel &+Whas a
-&+wsmooth handle that has been secured by &+Wwhite leather &+Wending in
-&+Wa large &N&+yloop &+Wfor easy carrying.
-~
-A
-18 4
-A
-19 5
-#83461
-marble statue~
-&+Wa ma&nrb&+Ll&+We st&+La&Nt&+Wu&Ne &+Wof &NT&+Waa&+Lr&Nk &+WSha&Nn&+La&+Wt~
-&+WPoised centrally upon the vestibule, a &+Lm&Na&+Wrb&+Ll&Ne &+Wsta&+Lt&Nu&+We of &+WTaa&Nr&+Lk &+WSh&+La&Nn&+Wat stands poised in combat.~
-~
-8 38 6 0 15 0 0 0 2 0 0
-0 0 0 0 0 0 0 0
-800 0 100
-E
-marble statue of taark shanat~
-   &+WThis exquisite statue is crafted of the purest ma&Nr&+Lb&Nl&+We.  Taark
-&+WShanat stands tall in combat, holding his warhammer high over his head in
-&+Wa moment of utter fury just as he is about to smash it into the doomed
-&+Wrecipient unlucky enough to receive such a blow.
-~
-#83462
-suit spiked platemail bearing symbol alatorin~
-&+Wa suit of spiked platemail bearing the symbol of &N&+cAlatorin&N~
-&+WA suit of spiked platemail bearing the symbol of &n&+cAlatorin &+Whas been left here.~
-~
-9 16 4 0 14 0 0 9 64 0 0
-20 0 0 5 1 0 0 0
-8 150233 100
-E
-suit spiked platemail bearing symbol alatorin~
-   &+WThis large suit of platemail is made of huge, thick scales.
-&+WMassive &N&+mmithril spikes &+Wjust out from the shoulders and
-&+Welbows, as well as the knees.  A huge crest of a &+csword &+Wcrossed
-&+Wwith a &+Chammer &+Wover a &+Bshield &+W - the symbol of &N&+cAlatorin&+W graces the brest.
-~
-A
-17 -60
-A
-19 3
-#83463
-commendation token stealth~
-&+Wa commendation &+Ytoken &+Wof &+Lstealth&N~
-&+WA shimmering &+Ytoken &+Wof &+Lstealth&+W has been left here.~
-~
-8 39 2 0 14 0 1 8404993 64 0 0
-0 0 0 0 0 0 0 0
-0 32321 100
-E
-shimmering token stealth~
-   &+WThis small &+Ytoken &+Wis made of platinum and lined with &+Ygold&+W.
-&+WA mark of &N&+cAlatorin &+Wis emblazoned on the front, with scripture
-&+Wdepicting &+Lstealth&+W.  &+WA small grouping of words reads &+cSee Modan
-&+cShanat.
-~
-#83464
-black leather beer-stained beer stained apron~
-&+La black leather &N&+ybeer-stained &+Lapron&N~
-&+LA black leather apron &N&+ystained with dozens of years of &N&+ybeer&+L has been left here.~
-~
-9 14 4 0 8 0 0 1025 0 0 0
-5 0 0 4 0 0 0 0
-4 602 96
-E
-black leather beer-stained beer stained apron~
-   &+LAlthough very old and utterly &N&+ydiscolored by beer&+L, this
-&+Lblack leather apron is in remarkable good shape.  A testament to
-&+Lits dwarven craftsmanship in the thickness and choice hide used
-&+Land cured in creating such an apron.
-~
-A
-1 8
-A
-5 10
-#83465
-horned dwarven war helmet warhelm helm~
-&+ya magnificent &+Yhorned &N&+ydwarven &+rwar&Nhelm&N~
-&+yA horned dwarven &N&+rwar helmet is sitting here.~
-~
-9 18 3 0 7 0 0 17 64 0 0
-20 0 0 0 0 0 0 0
-4 16332 100
-E
-horned dwarven war helmet warhelm helm~
-   &+yThis glorious dwarven war helmet has two large &+Wtusks &+yfrom
-&+ywhat appear to be mountain &+Yrams &n&+ysharped, dipped in blood,
-&+yand fastened on either side.
-~
-A
-19 4
-A
-31 3
-#83466
-suit black ringmail bearing symbol alatorin~
-&+La suit of black &N&+cr&+Ci&N&+cn&+Cg&N&+cm&+Ca&N&+ci&+Cl&+L bearing the &+Wsymbol &+Lof &N&+cAlatorin&N~
-&+LA suit of black &+Crin&N&+cgma&+Cil &nhas been left here.~
-~
-9 18 3 0 7 0 0 9 64 0 0
-35 0 0 4 0 0 0 0
-1 144332 100
-E
-suit black ringmail bearing symbol alatorin~
-   &+LThis magnificent set of black ringmail has a large crest on the breast
-&+Lof a &+Csword&+L and &N&+chammer&+L crossed over a huge &+Wshield&+L.
-~
-A
-18 4
-A
-19 4
-#83467
-earring spinning ice crystals~
-&+Wan &+Cea&N&+crr&+Cin&n&+cg &+Wof &+Ws&N&+cp&+Wi&N&+cn&+Wn&N&+ci&+Wn&N&+cg &+Ci&+Wc&+Ce &+Wcry&+Bs&N&+bt&+Wals&N~
-&+WA magical earring of spinning &+Bice &+Wcrysals has been left here.~
-~
-9 1 1 0 7 0 33554432 524289 64 0 0
-3 0 0 0 0 0 0 0
-0 23222 100 0 64 0 0
-E
-earring spinning ice crystals~
-   &+WThis tiny earring is composed of three magical droplets of frozen
-&+Bwater&+W, each spinning in a constant state of magical movement.
-~
-A
-23 -3
-A
-20 -3
-#83468
-tricksters gloves~
-&+Lsome &+Ytricksters &+Lgloves&N~
-&+LSome &+Ytricksters &+Lgloves&N have been left here.~
-~
-9 3 2 0 14 0 1048576 129 64 0 0
-5 0 0 0 0 0 0 0
--10 33442 100
-E
-tricksters gloves~
-   &+LThese small &N&+msilken &+Lgloves have a strange magical feel,
-&+Lcontouring to their wearers hands and seeming to be repulsive to
-&N&+bmagic&+L.
-~
-A
-32 3
-A
-24 -3
-#83469
-heavily-spiked stone-soled heavily spiked stone soled boots~
-&+Wsome heavily-spiked stone-soled boots&N~
-&+WSome heavily-spiked boots lined with thick stone are lying here.~
-~
-9 11 4 0 7 0 0 65 0 0 0
-10 0 0 0 0 0 0 0
-5 22331 100
-E
-heavily-spiked stone-soled heavily spiked stone soled boots~
-   &+WThese thick leather boots have been fastened around huge sheets of
-&+Wstone on the bottoms and tips.  These boots stand to be extraordinarily
-&+Wprotective when moving across harsh terrains while also providing
-&+Wadditional damage in attacks against those who get too close.
-~
-A
-17 -35
-A
-19 3
-#83470
-huge spiked bloody battle-axe axe~
-&+La huge &+Cs&+Lp&+Ci&+Lk&+Ce&+Ld &N&N&+rbloody &+Lbattle-&N&+caxe&N~
-&+LA huge spiked bloody battle-axe has been left here.~
-~
-5 19 5 0 7 0 4194304 8193 64 0 0
-1 4 7 0 0 0 0 0
-7 14332 100
-E
-huge spiked bloody battle-axe axe~
-   &+LThis huge, spiked battle-axe is nearly covered in &N&+rblood &+Lfrom
-&+Lmany victims.  Crafted with dwarven design, this adamantium axe is quite
-&+Lheavy, but not nearly as heavy as its massive size would imply.
-~
-A
-18 6
-A
-19 6
-#83471
-dangling bloodstone earring~
-&+La dangling &N&+rb&+Rlo&N&+rods&+Rto&N&+rne &+Learring&N~
-&+LA dangling earring is laying here.~
-~
-9 39 1 0 8 0 1 524289 64 0 0
-5 0 0 0 0 0 0 0
-0 17332 100
-E
-dangling bloodstone earring~
-   &+LThese earrings are rather simple in design; shards of &+Rbloodstone&L are
-&+Lattached to adamantite posts by tiny &+Ygold chains&+L.
-   &+LThe magical glowing aura of the &N&+rblood&+Rstones &+Lmay give these earrings
-&+Lsome value that they may otherwise be aesthetially lacking.
-~
-A
-13 22
-A
-19 3
-#83472
-brig key~
-&+Rthe brig key&N~
-&+RThe brig key has been left here.~
-~
-18 15 1 0 5 0 8388608 16385 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-brig key~
-   &+RThis large mithril key has been completed painted red, much like the
-&+Rlocks and cell interior of the Alatorin Brig for which it grants access.
-~
-#83473
-keg beer golden pearl~
-&N&+ya keg of beer from &N'the &+YGolden Pearl&N'~
-&+yA large keg of beer marked with the symbol of &N'The &+YGolden Pearl&N' is sitting here upright.~
-~
-8 6 4 0 5 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-8 6332 100
-E
-keg beer golden pearl~
-   &+yThis large &+rjodani wood &+ykeg is made to be very long-lasting,
-&+yand thankfully so.  It is quite old, but the markings on the front
-&+yread as freshly as ever &N&+y'The &+YGolden Pearl&N'
-~
-#83474
-huge spiked bloody dwarven hammer~
-&N&+ma huge spiked &N&+rbloody &N&+mdwarven hammer&N~
-&+mA bloody mithril dwarven battle hammer has been left here.~
-~
-5 18 4 0 7 0 4194304 8193 64 0 0
-4 4 7 0 0 0 0 0
-2 32119 100
-E
-huge spiked bloody dwarven hammer~
-   &+mThis huge dwarven mithril battle hammer has massive spikes surrounding
-&+mthe head.  There are various bloodstains from numerous victims that this
-&+mhammer has surely dismantled over the years.
-~
-A
-18 6
-A
-19 6
-#83475
-dangling whitestone earring~
-&+La dangling &Nw&+Wh&Ni&+Wtest&No&+Wn&Ne&+L earring&N~
-&+LA dangling &Nwhite&+Wstone&+L earring has been left here.~
-~
-9 39 1 0 7 0 0 524289 64 0 0
-5 0 0 0 0 0 0 0
-0 9332 100
-E
-dangling whitestone earring~
-   &+WA tiny whitestone cross hangs from a &+Ygolden chain.
-~
-A
-18 4
-A
-19 2
-#83476
-pink yellow umbrella~
-&+Ya pi&+Mnk &+Yan&+Md yel&+Ylow &+Mumb&+Yrel&+Mla&N~
-&+MA pink and &+Yyellow umbrella &+Mhas been &+Yleft here.~
-~
-8 3 3 0 13 0 0 8404993 0 0 0
-0 0 0 0 0 0 0 0
-0 54332 100 67108864 0 0 0
-E
-pink yellow umbrella~
-   &+YThis fine umbrella is made of finely-stitched pink and yellow silk
-&+Mover a wired frame.  The collapsable umbrella - a rare innovation in such
-&+Ya device, was most notably added by a local gnomish craftsman.  One feels
-&+Mincredibly lifted when holding such a proper accessory.
-~
-A
-14 35
-A
-28 10
-#83477
-blue crystalline band~
-&N&+ba blue &+Bcr&+Wy&+Bs&+Wt&+Bal&+Wl&+Bi&+Wn&+Be &N&+bband&N~
-&+BA blue crystalline band has been left here.~
-~
-9 8 1 0 11 0 4097 3 64 0 0
-5 0 0 0 0 0 0 0
-0 22339 100
-E
-blue crystalline band~
-   &+bThis small band is made out of a strange crystal that has grown around
-&+bperfectly to the shape of one's finger.  A strange light blinks inside the
-&+bcrystal itself.
-~
-A
-13 20
-A
-24 -1
-#83478
-huge ancient wooden crate~
-&+ya HUGE a&+Ln&N&+yc&+Li&n&+ye&+Ln&N&+yt wooden &+Rcrate&N~
-&+yA HUGE and &+Lancient &N&+ywooden &+Rcrate &N&+Ysits in the corner, covered in dust.~
-~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-#83479
-old wire-framed wire framed spectacles~
-&+ysome old wire-framed &+Wspectacles&N~
-&+ySome old wire-framde spectacles &+Whave been left here.~
-~
-9 7 2 0 7 0 0 131073 0 0 0
-0 0 0 0 0 0 0 0
-0 342 100
-E
-old wire-framed wire framed spectacles~
-   &+yThis small pair of spectacles is framed by a thin bronze wiring.  They
-&+yare made of thick concave &+Wglass &Nlenses&N&+y and have been pretty
-&+ywithstanding through time.
-~
-A
-3 6
-A
-4 6
-#83480
-long roc-feather roc feather quill~
-&+ya long roc-fe&+Yat&+Wher quill&N~
-&+yA long roc-fea&+Yth&+Wer quill has been left here.~
-~
-21 50 2 0 7 0 67117056 8404993 64 0 0
-0 0 0 0 0 0 0 0
-0 3002 100
-E
-long roc-feather roc feather quill~
-   &+yThe long dorsal feather of a mountain roc has been transformed into
-&+ya long scribable &Nquill pen&N.
-~
-A
-3 8
-A
-26 8
-#83481
-shackle key~
-&+La &Nsh&+Lac&Nkl&+Le &+Ckey&N~
-&+LA &Nsh&+Lac&Nkl&+Le &+Ckey &Nhas been left here.~
-~
-18 15 3 0 7 0 8392704 16385 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-shackle key~
-   &+LThis small &N&+ciron key&+L is generic and used to unlock large &N&+ciron shackles&+L.
-~
-#83482
-bowl white dragon egg soup~
-&+Wa b&Now&+Wl of &+Wwh&Ni&+Wte dr&Nag&+Won e&Ng&+Wg &N&+rsoup&N~
-&+WA bowl of white dragon egg &N&+rsoup &Nhas been left here.~
-~
-19 48 2 0 10 0 0 16385 0 0 0
-48 30 25 0 0 0 0 0
-0 4333 100
-E
-bowl white dragon egg soup~
-   &+WThis large bowl has a spill-proof top.  It is full of thick, chunky soup
-&+Wmade of white dragon egg.
-~
-#83483
-bowl wyvern egg soup~
-&n&+ya bo&+Wwl o&N&+yf wy&+Wve&N&+yrn &+Wegg &N&+rsoup&N~
-&+yA bowl of wyvern &+Wegg &N&+rsoup has been left here.~
-~
-19 48 2 0 7 0 0 16385 0 0 0
-48 25 30 0 0 0 0 0
-0 3221 100
-E
-bowl wyvern egg soup~
-   &+yThis bowl of chunky wyvern egg soup fills a spill-proof bowl.
-~
-#83484
-ball crackling energy~
-&+Ca ball of &N&+cc&+Cr&n&+ca&+Cc&n&+ck&+Cl&N&+ci&+Cn&N&+cg &+Cenergy&N~
-&+CA ball of crackling energy floats here.~
-~
-4 1 3 0 7 0 67117057 0 64 0 0
-50 4 4 374 0 0 0 0
--100 132093 100 0 128 0 0
-E
-ball crackling energy~
-   &+CThis brilliant ball of energy crackles and fluctuates with magic lightning.
-~
-#83485
-ancient adamantium warhammer hammer dwarven kings~
-&+Lan ancient &n&+ra&+md&+ra&+mm&+ra&+mn&+rt&+mi&+ru&+mm &+Lwarhammer of &N&+ydwarven kings&N~
-&+LAn ancient &N&+madamantium &+Lwarhammer sits here, propped up on its head.~
-~
-5 19 4 0 15 0 20054288 8193 127 0 0
-4 4 5 0 0 30062057 50 30
-0 233209 100 536870912 12480 0 0
-E
-ancient adamantium warhammer hammer dwarven kings~
-   &+LThis large warhammer is quite dissimilar to the typical sledges found
-&+Lin use by dwarves today.  An ancient design, a huge square-shaped head
-&+Lis off-balanced by a circular ball on the opposing side.  Large spikes sit
-&+Laround both heads, still as sharp as ever.  This ancient, yet massive
-&+Lhammer is made entirely out of &N&+madamantium&+L and bares ancient runes
-&+Lof &N&+ydwarven lore&+L from many centuries, depicting royalty and ultimate
-&+Lprosperity amongst the dwarven people.
-~
-E
-_char_msg~
-You smash $q into the &n&+ye&+La&N&+yr&+Lt&N&+yh &+Lreleasing a &+BHUGE eruption of &-L&+BLiGhTNinG!!&N
-~
-E
-_room_msg~
-&N$n smashes $q into the &+ye&+La&N&+yr&+Lt&N&+yh &+Lcausing a &+BHUGE eruption of &-L&+BLiGhTnInG!!&N
-~
-A
-31 5
-A
-35 5
-#83486
-black leather boots adamantium heel blades~
-&+Lsome black leather boots fit with &N&+madamantium &+Che&n&+mel &+Cbl&N&+ca&+mdes&N~
-&+LA pair of black leather boots are laying here, fit with &N&+madamantium &+Cheel blades&N.~
-~
-9 14 2 0 11 0 0 65 0 0 0
-5 0 0 3 0 0 0 0
-0 13333 100
-E
-black leather boots adamantium heel blades~
-   &+LThese fine black leather boots have retractable &N&+madamantium &+Cblades
-&+Lthat quickly slide out of the heel of the boot.  These &+Cblades &+Lare very
-&+Cshrap &+Land well-maintained.
-~
-A
-32 4
-A
-19 3
-#83487
-adamantium bracer tarkorsh~
-&+Lan &N&+ra&+md&+ra&+mm&+ra&+mn&+rt&+mi&+ru&+mm &+Lbracer of &N&+cTar&+Bko&N&+crsh&N~
-&+LAn &N&+radama&+mntium &+Lbracer of &N&+cTar&+Bko&N&+crsh&+L has been left here.~
-~
-9 19 3 0 7 0 0 4097 0 0 0
-5 0 0 0 0 0 0 0
-0 9032 100
-E
-adamantium bracer tarkorsh~
-   &+LThis adamantium bracelet bears the mark of the notorious &N&+rduergar
-&+Linquisitor &N&+cTar&+Bkor&N&+csh Darhelm.  It bares several &+Crazor-lined
-&+Lrivets, which lead up the forearm of the wearer.
-~
-A
-18 4
-A
-19 3
-#83488
-earring miniature durithalite dagger~
-&+La &N&+rdurithalite &+Learring shaped like a da&Ngg&+Wer&N~
-&+LAn earring carved like a miniature dagger has been left here.~
-~
-9 19 3 0 7 0 0 524289 64 0 0
-0 0 0 0 0 0 0 0
-0 14332 100
-E
-earring miniature durithalite dagger~
-   &+LThis tiny earring of carved &N&+rdurithalite&+L is quite tiny, but
-&+Lvery exquisite.
-~
-A
-13 16
-A
-19 2
-#83489
-mithril sign~
-&N&+ma mithril sign reading &N&+r'Cutpurse Killers'&N~
-&N&+mA mithril sign is posted above the southern doorway reading &N&+r'Cutpurse Killers.'~
-~
-13 18 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-E
-mithril sign~
-&+L+---------------------------+
-&+L+   &+C-&N&+c===============&+Y}&n&+y:::: &+L  +
-&+L+         &N&+r CUTPURSE&+L         +
-&+L+         &+r  KILLERS  &+L       +
-&+L+   &N&+y::::&+Y}&+c===============&+C-&+L   +
-&+L+---------------------------+
-&nA smaller engraving beneath the sign reads:
-&+RAll ye dwarves of mountain blood,
-&+RHone thy blades and hone them good,
-&+RFor only dwarves of mountain blood,
-&+RCan walketh in to the Cutpurse 'Hud.
-~
-#83490
-glass eye crimson iris~
-&+Wa glass eye with a &n&+Rc&+rr&+Ri&+rm&+Rs&+ro&+Rn &+Wiris&N~
-&+WA glass eye with a &N&+rcrim&+Rson &+Wiris &Nhas been left here.~
-~
-9 7 2 0 7 0 4096 131073 0 0 0
-1 0 0 0 0 0 0 0
-0 1029 100
-E
-glass eye crimson iris~
-   &+WThis small glass eye is nearly perfectly sphereical in shape.  the
-&+Wfront of the eye has a large &+Rcrim&N&+rson &+Wiris surrounding a deep
-&+Lblack &+Wpupil.
-~
-A
-18 2
-A
-19 2
-#83491
-black dagger reckoning _noquest_~
-&+Lthe black dagger of reckoning&N~
-&+LThe black dagger of reckoning floats here on a &N&+rwisp of &+Yhell&N&+rfire&N.~
-~
-5 19 3 0 14 0 33554432 8193 70 0 0
-2 2 8 0 7 324064321 41 30
-0 66666 100 0 28 0 0
-E
-black dagger reckoning _noquest_~
-&+LThis black dagger is long, sleek, and thick.  Pitch-black in
-&+Lcolor from top to base, this weapon is dark beyond its own
-&+Lexistence, humming with a dark and ancient evil.  Along the
-&+Wskull &+Lthat serves as the base of the dagger's pommel are
-&+Lis the word &N&+r'reckoning.'
-~
-E
-_char_msg~
-Your $q &N&+rglows blood red!
-You feel the &+Llifeforce &Nof $N &+Lflow through your body&N&+r, you want more..
-~
-E
-_room_msg~
-&n$n's $q &n&+rglows blood red&+L, draining the lifeforce of &N$N!
-~
-E
-_victim_msg~
-&N$n's $n &+rglows blood red!
-&+LYou feel your lifeforce being drained from your body as $N &N&+rgrins&+L.
-~
-A
-18 4
-A
-19 4
-#83492
-tight black shoes durithalite buckles~
-&+Lsome tight black shoes with &N&+rdu&+Rr&N&+ri&+Rth&+La&+Rl&+Li&+Rt&N&+re &+Lbuckles&N~
-&+LSome tight black shoes with &N&+rcrimson buckles&+L have been left here.~
-~
-9 3 2 0 9 0 0 65 0 0 0
-5 0 0 0 0 0 0 0
-0 11222 100
-E
-tight black shoes crimson buckles~
-   &+LThese cloth shoes are made of tightly-woven cloth.  Large straps help
-&+Lsupport ones ankles, reinforced with thick &N&+rdurithalite &+Lbuckles.
-~
-A
-2 5
-A
-19 3
-#83493
-wolf hide pants~
-&Nsome &+ywo&+Llf &+yhi&+Lde &N&+rpants&N~
-&nSome &+ywo&+llf &N&+yhi&+Lde &N&+rpants &+Llay here in a heap.~
-~
-9 12 3 0 5 0 0 33 0 0 0
-15 0 0 3 0 0 0 0
-0 17442 100
-E
-wolf hide pants~
-   &+yThese pants are made of thick wolf hide, stitched together in several
-&+ylayers to keep one warm and maneuverable in the harshest of &+Ccold&N&+y.
-~
-A
-32 4
-A
-19 2
-#83494
-potion elemental power _noquest_~
-&+La &+Wpotion &+Lof &+rel&+yem&+ben&+Bt&+gal &+Ypower&N~
-&+LA &+Wpotion &+Lof &N&+rel&+yem&+ben&+Bt&+gal &+Ypower&N has been left here.~
-~
-10 15 3 0 7 0 33554433 8388609 64 0 0
-60 267 481 244 0 0 0 0
-0 0 100
-E
-potion elemental power _noquest_~
-   &+LThis thick potion bottle holds within it a swirling maelstrom of total
-&+Rpower&+L.
-~
-#83495
-belt dangling rat bat skulls~
-&+La belt of dangling &+Rrat &+Land &+Rbat &+Ws&Nk&+Wu&Nl&+Wl&Ns&N~
-&+LA belt of dangling &+Wskulls&N lies here.~
-~
-9 15 3 0 7 0 0 2049 64 0 0
-5 0 0 3 0 0 0 0
-0 0 100 0 0 128 0
-A
-24 -4
-A
-55 4
-#83496
-mithril plated mithril-plated gnomish mobility suit~
-&+Ca &+mmithril&+C-plated &+Rgnomish &+Mm&+Ro&+Mb&+Ri&+Ml&+Ri&+Mt&+Ry &+Wsuit&N~
-&+mA mithril-plated &+Rgnomish &+Mmobility &+Wsuit has been left here.~
-~
-9 18 2 0 15 0 33554432 9 64 0 0
-20 0 0 3 0 0 0 0
--50 204309 100
-E
-mithril plated mithril-plated gnomish mobility suit~
-   &+CThis fine suit has large &+mmithril plates&+C fastened to the
-&+Cshoulders, chest, back, and stomach.  The &n&+mplates&+L have been
-&+Cshaped into perfect &+Lmuscular &+Cstructure, bound together by a
-&+Cseries of strange cords with miniature &+ypullies &+Cadding resistance.
-&+CThis suit has numerous &+Lbuckles &+Con numerous &+ystraps&+C, allowing
-&+Cits wearer to tighten and release the armor with total ease.
-~
-A
-55 6
-A
-36 6
-#83497
-mithril plated mithril-plated gnomish arm enhancers~
-&+Csome &+mmithril&+C-plated &+Rgnomish &+Marm &+Ce&+cn&+Ch&+ca&+Cn&+cc&+Ce&+cr&+Cs&N~
-&+CSome &N&+mmithril-plated &+Rgnomish &+Mleg &+cenhancers &+Lhave been left here.~
-~
-9 18 2 0 15 0 33554432 257 0 0 0
-20 0 0 3 0 0 0 0
--20 198332 100
-E
-mithril plated mithril-plated gnomish arm enhancers~
-   &+CThese arm plates are plated with large sheets of &+mmithril&+C.  Huge
-&+Cbands exist on miniature pullies at the joints of the arms, allowing for
-&+Cadded resistance and optimal strength enhancement - gnomish style.
-~
-A
-55 4
-A
-36 4
-#83498
-mithril plated mithril-plated gnomish leg enhancers~
-&+Csome &N&+mmithril&+C-plated &+Rgnomish &n&+mleg &+ce&+Cn&+ch&+Ca&+cn&+Cc&+ce&+Cr&+cs&N~
-&+CSome &N&+mmithril-pltaed &+Rgnomish leg enhancers&+L have been left here.~
-~
-9 18 2 0 15 0 33554432 33 0 0 0
-20 0 0 3 0 0 0 0
--20 199884 100
-E
-mithril plated mithril-plated gnomish leg enhancers~
-   &+CThese leg enhancers are made with huge &+mmithril plates &+Cprotecting
-&+Cthe major muscles.  Along the knee area there are protective guards with
-&+Cslotted plating, adding additional protection.
-~
-A
-55 4
-A
-36 4
-#83499
-mithril plated mithril-plated gnomish brain force enhancer~
-&+Ca &N&+mmithril&+C-plated &+Rgnomish &+Mb&N&+mra&+Mi&+mn &+mf&+Mo&+Yr&+Mc&N&+me &+ce&+Cn&+ch&+Ca&+cn&+Cc&+ce&+Cr&N~
-&+CA &N&+cmithril&+Cplated &+Rgnomish &+Mbr&+ma&+Mi&+mn f+Mo&+Yr&+Mc&+me &+Cen&+cha&+Cnc&+cer&+r has been left here.~
-~
-9 18 2 0 15 0 33554432 17 0 0 0
-20 0 0 4 0 0 0 0
-0 213223 100
-E
-mithril plated mithril-plated gnomish brain force enhancer~
-   &+mThis strange head-piece resembles that of a fan-rimmed helmet, similar
-&+mto those worn by the bushi of the eastern realms, only with the entire top
-&+mcompletely removed, leaving the wearers brain completely exposed.
-   &+BA strange magical force, however, permeates from the rim, creating a
-&+Bprotective shell around the wearers head.
-~
-A
-33 4
-A
-34 4
-#83500
-huge boulder~
-&+ya huge boulder&N~
-&+yA huge boulder sits here, filling the western end of a tunnel.~
-~
-29 11 5 0 7 0 0 0 0 0 0
-270 83898 3 1 0 0 0 0
-0 0 100
-E
-huge boulder~
-&+yThis massive stone boulder fills the entire western end of the tunnel.
-~
-#83501
-polished adamantite stud~
-&+Wa po&Nli&+Lshed adamantite &Nst&+Wud&N~
-&+WA polished &+Ladamantite stud&+W glistens here.~
-~
-9 19 1 0 10 0 0 524289 64 0 0
-1 0 0 0 0 0 0 0
-0 4333 100 65536 8 0 0
-E
-polished adamantite stud~
-   &+LThis tiny adamantite stud is a simple black sphere.  It has been
-&+Wheavily polished &+Lwith great persistance, resulting in a near-&+mglow
-&+Lwhen held in the &+Ylight&+L.
-~
-A
-18 3
-A
-24 -3
-#83502
-mithril stud carved fist~
-&+ma mithril stud carved like a &+Mfist&N~
-&+mA mithril stud carved like a &+Mfist&N&+m has been left here.~
-~
-9 18 3 0 10 0 0 524289 64 0 0
-2 0 0 3 0 0 0 0
-0 3228 100
-E
-mithril stud carved fist~
-   &+mThis stud juts out from ones ear lobe with a dominating, heavy
-&+mpresence.  A single five-fingered hand squeezed into a fist has been
-&+mmarvelously crafted with intricate detail.
-~
-A
-31 3
-A
-13 12
-#83503
-slender mithril dagger~
-&+ma slender mithril dagger&N~
-&+mA slender mithril dagger has been left here.~
-~
-5 18 2 0 8 0 0 8193 0 0 0
-2 2 8 0 0 0 0 0
-0 11448 100
-E
-slender mithril dagger~
-   &+mThis mithril dagger is long and slender; dreadfully sharp on either side.
-~
-A
-18 3
-A
-19 3
-#83504
-collapsable platinum prospector prospector's monocle~
-&+Wa collapsable platinum &+Yp&N&+yro&+Ys&+ype&+Yc&+yto&+Yr&+y's &+Wm&+Lo&+Wnoc&+Ll&+We&N~
-&+WA collapsable platinum prospectors monocle has been left here.~
-~
-9 25 3 0 15 0 0 131073 0 0 0
-5 0 0 3 0 0 0 0
-0 25332 100 4 0 0 1048576
-E
-collapsable platinum prospector prospector's monocle~
-&+WThis magnificent eyepiece is made out of several small sections of platinum
-&+Wthat can be extended or collapsed in on itself.  Two golden pins sitting
-&+Was guides along a straight track lock the monocle into position when the
-&+Wdesired focus has been reached.  Seeing as how this instrument is so tiny
-&+Wand intricate, it is probably safe to assume that it was crafted by someone
-&+Wwith hands as such.
-~
-A
-18 4
-A
-36 5
-#83505
-black leather gloves mithril blades~
-&+Lsome black leather gloves &n&+mwith mith&+Cril &+mbla&+Cdes&N~
-&+LSome black leather gloves &N&+mwith mit&+chril &+cbla&+Cdes&+L have been left here.~
-~
-9 13 2 0 10 0 0 129 0 0 0
-5 0 0 0 0 0 0 0
-0 11221 100
-E
-black leather gloves mithril blades~
-   &+LThese black leather gloves fit snugly around ones hands.  Small razor blades
-&+Lmade of thin &+cslivers&+L of &+mmithril &+Lprotrude from the knuckles of
-&+Lthese gloves.
-~
-A
-32 4
-A
-19 3
-#83506
-mithril bracer tarkorsh~
-&+La &N&+mm&+Mi&+mt&+Mh&+mr&+Mi&+ml &+Lbracer of &+BTar&N&+cko&+Brsh&N~
-&+LA &+mmithril bracer of &+BTarkorsh&+L has been left here.~
-~
-9 18 2 0 15 0 0 4097 0 0 0
-5 0 0 0 0 0 0 0
-0 10046 100
-E
-bracer mithril tarkorsh~
-   &+LThis small &+mmithril &+Lbracer is smooth to the touch.  Several large
-&+mmithril studs&+L are placed all around the bracelet.  There is a small
-&+minsignia around the inner rim of the bracelet reading &+B'Tar&+cko&+Brsh'
-~
-A
-19 4
-A
-18 3
-#83507
-blood-red blood red inquisitor inquisitor's mask~
-&+ra blood-red inquisitor's mask&N~
-&+rA blood-red inquisitor's mask has been left here.~
-~
-9 14 2 0 8 0 0 262145 64 0 0
-5 0 0 0 0 0 0 0
-0 1222 100
-E
-blood-red blood red inquisitor inquisitor's mask~
-   &+rThis leather mask has been dyed blood-red, after most likely
-&+rhaving been soaked in actual blood for quite some time.
-~
-A
-19 2
-A
-18 2
