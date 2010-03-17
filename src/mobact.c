@@ -7306,8 +7306,11 @@ int handle_npc_assist(P_char ch)
   }
 
 
-  if(CAN_ACT(ch) && (GET_POS(ch) > POS_SITTING) &&
-      IS_SET(ch->specials.act, ACT_PROTECTOR))
+  if(CAN_ACT(ch) &&
+     GET_POS(ch) > POS_SITTING &&
+     IS_SET(ch->specials.act, ACT_PROTECTOR) &&
+     GET_STAT(ch) > STAT_SLEEPING &&
+     !IS_STUNNED(ch))
   {
     Victim = find_protector_target(ch);
     if(Victim)
