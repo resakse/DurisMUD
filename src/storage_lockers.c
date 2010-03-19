@@ -974,14 +974,14 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  zone = &zone_table[world[ch->in_room].zone];
-  if (zone->status > ZONE_NORMAL && (GET_LEVEL(ch) > 25) &&
-      (zone_table[world[ch->in_room].zone].number != WINTERHAVEN))
-  {
-    send_to_char("The safety commission says to you, '&+RThe town is under attack!!&n'\n", ch);
-    send_to_char(" .. '&+WWe must fortify our defenses and keep the invaders out of the locker!'\n", ch);
-    return TRUE;
-  }
+  // zone = &zone_table[world[ch->in_room].zone];
+  // if (zone->status > ZONE_NORMAL && (GET_LEVEL(ch) > 25) &&
+      // (zone_table[world[ch->in_room].zone].number != WINTERHAVEN))
+  // {
+    // send_to_char("The safety commission says to you, '&+RThe town is under attack!!&n'\n", ch);
+    // send_to_char(" .. '&+WWe must fortify our defenses and keep the invaders out of the locker!'\n", ch);
+    // return TRUE;
+  // }
 
   // check for guild locker
   if (!str_cmp(enterWho, "guild"))
