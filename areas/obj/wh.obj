@@ -2672,7 +2672,7 @@ flaming axe illithid lords _noquest_~
 &+Lthe &+rf&+Rl&+ra&+Rm&+ri&+Rn&+rg &+Laxe of the &+MIllithid &+Llords&n~
 &+LA mysterious &+Mpurple &+Laxe lies on the ground.&n~
 ~
-5 20 3 0 15 0 9216 8193 66 87085083 0
+5 20 3 0 15 0 9280 8193 66 87085083 0
 1 4 5 0 0 0 0 0
 4 0 100
 A
@@ -3458,7 +3458,7 @@ titan warhammer snow ogre kings _noquest_ _id_~
 &+Wthe &+Cti&+Wt&+Can &+Wwar&+Chammer &+Wof the &+Wsnow &+bogre &+Wkings&n~
 &+WA mighty warhammer lies here.&n~
 ~
-5 16 2 0 14 0 9224 8193 66 87081275 0
+5 16 2 0 14 0 9288 8193 66 87081275 0
 4 5 4 0 0 0 0 0
 0 0 100 0 32796 0 0
 E
@@ -3723,7 +3723,7 @@ bastard sword demon slayer _noquest_~
 &+Lth&+we ba&+Lst&+ward &+Lsw&+word &+Lof &+wthe &+rD&+Re&+rm&+Ro&+rn &+MSl&+ma&+My&+me&+Mr&n~
 &+La m&+wyst&+Ler&+wiou&+Ls l&+wook&+Lin&+wg sw&+Lor&+wd li&+Les &+wher&+Le.&n~
 ~
-5 1 2 0 14 0 4202497 8193 64 0 0
+5 1 2 0 14 0 4202561 8193 64 0 0
 13 4 5 0 0 0 0 0
 0 0 100 0 32768 0 0
 A
@@ -3781,7 +3781,7 @@ mystical longsword volo traveler _noquest_~
 &+ct&+Lhe &+cm&+Lystical &+cl&+Longsword &+co&+Lf &+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler&n~
 &+cA r&+Leally &+cw&+Licked &+cl&+Looking &+cl&+Longsword &+cl&+Lies &+ch&+Lere.&n~
 ~
-5 1 2 0 15 0 9224 8193 66 87048219 0
+5 1 2 0 15 0 9288 8193 66 87048219 0
 5 4 5 0 0 0 0 0
 0 0 100 32 0 16777216 0
 A

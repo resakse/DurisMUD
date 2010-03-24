@@ -135,7 +135,6 @@ E 1 9305 1 5 100 0 0 0             *   a long flowing black robe
 E 1 9304 1 15 100 0 0 0            *   a glowing emerald bracelet
 E 1 9303 1 16 100 0 0 0            *   a jewel-studded silver dagger
 E 1 9302 1 18 100 0 0 0            *   a wizard's staff
-G 1 9312 1 0 100 0 0 0             *    a staff of absorption
 G 1 359 1 0 100 0 0 0              *    (object type not in this .obj file)
 M 0 9305 10 9301 100 0 0 0         * a patrolling guard
 E 1 9321 8 5 100 0 0 0             *   a heavy tarnished suit of platemail
