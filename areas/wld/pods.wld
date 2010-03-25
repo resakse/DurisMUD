@@ -7,7 +7,7 @@ not growing thickly in this spot, they can be seen growing so thickly that
 they almost create walls not too far away.  Occasionally a loud cry can be
 heard but whether it is from an &+wanimal&n or frightened person is not clear.
 ~
-1 4 26
+285 4 26
 D0
 ~
 ~
@@ -27,7 +27,7 @@ S
 &+gis enough to warn the wary that standing &+bwater&+g and the &+ccreatures&+g that live&n
 &+gin it, is close.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -50,7 +50,7 @@ S
 &+gfrom the trees, making it hard to see very far away.  The ground has become a&n
 &+gbit softer, slightly &+ymuddy.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -69,7 +69,7 @@ S
 &+gas they fly past almost too fast to see.  The smell of &+yrotting plants&+g fills&n
 &+gthe &+cair,&+g almost strong enough to make people gag.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -88,7 +88,7 @@ which eases the sense of claustrophobia, but there is still the feeling that
 unfriendly eyes are watching.  The prints on the ground show that large &+ycats&n
 are in the area, seeking prey.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -107,7 +107,7 @@ to scurry around in safety, out of sight of all &+mpredators&n as they dart arou
 in their eternal search for food.  In a small &+gshelter&n cleverly woven into the
 thick &+gvegetation,&n a &+ypodaling&n stands by a table.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -122,7 +122,7 @@ S
 &+git travels through the area.  &+wThick vines&+g grow on most of the trees, hanging&n
 &+gdown and entangling travelers as they try to move deeper into the swamp.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -142,7 +142,7 @@ S
 &+gtheir flight.   The trail continues to wind its way through the plants that&n
 &+ggrow rampant in the area, blocking progress everywhere except on the trail.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -161,7 +161,7 @@ footprint can be seen among the many prints.  It seems to lead further into
 the swamp, heading north.   Though the air is filled with insect song, very
 few of the &+mcreatures&n fly around living things to harass them.
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -180,7 +180,7 @@ sound from all around, and the occasional loud call of a &+mhunting predator&n c
 be heard, though the muffling quality of the &+gvegetation&n makes it very hard to
 determine the direction the sound came from.
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -199,7 +199,7 @@ way through the &+gthick plants&n blocking progress to the east.  Birds flit amo
 the trees hung with &+wthick gray vines&n and other &+csmall creatures&n dart among the
 &+gvegetation,&n staying hidden for the most part.
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -220,7 +220,7 @@ as they hunt for food.  Beyond the barrier formed by the &+gvegetation&n along t
 east, faint splashing and animal cries of fear are heard as a large &+mpredator&n
 hunts deeper in the &+gswamp.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -243,7 +243,7 @@ S
 &+gunwary.  Any tracks that are made quickly disappear as the soft ground does not&n
 &+gkeep imprints very long.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -261,7 +261,7 @@ S
 &+gwaiting for a victim to torment.  Loud calls sound from all around, but those&n
 &+gmaking the calls are not visible in the thick vegetation.&n
 ~
-1 33587200 26
+285 33587200 26
 D2
 ~
 ~
@@ -280,7 +280,7 @@ S
 &+gaway.  Noises seem even more muffled than normal, as though the area mourns&n
 &+gwhatever it was that died here.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -298,7 +298,7 @@ of annoying &+minsects&n seem to have disipated, leaving the air clearer.  There
 is a stench of rotting flesh hanging in the air, wafting in from the north.&n
 Animal calls seem to have regained their normal sounds for this &+gswamp.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -317,7 +317,7 @@ S
 &+gpass. Loud calls come from all directions as the &+ccreatures&+g that live in the&n
 &+gswamp go about their daily business.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -336,7 +336,7 @@ back and forth between them as they catch &+minsects&n on the fly.  Small &+ccre
 dart across the trail too fast to be seen clearly, making small noises as they&n
 bounce past.
 ~
-1 32768 26
+285 32768 26
 D2
 ~
 ~
@@ -354,7 +354,7 @@ S
 &+gLoud calls sound as &+ccreatures&+g, both predators and prey, move through the very&n
 &+gthick vegetation on their daily quest to find food.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -372,7 +372,7 @@ S
 &+Mflesh&n&+g to land on and feed.  There are spots among the thick underbrush that&n
 &+ghold &+Galgae-covered &n&+bwater,&+g where the &+minsects&+g rest until disturbed.&n
 ~
-1 32768 26
+285 32768 26
 D2
 ~
 ~
@@ -391,7 +391,7 @@ S
 &+gmoving in the area to the south.  The vegetation has become much thicker, and&n
 &+git blocks most of the &+Ysu&+Wn&+Ylight&+g that tries to reach the swamp floor.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -410,7 +410,7 @@ S
 &+Bthe &+wmoss&+B and they fly back and forth between the hanging strands as they hunt&n
 &+Bthe numerous &+minsects&+B in the area.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -430,7 +430,7 @@ along places to perch.  A few &+minsects&n buzz around but the &+Rbi&+Gr&+Bds&n 
 and catch them, keeping them from becoming annoying.  Quiet rustling sounds
 come from the &+gunderbrush&n as &+ccreatures&n move about on their daily rituals.
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -448,7 +448,7 @@ S
 &+gwho swings at the &+minsects.  &+RB&+Yir&+Bds&n&+g that &+ynest&+g in the &+wmoss&+g fly all around trying&n
 &+gto catch &+minsects&+g for a meal.&n
 ~
-1 4 26
+285 4 26
 D1
 ~
 ~
@@ -467,7 +467,7 @@ S
 &+gunderbrush seeking whatever food they may find while trying not to be a meal&n
 &+gfor the &+Clarger creatures.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -486,7 +486,7 @@ S
 &+ga feast, but the &+Gbi&+Rr&+Yds&n&+g that live in &+ynests&+g in the &+wmoss&+g hanging from the trees&n
 &+gswoop down on the &+minsects&+g to feast on them.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -511,7 +511,7 @@ S
 &+wGray moss&+B hangs down from the &n&+gtrees, &+Bcreating spaces where &n&+clarge creatures&n
 &+Bcan hide as well as providing a place for &+Yb&+Rir&+Gds&+B to &n&+ynest.&n
 ~
-1 1073774592 26
+285 1073774592 26
 D0
 ~
 ~
@@ -532,7 +532,7 @@ S
 &+gto avoid the &+Gthorny plants.&n   &+mInsects&+g fly up when their resting places are&n
 &+gdisturbed, flying into eyes and mouths to annoy &+ccreatures.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -550,7 +550,7 @@ S
 &+gof the fallen &+Gtree&n&+g contain &+ynests&+g that &+ylarge birds&+g have abandoned and remnants&n
 &+gof &+csha&+wtter&+ced &+Ce&+Wgg&n&+ws&+g are all that is left of their &+ynesting&+g attempt.&n
 ~
-1 33587200 26
+285 33587200 26
 D2
 ~
 ~
@@ -569,7 +569,7 @@ a lone &+Chuman,&n or human-like, footprint.  &+wHan&+cgin&+wg gr&+ca&+wy moss&n
 with a nesting place and they fly out of their &+ynests&n to catch the few &+minsects&n
 that are in the area as well as filling the air with cheerful songs.
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -587,7 +587,7 @@ fewer &+ybirds&n in this area, and they are quieter than in other areas.  Even t
 &+minsects&n seem to be reluctant to be in this section of the &+gswamp,&n and it is an
 unusually peaceful, &+Brestful&n spot as a result.
 ~
-1 163840 26
+285 163840 26
 D0
 ~
 ~
@@ -609,7 +609,7 @@ a fallen &+ytree&n stands alone as not even the thick vegetation will grow nearb
 As a result the &+Csky&n is easily seen above, allowing &+Ybright sunshine&n during the
 day and &+wsoft moonlight&n at night.
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -627,7 +627,7 @@ they try not to be food for larger &+ccreatures.&n  &+RBi&+Gr&+Bds&n fly out fro
 &+wmoss&n that hangs from the &+gtrees&n to chase &+minsects&n away, filling the air with
 their songs when they return to perch in the &+wmoss.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -645,7 +645,7 @@ S
 &+gof the trees, obscuring the trail.  Small pools of &+Gscum-covered &+Bwater&n&+g can&n
 &+gbe seen amidst the vegetation.&n
 ~
-1 32768 26
+285 32768 26
 D2
 ~
 ~
@@ -664,7 +664,7 @@ S
 &+mst&+Mran&n&+mge p&+Mink ca&n&+mra&+Mpa&n&+mces&+g skate across the surface of the water, disappearing&n
 &+gbeneath the surface with small popping sounds.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -684,7 +684,7 @@ S
 &+gfrom view.  Clouds of &+minsects&+g fill the air, harassing travelers who are in&n
 &+gtheir area.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -705,7 +705,7 @@ S
 &+gbeen stacked in piles at different spots in the pools and some larger &+canimals&n
 &+gcan be seen going in and out of them.&n
 ~
-1 1107329024 26
+285 1107329024 26
 D2
 ~
 ~
@@ -725,7 +725,7 @@ S
 &+Bto travel on water.  When large &+ybirds&+B swoop down at them, they drop beneath&n
 &+Bthe water's surface with soft popping sounds.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -747,7 +747,7 @@ S
 &+gthey fly.  &+cSmall creatures&+g dart around in the underbrush, seeking food as they&n
 &+gtry not to become food themselves.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -765,7 +765,7 @@ S
 &+gThe &+Yco&+Rl&+Bor&+Gf&+Rul b&+Yird&+Bs&n&+g that &+ynest&+g in the &+wgray moss&+g that hangs from the trees dart&n
 &+gout to catch the &+minsects,&+g clearing the &+Cair&n&+g further.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -784,7 +784,7 @@ as there is no rustling to distract the ear. Very few &+Rbi&+Grd&+Bs&n fly in th
 as there are not many &+minsects&n to catch and eat, and apparently none of them
 have &+ynested&n in the &+wgray moss&n hanging down from the trees.
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -804,7 +804,7 @@ the same color as the &+wmoss&n hidden behind some of the &+gtrees.&n  Glimpses 
 the walls show more &+gvegetation,&n but there appears to be no way past the &+wwalls&n
 at this point.
 ~
-1 32768 26
+285 32768 26
 D2
 ~
 ~
@@ -823,7 +823,7 @@ but the trail continues along the &+wwa&+Wl&+wl.&n  Small &+ccreatures&n have ma
 the cracks in the &+wwa&+Wl&+wl,&n and at spots a cleared area can be seen through the
 larger cracks.
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -843,7 +843,7 @@ can be seen through the cracks.  Insects fly up to all breathing &+mcreatures,&n
 seeking exposed &+Mflesh&n to feast upon, but they fly away when &+Yco&+Rl&+Yor&+Bfu&+Yl b&+Rir&+Gds&n
 come flying by, trying to catch them.
 ~
-1 32768 26
+285 32768 26
 D2
 ~
 ~
@@ -865,7 +865,7 @@ S
 &+gto enter the area beyond this &+wwa&+Wl&+wl,&+g though glimpses of a cleared area can&n
 &+gbe seen through cracks in the &+wwa&+Wl&+wl.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -887,7 +887,7 @@ S
 &+git blocks the way to the south, allowing no access in that direction, though a&n
 &+gcleared space can be glimpsed through cracks in the &+wwa&+Wl&+wl.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -906,7 +906,7 @@ S
 &+gthe south.  Glimpses of a cleared area can be caught through large cracks in&n
 &+gthe &+wwa&+Wl&+wl,&+g but there is no entrance through the &+wwa&+Wl&+wl&+g at this point.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -925,7 +925,7 @@ S
 &+gclouds away.  The &+Gscum&n&+g on the &+Bpools&n&+g is disturbed occasionally as whatever is&n
 &+gin them pokes and eye out to see if there is food nearby.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -944,7 +944,7 @@ S
 &+gto catch the &+minsects&+g for a meal.   Loud calls come from all directions from&n
 &+glarge &+ccreatures&+g searching for prey.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -968,7 +968,7 @@ S
 &+gplants&+B is even stronger here.   Though the top of the water is still, with&n
 &+Gscum&+B sitting on it in spots, there is a current below.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -986,7 +986,7 @@ S
 &+Mflesh&n&+g to feast upon.  The smell of rotting vegetation is stronger in the area&n
 &+gas there are small trees toppled into the &+Bpools.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -1005,7 +1005,7 @@ S
 &+Bbranches swaying to an unfelt wind, or &+Mbugs&+B with &+Mstr&n&+ma&+Mnge m&n&+marki&+Mngs&+B that skate&n
 &+Bacross the top of the water.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -1024,7 +1024,7 @@ S
 &+gout to chase the &+minsects,&+g feasting on them.  Soft calls from &+Mpredators&n&+g echo in&n
 &+gthe area.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -1045,7 +1045,7 @@ S
 &+Ball efforts, it is hard to hear anything, including the speech of someone that&n
 &+Bis standing close.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -1064,7 +1064,7 @@ S
 &+greveals that the &+Bpools&n&+g are much deeper than they seem, and there are things in&n
 &+gthem that may be hazardous to an adventurer's health.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -1083,7 +1083,7 @@ S
 &+garound, loud calls can be heard as the denizens of the swamp are hunting, all&n
 &+gof them looking for food while trying not to become food themselves.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -1101,7 +1101,7 @@ around, and &+wthick gray moss&n hangs from the &+gtrees,&n obscuring vision.  T
 leave travelers alone.  Loud calls as well as strange whistling sounds sound
 from all directions.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -1119,7 +1119,7 @@ S
 &+minsects&+g that rise from the &+Bpools.&n&+g  The cheerful songs of the &+Yb&+Rir&+Bds&n&+g help fend&n
 &+goff the depression that could so easily set in in such a dismal place.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -1138,7 +1138,7 @@ S
 &+gcan be heard from beyond the thick vegetation, but it is too thick to see what&n
 &+glarge &+ccreature&+g is making that splashing sound.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -1157,7 +1157,7 @@ S
 &+gof the &+wmoss&+g to chase away the clouds of &+minsects&+g that live here make the only&n
 &+gclear sounds as they sing cheerful birdsong.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -1180,7 +1180,7 @@ S
 &+gthat hangs from the trees, dislodging &+Ybi&+Rr&+Bd&+Ys,&n&+g which swoop down to attack &+minsects&n
 &+gas they fly through the area.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -1195,7 +1195,7 @@ S
 &+ghanging from the trees disturb &+ynesting &+Ybi&+Rr&+Bds,&n&+g who fly out to try to catch the&n
 &+minsects&+g for a meal.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -1213,7 +1213,7 @@ S
 &+gin the soft, damp ground.  There are no sounds made by small &+ccreatures&+g as they&n
 &+ghave wisely hidden themselves when something large is around.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -1236,7 +1236,7 @@ S
 &+Bthat hangs down from the &n&+gtrees,&+B camouflaging a crumbling &n&+wstone wall&+B which is&n
 &+Bthe same color as the &n&+wmoss.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -1274,7 +1274,7 @@ S
 &+Gscum.&+B  Grunting coming from nearby can be felt in the water rather than heard&n
 &+Bwith the ears.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -1289,7 +1289,7 @@ S
 &+ga meal.  Their cheerful songs cover any other sounds made by other &+ccreatures&n
 &+gnearby as well as far off.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -1309,7 +1309,7 @@ S
 &+gthe others, scenting the air with a sweet smell from its &+Mshi&n&+mmm&+Me&n&+mri&+Mng b&n&+mlo&+Mss&n&+mo&+Mms,&n
 &+gcovering the stench of rotting vegetation completely.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -1327,7 +1327,7 @@ S
 &+ghangs from the trees.  Despite their constant chatter in cheerful song, loud&n
 &+gcalls can be heard coming from other parts of the swamp.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -1345,7 +1345,7 @@ S
 &+gsighted is the &+Bb&n&+blu&+Be&n&+g one perched in the tree with &+Bsh&n&+bi&+Bmm&n&+ber&+Bin&n&+bg b&+Blo&n&+bsso&+Bms.&n&+g   This&n
 &+Bb&n&+bir&+Bd&n&+g does not sing, but makes loud grunting hoots.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -1364,7 +1364,7 @@ S
 &+git seems to attract them.  They are almost overwhelming as they crawl into eyes&n
 &+gand noses, seeking tender &+Mflesh&n&+g to feed on.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -1385,7 +1385,7 @@ S
 &+gutters a croaking grunt, the &+minsects&+g immediately take flight, flying as fast&n
 &+gas they can away from the &+Yb&+Wi&+Yrd.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -1407,7 +1407,7 @@ S
 &+Bcalls can be heard over the rustling of the feathers of the large, &+bdark birds&n
 &+Bperched on the &n&+ybranches&+B of the &n&+gtwisted trees.&n
 ~
-1 32768 26
+285 32768 26
 D2
 ~
 ~
@@ -1425,7 +1425,7 @@ S
 &+minsects&+g for a meal.  Strange hooting grunts sound from time to time,  and the&n
 &+minsects&+g seem to pause for a heartbeat when the sound is heard.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -1445,7 +1445,7 @@ S
 &+bfind.  &+YCo&+Rl&+Gor&+Bfu&+Yl b&+Bi&+Rrd&+Ys&n&+g fly out from their &+ynests&+g in the &+wthick gray moss&+g hanging&n
 &+gfrom the trees to chase the &+minsects&+g away.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -1464,7 +1464,7 @@ S
 &+Bpoke out of the water, giving the place an eerie air.  Large dark &+bbirds &+Broost&n
 &+Bin the solitary &n&+gtrees,&+B watching over the area as if they were lords.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -1484,7 +1484,7 @@ S
 &+Banything that lands on them.  Large &n&+bdark birds&+B roost in these &n&+gtrees,&+B looking&n
 &+Bout over the &+Gswamp &+Bwith an air of intelligence.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -1504,7 +1504,7 @@ S
 &+Bthat may touch them.  Large, &n&+bdark birds&+B perch on the solitary trees, watching&n
 &+Bover their area of the swamp with &n&+bdark,&+B glittering eyes.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -1527,7 +1527,7 @@ S
 &+gtrees is a single tree with &+Msh&n&+mi&+Mmm&n&+meri&+Mng b&n&+ml&+Mo&n&+mss&+Moms.&n&+g   A &+Mb&n&+mir&+Md&n&+g sitting in this tree&n
 &+gutters an occasional grunting hoot that causes the &+minsects&+g to flee.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -1546,7 +1546,7 @@ S
 &+Bwith an air of ownership.  A &n&+gtree&+B with &+Ysh&+Wi&+Ymm&+Weri&+Yng b&+Wl&+Yo&+Wss&+Yoms&+B stands alone in the&n
 &+Bwater, drawing the eye to its &+Ych&+Wee&+Yrfu&+Wl c&+Yolo&+Wr&+Ys.&n
 ~
-1 32768 26
+285 32768 26
 D2
 ~
 ~
@@ -1567,7 +1567,7 @@ S
 &+gfrom the other trees.  On this tree sits a single &+rb&+Rir&n&+rd&+g watching for &+minsects.&n
 &+gWhen it sees them flying, it utters a grunting hoot, and the &+minsects&+g flee.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -1585,7 +1585,7 @@ S
 &+gthe &+minsects&+g to feast on them.  A lone &+Bb&n&+bir&+Bd&n&+g perching in a tree with &+Bsh&n&+bi&+Bmm&n&+beri&+Bng&n
 &+Bb&n&+bl&+Bo&n&+bss&+Boms&n&+g utters a grunting hoot, and the &+minsects&+g flee the area.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -1605,7 +1605,7 @@ S
 &+BLarge &n&+bdark birds &+Bperch in the &n&+gtrees,&+B watching over the &n&+gswamp&+B with a brooding&n
 &+Bair, intelligence shining in their &n&+bblack eyes.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -1626,7 +1626,7 @@ S
 &+Bthey move about the &n&+gswamp.&+B   Large &n&+bdark birds&+B perch in these &n&+gtrees,&+B watching&n
 &+Ball who pass by with an air of intelligence and ownership.&n
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -1648,7 +1648,7 @@ S
 &+ghanging down from the trees provide a place for the &+Yc&+Rolo&+Br&+Gfu&+Yl b&+Rir&+Yds&n&+g that fly out&n
 &+gto chase the annoying &+minsects&+g to &+ynest.&n
 ~
-1 33587204 26
+285 33587204 26
 D0
 ~
 ~
@@ -1667,7 +1667,7 @@ S
 &+wgray moss&+g that hangs from the trees, chasing the &+minsects&+g to eat them. Hunting&n
 &+gcalls sound from deeper in the swamp as large &+ccreatures&+g search for prey.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -1690,7 +1690,7 @@ wind where it can go between the &+gtrees.&n The thick &+wgray moss&n hanging do
 the &+gtrees&n gives small &+ccreatures&n an exit to scramble away when predators enter
 the area.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -1710,7 +1710,7 @@ hunting them.  Despite their hiding places, squeals can be heard from time to
 time as they are found, followed by the loud calls of &+mpredators&n bragging that
 they have fed.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -1729,7 +1729,7 @@ to attack other small &+ccreatures&n when they spot them. &+wThick hanging moss&
 most of these small &+ccreatures&n a place to live and hide, but even they must go
 out to hunt for their food, exposing themselves to danger.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -1748,7 +1748,7 @@ Tracks cross the trail in great abundance, mostly &+Greptilian,&n though some ar
 &+cmammalian,&n too.   Barely seen because of the other tracks is a single booted
 footprint.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -1771,7 +1771,7 @@ A Bend in the Trail in the &+gSwamp&n~
 small &+ccreatures&n when they see them.  Loud calls sound through the &+gswamp,&n as
 large &+mpredators&n seek and find food.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -1789,7 +1789,7 @@ a trail.   Small &+ccreatures&n scurry up and down the &+wmoss&n as they go abou
 daily task of living.   Loud crashing nearby reveals the presence of at least
 one large &+canimal,&n but whether it is friend or foe remains to be seen.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -1807,7 +1807,7 @@ it and making progress slow.  Small &+ccreatures&n in this &+wmoss&n scurry away
 anything larger than they are, and &+wsmall birds&n dart down upon the &+ccreatures&n
 when they expose themselves.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -1826,7 +1826,7 @@ going on about the business of living.  If they make the mistake of leaving
 the protection of the &+wmoss, small birds&n swoop down on them to carry them up
 into the &+Csky&n and away.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -1846,7 +1846,7 @@ S
 &+gof the trees to chase the &+minsects&+g for a feast.   Sudden loud splashing sounds&n
 &+greveal the presence of a large &+ccreature,&+g even if it cannot be seen.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -1865,7 +1865,7 @@ S
 &+gupon.   Loud splashing sounds come from the west, but the &+ccreature&+g that is&n
 &+gmaking the sounds cannot be seen through the thick vegetation.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -1885,7 +1885,7 @@ S
 &+Gscum&+B float about the water, and &+minsects&+B rest on it. If anything disturbs the&n
 &+Gscum,&+B the &+minsects&+B launch into the air, attacking any exposed flesh.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -1907,7 +1907,7 @@ of the &+wthick gray moss&n hanging from the &+gtrees&n to chase them.  When rus
 is heard in the underbrush, those who look fast enough can see the &+ccreature&n
 that is making the sound.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -1928,7 +1928,7 @@ flit among the trees, avoiding the &+gplants&n that attack them.  &+wThick gray 
 hangs down from the trees, and small &+ccreatures&n move up and down this &+wmoss&n as
 they attempt to keep out of sight of &+mpredators.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -1949,7 +1949,7 @@ A few &+Yco&+Rl&+Borf&+Gu&+Yl bi&+Rrds&n fly from their &+ynests&n in the &+wmos
 to eat.  The few calls from the &+ccreatures&n that are heard are muted, as they
 are coming from over in the wetter part of the &+gswamp.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -1969,7 +1969,7 @@ and run up and down it as well as across the trail as they constantly seek
 food.  Hunting calls can be heard coming from the distance. Faintly to the
 east is the sound of a sweet, haunting melody.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -1990,7 +1990,7 @@ for food.  When a cloud of &+minsects&n moves into the area, &+Yco&+Rl&+Yorf&+Bu
 out of their &+ynests&n in the&+w moss&n to try to catch them, making the &+Rbu&+rtt&+Ber&+Yfl&+ries&n
 fill the air with &+Ybr&+yi&+Wgh&+Bt &+Ysp&+Ro&+Bts&n as they react to the sudden movement.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -2010,7 +2010,7 @@ to another.  When &+Rb&+Yir&+Gd&+Bs&n fly out from their &+ynests&n in the &+wmo
 scatter, sending bright spots of color everywhere. Though the &+Ybi&+Rr&+Yds&n fly about
 chasing other &+minsects,&n they leave the &+Cbu&+Bt&+Rt&+We&+Yr&+Cfli&+Res&n alone.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -2033,7 +2033,7 @@ east.  &+YB&+Ri&+Yrds&n that dart from their &+ynests&n in the &+wmoss&n seem to
 as they fly in almost complete silence. A few &+Ybu&+Rt&+Gte&+Yrfl&+Bie&+Ys&n are sitting on the
 moss, giving it a few bright spots.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -2052,7 +2052,7 @@ from behind the &+wvines&n to the east, but there appears to be no passage in th
 direction. There are more &+minsects,&n and &+Ybi&+Rr&+Yds&n fly from their &+ynests&n in the moss
 to chase them, disturbing the &+Ybu&+Ct&+gt&+rer&+Rfl&+Yie&+Gs&n that sit on the &+wmoss.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -2081,7 +2081,7 @@ S
 &+gin the area.  A faint stench of rotting flesh fills the air, causing those who&n
 &+gare weak of &+Mstomach&+g to feel ill.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -2102,7 +2102,7 @@ S
 &+gcries sound in the north as &+ccreatures&+g living in this swamp go about on their&n
 &+gdaily quest of finding food while not becoming food.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2126,7 +2126,7 @@ S
 &+Bupon the &+ybranches&+B of these lone &+gtrees,&+B watching over the area with a brooding
 &+Bair of intelligence as well as ownership.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -2150,7 +2150,7 @@ exact center of this oasis of peace and calm is a &+ghu&+yg&+ge o&+yak &+gtree.&
 sits a &+wsm&+ba&+Wl&+wl gray &+Wb&+bi&+wrd&n with &+Wwhite&n and &+bblack&n markings, and it is this &+wb&+Wird&n that
 is the source of the haunting melody that can be heard out in the &+gswamp.&n
 ~
-1 33554432 3
+285 33554432 3
 D0
 ~
 vines~
@@ -2173,7 +2173,7 @@ S
 &+gmaking it hard to tell what direction they came from, much less what type of&n
 &+ccreature&+g made them.&n
 ~
-1 33587200 26
+285 33587200 26
 D1
 ~
 ~
@@ -2192,7 +2192,7 @@ S
 &+gthe &+Ybu&+mt&+Mte&+Crf&+bl&+Yies&+g that perch upon the moss fluttering their wings fly up into&n
 &+gthe air, filling the area with bright &+Rmo&+Ct&+res&+g of color.&n
 ~
-1 33587200 26
+285 33587200 26
 D0
 ~
 ~
@@ -2216,7 +2216,7 @@ happen in a &+gswamp.  &+GBa&+gm&+Gbo&+gos&n compete with the other &+gplants&n 
 them flying into the air, to create &+Ybr&+gig&+Ch&+Rt s&+wpo&+Bts&+M of c&+Yol&+mo&+Yr&n against the unending
 &+Ggre&+ge&+Gne&+gss&n of the &+gswamp.&n
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -2235,7 +2235,7 @@ in this drier part of the &+gswamp.&n  Chattering sounds can be heard, but the o
 making the sounds is nowhere to be seen. &+YCo&+Rl&+Gor&+Bfu&+Yl b&+Bi&+Rr&+Yds&n dart from their nests
 in the &+wmoss,&n flying away in search of &+minsects&n to eat.
 ~
-1 32768 26
+285 32768 26
 D0
 ~
 ~
@@ -2255,7 +2255,7 @@ heard rustling around in the &+gunderbrush,&n squeaking and peeping as they move
 about searching for food or companionship.  &+YCo&+Rl&+Yor&+Gf&+Bu&+Yl b&+Ri&+Yrds&n fly past as they
 seek &+minsects,&n singing cheerful songs.
 ~
-1 32768 26
+285 32768 26
 D1
 ~
 ~
@@ -2274,7 +2274,7 @@ S
 &+yblend in and hide.  These tiny &+gb&+Gi&+grds&+y surprise the traveler, though, with loud&n
 &+ycries that could almost be mistaken for the hunting calls of big cats.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -2296,7 +2296,7 @@ S
 &+ymaking them are very close.  Beautiful &+Mdel&+Yi&+Mcate f&+bl&+Mowe&+mrs&+y grow high up on the&n
 &+Gba&+gm&+Gboo,&+y unreachable to almost everyone.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -2317,7 +2317,7 @@ S
 &+ythe prowl.  Small &+ccreatures&+y can be glimpsed scurrying among the &+Gba&+gm&+Gboo &+gs&+Gtalks,&n
 &+ygoing about their daily errands.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -2336,7 +2336,7 @@ S
 &+yout of the &+gswamp,&+y and from one of them a plume of &+wsmoke&+y from a controlled &+Rf&+ri&+Rre&n
 &+yrises up into the air.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -2358,7 +2358,7 @@ S
 &+ysurround the valley are clear.  To the south, the trail takes a sudden upward&n
 &+yturn as the peak of the hill is there.&n
 ~
-1 0 4
+285 0 4
 D2
 ~
 ~
@@ -2381,7 +2381,7 @@ S
 &+ybrighter on an area in the &+mmoun&+Wt&+mains&+y to the southeast.  In the far northeast,&n
 &+ya single &+wst&+Wo&+wne c&+Wa&+wstl&+We&+y stands alone in the &+mmoun&+Wt&+mains.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -2402,7 +2402,7 @@ S
 &+ybetween the &+gtrees,&+y and the raucous sounds of the &+ccreatures&+y living there rise&n
 &+yup to this spot.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -2423,7 +2423,7 @@ S
 &+ylittle attention to what goes on below them. &+wThick moss&+y hanging from &+gtrees&+y is&n
 &+yused like a highway by small &+ccreatures&+y trying to avoid being seen by hunters.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -2444,7 +2444,7 @@ S
 &+mflo&+Yw&+mer&+y to &+mfl&+Yo&+mwer.&+y Occasionally one will stop and sit in the &+Gba&+gm&+Gboo,&+y and utter&n
 &+ya loud call that sounds like a big cat hunting, not a tiny &+gb&+Gi&+grd.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -2466,7 +2466,7 @@ S
 &+yfaces until &+Yco&+Rl&+Yor&+Gf&+Bul &+Yb&+Rir&+Yds&+y fly out of their nests in the &+whanging moss&+y to try&n
 &+yto catch them for a meal.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -2487,7 +2487,7 @@ S
 &+ysit on the &+wmoss,&+y socializing.  When the &+wmoss&+y is disturbed, they flit into the&n
 &+yair, creating &+Ybr&+Ci&+cgh&+Rt d&+ro&+Yt&+Cs&+y of color everywhere.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -2508,7 +2508,7 @@ them.  Occasionally, a &+gb&+Gi&+grd&n colored the same greens as the &+Gba&+gm&
 among the &+Gba&+gm&+Gboo s&+gta&+Glks&n going from &+mf&+Ylo&+mwer&n to &+mf&+Ylo&+mwer&n that grows way up high in
 the &+Gba&+gm&+Gboo.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -2527,7 +2527,7 @@ all of the &+gplants,&n giving &+Yb&+Ri&+Yrds&n and small &+ccreatures&n a place
 are becoming more common, and &+Yco&+Rl&+Yor&+Bful &+Yb&+Ri&+Yrds&n swoop out of their &+ynests&n to give
 chase, eating their fill amid joyful songs.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -2547,7 +2547,7 @@ when they spot &+minsects,&n and chase the annoying pests for a meal. Soft rustl
 is a constant sound as the &+ccreatures&n that live here move about the &+gunderbrush,&n
 scurrying across the trail only to reach another hiding spot.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -2569,7 +2569,7 @@ that chase the &+minsects&n a safe place to &+ynest.&n Small &+ccreatures&n also
 food.  Loud calls sound from other parts of the &+gswamp&n as &+mpredators&n seek their
 own food, but they are nowhere in sight.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -2589,7 +2589,7 @@ S
 &+ginto the air when they are disturbed harassing whoever it was that interrupted&n
 &+gtheir rest.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2613,7 +2613,7 @@ S
 &+gscamper up and down it, searching for food, creating a continuous rustling in&n
 &+gthe verdant growth.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2631,7 +2631,7 @@ S
 &+gchasing them. Loud cracking sounds in the undergrowth send small &+ccreatures&n
 &+gscurrying up the moss as something large moves nearby.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -2651,7 +2651,7 @@ S
 &+gthe &+wmoss&+g when the splashing is heard, seeking safety. An occasional loud croak&n
 &+gfrom a frog is heard over the other continuous raucous sounds of the swamp.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2671,7 +2671,7 @@ S
 &+Gscum&+B float on the water. When these clumps are disturbed, the insects resting&n
 &+Bon them rise up into the air to form clouds of annoying &+mpests.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -2691,7 +2691,7 @@ S
 &+gthe clouds of &+minsects&+g that fill the air, feasting on them.  In spite of the&n
 &+Yb&+Ri&+Rrds,&+g the number of &+minsects&+g seems to multiply constantly.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -2710,7 +2710,7 @@ S
 &+gfood.  Movement beneath the &+Gscum&+g in the &+Bpools&+g shows not only that things live&n
 &+gin them, but also that the &+Bpools&+g are inter-connected beneath the ground.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -2731,7 +2731,7 @@ S
 &+gand soft, fill the air constantly, coming from the movements, as well as the&n
 &+gcalls, of the abundant &+canimal&+g life in the swamp.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2752,7 +2752,7 @@ flit from &+mf&+Yl&+mower&n to &+mf&+Yl&+mower,&n but they are hard to spot as t
 of the &+Gba&+gm&+Gboo.  &+wThick moss&n hangs from the &+gtrees,&n but it is not as thick as in
 the &+Bwetter&n areas, and it does not entangle those who brush past it.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -2773,7 +2773,7 @@ S
 &+gafter the &+minsects&+g that swarm in clouds.  Small &+ccreatures&+g climb this &+wmoss&+g as a&n
 &+gmeans to reach the food that is up in the trees.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2794,7 +2794,7 @@ S
 &+Bon the water from something moving beneath the water, though whatever created&n
 &+Bthem remains unseen.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -2813,7 +2813,7 @@ S
 &+garea, and &+Yb&+Ri&+Yrds&+g that &+ynest&+g in the &+wmoss&+g fly out after them.  P&+Yi&+Gtc&+gher p&+Yl&+ga&+Gnt&+gs grow&n
 &+gin the area, eating &+minsects&+g and &+Yb&+Ri&+Yrds&+g alike when they are touched.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -2835,7 +2835,7 @@ the &+gtrees.&n  They try to catch &+minsects&n that come within reach of their 
 long, sticky tongues.  The only &+minsects&n the &+gf&+Gr&+Gogs&n try to avoid are the large
 &+yan&+rt&+ys&n that are marching through the area.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -2856,7 +2856,7 @@ in the &+wthick gray moss&n that drapes from the &+gtrees&n dart out to chase aw
 &+minsects&n that come into the area. The air is filled with the continuous noise
 from the &+ccreatures&n that live in the &+gswamp.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -2876,7 +2876,7 @@ S
 &+gthe &+Gba&+gm&+Gboo s&+gt&+Galks,&+g and ti&+Gn&+gy g&+Gr&+geen b&+Gi&+Grds&+g fly between the &+Mf&+mlo&+Yw&+mers.&+g  A loud croak&n
 &+gsounds nearby from a bull&+Gf&+grog who must be in or near one of the pools.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2894,7 +2894,7 @@ S
 &+gare covered by &+Gscum&+g can be seen among the underbrush, and the chorus of &+Gf&+gr&+Gogs&n
 &+gcroaking adds to the other sounds of the swamp.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2914,7 +2914,7 @@ S
 &+Bthat there are things living here that are completely hidden but whether they&n
 &+Bare would attack is unknown.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -2937,7 +2937,7 @@ S
 &+gconstant rustling from the small &+ccreatures&+g give the swamp an air of unending&n
 &+gthreat.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2958,7 +2958,7 @@ S
 &+Cair.&+B Large &+bdark birds&+B sit on the &+ybranches&+B of these &+gtrees,&+B watching over their&n
 &+Barea with an air of brooding ownership.&n
 ~
-1 67108864 26
+285 67108864 26
 D1
 ~
 ~
@@ -2979,7 +2979,7 @@ S
 &+ybranches&+g of the trees where fruit grows.  &+GTi&+gn&+Gy f&+gr&+Gogs&+g cling to the trees in the&n
 &+gwet environment, catching &+minsects&+g or tiny &+ccreatures&+g with their fast tongues.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -2999,7 +2999,7 @@ The quality of the rustling sound is different as the types of &+gplants&n growi
 around the bases of the &+Gba&+gm&+Gboo&n is different, with different creatures nesting&n
 around them.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -3019,7 +3019,7 @@ the &+Gba&+gm&+Gboo&n stands, small &+ccreatures&n roll out into the pathway.  F
 crashing sounds, something large is trying to follow the small &+ccreatures&n but
 is unable to fit through the closely growing &+Gba&+gm&+Gboo s&+gta&+Gl&+gks.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -3039,7 +3039,7 @@ the &+gtr&+Ge&+Geto&+Gps&n to find fruit to eat.  The air is filled with the con
 of &+ccreatures&n moving about in the &+gtrees&n as well as different kinds of &+ccreatures&n
 calling to each other.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -3058,7 +3058,7 @@ S
 &+gfor food.  When clouds of &+minsects&+g rise from the &+bpools, &+Yb&+Ri&+Yrds&+g fly out of their&n
 &+ynests&+g in the &+wmoss&+g to chase after them.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3079,7 +3079,7 @@ S
 &+gtoo. Splashing sounds from beyond the thick wall of vegetation send the small&n
 &+ccreatures&+g scurrying for hiding places.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -3102,7 +3102,7 @@ S
 &+gclouds to harass all who are in the area.  &+YB&+Ri&+Yrds&+g that love to eat these pests&n
 &+gdart out of their &+ynests&+g in the &+wmoss.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3124,7 +3124,7 @@ S
 &+gnot the only &+ccreatures&+g up in the trees, though, as &+ys&+gn&+yak&+re&+ys&+g lay in wait for any&n
 &+gunwary little &+ccreatures&+g so that they, too, can eat.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3145,7 +3145,7 @@ S
 &+gwings is almost overpowering.  It is a relief when &+Yb&+Ri&+Yrds&+g fly from their &+ynests&n
 &+gin the &+wmoss&+g to chase away the &+minsects,&+g as the noise abates.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3166,7 +3166,7 @@ S
 &+gwhen the &+Gscum&+g is disturbed.  &+wThick gray moss&+g hangs down from the trees giving&n
 &+gthe &+Yb&+Ri&+Yrds&+g that chase the &+minsects&+g a place to &+ynest.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3185,7 +3185,7 @@ S
 &+yan&+rt&+ys&+g have pulled the &+wmoss&+g from the trees, opening the up the area.  There are&n
 &+gvery few other &+ccreatures&+g in the area as the &+yan&+rt&+ys&+g view them as food.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3205,7 +3205,7 @@ S
 &+gthe tasks they were assigned as efficiently as possible.  Other &+ccreatures&+g stay&n
 &+gout of this area, as the &+ya&+rn&+yts&+g would look upon them as food.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3226,7 +3226,7 @@ S
 &+Bwater&+g somewhere nearby, and the sounds of small &+ccreatures&+g moving about become&n
 &+gstill when the splashing is heard.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3250,7 +3250,7 @@ S
 &+gas well as other &+mpredators,&+g lay in wait there for unwary little &+ccreatures&+g to&n
 &+gcome along.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3269,7 +3269,7 @@ S
 &+gtrees before returning to their lairs on the ground.  From all around, sounds&n
 &+gof life fill the &+Cair.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3288,7 +3288,7 @@ panic, fleeing from &+mpredators&n that cannot fit between the &+Gst&+ga&+Glks.&
 through the &+Gba&+gm&+Gboo,&n making faint rustling sounds as they jostle the paper-thin
 and paper-sharp &+Gle&+ga&+Gves.&n  To the north, the steep side of a hill blocks access.
 ~
-1 0 3
+285 0 3
 D2
 ~
 ~
@@ -3305,7 +3305,7 @@ S
 &+gout to chase the &+minsects,&+g feasting on them.  The &+Cair&+g is filled with sounds of&n
 &+glife, from the croaking of &+Gf&+Yr&+Go&+ggs of all sizes to the songs of &+Yb&+Ri&+Yrds.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3325,7 +3325,7 @@ S
 &+Bdark, still water, giving the &+ccreatures&+B that live in the water places to hide&n
 &+Bwhile they look for food to eat.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -3346,7 +3346,7 @@ S
 &+gslither up the trees, hunting the small &+ccreatures&+g that climb the &+wthick moss&+g to&n
 &+greach the fruit in the treetops.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3365,7 +3365,7 @@ S
 &+git from here as the vegetation is too thick.  Loud snarls can be heard beyond&n
 &+gthe vegetation to the east as a &+mpredator&+g manages to catch its prey.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -3386,7 +3386,7 @@ S
 &+gusing the &+wmoss&+g to climb must be careful to avoid the &+Gthorny brambles&+g that are&n
 &+ggrowing inside the &+wmoss,&+g or they become wounded by the sharp &+Gthorns.&
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -3405,7 +3405,7 @@ S
 &+Gf&+yr&+gogs, and the songs of &+Yb&+Ri&+Yrds&+g to be able to hear the hunting sounds of larger&n
 &+ccreatures.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3425,7 +3425,7 @@ S
 &+gthe trees easier.  &+BPools&+g of &+Gscum-covered &+Bwater&+g can be seen in the underbrush&n
 &+gand sometimes in the path.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3444,7 +3444,7 @@ S
 &+ghigh in the treetops.  &+GF&+Yr&+gogs, as well as other &+ccreatures,&+g can be heard moving&n
 &+gabout in the underbrush, seeking food.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3464,7 +3464,7 @@ S
 &+gthat grow in the treetops.  &+YB&+Ri&+Yrds&+g that &+ynest&+g in the &+wmoss&+g constantly sing sweet&n
 &+gsongs, making this part of the swamp a bit more cheerful.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3483,7 +3483,7 @@ hangs from the &+Gtrees,&n it is thin, not able to support very much weight at a
 As a result of the thinner &+wmoss, &+Ysun&+Wl&+Yight&n reaches down into this area, and the
 &+gvines&n that are suppressed by the &+wmoss&n climb the tree trunks instead.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -3502,7 +3502,7 @@ of small &+ccreatures&n moving about in the undergrowth still surrounds all who 
 by, and hunting calls can be heard as &+mpredators&n make their rounds through the
 &+gswamp.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -3522,7 +3522,7 @@ trunks, covering them completely with green leaves.  A few of the &+Gvines&n gro
 as they try to find food without becoming food.  Their soft squeaks are hard
 to hear above the calls of &+Yb&+Ri&+Yrds&n and &+mpredators&n that echo about the area.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -3541,7 +3541,7 @@ block very much &+Ysun&+Wl&+Yight.&n  The side of a steep hill can be seen betwe
 to the west, but the &+gunderbrush&n is too thick to reach it from here.  The &+gtree&n
 trunks are covered with a thick growth of &+Gvines,&n some of which have &+Gthorns.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -3561,7 +3561,7 @@ S
 &+Gscum&+g they sit upon is disturbed.  &+YB&+Ri&+Yrds&+g dart out from their &+wnests&+g in the &+wmoss&n
 &+gto chase the &+minsects&+g for a feast.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -3580,7 +3580,7 @@ movement of small &+ccreatures,&n or even just a very slight, unfelt, breeze.  T
 &+gb&+Gi&+grds&n flit among the tops of the &+Gba&+gm&+Gboo s&+gt&+Gal&+gks.&n  Even though the ground is dry
 the chorus of &+Gf&+Yr&+gog&+Gs&n continues even in this area.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -3600,7 +3600,7 @@ S
 &+yall over the &+gswamp&+y echo through the area, especially the calls of &+mpredators&+y on&n
 &+ythe prowl.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -3619,7 +3619,7 @@ S
 &+gb&+Gi&+grds&+y fly among the tops of the &+Gba&+gm&+Gboo,&+y eating nectar from the &+Mf&+mlo&+Yw&+mers&+y growing&n
 &+yup there.  Small &+ccreatures&+y scurry about on their daily quest for food.&n
 ~
-1 33554432 4
+285 33554432 4
 D0
 ~
 ~
@@ -3646,7 +3646,7 @@ S
 &+ythat looks like it is a part of the side of a &+mmo&+Wu&+mntain.&n
 &+y   Both to the west and the south, the trail goes steeply downward.&n
 ~
-1 0 4
+285 0 4
 D2
 ~
 ~
@@ -3666,7 +3666,7 @@ S
 &+ythe &+gswamp.&+y  The &+Ysun&+y shines down among the &+Gvi&+gne-c&+Go&+gvered &+Gba&+gm&+Gboo s&+gta&+Gl&+gks,&+y but to&n
 &+ythe south, it grows dimmer.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -3686,7 +3686,7 @@ S
 &+yfor a meal.  &+gTr&+Ye&+Gef&+grogs&+y cling to the &+Gba&+gm&+Gboo,&+y watching for unwary &+minsects&+y which&n
 &+ythey catch with their fast &+Mtongues.&n
 ~
-1 33554432 4
+285 33554432 4
 D0
 ~
 ~
@@ -3704,7 +3704,7 @@ mixes with the tall &+gtrees&n draped with a thin &+wmoss&n and a wide variety o
 and fill the &+Cair&n with the sounds of life.  Squeaks and rustling join in, with
 the small &+ccreatures&n that try to move quietly adding to the raucous noise.
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3723,7 +3723,7 @@ S
 &+ynot seeming to be aware of the silent &+mpredators&+y that lie in wait among &+Gvines&n
 &+yand branches.&n
 ~
-1 33554432 4
+285 33554432 4
 D2
 ~
 ~
@@ -3741,7 +3741,7 @@ this spot, and a wide variety of &+ccreatures&n fly, leap, or scurry through &+g
 in their quest to find food.  Loud crashing sounds come from all around as the
 &+mpredators&n chase these small &+ccreatures.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -3760,7 +3760,7 @@ S
 &+ynest&+g in this &+wmoss,&+g along with &+Yb&+Ri&+Yrds,&+g and their eyes can be seen peering out at&n
 &+gthe world around them.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3779,7 +3779,7 @@ small &+ccreatures&n a way to climb up to the &+Yfruit&n growing in the &+gtreet
 as a place to &+ynest.&n  Odd calls fill the air as flying &+ccreatures&n also roost and
 harvest the abundant &+Yfruit.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3798,7 +3798,7 @@ S
 &+gfrom the huge trees to feast on the &+minsects.&+g  Glimpses can be caught of tall&n
 &+ccreatures&+g moving among the trees, but they stay hidden.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -3818,7 +3818,7 @@ they are nowhere to be seen when the area is studied.  Small &+ccreatures&n scur
 about the &+gswamp&n floor as well as up in the huge &+gtrees,&n busy on their quest to
 find food.
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -3837,7 +3837,7 @@ S
 &+grest on the &+Gscum&+g rise up in clouds when it is disturbed, harassing whatever it&n
 &+gwas that disturbed them.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -3861,7 +3861,7 @@ S
 &+Bfloat about, giving the &+ccreatures&+B that live in the water hiding places as they&n
 &+Bpoke their eyes above water to watch for prey.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -3884,7 +3884,7 @@ S
 &+gon the hunt for food, and the &+ccreatures&+g duck in their nests to avoid becoming&n
 &+gfood for larger hungry &+canimals.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3903,7 +3903,7 @@ S
 &+GVines&+g grow among the &+wmoss,&+g giving the tunnel a &+wstra&+Gn&+wge v&+Ga&+wrie&+gg&+wated&+g look.  Sharp&n
 &+Gthorns&+g grow on the &+Gvines,&+g wounding the unwary.&n
 ~
-1 33554436 26
+285 33554436 26
 D0
 ~
 ~
@@ -3922,7 +3922,7 @@ which lets in more &+Ysunl&+Wi&+Yght,&n and the &+Gvines&n grow in a tangled mas
 Tiny &+ccreatures&n use the &+wmoss&n to climb to the &+gtreetops&n in search of &+Yfruit,&n but
 far more &+ccreatures&n can be glimpsed on the ground than in the &+gtrees.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -3946,7 +3946,7 @@ S
 &+gunwary stumble into the &+Bpools&+g to become covered with a &+Gslimy green goo&+g and to&n
 &+gdisturb the &+minsects,&+g who swarm up in clouds to harass them.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -3963,7 +3963,7 @@ small &+ccreatures&n climb the moss to get to the &+Yfruit&n in the &+gtreetops.
 well.  Odd booming hoots as well as snarled hunting calls fill the &+Cair&n as the
 danger of the &+gswamp&n is once again reinforced for any who travel in it.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -3983,7 +3983,7 @@ avoid the fatal embrace of &+Gsn&+ya&+gkes&n as they sip nectar from the &+Mf&+m
 &+wrats&n with wings fly about, seeking &+minsects&n as well as &+Yfruit&n among the &+gplants&n
 even as they try not to become food themselves.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4003,7 +4003,7 @@ S
 &+yfor &+minsects&+g to eat.  The rustling of the &+gleaves&+y covers any slight sounds the&n
 &+Gsn&+ya&+gke&+y sneaking up on the croaking &+Gf&+Yr&+Gogs&+y might make.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -4027,7 +4027,7 @@ S
 &+yprogress to the west.  Despite the thinning of the growth of &+Gba&+gm&+Gboo,&+y there are&n
 &+ystill far too many to get a clear view of whatever is up on top of the hill.&n
 ~
-1 524288 4
+285 524288 4
 D0
 ~
 ~
@@ -4045,7 +4045,7 @@ S
 &+yis very steep, requiring most of the concentration of the traveller to stay on&n
 &+ythe trail and not slip down the hillside to a painful landing.&n
 ~
-1 0 4
+285 0 4
 D2
 ~
 ~
@@ -4064,7 +4064,7 @@ S
 &+ythe &+gswamp&+y can barely be seen from this vantage point as the hill does not rise&n
 &+yabove the tops of the tall &+gtrees&+y that surround it.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 door~
@@ -4088,7 +4088,7 @@ S
 &+yof the hut.  A pot filled with bubbling stew hangs suspended from the apex of&n
 &+ya &+wmetal tripod&+y set over the &+Rfi&+rr&+Re&+rpit.&n
 ~
-1 176324680 4
+285 176324680 4
 D0
 ~
 door~
@@ -4102,7 +4102,7 @@ S
 &+ystrewn across the table.  Along the west wall are chests and wardrobes, all of&n
 &+ywhich are locked.&n
 ~
-1 1073741832 4
+285 1073741832 4
 D2
 ~
 door~
@@ -4117,7 +4117,7 @@ few huge &+gtrees&n are mixed in with the &+Gba&+gm&+Gboo,&n and a &+wthin moss&
 the ground from the &+gtrees.  &+GVines&n grow on &+gtrees&n and &+Gba&+gm&+Gboo,&n covering entire
 areas with a &+Gthorny wall.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4136,7 +4136,7 @@ down from the &+gtrees&n give small &+ccreatures&n and &+Yb&+Ri&+Yrds&n a safe p
 of the &+gtrees.  &+GVines&n grow between the &+Gba&+gm&+Gboo&n and the &+gtrees,&n but the &+ccreatures&n
 do not use them as they have very sharp &+Gthorns.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4157,7 +4157,7 @@ S
 &+gthe &+Bpools&+g is disturbed and &+Yb&+Ri&+Yrds&+g dart out of their &+ynests&+g in the &+wmoss&+g to chase&n
 &+gthe &+mpests&+g for a feast.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4186,7 +4186,7 @@ S
 &+gmade from living materials.  Vines and moss have been used to create living&n
 &+gpockets that hold various materials on display for sale.&n
 ~
-1 8 26
+285 8 26
 D3
 ~
 vine~
@@ -4202,7 +4202,7 @@ S
 &+Bwait for prey to pass. Large &+bdark birds&+B sit in the twisted &+gtrees&+B overlooking&n
 &+Btheir area with a brooding intelligence.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4224,7 +4224,7 @@ S
 &+Gf&+Yr&+gogs helping the &+Yb&+Ri&+Yrds&+g eat them there seems to be an endless supply of those&n
 &+gannoying &+minsects.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4242,7 +4242,7 @@ the &+wmoss&n is disturbed.  Small &+ccreatures&n have made &+ynests&n in the &+
 it to climb up to the &+Yfruit&n that grows in the &+gtreetops.&n  The loud calls that
 can be heard throughout the &+gswamp&n are muffled here as the &+wmoss&n absorbs them.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4257,7 +4257,7 @@ S
 &+Bunfortunate enough to brush one of them.  The large &+bdark birds &+Bperched upon&n
 &+Bthe twisted &+gtrees&+B watch over the area with an air of brooding intelligence.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4276,7 +4276,7 @@ S
 &+ggrowing in the treetops.  &+YB&+Ri&+Yrds&+g that &+ynest&+g in this &+wmoss&+g fly out to chase away&n
 &+gthe &+minsects&+g that rise up in clouds to harass those that disturb the &+Gscum.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4296,7 +4296,7 @@ S
 &+gthere.  &+GS&+yna&+gkes follow the small &+ccreatures,&+g patiently stalking them as they go&n
 &+gabout their merry way.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -4316,7 +4316,7 @@ S
 &+Bto strangle.  Large &+bdark birds&+B sit in these strange &+gtrees,&+B watching over this&n
 &+Barea with an air of brooding intelligence.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4336,7 +4336,7 @@ S
 &+Bsmall enough to strangle.  Large &+bdark birds&+B perch in the trees, watching over&n
 &+Bthe area with an air of brooding intelligence.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4355,7 +4355,7 @@ S
 &+ynest&+g there fly out to chase the &+minsects&+g for a feast.  &+GTr&+geef&+Yr&+gogs perched on the&n
 &+gtrunks attempt to catch the insects with their fast &+Mtongues.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4374,7 +4374,7 @@ S
 &+gto the &+Yfruit&+g that grows in the treetops.  Occasionally a loud hiss or hunting&n
 &+gcall can be heard nearby as the swamp &+mpredators&+g hunt these small &+ccreatures.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4396,7 +4396,7 @@ absorb any sound from outside the area. Even the sounds of the &+ccreatures&n in
 the area are muffled, making it seem as though all in the area had suddenly
 become partially deaf and entered another world entirely.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -4413,7 +4413,7 @@ S
 &+gof &+Gscum-covered &+Bwater&+g can be glimpsed in the undergrowth, and these &+Bpools&+g give&n
 &+gannoying &+minsects&+g a place to rest and breed.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4433,7 +4433,7 @@ of the &+gtrees&n to eat the &+Yfruit&n that grows there.  &+YB&+Ri&+Yrds&+y nes
 darting out when clouds of &+minsects&n rise from the &+Gscum-covered &+Bpools.&n  They fly
 about the area, feasting on the &+minsects&n as they sing cheerful songs.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -4453,7 +4453,7 @@ S
 &+gwhen one of the &+ccreatures&+g wanders too close one of the &+Gs&+Yn&+gak&+Ges&+g springs upon the&n
 &+gunfortunate little victim.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -4476,7 +4476,7 @@ S
 &+gthe trees, giving &+ccreatures&+g of all sizes places to hide as they go on their&n
 &+gdaily errands of searching for food without becoming food themselves.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4496,7 +4496,7 @@ S
 &+Bit places to hide as they watch for prey.  Large &+bdark birds&+B sit in the &+gtrees,&n
 &+Bwatching over their watery area with an air of brooding intelligence.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4516,7 +4516,7 @@ S
 &+Bskate across the top of the water, disappearing below the water at any threat&n
 &+Bof danger.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4538,7 +4538,7 @@ S
 &+Bthe water, moving fast as they go on their way.  At the least hint of a threat&n
 &+Bthey dive down into the safety of the water.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4558,7 +4558,7 @@ S
 &+Bthe shorter races, giving the &+ccreatures&+B that live in the water a chance to hit&n
 &+Btheir air-breathing &+cvictims&+B without being seen.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4580,7 +4580,7 @@ S
 &+gas they search for food.  Some of them climb up the &+wmoss&+g to reach &+Yfruit&+g in the&n
 &+gtreetops, but they must brave the &+Gs&+Yn&+gak&+Ges&+g that lie in wait for them as they go.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -4604,7 +4604,7 @@ S
 &+Bbelow the water's surface.  There are a few strange twisted &+gtrees&+B growing, and&n
 &+Bthe &+rt&+yi&+rps&+B of their &+rr&+yoo&+rts&+B try to catch any small &+ccreature&+B caught in the current.&n
 ~
-1 0 0
+285 0 0
 D1
 ~
 ~
@@ -4626,7 +4626,7 @@ upon the &+gswamp&n in this area.  Loud thrashing sounds from something large co
 from the underbrush, alerting everything in the area.  Small &+ccreatures&n scurry
 up the &+gtrees&n at the sound.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4644,7 +4644,7 @@ loud crashing sound nearby warns all in the area to be on the lookout for some
 sort of large &+canimal&n to approach.  Rustling in the &+gunderbrush&n is caused by one
 of the stupider small &+ccreatures&n as those sounds are sure to attract &+mpredators.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4663,7 +4663,7 @@ in the treetops.  &+wMoss&n hangs down from the &+gtrees,&n providing a safe pla
 very light &+ccreatures&n to &+ynest.  &+CBr&+Wi&+Gght f&+Ylo&+Rw&+Rers&n bloom around the bases of tall
 &+gtrees,&n peeking out of the &+gunderbrush&n with unexpected bits of &+Bc&+Yo&+Blor.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4682,7 +4682,7 @@ grow on the &+gtrees,&n giving small &+ccreatures&n better footholds to use when
 climb to the &+gtreetops&n to eat the &+Yfruit&n growing there.  &+gSn&+Ga&+gkes&n slither after
 the &+ccreatures,&n feasting on them even as they feast on the &+Yfruit.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -4701,7 +4701,7 @@ up the &+wmoss&n to reach the &+Yfruit&n that grows in the &+gtreetops.  &+GBri&
 growing around the bases of the &+gtrees,&n their &+Yco&+Rl&+Bors&n easily spotted amidst thin
 &+gunderbrush.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4720,7 +4720,7 @@ to reach the &+Yfruit&n that grows in the &+gtreetops.&n  Some &+rbu&+Rt&+Yte&+B
 on the &+wmoss,&n adding bright dots of &+Yco&+Gl&+Yor&n to the &+gtrees.&n  Around the &+gtree&n bases
 some &+Rb&+Yri&+Bg&+bht &+Yf&+Glo&+yw&+Gers&n have grown which can be glimpsed between the &+gunderbrush.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4738,7 +4738,7 @@ S
 &+gup into the &+Cair&+g to harass those that disturbed them.  &+YCo&+Rl&+Yor&+Gfu&+Bl b&+Ri&+Yrds&+g that &+ynest&n
 &+gin the &+wmoss&+g fly out to feast on the &+minsects.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4756,7 +4756,7 @@ S
 &+Yfruit&+g growing there.  &+GS&+rn&+Gakes&+g hide near the &+Yfruit,&+g patiently watching for the&n
 &+gsmall &+ccreatures&+g to come close so that the &+Gs&+rn&+Gakes&+g can catch them.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -4775,7 +4775,7 @@ between the &+gtrees&n in this area, making the &+Gb&+Yri&+Rgh&+Bt f&+Ylo&+Mwers
 &+ytrunks&n stand out in the &+gunderbrush.&n  Loud crashing sounds can be heard as one
 of the larger &+ccreatures&n of the &+gswamp&n forces its way through the &+gunderbrush.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4794,7 +4794,7 @@ tall &+gtrees,&n making the bright &+Mfl&+Yo&+Rwer&+ms&n that are growing around
 search of small &+ccreatures&n to eat.  With a loud crash, an immense &+gli&+wz&+gard&n bursts
 through the &+gunderbrush&n looking for a meal.
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4815,7 +4815,7 @@ S
 &+gon these &+minsects,&+g but do not land on the scum to eat them, as the top of it is&n
 &+gvery sticky.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4834,7 +4834,7 @@ is strangling the &+Gba&+gm&+Gboo.&n  Tiny &+ccreatures&n scurry up the thin &+w
 &+Yfruit&n in the &+gtreetops,&n trying to avoid any &+Gs&+rn&+Gakes&n that may be up in the &+gtrees&n
 hunting for their food.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -4853,7 +4853,7 @@ is disturbed by the tiny &+ccreatures&n that use it to climb into the &+gtreetop
 search of &+Yfruit&n to eat, the &+Bbu&+Mt&+Yter&+Gf&+bli&+res&n flit up, filling the &+Cair&n with bright
 &+Csp&+Yo&+Gts&n of &+Mco&+ml&+Mor.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4872,7 +4872,7 @@ the area, and the small &+ccreatures&n that made them can be glimpsed as they us
 the thin &+wmoss&n draping down from the tall &+gtrees&n to climb up into the &+gtreetops&n
 to find &+Yfruit&n to eat.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -4890,7 +4890,7 @@ S
 &+gfrom the area.  Loud croaks from huge &+Gf&+Yr&+Gogs&+g among the &+Bpools&+g startle the unwary&n
 &+gas they follow the meandering trail.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -4909,7 +4909,7 @@ the warm &+Ysu&+Wn&+Ylight,&n flying up into the &+Cair&n when tiny &+ccreatures
 disturbing them.  Loud calls echo through the area as large &+ccreatures&n hunt for
 their suppers.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -4929,7 +4929,7 @@ S
 &+gtheir &+ynests&+g in the &+wmoss&+g that drapes down from the treetops to chase the pests&n
 &+gfor a feast.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -4948,7 +4948,7 @@ S
 &+gchase the &+minsects&+g when they fly into the &+Cair.  &+GBu&+Yl&+gl&+Gfr&+gogs fight over the larger&n
 &+Bpools,&+g filling the air with their croaking as they shove each other around.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -4968,7 +4968,7 @@ S
 &+Bthe surface.  Clumps of &+Gscum&+B floating about on the water give these &+ccreatures&n
 &+Bplaces to hide while they watch for prey to come close.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -4988,7 +4988,7 @@ S
 &+gthe &+Yfruit&+g that grows there to eat.  &+GS&+rn&+Gakes&+g hide among the &+Yfruit,&+g awaiting any&n
 &+gunwary &+ccreature.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5007,7 +5007,7 @@ S
 &+Bthe &+ybranches&+B of these &+gtrees&+B large &+bdark birds&+B sit, watching over the area with&n
 &+Ba brooding ownership.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5027,7 +5027,7 @@ S
 &+Babout on the water are clumps of &+Gscum&+B that give the &+mpredators&+B that live there&n
 &+Bplaces to hide while they watch for prey.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -5047,7 +5047,7 @@ S
 &+gthe area places to hide as well as a secure way to climb up into the treetops&n
 &+gto harvest the &+Yfruit&+g that grows there.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -5067,7 +5067,7 @@ S
 &+Bthat there are &+ccreatures&+B beneath the surface, this area seems to be safer than&n
 &+Bmost others in the &+gswamp.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5091,7 +5091,7 @@ S
 &+Bmoving below the surface.  Floating clumps of &+Gscum&+B give those moving below the&n
 &+Bwater a place to hide as they watch for prey.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5111,7 +5111,7 @@ S
 &+Bbeneath the murky water.  Ripples that suddenly appear on the water reveal the&n
 &+Bpresence of other &+ccreatures,&+B too.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -5132,7 +5132,7 @@ S
 &+BThey occasionally rise to the surface of the water to scan for possible danger&n
 &+Bbefore returning to the depths of the water.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -5153,7 +5153,7 @@ S
 &+gflying out when clouds of &+minsects&+g rise up when the &+Gscum&+g they normally rest on&n
 &+gis disturbed.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5172,7 +5172,7 @@ S
 &+Yfruit&+g that grows high in the trees.  Bats, too, fly among the trees in search&n
 &+gof &+Yfruit&+g or &+minsects&+g to eat.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -5192,7 +5192,7 @@ S
 &+gThose that can be seen are small, and usually using the &+wthick moss&+g to climb up&n
 &+ginto the treetops to eat the &+Yfruit&+g that grows there.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5215,7 +5215,7 @@ S
 &+Bpast by the current, the &+rr&+yoo&+rt t&+yi&+rps&+B of the &+gtree&+B reach out toward them, trying&n
 &+Bto catch them before they are pulled underwater.&n
 ~
-1 0 26
+285 0 26
 D3
 ~
 ~
@@ -5236,7 +5236,7 @@ the &+gtrees&n unless they are very tiny.  Because the moss is thin,&+Y su&+Wn&+
 down into the area, making the &+Ybr&+Ri&+Bgh&+Yt f&+Gl&+Bow&+Yers&n growing in the &+gunderbrush&n appear
 even brighter.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5255,7 +5255,7 @@ S
 &+Cair&+g in clouds when their &+Gscum&+g is disturbed, harassing those unfortunate enough&n
 &+gto be in the area.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -5274,7 +5274,7 @@ the &+wmoss&n they cling to is disturbed, putting bright dots of &+Bco&+Yl&+Ror&
 as they flit about.  Loud calls can be heard from other parts of the &+gswamp,&n as
 &+mpredators&n seek their prey.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5295,7 +5295,7 @@ S
 &+ynest&+g in the &+wthick moss&+g fly out when the &+minsects&+g are in the &+Cair,&+g catching them&n
 &+gfor a feast.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -5314,7 +5314,7 @@ S
 &+gin the area. Loud crashing sounds can be heard as a large &+ccreature&+g leaves the&n
 &+gpath and forces its way through the underbrush in search of its food.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5334,7 +5334,7 @@ S
 &+BClumps of &+Gscum&+B float about on the water, giving the denizens that live here&n
 &+Bplaces to hide while they watch for prey.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5358,7 +5358,7 @@ S
 &+garea.  &+YB&+Ri&+Yrds&+g fly out from their &+ynests&+g in the &+wmoss&+g to chase the &+minsects&+g that&n
 &+gare their preferred food.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -5378,7 +5378,7 @@ S
 &+Bof the branches it is &+wwhite&+B while on the trunk and the bottoms of the branches&n
 &+Bit is &+bdark.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -5398,7 +5398,7 @@ S
 &+gplace for &+minsects&+g to rest and breed, and when they are disturbed, they dart up&n
 &+gin clouds to harass whatever disturbed their home.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5418,7 +5418,7 @@ S
 &+Gs&+yn&+Gake&+g moving about.  Very few &+Bpools&+g of &+Gscum-covered &+Bwater&+g can be found in the&n
 &+gundergrowth as the ground begins to become drier.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -5437,7 +5437,7 @@ elsewhere is thin here, and &+Ysu&+Wn&+Ylight&n streams down, drying out the are
 food themselves.  Crashing sounds can be heard as &+mpredators&n force their way in
 the &+gunderbrush,&n searching for the &+ccreatures&n hidden there.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5464,7 +5464,7 @@ to enter the area.  &+WBones&n from its earlier kills lie scattered about the de
 entrance.  The only other &+ccreatures&n to be seen are high up in the &+gtrees&n out of
 the reach of the &+gli&+wz&+gard&n as they feast on the &+Yfruit&n in the &+gtreetops.&n
 ~
-1 0 26
+285 0 26
 D3
 ~
 ~
@@ -5479,7 +5479,7 @@ S
 &+gthe musky smell of a large &+ycat,&+g especially around the lair.  It is quiet since&n
 &+gno other &+ccreatures&+g enter the area.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5494,7 +5494,7 @@ trees, making brushing through them very painful.  Tiny &+ccreatures&n climbing 
 the &+wmoss&n are very careful to avoid the &+Gthorny vines&n as they seek the &+Yfruit&n in
 the &+gtreetops.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5517,7 +5517,7 @@ is blocked from this direction.  The trail winds around the &+ytrunks&n of some 
 the huge &+gtrees,&n making it hard to see very far.  &+wThin moss&n hangs down, but it
 is too thin to block the &+Ysu&+Wn&+Ylight&n out, so this area is not as dark as others.
 ~
-1 0 26
+285 0 26
 D0
 ~
 wall~
@@ -5557,7 +5557,7 @@ down from the &+gtrees&n here, obstructing vision but not &+Ysu&+Wn&+Ylight.&+G 
 grow twined about the &+wmoss,&n making it painful to try to push it aside.  Tiny
 &+ccreatures&n that climb up the &+wmoss&n take great care to avoid the &+Gvines.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5596,7 +5596,7 @@ the area since the &+wmoss&n is too thin to block it out here.  Tiny &+ccreature
 on the &+wmoss,&n being very careful not to touch the &+Gthorns&n as they climb into the
 &+gtreetops&n in search of the &+Yfruit&n that grows there.
 ~
-1 0 26
+285 0 26
 D3
 ~
 ~
@@ -5613,7 +5613,7 @@ S
 &+glook more graceful than the ones outside the wall.  No &+wmoss&+g drapes down on the&n
 &+gtrees inside here, though vines do grow on them.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 wall~
@@ -5646,7 +5646,7 @@ S
 &+gtown has been completely destroyed, there is a sense of peace here, and the&n
 &+gentire area has a hushed, waiting feeling about it.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5665,7 +5665,7 @@ S
 &+gall that is left of the elegant runes that once covered the &+wwa&+Wl&+wl.&+g  There is an&n
 &+gair of hushed expectancy about the area.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5684,7 +5684,7 @@ S
 &+gthe houses that were collapsed after the inhabitants were slaughtered.  Marks&n
 &+gmade by huge claws are still visible at some spots on the collapsed houses.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5704,7 +5704,7 @@ among the ruins attest to the fact that the &+cinhabitants&n fought back, not ju
 going to their deaths without protest.  &+gTrees, grass,&n and &+Mflowers&n do not grow
 here, as though the ground was cursed by the deaths that happened here.
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -5723,7 +5723,7 @@ immense pile of unstable &+wrub&+Wb&+wle.&n  A &+ydark, ugly tree&n grows in the
 breeze.  &+WBones&n and other &+rdebris&n litter the area beneath the &+ytree,&n a warning of
 an unseen danger.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5743,7 +5743,7 @@ lived here.  Tall, graceful &+gtrees&n line where the &+wstre&+We&+wt&n used to 
 this used to be an intersection but the other &+wstre&+We&+wt&n that ran to the west is
 completely blocked by &+wrub&+Wb&+wle.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5763,7 +5763,7 @@ the &+wpave&+Wment.&n  If anyone looks closely enough there are &+Wbones&n scatt
 the broken &+wsto&+Wn&+wes&n of the &+wbuil&+Wd&+wings,&n and there are faint marks from huge claws
 on the stone itself.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5782,7 +5782,7 @@ by the same forces that have turned this once beautiful place into a deserted,
 haunted &+wru&+Wi&+wn.&n  Graceful &+gtrees&n grow tall in the lines that they grew in so long
 ago when the town was a peaceful place.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -5801,7 +5801,7 @@ S
 &+ytrail, just as they did long ago when the elflings lived here.  Despite the&n
 &+yviolence done so long ago, a feeling of peace still lingers.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -5821,7 +5821,7 @@ S
 &+ybut there is no one living here to take care of them.  Small &+wbir&+Wd&+ws&+y up in the&n
 &+gtrees&+y sing sweet songs in this peaceful place.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -5843,7 +5843,7 @@ S
 &+yat all like any of the &+gtrees&+y out in the &+gswamp.  &+GGrass&+y and &+Mflowers&+y grow among&n
 &+ythe &+gtrees,&+y making the trail very soft on tired feet.&n
 ~
-1 0 4
+285 0 4
 D2
 ~
 ~
@@ -5864,7 +5864,7 @@ S
 &+ya bit away in the north are more &+wru&+Wi&+wns.&+y  Far to the east is a &+ggrove of trees&n
 &+ythat should not be here but in a &+gwoodland forest&+y somewhere.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -5891,7 +5891,7 @@ S
 &+ythe table, taking what he pleases and carving or etching it with surprisingly&n
 &+yskillful hands.&n
 ~
-1 0 4
+285 0 4
 D2
 ~
 ~
@@ -5906,7 +5906,7 @@ S
 &+ggoing from east to west.  A constant breeze along the corridor keeps &+minsects&n
 &+gaway, preventing them from settling on the &+Gscum.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -5925,7 +5925,7 @@ S
 &+Barea a place to rest.  A constant breeze blows along this corridor created by&n
 &+Bthe walls, keeping the &+Cair&+B fresh.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -5944,7 +5944,7 @@ S
 &+Bconstant breeze that flows along the &+wwa&+Wl&+wl.&+B  This breeze is the only thing that&n
 &+Bkeeps the annoying &+minsects&+B away from this area.  It also keeps the &+Cair &+Bfresh.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 wall~
@@ -5971,7 +5971,7 @@ along the &+wwa&+Wl&+wl.&n  They sway in the gentle breezes that flows constantl
 the length of the crumbling &+wwal&+Wl&+ws.&n  Sweet birdsong can be heard in the area,
 though the &+wbir&+Wd&+ws&n that are singing are hard to see sometimes.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6008,7 +6008,7 @@ S
 &+gstrong.  Remnants of graceful &+crunes&+g can still be seen, but there are too few&n
 &+crunes&+g to be able to decipher what they once told.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6027,7 +6027,7 @@ S
 &+gof the &+whou&+Ws&+wes.&+G  Grass&+g and &+Mflowers&+g grow atop the &+wrubb&+Wl&+we&+g as nature itself tries&n
 &+gto erase what happened here.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6046,7 +6046,7 @@ S
 &+gthe &+wstre&+We&+wt,&+g also untouched by the destruction.  Sweet birdsong fills the area&n
 &+gbut the &+wbi&+Wr&+wds&+g that are singing are not easy to see.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6066,7 +6066,7 @@ A Corner in the &+wR&+Wu&+wins&n~
 &+gas they rest.  Despite the destruction of the village some time ago there is a&n
 &+gfeeling of peace and hope in this area.&n
 ~
-1 131072 26
+285 131072 26
 D1
 ~
 ~
@@ -6115,7 +6115,7 @@ S
 &+gThe only sounds in the area are the sweet birdsongs and small splashes as the&n
 &+Bwater&+g is disturbed by the things living in it.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -6134,7 +6134,7 @@ S
 &+Ba break from chasing food.  A constant breeze blows along the &+wwa&+Wl&+wl,&+B changing&n
 &+Bthe &+Cair&+B and keeping it fresh.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -6157,7 +6157,7 @@ S
 &+gin them that allow glimpses of the swamp outside.  A steady breeze along the&n
 &+wwa&+Wl&+wls&+g keeps the annoying &+minsects&+g from entering the area, though.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6176,7 +6176,7 @@ S
 &+grustle in the steady breeze that blows along the &+wwa&+Wl&+wls,&+g keeping the &+Cair&+g fresh.&n
 &+gSweet birdsong fills the &+Cair&+g from &+wbi&+Wr&+wds&+g that are the same colors as the &+wwa&+Wl&+wls.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6196,7 +6196,7 @@ S
 &+Bout of the water lean toward the dimple but they are not pulled into it since&n
 &+Bthey are rooted into the ground beneath the water.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6219,7 +6219,7 @@ S
 &+gthe &+wwa&+Wl&+wl&+g where there is no standing &+Bwater,&+g and &+Mflowers&+g grow as though planted&n
 &+gin beds around the tree trunks.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -6237,7 +6237,7 @@ S
 &+gthe &+wwa&+Wl&+wl,&+g keeping the &+Cair&+g fresh.  &+wBi&+Wr&+wds&+g that blend in with the &+wwa&+Wl&+wls&+G flit from&n
 &+gtree to tree, singing sweet songs as they fly about.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6260,7 +6260,7 @@ now, it is clear that at one time there was a great battle fought here.  Claw
 marks are still visible on the &+wwa&+Wl&+wls&n in spots, and the cracks in the &+wpa&+Wv&+weme&+Wn&+wt&n
 were clearly caused by an intelligent source, not by weather or time alone.
 ~
-1 0 26
+285 0 26
 D1
 ~
 wall~
@@ -6296,7 +6296,7 @@ S
 &+gof the plants.  &+wThick moss&+g drapes down from the trees, giving small &+ccreatures&n
 &+ga place to travel and &+ynest&+g without being seen.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6315,7 +6315,7 @@ S
 &+ga clear area beyond it can be seen.  &+wThick moss&+g drapes down from the trees in&n
 &+gthis area, obscuring vision, and giving &+Yco&+Rl&+Yor&+Bfu&+Gl &+Yb&+Ri&+Yrds&+g a place to &+ynest.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6334,7 +6334,7 @@ S
 &+Bthat comes close to them.  Clumps of &+Bscum&+B float about the water, giving those&n
 &+Bthat live in the water places to hide while they watch for prey.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6353,7 +6353,7 @@ S
 &+ghave not weakened the &+wwa&+Wl&+wl&+g to the point it can be bypassed.  Swamp vegetation&n
 &+ggrows right up against the &+wwa&+Wl&+wl,&+g but the huge trees do not.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6372,7 +6372,7 @@ S
 &+gin the area, chasing them for a feast.  Bats also fly among the trees during&n
 &+gday as well as night, eating &+Yfruit&+g or &+minsects.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6393,7 +6393,7 @@ S
 &+gsmall &+ccreatures&+g a place to hide while they climb up into the treetops to eat&n
 &+gthe &+Yfruit&+g growing there.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6413,7 +6413,7 @@ S
 &+glive in as well as to climb up into the treetops, out of the reach of many of&n
 &+gthe larger &+mpredators.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -6433,7 +6433,7 @@ S
 &+Barea, sweeping everything that is not anchored toward a deep dimple that is in&n
 &+Bthe water in the southern part of the area.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6454,7 +6454,7 @@ S
 &+ganything disturbs the &+Gscum,&+g they rise up in clouds to harass everything in the&n
 &+garea.  &+MF&+Yl&+Mowers&+g make bright dots of color in the underbrush.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6478,7 +6478,7 @@ S
 &+gas their tastes prefer.  A &+wcr&+Wu&+wmbli&+Wn&+wg wa&+Wl&+wl&+g to the north blocks movement in that
 &+gdirection.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6497,7 +6497,7 @@ and &+Ysu&+Wn&+Ylight&n streams through to the ground.  Some &+Gba&+gm&+Gboo s&+
 the &+gtrees,&n allowing a slight breeze access to stir the &+Cair.&n  Loud crashes can
 be heard among the &+gunderbrush&n as something large forces its way through.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6517,7 +6517,7 @@ S
 &+Gba&+gm&+Gboo,&+y bright &+Mf&+mlo&+Yw&+mers&+y grow. &+GThorny vines&+y grow among the &+Gba&+gm&+Gboo s&+gta&+Glks,&+y making&n
 &+ythe trail wind where the &+Gvines&+y are not.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -6550,7 +6550,7 @@ S
 &+ysmall &+ccreatures&+y can use these &+Gvine &+gbr&+Gi&+gdges&+y to go between stands of &+Gba&+gm&+Gboo,&+y and&n
 &+ynever walk on the ground where larger &+mpredators&+y can catch them.&n
 ~
-1 0 4
+285 0 4
 D2
 ~
 ~
@@ -6569,7 +6569,7 @@ S
 &+yother hills in the &+gswamp,&+y but only the tops can be glimpsed to the east, the&n
 &+ysouth, and the southeast.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -6588,7 +6588,7 @@ S
 &+Gba&+gm&+Gboo&+y without ever touching the ground.  The leaves of the &+Gba&+gm&+Gboo&+y rustle in&n
 &+ythe constant breeze that blows through the area, keeping the &+Cair&+y fresh.&n
 ~
-1 0 4
+285 0 4
 D0
 ~
 ~
@@ -6608,7 +6608,7 @@ S
 &+yforces its way through the &+Gba&+gm&+Bboo,&+y splintering it.  Small &+ccreatures&+y scatter&n
 &+ywhen the crashing is heard as it is probably a &+mpredator&+y trying to get them.&n
 ~
-1 0 4
+285 0 4
 D1
 ~
 ~
@@ -6627,7 +6627,7 @@ the &+Gba&+gm&+Gboo,&n fighting for a foothold in the area.  Thin &+gmoss&n drap
 on the &+gswamp&n floor.  &+GThorny vines&n create &+gs&+Gw&+gayin&+Gg &+gb&+Gr&+gidges&n between the &+gtrees&n and
 the &+Gba&+gm&+Gboo.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -6646,7 +6646,7 @@ to keep the place warm and dry.  &+cCreatures&n use the swaying &+gb&+Gri&+gdges
 &+Gvines&n grow between &+gplants&n to move among the tops of the &+gplants&n so that large
 &+mpredators&n cannot reach them as they search for &+Yfruit.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6665,7 +6665,7 @@ and huge &+gtrees&n grow intermixed, creating an area where breezes flow freely.
 the the plants, their bright colors catching the eye of all who pass.  Bats
 fly among the &+Mf&+mlo&+Yw&+mers,&n searching for &+minsects&n or nectar to eat.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6688,7 +6688,7 @@ and &+ccreatures&n use it to climb up into the &+gtreetops,&n searching for &+Yf
 up there. Loud crashing can be heard as something large forces its way through
 the &+gunderbrush.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -6707,7 +6707,7 @@ small &+ccreatures&n use it to climb up into the &+gtreetops&n to look for &+Yfr
 there.  Because of the &+gtrees&n the &+Ysu&+Wn&+Ylight&n is muted, breaking through the cover
 of the &+gtreetops&n only in a few spots.
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -6726,7 +6726,7 @@ dance in the bright &+Ysun&+Wb&+Yeams.&n  Loud calls come from all over as &+ccr
 the &+gswamp&n go about the business of trying to find food without becoming food
 themselves.
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6745,7 +6745,7 @@ S
 &+gplace they need to rest and breed.  Small &+ccreatures&+g climb up the &+wthick moss&+g to&n
 &+gget to the &+Yfruit&+g in the treetops.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6765,7 +6765,7 @@ S
 &+gkinds of &+ccreatures.&+g  Regardless of the time of day or night there are always&n
 &+ccreatures&+g calling out for different reasons.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6786,7 +6786,7 @@ S
 &+Bseen below the top couple of inches.  A few patches of tall &+Greeds&+B grow out in&n
 &+Bthe water, bending with the current.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -6804,7 +6804,7 @@ S
 &+gare no trees looming over it to block out the light.  The &+Bb&+bir&+Bd&+g that sits on it&n
 &+gsings a sweet song, filling the area with a sense of peace and contentment.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6825,7 +6825,7 @@ S
 &+Bflow, they stand firm in the &+ymud,&+B catching all the &+ydebris&+B that tries to float&n
 &+Bpast them.&n
 ~
-1 0 26
+285 0 26
 D2
 ~
 ~
@@ -6844,7 +6844,7 @@ S
 &+gunderbrush, covers the ground near the tree, and &+Ysu&+Wn&+Ylight&+g shines down on it as&n
 &+gthere are no trees looming over it to block the &+Ysu&+Wn&+Ylight&+g out.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6864,7 +6864,7 @@ S
 &+Bjust a couple of inches down is completely hidden from sight.  Those who pass&n
 &+Bthrough the area need to watch their step or find themselves in deep water.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -6883,7 +6883,7 @@ S
 &+wmoss&+g drapes down the huge trees, but not the one in the center.  The &+wmoss&+g lets&n
 &+gsmall &+ccreatures&+g reach the treetops to search for &+Yfruit.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6903,7 +6903,7 @@ S
 &+Bin the southwest corner.  Clumps of &+Gscum&+B are in this pile, but the water pulls&n
 &+Bat the &+Gscum,&+B breaking it up so it goes between the &+Greeds.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -6923,7 +6923,7 @@ S
 &+ccreatures&+g climb the &+wmoss,&+g hidden from the view of &+mpredators&+g as they go up to&n
 &+gthe treetops to search for food.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -6943,7 +6943,7 @@ S
 &+gto &+ynest.  &+MB&+mri&+Yg&+mh&+Mt s&+mpo&+Yt&+ms o&+Mf c&+mo&+Yl&+mor&+g can be seen in the undergrowth as well as high&n
 &+gin the trees as &+Mf&+mlo&+Yw&+mers&+g bloom all around.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -6962,7 +6962,7 @@ S
 &+ghangs down from the huge trees have &+Mf&+mlo&+Yw&+mers&+g on them.  Loud calls can be heard&n
 &+gas the denizens of the swamp search for friends....or food.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -6981,7 +6981,7 @@ S
 &+grustling in the underbrush as small &+ccreatures&+g move about searching for mates&n
 &+gand food.  A loud thudding can be heard nearby as a &+mpredator&+g goes hunting.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -7000,7 +7000,7 @@ up in the &+gtrees&n and down on the ground.  Tiny &+ccreatures&n move among the
 sipping on the &+Cnectar&n as well as the &+Bwater&n that collects in the bottoms of the
 &+gleaves.&n  A breeze blows through the area, cooling down the &+Cair.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -7023,7 +7023,7 @@ the &+wmoss.&n  A few &+Cbu&+Yt&+Mte&+Crf&+Rl&+Yies&n flit around, putting spots
 they float about on the breeze.  Small &+ccreatures&n scurry about the area hunting
 for food among the &+gunderbrush.&n
 ~
-1 0 26
+285 0 26
 D1
 ~
 ~
@@ -7043,7 +7043,7 @@ S
 &+gis hot and humid.  Tracks cover the ground, most of them paw prints from small&n
 &+ccreatures,&+g but a few are from larger &+mpredators.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -7063,7 +7063,7 @@ S
 &+ccreatures&+g by their &+Mc&+mol&+Yo&+mrs.&+g  Loud crashing can be heard from a large &+ccreature&n
 &+ga large &+ccreature&+g forcing its way through the underbrush.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -7083,7 +7083,7 @@ S
 &+gnear a large p&+Yl&+ga&+Gnt.&+g  These &+Wbones&+g gleam &+Wwhite&+g in the &+Ysu&+Wn&+Yshine,&+g and it is clear&n
 &+gthat they have no teethmarks on them at all.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -7102,7 +7102,7 @@ in the area, keeping them from blocking out the &+Ysu&+Wn&+Ylight&n and allowing
 breezes to blow through, cooling the area.  &+MB&+mri&+Yg&+mh&+Mt f&+mlo&+Yw&+mers&n grow both on the
 ground and in the &+gtrees,&n giving the area many bright spots of &+Mc&+mol&+Yo&+mr.&n
 ~
-1 33554432 26
+285 33554432 26
 D1
 ~
 ~
@@ -7121,7 +7121,7 @@ S
 &+gthe harder it is for the &+Gba&+gm&+Gboo&+g to survive.  Small &+ccreatures&+g move through the&n
 &+gunderbrush, causing soft rustling sounds as they search for food.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -7142,7 +7142,7 @@ S
 &+Yb&+Ri&+Yrds&+g dart out of their &+ynests in the &+wmoss&+g when the &+minsects&+g are in the air and&n
 &+gchase them for a feast.&n
 ~
-1 33554432 26
+285 33554432 26
 D0
 ~
 ~
@@ -7166,7 +7166,7 @@ S
 &+Bwater in a strange, twisted shape.  Its &+rr&+yoo&+rt t&+yi&+rps&+B reach out of the water, and&n
 &+Bmove around, searching for small &+ccreatures&+B to catch.&n
 ~
-1 0 26
+285 0 26
 D0
 ~
 ~
@@ -7187,7 +7187,7 @@ S
 &+greach the &+Yfruit&+g growing in the treetops.  Loud crashes sound from a &+ccreature&n
 &+gforcing its way through the underbrush nearby.&n
 ~
-1 33554432 26
+285 33554432 26
 D2
 ~
 ~
@@ -7204,7 +7204,7 @@ S
 &+BThose without the ability to breathe in the water probably prefer to be swept&n
 &+Balong, hoping that they emerge in the air so that they do not suffocate.&n
 ~
-1 1073774625 9
+285 1073774625 9
 D2
 ~
 ~
@@ -7220,7 +7220,7 @@ S
 &+ccreatures&+B who live in the water many places to hide, as well as providing hand&n
 &+Band foot holds to those who need to climb up to the &+Cair.&n
 ~
-1 32800 9
+285 32800 9
 D4
 ~
 ~
@@ -7235,7 +7235,7 @@ S
 &+BThe tunnel is filled completely with the rushing water.  Those that need &+Cair&n
 &+Bto breathe must move further on.&n
 ~
-1 33 9
+285 33 9
 D2
 ~
 ~
@@ -7252,7 +7252,7 @@ S
 &+Bthat the water is calm.  &+rF&+wi&+rsh&+B dart about in the chaotic murk, searching for&n
 &+Bthings that did not survive the underwater trip to feast upon them.&n
 ~
-1 33 9
+285 33 9
 D1
 ~
 ~
@@ -7267,7 +7267,7 @@ S
 &+Ba few feet away.  The water completely fills the passageway.  Those that need&n
 &+Bto breathe need to keep moving to where there is &+Cair.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D3
 ~
 ~
@@ -7284,7 +7284,7 @@ S
 &+Bsearching for food to eat.  &+WF&+Yi&+Ws&+Yh&+B swim about the cavern, feasting on the bounty&n
 &+Bthat the current provides.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D3
 ~
 ~
@@ -7299,7 +7299,7 @@ S
 &+Wf&+Gi&+Ws&+Gh&+B swim about the area, eating this &+Galgae.&+B  Those who need &+Cair&+B to breathe&n
 &+Bneed to keep moving, as the water completely fills the tunnel.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D3
 ~
 ~
@@ -7316,7 +7316,7 @@ S
 &+Bthe cavern.  &+gStr&+ya&+gnge &+yp&+glan&+yt&+gs&+B grow on the floor, giving the &+Wf&+Bi&+Ws&+Bh a place to eat&n
 &+Bas well as to hide.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D4
 ~
 ~
@@ -7331,7 +7331,7 @@ S
 &+Bout anything new in the area.  Some &+gst&+yr&+ron&+yg-r&+root&+yed &+gwa&+yt&+ger p&+yl&+gants&+B grow in the &+ymud&n
 &+Bon the floor of the tunnel, giving the &+Wf&+ri&+Ws&+rh&+B a place to rest.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D3
 ~
 ~
@@ -7347,7 +7347,7 @@ S
 &+Bthe cavern floor wave around, wrapping around anyone that comes near to them.&n
 &+WF&+ri&+Ws&+rh&+B swim about, nibbling at the things swept in by the current.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D2
 ~
 ~
@@ -7362,7 +7362,7 @@ S
 &+Bfills the tunnel, so those that need to breathe &+Cair&+B need to let the water rush&n
 &+Bthem on along in the hopes of surfacing soon.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D1
 ~
 ~
@@ -7380,7 +7380,7 @@ S
 &+Bne&+bb&+Beri can be dimly seen in the murky water, and &+Wf&+Gi&+Ws&+Gh&+B swim about, looking in&n
 &+Bthe new arrivals for food.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D2
 ~
 ~
@@ -7396,7 +7396,7 @@ S
 &+Bthe tunnel, entangling anything that comes close.  The &+Wf&+Gi&+Ws&+Gh&+B hide among these&n
 &+Bplants to rest as they block the current.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D1
 ~
 ~
@@ -7412,7 +7412,7 @@ S
 &+Bto breathe.  Ne&+bb&+Beris graze among the &+gst&+yr&+gan&+yg&+ge p&+yl&+gants&+B growing in the &+ymud&+B on the&n
 &+Bcavern floor, and &+Wf&+Bi&+Ws&+Bh dart among them, searching for their preferred food.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D2
 ~
 ~
@@ -7428,7 +7428,7 @@ S
 &+Bneed &+Cair&+B to breathe need to let the current sweep them along to find a place&n
 &+Bwhere they can reach the surface again.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D1
 ~
 ~
@@ -7446,7 +7446,7 @@ S
 &+Bfor small morsels to eat.  They investigate everything the current has brought&n
 &+Binto their area, hoping for something new to try.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D2
 ~
 ~
@@ -7463,7 +7463,7 @@ S
 &+yr&+roo&+yts&+B between the &+yrocks&+B themselves.  &+WF&+ri&+Ws&+rh&+B swim among the &+gp&+yl&+gants&+B searching for&n
 &+Bmorsels of food to eat.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D2
 ~
 ~
@@ -7480,7 +7480,7 @@ S
 &+Bthat the water is calm.  &+rF&+wi&+rsh&+B dart about in the chaotic murk, searching for&n
 &+Bthings that did not survive the underwater trip to feast upon them.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D3
 ~
 ~
@@ -7496,7 +7496,7 @@ S
 &+Bthe tunnel, entangling anything that comes close.  The &+Wf&+Gi&+Ws&+Gh&+B hide among these&n
 &+Bplants to rest as they block the current.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D6
 ~
 ~
@@ -7512,7 +7512,7 @@ S
 &+Bto breathe.  Ne&+bb&+Beris graze among the &+gst&+yr&+gan&+yg&+ge p&+yl&+gants&+B growing in the &+ymud&+B on the&n
 &+Bcavern floor, and &+Wf&+Bi&+Ws&+Bh dart among them, searching for their preferred food.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D3
 ~
 ~
@@ -7528,7 +7528,7 @@ S
 &+Bneed &+Cair&+B to breathe need to let the current sweep them along to find a place&n
 &+Bwhere they can reach the surface again.&n
 ~
-1 1073774625 9
+285 1073774625 9
 D0
 ~
 ~
@@ -7546,7 +7546,7 @@ S
 &+Bfor small morsels to eat.  They investigate everything the current has brought&n
 &+Binto their area, hoping for something new to try.&n
 ~
-1 1073774625 9
+285 1073774625 9
 D6
 ~
 ~
@@ -7562,7 +7562,7 @@ S
 &+Bneed &+Cair&+B to breathe need to let the current sweep them along to find a place&n
 &+Bwhere they can reach the surface again.&n
 ~
-1 1073741857 9
+285 1073741857 9
 D2
 ~
 ~
