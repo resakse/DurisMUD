@@ -2786,18 +2786,18 @@ void finish_sinking(P_ship ship)
         insurance = (int)(SHIPTYPECOST(ship->m_class) * 0.50);  // only partial insurance for warships
 
 
-    if (P_char owner = get_char2(str_dup(SHIPOWNER(ship))))
-    {
-        GET_BALANCE_PLATINUM(owner) += insurance / 1000;
+//    if (P_char owner = get_char2(str_dup(SHIPOWNER(ship))))
+//    {
+        GET_BALANCE_PLATINUM(get_char2(str_dup(SHIPOWNER(ship)))) += insurance / 1000;
         wizlog(56, "Ship insurance to account: %d", insurance / 1000);
         logit(LOG_SHIP, "%s's insurance deposit to account: %d", ship->ownername, insurance / 1000);
-    }
-    else
-    {
-        ship->money = insurance; // if owner is not online, money go into ships coffer
-        wizlog(56, "Ship insurance to ship's coffer: %d", insurance / 1000);
-        logit(LOG_SHIP, "%s's insurance to ship's coffer: %d", ship->ownername, insurance / 1000);
-    }
+//    }
+//    else
+//    {
+//        ship->money = insurance; // if owner is not online, money go into ships coffer
+//        wizlog(56, "Ship insurance to ship's coffer: %d", insurance / 1000);
+//        logit(LOG_SHIP, "%s's insurance to ship's coffer: %d", ship->ownername, insurance / 1000);
+//    }
 
     int old_class = ship->m_class;
     ship->m_class = 0; // all ships become sloops after sinking
