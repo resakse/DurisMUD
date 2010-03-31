@@ -257,9 +257,9 @@ void spell_insects(int level, P_char ch, char *arg, int type, P_char victim,
 
     GET_EXP(mob) = 0;      
     mob->points.base_hitroll = mob->points.hitroll = GET_LEVEL(ch);
-    mob->points.base_damroll = mob->points.damroll = GET_LEVEL(ch) / 2;
-    mob->points.damnodice = (int) GET_LEVEL(ch) / 8;
-    mob->points.damsizedice = (int) GET_LEVEL(ch) / 8;
+    mob->points.base_damroll = mob->points.damroll = (int)(GET_LEVEL(ch) / 3);
+    mob->points.damnodice = (int)(GET_LEVEL(ch) / 8);
+    mob->points.damsizedice = (int)(GET_LEVEL(ch) / 9);
 
     setup_pet(mob, ch, 1, PET_NOORDER | PET_NOCASH);
     MobStartFight(mob, victim);
