@@ -1448,7 +1448,9 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
     raise(SIGSEGV);
   }
 
-
+  if (!IS_ALIVE(ch))
+    return;
+  
   if (!IS_TRUSTED(ch) && GET_LEVEL(victim) > 56)
   {
     send_to_char
@@ -1461,6 +1463,13 @@ void spell_clone_form(int level, P_char ch, char *arg, int type,
     casting_on_self = TRUE;
   }
 
+  if (IS_NPC(victim) &&
+      victim != ch &&
+      GET_VNUM(victim) == 250)
+  {
+    send_to_char("&+WYour magic is unable to duplicate the appearance of an illusion.&N\r\n", ch);
+    return;
+  }
 
   if (casting_on_self && is_illusion_char(ch))
   {
