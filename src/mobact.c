@@ -4642,6 +4642,10 @@ bool WillPsionicistSpell(P_char ch, P_char victim)
   P_char   target = NULL;
   int      dam = 0, lvl = 0, spl = 0;
 
+  if(IS_PC_PET(ch) &&
+     GET_MASTER(ch)->in_room != ch->in_room)
+      return false;
+    
   lvl = GET_LEVEL(ch);
 
   if(GET_HIT(ch) < (int)(GET_MAX_HIT(ch) / 10) &&
