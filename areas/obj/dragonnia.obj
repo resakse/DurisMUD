@@ -101,7 +101,7 @@ This is a cloak entirely made of dragon scales tied together as a sort of
 shield.  It can also be used as a triumph signal above your armature.
 ~
 A
-13 15
+13 35
 A
 24 -4
 #6803
@@ -873,7 +873,7 @@ This is a beautiful solid brass bracelet with beautiful ornaments on it.
 It looks very old but it is still as shiny as ever.
 ~
 A
-18 3
+18 5
 A
 23 -4
 #6851
@@ -1041,7 +1041,7 @@ a &+Wglowing &+Ymagical &nstone~
 A small unremarkable stone has been dropped here.~
 ~
 25 11 0 50 7 0 4096 16385 66 0 0
-6836 259 2 0 0 0 0 0
+6836 259 1 0 0 0 0 0
 18 10 100
 E
 stone magical glowing~
