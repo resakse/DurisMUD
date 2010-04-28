@@ -1385,9 +1385,18 @@ void point_update(void)
       
       if (!GET_NAME(i))
         continue;
+	
+	int reloghere = GET_BIRTHPLACE(i);
+       if (!reloghere)
+         reloghere = GET_HOME(i);
+       if (!reloghere)
+         reloghere = GET_ORIG_BIRTHPLACE(i);
+       if (!reloghere)
+         continue;
+         
       strcat(Gbuf1, GET_NAME(i));
       strcat(Gbuf1, ", ");
-      writeCharacter(i, 5, i->in_room);
+      writeCharacter(i, 5, reloghere);
       extract_char(i);
       if (i->desc)
         close_socket(i->desc);
