@@ -15,12 +15,28 @@
   PROFILE_##action(pulse_reset) \
   PROFILE_##action(event_loop) \
   PROFILE_##action(event_func) \
+  PROFILE_##action(mundane_quest) \
+  PROFILE_##action(mundane_autoinvis) \
+  PROFILE_##action(mundane_wagon) \
+  PROFILE_##action(mundane_wakeup) \
+  PROFILE_##action(mundane_justice) \
+  PROFILE_##action(mundane_commune) \
+  PROFILE_##action(mundane_autostand) \
+  PROFILE_##action(mundane_specproc) \
+  PROFILE_##action(mundane_mobcast) \
   PROFILE_##action(mundane_track) \
   PROFILE_##action(mundane_track_1) \
   PROFILE_##action(mundane_track_2) \
   PROFILE_##action(mundane_track_3) \
-  PROFILE_##action(mundane_track_4)
-
+  PROFILE_##action(mundane_track_4) \
+  PROFILE_##action(mundane_charmbreak) \
+  PROFILE_##action(mundane_curepoison) \
+  PROFILE_##action(mundane_wallbreak) \
+  PROFILE_##action(mundane_picktarget) \
+  PROFILE_##action(mundane_attack) \
+  PROFILE_##action(mundane_assist) \
+  PROFILE_##action(mundane_wander) \
+  PROFILE_##action(mundane_newevent)
    
 
 
