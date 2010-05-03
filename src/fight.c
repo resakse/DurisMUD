@@ -4581,7 +4581,7 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags,
  
 // Combat mind bypasses displacement.
   if(affected_by_spell(victim, SPELL_DISPLACEMENT) &&
-    (!number(0, 4)) &&
+    (!number(0, 5)) &&
     !affected_by_spell(ch, SPELL_COMBAT_MIND))
   {
     dam = 0;
@@ -4623,6 +4623,23 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags,
   }
   else
     skin = 0;
+
+
+// Ogre balance tweak. Ogres do more damage versus smaller opponents. The greater the difference the greater the damage. This back-end damage bonus is tacked on after all the shield/skin checks for extra lethalness.
+  if (ch &&
+		  victim &&
+      GET_RACE(ch) == RACE_OGRE &&
+      GET_POS(ch) == POS_STANDING)
+  {
+     int chsize = GET_SIZE(ch);
+     int victsize = GET_SIZE(victim);
+    
+     if(chsize > victsize)
+     {
+       dam = dam + MIN((chsize - victsize), 5);
+     }
+  }
+
   
   //-------------------------------
   // ranged stuff, moved from range.c
