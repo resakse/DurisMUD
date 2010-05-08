@@ -1370,6 +1370,7 @@ void spell_electrical_execution(int, P_char, char *, int, P_char, P_obj);
 void spell_invigorate(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj);
 void spell_life_bolt(int, P_char, char *, int, P_char, P_obj);
 void spell_enervation(int, P_char, char *, int, P_char, P_obj);
+void spell_repair_one_item(int, P_char, char *, int, P_char, P_obj);
 
 
 /* smagic.c */

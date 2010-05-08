@@ -190,6 +190,7 @@ void initialize_skills()
 
   //needed by setbit
   skills[MAX_AFFECT_TYPES].name = "\n";
+ 
 
 // Alchemist
   // Brawler
@@ -238,7 +239,9 @@ void initialize_skills()
 
   SKILL_CREATE("instant kill", SKILL_INSTANT_KILL, TAR_PHYS);
   SPEC_SKILL_ADD(CLASS_ROGUE, 56, 100, SPEC_ASSASSIN);
-
+  
+  SPELL_CREATE("repair one item", SPELL_REPAIR_ONE_ITEM, PULSE_SPELLCAST * 1,
+    TAR_OBJ_INV | TAR_OBJ_EQUIP, spell_repair_one_item);
 
 /* Conj Specs */
   SPELL_CREATE("magma burst", SPELL_MAGMA_BURST, PULSE_SPELLCAST * 2,
