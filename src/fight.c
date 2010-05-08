@@ -3656,9 +3656,10 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
       if(GET_CHAR_SKILL(victim, SKILL_ARCANE_BLOCK) > 0 &&
         !IS_TRUSTED(victim))
       {
-        if((dam > 10 &&
-           notch_skill(victim, SKILL_ARCANE_BLOCK, get_property("skill.notch.arcane", 100))) ||
-           number(1, 150) <= GET_LEVEL (ch))
+        if(dam > 15 &&
+          (notch_skill(victim, SKILL_ARCANE_BLOCK, get_property("skill.notch.arcane", 100)) ||
+          number(1, 200) <= (GET_LEVEL(ch) + GET_C_LUCK(ch) / 10) ||
+          ((IS_ELITE(ch) || IS_GREATER_RACE(ch)) && !number(0, 4))))
         {
           act("$N raises hands performing an &+Marcane gesture&n and some of $n's &+mspell energy&n is dispersed.",
             TRUE, ch, 0, victim, TO_NOTVICT);
@@ -3666,7 +3667,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
             TRUE, ch, 0, victim, TO_CHAR);
           act("You perform an &+Marcane gesture&n dispersing some of $n's &+mmspell energy.&n",
             TRUE, ch, 0, victim, TO_VICT);
-          dam = dam - 0.004 * GET_CHAR_SKILL(victim, SKILL_ARCANE_BLOCK) * dam;
+          dam = dam - number(1, (get_property("skill.arcane.block.dam.reduction", .004) * GET_CHAR_SKILL(victim, SKILL_ARCANE_BLOCK) * dam));
         }
       }
 
