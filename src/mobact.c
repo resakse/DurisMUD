@@ -5468,6 +5468,17 @@ bool MobMonk(P_char ch)
 
   if(IS_FIGHTING(ch) && (victim = ch->specials.fighting))
   {
+    if(GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) ||
+      (IS_ELITE(ch) && GET_CLASS(ch, CLASS_MONK)))
+    {
+      if(!number(0, 1) &&
+         !affected_by_skill(ch, SKILL_JIN_TOUCH) )
+      {
+        do_chant(ch, " jin touch", 0);
+        return TRUE;
+      }
+    }
+    
     char     buf[100];
 
     buf[0] = '\0';
@@ -5528,6 +5539,8 @@ bool MobMonk(P_char ch)
         do_springleap(ch, buf, 0);
         return TRUE;
       }
+    default:
+      break;
     }
 
     if(*buf)
