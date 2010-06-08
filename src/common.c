@@ -21,7 +21,7 @@ const char *specdata[][MAX_SPEC] = {
   {"&+BSwordsman", "&+yGuardian", "&+CSw&+cas&+Lhbuc&+ckl&+Cer&n", ""},      //Warrior
   {"&+cBlademaster", "&+gHuntsman", "&+gMa&+yrsha&+gll&n", ""},    //Ranger
   {"&+rPyr&+Rokine&+rtic", "&+MEn&+mslav&+Mer", "&+bPsyche&+Lporter", ""},         //Psionicist
-  {"&+wCrusa&+Wder", "&+WCavalier", "", ""},    //Paladin
+  {"&+wCrusa&+Wder", "&+WCavalier", "&+WWar&+Gden&n", ""},    //Paladin
   {"&+LDark Knight", "&+LDem&+ronic Ri&+Lder", "", ""},  //Anti-Paladin
   {"&+YZealot&n", "&+WHealer&n", "&+cHoly&+Wman&n", ""},      //Cleric
   {"&+rRe&+Rd Dra&+rgon", "&+gElap&+Ghi&+gdist", "", ""},   //Monk
@@ -85,7 +85,7 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Vampire", "Vampire", "&+RVam&+rpi&+Rre&n", "UM"},
   {"Death Knight", "DeathKnight", "&+LDeath &+bKnight&n", "UK"},
   {"Shadow Beast", "ShadowBeast", "&+LShadow &+rBeast&n", "US"},
-  {"Storm Giant", "StormGiant", "&+WS&+wt&+Wo&+wr&+Wm &+wG&+Wi&+wa&+Wn&+Wt&n", "SG"},
+  {"Storm Giant", "StormGiant", "&+cF&+yi&+crb&+yo&+clg&n", "SG"},
   {"Wight", "Wight", "&+RW&+ri&+Rg&+rh&+Rt&n", "UW"},
   {"Phantom", "Phantom", "&+WPha&+Lntom&n", "UP"},
   {"Harpy", "Harpy", "&+yHarpy&n", "MH"},
