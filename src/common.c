@@ -85,7 +85,7 @@ const struct race_names race_names_table[LAST_RACE + 2] = {
   {"Vampire", "Vampire", "&+RVam&+rpi&+Rre&n", "UM"},
   {"Death Knight", "DeathKnight", "&+LDeath &+bKnight&n", "UK"},
   {"Shadow Beast", "ShadowBeast", "&+LShadow &+rBeast&n", "US"},
-  {"Storm Giant", "StormGiant", "&+wSt&+Wor&+wm G&+Wia&+wnt&n", "SG"},
+  {"Firbolg", "StormGiant", "&+cF&+yi&+crb&+yo&+clg&n", "SG"},
   {"Wight", "Wight", "&+RW&+ri&+Rg&+rh&+Rt&n", "UW"},
   {"Phantom", "Phantom", "&+WPha&+Lntom&n", "UP"},
   {"Harpy", "Harpy", "&+yHarpy&n", "MH"},
