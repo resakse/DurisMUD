@@ -436,6 +436,7 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
       if(IS_NPC(who) && GET_VNUM(who) == VNUM_WITCH)
       {
         val = CONTAINS_WITCH;
+        break;
       }
       
       /* if room contains PC, show PC regardless of order - ditto
@@ -445,6 +446,7 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
       if(IS_DRAGON(who) || IS_DEMON(who) || IS_DEVIL(who))
       {
         val = CONTAINS_DRAGON;
+        break;
       }
 
       if(IS_DISGUISE_PC(who) || IS_DISGUISE_NPC(who))
