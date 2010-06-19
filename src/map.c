@@ -433,7 +433,7 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
         }
       }
       
-      if(IS_NPC(who) && GET_VNUM(who) == VNUM_WITCH)
+      if(IS_NPC(who) && (GET_VNUM(who) == VNUM_WITCH))
       {
         val = CONTAINS_WITCH;
         break;
