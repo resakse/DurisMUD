@@ -3495,6 +3495,7 @@ E 1 83350 12 5 100 0 0 0           *   a full suit of heavy adamantite
 E 1 83351 12 6 100 0 0 0           *   a heavy adamantite full-faced helmet
 E 1 83470 1 16 100 0 0 0           *   a huge spiked bloody battle-axe
 G 1 83414 1 0 100 0 0 0            *    the bloody head of General Helgor
+G 1 360 1 0 100 0 0 0              *    (object type not in this .obj file)
 F 1 83332 8 83706 100 0 0 0        * an elite Helgor sentinel (following)
 E 1 83281 16 16 100 0 0 0          *   a mithril dwarven halberd
 F 1 83332 8 83706 100 0 0 0        * an elite Helgor sentinel (following)
