@@ -90,7 +90,7 @@ const int allowed_secondary_classes[CLASS_COUNT + 1][5] = {
   {CLASS_CONJURER, CLASS_DRUID, CLASS_CLERIC, -1},    	      /* Sha */
   {CLASS_CONJURER, -1},         		              /* Sor */
   {-1},                         		              /* Nec */
-  {CLASS_SORCERER, CLASS_SHAMAN, -1},                   	              /* Con */
+  {CLASS_SORCERER, CLASS_SHAMAN, -1},                         /* Con */
   {CLASS_BARD, CLASS_MERCENARY, CLASS_CLERIC, -1},            /* Rog */
   {-1},                       /* Assassin not currently in game      */
   {CLASS_ROGUE, CLASS_WARRIOR, -1},                           /* Mer */
@@ -1717,10 +1717,16 @@ const int hometown[] = {
  *      select the particular city as its hometown.  For example,
  *      humans have the choice of Verzanan, Calimport, or Baulders Gate.
  *      Note though that only Verzanan is enable at this point for humans
- *      since the other hometowns are not finised.
+ *      since the other hometowns are not finished.
  *      Columns are ordered Human, Barbarian, Drow, Grey, Mountain, Duergar,
  *      Halfling, Gnome, Ogre, Troll, Half-elf, Illithid, Orc, Thrikreen,
- *      Centaur, Githyanki, Minotaur
+ *      Centaur, Githyanki, Minotaur, Kobold, Drider, Wood Elf, Firbolg,
+ *      Pillithid, Kuo Toa
+ *
+ * Human          (H) Barbarian      (B) Drow Elf       (D) Grey Elf       (E) Mountain Dwarf (M) Duergar Dwarf  (U)
+ * Halfling       (L) Gnome          (G) Ogre           (R) Swamp Troll    (T) Half-Elf       (F) Orc            (O)
+ * Thri-Kreen     (K) Centaur        (C) Githyanki      (J) Minotaur       (S) Kobold         (A) Drider         (2)
+ * Wood Elf       (W) Firbolg        (P) Pillithid      (I) Kuo Toa        (Q)
  */
 
  /* first column is always all zeroes */
@@ -1888,9 +1894,9 @@ const int guild_locations[][CLASS_COUNT + 1] = {
   {97663, 97663, 97663, 97663, 97663,
    97663, 97663, 97663, 97663, 97663,
    97663, 97663, 97663, 97663, 97663,
-   97663, 97663, 97663,    -1,    -1,
-   97633, 97663, 97663, 97663,    -1,
-      -1, 97633,    -1,    -1},
+   97663, 97663, 97663, 97663, 97663,
+   97633, 97663, 97663, 97663, 97663,
+   97663, 97633, 97663, 97663},
 
   /* * NaxVaran */
   {37716, 37776,    -1,    -1,    -1,
