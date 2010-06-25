@@ -61,51 +61,51 @@ extern void event_short_affect(P_char, P_char , P_obj , void *);
 
 typedef void cmd_func(P_char, char *, int);
 
-void     do_levitate(P_char, char *, int);
-void     do_darkness(P_char, char *, int);
-void     do_faerie_fire(P_char, char *, int);
-void     do_ud_invisibility(P_char, char *, int);
-void     do_strength(P_char, char *, int);
-void     do_summon_book(P_char, char *, int);
-void     do_summon_totem(P_char, char *, int);
-void     do_blast(P_char, char *, int);
-void     do_shift_astral(P_char, char *, int);
-void     do_shift_prime(P_char, char *, int);
-void     do_bite(P_char, char *, int);
-void     do_enlarge(P_char, char *, int);
-void     do_reduce(P_char, char *, int);
-void     do_project_image(P_char, char *, int);
-void     do_fireball(P_char, char *, int);
-void     do_fireshield(P_char, char *, int);
-void     do_firestorm(P_char, char *, int);
-void     do_plane_shift(P_char, char *, int);
-void     do_charm_animal(P_char, char *, int);
-void     do_innate_hide(P_char, char *, int);
-void     do_dispel_magic(P_char, char *, int);
-void     do_globe_of_darkness(P_char, char *, int);
-void     do_flurry(P_char, char *, int);
-void     do_shapechange(P_char, char *, int);
-void     do_throw_lightning(P_char, char *, int);
-void     do_stone_skin(P_char, char *, int);
-void     do_phantasmal_form(P_char, char *, int);
-void     do_shade_movement(P_char, char *, int);
-void     do_dimension_door(P_char, char *, int);
-void     do_god_call(P_char, char *, int);
-void     do_battle_rage(P_char, char *, int);
-void     do_mass_dispel(P_char, char *, int);
-void     do_disappear(P_char, char *, int);
-void     do_dispel_magic(P_char, char *, int);
-void     do_conjure_water(P_char, char *, int);
-void     do_foundry(P_char, char *, int);
-void     do_webwrap(P_char, char *, int);
-void     do_summon_imp(P_char, char *, int);
-void     do_innate_gaze(P_char, char *, int);
+void       do_levitate(P_char, char *, int);
+void       do_darkness(P_char, char *, int);
+void       do_faerie_fire(P_char, char *, int);
+void       do_ud_invisibility(P_char, char *, int);
+void       do_strength(P_char, char *, int);
+void       do_summon_book(P_char, char *, int);
+void       do_summon_totem(P_char, char *, int);
+void       do_blast(P_char, char *, int);
+void       do_shift_astral(P_char, char *, int);
+void       do_shift_prime(P_char, char *, int);
+void       do_bite(P_char, char *, int);
+void       do_enlarge(P_char, char *, int);
+void       do_reduce(P_char, char *, int);
+void       do_project_image(P_char, char *, int);
+void       do_fireball(P_char, char *, int);
+void       do_fireshield(P_char, char *, int);
+void       do_firestorm(P_char, char *, int);
+void       do_plane_shift(P_char, char *, int);
+void       do_charm_animal(P_char, char *, int);
+void       do_innate_hide(P_char, char *, int);
+void       do_dispel_magic(P_char, char *, int);
+void       do_globe_of_darkness(P_char, char *, int);
+void       do_flurry(P_char, char *, int);
+void       do_shapechange(P_char, char *, int);
+void       do_throw_lightning(P_char, char *, int);
+void       do_stone_skin(P_char, char *, int);
+void       do_phantasmal_form(P_char, char *, int);
+void       do_shade_movement(P_char, char *, int);
+void       do_dimension_door(P_char, char *, int);
+void       do_god_call(P_char, char *, int);
+void       do_battle_rage(P_char, char *, int);
+void       do_mass_dispel(P_char, char *, int);
+void       do_disappear(P_char, char *, int);
+void       do_dispel_magic(P_char, char *, int);
+void       do_conjure_water(P_char, char *, int);
+void       do_foundry(P_char, char *, int);
+void       do_webwrap(P_char, char *, int);
+void       do_summon_imp(P_char, char *, int);
+void       do_innate_gaze(P_char, char *, int);
 void       do_innate_embrace_death(P_char, char *, int);
 void       do_lifedrain(P_char, char *, int);
 void       do_immolate(P_char, char *, int);
-void     do_summon_warg(P_char, char *, int);
-void     do_shift_ethereal(P_char, char *, int);
-void     do_fade(P_char, char *, int);
+void       do_summon_warg(P_char, char *, int);
+void       do_shift_ethereal(P_char, char *, int);
+void       do_fade(P_char, char *, int);
 
 void       do_aura_protection(P_char, char *, int);
 void       do_aura_precision(P_char, char *, int);
@@ -306,7 +306,6 @@ const struct innate_data
   {"summon imp", do_summon_imp},
   {"hammer master", 0},
   {"axe master", 0},
-  {"longsword master", 0},
   {"gaze", do_innate_gaze},
   {"embrace death", 0},
   {"drain life", do_lifedrain},
@@ -477,7 +476,6 @@ void assign_innates()
   ADD_RACIAL_INNATE(INNATE_OUTDOOR_SNEAK, RACE_WOODELF, 11);
   ADD_RACIAL_INNATE(INNATE_FOREST_SIGHT, RACE_WOODELF, 11);
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_WOODELF, 1);
- // ADD_RACIAL_INNATE(INNATE_LONGSWORD_MASTER, RACE_WOODELF, 31);
 
   /* Evil Races */
   /* List of Drider Innates         */

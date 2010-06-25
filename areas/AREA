@@ -38,7 +38,7 @@ willem                    *71-72
 prison                    *73-74
 bastine                   *76-77
 v2                        *78-79
-/* This zone doesn't exist */jotinv                    *80-83
+jotinv                    *80-83
 grave                     *84-86
 gibber                    *87,88
 raiders                   *89
@@ -323,7 +323,6 @@ interspa                  *999
 random                    *1000 used for random encounter stuff
 tharnrifts                *1100
 surfacekeeps              *1200
-*surfacekeeps_objects      * also a stub until alatorin gets reviewed
 vecna                     *1300
 nexus_ic                  *1301
 nexus_uc                  *1302

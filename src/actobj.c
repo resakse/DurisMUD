@@ -3569,7 +3569,8 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
       if (IS_SET(obj_object->extra_flags, ITEM_WHOLE_BODY))
       {
         if (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_OGRE(ch) || IS_SGIANT(ch) ||
-                   GET_RACE(ch) == RACE_WIGHT || GET_RACE(ch) == RACE_SNOW_OGRE)
+                   GET_RACE(ch) == RACE_WIGHT || GET_RACE(ch) == RACE_SNOW_OGRE 
+				   || GET_RACE(ch) == RACE_DRIDER)
         {
           if (showit)
             send_to_char("You can't wear full body armor.\r\n", ch);
