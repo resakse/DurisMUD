@@ -31,18 +31,18 @@ D 0 22908 2 2 100 0 0 0
 *
 D 0 22908 1 1 100 0 0 0
 *     east exit from "Before a Shimmering Portal" to
-*     "Before the second portal" - closed
+*     "Before the Second Portal" - closed
 *
 D 0 22909 3 1 100 0 0 0
-*     west exit from "Before the second portal" to
+*     west exit from "Before the Second Portal" to
 *     "Before a Shimmering Portal" - closed
 *
 D 0 22908 3 1 100 0 0 0
 *     west exit from "Before a Shimmering Portal" to
-*     "Before the third portal" - closed
+*     "Before the Third Portal" - closed
 *
 D 0 22910 1 1 100 0 0 0
-*     east exit from "Before the third portal" to
+*     east exit from "Before the Third Portal" to
 *     "Before a Shimmering Portal" - closed
 *
 D 0 22936 0 6 100 0 0 0
