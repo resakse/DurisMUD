@@ -2551,7 +2551,7 @@ void event_dragonlord_check(P_char ch, P_char victim, P_obj obj, void *data)
       FALSE, ch, obj, 0, TO_CHAR);
     obj_to_char(unequip_char(ch, dragonlord_slot), ch);
   }
-  else if(armor != NULL &&
+  if(armor != NULL &&
           obj_index[armor->R_num].virtual_number == DRAGONLORD_PLATE_VNUM &&
           GET_STAT(ch) > STAT_DEAD)
   {
