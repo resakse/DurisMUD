@@ -1,0 +1,309 @@
+#131310
+M
+slave~
+&+CAt the mention of the word Katalia begins crying.
+
+&+CKatalia&n says 'Yes I was captured outside my city of Paranel a couple of
+weeks ago. The orc who captured me brought me here and I have been here
+ever since. I have tried to escape but every time I try and break these
+bindings they simply grow tighter. I am scared to try anything but the key
+on them, ohh please could you release me?'
+~
+Q
+Katalia quickly takes the key from you and says 'Thank you brave one, I do
+not know how I can thank you besides this.
+
+&+WKatalia &ngives you a light kiss on the cheek.
+
+&+WKatalia &nsays 'Also I heard some of the wizards say the word darkfather
+before they entered the level above the cleric's level. I do not know what
+the word means, but the door hummed when it was said.
+~
+R E 500000
+G I 131339
+S
+#131326
+M
+traveler emissary bloodstone~
+&+Lthe orc &n&+rsergeant&n says 'Yes, Yes I am waiting for that ambassador
+or messenger or whatever from Bloodstone. He is supposed to come through here
+and then I am supposed to give him a letter so he can go see the Captain, if
+you see him tell him to get his ass up here, I want to go back to sleep.'
+~
+Q
+&+Lan orc &n&+rsargeant&n says 'Damn, why didn't you say you were the messanger
+here hold on.
+
+&nThe &+LOrc &nhurridly scrawls a small note.
+
+&+LAn orc &n&+rsargeant &nsays  'Here take this and go see the captain.'
+~
+R I 131334
+R E 70000
+G I 131335
+S
+#131329
+M
+money mercenary~
+&+Lan &+Welite &nstone giant says 'WHAT!!! ARE YOU ATTEMTING TO BRIBE ME?!?!?!?!!'
+
+&+LAn &+Welite &nstone giant scratches his head in thought.
+
+&+LAn &+Welite &nstone giant says 'Hmmmmm well I am rather hungry if I was to be
+   given say.... one hundred plat I could see my way into walking away from here.'
+~
+M
+token message letter traveler~
+&+LAn &+Welite &nstone giant says 'AHhhh you are the traveller the Captain has
+been waiting for, well you had better give me the token from the sergeant
+before I can let you in.'
+~
+Q
+&+LAn &+Welite &nstone giant says 'Thanks for the Cash!'
+~
+R I 131319
+G C 100000
+D
+&+LAn &+Welite &nstone giant says 'why thank you for the money, I will be on
+my way now, ahhhh did you want to get into his quarters? hmmmm well here is
+the key... just don't tell anyone I gaveit to you... ok?
+~
+Q
+an &+Welite &nstone giant says 'Ok the message looks in order any everything here
+is the key, go on in.
+~
+R I 131319
+G I 131334
+S
+#131353
+M
+daughter picture~
+Looking up at the picture to the west Dorthan sighs longingly.
+
+Dorthan says 'Yes she is me daughter.. they took her... those evil things
+that live in the Black Tower down the road. Since that Urian came a month
+ago there has been no end of trouble. First he comes and buys the land, next
+that accursed Tower appears there within a day, blacking everthing out. Old
+McDaniels tried to tell everyone but they all saw how he was paying for stuff
+in gold, but they saw... they saw... when the dark races started to filter in.
+Then he started taking people, to make sure that people didn't attack him,
+or to make sure jobs got finished. He said that if I didn't make a hundred
+of these rotten two handed swords then he would kill my daughter.'
+~
+M
+urian~
+Dorthan says 'Aye, he is the master of the evil that has grown in the south.
+He needs killing, go to it.'
+~
+M
+black tower~
+Dorthan says 'Yes, some say that Urian built it in a single night. Others say
+that it has allways been there, only we who lived here could not see it. That
+is what Father Darrin says. He says that unless we rise up and destroy him
+the ancient enemeny will return to destroy us all. But if I rise up they will
+kill my daughter, I must get back to work or they will kill her, go away.
+~
+M
+black iron sword~
+Dorthan says 'This black iron is peculiar stuff. It is strong and cuts through
+almost anything, but it is brittle an heavy, I wouldn't make a sword out of it
+if I had the matierls left, I would make a shield. What a fine shield it would
+be to.
+~
+M
+shield~
+Dorthan says 'Your interested in that shield I was speaking of? Fool I can't
+make it. I would need hmmm five of those large two-handed sowrds of there and
+even then, I would need to know that my daughter was safe.
+~
+Q
+Dorthan says 'Thank god my daughter is safe! And you bring me the five swords,
+well hold on here.
+
+&+LDorthan takes the five swords an spends some time working on them, resmelting
+&+Lthem and generally melting them down and regorging them and gives you a
+&+Lwhat you wanted.
+~
+R I 131328
+G I 131304
+G I 131304
+G I 131304
+G I 131304
+G I 131304
+G I 131330
+S
+#131354
+M
+key~
+At the mention of the key the young woman says:
+  'Ohhhh please give me the key to free myself, I can walk to by uncle's house
+from here if only you will let me free myself. Here, if you will free me I
+will give you my mothers locket, take it to my father he will reward you surely.
+~
+Q
+&+C   She gigles with happyness as she gets the key.
+~
+R I 131330
+G I 131326
+D
+Amelia says 'Ohh thank you, here is the locket.'
+
+<Click!>
+~
+S
+#131374
+Q
+The statue takes the three keys and nods at you.
+~
+R I 131417
+G I 131411
+G I 131412
+G I 131413
+S
+#131425
+M
+key keys door doors~
+&+C   At the mention of the keys Janyon says, "Yes.... the master... he will
+&+Cnot give me any. He says the keys to the door are old, as old as the Tower.
+&+CHe says.... he says... that only he and the ancient mage... ummmmm Earlion
+&+Chas a key.... and he allways locks himself in there..... I can't sweep
+&+Cwhen he does that.... will you let me sweep....???
+~
+S
+#131446
+M
+urian shadowborn shadow ritual~
+&+WAz&nli&+Won &+Cthe &n&+gplanetar &nsays 'Yes, we must stop Urian. He plans on resurrecting
+the old god Sargon. My goddess has little strength left now, but we have had
+enough to gather this group together. I pray we are not to late. You see,
+If Urian can get all five parts of the Star Stone together and sacrifice the
+last of my mistress's priests then he can create the Gate Key, to open the
+portal to his dread master. You must stop him. We fear that even if Urian
+had not come Sargon might still get free. You must find and get all the parts
+of the Star Stone, and take them and give them to the Last Priest of Reaana,
+the Goddess of Light. He will know what to do.
+~
+M
+sargon darkness master lord evil~
+&+WAz&+Cli&+Won &+Cthe &n&+gplanetar &nsays 'Yes, Sargon, Lord of Shadows, Master of Darkness,
+Dimigod of Negative Energy. He has many names. He is a evil god that is in
+close alliance with Orcus, god of Undead. However Sargon has beem imprioned
+for many centuries, he has grown week. If you can get into his imprisoned
+pocked diminsion, then you might be able to kill him... its our only hope.
+~
+M
+power circle freedom favour~
+&+WAz&+Cli&+Won &+Cthe &n&+gplanetar &nsays 'I cannot leave here as long as this circle still
+sits around me. Go, find the conjurer who summoned me, he carries the staff
+he used to draw the circle, bring it back to be so I can break the circle
+and be free of this place.
+~
+Q
+&+WAz&+Cli&+Won &nsmiles happily as he takes the staff.
+
+&+WAz&+Cli&+Won &nsays 'I thank you my friend.'
+~
+R I 131406
+G I 131405
+D
+&+WAz&+Cli&+Won &+Ctakes the staff in his hands and &+LBREAKS &+Cit in two pieces. It shatters
+&+Cwith a huge &+WBANG&+C. Suddenly a &n&+rrift &+Cin space opens beside him.
+
+&+WAz&+Cli&+Won&n looks at you.
+
+&+WAz&+Cli&+Won&n says 'Take this my friend, you will need it against Sargon.
+~
+S
+#131450
+Q
+Jenifer says 'NOOOOOOOOOOOOOOOOOOOOOOOOOOOooooooooooooo.'
+
+Jenifer falls to her knees.
+
+Jenifer says 'Thank you for telling me... atleast now I know, you have my
+thanks.
+~
+R E 100000
+G I 131306
+S
+#131462
+M
+urian shadowborn master~
+&n&+yFather &+WDarrin &nsays '&+LUrian Shadowborn &nis a dark hearted soul. He is the master
+of that dark tower to the south. It is he that is going to try and raise his
+dark lord again. If you can, slay him, it will be a noble deed. Also if you
+find it bring me a long piece of stone that he has, its called the &+WStar &+LStone.
+~
+M
+tower black shadow~
+&n&+yFather &+WDarring &nsays 'Yes, that black tower is not something new. It is a
+magical artifact of the ages. Created a millenium ago by the evil wizard
+Earlion the Black it was the center of their army. When the evil god Sargon
+was banished, Earlion moved the tower somehow to somewhere the armies of
+Light could not touch it. Now &+LUrian Shadowborn &nhas brought it back, and he
+will destroy the world if he can raise his dead lord &+LSargon&n, he must be
+stopped.
+~
+M
+sargon god negative evil~
+&+LFather &+WDarrin &nsays 'Yes, the &+LDark Lord Sargon, God of Sha&ndo&+Cw&+Ws&n. He was
+the one that fought my lady over a thousand years ago. Finally with the help
+of the mage Martin Llewelyn he was imprisoned for hopefully eternity. Now
+Urian has come, and he will free his dark lord, unless he can be stopped, you
+must stop him if you can, gather your friends, for he shall march over the
+earth, and inside it, destroying all that do not worship him.
+~
+M
+key stone keystone star~
+&n&+yFather &+WDarrin &nsays 'The star stones are the shards of the key that
+can open a portal to enter and free the god, Sargon. It was shattered by
+the high priest of Reaana, my goddess, and only its high priest can put it
+back together. If you can gather the piece before Urian can complete his
+dark rituals maybe... just possibly you can gather enough power to slay the
+evil god, now go, and bring me the five pieces of the stone when you gather
+them.'
+~
+Q
+&+CHe takes the five piece of the Star Stone from you and nods.
+
+&n&+yFather &+WDarrin &nsays 'My time has come, now it is time to do yours.'
+~
+R I 131425
+G I 131431
+G I 131432
+G I 131433
+G I 131434
+G I 131435
+D
+&+WFather Darring takes the five parts of the stone and holds them above his
+&+Whead. He begins to glow brightly until his body is a burning glow of power
+&+Wand light. Finally the glow moves around the five piece and grows brighter
+&+Wuntil it is blinding. As suddenly as it came it is gone, and the glow
+&+Wdissapears, and Father Darrin falls into your arms, along with the Star Key.
+~
+S
+#131467
+M
+noble isabia elf~
+&+gThe elf looks up, "Have you seen the noble, Isabia?" I will be glad to reward
+&+gyou if you can free her, just bring me back her ring to show that you have
+&+gdone the job.
+~
+Q
+&+CHe nods, thank you for freeing her, the elven nation will not forget this.
+~
+R I 131445
+G I 131444
+S
+#131469
+M
+key prison~
+&+WIsabia&n says "Ohhh please, will you give me the key that the cardinal has. It
+is the only thing that can free me from this evil place. I beg you.
+~
+Q
+&+WIsabia bow and thanks you. I must go now, take this for my thanks.
+~
+R I 131444
+G I 131348
+S

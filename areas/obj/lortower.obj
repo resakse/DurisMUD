@@ -1,0 +1,2502 @@
+#131400
+stone standing large~
+&+La standing stone&n~
+&+LA large runed standing stone is here facing west.&n~
+~
+12 15 3 0 7 0 64 0 0 1 0
+0 0 0 0 0 0 0 0
+1 0 100
+E
+stone standing large runed&n~
+&+L   This large stone is made of solid granite and seems to be extremely old.
+&+LThe stone itself has some writing in anchient common that is barely readable.
+&+LThe following is what can be deciphered:
+
+           &+L       et tho   who re d this
+&+L                 K w t at they en r th
+&+L                  is on of the For aken
+&+L                 One.
+&n
+~
+#131401
+keystone stone dubneth~
+&+Ltke keystone of Du&nbn&+Cet&+Wh&n~
+&+LA long stone known as the keystone of Du&nbn&+Cet&+Wh &+Llays here.&n~
+~
+15 15 4 0 7 0 64 0 0 1 0
+40 29 131525 13 0 0 0 0
+1 0 100
+E
+keystone stone dubneth&n~
+&+L   The keystone of Dubneth has known marks at all, the only thing that is odd
+&+Labout it at all is a small hole where it looks like a star rock could fit
+&+Linto the top of the stone. Besides that the long piece of granite is with out
+&+Lnote.&n
+~
+T
+516 1 1000 100
+#131402
+farmer impailed figure~
+&+gan &+Limp&n&+ral&+Red &n&+gfarmer&n~
+&n&+gThe figure of an &+Limp&n&+ral&+Red &n&+gfarmer dominates the road here.&n~
+~
+12 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+farmer impailed figure&n~
+   The farmer looks fairly recently impailed. He seems to have been in his
+mid-thirites and looks to have been dead for about a day or so. His throat has
+been cut and he has been impailed on a black steel pike that is rusted.
+Nailed to his chest with a iron spike is a large note written on parchment
+paper that looks like it has been taken out of a book. The note has been
+written in fresh &n&+rblood &nand reads:
+
+
+&+r              I told ye people to
+&+r            leave me be and I would
+&+r            only kill a hand full of
+&+r            ye. Should ye persist in
+&+r            your efforts to attack
+&+r            me I will destroy your
+&+r            village utterly ye stupid
+&+r            inbred dogs.
+
+&+r                    Your Master
+&+r                    Urian Shadowborn
+&n
+~
+#131403
+farmer decaptitated~
+&n&+ga &n&+rdecapitated &n&+gfarmer&n~
+&n&+gA &n&+rdecapitated &n&+gfarmer has been left in the grass to &+Lrot.&n~
+~
+12 15 3 0 7 0 0 1 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+farmer decaptitated~
+   The corpse looks like it actually died of blood loss. It seems like he
+was tied down to the ground and then had his viens cut. In the dirt next to
+the corpse written in the dirt it says in &n&+rblood:
+
+&n&+y    Jenifer my love, if you read this know that I think of you at the last.
+~
+#131404
+sword black two-handed~
+&+La black iron two-handed &nsword&n~
+&+LA large black iron two-handed sword lays here.&n~
+~
+5 15 3 10 7 0 4194304 8193 0 1 0
+13 2 6 3 0 0 0 0
+10 9581 100
+E
+sword black two-handed~
+&+L   This large sword has been specificaly blessed by the dark clerics of
+&+LSargon to bring forth destruction on his enemies and also his resurrection.
+&+LIt is said that they are only given out to the militant order of the Priest
+&+Lhood.              &n
+~
+A
+18 3
+A
+19 5
+#131405
+dagger black iron~
+&+La dagger of black iron&n~
+&+LA dagger of black iron has been dropped here.&n~
+~
+5 15 3 0 7 10 0 8193 0 49152 0
+2 2 4 11 1 0 0 0
+5 6025 100
+E
+dagger black iron&n~
+&+L   This black dagger is made out of normal iron that has been exposed to the
+&+Levil power that is Sargon. It is said that when he walked the earth the
+&+Lunholy weapons glowed with power. Now that he has been exiled to the Prision
+&+Lof Light the weapons still posses some magic but not much.&n
+~
+A
+19 2
+A
+18 2
+#131406
+head decapitated joseph~
+&n&+ythe &n&+rdecapitated &n&+yhead of &+CJoseph Hammerson&n~
+&+yA decaptiated head of some farmer has been left here.&n~
+~
+12 15 3 0 7 0 4096 8404993 0 1 0
+0 0 0 0 0 0 0 0
+3 1 100
+E
+head decapitated joseph&n~
+&+L  The head belonged once to Joseph Hammerson, who died trying to destroy the
+&+Levil of the Black Tower, the same as you will... &n
+~
+#131407
+table mess~
+&n&+ya long wood table&n~
+&n&+yA long table with many nicks and marks is here.&n~
+~
+13 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+table mess~
+&n&+y   This long table is used to eat on my all the guards of the tower. The
+&n&+ytable looks like it has seen many combats and days, because it has many
+&n&+ygouges in it.&n
+~
+#131408
+black longsword iron sword~
+&+La black iron &nlong&+Lsword&n~
+&+LA black iron longsword lays here in the dirt.&n~
+~
+5 15 3 0 7 10 64 8193 0 32774 0
+5 2 5 3 0 0 0 0
+8 7582 100
+E
+black longsword iron~
+&+L   This black longsword is one of many that has been mass produced for the
+&+Lcommon guards of the Black Tower. Still a holy object, or unholy object, it
+&+Lis a symbol to many of the living proof that one day Sargon will return to
+&+Ldestroy all those who walk in the light.
+~
+A
+19 2
+A
+18 2
+#131409
+leg chicken~
+&n&+ya &+Ychicken &n&+yleg&n~
+&n&+yA chicken leg has been dropped here on the ground.&n~
+~
+19 15 3 0 7 0 0 16385 0 1 0
+6 0 0 0 0 0 0 0
+1 7 100
+E
+leg chicken&n~
+&n&+y  Its a chicken leg, its been fried, thats about it.&n
+~
+#131410
+club massive~
+&n&+ya massive club&n~
+&n&+yA huge club lays here on the ground.&n~
+~
+5 15 3 0 7 0 4194304 8193 0 863928346 0
+10 3 5 6 0 0 0 0
+0 3095 100
+E
+club massive~
+&n&+y  Its a big mean looking hill giant club. It has written into the club
+&n&+ywords in giant like 'Get Um!!' 'Crush Um' 'Hurt Um' 'CCAAAARRRGGGEEEE'. Rather
+&n&+ybaby like actually. &n
+~
+A
+18 -2
+A
+19 6
+#131411
+spoon wooden~
+&n&+ya sharpened wooden spoon&n~
+&n&+yA sharpened wooden spoon lays here.&n~
+~
+5 15 3 0 7 0 0 8193 0 57344 0
+2 2 3 11 0 0 0 0
+3 4 100
+E
+spoon wooden&n~
+&n&+y  Its a spoon with the normal end shaved off to make a vicious little point.
+~
+A
+19 -1
+A
+18 1
+#131412
+altar black sargon~
+&+La small black &n&+raltar &+Lof Sargon&n~
+&+LA small black &n&+raltar &+Ldedicated to Sargon lays against the wall here.&n~
+~
+12 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+100 0 100
+E
+altar black sargon~
+&+L   The black altar does not look like it is well taken care of, but it does
+&+Llook like it is used, beneath the altar is an assortment of differant skulls
+&+Lof creatures that walk in the light. The figure of Sargon itself is like a
+&+Lminiture warrior made of black marble. &n
+~
+#131413
+cloak burning flames~
+&n&+ra cloak of b&+Ru&+Yr&+Wn&+Yi&+Rn&n&+rg fl&+Ra&+Ym&+Re&n&+rs&n~
+&n&+rA cloak coated in fire and flame lays here.&n~
+~
+9 15 3 0 7 20 278848 1025 0 2976 0
+9 9 0 3 0 0 0 0
+4 38502 100 536870912 0 0 0
+E
+cloak burning flames&n~
+&+L   Urian &n&+rrequires all mages to build an item that uses everything they have
+&n&+rlearned at once. For many it takes years. This cloak was created from a
+&+rblessed cloak of Sargon and then coated in the lake of fire from the elemental
+&+rplane of fire. Only then it was given the powers it has, with the help of
+&+rthe efreeti magi.&n
+~
+A
+13 10
+A
+5 3
+#131414
+cask ale~
+&+ya cask of ale&n~
+&+yA large cask of ale lays here, waiting to be drunk.&n~
+~
+17 15 3 0 7 0 0 16385 0 1 0
+14 13 3 0 0 0 0 0
+10 6025 100
+E
+cask ale&n~
+&+y   This large ale cask has the words written 'Dargons Best XXXX' written on
+&+yduergar on the outside.&n
+~
+#131415
+silver wine glass~
+a &+Wsilver plated &n&+rwine &nglass&n~
+A &+Wsilver plated &n&+rwine &nglass is here sitting on the ground.&n~
+~
+17 15 3 0 7 10 64 8404993 0 1 0
+12 10 13 0 0 0 0 0
+1 15942 100
+E
+silver wine glass&n~
+&n&+r   This wine glass is made of silver except for the top which is made of
+&n&+rtinted red glass. The silver part is engraved with the designs of human type
+&n&+rcreatures feeding on the necks of others... how odd.&n
+~
+#131416
+bag traveling~
+&n&+yan off the shoulder traveling bag&n~
+&+yA long secure traveling bag lays here in the dirt.&n~
+~
+15 15 3 0 7 0 0 4194305 0 1 0
+50 5 0 50 0 0 0 0
+0 502 100
+E
+bag traveling&n~
+&+y   This bag is made of buckskin leather and is very nice and fits on one's
+&+yback with ease.   &n
+~
+A
+14 10
+#131417
+letter finely&n~
+&+ca finely written letter&n~
+&+cA finely written letter lays here on the ground.&n~
+~
+13 15 3 0 7 0 64 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+letter finely&n~
+
+
+   I hope that this letter reaches you in good health my friend. The work
+to raise our master from the dark pits where he is imprisioned is going well.
+After penning this letter I go to make the proper sacrifices and then to
+go attempt to open his prision. You may go ahead and start your offensive
+against Tharnadia, I will join you when I am done here. With the might of
+Sargon again on our side and their god all but forgotten, we shall surely
+crush all those sent against us. Also, remember that you agreed to march on
+Ghore with me. The betrayl the trolls of ghore fave us shall be revisited
+apon them ten fold when we destroy their city.
+
+&+L                                         Urian Shadowborn
+&n
+~
+#131418
+torch flickering~
+&+La &n&+rfl&+Ric&+Yke&+Rri&n&+rng &+L&n&+rt&+Ro&+Yr&+Rc&n&+rh&n~
+&+LA small &n&+rfl&+Ric&+Yke&+Rri&n&+rng t&+Ro&+Yr&+Rc&n&+rh &+Lmade of tallow wax is set into the wall here.&n~
+~
+13 15 3 0 7 0 262208 0 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+torch flickering&n~
+&+R   This flickering torch seems to not be burning down at all, and it seems
+&+Rto be perpetually lit by some magical means.  &n
+~
+#131419
+key black iron~
+&+La black iron key&n~
+&+LA large black iron key with spikes all over it.&n~
+~
+12 15 3 0 7 0 8388608 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+key black iron&n~
+&+L   This is a large oddly made black spiked key, it looks like it could hurt
+&+Lsomeone.   &n
+~
+#131420
+note worn letter~
+&+ca travel worn letter&n~
+&+cA lone travel word letter lays here in the dirt.&n~
+~
+13 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+note worn letter&n~
+&+c   The letter seems to have traveled quite a ways to get here, it has food
+&+cand drink stairs all over it. The letter itself reads:
+
+    My dear friend, I have recently come upon a most excellant job for
+  one of your... skills. If you would like to report to my captain of
+  the guard in the Black Tower I would be glad to inform you of the
+  job that I need done. I will repay you well for this. Seek out my
+  sargeant when you get in and speak with him when you arrive.
+
+&n&+r                                         Urian Shadowborn
+&n
+~
+#131421
+black mace~
+&+La black iron &nmace&n~
+&+LA large black iron mace lays here colecting dust.&n~
+~
+5 15 3 0 7 0 64 8193 0 416 0
+6 2 4 7 0 0 0 0
+1 5024 100
+E
+black mace&n~
+&+L  This is a black iron mace used by only those who are devotee's of Sargon,
+&+LThe black lord. &n
+~
+A
+19 2
+A
+18 -2
+#131422
+collar iron sargon&n~
+&+La &+Wco&+Cl&nl&+Lar with the &+Lem&n&+rb&+Rla&+Yz&+Ron&n&+red &+Lseal of Sargon&n~
+A heavy collar made of black iron lays here.&n~
+~
+9 15 3 0 7 10 16705 5 0 416 0
+10 2 0 3 0 0 0 0
+2 6015 100 0 128 0 0
+E
+collar iron sargon&n~
+&+L   This cold iron collar is has been forged in the forges of the clergy of
+&+Lsargon to make it an evil object worthy of his magic. Invested with the
+&+Lpowers of that evil god it now aids the wearer in his defense against both
+&+Lgood and lighting.&n
+~
+A
+13 13
+A
+24 -2
+#131423
+dagger nightfall~
+&+La dagger of n&nig&+Cht&nfal&+Ll&n~
+&+LA long arabian dagger lays here in the dirt.&n~
+~
+5 15 3 0 7 0 16481 8193 0 57344 0
+9 4 3 11 0 0 0 0
+0 49105 100 32 0 0 0
+E
+nightfall dagger&n~
+&+L   One of the items specifically made by the evil archmagus Urian Shadowborn
+&+Lthis blade has been blesses.. or cursed with his power. Made using the ancient
+&+Lformulas passed down from the wars of Light and Shadows this is a weapon of
+&+Lpower and evil. It glows with an evil all its own as it blends in with the
+&+Lshadows of the world. As you look on the blade you here faint wispering in your
+&+Lmind...      &n
+
+
+&+LSargon is the way of the shadows... you are one of the shadows... worship him.
+&n
+~
+A
+19 4
+A
+18 4
+T
+6 7 1 50
+#131424
+shadows cloak night~
+&+La cloak of sh&nad&+Cow&+Ws &+Land ni&n&+bgh&+Bt&n~
+&+LA cloak of shadows lays here on the ground.&n~
+~
+9 15 3 0 7 0 4192 1025 0 32798 0
+15 9 0 3 0 0 0 0
+0 23052 100 0 8 0 0
+E
+shadows cloak night&n~
+&+L   This cloak was made on the plane of avernus where darkness is a substance
+&+Lthat can be moulded like any other. This cloak must have been a gift to a
+&+Lpowerful individual for services rendered to them. This sort of thing is hard
+&+Lto come by and is prized greatly by those of the outer planes.&n
+~
+A
+31 2
+A
+19 3
+#131425
+sargon figure small~
+&+La small figure of Sargon&n~
+&+LA small figure of Sargon, Lord of Shadows stands here against the wall.&n~
+~
+13 15 3 0 7 0 65 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+sargon figure small&n~
+&+L   The statue looks to be about four feet tall and shows a human type of
+&+Lbeing that is draped in shadows all over his body. He wields a single sword
+&+Lthat sits at his hip and stands tall and errect. A small set of writing sits
+&+Lhere at the base of the statue.
+
+&+L   'In Sargon's Name are we Lead'
+
+&+L   'In Sargon's Name are we Born'
+
+&+L   'In Sargon's Name are our lives opened for us'   &n
+~
+#131426
+black key small~
+&+La small black key&n~
+&+LA small black key lays here, discarded.&n~
+~
+13 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+black key small&n~
+&+L   Its a small black key, devoid of adorment.
+~
+#131427
+key adamantium small~
+&+La small adamantium key&n~
+&+LA small adamantium key lays here.&n~
+~
+13 15 3 0 7 0 4160 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+key admantium small~
+&+L   This small admantium key has the mark of Sargon on it. &n
+~
+T
+6 5 1 60
+#131428
+shield iron black dubneth~
+&+La black iron sh&nie&+Cld &+Lof Du&nbn&+Cet&+Wh&n~
+&+LA large black shield made in the village of Dubneth lays here.&n~
+~
+37 15 3 0 7 0 16704 513 0 32806 0
+1 2 3 18 3 0 0 0
+24 67994 100 33554432 0 0 0
+E
+shield iron black dubneth&n~
+&+L   This black shield was made by the smith from Dubneth for deeds of great
+&+Lheroism. Made from the evil black metal of Sargon this shield has been
+&+Lencahnted to defend the wearer from all forms of evil. &n
+~
+A
+19 0
+A
+18 2
+#131429
+altar bloody sargon~
+&+La &n&+rbloody &+Laltar&n~
+&+LA &n&+rbloody &+Laltar to Sargan dominates the middle of the room.&n~
+~
+13 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+0 1 100
+E
+altar bloody sargon&n~
+&+L   This large bloody altar has been consecrated to the Dark Lord, Sargon.
+&+LIts surface is covered with flesh blood of some person, while the sides that
+&+Lare uncovered show dark circles of power dedicated to the evil diety.&n
+~
+#131430
+locket gold~
+&+Ya gold locket&n~
+&+WA gold locket has been thrown on the ground.&n~
+~
+13 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+0 4025 100
+E
+locket gold&n~
+&+Y   It is a pretty gold locket in it with a small old picture of a woman,
+&+Yher husband and their small girl.    &n
+~
+#131431
+desk wood stained~
+&+La dark &n&+rstained &+Ldesk&n~
+&+LA desk sits in the room, stained with wood finish and &n&+rblood.&n~
+~
+15 15 3 0 7 0 64 0 0 1 0
+100 13 131426 10 0 0 0 0
+0 1 100
+E
+desk wood stained&n~
+&+L   This dark desk seems to be made out of mahagoney and has been stained a
+&+Ldark finish. Also, it looks like blood has seeped into the finish itlself,
+&+Lweather this came after the desk was finished or during its use is unknown.
+&+LThere is a small drawer with a small key hole on the desk as well.&n
+~
+T
+512 4 1 40
+#131432
+sargon unholy book&n~
+&+Lan &n&+run&+Lholy &+Cbook &+Lof Sargon&n~
+&+LA book containing the rituals and histories of Sargon lays here.&n~
+~
+12 15 3 0 7 0 320 16385 0 224 0
+0 0 0 0 0 0 0 0
+0 1 100 65536 0 0 0
+E
+sargon unholy book&n~
+&+L   This unholy book seems to detail not only the retiruals in observation of
+&+Lthe ancient god, but also his history. Flipping through the book you come to
+&+La page that was marked by a red verlvet book marker. This page seems to have
+&+Lbeen read over and over again. It reads...
+
+
+   &+L  ...then the five piece of the great star shall be brought back
+   &+L   together. And once they are they will release our God from his
+&+L      imprisonment in the ring of stones. Know that on this day you must
+&+L      sacrifice five virgin women, and bring the leader of the five
+&+L      sections together, each shall bring their piece of the great star.
+&+L         The time for this will be when the God of Light is at her
+&+L      weakest. Know that when she has her last cleric in the city of
+&+L      the ring of stones, that you must bring him there, and though
+&+L      his sacrice on the stone the star shall be brought together. Only
+&+L      he can put the star together, through his blood, or through his
+&+L      knowledge.&n
+~
+A
+5 -7
+A
+28 -5
+#131433
+blood bottle black~
+&+La &nbottle &+Lof black &n&+rblood&n~
+&+LA small bottle of black blood lays here on the ground.&n~
+~
+10 15 3 0 7 0 4160 16385 0 1 0
+52 179 36 163 0 0 0 0
+1 1 100
+E
+blood bottle black~
+&+r   This bottle seems to filled with some sort of blood that is warm to the
+&+rtouch, even through the glass.&n
+~
+#131434
+note written hastily~
+a hastily written note&n~
+A hastily written note lays here.&n~
+~
+13 15 3 0 7 0 0 1 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+note written hastily~
+   The note is hastily made and almost illegible but reads:
+
+
+   These are the visitors the Captain wanted, let them in.
+
+
+                                         Me
+~
+#131435
+letter bloodstone~
+a letter from &n&+rBloodstone&n~
+A letter with the seal of &n&+rBloodstone &non it lays here.&n~
+~
+12 15 3 0 7 0 4096 1 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+letter bloodstone&n~
+&+L   Dear Kinslor,
+
+
+&+L   My old friend it is good to hear from you. I had heard that you were
+&+Lworking toward the raising of your ancient god. From what I get hear
+&+Lit seems to be going well. You ask what I would do if you attacked from
+&+Lyour area, would I back you, or fight you. My friend if you succeed in raising
+&+Lyour fallen god then i think my decision would be to help you. The only
+&+Lproblem in this area would be Duke Delwyn. He has an area close by here,
+&+Lbut I think toegether we can take him. I hope to see you over his cold dead
+&+Lcorpse.
+
+&+L                                        The Baron of &n&+rBloodstone&n
+~
+#131436
+mask darkness shade~
+&+La mask of the S&nh&+La&nd&+Le&n~
+&+LA mask of darkness lays here, blending with the night.&n~
+~
+9 15 3 0 7 0 97 262145 0 32798 0
+7 13 1 3 0 0 0 0
+1 24953 100 65568 0 0 0
+E
+mask darkness shade&n~
+&+L   One of the masks of the Shade, this one must have survived the Wars of
+&+LLight and Shadow. Made from the faces of the greatest servants of Sargon,
+&+LGod of Shadows it is a powerful item givin only to the most trusted and
+&+Lpowerful of the servants of the fallen god.
+&+L   Looking apon it it seems to shimmer with darkness and night, it is made
+&+Lof a thin cloth that seems impervious to damage and block all sight.&n
+~
+A
+19 2
+A
+18 2
+#131437
+key keyboard&n~
+&+ya keyboard&n~
+&+yA keyboard the PC's Can't see is here.&n~
+~
+15 15 3 0 7 0 2 0 0 1 0
+100 0 0 100 0 0 0 0
+0 1 100
+E
+key keyboard&n~
+&+y   This keyboard usually has all the keys to both the shackles and also the
+&+yprison area to the west. It seems to not have many keys now however.&n
+~
+#131438
+key iron black~
+&+La small black iron key&n~
+&+LA small key made of black iron has been discarded here.&n~
+~
+12 15 3 0 7 0 8388608 1 0 1 0
+0 0 0 0 0 0 0 0
+1 592 100
+E
+key iron black~
+&+L  Its a key of black iron, who knows what it goes to. &n
+~
+#131439
+steel small key~
+&+Wa small steel key&n~
+&+WA small steel key lays here in the dirt.&n~
+~
+12 15 3 0 7 0 8392704 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+steel small key&n~
+&+W   The key has the small letters 'SG' written on it. It seems to be a very
+&+Wsmall key, possibly to handcuffs or shackles.   &n
+~
+#131440
+corpse girl peasant girl's~
+&+Ca &n&+gpeasant &+Cgirl's &n&+rcorpse&n~
+&+CA &n&+gpeasant &+Cgirl's &n&+rcorpse &+Clays here, discarded.&n~
+~
+13 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+corpse girl peasant girl's~
+&+C   This is the corpse of a young peasant girl. There is a large hole in her
+&+Cchest where her heart has been ripped out. She is quite dead.  &n
+~
+#131441
+corpse orc ancient~
+&+Lan &+Wan&+Cci&nen&+Lt orc's corpse&n~
+&+LThe corpse of an &+Wan&+Cci&nen&+Lt orc lays here, its &n&+rheart &+Lripped out.&n~
+~
+13 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+orc ancient corpse~
+&+r   This ancient orc had appearantly out lived his usefulness in life, only
+&+rhis death was worth something. His body is still warm and blood still seeps
+&+rout of his body&n.
+~
+#131442
+corpse young knight~
+&+Cthe &n&+rcorpse &+Cof a &+Yyoung &+Wkn&+Cig&nh&+Lt&n~
+&+CThe &n&+rcorpse&+C of a &n&+Yyoung &+Wkn&+Cig&nh&+Lt &+Cof &n&+gGranor &+Clays here on the ground.&n~
+~
+13 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+corpse young knight&n~
+&+W   This knight must have been captured by the order. He seems to have been
+&+Wtortured before his heart was ritually cut out. His body has been discarded
+&+Where on the ground, his chest cavity opened and its hearts taken out.&n
+~
+#131443
+village farmer corpse~
+&n&+ga &n&+gvillage farmer's &n&+rcorpse&n~
+&+gA village farmer's &n&+rcorpse &n&+glays here, &n&+rblood &n&+gspurting out of his chest.&n~
+~
+13 15 3 0 7 0 0 0 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+village farmer corpse&n~
+&+g   This farmer was once a member of the village of Dubneth. Now however he
+&+gis dead, his soul sacrificed to Sargon to give him power when he is raised.
+&+gHit blood still spurts from his corpse as he lays here.&n
+~
+#131444
+book bookshelves~
+&+Lsome bookshelves&n~
+&n&+LA set of bookshelves the PC's can't see stands here.&n~
+~
+15 15 3 0 7 0 2 0 0 1 0
+100 0 0 100 0 0 0 0
+1 1 100
+E
+book bookshelves&n~
+&+L   These bookshelves are made of black stone, and have intricate symbols of
+&+Lspiders and such crawling all over them. It seems like the artistry is that
+&+Lof the drow.&n
+~
+#131445
+book inquiry temporal magic~
+&+La &+Cbook &+Llabeled &n&+r'&+CAn &n&+bIn&+Bq&+Cu&+Bi&n&+bry &+Cinto &+CTem&n&+Mpor&n&+mal &+BMagic&n&+r'~
+&+CA book about temporal magic lays here on the ground.&n~
+~
+33 15 3 0 7 0 64 16385 0 3584 0
+0 0 120 0 0 0 0 0
+1 1 100
+E
+book inquiry temporal magic&n~
+&+C   This book seems to be about temporal magic. It seems however that there
+&+Cis no end to the number of pages in the book; about half the book is about
+&+Chow time can be used as a tool. The rest of the pages are blank.  &n
+~
+#131446
+demon bound spellbook earlion book~
+&+Lthe &n&+rdemon &+Lbound &n&+mspellbook &+Lof &+CEarlion &n&+rDi&+W'&+LArthri&n~
+&+LA spellbook bound in demon hide lays here.&n~
+~
+33 15 3 0 7 0 4161 16385 0 3584 0
+0 0 100 0 0 0 0 0
+1 32953 100
+E
+demon bound spellbook earlion&n~
+&+L   This is the only spellbook that Earlion kept with him after he was
+&+Lput the Black Tower into the place which Is Not. The book itself seems to have
+&+Lbeen bound in the hide of a demon of some sort. The pages themselves are with
+&+Lout any mark at all... how odd.&n
+~
+A
+13 15
+A
+33 1
+#131447
+iron black chest~
+&+La black iron chest&n~
+&+LA large black iron chest lays here the PC's can't see.&n~
+~
+15 15 3 0 7 0 2 0 0 1 0
+100 29 131448 100 0 0 0 0
+1 1 100
+E
+iron black chest&n~
+&+L   This large chest seems to have been welded directly into the floor. Also
+&+Lthere seems to be a lock on it that is runed and magically made, it would be
+&+Lvery difficult to open this large chest without the key. &n
+~
+#131448
+bone key~
+&+La &+Wbone &+Lkey&n~
+&+WA key made of bone lays here on the ground.&n~
+~
+12 15 3 0 7 0 8392769 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+bone key&n~
+&+W  Its a key made of bone, it seems to be a finger bone actually, but it is
+&+Whard to see. Runes cover the outside of the key itself. &n
+~
+#131449
+heart hearts beating belt innocent~
+&+La belt of the &n&+rh&+Le&n&+rar&+Lt&n&+rs&+L of the &+Cinnocent&n~
+&n&+rA belt made of beating hearts lays here on the ground.&n~
+~
+9 15 3 0 7 0 131136 2049 0 480 0
+9 10 0 3 0 0 0 0
+1 1 100 33619968 0 0 0
+E
+heart hearts beating belt innocent&n~
+&+r   This belt is made of the freshly vut out hearts of the innocent, connected
+&+rto a belt blessed in the name of Sargon it keeps the hearts beating, their
+&+rblood still fresh. It also seems to impart of their owners wisdom and health
+&+ron to the wearer.              &n
+~
+A
+35 2
+A
+4 3
+#131450
+mithril hammer destroyer night _artifact_~
+&+Ca &+Wm&ni&+Wt&nh&+Wr&ni&+Wl &+Whammer&+C called &n&+r'&+LThe De&nst&+Cro&+Wyer &+Lof Night&n&+r'~
+&+CA large one handed hammer made of &+Wm&ni&+Wt&nh&+Wr&ni&+Wl l&+Cays here.&n~
+~
+5 18 3 0 14 40 33849664 8193 512 480 0
+4 4 4 6 0 0 0 0
+6 48945 100 8192 32960 0 0
+E
+mithril hammer destroyer night&n~
+&+C   This hammer seems to be made of the finest mithril. The mithril is made
+&+Cin designs that show creatures that seems to made of shadows being destroyed.
+&+CThe figure doing the destroying is a being bathed in golden light that is
+&+Cwielding a sword of fire on them. The grip is made of solid steel, and is
+&+Cwrapped in what looks to be fine leather.
+&+C   This weapons story is old and is quite grand. Givin to the dwarven cleric
+&+CDrogan during the Wars of Light and Shadow by the Goddess Raanna he wielded
+&+Cit in the destruction of many minions of Sargon. During the last days of the
+&+Cwar a small group of adventurers broke into the fortress and snuck past its
+&+Cmost powerful defenders, including Maltheas, the angel of Death, and the
+&+CMaster of Nightmares, and even Earlion, one of the most pwoerful mages on the
+&+Cplane. They snuck into Sargon's personal area and there had a titanic battle.
+&+CFinally, unable to kill them they impisoned him away in a pocket diminsion,
+&+Chowever just as they finished Sargons minions and his army arrived to destroy
+&+Cthem, Drogan bought the rest of the group time to flee, while he single
+&+Chandedly fought off the army. The hammer has been lost since then, some say
+&+Cit was destroyed, others say that it fell into the hands of the minions of
+&+CSargon.                               &n
+~
+A
+18 4
+A
+34 5
+#131451
+drow elf journal~
+&+La &n&+mdrow elf's &n&+yjournal&n~
+&+mA drow elf's &n&+yjournal &n&+yhas been dropped on the ground here.&n~
+~
+13 15 3 0 7 0 64 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 153 100
+E
+drow elf journal&n~
+   This journal seems to be a diary of some sort, a few of the excerts read:
+
+   5-22
+   'Today the three masters along with Lord Urian began the spell
+   to bring back the Black Tower from the place which Is Not.
+
+   5-24
+   'They finished the spell today, but many are saying something
+   went wrong. I was talking to the Master and he said that the
+   Tower had been in that place between moments in time. And that
+   when they brought it back There had been a time shift, he said
+   it should only affect living things though, unliving things or
+   objects should be safe.
+
+   6-12
+   'We finally opened the door into our level of the fortress, and
+   found the statue of Earlion. Lord Urian as in shock, he had no
+   idea that he was here still after all these years. However I
+   think that he worries the temporal shifts may have seriously
+   affected Earlion.
+
+   6-15
+   'The three masters have just finished getting the keys to open
+   the ancient mage Earlion's door. They belive that the statue
+   of him in the hallway has the key itself, and he needs the
+   Three tokens before he will give it up.
+
+   6-18
+   'The day has come, today Sargon will come back to us, and we will
+   march all over the face of earth. Soon they will release Earlion
+   from his room, they need his key desperately to open Sargon's
+   prison.      &n
+~
+#131452
+exit north south east west n s e w~
+&n&+bsome exit descriptions&n~
+&n&+bSome exit descriptions are here for the PC's&n~
+~
+13 15 3 0 7 0 2 0 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+exit desciptions north south east west&n~
+&n&+b   In that direction are more of the long mists of this horrible maze...&n
+~
+#131453
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PC's can't see to room 55.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131454 1 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter&n~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131454
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PC's can't see to room 56.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131455 2 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter&n~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131455
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA Maze teleporter the PC's can see is here to room 57.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131456 3 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131456
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PC's can't see to room 58.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131457 4 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter&n~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131457
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PC's can't see to room 58.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131457 1 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter&n~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131458
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PC's can't see to room 60&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131459 2 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter&n~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131459
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PCs can't see to room 61.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131460 3 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131460
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PCs can see to room 62.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131461 4 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131461
+maze teleporter~
+&n&+bA &+CMaze &n&+BTeleporter&n~
+&+BA teleporter for the Maze the PCs can't see to the Center of the Maze(Room 59).&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131458 4 -1 0 0 0 0 0
+1 1 100
+E
+maze teleporter~
+&n&+b   The maze here seems to go on forever... who can tell where it ends.&n
+~
+#131462
+portal shadows~
+&+La &+Cp&+Bo&n&+brt&+Ba&+Cl &+Lof sh&nad&+Cow&+Ws&n~
+&+LA &+Cp&+Bo&n&+brt&+Ba&+Cl &+Lmade of sh&nad&+Cow&+Ws &+Llevitates here in mid-air.&n~
+~
+25 15 3 0 7 0 33554497 0 0 1 0
+131517 7 -1 0 0 0 0 0
+1 1 100
+E
+portal shadows~
+&+W   This glowing portal is made out of shadows. Darkness and light seem to
+&+Wshift together to create this hole in the fabric of reality. &n
+~
+#131463
+spectre dagger~
+&+Ca spectre's dagger&n~
+&+CA long spectre's dagger lays here fading away.&n~
+~
+5 15 3 0 7 0 524353 8193 0 57344 0
+2 3 5 11 0 0 0 0
+1 1 100
+E
+spectre dagger&n~
+&+C  It is a dagger made of ethereal mist that seems to be fading away.&n
+~
+A
+19 4
+A
+18 4
+#131464
+blood flesh red letter~
+&n&+ra blood red letter&n~
+&n&+rA letter written on human flesh and inked in blood.&n~
+~
+12 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+blood flesh red letter~
+&+r   This letter is written in blood and on parchmant made of human flesh. It
+&+rreads:
+
+&+r   DeadLord Verinor,
+
+&+r      You must think me crazy if you belive that I will show
+&+r   you the secrets of how I created Maltheas. I did not spend
+&+r   fifteen years of my life as a slave before Nakral, the
+&+r   Crypt Keeper, so that he would teach me the arts of necro-
+&+r   mancy, so that I could GIVE them to the likes of you. Also,
+&+r   regarding your question about me giving you Maltheas, you
+&+r   and your little puppy dog master can go to hell with that.
+
+
+&+r                      Zrack, Master of the School of the Skeletal Hand&n
+~
+#131465
+circlet flame flames shadows~
+&+La &+Cc&+Bi&n&+brcl&+Be&+Ct &+Lmade of &n&+rf&+Rl&+Yam&+Re&n&+rs &+Land sh&nad&+Cow&+Ws&n~
+&+LA &+Cc&+Bi&n&+brcl&+Be&+Ct &+Lmade of &n&+rf&+Rl&+Yam&n&+Re&+Rs &+Land sh&nad&+Cow&+Ws &+Llays here on the ground.&n~
+~
+9 15 3 0 7 20 97 5 0 7680 0
+7 2 1 3 0 0 0 0
+1 32964 100
+E
+circlet flame flames shadows~
+&+r   This circlet is one of many that have been givin to mortals by the demons
+&+rof the abyss. Givin to enslave their souls, it cannot be taken off until
+&+rthe creature that it is givin to is dead. This one has the name "Verinor -
+&+rYour Soul Belong to Us" writtin on the outside of it.  &n
+~
+A
+13 25
+A
+20 -4
+#131466
+wand skull~
+&+La wand tipped with a &+Wskull&n~
+&+LA wand with a &+Wskull &+Ltop sits here on the ground.&n~
+~
+3 15 3 0 7 0 65 16385 0 1536 0
+51 2 2 271 0 0 0 0
+1 1 100
+E
+wand skull&n~
+&+L   This wand is made of blackwood and has a small animal skull at the top of
+&+Lit. On the bottom, written in small language are the words "Made in Lichgate"&n
+~
+#131467
+portal bones~
+&+La &+Wbone &+Lp&n&+bo&+Brt&n&+ba&+Ll&n~
+&+LA p&n&+bo&+Brt&n&+ba&+Ll made of &n&+Wbones &+Llevitates in mid-air here.&n~
+~
+25 15 3 0 7 0 8257 0 0 1 0
+131451 7 -1 0 0 0 0 0
+1 1 100
+E
+portal bones~
+&+L   This portal is made of bones that incircle a glowing portal that seems to
+&+Lshift with glowing colors and light. &n
+~
+#131468
+bone picture mural~
+&+Wa bone picture&n~
+&+LA picture-teleporter the PC's can see stands here to room 67.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131466 7 -1 0 0 0 0 0
+1 1 100
+E
+bone picture murial~
+&+W   The picture itself seems to be glowing slightly... how odd.&n
+~
+#131469
+bone picture mural~
+&n&+ra conquest picture&n~
+&+rA picture-teleporter the PC's can see stands here to room 74.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131473 7 -1 0 0 0 0 0
+1 1 100
+E
+bone picture murial~
+&+W   The picture itself seems to be glowing slightly... how odd.&n
+~
+#131470
+portal elemental element~
+&+La &+yel&n&+rem&+Cen&+Btal &+Lp&n&+bo&+Brt&n&+ba&+Ll&n~
+&+LA p&n&+bo&+Brt&n&+ba&+Ll made of the four &n&+yel&n&+rem&+Be&n&+bn&+Bt&+Cs &+Llevitates in mid-air here.&n~
+~
+25 15 3 0 7 0 8257 0 0 1 0
+131445 7 -1 0 0 0 0 0
+1 1 100
+E
+portal bones~
+&+L   This portal is made of bones that incircle a glowing portal that seems to
+&+Lshift with glowing colors and light.&n
+~
+#131471
+energy power plane~
+&+Wthe power of the energy plane&n~
+&+WAn energy trap the PC's can see.&n~
+~
+14 15 3 0 7 0 2 0 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+energy power plane~
+&+W   This is the power of the elemental plane of energy.&n
+~
+T
+5 5 100 60
+#131472
+table wood~
+&n&+ga wood table&n~
+&+gA wood table the PC's can see.&n~
+~
+15 15 3 0 7 0 2 0 0 1 0
+52 0 0 100 0 0 0 0
+1 1 100
+E
+table wood~
+&+g   Its a large table with some papers on it.&n
+~
+#131473
+notes note scattered papers paper~
+&+wsome scattered notes~
+&+wSome scattered notes are here, droped by someone who didn't care for knowledge.&n~
+~
+12 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+notes note scattered papers paper~
+   These notes are out of order and strange put you manage to put the following
+back together:
+
+   "... and it seems that Earlion put the last piece of his key inside
+   the energy gatherer of the Black Tower, the engine itself. Why he
+   did this I do not know, it seems he wanted to make sure none but
+   the most powerful could get to it. To get the key we need to travel
+   into the positive energy plane itself. Not much of it, thank Sargon,
+   because that would mean our death, but simply far enough to reach
+   the power source...."
+
+
+   "...and therefore I think we have the word that will open the way to
+   us. I hope we are correct, because without it, we will never be able
+   to free Earlion, and raise the Dark Lord...&n"
+~
+#131474
+teleporter~
+a teleporter to room 75&n~
+A teleporter the PC's can't see to room 75.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131474 6 -1 0 0 0 0 0
+1 1 100
+E
+teleporter~
+&+B   Below there seems to be a swirling of mist.&n
+~
+#131475
+paper note letter papers~
+&+wa loose piece of paper&n~
+&+wA loose piece of paper has been dropped here.&n~
+~
+12 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+paper note letter papers~
+   The piece of paper seems to be a translation from some language into
+common. A the end of the paper is the simply writing:
+
+    ...the first part of the word MUST be "Thoth"
+~
+#131476
+paper note letter papers~
+&+wa simple note&n~
+&+wA loose piece of paper has been dropped here.&n~
+~
+12 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+paper note letter papers~
+   The note says simply "I know that one of the parts of the word must be
+"Ron". I can't tell if it is the second part of the word or the third
+however.&n
+~
+#131477
+paper note letter papers~
+&+wa piece of an old letter&n~
+&+wA loose piece of paper has been dropped here.&n~
+~
+12 15 3 0 7 0 4096 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+paper note letter papers old~
+   The old letter seems to be rubbish, however the simple word "os" is written
+all over it, as if my a mad man.&n
+~
+#131478
+paper note letter papers~
+&+La piece of black parchment&n~
+&+LA loose piece of paper has been dropped here.&n~
+~
+12 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+paper note letter papers~
+&+L   The piece of black parchment has is made of paper, but of some odd tree.
+&+LIt has the following written into it.
+
+&+L   "It seems that "tith" is the middle part of the word. I hope that we have
+&+Lit so that my master can be freed. I need to consult with the others, maybe
+&+Lthey have found out their parts of the word as well...&n
+~
+#131479
+potion gray mist~
+a potion of &+Lgray mist&n~
+&+LA potion made of gray mist lays here on the ground.&n~
+~
+10 15 3 0 7 0 4161 16385 0 1 0
+30 84 108 41 100 0 0 0
+1 1 100
+E
+potion gray mist~
+&+L  This potion is made of swirling grey mist.&n
+~
+#131480
+scroll eradication~
+a scroll of &+Leradication&n~
+&+LThere is a scroll of no merit laying here, don't pick it up.&n~
+~
+2 15 3 0 7 0 69697 16385 0 3584 0
+51 25 0 0 0 0 0 0
+1 1 100
+E
+scroll eradication~
+&+L  This scroll kills people, it says so on the outside.&n
+~
+#131481
+wand shadow shadows~
+&+La wand of sh&nad&+Cow&+Ws&n~
+&+LA wand of sh&nad&+Cow&+Ws &+Llays here in the dirt.&n~
+~
+3 15 3 0 7 0 69697 16385 0 3584 0
+50 2 1 147 0 0 0 0
+1 1 100
+E
+wand shadow shadows~
+&+L  This wand is almost insumstantial. It is made of darkness and shadows.&n
+~
+#131482
+white liquid potion~
+&na potion of &+Wwhite liquid&n~
+&+WA potion of white liquid lays here unwanted.&n~
+~
+10 15 3 0 7 0 69697 16385 0 1 0
+40 9 75 16 0 0 0 0
+1 1 100
+E
+white liquid potion~
+&+W   Its a bottle with a white liquid in it, it seems clerical in nature.&n
+~
+#131483
+portal darkness~
+&+La portal of darkness&n~
+&+LA black portal of darkness levitates here in mid-air.&n~
+~
+15 15 3 0 7 0 65 0 0 1 0
+100 5 0 100 0 0 0 0
+1 1 100
+E
+portal darkness~
+&+L   This portal seems to open up into a small portal before enering the
+&+Lelemental plane of negative energy. There looks to be something inside the
+&+Lportal itself.&n
+~
+T
+512 5 5 90
+#131484
+leggings light darkness~
+&+Csome leggings of &+Wlight &+Cand &+Ldarkness&n~
+&+CA set of leggings made of shifting patterns of light and darkness lays here.&n~
+~
+9 15 3 0 7 0 1077601 33 0 3584 0
+9 5 1 3 0 0 0 0
+1 1 100 73728 0 0 0
+E
+leggings light darkness~
+&+C   These leggings are made of the shifting pattern of positive and negative
+&+Cenergy. Made during the wars of Light and Shadow, they were made by the
+&+Ctraitor Dathaniol. An archmage of great repute, he played both side against
+&+Ceach other and learned the ways of both. After making these leggings however
+&+Che was destroyed by Earlion for having betrayed the cause of darkness. The
+&+Cleggings had not been seen since....&n
+~
+A
+33 3
+A
+13 15
+#131485
+mask phantom~
+&+Ca &n&+rmask &+Ccalled &n&+L'&+LPh&na&+Cn&nt&+Lom'~
+&+LA mask that shifts in out out of reality lays here.&n~
+~
+9 15 3 0 7 10 135264 262145 0 3584 0
+5 13 1 3 0 0 0 0
+1 15059 100 2 0 0 0
+E
+mask phantom~
+&+L   This mask is actuality the face of a being known as Phantom. A powerful
+&+Ldemon of darkness that fought during the wars of Light and Darkness he was
+&+Lfinally destroyed during the last battle. All that remained of him was this
+&+Lfading bit of flesh and ethereal mist that is his mask. After that it was
+&+Lcalled the mask of the phantom for his rememberance.&n
+~
+A
+33 1
+A
+13 -10
+#131486
+crown sorcerer king~
+&+Cthe &+Wcr&+Co&nw&+Ln &n&+Cof the &n&+CS&+Mor&n&+mce&+Mre&+Cr &+WK&+Ci&nn&+Lg&n~
+&n&+rThe &+Wan&n&+Cci&nen&+Lt &+Wcr&+Co&nw&+Ln &n&+rof the &+CS&n&+Mor&n&+mce&+Mre&+Cr &+WK&+Ci&nn&+Lg &n&+rlays here in the &n&+ydirt&n&+r.&n~
+~
+9 15 3 0 7 0 151873 17 0 512 0
+13 4 1 3 0 0 0 0
+1 1 100 40 28 0 0
+E
+crown sorcerer king~
+&+m   This crown is what actually caused the ancient war of Light and Shadow.
+&+mLong before the wars, before there was Toril, before there was Duris, before
+&+mthere was Basternae there were many gods, and few heros. These were the days
+&+mof legends. At this time there was a powerful sorcerer named Thindal Darkenion.
+&+mHe was allready king over a huge area. However, he yearned for more, so he
+&+mmade pacts with an infernal power, Sargon, the Lord of Shadows. He gave his
+&+msoul over to the dark lord, and Sargon gave him powers, minions, and this
+&+mcrown to seal their pact. It was thereafter called the Crown of the Sorcerer
+&+mKing.
+&+m    Thindal fought a powerful war versus the forces of light, and finally in
+&+mhis dying breadth, as the forces of good entered his castle and his cities,
+&+mhe opened a breach between our world and Sargon's. He put a crack in the
+&+mbarrier that keeps the two areas apart. It was this crack that Sargon
+&+mexploited a thousand years later to come to our world and wreck destruction.&n
+~
+A
+13 15
+A
+24 -3
+#131487
+mural picture portal~
+&+Ba mural teleporter&n~
+&+BA teleporter the PC's can't see to room 106 sits here.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131505 7 -1 0 0 0 0 0
+1 1 100
+E
+murial picture portal~
+&+r   The murial before you is one of fore and carnage... however... looking at
+&+rit, you could swear that the portal on the picture actually moved with color..
+&+rhow odd...&n
+~
+#131488
+portal demonic glowing~
+&+La &n&+mglowing &n&+rdemonic &+Cp&+Bo&n&+brt&+Ba&+Cl&n~
+&+LA &n&+rdemonic &+Cp&+Bo&n&+brt&+Ba&+Cl &+Levitates here in mid-air, &n&+mglowing &+Lan evil color.&n~
+~
+25 15 3 0 7 0 1 0 0 1 0
+131447 7 -1 0 0 0 0 0
+1 1 100
+E
+portal demonic glowing~
+&+r   This glowing portal was created by the demons and the conjurers to link
+&+rtheir base of operations with the Black Tower. It sits here glowing a bright
+&+rred color.         &n
+~
+#131489
+eye central beholder xandur~
+&n&+Cthe &+Mce&n&+mnt&+Mral &+Ceye of the &+Cb&+Meh&n&+mol&+Mde&+Cr &+M'&n&+mXandur&+M'~
+&+mA large central eye of a beholder lays here on the ground.&n~
+~
+12 15 3 0 7 0 67113025 8404993 0 4000 0
+0 0 0 0 0 0 0 0
+1 1 100 67108864 0 0 0
+E
+eye central beholder xandur~
+&+C   This eye is from the beholder Xandur. One of the most trusted of the
+&+CHive Mothers minion beholders, only a very powerful individual could have
+&+Ctaken it away from him. You must be one such as this.&n
+~
+A
+23 -3
+A
+20 -3
+#131490
+pearl glowing negative energy~
+&+La &n&+Mglowing &+Wp&n&+Ce&na&+Lrl &+Lof negative energy&n~
+&+LA pearl made of negative energy lays here in the dirt.&n~
+~
+12 15 3 0 7 10 4449 524289 0 1 0
+0 0 0 0 0 0 0 0
+1 32859 100
+E
+pearl glowing negative energy&n~
+&+M   This glowing peral is the remains of a demons soul. Sometimes a demon's
+&+Msoul can be stolen and impirioned somewhere. When that happens the demons
+&+Mgets a pearl to replace his soul. This is such an item.&n
+~
+A
+13 13
+A
+18 2
+#131491
+demonically forged bracelet~
+&+La &n&+rdemonically&+W-&+Lf&no&+Crg&ne&+Ld bracelet&n~
+&n&+rA bracelet forged in the fires of hell lays here.&n~
+~
+9 15 3 0 7 0 16449 4097 0 32798 0
+9 11 1 3 0 0 0 0
+1 14563 100 570425344 0 0 0
+E
+demonicly gorged bracelet~
+&+r   This bracelet was forged in the fires of the lake of flames, on the 333rd
+&+rlevel of the abyss. Made for one of Orcus's generals it is a prized item,
+&+rand is an item of power. A mortal with this item would be well advised to
+&+rallways look over his back, because the demon prince of the undead has a long
+&+rmemory.               &n
+~
+A
+19 2
+A
+18 3
+#131492
+robe draconic scales~
+&+La robe of draconic &n&+rscales&n~
+&+LA robe made of the scales of a draconian lays here.&n~
+~
+9 15 3 0 7 0 2117696 9 0 8096 0
+15 3 1 3 0 0 0 0
+1 1 100 32 16 0 0
+E
+robe draconic scales~
+&+L   This long robe is made of the scales of a black draconian. They come only
+&+Lfrom the legendary place... Dragon Mountain. Few go to that place, knowing
+&+Lthat to do so would be their deaths. Few of these cloaks ever see the light
+&+Lof day...&n
+~
+A
+34 2
+A
+23 -5
+#131493
+totem ice frost giants~
+&+Can &+Wice &+Lto&nt&+Ce&+Wm &+Cof of the &+Wfrost &n&+ygiants&n~
+&+WA totem made of ice lays here on the ground.&n~
+~
+34 15 3 0 7 0 68157504 16385 0 256 0
+60 0 0 0 0 0 0 0
+3 13495 100 65536 0 0 0
+E
+totem ice frost giants~
+&+W   This totem is one of the holy items of the Frost Giants. Taken away by
+&+Wone of the faithful of Hel long ago its location has been a mystery ever
+&+Wsince... who can say where it has been, all that is known is that now you
+&+Whave it.&n
+~
+A
+13 20
+A
+34 2
+#131494
+tower black key chamber~
+&+Lthe key to the audience chamber&n~
+&+LA long black key to the audience chamber of the Black Tower.&n~
+~
+12 15 3 0 7 0 8388609 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+tower black key chamber~
+&+L   This long black key is the only thing that will open the final door that
+&+Lleads to Urian Shadowborn's personal quarters.&n
+~
+#131495
+key treasure tower~
+&+La key to the &+Ytreasure &+Lchamber&n~
+&+LA long key that goes to the treasure chamber of the Black Tower.&n~
+~
+12 15 3 0 7 0 1 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+key treasure tower~
+&+L   This key is held normally bu Urian Shadowborn and goes to the treasure
+&+Lchamber of the Black Tower itself.&n
+~
+#131496
+coins pile platinum~
+&+Wa pile of platinum coins&n~
+&+WA massive pile of platinum coins lays here.&n~
+~
+20 15 3 0 7 0 0 1 0 1 0
+0 0 0 500 0 0 0 0
+1 1 100
+E
+coins pile platinum~
+&+W  Its a really big pile of coins.&n
+~
+#131497
+gauntlets eradication pair&n~
+&+Lsome &+Wg&+Ca&nu&+Lntl&ne&+Ct&+Ws&+L of &n&+rer&+Rad&+Yi&+Wc&+Ya&+Rti&n&+ron&n~
+&+LA pair of gauntlets that destroy everything lay here.&n~
+~
+9 15 3 0 7 30 1069377 129 0 57790 0
+13 7 1 3 0 0 0 0
+7 54924 100
+E
+gauntlets eradication pair~
+&+r   These gauntlets were once worn my Lord Edrick Von'Darkenthe. He was the
+&+rlord of all the armies of Sargon in the says of the Wars of Light and Shadow.
+&+rHe was known for his ability to destroy anything. They have small spikes
+&+rthat seem to glow with magic sticking out of the tip of the gloves and it
+&+rseems that if they were pushed against someone's flesh they would explode.&n
+~
+A
+19 3
+A
+18 4
+#131498
+ring dragon dragonkind~
+&+Lthe &+Cring &+Lof the &n&+rdragonkind&n~
+&n&+rA ring made by the oldest of dragons lays here.&n~
+~
+9 15 3 0 7 0 102465 3 0 7680 0
+6 1 0 4 0 0 0 0
+1 1 100 536870912 12480 0 0
+E
+ring dragon dragonkind~
+&+r   This ancient ring was made in the dim mists of time. Made my the dragons
+&+rof Dragon Mount it was givin to their human who they choose to represent them
+&+ramong their kind. The ring was used by Urian for many years but since then
+&+rhe as removed it, being no longer their servant. It now belongs to you, to
+&+rdo with as you wish.
+&+r   It seems to glow and writhe a little as you look at it, as if in some way
+&+rit is alive.&n
+~
+A
+23 -5
+A
+35 2
+T
+2 2 1 90
+#131499
+longsword sword word akiaurn white black~
+&+La &+Wlo&+Cng&nsw&+Lord called &n&+r'&+LThe &+WWord &+Lof &+WAkiaurn&n&+r'~
+&+LA longsword of black metal and &+Wwhite &+Lrunes lays here.&n~
+~
+5 15 3 0 7 0 266561 8193 512 3584 0
+5 5 5 3 0 0 0 0
+1 1 100 134291464 0 0 0
+E
+longsword sword word akiaurn white black~
+   This sword was forged by the legendary mage Earlion for himself. He was
+rumored to know the word of akiaurn. When he made this sword it is said he
+whispered the word into the blade over a hundred times during its creation.
+It seems to glow with a power all its own as it lays here. A low hum also
+escapes from it when it is looked at closly.
+   The sword was wielded by him in his battle with the angel Galyon during
+the height of the battle of Fin Meadows. Finally he gave it up before sealing
+himself away in the Black tower.&n
+~
+A
+13 35
+A
+33 5
+#131500
+tome book large summoning exploration~
+&+La large to&+Cm&+Le &+Centitled &n&+r'&+LAn &n&+gExp&+Glor&n&+gation &+Lof &+CSu&+Bmm&n&+bo&+Bni&+Cng&n&+r'~
+&+YA large tome used for conjuration magic lies here.&n~
+~
+33 15 3 0 7 10 64 16385 0 2048 0
+0 0 120 0 0 0 0 0
+3 15493 100 536870912 0 0 0
+E
+tome book large summoning exploration~
+&+Y   This large book seems to be about the exploration of magic. It is covered
+&+Ywith information, and also in the back is a large area for further additions
+&+Yto this large book.&n
+~
+A
+13 5
+A
+20 -3
+#131501
+whip blazing fury~
+&n&+ra &+Lwhip &n&+rof b&+Rl&+Ya&+Wz&+Yi&+Rn&n&+rg fury&n~
+&n&+rA whip made of the writing souls of the dead lays here.&n~
+~
+5 15 3 0 7 0 262208 8193 0 32774 0
+14 4 4 2 0 0 0 0
+1 1 100 536870912 0 0 0
+E
+whip blazing fury~
+&+r   This long whip is made of the souls of the dead that have been impirioned
+&+rwithin its writing body. Burning with their anger and fury it glows with the
+&+rmagic of hate and destruction. It was created by the powerful demonic
+&+rsorcerer Girthil, the Insane. He created it for his most prized balor guard,
+&+rbefore he was ruthlessly killed and eaten by the same guard as his succubus
+&+rmistress looked on in joy. The ancient tale is told on the prime matierial
+&+rplane to sorcerers who think they can deal with demons, and is told in the
+&+rabyss as a joke.&n
+~
+A
+19 4
+A
+18 4
+#131502
+bone key charred~
+&+La key made of &+Wbone&n~
+&+LA large black key made of charred and &n&+rb&+Ru&+Yrn&+Re&n&+rd&+W bones.&n~
+~
+12 15 3 0 7 0 8388673 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+bone key charred~
+&n&+r   This key seems to be made of bones, and is clearly of demonic manufacture.&n
+~
+#131503
+astral forged mithril boots~
+&+Lsome &+Was&+Ctr&nal&+W-&+Cfo&nrg&+Led &+Wm&ni&+Wth&nr&+Wil &+Lboots&n~
+&+LA pair of boots forged in the magic of the astral plane lay here.&n~
+~
+9 15 3 0 7 0 151616 65 0 7680 0
+10 6 1 4 0 0 0 0
+1 1 100 32 64 0 0
+E
+astral forged mithril boots~
+   These boots were forged on the astral plane itself. With the help of the
+astral &n&+rUltra&+Lloth &n&+rGailon &nof &+LSargon &nwas abole to take ancient dwarven mithril,
+and infuse it with the &n&+mpower &nand &n&+mmagic &nof the planes, thus able to create
+these boots that seem to defy reality with their craftsmanship.
+   Along the metal boots that should way a ton are carved pictures of armies
+of &n&+rdemons &ndestroying other armies of &n&+rdemons&n. It is a literal picture of the
+&n&+rBlood Wars &nthemselves.
+   The boots themselves are extemely light and seem to fit well and are
+comfortable no matter the conditions.&n
+~
+A
+13 20
+A
+5 4
+#131504
+small parchment human flesh scroll letter~
+&+wa small parchment of &+Chuman &n&+rf&+Rl&n&+re&+Rs&n&+rh&n~
+&+wA letter from the &n&+rdemons &n&+wof the &+LCity of Sha&ndo&+Cw&+Ws &n&+wto &n&+rCalthor &n&+wof the &+WT&+Ch&nr&+Lee &n&+wlays here.&n~
+~
+12 15 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+small parchment human flesh~
+   This scroll is written on fresh human flesh that has been slightly cured.&n
+It reads in the language of the demons:
+
+   To Calthor of the Three,
+
+      Faethron and I have sent you this, hurry to the border where my son
+   Gailon is. Prepare for our masters coming, he will want to come back
+   to his palace before destroying Demorgon. Be ready, I sense the goddess
+   of Light moving. She is not dead yet, and she may yet send heros as she
+   did in the past, be ready for them.
+
+                                          Morhthia, Mistress of Sargon,
+
+                                          Queen of the City of Shadows
+~
+T
+6 2 1 80
+#131505
+staff cold iron cold-iron long~
+&+La long &+Bcold&+W-&+Liron staff&n~
+&+LA long &+Bcold&+W-&+Liron staff has been dropped here on the ground.&n~
+~
+4 15 3 0 7 0 65 16385 0 1 0
+20 10 5 10 0 0 0 0
+1 1 100
+E
+staff cold iron cold-iron long~
+&+L   This staff is a conjurers staff, and is used to draw circles of power to
+&+Ltrap demons, elemental, and... angels... or... even &n&=gplanetars...&n
+~
+A
+14 10
+A
+13 3
+#131506
+sword glowing light broadsword _id_~
+&+Ca &+Lbroad&nsw&+Cor&+Wd &+Cof &+Mglowing &+Wlight&n~
+&+CA long &+Lbroad&nsw&+Cor&+Wd &+Cof &n&+Mglowing &+Wlight &+Clays here on the ground.&n~
+~
+5 15 3 0 7 0 270657 8193 0 14 0
+5 4 6 3 0 0 0 0
+9 42842 100
+E
+_id_name_~
+broadsword sword redemption light
+~
+E
+_id_short_~
+&+Lthe broadsword called &n&+r'&+CThe &+WRede&+Cmp&nti&+Won &+Cof &+WLight&n&+r'
+~
+E
+light redemption glowing broadsword sword~
+&+W   The Rede&+Cmp&nti&+Lon &+Cof &+WLight was used by the &+Yholy &+Bwarrior &+WAz&+Cli&+Won during the
+&+WOriginal &n&+rWars &+Wof Light and &+LSh&nad&+Co&+Ww. Then he was a &+Yholy &+Lpaladin who fought on
+&+Wthe side of the the goddess Reaana against the &+Levil &+Wgod &+LSargon&+W. After he
+&+Wand his friends helped to imprison the &+Levil &+Wgod, he acended to devahood and
+&+Wnow seves Reaana as one of her chief angels.
+&+W   The weapon itself was forged by the goddess herself out of light and&n&+m power
+&+Wfrom the positive energy plane, even now it pulses with life and power. It
+&+Wis said that the weapon hate all &+Lund&n&+rea&+Ld&+W, and has special properties against
+&+Wthem, although that might just be a &n&+glegand&+W.
+&+W   The sword was used well against such &+Levils &nas the &n&+rTyrant &+Lof &n&+rDevlion&+W, and
+&+Wit was the the sword that gave &+LSargon &+Whimself the killing stroke that sent
+&+Whim realing into the prison of &n&+rExile.&n
+~
+A
+19 5
+A
+18 5
+#131507
+bone mask bloodstone~
+&+La &+Wbone &+Lmask of &n&+rBloodstone&n~
+&+LA mask made of &+Wbone &+Llays here, discarded.&n~
+~
+9 15 3 0 7 0 64 262145 0 1 0
+6 13 0 4 0 0 0 0
+1 1 100
+E
+bone mask bloodstone~
+&+L   This mask is made of the bones of dead skeletons, enchented again it is
+&+Lat item only givin to some of the high Knights of &n&+rBloodstone.&n
+~
+A
+32 1
+A
+19 2
+#131508
+iron gate key~
+&+La strong iron gate key&n~
+&+LA large iron gate key lays here on the ground.&n~
+~
+12 15 3 0 7 0 8388608 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+iron gate key~
+&+L   Its a large iron gate key.&n
+~
+#131509
+drow made bracelet~
+&+La &n&+mdrow&+W-&+Lm&na&+Cd&+We &+Lbracelet&n~
+&+LA drow made bracelet lies here on the ground.&n~
+~
+9 15 3 0 7 0 64 4097 0 6 0
+8 11 1 3 0 0 0 0
+1 1 100
+E
+drow made bracelet~
+&+m   This drow made bracelet was made for one of the few lovers that Essra,
+&+mthe Chosen ever let leave. She gae it to him to help keep him save, and to
+&+malso give him strength for certain... extracericular activities.&n
+~
+A
+19 2
+A
+31 2
+#131510
+shadow suit field plate~
+&+La suit of field &+Cplate &+Lmade of sh&nad&+Cow&+Ws&n~
+&+LA suit of field plate made of shadows lays here on the ground.&n~
+~
+9 15 3 0 7 0 67117120 9 0 32798 0
+24 3 1 4 0 0 0 0
+10 1 100 536870912 128 0 0
+E
+shadow suit field plate~
+&+L   This armor was formed and made for the master of the black guard. It was
+&+Lcreated out of a living shadow and grants some of the powers of it to its
+&+Lwearer, he can see in the dark, and also is immune cold and heat. It has the
+&+Lmark of the Black Tower on it.&n
+~
+A
+19 2
+A
+13 35
+#131511
+key death magic~
+&+La key of &n&+rdeath &n&+mmagic&n~
+&+LA key made of the magic of death lays here.&n~
+~
+12 15 3 0 7 0 4161 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+key death magic~
+&+L   This ancient key is one of the three stasis keys.&n
+~
+#131512
+key elemental magic~
+&+La key of &n&+re&+Rl&+Ye&+Gm&n&+ge&+Cn&+Bt&n&+ba&+Bl &n&+mmagic&n~
+&+LA key made of the magic of the elements lays here.&n~
+~
+12 15 3 0 7 0 4161 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+key death magic~
+&+L   This ancient key is one of the three stasis keys.&n
+~
+#131513
+key creation magic~
+&+La key of &n&+gcreation &n&+mmagic&n~
+&+LA key made of the magic of &n&+gcreation&+L lays here.&n~
+~
+12 15 3 0 7 0 4161 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+key death magic&n~
+&+L   This ancient key is one of the three stasis keys.
+~
+#131514
+portal shadows~
+&+La &+Cp&+Bo&n&+brt&+Ba&+Cl &+Lof sh&nad&+Cow&+Ws&n~
+&+LA &+Cp&+Bo&n&+brt&+Ba&+Cl &+Lmade of sh&nad&+Cow&+Ws &+Llevitates here in mid-air.&n~
+~
+25 15 3 0 7 0 33554497 0 0 1 0
+131458 7 -1 0 0 0 0 0
+1 1 100
+E
+portal shadows~
+&+W   This glowing portal is made out of shadows. Darkness and light seem to
+&+Wshift together to create this hole in the fabric of reality.&n
+~
+#131515
+cloak ethereal archmagus~
+&+Lan &+Cet&nh&+Cer&ne&+Cal &+Lcloak of the &n&+marc&+Mhm&+Cag&+Wus&n~
+&+CA cloak made of ethereal mist lays here, unwanted.&n~
+~
+15 15 3 0 7 0 4192 1025 0 3584 0
+400 5 0 400 0 0 0 0
+1 1 100 268435456 0 0 0
+E
+cloak ethereal archmagus~
+&+C   This cloak was once Earlion's pride and joy, made with help of Lord Aramus
+&+Cof the Ethereal plane it was givin to him before the wars of Light and
+&+CDarkness. However during the battle of Heavens Gate Azlion struck Earlion as
+&+Che was fleeing the field, and cut the cloak in two. It was instantly destroyed
+&+Chow it is here now must be through some sort of strange time rift.&n
+~
+A
+13 15
+A
+30 3
+#131516
+mithril chain burning skulls frozen bones~
+&+La &+Wm&ni&+Wth&nr&+Wil &+Wch&+Ca&ni&+Ln of &n&+rb&+Ru&+Yr&+Wn&+Yi&+Rn&n&+rg &+Wskulls &+Land &+Cf&+Br&n&+boz&+Be&+Cn &+Wbones&n~
+&+LA chain made of &n&+rb&+Ru&+Yr&+Wn&+Yi&+Rn&n&+rg &+Wskulls &+Land &+Cf&+Br&n&+boz&+Be&+Cn &+Wbones &+Llinked together lays here.&n~
+~
+9 15 3 0 7 0 16448 5 0 1 0
+7 2 1 4 0 0 0 0
+1 1 100 536870912 64 0 0
+E
+mithril chain burning skulls frozen bones~
+&+L   This mithril chain is a gift for over a thousand years of faithful service
+&+Lto Sargon. It is/was givin to Earlion before he became a demon, over a thousand
+&+Lyears from now, after this plane has allready been destroyed. It seems to
+&+Lfade in and out of reality a little, as if it doesn't really belong here at all.
+&+L   It is made of the last two free people on earth, the sorcerer Fulthin,
+&+Lthe fire mage, and his wife Nethria, the Ice Queen. They were the last two
+&+Lpeople in the world that were able to resist the might of Sargon... in that
+&+Lreality.&n
+~
+A
+19 2
+A
+24 -4
+#131517
+key stasis~
+&+Lthe key of &n&+bs&+Bt&+Cas&+Bi&n&+bs&n~
+&+CA key that seems to exist only half-way in this reality lays here.&n~
+~
+12 15 3 0 7 0 1 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+key stasis~
+&+B   This key seems to exist only partially in this reality, it seems to fade
+&+Bin and out of time as you look at it.&n
+~
+#131518
+corpse martin sorcerer llewellyn~
+the corpse of &+WMartin &+CL&+Ble&n&+bwe&+Blly&+Cn&n~
+The corpse of the &+Wlegendary &n&+msorcerer &+WMartin &+CL&+Ble&n&+bwe&+Blly&+Cn&n lays here.&n~
+~
+15 15 3 0 7 0 0 0 0 1 0
+100 0 0 100 0 0 0 0
+1 1 100
+E
+corpse martin sorcerer llewellyn&n~
+   This is the corpse of one of the most poweful &n&+msorcerers&n that has ever
+lived. He grew up in the ancient elven city of &n&+gVel&+Gya&n&+gdin&n, on the western coast
+in the time of&+W Legends&n. His mother was the&+W Silver &n&+gLady&n, the most
+powerful minion of &+WCerro&n, the &+WSilver Dragon &+LGod. &nHis father was Ilvin Dealth,
+another plane traveleing sorcerer. When the &n&+rwars &nof &+WLight &nand &+LShadow &ncame he
+kept himself aloof from them, prefering to live in &n&+gVe&+Gly&n&+gadin&n, the city he loved.
+When he came back from the planer adventure he found his beloved town laid
+to waste, its people killed, and the city givin over to &n&+gdemons&n. &+WMartin &nswore
+that he would see &+LSargon&n pay for that. In the next ten years he constructed
+the &+LPrison &nof &+CE&+Bx&n&+bi&+Bl&+Ce&n, a pocked diminsion from which there was no escape. When
+&+LSargon&n was thrust here, there was one catch. One person had to stay and seal
+the prision away, and the &+Levil&n god himself, forever. &+WMartin&n decided that he
+would stay here. &n&+MTime&n passes strangely here, there is no telling how long
+he lived here, awayting his time to &n&+rdie&n. Some say that his &+Csoul&n lives on,
+even it unable to escape the prison of his creation... who now can tell...
+for that is a tale for another &+Lday&n.&+C.&+W.&n
+~
+#131519
+spellbook book legendary sorcerer martin llewellyn&n~
+&+Cthe &n&+yspellbook &n&+Cof &+WMartin &+CL&+Blew&n&+bell&+By&+Cn&n~
+&+CA spellbook of the &+Wlegends &+Chas been dropped here, fool.&n~
+~
+33 15 3 0 7 100 28737 16385 0 3584 0
+0 0 200 0 0 0 0 0
+1 100493 100
+E
+spellbook book legendary sorcerer martin llewelyn&n~
+   Opening the spellbook you see that the first page has been written in
+allready. It reads the following.
+
+   Greetings and Well Met,
+
+      If you are here then I pray that you are soldiers of Light and not the
+   Darkness. If so then I have important information that you will need. I
+   realize that my prison will not last forever, but it should serve long
+   enough so that when you will have gotten here Sargon will be weakened,
+   and therefore killable. You must know some things to be able to go
+   farther and succeed. First, once you go in, you CANNOT get out. It is
+   impossible. You may leave from here... now. But that is the only way,
+   this room should have been opened to the normal travel spells upon my
+   death. There are seperate prisons here, when we imprisoned Sargon, we
+   also imprisoned his elite guards, so you must fight through them on
+   your way to Sargon. I do not know what is ahead more then one room,
+   although i can tell you that His personal demonic bodyguard is in the
+   next room.
+
+                                       Martin Llewellyn
+~
+A
+13 10
+A
+24 -3
+#131520
+crown forsaken damned~
+&+La &n&+rforsaken &+Wc&+Cr&no&+Cw&+Wn &+Lof the &n&+rdamned&n~
+&+LA &+Wc&+Cr&no&+Cw&+Wn &+Lof the &n&+rforsaken &+Llies here, &n&+rdamned &+Lfor &n&+reternity.&n~
+~
+9 15 3 0 7 0 20545 17 0 32798 0
+10 4 16 4 0 0 0 0
+1 1 100 16 0 0 0
+E
+crown forsaken damned~
+&+r   This crown was once known as the crown of Barony of Dathlmir. However when
+&+rthe Baron destroyed an entire village for the sake of his honor he was damned
+&+rby his god and forsaken forever. The crown was embued with his curse at that
+&+rtime, and has been cursed ever since.
+&+r   The crown itself is a circlet made of mithril with four large bloodstones
+&+rset equally around the crown itself.&n
+~
+A
+13 -10
+A
+19 2
+#131521
+gown gossamer witch queen silk~
+&n&+mthe &+Cgossamer &n&+mgown of the &+Lwitch&n&+m-&+Wqu&+Ce&ne&+Ln&n~
+&n&+mA gown made of &+Lspider &n&+msilk lays here on the ground.&n~
+~
+9 15 3 0 7 0 20576 9 0 73216 16
+15 3 1 2 0 0 0 0
+1 1 100 134217728 0 0 0
+E
+gown gossamer witch queen silk~
+&+m   This gown is ancient beyond imagination. It was made by the spiders of
+&+mlloth herself, as a gown to feast with the gods of the elves. However, before
+&+mthe dinner the war that drove the drow into the underdark begain. The dress
+&+mwas never worn and one of her handmaidens carried it away. The dress went
+&+mthrough many hands before coming into the possession of the witch queen,
+&+mwho used it to seduce the god Sargon to make her his high priestess.&n
+~
+A
+13 25
+A
+38 4
+#131522
+staff lich king~
+&+Lthe &n&+rstaff &+Lof the &+WL&+Ci&nc&+Lh &+WK&+Ci&nn&+Lg&n~
+&+LA long staff made of the &+Wbones &+Lof d&n&+rea&+Ld &+Wl&+Ci&nc&+Lhes lays here.&n~
+~
+5 15 3 0 7 0 16449 8193 0 3584 0
+12 5 3 6 0 0 0 0
+1 1 100 536870912 12480 0 0
+E
+staff lich king~
+&+C   The staves of the Lich King are givin out only to special emissaries of
+&+Cthe King himself. They grant the wield to see things that might otherwise
+&+Cbe hidden from them, and to give them insight that most people couldn't and
+&+Cwouldn't have.
+&+C   This long staff is made of bone, lich bone actually, from enemies of the
+&+CLich King, or people that have tried to overthrow him. It is glowing and
+&+Cpulsing with magic and is a powerful weapon.&n
+~
+A
+33 1
+A
+13 10
+#131523
+living cloak shadows darkness~
+&+La cloak of &+Rliving &+Lsha&ndo&+Cw&+Ws &+Land da&nr&+Ckn&ne&+Lss&n~
+&+LA cloak of writhing evil lays here, reaching for you.&n~
+~
+9 15 3 0 7 0 20577 1025 0 61348 0
+15 9 1 5 0 0 0 0
+1 1 100 2 0 0 0
+E
+living cloak shadows darkness~
+&+L   This cloak is what is left of the god Sargon. After being struck down this
+&+Llast vestige of him lives on. It has no memory but still has a vague malign
+&+Lintelligence. Sometimes you feel the cloak consticting around you, as if it
+&+Lwants to become one with you.. then it will stop as suddenly as it started.
+&+LAs if it knows that its fade forever is not to simply be a triket to be worn.&n
+~
+A
+13 15
+#131524
+darksoul blade forsaken eternal suffering sword~
+&n&+r'&+LDark&ns&+Co&+Wul&n&+r'&+L the b&nl&+Ca&nd&+Le of &+Ceternal &n&+Lsuffering&n~
+&+LThe blade of &n&+rpain &+Land &n&+rsuffering &+Llays here, daring you to take destiny itself.&n~
+~
+5 15 3 0 7 0 37798208 8193 512 32794 0
+13 5 8 3 0 0 0 0
+18 425924 100 805371920 0 0 0
+E
+darksoul blade eternal suffering sword~
+   This blade was forged in the &n&+gmists &nof time, in the age of &+Wlegends. &nTaken
+by &+LSargon &nas his own when he slew his ancient &n&+rmaster&n, the beginnings of this
+&+Cblade&n have been lost. None know where it was made, or who made it, all that
+is known is that it is one of the items of power. It has rested in the hands
+of many, fought on the side of &+Wgood&n and &+Levil&n, but always it brings suffering,
+always it brings famine and war to those that carry it, and those that it
+is used against. It is a blessing and a curse, it is &n&+rDark&ns&+Co&+Wul.
+   Before &+LSargon&n had it it was said to have been wielded by not only his
+master but also many other demon princes, changing hands fast during the &n&+rBlood
+&n&+rWars&n. It glows with power, guard it well.&n
+~
+A
+19 6
+A
+18 6
+#131525
+star key~
+&+Lthe &+WStar &+LKey&n~
+&+LA key that looks like a five pointed star lays here.&n~
+~
+12 15 3 0 7 0 8388673 16385 0 1 0
+0 0 0 0 0 0 0 0
+1 1 100
+E
+star key~
+&+L   This is the Star Key, the gate key to open the Prison of Exile and free,
+&+Lor kill the evil god Sargon.&n
+~
+#131526
+red dragonscale cloak~
+&n&+La &n&+Rred &n&+rdragonscale &+Lcloak&n~
+&+LA cloak made from dragon scales lies here on the ground.&n~
+~
+9 15 3 0 7 0 4160 16778241 0 1 0
+14 9 1 5 0 0 0 0
+1 1 100 536870912 0 0 0
+E
+red dragonscale cloak~
+&n&+r   This saddle is made of the finest dragonscale. It is the saddle which
+&n&+rSargon used to use on his personal mount, It has runes of chaos and evil
+&n&+rdrawn into it, or actually... burned into its body.&n
+~
+A
+19 1
+A
+18 2
+#131527
+teleporter~
+a teleporter to room 5&n~
+A teleporter the PC's can't see to room 5.&n~
+~
+25 15 3 0 7 0 2 0 0 1 0
+131404 1 -1 0 0 0 0 0
+1 1 100
+E
+teleportar&n~
+   Its a teleportar the PC's can't see.&n
+~
+#131528
+bowl pub stew~
+&n&+ya &+Lbowl &n&+yof &n&+ghearty &+Lpub &n&+ystew&n~
+&n&+yA bowl of stew lays here.&n~
+~
+19 15 3 0 7 0 0 16385 0 1 0
+10 0 0 0 0 0 0 0
+1 1 100
+E
+bowl pub stew~
+&n&+y   Its a bowl of stew, the kind made in Dubneth.&n
+~
+#131529
+tankard ale paranel's best~
+&+La tankard of '&+WParanel's &n&+BBest&+L'&n~
+&+LA tankard of ale lays here, unwanted and unused.&n~
+~
+17 15 3 0 7 0 0 16385 0 1 0
+10 10 7 0 0 0 0 0
+1 1 100
+E
+tankard ale tharnaida best~
+&+W   This wide pewter tankard has the words 'Tharaidia's Best' written on the
+&+Woutside.               &n
+~
+#131530
+barrel local ale lady light~
+&n&+ya barrel of local &n&+Yale &n&+ycalled '&+LThe&+W Lady's Light&n&+y'~
+&+LA barrel of the local brew of Dubneth lays here.&n~
+~
+17 15 3 0 7 0 0 8404993 0 1 0
+30 30 3 0 0 0 0 0
+1 1 100
+E
+barrel local ale lady light~
+&+Y   This brew is very old, and the tradition for making it has come down the
+&+Yline of one family for years. It is said the dwarves taught them how to make
+&+Yit, in return for a favour.&n
+~
+#131531
+stone piece star first~
+&+Lthe first piece of the &+WStar &+LStone&n~
+&+WOne of the pieces of the legendary &+WStar &+LStone lays here.&n~
+~
+12 15 3 0 7 100 4193 8404993 0 1 0
+0 0 0 0 0 0 0 0
+1 14539 100 8192 0 0 0
+E
+stone piece star~
+&+L   This piece of rock is the first piece of the legendary Star Stone, the
+&+Litem that can free Sargon from his dread prison. It will bring Light, or
+&+LDarkness to the world around us.&n
+~
+#131532
+stone piece star second~
+&+Lthe second piece of the &+WStar &+LStone&n~
+&+WOne of the pieces of the legendary &+WStar &+LStone lays here.&n~
+~
+12 15 3 0 7 100 4193 8404993 0 1 0
+0 0 0 0 0 0 0 0
+1 14539 100 8192 0 0 0
+E
+stone piece star&n~
+&+L   This piece of rock is the second piece of the legendary Star Stone, the
+&+Litem that can free Sargon from his dread prison. It will bring Light, or
+&+LDarkness to the world around us.&n
+~
+#131533
+stone piece star third~
+&+Lthe third piece of the &+WStar &+LStone&n~
+&+WOne of the pieces of the legendary &+WStar &+LStone lays here.&n~
+~
+12 15 3 0 7 100 4193 8404993 0 1 0
+0 0 0 0 0 0 0 0
+1 14539 100 8192 0 0 0
+E
+stone piece star third&n~
+&+L   This piece of rock is the third piece of the legendary Star Stone, the
+&+Litem that can free Sargon from his dread prison. It will bring Light, or
+&+LDarkness to the world around us.&n
+~
+#131534
+stone piece star fourth~
+&+Lthe fourth piece of the &+WStar &+LStone&n~
+&+WOne of the pieces of the legendary &+WStar &+LStone lays here.&n~
+~
+12 15 3 0 7 100 4193 8404993 0 1 0
+0 0 0 0 0 0 0 0
+1 14539 100 8192 0 0 0
+E
+stone piece star fourth~
+&+L   This piece of rock is the fourth piece of the legendary Star Stone, the
+&+Litem that can free Sargon from his dread prison. It will bring Light, or
+&+LDarkness to the world around us.&n
+~
+#131535
+stone piece star fifth~
+&+Lthe last piece of the &+WStar &+LStone&n~
+&+WOne of the pieces of the legendary &+WStar &+LStone lays here.&n~
+~
+12 15 3 0 7 100 4193 8404993 0 1 0
+0 0 0 0 0 0 0 0
+1 14539 100 8192 0 0 0
+E
+stone piece star&n~
+&+L   This piece of rock is the last piece of the legendary Star Stone, the
+&+Litem that can free Sargon from his dread prison. It will bring Light, or
+&+LDarkness to the world around us.&n
+~
+#131536
+necklace demonic ownership~
+&+La necklace of &n&+rdemonic &+Lownership&n~
+&+LA necklace showing that something is owned by the demons of the abyss lays here.&n~
+~
+9 15 3 0 7 100 4321 5 0 1 0
+7 2 1 2 0 0 0 0
+1 14539 100 8192 0 0 0
+E
+necklace demonic ownership~
+&+L   This necklace is given to special property of powerful being that work
+&+Lfor demons. It is to show that whatever is wearing it is loved by a high
+&+Lminion of evil and should not be messed with, under pain of death.&n
+~
+A
+19 0
+A
+18 2
+#131537
+rift exile~
+&+Cthe &+Lrift &+Cof &+Wexile&n~
+&+CA &+Lrift &+Cto &+WExile &+Csits here, waiting to be entered.&n~
+~
+25 15 3 0 7 0 65 0 0 1 0
+131528 7 -1 0 0 0 0 0
+0 0 100
+E
+rift exile~
+&+L   This rift levitates against the picture, small, and yet swirling with
+&+Linfinite power. It seems that it exists here simply to be entered. The rift
+&+Litself is made of a cascade of white and dark light, and anything that touches
+&+Lit is instantly sucked in...&n
+~
+#131538
+dragon ring tail scales lords~
+&+La &+Lring of the &n&+rdragon &+Wl&+Co&nr&+Lds&n~
+&n&+rA large ring made of woven dragon scales lays here.&n~
+~
+9 15 3 0 7 0 65 33554435 0 2 0
+5 20 0 3 0 0 0 0
+4 4392 100
+E
+dragon ring tail scales lords~
+&+r   This ring was forged by the ancient red dragon Dalthhimfire. He made it
+&+rfor his ill-bred son who he had sired through a ogress during one of his more
+&+r"festive" moods. He took his own scales and through magic only the dragons
+&+rhave creted this unique ring of woven and melted scales for his evil progeny.
+~
+A
+19 2
+A
+13 15
+#131539
+brain illithid magus zaquia~
+&+Mthe &n&+Cbrain &+Mof the &n&+millithid &+Mmagus &+C'&n&+mZ&+Maqu&+Cia'~
+&+MA pulsing brain lays here emiting a low hum.&n~
+~
+13 15 3 0 7 0 4161 8404993 0 1 0
+0 0 0 0 0 0 0 0
+3 2524 100
+E
+brain illithid magus zaqia~
+&+M   This brain belongs to the rogue illithid magus Zaqia. Once a friend of the
+&+Mpowerful mage Halaster he traveled in Undermountain until he ran into a group
+&+Mof grimlocks who ripped off one of his tenticles. Since then he has left
+&+MUndermountain and traveled to the fortress of the Demi-God of Darkness, Sargon,
+&+Min the hopes of learing magic from Urian Shadowborn.&n
+&+M   However, now he is dead, because you have his brain.&n
+~
+A
+12 30
+#131540
+earring shade shadows~
+&+Lan e&na&+Cr&+Wr&+Ci&nn&+Lg of the S&nh&+La&nd&+Le&n~
+&+LAn earring made of shadows lays here.&n~
+~
+9 15 3 0 7 0 4193 524289 0 122942 0
+4 14 0 3 0 0 0 0
+2 25843 100
+E
+earring shade shadows~
+&+L   This earring is made of the last bits of the greatest of Sargon's evil
+&+LShades. These creations were an amagumation of shadows, darkness and negative
+&+Lenergy. Their touch was death and their look could kill itself.
+&+L   The shade that this comes from was the last shade that Sargon ever made
+&+Lduring the Wars of Light and Shadow. It was right before The Redemtion of
+&+LLight gave him the killing blow that sent into Marin Lewellyn's Prision of
+&+LExile.
+&+L   It is about in inch across and around and seems to be a ball of energy that
+&+Lthat defies reality as it cracles and snarles at anyone that holds it.
+
+
+
+&+LThe greater s&nh&+La&nd&+Le Sassthar &+Wtells you in common 'Free me mortal, and Sargon
+&+Wshall reward you, do nothing and you will die to my hands like all the others!&n
+~
+A
+19 2
+A
+13 15
+#131541
+sleeves bladesingers~
+&+Csome &n&+bs&+Bl&+Ce&+We&+Cv&+Be&n&+bs &+Cof the &+Cbl&+Bad&n&+bes&+Bin&+Cge&nr&+Ls&n~
+&+bSome sleeves of the bladesingers lay here.&n~
+~
+9 15 3 0 7 0 266337 257 0 1039925246 271
+13 8 1 4 0 0 0 0
+2 43456 100 8192 0 0 0
+E
+sleeves bladesingers~
+&+b   These sleeves were made in the ancient elven city of Lethlispar. Long gone
+&+bbeneath the waves of the primoridal seas only a few items have survived.
+&+bThese sleeves are made of mithril thread that has been treated with the
+&+bblueshine method of the dwarves and had the elves spellsingers of the dim
+&+bpast enspell them with magic to aid the user in battle.&n
+~
+A
+19 2
+A
+18 2
+#131542
+chest gold huge inlaid~
+&+La huge chest of inlaid &+Ygold&n~
+&+LA huge chest sits here, containing the treasures of the fortress.&n~
+~
+15 15 3 0 7 0 0 0 0 1 0
+100 29 131495 100 0 0 0 0
+4 1054 100
+E
+chest gold huge inlaid~
+&+L   This chest was created with the rest of this huge tower.&n It is the chest
+&+Lthat contained 'The Destroyer of Night' for many years until the clerics of
+&+Lthe tower decided it was best kept on their level. The chest glows with
+&+Land odd light and the lock looks extremely solid.&n
+~
+#131543
+harp velyadin~
+&+Cthe &+Wh&+Ca&nr&+Cp of &n&+gVe&+Gly&n&+Ya&+Gdi&n&+gn&n~
+&+GThe ancient harp of Velyadin lays here.&n~
+~
+32 15 3 0 7 0 65 16385 0 65536 0
+187 53 0 40 0 0 0 0
+3 134563 100 8 0 0 0
+E
+harp velyadin&n~
+&+C   This harp was made by Martin Llewelyn when he lived in Velyadin. Made for
+&+Chis lost love Amanda it is a thing of worked art. It is made of fine fibers of
+&+Ca living oak tree that has willingly given up its center to give this harp
+&+Cform. Its strings are woven out of air and mist from the ancient lord of the
+&+CElemental Plane of Air, Yan-C-Bin. It is a thing of power.&n
+~
+A
+13 30
+A
+32 3
+#131544
+ring elven nobility shadowglade~
+&+Ca ring of elven nobility&n~
+&+CA ring of Shadowglade lays here.&n~
+~
+13 15 3 0 7 0 0 3 0 1 0
+0 0 0 0 0 0 0 0
+1 145 100
+E
+ring elven nobility shadowglade&n~
+   This ring is worn only by the nobles of Shadowglade, and indicated that
+the person holding it is either a friend, or a noble.&n
+~
+#131545
+leggings blade bladesingers~
+&+Cthe &+Wl&+Ce&+Bg&n&+bgi&+Bn&+Cg&+Ws&+C of the &n&+Wbl&+Bad&n&+bes&+Bin&n&+Wg&+Ce&nr&+Ls&n~
+&+CSome leggings of the faimed bladesingers lays here.&n~
+~
+9 15 3 0 7 0 65 33 0 1039862310 15
+10 5 1 5 0 0 0 0
+2 15942 100 8192 0 0 0
+E
+leggings blade bladesingers~
+&+b   These sleeves were made in the ancient elven city of Lethlispar. Long gone
+&+bbeneath the waves of the primoridal seas only a few items have survived.
+&+bThese sleeves are made of mithril thread that has been treated with the
+&+bblueshine method of the dwarves and had the elves spellsingers of the dim
+&+bpast enspell them with magic to aid the user in battle.&n
+~
+A
+19 2
+A
+13 20

@@ -1,0 +1,933 @@
+#1314
+The Tower of Darkness~
+131541 1 0 40 50 3
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 131404 5 2 100 0 0 0
+*     down exit from "The Center of Standing Stones" to
+*     "The Chamber of Exile" - closed/locked
+*
+D 0 131539 4 2 100 0 0 0
+*     up exit from "The Chamber of Exile" to
+*     "The Center of Standing Stones" - closed/locked
+*
+D 0 131408 2 1 100 0 0 0
+*     south exit from "Before the Black Tower" to
+*     "The Foyer of the Black Tower" - closed
+*
+D 0 131410 0 1 100 0 0 0
+*     north exit from "The Foyer of the Black Tower" to
+*     "Before the Black Tower" - closed
+*
+D 0 131409 1 1 100 0 0 0
+*     east exit from "A Guard's Bar" to
+*     "The Foyer of the Black Tower" - closed
+*
+D 0 131410 3 1 100 0 0 0
+*     west exit from "The Foyer of the Black Tower" to
+*     "A Guard's Bar" - closed
+*
+D 0 131409 2 1 100 0 0 0
+*     south exit from "A Guard's Bar" to
+*     "The Barracks of the Black Tower" - closed
+*
+D 0 131412 0 1 100 0 0 0
+*     north exit from "The Barracks of the Black Tower" to
+*     "A Guard's Bar" - closed
+*
+D 0 131410 1 1 100 0 0 0
+*     east exit from "The Foyer of the Black Tower" to
+*     "The Eastern Barracks of the Black Tower" - closed
+*
+D 0 131411 3 1 100 0 0 0
+*     west exit from "The Eastern Barracks of the Black Tower" to
+*     "The Foyer of the Black Tower" - closed
+*
+D 0 131411 2 1 100 0 0 0
+*     south exit from "The Eastern Barracks of the Black Tower" to
+*     "A Dark Alcove" - closed
+*
+D 0 131414 0 1 100 0 0 0
+*     north exit from "A Dark Alcove" to
+*     "The Eastern Barracks of the Black Tower" - closed
+*
+D 0 131412 2 1 100 0 0 0
+*     south exit from "The Barracks of the Black Tower" to
+*     "The Sergeant's Quarters" - closed
+*
+D 0 131415 0 1 100 0 0 0
+*     north exit from "The Sergeant's Quarters" to
+*     "The Barracks of the Black Tower" - closed
+*
+D 0 131413 1 1 100 0 0 0
+*     east exit from "The Foyer of the Black Tower" to
+*     "A Dark Alcove" - closed
+*
+D 0 131414 3 1 100 0 0 0
+*     west exit from "A Dark Alcove" to
+*     "The Foyer of the Black Tower" - closed
+*
+D 0 131413 2 1 100 0 0 0
+*     south exit from "The Foyer of the Black Tower" to
+*     "The Barracks Kitchen" - closed
+*
+D 0 131416 0 1 100 0 0 0
+*     north exit from "The Barracks Kitchen" to
+*     "The Foyer of the Black Tower" - closed
+*
+D 0 131418 1 1 100 0 0 0
+*     east exit from "The Captain's Quarters" to
+*     "The Captain's Parlor" - closed
+*
+D 0 131419 3 1 100 0 0 0
+*     west exit from "The Captain's Parlor" to
+*     "The Captain's Quarters" - closed
+*
+D 0 131419 2 2 100 0 0 0
+*     south exit from "The Captain's Parlor" to
+*     "Before a Black Iron Door" - closed/locked
+*
+D 0 131422 0 2 100 0 0 0
+*     north exit from "Before a Black Iron Door" to
+*     "The Captain's Parlor" - closed/locked
+*
+D 0 131421 2 1 100 0 0 0
+*     south exit from "A Long Black Corridor" to
+*     "An Inquisitioning Chamber" - closed
+*
+D 0 131424 0 1 100 0 0 0
+*     north exit from "An Inquisitioning Chamber" to
+*     "A Long Black Corridor" - closed
+*
+D 0 131422 2 2 100 0 0 0
+*     south exit from "Before a Black Iron Door" to
+*     "The Tower War Chamber" - closed/locked
+*
+D 0 131425 0 1 100 0 0 0
+*     north exit from "The Tower War Chamber" to
+*     "Before a Black Iron Door" - closed
+*
+D 0 131423 2 1 100 0 0 0
+*     south exit from "A Dark Hallway" to
+*     "A Long Flight of Stairs" - closed
+*
+D 0 131426 0 1 100 0 0 0
+*     north exit from "A Long Flight of Stairs" to
+*     "A Dark Hallway" - closed
+*
+D 0 131427 1 1 100 0 0 0
+*     east exit from "A Priest's Living Chambers" to
+*     "A Temple to Sargon" - closed
+*
+D 0 131428 3 1 100 0 0 0
+*     west exit from "A Temple to Sargon" to
+*     "A Priest's Living Chambers" - closed
+*
+D 0 131428 2 1 100 0 0 0
+*     south exit from "A Temple to Sargon" to
+*     "A Huge Battle Arena" - closed
+*
+D 0 131431 0 1 100 0 0 0
+*     north exit from "A Huge Battle Arena" to
+*     "A Temple to Sargon" - closed
+*
+D 0 131429 2 0 100 0 0 0
+*     south exit from "The Personal Chambers of Lord Mordren" to
+*     "Gathering Chamber of the Black Guard" - open
+*
+D 0 131432 0 0 100 0 0 0
+*     north exit from "Gathering Chamber of the Black Guard" to
+*     "The Personal Chambers of Lord Mordren" - open
+*
+D 0 131430 1 1 100 0 0 0
+*     east exit from "Barracks of the Black Guard" to
+*     "A Huge Battle Arena" - closed
+*
+D 0 131431 3 1 100 0 0 0
+*     west exit from "A Huge Battle Arena" to
+*     "Barracks of the Black Guard" - closed
+*
+D 0 131431 1 2 100 0 0 0
+*     east exit from "A Huge Battle Arena" to
+*     "Gathering Chamber of the Black Guard" - closed/locked
+*
+D 0 131432 3 1 100 0 0 0
+*     west exit from "Gathering Chamber of the Black Guard" to
+*     "A Huge Battle Arena" - closed
+*
+D 0 131431 2 1 100 0 0 0
+*     south exit from "A Huge Battle Arena" to
+*     "Foyer of the Black Guard" - closed
+*
+D 0 131434 0 2 100 0 0 0
+*     north exit from "Foyer of the Black Guard" to
+*     "A Huge Battle Arena" - closed/locked
+*
+D 0 131434 1 1 100 0 0 0
+*     east exit from "Foyer of the Black Guard" to
+*     "A Long Flight of Stairs" - closed
+*
+D 0 131435 3 1 100 0 0 0
+*     west exit from "A Long Flight of Stairs" to
+*     "Foyer of the Black Guard" - closed
+*
+D 0 131436 9 0 100 0 0 0
+*     southeast exit from "The Western Priest's Chambers" to
+*     "The Pillar of Darkness" - open
+*
+D 0 131440 6 0 100 0 0 0
+*     northwest exit from "The Pillar of Darkness" to
+*     "The Western Priest's Chambers" - open
+*
+D 0 131438 7 0 100 0 0 0
+*     southwest exit from "The Eastern Priests Chambers" to
+*     "The Pillar of Darkness" - open
+*
+D 0 131440 8 0 100 0 0 0
+*     northeast exit from "The Pillar of Darkness" to
+*     "The Eastern Priests Chambers" - open
+*
+D 0 131440 1 2 100 0 0 0
+*     east exit from "The Pillar of Darkness" to
+*     "Before the Temple of Sargon" - closed/locked
+*
+D 0 131441 3 2 100 0 0 0
+*     west exit from "Before the Temple of Sargon" to
+*     "The Pillar of Darkness" - closed/locked
+*
+D 0 131440 2 1 100 0 0 0
+*     south exit from "The Pillar of Darkness" to
+*     "A Guard's Chamber" - closed
+*
+D 0 131443 0 1 100 0 0 0
+*     north exit from "A Guard's Chamber" to
+*     "The Pillar of Darkness" - closed
+*
+D 0 131441 2 1 100 0 0 0
+*     south exit from "Before the Temple of Sargon" to
+*     "A Long Flight of Stairs" - closed
+*
+D 0 131444 0 1 100 0 0 0
+*     north exit from "A Long Flight of Stairs" to
+*     "Before the Temple of Sargon" - closed
+*
+D 0 131442 1 2 100 0 0 0
+*     east exit from "The Prison Room" to
+*     "A Guard's Chamber" - closed/locked
+*
+D 0 131443 3 2 100 0 0 0
+*     west exit from "A Guard's Chamber" to
+*     "The Prison Room" - closed/locked
+*
+D 0 131445 2 1 100 0 0 0
+*     south exit from "A Picture of Conquest" to
+*     "A Chamber of the Elements" - closed
+*
+D 0 131448 0 1 100 0 0 0
+*     north exit from "A Chamber of the Elements" to
+*     "A Picture of Conquest" - closed
+*
+D 0 131446 2 2 100 0 0 0
+*     south exit from "The Stasis Chambers" to
+*     "The Nexus" - closed/locked
+*
+D 0 131449 0 2 100 0 0 0
+*     north exit from "The Nexus" to
+*     "The Stasis Chambers" - closed/locked
+*
+D 0 131447 2 1 100 0 0 0
+*     south exit from "A Mural of Domination" to
+*     "A Room of Summoning" - closed
+*
+D 0 131450 0 1 100 0 0 0
+*     north exit from "A Room of Summoning" to
+*     "A Mural of Domination" - closed
+*
+D 0 131448 1 1 100 0 0 0
+*     east exit from "A Chamber of the Elements" to
+*     "The Nexus" - closed
+*
+D 0 131449 3 1 100 0 0 0
+*     west exit from "The Nexus" to
+*     "A Chamber of the Elements" - closed
+*
+D 0 131449 1 1 100 0 0 0
+*     east exit from "The Nexus" to
+*     "A Room of Summoning" - closed
+*
+D 0 131450 3 1 100 0 0 0
+*     west exit from "A Room of Summoning" to
+*     "The Nexus" - closed
+*
+D 0 131449 2 1 100 0 0 0
+*     south exit from "The Nexus" to
+*     "A Chamber of Bone" - closed
+*
+D 0 131452 0 1 100 0 0 0
+*     north exit from "A Chamber of Bone" to
+*     "The Nexus" - closed
+*
+D 0 131449 9 2 100 0 0 0
+*     southeast exit from "The Nexus" to
+*     "A Long Flight of Stairs" - closed/locked
+*
+D 0 131453 6 2 100 0 0 0
+*     northwest exit from "A Long Flight of Stairs" to
+*     "The Nexus" - closed/locked
+*
+D 0 131451 1 1 100 0 0 0
+*     east exit from "A Chamber of Death" to
+*     "A Chamber of Bone" - closed
+*
+D 0 131452 3 1 100 0 0 0
+*     west exit from "A Chamber of Bone" to
+*     "A Chamber of Death" - closed
+*
+D 0 131464 3 1 100 0 0 0
+*     west exit from "Before a Small Shack" to
+*     "Inside the Smithy" - closed
+*
+D 0 131465 1 1 100 0 0 0
+*     east exit from "Inside the Smithy" to
+*     "Before a Small Shack" - closed
+*
+D 0 131466 1 0 100 0 0 0
+*     east exit from "A Hall of Bones" to
+*     "The Study" - open
+*
+D 0 131468 3 0 100 0 0 0
+*     west exit from "The Study" to
+*     "A Hall of Bones" - open
+*
+D 0 131466 3 0 100 0 0 0
+*     west exit from "A Hall of Bones" to
+*     "The Library" - open
+*
+D 0 131467 1 0 100 0 0 0
+*     east exit from "The Library" to
+*     "A Hall of Bones" - open
+*
+D 0 131469 0 1 100 0 0 0
+*     north exit from "The Hall of Bones" to
+*     "Verinor's Quarters" - closed
+*
+D 0 131472 2 1 100 0 0 0
+*     south exit from "Verinor's Quarters" to
+*     "The Hall of Bones" - closed
+*
+D 0 131469 1 0 100 0 0 0
+*     east exit from "The Hall of Bones" to
+*     "The Laboratory" - open
+*
+D 0 131471 3 0 100 0 0 0
+*     west exit from "The Laboratory" to
+*     "The Hall of Bones" - open
+*
+D 0 131469 3 0 100 0 0 0
+*     west exit from "The Hall of Bones" to
+*     "Living Quarters" - open
+*
+D 0 131470 1 0 100 0 0 0
+*     east exit from "Living Quarters" to
+*     "The Hall of Bones" - open
+*
+D 0 131473 4 2 100 0 0 0
+*     up exit from "Inside a Sphere of Power" to
+*     "Before a Magical Barrier" - closed/locked
+*
+D 0 131483 5 2 100 0 0 0
+*     down exit from "Before a Magical Barrier" to
+*     "Inside a Sphere of Power" - closed/locked
+*
+D 0 131474 0 1 100 0 0 0
+*     north exit from "An Ancient Hall" to
+*     "A Warrior's Room" - closed
+*
+D 0 131475 2 1 100 0 0 0
+*     south exit from "A Warrior's Room" to
+*     "An Ancient Hall" - closed
+*
+D 0 131474 1 1 100 0 0 0
+*     east exit from "An Ancient Hall" to
+*     "A Cluttered Chamber" - closed
+*
+D 0 131476 3 1 100 0 0 0
+*     west exit from "A Cluttered Chamber" to
+*     "An Ancient Hall" - closed
+*
+D 0 131474 2 1 100 0 0 0
+*     south exit from "An Ancient Hall" to
+*     "Someone's Dark Quarters" - closed
+*
+D 0 131477 0 1 100 0 0 0
+*     north exit from "Someone's Dark Quarters" to
+*     "An Ancient Hall" - closed
+*
+D 0 131474 3 1 100 0 0 0
+*     west exit from "An Ancient Hall" to
+*     "A Dark Bedroom and Study" - closed
+*
+D 0 131478 1 1 100 0 0 0
+*     east exit from "A Dark Bedroom and Study" to
+*     "An Ancient Hall" - closed
+*
+D 0 131507 0 1 100 0 0 0
+*     north exit from "A Twisting Cavern" to
+*     "A Strange Storage Area" - closed
+*
+D 0 131513 2 1 100 0 0 0
+*     south exit from "A Strange Storage Area" to
+*     "A Twisting Cavern" - closed
+*
+D 0 131509 3 1 100 0 0 0
+*     west exit from "A Twisting Cavern" to
+*     "The Master's Quarters" - closed
+*
+D 0 131516 1 1 100 0 0 0
+*     east exit from "The Master's Quarters" to
+*     "A Twisting Cavern" - closed
+*
+D 0 131510 2 2 100 0 0 0
+*     south exit from "A Twisting Cavern" to
+*     "An Abyssal Audience Chamber" - closed/locked
+*
+D 0 131514 0 1 100 0 0 0
+*     north exit from "An Abyssal Audience Chamber" to
+*     "A Twisting Cavern" - closed
+*
+D 0 131510 3 0 100 0 0 0
+*     west exit from "A Twisting Cavern" to
+*     "A Small Study" - open
+*
+D 0 131515 1 0 100 0 0 0
+*     east exit from "A Small Study" to
+*     "A Twisting Cavern" - open
+*
+D 0 131518 1 1 100 0 0 0
+*     east exit from "Before Shadowborn Hall" to
+*     "A Well Furnished Waiting Room" - closed
+*
+D 0 131519 3 1 100 0 0 0
+*     west exit from "A Well Furnished Waiting Room" to
+*     "Before Shadowborn Hall" - closed
+*
+D 0 131518 2 2 100 0 0 0
+*     south exit from "Before Shadowborn Hall" to
+*     "The Audience Chamber of Shadowborn" - closed/locked
+*
+D 0 131522 0 1 100 0 0 0
+*     north exit from "The Audience Chamber of Shadowborn" to
+*     "Before Shadowborn Hall" - closed
+*
+D 0 131522 3 2 100 0 0 0
+*     west exit from "The Audience Chamber of Shadowborn" to
+*     "The Treasure Chamber" - closed/locked
+*
+D 0 131523 1 2 100 0 0 0
+*     east exit from "The Treasure Chamber" to
+*     "The Audience Chamber of Shadowborn" - closed/locked
+*
+D 0 131525 1 1 100 0 0 0
+*     east exit from "Before a Small Farmhouse" to
+*     "Inside the Farmhouse" - closed
+*
+D 0 131527 3 1 100 0 0 0
+*     west exit from "Inside the Farmhouse" to
+*     "Before a Small Farmhouse" - closed
+*
+D 0 131533 0 2 100 0 0 0
+*     north exit from "The Prison of Sargon, Demi-God of Shadows" to
+*     "A Hall of Light" - closed/locked
+*
+D 0 131534 2 2 100 0 0 0
+*     south exit from "A Hall of Light" to
+*     "The Prison of Sargon, Demi-God of Shadows" - closed/locked
+*
+D 0 131535 1 1 100 0 0 0
+*     east exit from "The Center of Dubneth" to
+*     "The Tavern of the Lady of Light" - closed
+*
+D 0 131536 3 1 100 0 0 0
+*     west exit from "The Tavern of the Lady of Light" to
+*     "The Center of Dubneth" - closed
+*
+D 0 131537 0 1 100 0 0 0
+*     north exit from "The Road to an Ancient Church" to
+*     "The Church of Holy Light" - closed
+*
+D 0 131538 2 1 100 0 0 0
+*     south exit from "The Church of Holy Light" to
+*     "The Road to an Ancient Church" - closed
+*
+*
+O 0 131400 1 131403 100 0 0 0      * a standing stone
+O 0 131402 1 131407 100 0 0 0      * an impaled farmer
+O 0 131403 1 131408 100 0 0 0      * a decapitated farmer
+O 0 131414 2 131409 100 0 0 0      * a cask of ale
+O 0 131418 4 131410 100 0 0 0      * a flickering torch
+O 0 131407 2 131413 100 0 0 0      * a long wood table
+O 0 131412 1 131414 100 0 0 0      * a small black altar of Sargon
+O 0 131418 4 131421 100 0 0 0      * a flickering torch
+O 0 131418 4 131423 100 0 0 0      * a flickering torch
+O 0 131431 1 131427 100 0 0 0      * a dark stained desk
+P 1 131432 1 131431 100 0 0 0      *   an unholy book of Sargon
+P 1 131433 1 131431 100 0 0 0      *   a bottle of black blood
+O 0 131429 1 131428 100 0 0 0      * a bloody altar
+O 0 131425 1 131434 100 0 0 0      * a small figure of Sargon
+O 0 131447 1 131437 100 0 0 0      * a black iron chest
+P 1 131450 1 131447 30 0 0 0       *   a mithril hammer called 'The Destroyer of Night'
+O 0 131418 4 131437 100 0 0 0      * a flickering torch
+O 0 131441 1 131439 100 0 0 0      * an ancient orc's corpse
+O 0 131440 1 131439 100 0 0 0      * a peasant girl's corpse
+O 0 131442 1 131439 100 0 0 0      * the corpse of a young knight
+O 0 131443 1 131439 100 0 0 0      * a village farmer's corpse
+O 0 131407 2 131443 100 0 0 0      * a long wood table
+O 0 131437 1 131443 100 0 0 0      * a keyboard
+P 1 131438 1 131437 100 0 0 0      *   a small black iron key
+P 1 131439 1 131437 100 0 0 0      *   a small steel key
+O 0 131469 1 131445 100 0 0 0      * a conquest picture
+O 0 131444 1 131446 100 0 0 0      * some bookshelves
+P 1 131445 1 131444 100 0 0 0      *   a book labeled 'An Inquiry into Temporal Magic'
+P 1 131446 1 131444 100 0 0 0      *   the demon bound spellbook of Earlion Di'Arthri
+O 0 131487 1 131447 100 0 0 0      * a mural teleporter
+O 0 131468 1 131451 100 0 0 0      * a bone picture
+O 0 131452 7 131454 100 0 0 0      * some exit descriptions
+O 0 131457 3 131454 100 0 0 0      * A Maze Teleporter
+O 0 131458 4 131454 100 0 0 0      * A Maze Teleporter
+O 0 131459 4 131454 100 0 0 0      * A Maze Teleporter
+O 0 131460 3 131454 100 0 0 0      * A Maze Teleporter
+O 0 131452 7 131455 100 0 0 0      * some exit descriptions
+O 0 131453 4 131455 100 0 0 0      * A Maze Teleporter
+O 0 131458 4 131455 100 0 0 0      * A Maze Teleporter
+O 0 131459 4 131455 100 0 0 0      * A Maze Teleporter
+O 0 131456 3 131455 100 0 0 0      * A Maze Teleporter
+O 0 131452 7 131456 100 0 0 0      * some exit descriptions
+O 0 131453 4 131456 100 0 0 0      * A Maze Teleporter
+O 0 131458 4 131456 100 0 0 0      * A Maze Teleporter
+O 0 131459 4 131456 100 0 0 0      * A Maze Teleporter
+O 0 131460 3 131456 100 0 0 0      * A Maze Teleporter
+O 0 131452 7 131457 100 0 0 0      * some exit descriptions
+O 0 131453 4 131457 100 0 0 0      * A Maze Teleporter
+O 0 131454 3 131457 100 0 0 0      * A Maze Teleporter
+O 0 131455 3 131457 100 0 0 0      * A Maze Teleporter
+O 0 131460 3 131457 100 0 0 0      * A Maze Teleporter
+O 0 131462 1 131458 100 0 0 0      * a portal of shadows
+O 0 131452 7 131459 100 0 0 0      * some exit descriptions
+O 0 131457 3 131459 100 0 0 0      * A Maze Teleporter
+O 0 131454 3 131459 100 0 0 0      * A Maze Teleporter
+O 0 131459 4 131459 100 0 0 0      * A Maze Teleporter
+O 0 131461 1 131459 100 0 0 0      * A Maze Teleporter
+O 0 131452 7 131460 100 0 0 0      * some exit descriptions
+O 0 131457 3 131460 100 0 0 0      * A Maze Teleporter
+O 0 131456 3 131460 100 0 0 0      * A Maze Teleporter
+O 0 131455 3 131460 100 0 0 0      * A Maze Teleporter
+O 0 131458 4 131460 100 0 0 0      * A Maze Teleporter
+O 0 131452 7 131461 100 0 0 0      * some exit descriptions
+O 0 131453 4 131461 100 0 0 0      * A Maze Teleporter
+O 0 131454 3 131461 100 0 0 0      * A Maze Teleporter
+O 0 131455 3 131461 100 0 0 0      * A Maze Teleporter
+O 0 131456 3 131461 100 0 0 0      * A Maze Teleporter
+O 0 131467 1 131466 100 0 0 0      * a bone portal
+O 0 131470 1 131473 100 0 0 0      * a elemental portal
+O 0 131471 1 131473 100 0 0 0      * the power of the energy plane
+O 0 131474 1 131473 100 0 0 0      * a teleporter to room 75
+O 0 131472 2 131474 100 0 0 0      * a wood table
+P 1 131473 1 131472 100 0 0 0      *   some scattered notes
+O 0 131477 1 131476 100 0 0 0      * a piece of an old letter
+O 0 131483 1 131496 100 0 0 0      * a portal of darkness
+P 1 131484 1 131483 100 0 0 0      *   some leggings of light and darkness
+P 1 131485 1 131483 100 0 0 0      *   a mask called 'Phantom'
+P 1 131512 1 131483 100 0 0 0      *   a key of elemental magic
+O 0 131488 1 131505 100 0 0 0      * a glowing demonic portal
+O 0 131472 2 131511 100 0 0 0      * a wood table
+P 1 131500 1 131472 100 0 0 0      *   a large tome entitled 'An Exploration of Summoning'
+O 0 131514 1 131517 100 0 0 0      * a portal of shadows
+O 0 131542 1 131523 100 0 0 0      * a huge chest of inlaid gold
+P 1 131496 1 131542 100 0 0 0      *   a pile of platinum coins
+P 1 131486 1 131542 20 0 0 0       *   the crown of the Sorcerer King
+P 1 131498 1 131542 100 0 0 0      *   the ring of the dragonkind
+P 1 131499 1 131542 100 0 0 0      *   a longsword called 'The Word of Akiaurn'
+O 0 131518 1 131528 100 0 0 0      * the corpse of Martin Llewellyn
+P 1 131519 1 131518 100 0 0 0      *   the spellbook of Martin Llewellyn
+O 0 131527 1 131534 100 0 0 0      * a teleporter to room 5
+O 0 131537 1 131539 100 0 0 0      * the rift of exile
+*
+M 0 131400 2 131400 100 0 0 0      * a sheep
+M 0 131401 1 131402 100 0 0 0      * a ram
+M 0 131400 2 131406 100 0 0 0      * a sheep
+M 0 131402 2 131407 100 0 0 0      * a horde of flies
+M 0 131402 2 131408 100 0 0 0      * a horde of flies
+M 0 131418 1 131409 100 0 0 0      * an ogre bartender
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131414 2 18 100 0 0 0          *   a cask of ale
+M 0 131419 1 131409 100 0 0 0      * a drunk orc
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131405 7 17 100 0 0 0          *   a dagger of black iron
+M 0 131420 1 131409 100 0 0 0      * a hooded human
+G 1 131415 1 0 100 0 0 0           *    a silver plated wine glass
+M 0 131421 1 131409 100 0 0 0      * a goblin dicer
+E 1 131405 7 16 100 0 0 0          *   a dagger of black iron
+M 0 131403 3 131410 100 0 0 0      * an orc knight
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131404 1 131410 100 0 0 0      * an ogre mercenary
+E 1 131405 7 16 100 0 0 0          *   a dagger of black iron
+E 1 131405 7 17 100 0 0 0          *   a dagger of black iron
+G 1 131406 1 0 100 0 0 0           *    the decapitated head of Joseph Hammerson
+M 0 131405 1 131410 100 0 0 0      * an apprentice of Urian
+M 0 131414 1 131411 100 0 0 0      * a troll warrior
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131408 24 17 100 0 0 0         *   a black iron longsword
+M 0 131415 1 131411 100 0 0 0      * a fire giant
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+F 1 131416 1 131411 100 0 0 0      * a fire drake (following)
+F 1 131417 1 131411 100 0 0 0      * an apprentice of Urian (following)
+E 1 131413 1 12 100 0 0 0          *   a cloak of burning flames
+M 0 131422 1 131412 100 0 0 0      * a human soldier
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+M 0 131423 1 131412 100 0 0 0      * a flind scout
+E 1 131405 7 16 100 0 0 0          *   a dagger of black iron
+E 1 131408 24 17 100 0 0 0         *   a black iron longsword
+E 1 131416 1 27 100 0 0 0          *   an off the shoulder traveling bag
+P 1 131417 1 131416 100 0 0 0      *   a finely written letter
+M 0 131424 1 131412 100 0 0 0      * an orc preacher
+M 0 131425 1 131412 100 0 0 0      * a hobgoblin warrior
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+M 0 131406 1 131413 100 0 0 0      * an orc guard
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131409 1 18 100 0 0 0          *   a chicken leg
+M 0 131407 1 131413 100 0 0 0      * a hill giant thug
+E 1 131410 2 16 100 0 0 0          *   a massive club
+M 0 131408 1 131413 100 0 0 0      * a goblin cook
+E 1 131405 7 16 100 0 0 0          *   a dagger of black iron
+E 1 131411 1 17 100 0 0 0          *   a sharpened wooden spoon
+M 0 131411 2 131414 100 0 0 0      * an orc acolyte
+F 1 131412 2 131414 100 0 0 0      * an unholy orc warrior (following)
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131413 1 131414 100 0 0 0      * an ogre guard
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+M 0 131426 1 131415 100 0 0 0      * an orc sergeant
+E 1 131508 1 18 100 0 0 0          *   a strong iron gate key
+M 0 131409 1 131416 100 0 0 0      * an ogress cook
+M 0 131410 1 131416 100 0 0 0      * Katalia
+M 0 131440 1 131418 100 0 0 0      * Kinslor Elfslayer
+E 1 131424 1 12 100 0 0 0          *   a cloak of shadows and night
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+G 1 131531 1 0 100 0 0 0           *    the first piece of the Star Stone
+F 1 131441 1 131418 100 0 0 0      * a priest of Sargon (following)
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+F 1 131403 3 131418 100 0 0 0      * an orc knight (following)
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131435 1 131419 100 0 0 0      * the captain's succubi mistress
+F 1 131436 1 131419 100 0 0 0      * a tiny imp (following)
+M 0 131442 1 131420 100 0 0 0      * Dana, daughter of Urian
+E 1 131536 1 3 100 0 0 0           *   a necklace of demonic ownership
+M 0 131444 1 131420 100 0 0 0      * a greater shadow
+M 0 131563 2 131421 100 0 0 0      * a elite fire giant
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131427 2 131421 100 0 0 0      * a hill giant guard
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131429 2 131422 100 0 0 0      * an elite stone giant
+M 0 131429 2 131422 100 0 0 0      * an elite stone giant
+M 0 131563 2 131423 100 0 0 0      * a elite fire giant
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131427 2 131423 100 0 0 0      * a hill giant guard
+E 1 131410 2 16 100 0 0 0          *   a massive club
+G 1 131404 31 0 100 0 0 0          *    a black iron two-handed sword
+M 0 131437 1 131424 100 0 0 0      * a goblin doctor
+M 0 131438 1 131424 100 0 0 0      * Dackron
+E 1 131423 1 16 100 0 0 0          *   a dagger of nightfall
+E 1 131405 7 17 100 0 0 0          *   a dagger of black iron
+F 1 131439 1 131424 100 0 0 0      * a small shadow drake (following)
+M 0 131433 1 131425 100 0 0 0      * an orc field marshal
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+F 1 131430 1 131425 100 0 0 0      * a war wizard (following)
+F 1 131431 1 131425 100 0 0 0      * an ogre commander (following)
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+F 1 131432 1 131425 100 0 0 0      * a drow officer (following)
+E 1 131509 1 14 100 0 0 0          *   a drow-made bracelet
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131408 24 17 100 0 0 0         *   a black iron longsword
+F 1 131434 1 131425 100 0 0 0      * a duergar chaplain (following)
+E 1 131422 1 3 100 0 0 0           *   a collar with the emblazoned seal of Sargon
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+M 0 131454 1 131428 100 0 0 0      * Amelia
+M 0 131455 1 131428 100 0 0 0      * a consecrated priest of Sargon
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+G 1 131426 1 0 100 0 0 0           *    a small black key
+M 0 131456 1 131428 100 0 0 0      * the priests' bodyguard
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+M 0 131457 1 131428 100 0 0 0      * a blood blessed warrior
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131462 1 131429 100 0 0 0      * Lord Mordren Ap'Dethyin
+E 1 131510 1 5 100 0 0 0           *   a suit of field plate made of shadows
+E 1 131436 1 20 100 0 0 0          *   a mask of the Shade
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+G 1 131532 1 0 100 0 0 0           *    the second piece of the Star Stone
+F 1 131463 1 131429 100 0 0 0      * an elite orc knight (following)
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+F 1 131464 1 131429 100 0 0 0      * an elite human knight (following)
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131403 3 131430 100 0 0 0      * an orc knight
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131412 2 131430 100 0 0 0      * an unholy orc warrior
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131428 2 131430 100 0 0 0      * a flind of the Black Guard
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131448 1 131431 100 0 0 0      * a knight champion
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131449 1 131431 100 0 0 0      * a sister knight
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131450 1 131431 100 0 0 0      * a flind knight
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131458 1 131432 100 0 0 0      * the sister superior
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131459 1 131432 100 0 0 0      * Urian's Champion
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131460 1 131432 100 0 0 0      * the ancient master
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131461 1 131432 100 0 0 0      * an emissary of Orcus
+M 0 131451 2 131433 100 0 0 0      * a militant priest
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131452 1 131433 100 0 0 0      * a dark hearted warrior
+G 1 131427 1 0 100 0 0 0           *    a small adamantium key
+M 0 131445 1 131434 100 0 0 0      * a rakshasa champion
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131446 1 131434 100 0 0 0      * a deadly dark knight
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131443 1 131434 100 0 0 0      * a drow priest
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+M 0 131447 1 131434 100 0 0 0      * an ogre applicant
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131428 2 131435 100 0 0 0      * a flind of the Black Guard
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131475 1 131436 100 0 0 0      * a drow priestess
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+F 1 131473 2 131436 100 0 0 0      * an ancient clay golem (following)
+M 0 131476 1 131436 100 0 0 0      * an orc cleric
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+F 1 131472 3 131436 100 0 0 0      * a guardian clay golem (following)
+M 0 131477 1 131438 100 0 0 0      * a human monk
+F 1 131470 2 131438 100 0 0 0      * a clay golem (following)
+M 0 131478 1 131438 100 0 0 0      * an orc monk
+F 1 131473 2 131438 100 0 0 0      * an ancient clay golem (following)
+M 0 131481 1 131439 100 0 0 0      * Cardinal Faethron
+E 1 131449 1 13 100 0 0 0          *   a belt of the hearts of the innocent
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+G 1 131448 1 0 100 0 0 0           *    a bone key
+G 1 131533 1 0 100 0 0 0           *    the third piece of the Star Stone
+F 1 131479 1 131439 100 0 0 0      * a bishop of Sargon (following)
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+F 1 131480 1 131439 100 0 0 0      * a vicar of shadows (following)
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+F 1 131472 3 131439 100 0 0 0      * a guardian clay golem (following)
+F 1 131471 5 131439 100 0 0 0      * a guardian bone golem (following)
+M 0 131465 2 131440 100 0 0 0      * a clerical zealot
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+E 1 131421 14 17 100 0 0 0         *   a black iron mace
+F 1 131472 3 131440 100 0 0 0      * a guardian clay golem (following)
+M 0 131411 2 131440 100 0 0 0      * an orc acolyte
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+M 0 131451 2 131440 100 0 0 0      * a militant priest
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+M 0 131471 5 131441 100 0 0 0      * a guardian bone golem
+M 0 131471 5 131441 100 0 0 0      * a guardian bone golem
+M 0 131471 5 131441 100 0 0 0      * a guardian bone golem
+M 0 131471 5 131441 100 0 0 0      * a guardian bone golem
+M 0 131569 1 131442 100 0 0 0      * Isabia, the elven noble
+M 0 131467 1 131443 100 0 0 0      * a lazy orc guard
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+M 0 131468 1 131443 100 0 0 0      * an orc slavemaster
+M 0 131469 1 131443 100 0 0 0      * the prison master
+E 1 131421 14 16 100 0 0 0         *   a black iron mace
+F 1 131470 2 131443 100 0 0 0      * a clay golem (following)
+M 0 131465 2 131444 100 0 0 0      * a clerical zealot
+M 0 131491 1 131446 100 0 0 0      * Earlion that is
+G 1 131534 1 0 100 0 0 0           *    the fourth piece of the Star Stone
+G 1 131494 1 0 100 0 0 0           *    the key to the audience chamber
+F 1 131490 1 131446 100 0 0 0      * Earlion that was (following)
+G 1 131515 1 0 20 0 0 0            *    an ethereal cloak of the archmagus
+F 1 131492 1 131446 100 0 0 0      * Earlion, the ultraloth (following)
+E 1 131516 1 3 20 0 0 0            *   a mithril chain of burning skulls and frozen bones
+M 0 131487 1 131448 100 0 0 0      * a drow sorcerer
+E 1 131451 1 18 100 0 0 0          *   a drow elf's journal
+F 1 131486 3 131448 100 0 0 0      * an iron golem (following)
+F 1 131486 3 131448 100 0 0 0      * an iron golem (following)
+F 1 131486 3 131448 100 0 0 0      * an iron golem (following)
+M 0 131474 1 131449 100 0 0 0      * a statue of an old man
+M 0 131488 1 131450 100 0 0 0      * a half-drow conjurer
+F 1 131489 2 131450 100 0 0 0      * a demonic vrock (following)
+F 1 131489 2 131450 100 0 0 0      * a demonic vrock (following)
+M 0 131482 1 131452 100 0 0 0      * a necromantic guard
+F 1 131483 1 131452 100 0 0 0      * a vampire (following)
+F 1 131485 3 131452 100 0 0 0      * a zombie of a farmer (following)
+F 1 131485 3 131452 100 0 0 0      * a zombie of a farmer (following)
+M 0 131484 2 131452 100 0 0 0      * a half-visible wraith
+M 0 131493 7 131455 100 0 0 0      * a shadow shade
+M 0 131493 7 131456 100 0 0 0      * a shadow shade
+M 0 131493 7 131457 100 0 0 0      * a shadow shade
+M 0 131494 1 131458 100 0 0 0      * a shadow dragon
+M 0 131493 7 131459 100 0 0 0      * a shadow shade
+M 0 131493 7 131460 100 0 0 0      * a shadow shade
+M 0 131493 7 131461 100 0 0 0      * a shadow shade
+M 0 131466 1 131463 100 0 0 0      * a cloaked traveller
+G 1 131435 1 0 100 0 0 0           *    a letter from Bloodstone
+M 0 131453 1 131465 100 0 0 0      * Dorthan, the smith
+M 0 131496 1 131466 100 0 0 0      * a vampiric guard
+M 0 131497 1 131466 100 0 0 0      * a spectre of an innkeeper
+E 1 131463 2 16 100 0 0 0          *   a spectre's dagger
+E 1 131463 2 17 100 0 0 0          *   a spectre's dagger
+M 0 131499 2 131466 100 0 0 0      * an unearthly bone golem
+M 0 131499 2 131466 100 0 0 0      * an unearthly bone golem
+M 0 131500 1 131467 100 0 0 0      * a cowled researcher
+M 0 131502 1 131468 100 0 0 0      * an envoy from Zrack
+M 0 131495 1 131469 100 0 0 0      * an emissary of Lichgate
+M 0 131484 2 131469 100 0 0 0      * a half-visible wraith
+M 0 131498 1 131470 100 0 0 0      * a necromantic magus
+F 1 131503 4 131470 100 0 0 0      * a ju-ju zombie (following)
+F 1 131503 4 131470 100 0 0 0      * a ju-ju zombie (following)
+M 0 131501 1 131471 100 0 0 0      * a bloody necromancer
+F 1 131485 3 131471 100 0 0 0      * a zombie of a farmer (following)
+M 0 131504 1 131472 100 0 0 0      * DeadLord Verinor
+E 1 131465 1 3 100 0 0 0           *   a circlet made of flames and shadows
+E 1 131464 1 18 100 0 0 0          *   a blood red letter
+G 1 131466 1 0 100 0 0 0           *    a wand tipped with a skull
+G 1 131511 1 0 100 0 0 0           *    a key of death magic
+F 1 131505 1 131472 100 0 0 0      * a quasit (following)
+F 1 131503 4 131472 100 0 0 0      * a ju-ju zombie (following)
+F 1 131503 4 131472 100 0 0 0      * a ju-ju zombie (following)
+M 0 131506 1 131473 100 0 0 0      * a greater positive energy elemental
+M 0 131507 1 131473 100 0 0 0      * a greater lighting elemental
+M 0 131510 1 131475 100 0 0 0      * Hackron, the minotaur sorceror
+G 1 131476 1 0 100 0 0 0           *    a simple note
+G 1 131480 1 0 100 0 0 0           *    a scroll of eradication
+F 1 131511 1 131475 100 0 0 0      * a huge stone golem (following)
+M 0 131512 1 131476 100 0 0 0      * Januhazanth, the evil gnome
+G 1 131482 1 0 100 0 0 0           *    a potion of white liquid
+F 1 131513 1 131476 100 0 0 0      * a venerable frost drake (following)
+M 0 131514 1 131477 100 0 0 0      * Nomrin, the shadow mage
+G 1 131478 1 0 100 0 0 0           *    a piece of black parchment
+G 1 131481 1 0 100 0 0 0           *    a wand of shadows
+F 1 131493 7 131477 100 0 0 0      * a shadow shade (following)
+M 0 131508 1 131478 100 0 0 0      * Faelia, the drow sorceress
+G 1 131475 1 0 100 0 0 0           *    a loose piece of paper
+F 1 131509 1 131478 100 0 0 0      * a cambion demon (following)
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+G 1 131479 1 0 100 0 0 0           *    a potion of gray mist
+M 0 131516 4 131479 100 0 0 0      * a positive energy elemental
+M 0 131516 4 131480 100 0 0 0      * a positive energy elemental
+M 0 131516 4 131481 100 0 0 0      * a positive energy elemental
+M 0 131519 2 131482 100 0 0 0      * a large positive energy elemental
+M 0 131519 2 131483 100 0 0 0      * a large positive energy elemental
+M 0 131516 4 131484 100 0 0 0      * a positive energy elemental
+M 0 131518 2 131487 100 0 0 0      * a greater positive energy elemental
+M 0 131518 2 131490 100 0 0 0      * a greater positive energy elemental
+M 0 131522 2 131492 100 0 0 0      * a HUGE lightning elemental
+M 0 131522 2 131493 100 0 0 0      * a HUGE lightning elemental
+M 0 131521 2 131494 100 0 0 0      * a large lightning elemental
+M 0 131520 4 131495 100 0 0 0      * a lightning elemental
+M 0 131515 1 131496 100 0 0 0      * a greater negative energy elemental
+M 0 131521 2 131497 100 0 0 0      * a large lightning elemental
+M 0 131520 4 131498 100 0 0 0      * a lightning elemental
+M 0 131520 4 131499 100 0 0 0      * a lightning elemental
+M 0 131520 4 131500 100 0 0 0      * a lightning elemental
+M 0 131523 1 131505 100 0 0 0      * an abyssal red dragon
+M 0 131524 5 131506 100 0 0 0      * a HUGE fire elemental
+M 0 131524 5 131506 100 0 0 0      * a HUGE fire elemental
+M 0 131524 5 131506 100 0 0 0      * a HUGE fire elemental
+M 0 131524 5 131506 100 0 0 0      * a HUGE fire elemental
+M 0 131524 5 131506 100 0 0 0      * a HUGE fire elemental
+M 0 131534 1 131507 100 0 0 0      * a powerful summoner
+F 1 131540 1 131507 100 0 0 0      * an evil quasit (following)
+M 0 131535 1 131508 100 0 0 0      * an evil conjurer
+M 0 131536 1 131509 100 0 0 0      * a shadow summoner
+M 0 131538 1 131510 100 0 0 0      * a cambion sorcerer
+M 0 131543 1 131510 100 0 0 0      * a renegade dao noble
+M 0 131539 1 131511 100 0 0 0      * a balor demon
+E 1 131501 1 16 100 0 0 0          *   a whip of blazing fury
+M 0 131546 1 131512 100 0 0 0      * Azlion the planetar
+M 0 131544 1 131514 100 0 0 0      * Calther of the Three
+G 1 131504 1 0 100 0 0 0           *    a small parchment of human flesh
+F 1 131545 3 131514 100 0 0 0      * an elite demon guard (following)
+F 1 131545 3 131514 100 0 0 0      * an elite demon guard (following)
+F 1 131545 3 131514 100 0 0 0      * an elite demon guard (following)
+M 0 131548 1 131514 100 0 0 0      * an excited conjurer
+E 1 131505 1 18 100 0 0 0          *   a long cold-iron staff
+M 0 131537 1 131515 100 0 0 0      * a demonic acolyte
+M 0 131541 1 131516 100 0 0 0      * Gailon Darkhoast
+E 1 131503 1 8 100 0 0 0           *   some astral-forged mithril boots
+E 1 131502 1 18 100 0 0 0          *   a key made of bone
+G 1 131513 1 0 100 0 0 0           *    a key of creation magic
+F 1 131542 1 131516 100 0 0 0      * a gorgeous alu-fiend (following)
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131408 24 17 100 0 0 0         *   a black iron longsword
+M 0 131525 1 131517 100 0 0 0      * Janyon, the old servant
+M 0 131526 1 131518 100 0 0 0      * Shavron, the Door Keeper
+E 1 131490 1 21 100 0 0 0          *   a glowing pearl of negative energy
+F 1 131527 2 131518 100 0 0 0      * a shadow (following)
+F 1 131527 2 131518 100 0 0 0      * a shadow (following)
+M 0 131528 1 131521 100 0 0 0      * Xandur, the Beholder Emissary
+G 1 131489 1 0 100 0 0 0           *    the central eye of the beholder 'Xandur'
+M 0 131529 1 131521 100 0 0 0      * Drakron, the emissary of Orcus
+E 1 131491 1 14 100 0 0 0          *   a demonically-forged bracelet
+M 0 131530 1 131521 100 0 0 0      * Kaxgrath the Black
+E 1 131492 1 5 100 0 0 0           *   a robe of draconic scales
+M 0 131531 1 131521 100 0 0 0      * Javra, a Bloodstone Emissary
+E 1 131507 1 20 100 0 0 0          *   a bone mask of Bloodstone
+M 0 131532 1 131521 100 0 0 0      * Morteus
+E 1 131493 1 18 100 0 0 0          *   an ice totem of of the frost giants
+M 0 131533 1 131522 100 0 0 0      * Urian Shadowborn
+G 1 131495 1 0 100 0 0 0           *    a key to the treasure chamber
+G 1 131535 1 0 100 0 0 0           *    the last piece of the Star Stone
+M 0 131547 2 131525 100 0 0 0      * a chicken
+M 0 131547 2 131525 100 0 0 0      * a chicken
+M 0 131549 3 131526 100 0 0 0      * a black and white cow
+M 0 131549 3 131526 100 0 0 0      * a black and white cow
+M 0 131549 3 131526 100 0 0 0      * a black and white cow
+M 0 131550 1 131527 100 0 0 0      * Jenifer
+M 0 131552 1 131530 100 0 0 0      * a greater balor guard
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131553 1 131530 100 0 0 0      * a ancient vampire guard
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+M 0 131554 1 131530 100 0 0 0      * a dracolich of a red dragon
+G 1 131526 1 0 100 0 0 0           *    a red dragonscale cloak
+M 0 131551 1 131530 100 0 0 0      * a maalthasu demon
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131408 24 17 100 0 0 0         *   a black iron longsword
+E 1 131408 24 25 100 0 0 0         *   a black iron longsword
+E 1 131408 24 26 100 0 0 0         *   a black iron longsword
+M 0 131556 2 131531 100 0 0 0      * a greater shade
+M 0 131556 2 131531 100 0 0 0      * a greater shade
+M 0 131555 1 131532 100 0 0 0      * Zanthos DawnReaver
+E 1 131497 1 9 100 0 0 0           *   some gauntlets of eradication
+E 1 131408 24 16 100 0 0 0         *   a black iron longsword
+E 1 131408 24 17 100 0 0 0         *   a black iron longsword
+M 0 131557 1 131532 100 0 0 0      * Krintha, matriarch of Sargon
+E 1 131521 1 5 60 0 0 0            *   the gossamer gown of the witch-queen
+M 0 131558 1 131532 100 0 0 0      * the lich Fazoul
+E 1 131522 1 16 100 0 0 0          *   the staff of the Lich King
+M 0 131559 1 131532 100 0 0 0      * Sir Edrod, the death knight
+E 1 131520 1 6 60 0 0 0            *   a forsaken crown of the damned
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131560 1 131533 100 0 0 0      * Sargon, Demi-God of Shadows
+E 1 131523 1 12 100 0 0 0          *   a cloak of living shadows and darkness
+E 1 131524 1 16 60 0 0 0           *   'Darksoul' the blade of eternal suffering
+M 0 131561 1 131536 100 0 0 0      * Fenrral, the tavern keeper
+G 1 131528 1 0 100 0 0 0           *    a bowl of hearty pub stew
+G 1 131529 1 0 100 0 0 0           *    a tankard of 'Paranel's Best'
+G 1 131530 1 0 100 0 0 0           *    a barrel of local ale called 'The Lady's Light'
+M 0 131562 1 131538 100 0 0 0      * Father Darrin
+M 0 131564 1 131540 100 0 0 0      * Galthon the dragon-ogre
+E 1 131538 1 1 100 0 0 0           *   a ring of the dragon lords
+E 1 131404 31 16 100 0 0 0         *   a black iron two-handed sword
+M 0 131565 1 131540 100 0 0 0      * the illithid magus Zaquia
+G 1 131539 1 0 100 0 0 0           *    the brain of the illithid magus 'Zaquia'
+M 0 131566 1 131540 100 0 0 0      * the greater shade Shassthar
+E 1 131540 1 21 100 0 0 0          *   an earring of the Shade
+M 0 131567 1 131540 100 0 0 0      * Danthas, the elven scout
+E 1 131541 1 10 100 0 0 0          *   some sleeves of the bladesingers
+M 0 131568 1 131540 100 0 0 0      * Versin, the Deathsinger
+E 1 131543 1 18 100 0 0 0          *   the harp of Velyadin
+*
+S
