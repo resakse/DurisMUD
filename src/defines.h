@@ -749,7 +749,7 @@ typedef unsigned int uint;
 #define AFF5_HOLY_DHARMA        BIT_9
 #define AFF5_ENH_HIDE           BIT_10
 #define AFF5_LISTEN             BIT_11
-#define AFF5_UNUSED10           BIT_12
+#define AFF5_PROT_UNDEAD        BIT_12
 #define AFF5_IMPRISON           BIT_14
 #define AFF5_TITAN_FORM         BIT_15
 #define AFF5_DELIRIUM           BIT_16

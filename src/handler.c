@@ -1044,6 +1044,10 @@ int char_to_room(P_char ch, int room, int dir)
   {
     firesector(ch);
   }
+  if ((world[room].sector_type == SECT_NEG_PLANE))
+  {
+    negsector(ch);
+  }
 
   /* underwater stuff */
   if (IS_SET(world[ch->in_room].room_flags, UNDERWATER) ||

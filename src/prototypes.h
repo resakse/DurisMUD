@@ -2267,6 +2267,7 @@ void firesector(P_char);
 void npc_steal(P_char, P_char);
 void underwatersector(P_char);
 void swimming_char(P_char);
+void negsector(P_char);
 
 /* spells.c */
 

@@ -494,3 +494,64 @@ P_obj find_key(P_char ch, int key)
       tar_obj = ch->equipment[HOLD];
   return (tar_obj);
 }
+
+/**
+ * For negative plane events, similar to event_firesector. -Keja
+ */
+void event_negsector(P_char ch, P_char victim, P_obj obj, void *data)
+{
+  struct affected_type *af, *next;
+
+  if (IS_TRUSTED(ch) || GET_RACE(ch) == RACE_UNDEAD ||
+      ch->in_room == NOWHERE ||
+      ((world[ch->in_room].sector_type != SECT_NEG_PLANE)))
+    return;
+
+  if (IS_AFFECTED5(ch, AFF5_PROT_UNDEAD))
+  {
+    for (af = ch->affected; af; af = next)
+    {
+      next = af->next;
+      if (af->type == SPELL_PROT_FROM_UNDEAD)
+      {
+        send_to_char("Your feeble spell is no match for the negative energy!\r\n",
+                     ch);
+        affect_remove(ch, af);
+      }
+    }
+    return;
+  }
+
+  if (GET_HIT(ch) < 0)
+  {
+    send_to_char
+      ("&+LYou gasp as you realize your lifeforce has run out!&n.\r\n",
+       ch);
+    act
+      ("$n&+L collapses in a crumpled heap, as their body shrivels into nothing.\r\n",
+       FALSE, ch, 0, 0, TO_ROOM);
+    die(ch, ch);
+    return;
+  }
+  else
+  {
+    GET_HIT(ch) -= 3;
+    StartRegen(ch, EVENT_HIT_REGEN);
+    if (IS_PC(ch) && ch->desc)
+      ch->desc->prompt_mode = 1;
+  }
+
+  add_event(event_negsector, 3, ch, 0, 0, 0, 0, 0);
+}
+
+void negsector(P_char ch)
+{
+  if (IS_TRUSTED(ch) || GET_RACE(ch) == RACE_UNDEAD ||
+      ch->in_room == NOWHERE || (IS_NPC(ch) && !IS_PC_PET(ch)) ||
+      ((world[ch->in_room].sector_type != SECT_NEG_PLANE)))
+    return;
+
+  if (!get_scheduled(ch, event_negsector))
+    add_event(event_negsector, 3, ch, 0, 0, 0, 0, 0);
+}
+
