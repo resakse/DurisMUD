@@ -577,7 +577,8 @@ void spell_chill_touch(int level, P_char ch, char *arg, int type,
        failed_save &&
        !IS_ELITE(victim) &&
        !IS_GREATER_RACE(victim) &&
-       !IS_AFFECTED3(victim, AFF3_COLDSHIELD))
+       !IS_AFFECTED3(victim, AFF3_COLDSHIELD) &&
+       !IS_AFFECTED4(victim, AFF4_ICE_AURA))
 
     {
       act("&+BThe chilling cold causes $N&+B to stammer, apparently weakened.&n",

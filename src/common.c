@@ -932,7 +932,7 @@ flagDef  affected4_bits[] = {
   {"SENSE_HOLINESS", "Sense holiness", 1, 0},
   {"PROT_LIVING", "Prot living", 1, 0},
   {"DETECT_ILLUSION", "Detect illusion", 1, 0},
-  {"AFF4UNUSED28", "Unused", 0, 0},
+  {"ICE_AURA", "Ice aura", 1, 0},
   {"REV_POLARITY", "Reverse polarity", 1, 0},
   {"NEG_SHIELD", "Negative shield", 1, 0},
   {"TUPOR", "Tupor", 0, 0},

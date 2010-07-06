@@ -727,7 +727,7 @@ typedef unsigned int uint;
 #define AFF4_SENSE_HOLINESS     BIT_25
 #define AFF4_PROT_LIVING        BIT_26
 #define AFF4_DETECT_ILLUSION    BIT_27
-#define AFF4_UNUSED28           BIT_28
+#define AFF4_ICE_AURA           BIT_28
 #define AFF4_REV_POLARITY       BIT_29
 #define AFF4_NEG_SHIELD         BIT_30
 #define AFF4_TUPOR              BIT_31

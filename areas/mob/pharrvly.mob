@@ -267,3 +267,798 @@ H 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 0
+#40220
+captain northshore pirate _no_move_~
+&+Lthe &+rcaptain &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+LA pirate with an especially pointy tri-corn hat sneers at you.&n
+~
+&+L   Before you stands a large weather worn pirate. A short cutlace sits
+&+Lon his hip as he stands here issuing orders to his crew. A lengthy
+&+Lpirates coat drapes across his shoulders as it billows in the
+&+Lfierce winds.&n
+~
+10314 0 0 0 0 0 0 -1000 S
+PH 0 1 -1
+42 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40221
+first mate pirate~
+&+Lthe &+bfirst mate &+Lof the &+YNorth&+Wshore &+Lpirates&n~
+&+LThe &+bfirst mate &+Lstands here, looking hostile.&n
+~
+&+L   The &+bfirst mate &+Lof the &+YNorth&+WShore &+Lpirates rushes about, helping the
+&+Lcaptain maintain order. This burly man seems capable of handling any
+&+Lsituation on the boat with easy. Around him people suddenly look
+&+Gbusy&+L, for fear of incuring the wrath of the first mate.
+~
+1073752136 1 0 0 0 0 0 -1000 S
+PH 0 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40222
+quarter master quartermaster northshore pirate~
+&+Lthe &+yquartermaster &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+LA large &+yquartermaster &+Lstands here, overseeing the operations of the ship.&n
+~
+&+L   This fairly large pirate seems to have seen his fair share of sea
+&+Lvoyages. A large flat bladed knife sits at his hip, seeming to have
+&+Lbeen used for cooking and work around the ship. The &+yquartermaster
+&+Lseems a very contemplative man, observing all the workers on the
+&+Lship, making sure no one is slacking off.n
+~
+1073752078 1 0 0 0 0 0 -1000 S
+PH 0 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40223
+master gunner pirate northshore~
+&+Lthe master gunner of the &+YNorth&+Wshore &+LPirates&n~
+&+LA burly pirate stands here, overseeing the cannons.&n
+~
+&+L  This large man stands here, double checking the ships port and starboard
+&+Lweapons. Stacking ballista bolts, you can see a massive build underneath
+&+Lthe dark, sweat stained tunic. An evil look gleams across his eyes as he
+&+Llooks upon his weapons, eager to unlease their fury.&n
+~
+10314 0 0 0 0 0 0 0 S
+PH 0 4 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40224
+helmsman helm northshore pirate~
+&+Lthe &+mhelmsman &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+LA large pirate stands here, eyeing the &+mhelm&+L.&n
+~
+&+L   This large pirate stands at the wheel, guiding the ship to its next
+&+Lbounty. Eyes to the horizon, this pirate is of a medium build. As his
+&+Lhands control the wheel, he's constantly watching the water, the crew,
+&+Land keeps a weary eye on the clouds.&n
+~
+10314 0 0 0 0 0 0 0 S
+PH 0 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40225
+doctor pirate surgeon northshore~
+&+Lthe &+Ydoctor &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+La large pirate stands here, a wicked surgical knife in hand.&n
+~
+&+L   This wicked looking man stands here, mixing a &+gh&+Ge&+gr&+Gb&+ga&+Gl &+Lremedy. This
+&+Lsmall doctor's meek frame seems out of place among the larger pirates,
+&+Lbut he deffinatly earns his own share. Constantly keeping the crew in
+&+Ldecent health, the doctor is among one of the more respected crew
+&+Lmembers and guarded very heavily during encounters.&n
+~
+10314 0 0 0 0 0 0 -1000 S
+PH 0 524320 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40226
+deck standard northshore pirate~
+&+La &+ydeck &+Lhand of the &+YNorth&+Wshore &+LPirates&n~
+&+LA busy pirate runs about here, following the captains orders.&n
+~
+&+L  This deck hand holds the lowest of the ranks on the boat. Taking orders
+&+Lfrom everyone, the deck hand is constantly busy and always working. As
+&+Lthis deckhand scurries around working, he's careful to avoid most to
+&+Lthe other crew members, for fear of being pushed into the great seas
+&+Lfor not pulling his own weight.&n
+~
+8 0 0 0 0 0 0 -850 S
+PH 0 16384 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40227
+lookout pirate northshore~
+&+La &+Wlookout &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+LA lean pirate stands here, his eye to the port looking for victims.&n
+~
+&+L   Eyes the to horizon, this lookout is constantly vigilant. His keen
+&+Leyesight has already guided these pirates to wealth, and as he plies
+&+Lhis skills, he leers at you, hving spotted your coin purse.&n
+~
+1073752138 0 0 0 0 0 0 -1000 S
+PH 0 4194304 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40228
+galley worker pirate northshore~
+&+La ga&+yll&+Ley &+ywo&+Lrk&+yer &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+LA swifting looking galley worker stands here, fidgeting restlessly.&n
+~
+&+L   As you look upon this pirte, you see him fast at work repairing damage
+&+Lto the ship. With the sheer number of encounters this ship has had, this
+&+Lworker is always repairing something or enhancing the defensive positions
+&+Laround the ship.&n
+~
+10314 0 0 402653208 0 0 0 -1000 S
+PH 0 64 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40229
+swashbuckler swash buckler northshore pirate~
+&+La &+cs&+Cw&+ca&+Cs&+ch&+Cb&+cu&+Cc&+ck&+Cl&+ce&+Cr &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+LA swashbuckling pirate stands here, waiting to board your ship.&n
+~
+&+L   This pirate stands here, a large grin on his face. Eager to board a
+&+Lship, this pirate is well equiped for fighting. A well used cutlace
+&+Lhangs at his hip and several wicked daggers are in various places
+&+Labout his body. A flowing pirates shirt billows around him as he
+&+Lperpairs to plunder his next victim.&n
+~
+10314 1 0 402653208 268435456 0 1024 -1000 S
+PH 0 1 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40230
+powder monkey northshore pirate pirates~
+&+La &+cbolt &+ycarrier &+Lof the &+YNorth&+Wshore &+LPirates&n~
+&+LA strong pirate moves about, bringing &+cbolts &+Lto the ballista.&n
+~
+&+L   This large pirate hussels about running from below deck to the ballista's.
+&+LCarrying the large bolts, this pirate has developed huge muscles which strain
+&+Lfrom the weight of the bolts. As the crew goes to war with its next victims,
+&+Lthis man helps fuel the destructive powers the ship can unleash.&n
+~
+8 0 0 0 0 0 0 -1000 S
+PH 0 4096 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40231
+captain twilight cove buccaneer pirate _no_move_~
+&+Lthe &+wcaptain &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LA dangerous looking orc &+wcaptain &+Lstand here, watching the seas.&n
+~
+&+L   Before you stands a battle scared orc &+Wcaptain&+L. His ragged clothing
+&+Lis sweat and dirt stained, and the desire to pillage gleams in his
+&+Leyes. This captain from the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove looks ready to ambush
+&+Lanything that moves.n
+~
+10314 1 0 402653208 0 0 0 0 S
+HO 0 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40232
+first mate twilight cove buccaneer pirate~
+&+Lthe &+cfirst mate &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LA well built orc pirate stands here, supporting his captain.&n
+~
+&+L   The first mate stands before you, his ugly orc features leering at
+&+Lyou. Standing a little over five feet tall, this squat, but well built
+&+Lorc lashes out at the crew mates, ensuring they stay busy with the
+&+Ltasks at hand.&n
+~
+10314 0 0 402653208 0 0 0 0 S
+HO 0 16 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40233
+quartermaster twilight cove buccaneer pirate~
+&+Lthe &+yquartermaster &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LThe orc quartermaster stands here, hording supplies.&n
+~
+&+L   This orc &+yquartermaster &+Lhas a rather suspecious look about him. &+GGreed &+Lseems
+&+Lto seep from his pores as he deals out the rations of food. A little portly,
+&+Lit seems as if he has been &+rhording &+Lsupplies for himself and eatting rather
+&+Lwell because of it.&n
+~
+10378 1 0 402653208 0 0 0 0 S
+HO 0 1 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40234
+master gunner twilight cove buccaneer pirate~
+&+Lthe &+mmaster gunner &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LA strong orc stands here, overseeing the ship's weapons.&n
+~
+&+L   This large orc has an &+revil &+Lgleam in his eye as he looks upon his "&+cchildren&+L".
+&+LAs he checks and re-checks his weapons, his eagerness to let lose the furious
+&+Lonslaught of the catapults and ballista seems to permiate his attention.&n
+~
+1073743944 1 0 402653208 0 0 0 -1000 S
+Ho 0 4096 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40235
+helmsman twilight cove buccaneer pirate~
+&+Lthe &+ghelmsman &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LA lean orc stands here, controlling the helm.&n
+~
+&+L   Standing at the helm, this tall orc towers over the wheel. Gnarled
+&+Land weathered hands guide the wheel as this vetran sailor guides the
+&+Lboat through the waters. Adept at his job, this sailor has managed
+&+Lto steer the vessel through the rocky coves with ease.n
+~
+8 1 0 402653208 0 0 0 -1000 S
+Ho 0 2097152 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40236
+surgeon twilight cove buccaneer pirate~
+&+Lthe &+Ysurgeon &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LAn orc surgeon stands here, a rusty knife held at the ready.&n
+~
+&+L   Standing before you, this orc lears at you with a &+rbloodthirsty &+Llook.
+&+LKnown for deciding that a small flesh wound would need to be amputated,
+&+Lthis surgeon's tools are always nearby and ready for work. His once
+&+Lwhite tunic appears to be stained with blood from many different
+&+L"patients".&n
+~
+1073752138 1 0 402653208 0 0 0 -1000 S
+Ho 0 32 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40237
+deck hand twilight cove buccaneer pirate~
+&+La &+ydeck hand &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LAn orc deck hand stands here, trying to look busy.&n
+~
+&+L   This squat orc hussels about the ship, weary of the captains vicious mood swings.
+&+LAssigned to the littlest of tasks, this deck hand better obey, or fear getting left
+&+Lon a deserted island.&n
+~
+10314 0 0 0 0 0 0 -1000 S
+Ho 0 1 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40238
+lookout twilight cove buccaneer pirate~
+&+La &+Wlookout &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LAn orc lookout stands here, eyeing you with suspecion.&n
+~
+&+L   Beady little eyes peer out from the ship's lookout, as his shifty eye
+&+Lwatch both the other pirates, and the horizon. Watching your every move,
+&+Lthis lookout seems ready to jump you out of distrust. Attempting to be
+&+Lcasual, you can also see the lookout watching the quartermasters every
+&+Lmove as well, suspecions of his intent as well.&n
+~
+10314 1 0 402653208 0 0 0 -1000 S
+Ho 0 32768 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40239
+galley worker twilight cove buccaneer pirate~
+&+La &+yga&+Lll&+yey &+Lwo&+yrk&+Ler of the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LAn orc galley worker stands here, husseling about his work.&n
+~
+&+L   This thick orc hussels about the decks in a hurry. Making sure to
+&+Lstay busy, this orc looks battle worn and ready to continue working
+&+Las needed.
+~
+10314 1 0 402653208 0 0 0 -1000 S
+Ho 0 1 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40240
+swashbuckler twilight cove buccaneer pirate~
+&+La &+cs&+Cw&+ca&+Cs&+ch&+Cb&+cu&+Cc&+ck&+Cl&+ce&+Cr &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+Bt &+LCove &+rBuccaneers&n~
+&+LAn orc swashbuckler sits here, eager to plunder.&n
+~
+&+L   This swashbuckler is about as dashing as an orc can get... which isn't
+&+Lmuch. Attempting to look important, this orc sticks his chest way out,
+&+Land leers at you with an ugly look upon his face.&n
+~
+403466 1 0 8 0 0 1024 -1000 S
+Ho 0 1 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40241
+bolt carrier twilight cove buccaneer pirate~
+&+La &+Gb&+go&+Gl&+Gt &+gc&+Ga&+gr&+Gr&+gi&+Ge&+gr &+Lof the &+BT&+bw&+Bi&+bl&+Bi&+bg&+Bh&+bt &+LCove &+rBuccaneers&n~
+&+LA burly orc pirate stands here, husseling to stack bolts at the ballista.&n
+~
+&+L   This burly orc hussels about, making sure the weapons are well stocked
+&+Land ready for use. Huge scars criss cross this orcs arms, from various
+&+Lbattles and previously conquered victims.&n
+~
+2122 1 0 402653208 0 0 0 -1000 S
+Ho 0 16384 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40242
+captain pirate marauder four winds _no_move_~
+&+Lthe &+Gcaptain &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LA &+ybattle &+rscared &+wcaptain &+Lstands here, ready to plunder the seas.&n
+~
+&+L   Before you stands the captain of the Four Winds. Known as one of the swiftest
+&+Land most devistating pirate bands, the Four Winds have a strong reputation based
+&+Lupon numerous conquests. This large imposing figure has the tattoo of the sea
+&+Lgod &+WPoseidon &+Lexhaling a massive gust of wind. Standing strong in the winds, this
+&+Lcaptain is ready to strike in the fastest way possible. As he grins
+&+Lat you, sharp teeth peek down from his gums, revealing his undead
+&+Lnature!
+~
+395338 1 0 402653336 34816 0 0 -1000 S
+UM 0 1048578 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40243
+first mate marauders four winds pirate~
+&+Lthe &+Bfirst &+bmate &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LThe &+Bfirst &+bmate &+Lstands here, avoiding the captain's unsavory attitude.&n
+~
+&+L   The first mate of the Four Winds stands here, overseeing his captains
+&+Lorders. This tall figure, also with the tattoo of Poseidon upon his arm,
+&+Lstands at the ready here, eager to jump onto crew members who are
+&+Lslacking in their duties. Pale flesh seems to hang from his bones
+&+Lgiving him a rather frightening appearance.&n
+~
+395338 1 0 402653208 2048 0 0 -1000 S
+UW 0 16384 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40244
+quartermaster marauder four winds~
+&+Lthe &+yquartermaster &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LThe quartermaster stands here, helping sort the bounty from the last ship.&n
+~
+&+L   This quartermaster looks among the crew, making sure each of the crew
+&+Lis earning their share. Dark, tattered and weathered skin covers his long
+&+Lworn tattoo of Poseidon. This quartermaster has been a part of the Four
+&+LWinds maruaders for scores of years, and is looking to expand his well made
+&+Learnings. The stentch of death and decay seems to seep from this pirates
+&+Lvery presence.&n
+~
+10314 1 0 402653208 0 0 0 -1000 S
+U 0 64 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40245
+master gunner marauder four winds~
+&+Lthe &+rmaster gunner &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LThe master gunner stands here, eager to unleash the fury of the ballista and catapults.&n
+~
+&+L   This wicked looking man has an evil, maniacle look upon his face.
+&+LEager to unleash the catapults and ballista, this gunner is constantly
+&+Lsurveying the horizon looking for prey. This crewmans tattoo of &+WPoseidon
+&+Lshows the god hurling a massive ballista bolt. Wicked clawed hands reveal
+&+Lthis pirates true undead nature!&n
+~
+10314 1 0 939524120 0 0 0 -1000 S
+U 0 4 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#40246
+helm helmsman maurader four winds~
+&+Lthe &+whelmsman &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LThe helmsman stands here, steering the ship to its next victim.&n
+~
+&+L   This large helmsman's head is clean shaven with the emblem of the Four
+&+LWinds tattoo'd across his scalp. Standing at the wheel, this man guides the
+&+Lship to its next call, that being the boarding and pillaging of the next
+&+Lship it comes across. Keeping a keen eye to the seas, this helmsman steers
+&+Ltowards their next conquest with a wicked grin on his face. Wicked red eyes
+&+Land the sheer pale skin shows the vampire heritage of this brutal pirate.&n
+~
+14410 1 0 939524120 0 0 0 -100 S
+UM 0 2097152 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40247
+surgeon marauder four winds~
+&+Lthe &+gsurgeon &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LA wicked surgeon stands here, ready to ply his trade.&n
+~
+&+L   The chief doctor of the Four Winds looks at you with a slight smirk.
+&+LStrapped to his belt, several pouches are brimming with various knives and
+&+Ltools of his trade, including a crude but effective cutting saw. looking
+&+Lat his clawed hands, and dried blood caked to his face, his undead nature
+&+Lleaps out to assult your senses!
+~
+395338 1 0 402653336 0 0 0 -1000 S
+U 0 288 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40248
+deck hand marauder four winds~
+&+La d&+wec&+Lk h&+wan&+Ld of the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LA large deck hand stands here, working to secure his portion of the bounty.&n
+~
+&+L   This deck hand looks like he has seen his fair share of time at sea.
+&+LA dark tan covers his exposed flesh, and a sour disposition seems to
+&+Lfollow him everywhere he goes on the ship, while carrrying out his
+&+Lwork. Chunks of flesh seem to have withered away in places and
+&+Lreaveal his &+wundead &+Lnature!&n
+~
+2122 1 0 402653240 0 0 0 -1000 S
+U 0 16384 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40249
+lookout marauder four winds~
+&+La &+Wl&+Co&+Wo&+Ck&+Wo&+Cu&+Wt &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LThe lookout stands here, keeping his eye to the horizon for the next mark.&n
+~
+&+L   Hardly paying attention to you, this lookout keeps his eyes to the
+&+Lhorizon. Standing a constant vigilance and keeping his wits about him,
+&+Lthis sailor's keen eye has brought numerous ships to the attention of
+&+Lthe marauders. Earning his keep, this sailor's bloodthirst can be
+&+Lseen as he scan's the waters for victims. &+rBlood red &+Leyes hint
+&+Lat the undead nature of this pirate!&n
+~
+2122 1 0 402653208 0 0 0 -1000 S
+U 0 4194304 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40250
+galley worker marauder four winds~
+&+La &+Ygalley worker &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LA galley worker stands here, husseling from task to task.&n
+~
+&+L   This galley workers looks abused. Constantly under the heel of the
+&+Lhigher up crew members, the work for this pirate never ends. In a mad
+&+Lrush, his sour attitude is evident on his face as he works his tasks.
+&+LFlayed flesh shows where the crew have whiped this poor undead pirate
+&+Linto shape!&n
+~
+10314 0 0 402653208 0 0 0 -1000 S
+U 0 1 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40251
+swashbuckler swash buckler marauder four winds _spec3_ undead~
+&+La &+cs&+Cw&+ca&+Cs&+ch&+Cb&+cu&+Cc&+ck&+Cl&+ce&+Cr &+Lof the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LA dashing looking pirate stands here, ready to board the next ship.&n
+~
+&+L   This swashbuckler is ready for action. Wanting to board a ship, this
+&+Lmarauder waits eagerly while sharpening his cutlace. Using long, even
+&+Lstrokes, the edge on his blade is as sharp as can be. As he looks at
+&+Lhis work, an eager expression floats across his face. Eager for blood
+&+Lthis &+rvampire &+Lswashbuckler is ready to fight.&n
+~
+10314 1 0 402653208 0 0 0 -1000 S
+U 0 1 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40252
+bolt carrier marauder four winds~
+&+La &+cb&+Co&+cl&+Ct &+Lc&+Wa&+Lr&+Wr&+Li&+We&+Lr of the &+yMa&+Lra&+yud&+Ler&+ys &+Lof the &+cFo&+Cur &+wWi&+Wnds&n~
+&+LA bolt carrier stands here, stacking bolts carefully despite the rolling seas&n
+~
+&+L    This bolt carrier looks pissed. Constantly being worked into the
+&+Lground, this pirate feels like he's not earning nearly enough shares
+&+Lfor the abuse his crew members put him through. Grumbling about
+&+Leverything, he continues his work, angry at everything around him.&n
+~
+10314 1 0 402653208 0 0 0 -1000 S
+U 0 4096 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40253
+captain dark sun syndicate _no_move_~
+&+Lthe &+Gc&+ga&+Gp&+gt&+Ga&+gi&+Gn &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LThe &+Gcaptain &+Lstands here, scanning the seas for the &+bnavy&+L.&n
+~
+&+L   A captain of the Dark &+ySun &+LSyndicate stands before you, a large grin
+&+Lon his face. The &+cemblem &+Lof the Syndicate adorns his arm, a dark &+ct&+Ca&+ct&+Ct&+co&+Co
+&+Lagainst well weathered &+yskin&+L. Known as the most vicious and cutthroat
+&+Lof the smuggling &+rpirates&+L, these members of the Dark &+ySun &+Lare feared
+&+Lby many, including the &+bnaval &+Lvessels that sail the waters. Sailing
+&+Lcontraband all across the seas, the Syndicate is known to be some
+&+Lof the more wealthy of pirate groups to ever have sailed the seas.
+&+LThis captain before you, stands around six feet tall, with a dark
+&+Lbeard framing his lean face. A constant look of smugness fills
+&+Lhis face.&n
+~
+10314 1 0 402653208 0 0 0 -1000 S
+ph 0 4195328 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40254
+first mate dark sun syndicate~
+&+Lthe &+cfirst mate &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LThe &+cfirst mate &+Lstands here, making sure their contraband is well hidden.&n
+~
+&+L   This tall, dark human stands a little over six feet tall. Watching
+&+Lyou from below his bi-corn hat, his weary gaze shifts from side to side
+&+Loften. Unsure about you, the gleam of suspesion is obvious in his eyes.
+&+LThe weathered tattoo of the Dark Sun rests on his forearm, as he moves
+&+Labout enforcing the orders of the capain.&n
+~
+10314 1 0 402653336 0 0 0 -1000 S
+PH 0 256 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40255
+quartermaster dark syn syndicate~
+&+Lthe &+yquartermaster &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LThe quartermaster stands here, taking inventory of the current cargo.&n
+~
+&+L   This burly smuggler stands before you, the real power behind the
+&+Lcaptain. This quartermaster is in charge of both the normal, and
+&+Lcontraband cargo contained within the Dark Sun's cargo hold. His
+&+ct&+Ca&+ct&+Ct&+co&+Co &+Lseems slighly different than the others, with a set of three
+&+Lstars surrounding the Dark Sun. A vicious snarl crosses his face
+&+Lany time anyone's eyes stray to the cargo hold. Only him and the
+&+Lcaptain know what contraband the Dark Sun is moving through these
+&+Lwaters.&N
+~
+10314 1 0 24 0 0 0 -1000 S
+PH 0 512 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40256
+master gunner dark sun~
+&+Lthe m&+wa&+Ls&+wt&+Le&+wr g&+Lu&+wn&+Ln&+we&+Lr of the Dark &+ySun &+LSyndicate&n~
+&+LThe master gunner waits here, wanting to try out their wicked new weapons.&n
+~
+&+L   Armed with some of the most powerful weapons ever created, the master
+&+Lgunner is one of the only ones on board that might be eager to run into
+&+Lsome navy ships. Wanting to try out his new exploding tipped ballista
+&+Lbolts, this weapon crazied smuggler keeps an eye on his weapons, and
+&+Lthe seas.&n
+~
+6218 1 0 402653208 0 0 0 -1000 S
+PH 0 4 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40257
+helm helmsman dark sun syndicate~
+&+Lthe &+Gh&+ge&+Gl&+gm&+Gs&+gm&+Ga&+gn &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LThe helmsman stands here, steering the ship away from navy convoys.&n
+~
+&+L   Standing at the wheel, the helmsman is guiding the cargo ship into
+&+Lsome seldom explored waters. Known as one of the best sailors around,
+&+Lthis helmsman knows more about the seas and the hidden passages to
+&+Lbest sail their contraband without incident.&N
+~
+10314 1 0 402653208 0 0 0 -1000 S
+PH 0 33554432 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40258
+surgeon dark sun syndicate _spec2_~
+&+Lthe &+Ys&+Wur&+Yg&+Weo&+Yn &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LThe surgeon stands here, bored out of his mind with no one to work on.&n
+~
+&+L   Before you stands a strange little man. Only on board to oversee the
+&+Lhealth of the crew, this doctor seems rather... uncomfortable at sea. A
+&+Lqueasy look constanly passes across his face, and the though of having
+&+Lto operate while at sea makes him ready to hurl over the side of the
+&+Lboat.&n
+~
+10314 1 0 402653208 0 0 0 -1000 S
+PH 0 32 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40259
+deck hand dark sun syndicate~
+&+La &+rdeck hand &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LThe deck hand stands here, helping secure the cargo safely.&n
+~
+&+L   This deck hand looks busy! In a rush of movement, this deckhand is
+&+Lall over the place working on job after job. Not having a clue what is
+&+Lbeing smuggeled on the ship, this deck hand is constantly being told
+&+Lwhere to go and what to do. Some day he may be trusted more, but for
+&+Lnow, his work alone has to earn his shares of the loot.&n
+~
+10314 1 0 0 0 0 0 -1000 S
+PH 0 1 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40260
+look out lookout dark sun syndicate~
+&+La &+Clookout &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LThe &+Clookout &+Lstands here, a &+mparanoid &+Lexpression covering his face as he looks for &+bnavy &+Lvessels.&n
+~
+&+L   Having one of the more important jobs on this ship, this thin lookout
+&+Lstands alert and is constantly watching the seas for any signs of ships,
+&+Lespecially port authority ships. Aware of the nature of the contraband
+&+Linside the hull, this pirate is eager to keep his helmsman and captain
+&+Linformed of whats at sea around them.&n
+~
+8 1 0 939524120 28 0 67108864 -1000 S
+PH 0 4194304 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40261
+galley worker dark sun syndicate~
+&+La &+mga&+Mll&+mey &+Mwo&+mrk&+Mer &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LA large galley worker &+yr&+ru&+ys&+rh&+ye&+rs &+Labout, stowing &+Wcargo &+Lwithin the ship.&n
+~
+&+L   Pushing you out of the way, this worker is busy at work, trying to
+&+Lstay away from the baleful eyes of his captain and first mate. Carrying
+&+Lsome of the food supplies to the quartermaster, he is constantly busy,
+&+Las the quartermaster works tirelessly to see that everyone is well fed
+&+Land doing their fair share. Working his butt off, he hopes to be
+&+Lpromoted out of the never ending work the crew drags up for him.&n
+~
+10314 1 0 24 0 0 0 -1000 S
+PH 0 1048576 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40262
+swash buckler swashbuckler dark sun syndicate _spec3_~
+&+La &+cs&+Cw&+ca&+Cs&+ch&+Cb&+cu&+Cc&+ck&+Cl&+ce&+Cr &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LA swashbuckler stands here, eyeing you with contempt.&n
+~
+&+L   This dashing looking figure stands here, with nothing to do. As the
+&+LDark Sun tends to avoid other ships, unless on missions to sink and
+&+Lretreive certain cargo's, this swashbuckler has little raiding he
+&+Lcan do, and is forced into helping with the upkeep on the ship.
+&+LWith hisfairly dexterous nature, he is constantly being sent up
+&+Lto help ready sails or tie ropes high up on the ship.&n
+~
+10314 1 0 402653208 0 0 0 -1000 S
+PH 0 1 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40263
+bolt carrier dark sun syndicate~
+&+La b&+wo&+Ll&+wt &+Lc&+wa&+Lrri&+we&+Lr &+Lof the Dark &+ySun &+LSyndicate&n~
+&+LA large bolt carrier stands here, perpairing the &+cweapons &+Lfor an encounter with the &+bnavy&+L.&n
+~
+&+L   This strong figure hussels about, taking extra care with the special
+&+Lcontraband weapons. Carrying the exploding tip'd ballista bolts with extra
+&+Lcare, the swaying of the ocean makes for an interesting entertainment, as
+&+Lhe dodges and ducks various swinging ropes and beams. As he stacks the
+&+Lstange ammo for the catapults an errie glow seems to seep from the ammo.&n
+~
+10314 1 0 24 0 0 0 -1000 S
+PH 0 64 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40264
+captain scion abyss demon _no_move_~
+&+Lthe &+rc&+Ra&+rp&+Rt&+ra&+Ri&+rn &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
+&+LA demon enshrouded in &+rflames &+Lstands here, issueing &+borders&+L.&n
+~
+&+L   Standing nearly 12 feet tall, this massive d&+we&+Lm&+wo&+Ln stands here, a
+&+Lshroud of &+rflame &+Lflowing about his body. As you look upon his face,
+&+Lpitch black eyes stare back, never blinking. A billowing pirate's
+&+Lcoat rests across broad shoulders, and appears to be made from the
+&+Lflayed &+yflesh &+Lof his victims. An aura of &+ranguish &+Lseems to radiate
+&+Lfrom his clawed hands. A crown of &+rflames &+Lseems to enshroud his head.&n
+~
+285222986 1 0 402653336 47297 0 8388608 -1000 S
+x 0 34603008 -1
+62 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40265
+first mate scion abyss~
+&+Lthe &+Bfir&+bst m&+Bate &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
+&+LA large d&+we&+Lm&+wo&+Ln stands here, helping his captain issue orders.&n
+~
+&+r   This massive demon stands before you, salavating at the idea of eatting your flesh.
+&+rWicked fangs protude from his mouth, as a pair of leathery wings flod up behind his
+&+rback. His skin seems to be a dark fiery red, almost chared black from countless eon's
+&+rin the fires of the &+WAb&+wy&+Lss&+r. Dark &+Lhorns &+rsprout from his forehead and seem
+&+rto have been used to gore victims in the past.&n
+~
+10314 1 0 939524248 0 0 0 -1000 S
+x 0 8 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40266
+quarter master quartermaster scion abyss~
+&+Lthe &+yquartermaster &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
+&+LA w&+ri&+Lc&+rk&+Le&+rd&+Ll&+ry &+Lbarbed d&+we&+Lm&+wo&+Ln stands here, overseeing the ships supplies.&n
+~
+&+L   This large demon towers well over you. A wicked expression covers its
+&+Lugly face as he eyes you with an inhuman hunger. Dark red skin covers
+&+Lits body and wicked barbs cover its massive body. Glowing embers emit
+&+La wisp of smoke from its eyes as it sizes you up and down wonder how
+&+Lmany bites it would take to consume you.&n
+~
+10314 1 0 24 2049 0 0 -1000 S
+x 0 1 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40267
+boatswain scion abyss~
+&+Lthe b&+woa&+Lts&+wwa&+Lin &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
+&+LA &+rdemonic &+Lboatswain stands here, obeying his captains orders.&n
+~
+&+L   Standing around eight feet tall, this thick skined demon stands
+&+Lwatch, overseeing the various deck personel. Watching the deck hands
+&+Lin particular to make sure they're staying on task, this demon wields
+&+La cruel whip with several nasty barbs attached to the heads. As he
+&+Lspies a deck hand slacking on the job, he springs into action, a
+&+Lnasty *&-L&+WCRACK&n&+L* of the whip tears the air as he bears
+&+Ldown upon the deckhand!&n
+~
+10314 1 0 939524248 2076 0 0 -1000 S
+x 0 2097152 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40268
+master gunner scion abyss~
+&+Lthe ma&+cst&+Ler &+cgu&+Lnn&+cer &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
+&+LThe &+ybattle &+cworn &+Lmaster gunner stands here, ordering the ships guns to &+rfire &+Lagain.&n
+~
+&+L   This thick demon stands before you, a wicked gleam in his fiery red
+&+Leyes. Standing before the massive weapons of the ship, this demon is in
+&+Lthe process of infusing several piles of ammo with hellfire. Sharp horns
+&+Lprotrude from his forhead, and several sharp spikes run down his back.
+&+LSmall blackened scales cover his body, making him look almost reptilian
+&+Lin nature.&n
+~
+10314 0 0 0 2076 0 0 -1000 S
+x 0 512 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#40269
+chief surgeon scions abyss~
+&+Lthe &+Ych&+yi&+Yef &+wsurgeon &+Lof the &+rSci&+Rons &+Lof the &+WAb&+wy&+Lss&n~
+&+LA d&+we&+Lm&+wo&+Ln surgeon stands here, meat &+chook &+Land &+rbutcher &+Wknife &+Lin hand, ready to operate on a crew mate.&N
+~
+&+L   A wicked looking six armed demon stands before you, tools of destruction
+&+Lin each hand. Known as the "doctor" on this marauding ship, this demon is
+&+Lanything but helpful. Wicked knives, saws and other "tools" of the medical
+&+Lfield seem to have been taken and used as cruel weapons, serving this demon
+&+Lwell.&n
+~
+10314 1 0 402653336 0 0 4096 -1000 S
+x 0 288 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

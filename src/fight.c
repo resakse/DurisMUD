@@ -3465,6 +3465,25 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
 
     return DAM_NONEDEAD;
   }
+  if(type == SPLDAM_COLD &&
+    ch != victim &&
+    ((IS_AFFECTED4(victim, AFF4_ICE_AURA)) && 
+    IS_AFFECTED3(victim, AFF3_COLDSHIELD)))
+  {
+    act("$N&+C absorbs your spell!",
+      FALSE, ch, 0, victim, TO_CHAR);
+    act("&+CYou absorb&n $n's&+C spell!",
+      FALSE, ch, 0, victim, TO_VICT);
+    act("$N&+C absorbs&n $n's &+Cspell!",
+      FALSE, ch, 0, victim, TO_NOTVICT);
+    vamp(victim, dam / 3, GET_MAX_HIT(victim)); 
+
+    update_pos(victim);
+    if (IS_NPC(victim))
+      do_alert(victim, NULL, 0);
+  
+    return DAM_NONEDEAD;
+  }
 
   if(type == SPLDAM_NEGATIVE &&
      IS_UNDEADRACE(ch) &&
@@ -3875,6 +3894,22 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
           send_to_char("The heat of the spell dried up your clothes completely!\n", victim);
         }
       }
+      if ( IS_AFFECTED4(victim, AFF4_ICE_AURA) )
+      {
+        act("&+rYour fiery spell causes&n $N &+rsmolder and spasm in pain!&n",
+           TRUE, ch, 0, victim, TO_CHAR);
+        act("$n's &+fiery spell causes you smolder and spasm in pain!&n",
+           TRUE, ch, 0, victim, TO_VICT);
+        act("$n's &+rfiery spell causes&n $N &n&+rto smolder and spasm in pain!&n",
+           TRUE, ch, 0, victim, TO_NOTVICT);
+        dam *= dam_factor[DF_VULNFIRE];
+      }
+
+      if (IS_AFFECTED2(victim, AFF2_FIRESHIELD))
+        dam *= dam_factor[DF_ELSHIELDRED];
+      else if (IS_AFFECTED(victim, AFF_PROT_FIRE))
+        dam *= dam_factor[DF_PROTECTION];
+
       break;
     case SPLDAM_COLD:
        if (GET_RACE(victim) == RACE_F_ELEMENTAL || IS_EFREET(victim) )

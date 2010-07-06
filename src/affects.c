@@ -532,6 +532,8 @@ void apply_affs(P_char ch, int mode)
     SET_BIT(ch->specials.affected_by2, AFF2_PROT_COLD);
   if (has_innate(ch, INNATE_FIRE_AURA))
     SET_BIT(ch->specials.affected_by2, AFF2_FIRE_AURA);
+  if (has_innate(ch, INNATE_ICE_AURA))
+    SET_BIT(ch->specials.affected_by4, AFF4_ICE_AURA);
   if (has_innate(ch, INNATE_ANTI_EVIL))
   {
     SET_BIT(ch->specials.affected_by, AFF_PROTECT_EVIL);

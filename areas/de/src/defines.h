@@ -922,9 +922,14 @@ typedef unsigned int uint;
 #define RACE_AVATAR          91 /* mob race code: AV */
 #define RACE_BRALANI         92 /* mob race code: BR */
 #define RACE_GHAELE          93 /* mob race code: GH */
-#define LAST_RACE            94
+#define RACE_WHINER          94 /* mob race code: WH */
+#define RACE_INCUBUS         95 /* mob race code: IN */
+#define RACE_SUCCUBUS        96 /* mob race code: SU */
+#define RACE_FIREGIANT       97 /* mob race code: FG */
+#define RACE_FROSTGIANT      98 /* mob race code: IG */
+#define LAST_RACE            99 /* 98 races on duris! */
 
-#define DEFINED_RACES        LAST_RACE /* actual number of races defined */
+#define DEFINED_RACES        98 /* actual number of races defined */
 #define MAX_HATRED	     5
 
 #define RACEWAR_NONE         0
