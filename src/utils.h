@@ -686,7 +686,9 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
                        (GET_RACE(ch) == RACE_SGIANT) || \
                        (GET_RACE(ch) == RACE_MINOTAUR) || \
                        (GET_RACE(ch) == RACE_SNOW_OGRE) || \
-                       (GET_RACE(ch) == RACE_FIRBOLG))
+                       (GET_RACE(ch) == RACE_FIRBOLG) || \
+                       (GET_RACE(ch) == RACE_FIREGIANT) || \
+                       (GET_RACE(ch) == RACE_FROSTGIANT))
 
 #define IS_INSECT(ch) ((GET_RACE(ch) == RACE_INSECT))
 
