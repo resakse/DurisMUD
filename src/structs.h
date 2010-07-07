@@ -1951,13 +1951,15 @@ struct mcname {
 #define SPEC_GUARDIAN  2
 #define SPEC_SWASHBUCKLER 3
 
+/*AntiPaladin Specs */
 #define SPEC_DARKKNIGHT 1
 #define SPEC_DEMONIC 2
 #define SPEC_SPAWN 3
 
+/* CLASS_PALADIN Specs */
 #define SPEC_CRUSADER 1
 #define SPEC_CAVALIER 2
-
+/* CLASS_SORCERER Specs */
 #define SPEC_WILDMAGE 1
 #define SPEC_WIZARD 2
 #define SPEC_SHADOW 3
@@ -1981,6 +1983,7 @@ struct mcname {
 //Druid Specs
 #define SPEC_WOODLAND 1
 #define SPEC_STORM 2
+#define LUNAR_DRUID 3
 
 // Ethermancer Specs
 #define SPEC_WINDTALKER 1
@@ -2010,6 +2013,11 @@ struct mcname {
 #define SPEC_THIEF    2
 #define SPEC_OLD_SWASHBUCKLER  3 // Switched to warrior.
 #define SPEC_SHARPSHOOTER 4
+
+/* CLASS_THEURGIST Specs */
+#define SPEC_MEDIUM 1
+#define SPEC_TEMPLAR 2
+#define SPEC_THAUMATURGE 3
 
 #define MAX_SPEC 4
 
