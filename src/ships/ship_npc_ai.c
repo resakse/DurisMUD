@@ -243,7 +243,7 @@ void NPCShipAI::cruise()
 {
     send_message_to_debug_char("Cruising: \n");
     reload_and_repair();
-    if (check_dir_for_land_from(ship->x, ship->y, ship->heading, 5)) 
+    if (calc_land_dist(ship->x, ship->y, ship->heading, 5.0) < 5.0) 
         new_heading += 10; 
     set_new_dir();
 }
@@ -1042,9 +1042,6 @@ void NPCShipAI::immobile_maneuver()
 /////////////////////////
 // ADVANCED COMBAT //////
 /////////////////////////
-
-/// TODO: update previous heading!!!
-
 
 void NPCShipAI::advanced_combat_maneuver()
 {
