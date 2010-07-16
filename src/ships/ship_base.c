@@ -890,6 +890,9 @@ void dock_ship(P_ship ship, int to_room)
 bool is_npc_ship_name (const char*);
 bool check_ship_name(P_ship ship, P_char ch, char* name)
 {
+    if (ISNPCSHIP(ship))
+        return true;
+
     ShipVisitor svs;
     for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
     {
@@ -1154,33 +1157,38 @@ int order_undock(P_char ch, P_ship ship)
         return TRUE;
     }
     
-    if (SHIPIMMOBILE(ship))
-    {
-        send_to_char("&+RYour ship is immobilized. Undocking procedures cancelled.\r\n", ch);
-        return TRUE;
-    }
-    
     if (ship->timer[T_UNDOCK] != 0)
     {
         send_to_char("The crew is already working on it!\r\n", ch);
         return TRUE;
     }
-    if (ship->mainsail == 0) 
+
+    if (SHIPISDOCKED(ship))
     {
-        send_to_char ("You cannot unfurl your sails, they are destroyed.\r\n", ch);
-        return TRUE;
+        if (ship->mainsail == 0)
+        {
+            send_to_char ("You cannot unfurl your sails, they are destroyed.\r\n", ch);
+            return TRUE;
+        }
+        if (SHIPIMMOBILE(ship))
+        {
+            send_to_char("&+RYour ship is immobilized. Undocking procedures cancelled.\r\n", ch);
+            return TRUE;
+        }
+        if (!check_undocking_conditions(ship, ch))
+            return TRUE;
     }
-    if (!check_undocking_conditions(ship, ch))
-        return TRUE;
 
     send_to_char("Your crew begins undocking procedures.\r\n", ch);
-    ship->pilotlevel = GET_LEVEL(ch);
-    if (RACE_PUNDEAD(ch))
-        ship->race = UNDEADSHIP;
-    else if (RACE_GOOD(ch))
-        ship->race = GOODIESHIP;
-    else
-        ship->race = EVILSHIP;
+    if (!ISNPCSHIP(ship))
+    {
+        if (RACE_PUNDEAD(ch))
+            ship->race = UNDEADSHIP;
+        else if (RACE_GOOD(ch))
+            ship->race = GOODIESHIP;
+        else
+            ship->race = EVILSHIP;
+    }
     if (IS_TRUSTED(ch))
         ship->timer[T_UNDOCK] = 2;
     else

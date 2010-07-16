@@ -118,11 +118,17 @@ NPCShipAI::NPCShipAI(P_ship s, P_char ch)
     debug_char = ch;
     did_board = 0;
     speed_restriction = -1;
+    since_last_fired_right = 0;
 
-    if (ship->m_class == SH_DREADNOUGHT)
+    if (SHIPHULLWEIGHT(ship) > 250)
     {
         is_heavy_ship = true;
         is_multi_target = true;
+    }
+    else
+    {
+        is_heavy_ship = false;
+        is_multi_target = false;
     }
 
     out_of_ammo = false;
@@ -144,6 +150,12 @@ void NPCShipAI::activity()
 
     if (ship->timer[T_MINDBLAST])
         return;
+
+    if (!check_for_captain_on_bridge())
+    {
+        send_message_to_debug_char("No captain of the bridge!\r\n");
+        return;
+    }
 
     getmap(ship); // doing it here once
     contacts_count = getcontacts(ship, false); // doing it here once
@@ -294,6 +306,29 @@ void NPCShipAI::attacked_by(P_ship attacker)
 }
 
 
+bool NPCShipAI::check_for_captain_on_bridge()
+{
+    P_char ch, ch_next;
+    for (ch = world[real_room(ship->room[0].roomnum)].people; ch; ch = ch_next)
+    {
+        if (ch)
+        {
+            ch_next = ch->next_in_room;
+            if (IS_NPC(ch) && mob_index[ch->only.npc->R_num].func.mob == npc_ship_crew_captain_func)
+            {
+                return true;
+            }
+            
+            if (IS_PC(ch) && IS_TRUSTED(ch))
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+
 /////////////////////////
 // GENERAL COMBAT ///////
 /////////////////////////
@@ -395,10 +430,17 @@ void NPCShipAI::board_target()
     if (!grunt_count)
         return;
 
-    if (type == NPC_AI_PIRATE)
-        act_to_all_in_ship(ship->target, "&+YA group of &+Rs&+ra&+Rv&+ra&+Rg&+re &+Rp&+ri&+Rr&+ra&+Rt&+re&+Rs &+Yjust &=LWboarded&N &+Yyour ship in search of valuables!&N\r\n");
+    if (ship == npc_dreadnought)
+    {
+        act_to_all_in_ship(ship->target, "&+YA group of &+Rr&+ra&+Rv&+ra&+Rg&+ri&+Rn&+rg &+Rd&+re&+Rm&+ro&+Rn&+rs &+Yjust &=LWboarded&N &+Yyour ship!&N\r\n");
+    }
     else
-        act_to_all_in_ship(ship->target, "&+YA group of &+Rs&+ra&+Rv&+ra&+Rg&+re &+Rp&+ri&+Rr&+ra&+Rt&+re&+Rs &+Yjust &=LWboarded&N &+Yyour ship!&N\r\n");
+    {
+        if (type == NPC_AI_PIRATE)
+            act_to_all_in_ship(ship->target, "&+YA group of &+Rs&+ra&+Rv&+ra&+Rg&+re &+Rp&+ri&+Rr&+ra&+Rt&+re&+Rs &+Yjust &=LWboarded&N &+Yyour ship in search of valuables!&N\r\n");
+        else
+            act_to_all_in_ship(ship->target, "&+YA group of &+Rs&+ra&+Rv&+ra&+Rg&+re &+Rp&+ri&+Rr&+ra&+Rt&+re&+Rs &+Yjust &=LWboarded&N &+Yyour ship!&N\r\n");
+    }
     
     int j;
     for (j = 0; j < MAX_SHIP_ROOM; j++) 
@@ -463,6 +505,7 @@ bool NPCShipAI::chase()
     new_heading = calc_intercept_heading (t_bearing, ship->target->heading);
     if (check_dir_for_land_from(ship->x, ship->y, new_heading, 5))
         new_heading = t_bearing;
+    since_last_fired_right = 0;
     send_message_to_debug_char("Intercepting: ");
     return true;
 }
@@ -1088,7 +1131,7 @@ void NPCShipAI::advanced_combat_maneuver()
 
 void NPCShipAI::a_attack()
 {
-    char to_fire[MAXSLOTS];
+    char to_fire[MAXSLOTS], can_fire_but_not_right = 0;
     send_message_to_debug_char("Weapons:");
     for (int w_num = 0; w_num < MAXSLOTS; w_num++) 
     {
@@ -1103,43 +1146,60 @@ void NPCShipAI::a_attack()
                 t_range < (float)weapon_data[w_index].max_range &&
                 ship->guncrew.stamina > weapon_data[w_index].reload_stamina)
             {
+                can_fire_but_not_right = 1;
+
                 int hit_arc = weapon_data[w_index].hit_arc;
-                if (w_index == W_MINDBLAST || w_index == W_FRAG_CAN)
+                if (w_index == W_FRAG_CAN)
                     hit_arc = 360; // doesnt matter where to fire from
                 int arc_width = get_arc_width(target_side);
                 int min_intersect = MIN(MIN(hit_arc, (hit_arc / 2 + 10)), arc_width / 2);
-                int rbearing = s_bearing - ship->target->heading; // how target sees you, relatively to direction
-                normalize_direction(rbearing);
-
-                // TODO: do it more correctly, does not support hit arc close to 360 right
-                int arc_center = get_arc_central_bearing(target_side);
-                int arc_cw = arc_center + arc_width / 2;
-                normalize_direction(arc_cw);
-                int arc_ccw = arc_center - arc_width / 2;
-                normalize_direction(arc_ccw);
 
                 int intersect = 0;
-                if ((arc_cw >= arc_ccw && (rbearing > arc_ccw && rbearing < arc_cw)) || (arc_cw < arc_ccw && (rbearing > arc_ccw || rbearing < arc_cw)))
-                { // center inside arc
-                    int ccw_diff = rbearing - arc_ccw;
-                    if (ccw_diff < 0) ccw_diff += 360;
-                    int cw_diff = arc_cw - rbearing;
-                    if (cw_diff < 0) cw_diff += 360;
-                    intersect = MIN(ccw_diff, hit_arc / 2) + MIN(cw_diff, hit_arc / 2);
-                }
-                else
                 {
-                    int ccw_diff = arc_ccw - rbearing;
-                    if (ccw_diff < 0) ccw_diff += 360;
-                    int cw_diff = rbearing - arc_cw;
-                    if (cw_diff < 0) cw_diff += 360;
-                    intersect = MAX(hit_arc / 2 - ccw_diff, 0) + MAX(hit_arc / 2 - cw_diff, 0);
+                    int rbearing = s_bearing - ship->target->heading; // how target sees you, relatively to direction
+                    normalize_direction(rbearing);
+
+                    int arc_center = get_arc_central_bearing(target_side);
+                    int arc_cw = arc_center + arc_width / 2;
+                    normalize_direction(arc_cw);
+                    int arc_ccw = arc_center - arc_width / 2;
+                    normalize_direction(arc_ccw);
+
+                    if ((arc_cw >= arc_ccw && (rbearing > arc_ccw && rbearing < arc_cw)) || (arc_cw < arc_ccw && (rbearing > arc_ccw || rbearing < arc_cw)))
+                    { // center inside arc
+                        int ccw_diff = rbearing - arc_ccw;
+                        if (ccw_diff < 0) ccw_diff += 360;
+                        int cw_diff = arc_cw - rbearing;
+                        if (cw_diff < 0) cw_diff += 360;
+                        intersect = MIN(ccw_diff, hit_arc / 2) + MIN(cw_diff, hit_arc / 2);
+                    }
+                    else
+                    {
+                        int ccw_diff = arc_ccw - rbearing;
+                        if (ccw_diff < 0) ccw_diff += 360;
+                        int cw_diff = rbearing - arc_cw;
+                        if (cw_diff < 0) cw_diff += 360;
+                        intersect = MAX(hit_arc / 2 - ccw_diff, 0) + MAX(hit_arc / 2 - cw_diff, 0);
+                    }
+                    send_message_to_debug_char("  %d:%d", w_num, intersect);
                 }
+
                 if (intersect >= min_intersect)
                 {
                     to_fire[w_num] = 1;
+                    since_last_fired_right = 0;
+                    can_fire_but_not_right = 0;
+                    send_message_to_debug_char("!");
                 }
-                send_message_to_debug_char("  %d:%d", w_num, intersect);
+
+                if (is_heavy_ship || (intersect == 0 && since_last_fired_right > number(30, 90)))
+                {
+                    if ((ship->target->armor[s_arc] + ship->target->internal[s_arc]) > 0 || weapon_data[w_index].hit_arc > 180)
+                    {
+                        to_fire[w_num] = 1;
+                        send_message_to_debug_char("!");
+                    }
+                }
             }
             else
             {
@@ -1147,13 +1207,17 @@ void NPCShipAI::a_attack()
             }
         }
     }
-    send_message_to_debug_char("\r\n");
+    send_message_to_debug_char("  sfr:%d\r\n", since_last_fired_right);
     for (int w_num = 0; w_num < MAXSLOTS; w_num++) 
     {
         if (to_fire[w_num])
         {
             fire_weapon(ship, debug_char, w_num);
         }
+    }
+    if (can_fire_but_not_right)
+    {
+        since_last_fired_right++;
     }
 }
 

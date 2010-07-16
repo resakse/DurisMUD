@@ -57,7 +57,7 @@ const char* pirateShipNames[] =
     "&+LThe &+YGo&+yld&+Yen &+LThief",
     "&+cIron &+CCu&+ctla&+Css",
     "&+GJ&+gad&+Ge Dr&+gag&+Gon",
-    "&&+WSa&+wlt&+Ly &+yLeu&+Lcro&+ytta",
+    "&+WSa&+wlt&+Ly &+yLeu&+Lcro&+ytta",
     "&+LAv&+wer&+Lnu&+Ws &+YR&+ri&+Rs&+rin&+Yg",
 };
 
@@ -786,24 +786,12 @@ P_ship try_load_npc_ship(P_ship target, P_char ch, NPC_AI_Type type, int level)
         return 0;
 
     ship->npc_ai->advanced = false;
-    if (SHIPHULLWEIGHT(ship) < 200)
-    {
-        if (level == 1 && number(1, 3) == 1)
-            ship->npc_ai->advanced = true;
-        if (level == 2 && number(1, 3) < 3)
-            ship->npc_ai->advanced = true;
-        if (level == 3)
-            ship->npc_ai->advanced = true;
-    }
-    else if (SHIPHULLWEIGHT(ship) < 250)
-    {
-        if (level == 1 && number(1, 5) == 1)
-            ship->npc_ai->advanced = true;
-        if (level == 2 && number(1, 3) == 1)
-            ship->npc_ai->advanced = true;
-        if (level == 3 && number(1, 2) == 1)
-            ship->npc_ai->advanced = true;
-    }
+    if (level == 1 && number(1, 3) == 1)
+        ship->npc_ai->advanced = true;
+    if (level == 2 && number(1, 2) == 1)
+        ship->npc_ai->advanced = true;
+    if (level == 3)
+        ship->npc_ai->advanced = true;
 
     ship->target = target;
     int ship_heading = dir + 180;
@@ -868,6 +856,7 @@ bool load_npc_dreadnought()
         {
             int name_index = number(0, sizeof(dreadnoughtShipNames)/sizeof(char*) - 1);
             nameship(dreadnoughtShipNames[name_index], npc_dreadnought);
+            npc_dreadnought->npc_ai->advanced = true;
             npc_dreadnought->npc_ai->permanent = true;
             return true;
         }

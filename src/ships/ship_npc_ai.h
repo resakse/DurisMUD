@@ -31,10 +31,11 @@ struct NPCShipAI
     
     NPCShipAI(P_ship s, P_char ch = 0);
     void activity();
+    bool check_for_captain_on_bridge();
     void cruise();
     void reload_and_repair();
     void attacked_by(P_ship attacker);
-
+    
     // General combat
     int t_bearing;
     int t_arc;
@@ -89,6 +90,7 @@ struct NPCShipAI
 
 
     // Advanced combat
+    int since_last_fired_right;
     float prev_hd;
     float curr_x, curr_y;
     int curr_angle[4];

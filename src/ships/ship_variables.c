@@ -129,7 +129,7 @@ const WeaponData weapon_data[MAXWEAPON] = {
  { "Heavy Ballistae",        1000000,   15,    6,      0,      5,     15,     22,      1,      10,    0,    100,      0,     15,      30,     20,      3,  WPNFLAG07 },
  { "Quartz Beamcannon",      4000000,    7,   40,      0,     20,      4,     16,      1,      10,   20,    100,     50,     15,      45,     10,      0,  WPNFLAG08 },
  { "Darkstone Beamcannon",   5000000,    9,   40,      0,     23,      5,     22,      1,      10,   20,    100,     50,     15,      45,     12,      0,  WPNFLAG09 },
- { "Mind Blast Cannon",      4000000,    5,   50,      0,     20,      0,      0,      1,      10,    0,      0,      0,      0,      45,      2,      0,  WPNFLAG10 },
+ { "Mind Blast Cannon",      4000000,    5,   50,      0,     20,      0,      0,      1,     360,    0,      0,      0,      0,      45,      2,      0,  WPNFLAG10 },
  { "Fragmentation Cannon",   5000000,    7,   20,      0,     15,      4,      6,      5,      90,   50,     50,    100,      0,      45,     10,     12,  WPNFLAG11 },
  { "Long Tom Catapult",      5000000,    9,    6,     20,     32,      3,      6,      8,     360,   20,    100,    100,      3,      45,     20,     36,  WPNFLAG12 },
 };                                                                                             

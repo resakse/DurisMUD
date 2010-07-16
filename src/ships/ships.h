@@ -335,7 +335,6 @@ struct ShipData
     struct NPCShipAI *npc_ai;
     int time;
     int race;
-    int pilotlevel;
     int money;
 
     int maxspeed_bonus;
