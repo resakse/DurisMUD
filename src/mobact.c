@@ -7659,7 +7659,7 @@ PROFILE_END(mundane_justice);
 PROFILE_END(mundane_justice);
 
 PROFILE_START(mundane_commune);
-  if(!IS_FIGHTING(ch) && !number(0, 20)) // If not fighting, "mem"
+  if(!USES_MANA(ch) && !IS_FIGHTING(ch) && !number(0, 20)) // If not fighting, "mem"
   {// 5%
     // made a separate procedure for mobs, w/o sprintfs and all  -Odorf
     do_npc_commune(ch);

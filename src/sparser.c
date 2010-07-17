@@ -1498,7 +1498,6 @@ bool parse_spell(P_char ch, char *argument,
   memset(target_data, 0, sizeof(struct spell_target_data));
   target_data->ttype = spl;
 
-  /*
   if (IS_TRUSTED(ch))
   {
   }
@@ -1511,18 +1510,13 @@ bool parse_spell(P_char ch, char *argument,
       return FALSE;
     }
   }
-  */
-  if (USES_SPELL_SLOTS(ch))
+  else if (USES_SPELL_SLOTS(ch))
   {
     if (circle != -1 && !ch->specials.undead_spell_slots[circle])
     {
       if (GET_CLASS(ch, CLASS_DRUID))
         send_to_char("&+gYou must commune with nature more before "
                      "invoking its power.\n", ch);
-      else if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
-      {
-        send_to_char("&+mYour thoughts have not collected enough to cast THAT spell.&n\n", ch);
-      }
       else
         send_to_char("&+LYour power reserves are not sufficient to "
                      "cast that spell!\n", ch);
@@ -1957,7 +1951,7 @@ void do_cast(P_char ch, char *argument, int cmd)
     send_to_char("You are too filled with &+RRAGE&N to cast!\n", ch);
     return;
   }
-  if (USES_FOCUS(ch) && !IS_TRUSTED(ch))
+  if (USES_MANA(ch) && !IS_TRUSTED(ch))
   {
     send_to_char("Psionicists use the command &+Bwill&n to use their abilities.\n", ch);
     return;
@@ -2559,8 +2553,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
     ((*skills[arg->spell].spell_pointer)
      (dev_power, ch, args, SPELL_TYPE_SPELL, tar_char, tar_obj));
 
-  /*
-  if ((GET_STAT(ch) != STAT_DEAD) && USES_FOCUS(ch))
+  if ((GET_STAT(ch) != STAT_DEAD) && USES_MANA(ch))
   {
     if (IS_PC(ch) && (GET_MANA(ch) < 0))
     {
@@ -2569,7 +2562,6 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
       KnockOut(ch, -(int) ((float) (GET_MANA(ch)) * 1.5));
     }
   }
-  */
   CharWait(ch, PULSE_SPELLCAST / 2);
 }
 

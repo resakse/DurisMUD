@@ -1042,7 +1042,6 @@ const char *command[] = {
   "area",
   "whitelist",
   "epicreset",
-  "focus",
   "\n"                          /* MAX_CMD_LIST is now 1000 */
 };
 
@@ -2542,8 +2541,7 @@ void assign_command_pointers(void)
   CMD_Y(CMD_SMITE, STAT_NORMAL + POS_STANDING, do_holy_smite, 0);
 //  CMD_N(CMD_OUTPOST, STAT_RESTING + POS_PRONE, do_outpost, 0);
   CMD_Y(CMD_OFFENSIVE, STAT_RESTING + POS_PRONE, do_offensive, 0);
-  CMD_Y(CMD_FOCUS, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
- 
+  
   /*
    * 'commands' which exist only to trigger specials
    */

@@ -517,7 +517,7 @@ void stop_memorizing(P_char ch)
   if (IS_PC(ch) && IS_AFFECTED2(ch, AFF2_MEMORIZING))
   {
     show_stop_memorizing(ch);
-    if (!USES_COMMUNE(ch) || !USES_FOCUS(ch))
+    if (!USES_COMMUNE(ch))
       disarm_char_events(ch, event_memorize);
   }
 }
@@ -664,15 +664,6 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
       tick_factor += GET_C_INT(ch) - (stat_factor[(int) GET_RACE(ch)].Int);
     }
   }
-  else if(ch->player.m_class & CLASS_PSIONICIST)
-  {
-   tick_factor = MAX(1, STAT_INDEX(GET_C_POW(ch)));
-
-    if(GET_C_POW(ch) > stat_factor[(int) GET_RACE(ch)].Pow)
-    {
-      tick_factor += GET_C_POW(ch) - (stat_factor[(int) GET_RACE(ch)].Pow);
-    }
-  }
   else
   {
     tick_factor = MAX(1, STAT_INDEX(GET_C_WIS(ch)));
@@ -817,7 +808,6 @@ void handle_undead_mem(P_char ch)
   char     gbuf[MAX_STRING_LENGTH];
 
   if(!USES_COMMUNE(ch) &&
-     !USES_FOCUS(ch) &&
      !GET_CLASS(ch, CLASS_WARLOCK) &&
      !((IS_UNDEADRACE(ch) ||
         is_wearing_necroplasm(ch) ||
@@ -839,7 +829,7 @@ void handle_undead_mem(P_char ch)
       continue;
     }
 
-    if ((USES_COMMUNE(ch) || USES_FOCUS(ch)) && (IS_CASTING(ch) || GET_OPPONENT(ch)))
+    if (USES_COMMUNE(ch) && (IS_CASTING(ch) || GET_OPPONENT(ch)))
     {
       highest_empty = i;
       break;
@@ -861,11 +851,6 @@ void handle_undead_mem(P_char ch)
       sprintf(gbuf, "&+WEthereal e&+Cssences flo&+cw into you, " 
 		      "res&+Ctoring your %d%s&+c &+Wcircle powers!\n",
               i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
-    }
-    else if(GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
-    {
-      sprintf(gbuf, "&+mYou feel a rush of energy as a&+L %d%s circle &+mspell coalesces in your mind...\n",
-              i, i== 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
     else
       sprintf(gbuf, "&+GYou feel nature's energy flow into your %d%s "
@@ -893,10 +878,10 @@ void handle_undead_mem(P_char ch)
     time = get_circle_memtime(ch, highest_empty);
     add_event(event_memorize, time, ch, 0, 0, 0, &time, sizeof(time));
   }
-  else if (!USES_COMMUNE(ch) || !USES_FOCUS(ch))
+  else if (!USES_COMMUNE(ch))
   {
     send_to_char("&+rYou feel fully infused...\n", ch);
-
+    
     CharWait(ch, WAIT_SEC);
     
     if(IS_PUNDEAD(ch) ||
@@ -915,10 +900,6 @@ void handle_undead_mem(P_char ch)
     }
     REMOVE_BIT(ch->specials.affected_by2, AFF2_MEMORIZING);
     stop_meditation(ch);
-  }
-  else if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
-  {
-    send_to_char("&+mThe energies in your mind converge into full cohesion...\n", ch);
   }
   else
     send_to_char("&+GYour communion with nature is now complete...\n", ch);
@@ -1058,8 +1039,7 @@ void event_memorize(P_char ch, P_char victim, P_obj obj, void *data)
      IS_HARPY(ch) ||
      GET_CLASS(ch, CLASS_ETHERMANCER) ||
      IS_UNDEADRACE(ch) ||
-     is_wearing_necroplasm(ch) ||
-     USES_FOCUS(ch))
+     is_wearing_necroplasm(ch))
   {
     handle_undead_mem(ch);
   }
@@ -1093,11 +1073,6 @@ void do_assimilate(P_char ch, char *argument, int cmd)
     send_to_char("You have no idea how to even begin.\n", ch);
     return;
   }
-  else if (cmd == CMD_FOCUS && !USES_FOCUS(ch))
-  {
-    send_to_char("You don't know how to do that!\n", ch);
-    return;
-  }
 
   sprintf(Gbuf1, "You currently have the following spell "
           "slots available:\n");
@@ -1118,11 +1093,11 @@ void do_assimilate(P_char ch, char *argument, int cmd)
   }
   send_to_char(Gbuf1, ch);
 
-  if ((USES_COMMUNE(ch) || USES_FOCUS(ch)) && need_mem && !get_scheduled(ch, event_memorize))
+  if (USES_COMMUNE(ch) && need_mem && !get_scheduled(ch, event_memorize))
     add_event(event_memorize, get_circle_memtime(ch, need_mem), ch, 0, 0, 0,
               0, 0);
 
-  if (!need_mem || USES_COMMUNE(ch) || USES_FOCUS(ch))
+  if (!need_mem || USES_COMMUNE(ch))
     return;
 
   if (cmd == CMD_TUPOR)
@@ -1207,7 +1182,7 @@ void do_memorize(P_char ch, char *argument, int cmd)
   P_obj    sbook = NULL;
   P_nevent  e1;
 
-  if (cmd == CMD_ASSIMILATE || cmd == CMD_COMMUNE || cmd == CMD_TUPOR || cmd == CMD_FOCUS)
+  if (cmd == CMD_ASSIMILATE || cmd == CMD_COMMUNE || cmd == CMD_TUPOR)
   {
     do_assimilate(ch, argument, cmd);
     return;
@@ -1635,7 +1610,6 @@ void use_spell(P_char ch, int spell)
 
   if(IS_TRUSTED(ch))
   { }
-  /*
   else if(USES_MANA(ch))
   {
 // Elite mobs should not lose mana as quickly. Jun09 -Lucrot
@@ -1657,7 +1631,6 @@ void use_spell(P_char ch, int spell)
       StartRegen(ch, EVENT_MANA_REGEN);
     }
   }
-  */
   else if(USES_SPELL_SLOTS(ch))
   {
   
@@ -2358,8 +2331,7 @@ void spell_mordenkainens_lucubration(int level, P_char ch, char *arg, int type, 
        IS_HARPY(ch) ||
        GET_CLASS(ch, CLASS_ETHERMANCER) ||
        IS_UNDEADRACE(ch) |
-       is_wearing_necroplasm(ch)) ||
-     !USES_FOCUS(ch))
+       is_wearing_necroplasm(ch)))
   {
     // normal casters
     

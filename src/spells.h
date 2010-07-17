@@ -642,8 +642,7 @@
 #define SPELL_NEG_ARMOR              593
 #define SPELL_ETHERIC_GUST           594
 #define SPELL_REPAIR_ONE_ITEM        595
-#define SPELL_TAINT                  596
-#define LAST_SPELL                   SPELL_TAINT 
+#define LAST_SPELL  SPELL_REPAIR_ONE_ITEM
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000
@@ -989,7 +988,7 @@
 #define TAG_EATING                   2017
 #define TAG_OBJ_RECENT_FRAG          2018
 #define TAG_KNOWN_SHAPE              2019
-#define TAG_DRINKING                 2020
+#define TAG_UNUSED                   2020
 #define TAG_EPIC_MONOLITH            2021
 #define TAG_EPIC_ERRAND              2022
 #define TAG_EPIC_COMPLETED           2023
