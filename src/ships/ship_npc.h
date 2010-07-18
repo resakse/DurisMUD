@@ -23,6 +23,8 @@ struct NPCShipCrewData
     int spec_mobs[10];
     int inner_grunts[10];
     int outer_grunts[10];
+    int treasure_chest;
+    int treasure_chest_key;
 };
 
 P_ship try_load_npc_ship(P_ship target);

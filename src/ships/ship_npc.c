@@ -847,10 +847,10 @@ bool load_npc_dreadnought()
     if (npc_dreadnought != 0)
         return false;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 20; i++)
     {
         int room = number (0, top_of_world);
-        if (world[room].sector_type != SECT_OCEAN)
+        if (!IS_MAP_ROOM(room) || world[room].sector_type != SECT_OCEAN)
             continue;
         if ((npc_dreadnought = try_load_npc_ship(room, 0, 0, NPC_AI_HUNTER, 4)) != 0)
         {
@@ -878,6 +878,8 @@ NPCShipCrewData npcShipCrewData[] =
       { 40222, 40223, 40224, 40225, 40227, 0, 0, 0, 0, 0 },
       { 40226, 40230, 0, 0, 0, 0, 0, 0, 0, 0},
       { 40228, 40229, 0, 0, 0, 0, 0, 0, 0, 0 },
+      40215,
+      40220
   },
   {
       1,
@@ -886,6 +888,8 @@ NPCShipCrewData npcShipCrewData[] =
       { 40233, 40234, 40235, 40236, 40238, 0, 0, 0, 0, 0 },
       { 40237, 40241, 0, 0, 0, 0, 0, 0, 0, 0 },
       { 40239, 40240, 0, 0, 0, 0, 0, 0, 0, 0 },
+      40216,
+      40221
   },
   {
       2,
@@ -894,6 +898,8 @@ NPCShipCrewData npcShipCrewData[] =
       { 40244, 40245, 40246, 40247, 40249, 0, 0, 0, 0, 0 },
       { 40248, 40252, 0, 0, 0, 0, 0, 0, 0, 0 },
       { 40250, 40251, 0, 0, 0, 0, 0, 0, 0, 0 },
+      40217,
+      40222
   },
   {
       3,
@@ -902,6 +908,8 @@ NPCShipCrewData npcShipCrewData[] =
       { 40255, 40256, 40257, 40258, 40260, 0, 0, 0, 0, 0 },
       { 40259, 40263, 0, 0, 0, 0, 0, 0, 0, 0 },
       { 40261, 40262, 0, 0, 0, 0, 0, 0, 0, 0 },
+      40218,
+      40223
   },
   {
       4,
@@ -910,6 +918,8 @@ NPCShipCrewData npcShipCrewData[] =
       { 40266, 40268, 40267, 40269, 40272, 0, 0, 0, 0, 0 },
       { 40273, 40274, 0, 0, 0, 0, 0, 0, 0, 0 },
       { 40270, 40271, 0, 0, 0, 0, 0, 0, 0, 0 },
+      40219,
+      40224
   }
 };
 
@@ -970,21 +980,20 @@ void assign_ship_crew_funcs()
     }
 }
 
-static int treasure_chests[5] = { 40215, 40216, 40217, 40218, 40219 };
-static int treasure_chest_keys[5] = { 40220, 40221, 40222, 40223, 40224 };
+static int materials[] = {7, 13, 20, 21, 22, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 }; // quality materials
+P_obj create_material(int index);
 
-
-bool load_treasure_chest(P_ship ship, P_char captain, int level)
+bool load_treasure_chest(P_ship ship, P_char captain, NPCShipCrewData* crew)
 {
     int r_num;
-    if ((r_num = real_object(treasure_chests[level])) < 0)
+    if ((r_num = real_object(crew->treasure_chest)) < 0)
         return false;
     P_obj chest = read_object(r_num, REAL);
     if (!chest)
         return false;
     obj_to_room(chest, real_room0(ship->bridge));
 
-    if ((r_num = real_object(treasure_chest_keys[level])) < 0)
+    if ((r_num = real_object(crew->treasure_chest_key)) < 0)
         return false;
     P_obj key = read_object(r_num, REAL);
     if (!key)
@@ -992,7 +1001,7 @@ bool load_treasure_chest(P_ship ship, P_char captain, int level)
     obj_to_char(key, captain);
 
     int money = 0;
-    switch (level)
+    switch (crew->level)
     {
     case 0: money = number(200, 400); break;
     case 1: money = number(500, 600); break;
@@ -1003,6 +1012,23 @@ bool load_treasure_chest(P_ship ship, P_char captain, int level)
 
     P_obj money_obj = create_money(0, 0, 0, money);
     obj_to_obj(money_obj, chest);
+
+
+    int npieces = number(5, 10 + crew->level * 5);
+    for (int i = 0; i < npieces; i++)
+    {
+        int material_index = materials[number(0, sizeof(materials)/sizeof(int) - 1)];
+        P_obj piece = create_material(material_index);
+        obj_to_obj(piece, chest);
+    }
+
+    int nstones = number(2, 4 + crew->level * 2);
+    for (int i = 0; i < nstones; i++)
+    {
+        P_obj stone = create_stones(NULL);
+        obj_to_obj(stone, chest);
+    }
+
     return true;
 }
 
@@ -1029,6 +1055,11 @@ P_char load_npc_ship_crew_member(P_ship ship, int room_no, int vnum)
 
 bool load_npc_ship_crew(P_ship ship, int crew_size, int crew_level)
 {
+    if (crew_level < 3 && number(0,4) == 0)
+        crew_level++;
+    else if (crew_level > 0 && number(0,4) == 0)
+        crew_level--;
+
     int total_crews = sizeof(npcShipCrewData) / sizeof(NPCShipCrewData);
     int i = 0;
     for (; i < total_crews; i++)
@@ -1089,7 +1120,7 @@ bool load_npc_ship_crew(P_ship ship, int crew_size, int crew_level)
 
     ship->npc_ai->crew_data = crew_data;
 
-    load_treasure_chest(ship, captain, crew_level);
+    load_treasure_chest(ship, captain, crew_data);
     return true;
 }
 

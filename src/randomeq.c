@@ -546,31 +546,18 @@ void create_randoms()
 
 }
 
-P_obj create_material(P_char killer, P_char mob)
+P_obj create_material(int index)
 {
-  P_obj    obj;
   char     buf1[MAX_STRING_LENGTH];
   char     buf2[MAX_STRING_LENGTH];
   char     buf3[MAX_STRING_LENGTH];
-  int      material, howgood;
 
-  if(GET_CLASS(killer, CLASS_ALCHEMIST))
-  {
-    if(IS_PC(killer) && !number(0,6)){
-      killer->only.pc->spell_bind_used = killer->only.pc->spell_bind_used - 10;
-       send_to_char("&+YYou feel your power increase some...&n\n", killer);  
-    }
-  }
-  howgood = (int) ((GET_LEVEL(killer) + GET_LEVEL(mob)) / 2.8); /* make sure you understand thisvalue before ya change it. */
-  material = number(0, BOUNDED(1, howgood, MAXMATERIAL));
+  P_obj obj = read_object(RANDOM_EQ_VNUM, VIRTUAL);
+  obj->material = material_data[index].m_number;
 
-  obj = read_object(RANDOM_EQ_VNUM, VIRTUAL);
-  obj->material = material_data[material].m_number;
-
-  sprintf(buf1, "random piece %s", strip_ansi(material_data[material].m_name).c_str());
-  sprintf(buf2, "a piece of %s&n", material_data[material].m_name);
-  sprintf(buf3, "&+La piece of %s&n lies here.",
-          material_data[material].m_name);
+  sprintf(buf1, "random piece %s", strip_ansi(material_data[index].m_name).c_str());
+  sprintf(buf2, "a piece of %s&n", material_data[index].m_name);
+  sprintf(buf3, "&+La piece of %s&n lies here.", material_data[index].m_name);
 
   set_keywords(obj, buf1);
   set_short_description(obj, buf2);
@@ -582,7 +569,22 @@ P_obj create_material(P_char killer, P_char mob)
   convertObj(obj);
 
   return obj;
+}
 
+
+P_obj create_material(P_char killer, P_char mob)
+{
+  if(GET_CLASS(killer, CLASS_ALCHEMIST))
+  {
+    if(IS_PC(killer) && !number(0,6)){
+      killer->only.pc->spell_bind_used = killer->only.pc->spell_bind_used - 10;
+       send_to_char("&+YYou feel your power increase some...&n\n", killer);  
+    }
+  }
+  int howgood = (int) ((GET_LEVEL(killer) + GET_LEVEL(mob)) / 2.8); /* make sure you understand this value before ya change it. */
+  int material_index = number(0, BOUNDED(1, howgood, MAXMATERIAL));
+
+  return create_material(material_index);
 }
 
 P_obj create_stones(P_char ch)
