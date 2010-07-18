@@ -156,6 +156,8 @@
 
 #define SOUL_TAKING_STILETTO 88314
 
+#define USES_MANA(ch) ((GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
+
 #define GET_SONG(ch) ((ch)->specials.song)
 
 #define BAD_APPLYS(apply) (apply == APPLY_GOLD || apply == APPLY_CHAR_WEIGHT || apply == APPLY_CHAR_HEIGHT || \
