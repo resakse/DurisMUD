@@ -21,7 +21,7 @@ char  arc[3];
 extern char  contact[256];
 extern char  weapon[100];
 
-int   write_newship(P_ship temp);
+int   write_ship(P_ship temp);
 P_ship getshipfromchar(P_char ch);
 void  setcontact(int i, P_ship obj, P_ship ship, int x, int y);
 int   bearing(float x1, float y1, float x2, float y2);
@@ -545,13 +545,13 @@ bool sink_ship(P_ship ship, P_ship attacker)
                 {
                     ship_gain_frags(contacts[i].ship, ship, frag_gain);
                     ship_gain_money(contacts[i].ship, ship, salvage, bounty);
-                    write_newship(contacts[i].ship);
+                    write_ship(contacts[i].ship);
                 }
             }
         }
 
         ship_loss_on_sink(ship, attacker, frag_gain);
-        write_newship(ship);
+        write_ship(ship);
 
         if (attacker->target == ship)
             attacker->target = NULL;

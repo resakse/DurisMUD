@@ -1,5 +1,5 @@
 /************************************************************
-newship.c
+read_ships.c
 
 New Ship system blah blah blah bug foo about it :P
 Updated with warships. Nov08 -Lucrot 
@@ -53,7 +53,7 @@ void initialize_newships()
   obj_index[real_object0(60001)].func.obj = shipobj_proc;
   obj_index[real_object0(1223)].func.obj = ship_cargo_info_stick;
   
-  if (!read_newship())
+  if (!read_ships())
   {
       logit(LOG_FILE, "Error reading ships from file!\r\n");
   }
@@ -109,14 +109,14 @@ void shutdown_newships()
                 }
             }
         }
-        write_newship(ship);
+        write_ship(ship);
     }
 }
 
 //--------------------------------------------------------------------
 // set ship object names with ship name in them
 //--------------------------------------------------------------------
-void nameship(const char *name, P_ship ship)
+void name_ship(const char *name, P_ship ship)
 {
    int rroom, i;
    
@@ -158,29 +158,33 @@ void nameship(const char *name, P_ship ship)
 
          if (ship->m_class == SH_CRUISER || ship->m_class == SH_DREADNOUGHT) 
          {
-            if (ship->bridge == world[rroom].number) {
-               sprintf(buf, "&+ROn the &+WBridge&N&+R of the &+L%s&N %s",
-                     SHIPCLASSNAME(ship), ship->name);
-            } else if (world[rroom].number == ship->bridge + 9) {
-               sprintf(buf, "&+YDocking Bay&+y of the &+L%s&N %s",
-                     SHIPCLASSNAME(ship), ship->name);
-            } else if (world[rroom].number == ship->bridge + 7) {
-               sprintf(buf, "&+BLaunch Deck&+y of the &+L%s&N %s",
-                     SHIPCLASSNAME(ship), ship->name);
-            } else {
-               sprintf(buf, "&+yAboard the &+L%s&N %s", SHIPCLASSNAME(ship),
-                     ship->name);
+            if (ship->bridge == world[rroom].number) 
+            {
+               sprintf(buf, "&+ROn the &+WBridge&N&+R of the &+L%s&N %s", SHIPCLASSNAME(ship), ship->name);
+            } 
+            else if (world[rroom].number == ship->bridge + 9) 
+            {
+               sprintf(buf, "&+YDocking Bay&+y of the &+L%s&N %s", SHIPCLASSNAME(ship), ship->name);
+            } 
+            else if (world[rroom].number == ship->bridge + 7) 
+            {
+               sprintf(buf, "&+BLaunch Deck&+y of the &+L%s&N %s", SHIPCLASSNAME(ship), ship->name);
+            } 
+            else 
+            {
+               sprintf(buf, "&+yAboard the &+L%s&N %s", SHIPCLASSNAME(ship), ship->name);
             }
-         } else if (ship->bridge == world[rroom].number) {
-            sprintf(buf, "&+yOn the &+WBridge&N&+y of the %s&N %s",
-                  SHIPCLASSNAME(ship), ship->name);
-         } else {
-            sprintf(buf, "&+yAboard the %s&N %s", SHIPCLASSNAME(ship),
-                  ship->name);
+         }
+         else if (ship->bridge == world[rroom].number) 
+         {
+            sprintf(buf, "&+yOn the &+WBridge&N&+y of the %s&N %s", SHIPCLASSNAME(ship), ship->name);
+         } 
+         else 
+         {
+            sprintf(buf, "&+yAboard the %s&N %s", SHIPCLASSNAME(ship), ship->name);
          }
 
          if (world[rroom].name) {
-//        str_free(world[rroom].name);
             world[rroom].name = NULL;
          }
 
@@ -192,16 +196,8 @@ void nameship(const char *name, P_ship ship)
 //--------------------------------------------------------------------
 // load ship into the world
 //--------------------------------------------------------------------
-int loadship(P_ship ship, int to_room)
+int load_ship(P_ship ship, int to_room)
 {
-   int      i, rroom, dir;
-
-   if (!IS_SET(ship->flags, LOADED)) 
-   {
-      shiperror = 1;
-      return FALSE;
-   }
-
    if (ship->shipobj == NULL) 
    {
       shiperror = 2;
@@ -214,11 +210,11 @@ int loadship(P_ship ship, int to_room)
       return FALSE;
    }
 
-   for (i = 0; i < MAX_SHIP_ROOM; i++) 
-   {
+    for (int i = 0; i < MAX_SHIP_ROOM; i++) 
+    {
       if (SHIPROOMNUM(ship, i) != -1) 
       {
-         rroom = real_room0(SHIPROOMNUM(ship, i));
+         int rroom = real_room0(SHIPROOMNUM(ship, i));
          if (!rroom) 
          {
             shiperror = 4;
@@ -226,15 +222,14 @@ int loadship(P_ship ship, int to_room)
          }
 
          world[rroom].funct = newshiproom_proc;
-         for (dir = 0; dir < NUM_EXITS; dir++) 
+         for (int dir = 0; dir < NUM_EXITS; dir++) 
          {
             if (SHIPROOMEXIT(ship, i, dir) != -1) 
             {
                if (!world[rroom].dir_option[dir])
                   CREATE(world[rroom].dir_option[dir], room_direction_data, 1, MEM_TAG_DIRDATA);
 
-               world[rroom].dir_option[dir]->to_room =
-               real_room0(SHIPROOMEXIT(ship, i, dir));
+               world[rroom].dir_option[dir]->to_room = real_room0(SHIPROOMEXIT(ship, i, dir));
                world[rroom].dir_option[dir]->exit_info = 0;
             } 
             else 
@@ -244,12 +239,15 @@ int loadship(P_ship ship, int to_room)
             }
          }
       }
-   }
-   
-   ship->target = NULL;
-   REMOVE_BIT(ship->flags, SINKING);
-   REMOVE_BIT(ship->flags, SUNKBYNPC);
-   REMOVE_BIT(ship->flags, RAMMING);
+    }
+
+
+   if(IS_SET(ship->flags, SINKING)) 
+     REMOVE_BIT(ship->flags, SINKING); 
+   if(IS_SET(ship->flags, SUNKBYNPC)) 
+     REMOVE_BIT(ship->flags, SUNKBYNPC); 
+   if(IS_SET(ship->flags, RAMMING)) 
+     REMOVE_BIT(ship->flags, RAMMING); 
    SET_BIT(ship->flags, DOCKED);
    SET_BIT(ship->flags, LOADED);
    
@@ -274,7 +272,6 @@ int loadship(P_ship ship, int to_room)
    ship->anchor = world[to_room].number;
    ship->location = to_room;
 
-   ship->repair = SHIPHULLWEIGHT(ship);
    update_crew(ship);
    reset_crew_stamina(ship);
    update_ship_status(ship);
@@ -284,25 +281,34 @@ int loadship(P_ship ship, int to_room)
 //--------------------------------------------------------------------
 // create new ship of given class
 //--------------------------------------------------------------------
-struct ShipData *newship(int m_class, bool npc)
+struct ShipData *new_ship(int m_class, bool npc)
 {
-   int j = 0;
-   ShipVisitor svs;
-   for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs)) j++;
-   if (j >= MAXSHIPS) 
-       return NULL;   // AT MAX FOR GAME?
+   if (shipObjHash.size() >= MAXSHIPS) 
+   {
+       shiperror = 6;   
+       return NULL;   // AT MAX FOR GAME
+   }
 
    // Make a new ship
    P_ship ship = NULL;
    CREATE(ship, ShipData, 1, MEM_TAG_SHIPDAT);
    
    ship->shipobj = read_object(60001, VIRTUAL);
+   if (ship->shipobj == NULL) {
+      shiperror = 16;
+      return NULL;
+   }
    shipObjHash.add(ship);
 
    // Set up the new ship
    ship->shipai = 0;
    ship->npc_ai = 0;
    ship->panel = read_object(60000, VIRTUAL);
+   if (ship->panel == NULL) 
+   {
+      shiperror = 17;
+      return NULL;
+   }
    ship->m_class = m_class;
    setarmor(ship, true);
    ship->frags = 0;
@@ -312,12 +318,12 @@ struct ShipData *newship(int m_class, bool npc)
    ship->z = 0;
    ship->flags = 0;
    ship->money = 0;
+   ship->target = 0;
    ship->mainsail = SHIPTYPEMAXSAIL(m_class);
+   ship->repair = SHIPHULLWEIGHT(ship);
 
    ship->maxspeed_bonus = 0;
    ship->capacity_bonus = 0;
-
-   SET_BIT(ship->flags, LOADED);
 
    ship->time = time(NULL);
    int room = (SHIPZONE * 100);
@@ -328,27 +334,12 @@ struct ShipData *newship(int m_class, bool npc)
    int bridge = room;
    ship->bridge = bridge;
    ship->entrance = bridge;
-   if (ship->panel == NULL) 
-   {
-      shiperror = 17;
-      return NULL;
-   }
-   for (j = 0; j <= NUM_EXITS; j++) 
-   {
-      ship->room[0].exit[j] = -1;
-   }
-   if (ship->panel == NULL) {
-      shiperror = 16;
-      return NULL;
-   }
-
-   for (j = 0; j < MAXSLOTS; j++) 
-   {
-        ship->slot[j].clear();
-   }
    clear_ship_layout(ship);
 
-   ship->room[0].roomnum = bridge;
+   for (int j = 0; j < MAXSLOTS; j++) 
+   {
+      ship->slot[j].clear();
+   }
 
    setcrew(ship, sail_crew_list[0], 0);
    setcrew(ship, gun_crew_list[0], 0);
@@ -358,15 +349,24 @@ struct ShipData *newship(int m_class, bool npc)
    assignid(ship, "**");
    SHIPKEYWORDS(ship) = str_dup("ship");
 
-   if (ship->panel == NULL) {
-      shiperror = 13;
-      return NULL;
-   }
    set_ship_layout(ship, m_class);
    return ship;
 }
 
 //--------------------------------------------------------------------
+void clear_references_to_ship(P_ship ship)
+{
+    ShipVisitor svs;
+    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
+    {
+        if (svs->target == ship)
+        {
+            svs->target = NULL;
+            act_to_all_in_ship(svs, "&+RTarget lost.\r\n");
+        }
+    }
+}
+
 void delete_ship(P_ship ship, bool npc)
 {
     char fname[256];
@@ -374,16 +374,11 @@ void delete_ship(P_ship ship, bool npc)
     for (int i = 0; i < MAX_SHIP_ROOM; i++)
         world[real_room0(SHIPROOMNUM(ship, i))].funct = NULL;
 
-    ShipVisitor svs;
-    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
-    {
-        if (svs->target == ship)
-            svs->target = NULL;
-    }
+    clear_references_to_ship(ship);
 
     if (!npc)
     {
-        write_newship(NULL);
+        write_ships_index();
         sprintf(fname, "Ships/%s", ship->ownername);
         unlink(fname);
     }
@@ -401,6 +396,43 @@ void delete_ship(P_ship ship, bool npc)
     
     FREE(ship);
 }
+void reset_ship(P_ship ship)
+{
+    setarmor(ship, true);
+    ship->mainsail = SHIPTYPEMAXSAIL(ship->m_class);
+    ship->repair = SHIPTYPEHULLWEIGHT(ship->m_class);
+
+    clear_ship_layout(ship);
+    set_ship_layout(ship, ship->m_class);
+    reset_ship_physical_layout(ship);
+    name_ship(ship->name, ship);
+
+    ship->timer[T_UNDOCK] = 0; 
+    ship->timer[T_MANEUVER] = 0; 
+    ship->timer[T_SINKING] = 0; 
+    ship->timer[T_BSTATION] = 0; 
+    ship->timer[T_RAM] = 0; 
+    ship->timer[T_RAM_WEAPONS] = 0; 
+    ship->timer[T_MAINTENANCE] = 0; 
+    ship->timer[T_MINDBLAST] = 0; 
+                 
+    if(IS_SET(ship->flags, MAINTENANCE)) 
+        REMOVE_BIT(ship->flags, MAINTENANCE); 
+    if(IS_SET(ship->flags, SINKING)) 
+        REMOVE_BIT(ship->flags, SINKING); 
+    if(IS_SET(ship->flags, SUNKBYNPC)) 
+        REMOVE_BIT(ship->flags, SUNKBYNPC); 
+    if(IS_SET(ship->flags, RAMMING)) 
+        REMOVE_BIT(ship->flags, RAMMING); 
+    if(IS_SET(ship->flags, ANCHOR)) 
+        REMOVE_BIT(ship->flags, ANCHOR); 
+    if(IS_SET(ship->flags, SUMMONED)) 
+        REMOVE_BIT(ship->flags, SUMMONED); 
+
+    for (int j = 0; j < MAXSLOTS; j++)
+        ship->slot[j].clear();
+}
+
 
 void clear_ship_layout(P_ship ship)
 {
@@ -639,14 +671,15 @@ void reset_ship_physical_layout(P_ship ship)
             int rroom = real_room0(SHIPROOMNUM(ship, j));
             if (!rroom)
                 continue;
-            if (real_room0(ship->bridge) == rroom) 
+            
+            /*if (real_room0(ship->bridge) == rroom) 
                 sprintf(buf, "&+yOn the &+WBridge&N&+y of the %s&N %s", SHIPCLASSNAME(ship), ship->name);
             else 
                 sprintf(buf, "&+yAboard the %s&N %s", SHIPCLASSNAME(ship), ship->name);
             if (world[rroom].name) 
                 world[rroom].name = NULL;
 
-            world[rroom].name = str_dup(buf);
+            world[rroom].name = str_dup(buf);*/
             world[rroom].funct = newshiproom_proc;
             for (int dir = 0; dir < NUM_EXITS; dir++) 
             {
@@ -664,7 +697,6 @@ void reset_ship_physical_layout(P_ship ship)
                     {
                         FREE(world[rroom].dir_option[dir]);
                         world[rroom].dir_option[dir] = 0;
-                        //world[rroom].dir_option[dir]->to_room = -1;
                     }
                 }
             }
@@ -858,7 +890,7 @@ void dock_ship(P_ship ship, int to_room)
     if ((real_room0(world[to_room].number) == to_room) && (to_room != 0)) 
     {
         ship->anchor = world[to_room].number;
-        write_newship(ship);
+        write_ship(ship);
     }
     if (to_room == 0) 
     {
@@ -868,15 +900,8 @@ void dock_ship(P_ship ship, int to_room)
         obj_to_room(ship->shipobj, ship->location);
     }
 
-    ShipVisitor svs;
-    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
-    {
-        if (svs->target == ship) 
-        {
-            svs->target = NULL;
-            act_to_all_in_ship(svs, "&+RTarget lost.\r\n");
-        }
-    }
+    clear_references_to_ship(ship);
+
     ship->location = to_room;
     ship->repair = SHIPTYPEHULLWEIGHT(ship->m_class);
     assignid(ship, "**");
@@ -1104,7 +1129,7 @@ int jettison_cargo(P_char ch, P_ship ship, char* arg)
     else
     {
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
     }
     return TRUE;
 }
@@ -1145,7 +1170,7 @@ int jettison_contraband(P_char ch, P_ship ship, char* arg)
     else
     {
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
     }
     return TRUE;
 }
@@ -2398,12 +2423,14 @@ int newship_proc(P_obj obj, P_char ch, int cmd, char *arg)
             return TRUE;
         }
       
-        if (!isname(GET_NAME(ch), SHIPOWNER(ship)) && !IS_TRUSTED(ch) &&
-            (ch->group == NULL ? 1 : get_char2(str_dup(SHIPOWNER(ship))) ==
-             NULL ? 1 : (get_char2(str_dup(SHIPOWNER(ship)))->group != ch->group))) 
+        if (!isname(str_dup(SHIPOWNER(ship)), GET_NAME(ch)) && !IS_TRUSTED(ch))
         {
-            send_to_char ("You are not the captain of this ship, the crew ignores you.\r\n", ch);
-            return TRUE;
+            P_char real_owner = get_char2(str_dup(SHIPOWNER(ship)));
+            if (ch->group == NULL || real_owner == NULL || real_owner->group != ch->group)
+            {
+                send_to_char ("You are not the captain of this ship, the crew ignores you.\r\n", ch);
+                return TRUE;
+            }
         }
         if (IS_SET(ship->flags, MAINTENANCE)) 
         {
@@ -2846,7 +2873,7 @@ int shiploader_proc(P_obj obj, P_char ch, int cmd, char *arg)
             }
             temp->frags = i;
             send_to_char("Done.\r\n", ch);
-            if (write_newship(temp)) {
+            if (write_ship(temp)) {
                 send_to_char("Saved.\r\n", ch);
             } else {
                 send_to_char("Error saving file!\r\n", ch);
@@ -2965,42 +2992,11 @@ void finish_sinking(P_ship ship)
         }
 
         int old_class = ship->m_class;
-        ship->m_class = 0; // all ships become sloops after sinking
-        setarmor(ship, true);
-        if (old_class > 0)
-           ship->mainsail = SHIPTYPEMAXSAIL(ship->m_class);
-        else
-           ship->mainsail = 0;
+        ship->m_class = SH_SLOOP; // all ships become sloops after sinking
+        reset_ship(ship);
 
-        clear_ship_layout(ship);
-        set_ship_layout(ship, ship->m_class);
-        reset_ship_physical_layout(ship);
-        nameship(ship->name, ship);
-
-        ship->timer[T_UNDOCK] = 0; 
-        ship->timer[T_MANEUVER] = 0; 
-        ship->timer[T_SINKING] = 0; 
-        ship->timer[T_BSTATION] = 0; 
-        ship->timer[T_RAM] = 0; 
-        ship->timer[T_RAM_WEAPONS] = 0; 
-        ship->timer[T_MAINTENANCE] = 0; 
-        ship->timer[T_MINDBLAST] = 0; 
-                     
-        if(IS_SET(ship->flags, MAINTENANCE)) 
-            REMOVE_BIT(ship->flags, MAINTENANCE); 
-        if(IS_SET(ship->flags, SINKING)) 
-            REMOVE_BIT(ship->flags, SINKING); 
-        if(IS_SET(ship->flags, SUNKBYNPC)) 
-            REMOVE_BIT(ship->flags, SUNKBYNPC); 
-        if(IS_SET(ship->flags, RAMMING)) 
-            REMOVE_BIT(ship->flags, RAMMING); 
-        if(IS_SET(ship->flags, ANCHOR)) 
-            REMOVE_BIT(ship->flags, ANCHOR); 
-        if(IS_SET(ship->flags, SUMMONED)) 
-            REMOVE_BIT(ship->flags, SUMMONED); 
-
-        for (int j = 0; j < MAXSLOTS; j++)
-            ship->slot[j].clear();
+        if (old_class == SH_SLOOP)
+           ship->mainsail = 0;  // have to pay at least something...
 
         ship->speed = 0;
         ship->setspeed = 0;
@@ -3017,7 +3013,7 @@ void finish_sinking(P_ship ship)
 
         reset_crew_stamina(ship);
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
     }
     else
     {
@@ -3530,19 +3526,6 @@ void newship_activity()
                 try_load_npc_ship(ship);
         }
     }
-
-    
-    /*bool unloaded = true;
-    while (unloaded) // this is because ship unloading invalidates the hash, have to repeat over
-    {
-        unloaded = false;
-        for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
-        {
-            if (ISNPCSHIP(svs))
-                if ((unloaded = try_unload_pirate_ship(svs)) != FALSE)
-                    break;
-        }
-    }*/
 }
 
 void crash_land(P_ship ship)
@@ -3926,6 +3909,7 @@ int summon_ship (P_char ch, P_ship ship)
     add_event(summon_ship_event, buildtime, NULL, NULL, NULL, 0, buf, strlen(buf)+1);
     return TRUE;
 }
+
 int sell_slot (P_char ch, P_ship ship, int slot)
 {
     if (ship->location != ch->in_room) 
@@ -3944,14 +3928,14 @@ int sell_slot (P_char ch, P_ship ship, int slot)
         if (SHIPWEAPONDAMAGED(ship, slot))
             cost = (int) (weapon_data[ship->slot[slot].index].cost * .1);
         else
-            cost = (int) (weapon_data[ship->slot[slot].index].cost * .75);
+            cost = (int) (weapon_data[ship->slot[slot].index].cost * .9);
 
         ADD_MONEY(ch, cost);
         sprintf(buf, "Here's %s for that %s.\r\n", coin_stringv(cost), ship->slot[slot].get_description());
         send_to_char(buf, ch);
         ship->slot[slot].clear();
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
         return TRUE;
     } 
     else if (ship->slot[slot].type == SLOT_CARGO)
@@ -4028,7 +4012,7 @@ int sell_cargo(P_char ch, P_ship ship, int slot)
 
         update_crew(ship);
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
 
         write_cargo();
     }
@@ -4130,7 +4114,7 @@ int sell_contra(P_char ch, P_ship ship, int slot)
 
         update_crew(ship);
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
 
         write_cargo();
     }
@@ -4243,6 +4227,9 @@ int sell_ship(P_char ch, P_ship ship, const char* arg)
 {
     int i = 0, k = 0, j;
 
+    send_to_char ("&+RSelling ships completely is not allowed.&N\r\n", ch);
+    return TRUE;
+
     if (!arg || !(*arg) || !isname(arg, "confirm"))
     {
         send_to_char ("&+RIf you are sure you want to sell your ship, type 'sell ship confirm'.\r\n&+RYou WILL loose your frags and crews!&N\r\n", ch);
@@ -4263,7 +4250,7 @@ int sell_ship(P_char ch, P_ship ship, const char* arg)
             if (SHIPWEAPONDAMAGED(ship, j))
                 cost += (int) (weapon_data[ship->slot[j].index].cost * .1);
             else
-                cost += (int) (weapon_data[ship->slot[j].index].cost * .75);
+                cost += (int) (weapon_data[ship->slot[j].index].cost * .9);
         }
     }
     if (ship->location != ch->in_room) 
@@ -4355,7 +4342,7 @@ int repair_all(P_char ch, P_ship ship)
     send_to_char(buf, ch);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -4397,7 +4384,7 @@ int repair_sail(P_char ch, P_ship ship)
     send_to_char(buf, ch);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -4480,7 +4467,7 @@ int repair_armor(P_char ch, P_ship ship, char* arg)
     send_to_char(buf, ch);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -4526,7 +4513,7 @@ int repair_internal(P_char ch, P_ship ship, char* arg)
         send_to_char(buf, ch);
         ship->timer[T_MAINTENANCE] += buildtime;
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
         return TRUE;
     }
     if (isname(arg, "fore") || isname(arg, "f")) {
@@ -4566,7 +4553,7 @@ int repair_internal(P_char ch, P_ship ship, char* arg)
     send_to_char(buf, ch);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -4622,7 +4609,7 @@ int repair_weapon(P_char ch, P_ship ship, char* arg)
     send_to_char(buf, ch);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -4699,7 +4686,7 @@ int reload_ammo(P_char ch, P_ship ship, char* arg)
     send_to_char(buf, ch);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -4847,7 +4834,7 @@ int buy_cargo(P_char ch, P_ship ship, char* arg)
     send_to_char ("Thank you for your purchase, your cargo is loaded and set to go!\r\n", ch);
 
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -4978,7 +4965,7 @@ int buy_contra(P_char ch, P_ship ship, char* arg)
     send_to_char ("Thank you for your 'purchase' *snicker*, your 'cargo' is loaded and set to go!\r\n", ch);
 
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -5101,14 +5088,14 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
     send_to_char(buf, ch);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
 
 int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
 {
-    int m_class, oldclass, cost, buildtime;
+    int cost, buildtime;
 
     if (owned)
     {
@@ -5149,24 +5136,22 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
     /* Okay, we have a valid selection for ship hull */
     if (owned) 
     {
-        oldclass = ship->m_class;
+        int oldclass = ship->m_class;
         if (i == oldclass)
         {
             send_to_char ("You own this hull already!\r\n", ch);
             return TRUE;
         }
 
-        if (i < oldclass)
+        for( int k = 0; k < MAXSLOTS; k++ )
         {
-            for( int k = 0; k < MAXSLOTS; k++ )
+            if (ship->slot[k].type != SLOT_EMPTY)
             {
-                if (ship->slot[k].type != SLOT_EMPTY)
-                {
-                    send_to_char ("You can not downgrade a hull with non-empty slots!\r\n", ch);
-                    return TRUE;
-                }
+                send_to_char ("You can not change a hull with non-empty slots!\r\n", ch);
+                return TRUE;
             }
         }
+
         cost = SHIPTYPECOST(i) - (int) (SHIPTYPECOST(oldclass) * .90);
         if (cost >= 0)
         {
@@ -5199,27 +5184,13 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
                 epic_gain_skillpoints(ch, -SHIPTYPEEPICCOST(i));
         }
 
-
-        m_class = i;
         ship->m_class = i;
-        setarmor(ship, true);
-        ship->mainsail = SHIPMAXSAIL(ship);
-        ship->repair = SHIPTYPEHULLWEIGHT(ship->m_class);
-        /*if(ship->lastsunk > 2)
-        {
-            ship->lastsunk /= 2;
-            send_to_char("Your reputation diminishes.\r\n", ch);
-        }*/
-    
-        clear_ship_layout(ship);
-        set_ship_layout(ship, ship->m_class);
-        reset_ship_physical_layout(ship);
-        nameship(str_dup(ship->name), ship);
-        update_maxspeed(ship);
-        if (m_class > oldclass)
-            buildtime = 75 * (m_class / 2 - oldclass / 3);
+        reset_ship(ship);
+
+        if (ship->m_class > oldclass)
+            buildtime = 75 * (ship->m_class / 2 - oldclass / 3);
         else
-            buildtime = 75 * (oldclass / 2 - m_class / 3);
+            buildtime = 75 * (oldclass / 2 - ship->m_class / 3);
 
         sprintf(buf, "Thanks for your business, it will take %d hours to complete this upgrade.\r\n", buildtime / 75);
         send_to_char(buf, ch);
@@ -5254,32 +5225,32 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
             return TRUE;
         }
 
-        SUB_MONEY(ch, SHIPTYPECOST(i), 0);
-        if (SHIPTYPEEPICCOST(i) > 0)
-            epic_gain_skillpoints(ch, -SHIPTYPEEPICCOST(i));
-
-        /* Now, create the ship object */
-        ship = newship(i);
+        // Now, create the ship object
+        ship = new_ship(i);
         if (ship == NULL) 
         {
-            send_to_char("World is too full of ships.\r\n", ch);
-            return TRUE;
-        }
-        if (ship->panel == NULL) 
-        {
-            send_to_char("panel null 1\r\n", ch);
+            logit(LOG_FILE, "error in new_ship(): %d\n", shiperror);
+            sprintf(buf, "Error creating new ship (%d), please notify a god.\r\n", shiperror);
+            send_to_char(buf, ch);
             return TRUE;
         }
         buildtime = 75 * SHIPTYPEID(i) / 4;
         ship->ownername = str_dup(GET_NAME(ch));
         ship->anchor = world[ch->in_room].number;
-        nameship(arg2, ship);
-        if (!loadship(ship, ch->in_room)) 
+        name_ship(arg2, ship);
+        if (!load_ship(ship, ch->in_room)) 
         {
-            logit(LOG_FILE, "error in loadship(): %d\n", shiperror); 
-            send_to_char("Error loading ship, please notify a god.\r\n", ch);
+            logit(LOG_FILE, "error in load_ship(): %d\n", shiperror);
+            sprintf(buf, "Error loading ship (%d), please notify a god.\r\n", shiperror);
+            send_to_char(buf, ch);
             return TRUE;
         }
+        write_ships_index();
+
+        // everything went successfully, substracting the cost        
+        SUB_MONEY(ch, SHIPTYPECOST(i), 0);
+        if (SHIPTYPEEPICCOST(i) > 0)
+            epic_gain_skillpoints(ch, -SHIPTYPEEPICCOST(i));
         sprintf(buf, "Thanks for your business, this hull will take %d hours to build.\r\n", SHIPTYPEID(i) / 4);
         send_to_char(buf, ch);
     }
@@ -5288,7 +5259,7 @@ int buy_hull(P_char ch, P_ship ship, int owned, char* arg1, char* arg2)
         SET_BIT(ship->flags, MAINTENANCE);
     ship->timer[T_MAINTENANCE] += buildtime;
     update_ship_status(ship);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -5316,7 +5287,7 @@ int swap_slots(P_char ch, P_ship ship, char* arg1, char* arg2)
     ship->slot[slot1].clone(ship->slot[slot2]);
     ship->slot[slot2].clone(temp);
     send_to_char("Done! Thank you for your business!\r\n", ch);
-    write_newship(ship);
+    write_ship(ship);
     return TRUE;
 }
 
@@ -5455,7 +5426,7 @@ int newship_shop(int room, P_char ch, int cmd, char *arg)
                 }
             }
         }
-        send_to_char("Valid syntax is 'sell <ship/cargo/contraband/[slot]>'\r\n", ch);
+        send_to_char("Valid syntax is 'sell <cargo/contraband/[slot]>'\r\n", ch);
         return TRUE;
     }
 
@@ -5578,39 +5549,37 @@ int newship_shop(int room, P_char ch, int cmd, char *arg)
 }; /* ship_shop */
 
 
+int write_ships_index()
+{
+    FILE* f = fopen("Ships/ship_index", "w");
+    if (!f)
+    {
+        logit(LOG_FILE, "Ship index file open error.");
+        return FALSE;
+    }
+    ShipVisitor svs;
+    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
+    {
+        if (IS_SET(svs->flags, LOADED) && !ISNPCSHIP(svs))
+            fprintf(f, "%s~\n", svs->ownername);
+    }
+    fprintf(f, "$~");
+    fclose(f);
+    return TRUE;
+}
 
-int write_newship(P_ship ship)
+
+int write_ship(P_ship ship)
 {
     char     buf[MAX_STRING_LENGTH];
     int      i;
     FILE    *f = NULL;
 
-    if (ship == NULL)
-    {
-        f = fopen("Ships/ship_index", "w");
-        if (!f)
-        {
-            logit(LOG_FILE, "Ship index file open error.");
-            return FALSE;
-        }
-        ShipVisitor svs;
-        for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
-        {
-            if (IS_SET(svs->flags, LOADED) && !ISNPCSHIP(svs))
-                fprintf(f, "%s~\n", svs->ownername);
-        }
-        fprintf(f, "$~");
-        fclose(f);
-        return TRUE;
-    }
     if (ISNPCSHIP(ship)) {
         return FALSE;
     }
     if (!IS_SET(ship->flags, LOADED)) {
         return FALSE;
-    }
-    if (IS_SET(ship->flags, MOB_SHIP)) {
-        return TRUE;
     }
     sprintf(buf, "Ships/%s", ship->ownername);
     f = fopen(buf, "w");
@@ -5672,11 +5641,11 @@ int write_newship(P_ship ship)
     return TRUE;
 }
 
-int read_newship()
+int read_ships()
 {
     P_ship ship;
     char    *ret = NULL;
-    int      i, k, intime, ver;
+    int      k, intime, ver;
     FILE    *f = NULL, *f2 = NULL;
 
     f = fopen("Ships/ship_index", "r");
@@ -5700,7 +5669,7 @@ int read_newship()
             ver = 0;
 
         fscanf(f2, "%d\n", &k);
-        ship = newship(k);
+        ship = new_ship(k);
     
         if( !ship )
         {
@@ -5712,35 +5681,21 @@ int read_newship()
         if (ver == 2)
         {
             fgets(buf2, MAX_STRING_LENGTH, f2);
-            i = 0;
-            while (buf2[i] != '\0') 
-            {
-                if (buf2[i] == '\n') 
-                {
-                    buf2[i] = '\0';
-                    break;
-                }
-                i++;
-            }
+            for (int i = 0; buf2[i] != '\0'; i++) 
+                if (buf2[i] == '\n') { buf2[i] = '\0'; break; }
+
             ship->ownername = str_dup(buf2);
 
             fgets(buf2, MAX_STRING_LENGTH, f2);
-            i = 0;
-            while (buf2[i] != '\0') 
-            {
-                if (buf2[i] == '\n') 
-                {
-                    buf2[i] = '\0';
-                    break;
-                }
-                i++;
-            }
+            for (int i = 0; buf2[i] != '\0'; i++) 
+                if (buf2[i] == '\n') { buf2[i] = '\0'; break; }
+
             ship->name = str_dup(buf2);
 
             fscanf(f2, "%d\n", &(ship->frags));
             fscanf(f2, "%d %d\n", &(ship->anchor), &(ship->time));
 
-            for (i = 0; i < 4; i++) 
+            for (int i = 0; i < 4; i++) 
             {
                 fscanf(f2, "%d %d\n", &(ship->armor[i]), &(ship->internal[i]));
             }
@@ -5757,7 +5712,7 @@ int read_newship()
             ship->rowingcrew.update();
             reset_crew_stamina(ship);
 
-            for (i = 0; i < MAXSLOTS; i++)  
+            for (int i = 0; i < MAXSLOTS; i++)  
             {
                 ship->slot[i].clear();
 
@@ -5795,19 +5750,19 @@ int read_newship()
             fclose(f2);
             return FALSE;
         }
-        nameship(ship->name, ship);
+        name_ship(ship->name, ship);
         intime = time(NULL);
 
-        if (!loadship(ship, real_room0(ship->anchor)))
+        if (!load_ship(ship, real_room0(ship->anchor)))
         {
             logit(LOG_FILE, "Error loading ship: %d.\r\n", shiperror);
             fclose(f2);
             return FALSE;
         }
-        if ((intime - ship->time) > NEWSHIP_INACTIVITY && SHIPCLASS(ship) == 0)
+        /*if ((intime - ship->time) > NEWSHIP_INACTIVITY && SHIPCLASS(ship) == 0)
         {
             SET_BIT(ship->flags, NEWSHIP_DELETE);
-        }
+        }*/
     
         fclose(f2);
 
@@ -6085,7 +6040,7 @@ int crew_shop(int room, P_char ch, int cmd, char *arg)
         send_to_char ("Aye aye cap'n!  We'll be on yer ship before you board!\r\n", ch);
         setcrew(ship, j, MAX(current_skill, ship_crew_data[j].start_skill));
         update_ship_status(ship);
-        write_newship(ship);
+        write_ship(ship);
         return TRUE;
     }
     return FALSE;
@@ -6235,7 +6190,7 @@ int erzul(P_char ch, P_char pl, int cmd, char *arg)
       obj = NULL;
       setcrew(ship, SAIL_AUTOMATONS, ship_crew_data[SAIL_AUTOMATONS].start_skill);
       update_ship_status(ship);
-      write_newship(ship);
+      write_ship(ship);
       send_to_char ("Erzul says 'They'll be at your ship by the time you get there!\r\n", pl);
       return TRUE;
     }
@@ -6254,7 +6209,7 @@ int erzul(P_char ch, P_char pl, int cmd, char *arg)
       obj = NULL;
       setcrew(ship, GUN_AUTOMATONS, ship_crew_data[GUN_AUTOMATONS].start_skill);
       update_ship_status(ship);
-      write_newship(ship);
+      write_ship(ship);
       send_to_char("Erzul says 'They'll be at your ship by the time you get there!\r\n",       pl);
       return TRUE;
     }

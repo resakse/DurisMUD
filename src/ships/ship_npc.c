@@ -5,7 +5,6 @@
 #include "ships.h"
 #include "comm.h"
 #include "db.h"
-//#include "graph.h"
 #include "interp.h"
 #include "objmisc.h"
 #include "prototypes.h"
@@ -59,6 +58,18 @@ const char* pirateShipNames[] =
     "&+GJ&+gad&+Ge Dr&+gag&+Gon",
     "&+WSa&+wlt&+Ly &+yLeu&+Lcro&+ytta",
     "&+LAv&+wer&+Lnu&+Ws &+YR&+ri&+Rs&+rin&+Yg",
+    "&+LWi&+wdow&+Le&+Wr's &+wSo&+Lrr&+wo&+Ww",
+    "&+WTh&+we &+RPa&+Wi&+Rns&+ree&+Rk&+rer",
+    "&+RHe&+ra&+yr&+Rt&+wl&+Le&+wss &+yB&+Yea&+yst",
+    "&+WT&+whe &+GV&+Wi&+Gl&+ge H&+Gan&+Wg&+Gma&+gn",
+    "&+WTh&+we &+CN&+Wor&+Ct&+ch &+CW&+Bi&+Wn&+cd",
+    "&+RRev&+ren&+wg&+Le &+wof the &+LD&+wa&+Lrk &+RD&+rem&+Ron",
+    "&+WT&+whe &+BC&+Ch&+Wi&+Cll&+Wi&+Cn&+Bg &+RB&+wa&+Wnn&+we&+Rr",
+    "&+YF&+Wea&+yr&+ws&+Wom&+Ye &+YF&+yis&+Yt&+ys",
+    "&+LBl&+wu&+Lnt &+WH&+war&+Wpo&+won",
+    "&+WT&+whe &+YGo&+Wl&+Yd&+we&+Yn &+YN&+Wu&+Ygg&+Wet",
+    "&+WT&+whe &+RW&+rr&+Rat&+rh &+wof the &+BT&+bi&+Bta&bn",
+    "&+GS&+Yi&+Gre&+Yn&+w's &+GS&+Wo&+Gng",
 };
 
 const char* dreadnoughtShipNames[] = 
@@ -672,7 +683,7 @@ P_ship load_npc_ship(int level, NPC_AI_Type type, int speed, int m_class, int ro
     
     dbg_char = ch;
 
-    P_ship ship = newship(npcShipSetup[i].m_class, true);
+    P_ship ship = new_ship(npcShipSetup[i].m_class, true);
     if (!ship)
     {
         if (ch) send_to_char("Couldn't create npc ship!\r\n", ch);
@@ -688,21 +699,20 @@ P_ship load_npc_ship(int level, NPC_AI_Type type, int speed, int m_class, int ro
     ship->npc_ai = new NPCShipAI(ship, ch);
     ship->npc_ai->type = type;
     ship->ownername = 0;
-
+    ship->anchor = world[room].number;
 
     int name_index = number(0, sizeof(pirateShipNames)/sizeof(char*) - 1);
-    nameship(pirateShipNames[name_index], ship);
+    name_ship(pirateShipNames[name_index], ship);
     assignid(ship, NULL, true);
 
     npcShipSetup[i].setup(ship, type);
     
-    if (!loadship(ship, room))
+    if (!load_ship(ship, room))
     {
         if (ch) send_to_char("Couldnt load npc ship!\r\n", ch);
         return false;
     }
     
-    ship->anchor = 0;
     REMOVE_BIT(ship->flags, DOCKED);
     return ship;
 }
@@ -855,7 +865,7 @@ bool load_npc_dreadnought()
         if ((npc_dreadnought = try_load_npc_ship(room, 0, 0, NPC_AI_HUNTER, 4)) != 0)
         {
             int name_index = number(0, sizeof(dreadnoughtShipNames)/sizeof(char*) - 1);
-            nameship(dreadnoughtShipNames[name_index], npc_dreadnought);
+            name_ship(dreadnoughtShipNames[name_index], npc_dreadnought);
             npc_dreadnought->npc_ai->advanced = true;
             npc_dreadnought->npc_ai->permanent = true;
             return true;

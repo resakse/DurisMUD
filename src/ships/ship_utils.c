@@ -21,7 +21,7 @@ extern const char *ship_symbol[35];
 
 extern void    dock_ship(P_ship ship, int to_room);
 extern float   range(float x1, float y1, float z1, float x2, float y2, float z2);
-extern int     write_newship(P_ship temp);
+extern int     write_ship(P_ship temp);
 
 void  summon_ship_event(P_char ch, P_char victim, P_obj obj, void *data);
 int   getmap(P_ship ship);
@@ -45,6 +45,7 @@ ShipObjHash::ShipObjHash()
 {
     for (int i = 0; i < SHIP_OBJ_TABLE_SIZE; i++)
         table[i] = 0;
+    sz = 0;
 }
 P_ship ShipObjHash::find(P_obj key)
 {
@@ -72,6 +73,7 @@ bool ShipObjHash::add(P_ship ship)
     }
     ship->next = table[t_index];
     table[t_index] = ship;
+    sz++;
     return true;
 }
 bool ShipObjHash::erase(P_ship ship)
@@ -92,6 +94,7 @@ bool ShipObjHash::erase(P_ship ship, unsigned t_index)
             else
                 table[t_index] = curr->next;
             curr->next = 0;
+            sz--;
             return true;
         }
         prev = curr;
@@ -161,15 +164,16 @@ bool rename_ship_owner(char *old_name, char *new_name)
 
    str_free(ship->ownername);
    ship->ownername = str_dup(new_name);
-   nameship(SHIPNAME(ship), ship);
-   write_newship(ship);
-   write_newship(NULL); // reset index file
+   name_ship(SHIPNAME(ship), ship);
+   write_ship(ship);
+   write_ships_index(); // reset index file
 
    sprintf(tmp_buf, "Ships/%s", old_name);
    unlink(tmp_buf);
 
    return TRUE;
 }
+
 
 /* ------------------------------------------------------------------------------ */
 /* pure ship rename function, to be called from rename hooks or command functions */
@@ -217,8 +221,8 @@ bool rename_ship(P_char ch, char *owner_name, char *new_name)
       }
    }
 
-   nameship(new_name, temp);
-   write_newship(temp);
+   name_ship(new_name, temp);
+   write_ship(temp);
 
    return TRUE;
 }
@@ -262,7 +266,7 @@ void summon_ship_event(P_char ch, P_char victim, P_obj obj, void *data)
         REMOVE_BIT(temp->flags, SUMMONED);
         temp->speed = 0;
         temp->setspeed = 0;
-        write_newship(temp);
+        write_ship(temp);
         return;
       }
     }

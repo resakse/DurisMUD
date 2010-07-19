@@ -1845,7 +1845,9 @@ P_char get_char2(char *name)
   char     tmpname[MAX_STRING_LENGTH];
   char    *tmp;
 
-  if (name)
+  if (!name)
+    return (0);
+  else
     strcpy(tmpname, name);
   tmp = tmpname;
 

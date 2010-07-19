@@ -107,9 +107,8 @@
 #define ANCHOR              BIT_9
 #define NEWSHIP_DELETE      BIT_11
 #define SQUID_SHIP          BIT_12
-#define MOB_SHIP            BIT_13
-#define SUMMONED            BIT_14
-#define SUNKBYNPC           BIT_15
+#define SUMMONED            BIT_13
+#define SUNKBYNPC           BIT_14
 
 #define EVILSHIP          0
 #define GOODIESHIP        1
@@ -518,15 +517,15 @@ int bearing(float x1, float y1, float x2, float y2);
 P_ship get_ship(char *ownername);
 P_ship getshipfromchar(P_char ch);
 bool rename_ship(P_char ch, char *owner_name, char *new_name);
-bool rename_ship_owner(char *old_name, char *new_name);
 
-int read_newship();
-int write_newship(P_ship ship);
+int read_ships();
+int write_ship(P_ship ship);
+int write_ships_index();
 
-void nameship(const char *name, P_ship ship);
-int loadship(P_ship shipdata, int to_room);
+void name_ship(const char *name, P_ship ship);
+int load_ship(P_ship shipdata, int to_room);
 
-struct ShipData *newship(int m_class, bool npc = false);
+struct ShipData *new_ship(int m_class, bool npc = false);
 void delete_ship(P_ship ship, bool npc = false);
 
 // shops
@@ -640,6 +639,7 @@ class ShipObjHash
 {
 public:
     ShipObjHash();
+    int size() { return sz; }
 
     P_ship find(P_obj key);
     bool add(P_ship ship);
@@ -662,6 +662,7 @@ public:
 
 private:
     P_ship table[SHIP_OBJ_TABLE_SIZE];
+    int sz;
 };
 typedef ShipObjHash::visitor ShipVisitor;
 extern ShipObjHash shipObjHash;
