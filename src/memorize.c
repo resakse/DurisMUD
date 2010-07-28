@@ -1681,7 +1681,7 @@ void use_spell(P_char ch, int spell)
     if(ch->specials.undead_spell_slots[get_spell_circle(ch, spell)] > 0)
       ch->specials.undead_spell_slots[get_spell_circle(ch, spell)] -= 1;
 
-    if(USES_COMMUNE(ch) &&
+    if((USES_COMMUNE(ch) || USES_FOCUS(ch)) &&
       !get_scheduled(ch, event_memorize))
     {
       add_event(event_memorize, get_circle_memtime(ch, get_spell_circle(ch, spell)),

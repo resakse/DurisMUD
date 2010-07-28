@@ -1957,7 +1957,8 @@ void do_cast(P_char ch, char *argument, int cmd)
     send_to_char("You are too filled with &+RRAGE&N to cast!\n", ch);
     return;
   }
-  if (USES_FOCUS(ch) && !IS_TRUSTED(ch))
+  if ((GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER)) &&
+      !IS_TRUSTED(ch))
   {
     send_to_char("Psionicists use the command &+Bwill&n to use their abilities.\n", ch);
     return;
