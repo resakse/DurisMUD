@@ -1249,12 +1249,12 @@ void NPCShipAI::a_attack()
         since_last_fired_right++;
     }
 
-    /*if (is_multi_target) // ok now lets see if we should fire on something else
+    if (is_multi_target) // ok now lets see if we should fire on something else
     {
         for (int w_num = 0; w_num < MAXSLOTS; w_num++) 
         {
             if (ship->slot[w_num].type != SLOT_WEAPON) 
-                continue
+                continue;
             if (!weapon_ready_to_fire(ship, w_num))
                 continue;
             int w_index = ship->slot[w_num].index;
@@ -1280,18 +1280,20 @@ void NPCShipAI::a_attack()
                 if (t_range < weapon_data[w_index].min_range) // main target is too close anyways, fire it
                     fire = true;
 
-                if ()
+                if (IS_SET(weapon_data[w_index].flags, MINDBLAST) && contacts[i].ship->timer[T_MINDBLAST] == 0)
+                    fire = true;
 
+                if (t_a == (t_arc + 2) % 4) // main target is at opposite arc, fire away
+                    fire = true;
+
+                if (fire)
                 {
-
-
-
                     ship->setheading = ship->heading;
-                    fire_weapon(ship, w_num, i, debug_char);
+                    fire_weapon(ship, w_num, i, hit_chance, debug_char);
                 }
             }
         }
-    }*/
+    }
 }
 
 
