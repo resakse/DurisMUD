@@ -1,6 +1,6 @@
 #402
 &+cPharr &+gValley&n~
-40390 2 0 15 25 1
+40389 2 0 15 25 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -455,6 +455,7 @@ M 0 40214 4 40368 100 0 0 0        * a small black bat
 M 0 40213 1 40370 100 0 0 0        * a brown mold
 M 0 40214 4 40371 100 0 0 0        * a small black bat
 M 0 40216 1 40375 100 0 0 0        * a gartham guard
+M 0 40250 1 40376 100 0 0 0        * a cutthroat plunderer Of the Mauraders of the Four Winds
 M 0 40217 2 40378 100 0 0 0        * a gartham warrior
 M 0 40217 2 40380 100 0 0 0        * a gartham warrior
 M 0 40215 1 40381 100 0 0 0        * the leader
