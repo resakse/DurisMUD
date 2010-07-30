@@ -1433,7 +1433,7 @@ void convertObj(P_obj obj)
     else if (CAN_WEAR(obj, ITEM_WEAR_NECK) || CAN_WEAR(obj, ITEM_WEAR_FACE) ||
              CAN_WEAR(obj, ITEM_WEAR_FEET) || CAN_WEAR(obj, ITEM_WEAR_HANDS))
       weight -= 5;
-    else if (CAN_WEAR(obj, ITEM_WEAR_BODY) || CAN_WEAR(obj, ITEM_HORSE_BODY))
+    else if (CAN_WEAR(obj, ITEM_WEAR_BODY) || CAN_WEAR(obj, ITEM_HORSE_BODY) || CAN_WEAR(obj, ITEM_SPIDER_BODY))
       weight += 10;
     else if (CAN_WEAR(obj, ITEM_WEAR_SHIELD))
     {

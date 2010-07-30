@@ -3252,6 +3252,9 @@ void perform_wear(P_char ch, P_obj obj_object, int keyword)
     act("$n throws $p in the air and it begins circling $s head.", TRUE, ch,
         obj_object, 0, TO_ROOM);
     break;
+  case 27:
+    act("$n shrugs into $p.", TRUE, ch, obj_object, 0, TO_ROOM);
+    break;
   }
   if (IS_SET(obj_object->extra_flags, ITEM_LIT))
   {
@@ -4626,6 +4629,35 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
       }
     }
     break;
+  case 27:
+    if (CAN_WEAR(obj_object, ITEM_SPIDER_BODY))
+    {
+      if (GET_RACE(ch) != RACE_DRIDER)
+      {
+        if (showit)
+          send_to_char("You can't wear spider body armor.\r\n", ch);
+        break;
+      }
+      if (ch->equipment[WEAR_SPIDER_BODY] || ch->equipment[WEAR_BODY])
+      {
+        send_to_char("You're already wearing something on your body.\r\n", ch);
+      }
+      else
+      {
+        if (showit)
+        {
+          act("You shrug into $p.", 0, ch, obj_object, 0, TO_CHAR);
+          perform_wear(ch, obj_object, keyword);
+        }
+        obj_from_char(obj_object, TRUE);
+        equip_char(ch, obj_object, WEAR_SPIDER_BODY, !showit);
+        return TRUE;
+      }
+    }
+    else
+      if (showit)
+        send_to_char("You can't wear that.\r\n", ch);
+    break;
 
   case -1:
     if (showit)
@@ -4704,6 +4736,7 @@ int      equipment_pos_table[CUR_MAX_WEAR][3] = {
   {ITEM_WEAR_FEET, 6, 38},
   {ITEM_WEAR_NOSE, 24, 39},
   {ITEM_WEAR_HORN, 25, 40},
+  {ITEM_SPIDER_BODY, 27, 42},
   {ITEM_HOLD, 13, 18}           /*
                                  * held gets checked last of all
                                  */
@@ -4745,6 +4778,7 @@ void do_wear(P_char ch, char *argument, int cmd)
     "nose",
     "horns",                    /* 24 */
     "ioun",
+    "spider_body",
     "\n"
   };
   int      loop = 0;
@@ -4825,6 +4859,8 @@ void do_wear(P_char ch, char *argument, int cmd)
           keyword = 25;
         else if (CAN_WEAR(obj_object, ITEM_WEAR_IOUN))
           keyword = 26;
+        else if (CAN_WEAR(obj_object, ITEM_SPIDER_BODY))
+          keyword = 27;
 
         if (keyword == -2)
         {

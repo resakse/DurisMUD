@@ -117,7 +117,8 @@ typedef union _zoneMiscFlagRec
 #define WEAR_NOSE              39
 #define WEAR_HORN              40
 #define WEAR_IOUN              41
-#define WEAR_HIGH              41
+#define WEAR_SIDER_BODY        42
+#define WEAR_HIGH              42
 
 #define WEAR_WHOLEBODY  WEAR_HIGH + 1  // returned by checkMobEquipSlot() -
 #define WEAR_WHOLEHEAD  WEAR_HIGH + 2  // used as indices in eq array just like

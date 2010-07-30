@@ -167,6 +167,7 @@ typedef unsigned int uint;
 #define ITEM_WEAR_NOSE      BIT_27
 #define ITEM_WEAR_HORN      BIT_28
 #define ITEM_WEAR_IOUN      BIT_29
+#define ITEM_SPIDER_BODY    BIT_30
 
 /* Bitvector for 'extra_flags' */
 
@@ -540,8 +541,9 @@ typedef unsigned int uint;
 #define WEAR_NOSE              39
 #define WEAR_HORN              40
 #define WEAR_IOUN              41
+#define WEAR_SPIDER_BODY       42
 
-#define CUR_MAX_WEAR           41
+#define CUR_MAX_WEAR           42
 #define MAX_WEAR               CUR_MAX_WEAR + 1    /* size of equipment[] array */
 
 /* For 'char_player_data' */

@@ -5,4 +5,6 @@
 /Duris.xcodeproj
 /build
 /gmon.out
+/areas/de/src/cscope.out
+/src/cscope.out
 *.o

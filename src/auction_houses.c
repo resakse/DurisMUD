@@ -902,6 +902,7 @@ EqSort::EqSort() {
 	flags.push_back(new EqSlotFlag("nose", "worn on nose", ITEM_WEAR_NOSE));
 	flags.push_back(new EqSlotFlag("tail", "worn on tail", ITEM_WEAR_TAIL));
 	flags.push_back(new EqSlotFlag("horse", "worn on a horses body", ITEM_HORSE_BODY));
+	flags.push_back(new EqSlotFlag("back", "worn on a spider body", ITEM_SPIDER_BODY));
 	flags.push_back(new EqSlotFlag("back", "worn on back", ITEM_WEAR_BACK));
 	flags.push_back(new EqSlotFlag("badge", "worn as a badge", ITEM_GUILD_INSIGNIA));
 	flags.push_back(new EqSlotFlag("quiver", "worn as a quiver", ITEM_WEAR_QUIVER));
