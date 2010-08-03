@@ -429,6 +429,42 @@ void balance_affects(P_char ch)
   add_event(event_balance_affects, 0, ch, 0, 0, 0, 0, 0);
 }
 
+int add_racial_stat_bonus(P_char ch, struct hold_data *affs)
+{
+  if (!affs || !ch)
+    raise(SIGSEGV);
+
+  if( !IS_PC(ch) || GET_RACE(ch) != RACE_HUMAN )
+    return FALSE;
+  
+  char buf[256];
+
+  sprintf(buf, "stats.bonus.%s", race_names_table[ch->player.race].no_spaces);
+
+  int i = get_property(buf, 0);
+
+  affs->c_Str += i;
+  affs->m_Str += i;
+  affs->c_Dex += i;
+  affs->m_Dex += i;
+  affs->c_Agi += i;
+  affs->m_Agi += i;
+  affs->c_Con += i;
+  affs->m_Con += i;
+  affs->c_Pow += i;
+  affs->m_Pow += i;
+  affs->c_Int += i;
+  affs->m_Int += i;
+  affs->c_Wis += i;
+  affs->m_Wis += i;
+  affs->c_Cha += i;
+  affs->m_Cha += i;
+  affs->c_Luc += i;
+  affs->m_Luc += i;
+
+  return TRUE;
+}
+
 /*
  * this routine actually applies the summarized affects to the character.
  * All sanity checking is done here. By breaking it out we can exercise
@@ -565,6 +601,7 @@ void apply_affs(P_char ch, int mode)
   if(mode)
   {
     add_racewar_stat_mods(ch, &TmpAffs);
+    add_racial_stat_bonus(ch, &TmpAffs);
   }
 
   t1 = (!mode || !TmpAffs.r_Str) ? (int) GET_RACE(ch) : TmpAffs.r_Str;
