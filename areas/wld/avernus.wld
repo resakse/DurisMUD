@@ -26,10 +26,6 @@ random mob load room one~
 if you are here contact a god NOW!
 ~
 320 176197696 0
-D1
-~
-~
-0 0 32003
 D3
 ~
 ~
@@ -40,33 +36,24 @@ random mob load room one - didnt make it~
 if you are here contact a god NOW!
 ~
 320 176197696 0
+D3
+~
+~
+0 0 32001
 S
 #32004
 random mob load room two~
 ~
 320 176197696 0
-D1
-~
-~
-0 0 32005
 D3
 ~
 ~
 0 0 32006
 S
-#32005
-random mob load room two - didn't make it~
-~
-320 176197696 0
-S
 #32006
 random mod load room two - second room~
 ~
 320 176197696 0
-D1
-~
-~
-0 0 32005
 D3
 ~
 ~

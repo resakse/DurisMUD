@@ -100,10 +100,10 @@ staff shadow summoning~
 &+LA large black staff rests here&n.~
 ~
 4 1 3 5 7 100 33563784 16385 0 37883440 0
-50 2 2 333 0 0 0 0
-2 0 100
+52 3 3 283 0 0 0 0
+2 0 100 4 0 0 0
 A
-13 15
+13 25
 A
 23 -5
 #32009
@@ -261,9 +261,9 @@ earring frozen styx water~
 0 0 0 0 0 0 0 0
 0 550000 100 536870912 28 0 0
 A
-12 10
+13 25
 A
-13 10
+26 10
 #32023
 ring dexterity~
 &+Ca ring of &+Ldexterity&n~
@@ -360,3 +360,23 @@ A
 23 -4
 A
 35 4
+#32031
+bloody eyeball dagon~
+&+Lthe &+rbloody &+Leyeball of &+WDagon&n~
+&+LA really &+rbloody &+Leyeball lies here.&n~
+~
+13 2 3 0 7 0 4096 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#32032
+trident flowing water~
+&+LA five-pronged &+btrident &+Lmade of &+Bflowing &+bwater&n~
+&+LA nasty looking &+btrident &+Lmade of &+bwater &+Llies here.&n~
+~
+5 15 3 0 7 0 1025 8193 0 3584 0
+18 5 5 0 0 0 0 0
+0 0 100 2064 0 0 0
+A
+36 7
+A
+14 40

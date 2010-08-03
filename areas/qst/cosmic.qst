@@ -116,19 +116,28 @@ D
 ~
 S
 #76243
+M
+hi furst stuff hello howdy hey~
+&+y   A &+Ydwarven &+ytrapper says to you, '&+WThere are quite a few items that I have need of. If you
+&+Whappen to come across &+rthe heart of Abbadon&+W, &+ga &+rsu-&+gmonster pelt&+W, &+ya giga&+gsaur tail&+W, &+ba &+Lshade
+&+btiger claw&+W, &+Lan ethereal &+yfalcon &+Lskull&+W, or &+ysome slink fur&+W, I would be happy to trade you for
+them...&+y'&n
+~
 Q
 ~
+R I 196
+R I 196
 R I 196
 G I 76031
 Q
 &+W"Thanks mate!"
 ~
-R C 50000
+R C 150000
 G I 40731
 Q
 &+W"Thanks mate!"
 ~
-R E 33333
+R E 150000
 G I 40733
 Q
 ~
@@ -137,7 +146,7 @@ R I 202
 G I 31117
 Q
 ~
-R E 10000
+R E 100000
 G I 82561
 Q
 &+W"Wow, a demon heart, nice kill! ake this."

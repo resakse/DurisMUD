@@ -219,9 +219,10 @@ E 1 215 1 10 100 0 0 0             *   (object type not in this .obj file)
 E 1 2207 1 16 100 0 0 0            *   a dark-bladed shortsword
 M 0 2201 1 2263 100 0 0 0          * the water elemental
 E 1 2201 1 15 100 0 0 0            *   a scrimshaw bracer
-M 0 2202 1 2264 100 0 0 0          * the priest of the Sea Goddess
+M 0 2202 1 2264 100 0 0 0          * a white-robed priest
 E 1 2202 1 20 100 0 0 0            *   a coral mask
 G 1 288 1 0 100 0 0 0              *    (object type not in this .obj file)
+M 0 55265 1 2264 100 0 0 0         * (mob type not in this .mob file)
 M 0 2203 1 2266 100 0 0 0          * the young mage
 E 1 2205 1 12 100 0 0 0            *   a blue mage's robe
 M 0 2206 1 2266 100 0 0 0          * the glowing staff

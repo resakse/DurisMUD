@@ -4927,10 +4927,6 @@ To the east the street extends.
 ~
 street~
 0 0 74150
-D2
-~
-~
-0 0 74922
 D3
 To the west the street extends.
 ~
@@ -4954,10 +4950,6 @@ in search of food, love, and adventure.  Those that would travel this
 street, keep one hand on their purse and the other on their weapon.
 ~
 740 33554432 1
-D0
-~
-~
-0 0 74921
 D1
 To the east the street extends.
 ~
@@ -5001,10 +4993,6 @@ To the east the street extends.
 ~
 street~
 0 0 74153
-D2
-~
-~
-0 0 74920
 D3
 To the west the street extends.
 ~
@@ -5028,19 +5016,11 @@ in search of food, love, and adventure.  Those that would travel this
 street, keep one hand on their purse and the other on their weapon.
 ~
 740 33554432 1
-D0
-~
-~
-0 0 74918
 D1
 To the east the street extends.
 ~
 street~
 0 0 74154
-D2
-~
-~
-0 0 74919
 D3
 To the west is a shop.
 ~
@@ -24542,151 +24522,4 @@ D2
 ~
 ~
 0 0 74913
-S
-#74918
-&+WMoldar's &+LSharp &+YWeapons&n~
-   &+LThis store is the city's main supplier of weaponry. The building is fairly
-&+Llarge, able to fit two small furnaces and four anvils. The staff of this shop
-&+Lis constantly at work with the sound of grinding steel echoing throughout the
-&+Lroom. Racks of various &+wswords&+L, &+wbattlehammers&+L, &+waxes &+Land &+wspears&+L line the walls.
-&+LTowards the front of the building is a large desk with an eager merchant
-&+Lsitting behind the counter. A large &+cdisplay &+Lcase sits against the wall.&n
-~
-740 33554432 0
-D2
-~
-~
-0 0 74155
-E
-display case~
-&+LThis marvelous display case contains some exquisitely crafted
-&+Lweapons by the local weaponsmith. The sides are made of solid
-&+Lobsidian and it has a very large protective glass window that
-&+Lprotects the items from curious hands.&n
-
-&+Wa &+cmagical &+Celectrum &+Wdagger
-&+Wa &+cmagical &+mmithril &+Cspiked mace
-&+Wa &+cmagical &+Wplatinum &+cbastard sword
-&+Wa &+cmagical &+ybronze &+Waxe
-&+Wa &+cmagical &+Madamandium &+Wwarhammer
-&+Wa &+cmagical &+Celectrum &+Wshortsword
-&+Wa &+cmagical &+Wplatinum &+clongsword&n
-~
-S
-#74919
-&+WSark's &+LHard &+YArmor&n~
-   &+yThis room is cluttered with merchandise. Suits of scalemail, splintmail
-&+yand platemail lay in heaps alongside the wall. A variety of shields lay
-&+ystacked on top of each other. There are a few barrels that contain bracers,
-&+yneckguards and gauntlets sitting towards the middle of the room. Off to your
-&+yright, is a very large &+cdisplay &+Lcase&+y.&n
-~
-740 33554432 0
-D0
-~
-~
-0 0 74155
-E
-display case~
-&+LThis large display case is built of solid oak. It is about ten
-&+Lfeet wide, and a good three feet deep. The front is framed by a
-&+Lvery large piece of glass. There are a few very nice pieces of
-&+Larmor on display.
-
-&+Wa &+cmagical &+Madamantium &+Wbuckler
-&+Wa &+cmagical &+Madamantium &+Wtower shield
-&+Wa pair of &+cmagical &+mmithril &+Warmplates
-&+Wa pair of &+cmagical &+mmithril &+Wlegplates
-&+Wa pair of &+Cmagical &+Wplatinum &+cboots
-&+Wa &+cmagical &+mmithril &+Whelmet
-&+Wa suit of &+cmagical &+Madamantium &+Wplatemail
-&+Wa pair of &+cmagical &+ybronze &+Wgauntlets&n
-~
-S
-#74920
-&+WNavift's &+LSteel &+YForge&n~
-   &+LThe first thing you notice is the incredible &+rheat &+Lradiating from the large
-&+Lfurnace. Very little is made from &+wwood &+Lin this building. The walls and even
-&+Lthe ceilings are made from slabs of obsidian and are held together with by a
-&+Lcreative system of &+wsteel &+Lshafts and beams. The floor is covered with a thick
-&+Llayer of &+wsoot&+L, a byproduct of the &+rr&+Re&+rd&+R-&+rh&+Ro&+rt &+Lcoals inside the furnace. The steel
-&+Lpoles that support the walls also have hooks attached, from which hang the
-&+Ldiverse array of merchandise this facility produces. A large and very beautiful
-&+cdisplay &+Lcase sits against the far wall.&n
-~
-740 33554432 0
-D0
-~
-~
-0 0 74154
-E
-display case~
-&+L   This case is marvelously decored with &+Wplatinum &+Land &+Ygold&+L. A large
-&+Lglass panel frames some exquisitely crafted objects. As you look more
-&+Lclosely, your eyes seem drawn to its contents...
-
-&+wthe &+Cti&+Wt&+Can &+Wwar&+Chammer &+Wof the snow &+bogre &+Wkings&n
-&+Lthe &+rf&+Rl&+ra&+Rm&+ri&+Rn&+rg &+Laxe of the &+MIllithid &+Llords&n
-&+Lthe &+rsp&+Li&+rk&+Le&+rd &+Lmace of the &+RD&+rea&+Rth S&+ree&+Rk&+re&+Rrs&n
-&+ct&+Lhe &+cm&+Lystical &+cl&+Longsword &+co&+Lf &+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler&n
-&+Lth&+we ba&+Lst&+ward &+Lsw&+word &+Lof &+wthe &+rD&+Re&+rm&+Ro&+rn &+MSl&+ma&+My&+me&+Mr&n
-&+Lthe &+Yf&+Wa&+Yb&+Wl&+Ye&+Wd &+Celectrum &+Ldagger named &+L'&+YRa&+L'&n
-&+Lth&+we g&+Lau&+wnt&+Lle&+wts &+Lof &+wa &+rLi&+Rvi&+rng &+mL&+Meg&+men&+Md&n
-&+Lthe &+Bm&+Ci&+Bs&+Ct&+By &+celectrum &+Lshortsword named '&+BB&+Cl&+Bu&+Cr&+L'&n
-&+Lthe &+min&+Mfa&+mmo&+Mus &+Lplatemail named '&+mF&+Ma&+mm&+Me&+L'&n
-&+rt&+Lhe &+rh&+Lelmet &+ro&+Lf &+rt&+Lhe &+rVa&+Rmp&+rir&+Re G&+rod&+Rs&n
-&+Bt&+Lhe &+Bb&+Loots &+Bo&+Lf &+Bt&+Lhe &+BA&+Lb&+By&+Lss&n
-&+Lt&+Whe &+Ll&+Wegplates &+Lo&+Wf &+Lt&+Whe &+LS&+Wtorm&n
-&+Yt&+yhe &+Ya&+yrm&+Yp&+ylates &+Yo&+yf &+Yt&+yhe &+YC&+yo&+Wsm&+yo&+Ys&n
-&+Lthe &+Wb&+wu&+Lc&+wk&+Ll&+we&+Wr &+Lof the &+WS&+wa&+Lin&+wt&+Ws&n
-&+Lt&+rh&+Re &+Lt&+ro&+Rw&+re&+Lr s&+rh&+Rie&+rl&+Ld o&+rf &+LIn&+rdo&+Rmi&+Lta&+Rbi&+Rli&+Lty&n
-~
-S
-#74921
-&+WFibblefinger's &+LAlchemist &+YLaboratory&n~
-   &+yFrom wall to wall, this room is simply a &+Lmess&+y. Literally hundreds of
-&+yvarious bottles hang from an intricate network of hooks and ropes from
-&+ythe ceiling. Many of the bottles you see contain the &+Wbody parts of animals
-&+yand even of people. There are a few dozen barrels filled to the brim with
-&+gherbal &+Gingredients &+yused by alchemists on a daily basis.&n
-~
-740 33554432 0
-D2
-~
-~
-0 0 74153
-S
-#74922
-&+WHedvig's &+LFine &+YJewelry&n~
-&+y   This jewelry stores sits comfortably close to Browncoat &+LBoulevard&+y, where
-&+ymost of its customers reside. The room is organized into various departments,
-&+yeach showcasing a specific type of jewelry. The store prides itself on being
-&+yable to deliver the finest quality precious &+Lmetals &+yand &+Lstones &+yto the most
-&+ywealthy of individuals. If you intend to shop here, you better be filthy
-&+yrich or horribly drunk. There is a very large &+Cdisplay &+Lcase &+ysitting against
-&+ythe far wall.&n
-~
-740 33554432 0
-D0
-~
-~
-0 0 74152
-E
-display case~
-&+yThe display case is rather large and contains only a few
-&+yprecious items. The doors are made entirely of glass, but
-&+yare locked really well. Within the case, you can clearly
-&+ysee a few exquisite items.&n
-
-&+Lan &+cenc&+Chan&+cted &+Learring of &+Rstrength&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+Gdexterity&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+Yagility&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+bconstitution&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+Mintelligence&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+Cwisdom&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+mpower&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+Bcharisma&n
-&+Lan &+cenc&+Chan&+cted &+Learring of &+Gluck&n
-&+Lan &+cea&+Crr&+cin&+Cg &+Lof &+mw&+Mo&+mn&+Md&+me&+Mr&+mo&+Mu&+ms &+rp&+Ro&+rw&+Re&+rr&n
-~
 S

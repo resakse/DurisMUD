@@ -3548,17 +3548,6 @@ PH 0 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#74251
-merchant~
-&+La &+Wmerchant&n~
-&+LA &+Wmerchant &+Lstands here, selling &+WMoldar's &+Lfinely crafted weaponry
-~
-~
-10 0 0 8 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
-0.0.0.0 0
-8 8 0
 #74252
 sark armorer~
 &+WSark&n~
@@ -3570,17 +3559,6 @@ PH 0 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#74253
-merchant~
-&+La &+Wmerchant&n~
-&+LA &+Wmerchant &+Lstands here, selling &+WSark's &+Lhard &+Warmor&+L.&n
-~
-~
-10 0 0 8 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
-0.0.0.0 0
-8 8 0
 #74254
 navift blacksmith~
 &+WNavift&n~
@@ -3590,28 +3568,6 @@ navift blacksmith~
 10 0 0 8 0 0 0 0 S
 PH 0 0 -1
 55 0 0 1d1+1 1d1+1
-0.0.0.0 0
-8 8 0
-#74255
-merchant~
-&+La &+Wmerchant&n~
-&+LA &+Wmerchant &+Lstands here, selling &+WNavift's &+Lforged items.&n
-~
-~
-10 0 0 8 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
-0.0.0.0 0
-8 8 0
-#74256
-merchant~
-&+La &+Wmerchant&n~
-&+LA &+Wmerchant &+Lstands here, selling &+WFibblefinger's &+Lstrange &+Ypotions&+L.&n
-~
-~
-10 0 0 8 0 0 0 0 S
-PH 0 0 -1
-1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #74257

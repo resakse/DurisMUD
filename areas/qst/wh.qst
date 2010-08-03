@@ -842,17 +842,19 @@ safe sighs~
 MA
 evils evil~
 &+WRosenthal says, '&+LYeah, I long time ago an ancient clan of evils broke through to
-&+Lthe surface world and waged a war that echoed throughout the universe.. My entire
+&+Lthe surface world and waged a war that echoed throughout the known lands. My entire
 &+Lfamily was slain before my eyes during the last great war.&+W'
 
 &+W'&+LMost of the ancient evils escaped with their lives.. but a few were captured
 &+Land rumor has it they are being held here in &+WWinterhaven&+L... It is a terrible sin
 &+Lfor those captives to be left alive.. I don't have much to offer, but I'm would give
 &+Lalmost anything to see their &+rhearts &+Lcarved from their bodies..&+W'&n
+
+&+W'&+LI heard that little weasel of a soul &+WThyz &+Lknows where they are.&+W'&n
 ~
 M
 hi hello howdy hey~
-&+WRosenthal sighs and says, '&+LThe world isn't &+Wsafe &+Lanymore.&+W'&
+&+WRosenthal sighs and says, '&+LThe world isn't &+Wsafe &+Lanymore.&+W'&n
 ~
 Q
 ~
@@ -1171,8 +1173,16 @@ R I 55315
 G I 55284
 G I 55209
 G I 55166
-G I 55316
-G I 55317
+G I 22631
+G I 34541
+G I 75856
+G I 76050
+G I 76066
+G I 76243
+G I 76634
+G I 82553
+G I 82554
+G I 82555
 Q
 ~
 R I 55318
@@ -1999,14 +2009,27 @@ drug drugs~
 ~
 M
 hi hey hello howdy~
-&+WThys says to you, '&+LUnless you are here to give me &+gdrugs &+Wor somehow
+&+WThyz says to you, '&+LUnless you are here to give me &+gdrugs &+Lor somehow
 &+Loffer me &+Wprotection &+Lfrom the law, I have no reason to speak with you.&+W'&n
 ~
 M
 protection immunity~
 &+WThyz whispers to you, '&+L...this city has me under a close watch. I know they're
 &+Lonly waiting to get enough evidence to put me away for good. My entire business is
-&+Lhere and I'm afraid I can't just walk away from it. If only you could get &+WSir Espet
+&+Lhere and I'm afraid I can't just walk away from it. Without some form of assurance
+&+Lthat I won't be thrown in jail, I'll just have to stay low.&+W'&n
+~
+M
+evil evils~
+&+WThyz whispers to you, '&+LAhhh, so you have heard of them? They're being kept under
+&+Llock and key in the &+Wprisons&+L. You wouldn't be interested in looking for them, would you?&+W'&n
+~
+M
+yes yeap prison prisons key keys~
+&+WThyz grins at you and says, '&+LI know the way into the prisons.. In fact, I have a key for the cell
+&+Ldoors. Of course, this key is very valuable to me and doesn't come cheap. If you want it, you will
+&+Lhave to bring me a letter of immunity, signed by &+WSir Espet &+Lhimself. With his pardon, I can sleep
+&+Lsoundly knowing that I won't be needing the key from the inside.&+W'&n
 ~
 Q
    &+WThyz grins at you and says, "Word! Thanks bro. Here, give this to Bojaxx.
@@ -2077,6 +2100,7 @@ Q
 &N
 ~
 R I 55367
+R I 55367
 G I 28997
 Q
 &N&+wSierra's eagerness at your arrival is disturbing and after a quick glance&n
@@ -2094,6 +2118,7 @@ Q
 &N&+wCrestfallen she tosses you an item and goes back to her station less &n
 &N&+wenthusiastically than before.&n
 ~
+R I 55366
 R I 55366
 G I 28998
 S
@@ -2589,10 +2614,6 @@ R C 350000
 G I 67116
 Q
 ~
-R I 55029
-G I 55154
-Q
-~
 R I 55550
 R I 55551
 R I 55552
@@ -2603,6 +2624,10 @@ Q
 ~
 R I 33719
 G I 15012
+Q
+~
+R C 500000
+G I 55154
 S
 #55166
 MA
@@ -3487,52 +3512,63 @@ S
 #55244
 MA
 qc_action~
-&+LA traeling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Lsays, '&+WI prefer flying around to walking
-&+Won the ground!&+L'&n
+&+LA traeling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Lsays, '&+WWhere are they? I sent for help nearly three days ago!&+L'&n
 ~
 M
 hey hello hi howdy~
-&+LA traveling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Wsays to you, 'Flying around like this takes a lot of energy.
-&+WIt requires quite a bit of &+yplanar &+Ydust &+Wto get one off the ground. You wouldn't
-&+Whappen to have a &+Lpouch &+Wto spare, would you? It would save me a bit of time.'&n
+&+LA traveling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Lsays to you, '&+WYou look a bit weak to help me on my task..
+&+WAre you the mercenaries I sent for?&+L'&n
 ~
 M
-pouch planar dust~
-&+LA traveling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Wsays to you, 'They're not the easiest to get, but they are definitely
-&+Wworth the effort. If you have one, I would be interested in buying it from you. Unfortunately
-&+WI don't have much to offer in the form of payment, other than a trinket and a few words
-&+Wof wisdom.'&n
+yes yeap~
+&+LA traveling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Lsays to you, '&+WFine, but it's not my fault if you go and get
+&+Wyourself killed. How about a test then? Bring me six &+Rbrilliant &+rblood-red &+Lorbs &+Was
+&+Wproof of your resilience...&+L'&n
+~
+M
+no nope~
+&+LA traveleing &+Mm&+my&+Ms&+mt&+Mi&+mc &+Llooks at you and asks, '&+WThen why are you here? Begone!&+L'&n
 ~
 Q
+&+LA traveling mystic says to you, 'Wonderful. You're weak appearance is obviously desceptive. Well
+&+Wmaybe that will come in handy. Here, please take these potions. They may help you on the next
+&+Wpart of your.. assignment. I require you to retrieve a magical trinket that is stored in the
+&+Wpersonal vault of the King of Winterhaven. Unfortunately, getting into the Palace and breaking
+&+Winto the vault is a two-fold task.&+L'
+
+&+L'First, the gates are completely sealed and no matter of brute force can break through them. The
+&+Wonly way in is with the help of Rosenthal. He has a hidden portal that can transport you inside
+&+Wthe palace. However, I know he does not share access to it freely. You must negotiate entry with
+&+Whim.&+L'
+
+&+L'Second, once you are inside the Palace, you must use this key to get inside the royal chamber
+&+Wand.. convince the King to hand over the keys to the vault. Be careful though, the royal guards
+&+Wstand at the ready to use their will against you.&+L'
+
+&+L'You can keep the contents of the vault for yourself, just remember to bring me the magical
+&+Wtrinket.&+L'&n
 ~
-R E 250000
-R I 0
-G I 55198
-Q
-~
-R E 250000
-R I 0
-G I 55199
-Q
-~
-R E 250000
-R I 0
-G I 55200
-Q
-~
-R E 250000
-R I 0
-G I 55201
-Q
-~
-R E 250000
-R I 0
-G I 55202
-Q
-~
-R E 250000
-R I 0
-G I 55203
+R I 55400
+R I 55400
+R I 55400
+R I 55426
+G I 55425
+G I 55425
+G I 55425
+G I 55425
+G I 55425
+G I 55425
 S
 #55251
+S
+#55265
+Q
+~
+R I 55312
+R I 55204
+R I 55204
+R I 55204
+G I 32031
+G I 87510
+G I 55313
 S

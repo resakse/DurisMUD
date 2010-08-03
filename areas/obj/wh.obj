@@ -324,11 +324,11 @@ mask svirfneblin scrotum _noquest_~
 ~
 9 15 3 0 7 0 8192 262145 64 0 0
 0 0 0 0 0 0 0 0
-0 0 100 67108864 0 0 0
+0 0 100 8 0 0 0
 A
 24 -2
 A
-34 2
+36 6
 #55030
 venom sack puffadder~
 &+Lthe &+gvenom &+Gsack &+Lof a &+rpuff&+Radder&n~
@@ -626,13 +626,13 @@ A
 A
 24 -3
 #55063
-token rosenthal _noquest_~
-&+WRosenthal's &+Ctoken &+Lof &+Cappreciation~
-&+WRosenthal's &+Ctoken &+Lof &+Cappreciation &+Llies here.&n~
+key royal palace~
+&+Lthe key to the &+YRoyal &+WPalace&n~
+&+LA very magnificent &+Ykey &+Llies in the dirt here.&n~
 ~
-13 1 3 0 7 0 0 1 64 0 0
+18 1 3 0 7 0 0 1 64 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+1000 0 100
 #55064
 token sierra _noquest_~
 &+WSierra's &+Ctoken &+Lof &+Cappreciation~
@@ -650,7 +650,7 @@ signet ring frenbar _noquest_~
 0 0 0 0 0 0 0 0
 0 0 100 8 0 0 0
 A
-18 5
+18 6
 A
 13 25
 #55066
@@ -3594,7 +3594,7 @@ key winterhaven prison prisons~
 &+La prison &+rkey &+Llies here.~
 ~
 18 10 2 0 7 0 8388616 1 64 0 0
-0 100 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
 0 0 100
 T
 2 0 0 0
@@ -3874,7 +3874,7 @@ scale leviathan _noquest_~
 &+Bt&+Lhe &+Bs&+Lcale &+Bo&+Lf &+Bt&+Lhe &+BL&+Lev&+Bi&+Lat&+Bh&+Lan&n~
 &+LA small scale lies here.&n~
 ~
-13 1 2 0 7 0 8200 1 0 0 0
+13 1 2 0 7 0 8400904 1 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 T
@@ -4102,9 +4102,9 @@ shield winterhaven _noquest_~
 2 3 0 0 0 1 0 0
 50 0 100
 A
-18 5
+18 2
 A
-19 5
+19 2
 T
 2 0 0 0
 #55334
@@ -4113,7 +4113,7 @@ mithril large winterhaven sword guards _noquest_~
 &+LA large sword lies here.&n~
 ~
 5 3 2 0 7 0 8192 8193 66 0 0
-5 3 4 0 0 0 0 0
+5 3 3 0 0 0 0 0
 0 0 100
 A
 18 3
@@ -4142,11 +4142,11 @@ rapier penetration _noquest_~
 &+ct&+Ch&+Le &+cr&+Ca&+Lpier &+cc&+Ca&+Llled &+W'&+cP&+Cenetration&+W'&n~
 &+cA &+Cslender &+cand &+Cbeautiful &+crapier lies here in the dust.&n~
 ~
-5 22 3 0 11 0 67108864 1 64 0 0
-5 5 2 0 0 0 0 0
-0 0 100
+5 22 3 0 11 0 67108864 8193 64 0 0
+2 2 9 0 0 0 0 0
+0 0 100 0 0 0 1048576
 A
-42 7
+32 7
 A
 18 4
 #55338
@@ -4170,17 +4170,17 @@ deep blue potion~
 50 356 9 9 0 0 0 0
 0 0 100
 #55340
-new object~
-new object~
-slender sword called 'penetration'~
+wisp pure madness~
+&+La wisp of pure madness&n~
+&+LSomehow a thought of madness floats in the air.&n~
 ~
-5 15 3 0 7 0 1 8193 64 0 0
-5 3 3 0 0 0 0 0
-0 0 100
+9 15 3 0 7 0 1025 5 64 3584 0
+0 0 0 0 0 0 0 0
+0 0 100 0 0 0 262144
 A
-18 6
+30 15
 A
-35 6
+10 -125
 #55341
 massive greatsword random _noquest_~
 &+Lthe &+Ymassive &+Lgreat&+Ysword &+Lcalled '&+YRandom&+L'&n~
@@ -4773,7 +4773,7 @@ potion vitality~
 &+LA potion of &+Yvitality &+Llies in the dust here.&n~
 ~
 10 7 3 0 7 0 8193 8388609 0 0 0
-46 56 0 0 0 0 0 0
+55 56 192 1 0 0 0 0
 0 0 100
 #55401
 fingerless leather gloves~
@@ -4956,7 +4956,7 @@ _noquest_ book traveler~
 ~
 3 28 2 0 14 0 8 1 64 0 0
 56 2 2 42 0 0 0 0
-0 0 100
+0 0 100 524288 0 0 0
 T
 2 0 0 0
 #55419
@@ -5035,6 +5035,70 @@ A
 24 -2
 A
 55 2
+#55425
+brilliant blood-red orb~
+&+La &+Rbrilliant &+rblood-red &+Lorb&n~
+&+LA &+Rbrilliant &+rblood-red &+Lorb lies here.&n~
+~
+3 15 3 0 7 0 8388609 16385 0 0 0
+40 2 2 25 0 0 0 0
+0 0 100
+#55426
+golden key~
+&+La large &+Ygolden &+Lkey&n~
+&+LA large &+Ygolden &+Lkey lies here.&n~
+~
+18 15 3 0 7 0 0 1 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
+#55427
+butchered tentacle illithid lord~
+&+Lthe &+rbutchered &+mtentacle &+Lof an &+MIllithid&+L-lord~
+&+LA &+rbloody &+mtentacle &+Llies here.&n~
+~
+9 15 3 0 7 0 4097 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100 16 0 1048576 0
+A
+37 5
+A
+17 -25
+#55428
+tentacle illithid lord ithaquua~
+&+Lthe &+mtentacle &+Lof the great &+MIllithid&+L-lord, &+WIthaquua&n~
+&+LA very &+mstrange &+Llooking &+mtentacle &+Lhovers in the air here.&n~
+~
+9 15 3 0 7 0 0 2049 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100 0 0 524288 0
+A
+30 10
+A
+24 -5
+#55429
+spiked crown mental resistance~
+&+Lthe &+mspiked &+Lcrown of &+mmental &+Lresistance&n~
+&+LA very large spiked crown lies in the dust.&n~
+~
+9 15 3 0 7 0 0 17 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100 0 0 16777216 0
+A
+37 4
+A
+13 50
+#55430
+wicked battleaxe~
+&+La wicked looking double-bladed battleaxe&n~
+&+LA very dangerous looking battleaxe lies here.&n~
+~
+5 15 3 0 7 0 0 8193 64 0 0
+1 4 5 0 0 0 0 0
+0 0 100 32 0 0 0
+A
+31 2
+A
+19 5
 #55500
 deer~
 &+Wa freshly killed &+Ydeer&n~

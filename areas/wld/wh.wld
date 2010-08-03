@@ -712,8 +712,8 @@ D2
 0 0 55034
 D3
 ~
-palace~
-3 0 55630
+~
+0 55630 55630
 S
 #55034
 &+yA &+WBright &+yAlley Alongside a Massive &+LStone &+yWall~
@@ -995,6 +995,10 @@ D1
 ~
 ~
 0 0 55047
+D5
+~
+debris~
+2 0 55412
 S
 #55047
 &+yA &+WBright &+yAlley Alongside a Massive &+LStone &+yWall~
@@ -5843,6 +5847,10 @@ D2
 ~
 ~
 0 0 55262
+D3
+~
+~
+0 0 55404
 S
 #55262
 &+yOn a &+WPrivate &+yand &+YSandy &+yBeach&n~
@@ -6568,7 +6576,7 @@ D0
 D2
 ~
 ~
-0 0 546133
+0 0 75410
 S
 #55298
 &+GThe &+WKing's Private &+GForest&n~
@@ -6989,7 +6997,7 @@ S
 D0
 ~
 ~
-0 0 545333
+0 0 533478
 D2
 ~
 ~
@@ -8542,7 +8550,7 @@ D3
 0 0 55354
 S
 #55382
-&+LAn &+WImmaculate &+LStone Highway&n~
+&+LAlon&+wg a G&+Lrav&+we&+Ll Hi&+wgh&+Lway&n~
 &+g   This road is one of the major highays that lead to the city of
 &+WWinterhaven&+g. To the &+LNorth &+gand &+LSouth &+gyou can see the King's Forest,
 &+gthe private woodlands of the royal family. To the &+LWest &+gyou can see
@@ -8940,7 +8948,7 @@ Distribution for Ambassadors~
 D0
 ~
 ~
-0 0 74493
+0 0 55403
 D2
 ~
 ~
@@ -9024,6 +9032,23 @@ D2
 ~
 ~
 0 0 83225
+S
+#55404
+&+yA Large &+LPier &+yBuilt of &+LObsidian&n~
+&+y  This large &+Lpier &+yextends from the sandy beaches in the East towards the frigid
+&+ywaters of the &+WIce&+CCrag &+ycoast. The deck is built from solid &+Lobsidian &+yand is nearly
+&+yforty feet wide. You can smell the ocean wafting in the air, carrying a powerful
+&+ycombination of salty and fishy smells.&n
+~
+550 4 1
+D1
+~
+~
+0 0 55261
+D3
+~
+~
+0 0 55409
 S
 #55405
 &+GThe &+WKing's Private &+GForest&n~
@@ -9121,8 +9146,42 @@ D3
 ~
 0 0 55379
 S
+#55409
+&+yA Large &+LPier &+yBuilt of &+LObsidian&n~
+&+y  This large &+Lpier &+yextends from the sandy beaches in the East towards the frigid
+&+ywaters of the &+WIce&+CCrag &+ycoast. The deck is built from solid &+Lobsidian &+yand is nearly
+&+yforty feet wide. You can smell the ocean wafting in the air, carrying a powerful
+&+ycombination of salty and fishy smells.&n
+~
+550 0 1
+D1
+~
+~
+0 0 55404
+D3
+~
+~
+0 0 55410
+S
+#55410
+&+yThe &+LDockyard &+yOn A Large &+LPier&n~
+&+y  This large &+Lpier &+yextends from the sandy beaches in the East towards the frigid
+&+ywaters of the &+WIce&+CCrag &+ycoast. The deck is built from solid &+Lobsidian &+yand is nearly
+&+yforty feet wide. You can smell the ocean wafting in the air, carrying a powerful
+&+ycombination of salty and fishy smells.&n
+~
+550 1048576 2
+D1
+~
+~
+0 0 55409
+D3
+~
+~
+0 0 533875
+S
 #55411
-&+LAn &+WImmaculate &+LStone Highway&n~
+&+LAlon&+wg a G&+Lrav&+we&+Ll Hi&+wgh&+Lway&n~
 &+g   This road is one of the major highays that lead to the city of
 &+WWinterhaven&+g. To the &+LNorth &+gand &+LSouth &+gyou can see the King's Forest,
 &+gthe private woodlands of the royal family. To the &+LWest &+gyou can see
@@ -9144,6 +9203,27 @@ D4
 ~
 ~
 0 0 55500
+S
+#55412
+&+LA Large Pothole&n~
+&+L  This large pothole extends more than a dozen feet below the street. There are
+&+La lot of animal tracks and feces that litter the crevices of this small crevice.
+&+LLarge strands of spider webs line the walls.&n
+~
+550 1073750273 0
+D4
+~
+debris~
+2 0 55046
+S
+#55413
+&+WInside the &+YRoyal &+WPalace&n~
+~
+550 0 0
+D1
+~
+double~
+1 0 55630
 S
 #55414
 &+GThe &+WKing's Private &+GForest&n~
@@ -10138,7 +10218,7 @@ D3
 0 0 55407
 S
 #55500
-&+LAn &+WImmaculate &+LStone Highway&n~
+&+LAlon&+wg a G&+Lrav&+we&+Ll Hi&+wgh&+Lway&n~
 &+gThis forest is kept in extremely good condition and is frequently used by
 &+gnobles and royalty as a place for relaxation and meditation. The trees are
 &+gall &+yoak &+gand &+ypine&+g, neatly arranged into rows. The trees are massive and
@@ -10158,7 +10238,7 @@ D5
 0 0 55411
 S
 #55501
-&+LAn &+WImmaculate &+LStone Highway&n~
+&+LAlon&+wg a G&+Lrav&+we&+Ll Hi&+wgh&+Lway&n~
 &+gThis forest is kept in extremely good condition and is frequently used by
 &+gnobles and royalty as a place for relaxation and meditation. The trees are
 &+gall &+yoak &+gand &+ypine&+g, neatly arranged into rows. The trees are massive and
@@ -10178,7 +10258,7 @@ D3
 0 0 55500
 S
 #55502
-&+LAn &+WImmaculate &+LStone Highway&n~
+&+LAlon&+wg a G&+Lrav&+we&+Ll Hi&+wgh&+Lway&n~
 &+gThis forest is kept in extremely good condition and is frequently used by
 &+gnobles and royalty as a place for relaxation and meditation. The trees are
 &+gall &+yoak &+gand &+ypine&+g, neatly arranged into rows. The trees are massive and
@@ -10198,7 +10278,7 @@ D3
 0 0 55501
 S
 #55503
-&+LAn &+WImmaculate &+LStone Highway&n~
+&+LAlon&+wg a G&+Lrav&+we&+Ll Hi&+wgh&+Lway&n~
 &+gThis forest is kept in extremely good condition and is frequently used by
 &+gnobles and royalty as a place for relaxation and meditation. The trees are
 &+gall &+yoak &+gand &+ypine&+g, neatly arranged into rows. The trees are massive and
@@ -10211,7 +10291,7 @@ S
 D1
 ~
 ~
-0 0 545734
+0 0 533879
 D3
 ~
 ~
@@ -12580,26 +12660,10 @@ S
 &+LThis room is where the mobs for the Winterhaven shout code will load.&n
 ~
 550 32768 0
-D0
-~
-~
-0 0 55016
-D1
-~
-~
-0 0 55066
-D2
-~
-~
-0 0 55050
 D3
 ~
 door~
 1 0 55613
-D5
-~
-~
-0 0 55100
 S
 #55617
 &+WWinterhaven Load Rooms~
@@ -12839,13 +12903,21 @@ D3
 S
 #55630
 &+WAn Entryway Into the Palace&n~
-This room is where the incarnate mobs will be dispersed to various zones.&n
+&+W  This long hallway is very wide and is magnificently decorate with tall white columns
+&+Wof polished marble. There are a number of statues depicting soldiers, mages, and priests,
+&+Wall of whome have served the royal family and the city of Winterhaven in the past. There
+&+Wis very little traffic in this area. The air smells slightly stale and you notice that
+&+Wthe oversized doors to the Palace seem to have been closed for quite some time.&n
 ~
-550 32768 0
+550 32768 1
 D1
 ~
 palace~
-1 0 55033
+0 0 55033
+D3
+~
+double~
+3 55063 55413
 S
 #55631
 &+WMi&+Cd-&+WAi&+Cr A&+Wbo&+Cve &+WTh&+Ce &+CCe&+cle&+Cs&+cti&+Cal &+WBa&+wza&+War&n~

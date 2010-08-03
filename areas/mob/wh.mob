@@ -284,7 +284,7 @@ a 0 1 -1
 0.0.0.0 0
 8 8 1
 #55020
-massive guard warrior _justiceshout1_ _nosneak_~
+massive guard warrior~
 &+La &+cmassive &+Welite &+Lguard&n~
 &+LA &+cmassive &+Wwarrior &+Lstands here, protecting the city of &+WWinterhaven&+L.&n
 ~
@@ -294,13 +294,13 @@ massive guard warrior _justiceshout1_ _nosneak_~
 &+Lwatching for intruders and he looks ready to leap into any fight at a
 &+Lmoments notice.&n
 ~
-67504138 896 0 134217788 2076 0 67108864 0 S
+67504138 0 0 134217788 2076 0 67108864 0 S
 ph 0 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55021
-mighty wizard _justiceshout1_ _nosneak_~
+mighty wizard~
 &+La &+Cmighty &+cwizard&n~
 &+LA &+Cmighty &+cwizard &+Lstands here, guarding &+WWinterhaven&+L from intruders.&n
 ~
@@ -310,13 +310,13 @@ mighty wizard _justiceshout1_ _nosneak_~
 &+Lliving &+Blightning &+Lare wrapped around both his arms, ready to &+rexplode
 &+Lin a fury towards whatever danger threatens the peace of this city.&n
 ~
-67504138 896 0 134742072 28 0 67239936 0 S
+67504138 0 0 134742072 28 0 67239936 0 S
 pe 0 512 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55022
-massive guard warrior _justicescan_ _justiceshout2_ _nosneak_~
+massive guard warrior~
 &+La &+cmassive &+Welite &+Lguard&n~
 &+LA &+cmassive &+Wwarrior &+Lstands here, protecting the city of &+WWinterhaven&+L.&n
 ~
@@ -326,7 +326,7 @@ massive guard warrior _justicescan_ _justiceshout2_ _nosneak_~
 &+Lwatching for intruders and he looks ready to leap into any fight at a
 &+Lmoments notice.&n
 ~
-1074137096 384 0 403177656 28 0 67108864 0 S
+1074137096 0 0 403177656 28 0 67108864 0 S
 ph 0 2 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -358,7 +358,7 @@ obnoxious gambler~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-36 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55025
@@ -433,20 +433,14 @@ x 0 16 5
 0.0.0.0 0
 8 8 0
 #55031
-salyyn daughter~
-&+WSalyyn~
-&+WSalyyn &+Lthe daughter of &+WSvivel &+Lwalks along the street here.&n
+salyyn battle priest _spec1_~
+&+WSalyyn, &+Lthe &+Mbat&+mtle&+L-priest&n~
+&+LA &+Mfear&+msome &+Lpriest stands here, drenched in &+rblo&+Rod&+L.&n
 ~
-&+L   This beautiful woman walks the streets looking for anything
-&+Lthat would be entertaining and a break from the monotonous
-&+Llifestyle of an aristocrat. She is wearing clothes that are
-&+Lprobably too expensive for you to be able to pronounce properly,
-&+Land doesn't look to be in the &+Wmood &+Lfor putting up with your crap
-&+Lanyway.
 ~
-1074137098 0 0 0 0 0 0 0 S
-ph 0 64 -1
-40 0 0 1d1+1 1d1+1
+1074137096 0 0 1572864 0 0 0 0 S
+ct 0 32 -1
+56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
 #55032
@@ -498,9 +492,9 @@ sand crab~
 &+Yaggressive at night, and are prone to attacking anyone in their
 &+Ypath!&n
 ~
-393224 5 0 0 0 0 0 -750 S
+393224 5 0 8 0 0 0 -750 S
 ac 0 1 -1
-1 0 0 1d1+1 1d1+1
+5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #55036
@@ -944,9 +938,9 @@ ghost crab~
 ~
 &+L   This ghost crab is the size of a small cat.&n
 ~
-393224 5 0 0 0 0 0 -500 S
+393224 5 0 8 0 0 0 -500 S
 ac 0 1 -1
-3 0 0 1d1+1 1d1+1
+7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #55067
@@ -1780,7 +1774,7 @@ thyz rogue~
 ~
 1074137098 0 0 0 0 0 0 -1000 S
 pm 0 4096 -1
-46 0 0 1d1+1 1d1+1
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55124
@@ -1804,7 +1798,6 @@ siren sierra~
 &+WSierra&n~
 &+WSierra &+Lthe large-bosomed &+YSiren &+Lsings soothingly by the pool.&n
 ~
-p
 &+W   Sierra &+Lis extremely beautiful and has an impressive voice to
 &+Lmatch. She is about five feet tall and is slender in her figure.
 &+LShe is only wearing a small dress and a very low-cut shirt. She
@@ -1910,7 +1903,7 @@ executioner muredach~
 ~
 1074137098 0 0 0 0 0 0 -1000 S
 ph 0 16 -1
-46 0 0 1d1+1 1d1+1
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55132
@@ -1946,7 +1939,7 @@ pe 0 1 -1
 0.0.0.0 0
 8 8 2
 #55134
-ranger guardsman guard _nosneak_~
+ranger guardsman guard~
 &+La &+Granger &+Lguardsman&n~
 &+LA mighty &+Granger &+Lkeeps this area in check.&n
 ~
@@ -1956,7 +1949,7 @@ ranger guardsman guard _nosneak_~
 &+wis interested in any of your nonsense, so it would be best
 &+wfor you to leave him alone.&n
 ~
-67110986 128 0 134217752 0 0 0 0 S
+67110986 0 0 134217752 0 0 0 0 S
 ph 0 2 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -2086,7 +2079,7 @@ goblin~
 ~
 ~
 1074137098 1 0 0 0 65536 262144 0 S
-hg 0 65536 -1
+hg 0 512 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2200,7 +2193,7 @@ noble~
 ~
 1074137098 0 0 0 0 0 0 0 S
 ph 0 1 -1
-35 0 0 1d1+1 1d1+1
+45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55153
@@ -2211,7 +2204,7 @@ noble~
 ~
 1074137098 0 0 0 0 0 0 0 S
 ph 0 1 -1
-37 0 0 1d1+1 1d1+1
+47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55154
@@ -2573,7 +2566,7 @@ priest high winterhaven~
 &+Land citizens of this great city. His movements are very gentle
 &+Land his demeanor radiates a calm and controlled attitude.&n
 ~
-424010 384 0 1057071356 47325 17301632 72364544 1000 S
+424010 0 0 1057071356 47325 17301632 72364544 1000 S
 PH 0 928 -1
 62 140 500 5000d4+5000 50d4+200
 0.0.0.0 0
@@ -2977,8 +2970,52 @@ so 0 1048577 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
+#55213
+mob unnamed~
+an unnamed mob~
+An unnamed mob stands here, looking lonely and forelorn.
+~
+~
+8 0 0 0 0 0 0 0 S
+PH 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#55214
+ithaquua illithid~
+&+WIthaquua&n~
+&nAn &+MIllithid &n(medium) &+MEnrager &nof &+MClan Love Tentacle &nstands here.&n
+~
+~
+17176650 0 0 0 0 0 0 0 S
+mf 0 262144 -1
+58 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#55215
+zalphanz headless mercenary~
+&+WZalphanz, &+gthe &+Yheadless &+gmercenary&n~
+&+BAn enormous &+Yheadless &+Bmercenary somehow clings to the shadows.&n
+~
+~
+1074137096 0 0 1572864 0 0 0 0 S
+g 0 16384 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#55216
+elyra black~
+&+LElyra, the black&n~
+&+LElyra, the black, stands before you in a state of trance.&n
+~
+~
+1074137096 0 0 1572864 0 0 0 -1000 S
+sh 0 2097152 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
 #55217
-massive guard warrior _justiceshout1_~
+massive guard warrior~
 &+La &+Cmember &+Lof the &+Wcity &+Lpatrol&n~
 &+LA &+Cmassive &+Wguard &+Lis patroling the city of &+WWinterhaven&+L.&n
 ~
@@ -2988,7 +3025,7 @@ massive guard warrior _justiceshout1_~
 &+Lwatching for intruders and he looks ready to leap into any fight at a
 &+Lmoments notice.&n
 ~
-1074137096 384 0 403177656 28 0 67108864 0 S
+1074137096 0 0 403177656 28 0 67108864 0 S
 pm 0 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -3264,9 +3301,9 @@ frenbar gangleader~
 &+rof staying ahea&+Ld of the law. &+rStrangely, i&+Lt looks as i&+rf he is miss&+Ling his left
 &+rindex finge&+Lr.&n
 ~
-2058 0 0 0 0 0 0 0 S
-p2 0 8192 -1
-50 0 0 1d1+1 1d1+1
+16779274 0 0 0 0 0 0 0 S
+p2 0 24576 -1
+56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55235
@@ -3280,7 +3317,7 @@ dirty henchman~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-40 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55236
@@ -3294,7 +3331,7 @@ fat henchman~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-40 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55237
@@ -3312,7 +3349,7 @@ bojaxx bodyguard~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-40 0 0 1d1+1 1d1+1
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #55238
@@ -3422,6 +3459,10 @@ traveling mystic~
 &+La traveling &+Mm&+my&+Ms&+mt&+Mi&+mc&n~
 &+LA traveling &+Mm&+my&+Ms&+mt&+Mi&+mc &+Lhovers in mid-air here.&n
 ~
+&+L  This traveling nomad hovers above the ground, radiating with raw power. She
+&+Lshows an expression of pure anger as she stares to the West, in the direction
+&+Lof the Palace of Winterhaven. She briefly casts an inquisitive gaze towards
+&+Lyou.&n
 ~
 133130 0 0 0 0 0 0 0 S
 sh 0 3584 -1
@@ -3436,7 +3477,7 @@ drunk gambler~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-35 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55246
@@ -3465,7 +3506,7 @@ addicted gambler~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-37 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55248
@@ -3479,7 +3520,7 @@ slutty tramp~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-40 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
 #55249
@@ -3493,7 +3534,7 @@ vicious thug dark-eyed~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-39 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55250
@@ -3507,7 +3548,7 @@ stupid lackey~
 ~
 2058 0 0 0 0 0 0 0 S
 ph 0 4096 -1
-39 0 0 1d1+1 1d1+1
+51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #55251
@@ -3653,6 +3694,61 @@ an 0 512 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#55261
+salt dockmaster~
+&+WSalt, &+ythe peg-legged &+Ldockmaster&n~
+&+WSalt, &+ythe peg-legged &+Ldockmaster &+ykeeps a watchful eye over the &+Lpier&+y.&n
+~
+~
+395274 0 0 0 0 0 0 0 S
+pm 0 16384 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#55262
+large funnelweb spider~
+&+LA large &+Wfunnelweb &+Lspider&n~
+&+LA large &+Wfunnelweb &+Lspider crawls around in the dark.&n
+~
+~
+395274 1 0 0 0 0 0 0 S
+as 0 64 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#55263
+royal guardsman guard~
+&+WA &+Yroyal &+Wguardsman&n~
+&+WA &+Yroyal &+Wguardsman stands tall and motionless.&n
+~
+~
+395274 0 0 0 0 0 0 0 S
+sg 0 8 -1
+55 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#55264
+leviathan princess abyssal~
+&+bt&+Lhe &+bL&+Lev&+bi&+Lat&+bh&+Lan&n~
+&+bL&+Lev&+bi&+Lat&+bh&+Lan, the &+bA&+Lbyssal &+bP&+Lrincess of the &+bS&+Lea searches for her next ocean-faring victim.&n
+~
+~
+1359349768 0 0 0 0 0 0 -1000 S
+x 0 32 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#55265
+adryv sahaugin priest~
+&+WAdryv&+L, the &+bS&+Lahaugin &+bp&+Lriest&n~
+&+WAdryv&+L, the &+bS&+Lahaugin &+bp&+Lriest of &+bSekolah &+Lglares in your direction.&n
+~
+~
+395274 0 0 0 0 0 0 0 S
+x 0 16 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
 #55500
 white-tailed deer~
 &+yA &+Wwh&+wi&+Wt&+we&+W-t&+wai&+Wl&+we&+Wd &+Yd&+yee&+Yr&n~

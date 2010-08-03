@@ -1,6 +1,6 @@
 #740
 &+RBloodstone Keep&n~
-74922 2 0 40 50 1
+74917 2 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -2008,50 +2008,5 @@ M 0 74249 3 74917 100 0 0 0        * a sinister apprentice
 M 0 74249 3 74917 100 0 0 0        * a sinister apprentice
 M 0 74249 3 74917 100 0 0 0        * a sinister apprentice
 G 1 74298 1 0 100 0 0 0            *    a sigil of vile corruption
-M 0 74250 1 74918 100 0 0 0        * Moldar
-M 0 74251 1 74918 100 0 0 0        * a merchant
-G 1 55118 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55117 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55116 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55115 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55114 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55113 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55112 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55283 999 0 100 0 0 0          *    (object type not in this .obj file)
-M 0 74252 1 74919 100 0 0 0        * Sark
-M 0 74253 1 74919 100 0 0 0        * a merchant
-G 1 55126 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55125 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55124 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55123 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55122 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55121 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55120 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55119 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55284 999 0 100 0 0 0          *    (object type not in this .obj file)
-M 0 74254 1 74920 100 0 0 0        * Navift
-M 0 74255 1 74920 100 0 0 0        * a merchant
-G 1 338 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 252 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 55132 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55131 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55130 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55129 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55128 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55127 999 0 100 0 0 0          *    (object type not in this .obj file)
-G 1 55076 999 0 100 0 0 0          *    (object type not in this .obj file)
-M 0 74257 1 74921 100 0 0 0        * Fibblefinger
-M 0 74256 1 74921 100 0 0 0        * a merchant
-G 1 828 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 827 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 826 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 825 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 824 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 823 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 822 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 821 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 820 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 55141 999 0 100 0 0 0          *    (object type not in this .obj file)
-M 0 74258 1 74922 100 0 0 0        * Hedvig
 *
 S

@@ -168,16 +168,16 @@ Y 0 2048 4
 8 8 1
 #32011
 dagon~
-Dagon~
-Dagon stands here.
+&+WDagon &+Lthe Abyssal Lord&n~
+&+LThe Abyssal lord &+WDagon &+Lslithers nearby.&n
 ~
-&+RDagon appears as a red-skinned satyr with a slyly handsome,
-&+Rhairless visage, pointed ears, and short, curving horns like
-&+Rthose of a pit fiend.  His eyes are green, and shine brightly
-&+Rwhen angered.  He's wearing a weapon-harness and a backpack.&n
+&+L  This dark lord of the abyss stands before you as a colossal-sized eel with the
+&+Lleering fanged face of a deep-underwater fish. Numerous tentacles cover his body,
+&+Ltwo of which ends in digits tipped with long sharp talons. Dagon is traveling away
+&+Lfrom his home plane of Shadowsea, 89th Layer of the Abyss, gathering followers.&n
 ~
-1140881672 1 0 536871056 2048 67108864 12592640 -1000 S
-Y 0 1 3
+1157658888 1 0 536871056 2048 67108864 12592640 -1000 S
+x 0 544 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -369,3 +369,25 @@ D 0 544 5
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
+#32024
+hezrou~
+&+La dark-skinned &+rhezrou&n~
+&+LThis evil looking &+rmane&+L snarls viciously at his surroundings.&n
+~
+~
+1141245962 1 0 1573048 0 0 0 -1000 S
+x 0 1 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#32025
+hezrou~
+&+La dangerous looking &+rhezrou&n~
+&+LA snarling &+rmane &+Lstands here, radiating with power.&n
+~
+~
+1141245962 1 0 1573048 0 0 0 -1000 S
+x 0 512 -1
+51 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0

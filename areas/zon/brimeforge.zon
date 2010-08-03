@@ -1,6 +1,6 @@
 #449
 &+LThe &+rBrim&+LStone &+LForge&n~
-131042 2 0 40 50 1
+131049 2 0 40 50 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -69,29 +69,37 @@ D 0 131042 2 2 100 0 0 0
 *     south exit from "Inside the BrimStone Forge" to
 *     "Inside the BrimStone Forge" - closed/locked
 *
+D 0 131027 1 1 100 0 0 0
+*     east exit from "Inside the BrimStone Forge" to
+*     "The Military Barracks" - closed
+*
+D 0 131048 3 1 100 0 0 0
+*     west exit from "The Military Barracks" to
+*     "Inside the BrimStone Forge" - closed
+*
 D 0 131038 0 2 100 0 0 0
-*     north exit from "Inside the BrimStone Forge" to
+*     north exit from "The Holding Cells" to
 *     "A Powerfully Constructed BrimStone Cell" - closed/locked
 *
 D 0 131039 2 1 100 0 0 0
 *     south exit from "A Powerfully Constructed BrimStone Cell" to
-*     "Inside the BrimStone Forge" - closed
+*     "The Holding Cells" - closed
 *
 D 0 131038 1 2 100 0 0 0
-*     east exit from "Inside the BrimStone Forge" to
+*     east exit from "The Holding Cells" to
 *     "A Powerfully Constructed BrimStone Cell" - closed/locked
 *
 D 0 131040 3 1 100 0 0 0
 *     west exit from "A Powerfully Constructed BrimStone Cell" to
-*     "Inside the BrimStone Forge" - closed
+*     "The Holding Cells" - closed
 *
 D 0 131038 2 2 100 0 0 0
-*     south exit from "Inside the BrimStone Forge" to
+*     south exit from "The Holding Cells" to
 *     "A Powerfully Constructed BrimStone Cell" - closed/locked
 *
 D 0 131041 0 1 100 0 0 0
 *     north exit from "A Powerfully Constructed BrimStone Cell" to
-*     "Inside the BrimStone Forge" - closed
+*     "The Holding Cells" - closed
 *
 *
 O 0 131007 5 131003 100 0 0 0      * a smoldering chunk of BrimStone
@@ -107,6 +115,7 @@ O 0 131001 6 131017 100 0 0 0      * a large crack
 O 0 131001 6 131019 100 0 0 0      * a large crack
 O 0 131009 2 131036 100 0 0 0      * a strange sign
 O 0 131009 2 131037 100 0 0 0      * a strange sign
+O 0 131014 1 131048 100 0 0 0      * a massive chest
 *
 M 0 131009 1 131001 100 0 0 0      * a traveling Efreeti
 M 0 131008 3 131004 100 0 0 0      * an illithid overseer
@@ -151,6 +160,11 @@ M 0 131007 6 131022 100 0 0 0      * a vile demon
 M 0 131007 6 131023 100 0 0 0      * a vile demon
 M 0 131007 6 131024 100 0 0 0      * a vile demon
 M 0 131007 6 131025 100 0 0 0      * a vile demon
+M 0 131016 1 131027 100 0 0 0      * a Minotaur general
+G 1 131013 1 0 100 0 0 0           *    a single and very large key
+F 1 131015 3 131027 100 0 0 0      * a massive guardsman (following)
+F 1 131015 3 131027 100 0 0 0      * a massive guardsman (following)
+F 1 131015 3 131027 100 0 0 0      * a massive guardsman (following)
 M 0 131010 8 131031 100 0 0 0      * a dangerous spectre
 E 1 131008 16 16 100 0 0 0         *   a shard of BrimStone
 E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
@@ -178,7 +192,7 @@ E 1 131008 16 17 100 0 0 0         *   a shard of BrimStone
 M 0 131011 1 131038 100 0 0 0      * an ethereal guardian
 M 0 131012 1 131039 100 0 0 0      * Lord Kaynor, the exiled lord of Tharnadia
 E 1 131010 1 3 25 0 0 0            *   the defiled golden amulet of Tharnadia
-G 1 131016 1 0 100 0 0 0           *    the essence of Lord Kaynor
+G 1 131016 1 0 100 0 0 0           *    the bloody heart of Lord Kaynor
 M 0 131013 1 131040 100 0 0 0      * The wicked child of the Chronomancer
 E 1 131011 1 19 25 0 0 0           *   the unholy bifocals of the Chronomancer
 G 1 131017 1 0 100 0 0 0           *    the bloody heart of the Chronomancer's child

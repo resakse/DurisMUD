@@ -146,7 +146,7 @@ lord kaynor lord tharnadia~
 ~
 285214730 1 0 0 0 0 0 0 S
 ul 0 512 -1
-56 0 0 1d1+1 1d1+1
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #131013
@@ -155,9 +155,9 @@ wicked child chronomancer~
 &+LThe wicked child of the Chronomancer stands before you.&n
 ~
 ~
-16779272 1 0 0 0 0 0 0 S
+16779274 1 0 0 0 0 0 0 S
 sh 0 1024 -1
-56 0 0 1d1+1 1d1+1
+60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #131014
@@ -166,8 +166,38 @@ azureal~
 &+LAzureal, the lieutenant of Zariel, stands quietly here.&n
 ~
 ~
-16779272 1 0 0 0 0 0 0 S
+16779274 1 0 0 0 0 0 0 S
 uw 0 16 -1
-56 0 0 1d1+1 1d1+1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131015
+massive guardsman~
+&+La massive &+rguards&+Lman&n~
+&+LA massive &+rguards&+Lman blocks your entrance into the &+rBrim&+LStone Forge.&n
+~
+&+L   This guardsman stands very tall and seems to almost touch the ceiling with his
+&+Llarge horns. He is lightly clad with a leather tunic and a belt secured with a heavy
+&+Lbuckle. His hands look hard as a rock. You definitely should considering picking
+&+La different fight.&n
+~
+411658 0 0 0 0 0 0 0 S
+mt 0 1048576 -1
+52 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#131016
+minotaur general~
+&+La Mino&+rtaur &+Lgeneral&n~
+&+LA brute looking Mino&+rtaur &+Lscreams commands at his troop of fierce &+rguards&+Lman.&n
+~
+&+L   This guardsman stands very tall and seems to almost touch the ceiling with his
+&+Llarge horns. He is lightly clad with a leather tunic and a belt secured with a heavy
+&+Lbuckle. His hands look hard as a rock. You definitely should considering picking
+&+La different fight.&n
+~
+411658 0 0 0 0 0 0 0 S
+mt 0 1 -1
+55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

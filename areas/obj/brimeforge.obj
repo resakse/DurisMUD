@@ -113,11 +113,11 @@ unholy bifocals chronomancer~
 ~
 9 18 2 0 12 0 8388609 131073 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100 536870912 2 0 0
+0 0 100 40 0 0 0
 A
-13 50
+13 25
 A
-5 5
+5 10
 #131012
 strange mithril key~
 &+La strange &+mmithril &+Lkey&n~
@@ -127,20 +127,20 @@ strange mithril key~
 0 100 0 0 0 0 0 0
 0 0 100
 #131013
-strange mithril key~
-&+La strange &+mmithril &+Lkey&n~
-&+LA strange &+mmithril &+Lkey lies here.&n~
+single large key~
+&+La single and very large &+rkey&n~
+&+LA very large &+rkey &+Lhas been carelessly thrown here.&n~
 ~
-18 18 2 0 12 0 8388609 1 0 0 0
-0 100 0 0 0 0 0 0
+18 18 2 0 12 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
 0 0 100
 #131014
-strange mithril key~
-&+La strange &+mmithril &+Lkey&n~
-&+LA strange &+mmithril &+Lkey lies here.&n~
+massive chest~
+&+La massive &+rchest&n~
+&+LA massive &+rchest &+Lsits at the center of the room.&n~
 ~
-18 18 2 0 12 0 8388609 1 0 0 0
-0 100 0 0 0 0 0 0
+15 18 2 0 12 0 8388609 0 0 0 0
+0 29 131020 0 0 0 0 0
 0 0 100
 #131015
 flaming halberd rage~
@@ -155,11 +155,11 @@ A
 A
 19 5
 #131016
-essence lord kaynor~
-&+Lthe essence of &+WLord Kaynor&n~
-&+LThe essence of &+WLord Kaynor &+Lfloats here.&n~
+bloody heart lord kaynor~
+&+Lthe &+rbloody &+Lheart of &+WLord Kaynor&n~
+&+Lthe &+rbloody &+Lheart of &+WLord Kaynor &+Llies here.&n~
 ~
-8 18 2 0 12 0 8388609 1 0 0 0
+8 2 2 0 12 0 8388609 1 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #131017
@@ -177,4 +177,20 @@ bloody horns azureal~
 ~
 8 2 2 0 12 0 8388609 1 0 0 0
 0 0 0 0 0 0 0 0
+0 0 100
+#131019
+powerful brimstone rune~
+&+La powerful &+rbrim&+Lstone rune&n~
+&+LA very powerful looking &+rbrim&+Lstone rune floats mysteriously here.&n~
+~
+8 11 2 0 15 0 8388608 16385 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#131020
+unremarkable key~
+&+Lan &+runremarkable &+Lkey&n~
+&+LYou barely notice this key lying here.&n~
+~
+18 18 2 0 12 0 8388608 1 0 0 0
+0 100 0 0 0 0 0 0
 0 0 100

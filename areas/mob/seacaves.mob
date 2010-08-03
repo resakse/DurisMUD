@@ -30,8 +30,8 @@ EW 0 0 -1
 8 8 0
 #2202
 priest cleric~
-&+gthe priest of the Sea Goddess&n~
-The &+gpriest&n of the temple stands here, preparing for an unholy ritual.
+&+Wa white-robed &+bp&+Lriest&n~
+&+WA white-robed &+bp&+Lriest &+Wstands here, preparing for an unholy ritual.&n
 ~
 This tall, wiry man scurries around the room, making preparations for the
 next service. He appears to be in his early forties, but the religious fervor
@@ -42,7 +42,7 @@ of white like the foam of crashing waves.
 ~
 2058 1 0 0 0 0 0 -1000 S
 PH 0 512 -1
-15 15 51 15d18+60 2d5+2
+36 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 8 8 1
 #2203

@@ -5,13 +5,13 @@
 * Zone edited with durisEdit v2.99de
 *
 *
-D 0 55033 3 2 100 0 0 0
-*     west exit from "A Bright Alley Alongside a Massive Stone Wall" to
-*     "An Entryway Into the Palace" - closed/locked
+D 0 55046 5 1 100 0 0 0
+*     down exit from "A Turn in a Bright Alley Alongside a Massive Stone Wall" to
+*     "A Large Pothole" - closed
 *
-D 0 55630 1 1 100 0 0 0
-*     east exit from "An Entryway Into the Palace" to
-*     "A Bright Alley Alongside a Massive Stone Wall" - closed
+D 0 55412 4 1 100 0 0 0
+*     up exit from "A Large Pothole" to
+*     "A Turn in a Bright Alley Alongside a Massive Stone Wall" - closed
 *
 D 0 55070 2 1 100 0 0 0
 *     south exit from "On Browncoat Boulevard" to
@@ -341,6 +341,14 @@ D 0 55614 0 1 100 0 0 0
 *     north exit from "Zone dispersal room for Incarnates." to
 *     "Incarne loading room for Evils" - closed
 *
+D 0 55413 1 1 100 0 0 0
+*     east exit from "Inside the Royal Palace" to
+*     "An Entryway Into the Palace" - closed
+*
+D 0 55630 3 2 100 0 0 0
+*     west exit from "An Entryway Into the Palace" to
+*     "Inside the Royal Palace" - closed/locked
+*
 D 0 55508 0 2 100 0 0 0
 *     north exit from "The Winterhaven Jail" to
 *     "A Processing Room in the Winterhaven Jail" - closed/locked
@@ -556,21 +564,43 @@ O 0 55289 1 55631 100 0 0 0        * a Gnomish Device
 *
 M 0 55154 4 55080 100 0 0 0        * a female noble
 M 0 55154 4 55081 100 0 0 0        * a female noble
-M 0 55020 15 55094 100 0 0 0       * a massive elite guard
-M 0 55020 15 55094 100 0 0 0       * a massive elite guard
-M 0 55020 15 55094 100 0 0 0       * a massive elite guard
 M 0 55021 6 55094 100 0 0 0        * a mighty wizard
+E 1 55425 6 18 100 0 0 0           *   a brilliant blood-red orb
+F 1 55020 18 55094 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55094 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55094 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
 M 0 55057 1 55100 100 0 0 0        * a white-clad Monk
-M 0 55020 15 55108 100 0 0 0       * a massive elite guard
-M 0 55020 15 55108 100 0 0 0       * a massive elite guard
-M 0 55020 15 55108 100 0 0 0       * a massive elite guard
 M 0 55021 6 55108 100 0 0 0        * a mighty wizard
-M 0 55020 15 55115 100 0 0 0       * a massive elite guard
-M 0 55020 15 55115 100 0 0 0       * a massive elite guard
-M 0 55020 15 55115 100 0 0 0       * a massive elite guard
+E 1 55425 6 18 100 0 0 0           *   a brilliant blood-red orb
+F 1 55020 18 55108 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55108 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55108 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
 M 0 55021 6 55115 100 0 0 0        * a mighty wizard
+E 1 55425 6 18 100 0 0 0           *   a brilliant blood-red orb
+F 1 55020 18 55115 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55115 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55115 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
 M 0 55184 1 55126 100 0 0 0        * the High Priest of Winterhaven
 M 0 55131 1 55127 100 0 0 0        * Muredach
+G 1 55430 1 0 100 0 0 0            *    a wicked looking double-bladed battleaxe
 M 0 55056 1 55127 100 0 0 0        * Melfist
 G 1 55383 999 0 100 0 0 0          *    a small vial of blue dye
 G 1 55384 999 0 100 0 0 0          *    a small vial of red dye
@@ -583,9 +613,17 @@ G 1 55410 999 0 100 0 0 0          *    a small vial of white dye
 M 0 55058 3 55128 100 0 0 0        * a guard of the guilds
 M 0 55058 3 55128 100 0 0 0        * a guard of the guilds
 M 0 55058 3 55128 100 0 0 0        * a guard of the guilds
-M 0 55020 15 55131 100 0 0 0       * a massive elite guard
-M 0 55020 15 55131 100 0 0 0       * a massive elite guard
 M 0 55021 6 55131 100 0 0 0        * a mighty wizard
+E 1 55425 6 18 100 0 0 0           *   a brilliant blood-red orb
+F 1 55020 18 55131 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55131 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55131 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
 M 0 55060 4 55135 100 0 0 0        * an apprentice
 M 0 55166 4 55135 100 0 0 0        * an apprentice
 M 0 55060 4 55139 100 0 0 0        * an apprentice
@@ -765,12 +803,28 @@ M 0 55114 1 55216 100 0 0 0        * Bashere
 M 0 55113 1 55217 100 0 0 0        * Urthylyl
 M 0 55112 1 55218 100 0 0 0        * Bristhol
 M 0 55111 1 55219 100 0 0 0        * Buzzbeef
-M 0 55020 15 55220 100 0 0 0       * a massive elite guard
-M 0 55020 15 55220 100 0 0 0       * a massive elite guard
 M 0 55021 6 55220 100 0 0 0        * a mighty wizard
-M 0 55020 15 55221 100 0 0 0       * a massive elite guard
-M 0 55020 15 55221 100 0 0 0       * a massive elite guard
+E 1 55425 6 18 100 0 0 0           *   a brilliant blood-red orb
+F 1 55020 18 55220 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55220 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55220 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
 M 0 55021 6 55221 100 0 0 0        * a mighty wizard
+E 1 55425 6 18 100 0 0 0           *   a brilliant blood-red orb
+F 1 55020 18 55221 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55221 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
+F 1 55020 18 55221 100 0 0 0       * a massive elite guard (following)
+E 1 55333 18 11 100 0 0 0          *   a shield bearing the crest of Winterhaven
+E 1 55334 18 16 100 0 0 0          *   a large mithril sword of the Winterhaven Guard
 M 0 55011 5 55292 100 0 0 0        * a city guard
 M 0 55011 5 55292 100 0 0 0        * a city guard
 M 0 55011 5 55292 100 0 0 0        * a city guard
@@ -808,14 +862,6 @@ M 0 55085 4 55295 100 0 0 0        * a male commoner
 M 0 55085 4 55295 100 0 0 0        * a male commoner
 M 0 55084 4 55295 100 0 0 0        * a female commoner
 M 0 55084 4 55295 100 0 0 0        * a female commoner
-M 0 55023 6 55296 100 0 0 0        * a mighty warrior
-E 1 55334 6 16 100 0 0 0           *   a large mithril sword of the Winterhaven Guard
-M 0 55023 6 55296 100 0 0 0        * a mighty warrior
-E 1 55334 6 16 100 0 0 0           *   a large mithril sword of the Winterhaven Guard
-M 0 55023 6 55301 100 0 0 0        * a mighty warrior
-E 1 55334 6 16 100 0 0 0           *   a large mithril sword of the Winterhaven Guard
-M 0 55023 6 55301 100 0 0 0        * a mighty warrior
-E 1 55334 6 16 100 0 0 0           *   a large mithril sword of the Winterhaven Guard
 M 0 55171 1 55319 100 0 0 0        * Celarno
 M 0 55172 1 55324 100 0 0 0        * Duule
 M 0 55170 1 55333 100 0 0 0        * Ibaron
@@ -881,34 +927,34 @@ M 0 55176 1 55396 100 0 0 0        * Nubija
 M 0 55173 1 55397 100 0 0 0        * Theft
 M 0 55174 1 55398 100 0 0 0        * Ugruk
 M 0 55212 1 55399 100 0 0 0        * the Indomitable Snowman
-M 0 55201 2 55400 100 0 0 0        * an ambassador from the Icecrag Castle
-M 0 55208 2 55400 100 0 0 0        * an ambassador from the Domain of Lost Souls
-M 0 55199 2 55400 100 0 0 0        * an ambassador from The Jade Empire
-M 0 55200 2 55400 100 0 0 0        * an ambassador from the Du'Maathe Castle
-M 0 55204 2 55400 100 0 0 0        * an ambassador from Jotunheim
-M 0 55207 2 55400 100 0 0 0        * an ambassador from the Forest City of Aravne
-M 0 55242 2 55400 100 0 0 0        * an Ambassador from Venan'Trut
-M 0 55205 2 55400 100 0 0 0        * an ambassador from Krethik Keep
-M 0 55221 2 55400 100 0 0 0        * an Ambassador from the Swamp
-M 0 55202 2 55400 100 0 0 0        * an ambassador from Fort Boyard
-M 0 55203 2 55400 100 0 0 0        * an ambassador from The Sky City of Ultarium
-M 0 55206 2 55400 100 0 0 0        * an ambassador from The Temple of Skrentherlog
-M 0 55224 2 55400 100 0 0 0        * an Ambassador from The Obsidian Citadel
-M 0 55218 2 55400 100 0 0 0        * an Ambassador from New Cave City
-M 0 55226 2 55400 100 0 0 0        * an Ambassador from the Lair of the Gibberling King
-M 0 55243 2 55400 100 0 0 0        * an Ambassador from Rogue Plains
-M 0 55223 2 55400 100 0 0 0        * an Ambassador from The Citadel
-M 0 55228 2 55400 100 0 0 0        * an Ambassador from the Ice Tower
-M 0 55227 2 55400 100 0 0 0        * an Ambassador from The High Moor Forest
-M 0 55222 2 55400 100 0 0 0        * an Ambassador from the Keep of Evil
-M 0 55220 2 55400 100 0 0 0        * an Ambassador from Labyrinth of No Return
-M 0 55219 2 55400 100 0 0 0        * an Ambassador from The Prisons of Carthapia
-M 0 55209 2 55400 100 0 0 0        * an ambassador from the Tribal Oasis
-M 0 55225 2 55400 100 0 0 0        * an Ambassador from Zalkapfaan
-M 0 55238 2 55400 100 0 0 0        * an Ambassador from The Hall of Knighthood
-M 0 55135 2 55400 100 0 0 0        * An Ambassador from The Forgotten Mansion
-M 0 55136 2 55400 100 0 0 0        * an Ambassador from the Village of Werrun
-M 0 55137 2 55400 100 0 0 0        * An Ambassador from Quintaragon Castle
+M 0 55201 1 55400 100 0 0 0        * an ambassador from the Icecrag Castle
+M 0 55208 1 55400 100 0 0 0        * an ambassador from the Domain of Lost Souls
+M 0 55199 1 55400 100 0 0 0        * an ambassador from The Jade Empire
+M 0 55200 1 55400 100 0 0 0        * an ambassador from the Du'Maathe Castle
+M 0 55204 1 55400 100 0 0 0        * an ambassador from Jotunheim
+M 0 55207 1 55400 100 0 0 0        * an ambassador from the Forest City of Aravne
+M 0 55242 1 55400 100 0 0 0        * an Ambassador from Venan'Trut
+M 0 55205 1 55400 100 0 0 0        * an ambassador from Krethik Keep
+M 0 55221 1 55400 100 0 0 0        * an Ambassador from the Swamp
+M 0 55202 1 55400 100 0 0 0        * an ambassador from Fort Boyard
+M 0 55203 1 55400 100 0 0 0        * an ambassador from The Sky City of Ultarium
+M 0 55206 1 55400 100 0 0 0        * an ambassador from The Temple of Skrentherlog
+M 0 55224 1 55400 100 0 0 0        * an Ambassador from The Obsidian Citadel
+M 0 55218 1 55400 100 0 0 0        * an Ambassador from New Cave City
+M 0 55226 1 55400 100 0 0 0        * an Ambassador from the Lair of the Gibberling King
+M 0 55243 1 55400 100 0 0 0        * an Ambassador from Rogue Plains
+M 0 55223 1 55400 100 0 0 0        * an Ambassador from The Citadel
+M 0 55228 1 55400 100 0 0 0        * an Ambassador from the Ice Tower
+M 0 55227 1 55400 100 0 0 0        * an Ambassador from The High Moor Forest
+M 0 55222 1 55400 100 0 0 0        * an Ambassador from the Keep of Evil
+M 0 55220 1 55400 100 0 0 0        * an Ambassador from Labyrinth of No Return
+M 0 55219 1 55400 100 0 0 0        * an Ambassador from The Prisons of Carthapia
+M 0 55209 1 55400 100 0 0 0        * an ambassador from the Tribal Oasis
+M 0 55225 1 55400 100 0 0 0        * an Ambassador from Zalkapfaan
+M 0 55238 1 55400 100 0 0 0        * an Ambassador from The Hall of Knighthood
+M 0 55135 1 55400 100 0 0 0        * An Ambassador from The Forgotten Mansion
+M 0 55136 1 55400 100 0 0 0        * an Ambassador from the Village of Werrun
+M 0 55137 1 55400 100 0 0 0        * An Ambassador from Quintaragon Castle
 M 0 55034 1 55401 100 0 0 0        * Tarn Bloodblade, the outlaw of Tharnadia
 E 1 55377 1 16 30 0 0 0            *   a gladius called 'Backstabber'
 E 1 55376 6 17 100 0 0 0           *   a blood-soaked dagger
@@ -940,34 +986,6 @@ M 0 55246 4 55402 100 0 0 0        * a tall psychomia treant
 M 0 55246 4 55402 100 0 0 0        * a tall psychomia treant
 M 0 55551 4 55402 100 0 0 0        * The Incarnate of Frost
 M 0 55551 4 55402 100 0 0 0        * The Incarnate of Frost
-M 0 55201 2 55403 50 0 0 0         * an ambassador from the Icecrag Castle
-M 0 55208 2 55403 50 0 0 0         * an ambassador from the Domain of Lost Souls
-M 0 55199 2 55403 50 0 0 0         * an ambassador from The Jade Empire
-M 0 55200 2 55403 50 0 0 0         * an ambassador from the Du'Maathe Castle
-M 0 55204 2 55403 50 0 0 0         * an ambassador from Jotunheim
-M 0 55207 2 55403 50 0 0 0         * an ambassador from the Forest City of Aravne
-M 0 55242 2 55403 50 0 0 0         * an Ambassador from Venan'Trut
-M 0 55205 2 55403 50 0 0 0         * an ambassador from Krethik Keep
-M 0 55221 2 55403 50 0 0 0         * an Ambassador from the Swamp
-M 0 55202 2 55403 50 0 0 0         * an ambassador from Fort Boyard
-M 0 55203 2 55403 50 0 0 0         * an ambassador from The Sky City of Ultarium
-M 0 55206 2 55403 50 0 0 0         * an ambassador from The Temple of Skrentherlog
-M 0 55224 2 55403 50 0 0 0         * an Ambassador from The Obsidian Citadel
-M 0 55218 2 55403 50 0 0 0         * an Ambassador from New Cave City
-M 0 55226 2 55403 50 0 0 0         * an Ambassador from the Lair of the Gibberling King
-M 0 55243 2 55403 50 0 0 0         * an Ambassador from Rogue Plains
-M 0 55223 2 55403 50 0 0 0         * an Ambassador from The Citadel
-M 0 55228 2 55403 50 0 0 0         * an Ambassador from the Ice Tower
-M 0 55227 2 55403 50 0 0 0         * an Ambassador from The High Moor Forest
-M 0 55222 2 55403 50 0 0 0         * an Ambassador from the Keep of Evil
-M 0 55220 2 55403 50 0 0 0         * an Ambassador from Labyrinth of No Return
-M 0 55219 2 55403 50 0 0 0         * an Ambassador from The Prisons of Carthapia
-M 0 55209 2 55403 50 0 0 0         * an ambassador from the Tribal Oasis
-M 0 55225 2 55403 50 0 0 0         * an Ambassador from Zalkapfaan
-M 0 55238 2 55403 50 0 0 0         * an Ambassador from The Hall of Knighthood
-M 0 55135 2 55403 50 0 0 0         * An Ambassador from The Forgotten Mansion
-M 0 55136 2 55403 50 0 0 0         * an Ambassador from the Village of Werrun
-M 0 55137 2 55403 50 0 0 0         * An Ambassador from Quintaragon Castle
 M 0 55517 26 55406 25 0 0 0        * a baby duckling
 M 0 55518 26 55406 25 0 0 0        * a small carp
 M 0 55519 26 55406 25 0 0 0        * a medium carp
@@ -976,6 +994,8 @@ M 0 55517 26 55407 25 0 0 0        * a baby duckling
 M 0 55518 26 55407 25 0 0 0        * a small carp
 M 0 55519 26 55407 25 0 0 0        * a medium carp
 M 0 55520 26 55407 25 0 0 0        * a large carp
+M 0 55261 1 55410 100 0 0 0        * Salt, the peg-legged dockmaster
+M 0 55262 1 55412 100 0 0 0        * A large funnelweb spider
 M 0 55517 26 55415 25 0 0 0        * a baby duckling
 M 0 55518 26 55415 25 0 0 0        * a small carp
 M 0 55519 26 55415 25 0 0 0        * a medium carp
@@ -1024,10 +1044,6 @@ M 0 55517 26 55493 25 0 0 0        * a baby duckling
 M 0 55518 26 55493 25 0 0 0        * a small carp
 M 0 55519 26 55493 25 0 0 0        * a medium carp
 M 0 55520 26 55493 25 0 0 0        * a large carp
-M 0 55023 6 55500 100 0 0 0        * a mighty warrior
-E 1 55334 6 16 100 0 0 0           *   a large mithril sword of the Winterhaven Guard
-M 0 55023 6 55500 100 0 0 0        * a mighty warrior
-E 1 55334 6 16 100 0 0 0           *   a large mithril sword of the Winterhaven Guard
 M 0 55059 2 55504 100 0 0 0        * a jail guard
 M 0 55059 2 55504 100 0 0 0        * a jail guard
 M 0 55147 3 55507 100 0 0 0        * a security guard
@@ -1039,21 +1055,25 @@ M 0 55139 1 55511 100 0 0 0        * a Drow Elf
 G 1 55013 1 0 100 0 0 0            *    the heart of Spij
 F 1 55140 1 55511 100 0 0 0        * a Duergar (following)
 G 1 55014 1 0 100 0 0 0            *    the heart of Golrith
+F 1 55145 1 55511 100 0 0 0        * a Troll (following)
+E 1 55011 4 16 100 0 0 0           *   a rusty bar
+G 1 55017 1 0 100 0 0 0            *    the heart of Breg
+F 1 55144 1 55511 100 0 0 0        * an Orc (following)
+E 1 55011 4 16 100 0 0 0           *   a rusty bar
+E 1 55011 4 17 100 0 0 0           *   a rusty bar
+G 1 55020 1 0 100 0 0 0            *    the heart of Orthaz
 M 0 55141 1 55512 100 0 0 0        * an Ogre
 G 1 55015 1 0 100 0 0 0            *    the heart of Taranno
 F 1 55142 1 55512 100 0 0 0        * a Githyanki (following)
 G 1 55016 1 0 100 0 0 0            *    the heart of Laps
-M 0 55144 1 55514 100 0 0 0        * an Orc
-E 1 55011 4 16 100 0 0 0           *   a rusty bar
-E 1 55011 4 17 100 0 0 0           *   a rusty bar
-G 1 55020 1 0 100 0 0 0            *    the heart of Orthaz
-M 0 55143 1 55514 100 0 0 0        * a Goblin
+F 1 55143 1 55512 100 0 0 0        * a Goblin (following)
 G 1 55019 1 0 100 0 0 0            *    the heart of Dakta
-M 0 55145 1 55515 100 0 0 0        * a Troll
-E 1 55011 4 16 100 0 0 0           *   a rusty bar
-G 1 55017 1 0 100 0 0 0            *    the heart of Breg
-M 0 55146 1 55515 100 0 0 0        * a Thri-Kreen
+F 1 55146 1 55512 100 0 0 0        * a Thri-Kreen (following)
 G 1 55018 1 0 100 0 0 0            *    the heart of Kileek
+M 0 55214 1 55514 20 0 0 0         * Ithaquua
+E 1 55429 1 6 100 0 0 0            *   the spiked crown of mental resistance
+G 1 55427 1 0 100 0 0 0            *    the butchered tentacle of an Illithid-lord
+M 0 55213 1 55515 100 0 0 0        * an unnamed mob
 M 0 55049 7 55549 100 0 0 0        * a puffadder
 M 0 55049 7 55549 100 0 0 0        * a puffadder
 M 0 55049 7 55549 100 0 0 0        * a puffadder
@@ -1062,18 +1082,10 @@ M 0 55049 7 55549 100 0 0 0        * a puffadder
 M 0 55049 7 55549 100 0 0 0        * a puffadder
 M 0 55049 7 55549 100 0 0 0        * a puffadder
 M 0 55521 1 55549 100 0 0 0        * a pregnant puffadder
-M 0 55061 3 55554 100 0 0 0        * a fearsome WaRRioR
-F 1 55063 6 55554 100 0 0 0        * a powerful sage (following)
-F 1 55064 3 55554 100 0 0 0        * a divine guardsman (following)
-F 1 55063 6 55554 100 0 0 0        * a powerful sage (following)
-M 0 55061 3 55555 100 0 0 0        * a fearsome WaRRioR
-F 1 55063 6 55555 100 0 0 0        * a powerful sage (following)
-F 1 55064 3 55555 100 0 0 0        * a divine guardsman (following)
-F 1 55063 6 55555 100 0 0 0        * a powerful sage (following)
-M 0 55061 3 55556 100 0 0 0        * a fearsome WaRRioR
-F 1 55063 6 55556 100 0 0 0        * a powerful sage (following)
-F 1 55064 3 55556 100 0 0 0        * a divine guardsman (following)
-F 1 55063 6 55556 100 0 0 0        * a powerful sage (following)
+M 0 55061 1 55556 100 0 0 0        * a fearsome WaRRioR
+F 1 55063 2 55556 100 0 0 0        * a powerful sage (following)
+F 1 55064 1 55556 100 0 0 0        * a divine guardsman (following)
+F 1 55063 2 55556 100 0 0 0        * a powerful sage (following)
 M 0 55134 3 55559 100 0 0 0        * a ranger guardsman
 M 0 55134 3 55559 100 0 0 0        * a ranger guardsman
 M 0 55134 3 55559 100 0 0 0        * a ranger guardsman
@@ -1533,9 +1545,14 @@ G 1 55149 999 0 100 0 0 0          *    a thick and crunchy pretzel
 G 1 55151 999 0 100 0 0 0          *    a rootbeer float
 G 1 55150 999 0 100 0 0 0          *    a cup of soft ice cream
 M 0 55100 1 55605 100 0 0 0        * Rosenthal
+M 0 55215 1 55606 10 0 0 0         * Zalphanz, the headless mercenary
+E 1 55337 1 16 100 0 0 0           *   the rapier called 'Penetration'
+M 0 55216 1 55606 10 0 0 0         * Elyra, the black
+E 1 55340 1 3 100 0 0 0            *   a wisp of pure madness
+M 0 55031 1 55606 10 0 0 0         * Salyyn, the battle-priest
+E 1 55053 1 16 100 0 0 0           *   the mighty warmace named 'Smite'
 M 0 55210 1 55608 100 0 0 0        * a mental projection of Drahknalloth
 M 0 55211 1 55611 100 0 0 0        * Drahknalloth
-M 0 55031 1 55612 100 0 0 0        * Salyyn
 M 0 55551 4 55614 100 0 0 0        * The Incarnate of Frost
 M 0 55552 4 55614 100 0 0 0        * The Incarnate of Stone
 M 0 55553 4 55614 100 0 0 0        * The Incarnate of Air
@@ -1554,13 +1571,8 @@ M 0 55254 1 55615 100 0 0 0        * a figureless haze
 G 1 55329 1 0 100 0 0 0            *    the second mold of the key of gnomish secrets
 M 0 55253 1 55615 100 0 0 0        * a figureless haze
 G 1 55330 1 0 100 0 0 0            *    the third mold of the key of gnomish secrets
-M 0 55241 1 55616 100 0 0 0        * an unholy guardian
-M 0 55255 1 55616 100 0 0 0        * a divine guardsman
-M 0 55258 1 55616 100 0 0 0        * a fearsome WaRRioR
-M 0 55259 1 55616 100 0 0 0        * a powerful sage
-M 0 55256 1 55616 100 0 0 0        * an unholy guardian
-M 0 55260 1 55616 100 0 0 0        * a powerful sage
-M 0 55240 1 55616 100 0 0 0        * a divine guardsman
+M 0 55264 1 55616 100 0 0 0        * the Leviathan
+G 1 55313 1 0 100 0 0 0            *    the scale of the Leviathan
 M 0 55229 1 55618 100 0 0 0        * a large snow ogre chief
 M 0 55231 1 55619 25 0 0 0         * a snow ogre shaman
 M 0 55230 1 55620 25 0 0 0         * a snow ogre shaman
@@ -1588,6 +1600,8 @@ M 0 55247 1 55626 100 0 0 0        * An addicted gambler
 E 1 55296 1 16 100 0 0 0           *   a crudely sharpened knife
 M 0 55248 1 55626 100 0 0 0        * A really slutty tramp
 M 0 55239 1 55627 100 0 0 0        * Chibbleniffle the Great Scientist
+M 0 55263 2 55630 100 0 0 0        * A royal guardsman
+M 0 55263 2 55630 100 0 0 0        * A royal guardsman
 M 0 55244 1 55631 100 0 0 0        * a traveling mystic
 *
 S

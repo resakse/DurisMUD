@@ -447,15 +447,15 @@ S
 &+LInside the &+rBrim&+LStone Forge&n~
    &+LThis street leads deeper into the BrimStone Forge.
 ~
-449 1073774656 1 0
+449 1073774660 1 0
 D0
 ~
 portcullis~
 3 0 131042
 D1
 ~
-~
-0 0 131038
+steel doors~
+1 0 131048
 D3
 ~
 gates~
@@ -612,7 +612,7 @@ D5
 0 0 131031
 S
 #131038
-&+LInside the &+rBrim&+LStone Forge&n~
+&+LThe Holding Cells&n~
    &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
 &+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
 &+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
@@ -634,7 +634,7 @@ cell~
 D3
 ~
 ~
-0 0 131027
+0 0 131048
 S
 #131039
 &+LA Powerfully Constructed &+rBrim&+LStone Cell&n~
@@ -683,8 +683,127 @@ S
 &+Lfrom the smell of what seems like rotting flesh.&n
 ~
 449 1073741824 0 0
+D0
+~
+~
+0 0 131044
 D2
 ~
 ~
 3 0 131027
+D3
+~
+~
+0 0 131043
+S
+#131043
+Quest 1~
+   &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
+&+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
+&+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
+&+Lfrom the smell of what seems like rotting flesh.&n
+~
+449 1073741824 0 0
+D1
+~
+~
+0 0 131042
+S
+#131044
+&+LInside the &+rBrim&+LStone Forge&n~
+   &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
+&+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
+&+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
+&+Lfrom the smell of what seems like rotting flesh.&n
+~
+449 1073741824 0 0
+D0
+~
+~
+0 0 131047
+D1
+~
+~
+0 0 131046
+D2
+~
+~
+0 0 131042
+D3
+~
+~
+0 0 131045
+S
+#131045
+Quest 2~
+   &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
+&+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
+&+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
+&+Lfrom the smell of what seems like rotting flesh.&n
+~
+449 1073741824 0 0
+D1
+~
+~
+0 0 131044
+S
+#131046
+Quest 3~
+   &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
+&+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
+&+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
+&+Lfrom the smell of what seems like rotting flesh.&n
+~
+449 1073741824 0 0
+D3
+~
+~
+0 0 131044
+S
+#131047
+&+LInside the &+rBrim&+LStone Forge&n~
+   &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
+&+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
+&+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
+&+Lfrom the smell of what seems like rotting flesh.&n
+~
+449 1073741824 0 0
+D0
+~
+~
+0 0 131049
+D2
+~
+~
+0 0 131044
+S
+#131048
+&+LThe Military &+rBarr&+Lacks&n~
+   &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
+&+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
+&+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
+&+Lfrom the smell of what seems like rotting flesh.&n
+~
+449 1073774656 1 0
+D1
+~
+~
+0 0 131038
+D3
+~
+steel doors~
+1 0 131027
+S
+#131049
+&+LA Collapsed Entrance to the &+rBrim&+LStone Mines7N~
+   &+LThis strange little crevice seems almost impossible to see from the outside. Yet, once
+&+Linside, you realize that it is rather large. The room smells of thick sulfur and the floor
+&+Llooks to be frequently used by many a strange creature. Despite your best efforts, you gag
+&+Lfrom the smell of what seems like rotting flesh.&n
+~
+449 1073774656 0 0
+D2
+~
+~
+0 0 131047
 S

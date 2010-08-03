@@ -1,13 +1,15 @@
 #0
-troll slave~
-&+La &+gtroll &+Lslave&n~
-&+LA defeated &+gtroll &+Lhangs his head low as he hammers at the &+rbrim&+Lstone.&n
+massive guardsman~
+&+La massive &+rguards&+Lman&n~
+&+LA massive &+rguards&+Lman blocks your entrance into the &+rBrim&+LStone Forge.&n
 ~
-&+L  This poor &+gtroll &+Lhas been bound to captivity and is being forced to work
-&+Lin these mines.&n
+&+L   This guardsman stands very tall and seems to almost touch the ceiling with his
+&+Llarge horns. He is lightly clad with a leather tunic and a belt secured with a heavy
+&+Lbuckle. His hands look hard as a rock. You definitely should considering picking
+&+La different fight.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-pt 0 1048576 -1
-45 0 0 1d1+1 1d1+1
+411658 0 0 0 0 0 0 0 S
+mt 0 1048576 -1
+52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

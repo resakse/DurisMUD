@@ -8,59 +8,63 @@
 *
 O 0 32013 1 32057 100 0 0 0        * The Bronze Citadel Entrance
 *
-M 0 32005 1 32002 100 0 0 0        * Nergal
+M 0 32014 1 32002 50 0 0 0         * Malarea
+E 1 32012 1 13 100 0 0 0           *   a jeweled belt
+F 1 90705 6 32002 100 0 0 0        * (mob type not in this .mob file) (following)
+F 1 90705 6 32002 100 0 0 0        * (mob type not in this .mob file) (following)
+M 0 32005 1 32002 50 0 0 0         * Nergal
 E 1 32004 1 12 100 0 0 0           *   a wing of Nergal
-M 0 32010 1 32002 100 0 0 0        * Cahor
+M 0 32010 1 32002 50 0 0 0         * Cahor
 E 1 32008 1 18 100 0 0 0           *   a staff of shadow summoning
-M 0 32011 1 32002 100 0 0 0        * Dagon
-E 1 32009 2 16 100 0 0 0           *   a silver scimitar
-E 1 32009 2 17 100 0 0 0           *   a silver scimitar
-F 1 90715 3 32002 100 0 0 0        * (mob type not in this .mob file) (following)
-F 1 90715 3 32002 100 0 0 0        * (mob type not in this .mob file) (following)
-F 1 90715 3 32002 100 0 0 0        * (mob type not in this .mob file) (following)
-M 0 32013 1 32002 100 0 0 0        * Kochbiel
+M 0 32011 1 32002 25 0 0 0         * Dagon the Abyssal Lord
+G 1 32031 1 0 100 0 0 0            *    the bloody eyeball of Dagon
+M 0 32013 1 32002 50 0 0 0         * Kochbiel
 E 1 32011 4 16 100 0 0 0           *   a basalt scimitar
 E 1 32011 4 17 100 0 0 0           *   a basalt scimitar
 E 1 32011 4 25 100 0 0 0           *   a basalt scimitar
 E 1 32011 4 26 100 0 0 0           *   a basalt scimitar
-M 0 32014 1 32002 100 0 0 0        * Malarea
-E 1 32012 1 13 100 0 0 0           *   a jeweled belt
-F 1 90705 6 32002 100 0 0 0        * (mob type not in this .mob file) (following)
-F 1 90705 6 32002 100 0 0 0        * (mob type not in this .mob file) (following)
-M 0 32012 1 32002 100 0 0 0        * Duskur
+M 0 32012 1 32002 50 0 0 0         * Duskur
 E 1 32010 1 16 100 0 0 0           *   a serrated dagger of venom
-M 0 32006 1 32002 100 0 0 0        * Bist
+M 0 32006 1 32002 50 0 0 0         * Bist
 E 1 32005 1 16 100 0 0 0           *   the claw of Bist
-M 0 32017 10 32002 100 0 0 0       * an imp
-E 1 32017 999 2 100 0 0 0          *   a ring of intelligence
+M 0 32017 10 32002 90 0 0 0        * an imp
+E 1 32017 1 2 100 0 0 0            *   a ring of intelligence
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32018 1 2 100 0 0 0            *   a ring of strength
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32016 1 2 100 0 0 0            *   a ring of agility
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32023 1 2 100 0 0 0            *   a ring of dexterity
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32024 1 2 100 0 0 0            *   a ring of constitution
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32025 1 2 100 0 0 0            *   a ring of luck
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32026 1 2 100 0 0 0            *   a ring of power
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32027 1 2 100 0 0 0            *   a ring of wisdom
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32028 1 2 100 0 0 0            *   a ring of charisma
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
-M 0 32017 10 32002 100 0 0 0       * an imp
+M 0 32017 10 32002 90 0 0 0        * an imp
 E 1 32015 14 16 100 0 0 0          *   a serrated dagger of venom
 E 1 32022 1 21 100 0 0 0           *   an earring of frozen Styx water
+M 0 32024 2 32003 100 0 0 0        * a dark-skinned hezrou
+E 1 32009 4 16 100 0 0 0           *   a silver scimitar
+E 1 32009 4 17 100 0 0 0           *   a silver scimitar
+M 0 32024 2 32003 100 0 0 0        * a dark-skinned hezrou
+E 1 32009 4 16 100 0 0 0           *   a silver scimitar
+E 1 32009 4 17 100 0 0 0           *   a silver scimitar
+M 0 32025 2 32003 100 0 0 0        * a dangerous looking hezrou
+M 0 32025 2 32003 100 0 0 0        * a dangerous looking hezrou
 M 0 32003 1 32004 100 0 0 0        * Amduscias
 E 1 32001 1 16 100 0 0 0           *   the staff of sinister tactics
 F 1 90711 4 32004 100 0 0 0        * (mob type not in this .mob file) (following)
