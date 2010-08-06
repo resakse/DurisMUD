@@ -23,7 +23,7 @@
 #define T_MINDBLAST       8
 #define MAXTIMERS         9
 
-#define MAXSHIPS         500
+#define MAXSHIPS        1000
 #define MAX_SHIP_ROOM     10
 #define SHIPZONE         600
 
@@ -668,10 +668,8 @@ void check_contraband(P_ship ship, int to_room);
 void initialize_ship_cargo();
 int read_cargo();
 int write_cargo();
-int cargo_sell_price(int location);
-int cargo_sell_price(int location, bool delayed);
-int cargo_buy_price(int location, int type);
-int cargo_buy_price(int location, int type, bool delayed);
+int cargo_sell_price(int location, bool delayed = false);
+int cargo_buy_price(int location, int type, bool delayed = false);
 int contra_sell_price(int location);
 int contra_sell_price(int location, int type);
 int contra_buy_price(int location, int type);

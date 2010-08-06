@@ -40,20 +40,21 @@ const CargoData cargo_location_data[NUM_PORTS] = {
 };
 
 // This is the matrix that shows each port's preference for the other ports' cargo. Number is percentage.
-// This table is based on exact shortest-path distances between ocean_map_squares
+// This table is based on exact shortest-path distances between ocean_map_squares, weighted to reduce difference
 const int cargo_location_mod[NUM_PORTS][NUM_PORTS] = {
-//            Flann   Dalvik  Menden  Myrabo  Torrha  Sarmiz  Storm   Venan'  Thur'G      MIN     MAX
-/*  Flann */ {    0,    258,    130,    179,    200,    372,    172,    248,    294 }, // Menden  Sarmiz
-/* Dalvik */ {  258,      0,    322,    107,    220,    264,    300,    342,    152 }, // Myrabo  Venan
-/* Menden */ {  130,    322,      0,    243,    292,    330,    108,    120,    344 }, // Storm   Thur'G
-/* Myrabo */ {  179,    107,    243,      0,    297,    325,    331,    245,    229 }, // Dalvik  Storm
-/* Torrha */ {  200,    220,    292,    297,      0,    366,    198,    258,    156 }, // Thur'G  Sarmiz
-/* Sarmiz */ {  372,    264,    330,    325,    366,      0,    236,    302,    378 }, // Storm   Thur'G
-/* Storm  */ {  172,    300,    108,    331,    198,    236,      0,    212,    292 }, // Menden  Myrabo
-/* Venan' */ {  248,    342,    120,    245,    258,    302,    212,      0,    254 }, // Menden  Dalvik
-/* Thur'G */ {  294,    152,    344,    229,    156,    378,    292,    254,      0 }  // Dalvik  Sarmiz
- // Shortest route: Dalvik <-> Myrabo (107)
- // Longest route:  Sarmiz <-> Thur'G (378)
+//            Flann  Dalvik Menden Myrabo Torrha Sarmiz Storm  Venan' Thur'G      MIN     MAX
+/*  Flann */ {    0,   254,   190,   214,   225,   311,   211,   249,   272 }, // Menden  Sarmiz
+/* Dalvik */ {  254,     0,   286,   178,   235,   257,   275,   296,   201 }, // Myrabo  Venan
+/* Menden */ {  190,   286,     0,   246,   271,   290,   179,   185,   297 }, // Storm   Thur'G
+/* Myrabo */ {  214,   178,   246,     0,   273,   287,   290,   247,   239 }, // Dalvik  Storm
+/* Torrha */ {  225,   235,   271,   273,     0,   308,   224,   254,   203 }, // Thur'G  Sarmiz
+/* Sarmiz */ {  311,   257,   290,   287,   308,     0,   243,   276,   314 }, // Storm   Thur'G
+/* Storm  */ {  211,   275,   179,   290,   224,   243,     0,   231,   271 }, // Menden  Myrabo
+/* Venan' */ {  249,   296,   185,   247,   254,   276,   231,     0,   252 }, // Menden  Dalvik
+/* Thur'G */ {  272,   201,   297,   239,   203,   314,   271,   252,     0 }  // Dalvik  Sarmiz
+ // Shortest route: Dalvik <-> Myrabolus (178)      
+ // Longest route: Sarmiz'Duul <-> Thur'Gurax (314) 
+ // Num routes: 36, Average distance: 250           
 };
 
 const char *cargo_name[NUM_PORTS] = {
@@ -219,6 +220,30 @@ int write_cargo()
 #endif
 }
 
+/*
+- ship.cargo.autoSellAdjustMod
+- ship.cargo.autoBuyAdjustMod
+- ship.cargo.minPriceMod
+- ship.cargo.maxPriceMod
+- ship.contraband.autoSellAdjustMod
+- ship.contraband.autoBuyAdjustMod
+- ship.contraband.minPriceMod
+- ship.contraband.maxPriceMod
+
++ ship.cargo.autoSellAdjustRate = 0.05
++ ship.cargo.autoBuyAdjustRate = 0.05
++ ship.cargo.sellPriceMod=1.0
++ ship.cargo.buyPriceMod=1.0
+* ship.cargo.sellAdjustMod=0.005
+* ship.cargo.buyAdjustMod=0.003
++ ship.contraband.autoSellAdjustRate = 0.05
++ ship.contraband.autoBuyAdjustRate = 0.05
++ ship.contraband.sellPriceMod=1.0
++ ship.contraband.buyPriceMod=1.0
+* ship.contraband.sellAdjustMod = 0.025
+* ship.contraband.buyAdjustMod = 0.015
+*/
+
 void update_cargo(bool force)
 {
   if(!force && !has_elapsed("update_cargo", get_property("ship.cargo.update.secs", 1800)) )
@@ -228,26 +253,54 @@ void update_cargo(bool force)
 
   int      i, j;
   
+  // all mods auto-balance to 1.0 with time, the farther it from 1.0, the faster it changes
   for (i = 0; i < NUM_PORTS; i++)
   {
     for (j = 0; j < NUM_PORTS; j++)
     {
       if(i==j)
       {
-        // ports' own sell price decreases slowly over time back to min
-        ship_cargo_market_mod[i][j] = MAX(get_property("ship.cargo.minPriceMod", 1.0), 
-                                          ship_cargo_market_mod[i][j] * get_property("ship.cargo.autoSellAdjustMod", 1.0));
-        
-        ship_contra_market_mod[i][j] = MAX(get_property("ship.contraband.minPriceMod", 1.0), 
-                                           ship_contra_market_mod[i][j] * get_property("ship.contraband.autoSellAdjustMod", 1.0));
+        float cargo_sell_mod = get_property("ship.cargo.sellPriceMod", 1.0);
+        if (ship_cargo_market_mod[i][j] < cargo_sell_mod)
+        {
+          ship_cargo_market_mod[i][j] = MAX(cargo_sell_mod, ship_cargo_market_mod[i][j] + (cargo_sell_mod - ship_cargo_market_mod[i][j] + 0.1) * get_property("ship.cargo.autoSellAdjustRate", 0.05));
+        }
+        if (ship_cargo_market_mod[i][j] > cargo_sell_mod)
+        {
+          ship_cargo_market_mod[i][j] = MIN(cargo_sell_mod, ship_cargo_market_mod[i][j] - (ship_cargo_market_mod[i][j] - cargo_sell_mod + 0.1) * get_property("ship.cargo.autoSellAdjustRate", 0.05));
+        }
+
+        float contra_sell_mod = get_property("ship.contraband.sellPriceMod", 1.0);
+        if (ship_contra_market_mod[i][j] < contra_sell_mod)
+        {
+          ship_contra_market_mod[i][j] = MAX(contra_sell_mod, ship_contra_market_mod[i][j] + (contra_sell_mod - ship_contra_market_mod[i][j] + 0.1) * get_property("ship.contraband.autoSellAdjustRate", 0.05));
+        }
+        if (ship_contra_market_mod[i][j] > contra_sell_mod)
+        {
+          ship_contra_market_mod[i][j] = MIN(contra_sell_mod, ship_contra_market_mod[i][j] - (ship_contra_market_mod[i][j] - contra_sell_mod + 0.1) * get_property("ship.contraband.autoSellAdjustRate", 0.05));
+        }
       }
       else
       {
-        // ports' buy prices increase slowly over time to max
-        ship_cargo_market_mod[i][j] = MIN(get_property("ship.cargo.maxPriceMod", 1.0), 
-                                          ship_cargo_market_mod[i][j] * get_property("ship.cargo.autoBuyAdjustMod", 1.0));
-        ship_contra_market_mod[i][j] = MIN(get_property("ship.contraband.maxPriceMod", 1.0), 
-                                           ship_contra_market_mod[i][j] * get_property("ship.contraband.autoBuyAdjustMod", 1.0));
+        float cargo_buy_mod = get_property("ship.cargo.buyPriceMod", 1.0);
+        if (ship_cargo_market_mod[i][j] < cargo_buy_mod)
+        {
+          ship_cargo_market_mod[i][j] = MAX(cargo_buy_mod, ship_cargo_market_mod[i][j] + (cargo_buy_mod - ship_cargo_market_mod[i][j] + 0.1) * get_property("ship.cargo.autoBuyAdjustRate", 0.05));
+        }
+        if (ship_cargo_market_mod[i][j] > cargo_buy_mod)
+        {
+          ship_cargo_market_mod[i][j] = MIN(cargo_buy_mod, ship_cargo_market_mod[i][j] - (ship_cargo_market_mod[i][j] - cargo_buy_mod + 0.1) * get_property("ship.cargo.autoBuyAdjustRate", 0.05));
+        }
+
+        float contra_buy_mod = get_property("ship.contraband.buyPriceMod", 1.0);
+        if (ship_contra_market_mod[i][j] < contra_buy_mod)
+        {
+          ship_contra_market_mod[i][j] = MAX(contra_buy_mod, ship_contra_market_mod[i][j] + (contra_buy_mod - ship_contra_market_mod[i][j] + 0.1) * get_property("ship.contraband.autoBuyAdjustRate", 0.05));
+        }
+        if (ship_contra_market_mod[i][j] > contra_buy_mod)
+        {
+          ship_contra_market_mod[i][j] = MIN(contra_buy_mod, ship_contra_market_mod[i][j] - (ship_contra_market_mod[i][j] - contra_buy_mod + 0.1) * get_property("ship.contraband.autoBuyAdjustRate", 0.05));
+        }
       }     
     }
   }
@@ -337,7 +390,7 @@ void calculate_port_distances()
     {
       if( i == j )
       {
-        strcat(line, "     - ");
+        strcat(line, "     0,");
         continue;
       }
             
@@ -348,6 +401,7 @@ void calculate_port_distances()
       if( found_path )
       {
         int dist = (int) route.size();
+        dist = (dist + 250) / 2;
         
         if( dist < min_dist )
         {
@@ -360,7 +414,7 @@ void calculate_port_distances()
           max_port = j;
         }
         
-        sprintf(buff, "%6d ", dist);
+        sprintf(buff, "%6d,", dist);
         strcat(line, buff);
         
         avg_distance += (float) dist;
@@ -397,11 +451,6 @@ void calculate_port_distances()
   logit(LOG_SHIP, "Num routes: %d, Average distance: %d", count/2, (int) avg_distance / count);  
 }
 
-int cargo_sell_price(int location)
-{
-  return cargo_sell_price(location, false);
-}
-
 // i.e. the price the port charges to sell its cargo
 int cargo_sell_price(int location, bool delayed)
 {
@@ -414,11 +463,6 @@ int cargo_sell_price(int location, bool delayed)
   {
     return (int) (1000 * cargo_location_data[location].base_cost_cargo * ship_cargo_market_mod[location][location]);
   }
-}
-
-int cargo_buy_price(int location, int type)
-{
-  return cargo_buy_price(location, type, false);
 }
 
 // i.e. the price the port will pay to buy cargo
@@ -452,22 +496,22 @@ void adjust_ship_market(int transaction, int location, int type, int volume)
   if( transaction == SOLD_CARGO )
   {
     // player sold cargo, so adjust market price downwards slightly
-    ship_cargo_market_mod[location][type] = MAX(get_property("ship.cargo.minPriceMod", 1.0), ship_cargo_market_mod[location][type] - (get_property("ship.cargo.sellAdjustMod", 0.0) * volume));
+    ship_cargo_market_mod[location][type] = ship_cargo_market_mod[location][type] * (1.0 - get_property("ship.cargo.sellAdjustMod", 0.005) * volume);
   }
   else if( transaction == BOUGHT_CARGO )
   {
     // player bought cargo, so adjust market price upwards slightly
-    ship_cargo_market_mod[location][type] = MIN(get_property("ship.cargo.maxPriceMod", 1.0), ship_cargo_market_mod[location][type] + (get_property("ship.cargo.buyAdjustMod", 0.0) * volume));
+    ship_cargo_market_mod[location][type] = ship_cargo_market_mod[location][type] * (1.0 + get_property("ship.cargo.buyAdjustMod", 0.003) * volume);
   }
   else if( transaction == SOLD_CONTRA )
   {
     // player sold contraband, so adjust market price downwards slightly
-    ship_contra_market_mod[location][type] = MAX(get_property("ship.contraband.minPriceMod", 1.0), ship_contra_market_mod[location][type] - (get_property("ship.contraband.sellAdjustMod", 0.0) * volume));
+    ship_contra_market_mod[location][type] = ship_contra_market_mod[location][type] * (1.0 - get_property("ship.contraband.sellAdjustMod", 0.025) * volume);
   }
   else if( transaction == BOUGHT_CONTRA )
   {
     // player bought contraband, so adjust market price upwards slightly
-    ship_contra_market_mod[location][type] = MIN(get_property("ship.contraband.maxPriceMod", 1.0), ship_contra_market_mod[location][type] + (get_property("ship.contraband.buyAdjustMod", 0.0) * volume));
+    ship_contra_market_mod[location][type] = ship_contra_market_mod[location][type] * (1.0 + get_property("ship.contraband.buyAdjustMod", 0.015) * volume);
   }
   
   if(!write_cargo())
