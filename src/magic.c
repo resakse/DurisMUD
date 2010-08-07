@@ -12018,6 +12018,14 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type,
     "You scream as you fly into a million pieces. $n grins evilly.",
     "$n disintegrates $N into a pile of dust!", 0
   };
+  struct damage_messages eqburnmsg = {
+    "$p turns red hot, $N screams as $p burns him.",
+    "$p turns red hot and burns you!",
+    "$p turns red hot and burns $N!",
+    "$p turns red hot and burns the last bit of life out of $N!",
+    "$p turns red hot and burns the last bit of life out of you!",
+    "$p turns red hot and burns the last bit of life out of $N!", 0
+  };
 
   if(!(ch) ||
      !IS_ALIVE(ch) ||
@@ -12060,7 +12068,11 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type,
                !IS_ARTIFACT(obj) &&
                !IS_NOSHOW(obj) )
             {
-              statuslog(AVATAR, "%s just disintegrated %s from %s at [%d]",
+              spell_damage(ch, victim, (int)get_property("spell.disintegrate.burn.dmg", 3), SPLDAM_FIRE, 0, &eqburnmsg);
+	      obj->condition -= BOUNDED(0, number(1, (int)get_property("spell.disintegrate.max.eq.dmg", 10)), (obj->condition-1));
+              act("$p cracks from the heat.", FALSE, ch, obj, victim, TO_VICT);
+              /*
+	      statuslog(AVATAR, "%s just disintegrated %s from %s at [%d]",
                         GET_NAME(ch), obj->short_description, GET_NAME(victim),
                         world[ch->in_room].number);
               
@@ -12075,7 +12087,7 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type,
               }
               
               if(OBJ_CARRIED(obj))
-              {                   /* remove the obj */
+              {                   // remove the obj
                 obj_from_char(obj, TRUE);
               }
               else if(OBJ_WORN(obj))
@@ -12103,6 +12115,7 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type,
                 extract_obj(obj, TRUE);
                 obj = NULL;
               }
+	      */
             }
             /* else
             {
