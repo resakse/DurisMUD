@@ -29,8 +29,8 @@ void init_auctioneers(void)
     /*
      * auctioneer vnum, auction room 
      */
-    {6098, 6322},               /* Tharnadia */
-    {0, 0},
+    {132598, 132821},               /* Tharnadia */
+    {97590, 97756},                 /* Shady */
     {0, 0},
     {0, 0},
     {0, 0},

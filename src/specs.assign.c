@@ -1829,6 +1829,8 @@ void assign_objects(void)
     obj_index[real_object0(6110)].func.obj = die_roller;
 
   world[real_room0(132575)].funct = inn;
+  world[real_room(132612)].func.obj = storage_locker_obj_hook;
+  mob_index[real_mobile0(132530)].func.mob = money_changer;
   
   /* Sylvandawn */
   obj_index[real_object0(425)].func.obj = holy_weapon;
