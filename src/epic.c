@@ -169,8 +169,8 @@ struct epic_reward {
     0 },
   {EPIC_REWARD_SKILL, SKILL_EPIC_LUCK, 100, 1, 1000000,
     0 },
-  {EPIC_REWARD_SKILL, SKILL_SHIP_DAMAGE_CONTROL, 1000, 2, 8000000,
-    0 },
+//  {EPIC_REWARD_SKILL, SKILL_SHIP_DAMAGE_CONTROL, 1000, 2, 8000000,
+//    0 },
   {0}
 };
 
@@ -229,7 +229,7 @@ struct epic_teacher_skill {
   {66671, SKILL_EPIC_CONSTITUTION, 0, 100, 0, 0, 0}, //Thurdorf in Torrhan
   {82408, SKILL_EPIC_CHARISMA, 0, 100, 0, 0, 0}, //Frolikk in Temple of Sun
   {21535, SKILL_EPIC_LUCK, 0, 100, 0, 0, 0}, //Babedo in Aravne
-  {2733, SKILL_SHIP_DAMAGE_CONTROL, 0, 100, 0, 0, 0}, // Commodore in Headless
+//  {2733, SKILL_SHIP_DAMAGE_CONTROL, 0, 100, 0, 0, 0}, // Commodore in Headless
   {0}
 };
 
