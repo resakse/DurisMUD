@@ -12861,7 +12861,8 @@ int doom_blade_Proc(P_obj obj, P_char ch, int cmd, char *arg)
        FALSE, ch, obj, vict, TO_CHAR);
          
   if(IS_UNDEADRACE(vict) &&
-     GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER))
+     (GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER) ||
+      GET_SPEC(ch, CLASS_THEURGIST, SPEC_THAUMATURGE)))
   {
     spell_undead_to_death(lvl, ch, NULL, 0, vict, obj);
   }

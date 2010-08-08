@@ -134,12 +134,12 @@ int read_cargo()
     
         if( !strcmp(type, "CARGO") )
         {
-            ship_cargo_market_mod[port_id][cargo_type] = BOUNDEDF(get_property("ship.cargo.minPriceMod", 0.0), modifier, get_property("ship.cargo.maxPriceMod", 0.0));
+            ship_cargo_market_mod[port_id][cargo_type] = modifier; //BOUNDEDF(get_property("ship.cargo.minPriceMod", 0.0), modifier, get_property("ship.cargo.maxPriceMod", 0.0));
             ship_cargo_market_mod_delayed[port_id][cargo_type] = ship_cargo_market_mod[port_id][cargo_type];
         }
         else if( !strcmp(type, "CONTRABAND") )
         {
-            ship_contra_market_mod[port_id][cargo_type] = BOUNDEDF(get_property("ship.contraband.minPriceMod", 0.0), modifier, get_property("ship.contraband.maxPriceMod", 0.0));
+            ship_contra_market_mod[port_id][cargo_type] = modifier; //BOUNDEDF(get_property("ship.contraband.minPriceMod", 0.0), modifier, get_property("ship.contraband.maxPriceMod", 0.0));
         }
 	}
   

@@ -50,8 +50,9 @@ int modify_exp_by_zone_trophy(P_char ch, int type, int XP)
   
  //  debug("%s exp: %d, zone_exp: %d, notch: %d, threshold: %d", GET_NAME(ch), XP, zone_exp, EXP_NOTCH(ch), (3 * EXP_NOTCH(ch)) );
   
+  int reduction_scale = (int) get_property("exp.zoneTrophy.scale.notches", 10);
   // if more than the threshold, adjust by average zone_exp from group
-  if( zone_exp > ( EXP_NOTCH(ch) * (int) get_property("exp.zoneTrophy.threshold.notches", 3)))
+  if( zone_exp >= ( EXP_NOTCH(ch) * reduction_scale / 5))
   {
     int avg_zone_exp = 0, group_size = 0;
     
@@ -76,7 +77,6 @@ int modify_exp_by_zone_trophy(P_char ch, int type, int XP)
       avg_zone_exp = get_zone_exp(ch, zone_number);
     }
     
-    int reduction_scale = (int) get_property("exp.zoneTrophy.scale.notches", 10);
     int trophy_notches = (int) ( avg_zone_exp / EXP_NOTCH(ch));
     
 //    debug("XP: %d, avg_zone_exp: %d, reduction scale: %d, trophy_notches: %d", XP, avg_zone_exp, reduction_scale, trophy_notches);
@@ -191,6 +191,7 @@ void do_trophy(P_char ch, char *arg, int cmd)
     send_to_char("&+WTrophy zones:&n\r\n", ch);
 //    debug("exp notch: %d", EXP_NOTCH(who)); 
 
+    int reduction_scale = (int) get_property("exp.zoneTrophy.scale.notches", 10);
     for( zone_trophy_iterator it = ZONE_TROPHY(who)->begin(); it != ZONE_TROPHY(who)->end(); it++ )
     {
       struct zone_info zone;
@@ -202,18 +203,18 @@ void do_trophy(P_char ch, char *arg, int cmd)
       if( it->exp <= 0 )
         continue;
 
-      if( !IS_TRUSTED(ch) && notches < (int) get_property("exp.zoneTrophy.threshold.notches", 3) )
+      if( !IS_TRUSTED(ch) && notches < reduction_scale / 5 )
         continue;      
       
-      if( notches >= 12 )
+      if( notches >= reduction_scale / 1.5 )
       {
         strcpy(Gbuf2, "&+Roverdone");
       }
-      else if( notches >= 7 )
+      else if( notches >= reduction_scale / 2.5 )
       {
         strcpy(Gbuf2, "&+yboring");
       }
-      else if( notches >= 4 )
+      else if( notches >= reduction_scale / 5 )
       {
         strcpy(Gbuf2, "&+gexperienced");
       }

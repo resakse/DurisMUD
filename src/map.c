@@ -335,7 +335,8 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
       {
         if ((!str_cmp(ch->player.name, obj->action_description) ||
             IS_TRUSTED(ch) ||
-            GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE)))
+            GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE) ||
+	    GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR)))
         {
           val = MIN(val, CONTAINS_CORPSE);
         }

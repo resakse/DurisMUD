@@ -335,7 +335,8 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
     raise(SIGSEGV);
   }
   
-  if(GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER))
+  if(GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER) ||
+     GET_SPEC(ch, CLASS_THEURGIST, SPEC_THAUMATURGE))
     life += (int) (life / 3);
   
   if (CHAR_IN_SAFE_ZONE(ch))
@@ -452,7 +453,8 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   }
 
  int necro_power = GET_LEVEL(ch) / 3;
- if( GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE) ) 
+ if( GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE) ||
+     GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR) ) 
      necro_power += 4;  
      
   if ((sum + undead_data[typ].cost > necro_power) &&
@@ -2139,7 +2141,8 @@ void do_remort(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if( !GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER) ) 
+  if( !GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER) &&
+      !GET_SPEC(ch, CLASS_THEURGIST, SPEC_THAUMATURGE)) 
   {
     send_to_char("You don't know how to return to life so quickly!\r\n", ch);
     return;

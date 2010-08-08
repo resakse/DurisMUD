@@ -1043,7 +1043,8 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
 
   dam = dice(3 * level, 5);
   
-  if(GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER))
+  if(GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER) ||
+      GET_SPEC(ch, CLASS_THEURGIST, SPEC_THAUMATURGE))
     level = (int)(level * 1.25); 
   
   if(IS_AFFECTED4(victim, AFF4_DEFLECT))

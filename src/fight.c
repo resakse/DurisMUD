@@ -5664,6 +5664,7 @@ int calculate_thac_zero(P_char ch, int skill)
           GET_CLASS(ch, CLASS_PALADIN) ||
           GET_CLASS(ch, CLASS_ANTIPALADIN) ||
           GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER) ||
+	  GET_SPEC(ch, CLASS_THEURGIST, SPEC_THAUMATURGE) ||
           GET_SPEC(ch, CLASS_CLERIC, SPEC_ZEALOT) ||
           GET_CLASS(ch, CLASS_ASSASSIN) ||
           GET_SPEC(ch, CLASS_ROGUE, SPEC_ASSASSIN))
