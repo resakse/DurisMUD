@@ -727,7 +727,8 @@ void assign_mobiles(void)
  mob_index[real_mobile0(16553)].func.mob = world_quest; // Woodseer
  
  mob_index[real_mobile0(53670)].func.mob = world_quest; // Sunwell
- 
+
+  
 
   /* Hall of the Ancients */
   mob_index[real_mobile0(77714)].func.mob = morkoth_mother;
@@ -1827,6 +1828,8 @@ void assign_objects(void)
     obj_index[real_object0(6109)].func.obj =
     obj_index[real_object0(6110)].func.obj = die_roller;
 
+  world[real_room0(132575)].funct = inn;
+  
   /* Sylvandawn */
   obj_index[real_object0(425)].func.obj = holy_weapon;
   obj_index[real_object0(8110)].func.obj = labelas;

@@ -10,10 +10,6 @@
 #include <string>
 using namespace std;
 
-#ifndef CHAOS_MUD
-#define CHAOS_MUD       1  // normal rules suspended, maxes skills, etc, etc
-#endif 
-
 #define STRING(var) char (var)[MAX_STRING_LENGTH];
 
 /* data files used by the game system */
