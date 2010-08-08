@@ -11933,7 +11933,7 @@ void spell_single_incendiary_cloud(int level, P_char ch, char *arg, int type,
     return;
   }
   
-  dam = dice(3 * level, 7);
+  dam = dice(3 * level, 8);
   
   if(NewSaves(victim, SAVING_SPELL, 0))
   {
@@ -13119,7 +13119,7 @@ void spell_sunray(int level, P_char ch, char *arg, int type, P_char victim,
  
 // A little more than iceball and does less damage when not outside.
 // However, has a chance to blind victim for a while.
-  dam = dice((int)(level * 2.5), 5);
+  dam = dice((int)(level * 3), 5);
   
   if(IS_AFFECTED(victim, AFF_BLIND) ||
      !IS_OUTSIDE(victim->in_room))
@@ -16669,7 +16669,8 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
  * Original value was 130... bringing base value down to 100 and
  * applying terrain/room modifications
  */
-  int      doomdam = 95;
+  P_char   tch, next;
+  int      doomdam = 180;
   int      num;
   struct damage_messages messages = {
     "&+LYou send &+ma wave of insects and arachnids &+Lagainst $N!",
@@ -16683,7 +16684,7 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
       "leaving nothing but a few &+Wbones&+L..", 0
   };
 
-  if(!IS_ALIVE(ch) || !IS_ALIVE(vict))
+  if(!IS_ALIVE(ch))
     return;
 
   switch(world[ch->in_room].sector_type)
@@ -16748,26 +16749,37 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
   if(num == 0)
   {
     act("&+LThe sea of &+marachnids&+L fades away...\n",
-        FALSE, ch, 0, vict, TO_CHAR);
+        FALSE, ch, 0, 0, TO_CHAR);
     act("&+LThe sea of &+marachnids&+L fades away...\n",
-        FALSE, ch, 0, vict, TO_VICT);
-    act("&+LThe sea of &+marachnids&+L around $N fades away...\n",
-        FALSE, ch, 0, vict, TO_ROOM);
+        FALSE, ch, 0, 0, TO_ROOM);
     return;
   }
   else
     num--;
-
-  if(IS_AFFECTED3(vict, AFF3_COLDSHIELD) ||
-    IS_AFFECTED2(vict, AFF2_FIRESHIELD) ||
-    IS_AFFECTED3(vict, AFF3_LIGHTNINGSHIELD))
+  
+  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, tch, TO_CHAR);
+  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, tch, TO_ROOM);
+  for (tch = world[ch->in_room].people; tch; tch = next)
   {
-    doomdam = (int) (doomdam * 0.75);
-  }
+    next = tch->next_in_room;
+    if ((tch == ch) || !should_area_hit(ch, tch))
+      continue;
+    
+    if(IS_AFFECTED3(tch, AFF3_COLDSHIELD) ||
+      IS_AFFECTED2(tch, AFF2_FIRESHIELD) ||
+      IS_AFFECTED3(tch, AFF3_LIGHTNINGSHIELD))
+    {
+      doomdam = (int) (doomdam * 0.75);
+    }
 
-  if(spell_damage(ch, vict, doomdam, SPLDAM_GENERIC, SPLDAM_NODEFLECT,
-    &messages) == DAM_NONEDEAD)
-      add_event(event_cdoom, PULSE_VIOLENCE, ch, vict, NULL, 0, &num, sizeof(num));
+    if(spell_damage(ch, tch, doomdam, SPLDAM_GENERIC, SPLDAM_NODEFLECT,
+      &messages) == DAM_NONEDEAD)
+    {
+      if(IS_ALIVE(ch) && IS_ALIVE(tch))
+        gain_exp(ch, tch, 0, EXP_DAMAGE);
+    }
+  }
+  add_event(event_cdoom, PULSE_VIOLENCE, ch, vict, NULL, 0, &num, sizeof(num));
 }
 
 void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
@@ -16775,21 +16787,18 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
 {
   int waves = number(4, 5);
 
-  if(!IS_ALIVE(ch) || !IS_ALIVE(victim))
+  if(!IS_ALIVE(ch))
     return;
 
   if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND) &&
     (world[ch->in_room].sector_type == SECT_FOREST))
       waves++;
 
-  act("&+LA &+gpl&+Lag&+gue &+Lof &+minsects and arachnids&+L flow like an ocean "
-    "around $N!", TRUE, ch, 0, victim, TO_ROOM);
-  act("&+LYou send out a &+mwave of insects&+L against $N!",
+  act("&+LA &+gpl&+Lag&+gue &+Lof &+minsects and arachnids&+L flow like an ocean.", TRUE, ch, 0, victim, TO_ROOM);
+  act("&+LYou send out a &+mwave of insects&+L!",
     TRUE, ch, 0, victim, TO_CHAR);
-  engage(ch, victim);
+  //engage(ch, victim);
   add_event(event_cdoom, 0, ch, victim, NULL, 0, &waves, sizeof(waves));
-  if(IS_ALIVE(ch) && IS_ALIVE(victim))
-      gain_exp(ch, victim, 0, EXP_DAMAGE);
 }
 
 void spell_sense_follower(int level, P_char ch, char *arg, int type,

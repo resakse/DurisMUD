@@ -1131,7 +1131,7 @@ const struct class_names class_names_table[] = {
   {"Dreadlord", "&+LDread&+rlord&n", "Dre", 'e'},
   {"Ethermancer", "&+wEthermancer&n", "Eth", 'g'},
   {"Avenger", "&+WAvenger&n", "Ave", 'z'},
-  {"Theurgist", "&+cTh&+Ceur&+Wgist&n", "The", 'e'},
+  {"Theurgist", "&+cTh&+Ceur&+Wgist&n", "The", '1'},
   {0}
 };
 

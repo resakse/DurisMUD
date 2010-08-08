@@ -349,7 +349,7 @@ bool TownPortalRoom::init()
     if( this->guildhall->racewar == RACEWAR_GOOD )
     {
       char buff[MAX_STRING_LENGTH];
-      sprintf(buff, this->portal->description, "Winterhaven");
+      sprintf(buff, this->portal->description, "Tharnadia");
       this->portal->description = str_dup(buff);
       this->portal->str_mask = STRUNG_DESC1;
       this->portal->value[0] = WH_INN_VNUM;      

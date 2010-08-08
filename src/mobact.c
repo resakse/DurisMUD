@@ -535,7 +535,8 @@ int IS_MAGE(P_char ch)
     CLASS_ILLUSIONIST |
     CLASS_REAVER |
     CLASS_ANTIPALADIN |
-    CLASS_PSIONICIST));
+    CLASS_PSIONICIST) |
+    CLASS_THEURGIST);
 }
 
 int IS_THIEF(P_char ch)
@@ -1145,7 +1146,9 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
      !CHAR_IN_JUSTICE_AREA(ch) &&
      !CHAR_IN_TOWN(ch) &&
      (npc_has_spell_slot(ch, SPELL_ANIMATE_DEAD) ||
-     npc_has_spell_slot(ch, SPELL_CREATE_DRACOLICH)) &&
+     npc_has_spell_slot(ch, SPELL_CREATE_DRACOLICH) ||
+     npc_has_spell_slot(ch, SPELL_CALL_TITAN) ||
+     npc_has_spell_slot(ch, SPELL_CALL_AVATAR)) &&
      (!IS_AFFECTED(ch, AFF_HIDE) || IS_SET(ch->specials.act, ACT_SENTINEL)))
   {
     // find highest-level corpse
@@ -1197,7 +1200,8 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
     {
       if(can_raise_draco(ch, lvl, false) && (high_corpse >= 40) &&
           (best_corpse->value[1] != PC_CORPSE) &&
-          npc_has_spell_slot(ch, SPELL_CREATE_DRACOLICH))
+          (npc_has_spell_slot(ch, SPELL_CREATE_DRACOLICH) ||
+	  npc_has_spell_slot(ch, SPELL_CALL_TITAN)))
       {
         struct obj_affect *af;
         af = get_obj_affect(best_corpse, TAG_OBJ_DECAY);
@@ -1209,7 +1213,10 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
           set_obj_affected(best_corpse, newtime, TAG_OBJ_DECAY, 0);
         }
 
-        spl = SPELL_CREATE_DRACOLICH;
+	if (GET_CLASS(ch, CLASS_THEURGIST))
+	  spl = SPELL_CALL_TITAN;
+	else
+          spl = SPELL_CREATE_DRACOLICH;
 
         return (MobCastSpell(ch, 0, best_corpse, spl, lvl));
       }
@@ -1217,33 +1224,57 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
                 npc_has_spell_slot(ch, SPELL_RAISE_SPECTRE) ||
                 npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) ||
                 npc_has_spell_slot(ch, SPELL_RAISE_VAMPIRE) ||
-                npc_has_spell_slot(ch, SPELL_RAISE_LICH)) &&
+                npc_has_spell_slot(ch, SPELL_RAISE_LICH) ||
+                npc_has_spell_slot(ch, SPELL_CALL_ASURA) ||
+                npc_has_spell_slot(ch, SPELL_CALL_BRALANI) ||
+                npc_has_spell_slot(ch, SPELL_CALL_KNIGHT) ||
+                npc_has_spell_slot(ch, SPELL_CALL_LIBERATOR)) &&
                !(strstr(best_corpse->name, "undead")) &&
                ((pets = count_undead(ch)) < GET_LEVEL(ch) / 3) && pets >= 0)
       {
-        if(npc_has_spell_slot(ch, SPELL_RAISE_LICH) &&
+        if((npc_has_spell_slot(ch, SPELL_RAISE_LICH) ||
+	    npc_has_spell_slot(ch, SPELL_CALL_LIBERATOR)) &&
             (high_corpse >= undead_data[5][0]))
         {
-          spl = SPELL_RAISE_LICH;
+	  if (GET_CLASS(ch, CLASS_THEURGIST))
+	    spl = SPELL_CALL_LIBERATOR;
+	  else
+            spl = SPELL_RAISE_LICH;
         }
-        else if(npc_has_spell_slot(ch, SPELL_RAISE_VAMPIRE) &&
+        else if((npc_has_spell_slot(ch, SPELL_RAISE_VAMPIRE) ||
+	         npc_has_spell_slot(ch, SPELL_CALL_KNIGHT)) &&
                  (high_corpse >= undead_data[4][0]))
         {
-          if(npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) &&
+          if((npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) ||
+	      npc_has_spell_slot(ch, SPELL_CALL_BRALANI)) &&
               (number(0, 2) == 1) && (high_corpse >= undead_data[3][0]))
-            spl = SPELL_RAISE_WRAITH;
+            if (GET_CLASS(ch, CLASS_THEURGIST))
+	      spl = SPELL_CALL_BRALANI;
+	    else
+	      spl = SPELL_RAISE_WRAITH;
           else
-            spl = SPELL_RAISE_VAMPIRE;
+	    if (GET_CLASS(ch, CLASS_THEURGIST))
+	      spl = SPELL_CALL_KNIGHT;
+	    else
+	      spl = SPELL_RAISE_VAMPIRE;
         }
-        else if(npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) &&
+        else if((npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) ||
+	         npc_has_spell_slot(ch, SPELL_CALL_BRALANI)) &&
                  (high_corpse >= undead_data[3][0]))
         {
-          spl = SPELL_RAISE_WRAITH;
+          if (GET_CLASS(ch, CLASS_THEURGIST))
+	    spl = SPELL_CALL_BRALANI;
+	  else
+	    spl = SPELL_RAISE_WRAITH;
         }
-        else if(npc_has_spell_slot(ch, SPELL_RAISE_SPECTRE) &&
+        else if((npc_has_spell_slot(ch, SPELL_RAISE_SPECTRE) ||
+	         npc_has_spell_slot(ch, SPELL_CALL_ASURA)) &&
                  (high_corpse >= undead_data[2][0]))
         {
-          spl = SPELL_RAISE_SPECTRE;
+	  if (GET_CLASS(ch, CLASS_THEURGIST))
+	    spl = SPELL_CALL_ASURA;
+	  else
+            spl = SPELL_RAISE_SPECTRE;
         }
         else if(npc_has_spell_slot(ch, SPELL_ANIMATE_DEAD))
           spl = SPELL_ANIMATE_DEAD;
@@ -1507,7 +1538,14 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
       {
         spl = SPELL_SUMMON_GHASTS;
       }
-      
+
+      if(!spl &&
+	 npc_has_spell_slot(ch, SPELL_AID_OF_THE_HEAVENS) &&
+	 !IS_ANGEL(target))
+      {
+	spl = SPELL_AID_OF_THE_HEAVENS;
+      }
+
       if(!spl &&
          npc_has_spell_slot(ch, SPELL_CLOAK_OF_FEAR) &&
          !number(0, 2))
@@ -6063,7 +6101,7 @@ bool MobMercenary(P_char ch)
             (CLASS_SORCERER | CLASS_PSIONICIST | CLASS_CLERIC |
              CLASS_CONJURER | CLASS_WARLOCK | CLASS_ILLUSIONIST |
              CLASS_BARD | CLASS_DRUID | CLASS_ETHERMANCER | CLASS_SHAMAN |
-             CLASS_NECROMANCER))
+             CLASS_NECROMANCER | CLASS_THEURGIST))
         {
           do_headlock(ch, 0, CMD_HEADLOCK);
         }
@@ -6529,7 +6567,8 @@ void MobCombat(P_char ch)
   // combat casting, so go for offensive
 
   if((GET_CLASS(ch, CLASS_SORCERER) || GET_CLASS(ch, CLASS_CONJURER) ||
-       GET_CLASS(ch, CLASS_NECROMANCER) || GET_CLASS(ch, CLASS_BARD)) &&
+       GET_CLASS(ch, CLASS_NECROMANCER) || GET_CLASS(ch, CLASS_BARD) ||
+       GET_CLASS(ch, CLASS_THEURGIST)) &&
         (!IS_MULTICLASS_NPC(ch) || number(0, 2)))
     if(CastMageSpell(ch, 0, FALSE))
       return;
@@ -7393,7 +7432,7 @@ int handle_npc_assist(P_char ch)
 bool MobSpellUp(P_char ch)
 {
     bool is_multiclass = IS_MULTICLASS_NPC(ch); // about 15% are multiclass
-    if(GET_CLASS(ch, CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER) && (is_multiclass ? number(0, 2) : 1))
+    if(GET_CLASS(ch, CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER | CLASS_THEURGIST) && (is_multiclass ? number(0, 2) : 1))
     {
       if(CastMageSpell(ch, ch, FALSE))
         return TRUE;
@@ -7715,7 +7754,8 @@ PROFILE_START(mundane_mobcast);
   { // 100%
     if (GET_CLASS(ch,
         CLASS_CLERIC | CLASS_SHAMAN | CLASS_ETHERMANCER | CLASS_DRUID |
-        CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER | CLASS_ILLUSIONIST | CLASS_WARLOCK |
+        CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER |
+	CLASS_THEURGIST | CLASS_ILLUSIONIST | CLASS_WARLOCK |
         CLASS_PSIONICIST | CLASS_MINDFLAYER |
         CLASS_PALADIN | CLASS_ANTIPALADIN |
         CLASS_RANGER | CLASS_REAVER |

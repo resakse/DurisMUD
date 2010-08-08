@@ -359,6 +359,8 @@ const struct innate_data
   {"engulf", do_engulf},
   {"slime", do_slime},
   {"dual wielding master", 0},
+  {"speed", 0},
+  {"ice aura", 0},
   {"requiem", 0},
   {"ally", 0},
   {"summon host", do_summon_host},
@@ -538,7 +540,7 @@ void assign_innates()
   /* List of (P)Illithid Innate      */
   ADD_RACIAL_INNATE(INNATE_MAGIC_RESISTANCE, RACE_PILLITHID, 1);
   ADD_RACIAL_INNATE(INNATE_ULTRAVISION, RACE_PILLITHID, 1);
-  ADD_RACIAL_INNATE(INNATE_LEVITATE, RACE_ILLITHID, 10);
+  ADD_RACIAL_INNATE(INNATE_LEVITATE, RACE_PILLITHID, 10);
   ADD_RACIAL_INNATE(INNATE_DAYBLIND, RACE_PILLITHID, 1);
   ADD_RACIAL_INNATE(INNATE_VULN_SUN, RACE_PILLITHID, 1);
   ADD_RACIAL_INNATE(INNATE_SHIFT_ASTRAL, RACE_PILLITHID, 1);

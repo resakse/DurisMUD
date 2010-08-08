@@ -620,9 +620,11 @@ int calculate_harpy_time(P_char ch, int circle, bool bStatOnly)
 
 int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
 {
-  double   time_mult;
+  float    time_mult, time;
   P_nevent  e;
-  int      tick_factor = 0, time, align, level, clevel;
+  int      tick_factor = 0, align, level, clevel;
+  //int      lowlvlcap = (int)get_property("memorize.lowlvl.cap", 30);
+  //int      lowlvlbottom = (int)get_property("memorize.lowlvl.bottom", 40);
 
   if(IS_PUNDEAD(ch) ||
      GET_CLASS(ch, CLASS_WARLOCK) ||
@@ -691,11 +693,17 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
 
   }
 
-  time = (int) ((time_mult * lfactor[level]) / (fake_sqrt_table[clevel] * tick_factor));
+  float clevel_mod = fake_sqrt_table[clevel];
+
+  int lowlvlcap = get_property("memorize.lowlvl.cap", 25);
+  if (IS_PC(ch) && (GET_LEVEL(ch) < lowlvlcap))
+      clevel_mod += (fake_sqrt_table[lowlvlcap] - clevel_mod) / 2.0;
+
+  time = (time_mult * lfactor[level]) / (clevel_mod * tick_factor);
 
   if(IS_NPC(ch))
   {
-    time = (int) (time * get_property("memorize.factor.npc", 1.0));
+    time = time * get_property("memorize.factor.npc", 1.0);
   }
   else if(ch->player.m_class & CLASS_DRUID)
   {
@@ -708,24 +716,23 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
       modifier = (modifier / get_property("memorize.factor.multi.commune", 2.0) ) + 0.75;
     }
     
-    time = (int) (time * modifier);
+    time = time * modifier;
       
     // modify based on property tweak
-    time = (int) (time * get_property("memorize.factor.commune", 2.0));
+    time = time * get_property("memorize.factor.commune", 1.0);
 
     // reduction in time if you have the epic skill
-  if(GET_CHAR_SKILL(ch, SKILL_NATURES_SANCTITY) > number(1, 100) &&
-     OUTSIDE(ch))
-  {
-    time = (int) (time * .65);
-  }
+    if(GET_CHAR_SKILL(ch, SKILL_NATURES_SANCTITY) > number(1, 100) && OUTSIDE(ch))
+    {
+      time = time * .65;
+    }
 
-  // randomly reduce the time by 1/3 based on level of caster
+    // randomly reduce the time by 1/3 based on level of caster
     if(!bStatOnly &&
        !GET_OPPONENT(ch) &&
        GET_LEVEL(ch) > number(0, 65))
     {
-      time = (int) (time / 1.5);
+      time = time / 1.5;
     }
 
     align = GET_ALIGNMENT(ch);
@@ -735,21 +742,21 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
        !IS_MULTICLASS_PC(ch))
     { 
         // only true druids...
-        time = (int) (time / 1.8);  // 0 align reduces time by ~45%
+        time = time / 1.5;  // 0 align reduces time by 1/3
     }
     else if((align <= 350) &&
             (align >= -350))
     {
-       time = (int) (time * 0.98); // -350 to 350 pretty much doesn't do anything
+       time = time * 1.0; // -350 to 350 pretty much doesn't do anything
     } 
     else if((align > 350 && align < 900)  ||
            ((align < -350) && (align > -900)))
     {
-       time = (int) (time * 1.6);  // -900 to 900 gives a 60% penalty
+       time = time * 1.6;  // -900 to 900 gives a 60% penalty
     }
     else 
     {
-       time = (int) (time * 2.0);  // everyone else has time doubled
+       time = time * 2.0;  // everyone else has time doubled
     }
     
     // cant commune while in command lag, this makes sure they will
@@ -760,7 +767,34 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
                                  // instantly after a fight or spell is cast
     }
   }
-  return time;
+  else if(ch->player.m_class & CLASS_PSIONICIST)
+  {
+    time = time * get_property("memorize.factor.focus", 1.0);
+    if(GET_CHAR_SKILL(ch, SKILL_ADVANCED_MEDITATION) > 0)
+    {
+      time = (int) (time / (1.0 + 0.5 * (float)GET_CHAR_SKILL(ch, SKILL_ADVANCED_MEDITATION) / 100.0));
+    }
+    if(!bStatOnly && IS_AFFECTED(ch, AFF_MEDITATE))
+    {
+       int med_roll = GET_CHAR_SKILL(ch, SKILL_MEDITATE) - number(0, 100);
+       if (med_roll > 95)
+           time *= 0.3;
+       else if (med_roll > 80)
+           time *= 0.4;
+       else if (med_roll > 50)
+           time *= 0.5;
+       else if (med_roll > 0)
+           time *= 0.65;
+    }
+
+    // cant focus while in command lag, this makes sure they will
+    // not regain spells while spamming cast
+    if(!bStatOnly && (e = get_scheduled(ch, event_wait)))
+    {
+      time += ne_event_time(e);  // adding the time ensures that the event will not complete instantly after a fight or spell is cast
+    }
+}
+  return (int)time;
 }
 
 void balance_align(P_char ch) 

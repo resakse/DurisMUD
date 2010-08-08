@@ -398,6 +398,7 @@ void do_shriek(P_char, char *, int);
 bool isSweepable(P_char, P_char);
 bool isKickable(P_char, P_char);
 bool isMaulable(P_char, P_char);
+double orc_horde_dam_modifier(P_char, double, int);
 
 /* actoth.c */
 

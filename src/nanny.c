@@ -194,6 +194,7 @@ void init_height_weight(P_char ch)
   case RACE_HARPY:
   case RACE_GARGOYLE:
   case RACE_ILLITHID:
+  case RACE_PILLITHID:
     f = (float) f *0.75;
 
     break;
@@ -430,6 +431,10 @@ void load_obj_to_newbies(P_char ch)
                                              {
                                              706, 735, 731, 731, -1}));
 
+  CREATE_KIT(RACE_HUMAN, CLASS_THEURGIST, ((int[])
+                                             {
+                                             1112, 1114, 1115, 209, 614,
+                                             1131, -1}));
 /*END Human Classes*/
 
 
@@ -656,11 +661,14 @@ void load_obj_to_newbies(P_char ch)
                                          1112, 1128, 1129, 1130, 1131, 1132,
                                          412, 412, 412, 412, 412, -1}));
 
-	CREATE_KIT(RACE_HALFELF, CLASS_PALADIN, ((int[])
+  CREATE_KIT(RACE_HALFELF, CLASS_PALADIN, ((int[])
 	                                         {
-																					 1101, 1102, 1103, 1107, 1110, -1}));
+			                 1101, 1102, 1103, 1107, 1110, -1}));
 
-
+  CREATE_KIT(RACE_HALFELF, CLASS_THEURGIST, ((int[])
+                                             {
+                                             1112, 1114, 1115, 209, 614,
+                                             1131, -1}));
 /*END Half Elf Classes*/
 
 /*Halfling Basics*/
@@ -779,6 +787,43 @@ void load_obj_to_newbies(P_char ch)
                                       731, 731, 706, 735, 107, 106, 105,
 679, 388, -1}));
 
+
+/*Planetbound Illithid Basic*/
+  CREATE_KIT(RACE_ILLITHID, 0, ((int[])
+                                {
+                                567, 609, 733, 1174, 1175, -1}));
+
+/*Planetbound Illithid Classes*/
+  CREATE_KIT(RACE_PILLITHID, CLASS_WARRIOR, ((int[])
+                                         {
+                                         1101, 1102, 1103, 1104, 1105, 1105,
+                                         1106, 1107, 1108, 1109, -1}));
+  
+  CREATE_KIT(RACE_PILLITHID, CLASS_PSIONICIST, ((int[])
+                                               {
+                                               1112, 706, 1131, -1}));
+
+  CREATE_KIT(RACE_PILLITHID, CLASS_SORCERER, ((int[])
+                                              {
+                                              1114, 1115, 1131, 706, 735, 731,
+                                              731, -1}));
+  
+  CREATE_KIT(RACE_PILLITHID, CLASS_CONJURER, ((int[])
+                                              {
+                                              1114, 1115, 1131, 706, 735, 731,
+                                              731, -1}));
+
+  CREATE_KIT(RACE_PILLITHID, CLASS_ILLUSIONIST, ((int[])
+                                           {
+                                           1114, 1115, 1131, 706, 735, 731,
+                                           731, -1}));
+  
+  CREATE_KIT(RACE_ORC, CLASS_ETHERMANCER, ((int[])
+                                             {
+                                             706, 735, 731, 731, -1}));
+
+/*END Planetbound Illithid Classes*/
+					       
 /*Illithid Basic*/
   CREATE_KIT(RACE_ILLITHID, 0, ((int[])
                                 {
@@ -1424,6 +1469,233 @@ void load_obj_to_newbies(P_char ch)
 
 /*END Goblin Classes*/
 
+/*Drider Basics*/
+  CREATE_KIT(RACE_DRIDER, 0, ((int[])
+                            {
+                            561, 604, 36016, 1156, 1157, -1}));
+
+/*Drider Classes*/
+  CREATE_KIT(RACE_DRIDER, CLASS_WARRIOR, ((int[])
+                                        {
+                                        1101, 1102, 1103, 1104, 1105, 1105,
+                                        1106, 1107, 1108, 1109, -1}));
+
+  CREATE_KIT(RACE_DRIDER, CLASS_CLERIC, ((int[])
+                                       {
+                                       1119, 1120, 1121, 1123, 1125, 1126,
+                                       1127, -1}));
+
+  CREATE_KIT(RACE_DRIDER, CLASS_SORCERER, ((int[])
+                                         {
+                                         1114, 1115, 1131, 706, 735, 731, 731,
+                                         -1}));
+
+  CREATE_KIT(RACE_DRIDER, CLASS_CONJURER, ((int[])
+                                         {
+                                         1114, 1115, 1131, 706, 735, 731, 731,
+                                         -1}));
+
+  CREATE_KIT(RACE_DRIDER, CLASS_NECROMANCER, ((int[])
+                                            {
+                                            1112, 1114, 1115, 1141, 1142,
+                                            1143, -1}));
+
+  CREATE_KIT(RACE_DRIDER, CLASS_REAVER, ((int[])
+                                         {
+                                         1109, 1108, 1107, 1106, 1105, 1104,
+                                         1103, 1102, 1101, 604, 1157, 1156,
+                                         1115, 1114, -1}));
+
+/* END Drider Classes */
+
+  
+/*Kobold Basics*/
+  CREATE_KIT(RACE_KOBOLD, 0, ((int[])
+                              {
+                              1172, 1173, 612, -1}));
+
+/*Goblin Classes*/
+  CREATE_KIT(RACE_KOBOLD, CLASS_CLERIC, ((int[])
+                                         {706, 735, 731, 731, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_REAVER, ((int[])
+                                         {
+                                         1109, 1108, 1107, 1106, 1105, 1104,
+                                         1103, 1102, 1101, 604, 1157, 1156,
+                                         1115, 1114, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_WARRIOR, ((int[])
+                                          {
+                                          1109, 1108, 1107, 1106, 1105, 1104,
+                                          1103, 1102, 1101, 604, 1157, 1156, -1
+                                          }));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_ILLUSIONIST, ((int[])
+                                              {
+                                              1114, 1115, 1131, 706, 735, 731,
+                                              731, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_SORCERER, ((int[])
+                                           {
+                                           1114, 1115, 1131, 706, 735, 731,
+                                           731, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_NECROMANCER, ((int[])
+                                              {
+                                              1114, 1115, 1131, 706, 735, 731,
+                                              731, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_CONJURER, ((int[])
+                                           {
+                                           1114, 1115, 1131, 706, 735, 731,
+                                           731, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_SHAMAN, ((int[])
+                                         {
+                                         105, 106, 107, 1144, 1145, 1146,
+                                         1127, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_BARD, ((int[])
+                                       {
+                                       1112, 1128, 1129, 1130, 1131, 1134,
+                                       -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_ALCHEMIST, ((int[])
+                                            {
+                                            1108, 1107, 1106, 1105, 1104,
+                                            1103, 1102, 1101, 604, 1157, 1156, 52,
+                                            -1 }));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_ASSASSIN, ((int[])
+                                           {
+                                           1112, 1112, 1128, 1129, 1130, 1131,
+                                           -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_ROGUE, ((int[])
+                                           {
+                                           1112, 1128, 1129, 1130, 1131,
+                                           412, 412, 412, -1}));
+
+  CREATE_KIT(RACE_KOBOLD, CLASS_ETHERMANCER, ((int[])
+                                             {
+                                             706, 735, 731, 731, -1}));
+
+/*END Kobold Classes*/
+  
+  
+/*Kuo Toa Basic*/
+  CREATE_KIT(RACE_KUOTOA, 0, ((int[])
+                             {
+                             1172, 1155, 571, 613, -1}));
+
+/*Troll Classes*/
+  CREATE_KIT(RACE_KUOTOA, CLASS_CLERIC, ((int[])
+                                         {706, 735, 731, 731, -1}));
+  
+  CREATE_KIT(RACE_KUOTOA, CLASS_MERCENARY, ((int[])
+                                           {
+                                           1101, 1102, 1103, 1104, 1106, 1107,
+                                           1108, 1112, -1}));
+
+  CREATE_KIT(RACE_KUOTOA, CLASS_SHAMAN, ((int[])
+                                        {
+                                        105, 106, 107, 1144, 1145, 1146, 1127,
+                                        -1}));
+
+  CREATE_KIT(RACE_KUOTOA, CLASS_WARRIOR, ((int[])
+                                         {
+                                         1101, 1102, 1103, 1104, 1105, 1105,
+                                         1106, 1107, 1108, 1109, -1}));
+
+  CREATE_KIT(RACE_KUOTOA, CLASS_ROGUE, ((int[])
+                                           {
+                                           1112, 1128, 1129, 1130, 1131,
+                                           412, 412, 412, -1}));
+
+/*END Troll Classes*/
+
+/* Firbolg Basic */
+  CREATE_KIT(RACE_FIRBOLG, 0, ((int[])
+                                 {
+                                 560, 603, 398, 398, 1154, 1155, -1}));
+
+/* Firbolg Classes */  
+  CREATE_KIT(RACE_FIRBOLG, CLASS_WARRIOR, ((int[])
+                                             {
+                                             1101, 1102, 1103, 1104, 1105,
+                                             1105, 1106, 1107, 1108, 1109,
+                                             -1}));
+  CREATE_KIT(RACE_FIRBOLG, CLASS_SHAMAN, ((int[])
+                                            {
+                                            105, 106, 107, 1144, 1145, 1146,
+                                            1127, -1}));
+  CREATE_KIT(RACE_FIRBOLG, CLASS_MERCENARY, ((int[])
+                                               {
+                                               1101, 1102, 1103, 1104, 1106,
+                                               1107, 1108, 1112, -1}));
+  
+  CREATE_KIT(RACE_FIRBOLG, CLASS_DRUID, ((int[])
+                                       {
+                                       1135, 1136, 1137, 1138, 1139, 1140,
+                                       -1}));
+/* END Firbolg */
+
+/*Wood Elf Basics*/
+  CREATE_KIT(RACE_WOODELF, 0, ((int[])
+                            {
+                            568, 610, 398, 398, 1158, 1159, -1}));
+
+/*Wood Elf Classes*/
+  CREATE_KIT(RACE_WOODELF, CLASS_WARRIOR, ((int[])
+                                        {
+                                        1101, 1102, 1103, 1104, 1105, 1105,
+                                        1106, 1107, 1108, 1109, -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_RANGER, ((int[])
+                                       {
+                                       1101, 1102, 1103, 1104, 1105, 1105,
+                                       1106, 1107, 1113, 1113, 1114, 1115,
+                                       1116, 1117, 1117, 1117, 1117, 1117,
+                                       1117, 1117, 1117, 1117, 1117, 1118,
+                                       -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_CLERIC, ((int[])
+                                       {
+                                       1119, 1120, 1121, 1122, 1124, 1126,
+                                       1127, -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_CONJURER, ((int[])
+                                         {
+                                         1114, 1115, 1131, 706, 735, 731, 731,
+                                         -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_DRUID, ((int[])
+                                      {
+                                      1135, 1136, 1137, 1138, 1139, 1140,
+                                      -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_SORCERER, ((int[])
+                                         {
+                                         1114, 1115, 1131, 706, 735, 731, 731,
+                                         -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_THIEF, ((int[])
+                                      {
+                                      1112, 1128, 1129, 1130, 1131, 1132, 412,
+                                      412, 412, 412, 412, -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_ROGUE, ((int[])
+                                      {
+                                      1112, 1128, 1129, 1130, 1131, 1132, 412,
+                                      412, 412, 412, 412, -1}));
+
+  CREATE_KIT(RACE_WOODELF, CLASS_BARD, ((int[])
+                                     {
+                                     1112, 1128, 1129, 1130, 1131, 1134,
+                                     -1}));
+
+/*END Wood Elf Classes*/
+  
   if (ch->carrying && IS_PC(ch))        /* we are _NOT_ here to give people free eq many times */
     return;
 
@@ -3449,7 +3721,8 @@ void select_race(P_desc d, char *arg)
 
     GET_RACE(d->character) = RACE_NONE;
   }
-  else if (GET_RACE(d->character) != RACE_ILLITHID)
+  else if ((GET_RACE(d->character) != RACE_ILLITHID) &&
+           (GET_RACE(d->character) != RACE_PILLITHID))
   {
     SEND_TO_Q("\r\nIs your character Male or Female (Z for race)? (M/F/Z) ",
               d);
@@ -4043,7 +4316,7 @@ void display_characteristics(P_desc d)
   {
     logit(LOG_STATUS, "display_characteristics: unknown hometown, %d\n",
           GET_HOME(d->character));
-    GET_HOME(d->character) = HOME_WINTERHAVEN;
+    GET_HOME(d->character) = HOME_THARN;
     sprintf(Gbuf1 + strlen(Gbuf1), "HOMETOWN: %s\r\n",
             town_name_list[GET_HOME(d->character)]);
   }
@@ -4157,7 +4430,7 @@ int find_hometown(int race, bool force)
   {
     sprintf(Gbuf1, "find_hometown: illegal race, %d\n", race);
     logit(LOG_STATUS, Gbuf1);
-    return (HOME_WINTERHAVEN);    /* default */
+    return (HOME_THARN);    /* default */
   }
   for (i = 0; i <= LAST_HOME; i++)
   {
@@ -4172,7 +4445,7 @@ int find_hometown(int race, bool force)
   {                             /* none found, avail_hometowns matrix fucked */
     sprintf(Gbuf1, "find_hometown: race %d has no avail hometowns\n", race);
     logit(LOG_STATUS, Gbuf1);
-    return (HOME_WINTERHAVEN);    /* default */
+    return (HOME_THARN);    /* default */
   }
   else if (count == 1 || force)          /* what we expect, 1 town, return it */
     return (home);
@@ -4197,7 +4470,7 @@ void find_starting_location(P_char ch, int hometown)
     sprintf(Gbuf1, "find_starting_location: illegal hometown %d for %s",
             hometown, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
-    GET_HOME(ch) = guild_locations[HOME_WINTERHAVEN][0];  /* default */
+    GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
     return;
   }
   if ((ch->player.m_class < 1) ||
@@ -4206,7 +4479,7 @@ void find_starting_location(P_char ch, int hometown)
     sprintf(Gbuf1, "find_starting_location: illegal class %d for %s",
             ch->player.m_class, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
-    GET_HOME(ch) = guild_locations[HOME_WINTERHAVEN][0];  /* default */
+    GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
     return;
   }
   guild_num = guild_locations[hometown][flag2idx(ch->player.m_class)];

@@ -5721,7 +5721,7 @@ ragged cloth tunic~
 &+Ma ragged cl&+Coth tunic&N~
 &+Ma ragged cl&+Coth tunic lines here.&N~
 ~
-9 3 3 8 7 0 524288 9 0 0 0
+9 3 3 8 7 0 524288 9 8 0 0
 8 0 0 3 0 0 0 0
 10 10 100
 E
@@ -7711,7 +7711,7 @@ thin steel dagger~
 &+wa thin steel dagger&N~
 &+wa steel dagger has been tossed aside here.&N~
 ~
-5 16 3 1 7 0 8200 24577 0 4194697720 0
+5 16 3 1 7 0 8200 24577 0 4060479992 0
 2 3 2 11 0 0 0 0
 1 1 100
 #1113
@@ -7863,7 +7863,7 @@ tight black slippers~
 &+La pair of tight black slippers&N~
 &+La pair of tight black slippers has been tossed here.&N~
 ~
-9 3 3 0 7 0 525320 16449 0 12696064 0
+9 3 3 0 7 0 525320 16449 0 146913792 0
 1 0 0 1 0 0 0 0
 0 1 100
 #1132

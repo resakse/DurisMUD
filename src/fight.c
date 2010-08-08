@@ -1424,12 +1424,20 @@ P_obj make_corpse(P_char ch, int loss)
       act("$n explodes into all corners of the room, covering it in darkness!", TRUE, ch, 0, 0, TO_ROOM);
       spell_darkness(GET_LEVEL(ch), ch, 0, 0, 0, 0);
       break;
-	case RACE_V_ELEMENTAL:
-	  act("$n howls, and returns to the void which spawned it.", TRUE, ch, 0, 0, TO_ROOM);
-	  break;
-	case RACE_I_ELEMENTAL:
-	  act("A blank look overcomes $n's face for a moment, before $e shatters into tiny fragments!", TRUE, ch, 0, 0, TO_ROOM);
-	  break;
+    case RACE_V_ELEMENTAL:
+      act("$n howls, and returns to the void which spawned it.", TRUE, ch, 0, 0, TO_ROOM);
+      break;
+    case RACE_I_ELEMENTAL:
+      act("A blank look overcomes $n's face for a moment, before $e shatters into tiny fragments!", TRUE, ch, 0, 0, TO_ROOM);
+      break;
+    case RACE_ARCHON:
+    case RACE_ASURA:
+    case RACE_TITAN:
+    case RACE_AVATAR:
+    case RACE_GHAELE:
+    case RACE_BRALANI:
+      act("$n &+Wglows white&n &+wbefore &+Ldissapearing...&n", TRUE, ch, 0, 0, TO_ROOM);
+      break;
     }
 
     obj_from_room(corpse);
@@ -6811,7 +6819,12 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   }
 
   dam *= ch->specials.damage_mod;
-  
+
+  if(GET_RACE(ch) == RACE_ORC)
+    dam = orc_horde_dam_modifier(ch, dam, TRUE);
+  else if (GET_RACE(victim) == RACE_ORC)
+    dam = orc_horde_dam_modifier(victim, dam, FALSE);
+
   if(weapon &&
     IS_SLAYING(weapon, victim))
   {
@@ -9116,4 +9129,45 @@ bool critical_disarm(P_char ch, P_char victim)
   }
 
   return TRUE;
+}
+
+double orc_horde_dam_modifier(P_char ch, double dam, int attacking)
+{
+  P_char horde, next;
+  float c = 0.00;
+
+  if (!ch)
+    return dam;
+
+  for (horde = world[ch->in_room].people; horde; horde = next)
+  {
+    next = horde->next_in_room;
+
+    if (attacking)
+    {
+      if (GET_RACE(horde) == RACE_ORC &&
+	  ch != horde)
+        c++;
+    }
+    else
+    {
+      if (GET_RACE(horde) == RACE_ORC)
+        c--;
+    }
+  }
+
+  // Remove ourself
+  if (!attacking)
+    c++;
+
+  c *= get_property("orc.horde.bonus.modifier", 1.5);
+
+  if (attacking)
+  {
+    return (dam * (1.0+(c/100.00)));
+  }
+  else
+  {
+    return (dam * (1.0-(c/100.00)));
+  }
 }

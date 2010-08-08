@@ -22,7 +22,7 @@
 //char  arc[3];
 extern char buf[MAX_STRING_LENGTH];
 
-int epic_ship_damage_control(P_char ch, int dam)
+/*int epic_ship_damage_control(P_char ch, int dam)
 {
     if(!(ch) || dam < 2)
         return dam;
@@ -44,7 +44,7 @@ int epic_ship_damage_control(P_char ch, int dam)
         dam--;
 
     return dam;
-}
+}*/
 
 void stun_all_in_ship(P_ship ship, int timer)
 {
@@ -561,16 +561,14 @@ void volley_hit_event(P_char ch, P_char victim, P_obj obj, void *data)
     
 int damage_sail(P_ship attacker, P_ship target, int dam)
 {
-    P_char captain = captain_is_aboard(target);
+    /*P_char captain = captain_is_aboard(target);
     
     // debug("Sail damage is: %d.", dam);
     
     if (captain)
     {
         dam = epic_ship_damage_control(captain, dam);
-    }
-
-    // debug("Sail damage after epic skill is: %d.", dam);
+    }*/
     
     if (dam < 1)
         dam = 1;
@@ -588,12 +586,12 @@ int damage_sail(P_ship attacker, P_ship target, int dam)
 
 int damage_hull(P_ship attacker, P_ship target, int dam, int arc, int armor_pierce)
 {
-    P_char captain = captain_is_aboard(target);
+    /*P_char captain = captain_is_aboard(target);
     
     if (captain)
     {
         dam = epic_ship_damage_control(captain, dam);
-    }
+    }*/
     
     if (dam < 1)
         dam = 1;

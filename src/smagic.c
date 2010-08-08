@@ -1260,7 +1260,7 @@ void spell_single_earthen_rain(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  dam = dice(level, 4) * 4; 
+  dam = dice(level, 5) * 3; 
   
   if(NewSaves(victim, SAVING_BREATH, 2))
     dam = (int) (dam * 0.66);
