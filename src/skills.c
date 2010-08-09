@@ -1254,7 +1254,7 @@ void initialize_skills()
   
   SPELL_CREATE("depart", SPELL_DEPART, PULSE_SPELLCAST,
                 TAR_SELF_ONLY, spell_depart);
-  SPELL_ADD(CLASS_PSIONICIST, 7);
+  //SPELL_ADD(CLASS_PSIONICIST, 7);
   
   SPELL_CREATE_MSG("mielikki vitality", SPELL_MIELIKKI_VITALITY, PULSE_SPELLCAST * 3,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
