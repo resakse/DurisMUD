@@ -11321,7 +11321,9 @@ int world_quest(P_char ch, P_char pl, int cmd, char *arg)
   char     name[MAX_INPUT_LENGTH], what[MAX_STRING_LENGTH];
   char     money_string[MAX_INPUT_LENGTH];
 
-  int temp =0;
+  int temp = 0;
+  float timediff, costmod;
+
 
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
@@ -11358,6 +11360,12 @@ int world_quest(P_char ch, P_char pl, int cmd, char *arg)
       // }
 
       temp = (int)((get_property("worldQuest.abandon.mod", 0.5) * GET_LEVEL(pl) * GET_LEVEL(pl) * GET_LEVEL(pl)));
+
+      timediff = time(NULL) - pl->only.pc->quest_started;
+      costmod = timediff / 60 / 60 / get_property("world.quest.cost.abandon.time", 24.000);
+      temp = temp * BOUNDED(1.0, costmod, 100.0);
+      
+      debug("timediff: %f, hrsdiff: %f, costmod: %f, temp: %d, cost: %s", timediff, timediff / 60 / 60, costmod, temp, coin_stringv(temp));
 
       sprintf(money_string, "OH NO, you've cost me alot of time and money, but toss me %s and I'll take care of your task!", coin_stringv(temp) );
 
