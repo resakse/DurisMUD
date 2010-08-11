@@ -11363,9 +11363,9 @@ int world_quest(P_char ch, P_char pl, int cmd, char *arg)
 
       timediff = time(NULL) - pl->only.pc->quest_started;
       costmod = timediff / 60 / 60 / get_property("world.quest.cost.abandon.time", 24.000);
-      temp = temp * BOUNDED(1.0, costmod, 100.0);
+      temp = temp * BOUNDED(0.01, costmod, 1.0);
       
-      debug("timediff: %f, hrsdiff: %f, costmod: %f, temp: %d, cost: %s", timediff, timediff / 60 / 60, costmod, temp, coin_stringv(temp));
+      //debug("timediff: %f, hrsdiff: %f, costmod: %f, temp: %d, cost: %s", timediff, timediff / 60 / 60, costmod, temp, coin_stringv(temp));
 
       sprintf(money_string, "OH NO, you've cost me alot of time and money, but toss me %s and I'll take care of your task!", coin_stringv(temp) );
 
