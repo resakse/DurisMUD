@@ -4722,7 +4722,6 @@ void set_char_size(P_char ch)
   case RACE_OROG:
   case RACE_WOODELF:
   case RACE_KUOTOA:
-  case RACE_DRIDER:
     GET_SIZE(ch) = SIZE_MEDIUM;
     break;
   case RACE_HARPY:
@@ -4738,6 +4737,7 @@ void set_char_size(P_char ch)
   case RACE_CENTAUR:
   case RACE_REVENANT:
   case RACE_BARBARIAN:
+  case RACE_DRIDER:
     GET_SIZE(ch) = SIZE_LARGE;
     break;
   case RACE_SGIANT:
