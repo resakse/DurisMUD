@@ -372,7 +372,7 @@ deck standard northshore pirate~
 ~
 403528 0 0 0 0 0 0 -850 S
 PH 0 16384 -1
-35 0 0 1d1+1 1d1+1
+31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40227
@@ -386,7 +386,7 @@ lookout pirate northshore~
 ~
 1073752136 0 0 0 0 0 0 -1000 S
 PH 0 4194304 -1
-35 0 0 1d1+1 1d1+1
+31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40228
@@ -401,7 +401,7 @@ cut throat cutthroat north shore northshore pirate~
 ~
 10312 0 0 402653208 0 0 0 -1000 S
 PH 0 64 -1
-35 0 0 1d1+1 1d1+1
+31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40229
@@ -417,7 +417,7 @@ swashbuckler swash buckler northshore pirate~
 ~
 10312 1 0 402653208 268435456 0 1024 -1000 S
 PH 0 1 -1
-35 0 0 1d1+1 1d1+1
+31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40230
@@ -432,7 +432,7 @@ gunner pirate north shore northshore~
 ~
 395272 1 0 0 0 0 0 -1000 S
 PH 0 4096 -1
-35 0 0 1d1+1 1d1+1
+31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #40231
@@ -446,7 +446,7 @@ captain twilight cove buccaneer pirate _no_move_~
 &+Lanything that moves.n
 ~
 10314 1 0 402653208 0 0 0 0 S
-HO 0 0 -1
+HO 0 16384 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -536,7 +536,7 @@ deck hand twilight cove buccaneer pirate~
 ~
 10312 0 0 0 0 0 0 -1000 S
 Ho 0 1 -1
-40 0 0 1d1+1 1d1+1
+35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40238
@@ -552,7 +552,7 @@ lookout twilight cove buccaneer pirate~
 ~
 10312 1 0 402653208 0 0 0 -1000 S
 Ho 0 32768 -1
-40 0 0 1d1+1 1d1+1
+35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40239
@@ -567,7 +567,7 @@ cut throat cutthroat plunderer~
 ~
 10312 1 0 402653208 0 0 0 -1000 S
 Ho 0 1 -1
-40 0 0 1d1+1 1d1+1
+36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40240
@@ -581,7 +581,7 @@ swashbuckler twilight cove buccaneer pirate~
 ~
 403464 1 0 8 0 0 1024 -1000 S
 Ho 0 1 -1
-41 0 0 1d1+1 1d1+1
+36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40241
@@ -595,7 +595,7 @@ gunner pirate twilight cove buccaneer~
 ~
 2120 1 0 402653208 0 0 0 -1000 S
 Ho 0 16384 -1
-40 0 0 1d1+1 1d1+1
+35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #40242
@@ -711,7 +711,7 @@ deck hand marauder four winds~
 ~
 2120 1 0 402653240 0 0 0 -1000 S
 U 0 16384 -1
-45 0 0 1d1+1 1d1+1
+40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40249
@@ -728,7 +728,7 @@ lookout marauder four winds~
 ~
 10312 1 0 402653208 0 0 0 -1000 S
 U 0 4194304 -1
-45 0 0 1d1+1 1d1+1
+40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40250
@@ -744,7 +744,7 @@ cutthroat plunderer marauder four winds~
 ~
 10312 0 0 402653208 0 0 0 -1000 S
 U 0 1 -1
-45 0 0 1d1+1 1d1+1
+40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40251
@@ -760,7 +760,7 @@ swashbuckler swash buckler marauder four winds _spec3_ undead~
 ~
 10312 1 0 402653208 0 0 0 -1000 S
 U 0 1 -1
-45 0 0 1d1+1 1d1+1
+40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40252
@@ -775,7 +775,7 @@ bolt carrier marauder four winds~
 ~
 10312 1 0 402653208 0 0 0 -1000 S
 U 0 4096 -1
-45 0 0 1d1+1 1d1+1
+40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40253
@@ -795,7 +795,7 @@ captain dark sun syndicate _no_move_~
 &+Lhis face.&n
 ~
 10314 1 0 402653208 0 0 0 -1000 S
-ph 0 4195328 -1
+ph 0 4194336 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -894,7 +894,7 @@ deck hand dark sun syndicate~
 ~
 10312 1 0 0 0 0 0 -1000 S
 PH 0 1 -1
-50 0 0 1d1+1 1d1+1
+45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40260
@@ -910,7 +910,7 @@ look out lookout dark sun syndicate~
 ~
 403464 1 0 939524120 28 0 67108864 -1000 S
 PH 0 4194304 -1
-50 0 0 1d1+1 1d1+1
+45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40261
@@ -927,7 +927,7 @@ vicious cuttthroat dark sun syndicate~
 ~
 10312 1 0 24 0 0 0 -1000 S
 PH 0 1048576 -1
-50 0 0 1d1+1 1d1+1
+46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40262
@@ -944,7 +944,7 @@ swash buckler swashbuckler dark sun syndicate _spec3_~
 ~
 10312 1 0 402653208 0 0 0 -1000 S
 PH 0 1 -1
-55 0 0 1d1+1 1d1+1
+46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40263
@@ -960,7 +960,7 @@ bolt carrier dark sun syndicate~
 ~
 10312 1 0 24 0 0 0 -1000 S
 PH 0 64 -1
-50 0 0 1d1+1 1d1+1
+45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #40264

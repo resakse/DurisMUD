@@ -217,14 +217,15 @@ UG 0 1 4
 0.0.0.0 0
 8 8 0
 #1317
-winterhaven battle cleric~
-&+Wa Winterhaven cleric&N~
-&+WA Winterhaven cleric is here, kneeling in prayer.&N
+tharnadian cleric battle~
+&+Wa &+LTharnadian &+Wcleric&N~
+&+WA &+LTharnadian &+Wcleric is here, kneeling in prayer.&N
 ~
   Decked out in the simple white robes of a journeyman member of
-Winterhaven's Holy Order, this man is obviously a cleric.  He
-sits here in prayer -- his task to try and banish Lord Braddistock
-from the prime material plane.  He is not having much luck, however.
+Tharnadia's Holy Order, this man is obviously a cleric.  He sits
+here in prayer -- his task to try and banish Lord Braddistock
+from the prime material plane.  He is not having much luck,
+however.
 ~
 1073743946 32 0 0 0 0 0 1000 S
 PH 0 32 -1
