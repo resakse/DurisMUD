@@ -154,7 +154,7 @@ int multiclass_proc(int room, P_char ch, int cmd, char *arg)
 {
   int      i;
   int skls[MAX_SKILLS];
-  int min_level = get_property("multiclass.level.req.min", 41);  
+  int min_level = get_property("multiclass.level.req.min", 50);  
 
   if ((cmd == CMD_SET_PERIODIC) || (ch == NULL) || IS_NPC(ch) || IS_MORPH(ch) ||
       !((cmd == CMD_MULTICLASS)))
@@ -180,7 +180,7 @@ int multiclass_proc(int room, P_char ch, int cmd, char *arg)
     while (*arg == ' ')
       arg++;
 
-    if(ch->only.pc->epics < 5)
+    if(ch->only.pc->epics < get_property("multiclass.epic.req.min", 250))
     {
       send_to_char("You need more &+yepic&n experience.\r\n", ch);
       return FALSE;
