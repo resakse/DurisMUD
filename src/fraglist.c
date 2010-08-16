@@ -334,6 +334,30 @@ void displayFragList(P_char ch, char *arg, int cmd)
     {
       sprintf(filename, "Fraglists/fraglist.agathinon");
     }
+    else if (strstr("eladrin", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.eladrin");
+    }
+    else if (strstr("pillithid", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.planetbound_illithid");
+    }
+    else if (strstr("wood elf", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.wood_elf");
+    }
+    else if (strstr("kobold", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.kobold");
+    }
+    else if (strstr("kuo toa", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.kuo_toa");
+    }
+    else if (strstr("firbolg", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.firbolg");
+    }
     else if (strstr("warrior", arg))
     {
       sprintf(filename, "Fraglists/fraglist.warrior");
@@ -441,6 +465,10 @@ void displayFragList(P_char ch, char *arg, int cmd)
     else if (strstr("avenger", arg))
     {
       sprintf(filename, "Fraglists/fraglist.avenger");
+    }
+    else if (strstr("theurgist", arg))
+    {
+      sprintf(filename, "Fraglists/fraglist.theurgist");
     }
     else if (strstr("ship", arg))
     {

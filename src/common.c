@@ -455,6 +455,7 @@ const char *drinks[] = {
   "\n"
 };
 
+extern const int drink_aff[][3];
 const int drink_aff[][3] = {
   {0, 0, 10},                   /* * Water    */
   {3, 2, 5},                    /* * beer     */

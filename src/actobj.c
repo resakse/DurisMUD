@@ -2425,8 +2425,8 @@ void do_drink(P_char ch, char *argument, int cmd)
 
   /* procs will still work regardless of this.. */
 
-  send_to_char("You fill your mouth, but are unable to swallow!\r\n", ch);
-  return;
+  //send_to_char("You fill your mouth, but are unable to swallow!\r\n", ch);
+  //return;
 
   /*
    * added by DTS 5/26/95 to prevent pets healing by drinking holy water
