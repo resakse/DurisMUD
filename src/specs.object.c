@@ -8182,7 +8182,9 @@ int druid_spring(P_obj obj, P_char ch, int cmd, char *arg)
 	spell_regeneration(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
       if (obj->value[0] >= 41)
 	spell_endurance(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
-      
+      if (obj->value[0] >= 31)
+	spell_aid(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
+
       if (obj->value[0] >= 31)
         spell_natures_touch(obj->value[0], ch, 0, SPELL_TYPE_SPELL, ch, 0);
       else
