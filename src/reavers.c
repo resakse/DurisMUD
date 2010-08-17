@@ -153,10 +153,12 @@ void spell_eshabalas_vitality(int level, P_char ch, char *arg, int type,
   af.location = APPLY_HIT;
   affect_to_char(victim, &af);
 
+  /*
   af.duration = 15;
   af.modifier = number(20, 45);
   af.location = APPLY_MOVE;
   affect_to_char(victim, &af);
+  */
 
   send_to_char("&+mEshabalas vitality flows through you!&n\n", ch);
 }

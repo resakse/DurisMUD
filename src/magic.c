@@ -20090,6 +20090,7 @@ void spell_mielikki_vitality(int level, P_char ch, char *arg, int type, P_char v
     affect_to_char(victim, &af);
   }
   
+  /*  // They get endurance, no need for this.
   if((GET_CLASS(ch, CLASS_RANGER) &&
      !affected_by_spell(ch, SPELL_ENDURANCE)) ||
      GET_SPEC(ch, CLASS_RANGER, SPEC_WOODSMAN))
@@ -20098,6 +20099,7 @@ void spell_mielikki_vitality(int level, P_char ch, char *arg, int type, P_char v
     af.location = APPLY_MOVE_REG;
     affect_to_char(victim, &af);    
   }    
+  */
 
   send_to_char("&+GYou feel the &+ywarm &+Gbreathe of the Goddess Mielikki.\r\n", ch);
 }
