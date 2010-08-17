@@ -6318,6 +6318,9 @@ void spell_natures_touch(int level, P_char ch, char *arg, int type,
     break;
   }
 
+  if (!(GET_CLASS(ch, CLASS_DRUID) || GET_CLASS(ch, CLASS_RANGER)))
+    healpoints /= 3;
+
   if(IS_NPC(victim))
   {
     heal(victim, ch, healpoints, GET_MAX_HIT(victim) - number(1, 4));
