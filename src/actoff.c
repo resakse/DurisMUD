@@ -4527,7 +4527,7 @@ int backstab(P_char ch, P_char victim)
     percent_chance = 101;
   }
   
-  CharWait(ch, (int) (PULSE_VIOLENCE * 0.8));
+  CharWait(ch, (int) (PULSE_VIOLENCE * 1.1));
 
   if(IS_PC(ch) && (!on_front_line(ch) || !on_front_line(victim)))
   {
