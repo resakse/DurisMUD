@@ -5788,7 +5788,7 @@ int chance_to_hit(P_char ch, P_char victim, int skill, P_obj weapon)
     !IS_UNDEADRACE(victim)&& 
     IS_AFFECTED5(victim, AFF5_PROT_UNDEAD))
   {
-    to_hit -= af->modifier;
+    to_hit = (int) to_hit * get_property("to.hit.ProtUndead", 0.700);
   }
 
   if(!CAN_SEE(ch, victim))
