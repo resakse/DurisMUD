@@ -907,7 +907,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
         IS_PUNDEAD(ch) || \
         IS_HARPY(ch) || \
         GET_CLASS(ch, CLASS_ETHERMANCER) || \
-        USES_FOCUS(ch))
+        USES_FOCUS(ch) || \
+        IS_ANGELIC(ch))
 
 #define IS_SPELL_S(n) (IS_SET(skills[n].targets, TAR_SPELL))
 #define IS_SPELL(n) (n>=FIRST_SPELL && n<=LAST_SPELL && IS_SPELL_S(n))
