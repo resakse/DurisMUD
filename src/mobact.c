@@ -7652,7 +7652,7 @@ PROFILE_END(mundane_quest);
 #endif
 
 PROFILE_START(mundane_autoinvis);
-  if(GET_RACE(ch) == RACE_A_ELEMENTAL || IS_WRAITH(ch))
+  if(GET_RACE(ch) == RACE_A_ELEMENTAL || IS_WRAITH(ch) || IS_BRALANI(ch))
   { // 2%
     if(!IS_SET(ch->specials.affected_by, AFF_INVISIBLE) && !IS_FIGHTING(ch) && !IS_CASTING(ch))  
     {  
