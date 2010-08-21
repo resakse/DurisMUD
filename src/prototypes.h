@@ -1667,7 +1667,7 @@ P_char pick_target(P_char, unsigned int);
 int dummy_function(P_char, P_char, int, char*);
 int babau_combat(P_char, P_char, int, char*);
 int summon_new_demon(P_char, int);
-bool should_teacher_move(P_char);
+
 
 /* mobconv.c */
 
@@ -2103,6 +2103,7 @@ void spell_spinal_corruption(int, P_char, char*, int, P_char, P_obj);
 void spell_memory_block(int, P_char, char*, int, P_char, P_obj);
 void spell_psionic_cloud(int, P_char, char*, int, P_char, P_obj);
 void spell_psychic_crush(int, P_char, char*, int, P_char, P_obj);
+void spell_pyrokinesis(int, P_char, char*, int, P_char, P_obj);
 void spell_ethereal_rift(int, P_char, char*, int, P_char, P_obj);
 void spell_radial_navigation(int, P_char, char*, int, P_char, P_obj);
 void spell_sever_link(int, P_char, char *, int, P_char, P_obj);

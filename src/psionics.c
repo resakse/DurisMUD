@@ -1223,6 +1223,9 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
       
   dam = 11 * level + number(1, 75); 
 
+  if (GET_SPEC(ch, CLASS_PSIONICIST, SPEC_ENSLAVER))
+     dam = (int)(dam * 1.10);
+
 // Pow difference stat save and it is harder (25% only) to do extra damage.
 // Crushing hand does *2 damage on failed spell saves.
   // if(!StatSave(victim, APPLY_POW, POW_DIFF(ch, victim)) &&
@@ -1245,17 +1248,17 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
     switch (number(0, 2))
     {
       case 0:
-        send_to_char("&+wThat last attack was particularly invasive, and you feel your collective power decrease.&n\r\n", victim);
+        send_to_char("&+mThat last attack was particularly invasive, and you feel your collective power decrease.&n\r\n", victim);
         af.location = APPLY_POW;
         break;
         
       case 1:
-        send_to_char("&+wThat last attack was particularly invasive, and you feel your collective intelligence decrease.&n\r\n", victim);
+        send_to_char("&+mThat last attack was particularly invasive, and you feel your collective intelligence decrease.&n\r\n", victim);
         af.location = APPLY_INT;
         break;
         
       case 2:
-        send_to_char("&+wThat last attack was particularly invasive, and you feel your collective wisdom decrease.&n\r\n", victim);
+        send_to_char("&+mThat last attack was particularly invasive, and you feel your collective wisdom decrease.&n\r\n", victim);
         af.location = APPLY_WIS;
         break;
       default:
@@ -1373,9 +1376,9 @@ void spell_death_field(int level, P_char ch, char *arg, int type,
   zone_spellmessage(ch->in_room,
                     "&+LYour brain hurts as a black haze fills your psyche!\r\n",
                     "&+LYour brain hurts as a black haze coming from the %s fills your psyche!\r\n");
-  if((ch) &&
-     IS_ALIVE(ch))
-        CharWait(ch, (int) (PULSE_SPELLCAST * 1.5));
+  //if((ch) &&
+  //   IS_ALIVE(ch))
+  //      CharWait(ch, (int) (PULSE_SPELLCAST * 1.5));
 }
 
 void spell_detonate(int level, P_char ch, char *arg, int type, P_char victim,
@@ -1408,11 +1411,13 @@ void spell_detonate(int level, P_char ch, char *arg, int type, P_char victim,
   
   if(GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PYROKINETIC))
   {
-    dam = (int)(dam * get_property("spell.detonate.shrugModifier", 0.750));
+    //dam = (int)(dam * get_property("spell.detonate.shrugModifier", 0.750));
     
+    // 40% harder to shrug, same as crush
+    if(number(1, 100) < 40 && resists_spell(ch, victim))
+        return;
+
     dam /= 2;
-    
-    debug("DETONATE PYRO: (%s) doing (%d) damage.", GET_NAME(ch), dam);
     
     spell_damage(ch, victim, dam, SPLDAM_FIRE, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages);
     
@@ -3567,3 +3572,74 @@ void spell_celerity(int level, P_char ch, char *arg, int type,
   update_pos(ch);       
 }
 
+
+
+void spell_pyrokinesis(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
+{
+  int      dam, spec_affect;
+  char     buf[256];
+  struct affected_type af;
+  struct damage_messages messages = {
+    "&+mYou ignite a &+rpersonal &+ri&+Rn&+rf&+Re&+rr&+Rn&+ro &+mwithin $N's body.",
+    "&+mYou scream in &+Wa&+wg&+Wo&+wn&+Wy &+mas &+rs&+Rea&+rri&+Rng &+rh&+Re&+Ra&+rt &+wi&+rg&+wn&+wi&+rt&+we&+rs and &+rb&+Rur&+Ws&+wt&+Rs &+Ri&+Wn&+wt&+Ro f&+Wl&+wa&+Wm&+Re&+Rs &+mwithin your body.",
+    "&+m$N screams and doubles over in &+Wa&+wg&+Wo&+wn&+Wy &+mas &+rs&+Rea&+rri&+Rng &+rh&+Re&+Ra&+rt &+ri&+Rg&+wn&+Wit&+we&+Rs &+mwithin $S body.",
+    "&+mYou set $N's whole body &+Rab&+wl&+Wa&+wz&+Re&+m, leaving nothing but &+Lscorched &+mremains.",
+    "&+RBl&+wa&+Wz&+wi&+Rn&+rg i&+Rn&+rf&+Re&+rr&+Rn&+ro &+mgrows from within and &+Lscorches &+myour whole body dead.",
+    "&+RRa&+rgi&+Rng &+rf&+Rla&+rme&+Rs &+Wb&+wu&+Wr&+ws&+Wt &+mfrom within and &+We&+wn&+Wg&+wu&+Wl&+wf &+m$N's whole body, leaving nothing but &+Lscorched &+mremains.", 0
+  };
+
+  
+  if(!(ch) || 
+     !IS_ALIVE(ch) ||
+     !(victim) ||
+     !IS_ALIVE(victim))
+      return;
+
+// 40% harder to shrug, same as crush
+  if(number(1, 100) < 40 &&
+    resists_spell(ch, victim))
+      return;
+  
+  dam = 11 * level + number(1, 125); 
+
+  if (GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PYROKINETIC))
+     dam = (int)(dam * 1.10);
+
+  if(!NewSaves(victim, SAVING_SPELL, 0))
+     dam = (int)(dam * 1.15);
+  
+  if(spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, &messages) != DAM_NONEDEAD)
+    return;
+  
+  if(!affected_by_spell(victim, SPELL_PYROKINESIS))
+  {
+    bzero(&af, sizeof(af));
+    af.type = SPELL_PYROKINESIS;
+    af.duration =  1;
+    af.modifier = (int) (-1 * (level / 5));
+
+    act("&+m$n suddenly looks in pain as $e moves.&n",
+        FALSE, victim, 0, 0, TO_ROOM);
+
+    switch (number(0, 2))
+    {
+      case 0:
+        send_to_char("&+mThe heat damages your muscles, you feel less agile.&n\r\n", victim);
+        af.location = APPLY_AGI;
+        break;
+        
+      case 1:
+        send_to_char("&+mThe heat damages your muscles, you feel less dexterous.&n\r\n", victim);
+        af.location = APPLY_DEX;
+        break;
+        
+      case 2:
+        send_to_char("&+mThe heat damages your muscles, you feel weaker.&n\r\n", victim);
+        af.location = APPLY_STR;
+        break;
+      default:
+        break;
+    }
+    affect_to_char(victim, &af);
+  }
+}

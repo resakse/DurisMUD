@@ -362,7 +362,7 @@
 #define SPELL_FORTITUDE	             348
 #define SPELL_WANDERING_WOODS	     349
 #define SPELL_FLAME_BLADE	     350
-#define SPELL_ELEMENTAL_SWARM		     351
+#define SPELL_ELEMENTAL_SWARM	     351
 #define SPELL_SERENDIPITY	     352
 #define SPELL_TRANQUILITY	     353
 #define SPELL_AID		     354
@@ -658,7 +658,9 @@
 #define SPELL_HOLY_AURA              609
 #define SPELL_AID_OF_THE_HEAVENS     610
 #define SPELL_VOICE_OF_CREATION      611
-#define LAST_SPELL  SPELL_VOICE_OF_CREATION
+#define SPELL_PYROKINESIS            612
+
+#define LAST_SPELL  SPELL_PYROKINESIS
 
 #define FIRST_SKILL                  1000  /* should be a decent split point */
 #define SKILL_SNEAK                  1000

@@ -4833,6 +4833,9 @@ bool WillPsionicistSpell(P_char ch, P_char victim)
 
   if(IS_BRAINLESS(target))
   {
+    if(!spl && knows_spell(ch, SPELL_PYROKINESIS))
+      spl = SPELL_PYROKINESIS;
+
     if(!spl && knows_spell(ch, SPELL_DETONATE))
       spl = SPELL_DETONATE;
     
@@ -4848,6 +4851,9 @@ bool WillPsionicistSpell(P_char ch, P_char victim)
        knows_spell(ch, SPELL_DEATH_FIELD) &&
        number(0, 1))
           spl = SPELL_DEATH_FIELD;
+
+    if(!spl && knows_spell(ch, SPELL_PYROKINESIS))
+      spl = SPELL_PYROKINESIS;
 
     if(!spl && knows_spell(ch, SPELL_PSYCHIC_CRUSH))
       spl = SPELL_PSYCHIC_CRUSH;
@@ -8171,7 +8177,7 @@ PROFILE_END(mundane_assist);
 
 PROFILE_START(mundane_wander);
   if(!IS_FIGHTING(ch) && !IS_PATROL(ch) && !GET_MASTER(ch) &&
-      !get_linking_char(ch, LNK_RIDING) && should_teacher_move(ch))
+      !get_linking_char(ch, LNK_RIDING))
   { // 96%
     if((!IS_SET(ch->specials.act, ACT_SENTINEL) ||
          (IS_SET(world[ch->in_room].room_flags, SAFE_ZONE) &&
@@ -10456,21 +10462,4 @@ void give_proper_stat(P_char ch)
     ch->base_stats.Con = number(80, 100);
 
   affect_total(ch, FALSE);
-}
-
-bool should_teacher_move(P_char ch)
-{
-  P_char tch;
-
-  // If it's not a teacher, who cares, let it move.
-  if (!IS_ACT(ch, ACT_TEACHER))
-    return true;
-
-  LOOP_THRU_PEOPLE(tch, ch)
-  {
-    // If there's a player in the room trying to scribe, dont move.
-    if (IS_PC(tch))
-      return false;
-  }
-  return true;
 }
