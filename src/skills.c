@@ -967,8 +967,8 @@ void initialize_skills()
   SPELL_CREATE_MSG("tower of iron will", SPELL_TOWER_IRON_WILL, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY,
                 spell_tower_iron_will, "&+YYou just lost your tower of iron will!&N");
-  SPELL_ADD(CLASS_PSIONICIST, 11);
-  SPELL_ADD(CLASS_MINDFLAYER, 8);
+  SPELL_ADD(CLASS_PSIONICIST, 7);
+  SPELL_ADD(CLASS_MINDFLAYER, 7);
 
   SPELL_CREATE("celerity", SPELL_CELERITY, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT, spell_celerity);
@@ -1106,7 +1106,7 @@ void initialize_skills()
   SPELL_CREATE("solbeeps missile barrage", SPELL_MISSILE_BARRAGE, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                 spell_solbeeps_missile_barrage);
-	SPELL_ADD(CLASS_SORCERER, 10);
+	SPELL_ADD(CLASS_SORCERER, 11);
 
   SPELL_CREATE("anti-magic ray", SPELL_ANTI_MAGIC_RAY, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_anti_magic_ray);
@@ -1119,7 +1119,7 @@ void initialize_skills()
   SPELL_CREATE("bigbys crushing hand", SPELL_BIGBYS_CRUSHING_HAND, PULSE_SPELLCAST * 19/9,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                spell_bigbys_crushing_hand);
-  SPELL_ADD(CLASS_SORCERER, 11);
+  SPELL_ADD(CLASS_SORCERER, 10);
 
   SPELL_CREATE("dimension door", SPELL_DIMENSION_DOOR, PULSE_SPELLCAST * 3 / 2,
                 TAR_CHAR_WORLD | TAR_SELF_NONO | TAR_NOCOMBAT, spell_dimension_door);

@@ -2795,10 +2795,10 @@ void spell_bigbys_crushing_hand(int level, P_char ch, char *arg, int type,
       0
   };
 
-  int dam = 14 * level + number(1, 25);
+  int dam = 12 * level + number(1, 50);
 
   if(!NewSaves(victim, SAVING_SPELL, 0))
-    dam = (int) (dam * 2);
+    dam = (int) (dam * 1.75);
 
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
 }
@@ -2826,8 +2826,6 @@ int spell_solbeeps_single_missile(int level, P_char ch, char *arg, int type, P_c
     0
   };
 
-  int num_dice = MIN(51, level);
-  int dam = dice(num_dice, 8);
   // Return true for next missile if available.
   // Return false to stop barrage.
   if(!(ch) &&
@@ -2839,23 +2837,35 @@ int spell_solbeeps_single_missile(int level, P_char ch, char *arg, int type, P_c
   if(resists_spell(ch, victim))
     return true;
 
-  if(NewSaves(victim, SAVING_SPELL, 0))
+  int dam = dice (25, 15); // average ~50 per missile, so from 150 at 51 to 200 at 55 plus 25% chance of 250 at 56
+                           // made damage level-independent, since average number of missiles grows with level
+
+  bool saved = true;
+  if(!NewSaves(victim, SAVING_SPELL, 0))
   {
-    dam = (int) (dam * 0.75);
-    if(spell_damage(ch, victim, dam, SPLDAM_GENERIC,
-      SPLDAM_NOSHRUG, &halfdam_messages) == DAM_NONEDEAD);
-          return true;
+    dam = (int) (dam * 1.5);
+    saved = false;
   }
-  else
+
+  if(spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_NOSHRUG, saved ? &halfdam_messages : &fulldam_messages) == DAM_NONEDEAD)
   {
-    if(spell_damage(ch, victim, dam, SPLDAM_GENERIC,
-      SPLDAM_NOSHRUG, &fulldam_messages) == DAM_NONEDEAD)
+    if(!saved && GET_SIZE(victim) < SIZE_HUGE &&
+      !StatSave(victim, APPLY_AGI, -2 * (SIZE_LARGE - GET_SIZE(victim))) &&
+      !IS_AFFECTED4(victim, AFF4_DEFLECT))
     {
-      if(GET_SIZE(victim) < SIZE_LARGE &&
-        !StatSave(victim, APPLY_AGI, -2 * (SIZE_MEDIUM - GET_SIZE(victim))) &&
-        !IS_AFFECTED4(victim, AFF4_DEFLECT))
-      {
-        int door = number(0, 9);
+      act("$N goes flying and crashes into the wall!", FALSE, ch, 0,
+          victim, TO_CHAR);
+      act("You are sent flying and crash into the wall!", FALSE, ch, 0,
+          victim, TO_VICT);
+      act("$N goes flying and crashes into the wall!", FALSE, ch, 0,
+          victim, TO_NOTVICT);
+      SET_POS(victim, POS_PRONE + GET_STAT(victim));
+      
+      stop_fighting(victim);
+      CharWait(victim, PULSE_VIOLENCE * 1);
+
+
+        /*int door = number(0, 9);
 
         if((CAN_GO(victim, door)) && (!check_wall(victim->in_room, door)))
         {
@@ -2877,8 +2887,7 @@ int spell_solbeeps_single_missile(int level, P_char ch, char *arg, int type, P_c
             CharWait(victim, PULSE_VIOLENCE * 1);
           }
           return FALSE;
-        }
-      }
+        }*/
     }
     return true;
   }
@@ -2889,17 +2898,16 @@ int spell_solbeeps_single_missile(int level, P_char ch, char *arg, int type, P_c
 void spell_solbeeps_missile_barrage(int level, P_char ch, char *arg, int type, P_char victim,
                   P_obj tar_obj)
 {
-  int num_missiles = 3, i = 0;
-  
   if(!(ch) ||
      !IS_ALIVE(ch))
         return;
 
-  if((level >= 52) &&
-    (!number(0, 3)))
-        num_missiles++;
+  int num_missiles = 3, i = 0;
 
-  if((level >= 56 ))
+  if (level >= 56 || !number(0, 55 - level))
+    num_missiles++;
+
+  if (level >= 56 && !number(0, 3))
     num_missiles++;
 
   while( i < num_missiles &&
