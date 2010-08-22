@@ -182,6 +182,9 @@ void assign_mobiles(void)
   /* mob clear epic task */
   mob_index[real_mobile0(22428)].func.mob = clear_epic_task_spec;
   
+  /* monk quest mob */
+  mob_index[real_mobile0(55178)].func.mob = monk_remort;
+
   /* player castles */
 
   /* Shipyards */

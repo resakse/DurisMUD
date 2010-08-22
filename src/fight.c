@@ -5655,8 +5655,7 @@ int calculate_thac_zero(P_char ch, int skill)
   {
     to_hit = get_property("to.hit.WarriorTypes", 10);
   }
-  else if(GET_CLASS(ch, CLASS_MONK) ||
-          GET_CLASS(ch, CLASS_MERCENARY) ||
+  else if(GET_CLASS(ch, CLASS_MERCENARY) ||
           GET_CLASS(ch, CLASS_REAVER) ||
           GET_CLASS(ch, CLASS_RANGER)  ||
           GET_CLASS(ch, CLASS_BERSERKER) ||
@@ -5672,7 +5671,8 @@ int calculate_thac_zero(P_char ch, int skill)
   }
   else if(GET_CLASS(ch, CLASS_THIEF) ||
          GET_CLASS(ch, CLASS_BARD) ||
-         GET_CLASS(ch, CLASS_ROGUE))
+         GET_CLASS(ch, CLASS_ROGUE) ||
+	 GET_CLASS(ch, CLASS_MONK))
   {
     to_hit = get_property("to.hit.RogueTypes", 7);
   }
@@ -8397,11 +8397,11 @@ void perform_violence(void)
     number_attacks = calculate_attacks(ch, attacks);
 
 // Monks ignore inertial barrier and armlocks. May2010 -Lucrot
-    if(!GET_CLASS(ch, CLASS_MONK) &&
-      (IS_AFFECTED3(opponent, AFF3_INERTIAL_BARRIER) ||
+// Removing monks ignore per Kitsero. Aug2010
+    if(IS_AFFECTED3(opponent, AFF3_INERTIAL_BARRIER) ||
       (!GET_CLASS(ch, CLASS_PSIONICIST) &&
       IS_AFFECTED3(ch, AFF3_INERTIAL_BARRIER) ) ||
-      IS_ARMLOCK(ch)))
+      IS_ARMLOCK(ch))
     {
       real_attacks = number_attacks - (int) (number_attacks / 2);
     }

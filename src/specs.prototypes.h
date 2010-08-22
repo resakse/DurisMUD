@@ -487,6 +487,7 @@ int fooquest_boss(P_char, P_char, int, char *);
 
 int io_assistant(P_char ch, P_char pl, int cmd, char *arg);
 
+int monk_remort(P_char ch, P_char pl, int cmd, char *arg);
 
 // Torg
 int timoro_die(P_char, P_char, int, char *);

@@ -16365,3 +16365,101 @@ int tentacler_death(P_char tentacler, P_char ch, int cmd, char *arg)
    return FALSE;
 } 
 
+int monk_remort(P_char ch, P_char pl, int cmd, char *arg)
+{
+  P_char tch;
+  char name[MAX_STRING_LENGTH], msg[MAX_STRING_LENGTH];
+  char Gbuf[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
+  int epiccost, plat;
+
+  if (cmd == CMD_SET_PERIODIC)
+    return TRUE;
+
+  argument_interpreter(arg, name, msg);
+
+  if (!pl && (cmd == CMD_PERIODIC))
+  {
+    LOOP_THRU_PEOPLE(tch, ch)
+    {
+      if (!number(0, 3) && GET_CLASS(tch, CLASS_CLERIC) && !IS_MULTICLASS_PC(tch))
+      {
+	do_say(ch, "A cleric eh?  Have you heard the rumors of clerics becoming powerful monks?", -4);
+	return FALSE;
+      }
+    }
+  }
+
+  if (pl && !IS_PC(pl))
+    return FALSE;
+
+  if (cmd != CMD_ASK)
+    return FALSE;
+ 
+  epiccost = (int)get_property("remort.monk.epic.cost", 1000.000);
+  plat = (int)get_property("remort.monk.cost", 1000000.00);
+  
+  if (!strcmp(msg, "monk"))
+  {
+    do_say(ch, "Yes Monks are a powerful kind indeed.  If you seek to become one, I can teach you for a price.", -4);
+    sprintf(Gbuf, "It will cost you %s, and you must posses %d epics.", coin_stringv(plat), epiccost);
+    do_say(ch, Gbuf, -4);
+    do_say(ch, "Ask me 'remort' to confirm.", -4);
+    return TRUE;
+  }
+  if (!strcmp(msg, "remort"))
+  {
+    if (IS_TRUSTED(pl))
+    {
+      send_to_char("That would be very dumb.\n", pl);
+      return TRUE;
+    }
+
+    if (!GET_CLASS(pl, CLASS_CLERIC))
+    {
+      send_to_char("You do not posses the correct class to obtain my teachings.\n", pl);
+      return TRUE;
+    }
+  
+    if ((GET_RACE(pl) != RACE_HUMAN) &&
+        (GET_RACE(pl) != RACE_GNOME) &&
+        (GET_RACE(pl) != RACE_GITHZERAI) &&
+        (GET_RACE(pl) != RACE_ORC) &&
+        (GET_RACE(pl) != RACE_KUOTOA) &&
+        (GET_RACE(pl) != RACE_KOBOLD))
+    {
+      send_to_char("I do not teach your kind!  Be gone!\n", pl);
+      return TRUE;
+    }
+
+    if (pl->only.pc->epics < (int)get_property("remort.monk.epic.cost", 1000.000))
+    {
+      send_to_char("You are not epic enough!\n", pl);
+      return TRUE;
+    }
+
+    if (GET_MONEY(pl) < plat)
+    {
+      send_to_char("You can't afford it!\n", pl);
+      return TRUE;
+    }
+    
+    // PASSED!
+
+    SUB_MONEY(pl, plat, 0);
+    sprintf(Gbuf, "%s takes your money.\n", ch->player.short_descr);
+    send_to_char(Gbuf, pl);
+    
+    forget_spells(pl, -1);
+    pl->player.spec = 0;
+    pl->player.secondary_class = 0;
+    pl->player.m_class = CLASS_MONK;
+    do_start(pl, 1);
+
+    sprintf(Gbuf2, "You begin listening to %s as he begins\n", ch->player.short_descr);
+    send_to_char(Gbuf2, pl);
+    send_to_char("describing the ways of the &+LM&+won&+Lk&n to you.\n", pl);
+    send_to_char("Before too long, you begin to forget your priesthood.\n", pl);
+    CharWait(pl, WAIT_SEC * 30);
+    return TRUE;
+  }
+}
