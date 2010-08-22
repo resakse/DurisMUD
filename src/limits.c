@@ -1245,30 +1245,27 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     }
     else
     {
-      XP = XP * get_property("exp.factor.kill", 1.00) ;
+      if (!IS_PC(victim))
+      {
+        XP = XP * get_property("exp.factor.kill", 1.00) ;
 // debug("kill 1 exp gain (%d)", (int)XP);
-      XP = gain_global_exp_modifiers(ch, XP);
+        XP = gain_global_exp_modifiers(ch, XP);
 // debug("kill 2 exp gain (%d)", (int)XP);
-      XP = XP * exp_mod(ch, victim) / 100;
+        XP = XP * exp_mod(ch, victim) / 100;
 // debug("kill 3 exp gain (%d)", (int)XP);
-      XP = modify_exp_by_zone_trophy(ch, type, XP);
+        XP = modify_exp_by_zone_trophy(ch, type, XP);
 // debug("kill 4 exp gain (%d)", (int)XP);
-      XP = gain_exp_modifiers(ch, victim, XP);
+        XP = gain_exp_modifiers(ch, victim, XP);
 // debug("kill 5 exp gain (%d)", (int)XP);
-      XP = gain_exp_modifiers_race_only(ch, victim, XP);
+        XP = gain_exp_modifiers_race_only(ch, victim, XP);
 // debug("kill 6 exp gain (%d)", (int)XP);
-      XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
+        XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
 // debug("kill 7 exp gain (%d)", (int)XP);
+      }
       logit(LOG_EXP,
             "KILL EXP: %s (%d) killed by %s (%d): old exp: %d, new exp: %d, +exp: %d",
             GET_NAME(victim), GET_LEVEL(victim), GET_NAME(ch),
             GET_LEVEL(ch), GET_EXP(ch), GET_EXP(ch) + (int)XP, (int)XP);
-    }
-    
-    if(pvp)
-    {
-      XP = XP * get_property("gain.exp.mod.pvp", 1.250);
-// debug("kill 8 exp gain (%d)", (int)XP);
     }
   }
   else if(type == EXP_WORLD_QUEST)
