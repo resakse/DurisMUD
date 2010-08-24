@@ -1376,9 +1376,9 @@ void spell_death_field(int level, P_char ch, char *arg, int type,
   zone_spellmessage(ch->in_room,
                     "&+LYour brain hurts as a black haze fills your psyche!\r\n",
                     "&+LYour brain hurts as a black haze coming from the %s fills your psyche!\r\n");
-  //if((ch) &&
-  //   IS_ALIVE(ch))
-  //      CharWait(ch, (int) (PULSE_SPELLCAST * 1.5));
+  if((ch) &&
+     IS_ALIVE(ch))
+        CharWait(ch, (int) (PULSE_SPELLCAST * 0.5));
 }
 
 void spell_detonate(int level, P_char ch, char *arg, int type, P_char victim,
