@@ -87,6 +87,7 @@ void do_terrain(P_char ch, char *arg, int cmd)
 
 void do_multiclass(P_char ch, char *arg, int cmd)
 {
+  char buf[MAX_STRING_LENGTH];
   int found_one = FALSE, i;
   int min_level = get_property("multiclass.level.req.min", 41);
   
@@ -111,8 +112,10 @@ void do_multiclass(P_char ch, char *arg, int cmd)
   }
 
   if (GET_LEVEL(ch) < min_level)
-    send_to_char("You cannot multiclass until you reach level 41.\r\n"
-                 "However, here is a list of your future choices:\r\n\r\n",ch);
+  {
+    sprintf(buf, "You cannot multiclass until you reach level %d.\r\nHowever, here is a list of your future choices:\r\n\r\n", min_level);
+    send_to_char(buf, ch);
+  }
   else if (cmd != -1)           // indicates called from proc with no arg..  aren't i nice
     send_to_char("You are not in the proper location to multiclass.\r\n"
                  "However, here is a list of your possible choices:\r\n\r\n", ch);
