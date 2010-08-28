@@ -47,7 +47,7 @@ const ShipCrewData ship_crew_data[MAXCREWS] = {
     { "&+GStr&+go&+Gng&+ga&+Grms &+go&+Gf &+GGh&+go&+Gr&+ge ",             0,     0,       0,       0,    780,      0,     0,     0,   1000000,     0, { 43221, 0, 0, 0, 77 }, CF_NONE },
     { "&+GSarmiz'Duul &+BScallywags",                                      0,   150,     100,      80,    600,      1,     0,     0,   1600000,    80, {  9704, 0, 0, 0, 77 }, CF_NONE },
     { "&+WSto&+wrm&+bPort &+rBucaneers",                                   0,   100,     140,     100,    625,      0,     2,     0,   2000000,   100, { 22481, 0, 0, 0, 77 }, CF_NONE },
-    { "&+yJu&+wgg&+yer&+Wna&+wug&+Wh&+wt &+LDeserters",                    1,   500,     500,     350,    725,      1,     1,     0,   5000000,   360, {     0, 0, 0, 0, 77 }, CF_NONE },
+    { "&+yJu&+wgg&+yer&+Wna&+wug&+Wh&+wt &+LDeserters",                    1,   500,     500,     350,    725,      1,     1,     0,   5000000,   360, { 22648, 0, 0, 0, 77 }, CF_NONE },
     
     { "&+rQuietus &+WPo&+Lwd&+wer &+wMo&+Lnk&+wey&+Ls",                    1,   500,     800,     400,    750,      0,     2,     0,   6000000,   500, {  1734, 0, 0, 0, 77 }, CF_SCOUT_RANGE_1 },
     { "&+BTorrhan &+LBl&+wa&+Lck &+LG&+wa&+Lng",                           1,   550,     450,     750,    750,      0,     0,     2,   6000000,   450, { 66735, 0, 0, 0, 77 }, CF_HULL_REPAIR_2 },
@@ -67,34 +67,34 @@ const ShipChiefData ship_chief_data[MAXCHIEFS] = {
 //                                                                    Skill  Gain    Mod       Cost   Frags
     { NO_CHIEF,    "None",                                               0,     0,      0,          0,      0, {     0,     0, 0, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+wDe&+Lck &+wCa&+Lde&+wt",                        200,    10,      1,     800000,    120, { 43222,132766, 0, 0, 77 }, CCF_NONE  } , // TODO: tharn
-    { SAIL_CHIEF,  "&+wR&+Lu&+wgg&+Le&+wd &+yHelms&+wman",             200,    10,      1,     800000,    120, {  9704, 22481, 0, 0, 77 }, CCF_NONE  } ,
-    { GUNS_CHIEF,  "&+rGunner &+cCadet",                               250,    10,      1,    1200000,    150, { 43220,132766, 0, 0, 77 }, CCF_NONE  } , // TODO: tharn
-    { GUNS_CHIEF,  "&+cExperienced &+rCanoneer",                       250,    10,      1,    1200000,    150, {  1734,     0, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+wShip&+yw&+wr&+yi&+wg&+yh&+wt &+yTyro",          220,    10,      1,    1000000,    130, { 43220,     0, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+wD&+yoc&+wk &+yCa&+wrp&+yen&+wter",              220,    10,      1,    1000000,    130, {  9704,     0, 0, 0, 77 }, CCF_NONE  } ,
+    { SAIL_CHIEF,  "&+wDe&+Lck &+wCa&+Lde&+wt",                        200,    10,      1,     800000,    120, { 43222,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { SAIL_CHIEF,  "&+wR&+Lu&+wgg&+Le&+wd &+yHelms&+wman",             200,    10,      1,     800000,    120, {  9704, 22481,     0, 0, 77 }, CCF_NONE  } ,
+    { GUNS_CHIEF,  "&+rGunner &+cCadet",                               250,    10,      1,    1200000,    150, { 43220,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { GUNS_CHIEF,  "&+cExperienced &+rCanoneer",                       250,    10,      1,    1200000,    150, {  1734,     0,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+wShip&+yw&+wr&+yi&+wg&+yh&+wt &+yTyro",          220,    10,      1,    1000000,    130, { 43220,     0,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+wD&+yoc&+wk &+yCa&+wrp&+yen&+wter",              220,    10,      1,    1000000,    130, {  9704,     0,     0, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+yOld &+gQ&+wu&+ga&+wr&+gt&+we&+gr&+wmaster",     800,    25,      2,    3000000,    540, {  1734, 82641, 0, 0, 77 }, CCF_NONE  } ,
-    { GUNS_CHIEF,  "&+BMaster &+rGu&+Rnn&+rer",                       1000,    35,      2,    4000000,    700, { 54240, 22481, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+yVet&+Ye&+Wr&+Ya&+yn &+yB&+Yo&+Wats&+Yw&+yain",  900,    30,      2,    3500000,    640, { 43221, 66735, 0, 0, 77 }, CCF_NONE  } ,
+    { SAIL_CHIEF,  "&+yOld &+gQ&+wu&+ga&+wr&+gt&+we&+gr&+wmaster",     800,    25,      2,    3000000,    540, {  1734, 82641, 55418, 0, 77 }, CCF_NONE  } ,
+    { GUNS_CHIEF,  "&+BMaster &+rGu&+Rnn&+rer",                       1000,    35,      2,    4000000,    700, { 54240, 22481,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+yVet&+Ye&+Wr&+Ya&+yn &+yB&+Yo&+Wats&+Yw&+yain",  900,    30,      2,    3500000,    640, { 43221, 66735, 55418, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+BChief &+WM&+wa&+Wt&+we",                       2000,    50,      3,    7500000,   1350, { 81021,132766, 0, 0, 77 }, CCF_NONE  } , // TODO: tharn
-    { GUNS_CHIEF,  "&+WE&+wl&+Wi&+wte &+RGunner",                     2500,    70,      3,    9000000,   1640, { 76859, 38107, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+cE&+wxp&+ce&+wrt &+cE&+wng&+ci&+wn&+cee&+wr",   2200,    60,      3,    8000000,   1480, { 49051, 76859, 0, 0, 77 }, CCF_NONE  } ,
+    { SAIL_CHIEF,  "&+BChief &+WM&+wa&+Wt&+we",                       2000,    50,      3,    7500000,   1350, { 81021,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { GUNS_CHIEF,  "&+WE&+wl&+Wi&+wte &+RGunner",                     2500,    70,      3,    9000000,   1640, { 76859, 38107,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+cE&+wxp&+ce&+wrt &+cE&+wng&+ci&+wn&+cee&+wr",   2200,    60,      3,    8000000,   1480, { 49051, 76859,     0, 0, 77 }, CCF_NONE  } ,
 }; 
 
-#define WPNFLAG01   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                                   //small ball        
-#define WPNFLAG02   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                                   //med ball          
-#define WPNFLAG03   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                                   //lrg ball          
-#define WPNFLAG04   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN            | BALLISTIC  //small cat         
-#define WPNFLAG05   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN            | BALLISTIC  //med cat           
-#define WPNFLAG06   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN            | BALLISTIC  //large cat         
-#define WPNFLAG07                                 PORT_ALLOWED | STAR_ALLOWED                                   //hvy ball          
-#define WPNFLAG08   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM | CAPITOL              //light beam
-#define WPNFLAG09   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM | CAPITOL              //heavy beam
-#define WPNFLAG10   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | MINDBLAST| CAPITOL              //mind blast        
-#define WPNFLAG11   FORE_ALLOWED | REAR_ALLOWED |                               SAILSHOT | CAPITOL              //frag cannon       
-#define WPNFLAG12   FORE_ALLOWED | REAR_ALLOWED |                               SHOTGUN  | CAPITOL | BALLISTIC  //long tom          
+#define WPNFLAG01   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                         //small ball        
+#define WPNFLAG02   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                         //med ball          
+#define WPNFLAG03   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                         //lrg ball          
+#define WPNFLAG04   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC             // small cat         
+#define WPNFLAG05   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC             //med cat           
+#define WPNFLAG06   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC             //large cat         
+#define WPNFLAG07                                 PORT_ALLOWED | STAR_ALLOWED                         //hvy ball          
+#define WPNFLAG08   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM  | CAPITOL   //light beam
+#define WPNFLAG09   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | RANGEDAM  | CAPITOL   //heavy beam
+#define WPNFLAG10   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED | MINDBLAST | CAPITOL   //mind blast        
+#define WPNFLAG11   FORE_ALLOWED | REAR_ALLOWED                                           | CAPITOL   //frag cannon       
+#define WPNFLAG12   FORE_ALLOWED | REAR_ALLOWED                               | BALLISTIC | CAPITOL   //long tom          
 
 const WeaponData weapon_data[MAXWEAPON] = {
 // Name                         Cost  Frags Weight Ammo    Min     Max     Min     Max  Fragments Damage  Sail   Hull    Sail    Armor   Reload  Volley      Flags

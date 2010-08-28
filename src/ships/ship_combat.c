@@ -898,14 +898,14 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
         {
             int eram_dam = eq_ram_damage(ship);
             eram_dam = number(eram_dam * 0.8, eram_dam * 1.2);
-            damage_hull(ship, target, eram_dam, tarc, 20);
+            damage_hull(ship, target, eram_dam, tarc, 30);
             ship_eram = true;
         }
         if (has_eq_ram(target) && tarc == SIDE_FORE)
         {
             int counter_eram_dam = eq_ram_damage(ship);
             counter_eram_dam = number(counter_eram_dam * 0.6, counter_eram_dam * 1.0);
-            damage_hull(NULL, ship, counter_eram_dam, sarc, 20);
+            damage_hull(NULL, ship, counter_eram_dam, sarc, 30);
             target_eram = true;
         }
 
