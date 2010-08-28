@@ -67,20 +67,20 @@ const ShipChiefData ship_chief_data[MAXCHIEFS] = {
 //                                                                    Skill  Gain    Mod       Cost   Frags
     { NO_CHIEF,    "None",                                               0,     0,      0,          0,      0, {     0,     0, 0, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+wDe&+Lck &+wCa&+Lde&+wt",                        200,    10,      1,     800000,    120, { 43222,132766, 0, 0, 77 }, CCF_NONE  } , // TODO: tharn
-    { SAIL_CHIEF,  "&+wR&+Lu&+wgg&+Le&+wd &+yHelms&+wman",             200,    10,      1,     800000,    120, {  9704, 22481, 0, 0, 77 }, CCF_NONE  } ,
-    { GUNS_CHIEF,  "&+rGunner &+cCadet",                               250,    10,      1,    1200000,    150, { 43220,132766, 0, 0, 77 }, CCF_NONE  } , // TODO: tharn
-    { GUNS_CHIEF,  "&+cExperienced &+rCanoneer",                       250,    10,      1,    1200000,    150, {  1734,     0, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+wShip&+yw&+wr&+yi&+wg&+yh&+wt &+yTyro",          220,    10,      1,    1000000,    130, { 43220,     0, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+wD&+yoc&+wk &+yCa&+wrp&+yen&+wter",              220,    10,      1,    1000000,    130, {  9704,     0, 0, 0, 77 }, CCF_NONE  } ,
+    { SAIL_CHIEF,  "&+wDe&+Lck &+wCa&+Lde&+wt",                        200,    10,      1,     800000,    120, { 43222,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { SAIL_CHIEF,  "&+wR&+Lu&+wgg&+Le&+wd &+yHelms&+wman",             200,    10,      1,     800000,    120, {  9704, 22481,     0, 0, 77 }, CCF_NONE  } ,
+    { GUNS_CHIEF,  "&+rGunner &+cCadet",                               250,    10,      1,    1200000,    150, { 43220,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { GUNS_CHIEF,  "&+cExperienced &+rCanoneer",                       250,    10,      1,    1200000,    150, {  1734,     0,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+wShip&+yw&+wr&+yi&+wg&+yh&+wt &+yTyro",          220,    10,      1,    1000000,    130, { 43220,     0,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+wD&+yoc&+wk &+yCa&+wrp&+yen&+wter",              220,    10,      1,    1000000,    130, {  9704,     0,     0, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+yOld &+gQ&+wu&+ga&+wr&+gt&+we&+gr&+wmaster",     800,    25,      2,    3000000,    540, {  1734, 82641, 0, 0, 77 }, CCF_NONE  } ,
-    { GUNS_CHIEF,  "&+BMaster &+rGu&+Rnn&+rer",                       1000,    35,      2,    4000000,    700, { 54240, 22481, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+yVet&+Ye&+Wr&+Ya&+yn &+yB&+Yo&+Wats&+Yw&+yain",  900,    30,      2,    3500000,    640, { 43221, 66735, 0, 0, 77 }, CCF_NONE  } ,
+    { SAIL_CHIEF,  "&+yOld &+gQ&+wu&+ga&+wr&+gt&+we&+gr&+wmaster",     800,    25,      2,    3000000,    540, {  1734, 82641, 55418, 0, 77 }, CCF_NONE  } ,
+    { GUNS_CHIEF,  "&+BMaster &+rGu&+Rnn&+rer",                       1000,    35,      2,    4000000,    700, { 54240, 22481,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+yVet&+Ye&+Wr&+Ya&+yn &+yB&+Yo&+Wats&+Yw&+yain",  900,    30,      2,    3500000,    640, { 43221, 66735, 55418, 0, 77 }, CCF_NONE  } ,
 
-    { SAIL_CHIEF,  "&+BChief &+WM&+wa&+Wt&+we",                       2000,    50,      3,    7500000,   1350, { 81021,132766, 0, 0, 77 }, CCF_NONE  } , // TODO: tharn
-    { GUNS_CHIEF,  "&+WE&+wl&+Wi&+wte &+RGunner",                     2500,    70,      3,    9000000,   1640, { 76859, 38107, 0, 0, 77 }, CCF_NONE  } ,
-    { RPAR_CHIEF,  "&+cE&+wxp&+ce&+wrt &+cE&+wng&+ci&+wn&+cee&+wr",   2200,    60,      3,    8000000,   1480, { 49051, 76859, 0, 0, 77 }, CCF_NONE  } ,
+    { SAIL_CHIEF,  "&+BChief &+WM&+wa&+Wt&+we",                       2000,    50,      3,    7500000,   1350, { 81021,132766,     0, 0, 77 }, CCF_NONE  } , // TODO: tharn
+    { GUNS_CHIEF,  "&+WE&+wl&+Wi&+wte &+RGunner",                     2500,    70,      3,    9000000,   1640, { 76859, 38107,     0, 0, 77 }, CCF_NONE  } ,
+    { RPAR_CHIEF,  "&+cE&+wxp&+ce&+wrt &+cE&+wng&+ci&+wn&+cee&+wr",   2200,    60,      3,    8000000,   1480, { 49051, 76859,     0, 0, 77 }, CCF_NONE  } ,
 }; 
 
 #define WPNFLAG01   FORE_ALLOWED | REAR_ALLOWED | PORT_ALLOWED | STAR_ALLOWED                                   //small ball        
