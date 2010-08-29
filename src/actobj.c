@@ -2688,6 +2688,7 @@ void do_eat(P_char ch, char *argument, int cmd)
       int mov_reg;
       if (temp->value[3] > 0) // TODO: apply poison
       {
+          act("&+GYou feel sick.", FALSE, ch, 0, 0, TO_CHAR);
           hit_reg = -temp->value[3];
           mov_reg = 0;
       }
