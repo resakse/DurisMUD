@@ -2810,7 +2810,7 @@ SPELL_ADD(CLASS_NONE, 1);
                 TAR_CHAR_ROOM | TAR_SPIRIT, spell_mending);
   SPELL_ADD(CLASS_SHAMAN, 4);
 
-  SPELL_CREATE("soul disturbance", SPELL_SOUL_DISTURBANCE, PULSE_SPELLCAST * (3 / 2),
+  SPELL_CREATE("soul disturbance", SPELL_SOUL_DISTURBANCE, PULSE_SPELLCAST * 5 / 4,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO | TAR_SPIRIT,
                 spell_soul_disturbance);
   SPELL_ADD(CLASS_SHAMAN, 4);
@@ -2849,7 +2849,7 @@ SPELL_ADD(CLASS_NONE, 1);
                 spell_greater_spirit_anguish);
   SPELL_ADD(CLASS_SHAMAN, 12);
 
-  SPELL_CREATE("greater soul disturbance", SPELL_GREATER_SOUL_DISTURB, 2 * PULSE_SPELLCAST,
+  SPELL_CREATE("greater soul disturbance", SPELL_GREATER_SOUL_DISTURB, 4/3 * PULSE_SPELLCAST,
                 TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO | TAR_SPIRIT,
                 spell_greater_soul_disturbance);
   SPELL_ADD(CLASS_SHAMAN, 7);
