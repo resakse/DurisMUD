@@ -1,0 +1,279 @@
+   Help file for "The Tower of Darkness"
+
+
+        I       Basic History
+
+        II      Layout
+
+        III     Quests
+
+        IV      Errors
+
+
+
+        Basic History
+
+       A long time ago there was a conflict between Sargon, the God of
+shadows and Darkness, and Reanna, the Goddess of Light. They both eventually
+came down to earth to lead their individual forces in the Wars of Light and
+Shadow. At the end of the war the Heros of Light, led by Martin Lewellyn
+took a blade forged by Reanna and struck Sargon down while his army was away.
+They then imprisioned Sargon, along with his most powerful minions while the
+God was Wakened from the blow in a Pocket Diminsion called Exile.
+       After the God's imprisonment his most powerful sorcerer, Earlion, was the only
+powerful follower of Sargon left, the other Heros of Darkness having been
+imprisoned in Exile along with the God. The Army of Light was then marching
+on the Tower of Darkness, the center of Sargon's power. Knowing that if he
+stayed he and the tower would be destroyed Earlion told all of the army and
+lay followers of Sargon to flee and that one day a Man would come and bring
+back the tower and release the god from his prison. Earlion then cast a spell
+that took the tower away from time and space, moving it to a place "between
+moments" as it is called in his journal.
+       After this nothing happened much. For many years Reanna was a very
+powerful goddess. Yet over time her power has deteriorated to the point that
+now she has one last follower. This follower and cleric lives on the site
+where Sargon was imprioned, right outside the ancient site of the Tower of
+Darkness.
+       Into this situation Urian Shadowborn enters. Urian is an extemely
+powerful wizard who has had visions sent by Sargon from the Prison showing
+how to open Exile and release the god. Since then he has gathered together
+all of the Priests of Sargon and the Black Guard, the personal guard of Sargon
+on earth. He then came to the place where the Tower was and summoned it back
+from the "moment out of time".
+       Now that the Tower of Darkness was back all he needed to do was open
+Exile. It was written in the holy book of Sargon that he needed the five parts
+of a shard of stone that served as the key to the prison on the Prime Material
+Plane. After he had them all he could sacrifice the last cleric of Reanna and
+he would have the Star Key to open the prison and free Sargon.
+        Here the Players enter the picture. Their job is to fight from level
+to level of this 6 level tower, do all the quests and get all 5 parts of the
+star stone from the heads of the differant groups(the Black Guard, the clerics,
+Urian himself ect...)
+        When they have done that they can give the pieces of the stone to the
+cleric of Reanna in the village of Dubneth(part of the zone) and he will give
+them the Star Key. Then they can open the entrance to Exile, enter and kill
+the Heros of Darkness and Sargon himself.
+
+
+
+II    Layout
+
+        The layout of the zone is as follows:
+
+               The Village of Dubneth(including the Church of Reanna, the
+                         |             Inn and the Smithy)
+                         |
+           The           |----(The Farm of Jenifer McLaurn
+           Portal ________
+           to Exile      |
+                         |
+                         |
+                The Tower of Darkness*
+
+        The Tower of Darkness is organized by Level. There are a total of
+     6 levels. Each is a 3x3 grid. A total of 9 rooms that are all layed
+     out differantly
+
+        Level 1: The first level is the army barracks. It is mainly mid to
+                 low level 40 mobs. There is one piece of eq and 2 quests.
+                 Along with this is the key that locks the main door, this
+                 makes the zone unraidable if you kill this person. The door
+                 starts off UNlocked, and can later be locked by people doing
+                 the zone.
+        Level 2: This is the officers level. On this level are the Captain
+                 and his officers. There is some ok eq here and the first
+                 part of the Star stone.
+        Level 3: This level belongs to the Black Guard. This is an elite
+                 group of Anti-Paladins devoted to Sargon. The mob level
+                 goes up here and the second part of the star stone is here.
+        Level 4: To get into this level the word "Sargon" must be said. It
+                 is the clerics level. This entire level is a death trap once
+                 you enter the room past the bone golems.
+        Level 5: This is the mages level. Is is basically 9 rooms but has
+                 Some serius modifications. Each of the three mage groups
+                 (Necros, Sorcs and Conjurers) have a teleporter on this
+                 level that takes people to their true base of operations.
+                 One of these is deep in the earth(Necros). One is in the
+                 Abyss(the conjurers) and the other is a small pocket
+                 dimision on the border of the Positive Energy Plane(the sorcs)
+                 The Teleporters are pictures that are all NO_SHOW items.
+                 As a note, you MUST kill all three of the small mage guilds
+                 to get the keys of magic to give them to the golem in room
+                 number 50 so that he can give you the key to open up Earlion's
+                 room of suspended animation, kill him(get his eq and the
+                 star stone for this level and get the key to Urian's door
+                 on level 7).
+        Level 6: This is the level of mirrors. It is a maze of teleporters
+                 that throw people around. It should prove VERY confusing.
+                 In it are a some ghost shadow breathers. In the center of
+                 the area is a dragon that will scatter the PC's back into
+                 the maze. Take a second to look at this area. Its rather
+                 complicated. In the center of this area is a portal that
+                 takes you to the "last level" level 7.
+        Level 7: This is a small 5 room area. It has the ambassadors area
+                 (Where random emissarys load every boot) and it has the
+                 door into Urian's Chamber. Only he and Earlion have the key
+                 to this last area of the Tower. You Have to kill Earlion on
+                 Level 6 to get in here. Urian has the key to the treasure
+                 chamber on this level.
+
+        EXILE:    Exile is REALLY dangerous. The beginning of it is room 129.
+                You have to go through the teleporter in room 140 to get to
+                it. And you have to have done every level of the Tower of
+                Darkness to get the Star Key. The lay out works like this.
+                The first room is the ONLY room in the zone that is wellable
+                wordable or anything like that. If you go north you enter
+                the actual Exile Prison. After you enter the first room you
+                must complete Exile or you lose ALL of your eq.
+
+                   In affect you can enter Exile but you cannot get out until
+                you kill Sargon. There are 4 rooms to Exile. Each room is a
+                one way trip. You can go North but you cannot go back the
+                way you come. So if you die you cannot CR yourself, and you
+                must fight the mobs you just fought Naked. This is where
+                the best eq in the zone is.
+
+                I used no affect 3 or affect 4, no stone, globe, minor globe,
+                fireshield or anything else I can think of on any objects.
+
+
+
+III   The Quests
+
+        There are a total of 10 quests in the zone. I will just go from the
+bottom of the tower to the top doing them by number and floor.
+
+(1)     Recently the farmers and peasants of risen up and tried to destroy
+      the tower that has appeared. They were all killed to a man. Since then
+      Urian has made an object lesson of them to the people of Dubneth.
+      One of the young men was just married. His wife is going crazy, not
+      knowing if he is dead or what. In fact... he is dead and the ogre in
+      the first room has decapitated him. If the PC's give the head back to
+      the woman she crys and sobs and they are rewarded with expierence.
+      The decapitated head of Joseph McLaurun(obj # 7)
+      His wife is mob number 151
+      The mobs with the head are in room # 11
+
+(2)     On the second level of the Tower there is a unpickable and locked
+      door that leads to Kinslor Elfslayer. He has the first piece of the
+      Star Stone. You have to get the key to open the door. There are two
+      ways to do this.
+                A. There are two stone giants in front of his room. They
+                   are very greedy. You can bribe them with 100p and they
+                   will give you the key.
+                B. The captain is expecting a messenger from Bloodstone.
+                   The envoy is in Dubneth wandering around(mob # 67) and has
+                   a letter for him(obj # 36). If you kill him and deliver
+                   the letter to the Sargeant of the first level(mob 27) room
+                   16 then he will give you a pass to give to the elite stone
+                   giants that have them give you the key to enter the area.
+
+(3)     The next quest deals with a door as well. To get into the 5th level
+     of the Tower(the Mages Level) the word "darkfather" must be said to open
+     it. There is only one way to learn the word. On the 4th level of the
+     Tower(the clerics level) there is a small prison area(Room 42). In that
+     room is a key board that is flagged No_Show. In it is a key that will
+     undo the bindings on Katalia's arms on the first level(she is mob # 11
+     in room # 17). If you give her the key she will undo her writs and give
+     you Exp, and also will tell you that the wizards say the word "Darkfather"
+     and that it makes the door hum on the 6th level.
+
+(4)     In the village of Dubneth is a fine smith named Dorthan. Shortly
+     after the Tower reappeared Urian realised he needed more iron weapons
+     for his men. He therefore stole the Smiths daughter and forced him to
+     do free work for him until she is rescued. She is located on the the
+     3rd level on the Black Guard's level and is mob number 55, her name is
+     Amelia. If you can kill the priest in the room with her, and get his
+     key and give it to her she will give you her mothers locket. If you take
+     this and a lot of the normal iron weapons found in the zone to Dorthan
+     he will make you the 'iron shield of Dubneth'
+     Dorthan is mob # 54 in room # 66.
+     Amelia is mob # 55 in room # 29.
+
+(5)     The next major quest deals with getting the 4th part of the Star
+     Stone off the 5th level. When Earlion the sorcerer took the Tower of
+     Darkness to the place "between moments" he had to go with it. To make
+     sure that he did no go insane during the time passage he put himself in
+     stasis. He then put a large golem that has the stasis key outside the
+     room. When the mages of the Tower of Darkness returned and found all
+     three keys of magic(the key of Death Magic, the key of Creation Magic,
+     and the key elemental magic) and gave them to the golem he would give
+     them the stasis key and that would let them free Earlion and thereby
+     get the 4th part of the star stone. The PC's must get all 3 keys, and
+     give them to the statue, open the stasis chamber and kill earlion(In all
+     his aspects).
+     The key of death magic(obj 112) carried by Deadlord Verinor(mob 105) in
+        room 73.
+     The key to creation magic(obj 114) carried by Gailon Darkhoast(mob 142) in
+        room 117.
+     The key to elemental magic(obj 113) in a portal of darkness (obj 84) in
+        room 97.
+     you get the key of stasis(obj 118) from the old statue(mob 75) in 50.
+
+(6)      This is an easy quest. Reanna has one planetar that works for her.
+    Before he was a planetar he was the mortal that gave Sargon his death
+    blow. He has been willingly captured so that he can talk to the PC's. He
+    will answer a lot of questions about the zone in case the PC's have not
+    figured out what is going on yet. Also if they(or when they) kill the
+    person that has him imprioned and give his staff to the planetar he will
+    give him the sword that struck Sargon down it is 'a broadsword of glowing light'
+    but I did the thing where you have to reveal true name. In reality it is
+    a broad sword named 'The Redemtion of Light'. Anyway here are the mob
+    names and numbers ect...
+      A long cold-iron staff(obj 116) equiped by an excited conjurer (mob 149)
+       in room 115.
+      a broadsword of glowing power (obj 107) givin by Azlion (mob 147) in a
+        Summoning Chamber (room 113
+
+(7) The last "True" quest is that to get the star key itself. You have to
+   kill the following mobs and key the parts of the star stone from them
+   and then give all 5 parts to the last cleric of Reanna, and then you
+   can get the star stone to open the prision of Exile(room 5).
+
+   the first piece (obj 132) held by Kinslor Elfslayer(mob 41) in room 19
+   the second piece (133) held by Mordrin Ap'Dethyin (63) in room 30
+   the third piece (134) held by Cardinal Feathron (82) in room 40
+   the fourth piece (135) held by Earlion that is (92) in room 47
+   the last piece (136) held by Urian Shadowborn (134) in room 123
+   
+     You then give all of them to Father Darrin(mob 163) in the Church of
+     Holy Light(room 139). He then gives you the Star Key(Obj 126) and you can
+     then enter room 140 to access to the teleporter that will teleport you to
+     the beginning of Exile(room 129).
+
+(Other)  The only quest type things are a bunch of papers that you must get
+    to piece together a word that opens the portal onto the Positive Energy
+    Plane. The papers are obj # 76,77,78 and 79. The portal is in room # 74.
+
+
+IV      Errors
+
+        The only errors that should show up have to do with the random mob
+rooms. There are two groups of randoms. The first group is a random group of
+emissaries that pops into the emissary room. I tried to rig it so that
+normally one would pop per time around.
+        The other group are just normal random mobs that have a mob
+distribution room that they go to, that way they can be almost anywhere in
+the zone.
+
+
+Ok the last thing. I was hopeing that I could get some procs. The only proc
+that I hope someone puts in is I would like a weapon Proc on "Darksoul, the
+blade of Eternal Suffering" that Sargon has. Its two handed and I was thinking
+maybe something like curse? or energy drain? anyway, whatever fits. Thanks
+I hope this is what you wanted. Also maybe some zone procs to make the zone
+harder. I hope you like the zone.
+
+Shawn Lowrey, A.K.A. Lortar Fujasawa 
+
+                                              Lortar/Avaron
+                                              a.k.a. Shawn M. Lowrey
+                                              518 Rebecca Ave.
+                                              Hattiesburg Ms. 39401
+
+                                              Or
+                                              Shawn M. Lowrey
+                                              1586 Jefferson Ave.
+                                              New Oreleans La, 70115
+                                              slowrey@law.tulane.edu
+                                              sowrey@ocean.st.usm.edu
