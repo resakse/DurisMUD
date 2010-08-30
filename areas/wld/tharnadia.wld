@@ -878,6 +878,10 @@ S
 &+wthe west the road continues on.&n
 ~
 1325 142639168 1 0
+D0
+~
+~
+0 0 133065
 D1
    The northern city gates lie to the east.
 ~
@@ -13797,7 +13801,7 @@ S
 &+gcity up to the large cliffs upon which the &+Ltwin keeps&+g are built.  A dirt road
 &+gleads away to the south toward the plains beyond.&n
 ~
-1325 8388676 2 0
+1325 142606404 1 0
 D0
    The gates are heavily fortified and made from iron.
 ~
@@ -13806,7 +13810,7 @@ iron gate gates~
 D2
 ~
 ~
-0 0 570823
+0 0 133058
 E
 gate gates iron~
    The gates are enormous, made from bound planks of thick iron.  They look
@@ -13843,4 +13847,254 @@ gate gates iron~
    The gates are enormous, made from bound planks of thick iron.  They look
 very strong, probably able to withstand a good deal of damage before falling.
 ~
+S
+#133058
+The Road Leading From Tharnadia~
+   This road leads away from Tharnadia, toward the lands south. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues north toward the city gates, and
+south towards the open road.
+~
+1325 134250564 2 0
+D0
+~
+~
+0 0 133056
+D2
+~
+~
+0 0 133059
+S
+#133059
+The Road Leading From Tharnadia~
+   This road leads away from Tharnadia, toward the lands south. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues north toward the city gates, and
+south towards the open road.
+~
+1325 134250624 2 0
+D0
+~
+~
+0 0 133058
+D1
+~
+~
+0 0 133060
+S
+#133060
+The Road Leading From Tharnadia~
+   This road leads away from Tharnadia, toward the lands south. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues north toward the city gates, and
+south towards the open road.
+~
+1325 134250624 2 0
+D2
+~
+~
+0 0 133061
+D3
+~
+~
+0 0 133059
+S
+#133061
+The Road Leading From Tharnadia~
+   This road leads away from Tharnadia, toward the lands south. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues north toward the city gates, and
+south towards the open road.
+~
+1325 134250624 2 0
+D0
+~
+~
+0 0 133060
+D2
+~
+~
+0 0 133062
+S
+#133062
+The Road Leading From Tharnadia~
+   This road leads away from Tharnadia, toward the lands south. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues north toward the city gates, and
+south towards the open road.
+~
+1325 134250560 2 0
+D0
+~
+~
+0 0 133061
+D3
+~
+~
+0 0 133063
+S
+#133063
+The Road Leading From Tharnadia~
+   This road leads away from Tharnadia, toward the lands south. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues north toward the city gates, and
+south towards the open road.
+~
+1325 134250624 2 0
+D1
+~
+~
+0 0 133062
+D2
+~
+~
+0 0 133064
+S
+#133064
+The Road Leading From Tharnadia~
+   This road leads away from Tharnadia, toward the lands south. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues north toward the city gates, and
+south towards the open road.
+~
+1325 134250560 2 0
+D0
+~
+~
+0 0 133063
+D2
+~
+~
+0 0 570823
+S
+#133065
+Inside the Northern Gates~
+   Two huge ironbound gates guard the northern entrance to &+LTharnadia &+where,
+standing nearly twenty feet tall.  The gates are fastened to huge &+Lstone &+wtowers
+on either side, making this entrance seem very secure and protected.  A system
+of &+yropes &+wand pulleys hold the door up, reducing its weight and making it
+easily opened and closed by a single operator.  &+LThe Keats Road &+wleads away
+to the south into the heart of the city, while the gateway exits out into
+a vast grassy plains with mountains in the distance.  The wall road leads to
+the west and to the east.
+~
+1325 142639232 1 0
+D0
+~
+gate gates north~
+1 0 133066
+D2
+~
+~
+0 0 132537
+S
+#133066
+&+GOutside the Northern Gates~
+&+g   Two huge ironbound gates mark the northern entrance to Tharnadia here,
+&+gstanding twenty feet high, and surrounded by two fifty foot stone towers.  The
+&+gcity seems quite well protected behind this great display of defensive might,
+&+gwith arrow slits and defensive measures lining the towers.  The city walls
+&+gextend to the east and west for quite a distance, completely surrounding the
+&+gcity up to the large cliffs upon which the &+Ltwin keeps &+Gare built.  A stone road
+&+gleads away to the south towards the city center.&n
+~
+1325 142639172 0 0
+D0
+~
+~
+0 0 133067
+D2
+~
+gate gates northern~
+1 0 133065
+S
+#133067
+The Road Leadings Away From Tharnadia~
+   This road leads away from Tharnadia, toward the lands north. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues south toward the city gates, and
+north towards the open road.
+~
+1325 142639172 2 0
+D0
+~
+~
+0 0 133068
+D2
+~
+~
+0 0 133066
+S
+#133068
+The Road Leading Away From Tharnadia~
+   This road leads away from Tharnadia, toward the lands north. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues south toward the city gates, and
+north towards the open road.
+~
+1325 134250560 2 0
+D0
+~
+~
+0 0 133069
+D2
+~
+~
+0 0 133067
+S
+#133069
+The Road Leading Away From Tharnadia~
+   This road leads away from Tharnadia, toward the lands north. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues south toward the city gates, and
+north towards the open road.
+~
+1325 142639168 2 0
+D0
+~
+~
+0 0 133070
+D2
+~
+~
+0 0 133068
+S
+#133070
+The Road Leading Away From Tharnadia~
+   This road leads away from Tharnadia, toward the lands north. This
+section of earth is lower than the areas flanking the Tharnadian
+countryside, the result of an earthquake many centuries ago. Green
+grasses flank the road, and a some forest and plains opens to the
+east and west. The road continues south toward the city gates, and
+north towards the open road.
+~
+1325 142639168 2 0
+D0
+~
+~
+0 0 570023
+D2
+~
+~
+0 0 133069
 S

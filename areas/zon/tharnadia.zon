@@ -1,6 +1,6 @@
 #1325
 &+WTharnadia &+L- City of &+CHumans&N~
-133057 2 4 15 25 1
+133070 2 4 15 25 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -469,6 +469,14 @@ D 0 133057 2 1 100 0 0 0
 *     south exit from "Inside the Southern City Gates" to
 *     "Outside the Southern City Gates" - closed
 *
+D 0 133065 0 1 100 0 0 0
+*     north exit from "Inside the Northern Gates" to
+*     "Outside the Northern Gates" - closed
+*
+D 0 133066 2 1 100 0 0 0
+*     south exit from "Outside the Northern Gates" to
+*     "Inside the Northern Gates" - closed
+*
 *
 O 0 132626 1 132501 100 0 0 0      * a glowing portal
 O 0 132621 1 132501 100 0 0 0      * a glowing bookshelf
@@ -479,8 +487,8 @@ P 1 132623 999 132621 100 0 0 0    *   a glowing quill
 P 1 132623 999 132621 100 0 0 0    *   a glowing quill
 P 1 132623 999 132621 100 0 0 0    *   a glowing quill
 P 1 132624 1 132621 100 0 0 0      *   a crumpled up note
-O 0 132505 2 132503 100 0 0 0      * the statue on the left
-O 0 132506 2 132503 100 0 0 0      * the statue on the right
+O 0 132505 3 132503 100 0 0 0      * the statue on the left
+O 0 132506 3 132503 100 0 0 0      * the statue on the right
 O 0 132607 2 132503 100 0 0 0      * @>--'---,---
 O 0 132519 4 132504 100 0 0 0      * a map of Tharnadia
 O 0 132510 6 132506 100 0 0 0      * an iron stove
@@ -606,10 +614,12 @@ O 0 132653 1 133050 100 0 0 0      * an ironbound chest
 P 1 132635 2 132653 100 0 0 0      *   a packet of maps
 P 1 132664 3 132653 100 0 0 0      *   a magical text book
 P 1 132664 3 132653 100 0 0 0      *   a magical text book
-O 0 132505 2 133056 100 0 0 0      * the statue on the left
-O 0 132506 2 133056 100 0 0 0      * the statue on the right
+O 0 132505 3 133056 100 0 0 0      * the statue on the left
+O 0 132506 3 133056 100 0 0 0      * the statue on the right
 O 0 132607 2 133056 100 0 0 0      * @>--'---,---
 O 0 132519 4 133057 100 0 0 0      * a map of Tharnadia
+O 0 132505 3 133066 100 0 0 0      * the statue on the left
+O 0 132506 3 133066 100 0 0 0      * the statue on the right
 *
 M 0 132617 1 132500 100 0 0 0      * Kieta
 G 1 66709 999 0 100 0 0 0          *    (object type not in this .obj file)
@@ -628,7 +638,7 @@ E 1 132532 45 5 100 0 0 0          *   some spiked leather armor bearing the ins
 E 1 132574 30 9 100 0 0 0          *   a pair of vorhide fingers
 E 1 132555 65 16 100 0 0 0         *   a small sword
 G 1 132562 46 0 100 0 0 0          *    a leather jacket
-M 0 132521 11 132503 100 0 0 0     * an elite guard
+M 0 132521 16 132503 100 0 0 0     * an elite guard
 E 1 132527 6 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
 E 1 132522 5 6 100 0 0 0           *   a blacksteel coif
 E 1 132521 6 7 100 0 0 0           *   some vorhide leggings
@@ -636,20 +646,20 @@ E 1 132528 18 8 100 0 0 0          *   a pair of blacksteel boots
 E 1 132523 5 10 100 0 0 0          *   some vorhide armplates
 E 1 132566 5 11 100 0 0 0          *   a shield emblazoned with the insignia of Tharnadia
 G 1 132551 5 0 100 0 0 0           *    a double-bladed battle axe
-M 0 132575 2 132503 100 0 0 0      * a controller
+M 0 132575 3 132503 100 0 0 0      * a controller
 E 1 132586 9 16 100 0 0 0          *   a polished steel dagger
 E 1 132586 9 17 100 0 0 0          *   a polished steel dagger
-M 0 132614 2 132503 100 0 0 0      * A tharnadian illusionist
-M 0 132521 11 132503 100 0 0 0     * an elite guard
-M 0 132521 11 132503 100 0 0 0     * an elite guard
-M 0 132521 11 132503 100 0 0 0     * an elite guard
-M 0 132521 11 132503 100 0 0 0     * an elite guard
+M 0 132614 3 132503 100 0 0 0      * A tharnadian illusionist
+M 0 132521 16 132503 100 0 0 0     * an elite guard
+M 0 132521 16 132503 100 0 0 0     * an elite guard
+M 0 132521 16 132503 100 0 0 0     * an elite guard
+M 0 132521 16 132503 100 0 0 0     * an elite guard
 M 0 132547 9 132504 100 0 0 0      * a stray dog
 E 1 132591 2 3 100 0 0 0           *   a steel dog collar
 M 0 132616 8 132504 100 0 0 0      * a tharnadian thief-hunter
-M 0 132621 6 132504 100 0 0 0      * an elite guard
-M 0 132621 6 132504 100 0 0 0      * an elite guard
-M 0 132621 6 132504 100 0 0 0      * an elite guard
+M 0 132621 9 132504 100 0 0 0      * an elite guard
+M 0 132621 9 132504 100 0 0 0      * an elite guard
+M 0 132621 9 132504 100 0 0 0      * an elite guard
 M 0 132548 10 132505 100 0 0 0     * a stray cat
 M 0 132536 4 132506 100 0 0 0      * a working commoner
 M 0 132520 13 132507 100 0 0 0     * a militia guard
@@ -891,7 +901,7 @@ E 1 132555 65 16 100 0 0 0         *   a small sword
 M 0 132569 2 132580 100 0 0 0      * a young cleric
 M 0 132571 1 132581 100 0 0 0      * a commoner
 M 0 132547 9 132582 100 0 0 0      * a stray dog
-M 0 132521 11 132582 100 0 0 0     * an elite guard
+M 0 132521 16 132582 100 0 0 0     * an elite guard
 E 1 132527 6 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
 E 1 132522 5 6 100 0 0 0           *   a blacksteel coif
 E 1 132521 6 7 100 0 0 0           *   some vorhide leggings
@@ -1740,7 +1750,7 @@ E 1 132651 4 11 100 0 0 0          *   a Caer Tannad militia shield
 M 0 132625 1 133052 100 0 0 0      * an elite guard
 M 0 132643 3 133054 100 0 0 0      * a dock guard
 E 1 132651 4 11 100 0 0 0          *   a Caer Tannad militia shield
-M 0 132521 11 133056 100 0 0 0     * an elite guard
+M 0 132521 16 133056 100 0 0 0     * an elite guard
 E 1 132527 6 5 100 0 0 0           *   a steel cuirass emblazoned with the insignia of Tharnadia
 E 1 132522 5 6 100 0 0 0           *   a blacksteel coif
 E 1 132521 6 7 100 0 0 0           *   some vorhide leggings
@@ -1748,19 +1758,29 @@ E 1 132528 18 8 100 0 0 0          *   a pair of blacksteel boots
 E 1 132523 5 10 100 0 0 0          *   some vorhide armplates
 E 1 132566 5 11 100 0 0 0          *   a shield emblazoned with the insignia of Tharnadia
 G 1 132551 5 0 100 0 0 0           *    a double-bladed battle axe
-M 0 132575 2 133056 100 0 0 0      * a controller
+M 0 132575 3 133056 100 0 0 0      * a controller
 E 1 132586 9 16 100 0 0 0          *   a polished steel dagger
 E 1 132586 9 17 100 0 0 0          *   a polished steel dagger
-M 0 132614 2 133056 100 0 0 0      * A tharnadian illusionist
-M 0 132521 11 133056 100 0 0 0     * an elite guard
-M 0 132521 11 133056 100 0 0 0     * an elite guard
-M 0 132521 11 133056 100 0 0 0     * an elite guard
-M 0 132521 11 133056 100 0 0 0     * an elite guard
+M 0 132614 3 133056 100 0 0 0      * A tharnadian illusionist
+M 0 132521 16 133056 100 0 0 0     * an elite guard
+M 0 132521 16 133056 100 0 0 0     * an elite guard
+M 0 132521 16 133056 100 0 0 0     * an elite guard
+M 0 132521 16 133056 100 0 0 0     * an elite guard
 M 0 132547 9 133057 100 0 0 0      * a stray dog
 E 1 132591 2 3 100 0 0 0           *   a steel dog collar
 M 0 132616 8 133057 100 0 0 0      * a tharnadian thief-hunter
-M 0 132621 6 133057 100 0 0 0      * an elite guard
-M 0 132621 6 133057 100 0 0 0      * an elite guard
-M 0 132621 6 133057 100 0 0 0      * an elite guard
+M 0 132621 9 133057 100 0 0 0      * an elite guard
+M 0 132621 9 133057 100 0 0 0      * an elite guard
+M 0 132621 9 133057 100 0 0 0      * an elite guard
+M 0 132621 9 133065 100 0 0 0      * an elite guard
+M 0 132621 9 133065 100 0 0 0      * an elite guard
+M 0 132621 9 133065 100 0 0 0      * an elite guard
+M 0 132521 16 133066 100 0 0 0     * an elite guard
+M 0 132521 16 133066 100 0 0 0     * an elite guard
+M 0 132521 16 133066 100 0 0 0     * an elite guard
+M 0 132521 16 133066 100 0 0 0     * an elite guard
+M 0 132614 3 133066 100 0 0 0      * A tharnadian illusionist
+M 0 132575 3 133066 100 0 0 0      * a controller
+M 0 132521 16 133066 100 0 0 0     * an elite guard
 *
 S
