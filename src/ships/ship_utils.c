@@ -1049,9 +1049,11 @@ void ShipCrew::update()
     //TODO max_stamina = (int)((float)ship_crew_data[index].base_stamina * (1.0 + sqrt((float)(skill - ship_crew_data[index].min_skill) / 1000.0) / 300.0) );
     if (stamina > max_stamina) stamina = max_stamina;
     
-    sail_mod_applied = sqrt((float)sail_skill) / 130.0 + (float)sail_mod() * 0.04;
-    guns_mod_applied = sqrt((float)guns_skill) / 130.0 + (float)guns_mod() * 0.04;
     rpar_mod_applied = sqrt((float)rpar_skill) / 130.0 + (float)rpar_mod() * 0.04;
+    sail_mod_applied = sqrt((float)sail_skill) / 130.0 + (float)sail_mod() * 0.04;
+    sail_mod_applied = (sail_mod_applied * 8 + rpar_mod_applied * 2) / 10.0;
+    guns_mod_applied = sqrt((float)guns_skill) / 130.0 + (float)guns_mod() * 0.04;
+    guns_mod_applied = (guns_mod_applied * 8 + rpar_mod_applied * 2) / 10.0;
 }
 
 void ShipCrew::reset_stamina() 
