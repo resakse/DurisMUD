@@ -932,8 +932,9 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
                     if (hit_dir >= 360)    hit_dir -= 360;
                     else if (hit_dir < 0)  hit_dir = 360 + hit_dir;
                     int hit_arc = get_arc(target->heading, hit_dir);
-                    if (!(target_eram && hit_arc == SIDE_FORE && number(1, 2) == 1))  // equiped ram partially protects fore side
-                        damage_hull(ship, target, dam, hit_arc, 2);
+                    if (target_eram && hit_arc == SIDE_FORE)  // equiped ram partially protects fore side
+                        dam = MAX(1, dam/2);
+                    damage_hull(ship, target, dam, hit_arc, 2);
                 }
             }
             else
@@ -950,8 +951,9 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
                     if (hit_dir >= 360)    hit_dir -= 360;
                     else if (hit_dir < 0)  hit_dir = 360 + hit_dir;
                     int hit_arc = get_arc(ship->heading, hit_dir);
-                    if (!(ship_eram && hit_arc == SIDE_FORE && number(1, 2) == 1))  // equiped ram partially protects fore side
-                        damage_hull(NULL, ship, dam, hit_arc, 0);
+                    if (ship_eram && hit_arc == SIDE_FORE)   // equiped ram partially protects fore side
+                        dam = MAX(1, dam/2);
+                    damage_hull(NULL, ship, dam, hit_arc, 0);
                 }
             }
         }
