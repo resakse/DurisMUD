@@ -2943,7 +2943,7 @@ char racewar(P_char viewer, P_char viewee)
     if (IS_DISGUISE_NPC(viewee))
     {
       logit(LOG_DEBUG, "Utility.c in racewar(): IS_DIGUISED_NPC -> (%s) in (%d) -- backtracing crash from 3/24", GET_NAME(viewee), world[viewee->in_room].number);
-      return TRUE;
+      return FALSE;
     }
     if (GET_RACEWAR(viewer) == viewee->disguise.racewar)
     {
