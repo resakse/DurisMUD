@@ -1632,6 +1632,8 @@ void dock_ship(P_ship ship, int to_room)
         obj_from_room(ship->shipobj);
         obj_to_room(ship->shipobj, ship->location);
     }
+    if (ship->target != NULL)
+        ship->target = NULL;
 
     clear_references_to_ship(ship);
 

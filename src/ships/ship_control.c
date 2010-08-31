@@ -189,11 +189,6 @@ int order_maneuver(P_char ch, P_ship ship, char* arg)
         send_to_char("You're coming in too fast!!\r\n", ch);
         return TRUE;
     }
-    if (ship->target != NULL) 
-    {
-        send_to_char ("Your crew is on alert status while you have a target locked!\r\n", ch);
-        return TRUE;
-    }
     if (ship->timer[T_MANEUVER] > 0) 
     {
         send_to_char("Your ship isn't ready to maneuver again yet.\r\n", ch);
@@ -226,10 +221,12 @@ int order_maneuver(P_char ch, P_ship ship, char* arg)
         return TRUE;
     }
 
-    if ((IS_SET(world [dir_room].room_flags, DOCKABLE) || world[dir_room].number < 110000) &&
-        ship->timer[T_BSTATION] > 0)
+    if ((IS_SET(world [dir_room].room_flags, DOCKABLE) || world[dir_room].number < 110000) && ship->timer[T_BSTATION] > 0)
     {
-        send_to_char_f(ch, "Your crew is still on alert status and will take %d seconds longer to stand down.\r\n", ship->timer[T_BSTATION]);
+        if (ship->target != NULL) 
+            send_to_char ("Your crew is on alert status while you have a target locked!\r\n", ch);
+        else
+            send_to_char_f(ch, "Your crew is still on alert status and will take %d seconds longer to stand down.\r\n", ship->timer[T_BSTATION]);
         return TRUE;
     }
 
@@ -255,8 +252,6 @@ int order_maneuver(P_char ch, P_ship ship, char* arg)
             send_to_room_f(ship->location, "%s maneuvers in from the %s.\r\n", ship->name, dirs[rev_dir[dir]]);
             act_to_all_in_ship_f(ship, "Your ship manuevers to the %s.", dirs[dir]);
             ship->timer[T_MANEUVER] = 5;
-            if (ship->target != NULL)
-                ship->target = NULL;
             everyone_look_out_ship(ship);
             if (IS_SET(world[ship->location].room_flags, DOCKABLE))
             {
