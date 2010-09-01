@@ -760,6 +760,8 @@ bool has_eq_levistone(const ShipData* ship);
 int eq_levistone_slot(const ShipData* ship);
 int eq_levistone_weight(const ShipData* ship);
 
+bool ocean_pvp_state();
+
 // Externals
 extern P_index obj_index;
 extern P_index mob_index;

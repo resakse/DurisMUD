@@ -376,15 +376,33 @@ int summon_ship (P_char ch, P_ship ship)
     }
     
     SUB_MONEY(ch, summon_cost, 0);
-    int buildtime = (int) (140 * 100 / (SHIPIMMOBILE(ship) ? 1 : ship->get_maxspeed()));
+
+
+
+    int summontime, pvp = false;
     if( IS_TRUSTED(ch) )
-        buildtime = 0;
-    SET_BIT(ship->flags, SUMMONED);
-    send_to_char_f(ch, "Thanks for your business, it will take %d hours for your ship to get here.\r\n", buildtime / 280);
+        summontime = 0;
+    else if (SHIPCLASS(ship) == SH_SLOOP && SHIPCLASS(ship) == SH_YACHT)
+    {
+        summontime = (280 * 50) / MAX(ship->get_maxspeed(), 1);
+    }
+    else
+    {
+        summontime = (280 * 70) / MAX((ship->get_maxspeed() - 20), 1);
+        pvp = ocean_pvp_state();
+        if (pvp) summontime *= 4;
+    }
+    summontime = MIN(summontime, 200 * 70);
+
+    if (pvp)
+        send_to_char_f(ch, "Due to dangerous conditions, it will take about %d hours for your ship to get here.\r\n", summontime / 280);
+    else
+        send_to_char_f(ch, "Thanks for your business, it will take %d hours for your ship to get here.\r\n", summontime / 280);
 
     sprintf(buf, "%s %d %d", GET_NAME(ch), ch->in_room, IS_TRUSTED(ch));
 
-    add_event(summon_ship_event, buildtime, NULL, NULL, NULL, 0, buf, strlen(buf)+1);
+    SET_BIT(ship->flags, SUMMONED);
+    add_event(summon_ship_event, summontime, NULL, NULL, NULL, 0, buf, strlen(buf)+1);
     return TRUE;
 }
 

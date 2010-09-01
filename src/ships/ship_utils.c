@@ -1377,3 +1377,37 @@ int eq_levistone_weight(const ShipData *ship)
 {
     return (SHIPHULLWEIGHT(ship) + 50) / 40;
 }
+
+
+
+bool ocean_pvp_state()
+{
+    ShipVisitor svs;
+    for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
+    {
+        P_ship ship = svs;
+        if (SHIPISDOCKED(ship)) 
+            continue;
+
+        if (SHIPCLASS(ship) == SH_SLOOP || SHIPCLASS(ship) == SH_YACHT)
+            continue;
+
+        int contact_count = getcontacts(ship, false);
+        if (contact_count == 0) continue;
+
+        for (int i = 0; i < contact_count; i++)
+        {
+            if (contacts[i].ship == ship)
+                continue;
+            if (SHIPISDOCKED(contacts[i].ship))
+                continue;
+
+            if ((contacts[i].ship->race == GOODIESHIP && ship->race == EVILSHIP) ||
+                (contacts[i].ship->race == EVILSHIP && ship->race == GOODIESHIP))
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
