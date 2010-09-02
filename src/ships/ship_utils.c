@@ -1205,7 +1205,6 @@ void clear_cargo(P_ship ship)
       ship->slot[i].type = SLOT_EMPTY;
     }
   }
-  write_ship(ship);
 }
 
 P_char captain_is_aboard(P_ship ship)

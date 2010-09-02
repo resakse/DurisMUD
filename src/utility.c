@@ -1828,7 +1828,7 @@ int move_cost(P_char ch, int dir)
   
   if((world[world[ch->in_room].dir_option[dir]->to_room].sector_type == SECT_OCEAN) &&
      is_ice(ch, ch->in_room))
-        moves = moves >> 1;
+        moves = moves >> 2;
 
   if(IS_TLEGLOCK(ch))
     moves += 10;
