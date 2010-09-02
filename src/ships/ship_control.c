@@ -245,11 +245,11 @@ int order_maneuver(P_char ch, P_ship ship, char* arg)
         {
             ship->speed = 0;
             ship->setspeed = 0;
-            send_to_room_f(ship->location, "%s maneuvers to the %s.\r\n", ship->name, dirs[dir]);
+            send_to_room_f(ship->location, "%s &Nmaneuvers to the %s.\r\n", ship->name, dirs[dir]);
             ship->location = world[ship->location].dir_option[dir]->to_room;
             obj_from_room(SHIPOBJ(ship));
             obj_to_room(SHIPOBJ(ship), ship->location);
-            send_to_room_f(ship->location, "%s maneuvers in from the %s.\r\n", ship->name, dirs[rev_dir[dir]]);
+            send_to_room_f(ship->location, "%s &Nmaneuvers in from the %s.\r\n", ship->name, dirs[rev_dir[dir]]);
             act_to_all_in_ship_f(ship, "Your ship manuevers to the %s.", dirs[dir]);
             ship->timer[T_MANEUVER] = 5;
             everyone_look_out_ship(ship);
