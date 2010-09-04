@@ -18,6 +18,7 @@
 
 extern int top_of_world;
 
+bool nexus_to_cyrics_revenge = false;
 
 
 //////////////////////
@@ -66,10 +67,6 @@ const char* pirateShipNames[] =
     "&+GS&+Yi&+Gre&+Yn&+w's &+GS&+Wo&+Gng",
 };
 
-const char* dreadnoughtShipNames[] = 
-{
-    "&+RCy&+rri&+Lc's Rev&+ren&+Rge",
-};
 
 bool is_npc_ship_name(const char *name)
 {
@@ -78,11 +75,8 @@ bool is_npc_ship_name(const char *name)
         if (!strcmp(strip_ansi(name).c_str(), strip_ansi(pirateShipNames[n]).c_str()))
             return true;
     }
-    for (unsigned n = 0; n < sizeof(dreadnoughtShipNames)/sizeof(char*); n++)
-    {
-        if (!strcmp(strip_ansi(name).c_str(), strip_ansi(dreadnoughtShipNames[n]).c_str()))
-            return true;
-    }
+    if (!strcmp(strip_ansi(name).c_str(), strip_ansi(CYRICS_REVENGE_NAME).c_str()))
+        return true;
     return false;
 }
 
@@ -94,8 +88,7 @@ bool is_npc_ship_name(const char *name)
 // SETUP
 //////////////////////
 
-bool  load_npc_ship_crew(P_ship ship, int crew_size, int crew_level);
-void setup_npc_clipper_01(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_clipper_01(P_ship ship) // level 0
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     //set_weapon(ship, 1, W_SMALL_BAL, SIDE_PORT);
@@ -105,9 +98,8 @@ void setup_npc_clipper_01(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(100, 150);
-    load_npc_ship_crew(ship, 8, 0);
 }
-void setup_npc_clipper_02(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_clipper_02(P_ship ship) // level 0
 {
     set_weapon(ship, 0, W_MEDIUM_BAL, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_BAL, SIDE_PORT);
@@ -116,9 +108,8 @@ void setup_npc_clipper_02(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(100, 150);
-    load_npc_ship_crew(ship, 8, 0);
 }
-void setup_npc_clipper_03(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_clipper_03(P_ship ship) // level 0
 {
     set_weapon(ship, 0, W_SMALL_BAL, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_BAL, SIDE_PORT);
@@ -128,9 +119,8 @@ void setup_npc_clipper_03(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(150, 200);
-    load_npc_ship_crew(ship, 8, 0);
 }
-void setup_npc_ketch_01(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_ketch_01(P_ship ship) // level 0
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_BAL, SIDE_STAR);
@@ -139,9 +129,8 @@ void setup_npc_ketch_01(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(150, 200);
-    load_npc_ship_crew(ship, 9, 0);
 }
-void setup_npc_ketch_02(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_ketch_02(P_ship ship) // level 0
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_BAL, SIDE_STAR);
@@ -152,9 +141,8 @@ void setup_npc_ketch_02(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(200, 250);
-    load_npc_ship_crew(ship, 9, 0);
 }
-void setup_npc_ketch_03(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_ketch_03(P_ship ship) // level 0
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_REAR);
@@ -162,9 +150,8 @@ void setup_npc_ketch_03(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(200, 250);
-    load_npc_ship_crew(ship, 9, 0);
 }
-void setup_npc_caravel_01(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_caravel_01(P_ship ship) // level 0
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_BAL, SIDE_STAR);
@@ -174,9 +161,8 @@ void setup_npc_caravel_01(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(250, 300);
-    load_npc_ship_crew(ship, 12, 0);
 }
-void setup_npc_caravel_02(P_ship ship, NPC_AI_Type type) // level 0
+void setup_npc_caravel_02(P_ship ship) // level 0
 {
     //set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
@@ -186,9 +172,8 @@ void setup_npc_caravel_02(P_ship ship, NPC_AI_Type type) // level 0
     ship->crew.guns_skill = 200;
     ship->crew.rpar_skill = 200;
     ship->frags = number(250, 300);
-    load_npc_ship_crew(ship, 12, 0);
 }
-void setup_npc_caravel_03(P_ship ship, NPC_AI_Type type) // level 1
+void setup_npc_caravel_03(P_ship ship) // level 1
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_BAL, SIDE_PORT);
@@ -198,9 +183,8 @@ void setup_npc_caravel_03(P_ship ship, NPC_AI_Type type) // level 1
     ship->crew.guns_skill = 600;
     ship->crew.rpar_skill = 600;
     ship->frags = number(400, 500);
-    load_npc_ship_crew(ship, 12, 1);
 }
-void setup_npc_corvette_01(P_ship ship, NPC_AI_Type type) // level 1
+void setup_npc_corvette_01(P_ship ship) // level 1
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_BAL, SIDE_STAR);
@@ -209,9 +193,8 @@ void setup_npc_corvette_01(P_ship ship, NPC_AI_Type type) // level 1
     ship->crew.guns_skill = 300;
     ship->crew.rpar_skill = 300;
     ship->frags = number(400, 500);
-    load_npc_ship_crew(ship, 12, 1);
 }
-void setup_npc_corvette_02(P_ship ship, NPC_AI_Type type) // level 1
+void setup_npc_corvette_02(P_ship ship) // level 1
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_BAL, SIDE_PORT);
@@ -220,9 +203,8 @@ void setup_npc_corvette_02(P_ship ship, NPC_AI_Type type) // level 1
     ship->crew.guns_skill = 300;
     ship->crew.rpar_skill = 300;
     ship->frags = number(400, 500);
-    load_npc_ship_crew(ship, 12, 1);
 }
-void setup_npc_corvette_03(P_ship ship, NPC_AI_Type type) // level 1
+void setup_npc_corvette_03(P_ship ship) // level 1
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_BAL, SIDE_PORT);
@@ -233,9 +215,8 @@ void setup_npc_corvette_03(P_ship ship, NPC_AI_Type type) // level 1
     ship->crew.guns_skill = 300;
     ship->crew.rpar_skill = 300;
     ship->frags = number(400, 500);
-    load_npc_ship_crew(ship, 12, 1);
 }
-void setup_npc_corvette_04(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_corvette_04(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_SMALL_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_BAL, SIDE_PORT);
@@ -248,9 +229,8 @@ void setup_npc_corvette_04(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1200;
     ship->crew.rpar_skill = 1200;
     ship->frags = number(600, 700);
-    load_npc_ship_crew(ship, 12, 2);
 }
-void setup_npc_corvette_05(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_corvette_05(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_PORT);
@@ -259,11 +239,10 @@ void setup_npc_corvette_05(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(600, 700);
-    load_npc_ship_crew(ship, 12, 2);
 }    
 
 
-void setup_npc_corvette_06(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_corvette_06(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_STAR);
@@ -272,10 +251,9 @@ void setup_npc_corvette_06(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(600, 700);
-    load_npc_ship_crew(ship, 12, 2);
 }
 
-void setup_npc_corvette_07(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_corvette_07(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_BAL, SIDE_STAR);
@@ -285,10 +263,9 @@ void setup_npc_corvette_07(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(700, 800);
-    load_npc_ship_crew(ship, 12, 2);
 }
 
-void setup_npc_corvette_08(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_corvette_08(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_REAR);
@@ -300,10 +277,9 @@ void setup_npc_corvette_08(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(700, 800);
-    load_npc_ship_crew(ship, 12, 2);
 }
 
-void setup_npc_corvette_09(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_corvette_09(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_STAR);
@@ -313,10 +289,9 @@ void setup_npc_corvette_09(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 2500;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2000, 2200);
-    load_npc_ship_crew(ship, 12, 2);
 }
 
-void setup_npc_corvette_10(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_corvette_10(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_PORT);
@@ -326,10 +301,9 @@ void setup_npc_corvette_10(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 2500;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2000, 2200);
-    load_npc_ship_crew(ship, 12, 2);
 }
 
-void setup_npc_corvette_11(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_corvette_11(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_LIGHT_BEAM, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_PORT);
@@ -339,10 +313,9 @@ void setup_npc_corvette_11(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 2400;
     ship->crew.rpar_skill = 2200;
     ship->frags = number(2000, 2200);
-    load_npc_ship_crew(ship, 12, 3);
 }
 
-void setup_npc_destroyer_01(P_ship ship, NPC_AI_Type type) // level 1
+void setup_npc_destroyer_01(P_ship ship) // level 1
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_BAL, SIDE_STAR);
@@ -355,10 +328,9 @@ void setup_npc_destroyer_01(P_ship ship, NPC_AI_Type type) // level 1
     ship->crew.guns_skill = 400;
     ship->crew.rpar_skill = 400;
     ship->frags = number(600, 700);
-    load_npc_ship_crew(ship, 15, 1);
 }
 
-void setup_npc_destroyer_02(P_ship ship, NPC_AI_Type type) // level 1
+void setup_npc_destroyer_02(P_ship ship) // level 1
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_STAR);
@@ -367,10 +339,9 @@ void setup_npc_destroyer_02(P_ship ship, NPC_AI_Type type) // level 1
     ship->crew.guns_skill = 500;
     ship->crew.rpar_skill = 500;
     ship->frags = number(600, 700);
-    load_npc_ship_crew(ship, 15, 1);
 }
 
-void setup_npc_destroyer_03(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_destroyer_03(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_FORE);
@@ -381,9 +352,8 @@ void setup_npc_destroyer_03(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(700, 900);
-    load_npc_ship_crew(ship, 15, 2);
 }
-void setup_npc_destroyer_04(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_destroyer_04(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_CAT, SIDE_FORE);
@@ -393,9 +363,8 @@ void setup_npc_destroyer_04(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(700, 900);
-    load_npc_ship_crew(ship, 15, 2);
 }
-void setup_npc_destroyer_05(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_destroyer_05(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_CAT, SIDE_FORE);
@@ -408,10 +377,9 @@ void setup_npc_destroyer_05(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(800, 1000);
-    load_npc_ship_crew(ship, 15, 2);
 }
 
-void setup_npc_destroyer_06(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_destroyer_06(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_REAR);
@@ -423,10 +391,9 @@ void setup_npc_destroyer_06(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(800, 1000);
-    load_npc_ship_crew(ship, 15, 2);
 }
 
-void setup_npc_destroyer_07(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_destroyer_07(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_LARGE_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_BAL, SIDE_PORT);
@@ -437,10 +404,9 @@ void setup_npc_destroyer_07(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(800, 1000);
-    load_npc_ship_crew(ship, 15, 2);
 }
 
-void setup_npc_destroyer_08(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_destroyer_08(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_LARGE_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_PORT);
@@ -450,10 +416,9 @@ void setup_npc_destroyer_08(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(700, 900);
-    load_npc_ship_crew(ship, 15, 2);
 }
 
-void setup_npc_destroyer_09(P_ship ship, NPC_AI_Type type) // level 2
+void setup_npc_destroyer_09(P_ship ship) // level 2
 {
     set_weapon(ship, 0, W_LARGE_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_BAL, SIDE_PORT);
@@ -465,10 +430,9 @@ void setup_npc_destroyer_09(P_ship ship, NPC_AI_Type type) // level 2
     ship->crew.guns_skill = 1500;
     ship->crew.rpar_skill = 1500;
     ship->frags = number(800, 1000);
-    load_npc_ship_crew(ship, 15, 2);
 }
 
-void setup_npc_destroyer_10(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_destroyer_10(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_FRAG_CAN, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_REAR);
@@ -480,10 +444,9 @@ void setup_npc_destroyer_10(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 2500;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2200, 2500);
-    load_npc_ship_crew(ship, 15, 3);
 }
 
-void setup_npc_destroyer_11(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_destroyer_11(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_HEAVY_BEAM, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_CAT, SIDE_FORE);
@@ -494,10 +457,9 @@ void setup_npc_destroyer_11(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 2500;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2200, 2500);
-    load_npc_ship_crew(ship, 15, 3);
 }
 
-void setup_npc_destroyer_12(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_destroyer_12(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_HEAVY_BEAM, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_REAR);
@@ -510,10 +472,9 @@ void setup_npc_destroyer_12(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 2500;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2200, 2500);
-    load_npc_ship_crew(ship, 15, 3);
 }
 
-void setup_npc_destroyer_13(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_destroyer_13(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_SMALL_CAT, SIDE_REAR);
@@ -526,10 +487,9 @@ void setup_npc_destroyer_13(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 2500;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2200, 2500);
-    load_npc_ship_crew(ship, 15, 3);
 }
 
-void setup_npc_frigate_01(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_frigate_01(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_LARGE_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_FRAG_CAN, SIDE_FORE);
@@ -542,10 +502,9 @@ void setup_npc_frigate_01(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 3000;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2500, 3000);
-    load_npc_ship_crew(ship, 18, 3);
 }
 
-void setup_npc_frigate_02(P_ship ship, NPC_AI_Type type) // level 3
+void setup_npc_frigate_02(P_ship ship) // level 3
 {
     set_weapon(ship, 0, W_MEDIUM_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_MEDIUM_CAT, SIDE_FORE);
@@ -560,10 +519,9 @@ void setup_npc_frigate_02(P_ship ship, NPC_AI_Type type) // level 3
     ship->crew.guns_skill = 3000;
     ship->crew.rpar_skill = 2500;
     ship->frags = number(2500, 3000);
-    load_npc_ship_crew(ship, 18, 3);
 }
 
-void setup_npc_dreadnought_01(P_ship ship, NPC_AI_Type type) // level 4
+void setup_npc_dreadnought_01(P_ship ship) // level 4
 {
     set_weapon(ship, 0, W_FRAG_CAN, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_CAT, SIDE_FORE);
@@ -585,10 +543,9 @@ void setup_npc_dreadnought_01(P_ship ship, NPC_AI_Type type) // level 4
     ship->crew.guns_skill = 10000;
     ship->crew.rpar_skill = 10000;
     ship->frags = number(3000, 4000);
-    load_npc_ship_crew(ship, 20, 4);
 }
 
-void setup_npc_dreadnought_02(P_ship ship, NPC_AI_Type type) // level 4
+void setup_npc_dreadnought_02(P_ship ship) // level 4
 {
     set_weapon(ship, 0, W_LONGTOM, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_CAT, SIDE_FORE);
@@ -610,9 +567,8 @@ void setup_npc_dreadnought_02(P_ship ship, NPC_AI_Type type) // level 4
     ship->crew.guns_skill = 10000;
     ship->crew.rpar_skill = 10000;
     ship->frags = number(3000, 4000);
-    load_npc_ship_crew(ship, 20, 4);
 }
-void setup_npc_dreadnought_03(P_ship ship, NPC_AI_Type type) // level 4
+void setup_npc_dreadnought_03(P_ship ship) // level 4
 {
     set_weapon(ship, 0, W_LARGE_CAT, SIDE_FORE);
     set_weapon(ship, 1, W_LARGE_CAT, SIDE_FORE);
@@ -634,47 +590,46 @@ void setup_npc_dreadnought_03(P_ship ship, NPC_AI_Type type) // level 4
     ship->crew.guns_skill = 10000;
     ship->crew.rpar_skill = 10000;
     ship->frags = number(3000, 4000);
-    load_npc_ship_crew(ship, 20, 4);
 }
 
 NPCShipSetup npcShipSetup [] = {
-    { SH_CLIPPER,     0, &setup_npc_clipper_01 },
-    { SH_CLIPPER,     0, &setup_npc_clipper_02 },
-    { SH_CLIPPER,     0, &setup_npc_clipper_03 },
-    { SH_KETCH,       0, &setup_npc_ketch_01 },
-    { SH_KETCH,       0, &setup_npc_ketch_02 },
-    { SH_KETCH,       0, &setup_npc_ketch_03 },
-    { SH_CARAVEL,     0, &setup_npc_caravel_01 },
-    { SH_CARAVEL,     0, &setup_npc_caravel_02 },
-    { SH_CARAVEL,     1, &setup_npc_caravel_03 },
-    { SH_CORVETTE,    1, &setup_npc_corvette_01 },
-    { SH_CORVETTE,    1, &setup_npc_corvette_02 },
-    { SH_CORVETTE,    1, &setup_npc_corvette_03 },
-    { SH_CORVETTE,    2, &setup_npc_corvette_04 },
-    { SH_CORVETTE,    2, &setup_npc_corvette_05 },
-    { SH_CORVETTE,    2, &setup_npc_corvette_06 },
-    { SH_CORVETTE,    2, &setup_npc_corvette_07 },
-    { SH_CORVETTE,    2, &setup_npc_corvette_08 },
-    { SH_CORVETTE,    3, &setup_npc_corvette_09 },
-    { SH_CORVETTE,    3, &setup_npc_corvette_10 },
-    { SH_CORVETTE,    3, &setup_npc_corvette_11 },
-    { SH_DESTROYER,   1, &setup_npc_destroyer_01 },
-    { SH_DESTROYER,   1, &setup_npc_destroyer_02 },
-    { SH_DESTROYER,   2, &setup_npc_destroyer_03 },
-    { SH_DESTROYER,   2, &setup_npc_destroyer_04 },
-    { SH_DESTROYER,   2, &setup_npc_destroyer_05 },
-    { SH_DESTROYER,   2, &setup_npc_destroyer_06 },
-    { SH_DESTROYER,   2, &setup_npc_destroyer_07 },
-    { SH_DESTROYER,   2, &setup_npc_destroyer_08 },
-    { SH_DESTROYER,   2, &setup_npc_destroyer_09 },
-    { SH_DESTROYER,   3, &setup_npc_destroyer_10 },
-    { SH_DESTROYER,   3, &setup_npc_destroyer_11 },
-    { SH_DESTROYER,   3, &setup_npc_destroyer_12 },
-    { SH_FRIGATE,     3, &setup_npc_frigate_01 },
-    { SH_FRIGATE,     3, &setup_npc_frigate_02 },
-    { SH_DREADNOUGHT, 4, &setup_npc_dreadnought_01 },
-    { SH_DREADNOUGHT, 4, &setup_npc_dreadnought_02 },
-    { SH_DREADNOUGHT, 4, &setup_npc_dreadnought_03 },
+    { SH_CLIPPER,     0,  8, &setup_npc_clipper_01 },
+    { SH_CLIPPER,     0,  8, &setup_npc_clipper_02 },
+    { SH_CLIPPER,     0,  8, &setup_npc_clipper_03 },
+    { SH_KETCH,       0,  9, &setup_npc_ketch_01 },
+    { SH_KETCH,       0,  9, &setup_npc_ketch_02 },
+    { SH_KETCH,       0,  9, &setup_npc_ketch_03 },
+    { SH_CARAVEL,     0, 12, &setup_npc_caravel_01 },
+    { SH_CARAVEL,     0, 12, &setup_npc_caravel_02 },
+    { SH_CARAVEL,     1, 12, &setup_npc_caravel_03 },
+    { SH_CORVETTE,    1, 12, &setup_npc_corvette_01 },
+    { SH_CORVETTE,    1, 12, &setup_npc_corvette_02 },
+    { SH_CORVETTE,    1, 12, &setup_npc_corvette_03 },
+    { SH_CORVETTE,    2, 12, &setup_npc_corvette_04 },
+    { SH_CORVETTE,    2, 12, &setup_npc_corvette_05 },
+    { SH_CORVETTE,    2, 12, &setup_npc_corvette_06 },
+    { SH_CORVETTE,    2, 12, &setup_npc_corvette_07 },
+    { SH_CORVETTE,    2, 12, &setup_npc_corvette_08 },
+    { SH_CORVETTE,    3, 12, &setup_npc_corvette_09 },
+    { SH_CORVETTE,    3, 12, &setup_npc_corvette_10 },
+    { SH_CORVETTE,    3, 12, &setup_npc_corvette_11 },
+    { SH_DESTROYER,   1, 15, &setup_npc_destroyer_01 },
+    { SH_DESTROYER,   1, 15, &setup_npc_destroyer_02 },
+    { SH_DESTROYER,   2, 15, &setup_npc_destroyer_03 },
+    { SH_DESTROYER,   2, 15, &setup_npc_destroyer_04 },
+    { SH_DESTROYER,   2, 15, &setup_npc_destroyer_05 },
+    { SH_DESTROYER,   2, 15, &setup_npc_destroyer_06 },
+    { SH_DESTROYER,   2, 15, &setup_npc_destroyer_07 },
+    { SH_DESTROYER,   2, 15, &setup_npc_destroyer_08 },
+    { SH_DESTROYER,   2, 15, &setup_npc_destroyer_09 },
+    { SH_DESTROYER,   3, 15, &setup_npc_destroyer_10 },
+    { SH_DESTROYER,   3, 15, &setup_npc_destroyer_11 },
+    { SH_DESTROYER,   3, 15, &setup_npc_destroyer_12 },
+    { SH_FRIGATE,     3, 18, &setup_npc_frigate_01 },
+    { SH_FRIGATE,     3, 18, &setup_npc_frigate_02 },
+    { SH_DREADNOUGHT, 4, 25, &setup_npc_dreadnought_01 },
+    { SH_DREADNOUGHT, 4, 25, &setup_npc_dreadnought_02 },
+    { SH_DREADNOUGHT, 4, 25, &setup_npc_dreadnought_03 },
 };
 
 
@@ -818,21 +773,20 @@ P_ship try_load_npc_ship(P_ship target, NPC_AI_Type type, int level, int locatio
     if (!ship)
         return 0;
 
-    ship->setheading = ship->heading = 0;
-    ship->setspeed = ship->speed = 0;
-    ship->target = 0;
-    ship->npc_ai->mode = NPC_AI_CRUISING;
     return ship;
 }
 
-P_ship load_npc_ship(int level, NPC_AI_Type type, int speed, int m_class, int room, P_char ch)
+
+NPCShipSetup* find_ship_setup(int level, int m_class, int speed)
 {
     int num = number(0, sizeof(npcShipSetup) / sizeof(NPCShipSetup) - 1);
 
     int i = 0, ii = 0;
     while (true)
     {
-        if ((npcShipSetup[i].m_class == m_class || m_class == -1) && (SHIPTYPE_SPEED(npcShipSetup[i].m_class) >= speed || speed == -1) && npcShipSetup[i].level == level)
+        if ((npcShipSetup[i].level == level || level == -1) && 
+            (npcShipSetup[i].m_class == m_class || m_class == -1) && 
+            (SHIPTYPE_SPEED(npcShipSetup[i].m_class) >= speed || speed == -1))
         {
             if (ii == num)
                 break;
@@ -846,40 +800,56 @@ P_ship load_npc_ship(int level, NPC_AI_Type type, int speed, int m_class, int ro
             i = 0;
         }
     }
-    
-    dbg_char = ch;
+    return npcShipSetup + i;
+}
 
-    P_ship ship = new_ship(npcShipSetup[i].m_class, true);
+P_ship create_npc_ship(NPCShipSetup* setup, P_char ch)
+{
+    P_ship ship = new_ship(setup->m_class, true);
     if (!ship)
     {
         if (ch) send_to_char("Couldn't create npc ship!\r\n", ch);
-        return false;
+        return NULL;
     }
     if (!ship->panel) 
     {
         if (ch) send_to_char("No panel!\r\n", ch);
-        return false;
+        return NULL;
     }
 
     ship->race = NPCSHIP;
     ship->npc_ai = new NPCShipAI(ship, ch);
-    ship->npc_ai->type = type;
     ship->ownername = 0;
-    ship->anchor = world[room].number;
+    ship->anchor = 0;
+    return ship;
+}
+
+P_ship load_npc_ship(int level, NPC_AI_Type type, int min_speed, int m_class, int room, P_char ch)
+{
+    NPCShipSetup* setup = find_ship_setup(level, m_class, min_speed);
+    if (!setup)
+        return NULL;
+    
+    dbg_char = ch;
+
+    P_ship ship = create_npc_ship(setup, ch);
 
     int name_index = number(0, sizeof(pirateShipNames)/sizeof(char*) - 1);
     name_ship(pirateShipNames[name_index], ship);
-    assignid(ship, NULL, true);
 
-    npcShipSetup[i].setup(ship, type);
-    set_crew(ship, ship->npc_ai->crew_data->ship_crew_index, false);
-    
     if (!load_ship(ship, room))
     {
         if (ch) send_to_char("Couldnt load npc ship!\r\n", ch);
-        return false;
+        return NULL;
     }
-    
+
+    setup->setup(ship);
+    ship->npc_ai->type = type;
+    ship->npc_ai->mode = NPC_AI_IDLING;
+
+    load_npc_ship_crew(ship, setup->crew_size, setup->level);
+
+    assignid(ship, NULL, true);
     REMOVE_BIT(ship->flags, DOCKED);
     return ship;
 }
@@ -901,24 +871,92 @@ bool load_cyrics_revenge()
     if (cyrics_revenge != 0)
         return false;
 
-    for (int i = 0; i < 20; i++)
+    int i = 0, room;
+    for (; i < 20; i++)
     {
-        int room = number (0, top_of_world);
-        if (!IS_MAP_ROOM(room) || world[room].sector_type != SECT_OCEAN)
-            continue;
-        if ((cyrics_revenge = try_load_npc_ship(0, NPC_AI_HUNTER, 4, room, 0)) != 0)
-        {
-            int name_index = number(0, sizeof(dreadnoughtShipNames)/sizeof(char*) - 1);
-            name_ship(dreadnoughtShipNames[name_index], cyrics_revenge);
-            cyrics_revenge->npc_ai->advanced = 1;
-            cyrics_revenge->npc_ai->permanent = true;
-            SET_BIT(cyrics_revenge->flags, AIR);
-            return true;
-        }
+        room = number (0, top_of_world);
+        if (IS_MAP_ROOM(room) && world[room].sector_type == SECT_OCEAN)
+            break;
     }
-    return false;
+    if (i == 20) return false;
+
+
+    NPCShipSetup* setup = find_ship_setup(4, SH_DREADNOUGHT, -1);
+    if (!setup)
+        return false;
+
+    cyrics_revenge = create_npc_ship(setup, 0);
+    if (!cyrics_revenge)
+        return false;
+
+    name_ship(CYRICS_REVENGE_NAME, cyrics_revenge);
+    if (!load_ship(cyrics_revenge, room))
+        return false;
+
+    setup->setup(cyrics_revenge);
+    cyrics_revenge->npc_ai->type = NPC_AI_HUNTER;
+    cyrics_revenge->npc_ai->advanced = 1;
+    cyrics_revenge->npc_ai->permanent = true;
+    cyrics_revenge->npc_ai->mode = NPC_AI_CRUISING;
+
+    load_cyrics_revenge_crew(cyrics_revenge);
+
+    assignid(cyrics_revenge, NULL, true);
+    REMOVE_BIT(cyrics_revenge->flags, DOCKED);
+    SET_BIT(cyrics_revenge->flags, AIR);
+    return true;
 }
 
+bool load_cyrics_revenge_crew(P_ship ship)
+{
+    NPCShipCrewData* crew_data = npcShipCrewData + CYRICS_REVENGE_CREW;
+    P_char captain = load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->captain_mob, 5);
+    if (!captain) return false;
+  
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->firstmate_mob, 3); // sentinel spec mobs
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 6))].number, crew_data->spec_mobs[0], 3); 
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 2))].number, crew_data->spec_mobs[1], 3);
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 1))].number, crew_data->spec_mobs[2], 3);
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[3], 3); // walking surgeon
+
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[4], 2); // two lookouts
+    load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->spec_mobs[4], 2);
+
+    for (int i = 0; i < 9; i++)
+    {
+        load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->inner_grunts[0], 1);
+        load_npc_ship_crew_member(ship, world[real_room0(SHIP_ROOM_NUM(ship, 0))].number, crew_data->inner_grunts[1], 1);
+    }
+
+    set_crew(ship, crew_data->ship_crew_index, false);
+    ship->npc_ai->crew_data = crew_data;
+
+
+    room_direction_data* dn_ex = world[real_room0(SHIP_ROOM_NUM(ship, 2))].dir_option[DOWN];
+    dn_ex->general_description = str_dup("A heavy wooden hatch leads to ship's hold.");
+    dn_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_SECRET | EX_PICKPROOF;
+    dn_ex->key = 40225;
+    dn_ex->keyword = str_dup("hatch heavy");
+
+    room_direction_data* up_ex = world[real_room0(SHIP_ROOM_NUM(ship, 7))].dir_option[UP];
+    up_ex->general_description = str_dup("A heavy wooden hatch leads to ship's hold.");
+    up_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_SECRET | EX_PICKPROOF;
+    up_ex->key = 40225;
+    up_ex->keyword = str_dup("hatch heavy");
+
+    P_obj chest = load_treasure_chest(ship, captain, crew_data);
+    int r_num = real_object(40225);
+    if (r_num < 0) return NULL;
+    P_obj nexus_key = read_object(r_num, REAL);
+    obj_to_obj(nexus_key, chest);
+    return true;
+}
+
+
+int get_cyrics_revenge_nexus_rvnum(P_ship ship)
+{
+    return SHIP_ROOM_NUM(ship, 7);
+}
 
 /////////////////////////////
 //  CREWS
@@ -1043,21 +1081,21 @@ void assign_ship_crew_funcs()
 static int materials[] = {7, 13, 20, 21, 22, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 }; // quality materials
 P_obj create_material(int index);
 
-bool load_treasure_chest(P_ship ship, P_char captain, NPCShipCrewData* crew)
+P_obj load_treasure_chest(P_ship ship, P_char captain, NPCShipCrewData* crew)
 {
     int r_num;
     if ((r_num = real_object(crew->treasure_chest)) < 0)
-        return false;
+        return NULL;
     P_obj chest = read_object(r_num, REAL);
     if (!chest)
-        return false;
+        return NULL;
     obj_to_room(chest, real_room0(ship->bridge));
 
     if ((r_num = real_object(crew->treasure_chest_key)) < 0)
-        return false;
+        return NULL;
     P_obj key = read_object(r_num, REAL);
     if (!key)
-        return false;
+        return NULL;
     obj_to_char(key, captain);
 
     int money = 0;
@@ -1089,12 +1127,12 @@ bool load_treasure_chest(P_ship ship, P_char captain, NPCShipCrewData* crew)
         obj_to_obj(stone, chest);
     }
 
-    return true;
+    return chest;
 }
 
 
 void apply_zone_modifier(P_char ch);
-P_char load_npc_ship_crew_member(P_ship ship, int room_no, int vnum)
+P_char load_npc_ship_crew_member(P_ship ship, int room_no, int vnum, int load_eq)
 {
     int room = real_room0(room_no);
     int rnum;
@@ -1110,11 +1148,22 @@ P_char load_npc_ship_crew_member(P_ship ship, int room_no, int vnum)
     GET_BIRTHPLACE(mob) = world[room].number;
     apply_zone_modifier(mob);
     char_to_room(mob, room, 0);
+
+    if (load_eq > 0)
+    {
+        while (load_eq--)
+        {
+            P_obj o = create_random_eq_new(mob, mob, -1, -1);
+            obj_to_char(o, mob);
+        }
+        do_wear(mob, "all", 0);
+    }
     return mob;
 }
 
-bool load_npc_ship_crew(P_ship ship, int crew_size, int crew_level)
+bool load_npc_ship_crew(P_ship ship, int crew_size, int ship_level)
 {
+    int crew_level = ship_level;
     if (crew_level < 3 && number(0,4) == 0)
         crew_level++;
     else if (crew_level > 0 && number(0,4) == 0)
@@ -1141,13 +1190,13 @@ bool load_npc_ship_crew(P_ship ship, int crew_size, int crew_level)
 
     NPCShipCrewData* crew_data = npcShipCrewData + i;
     int loaded = 0;
-    P_char captain = load_npc_ship_crew_member(ship, ship->bridge, crew_data->captain_mob);
+    P_char captain = load_npc_ship_crew_member(ship, ship->bridge, crew_data->captain_mob, 3);
     if (!captain) return false;
     loaded += 1;
 
     if (crew_size > 4)
     {
-        if (!load_npc_ship_crew_member(ship, ship->bridge, crew_data->firstmate_mob)) return false;
+        if (!load_npc_ship_crew_member(ship, ship->bridge, crew_data->firstmate_mob, 2)) return false;
         loaded += 1;
     }
 
@@ -1159,7 +1208,7 @@ bool load_npc_ship_crew(P_ship ship, int crew_size, int crew_level)
         for (unsigned s = 0; s < sizeof(crew_data->spec_mobs) / sizeof(int) && crew_data->spec_mobs[s] != 0 && loaded < crew_size - 3; s++)
         {
             if (number(1, 6 - spec_load) > 1) continue;
-            if (!load_npc_ship_crew_member(ship, ship->bridge, crew_data->spec_mobs[s])) return false;
+            if (!load_npc_ship_crew_member(ship, ship->bridge, crew_data->spec_mobs[s], 2)) return false;
             loaded++;
         }
     }
@@ -1173,11 +1222,12 @@ bool load_npc_ship_crew(P_ship ship, int crew_size, int crew_level)
     {
         while (loaded < crew_size)
         {
-            if (!load_npc_ship_crew_member(ship, ship->bridge, crew_data->inner_grunts[number(0, grunt_count - 1)])) return false;
+            if (!load_npc_ship_crew_member(ship, ship->bridge, crew_data->inner_grunts[number(0, grunt_count - 1)], 1)) return false;
             loaded++;
         }
     }
 
+    set_crew(ship, crew_data->ship_crew_index, false);
     ship->npc_ai->crew_data = crew_data;
 
     load_treasure_chest(ship, captain, crew_data);

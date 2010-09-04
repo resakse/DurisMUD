@@ -353,7 +353,9 @@ bool sink_ship(P_ship ship, P_ship attacker)
         act_to_all_in_ship(ship, "&=LRYOUR SHIP IS DESTROYED!!&N");
     }
 
-    if (IS_NPC_SHIP(ship))
+    if (ship == cyrics_revenge)
+        ship->timer[T_SINKING] = 7500; // to let people clear it/take nexus
+    else if (IS_NPC_SHIP(ship))
         ship->timer[T_SINKING] = number(1000, 1500); // to let people clear it
     else
         ship->timer[T_SINKING] = number(75, 150);

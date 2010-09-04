@@ -153,6 +153,8 @@ struct ShipData *new_ship(int m_class, bool npc)
    ship->target = 0;
    ship->mainsail = SHIPTYPE_MAX_SAIL(m_class);
    ship->repair = SHIP_HULL_WEIGHT(ship);
+   ship->setheading = ship->heading = 0;
+   ship->setspeed = ship->speed = 0;
 
    ship->maxspeed_bonus = 0;
    ship->capacity_bonus = 0;
