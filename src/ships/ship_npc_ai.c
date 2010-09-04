@@ -569,7 +569,7 @@ void NPCShipAI::board_target()
         while (board_count)
         {
             int grunt = crew_data->outer_grunts[number(0, grunt_count - 1)];
-            if (!load_npc_ship_crew_member(ship->target, ship->target->bridge + room_no, grunt)) 
+            if (!load_npc_ship_crew_member(ship->target, ship->target->bridge + room_no, grunt, 0)) 
                 return;
             board_count--;
             room_no = number(0, j - 1);

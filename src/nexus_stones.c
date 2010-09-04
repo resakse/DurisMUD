@@ -22,6 +22,7 @@ using namespace std;
 #include "db.h"
 #include "damage.h"
 #include "epic.h"
+#include "ship_npc.h"
 
 extern P_index mob_index;
 extern P_index obj_index;
@@ -563,9 +564,16 @@ int nexus_stone(P_obj stone, P_char ch, int cmd, char *arg)
 void nexus_stone_epics(P_char ch, P_obj stone)
 {
   struct affected_type *afp;
-  int amountbase = get_property("nexusStones.epicsMax", 70);
-  int amount = amountbase;
+  int amount_max = get_property("nexusStones.epicsMax", 70);
+  int amount_min = get_property("nexusStones.epicsMin", 50);
 
+  if (STONE_ID(stone) == CYRICS_REVENGE_NEXUS_STONE && nexus_to_cyrics_revenge)
+  {
+      amount_max *= 2;
+      amount_min *= 2;
+  }
+
+  int amount = amount_max;
   if (afp = get_epic_task(ch)) {
     if (-(afp->modifier) == STONE_ID(stone))
     {
@@ -578,7 +586,7 @@ void nexus_stone_epics(P_char ch, P_obj stone)
   
   // give out epics for turning the stone
   gain_epic(ch, EPIC_NEXUS_STONE, STONE_ID(stone), 
-            number( get_property("nexusStones.epicsMin", 50), amount )
+            number( amount_min, amount )
             );
 
   if( ch->group )
@@ -587,7 +595,7 @@ void nexus_stone_epics(P_char ch, P_obj stone)
     {
       if( ch == gl->ch ) continue;
       if( !IS_PC(gl->ch) || IS_TRUSTED(gl->ch) ) continue;
-      amount = amountbase;
+      amount = amount_max;
       if( gl->ch->in_room == ch->in_room )
       {
         if ( (afp = get_epic_task(gl->ch)) &&
@@ -599,7 +607,7 @@ void nexus_stone_epics(P_char ch, P_obj stone)
           affect_remove(gl->ch, afp);
         }
         gain_epic(gl->ch, EPIC_NEXUS_STONE, STONE_ID(stone), 
-                  number( get_property("nexusStones.epicsMin", 50), amount )
+                  number( amount_min, amount )
                   );
       }
     }
@@ -1212,6 +1220,14 @@ int remove_nexus_sage(int stone_id)
 // load nexus stone into room, set the correct flags
 bool load_nexus_stone(int stone_id, const char* stone_name, int room_vnum, int align)
 {
+  if (stone_id == CYRICS_REVENGE_NEXUS_STONE && nexus_to_cyrics_revenge)
+  {
+    if (cyrics_revenge != 0)
+      room_vnum = get_cyrics_revenge_nexus_rvnum(cyrics_revenge);
+    else
+      return false;
+  }
+      
   P_obj stone = read_object(real_object(OBJ_NEXUS_STONE), REAL);
   
   if( !stone )

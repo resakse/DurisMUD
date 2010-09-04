@@ -1007,7 +1007,7 @@ quarter master quartermaster scion abyss~
 &+La wisp of smoke from its eyes as it sizes you up and down wonder how
 &+Lmany bites it would take to consume you.&n
 ~
-10312 1 0 24 2049 0 0 -1000 S
+10314 1 0 24 2049 0 0 -1000 S
 x 0 1 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -1025,7 +1025,7 @@ boatswain scion abyss~
 &+Lnasty *&-L&+WCRACK&n&+L* of the whip tears the air as he bears
 &+Ldown upon the deckhand!&n
 ~
-10312 1 0 939524248 2076 0 0 -1000 S
+10314 1 0 939524248 2076 0 0 -1000 S
 x 0 2097152 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
@@ -1042,7 +1042,7 @@ master gunner scion abyss~
 &+LSmall blackened scales cover his body, making him look almost reptilian
 &+Lin nature.&n
 ~
-10312 0 0 0 2076 0 0 -1000 S
+10314 0 0 0 2076 0 0 -1000 S
 x 0 512 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
