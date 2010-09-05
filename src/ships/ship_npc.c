@@ -1219,7 +1219,7 @@ bool load_cyrics_revenge_crew(P_ship ship)
 
     room_direction_data* up_ex = world[real_room0(SHIP_ROOM_NUM(ship, 7))].dir_option[UP];
     up_ex->general_description = str_dup("A heavy wooden hatch leads to ship's hold.");
-    up_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_SECRET | EX_PICKPROOF;
+    up_ex->exit_info = EX_ISDOOR | EX_CLOSED | EX_LOCKED | EX_PICKPROOF;
     up_ex->key = 40225;
     up_ex->keyword = str_dup("hatch heavy");
 
