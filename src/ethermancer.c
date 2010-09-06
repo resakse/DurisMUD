@@ -1988,6 +1988,8 @@ void spell_polar_vortex(int level, P_char ch, char *arg, int type, P_char victim
           stop_fighting(tch);
       }
       send_to_char("&+CYou find no shelter from the savage vortex!&n\n", tch);
+      if (IS_PC(tch))
+        dam = dam * get_property("spell.area.damage.to.pc", 0.5);
       dam = dam * get_property("spell.area.damage.factor.polarvortex", 1.000);
       spell_damage(ch, tch, dam, SPLDAM_COLD, 0, &messages);
     }

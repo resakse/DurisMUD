@@ -742,7 +742,7 @@ cutthroat plunderer marauder four winds _spec1_~
 &+LFlayed flesh shows where the crew have whiped this poor undead pirate
 &+Linto shape!&n
 ~
-10312 0 0 402653240 0 0 0 -1000 S
+10312 1 0 402653240 0 0 0 -1000 S
 U 0 16384 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0

@@ -1183,6 +1183,9 @@ void spell_single_scathing_wind(int level, P_char ch, char *arg, int type,
   
   dam = dice(3 * level, 5);
   
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
   dam = dam * get_property("spell.area.damage.factor.scathingwind", 1.000);
   
   if(NewSaves(victim, SAVING_SPELL, mod))
@@ -1275,6 +1278,9 @@ void spell_single_earthen_rain(int level, P_char ch, char *arg, int type,
   if(GET_SPEC(ch, CLASS_SHAMAN, SPEC_ELEMENTALIST))
     dam = (int) (dam * get_property("damage.increase.elementalist", 1.150));
  
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
   dam = dam * get_property("spell.area.damage.factor.earthenrain", 1.000);
 
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_NOSHRUG, &messages);
@@ -1533,6 +1539,9 @@ void spell_pythonsting(int level, P_char ch, char *arg, int type,
     dam *= 2;
   }
 
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
   dam = dam * get_property("spell.area.damage.factor.gpythonsting", 1.000);
   
   if(spell_damage(ch, victim, dam, SPLDAM_GENERIC,

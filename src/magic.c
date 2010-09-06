@@ -2615,16 +2615,16 @@ void spell_earthen_maul(int level, P_char ch, char *arg, int type,
   };
 
   temp = MIN(20, (level / 2 + 1));
-  dam = dice(5 * temp, 6);
+  dam = dice(5 * temp, 9);
 
   if(level > 50)
   {
-    dam = dice(6 * temp, 6);
+    dam = dice(6 * temp, 9);
   }
 
   dam = dam * DAMFACTOR;
 
-  if(saves_spell(victim, SAVING_SPELL))
+  if(NewSaves(victim, SAVING_SPELL, 1.5))
     dam >>= 1;
 
 
@@ -3071,15 +3071,15 @@ void spell_cyclone(int level, P_char ch, char *arg, int type, P_char victim,
     return;
   }
 
-        dam = dice(level, 12);
+        dam = dice(level * 3, 9);
 
 /*  play_sound(SOUND_WIND3, NULL, ch->in_room, TO_ROOM); */
 
-  svchance = (int) (level / 20);
+  svchance = (int) (level / 12);
 
   if(IS_AFFECTED(victim, AFF_FLY) &&
     !NewSaves(victim, SAVING_PARA, svchance) &&
-    GET_LEVEL(victim) < (GET_LEVEL(ch) + 10) &&
+  /*  GET_LEVEL(victim) < (GET_LEVEL(ch) + 10) && */
                 !IS_ELITE(victim))
   {
     //door = number(0, NUM_EXITS - 1);
@@ -3160,6 +3160,8 @@ void spell_single_meteorswarm(int level, P_char ch, char *arg, int type,
       return;
 
   dam = 100 + level * 6 + number(1, 40);
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5); 
   dam = dam * get_property("spell.area.damage.factor.meteorswarm", 1.000);
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
 }
@@ -3492,6 +3494,10 @@ void spell_single_firestorm(int level, P_char ch, char *arg, int type,
   dam = dice(level, 10);
   if(NewSaves(victim, SAVING_SPELL, 0))
     dam >>= 1;
+  
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
   dam = dam * get_property("spell.area.damage.factor.firestorm", 1.000);
   spell_damage(ch, victim, dam, SPLDAM_FIRE, 0, &messages);
 }
@@ -9835,7 +9841,7 @@ void spell_shadow_breath_1(int level, P_char ch, char *arg, int type,
     "$n &+wtotally consumes&n $N &+Lwith blackness.&n", 0
   };
   save = calc_dragon_breath_save(ch, victim);
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 6) + level);
+  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 5) + level);
 
   if(!are_we_still_alive(ch , victim))
     return;
@@ -9865,7 +9871,7 @@ void spell_shadow_breath_2(int level, P_char ch, char *arg, int type,
     return;
 
   save = calc_dragon_breath_save(ch, victim);
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
+  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 7) + level);
 
   if(NewSaves(victim, SAVING_BREATH, save))
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
@@ -12265,6 +12271,9 @@ void spell_single_incendiary_cloud(int level, P_char ch, char *arg, int type,
     dam /= 2;
   }
 
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
   dam = dam * get_property("spell.area.damage.factor.incendiary", 1.000);
 
   spell_damage(ch, victim, dam, SPLDAM_FIRE, 0, &messages);
@@ -12697,6 +12706,9 @@ void spell_ice_storm(int level, P_char ch, char *arg, int type, P_char victim,
   int num_dice = MIN(level, 36);
   int dam = dice(num_dice, 8);
 
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
   dam = dam * get_property("spell.area.damage.factor.icestorm", 1.000);
 
   if(rain) {
@@ -12992,6 +13004,9 @@ void spell_ghastly_touch(int level, P_char ch, char *arg, int type, P_char victi
   int dam;
   dam = (int) number(level * 4, level * 6);
   
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+  
   dam = dam * get_property("spell.area.damage.factor.summonghasts", 1.000);
 
   if(spell_damage (ch, victim, dam, SPLDAM_NEGATIVE, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD)
@@ -13029,7 +13044,10 @@ void spell_heavens_aid(int level, P_char ch, char *arg, int type, P_char victim,
 
   int dam;
   dam = (int) number(level * 4, level * 6);
-  
+
+  if (IS_PC(victim))
+    dam = dam * get_property("spell.area.damage.to.pc", 0.5);
+
   dam = dam * get_property("spell.area.damage.factor.aidoftheheavens", 1.000);
 
   if(spell_damage (ch, victim, dam, SPLDAM_HOLY, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD)
@@ -13453,7 +13471,7 @@ void spell_sunray(int level, P_char ch, char *arg, int type, P_char victim,
  
 // A little more than iceball and does less damage when not outside.
 // However, has a chance to blind victim for a while.
-  dam = dice((int)(level * 3), 5);
+  dam = dice((int)(level * 4), 6) - number(5, 20);
   
   if(IS_AFFECTED(victim, AFF_BLIND) ||
      !IS_OUTSIDE(victim->in_room))
@@ -16997,7 +17015,7 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
  */
   P_char   tch, next;
   int      doomdam = 95 + number(0, 20);
-  int      num;
+  int      num, finaldam = 0;
   struct damage_messages messages = {
     "&+LYou send &+ma wave of insects and arachnids &+Lagainst $N!",
     "&+mA sea of arachnids and insects &+Lconsume and overwhelm you!",
@@ -17055,7 +17073,7 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
   }
 
   if(get_spell_from_room(&world[ch->in_room], SPELL_SUMMON_INSECTS))
-    doomdam += 15;
+    doomdam += 25;
 
 /*
  * Originally doom was going to be the forest druid spec nuke, and
@@ -17066,7 +17084,7 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
  */
 
   if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND)) 
-    doomdam += 25;
+    doomdam += 35;
   else
     doomdam -= 5;
 
@@ -17088,6 +17106,7 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
   for (tch = world[ch->in_room].people; tch; tch = next)
   {
     next = tch->next_in_room;
+    finaldam = doomdam;
     if ((tch == ch) || !should_area_hit(ch, tch))
       continue;
     
@@ -17095,12 +17114,18 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
       IS_AFFECTED2(tch, AFF2_FIRESHIELD) ||
       IS_AFFECTED3(tch, AFF3_LIGHTNINGSHIELD))
     {
-      doomdam = (int) (doomdam * 0.75);
+      finaldam = (int) (finaldam * 0.75);
     }
     
-    doomdam = doomdam * get_property("spell.area.damage.factor.doom", 1.000);
+    if (IS_PC(tch))
+      finaldam = finaldam * get_property("spell.area.damage.to.pc", 0.5);
+  
+    finaldam = finaldam * get_property("spell.area.damage.factor.doom", 1.000);
 
-    if(spell_damage(ch, tch, doomdam, SPLDAM_GENERIC, SPLDAM_NODEFLECT,
+    if (number(1, 100) >= get_property("spell.area.minChance.doom", 100))
+      continue;
+
+    if(spell_damage(ch, tch, finaldam, SPLDAM_GENERIC, SPLDAM_NODEFLECT,
       &messages) == DAM_NONEDEAD)
     {
       //if(IS_ALIVE(ch) && IS_ALIVE(tch))
