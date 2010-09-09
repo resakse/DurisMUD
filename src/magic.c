@@ -466,8 +466,8 @@ void spell_prismatic_spray(int level, P_char ch, char *arg, int type,
   }
 
   zone_spellmessage(room,
-    "&+CC&+co&+Cl&+co&+Cr&+cf&+Cu&+cl&N &+Crays of &+Wlight &+Cstreak throughout the sky!&n",
-    "&+CC&+co&+Cl&+co&+Cr&+cf&+Cu&+cl&N &+Crays of &+Wlight &+Cstreak throughout the sky to the %s!&n");
+    "&+CC&+co&+Cl&+co&+Cr&+cf&+Cu&+cl&N &+Crays of &+Wlight &+Cstreak throughout the sky!&n\n\r",
+    "&+CC&+co&+Cl&+co&+Cr&+cf&+Cu&+cl&N &+Crays of &+Wlight &+Cstreak throughout the sky to the %s!&n\n\r");
 }
 
 
