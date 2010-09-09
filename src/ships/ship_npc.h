@@ -30,7 +30,7 @@ struct NPCShipCrewData
     int ship_crew_index;
 };
 
-P_ship try_load_npc_ship(P_ship target);
+P_ship try_load_pirate_ship(P_ship target);
 P_ship try_load_npc_ship(P_ship target, NPC_AI_Type type, int level, P_char dbg_ch);
 P_ship try_load_npc_ship(P_ship target, NPC_AI_Type type, int level, int location, P_char dgb_ch);
 P_ship load_npc_ship(int level, NPC_AI_Type type, int min_speed, int m_class, int room, P_char dgb_ch);

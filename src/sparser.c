@@ -1821,7 +1821,7 @@ void do_will(P_char ch, char *argument, int cmd)
     dura = 1;
   else
   {
-    if (GET_CLASS(ch, CLASS_PSIONICIST) &&
+    /*if (GET_CLASS(ch, CLASS_PSIONICIST) &&
         (!is_tank || (is_tank && number(0, 1))) &&
         IS_SET(ch->specials.act2, PLR2_QUICKCHANT) &&
         ((IS_NPC(ch) && (number(1, 101) > (20 + 1.5 * GET_LEVEL(ch)))) ||
@@ -1830,7 +1830,7 @@ void do_will(P_char ch, char *argument, int cmd)
       dura >>= 1;
       if (!number(0, 1))
         notch_skill(ch, SKILL_QUICK_CHANT, get_property("skill.notch.quickChant", 100));
-    }
+    }*/
     if (GET_CLASS(ch, CLASS_MINDFLAYER))
       dura = 1;
   }

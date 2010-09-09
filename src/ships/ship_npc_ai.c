@@ -106,6 +106,7 @@ NPCShipAI::NPCShipAI(P_ship s, P_char ch)
     did_board = 0;
     speed_restriction = -1;
     since_last_fired_right = 0;
+    target_side = SIDE_REAR;
 
     if (SHIP_HULL_WEIGHT(ship) > 200)
     {
@@ -440,29 +441,58 @@ bool NPCShipAI::find_current_target()
 
 bool NPCShipAI::find_new_target()
 {
-    for (int i = 0; i < contacts_count; i++) 
+    int i = 0;
+    if (ship == cyrics_revenge)
     {
-        if (ship == cyrics_revenge && ship->timer[T_BSTATION] == 0 && !IS_NPC_SHIP(contacts[i].ship))
-        { // chance to ignore player's if not too close
-            if (contacts[i].range > 35)
-                continue;
-            if (contacts[i].range > 10 
-                && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT ||
-                number(0, ((int)contacts[i].range - 9) * 15) > 0))
-            {
-                continue;
-            }
-        }
-        if (is_valid_target(contacts[i].ship))
+        for (i = 0; i < contacts_count; i++) 
         {
-            ship->target = contacts[i].ship;
-            update_target(i);
-            ship->timer[T_MAINTENANCE] = 0;
-            send_message_to_debug_char("Found new target: %s\r\n", contacts[i].ship->id);
-            return true;
+            if (!IS_NPC_SHIP(contacts[i].ship))
+                continue;
+            if (ship->timer[T_BSTATION] == 0)
+            {
+                if (contacts[i].range > 35)
+                    continue;
+                if (contacts[i].range > 10 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT))
+                    continue;
+                if (number(0, (int)contacts[i].range * 10) > 0)
+                    continue;
+            }
+            if (is_valid_target(contacts[i].ship))
+                goto found;
+        }
+        for (i = 0; i < contacts_count; i++) 
+        {
+            if (IS_NPC_SHIP(contacts[i].ship))
+                continue;
+            if (ship->timer[T_BSTATION] == 0)
+            {
+                if (contacts[i].range > 35)
+                    continue;
+                if (contacts[i].range > 10 && (contacts[i].ship->m_class == SH_SLOOP || contacts[i].ship->m_class == SH_YACHT))
+                    continue;
+                if (number(0, (int)contacts[i].range * 20) > 0)
+                    continue;
+            }
+            if (is_valid_target(contacts[i].ship))
+                goto found;
+        }
+    }
+    else
+    {
+        for (i = 0; i < contacts_count; i++) 
+        {
+            if (is_valid_target(contacts[i].ship))
+                goto found;
         }
     }
     return false;
+
+  found:
+    ship->target = contacts[i].ship;
+    update_target(i);
+    ship->timer[T_MAINTENANCE] = 0;
+    send_message_to_debug_char("Found new target: %s\r\n", contacts[i].ship->id);
+    return true;
 }
 void NPCShipAI::update_target(int i) // index in contacts
 {
@@ -566,19 +596,19 @@ void NPCShipAI::board_target()
         if (!ok) break;
     } // j is number of used room
 
-    int board_count = j * 0.75;
-    if (crew_data->level > 2) board_count--;
-    int room_no = 0;
-    if (grunt_count)
+    int board_count = j * ((crew_data->level > 2) ? 0.50 : 0.75);
+
+    int grunt = crew_data->outer_grunts[number(0, grunt_count - 1)];
+    if (!load_npc_ship_crew_member(ship->target, ship->target->bridge, grunt, 0)) 
+        return;
+    board_count--;
+    while (board_count)
     {
-        while (board_count)
-        {
-            int grunt = crew_data->outer_grunts[number(0, grunt_count - 1)];
-            if (!load_npc_ship_crew_member(ship->target, ship->target->bridge + room_no, grunt, 0)) 
-                return;
-            board_count--;
-            room_no = number(0, j - 1);
-        }
+        int room_no = number(1, j - 1);
+        grunt = crew_data->outer_grunts[number(0, grunt_count - 1)];
+        if (!load_npc_ship_crew_member(ship->target, ship->target->bridge + room_no, grunt, 0)) 
+            return;
+        board_count--;
     }
 
     if (type == NPC_AI_PIRATE)

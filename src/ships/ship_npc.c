@@ -637,11 +637,13 @@ NPCShipSetup npcShipSetup [] = {
 //////////////////////
 
 P_char dbg_char = 0;
-P_ship try_load_npc_ship(P_ship target)
+P_ship try_load_pirate_ship(P_ship target)
 {
     if (IS_NPC_SHIP(target))
         return 0;
     if (target->m_class == SH_SLOOP || target->m_class == SH_YACHT)
+        return 0;
+    if (ocean_pvp_state()) // dont want pirates to interfere in pvp too much
         return 0;
 
     NPC_AI_Type type = NPC_AI_PIRATE;
@@ -1066,10 +1068,10 @@ P_char load_npc_ship_crew_member(P_ship ship, int room_no, int vnum, int load_eq
 bool load_npc_ship_crew(P_ship ship, int crew_size, int ship_level)
 {
     int crew_level = ship_level;
-    if (crew_level < 3 && number(0,4) == 0)
+    /*if (crew_level < 3 && number(0,4) == 0)
         crew_level++;
     else if (crew_level > 0 && number(0,4) == 0)
-        crew_level--;
+        crew_level--; */
 
     int total_crews = sizeof(npcShipCrewData) / sizeof(NPCShipCrewData);
     int i = 0;

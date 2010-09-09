@@ -827,11 +827,6 @@ int do_lock_target(P_char ch, P_ship ship, char* arg)
     }
     if (isname(arg, "off")) 
     {
-        if (ship->npc_ai != 0 && IS_TRUSTED(ch))
-        {
-            delete ship->npc_ai;
-            ship->npc_ai = 0;
-        }
 
         if (ship->target != NULL) {
             ship->target = NULL;
@@ -842,24 +837,46 @@ int do_lock_target(P_char ch, P_ship ship, char* arg)
             return TRUE;
         }
     }
-    if (isname(arg, "pirate") && IS_TRUSTED(ch))
+    if (IS_TRUSTED(ch))
     {
-        if (ship->npc_ai)
+        if (isname(arg, "ai_off") && IS_TRUSTED(ch)) 
         {
-            delete ship->npc_ai;
-            ship->npc_ai = 0;
+            if (ship->npc_ai != 0)
+            {
+                delete ship->npc_ai;
+                ship->npc_ai = 0;
+            }
         }
-        else
-            ship->npc_ai = new NPCShipAI(ship, ch);
-    }
-    if (isname(arg, "debug") && IS_TRUSTED(ch))
-    {
-        if (ship->npc_ai)
+        if (isname(arg, "ai_pirate")) 
         {
-            if (ship->npc_ai->debug_char)
-                ship->npc_ai->debug_char = 0;
-            else
-                ship->npc_ai->debug_char = ch;
+            if (!ship->npc_ai)
+                ship->npc_ai = new NPCShipAI(ship, ch);
+            ship->npc_ai->type = NPC_AI_PIRATE;
+            ship->npc_ai->mode = NPC_AI_CRUISING;
+        }
+        if (isname(arg, "ai_hunter")) 
+        {
+            if (!ship->npc_ai)
+                ship->npc_ai = new NPCShipAI(ship, ch);
+            ship->npc_ai->type = NPC_AI_HUNTER;
+            ship->npc_ai->mode = NPC_AI_CRUISING;
+        }
+        if (isname(arg, "ai_escort")) 
+        {
+            if (!ship->npc_ai)
+                ship->npc_ai = new NPCShipAI(ship, ch);
+            ship->npc_ai->type = NPC_AI_ESCORT;
+            ship->npc_ai->mode = NPC_AI_CRUISING;
+        }
+        if (isname(arg, "ai_advanced")) 
+        {
+            if (ship->npc_ai)
+                ship->npc_ai->advanced = true;
+        }
+        if (isname(arg, "ai_basic")) 
+        {
+            if (ship->npc_ai)
+                ship->npc_ai->advanced = false;
         }
     }
 

@@ -1480,6 +1480,7 @@ void do_dragon_punch(P_char ch, char *argument, int cmd)
   P_char   vict = NULL;
   char     name[100];
   int      skl_lvl = 0;
+  int      dam = 0;
   struct damage_messages messages = {
     "WHAP!  For a moment, you feel just like a dragon must as you punch $N.",
     "$n's fist flies toward you at frightening speeds, stopping only when it strikes your flesh.",
@@ -1517,7 +1518,12 @@ void do_dragon_punch(P_char ch, char *argument, int cmd)
   }
 
   skl_lvl = BOUNDED(0, skl_lvl + GetConditionModifier(vict), 100);
+
+  dam = dice(60, 8);
+  dam = dam * MAX(30, skl_lvl) / 100;
   
+  // Gona try making them always land, but have damage based on skill.
+  /*
   if (!notch_skill(ch, SKILL_DRAGON_PUNCH,
                    get_property("skill.notch.offensive", 15)) &&
       number(1, 101) > skl_lvl)
@@ -1529,7 +1535,8 @@ void do_dragon_punch(P_char ch, char *argument, int cmd)
         TO_NOTVICT);
   }
   else
-    melee_damage(ch, vict, dice(GET_LEVEL(ch), 8), PHSDAM_TOUCH, &messages);
+  */
+    melee_damage(ch, vict, dam, PHSDAM_TOUCH, &messages);
 
   CharWait(ch, 2 * PULSE_VIOLENCE);
 }

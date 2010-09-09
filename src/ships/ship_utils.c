@@ -200,9 +200,8 @@ void everyone_get_out_ship(P_ship ship)
       if (obj)
       {
         obj_next = obj->next_content;
-        if (obj != ship->panel)
+        if (obj != ship->panel && !(obj->type == ITEM_CORPSE && !IS_SET(obj->value[1], NPC_CORPSE)))
         {
-          obj_next = obj->next_content;
           obj_from_room(obj);
           obj_to_room(obj, ship->location);
         }
@@ -240,13 +239,15 @@ void clear_ship_content(P_ship ship)
       if (obj)
       {
         obj_next = obj->next_content;
-        if (obj != ship->panel)
+        if (obj == ship->panel)
+            continue;
+        if (obj->type == ITEM_CORPSE && !IS_SET(obj->value[1], NPC_CORPSE))
         {
-          obj_next = obj->next_content;
-          //obj_from_room(obj);
-          //obj_to_room(obj, ship->location);
-          extract_obj(obj, TRUE);
+            obj_from_room(obj);
+            obj_to_room(obj, ship->location);
+            continue;
         }
+        extract_obj(obj, TRUE);
       }
     }
   }
@@ -463,12 +464,14 @@ void update_maxspeed(P_ship ship, int breach_count)
     float weight_mod = 1.0 - ( (float) (SHIP_SLOT_WEIGHT(ship) - equipment_weight_mod - cargo_weight_mod) / (float) SHIP_MAX_WEIGHT(ship) );
 
     int ceil = SHIPTYPE_SPEED(ship->m_class) + ship->crew.get_maxspeed_mod();
+    if (breach_count == 0 && SHIP_FLYING(ship)) ceil *= 1.2;
+
     float maxspeed = ceil;
     if (breach_count == 0 && SHIP_FLYING(ship)) maxspeed *= 1.2;
+    if (breach_count == 1 && SHIP_FLYING(ship)) maxspeed *= 0.5;
     maxspeed = maxspeed * (1.0 + ship->crew.sail_mod_applied);
     maxspeed = maxspeed * weight_mod;
     maxspeed = maxspeed * (float)ship->mainsail / (float)SHIP_MAX_SAIL(ship); // Adjust for sail condition
-    if (breach_count == 1 && SHIP_FLYING(ship)) maxspeed *= 0.5;
     ship->maxspeed = BOUNDED(1, (int)maxspeed, ceil);
 }
 
