@@ -101,6 +101,7 @@ O 0 88312 1 88398 100 0 0 0        * a pair of clawed demon-hide moccasins
 O 0 88315 1 88398 100 0 0 0        * a fire-imbued totem of Kossuth
 O 0 88316 1 88398 100 0 0 0        * the bracers of immolation
 O 0 88323 1 88398 80 0 0 0         * a pair of battered and worn gauntlets
+O 0 61 1 88398 100 0 0 0           * (object type not in this .obj file)
 *
 M 0 88324 15 88307 100 0 0 0       * a fire minion
 E 1 88326 22 16 100 0 0 0          *   a thin spike
@@ -253,18 +254,18 @@ F 1 88329 6 88396 100 0 0 0        * a huge fire minion guard (following)
 F 1 88329 6 88396 100 0 0 0        * a huge fire minion guard (following)
 F 1 88329 6 88396 100 0 0 0        * a huge fire minion guard (following)
 F 1 88329 6 88396 100 0 0 0        * a huge fire minion guard (following)
-M 0 88310 16 88397 100 0 0 0       * a huge fire minion guard
-F 1 88310 16 88397 100 0 0 0       * a huge fire minion guard (following)
-F 1 88310 16 88397 100 0 0 0       * a huge fire minion guard (following)
-F 1 88310 16 88397 100 0 0 0       * a huge fire minion guard (following)
-F 1 88310 16 88397 100 0 0 0       * a huge fire minion guard (following)
+M 0 88310 14 88397 100 0 0 0       * a huge fire minion guard
+F 1 88310 14 88397 100 0 0 0       * a huge fire minion guard (following)
+F 1 88310 14 88397 100 0 0 0       * a huge fire minion guard (following)
+F 1 88310 14 88397 100 0 0 0       * a huge fire minion guard (following)
+F 1 88310 14 88397 100 0 0 0       * a huge fire minion guard (following)
 F 1 88317 21 88397 100 0 0 0       * a servant (following)
 M 0 88308 14 88400 100 0 0 0       * a magma guard
 M 0 88306 18 88402 100 0 0 0       * a fire minion
 M 0 88306 18 88402 100 0 0 0       * a fire minion
 M 0 88306 18 88402 100 0 0 0       * a fire minion
 M 0 88308 14 88403 100 0 0 0       * a magma guard
-M 0 88309 19 88404 100 0 0 0       * a fire minion guard
+M 0 88309 17 88404 100 0 0 0       * a fire minion guard
 M 0 88317 21 88404 100 0 0 0       * a servant
 M 0 88317 21 88404 100 0 0 0       * a servant
 M 0 88303 15 88404 100 0 0 0       * an efreeti magi
@@ -284,24 +285,24 @@ M 0 88304 14 88406 100 0 0 0       * an efreeti berserker
 M 0 88304 14 88406 100 0 0 0       * an efreeti berserker
 M 0 88315 1 88407 100 0 0 0        * the captain of the elemental guard
 E 1 88301 1 6 50 0 0 0             *   a crown of burning flames
-F 1 88310 16 88407 100 0 0 0       * a huge fire minion guard (following)
-F 1 88310 16 88407 100 0 0 0       * a huge fire minion guard (following)
-F 1 88310 16 88407 100 0 0 0       * a huge fire minion guard (following)
-F 1 88310 16 88407 100 0 0 0       * a huge fire minion guard (following)
-M 0 88309 19 88408 100 0 0 0       * a fire minion guard
-F 1 88309 19 88408 100 0 0 0       * a fire minion guard (following)
-M 0 88309 19 88408 100 0 0 0       * a fire minion guard
-M 0 88309 19 88411 100 0 0 0       * a fire minion guard
-F 1 88309 19 88411 100 0 0 0       * a fire minion guard (following)
-M 0 88309 19 88411 100 0 0 0       * a fire minion guard
-M 0 88310 16 88414 100 0 0 0       * a huge fire minion guard
+F 1 88310 14 88407 100 0 0 0       * a huge fire minion guard (following)
+F 1 88310 14 88407 100 0 0 0       * a huge fire minion guard (following)
+F 1 88310 14 88407 100 0 0 0       * a huge fire minion guard (following)
+F 1 88310 14 88407 100 0 0 0       * a huge fire minion guard (following)
+M 0 88309 17 88408 100 0 0 0       * a fire minion guard
+F 1 88309 17 88408 100 0 0 0       * a fire minion guard (following)
+M 0 88309 17 88408 100 0 0 0       * a fire minion guard
+M 0 88309 17 88411 100 0 0 0       * a fire minion guard
+F 1 88309 17 88411 100 0 0 0       * a fire minion guard (following)
+M 0 88309 17 88411 100 0 0 0       * a fire minion guard
+M 0 88310 14 88414 100 0 0 0       * a huge fire minion guard
 F 1 88306 18 88414 100 0 0 0       * a fire minion (following)
 F 1 88306 18 88414 100 0 0 0       * a fire minion (following)
-M 0 88310 16 88414 100 0 0 0       * a huge fire minion guard
-M 0 88310 16 88414 100 0 0 0       * a huge fire minion guard
-M 0 88309 19 88415 100 0 0 0       * a fire minion guard
-F 1 88309 19 88415 100 0 0 0       * a fire minion guard (following)
-M 0 88309 19 88415 100 0 0 0       * a fire minion guard
+M 0 88310 14 88414 100 0 0 0       * a huge fire minion guard
+M 0 88310 14 88414 100 0 0 0       * a huge fire minion guard
+M 0 88309 17 88415 100 0 0 0       * a fire minion guard
+F 1 88309 17 88415 100 0 0 0       * a fire minion guard (following)
+M 0 88309 17 88415 100 0 0 0       * a fire minion guard
 M 0 88311 1 88420 25 0 0 0         * Khoe, the emissary of Ogremoch
 E 1 88319 1 12 100 0 0 0           *   an earthen cloak of lordly might
 M 0 88314 1 88421 15 0 0 0         * Drooz Kyrendyleea
@@ -321,16 +322,16 @@ M 0 88306 18 88428 100 0 0 0       * a fire minion
 M 0 88306 18 88428 100 0 0 0       * a fire minion
 M 0 88306 18 88428 100 0 0 0       * a fire minion
 M 0 88306 18 88428 100 0 0 0       * a fire minion
-M 0 88309 19 88429 100 0 0 0       * a fire minion guard
-M 0 88309 19 88429 100 0 0 0       * a fire minion guard
+M 0 88309 17 88429 100 0 0 0       * a fire minion guard
+M 0 88309 17 88429 100 0 0 0       * a fire minion guard
 M 0 88308 14 88431 100 0 0 0       * a magma guard
-M 0 88309 19 88432 100 0 0 0       * a fire minion guard
+M 0 88309 17 88432 100 0 0 0       * a fire minion guard
 M 0 88306 18 88432 100 0 0 0       * a fire minion
-M 0 88309 19 88432 100 0 0 0       * a fire minion guard
+M 0 88309 17 88432 100 0 0 0       * a fire minion guard
 M 0 88302 12 88433 100 0 0 0       * an efreeti warrior
 M 0 88302 12 88433 100 0 0 0       * an efreeti warrior
 M 0 88306 18 88436 100 0 0 0       * a fire minion
-M 0 88309 19 88437 100 0 0 0       * a fire minion guard
+M 0 88309 17 88437 100 0 0 0       * a fire minion guard
 F 1 88308 14 88437 100 0 0 0       * a magma guard (following)
 M 0 88308 14 88441 100 0 0 0       * a magma guard
 M 0 88308 14 88441 100 0 0 0       * a magma guard
@@ -348,14 +349,10 @@ E 1 88300 1 16 100 0 0 0           *   the flaming sword, Inferno
 G 1 88302 1 0 100 0 0 0            *    a flaming key
 G 1 25030 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 359 1 0 100 0 0 0              *    (object type not in this .obj file)
-M 0 88310 16 88449 100 0 0 0       * a huge fire minion guard
-F 1 88310 16 88449 100 0 0 0       * a huge fire minion guard (following)
-M 0 88309 19 88449 100 0 0 0       * a fire minion guard
-F 1 88309 19 88449 100 0 0 0       * a fire minion guard (following)
-M 0 88310 16 88450 100 0 0 0       * a huge fire minion guard
-F 1 88310 16 88450 100 0 0 0       * a huge fire minion guard (following)
-M 0 88309 19 88450 100 0 0 0       * a fire minion guard
-F 1 88309 19 88450 100 0 0 0       * a fire minion guard (following)
+M 0 88310 14 88449 100 0 0 0       * a huge fire minion guard
+F 1 88310 14 88449 100 0 0 0       * a huge fire minion guard (following)
+M 0 88309 17 88449 100 0 0 0       * a fire minion guard
+F 1 88309 17 88449 100 0 0 0       * a fire minion guard (following)
 M 0 88458 1 88459 100 0 0 0        * a mechanical construct
 M 0 88457 1 88459 100 0 0 0        * a mechanical construct
 G 1 88327 1 0 100 0 0 0            *    the Jammin Java Music Contraption

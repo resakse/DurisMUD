@@ -965,8 +965,7 @@ void bard_heroism(int l, P_char ch, P_char victim, int song)
 	empower += 100;
 
   if(GET_LEVEL(ch) >= 21 &&
-    !IS_AFFECTED(victim, AFF_HASTE) &&
-    ch == victim)
+    !IS_AFFECTED(victim, AFF_HASTE))
       spell_haste(l, ch, 0, 0, victim, NULL);
 
   if(!affected_by_spell(victim, SONG_HEROISM))

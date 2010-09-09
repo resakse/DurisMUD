@@ -166,7 +166,6 @@ D 0 25333 2 2 100 0 0 0
 *     "Intersection of High Street and The Way of Heroes" - closed/locked
 *
 *
-O 0 61 1 25214 100 0 0 0           * (object type not in this .obj file)
 O 0 2097 30 25296 100 0 0 0        * (object type not in this .obj file)
 *
 M 0 25400 2 25201 100 0 0 0        * (mob type not in this .mob file)

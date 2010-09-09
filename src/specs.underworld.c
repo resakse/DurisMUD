@@ -822,7 +822,7 @@ int doombringer(P_obj obj, P_char ch, int cmd, char *arg)
     return false;
   }
 
-  if(CheckMultiProcTiming(ch) &&
+  if(/*CheckMultiProcTiming(ch) &&*/
      !number(0, 24)) // 4% proc rate.
   {
     act("&+LYour $q blurs as it calls upon the elements of &+Blightning, &N&+rfire, &+Cand ice to strike&N $N.",
@@ -1264,7 +1264,7 @@ int avernus(P_obj obj, P_char ch, int cmd, char *arg)
   if((obj->loc.wearing == ch) &&
      vict &&
      !number(0, 24) &&
-     CheckMultiProcTiming(ch) &&
+     /*CheckMultiProcTiming(ch) &&*/
      !IS_UNDEADRACE(vict))
   {
     act("&+LAvernus, the life stealer &N&+Wglows brightly in your hands as it dives into $N.&N",
