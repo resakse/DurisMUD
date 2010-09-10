@@ -1146,7 +1146,8 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
      !CHAR_IN_JUSTICE_AREA(ch) &&
      !CHAR_IN_TOWN(ch) &&
      (npc_has_spell_slot(ch, SPELL_ANIMATE_DEAD) ||
-     npc_has_spell_slot(ch, SPELL_CREATE_DRACOLICH) ||
+      npc_has_spell_slot(ch, SPELL_CALL_ARCHON) ||
+      npc_has_spell_slot(ch, SPELL_CREATE_DRACOLICH) ||
      npc_has_spell_slot(ch, SPELL_CALL_TITAN) ||
      npc_has_spell_slot(ch, SPELL_CALL_AVATAR)) &&
      (!IS_AFFECTED(ch, AFF_HIDE) || IS_SET(ch->specials.act, ACT_SENTINEL)))
@@ -1225,6 +1226,7 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
                 npc_has_spell_slot(ch, SPELL_RAISE_WRAITH) ||
                 npc_has_spell_slot(ch, SPELL_RAISE_VAMPIRE) ||
                 npc_has_spell_slot(ch, SPELL_RAISE_LICH) ||
+	        npc_has_spell_slot(ch, SPELL_CALL_ARCHON) ||
                 npc_has_spell_slot(ch, SPELL_CALL_ASURA) ||
                 npc_has_spell_slot(ch, SPELL_CALL_BRALANI) ||
                 npc_has_spell_slot(ch, SPELL_CALL_KNIGHT) ||
@@ -1276,8 +1278,12 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
 	  else
             spl = SPELL_RAISE_SPECTRE;
         }
-        else if(npc_has_spell_slot(ch, SPELL_ANIMATE_DEAD))
-          spl = SPELL_ANIMATE_DEAD;
+        else if(npc_has_spell_slot(ch, SPELL_ANIMATE_DEAD) ||
+	        npc_has_spell_slot(ch, SPELL_CALL_ARCHON))
+          if (GET_CLASS(ch, CLASS_THEURGIST))
+	    spl = SPELL_CALL_ARCHON;
+	  else
+	    spl = SPELL_ANIMATE_DEAD;
 
         if(spl)
           return (MobCastSpell(ch, 0, best_corpse, spl, lvl));
