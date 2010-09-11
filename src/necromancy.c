@@ -1509,7 +1509,8 @@ void create_golem(int level, P_char ch, P_char victim, P_obj obj,
 
   if (percent > 65)
   {
-    GET_RACE(mob) = RACE_GOLEM;
+    // All golems are already golems now.
+    //GET_RACE(mob) = RACE_GOLEM;
     SET_BIT(mob->specials.affected_by4, AFF4_VAMPIRE_FORM);
   }
 

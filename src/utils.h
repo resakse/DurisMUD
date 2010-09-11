@@ -730,7 +730,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
            (GET_RACE(ch) == RACE_SKELETON) || \
            (GET_RACE(ch) == RACE_WRAITH) || \
            (GET_RACE(ch) == RACE_SHADOW) || \
-		   (GET_RACE(ch) == RACE_V_ELEMENTAL) || \
+           (GET_RACE(ch) == RACE_V_ELEMENTAL) || \
            (IS_DRACOLICH(ch)) || \
            (IS_UNDEAD(ch)))
 

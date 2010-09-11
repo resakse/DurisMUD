@@ -11257,7 +11257,8 @@ void spell_mend_soul(int level, P_char ch, char *arg, int type,
 {
   int      healpoints;
 
-  if(!IS_ANGEL(victim))
+  if(!IS_ANGEL(victim) &&
+      GET_RACE(victim) != RACE_GOLEM)
   {
     act
       ("$N chants something odd and takes a look at $n, a weird look in $S eyes.",
@@ -11297,7 +11298,8 @@ void spell_heal_undead(int level, P_char ch, char *arg, int type,
 {
   int      healpoints;
 
-  if(!IS_UNDEADRACE(victim))
+  if(!IS_UNDEADRACE(victim) &&
+     GET_RACE(victim) != RACE_GOLEM)
   {
     act
       ("$N chants something odd and takes a look at $n, a weird look in $S eyes.",
