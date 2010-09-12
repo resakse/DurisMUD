@@ -764,20 +764,16 @@ int epic_stone_payout(P_obj obj, P_char ch)
       }
     }
   }
-// Since player group cap is now 99 this just allows the large groups to
-// continue receiving reasonable epics.
-  if(num_players > 11)
-  {
-    num_players = 11;
-  }
+
+  if (num_players < obj->value[1] && obj->value[1] != 0)
+      num_players = obj->value[1];
   
   /* epic value is
     the old payout value * number of touches / total group players in room,
     max = (1.5) * the old payout value */
 
-  int payout, max_payout;
-  payout = (int) ( obj->value[0] * obj->value[1] / num_players );
-  max_payout = (int) ( obj->value[0] * (float) get_property("epic.touch.maxPayoutFactor", 1.5));
+  int payout = (int) ( obj->value[0] * obj->value[1] / num_players );
+  int max_payout = (int) ( obj->value[0] * (float) get_property("epic.touch.maxPayoutFactor", 1.5));
 
   int epic_value = BOUNDED( 1, payout, max_payout );
 
@@ -2346,7 +2342,7 @@ float get_epic_zone_alignment_mod(int zone_number, ubyte racewar)
   if( (alignment < 0 && racewar == RACEWAR_GOOD) || (alignment > 0 && racewar == RACEWAR_EVIL) )
   {
     // good alignment, evil racewar or evil alignment, good racewar
-    mod += ((float) abs(alignment)) * 2.0f * (float) get_property("epic.zone.alignmentMod", 0.10);
+    mod += ((float) abs(alignment)) * 0.5 * (float) get_property("epic.zone.alignmentMod", 0.10);
   }
   else if( (alignment > 0 && racewar == RACEWAR_GOOD) || (alignment < 0 && racewar == RACEWAR_EVIL) )
   {
