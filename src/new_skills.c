@@ -986,7 +986,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
       skl_lvl = MAX(100, GET_LEVEL(ch) * 3);
   }
 
-  debug("(%s) jin skill is (%d).", GET_NAME(ch), skl_lvl);
+  //debug("(%s) jin skill is (%d).", GET_NAME(ch), skl_lvl);
 
   if(IS_FIGHTING(ch))
     vict = ch->specials.fighting;
@@ -1073,7 +1073,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
   act("$n&+C's chants a mantra as $e touches you - pain courses throughout your body!&n",
     FALSE, ch, 0, vict, TO_VICT);
     
-  debug("(%s) Jin Touch: damage upon (%s) for (%d).", GET_NAME(ch), GET_NAME(vict), dam);
+  //debug("(%s) Jin Touch: damage upon (%s) for (%d).", GET_NAME(ch), GET_NAME(vict), dam);
 
   if(melee_damage(ch, vict, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION |
       PHSDAM_TOUCH, 0) != DAM_NONEDEAD)
@@ -1083,6 +1083,9 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
     return;
 
   percent = (BOUNDED(0, (GET_LEVEL(ch) - GET_LEVEL(vict)), 30)) + number(-5, 5);
+
+  if (GET_CHAR_SKILL(ch, SKILL_ANATOMY))
+    percent += (int)(GET_CHAR_SKILL(ch, SKILL_ANATOMY)/10);
 
   if(!affected_by_spell(vict, SKILL_JIN_TOUCH) &&
     (percent > number(0, 19)) &&
@@ -1197,6 +1200,9 @@ void chant_ki_strike(P_char ch, char *argument, int cmd)
 
   percent = (BOUNDED(0, (GET_LEVEL(ch) - GET_LEVEL(vict)), 100));
   percent += number(-5, 20);
+
+  if (GET_CHAR_SKILL(ch, SKILL_ANATOMY))
+    percent += (int)(GET_CHAR_SKILL(ch, SKILL_ANAATOMY)/10);
 
   if(!affected_by_spell(vict, SKILL_KI_STRIKE) &&
     (percent > number(1, 30)) &&
