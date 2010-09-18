@@ -11594,6 +11594,14 @@ void spell_create_spring(int level, P_char ch, char *arg, int type,
     send_to_char("Fountain indoors? Putz!\n", ch);
     return;
   }*/
+
+  if (world[ch->in_room].sector_type == SECT_NO_GROUND ||
+      world[ch->in_room].sector_type == SECT_UNDRWLD_NOGROUND)
+  {
+  	send_to_char("&+bA spring usually needs more solid ground for support!\n", ch);
+  	return;
+  }
+
   spring = read_object(750, VIRTUAL);
   if(!spring)
   {
