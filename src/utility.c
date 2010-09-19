@@ -4357,8 +4357,8 @@ int cast_as_damage_area(P_char ch,
       float median = (float)pc_count / 2.0 + 5.0 / (float)pc_count;
       float range = 1.5;
       int pc_hit = number((int)((median - range / 2.0) * 1000.0), (int)((median + range / 2.0) * 1000.0)) / 1000;
-      pc_hit = MIN((int)(pc_count * min_chance / 100), pc_hit);
-      pc_hit = MAX(pc_hit, pc_count);
+      pc_hit = MAX((int)(pc_count * min_chance / 100), pc_hit);
+      pc_hit = MIN(pc_hit, pc_count);
       int pc_skip = pc_count - pc_hit;
       if (pc_skip > 0)
       {
