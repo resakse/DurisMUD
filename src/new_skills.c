@@ -684,7 +684,7 @@ void chant_calm(P_char ch, char *argument, int cmd)
 
 void chant_heroism(P_char ch, char *argument, int cmd)
 {
-  struct affected_type af, af1, af2;
+  struct affected_type af, af1, af2, af3;
   char     buf[100];
   int      skl_lvl = 0;
   int duration = MAX(5, (GET_LEVEL(ch) / 4)  + 2);
@@ -756,11 +756,24 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     bzero(&af2, sizeof(af2));
     af2.type = SPELL_DAZZLE;
     af2.flags = AFFTYPE_NODISPEL;
+    af2.bitvector4 = AFF4_DAZZLER;
     af2.duration = duration / 2;
     affect_to_char(ch, &af2);
     send_to_char("Your body begins to glow with disorienting colors... \r\n", ch);
   }
 
+  if (GET_LEVEL(ch) >= 51 &&
+      !IS_AFFECTED(ch, AFF_HASTE))
+  {
+    bzero(&af3, sizeof(af3));
+    af3.type = SPELL_HASTE;
+    af3.flags = AFFTYPE_NODISPEL;
+    af3.bitvector = AFF_HASTE;
+    af3.duration = duration;
+    affect_to_char(ch, &af3);
+    send_to_char("Your body begins to speed up!\r\n", ch);
+  }
+  
   CharWait(ch, PULSE_VIOLENCE);
 }
 
