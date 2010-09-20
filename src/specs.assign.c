@@ -1674,7 +1674,7 @@ void assign_objects(void)
   obj_index[real_object0(130007)].func.obj = vecna_dispel;
   obj_index[real_object0(130008)].func.obj = vecna_boneaxe;
   obj_index[real_object0(130027)].func.obj = vecna_staffoaken;
-  // obj_index[real_object0(130028)].func.obj = vecna_krindor_main;
+  obj_index[real_object0(130028)].func.obj = vecna_krindor_main;
   obj_index[real_object0(130018)].func.obj = vecna_death_mask;
   obj_index[real_object0(130038)].func.obj = mob_vecna_procs;
   

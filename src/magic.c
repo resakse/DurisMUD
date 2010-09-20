@@ -17220,10 +17220,18 @@ void spell_single_cdoom_wave(int level, P_char ch, char *arg, int type,
     doomdam = (int) (doomdam * 0.75);
   }
 
-  if (IS_PC(ch) && IS_PC(victim))
-    doomdam = doomdam * get_property("spell.area.damage.to.pc", 0.5);
+  if (arg)  // area
+  {
+    if (IS_PC(ch) && IS_PC(victim))
+      doomdam = doomdam * get_property("spell.area.damage.to.pc", 0.5);
+  } 
+  else  // single target
+  {
+    doomdam = doomdam * 1.5;
+  }
   
   doomdam = doomdam * get_property("spell.area.damage.factor.creepingDoom", 1.000);
+
 
   spell_damage(ch, victim, doomdam, SPLDAM_GENERIC, SPLDAM_NODEFLECT, &messages);
 }
@@ -17232,11 +17240,18 @@ struct CDoomData
 {
   int level;
   int waves;
+  int area;
 };
 
-void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
+void event_cdoom(P_char ch, P_char victim, P_obj obj, void *data)
 {
   CDoomData *cDoomData = (CDoomData*) data;
+
+  if (!cDoomData->area)
+  {
+     if(!IS_ALIVE(victim) || victim->in_room != ch->in_room)
+         cDoomData->waves = 0;
+  }
 
   if(cDoomData->waves == 0)
   {
@@ -17249,15 +17264,22 @@ void event_cdoom(P_char ch, P_char vict, P_obj obj, void *data)
   else
     cDoomData->waves--;
   
-  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, vict, TO_CHAR);
-  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, vict, TO_ROOM);
+  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_CHAR);
+  act("&+LA wave of &+marachnids&+L crawls about the area...", FALSE, ch, 0, victim, TO_ROOM);
 
   // if doom is single-target, replace with direct call to spell_single_cdoom_wave
-  cast_as_damage_area(ch, spell_single_cdoom_wave, cDoomData->level, vict,
+  if (cDoomData->area)
+  {
+    cast_as_damage_area(ch, spell_single_cdoom_wave, cDoomData->level, victim,
                       get_property("spell.area.minChance.creepingDoom", 50),
                       get_property("spell.area.chanceStep.creepingDoom", 20));
+  }
+  else
+  {
+    spell_single_cdoom_wave(cDoomData->level, ch, 0, 0, victim, obj);
+  }
 
-  add_event(event_cdoom, PULSE_VIOLENCE, ch, vict, NULL, 0, cDoomData, sizeof(CDoomData));
+  add_event(event_cdoom, PULSE_VIOLENCE, ch, victim, NULL, 0, cDoomData, sizeof(CDoomData));
 }
 
 void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
@@ -17269,8 +17291,9 @@ void spell_cdoom(int level, P_char ch, char *arg, int type, P_char victim,
   CDoomData cDoomData;
   cDoomData.waves = number(4, 5);
   cDoomData.level = level;
+  cDoomData.area = victim ? 0 : 1;
 
-  /* uncomment if doom is single target
+  /* either this or damage bonus in single wave
   if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND) ||
     (world[ch->in_room].sector_type == SECT_FOREST))
       cDoomData.waves++;*/

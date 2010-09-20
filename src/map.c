@@ -671,15 +671,15 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
       {
         strcat(buf, "&=LBM&n");
       }
-      else if (whats_in == CONTAINS_TRACK && IS_TRUSTED(ch))
+      else if (whats_in == CONTAINS_TRACK)
       {
         strcat(buf, "&+Y.");
       }
-      else if (whats_in == CONTAINS_OLD_BLOOD && IS_TRUSTED(ch))
+      else if (whats_in == CONTAINS_OLD_BLOOD)
       {
         strcat(buf, "&+r.");
       }
-      else if (whats_in == CONTAINS_BLOOD && IS_TRUSTED(ch))
+      else if (whats_in == CONTAINS_BLOOD)
       {
         strcat(buf, "&+R.");
       }
