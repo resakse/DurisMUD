@@ -9919,9 +9919,7 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
      * okay.. closed door in the way.. just open it :)
      *     */
 
-    sprintf(buf, "%s %s", EXIT(ch, (int) next_step)->keyword ?
-            FirstWord(EXIT(ch, (int) next_step)->keyword) : "door",
-            dirs[(int) next_step]);
+    sprintf(buf, "%s", dirs[(int) next_step]);
     do_open(ch, buf, 0);
     
     add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));

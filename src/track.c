@@ -105,6 +105,7 @@ void event_track_move(P_char ch, P_char vict, P_obj obj, void *data)
       send_to_char("You open the ", ch);
       send_to_char(buf, ch);
       send_to_char(".\r\n", ch);
+      sprintf(buf, "%s", dirs[(int) dir]);
       do_open(ch, buf, 0);
     }
 
