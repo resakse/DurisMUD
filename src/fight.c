@@ -1444,6 +1444,7 @@ P_obj make_corpse(P_char ch, int loss)
     case RACE_AVATAR:
     case RACE_GHAELE:
     case RACE_BRALANI:
+    case RACE_ELADRIN:
       act("$n &+Wglows white&n &+wbefore &+Ldissapearing...&n", TRUE, ch, 0, 0, TO_ROOM);
       break;
     }
