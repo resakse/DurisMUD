@@ -3495,7 +3495,6 @@ E 1 83350 12 5 100 0 0 0           *   a full suit of heavy adamantite
 E 1 83351 12 6 100 0 0 0           *   a heavy adamantite full-faced helmet
 E 1 83470 1 16 100 0 0 0           *   a huge spiked bloody battle-axe
 G 1 83414 1 0 100 0 0 0            *    the bloody head of General Helgor
-G 1 360 1 0 100 0 0 0              *    (object type not in this .obj file)
 F 1 83332 8 83706 100 0 0 0        * an elite Helgor sentinel (following)
 E 1 83281 16 16 100 0 0 0          *   a mithril dwarven halberd
 F 1 83332 8 83706 100 0 0 0        * an elite Helgor sentinel (following)
@@ -3863,6 +3862,7 @@ E 1 83595 1 12 100 0 0 0           *   a long cape of shabilly-stitched dwarf sc
 E 1 83548 42 16 100 0 0 0          *   a slimy troglodyte claw
 E 1 83548 42 17 100 0 0 0          *   a slimy troglodyte claw
 G 1 83509 1 0 100 0 0 0            *    the horned head of Kereghaktis
+G 1 360 1 0 100 0 0 0              *    (object type not in this .obj file)
 F 1 83489 1 83870 100 0 0 0        * Silmaeth, Devil Prince of Kashtrakis (following)
 E 1 83593 1 12 15 0 0 0            *   the shroud of corruption
 E 1 83597 1 19 100 0 0 0           *   eyes of the tanar'ri

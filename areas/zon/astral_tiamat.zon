@@ -56,8 +56,8 @@ D 0 19953 0 6 100 0 0 0
 *
 O 0 19907 2 19902 100 0 0 0        * a Large Black Pool
 O 0 19710 2 19945 100 0 0 0        * (object type not in this .obj file)
-O 0 19715 2 19946 100 0 0 0        * (object type not in this .obj file)
 O 0 19909 2 19946 100 0 0 0        * acid trap
+O 0 19715 1 19946 100 0 0 0        * (object type not in this .obj file)
 O 0 19913 1 19948 100 0 0 0        * a suit of pitch-black platemail armor
 O 0 19907 2 19949 100 0 0 0        * a Large Black Pool
 O 0 19909 2 19949 100 0 0 0        * acid trap
@@ -95,6 +95,7 @@ M 0 19901 1 19940 100 0 0 0        * a HUGE slaad
 G 1 19872 1 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 19760 5 19943 100 0 0 0        * (mob type not in this .mob file)
 M 0 19705 2 19946 100 0 0 0        * (mob type not in this .mob file)
+G 1 19908 1 0 100 0 0 0            *    a rusty key
 M 0 19705 2 19946 100 0 0 0        * (mob type not in this .mob file)
 M 0 19921 1 19947 100 0 0 0        * (mob type not in this .mob file)
 G 1 55203 1 0 100 0 0 0            *    (object type not in this .obj file)
