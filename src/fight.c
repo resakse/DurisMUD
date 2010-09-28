@@ -4064,6 +4064,8 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
 	dam *= dam_factor[DF_TIGERPALM];
       break;
     case SPLDAM_NEGATIVE:
+      if (victim && IS_ANGEL(victim))
+        dam *= get_property("damage.neg.increase.modifierVsAngel", 1.300);
       if (IS_AFFECTED2(victim, AFF2_SOULSHIELD))
         dam *= dam_factor[DF_SLSHIELDINCREASE];
       if (IS_AFFECTED4(victim, AFF4_NEG_SHIELD))
