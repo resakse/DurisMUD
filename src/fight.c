@@ -5125,7 +5125,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
          tch != victim &&
          !IS_AFFECTED4(tch, AFF4_HOLY_SACRIFICE) &&
          !affected_by_spell(tch, SPELL_PLAGUE))
-            vamp(tch, sac_gain, GET_MAX_HIT(tch));
+            vamp(tch, sac_gain, (GET_MAX_HIT(tch) + (GET_MAX_HIT(tch)/3)));
     }
   }
 }
