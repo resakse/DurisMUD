@@ -1494,6 +1494,9 @@ char affect_total(P_char ch, int kill_ch)
 
   ch->specials.base_combat_round = MAX(3, ch->specials.base_combat_round);
 
+  if (IS_PC(ch) && GET_CHAR_SKILL(ch, SKILL_FORGE) >= 70)
+	  ch->specials.affected_by5 |= AFF5_MINE; /* high enough skill in forge grants miner's sight */
+
   /* only if actually in game. JAB */
   if (ch->desc && !ch->desc->connected && (GET_STAT(ch) != STAT_DEAD))
   {
