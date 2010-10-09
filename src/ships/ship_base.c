@@ -163,7 +163,7 @@ struct ShipData *new_ship(int m_class, bool npc)
    int room = (SHIPZONE * 100);
    while (world[real_room0(room)].funct == ship_room_proc) 
    {
-      room += 10;
+      room += MAX_SHIP_ROOM;
    }
    int bridge = room;
    ship->bridge = bridge;
