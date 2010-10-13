@@ -430,7 +430,6 @@ struct ShipData
     *id;  //designation of ship AA-ZZ
     int num; //Ship Number
     int location;  //Current room ship is in might remove and make
-    int hashcode;
     float heading;  //current heading
     float setheading; //set heading
     int maxspeed;
@@ -441,6 +440,7 @@ struct ShipData
     int people;
     int bridge, entrance, m_class, anchor, repair;
     struct ShipRoom room[MAX_SHIP_ROOM];
+    int room_count;
     char *keywords;
     ulong flags;
     struct ShipData *next, *target;
@@ -636,9 +636,10 @@ int load_ship(P_ship shipdata, int to_room);
 void delete_ship(P_ship ship, bool npc = false);
 void clear_references_to_ship(P_ship ship);
 
-void set_ship_layout(P_ship ship, int m_class);
+void init_ship_layout(P_ship ship);
 void clear_ship_layout(P_ship ship);
-void set_ship_physical_layout(P_ship ship);
+void set_ship_layout(P_ship ship, int m_class);
+bool set_ship_physical_layout(P_ship ship);
 
 void set_ship_armor(P_ship ship, bool equal);
 
@@ -788,9 +789,6 @@ extern int shiperror;
 
 // Ship object hash
 #define SHIP_OBJ_TABLE_SIZE 509
-#define BEG_HASH 23346
-#define END_HASH 23402
-#define isverge(ship) (ship->hashcode == BEG_HASH || ship->hashcode == END_HASH)
 #define ABS(x) ((x) < 0 ? -(x) : (x)) // to go around mainbox issue with math library
 
 class ShipObjHash

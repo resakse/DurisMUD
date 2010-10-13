@@ -4,8 +4,19 @@ tower outpost _ignore_~
 &+yA small outpost tower stands here.
 ~
 ~
-41971787 0 0 268468224 1024 17825792 4096 0 S
+41971787 0 0 268468224 1024 16777216 4096 0 S
 OG 0 0 7
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
+#97801
+gateguard gate guard~
+A gate guard~
+A gate guard stands here defending the gates.
+~
+~
+33585162 0 0 0 0 0 0 0 S
+OG 0 1 4
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

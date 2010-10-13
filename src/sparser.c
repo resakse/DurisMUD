@@ -1512,10 +1512,11 @@ bool parse_spell(P_char ch, char *argument,
   memset(target_data, 0, sizeof(struct spell_target_data));
   target_data->ttype = spl;
 
-  /*
+  
   if (IS_TRUSTED(ch))
   {
   }
+  /*
   else if (USES_MANA(ch))
   {
     if (GET_MANA(ch) < 1 && circle != -1)
@@ -1526,7 +1527,7 @@ bool parse_spell(P_char ch, char *argument,
     }
   }
   */
-  if (USES_SPELL_SLOTS(ch))
+  else if (USES_SPELL_SLOTS(ch))
   {
     if (circle != -1 && !ch->specials.undead_spell_slots[circle])
     {

@@ -504,7 +504,6 @@ void NPCShipAI::update_target(int i) // index in contacts
     t_x = contacts[i].x;
     t_y = contacts[i].y;
     t_arc = get_arc(ship->heading, t_bearing);
-    advanced |= -isverge(contacts[i].ship);
     s_bearing = t_bearing + 180;
     normalize_direction(s_bearing);
     s_arc = get_arc(ship->target->heading, s_bearing);
@@ -595,22 +594,7 @@ void NPCShipAI::board_target()
             act_to_all_in_ship(ship->target, "&+YA group of &+Rs&+ra&+Rv&+ra&+Rg&+re &+Rp&+ri&+Rr&+ra&+Rt&+re&+Rs &+Yjust &=LWboarded&N &+Yyour ship!&N\r\n");
     }
     
-    int j;
-    for (j = 0; j < MAX_SHIP_ROOM; j++) 
-    {
-        bool ok = false;
-        for (int k = 0; k < NUM_EXITS; k++) 
-        {
-            if (SHIP_ROOM_EXIT(ship->target, j, k) != -1)
-            {
-                ok = true;
-                break;
-            }
-        }
-        if (!ok) break;
-    } // j is number of used room
-
-    int board_count = j * ((crew_data->level > 2) ? 0.50 : 0.75);
+    int board_count = ship->target->room_count * ((crew_data->level > 2) ? 0.50 : 0.75);
 
     int grunt = crew_data->outer_grunts[number(0, grunt_count - 1)];
     if (!load_npc_ship_crew_member(ship->target, ship->target->bridge, grunt, 0)) 
@@ -618,7 +602,7 @@ void NPCShipAI::board_target()
     board_count--;
     while (board_count)
     {
-        int room_no = number(1, j - 1);
+        int room_no = number(1, ship->target->room_count - 1);
         grunt = crew_data->outer_grunts[number(0, grunt_count - 1)];
         if (!load_npc_ship_crew_member(ship->target, ship->target->bridge + room_no, grunt, 0)) 
             return;
@@ -827,7 +811,7 @@ bool NPCShipAI::check_ram()
     if (SHIP_FLYING(ship) && !SHIP_FLYING(ship->target) && !IS_WATER_ROOM(ship->location))
         return false;
 
-    if (!advanced && !is_boardable(ship->target) && number(1, 3) > 1)
+    if (advanced <= 0 && !is_boardable(ship->target) && number(1, 3) > 1)
         return false; // dumb ones ram less in combat
 
     return true;
@@ -1050,7 +1034,6 @@ bool NPCShipAI::b_turn_active_weapon()
     {
         if (active_arc[arc_priority[i]] < 4) // there is weapon ready or almost ready to fire, turning
         {
-            if (advanced < 0) arc_priority[i] &= -2;
             float n_h = t_bearing - get_arc_central_bearing(arc_priority[i]);
             if (is_heavy_ship && arc_priority[i] == SLOT_REAR &&  ((n_h - ship->heading) > 60 || (n_h - ship->heading) < -60))
                 continue; // not turning heavy ship's rear (TODO: check if rear is the only remaining side)
@@ -1078,7 +1061,6 @@ bool NPCShipAI::b_turn_reloading_weapon()
     }
     if (best_arc != -1)
     {
-        if (advanced < 0) best_arc &= -2;
         new_heading = t_bearing - get_arc_central_bearing(best_arc);
         send_message_to_debug_char("Turning reloading weapon arc %s: ", get_arc_name(best_arc));
         return true;

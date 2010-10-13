@@ -51,7 +51,7 @@ void stun_all_in_ship(P_ship ship, int timer)
   int      i;
   P_char   ch;
 
-  for (i = 0; i < MAX_SHIP_ROOM; i++)
+  for (i = 0; i < ship->room_count; i++)
   {
     if ((SHIP_ROOM_NUM(ship, i) != -1) &&
         world[real_room(SHIP_ROOM_NUM(ship, i))].people)
@@ -1186,9 +1186,12 @@ int fire_weapon(P_ship ship, int w_num, int t_contact, int hit_chance, P_char ch
     if (ship->slot[w_num].val1 > 0)
        ship->slot[w_num].val1--;
 
-    float reload_time = (float)weapon_data[w_index].reload_time * (1.0 - ship->crew.guns_mod_applied * 0.15);
-    reload_time /= ship->crew.get_stamina_mod();
-    ship->slot[w_num].timer = MAX(1, (int)reload_time);
+    if (ship->slot[w_num].val1 > 0)
+    {
+        float reload_time = (float)weapon_data[w_index].reload_time * (1.0 - ship->crew.guns_mod_applied * 0.15);
+        reload_time /= ship->crew.get_stamina_mod();
+        ship->slot[w_num].timer = MAX(1, (int)reload_time);
+    }
 
     // reducing crew stamina
     ship->crew.reduce_stamina((float)weapon_data[w_index].weight / (SHIP_HULL_MOD(ship) / 10.0), ship);

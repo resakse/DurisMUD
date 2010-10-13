@@ -2247,7 +2247,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 
     strcat(o_buf, buf);
 
-    strcat(buf, "\n&+YSpecial procedure:&N ");
+    sprintf(buf, "\n&+YSpecial procedure:&N ");
     if (j->R_num >= 0)
       strcat(buf, (obj_index[j->R_num].func.obj ?
             get_function_name((void*)obj_index[j->R_num].func.obj) : "No"));
@@ -2316,7 +2316,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     { 
         int craft = j->craftsmanship;
         
-        strcat(buf, "\n&+YQuality:&N ");
+        sprintf(buf, "\n&+YQuality:&N ");
         
       if (craft < OBJCRAFT_LOWEST ||
           craft > OBJCRAFT_HIGHEST)

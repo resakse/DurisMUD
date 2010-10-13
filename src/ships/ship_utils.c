@@ -161,7 +161,7 @@ void everyone_look_out_ship(P_ship ship)
   P_char   ch, ch_next;
   int      i;
 
-  for (i = 0; i < MAX_SHIP_ROOM; i++)
+  for (i = 0; i < ship->room_count; i++)
   {
     for (ch = world[real_room(ship->room[i].roomnum)].people; ch;
          ch = ch_next)
@@ -184,7 +184,7 @@ void everyone_get_out_ship(P_ship ship)
   P_obj    obj, obj_next;
   int      i;
 
-  for (i = 0; i < MAX_SHIP_ROOM; i++)
+  for (i = 0; i < ship->room_count; i++)
   {
     for (ch = world[real_room(ship->room[i].roomnum)].people; ch; ch = ch_next)
     {
@@ -216,7 +216,7 @@ void clear_ship_content(P_ship ship)
   P_obj    obj, obj_next;
   int      i;
 
-  for (i = 0; i < MAX_SHIP_ROOM; i++)
+  for (i = 0; i < ship->room_count; i++)
   {
     for (ch = world[real_room(ship->room[i].roomnum)].people; ch; ch = ch_next)
     {
@@ -272,7 +272,7 @@ void act_to_all_in_ship(P_ship ship, const char *msg)
   if (ship == NULL)
     return;
 
-  for (int i = 0; i < MAX_SHIP_ROOM; i++)
+  for (int i = 0; i < ship->room_count; i++)
   {
     if ((SHIP_ROOM_NUM(ship, i) != -1) && world[real_room(SHIP_ROOM_NUM(ship, i))].people)
     {
@@ -349,7 +349,7 @@ P_ship get_ship_from_char(P_char ch)
     if (!SHIP_LOADED(svs))
       continue;
 
-    for (j = 0; j < MAX_SHIP_ROOM; j++)
+    for (j = 0; j < svs->room_count; j++)
     {
       if (world[ch->in_room].number == svs->room[j].roomnum)
       {
@@ -368,7 +368,7 @@ int num_people_in_ship(P_ship ship)
   if (!SHIP_LOADED(ship))
     return 0;
 
-  for (i = 0; i < MAX_SHIP_ROOM; i++)
+  for (i = 0; i < ship->room_count; i++)
   {
     for (ch = world[real_room0(ship->room[i].roomnum)].people; ch;
          ch = ch->next_in_room)
@@ -836,6 +836,8 @@ char* ShipSlot::get_status_str()
             sprintf(status, "&+RBadly Damaged");
         else if (val2 > 0)
             sprintf(status, "&+WDamaged");
+        else if (val1 == 0)
+            sprintf(status, "&+LOut of Ammo");
         else if (timer > 0)
             sprintf(status, "&+Y%-6d", timer);
         else if (timer == 0)
@@ -1254,7 +1256,7 @@ P_char captain_is_aboard(P_ship ship)
   if (!(ship))
     return NULL;
 
-  for (int i = 0; i < MAX_SHIP_ROOM; i++)
+  for (int i = 0; i < ship->room_count; i++)
   {
     P_char ch_next = 0;
     for (P_char ch = world[real_room(ship->room[i].roomnum)].people; ch; ch = ch_next)
@@ -1279,7 +1281,7 @@ bool pc_is_aboard(P_ship ship)
   if (!(ship))
     return NULL;
 
-  for (int i = 0; i < MAX_SHIP_ROOM; i++)
+  for (int i = 0; i < ship->room_count; i++)
   {
     P_char ch_next = 0;
     for (P_char ch = world[real_room(ship->room[i].roomnum)].people; ch; ch = ch_next)
@@ -1297,7 +1299,7 @@ int anchor_room(int room)
     ShipVisitor svs;
     for (bool fn = shipObjHash.get_first(svs); fn; fn = shipObjHash.get_next(svs))
     {
-        for (int i = 0; i < MAX_SHIP_ROOM; i++)
+        for (int i = 0; i < svs->room_count; i++)
         {
             if (room == svs->room[i].roomnum)
                 return svs->anchor;

@@ -20,6 +20,7 @@
 #include "ships.h"
 
 extern P_room world;
+extern P_desc descriptor_list;
 
 int guildhall_door(P_obj obj, P_char ch, int cmd, char *arg)
 {
@@ -44,6 +45,8 @@ int guildhall_door(P_obj obj, P_char ch, int cmd, char *arg)
 
 int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
 {  
+  char buff[MAX_STRING_LENGTH];
+
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
 
@@ -129,7 +132,7 @@ int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
     }
     else if( allowed )
     {
-      act("$N stands impassively as you as you pass by.", FALSE, pl, 0, ch, TO_CHAR);
+      act("$N stands impassively as you pass by.", FALSE, pl, 0, ch, TO_CHAR);
       act("$N stands impassively as $n passes by.", FALSE, pl, 0, ch, TO_NOTVICT);
       return FALSE;
     }
@@ -141,6 +144,24 @@ int guildhall_golem(P_char ch, P_char pl, int cmd, char *arg)
     }
 
     return TRUE;
+  }
+  
+  if ( pl && (cmd == CMD_GOTHIT && !number(0, 15)) ||
+      (cmd == CMD_HIT || cmd == CMD_KILL))
+  {
+    //can add check here to see if guild has magic mouth upgrade from db?
+    sprintf(buff,
+	"&+cA magic mouth tells your guild 'Alert! $N&n&+c has trespassed into %s&n&+c!'&n",
+	world[ch->in_room].name);
+    for (P_desc i = descriptor_list; i; i = i->next)
+      if (!i->connected &&
+	  !is_silent(i->character, TRUE) &&
+	  IS_SET(i->character->specials.act, PLR_GCC) &&
+	  IS_MEMBER(GET_A_BITS(i->character)) &&
+	  (GET_A_NUM(i->character) == GET_A_NUM(ch)) &&
+	  !IS_TRUSTED(i->character))
+	act(buff, FALSE, i->character, 0, pl, TO_CHAR);
+    return FALSE;
   }
   
   return FALSE;

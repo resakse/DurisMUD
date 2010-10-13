@@ -17167,7 +17167,7 @@ void spell_single_cdoom_wave(int level, P_char ch, char *arg, int type,
 
   int doomdam = 40 + level + number(0, 20);
 
-  switch(world[ch->in_room].sector_type)
+  switch(world[victim->in_room].sector_type)
   {
   case SECT_WATER_SWIM:
   case SECT_WATER_NOSWIM:
@@ -17208,7 +17208,7 @@ void spell_single_cdoom_wave(int level, P_char ch, char *arg, int type,
     break;
   }
 
-  if(get_spell_from_room(&world[ch->in_room], SPELL_SUMMON_INSECTS))
+  if(get_spell_from_room(&world[victim->in_room], SPELL_SUMMON_INSECTS))
     doomdam += 20;
 
   if(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND)) 
@@ -17226,10 +17226,9 @@ void spell_single_cdoom_wave(int level, P_char ch, char *arg, int type,
     if (IS_PC(ch) && IS_PC(victim))
       doomdam = doomdam * get_property("spell.area.damage.to.pc", 0.5);
   } 
-  else  // single target
+  else  // single target, stays with target
   {
-    //reducing damage since we are gona let it stay with target when ch isnt in room
-    doomdam = doomdam * 1.25;
+    doomdam = doomdam * 1.20;
   }
   
   doomdam = doomdam * get_property("spell.area.damage.factor.creepingDoom", 1.000);
