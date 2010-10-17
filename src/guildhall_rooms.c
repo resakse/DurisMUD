@@ -6,6 +6,7 @@
  *
  */
 
+#include <math.h>
 #include "guildhall.h"
 #include "guildhall_db.h"
 #include "utility.h"
@@ -349,11 +350,48 @@ bool TownPortalRoom::init()
   {
     if( this->guildhall->racewar == RACEWAR_GOOD )
     {
+      int town[] = {TH_MAP_VNUM, KI_MAP_VNUM, WS_MAP_VNUM};
+      int inn[] = {TH_INN_VNUM, KI_INN_VNUM, WS_INN_VNUM};
+      int whichtown[3];
+      int dest = 0;
+      int dist = 0;
+      int i;
+
+      for (i = 0; i < 3; i++)
+        whichtown[i] = 0;
+
+      for (i = 0; i < 3; i++)
+      {
+        whichtown[i] = calculate_map_distance(real_room(this->guildhall->outside_vnum), real_room(town[i]));
+	if (whichtown[i])
+	  whichtown[i] = (int) sqrt(whichtown[i]);
+        
+	if (dist > whichtown[i] || dist == 0)
+	{
+	  dist = whichtown[i];
+	  dest = inn[i];
+	}
+      }
+      
       char buff[MAX_STRING_LENGTH];
-      sprintf(buff, this->portal->description, "Tharnadia");
+      if (dest == WS_INN_VNUM)
+      {
+        sprintf(buff, this->portal->description, "&+GWoodseer&n");
+        this->portal->value[0] = WS_INN_VNUM;
+      }
+      else if (dest == KI_INN_VNUM)
+      {
+	sprintf(buff, this->portal->description, "&+YKimordril&n");
+        this->portal->value[0] = KI_INN_VNUM;
+      }
+      else
+      {
+        sprintf(buff, this->portal->description, "&+cTharnadia&n");
+        this->portal->value[0] = TH_INN_VNUM;
+      } 
+      
       this->portal->description = str_dup(buff);
       this->portal->str_mask = STRUNG_DESC1;
-      this->portal->value[0] = TH_INN_VNUM;      
       obj_to_room(this->portal, real_room0(this->vnum));
     }
     else if( this->guildhall->racewar == RACEWAR_EVIL )
@@ -361,12 +399,12 @@ bool TownPortalRoom::init()
       char buff[MAX_STRING_LENGTH];
       if (IS_CONTINENT(real_room(this->guildhall->outside_vnum), CONT_EC))
       {
-	sprintf(buff, this->portal->description, "Shady Grove");
+	sprintf(buff, this->portal->description, "&+LShady Grove&n");
         this->portal->value[0] = SHADY_INN_VNUM;      
       }
       else
       {
-	sprintf(buff, this->portal->description, "Khildarak");
+	sprintf(buff, this->portal->description, "&+rKhildarak&n");
 	this->portal->value[0] = KHILD_INN_VNUM;
       }
       this->portal->description = str_dup(buff);
