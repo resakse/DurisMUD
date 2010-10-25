@@ -973,6 +973,27 @@ void sprinttype(int type, const char *names[], char *result)
     strcpy(result, "UNDEFINED");
 }
 
+struct time_info_data real_time_countdown(time_t t2, time_t t1, int max_sec)
+{
+  long secs;
+  struct time_info_data now;
+
+  secs = (long) max_sec - (t2 - t1);
+
+  now.second = secs % 60;
+
+  secs -= now.second;
+  now.minute = (secs / 60) % 60;
+  secs -= 60 * now.minute;
+  now.hour = (secs / SECS_PER_REAL_HOUR) % 24;
+  secs -= SECS_PER_REAL_HOUR * now.hour;
+  now.day = (secs / SECS_PER_REAL_DAY);
+  secs -= SECS_PER_REAL_DAY * now.day;
+  now.month = -1;
+  now.year = -1;
+  return now;
+}
+
 /*
  * Calculate the REAL time passed over the last t2-t1 centuries (secs)
  */

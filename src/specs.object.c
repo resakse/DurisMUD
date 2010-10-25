@@ -8008,7 +8008,7 @@ int stat_pool_common(P_obj obj, P_char ch, int cmd, sh_int * statPtr,
 
     if ((af2 = get_spell_from_char(ch, TAG_POOL)) != NULL)
     {
-      if ((af2->modifier + (60 * 60 * 24 * 2)) < time(NULL))
+      if ((af2->modifier + (60 * 60 * 24 * 2)) > time(NULL))
       {
         send_to_char("The liquid burns your throat!  Ouch!\n", ch);
         act("$n reels in pain as $e takes a drink from $p!", FALSE,

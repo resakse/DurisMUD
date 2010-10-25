@@ -2851,6 +2851,7 @@ int cmd_to_exitnumb(int);
 struct time_info_data age(P_char);
 struct time_info_data mud_time_passed(time_t, time_t);
 struct time_info_data real_time_passed(time_t, time_t);
+struct time_info_data real_time_countdown(time_t, time_t, int);
 void ADD_MONEY(P_char, int);
 void CAP(char *);
 void InitGrantFastLookup(void);

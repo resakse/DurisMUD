@@ -4823,6 +4823,8 @@ void do_score(P_char ch, char *argument, int cmd)
   if (GET_LEVEL(ch) > 50)
   {
     struct affected_type *af;
+    long ct;
+    struct time_info_data timer;
 	
     if((af = get_spell_from_char(ch, TAG_POOL)) == NULL)
     {
@@ -4830,9 +4832,13 @@ void do_score(P_char ch, char *argument, int cmd)
     }
 	  else
 	  {
-	    sprintf(buf, "Stat Pool timeout: %d hours\n", 
+	    ct = time(0);
+	    timer = real_time_countdown(ct, af->modifier, 60*60*24*2);
+	    sprintf(buf, "Stat Pool timeout: %d:%s%d:%s%d\n", 
 	            //af->duration * PULSES_IN_TICK / (WAIT_SEC * SECS_PER_REAL_HOUR));
-	      (af->modifier / 60 / 60));
+	      timer.day * 24 + timer.hour,
+	      (timer.minute > 9) ? "" : "0", timer.minute,
+	      (timer.second > 9) ? "" : "0", timer.second);
 	    send_to_char(buf, ch);
 	  }
   }
