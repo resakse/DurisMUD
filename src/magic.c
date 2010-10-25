@@ -20559,9 +20559,9 @@ void spell_life_bolt(int level, P_char ch, char *arg, int type,
     {
       send_to_char("&+WYou send a quick prayer to your Deity, offering your &+Rlifeforce&+W and asking for divine energy to flow through you!\r\n", ch);
 
-      // Yes this vamps angelic.
-      if (spell_damage(ch, ch, self_dam, SPLDAM_HOLY, RAWDAM_NOKILL | SPLDAM_NOSHRUG, 0) != DAM_NONEDEAD)
-	        return;
+      vamp(ch, self_dam/6, GET_MAX_HIT(ch) * 1.5);
+      //if (spell_damage(ch, ch, self_dam, SPLDAM_HOLY, RAWDAM_NOKILL | SPLDAM_NOSHRUG, 0) != DAM_NONEDEAD)
+	//        return;
     }
   }
 
