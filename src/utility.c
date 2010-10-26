@@ -980,14 +980,13 @@ struct time_info_data real_time_countdown(time_t t2, time_t t1, int max_sec)
 
   secs = (long) max_sec - (t2 - t1);
 
-  now.second = secs % 60;
-
+  now.second = MAX(0, secs % 60);
   secs -= now.second;
-  now.minute = (secs / 60) % 60;
+  now.minute = MAX(0, (secs / 60) % 60);
   secs -= 60 * now.minute;
-  now.hour = (secs / SECS_PER_REAL_HOUR) % 24;
+  now.hour = MAX(0, (secs / SECS_PER_REAL_HOUR) % 24);
   secs -= SECS_PER_REAL_HOUR * now.hour;
-  now.day = (secs / SECS_PER_REAL_DAY);
+  now.day = MAX(0, (secs / SECS_PER_REAL_DAY));
   secs -= SECS_PER_REAL_DAY * now.day;
   now.month = -1;
   now.year = -1;
