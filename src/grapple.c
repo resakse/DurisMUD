@@ -259,7 +259,7 @@ void do_bearhug(P_char ch, char *argument, int cmd)
         )
        )
     {
-      if ((number(0,10)-gclvl))
+      if (BOUNDED(0, (number(0,12)-gclvl), 10))
       {
         type = TAG_BEARHUG;
         act("$n wraps his arms around you but you manage to keep your arms free!", TRUE, ch, 0, victim, TO_VICT);
@@ -656,7 +656,7 @@ void event_headlock(P_char ch, P_char victim, P_obj obj, void *data)
   else
   {
     gclvl = GET_CHAR_SKILL(ch, SKILL_GRAPPLER_COMBAT)/20;
-    percent = BOUNDED(0, (GET_C_STR(ch) - GET_C_STR(victim)), 5+gclvl);
+    percent = BOUNDED(0, (GET_C_STR(ch) - GET_C_STR(victim)), 5+gclvl) + number(0, 2);
     
     if ((type == HOLD_IMPROVED) && (percent >= number(1, 100)) && (GET_LEVEL(ch) >= 51))
     {
@@ -1168,7 +1168,7 @@ void event_leglock(P_char ch, P_char victim, P_obj obj, void *data)
   else
   {
     gclvl = GET_CHAR_SKILL(ch, SKILL_GRAPPLER_COMBAT)/20;
-    percent = BOUNDED(0, (GET_C_STR(ch) - GET_C_STR(victim)), 5+gclvl);
+    percent = BOUNDED(0, (GET_C_STR(ch) - GET_C_STR(victim)), 5+gclvl) + number(, 2);
     str = (int)(GET_C_STR(ch)/10);
 
     struct affected_type *afp;
