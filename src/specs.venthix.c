@@ -654,7 +654,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
     }
     // if 2 minutes have passed and we are in standby mode begin next round
     if (obj->value[ZOMBIES_STATUS] == 2 &&
-	(obj->timer[0] + (60 * 2)) <= time(NULL))
+	(obj->timer[0] + BOUNDED(15, (15 * obj->value[ZOMBIES_LEVEL]/2), (60 * 3))) <= time(NULL))
     {
       obj->timer[0] = 0;
       obj->value[ZOMBIES_STATUS] = 1;
@@ -682,7 +682,7 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
     {
       //set game to standby mode to setup the next round
       obj->value[ZOMBIES_STATUS] = 2;
-      obj->timer[0] = time(NULL) - (110); // should be 10 seconds to start
+      obj->timer[0] = time(NULL) - (10); // should be 10 seconds to start
       send_to_zone(zone, "The game is beginning, good luck.\r\n");
       return TRUE;
     }
