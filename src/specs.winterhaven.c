@@ -4148,10 +4148,7 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
 
-  if (!obj ||
-      !ch ||
-      !IS_ALIVE(ch) ||
-      !(*arg))
+  if (!obj || !ch)
     return FALSE;
   
   if (!OBJ_WORN(obj))
