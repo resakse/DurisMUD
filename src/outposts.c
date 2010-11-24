@@ -590,7 +590,7 @@ void do_outpost(P_char ch, char *arg, int cmd)
       return;
     }
    
-    if (!sub_money_asc(building->guild_id, cost/1000, 0, 0, 0))
+    if (!IS_TRUSTED(ch) && !sub_money_asc(building->guild_id, cost/1000, 0, 0, 0))
     {
       send_to_guild(building->guild_id, "The Guild Banker", "There are not enough guild funds to purchase a portal.");
       return;
@@ -629,7 +629,7 @@ void do_outpost(P_char ch, char *arg, int cmd)
       return;
     }
     
-    if (!sub_money_asc(building->guild_id, cost/1000, 0, 0, 0))
+    if (!IS_TRUSTED(ch) && !sub_money_asc(building->guild_id, cost/1000, 0, 0, 0))
     {
       send_to_guild(building->guild_id, "The Guild Banker", "There are not enough guild funds to purchase an outpost golem.");
       return;
