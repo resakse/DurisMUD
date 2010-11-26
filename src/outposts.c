@@ -210,7 +210,7 @@ void show_outposts(P_char ch)
 
     sprintf(buff, "&+W*ID: &+c%2d &+WContinent: &+c%-18s&n &+WOwner: &+c%-15s&n\r\n", i+1, pad_ansi(continent_name(world[building->location()].continent), 18).c_str(), title);
     send_to_char(buff, ch);
-    if (IS_TRUSTED(ch) || (owner == GET_A_NUM(ch)))
+    if (IS_TRUSTED(ch) || ((owner != 0) && (owner == GET_A_NUM(ch))))
     {
       sprintf(buff, "       &+LGateguards: &+c%d &+LPortal: &+c%-4s &+LArchers: &+c%-4s&n\r\n", golems, (portal ? "Yes" : "No"), (archers ? "Yes" : "No"));
       send_to_char(buff, ch);
