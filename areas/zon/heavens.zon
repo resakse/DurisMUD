@@ -126,7 +126,7 @@ O 0 174 1 15 100 0 0 0             * a statue of a beautiful man
 O 0 75 999 15 100 0 0 0            * a Zone Planning board
 O 0 367 1 16 100 0 0 0             * a whetstone
 O 0 362 1 16 100 0 0 0             * a pile of brittle alloy
-O 0 84 2 33 100 0 0 0              * a bug board
+O 0 84 2 33 100 0 0 0              * Jexni's To-Do List
 O 0 1278 999 33 100 0 0 0          * the book of files
 O 0 92 1 37 100 0 0 0              * flames bulletin board
 O 0 90 999 38 100 0 0 0            * a feedback board
@@ -152,9 +152,7 @@ O 0 1278 999 420 100 0 0 0         * the book of files
 O 0 89 9999 420 100 0 0 0          * a holy bulletin board
 O 0 89 9999 444 100 0 0 0          * a holy bulletin board
 O 0 45 100 444 100 0 0 0           * a slot machine
-O 0 84 2 500 100 0 0 0             * a bug board
-O 0 45 100 500 100 0 0 0           * a slot machine
-O 0 32868 1 500 100 0 0 0          * (object type not in this .obj file)
+O 0 84 2 500 100 0 0 0             * Jexni's To-Do List
 O 0 49 1 501 100 0 0 0             * Flap
 O 0 52 1 501 100 0 0 0             * a small recipe book
 O 0 1278 999 777 100 0 0 0         * the book of files
@@ -202,9 +200,9 @@ P 1 1216 6 1212 100 0 0 0          *   a plate of assorted cheeses
 P 1 1216 6 1212 100 0 0 0          *   a plate of assorted cheeses
 P 1 1216 6 1212 100 0 0 0          *   a plate of assorted cheeses
 O 0 1213 1 1214 100 0 0 0          * Rand's tree
-O 0 1214 1 1214 100 0 0 0          * Rend's hot tub
+O 0 1214 1 1214 100 0 0 0          * Rand's hot tub
 O 0 1215 1 1214 100 0 0 0          * Ceiling Mirror
-O 0 1217 1 1214 100 0 0 0          * Rend's bed
+O 0 1217 1 1214 100 0 0 0          * Rand's bed
 O 0 1219 1 1214 100 0 0 0          * Tv
 O 0 91 99 1216 100 0 0 0           * a meeting board
 O 0 1202 1 1218 100 0 0 0          * wisp of shadow
@@ -229,12 +227,11 @@ M 0 64 1 23 100 0 0 0              * the architect
 M 0 73 1 39 100 0 0 0              * the holy mail machine
 M 0 444 1 44 100 0 0 0             * Io's assistant
 M 0 15 1 107 100 0 0 0             * the witch doctor
-M 0 320 1 500 100 0 0 0            * a HUGE black and white cow
 M 0 46 1 666 100 0 0 0             * Xena, warrior princess
 M 0 2 1 1212 100 0 0 0             * (mob type not in this .mob file)
 M 0 1227 1 1227 100 0 0 0          * Kdaron
 E 1 1232 1 11 100 0 0 0            *   a Happy Noodle Boy comic book
-E 1 1231 1 16 100 0 0 0            *   the skull tipped dagger of Orcus
+E 1 1231 1 16 100 0 0 0            *   the skull-tipped dagger of Orcus
 G 1 1229 1 0 100 0 0 0             *    Happy Fun Ball
 M 0 300 1 1228 100 0 0 0           * The Demon Steed of Paradox
 *

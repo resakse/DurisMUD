@@ -1907,7 +1907,7 @@ P_char ForceReturn(P_char ch)
     true_id = MORPH_ORIG(t_ch);
     if (!is_avatar)
     {
-      act("$n's dying Sbody slowly changes back into $N.",
+      act("$n's dying body slowly changes back into $N.",
           FALSE, t_ch, 0, true_id, TO_ROOM);
       send_to_char
         ("As the last of life leaves you, your body resumes its natural form.\r\n",

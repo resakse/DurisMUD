@@ -1105,13 +1105,13 @@ To view the subject of each scroll in the case, type LOOK CASE.
 To read a scroll, type READ <scroll_number>.
 ~
 #84
-board bug~
-a bug board~
-A board is here with bugs all over it. Ewww!~
+jexni board list~
+Jexni's To-Do List~
+Jexni's To-Do List hangs in mid-air here, &+Wglowing&n softly.~
 ~
-13 16 4 50 7 0 0 0 0 0 0
-51 51 51 52 0 0 0 0
-0 0 100
+13 1 4 50 15 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100 0 0 0 524288
 #85
 board trouble players player~
 a trouble players board~

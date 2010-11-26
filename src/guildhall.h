@@ -101,9 +101,9 @@ using namespace std;
 #define GH_GOLEM_TYPE_SORCERER 3
 
 #define IS_GH_GOLEM(ch) ( IS_NPC(ch) && \
-  ( GET_VNUM(ch) == GH_GOLEM_TYPE_WARRIOR || \
-  GET_VNUM(ch) == GH_GOLEM_TYPE_CLERIC || \
-  GET_VNUM(ch) == GH_GOLEM_TYPE_SORCERER ) )
+                        ( GET_VNUM(ch) == GH_GOLEM_WARRIOR  || \
+                          GET_VNUM(ch) == GH_GOLEM_CLERIC   || \
+                          GET_VNUM(ch) == GH_GOLEM_SORCERER ))
 
 struct Guildhall; // stub declaration so following can refer to it
 struct GuildhallRoom; // stub declaration so following can refer to it
