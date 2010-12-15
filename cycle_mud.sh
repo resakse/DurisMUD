@@ -27,7 +27,7 @@ while [ $RESULT != 0 ]; do
   nm --demangle dms | grep " T " | sed -e 's/[(].*[)]//g' > lib/misc/event_names
 
 	if [ -f /usr/local/bin/sendEmail ]; then
-		/usr/local/bin/sendEmail -t torgal@durismud.com \
+		/usr/local/bin/sendEmail -t kitsero@durismud.com \
 			-f mud@durismud.com -u "Duris Booting..." \
 			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
     sleep 10 # slow down in order to prevent 83284828234 emails from being sent per second

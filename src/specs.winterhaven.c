@@ -3808,7 +3808,7 @@ int gladius_backstabber(P_obj obj, P_char ch, int cmd, char *arg)
   int curr_time;
 
   if ( !ch )
-	return FALSE;
+    return FALSE;
 
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
@@ -3832,7 +3832,7 @@ int gladius_backstabber(P_obj obj, P_char ch, int cmd, char *arg)
     if (GET_POS(ch) < POS_STANDING)
       return FALSE;
 
-    if (cmd == CMD_MELEE_HIT && ch && vict && !number(0, 1) && CheckMultiProcTiming(ch))
+    if (cmd == CMD_MELEE_HIT && ch && vict && !number(0, 30) && CheckMultiProcTiming(ch))
     {
 
       act("&nYour $q &nbegins to &+mhum&n.", TRUE, ch, obj, vict, TO_CHAR);

@@ -3,8 +3,8 @@ inferno sword flaming~
 &+rthe f&+Rl&+Ya&+Wm&+Yi&+Rn&+rg sword, &+RInferno&N~
 &+rA fine longsword, glowing with magical fire rests here.&N~
 ~
-5 19 4 0 15 0 57376 8193 576 47169504 0
-5 5 4 0 0 0 0 0
+5 19 4 0 15 0 57376 8193 576 181387232 0
+5 5 5 0 0 0 0 0
 12 0 100 536870928 1 0 0
 E
 inferno sword flaming~
@@ -14,7 +14,7 @@ any natural means.  The rune of &+mKossuth&+r flickers in a black
 patern along the blade.&N
 ~
 A
-18 5
+18 3
 A
 19 5
 #88301
@@ -22,9 +22,9 @@ crown flames burning fire~
 &+ra crown of &+Rburning&+r flames&N~
 A metal crown, with an unnatural &+rfire&N flowing around it rests here.~
 ~
-9 19 4 0 14 0 173088 17 0 87048315 0
+9 19 4 0 14 0 173088 17 0 87126107 0
 15 0 0 0 0 0 0 0
-0 0 100 805306400 0 0 0
+6 0 100 805306400 0 0 0
 A
 58 -1
 A
@@ -44,17 +44,17 @@ suit flame wreathed platemail~
 ~
 9 19 3 0 14 100 172040 9 2 0 0
 20 0 0 0 0 0 0 0
-8 0 100 536944672 1 0 0
+10 0 100 536944672 0 0 0
 A
-24 -4
+24 -5
 A
-35 6
+35 5
 #88304
 cloak winds imperceptible~
 &+can imperceptible &+Ccloak &+cof the w&+Ci&+Wn&+Cd&+cs&n~
 &+cThe air seems to coalesce into a cloak here.&N~
 ~
-9 1 2 0 13 0 143393 1025 0 0 0
+9 1 2 0 13 0 12320 1025 0 0 0
 10 0 0 0 0 0 0 0
 0 0 100 134217732 0 0 0
 A
@@ -66,13 +66,13 @@ ring magenta~
 &+man &+Menchanted &+mring of &+rbalor &+Wbone&n~
 &+mA ring made of &+Wbone &+mrests here.&N~
 ~
-11 10 2 0 10 0 1024 3 0 2048 0
+11 10 2 0 10 0 0 3 0 0 0
 0 0 0 0 0 0 0 0
 1 0 100 4 0 0 0
 A
-13 30
+13 25
 A
-33 5
+33 4
 #88306
 massive pile coins~
 &+Ya massive pile of coins&N~
@@ -90,7 +90,7 @@ flaming earring~
 0 0 0 0 0 0 0 0
 0 0 100 536870916 0 0 0
 A
-13 20
+23 -4
 A
 20 -4
 #88308
@@ -129,21 +129,21 @@ gloves immolation aflame~
 &+rthe glo&+Rves of immo&+rlation&n~
 &+rSome gloves that seem to be aflame are here.&n~
 ~
-9 19 3 0 7 0 9 129 0 100662879 0
+9 19 3 0 7 0 9 129 0 234880607 0
 11 0 0 0 0 0 0 0
 5 0 100 0 1 0 0
 A
-34 2
+34 3
 A
-24 -2
+24 -3
 #88312
 demon hide moccasins~
 &+La pair of &+mclawed &+Mdemon&+L-&+Mhide &+Lmoccasins&n~
 &+mA pair of moccasins crafted from &+Ldemon-hide&+m lie here.&n~
 ~
-9 14 3 0 7 0 8 65 0 0 0
+9 35 3 0 7 0 8 65 0 0 0
 12 0 0 0 0 0 0 0
-3 0 100 32768 0 0 33554432
+5 0 100 32768 0 0 33554432
 A
 35 4
 A
@@ -154,7 +154,7 @@ dirk serrated adamantium cruel~
 &+rA cruel-looking dirk lies here.&n~
 ~
 5 19 3 0 7 0 69760 8193 124 0 0
-2 3 5 0 0 0 0 0
+2 4 4 0 0 0 0 0
 4 0 100
 A
 18 4
@@ -165,13 +165,13 @@ otherworldly stiletto soul-taking soul~
 &+wan &+Loth&+wer&+Wwo&+wrl&+Ldly &+wstiletto &+Lof &+wso&+Lul&+W-&+Ltak&+wing&n~
 &+wA stiletto phases in and out of &+Lexistence &+where.&n~
 ~
-5 1 3 0 7 0 69696 8193 0 0 0
-2 3 5 0 0 0 0 0
-4 0 100 16 0 0 0
+5 1 3 0 7 0 4096 8193 0 0 0
+2 6 3 0 0 0 0 0
+0 0 100 16 0 0 0
 A
-19 4
+19 3
 A
-32 5
+32 4
 #88315
 totem kossuth fire imbued ember burning~
 &+ra &+Rfire&+r-&+Rimbued &+Ltotem &+rof &+WKossuth&n~
@@ -179,9 +179,11 @@ totem kossuth fire imbued ember burning~
 ~
 34 24 2 0 14 0 3310720 16385 64 256 0
 63 0 0 0 0 0 0 0
-1 100000 100 536870912 0 64 0
+1 192032 100 536870912 0 64 0
 A
 34 4
+A
+20 -2
 #88316
 bracers immolation aflame~
 &+rthe &+Rbracers &+rof &+Ri&+rmmo&+Rla&+rti&+Ron&n~
@@ -193,7 +195,7 @@ bracers immolation aflame~
 A
 27 8
 A
-37 4
+37 3
 #88317
 liquid ring rock ancient~
 &+Lan ancient &+rring &+Lof &+Rli&+Wqu&+Rid &+rrock&n~
@@ -221,23 +223,23 @@ earthen cloak lordly might~
 ~
 9 11 3 0 7 0 0 1025 0 0 0
 12 0 0 0 0 0 0 0
-0 0 100 134217728 0 0 0
+5 0 100 134217728 0 0 0
 A
-30 15
+31 3
 A
-13 25
+24 -3
 #88320
 gauntlets hellfire vampiric~
 &+ra pair of &+Rvam&+rpi&+Rric &+Ldragon&+rscale &+Lgauntlets&n~
 &+RA strange pair of dragonscale gauntlets float here.&n~
 ~
-9 35 3 0 15 0 0 129 64 0 0
+9 35 3 0 15 0 1024 129 64 87126527 0
 6 0 0 0 0 0 0 0
-3 0 100 536870912 274624 64 0
+4 0 100 536870912 274624 64 0
 A
 54 35
 A
-32 5
+32 4
 #88321
 carnelian ruby gorget~
 &+ra &+Ycar&+Rnel&+Yian &+rand &+Rruby &+rinlaid &+Ygorget&n~
@@ -247,9 +249,9 @@ carnelian ruby gorget~
 0 0 0 0 0 0 0 0
 2 0 100 805339136 0 0 0
 A
-33 4
+33 3
 A
-34 4
+34 3
 #88322
 magnificent pile black red dragonscales~
 &+La magnificent &+rpile &+Lof black a&+rnd red &+Ldragon&+rscales&n~
@@ -292,52 +294,9 @@ thin spike sharpened~
 &+RA thin, sharpened spike lies here.&n~
 ~
 5 15 3 0 7 0 524352 8193 0 0 0
-2 3 5 0 0 0 0 0
+2 3 3 0 0 0 0 0
 0 0 100
 A
-18 4
+18 3
 A
-19 4
-#88327
-jammin java music box contraption~
-&+Wth&+ce Ja&+rmm&+Cin Ja&+Wva &+BM&+ru&+Bs&+ri&+Bc &+YC&+Won&+ctra&+rpti&+Con&N~
-&+ya ceramic box of odd looking rods, sticks, and gizmos has been left here.&N~
-~
-32 44 10 0 15 0 3155016 16385 64 8425504 0
-184 56 0 1 0 0 0 0
-5 0 100
-E
-jammin music box contraption~
-&+LAlthough this device bespeaks of something perhaps sinister,
-&+Lit truly is a collection of odd looking devices. Upon closer
-&+Lexamination, &+Rpowerful &+Lmagical runes are&n &+Leasily see along
-&+Lthe device's edges. The runes actually appear to be
-&+Lbuttons that can be pressed!&n
-
-&+WAn inscription along a single edge of the device reads:
-                      &+G"Everything in nature is lyrical..."&n
-
-
-        __
-      ,´ |
-______|___|______________________________________________
-      |  /                      ___----
-      | /                  _----      |
-______|/__________________|___________|__________|\______
-     ,|                   |           |          | \
-    / |                   |           |          | --
-___/__|___________________|___________|__________|_______
-  /,´|  \                |      ,d88b|          |
- | .  |   \            __ |      88888|       __ |
-_|_|__|____|_________,d88b|______`Y88P'_____,d88b|_______
- |  ` |    |         88888|                 88888|
- `.   |   /          `Y88P'                 `Y88P'
-___`._|_./_______________________________________________
-      |
-    | |
-     \|
-~
-A
-22 -6
-A
-30 10
+19 3

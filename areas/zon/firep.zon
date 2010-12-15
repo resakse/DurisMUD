@@ -1,6 +1,6 @@
 #883
 &+LThe Charcoal Palace&n~
-88459 0 0 1 6 3
+88450 0 0 1 6 3
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -353,8 +353,5 @@ M 0 88310 14 88449 100 0 0 0       * a huge fire minion guard
 F 1 88310 14 88449 100 0 0 0       * a huge fire minion guard (following)
 M 0 88309 17 88449 100 0 0 0       * a fire minion guard
 F 1 88309 17 88449 100 0 0 0       * a fire minion guard (following)
-M 0 88458 1 88459 100 0 0 0        * a mechanical construct
-M 0 88457 1 88459 100 0 0 0        * a mechanical construct
-G 1 88327 1 0 100 0 0 0            *    the Jammin Java Music Contraption
 *
 S
