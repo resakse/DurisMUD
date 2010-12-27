@@ -5128,13 +5128,13 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     // vamped = vamp(ch, MIN(dam, number(2, 7)), (int)(GET_MAX_HIT(ch) * 1.2));
  // }
   
-  if(dam >= 2 &&
+  if((dam >= 2 &&
     !IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY) &&
     IS_AFFECTED4(victim, AFF4_HOLY_SACRIFICE) &&
     (flags & RAWDAM_HOLYSAC) &&
     !affected_by_spell(victim, SPELL_PLAGUE)) &&
     ((GOOD_RACE(victim) && !GOOD_RACE(ch)) ||
-     (EVIL_RACE(victim) && !EVIL_RACE(ch)))
+     (EVIL_RACE(victim) && !EVIL_RACE(ch))))
   {
     sac_gain = dam * get_property("vamping.holySacrifice", 0.050);
 
