@@ -1056,7 +1056,8 @@
 #define TAG_GUILDHALL                2061
 #define TAG_DIRECTION                2062
 #define TAG_SPAWN                    2063
-
+#define TAG_HOLY_OFFENSE             2064  // for holy_weapon proc
+#define TAG_HOLY_DEFENSE             2065  // for holy_weapon proc
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
 
 #define SAVING_PARA   0

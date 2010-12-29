@@ -37,6 +37,7 @@
 #include "epic.h"
 #include "disguise.h"
 #include "sql.h"
+#include "vnum.obj.h"
 
 /*
  * external variables
@@ -98,7 +99,6 @@ void     unlink_char_affect(P_char, struct affected_type *);
 struct link_description link_types[LNK_MAX + 1];
 
 extern void disarm_single_event(P_nevent);
-
 int damroll_cap;
 
 
@@ -3018,8 +3018,8 @@ void event_falling_char(P_char ch, P_char victim, P_obj obj, void *data)
  still falling that fast, and they'll take that damage.  Since this isn't
  instantaneous they can (theoretically) save themselves by starting to fly
  or levitate (we can now add feather fall that kicks in if they exceed 20
-              mph (they'd still be falling though *grin*)
-              */
+ mph (they'd still be falling though *grin*)
+*/
 
 /* New formula; All damage taken is a percentage of their max, so a level
 1 player has just as much chance of survival as a level 50.
@@ -3028,6 +3028,7 @@ stats, would be 12% of their max hit, plus about 30 points, depending on
 agi. Should they reach terminal velocity, 33+ rooms, they will take 100%
 damage, + the 30 or so points. Having safe_fall skill kick in, should
 leave them living, but on the brink of death. */
+
 bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
 {
   P_nevent ev;
@@ -3056,11 +3057,17 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
     Using virtual can go, as it checks more door states */
     if ((world[ch->in_room].sector_type != SECT_NO_GROUND) &&
         (world[ch->in_room].sector_type != SECT_UNDRWLD_NOGROUND) &&
-        !VIRTUAL_CAN_GO(ch->in_room, DOWN) && (ch->specials.z_cord == 0))
+        !VIRTUAL_CAN_GO(ch->in_room, DOWN) && 
+        (ch->specials.z_cord == 0))
       return FALSE;
     /* This isn't for sinking */
     if (ch->specials.z_cord < 0)
       return FALSE;
+
+    /* Don't continue if a breakable wall is acting as a floor - Jexni 12/07/10 */    
+    if (world[ch->in_room].dir_option[DOWN])
+      if(IS_SET(world[ch->in_room].dir_option[DOWN]->exit_info, EX_BREAKABLE))
+        return FALSE;
 
     /* ch has just stepped into space, initiate the plunge  */
     if (IS_TRUSTED(ch) || IS_AFFECTED(ch, AFF_LEVITATE) || IS_AFFECTED(ch, AFF_FLY))
@@ -3091,11 +3098,9 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
 
     if (CAN_GO(ch, DOWN) || ch->specials.z_cord > 0)
     {
-      /* hehe, they hang there for 1 pulse before they start falling  */
-      /* screw hanging for one pulse, let's try 0 */
+      /*  send them falling */
       speed = 1;
       add_event(event_falling_char, 0, ch, NULL, NULL, 0, &speed, sizeof(speed));
-      //AddEvent(EVENT_FALLING_CHAR, 0, TRUE, ch, 1);
       return TRUE;
     }
     else
@@ -3115,9 +3120,10 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
   speed = (int) kill_char;
   i = ch->in_room;
 
-  if ((ch->specials.z_cord > 0) || (world[i].dir_option[DOWN] &&
-                                    !IS_SET(world[i].dir_option[DOWN]->
-                                            exit_info, EX_CLOSED)))
+  if ((ch->specials.z_cord > 0) || 
+      (world[i].dir_option[DOWN] &&
+      !IS_SET(world[i].dir_option[DOWN]->exit_info, EX_CLOSED) &&
+      !IS_SET(world[i].dir_option[DOWN]->exit_info, EX_BREAKABLE)))
   {
     if (ch->specials.z_cord > 0)
     {
@@ -3172,21 +3178,20 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
   }
   else
     new_room = i;               /*
-     this happens when faller is
-     summoned/transed/teleported out
-     */
+                                   this happens when faller is
+                                   summoned/transed/teleported out
+                                */
 
   if (!world[new_room].dir_option[DOWN] ||
       (world[new_room].dir_option[DOWN]->to_room == NOWHERE) ||
-      IS_SET(world[new_room].dir_option[DOWN]->exit_info, EX_CLOSED)
-      || ((ch->specials.z_cord == 0) && had_zcord))
+      IS_SET(world[new_room].dir_option[DOWN]->exit_info, EX_CLOSED) || 
+      IS_SET(world[new_room].dir_option[DOWN]->exit_info, EX_BREAKABLE) ||
+      ((ch->specials.z_cord == 0) && had_zcord))
   {
 
     /* oh dear, we seem to have run out of falling room!  Muhahaha  */
 
-    dam =
-    (int) (GET_MAX_HIT(ch) * ((speed / 2.5) / 100)) + (number(80, 120) -
-                                                       GET_C_AGI(ch));
+    dam = (int) (GET_MAX_HIT(ch) * ((speed / 2.5) / 100)) + (number(80, 120) - GET_C_AGI(ch));
 
     if (dam < 2)
       dam = 2;
@@ -3194,6 +3199,34 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
     if (GET_CHAR_SKILL(ch, SKILL_SAFE_FALL))
       if (GET_CHAR_SKILL(ch, SKILL_SAFE_FALL) > number(1, 101))
         dam <<= 1;
+
+    if (world[ch->in_room].dir_option[DOWN])
+    { 
+       if (IS_SET(world[ch->in_room].dir_option[DOWN]->exit_info, EX_BREAKABLE))
+       {
+          P_obj Wall;
+          for(Wall = world[ch->in_room].contents; Wall; Wall = Wall->next_content)
+          {
+             if(Wall->R_num == real_object(VOBJ_WALLS))
+               if(Wall->value[1] == 5)
+                 break;
+          }
+          if(Wall && (speed > 43 || (Wall->value[2] / 2 < 10)))
+          {
+             act("You slam into $p, shattering it upon impact, and only marginally slowing your fall...", FALSE, ch, Wall, 0, TO_CHAR);
+             act("$n falls from above, slamming into and shattering $p, before continuing to fall...", FALSE, ch, Wall, 0, TO_ROOM);
+             damage(ch, ch, dam, TYPE_UNDEFINED);
+             spell_dispel_magic(70, ch, NULL, SPELL_TYPE_SPELL, 0, Wall);
+             speed /= 2;
+             add_event(event_falling_char, 0, ch, NULL, NULL, 0, &speed, sizeof(speed));
+             return FALSE;
+          }
+          else if(Wall)
+          {
+             Wall->value[2] /= 2;
+          }
+       }
+    }
 
     if (dam <= 0)
     {
@@ -3215,8 +3248,7 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
     else
     {
       send_to_char("You land with stunning force!\n", ch);
-      act("$n falls in from above, landing in a crumpled heap!", TRUE, ch, 0,
-          0, TO_ROOM);
+      act("$n falls in from above, landing in a crumpled heap!", TRUE, ch, 0, 0, TO_ROOM);
 
       if (ch->specials.z_cord > 0)
         ch->specials.z_cord = 0;
@@ -3355,6 +3387,12 @@ bool falling_obj(P_obj obj, int start_speed, bool caller_is_event)
     raise(SIGSEGV);
   }
 
+  if (!OBJ_ROOM(obj))
+  {
+    logit(LOG_EXIT, "falling_obj: (%d) %s in NOWHERE.", obj_index[obj->R_num].virtual_number, obj->name);
+    raise(SIGSEGV);
+  }
+
   /* Not for underwater use */
   if (obj->z_cord < 0)
     return FALSE;
@@ -3362,19 +3400,17 @@ bool falling_obj(P_obj obj, int start_speed, bool caller_is_event)
   if (IS_SET(obj->extra_flags, ITEM_LEVITATES))
     return FALSE;
 
+  /* Don't continue if a breakable wall is acting as a floor - Jexni 12/07/10 */
+  if (world[obj->loc.room].dir_option[DOWN])
+    if(IS_SET(world[obj->loc.room].dir_option[DOWN]->exit_info, EX_BREAKABLE))
+      return FALSE;
+
   if (!caller_is_event)
   {
     /* if not already falling */
     LOOP_EVENTS(ev, obj->nevents)
       if(ev->func == event_falling_obj)
         return FALSE;
-
-    if (!OBJ_ROOM(obj))
-    {
-      logit(LOG_EXIT, "falling_obj: (%d) %s in NOWHERE.",
-            obj_index[obj->R_num].virtual_number, obj->name);
-      raise(SIGSEGV);
-    }
 
     /* obj has just been dropped/moved into space, initiate the plunge */
 
@@ -3394,7 +3430,6 @@ bool falling_obj(P_obj obj, int start_speed, bool caller_is_event)
       new_room = world[obj->loc.room].dir_option[DOWN]->to_room;
     speed = 31;
     add_event(event_falling_obj, 4, NULL, NULL, obj, 0, &speed, sizeof(speed));
-    //AddEvent(EVENT_FALLING_OBJ, 4, TRUE, obj, 31);
     /*
      1 second and speed
      31 mph after that
@@ -3434,6 +3469,9 @@ bool falling_obj(P_obj obj, int start_speed, bool caller_is_event)
 
   if (world[i].dir_option[DOWN])
   {
+    /* Don't continue if a breakable wall is acting as a floor - Jexni 12/07/10 */
+    if(IS_SET(world[i].dir_option[DOWN]->exit_info, EX_BREAKABLE))
+      return FALSE;
 
     new_room = world[i].dir_option[DOWN]->to_room;
 

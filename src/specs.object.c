@@ -4932,11 +4932,11 @@ int labelas(P_obj obj, P_char ch, int cmd, char *arg)
 
 int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   tch;
-  P_char   vict = NULL;
+  P_char   tch, vict = NULL;
   struct proc_data *data = NULL;
+  struct affected_type aff, *af;
   bool     should_jump;
-  int      alignment; // 0 == good, 1 == evil, -1 == neutral
+  int      pcnt = 100, curr_time, tmpper, alignment; // 0 == good, 1 == evil, -1 == neutral
 
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
@@ -4946,10 +4946,10 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
 
   switch (obj_index[obj->R_num].virtual_number)
   {
-    case 425:
+    case 425:  // Ambran
       alignment = 0;
       break;
-    case 51005:
+    case 51005:  // Death Rider
       alignment = 1;
       break;
     default:
@@ -4957,9 +4957,236 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
       break;
   }
 
-  if(cmd == CMD_MELEE_HIT &&
-    !number(0, 24) &&
-    CheckMultiProcTiming(ch))
+  if((cmd == CMD_REMOVE) && arg )
+  {
+    if( isname(arg, obj->name) || isname(arg, "all") )
+    {
+      if (affected_by_spell(ch, TAG_HOLY_OFFENSE))
+        affect_from_char(ch, TAG_HOLY_OFFENSE);
+      if (affected_by_spell(ch, TAG_HOLY_DEFENSE))
+        affect_from_char(ch, TAG_HOLY_DEFENSE);
+    }
+  }
+
+  if (OBJ_WORN(obj))
+  {
+     if(cmd == CMD_SAY && arg)
+     {
+        if(isname(arg, "attack"))
+        {
+           af = get_spell_from_char(ch, TAG_HOLY_OFFENSE);
+           if (!af)
+           {
+              memset(&aff, 0, sizeof(aff));
+              aff.type = TAG_HOLY_OFFENSE;
+              aff.flags = AFFTYPE_NODISPEL;
+              aff.modifier = 8;
+              aff.location = APPLY_STR_MAX;
+              aff.duration = -1;
+              affect_to_char(ch, &aff);
+              aff.type = TAG_HOLY_OFFENSE;
+              aff.flags = AFFTYPE_NODISPEL;
+              aff.modifier = 8;
+              aff.location = APPLY_DEX_MAX;
+              aff.duration = -1;
+              affect_to_char(ch, &aff);
+              aff.type = TAG_HOLY_OFFENSE;
+              aff.flags = AFFTYPE_NODISPEL;
+              aff.modifier = -1;
+              aff.location = APPLY_COMBAT_PULSE;
+              aff.duration = -1;
+              affect_to_char(ch, &aff);
+              aff.type = TAG_HOLY_OFFENSE;
+              aff.flags = AFFTYPE_NODISPEL;
+              aff.modifier = -20;
+              aff.location = APPLY_AGI;
+              aff.duration = -1;
+              affect_to_char(ch, &aff);
+              aff.type = TAG_HOLY_OFFENSE;
+              aff.flags = AFFTYPE_NODISPEL;
+              aff.modifier = -20;
+              aff.location = APPLY_MOVE_REG;
+              aff.duration = -1;
+              affect_to_char(ch, &aff);
+              act("&+LAs you utter the word, a chill runs through your body as power takes hold...", FALSE, ch, obj, 0, TO_CHAR);
+              act("$n &+wwhispers something to $s $q&+w, and &+Lshudders &+wwith new power...", FALSE, ch, obj, 0, TO_ROOM);
+              if(af = get_spell_from_char(ch, TAG_HOLY_DEFENSE))
+                 affect_from_char(ch, TAG_HOLY_DEFENSE);
+              CharWait(ch, 2 * PULSE_VIOLENCE);
+              return TRUE;
+           }
+        }
+        else if(isname(arg, "defend"))
+        {  
+           af = get_spell_from_char(ch, TAG_HOLY_DEFENSE);
+           if (!af)
+           {
+               memset(&aff, 0, sizeof(aff));
+               aff.type = TAG_HOLY_DEFENSE;
+               aff.flags = AFFTYPE_NODISPEL;
+               aff.modifier = 10;
+               aff.location = APPLY_AGI_MAX;
+               aff.duration = -1;
+               affect_to_char(ch, &aff);
+               aff.type = TAG_HOLY_DEFENSE;
+               aff.flags = AFFTYPE_NODISPEL;
+               aff.modifier = -10;
+               aff.location = APPLY_SAVING_FEAR;
+               aff.duration = -1;
+               affect_to_char(ch, &aff);
+               aff.type = TAG_HOLY_DEFENSE;
+               aff.flags = AFFTYPE_NODISPEL;
+               aff.modifier = -10;
+               aff.location = APPLY_SAVING_SPELL;
+               aff.duration = -1;
+               affect_to_char(ch, &aff);
+               aff.type = TAG_HOLY_DEFENSE;
+               aff.flags = AFFTYPE_NODISPEL;
+               aff.modifier = -15;
+               aff.location = APPLY_STR;
+               aff.duration = -1;
+               affect_to_char(ch, &aff);
+               aff.type = TAG_HOLY_DEFENSE;
+               aff.flags = AFFTYPE_NODISPEL;
+               aff.modifier = 1;
+               aff.location = APPLY_COMBAT_PULSE;
+               aff.duration = -1;
+               affect_to_char(ch, &aff);
+               act("&+WAs you utter the word, a chill runs through your body as power takes hold...", FALSE, ch, obj, 0, TO_CHAR);
+               act("$n &+wwhispers something to $s $q&+w, and &+Wshudders &+wwith new power...", FALSE, ch, obj, 0, TO_ROOM);
+               if(af = get_spell_from_char(ch, TAG_HOLY_OFFENSE))
+                 affect_from_char(ch, TAG_HOLY_OFFENSE);
+               CharWait(ch, 2 * PULSE_VIOLENCE);
+               return TRUE;
+           }
+        }
+     }
+     return FALSE;
+  } 
+  
+  if (cmd == CMD_PERIODIC)
+  { 
+     if(OBJ_WORN(obj))                  //  This periodically checks to see if
+       ch = obj->loc.wearing;              //  to see if item is in the proper racewar hands
+     else if(OBJ_CARRIED(obj))
+       ch = obj->loc.carrying;
+     else
+       return FALSE;
+
+     switch(alignment)
+     {
+       case 0:
+         should_jump = !RACE_GOOD(ch);
+         break; 
+       case 1:
+         should_jump = !RACE_EVIL(ch);
+         break;
+       default:
+         should_jump = false;
+     }
+
+     if(IS_TRUSTED(ch))
+       should_jump = false;
+
+     if(!IS_PC(ch))
+       should_jump = false;
+
+     if(should_jump)
+     {
+         if (OBJ_WORN(obj))
+           obj_to_char(unequip_char(ch, (ch->equipment[WIELD] == obj) ? WIELD : 
+             (ch->equipment[SECONDARY_WEAPON] == obj) ? SECONDARY_WEAPON : 
+               (ch->equipment[HOLD] == obj) ? HOLD : 0), ch);
+               
+         obj_from_char(obj, TRUE);
+      
+       for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
+       {
+         if (IS_PC(tch) && opposite_racewar(ch, tch))
+         {
+           act("$p screams in outrage at your touch!", FALSE, ch, obj, 0, TO_CHAR);
+           act("$p screams in outrage at $n's touch!", FALSE, ch, obj, 0, TO_ROOM);
+           act("$p &=LCshimmers&n, blasts you with power and leaps to $N!", FALSE, ch, obj, tch, TO_CHAR);
+           act("$p &=LCshimmers&n and blasts $n as it leaps to $N!", FALSE, ch, obj, tch, TO_NOTVICT);
+           act("$p &=LCshimmers&n and blasts $n as it leaps to you!", FALSE, ch, obj, tch, TO_VICT);
+           spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+           obj_to_char(obj, tch);
+           break;
+         }
+       }
+       if (!tch)
+       {
+         act("$p &=LCshimmers&n, blasts you with power and vanishes from your hand!", FALSE, ch, obj, 0, TO_CHAR);
+         act("$p &=LCshimmers&n and blasts $n before vanishing!", FALSE, ch, obj, 0, TO_ROOM);
+         spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+         extract_obj(obj, TRUE);
+       }
+       return TRUE;
+     }
+
+     if (ch->equipment[WIELD] == obj && !number(0, 10))
+     {
+       hummer(obj);
+       for( struct group_list *tgl = ch->group; tgl && tgl->ch; tgl = tgl->next )
+       {
+ 	    if(tgl->ch->in_room != ch->in_room) 
+           continue;
+ 	
+         if(!affected_by_spell(tgl->ch, SPELL_ARMOR))
+           spell_armor(60, ch, 0, 0, tgl->ch, 0);
+ 
+         if(!affected_by_spell(tgl->ch, SPELL_BLESS))
+           spell_bless(60, ch, 0, 0, tgl->ch, 0);
+       }
+       return TRUE;
+     }
+     
+    // Following proc finds the most hurt ally tanking and rescues them - Jexni 12/2/10
+
+     if(IS_FIGHTING(ch) && ch->equipment[WIELD] == obj && number(0, 1))
+     {
+        for(tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
+        {
+           if(grouped(ch, tch) && IS_FIGHTING(tch) && (tch != ch))
+           {
+             tmpper = (GET_HIT(tch) / GET_MAX_HIT(tch)) * 100;
+             if(tmpper < pcnt)
+             {
+               vict = tch;
+               pcnt = tmpper;
+             }
+           }      
+        }
+        for(tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
+        {
+           if(tch->specials.fighting == vict)
+             break;
+        }
+        if(vict)
+        {      
+           if(CanDoFightMove(ch, tch))
+           {
+              act("Your $q &+Wglows &+was you slam the pommel into $N&+w,&L&+wknocking $M away from your ally!", FALSE, ch, obj, tch, TO_CHAR);
+              act("$p &+Wglows &+was its pommel is slammed into $N&+w,&L&+wknocking $M away from YOU!", FALSE, vict, obj, tch, TO_CHAR);
+              act("$n&+w's $q &+Wglows &+was its pommel smashes into you,&L&+wknocking you off-balance and back several steps!", FALSE, ch, obj, tch, TO_VICT);
+              if(vict->specials.fighting == tch)
+                stop_fighting(vict);
+              if(!IS_FIGHTING(ch))
+                set_fighting(ch, tch);
+              if(IS_FIGHTING(tch))
+              {
+                stop_fighting(tch);
+                set_fighting(tch, ch);
+              }
+           }
+        }
+        return TRUE;
+     }
+  }
+  return FALSE;
+
+/* Rewrote holy_weapon proc to be defensive or offensive by choice of wielder - Jexni 11/30/10
+  if(cmd == CMD_MELEE_HIT && !number(0, 24) && CheckMultiProcTiming(ch))
   {
     vict = (P_char) arg;
 
@@ -5013,105 +5240,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if (cmd == CMD_PERIODIC)
-  {                             /* periodic call */
-    if (OBJ_WORN(obj))
-      ch = obj->loc.wearing;
-    else if (OBJ_CARRIED(obj))
-      ch = obj->loc.carrying;
-    else
-      return FALSE;
-
-    switch(alignment)
-    {
-      case 0:
-        should_jump = !RACE_GOOD(ch);
-        break;
-      case 1:
-        should_jump = !RACE_EVIL(ch);
-        break;
-      default:
-        should_jump = false;
-    }
-
-    if( IS_TRUSTED(ch) )
-      should_jump = false;
-
-    if( !IS_PC(ch) )
-      should_jump = false;
-
-    if (should_jump)
-    {
-      if (OBJ_WORN(obj))
-        obj_to_char(unequip_char(ch, (ch->equipment[WIELD] == obj) ? WIELD :
-                                 (ch->equipment[SECONDARY_WEAPON] ==
-                                  obj) ? SECONDARY_WEAPON : (ch->
-                                                             equipment[HOLD]
-                                                             ==
-                                                             obj) ? HOLD : 0),
-                    ch);
-      obj_from_char(obj, TRUE);
-      for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
-      {
-        if (IS_PC(tch) && opposite_racewar(ch, tch))
-        {
-          act("$p screams in outrage at your touch!", FALSE, ch, obj, 0,
-              TO_CHAR);
-          act("$p screams in outrage at $n's touch!", FALSE, ch, obj, 0,
-              TO_ROOM);
-          act("$p &=LCshimmers&n, blasts you with power and leaps to $N!",
-              FALSE, ch, obj, tch, TO_CHAR);
-          act("$p &=LCshimmers&n and blasts $n as it leaps to $N!", FALSE, ch,
-              obj, tch, TO_NOTVICT);
-          act("$p &=LCshimmers&n and blasts $n as it leaps to you!", FALSE,
-              ch, obj, tch, TO_VICT);
-      		spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-          obj_to_char(obj, tch);
-          break;
-        }
-      }
-      if (!tch)
-      {
-        act
-          ("$p &=LCshimmers&n, blasts you with power and vanishes from your hand!",
-           FALSE, ch, obj, 0, TO_CHAR);
-        act("$p &=LCshimmers&n and blasts $n before vanishing!", FALSE, ch,
-            obj, 0, TO_ROOM);
-      	spell_lightning_bolt(61, ch, 0, SPELL_TYPE_SPELL, ch, 0);
-        extract_obj(obj, TRUE);
-      }
-      return TRUE;
-    }
-
-    if (ch->equipment[WIELD] == obj && number(0,10) == 0 )
-    {
-			act("Your $p&n hums quietly.",
-          FALSE, ch, obj, 0, TO_CHAR);
-			act("$n's $p&n hums quietly.",
-          FALSE, ch, obj, 0, TO_ROOM);
-
-      for( struct group_list *tgl = ch->group; tgl && tgl->ch; tgl = tgl->next )
-			{
-				if( tgl->ch->in_room != ch->in_room ) continue;
-
-				if( !affected_by_spell(tgl->ch, SPELL_ARMOR) )
-				{
-          spell_armor(60, ch, 0, 0, tgl->ch, 0);
-			  }
-
-				if( !affected_by_spell(tgl->ch, SPELL_BLESS) )
-				{
-          spell_bless(60, ch, 0, 0, tgl->ch, 0);
-				}
-
-			}
-
-			return TRUE;
-
-    }
-  }
-
-  return FALSE;
+*/
 }
 
 int menden_figurine(P_obj obj, P_char ch, int cmd, char *arg)
@@ -6835,7 +6964,7 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
   struct follow_type *k, *next_dude;
   P_obj    tempobj;
   struct affected_type af;
-  bool     drag_followers;
+  bool     drag_followers, downexit = FALSE;
   char     char_message[512], room_message[512];
   struct damage_messages messages = {
     char_message, char_message, room_message,
@@ -6852,6 +6981,9 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
 
   type = obj->value[3];
+
+  if(obj->value[1] == DOWN)
+    downexit = TRUE;
 
   if (cmd == CMD_DECAY)
   {
@@ -6883,6 +7015,17 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_WALLED);
       REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_BREAKABLE);
       REMOVE_BIT(VIRTUAL_EXIT(obj->loc.room, obj->value[1])->exit_info, EX_ILLUSION);
+    }
+    if(downexit)
+    {
+      int speed = 1;
+      was_in = obj->loc.room;
+      for(tempobj = world[was_in].contents; tempobj; tempobj = tempobj->next_content)
+      {
+        if(tempobj == obj)
+          continue;
+        add_event(event_falling_obj, 4, NULL, NULL, tempobj, 0, &speed, sizeof(speed));
+      }
     }
     return TRUE;
   }
@@ -7002,7 +7145,7 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
   if (dircmd == -1)
     return FALSE;
 
-  /* do this wall really block the attempted direction */
+  /* does this wall really block the attempted direction */
   if (obj->value[1] != dircmd)
     return FALSE;
 
