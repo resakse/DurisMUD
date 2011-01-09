@@ -944,6 +944,7 @@ void NPCShipAI::b_attack()
                 {
                     ship->setheading = ship->heading;
                     fire_weapon(ship, w_num, i, debug_char);
+                    break;
                 }
             }
         }
@@ -1471,6 +1472,7 @@ void NPCShipAI::a_attack()
                 {
                     ship->setheading = ship->heading;
                     fire_weapon(ship, w_num, i, hit_chance, debug_char);
+                    break;
                 }
             }
         }
