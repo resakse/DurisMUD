@@ -6604,14 +6604,14 @@ void spell_healing_salve(int level, P_char ch, char *arg, int type,
   add_event(event_healing_salve, (int) (PULSE_VIOLENCE * 0.1), ch, victim, 0, 0,
             &waves, sizeof(waves));
 
-  if(affected_by_spell(victim, SPELL_PLAGUE))
-    affect_from_char(victim, SPELL_PLAGUE);
+  //if(affected_by_spell(victim, SPELL_PLAGUE))
+  //  affect_from_char(victim, SPELL_PLAGUE);
 
   if(IS_AFFECTED4(victim, AFF4_CARRY_PLAGUE))
     REMOVE_BIT(victim->specials.affected_by4, AFF4_CARRY_PLAGUE);
 
-  if(affected_by_spell(victim, SPELL_WITHER))
-    affect_from_char(victim, SPELL_WITHER);
+  //if(affected_by_spell(victim, SPELL_WITHER))
+  //  affect_from_char(victim, SPELL_WITHER);
 }
 
 void spell_sticks_to_snakes(int level, P_char ch, char *arg, int type,
@@ -8289,7 +8289,7 @@ void spell_blur(int level, P_char ch, char *arg, int type, P_char victim,
 }
 
 
-void spell_miners_sight(int level, P_char ch, char *arg, int type, P_char victim,
+void spell_lodestone_vision(int level, P_char ch, char *arg, int type, P_char victim,
                  P_obj obj)
 {
   if (IS_AFFECTED5(ch, AFF5_MINE))
@@ -8300,13 +8300,12 @@ void spell_miners_sight(int level, P_char ch, char *arg, int type, P_char victim
     return;
   }
   
-  if (!affected_by_spell(victim, SPELL_MINER))
+  if (!affected_by_spell(victim, SPELL_LODESTONE))
   {
     act("A faint glimmer passes across your eyes as you feel your ability to detect minerals improve.", FALSE, ch, 0, victim, TO_CHAR);
-    //act("A faint glimmer passes across $N eyes as $S ability to detect minerals improve.", FALSE, ch, 0, victim, TO_CHAR);
     struct affected_type af;
     bzero(&af, sizeof(af));
-    af.type = SPELL_MINER;
+    af.type = SPELL_LODESTONE;
     af.bitvector5 = AFF5_MINE;
     af.duration = number(5, 7);
     affect_to_char(victim, &af);
@@ -9128,7 +9127,7 @@ void spell_plague(int level, P_char ch, char *arg, int type, P_char victim,
     return;
   }
   
-  if(!NewSaves(victim, SAVING_SPELL, 30))
+  if(!NewSaves(victim, SAVING_SPELL, -1))
   {  
     act("$n's skin &+cpales&n and sweat drips down $s body.",
       TRUE, victim, 0, 0, TO_ROOM);
@@ -13025,6 +13024,52 @@ void spell_faerie_fog(int level, P_char ch, char *arg, int type,
       }
       justice_witness(tmp_victim, NULL, CRIME_DISGUISE);
     }
+  }
+}
+
+void spell_blackmantle(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
+{
+  struct affected_type af;
+  
+  if(!ch)
+  {
+    logit(LOG_EXIT, "spell_blackmantle called in magic.c with no ch");
+    raise(SIGSEGV);
+  }
+
+  if(!IS_ALIVE(ch) ||
+     !IS_ALIVE(victim))
+  {
+    return;
+  }
+  
+  if(ch == victim)
+  {
+    send_to_char("Stop wasting time and go kill someone!\r\n", ch);
+    return;
+  }
+  
+  if(affected_by_spell(victim, SPELL_BMANTLE))
+  {
+    send_to_char("They are already afflicted by blackmantle!!\n", ch);
+    return;
+  }
+  
+  if(!NewSaves(victim, SAVING_SPELL, 0))
+  {  
+    act("&+LA blanketing shroud of &+bnegative energy &+Lcoalesces around $N&+L...", FALSE, ch, 0, victim, TO_CHAR);
+    act("&+LA blanketing shroud of &+bnegative energy &+Lcoalesces around $N&+L...", FALSE, ch, 0, victim, TO_NOTVICT);
+    act("&+LA cloud of &+bnegative energy &+Ldroplets cloak you, slowly draining the &+wlife &+Lfrom your body...", FALSE, ch, 0, victim, TO_VICT);
+
+    bzero(&af, sizeof(af));
+    af.type = SPELL_BMANTLE;
+    af.duration = level / 9;
+    af.modifier = 800;
+    affect_to_char(victim, &af);
+  }
+  else
+  {
+    act("&+LYour spell fails to afflict $N&+L!", FALSE, ch, 0, victim, TO_CHAR);
   }
 }
 

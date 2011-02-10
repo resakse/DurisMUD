@@ -3811,7 +3811,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     IS_GREATER_RACE(victim) ||
     IS_TRUSTED(victim))
   {
-    send_to_char("Don't you wish.\n", ch);
+    send_to_char("They are far too skilled to fall for such a move.\n", ch);
     CharWait(ch, (int) (PULSE_VIOLENCE * 0.25));
     
     return;
@@ -3931,11 +3931,11 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   /*  maybe the attacker or victim are lucky */
 
   if ((GET_C_LUCK(ch) / 2) > number(0, 90)) {
-     success = (int) (success * 1.2);
+     success = (int) (success * 1.1);
   }
 
   if ((GET_C_LUCK(victim) / 2) > number(0, 80)) {
-     success = (int) (success * 0.8);
+     success = (int) (success * 0.9);
   }
 
   /* now check if headbutter is capable of headbutting opponent */
@@ -3966,8 +3966,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
 
   int dam = 0;
   
-  if (!notch_skill(ch, SKILL_HEADBUTT,
-                   get_property("skill.notch.offensive", 15)) &&
+  if (!notch_skill(ch, SKILL_HEADBUTT, get_property("skill.notch.offensive", 15)) &&
       tmp_num <= 3)
   {
     // failed catastrophically!
@@ -3976,7 +3975,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     if (get_takedown_size(victim) < get_takedown_size(ch))
       dam = (int) (dam * 1.5);
 
-    if (melee_damage(victim, ch, dam, PHSDAM_NOPOSITION, &fail_messages)
+    if (melee_damage(victim, ch, dam, PHSDAM_NOPOSITION | PHSDAM_TOUCH, &fail_messages)
         != DAM_NONEDEAD)
       return;
 
@@ -3994,22 +3993,22 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   else
   {
     // success!
-    dam = number(10,20) + (int) (GET_LEVEL(ch) * 2.0) + GET_CHAR_SKILL(ch, SKILL_HEADBUTT);
+    dam = (int) ((GET_LEVEL(ch) / 60) * (number(-10, 20) + GET_CHAR_SKILL(ch, SKILL_HEADBUTT)));
     
     if (GET_RACE(ch) == RACE_MINOTAUR)
     {
-      dam = (int) (dam * get_property("damage.headbutt.damBonusMinotaur", 2.000));
+      dam = (int) (dam * get_property("damage.headbutt.damBonusMinotaur", 1.500));
     }
     
     // if victim is smaller, do a bit more damage
     if (get_takedown_size(victim) < get_takedown_size(ch))
-      dam = (int) (dam * get_property("damage.headbutt.damBonusVsSmaller", 1.250));
+      dam = (int) (dam * get_property("damage.headbutt.damBonusVsSmaller", 1.10));
 
     // if victim is larger, do a bit less damage
     if (get_takedown_size(victim) > get_takedown_size(ch))
-      dam = (int) (dam * get_property("damage.headbutt.damPenaltyVsLarger", 0.750));    
+      dam = (int) (dam * get_property("damage.headbutt.damPenaltyVsLarger", 0.900));    
     
-    if (melee_damage(ch, victim, dam, PHSDAM_NOPOSITION, messages))
+    if (melee_damage(ch, victim, dam, PHSDAM_NOPOSITION | PHSDAM_TOUCH, messages))
       return;
 
     if(GET_CHAR_SKILL(ch, SKILL_DOUBLE_HEADBUTT) > number(0,300))
@@ -4020,14 +4019,14 @@ void do_headbutt(P_char ch, char *argument, int cmd)
         act("With a quick move, $n pulls back $s head and rams it into you again!", FALSE, ch, 0, victim, TO_VICT);
         act("$n deftly pulls back $s head and slams it into $N again!", FALSE, ch, 0, victim, TO_NOTVICTROOM);
 
-        if (melee_damage(ch, victim, (int) (dam / j), PHSDAM_NOPOSITION, messages))
+        if (melee_damage(ch, victim, (int) (dam / j), PHSDAM_NOPOSITION | PHSDAM_TOUCH, messages))
           return;        
       }
 
       if (IS_FIGHTING(ch))
         do_throat_crush(ch, "", 0);
     }
-
+    
     tmp_num = number(1, 100 - (success / 2));
     array_index = STAT_INDEX(GET_C_CON(ch)) - STAT_INDEX(GET_C_CON(victim));
 
@@ -4872,7 +4871,8 @@ void bash(P_char ch, P_char victim)
 
   if(!(ch) ||
     !IS_ALIVE(ch) ||
-    !IS_ALIVE(victim))
+    !IS_ALIVE(victim) ||
+     IS_TRUSTED(victim))
   {
     return;
   }

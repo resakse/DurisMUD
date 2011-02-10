@@ -313,7 +313,7 @@ int wornweight(P_char ch)
   enc = 0;
   for (i = 0; i < MAX_WEAR; i++)
     if (ch->equipment[i])
-      enc += (GET_OBJ_WEIGHT(ch->equipment[i]) / 4);
+      enc += (GET_OBJ_WEIGHT(ch->equipment[i]));
   return enc;
 }
 
@@ -330,11 +330,11 @@ int MonkAcBonus(P_char ch)
     // Bonus based on martial arts skill
     b -= GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS) / 2;
     /*
-       4x penalty for encumbering worn items (small allowance for low levels
+       4x penalty for encumbering worn items with a small allowance for low levels
      */
     b += MAX(0, (4 * (wornweight(ch) - ((66 - GET_LEVEL(ch)) / 6))));
 
-    return BOUNDED(-175, b, 0);
+    return BOUNDED(-100, b, 50);
   }
   else
     return 0;
@@ -467,8 +467,9 @@ int MonkDamage(P_char ch)
   MonkSetSpecialDie(ch);
   dam = dice(ch->points.damnodice, ch->points.damsizedice);
   dam += skl_lvl / 11;
+
   if (GET_CLASS(ch, CLASS_MONK))
-    dam = BOUNDED(1, dam - wornweight(ch) + 56 - GET_LEVEL(ch), dam);
+    dam = BOUNDED(1, dam - (wornweight(ch) + 62 - GET_LEVEL(ch)), dam); 
   return dam;
 }
 
@@ -686,7 +687,7 @@ void chant_diamond_soul(P_char ch, char *argument, int cmd)
   struct affected_type af;
   char     buf[100];
   int      skl_lvl = 0;
-  int duration = MAX(5, (GET_LEVEL(ch) / 4)  + 2);
+  int duration = MAX(2, (GET_LEVEL(ch) / 16)  + 2);
 
   if (!GET_CLASS(ch, CLASS_MONK) && !IS_TRUSTED(ch))
   {
@@ -695,7 +696,7 @@ void chant_diamond_soul(P_char ch, char *argument, int cmd)
   }
 
   if (!affect_timer(ch,
-	WAIT_SEC * get_property("timer.secs.MonkDiamon", 120),
+	WAIT_SEC * get_property("timer.secs.monkDiamond", 120),
 	SKILL_DIAMOND_SOUL))
   {
     send_to_char("Your mind needs rest...\r\n", ch);
@@ -716,7 +717,7 @@ void chant_diamond_soul(P_char ch, char *argument, int cmd)
   
   if (affected_by_spell(ch, SKILL_HEROISM))
   {
-    send_to_char("You cannot call upon the diamon soul technique while under the influence of heroism.\r\n", ch);
+    send_to_char("You cannot call upon the diamond soul technique while under the influence of heroism.\r\n", ch);
     return;
   }
     
@@ -734,11 +735,11 @@ void chant_diamond_soul(P_char ch, char *argument, int cmd)
   af.flags = AFFTYPE_NODISPEL;
   af.duration = duration;
   
-  af.modifier = -(MAX(2, (int) (GET_LEVEL(ch) / 4)));
+  af.modifier = -(MAX(2, (int) (GET_LEVEL(ch) / 8)));
   af.location = APPLY_SAVING_SPELL;
   affect_to_char(ch, &af);
 
-  af.modifier = -(MAX(2, (int) (GET_LEVEL(ch) / 4)));
+  af.modifier = -(MAX(2, (int) (GET_LEVEL(ch) / 8)));
   af.location = APPLY_SAVING_PARA;
   affect_to_char(ch, &af);
 
@@ -780,7 +781,7 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     return;
   }
   
-  if (affected_by_spell(ch, SKILL_HEROISM))
+  if (affected_by_spell(ch, SKILL_DIAMOND_SOUL))
   {
     send_to_char("You cannot call upon the heroism technique while under the influence of diamond soul.\r\n", ch);
     return;
@@ -800,11 +801,11 @@ void chant_heroism(P_char ch, char *argument, int cmd)
   af.flags = AFFTYPE_NODISPEL;
   af.duration = duration;
   
-  af.modifier = MAX(2, (int) (GET_LEVEL(ch) / 4));
+  af.modifier = MAX(2, (int) (GET_LEVEL(ch) / 8));
   af.location = APPLY_HITROLL;
   affect_to_char(ch, &af);
   
-  af.modifier = MAX(2, GET_LEVEL(ch) / 4);
+  af.modifier = MAX(2, GET_LEVEL(ch) / 8);
   af.location = APPLY_DAMROLL;
   affect_to_char(ch, &af);
   
@@ -914,7 +915,7 @@ void chant_buddha_palm(P_char ch, char *argument, int cmd)
   }
 
   num_tar = GET_LEVEL(ch) / 10;
-  dam = dice(GET_LEVEL(ch), 12);
+  dam = dice(GET_LEVEL(ch) / 2, 8);
   for (vict = world[ch->in_room].people; vict; vict = hold)
   {
     hold = vict->next_in_room;
@@ -1143,12 +1144,12 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
   
   dam = (int)(dice(GET_C_DEX(ch), 3) +
               dice(GET_C_AGI(ch), 3) +
-              dice(GET_C_WIS(ch), 3)) / 3;
+              dice(GET_C_WIS(ch), 3)) / 4;
   
-  if(skl_lvl <= 60)
-    dam = (int) (0.5 * dam);
+  if(skl_lvl <= 80)
+    dam = (int) (0.4 * dam);
   else if(skl_lvl <= 90)
-    dam = (int) (0.7 * dam);
+    dam = (int) (0.6 * dam);
     
   act("&+CYou harness your full Jin, and deliver a powerful strike to&n $N!&n",
     FALSE, ch, 0, vict, TO_CHAR);
@@ -1212,7 +1213,7 @@ void chant_ki_strike(P_char ch, char *argument, int cmd)
   if (IS_PC(ch))
     skl_lvl = GET_CHAR_SKILL(ch, SKILL_KI_STRIKE);
   else
-    skl_lvl = MAX(100, GET_LEVEL(ch) * 3);
+    skl_lvl = MAX(100, GET_LEVEL(ch) * 2);
 
   if (argument)
     one_argument(argument, name);
@@ -1254,6 +1255,7 @@ void chant_ki_strike(P_char ch, char *argument, int cmd)
   }
   if (number(1, 100) > skl_lvl)
   {
+    appear(ch);
     send_to_char("You forgot the words for the chant.\r\n", ch);
     CharWait(ch, 2 * PULSE_VIOLENCE);
 
@@ -1269,6 +1271,7 @@ void chant_ki_strike(P_char ch, char *argument, int cmd)
     if (!IS_FIGHTING(ch))
       set_fighting(ch, vict);
   {
+    appear(ch);
     act("&+BYou swiftly strike at $N&+B, delivering a quick, decisive blow to a pressure point!&n",
       FALSE, ch, 0, vict, TO_CHAR);
     act("&+B$n&+B lunges at $N&+B striking $S chest, leaving $M slightly dazed!&n",

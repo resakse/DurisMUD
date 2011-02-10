@@ -122,9 +122,9 @@ M 0 500204 1 517709 100 0 0 0      * an accomplished bladesman named Llyriv
 M 0 500197 1 518464 100 0 0 0      * Kortril Levylinnae
 E 1 500118 1 18 100 0 0 0          *   a simple wooden lyre
 M 0 500201 1 521258 100 0 0 0      * Valiwilwoor
-M 0 500120 3 522869 100 0 0 0      * a young Gnomish Scientist
-M 0 500120 3 522869 100 0 0 0      * a young Gnomish Scientist
-M 0 500120 3 522869 100 0 0 0      * a young Gnomish Scientist
+M 0 500120 3 522869 100 0 0 0      * a young Gnomish scientist
+M 0 500120 3 522869 100 0 0 0      * a young Gnomish scientist
+M 0 500120 3 522869 100 0 0 0      * a young Gnomish scientist
 M 0 500045 27 523254 100 0 0 0     * a deer
 M 0 500045 27 523254 100 0 0 0     * a deer
 M 0 500045 27 523254 100 0 0 0     * a deer
@@ -309,8 +309,8 @@ M 0 500111 1 534312 100 0 0 0      * Moldug the barbarian fisherman
 M 0 500210 1 536096 100 0 0 0      * Ryllinae
 M 0 500117 1 538271 100 0 0 0      * the Prophet of Ice
 G 1 500048 1 0 100 0 0 0           *    The head of the Prophet of Ice
-F 1 500119 2 538271 100 0 0 0      * the Guardian of the Altar of Ice (following)
-F 1 500119 2 538271 100 0 0 0      * the Guardian of the Altar of Ice (following)
+F 1 500119 2 538271 100 0 0 0      * the guardian of the Altar of Ice (following)
+F 1 500119 2 538271 100 0 0 0      * the guardian of the Altar of Ice (following)
 M 0 500203 1 539268 100 0 0 0      * Valyn
 E 1 500109 1 8 100 0 0 0           *   a pair of moss-covered boots
 M 0 500190 1 540903 100 0 0 0      * the elementalist, Mugtogg the great
@@ -591,8 +591,8 @@ M 0 500058 17 556094 100 0 0 0     * an elite highwayman
 M 0 500058 17 556097 100 0 0 0     * an elite highwayman
 M 0 500116 1 556476 100 0 0 0      * the Prophet of Fire
 G 1 500047 1 0 100 0 0 0           *    the head of the Prophet of Fire
-F 1 500118 2 556476 100 0 0 0      * the Guardian of the Altar of Fire (following)
-F 1 500118 2 556476 100 0 0 0      * the Guardian of the Altar of Fire (following)
+F 1 500118 2 556476 100 0 0 0      * the guardian of the Altar of Fire (following)
+F 1 500118 2 556476 100 0 0 0      * the guardian of the Altar of Fire (following)
 M 0 500058 17 556893 100 0 0 0     * an elite highwayman
 M 0 500195 1 556925 100 0 0 0      * Jaer, the skull
 E 1 500117 1 7 100 0 0 0           *   a pair of wooden shin guards covered with soot

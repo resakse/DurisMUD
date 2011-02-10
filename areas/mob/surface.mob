@@ -1289,7 +1289,7 @@ sk 0 1 4
 #500087
 nightcrawler shadow~
 &+La &+bn&+Li&+bg&+Lh&+bt&+Lc&+br&+La&+bw&+Ll&+be&+Lr&N~
-&+LA Nightcrawler &+bShadow &+Lfloats in and out through the shadows here.
+&+LA nightcrawler &+bshadow &+Lfloats in and out through the shadows here.
 ~
    &+LThis dark, wavering figure floats above the ground, ready to envelope
 &+Lthose around it in an essence of death.  As this shadowy form of a
@@ -1739,7 +1739,7 @@ ew 0 33554432 -1
 8 8 0
 #500118
 guardian fire~
-&+Lthe &+RGuardian &+Lof &+rthe Altar of &+RFire&n~
+&+Lthe &+Rguardian &+Lof &+rthe Altar of &+RFire&n~
 &+Lthe &+RGuardian &+Lof &+rthe Altar of &+RFire &+Lstands here, motionless.&n
 ~
 ~
@@ -1750,18 +1750,18 @@ ef 0 1 -1
 8 8 0
 #500119
 guardian ice~
-&+Lthe &+CGuardian &+Lof &+bthe Altar of &+CIce&n~
+&+Lthe &+Cguardian &+Lof &+bthe Altar of &+CIce&n~
 &+LThe &+CGuardian &+Lof &+bthe Altar of &+CIce &+Lstands here, motionless.&n
 ~
 ~
 67108874 0 0 0 0 0 0 0 S
-ew 0 1 -1
+ie 0 1 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
 #500120
 young gnomish scientist~
-&+Wa young &+RGn&+romi&+Rsh &+RSc&+rie&+Rnt&+ri&+Rst&n~
+&+Wa young &+RGn&+romi&+Rsh &+Rsc&+rie&+Rnt&+ri&+Rst&n~
 &+WA young &+RGn&+romi&+Rsh Sc&+rie&+Rnt&+ri&+Rst &+Wwanders around this &+gSecluded Island&+W.&n
 ~
 ~

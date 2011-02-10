@@ -380,9 +380,9 @@ void event_bearhug(P_char ch, P_char victim, P_obj obj, void *data)
   {
     int dam = BOUNDED(40, (int)(GET_LEVEL(ch) + (3 * (int)(GET_C_STR(ch) - GET_C_STR(victim))) * (float)get_property("grapple.bearhug.dmgmod", 1.00) * ((float)GET_CHAR_SKILL(ch, SKILL_BEARHUG) / 100)), 300);
     dam += number(-20, 20); 
-    raw_damage(ch, victim, dam, RAWDAM_DEFAULT, &messages);
+    melee_damage(ch, victim, dam, PHSDAM_TOUCH, &messages);
     notch_skill(ch, SKILL_BEARHUG, (int)get_property("skill.notch.bearhug", 10));
-    check_shields(ch, victim, dam, RAWDAM_DEFAULT);
+    //check_shields(ch, victim, dam, RAWDAM_DEFAULT);
     if (IS_ALIVE(ch) && IS_ALIVE(victim))
       add_event(event_bearhug, PULSE_VIOLENCE/2, ch, victim, 0, 0, 0, 0);
   }
@@ -768,8 +768,8 @@ void armlock_check(P_char attacker, P_char grappler)
 
   gclvl = GET_CHAR_SKILL(grappler, SKILL_GRAPPLER_COMBAT)/10;
   percent = GET_CHAR_SKILL(grappler, SKILL_ARMLOCK);
-
-  if (((percent > number(1, 101)) && !number(0, 15-gclvl)) ||
+  
+  if (((percent > number(1, 101)) && !number(0, 20-gclvl)) ||
       notch_skill(grappler, SKILL_ARMLOCK, (int)get_property("skill.notch.armlock", 5)) ||
       notch_skill(grappler, SKILL_GRAPPLER_COMBAT, (int)get_property("skill.notch.grapplercombat", 1))
      )
@@ -1231,8 +1231,6 @@ void event_leglock(P_char ch, P_char victim, P_obj obj, void *data)
     }
   }
 }
-
-
 
 void do_groundslam(P_char ch, char *argument, int cmd)
 {
