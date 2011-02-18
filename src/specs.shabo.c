@@ -532,7 +532,7 @@ int shabo_trap_south(P_obj obj, P_char ch, int cmd, char *arg)
               TO_CHAR);
           act("&+L$n gets hit with a stunning force!", TRUE, ch, 0, 0,
               TO_NOTVICT);
-          Stun(ch, (dice(1, 3) * PULSE_VIOLENCE));
+          Stun(ch, ch, (dice(1, 3) * PULSE_VIOLENCE));
           SET_POS(ch, POS_KNEELING + GET_STAT(ch));
           CharWait(ch, PULSE_VIOLENCE * 1);
         }

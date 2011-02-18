@@ -332,7 +332,7 @@ int MonkAcBonus(P_char ch)
     /*
        4x penalty for encumbering worn items with a small allowance for low levels
      */
-    b += MAX(0, (4 * (wornweight(ch) - ((66 - GET_LEVEL(ch)) / 6))));
+    b += MAX(0, (3 * (wornweight(ch) - ((60 - GET_LEVEL(ch)) / 6))));
 
     return BOUNDED(-100, b, 50);
   }
@@ -469,7 +469,7 @@ int MonkDamage(P_char ch)
   dam += skl_lvl / 11;
 
   if (GET_CLASS(ch, CLASS_MONK))
-    dam = BOUNDED(1, dam - (wornweight(ch) + 62 - GET_LEVEL(ch)), dam); 
+    dam = BOUNDED(1, dam - (wornweight(ch) + 56 - GET_LEVEL(ch)), dam); 
   return dam;
 }
 
@@ -3712,7 +3712,7 @@ void do_true_strike(P_char ch, char *argument, int cmd)
         ("The pain is to much to bear and totaly numbs your senses.\n\r",
          vict);
       act("$n grimaces with pain.", FALSE, vict, 0, 0, TO_ROOM);
-      Stun(vict, PULSE_VIOLENCE * 2);
+      Stun(vict, ch, PULSE_VIOLENCE * 2);
     }
     else if (x <= 60)
     {

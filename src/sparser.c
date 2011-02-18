@@ -959,8 +959,6 @@ bool NewSaves(P_char ch, int save_type, int mod)
      save file scale has changed, so need to change meaning of the mods to it.
      For now, we just multiply the mod by 5.
    */
-//  if(GET_LEVEL(ch) > 57)
-  //      return TRUE;
   
   save += (ch->specials.apply_saving_throw[save_type] + mod) * 5;
 

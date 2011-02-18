@@ -465,10 +465,12 @@ void do_stampede(P_char ch, char *arg, int cmd)
     if (!should_area_hit(ch, mob))
       continue;
     
-    /* can't stampede some races */
+    /* can't stampede some beings */
 
     if ((GET_RACE(mob) == RACE_GHOST) ||
         (GET_RACE(mob) == RACE_A_ELEMENTAL) ||
+        (GET_RACE(mob) == RACE_EFREET) ||
+        (IS_ELITE(mob)) ||
         (IS_AFFECTED4(mob, AFF4_PHANTASMAL_FORM)))
       continue;
 
@@ -476,10 +478,7 @@ void do_stampede(P_char ch, char *arg, int cmd)
       continue;
 
     missed = 0;
-    /*
-       if (number(1, 150) > (GET_LEVEL(ch) * 2 - STAT_INDEX(GET_C_AGI(mob)) +
-       dice(10, 5))) {
-     */
+
     if(!number(0, 9))
     { }
     else if (number(1, 100) >
@@ -498,7 +497,7 @@ void do_stampede(P_char ch, char *arg, int cmd)
       act("You crash wildly into $N!", 0, ch, 0, mob, TO_CHAR);
       act("$n crashes wildly into you!", 0, ch, 0, mob, TO_VICT);
       SET_POS(mob, POS_PRONE + GET_STAT(mob));
-      Stun(mob, PULSE_VIOLENCE * 1 / 2);
+      Stun(mob, ch, PULSE_VIOLENCE * 1 / 2);
       count++;
     }
     set_fighting(mob, ch);

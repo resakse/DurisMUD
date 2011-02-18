@@ -2679,52 +2679,77 @@ int blind(P_char ch, P_char victim, int duration)
 }
 
 //---------------------------------------------------------------------------------
-void Stun(P_char ch, int duration)
+void Stun(P_char stunnee, P_char stunner, int duration)
 {
   struct affected_type af;
+  int attlevel = GET_LEVEL(stunner), deflevel = GET_LEVEL(stunnee);
 
-  if(!IS_ALIVE(ch))
+  if(!IS_ALIVE(stunnee))
   {
     return;
   }
   
 // Elite mobs are !stun. Oct08 -Lucrot
-  if(IS_ELITE(ch))
+  if(IS_ELITE(stunnee))
   {
     return;
   }
   
 // Greater races are harder to stun based on their level. Level 60+ greater races
 // cannot be stunned when this function is called. Oct08 -Lucrot
-  if(IS_GREATER_RACE(ch) || GET_RACE(ch) == RACE_PLANT || 
-                            GET_RACE(ch) == RACE_GOLEM || 
-                            GET_RACE(ch) == RACE_CONSTRUCT)
+  if(IS_GREATER_RACE(stunnee) || 
+     GET_RACE(stunnee) == RACE_PLANT || 
+     GET_RACE(stunnee) == RACE_GOLEM || 
+     GET_RACE(stunnee) == RACE_CONSTRUCT)
   {
-    if(!number(0, (int) BOUNDED(0, (60 - GET_LEVEL(ch)), 59)))
+    if(!number(0, (int) BOUNDED(0, (60 - deflevel), 59)))
     {
       return;
     }
   }
 
-  if(IS_AFFECTED2(ch, AFF2_STUNNED))
+  if(IS_AFFECTED2(stunnee, AFF2_STUNNED))
   {
-    send_to_char("&+wIf you could get more stunned you would.\r\n", ch);
+    send_to_char("&+wIf you could get more stunned you would.\r\n", stunnee);
     return;
   }
 
-  memset(&af, 0, sizeof(af));
-  af.type = SPELL_PWORD_STUN;
-  af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
-  af.bitvector2 = AFF2_STUNNED;
-  af.duration = duration;
-  affect_to_char(ch, &af);
-
-  send_to_char("&+wThe world starts spinning, and your ears are ringing!\r\n", ch);
-  act("$n&n is &+Wstunned!&n", TRUE, ch, 0, 0, TO_ROOM);
-  if(IS_FIGHTING(ch))
+  // SAVING_FEAR now protects against stun, and protects based upon level difference of the two foes - Jexni 2/13/11
+  // You have 2 chances to save against stun effect, as stun is fairly nasty, 2nd chance halves duration
+  int chance = BOUNDED(-25, attlevel - deflevel, 25);
+  
+  if(!NewSaves(stunnee, SAVING_FEAR, chance))
   {
-    stop_fighting(ch);
-  }
+     memset(&af, 0, sizeof(af));
+     af.type = SPELL_PWORD_STUN;
+     af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
+     af.bitvector2 = AFF2_STUNNED;
+     af.duration = duration;
+     affect_to_char(stunnee, &af);
+
+     send_to_char("&+wThe world starts spinning, and your ears are ringing!\r\n", stunnee);
+     act("$n&n is &+Wstunned!&n", TRUE, stunnee, 0, 0, TO_ROOM);
+     if(IS_FIGHTING(stunnee))
+     {
+       stop_fighting(stunnee);
+     }
+   }
+   else if(!NewSaves(stunnee, SAVING_FEAR, chance + number(0, 3)))
+   {
+     memset(&af, 0, sizeof(af));
+     af.type = SPELL_PWORD_STUN;
+     af.flags = AFFTYPE_SHORT | AFFTYPE_NOSHOW | AFFTYPE_NODISPEL;
+     af.bitvector2 = AFF2_STUNNED;
+     af.duration = duration / 2;
+     affect_to_char(stunnee, &af);
+
+     send_to_char("&+wWow that &+Rsmarts... &+Wbut you manage to recover quickly!\r\n", stunnee);
+     act("$n&n is momentarily &+Wdazed...&n", TRUE, stunnee, 0, 0, TO_ROOM);
+     if(!number(0, 3) && IS_FIGHTING(stunnee))
+     {
+       stop_fighting(stunnee);
+     }
+   }
 }
 
 //---------------------------------------------------------------------------------
@@ -3263,7 +3288,7 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
       }
 
       SET_POS(ch, number(0, 2) + GET_STAT(ch));
-      Stun(ch, (100 * dam / GET_MAX_HIT(ch)));  /* 1-100  */
+      Stun(ch, ch, (100 * dam / GET_MAX_HIT(ch)));  /* 1-100  */
       /* also can knock them out for a time.  */
       if (number(1, (100 * dam / GET_MAX_HIT(ch))) >
           number(STAT_INDEX(GET_C_CON(ch)) / 2,
@@ -3297,7 +3322,7 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
         }
 
         SET_POS(chr, number(0, 2) + GET_STAT(chr));
-        Stun(chr, (100 * dam / GET_MAX_HIT(chr)));
+        Stun(chr, chr, (100 * dam / GET_MAX_HIT(chr)));
 
         if (number(1, (100 * dam / GET_MAX_HIT(chr))) >
             number(STAT_INDEX(GET_C_CON(chr)) / 2,

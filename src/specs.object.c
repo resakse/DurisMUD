@@ -2293,7 +2293,7 @@ int bloodfeast(P_obj obj, P_char ch, int cmd, char *arg)
 int bloodfeast(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      curr_time, dam;
-  P_char   kala;
+  P_char   victim;
   P_char   temp_ch;
 
   /*
@@ -2326,31 +2326,31 @@ int bloodfeast(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (obj->loc.wearing != ch)
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   
   if(!number(0, 24) &&
     CheckMultiProcTiming(ch) &&
-    !IS_RACEUNDEAD(kala))
+    !IS_RACEUNDEAD(victim))
   {
 
-    dam = BOUNDED(0, (GET_HIT(kala) + 9), 100);
-    act("$p &+Lemits a &n&+rblood curdling &+RsCrEaM!!!&n", TRUE, ch, obj, kala,
+    dam = BOUNDED(0, (GET_HIT(victim) + 9), 100);
+    act("$p &+Lemits a &n&+rblood curdling &+RsCrEaM!!!&n", TRUE, ch, obj, victim,
         TO_CHAR);
-    act("$p &+Lemits a &n&+rblood curdling &+RsCrEaM!!!&n", TRUE, ch, obj, kala,
+    act("$p &+Lemits a &n&+rblood curdling &+RsCrEaM!!!&n", TRUE, ch, obj, victim,
         TO_NOTVICT);
-    act("$p &+Lemits a &n&+rblood curdling &+RsCrEaM!!!&n", TRUE, ch, obj, kala,
+    act("$p &+Lemits a &n&+rblood curdling &+RsCrEaM!!!&n", TRUE, ch, obj, victim,
         TO_VICT);
     act("&+WYou feel energy flowing from $N&+W into you!&N", TRUE, ch, obj,
-        kala, TO_CHAR);
+        victim, TO_CHAR);
     act("&+LYou feel the lifeforce being drained from your limbs!&N", TRUE, ch,
-        obj, kala, TO_VICT);
+        obj, victim, TO_VICT);
     act("&+L$N&+L looks &n&+wpale &+Las $s lifeforce is drained by $n!&N", TRUE,
-        ch, obj, kala, TO_NOTVICT);
+        ch, obj, victim, TO_NOTVICT);
     vamp(ch, dam / 2, (int) (GET_MAX_HIT(ch) * 1.3));
 
-    GET_HIT(kala) -= dam;
+    GET_HIT(victim) -= dam;
     return (TRUE);
   }
   
@@ -2360,7 +2360,7 @@ int bloodfeast(P_obj obj, P_char ch, int cmd, char *arg)
 
 int mist_claymore(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -2375,18 +2375,18 @@ int mist_claymore(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act("&+W$n's&N $q &+Wglows with an &+Geerie flame&+W!!&N", TRUE, ch, obj,
-      kala, TO_NOTVICT);
+      victim, TO_NOTVICT);
   act("&+WYour&N $q &+Wglows with an &+Geerie flame&+W!!&N", TRUE, ch, obj,
-      kala, TO_CHAR);
+      victim, TO_CHAR);
   act("&+W$n's&N $q &+Wglows with an &+Geerie flame&+W!!&N", TRUE, ch, obj,
-      kala, TO_VICT);
-  spell_incendiary_cloud(50, ch, NULL, 0, kala, obj);
+      victim, TO_VICT);
+  spell_incendiary_cloud(50, ch, NULL, 0, victim, obj);
   return (TRUE);
 }
 
@@ -4005,7 +4005,7 @@ int dranum_mask(P_obj obj, P_char ch, int cmd, char *arg)
 int sunblade(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      curr_time, rand;
-  P_char   kala;
+  P_char   victim;
   P_char   temp_ch;
 
   //check for periodic event calls
@@ -4042,35 +4042,35 @@ int sunblade(P_obj obj, P_char ch, int cmd, char *arg)
   if (obj->loc.wearing != ch)
     return (FALSE);
   
-  kala = (P_char) arg;
+  victim = (P_char) arg;
   
-  if(!kala)
+  if(!victim)
     return (FALSE);
   
   if(!number(0, 24) &&
      CheckMultiProcTiming(ch)) // 4% chance
   {
     act("&+r$n's&n $q &+Rexplodes&n&+r in a torrent of pure &+Rflame!&n",
-      TRUE, ch, obj, kala, TO_CHAR);
+      TRUE, ch, obj, victim, TO_CHAR);
     act("&+r$n's&n $q &+Rexplodes&n&+r in a torrent of pure &+Rflame!&n",
-      TRUE, ch, obj, kala, TO_NOTVICT);
+      TRUE, ch, obj, victim, TO_NOTVICT);
     act("&+r$n's&n $q &+Rexplodes&n&+r in a torrent of pure &+Rflame!&n",
-      TRUE, ch, obj, kala, TO_VICT);
+      TRUE, ch, obj, victim, TO_VICT);
     
     if(OUTSIDE(ch))
-      spell_sunray(GET_LEVEL(ch), ch, NULL, 0, kala, 0);
+      spell_sunray(GET_LEVEL(ch), ch, NULL, 0, victim, 0);
     else if(number(0, 1))
-      spell_solar_flare(GET_LEVEL(ch), ch, NULL, 0, kala, NULL);
+      spell_solar_flare(GET_LEVEL(ch), ch, NULL, 0, victim, NULL);
     else if(number(0, 1))
-      spell_firebrand(GET_LEVEL(ch), ch, NULL, 0, kala, 0);
+      spell_firebrand(GET_LEVEL(ch), ch, NULL, 0, victim, 0);
     else
-      spell_immolate(GET_LEVEL(ch), ch, NULL, 0, kala, 0);
+      spell_immolate(GET_LEVEL(ch), ch, NULL, 0, victim, 0);
    
     if(GET_C_LUCK(ch) > number(1, 1000))
     {
-      act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, kala, TO_CHAR);
-      act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, kala, TO_NOTVICT);
-      act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, kala, TO_VICT);
+      act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, victim, TO_CHAR);
+      act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, victim, TO_NOTVICT);
+      act("$p &+memits a &+Msoft glow&n&+m.&n", TRUE, ch, obj, victim, TO_VICT);
       spell_heal(GET_LEVEL(ch), ch, 0, 0, ch, 0);
     }
     
@@ -4239,7 +4239,7 @@ int vigor_mask(P_obj obj, P_char ch, int cmd, char *arg)
 
 int mace_of_sea(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -4254,21 +4254,21 @@ int mace_of_sea(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
-  act("&+b$n's&N $q &n&+rglows blue...&N", TRUE, ch, obj, kala, TO_NOTVICT);
-  act("&+bYour&N $q &n&+rglows blue...&N", TRUE, ch, obj, kala, TO_CHAR);
-  act("&+b$n's&N $q &n&+rglows blue...&N", TRUE, ch, obj, kala, TO_VICT);
-  spell_lightning_bolt(40, ch, NULL, 0, kala, obj);
+  act("&+b$n's&N $q &n&+rglows blue...&N", TRUE, ch, obj, victim, TO_NOTVICT);
+  act("&+bYour&N $q &n&+rglows blue...&N", TRUE, ch, obj, victim, TO_CHAR);
+  act("&+b$n's&N $q &n&+rglows blue...&N", TRUE, ch, obj, victim, TO_VICT);
+  spell_lightning_bolt(40, ch, NULL, 0, victim, obj);
   return (TRUE);
 }
 
 int serpent_blade(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -4283,25 +4283,25 @@ int serpent_blade(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act("$p&+L carried by $n &+WLASHES &+Rout as it bites $N!&N", TRUE, ch, obj,
-      kala, TO_NOTVICT);
+      victim, TO_NOTVICT);
   act("$p&+L carried by you &+WLASHES &+Rout as it bites $N!&N", TRUE, ch,
-      obj, kala, TO_CHAR);
+      obj, victim, TO_CHAR);
   act("$p&+L carried by $n &+WLASHES &+Rout as it bites you!&N", TRUE, ch,
-      obj, kala, TO_VICT);
-  spell_poison(40, ch, 0, 0, kala, obj);
-  spell_minor_paralysis(40, ch, NULL, 0, kala, obj);
+      obj, victim, TO_VICT);
+  spell_poison(40, ch, 0, 0, victim, obj);
+  spell_minor_paralysis(40, ch, NULL, 0, victim, obj);
   return (TRUE);
 }
 
 int kvasir_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -4316,8 +4316,8 @@ int kvasir_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
@@ -4327,53 +4327,53 @@ int kvasir_dagger(P_obj obj, P_char ch, int cmd, char *arg)
   case 0:
     act
       ("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_NOTVICT);
+       TRUE, ch, obj, victim, TO_NOTVICT);
     act
       ("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_CHAR);
+       TRUE, ch, obj, victim, TO_CHAR);
     act
       ("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_VICT);
-    spell_cone_of_cold(60, ch, NULL, SPELL_TYPE_SPELL, kala, obj);
+       TRUE, ch, obj, victim, TO_VICT);
+    spell_cone_of_cold(60, ch, NULL, SPELL_TYPE_SPELL, victim, obj);
     break;
 
   case 1:
     act
       ("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_NOTVICT);
+       TRUE, ch, obj, victim, TO_NOTVICT);
     act
       ("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_CHAR);
+       TRUE, ch, obj, victim, TO_CHAR);
     act
       ("&+WFrost runs down the blade of a&n $q&L&+Was the spirit of the &+Cice dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_VICT);
-    spell_ice_storm(60, ch, NULL, 0, kala, obj);
+       TRUE, ch, obj, victim, TO_VICT);
+    spell_ice_storm(60, ch, NULL, 0, victim, obj);
     break;
 
   case 2:
     act
       ("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_NOTVICT);
+       TRUE, ch, obj, victim, TO_NOTVICT);
     act
       ("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_CHAR);
+       TRUE, ch, obj, victim, TO_CHAR);
     act
       ("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_VICT);
-    spell_immolate(60, ch, NULL, 0, kala, obj);
+       TRUE, ch, obj, victim, TO_VICT);
+    spell_immolate(60, ch, NULL, 0, victim, obj);
     break;
 
   case 3:
     act
       ("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_NOTVICT);
+       TRUE, ch, obj, victim, TO_NOTVICT);
     act
       ("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_CHAR);
+       TRUE, ch, obj, victim, TO_CHAR);
     act
       ("&+RFlames &+Wcrackle along the blade of a&n $q&L&+Was the spirit of the &+Rfire dragon &+Wstirs in its eternal prison...&n",
-       TRUE, ch, obj, kala, TO_VICT);
-    spell_firestorm(60, ch, NULL, 0, kala, obj);
+       TRUE, ch, obj, victim, TO_VICT);
+    spell_firestorm(60, ch, NULL, 0, victim, obj);
     break;
 
   }
@@ -4385,7 +4385,7 @@ int kvasir_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 int lich_spine(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int save;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -4400,21 +4400,21 @@ int lich_spine(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act("&+b$n's&N $q &n&+rglows with a devilish light...&N", TRUE, ch, obj,
-      kala, TO_NOTVICT);
+      victim, TO_NOTVICT);
   act("&+bYour&N $q &n&+rglows with a devilish light...&N", TRUE, ch, obj,
-      kala, TO_CHAR);
+      victim, TO_CHAR);
   act("&+b$n's&N $q &n&+rglows with a devilish light...&N", TRUE, ch, obj,
-      kala, TO_VICT);
-  save = kala->specials.apply_saving_throw[SAVING_SPELL];
-  kala->specials.apply_saving_throw[SAVING_SPELL] = 20;
-  spell_wither(60, ch, NULL, 0, kala, obj);
-  kala->specials.apply_saving_throw[SAVING_SPELL] = save;
+      victim, TO_VICT);
+  save = victim->specials.apply_saving_throw[SAVING_SPELL];
+  victim->specials.apply_saving_throw[SAVING_SPELL] = 20;
+  spell_wither(60, ch, NULL, 0, victim, obj);
+  victim->specials.apply_saving_throw[SAVING_SPELL] = save;
 
   return (TRUE);
 }
@@ -4587,7 +4587,7 @@ int treasure_chest(P_obj obj, P_char ch, int cmd, char *argument)
 
 int demo_scimitar(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -4602,30 +4602,30 @@ int demo_scimitar(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 35))
     return (FALSE);
   act("$p &+Lcarried by $n&+L slices into $N's&+L soul...&n", TRUE, ch, obj,
-      kala, TO_NOTVICT);
-  act("Your $q &+Lslices into $N's&+L soul...&n", TRUE, ch, obj, kala,
+      victim, TO_NOTVICT);
+  act("Your $q &+Lslices into $N's&+L soul...&n", TRUE, ch, obj, victim,
       TO_CHAR);
   act("$p &+Lcarried by $n&+L slices into your&+L soul...&n", TRUE, ch, obj,
-      kala, TO_VICT);
+      victim, TO_VICT);
 
-  GET_VITALITY(kala) = MAX(0, GET_VITALITY(kala) - 40);
+  GET_VITALITY(victim) = MAX(0, GET_VITALITY(victim) - 40);
 
-  act("&+L$N&+L goes limp for a moment.&n", FALSE, ch, 0, kala, TO_NOTVICT);
-  act("&+LYou&+L goes limp for a moment.&n", FALSE, ch, 0, kala, TO_VICT);
-  act("&+L$N&+L goes limp for a moment.&n", FALSE, ch, 0, kala, TO_CHAR);
+  act("&+L$N&+L goes limp for a moment.&n", FALSE, ch, 0, victim, TO_NOTVICT);
+  act("&+LYou&+L goes limp for a moment.&n", FALSE, ch, 0, victim, TO_VICT);
+  act("&+L$N&+L goes limp for a moment.&n", FALSE, ch, 0, victim, TO_CHAR);
 
   return (TRUE);
 }
 
 int orb_of_destruction(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -4640,21 +4640,21 @@ int orb_of_destruction(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 15))
     return (FALSE);
   act
     ("&+L$n's&N $q &n&+bdraws &+Benergy&n&+b from the surroundings and &+LBLASTS $N!&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+LYour&N $q &n&+bdraws &+Benergy&n&+b from the surroundings and &+LBLASTS $N!&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+L$n's&N $q &n&+bdraws &+Benergy&n&+b from the surroundings and &+LBLASTS YOU!&N",
-     TRUE, ch, obj, kala, TO_VICT);
-  spell_disintegrate(40, ch, NULL, SPELL_TYPE_SPELL, kala, obj);
+     TRUE, ch, obj, victim, TO_VICT);
+  spell_disintegrate(40, ch, NULL, SPELL_TYPE_SPELL, victim, obj);
   return (TRUE);
 }
 
@@ -7927,7 +7927,7 @@ int yuan_ti_stone(P_obj obj, P_char ch, int cmd, char *arg)
 int trans_tower_sword(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000, curr_time;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -7975,22 +7975,22 @@ int trans_tower_sword(P_obj obj, P_char ch, int cmd, char *arg)
   if (!dam)
     return FALSE;
 
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 20))
     return (FALSE);
   act
     ("$n's $q &+Wglows white&n, unleashing a massive ball of ice towards $N!",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("Your $q &+Wglows white&n, unleashing a massive ball of ice towards $N!",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("$n's $q &+Wglows white&n, unleashing a massive ball of ice towards _YOU_!",
-     TRUE, ch, obj, kala, TO_VICT);
-  spell_harm(50, ch, NULL, 0, kala, obj);
-  spell_arieks_shattering_iceball(30, ch, NULL, SPELL_TYPE_SPELL, kala, obj);
+     TRUE, ch, obj, victim, TO_VICT);
+  spell_harm(50, ch, NULL, 0, victim, obj);
+  spell_arieks_shattering_iceball(30, ch, NULL, SPELL_TYPE_SPELL, victim, obj);
   return (TRUE);
 }
 
@@ -8722,7 +8722,7 @@ int serpent_of_miracles(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      rand;
   int      curr_time;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -8752,49 +8752,49 @@ int serpent_of_miracles(P_obj obj, P_char ch, int cmd, char *arg)
         case 0:
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and infuse&n&+rs you with magic.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_globe(20, ch, 0, 0, ch, 0);
           break;
         case 1:
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and infuse&n&+rs you with magic.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_detect_invisibility(20, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
           break;
         case 2:
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and infuse&n&+rs you with magic.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_haste(20, ch, 0, 0, ch, 0);
           break;
         case 3:
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and infuse&n&+rs you with magic.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_fly(20, ch, NULL, 0, ch, 0);
           break;
         case 4:                // Start for bless proc messages.
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and ble&n&+rsses you with ho&+Wly power.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_regeneration(20, ch, NULL, 0, ch, 0);
           break;
         case 5:
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and ble&n&+rsses you with ho&+Wly power.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_armor(20, ch, 0, 0, ch, 0);
           break;
         case 6:
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and ble&n&+rsses you with ho&+Wly power.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_soulshield(20, ch, 0, 0, ch, 0);
           break;
         case 7:
           act
             ("&n&+WThe writh&n&+Ring serpent of mi&n&+rracles tightens ar&+Wound your a&+Rrm and ble&n&+rsses you with ho&+Wly power.&n",
-             TRUE, ch, obj, kala, TO_CHAR);
+             TRUE, ch, obj, victim, TO_CHAR);
           spell_pantherspeed(20, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
           break;
         }
@@ -8952,7 +8952,7 @@ int madman_shield(P_obj obj, P_char ch, int cmd, char *arg)
 
 int madman_mangler(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   kala;
+  P_char   victim;
 
   if (cmd == CMD_SET_PERIODIC)
     return FALSE;
@@ -9003,14 +9003,14 @@ int madman_mangler(P_obj obj, P_char ch, int cmd, char *arg)
   if (cmd != CMD_MELEE_HIT)
     return (FALSE);
 
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
-  act("&+L$n's&N $q &n&+Lgoes &+rmad...&N", TRUE, ch, obj, kala, TO_NOTVICT);
-  act("&+LYour&N $q &n&+Lgoes &+rmad...&N", TRUE, ch, obj, kala, TO_CHAR);
-  act("&+L$n's&N $q &n&+Lgoes &+rmad...&N", TRUE, ch, obj, kala, TO_VICT);
+  act("&+L$n's&N $q &n&+Lgoes &+rmad...&N", TRUE, ch, obj, victim, TO_NOTVICT);
+  act("&+LYour&N $q &n&+Lgoes &+rmad...&N", TRUE, ch, obj, victim, TO_CHAR);
+  act("&+L$n's&N $q &n&+Lgoes &+rmad...&N", TRUE, ch, obj, victim, TO_VICT);
   spell_blur(60, ch, 0, 0, ch, 0);
   return (TRUE);
 }
@@ -9139,7 +9139,7 @@ int blindbadge(P_obj obj, P_char ch, int cmd, char *arg)
 int confusionsword(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
   int      rand;
 
   /*
@@ -9155,30 +9155,30 @@ int confusionsword(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   rand = number(1, 10);
   if (rand < 8)
   {
-    act("&n$n's&N $q &n&+Mcreates a strange sound...&N", TRUE, ch, obj, kala,
+    act("&n$n's&N $q &n&+Mcreates a strange sound...&N", TRUE, ch, obj, victim,
         TO_NOTVICT);
-    act("&nYour&N $q &n&+Mcreates a strange sound...&N", TRUE, ch, obj, kala,
+    act("&nYour&N $q &n&+Mcreates a strange sound...&N", TRUE, ch, obj, victim,
         TO_CHAR);
-    act("&n$n's&N $q &n&+Mcreates a strange sound... &N", TRUE, ch, obj, kala,
+    act("&n$n's&N $q &n&+Mcreates a strange sound... &N", TRUE, ch, obj, victim,
         TO_VICT);
-    spell_inflict_pain(40, ch, 0, 0, kala, obj);
+    spell_inflict_pain(40, ch, 0, 0, victim, obj);
   }
   else
   {
     act("&n$n's&N $q &n&+Mcreates a &+YCRACKED&+M sound...&N", TRUE, ch, obj,
-        kala, TO_NOTVICT);
+        victim, TO_NOTVICT);
     act("&nYour&N $q &n&+Mcreates a &+YCRACKED&+M sound...&N", TRUE, ch, obj,
-        kala, TO_CHAR);
+        victim, TO_CHAR);
     act("&n$n's&N $q &n&+Mcreates a &+YCRACKED&+M sound... &N", TRUE, ch, obj,
-        kala, TO_VICT);
+        victim, TO_VICT);
     spell_ego_blast(30, ch, 0, 0, ch, obj);
   }
   return (TRUE);
@@ -9272,7 +9272,7 @@ int fumblegaunts(P_obj obj, P_char ch, int cmd, char *arg)
 int brainripper(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
   int      rand;
 
   /*
@@ -9288,25 +9288,25 @@ int brainripper(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   rand = number(1, 10);
   if (rand < 8)
   {
-    act("&+W$n's&N $q &+Wglows!&N", TRUE, ch, obj, kala, TO_NOTVICT);
-    act("&+WYour&N $q &+Wglows!!&N", TRUE, ch, obj, kala, TO_CHAR);
-    act("&+W$n's&N $q &+Wglows!!&N", TRUE, ch, obj, kala, TO_VICT);
-    spell_inflict_pain(40, ch, 0, 0, kala, obj);
-    spell_feeblemind(60, ch, NULL, 0, kala, 0);
+    act("&+W$n's&N $q &+Wglows!&N", TRUE, ch, obj, victim, TO_NOTVICT);
+    act("&+WYour&N $q &+Wglows!!&N", TRUE, ch, obj, victim, TO_CHAR);
+    act("&+W$n's&N $q &+Wglows!!&N", TRUE, ch, obj, victim, TO_VICT);
+    spell_inflict_pain(40, ch, 0, 0, victim, obj);
+    spell_feeblemind(60, ch, NULL, 0, victim, 0);
   }
   else
   {
-    act("&+W$n's&N $q &+Lglows!&N", TRUE, ch, obj, kala, TO_NOTVICT);
-    act("&+WYour&N $q &+Lglows!!&N", TRUE, ch, obj, kala, TO_CHAR);
-    act("&+W$n's&N $q &+Lglows!!&N", TRUE, ch, obj, kala, TO_VICT);
+    act("&+W$n's&N $q &+Lglows!&N", TRUE, ch, obj, victim, TO_NOTVICT);
+    act("&+WYour&N $q &+Lglows!!&N", TRUE, ch, obj, victim, TO_CHAR);
+    act("&+W$n's&N $q &+Lglows!!&N", TRUE, ch, obj, victim, TO_VICT);
     berserk(ch, 6 * PULSE_VIOLENCE);
   }
   return (TRUE);
@@ -9350,7 +9350,7 @@ int stormbringer(P_obj obj, P_char ch, int cmd, char *arg)
       victim, TO_CHAR);
   act("&+cA &+Wforce&+c of &+Cwinds&+c throws $n backwards.&n", TRUE, victim,
       obj, ch, TO_NOTVICT);
-  Stun(victim, (dice(1, 2) * PULSE_VIOLENCE));*/
+  Stun(victim, ch, (dice(1, 2) * PULSE_VIOLENCE));*/
 
   spell_cyclone(30, ch, 0, SPELL_TYPE_SPELL, victim, 0);
 
@@ -9410,7 +9410,7 @@ int stormbringer(P_obj obj, P_char ch, int cmd, char *arg)
 int hammer_titans(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
   int      rand;
 
   /*
@@ -9426,20 +9426,20 @@ int hammer_titans(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
-  act("&+W$n's&N $q &+Bsurges with electricity!&N", TRUE, ch, obj, kala,
+  act("&+W$n's&N $q &+Bsurges with electricity!&N", TRUE, ch, obj, victim,
       TO_NOTVICT);
-  act("&+WYour&N $q &+Bsurges with electricity!&N", TRUE, ch, obj, kala,
+  act("&+WYour&N $q &+Bsurges with electricity!&N", TRUE, ch, obj, victim,
       TO_CHAR);
-  act("&+W$n's&N $q &+Bsurges with electricity!&N", TRUE, ch, obj, kala,
+  act("&+W$n's&N $q &+Bsurges with electricity!&N", TRUE, ch, obj, victim,
       TO_VICT);
-  spell_lightning_bolt(60, ch, 0, SPELL_TYPE_SPELL, kala, 0);
-  if (char_in_list(kala))
-    spell_lightning_bolt(60, ch, 0, SPELL_TYPE_SPELL, kala, 0);
+  spell_lightning_bolt(60, ch, 0, SPELL_TYPE_SPELL, victim, 0);
+  if (char_in_list(victim))
+    spell_lightning_bolt(60, ch, 0, SPELL_TYPE_SPELL, victim, 0);
   return (TRUE);
 
   return (TRUE);
@@ -9658,7 +9658,7 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
 int fun_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -9673,30 +9673,30 @@ int fun_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 1))
     return (FALSE);
   act
     ("&+w$n's&N $q &N strikes out in a &+rfre&+Rnzy&N of &+cs&+Cp&+We&+Ce&+cd&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+wYour&N $q &N strikes out in a &+rfre&+Rnzy&N of &+cs&+Cp&+We&+Ce&+cd&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+w$n's&N $q &N strikes out in a &+rfre&+Rnzy&N of &+cs&+Cp&+We&+Ce&+cd&N",
-     TRUE, ch, obj, kala, TO_VICT);
-  spell_magic_missile(30, ch, NULL, 0, kala, 0);
+     TRUE, ch, obj, victim, TO_VICT);
+  spell_magic_missile(30, ch, NULL, 0, victim, 0);
   if (ch->specials.fighting)
-    spell_ice_missile(30, ch, NULL, SPELL_TYPE_SPELL, kala, 0);
+    spell_ice_missile(30, ch, NULL, SPELL_TYPE_SPELL, victim, 0);
   return (TRUE);
 }
 
 int mankiller(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -9710,12 +9710,12 @@ int mankiller(P_obj obj, P_char ch, int cmd, char *arg)
     return (FALSE);
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
 
 
-  if (GET_SEX(kala) == SEX_FEMALE)
+  if (GET_SEX(victim) == SEX_FEMALE)
     return (FALSE);
 
   if (number(0, 15))
@@ -9723,52 +9723,52 @@ int mankiller(P_obj obj, P_char ch, int cmd, char *arg)
 
   /*act
     ("&+w$n's&N $q &Nscreams out with a female voice &+W'&+MBegone you filthy male!&+W'&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+w$n's&N $q &Nscreams out with a female voice &+W'&+MBegone you filthy male!&+W'&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+w$n's&N $q &Nscreams out with a female voice &+W'&+MBegone you filthy male!&+W'&N",
-     TRUE, ch, obj, kala, TO_VICT);*/
+     TRUE, ch, obj, victim, TO_VICT);*/
   switch (number(0, 2))
   {
   case 0:
     act
     ("&+w$n's&N $q &Nlets out a fearsome &+MSCREAM&n, directed at $N!&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("You grin slightly, as $q&N &+wspirit's &+MSCREAM&n causes $N to writhe in agony!&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+w$n's&N $q pierces your mind with a &+wsupernatural&n &+MSCREAM&n, stunning you!&N",
-     TRUE, ch, obj, kala, TO_VICT);
-  Stun(kala, (int) (PULSE_VIOLENCE * 0.5));
+     TRUE, ch, obj, victim, TO_VICT);
+  Stun(victim, ch, (int) (PULSE_VIOLENCE * 0.5));
   return (TRUE);
   break;
   case 1:
     act
     ("&+w$n's&N $q &Nscreams out with a female voice &+W'&+MBegone, you filthy male!&+W'&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+w$n's&N $q &Nscreams out with a female voice &+W'&+MBegone, you filthy male!&+W'&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+w$n's&N $q &Nscreams out with a female voice &+W'&+MBegone, you filthy male!&+W'&N",
-     TRUE, ch, obj, kala, TO_VICT);
-  spell_nightmare(60, ch, NULL, 0, kala, 0);
+     TRUE, ch, obj, victim, TO_VICT);
+  spell_nightmare(60, ch, NULL, 0, victim, 0);
   return (TRUE);
   break;
   case 2:
     act
     ("&+w$n's $q&n emits an ear piercing &+RSHRIEK&n!&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("$q&n emits an ear piercing &+RSHRIEK&n! You instinctively cover your ears.&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+RARGH!&n As $n's $q&n emits a piercing &+RSHRIEK&n, you are filled with excruciating pain!&N",
-     TRUE, ch, obj, kala, TO_VICT);
-  spell_shatter(56, ch, NULL, 0, kala, 0);
+     TRUE, ch, obj, victim, TO_VICT);
+  spell_shatter(56, ch, NULL, 0, victim, 0);
   return (TRUE);
   break;
   }
@@ -9777,7 +9777,7 @@ int mankiller(P_obj obj, P_char ch, int cmd, char *arg)
 int dragonslayer(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -9821,11 +9821,11 @@ int dragonslayer(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
 
-  if (!IS_DRAGON(kala))
+  if (!IS_DRAGON(victim))
     return (FALSE);
 
 
@@ -9833,11 +9833,11 @@ int dragonslayer(P_obj obj, P_char ch, int cmd, char *arg)
     return (FALSE);
   act
     ("&+GYour $q &+Wglows &+Rbright &+rred &+Gat the sight of a &+gdr&+Gag&+gon&N.",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+G$n's $q &+Wglows &+Rbright &+rred &+Gat the sight of a &+gdr&+Gag&+gon&N.&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
-  spell_burning_hands(40, ch, NULL, 0, kala, obj);
+     TRUE, ch, obj, victim, TO_NOTVICT);
+  spell_burning_hands(40, ch, NULL, 0, victim, obj);
   spell_stone_skin(26, ch, 0, 0, ch, 0);
   spell_haste(26, ch, 0, 0, ch, 0);
   return (TRUE);
@@ -9924,7 +9924,7 @@ int lifereaver(P_obj obj, P_char ch, int cmd, char *arg)
 int rax_red_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -9939,22 +9939,22 @@ int rax_red_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 1))
     return (FALSE);
   act
     ("&+L$n's&N $q &+r st&+Rrik&+res &+Lout in a &+RF&+rUR&+RY &+Lof &+rde&+Rst&+rruc&+Rt&+rio&+Rn&+L!&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+LYour&N $q &+r st&+Rrik&+res &+Lout in a &+RF&+rUR&+RY &+Lof &+rde&+Rst&+rruc&+Rt&+rio&+Rn&+L!&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+L$n's&N $q &+r st&+Rrik&+res &+Lout in a &+RF&+rUR&+RY &+Lof &+rde&+Rst&+rruc&+Rt&+rio&+Rn&+L!&N",
-     TRUE, ch, obj, kala, TO_VICT);
+     TRUE, ch, obj, victim, TO_VICT);
   if (ch->specials.fighting)
-    spell_bigbys_crushing_hand(60, ch, NULL, SPELL_TYPE_SPELL, kala, 0);
+    spell_bigbys_crushing_hand(60, ch, NULL, SPELL_TYPE_SPELL, victim, 0);
   return (TRUE);
 }
 
@@ -10429,7 +10429,7 @@ int circlet_of_light(P_obj obj, P_char ch, int cmd, char *arg)
 int ljs_sword(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -10444,19 +10444,19 @@ int ljs_sword(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act("&+W$n's&N $q &+Lfl&+rar&+Res &+Lup with darkness...&N", TRUE, ch, obj,
-      kala, TO_NOTVICT);
+      victim, TO_NOTVICT);
   act("&+WYour&N $q &+Lfl&+rar&+Res &+Lup with darkness...&N", TRUE, ch, obj,
-      kala, TO_CHAR);
+      victim, TO_CHAR);
   act("&+W$n's&N $q &+Lfl&+rar&+Res &+Lup with darkness...&N", TRUE, ch, obj,
-      kala, TO_VICT);
+      victim, TO_VICT);
 /* This is just a temporary spell, the spell will probably be made something else later, but just getting it to work for now! */
-  spell_greater_spirit_anguish(25, ch, NULL, SPELL_TYPE_SPELL, kala, obj);
+  spell_greater_spirit_anguish(25, ch, NULL, SPELL_TYPE_SPELL, victim, obj);
   return (TRUE);
 }
 
@@ -10465,7 +10465,7 @@ int ljs_sword(P_obj obj, P_char ch, int cmd, char *arg)
 int wuss_sword(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -10480,25 +10480,25 @@ int wuss_sword(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
-  act("&+W$n's&N $q &+Wglows &+Ybrightly&+w...&N", TRUE, ch, obj, kala,
+  act("&+W$n's&N $q &+Wglows &+Ybrightly&+w...&N", TRUE, ch, obj, victim,
       TO_NOTVICT);
-  act("&+WYour&N $q &+Wglows &+Ybrightly&+w...&N", TRUE, ch, obj, kala,
+  act("&+WYour&N $q &+Wglows &+Ybrightly&+w...&N", TRUE, ch, obj, victim,
       TO_CHAR);
-  act("&+W$n's&N $q &+Wglows &+Ybrightly&+w...&N", TRUE, ch, obj, kala,
+  act("&+W$n's&N $q &+Wglows &+Ybrightly&+w...&N", TRUE, ch, obj, victim,
       TO_VICT);
-  spell_magic_missile(1, ch, NULL, 0, kala, obj);
+  spell_magic_missile(1, ch, NULL, 0, victim, obj);
   return (TRUE);
 }
 
 int head_guard_sword(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -10513,18 +10513,18 @@ int head_guard_sword(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act("&+W$n's&N $q &+rB&+RU&+YRS&+RT&+rS &+Linto &+rfl&+Ram&+Yes&+L...&N",
-      TRUE, ch, obj, kala, TO_NOTVICT);
+      TRUE, ch, obj, victim, TO_NOTVICT);
   act("&+WYour&N $q &+rB&+RU&+YRS&+RT&+rS &+Linto &+rfl&+Ram&+Yes&+L...&N",
-      TRUE, ch, obj, kala, TO_CHAR);
+      TRUE, ch, obj, victim, TO_CHAR);
   act("&+W$n's&N $q &+rB&+RU&+YRS&+RT&+rS &+Linto &+rfl&+Ram&+Yes&+L...&N",
-      TRUE, ch, obj, kala, TO_VICT);
-  spell_magma_burst(30, ch, NULL, 0, kala, obj);
+      TRUE, ch, obj, victim, TO_VICT);
+  spell_magma_burst(30, ch, NULL, 0, victim, obj);
   return (TRUE);
 }
 
@@ -10532,7 +10532,7 @@ int alch_rod(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      rand;
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -10547,28 +10547,28 @@ int alch_rod(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act
     ("&+W$n's&N $q &+Lcalls upon &+cmy&+Cst&+Wi&+Cca&+cl &+rpo&+Rwe&+rrs&+L...&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+WYour&N $q &+Lcalls upon &+cmy&+Cst&+Wi&+Cca&+cl &+rpo&+Rwe&+rrs&+L...&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+W$n's&N $q &+Lcalls upon &+cmy&+Cst&+Wi&+Cca&+cl &+rpo&+Rwe&+rrs&+L...&N",
-     TRUE, ch, obj, kala, TO_VICT);
+     TRUE, ch, obj, victim, TO_VICT);
   rand = number(0, 1);
   switch (rand)
   {
   case 0:
-    spell_living_stone(30, ch, 0, 0, kala, obj);
+    spell_living_stone(30, ch, 0, 0, victim, obj);
     break;
   case 1:
-    spell_shadow_monster(30, ch, NULL, 0, kala, obj);
+    spell_shadow_monster(30, ch, NULL, 0, victim, obj);
     break;
   }
   return (TRUE);
@@ -10581,7 +10581,7 @@ int dragon_skull_helm(P_obj obj, P_char ch, int cmd, char *argument)
   int      rand;
   int      curr_time;
   P_char   temp_ch;
-  P_char   kala;
+  P_char   victim;
 
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
@@ -10626,42 +10626,42 @@ int dragon_skull_helm(P_obj obj, P_char ch, int cmd, char *argument)
       {
       case 0:
         act("&+LYour $q&+L causes your eyes to &+Rg&+rlo&+Rw&+L.&n", TRUE, ch,
-            obj, kala, TO_CHAR);
+            obj, victim, TO_CHAR);
         spell_infravision(60, ch, 0, 0, ch, 0);
         break;
       case 1:
         act("&+LYour $q&+L causes your eyes to &+Wglow&+L.&n", TRUE, ch, obj,
-            kala, TO_CHAR);
+            victim, TO_CHAR);
         spell_detect_invisibility(60, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
         break;
       case 2:
         act("&+LYour $q&+L causes your eyes to &+Yglow&+L.&n", TRUE, ch, obj,
-            kala, TO_CHAR);
+            victim, TO_CHAR);
         spell_detect_good(60, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
         break;
       case 3:
         act("&+LYour $q&+L causes your eyes to &+wglow&+L.&n", TRUE, ch, obj,
-            kala, TO_CHAR);
+            victim, TO_CHAR);
         spell_farsee(60, ch, NULL, 0, ch, 0);
         break;
       case 4:
         act("&+LYour $q&+L causes your eyes to &+Lglow&+L.&n", TRUE, ch, obj,
-            kala, TO_CHAR);
+            victim, TO_CHAR);
         spell_sense_life(60, ch, 0, 0, ch, 0);
         break;
       case 5:
         act("&+LYour $q&+L causes your eyes to &+Wg&+wlo&+Ww&+L.&n", TRUE, ch,
-            obj, kala, TO_CHAR);
+            obj, victim, TO_CHAR);
         spell_hawkvision(60, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
         break;
       case 6:
         act("&+LYour $q&+L causes your eyes to &+rglow&+L.&n", TRUE, ch, obj,
-            kala, TO_CHAR);
+            victim, TO_CHAR);
         spell_detect_evil(60, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
         break;
       case 7:
         act("&+LYour $q&+L causes your eyes to &+Bglow&+L.&n", TRUE, ch, obj,
-            kala, TO_CHAR);
+            victim, TO_CHAR);
         spell_detect_magic(60, ch, NULL, SPELL_TYPE_SPELL, ch, 0);
         break;
       }
@@ -10671,19 +10671,19 @@ int dragon_skull_helm(P_obj obj, P_char ch, int cmd, char *argument)
   }
   if (IS_FIGHTING(ch))          // && !number(0,9))
   {
-    kala = ch->specials.fighting;
-    if ((IS_UNDEAD(kala)) && IS_NPC(kala))      //return FALSE;  // ignores pcs and living
+    victim = ch->specials.fighting;
+    if ((IS_UNDEAD(victim)) && IS_NPC(victim))      //return FALSE;  // ignores pcs and living
     {
       act
         ("&+L$n's $q &+L causes &+W$m &+Leyes to &+Rp&+ru&+Rl&+rs&+Re &+Lwith &+Bincredible &+Wenergy&+L.",
-         TRUE, ch, obj, kala, TO_NOTVICT);
+         TRUE, ch, obj, victim, TO_NOTVICT);
       act
         ("&+LYour $q &+L causes your eyes to &+Rp&+ru&+Rl&+rs&+Re &+Lwith &+Bincredible &+Wenergy&+L.",
-         TRUE, ch, obj, kala, TO_CHAR);
+         TRUE, ch, obj, victim, TO_CHAR);
       act
         ("&+L$n's $q &+L causes &+W$n &+Leyes to &+Rp&+ru&+Rl&+rs&+Re &+Lwith &+Bincredible &+Wenergy&+L.",
-         TRUE, ch, obj, kala, TO_VICT);
-      spell_destroy_undead(60, ch, NULL, 0, kala, 0);
+         TRUE, ch, obj, victim, TO_VICT);
+      spell_destroy_undead(60, ch, NULL, 0, victim, 0);
     }
     return FALSE;
   }
@@ -10758,7 +10758,7 @@ int ljs_armor(P_obj obj, P_char ch, int cmd, char *arg)
   int      cur_time;
 
   P_char   vict;
-  P_char   kala;
+  P_char   victim;
   struct affected_type *af;
 
   if (cmd == CMD_SET_PERIODIC)
@@ -10819,7 +10819,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      rand;
   int      curr_time;
-  P_char   kala;
+  P_char   victim;
   P_obj    ingred;
   P_char   temp_ch;
 
@@ -10929,7 +10929,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
 int sinister_tactics_staff(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -10944,28 +10944,28 @@ int sinister_tactics_staff(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act
     ("&+WYour $p &+Br&+be&+Bs&+bo&+Bn&+ba&+Bt&+be&+Bs &+Wwith the scream of &+Lt&+ror&+Rtu&+rre&+Ld &+csouls&+W!&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act("&+W$n's $p &+Br&+be&+Bs&+bo&+Bn&+ba&+Bt&+be&+Bs &+Was it strikes $N.",
-      TRUE, ch, obj, kala, TO_NOTVICT);
+      TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+WYour head is filled with the scream of &+Lt&+ror&+Rtu&+rre&+Ld &+csouls&+W!&N",
-     TRUE, ch, obj, kala, TO_VICT);
-  if (!fear_check(kala))
-    do_flee(kala, 0, 2);
+     TRUE, ch, obj, victim, TO_VICT);
+  if (!fear_check(victim))
+    do_flee(victim, 0, 2);
   return (TRUE);
 }
 
 int shard_frozen_styx_water(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -10980,21 +10980,21 @@ int shard_frozen_styx_water(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
-  if (!kala)
+  victim = (P_char) arg;
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act
     ("&+LYour $p &+Lgets &+Cice &+Wcold&+L causing $N&+L's head to &+Bfreeze&+L!&N",
-     TRUE, ch, obj, kala, TO_CHAR);
+     TRUE, ch, obj, victim, TO_CHAR);
   act
     ("&+L$n's $p &+Lgets &+Cice &+Wcold&+L causing $N&+L's head to &+Bfreeze&+L!&N",
-     TRUE, ch, obj, kala, TO_NOTVICT);
+     TRUE, ch, obj, victim, TO_NOTVICT);
   act
     ("&+L$n's $p &+Lgets &+Cice &+Wcold&+L causing your head to &+Bfreeze&+L!&N",
-     TRUE, ch, obj, kala, TO_VICT);
-  spell_feeblemind(35, ch, NULL, 0, kala, 0);
+     TRUE, ch, obj, victim, TO_VICT);
+  spell_feeblemind(35, ch, NULL, 0, victim, 0);
   return (TRUE);
 }
 
@@ -11216,7 +11216,7 @@ int out_of_god_bp(P_obj obj, P_char ch, int cmd, char *arg)
   {                             // we have a winner!
     if (number(0, 4) == 4)
     {                           // let em out heh
-      act("$n opens the leather flap with a heoric show of might.", FALSE, ch,
+      act("$n opens the leather flap with a heroic show of might.", FALSE, ch,
           obj, tch, TO_NOTVICT);
       act("$n climbs out and quickly closes the flap behind $m.", FALSE, ch,
           obj, tch, TO_NOTVICT);
@@ -11241,7 +11241,7 @@ int out_of_god_bp(P_obj obj, P_char ch, int cmd, char *arg)
       act
         ("You attempt open &+ya large leather backpack&N but fail miserably, falling on your ass.",
          FALSE, ch, obj, tch, TO_CHAR);
-      Stun(ch, (dice(1, 3) * PULSE_VIOLENCE));
+      Stun(ch, ch, (dice(1, 3) * PULSE_VIOLENCE));
       SET_POS(ch, POS_PRONE + GET_STAT(ch));
       CharWait(ch, PULSE_VIOLENCE * 1);
 
@@ -11626,7 +11626,7 @@ int staff_shadow_summoning(P_obj obj, P_char ch, int cmd, char *arg)
 int rod_of_magic(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -11641,20 +11641,20 @@ int rod_of_magic(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
+  victim = (P_char) arg;
 
-  if (!kala)
+  if (!victim)
     return (FALSE);
   if (number(0, 15))
     return (FALSE);
   act("&+L$n's&N $q &+Lspews &+wforth &+mmeta&+Bmagic&+W!&N", TRUE, ch, obj,
-      kala, TO_NOTVICT);
+      victim, TO_NOTVICT);
   act("&+LYour&N $q &+Lspews &+wforth &+mmeta&+Bmagic&+W!&N", TRUE, ch, obj,
-      kala, TO_CHAR);
+      victim, TO_CHAR);
   act("&+L$n's&N $q &+Lspews &+wforth &+mmeta&+Bmagic&+W!&N&N", TRUE, ch, obj,
-      kala, TO_VICT);
+      victim, TO_VICT);
   if (ch->specials.fighting)
-    spell_stornogs_lowered_magical_res(60, ch, NULL, SPELL_TYPE_SPELL, kala,
+    spell_stornogs_lowered_magical_res(60, ch, NULL, SPELL_TYPE_SPELL, victim,
                                        0);
   return (TRUE);
 }
@@ -11662,7 +11662,7 @@ int rod_of_magic(P_obj obj, P_char ch, int cmd, char *arg)
 int nightcrawler_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
-  P_char   kala;
+  P_char   victim;
 
   /*
      check for periodic event calls
@@ -11677,20 +11677,20 @@ int nightcrawler_dagger(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!OBJ_WORN(obj) || (obj->loc.wearing != ch))
     return (FALSE);
-  kala = (P_char) arg;
+  victim = (P_char) arg;
 
-  if (!kala)
+  if (!victim)
     return (FALSE);
   if (number(0, 30))
     return (FALSE);
   act("&+LA beam of d&+barkne&+Lss erupts from the tip of $n's&N $q!&N", TRUE,
-      ch, obj, kala, TO_NOTVICT);
+      ch, obj, victim, TO_NOTVICT);
   act("&+LA beam of d&+barkne&+Lss erupts from the tip of your&N $q!&N", TRUE,
-      ch, obj, kala, TO_CHAR);
+      ch, obj, victim, TO_CHAR);
   act("&+LA beam of d&+barkne&+Lss erupts from the tip of $n's&N $q!&N&N",
-      TRUE, ch, obj, kala, TO_VICT);
+      TRUE, ch, obj, victim, TO_VICT);
   if (ch->specials.fighting)
-    spell_devitalize(50, ch, NULL, SPELL_TYPE_SPELL, kala, 0);
+    spell_devitalize(50, ch, NULL, SPELL_TYPE_SPELL, victim, 0);
   return (TRUE);
 }
 
@@ -13670,20 +13670,20 @@ int critical_attack_proc(P_obj obj, P_char ch, int cmd, char *arg)
     {
     case 0:
       act("&nYou slam the &+yhandle&n of your $q in $N's face!&n", FALSE, ch, obj, victim, TO_CHAR);
-	  act("&n$n makes a quick move and slams the &+yhandle&n of $s $q in your face!&n", FALSE, ch, obj, victim, TO_VICT);
-	  act("&n$n makes a quick move and slams the &+yhandle&n of $s $q in $N's face!&n", FALSE, ch, obj, victim, TO_NOTVICT);
+	  act("$n makes a quick move and slams the &+yhandle&n of $s $q in your face!&n", FALSE, ch, obj, victim, TO_VICT);
+	  act("$n makes a quick move and slams the &+yhandle&n of $s $q in $N's face!&n", FALSE, ch, obj, victim, TO_NOTVICT);
 	  blind(ch, victim, 2 * PULSE_VIOLENCE);
       break;
     case 1:
       act("&nYou point your&n $q at&n $N and utter a word of &+rc&+Ro&+rm&+Rm&+ra&+Rn&+rd&n!", FALSE, ch, obj, victim, TO_CHAR);
-	  act("&n$n points $s $q at &+L_YOU_&n and utters a word of &+rc&+Ro&+rm&+Rm&+ra&+Rn&+rd&n!", FALSE, ch, obj, victim, TO_VICT);
-	  act("&n$n points $s $q at $N and utters a word of &+rc&+Ro&+rm&+Rm&+ra&+Rn&+rd&n!", FALSE, ch, obj, victim, TO_NOTVICT);
-	  Stun(victim, PULSE_VIOLENCE);
+	  act("$n points $s $q at &+L_YOU_&n and utters a word of &+rc&+Ro&+rm&+Rm&+ra&+Rn&+rd&n!", FALSE, ch, obj, victim, TO_VICT);
+	  act("$n points $s $q at $N and utters a word of &+rc&+Ro&+rm&+Rm&+ra&+Rn&+rd&n!", FALSE, ch, obj, victim, TO_NOTVICT);
+	  Stun(victim, ch, PULSE_VIOLENCE);
       break;
     case 2:
       act("&nYou &+rhook&n your $q around $N's leg and pull $M to the ground!&n", FALSE, ch, obj, victim, TO_CHAR);
-	  act("&n$n suddenly &+rhooks&n $s $q around your leg and pulls you to the ground!&n", FALSE, ch, obj, victim, TO_VICT);
-	  act("&n$n suddenly &+rhooks&n $s $q around&n $N's leg and pulls $M to the ground!&n", FALSE, ch, obj, victim, TO_NOTVICT);
+	  act("$n suddenly &+rhooks&n $s $q around your leg and pulls you to the ground!&n", FALSE, ch, obj, victim, TO_VICT);
+	  act("$n suddenly &+rhooks&n $s $q around&n $N's leg and pulls $M to the ground!&n", FALSE, ch, obj, victim, TO_NOTVICT);
 	  SET_POS(victim, POS_SITTING + GET_STAT(victim));
 	}
   return (TRUE);

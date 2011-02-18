@@ -451,7 +451,7 @@ void spell_stunning_visions(int level, P_char ch, char *arg, int type,
                             P_char victim, P_obj obj)
 {
 
-  int percent = 0, percentvictim = 0, percentch = 0, save = 0;
+  int percent = level + number(-10, 10);
 
   if(!(ch) ||
     !(victim) ||
@@ -478,30 +478,25 @@ void spell_stunning_visions(int level, P_char ch, char *arg, int type,
     send_to_char("Your target is already stunned!\r\n", ch);
     return;
   }
-  
-  save = victim->specials.apply_saving_throw[SAVING_SPELL];
-  
-  percentch = (int) ((GET_C_POW(ch) + GET_LEVEL(ch)) * get_property("spell.power.word.Stun", 1.5));
-  percentvictim = GET_C_POW(victim) + GET_LEVEL(victim) - save;
-  
-  if(IS_PC_PET(victim))
-  {
-    percentvictim *= 2;
-  }
-  
-// Two constrained random numbers compared to each other.
-  percent = (number(0, percentch)) - (number(0, percentvictim));
+ 
+  if(NewSaves(ch, SAVING_SPELL, 0))
+    percent /= 2;
 
-  act("$n's &+cstunning visions dance before&n $N's &+ceyes.&n",
-    FALSE, ch, 0, victim, TO_NOTVICT);
+  if(IS_PC_PET(victim))
+    percent *= 2;
+  
+  percent += (level - GET_LEVEL(victim));
+
+  percent += (GET_C_POW(ch) - GET_C_POW(victim)) / 3;
+
   act("&+cYou send a wave of incredible visions toward&n $N.",
     FALSE, ch, 0, victim, TO_CHAR);
-      
-  if (GET_LEVEL(victim) > 58 && (percent < 10))
+  
+  if(percent < 11)
   {
-    send_to_char("&+cNo visions can stun it!\r\n", ch);
-    act("$n &+ctries to mesmerize you with some stunning visions!\r\n",
+    act("$n &+ctries to mesmerize you with some stunning visions, but fails miserably!\r\n",
       FALSE, ch, 0, victim, TO_VICT);
+    act("&+cYour visions fail to impress your foe...", FALSE, ch, 0, victim, TO_CHAR);
     return;
   }
 
@@ -520,7 +515,7 @@ void spell_stunning_visions(int level, P_char ch, char *arg, int type,
     }
     
     stop_fighting(ch);
-    Stun(victim, PULSE_VIOLENCE * 3);
+    Stun(victim, ch, PULSE_VIOLENCE * 3);
     return;
   }
   else if (percent > 60)
@@ -538,7 +533,7 @@ void spell_stunning_visions(int level, P_char ch, char *arg, int type,
     }
     
     stop_fighting(ch);
-    Stun(victim, PULSE_VIOLENCE * 25 / 10);
+    Stun(victim, ch, PULSE_VIOLENCE * 2);
     return;
   }
   else if (percent > 40)
@@ -555,10 +550,10 @@ void spell_stunning_visions(int level, P_char ch, char *arg, int type,
       stop_fighting(victim);
     }
     stop_fighting(ch);
-    Stun(victim, PULSE_VIOLENCE * 2);
+    Stun(victim, ch, PULSE_VIOLENCE * number(1, 2));
     return;
   }
-  else if (percent > 15)
+  else if (percent >= 11)
   {
     act("&+cYour wave of visions seems to slightly mesmerize&n $N!",
       FALSE, ch, 0, victim, TO_CHAR);
@@ -572,7 +567,7 @@ void spell_stunning_visions(int level, P_char ch, char *arg, int type,
       stop_fighting(victim);
     }
     stop_fighting(ch);
-    Stun(victim, PULSE_VIOLENCE);
+    Stun(victim, ch, PULSE_VIOLENCE);
     return;
   }
 }
@@ -1258,9 +1253,9 @@ void spell_hammer(int level, P_char ch, char *arg, int type, P_char victim,
   if(!number(0, 19))
   {
     if(stunself)
-      Stun(ch, PULSE_VIOLENCE);
+      Stun(ch, ch, PULSE_VIOLENCE);
     else
-      Stun(victim, PULSE_VIOLENCE);
+      Stun(victim, ch, PULSE_VIOLENCE);
   }
 }
 

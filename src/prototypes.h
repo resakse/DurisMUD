@@ -775,7 +775,7 @@ void clear_events_type(P_char, int);
 void Events(void);
 void ReSchedule(void);
 void StartRegen(P_char, int);
-void Stun(P_char, int);
+void Stun(P_char, P_char, int);
 void init_events(void);
 typedef void (*event_func)(P_char ch, P_char victim, P_obj obj, void *data);
 void add_event(event_func, int, P_char, P_char, P_obj, int, void*, int);

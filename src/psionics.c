@@ -1055,7 +1055,7 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
     if(spec_affect < 10)
     {
       if(!IS_STUNNED(victim))
-        Stun(victim, PULSE_VIOLENCE * 1);
+        Stun(victim, ch, PULSE_VIOLENCE * 1);
       
       if(IS_HUMANOID(victim))
       {
@@ -1850,7 +1850,7 @@ void spell_inflict_pain(int level, P_char ch, char *arg, int type, P_char victim
          StatSave(victim, APPLY_POW, POW_DIFF(ch, victim)) &&
          level > GET_LEVEL(victim) &&
          GET_C_POW(ch) > number(1, 1000))
-          Stun(ch, PULSE_VIOLENCE * number(2, 5) / 2);
+          Stun(victim, ch, PULSE_VIOLENCE * number(2, 5) / 2);
 }
 
 void spell_intellect_fortress(int level, P_char ch, char *arg, int type,
@@ -2018,7 +2018,7 @@ void spell_confuse(int level, P_char ch, char *arg, int type, P_char victim,
       case 1:
       case 2:
       case 3:
-        Stun(tch, (2 * PULSE_VIOLENCE));
+        Stun(tch, ch, (2 * PULSE_VIOLENCE));
         break;
       case 4:
       case 5:

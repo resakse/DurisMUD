@@ -1489,7 +1489,7 @@ void do_charge(P_char ch, char *argument, int cmd)
     /*   if(!damage(ch, victim, number(GET_LEVEL(ch), 6 * GET_LEVEL(ch)), TYPE_CHARGE))
        SET_POS(victim, POS_PRONE + GET_STAT(victim));
        CharWait(victim, PULSE_VIOLENCE);
-       Stun(victim, PULSE_VIOLENCE * 3);
+       Stun(victim, ch, PULSE_VIOLENCE * 3);
        if(char_in_list(ch)) CharWait(ch, PULSE_VIOLENCE * 4);
 
      */
@@ -2652,15 +2652,15 @@ void event_combination(P_char ch, P_char victim, P_obj obj, void *data)
     messages.victim = monk_combos_messages[stage][move][2];
     messages.room = monk_combos_messages[stage][move][0];
     result = melee_damage(ch, victim, dam, PHSDAM_TOUCH, &messages);
-    //if(result == DAM_NONEDEAD && stage == 6 && GET_LEVEL(ch) >= 50)
-   // {
-    //  act("Your final move stuns $N!", FALSE, ch, 0, victim, TO_CHAR);
-    //  act("You are STUNNED!", FALSE, ch, 0, victim, TO_VICT);
-    //  act("$N is stunned by $n's vicious combination!", FALSE, ch, 0, 
-victim,
-    //      TO_NOTVICT);
-    //  Stun(victim, PULSE_VIOLENCE * 2);
-    //}
+    if(result == DAM_NONEDEAD && stage == 6 && GET_LEVEL(ch) >= 50)
+    {
+      Stun(victim, ch, PULSE_VIOLENCE * 2);
+      if(IS_AFFECTED2(ch, AFF2_STUNNED))
+      {
+        act("Your final move stuns $N!", FALSE, ch, 0, victim, TO_CHAR);
+        act("$N is stunned by $n's vicious combination!", FALSE, ch, 0, victim, TO_NOTVICT);
+      }
+    }
     stage++;
   }
   while (result == DAM_NONEDEAD && skill >= skill_req &&
@@ -3235,7 +3235,7 @@ bool kick(P_char ch, P_char victim)
         if(!number(0, 24) &&
            !IS_STUNNED(victim))
         {
-          Stun(victim, (PULSE_VIOLENCE * number(1, 2)));
+          Stun(victim, ch, (PULSE_VIOLENCE * number(1, 2)));
         }
         stop_fighting(victim);
         CharWait(victim, (int) (PULSE_VIOLENCE *
@@ -3257,7 +3257,7 @@ bool kick(P_char ch, P_char victim)
       
       if(!number(0, 24))
       {
-        Stun(victim, (PULSE_VIOLENCE * number(1, 3)));
+        Stun(victim, ch, (PULSE_VIOLENCE * number(1, 3)));
       }
       stop_fighting(victim);
       CharWait(victim, (int) (PULSE_VIOLENCE * get_property("kick.groinkick.victimlag", 1.000)));
@@ -3681,20 +3681,8 @@ void do_headbutt(P_char ch, char *argument, int cmd)
 {
   P_char   victim, tch;
   struct affected_type af;
-  int      success, tmp_num, array_index;
-  float    headbutt_dex_bonus_table[] = { 1, 1.2, 1.4, 1.5, 1.6, 1.8, 2.0, 2.2 };
-  float    headbutt_agi_bonus_table[] = { 1.05, 1.1, 1.15, 1.20, 1.25, 1.30, 1.40, 1.50 };
-  float    headbutt_lvl_bonus_table[] = { 1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.8, 2, 2.2, 2.4};
-  float    headbutt_exp_bonus_table[] = { 1, 2, 4, 6, 8, 9, 10, 11, 12, 14};
-  float    headbutt_con_bonus_table[] = { 1, 1.2, 1.3, 1.4, 1.5, 1.8, 2.0, 2.1, 2.2, 2.4 };
-
-  float    headbutt_learned_mult_table[] =
-    { 1.0, 1.0, 1.1, 1.1, 1.3, 1.3, 1.3, 1.6, 2.0, 2.5, 3.0, 3.0, 3.0, 3.0 };
-  float    headbutt_level_mult_table[] =
-    { 1.0, 1.8, 2.1, 2.5, 3.0, 3.5, 4.0, 4.5, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0,
-    8.0, 8.0, 8.0, 8.0
-  };
-
+  int      success, tmp_num;
+  
   struct damage_messages messages_humanoid = {
     "You leave a huge, &+rred&N swollen lump on $N's temple.",
     "Everything is blurry after $n's head came crashing into your skull.",
@@ -3751,25 +3739,39 @@ void do_headbutt(P_char ch, char *argument, int cmd)
         TO_CHAR);
     return;
   }
-  /*
+
+  int attlevel = GET_LEVEL(ch), deflevel = GET_LEVEL(victim);
+  if (IS_TRUSTED(victim) || isname("_nobutt_", GET_NAME(victim)))
+  {
+    act("$N is clearly too quick and clever for such a brutish attack.", FALSE, ch, 0, victim, TO_CHAR);
+    return;
+  }
+  
   if (!HAS_FOOTING(ch))
   {
     send_to_char("You have no footing here!\n", ch);
     return;
   }
-  */
+ 
   if (!CanDoFightMove(ch, victim))
     return;
 
-  // both ch and victim have to be front ranked...
-
   if(GET_POS(victim) !=  POS_STANDING)
   {
-    act("$n attempted to headbutt you.", FALSE, ch, 0, victim, TO_VICT);
-    act("Headbutt requires you to be able to reach his head!", FALSE, ch, 0, 0, TO_CHAR);
-    CharWait(ch, (int) (1 * WAIT_SEC));
+    if(get_takedown_size(victim) + 1 == get_takedown_size(ch) && GET_POS(victim) == POS_KNEELING)
+    {
+    }
+    else if(get_takedown_size(victim) + 2 == get_takedown_size(ch) && GET_POS(victim) == POS_SITTING)
+    {
+    }
+    else
+    {
+      act("$n attempted to headbutt you.", FALSE, ch, 0, victim, TO_VICT);
+      act("Headbutt requires you to be able to reach his head!", FALSE, ch, 0, 0, TO_CHAR);
+      CharWait(ch, (int) (1 * WAIT_SEC));
     
-    return;
+      return;
+    }
   }
 
   if (!on_front_line(ch) || !on_front_line(victim))
@@ -3780,7 +3782,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   
   if (IS_PC(ch) && IS_PC(victim))
   {
-    if (get_takedown_size(victim) > get_takedown_size(ch) +1 &&
+    if (get_takedown_size(victim) > get_takedown_size(ch) + 1 &&
         GET_POS(victim) > POS_KNEELING)
     {
       act("You'd have to grow considerably to do that!", FALSE, ch, 0, 0,
@@ -3789,7 +3791,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     }
   }
 
-  if (get_takedown_size(victim) < get_takedown_size(ch) - 1)
+  if (GET_POS(victim) == POS_STANDING && get_takedown_size(victim) < get_takedown_size(ch) - 1)
   {
     act("It is far too small.  You're better off squashing it.",
         FALSE, ch, 0, 0, TO_CHAR);
@@ -3809,8 +3811,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   }
 
   if(IS_ELITE(victim) ||
-    IS_GREATER_RACE(victim) ||
-    IS_TRUSTED(victim))
+    IS_GREATER_RACE(victim))
   {
     send_to_char("They are far too skilled to fall for such a move.\n", ch);
     CharWait(ch, (int) (PULSE_VIOLENCE * 0.25));
@@ -3831,85 +3832,15 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     return;
   }
 
-  memset(&af, 0, sizeof(af));
-  af.type = SKILL_HEADBUTT;
-  af.duration = (int) (2.5 *PULSE_VIOLENCE);
-
-  af.flags = AFFTYPE_SHORT;
-  affect_to_char(ch, &af);
-
-  CharWait(ch, (int) (PULSE_VIOLENCE * 1.5));
-
-  /*
-   * calculate the chance the headbutter succeeds
-   * Factors involved in calculation:
-   * a) dex bonus affects success: -25 -> +25 b) experience "   "   "
-   * ": -343 -> +343 c) skill learned  "   "   ": +10 -> +180
-   * Range is from -358 -> 548.
-   * Outcome based on random number selected:
-   * -358 ->   0: Message stating victim is far too skilled to be
-   * headbutted. 1 ->  40: Failure. 41 -> 548: Success.
-   * These numbers were selected with the average situation in mind.
-   * That is, against an opponent who, without a doubt, cannot be
-   * headbutted, will not be.  This occurs, for example, when the
-   * opponent's level is 50/yours is 20, opponent's dex exceeds yours
-   * by 5+, and you haven't learned the skill over 69%.  If your total
-   * success doesn't exceed 60, you're still too out skilled, but you're
-   * capable of getting in position to attempt a headbutt.  It is only
-   * when you clearly outclass your opponent does the success rate
-   * increase dramatically.
-   *
-   */
-
-  success = 0;
-
-  array_index = STAT_INDEX(GET_C_DEX(ch)) - STAT_INDEX(GET_C_DEX(victim));
-
-  success += (int) GET_C_DEX(ch) / 2;
-
-  /* Dex check */
-  if (array_index >= 0) {
-    array_index = (array_index > 8) ? 7 : array_index;
-    success *= (int) headbutt_dex_bonus_table[array_index];
-  } else if (array_index < 0) {
-   array_index = (-1) * ( (array_index < -7) ? -7 : array_index);
-   success /= (int)  headbutt_dex_bonus_table[array_index];
- }
-
-  /* Agi Check */
-  array_index = STAT_INDEX(GET_C_AGI(ch)) - STAT_INDEX(GET_C_AGI(victim));
-  if (array_index >= 0) {
-    array_index = (array_index > 8) ? 7 : array_index;
-    success *= (int) headbutt_agi_bonus_table[array_index];
-  } else if (array_index < 0) {
-    array_index = (-1) * ( (array_index < -7) ? -7 : array_index);
-    success /= (int) headbutt_agi_bonus_table[array_index];
-  }
-
-  /* size checks -- always headbutting equal size is a fair
-     playing field, and after that your success rate starts to
-     go down */
+  success = (GET_CHAR_SKILL(ch, SKILL_HEADBUTT) + attlevel) / 2;
+  success += BOUNDED(-20, attlevel - deflevel, 20);
 
   if (get_takedown_size(victim) > get_takedown_size(ch)) 
   {
     for( int j = 0; j < ( get_takedown_size(victim) - get_takedown_size(ch) ); j++ )
     {
-      success *= (int) 0.95;
+      success = (int) success * 0.90;
     }
-  }
-
-  /*
-   * figure in experience differential.  multiplies by factor of 2 since
-   * this plays a large role in succeeding
-   */
-  tmp_num = MAX(9, GET_LEVEL(ch) - GET_LEVEL(victim));
-
-  if (tmp_num >= 0) {
-    tmp_num = (tmp_num > 9) ? 9 : tmp_num;
-    success *= (int) headbutt_lvl_bonus_table[tmp_num];
-  } else if (tmp_num < 0) {
-    tmp_num = (-1) * ( (tmp_num < -9) ? -9 : tmp_num);
-    success /= (int) headbutt_lvl_bonus_table[tmp_num];
   }
 
   // anatomy check
@@ -3917,17 +3848,6 @@ void do_headbutt(P_char ch, char *argument, int cmd)
       5 + GET_CHAR_SKILL(ch, SKILL_ANATOMY)/10 > number(0,100)) {
     success *= (int) 1.5;
   }
-
-  /*
-   * now, consider how well the skill is learned.  the better learned
-   * they are, the more this factor weighs in on total success
-   */
-
-  array_index = (int) (GET_CHAR_SKILL(ch, SKILL_HEADBUTT) / 9);
-
-  success += (int) ( (GET_CHAR_SKILL(ch, SKILL_HEADBUTT) / 2) +
-     (headbutt_exp_bonus_table[array_index] * 2) );
-
 
   /*  maybe the attacker or victim are lucky */
 
@@ -3938,22 +3858,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   if ((GET_C_LUCK(victim) / 2) > number(0, 80)) {
      success = (int) (success * 0.9);
   }
-
-  /* now check if headbutter is capable of headbutting opponent */
-
-  if (success <= 0 || IS_TRUSTED(victim))
-  {
-    act("$N is clearly too quick and clever for such a brutish attack.",
-        FALSE, ch, 0, victim, TO_CHAR);
-    return;
-  }
-
-  if (isname("_nobutt_", GET_NAME(victim)))
-  {
-    knock_out(ch, PULSE_VIOLENCE * number(2,3));
-    return;
-  }
-
+  
   if (IS_TRUSTED(ch) || !AWAKE(victim))
   {
     tmp_num = 100;
@@ -3963,12 +3868,10 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     tmp_num = number(1, success);
   }
 
-  justice_witness(ch, victim, CRIME_ATT_MURDER);
-
   int dam = 0;
   
   if (!notch_skill(ch, SKILL_HEADBUTT, get_property("skill.notch.offensive", 15)) &&
-      tmp_num <= 3)
+      tmp_num <= 2)
   {
     // failed catastrophically!
     dam = number(0, 30);
@@ -3994,7 +3897,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   else
   {
     // success!
-    dam = (int) ((GET_LEVEL(ch) / 60) * (number(-10, 20) + GET_CHAR_SKILL(ch, SKILL_HEADBUTT)));
+    dam = (int) ((GET_LEVEL(ch) / 51) * (number(-5, 25) + GET_CHAR_SKILL(ch, SKILL_HEADBUTT)));
     
     if (GET_RACE(ch) == RACE_MINOTAUR)
     {
@@ -4023,52 +3926,39 @@ void do_headbutt(P_char ch, char *argument, int cmd)
         if (melee_damage(ch, victim, (int) (dam / j), PHSDAM_NOPOSITION | PHSDAM_TOUCH, messages))
           return;        
       }
-
-      if (IS_FIGHTING(ch))
-        do_throat_crush(ch, "", 0);
     }
-    
+
+    memset(&af, 0, sizeof(af));
+    af.type = SKILL_HEADBUTT;
+    af.duration = (int) (2.5 *PULSE_VIOLENCE);
+    af.flags = AFFTYPE_SHORT;
+    affect_to_char(ch, &af);
+    CharWait(ch, (int) (PULSE_VIOLENCE * 1.5));
+
     tmp_num = number(1, 100 - (success / 2));
-    array_index = STAT_INDEX(GET_C_CON(ch)) - STAT_INDEX(GET_C_CON(victim));
 
-    // better con check makes attacker either have more stun/ko chances
-    // or less, depending on if attacker con greater, or victim con greater
-    if (array_index >= 0) {
-      array_index = (array_index > 9) ? 9 : array_index;
-      tmp_num /= (int) headbutt_con_bonus_table[array_index];
-    } else if (array_index < 0) {
-      array_index = (-1) * ( (array_index < -9) ? -9 : array_index);
-      tmp_num *= (int) headbutt_con_bonus_table[array_index];
-    }
-
-    // Final check against people getting so uber they stun-lock
-    // people all the time, still get decent chance of stun
-    if (tmp_num < 20) {
-      tmp_num = number(1, 20);
-    }
-
-    if (tmp_num == 1 && !IS_AFFECTED(victim, AFF_KNOCKED_OUT))
+    if (tmp_num < 3 && !IS_AFFECTED(victim, AFF_KNOCKED_OUT)) // 4% chance at 100% success - Jexni 2/15/11
     {
       knock_out(victim, PULSE_VIOLENCE * number(2,3));
     }
-    else if (tmp_num < 6)
+    else if (tmp_num < 7)
     {
       send_to_char("Wow!  Look at all those stars!!\n", victim);
-      CharWait(victim, (int) (PULSE_VIOLENCE * 1.6));
-      Stun(victim, (int) (PULSE_VIOLENCE * 1.6));
+      CharWait(victim, (int) (PULSE_VIOLENCE * 1));
+      Stun(victim, ch, (int) (PULSE_VIOLENCE * 1.5));
     }
-    else if (tmp_num < 10)
+    else if (tmp_num < 11)
     {
       send_to_char("Wow!  Look at all those stars!\n", victim);
 
       if (number(0,4)) {
-        CharWait(victim, (int) (PULSE_VIOLENCE * 1.5));
-        Stun(victim, (int) (PULSE_VIOLENCE * 0.5));
+        CharWait(victim, (int) (PULSE_VIOLENCE * 0.5));
+        Stun(victim, ch, (int) (PULSE_VIOLENCE * 0.5));
       }
     }
     else
     {
-      CharWait(victim, (int) (PULSE_VIOLENCE * 1.5));
+      CharWait(victim, (int) (PULSE_VIOLENCE * 1));
     }
     if (tmp_num < 25 && !IS_SET(ch->specials.act, PLR_VICIOUS) &&
         IS_FIGHTING(ch))
@@ -4081,8 +3971,6 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     }
   }
 }
-
-// End headbutt
 
 void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
 {
@@ -5599,7 +5487,7 @@ void do_tackle(P_char ch, char *arg, int cmd)
         SET_POS(ch, POS_PRONE + GET_STAT(ch));
         
         if(GET_C_CON(ch) < number(1, 125))
-          Stun(ch, PULSE_VIOLENCE);
+          Stun(ch, ch, PULSE_VIOLENCE);
         
         CharWait(ch, PULSE_VIOLENCE * 3);
       }
@@ -5697,7 +5585,7 @@ void buck(P_char ch)
 
   CharWait(ch, PULSE_VIOLENCE * 3);
   CharWait(victim, PULSE_VIOLENCE * 2);
-  Stun(victim, PULSE_VIOLENCE);
+  Stun(victim, ch, PULSE_VIOLENCE);
 
   SET_POS(victim, POS_PRONE + GET_STAT(victim));
 
@@ -6353,7 +6241,8 @@ void maul(P_char ch, P_char victim)
 
     if((percent_chance / 5) > percentroll &&
         !IS_STUNNED(victim))
-          Stun(victim, number(PULSE_VIOLENCE, (int) (PULSE_VIOLENCE * 1) ));
+          Stun(victim, ch, number(PULSE_VIOLENCE, (int) (PULSE_VIOLENCE 
+* 1) ));
     
     if(GET_SPEC(ch, CLASS_BERSERKER, SPEC_MAULER) ||
        IS_ELITE(ch))
@@ -7174,7 +7063,7 @@ void do_rearkick(P_char ch, char *argument, int cmd)
             act("Your kick stuns $N!", FALSE, ch, 0, victim, TO_CHAR);
                         act("You are STUNNED!", FALSE, ch, 0, victim, TO_VICT);
                         act("$N is stunned by $n's mighty kick!", FALSE, ch, 0, victim, TO_NOTVICT);
-                        Stun(victim, PULSE_VIOLENCE*2);
+                        Stun(victim, ch, PULSE_VIOLENCE*2);
     }
 
     if(knockdown_chance > number(1,100)) {
@@ -7581,7 +7470,8 @@ void bodyslam(P_char ch, P_char victim)
          SKILL_BODYSLAM))
     {
       if(number(0, 1))
-        Stun(victim, number(PULSE_VIOLENCE, (int) (PULSE_VIOLENCE * 2.5) ));
+        Stun(victim, ch, number(PULSE_VIOLENCE, (int) (PULSE_VIOLENCE * 
+2.5) ));
     }
     else
       return;
@@ -7598,7 +7488,7 @@ void bodyslam(P_char ch, P_char victim)
     {
       SET_POS(ch, POS_PRONE + GET_STAT(ch));
       fall = FALSE;
-      Stun(ch, PULSE_VIOLENCE);
+      Stun(ch, ch, PULSE_VIOLENCE);
     }
   }
 
@@ -7901,7 +7791,7 @@ void do_springleap(P_char ch, char *argument, int cmd)
          SKILL_SPRINGLEAP))
     {
       if(number(0, 1))
-        Stun(vict, number(PULSE_VIOLENCE, PULSE_VIOLENCE ));
+        Stun(vict, ch, number(PULSE_VIOLENCE, PULSE_VIOLENCE ));
     }
     else
       return;

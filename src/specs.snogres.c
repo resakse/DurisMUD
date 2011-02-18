@@ -339,8 +339,8 @@ int berserker_toss(P_char ch, P_char vict, int cmd, char *arg)
   act("&+rYour path through the air sends you &+Rcareening violently &N&+rinto &+R$N&n&+r!&n", FALSE, vict, 0, victtwo, TO_CHAR); 
   act("&+R$n&n&+r's path through the air sends $m &+Rcareening violently &N&+rinto &+R$N&n&+r!&n", FALSE, vict, 0, victtwo, TO_NOTVICTROOM);
   damage(victtwo, vict, (GET_WEIGHT(victtwo) / 2), TYPE_UNDEFINED);
-  Stun(vict, 2 * PULSE_VIOLENCE);
-  Stun(victtwo, 2 * PULSE_VIOLENCE);
+  Stun(vict, ch, 2 * PULSE_VIOLENCE);
+  Stun(victtwo, ch, 2 * PULSE_VIOLENCE);
   stop_fighting(victtwo);
   stop_fighting(vict);
   } //  33% chance of proc
@@ -396,7 +396,7 @@ int illithid_whip(P_obj obj, P_char ch, int cmd, char *arg)
       act("&+mYour $p &+mwraps about $N&+m's legs, tripping $M up!\n&N", FALSE, ch, obj, vict, TO_CHAR);
       act("&+m$n&+m's $p &+mwraps about $N&+m's legs, tripping $M up!\n&N", FALSE, ch, obj, vict, TO_ROOM);
       act("&+m$n&+m's $p wraps about your legs, tripping you up!\n&N", FALSE, ch, obj, vict, TO_VICT);
-      Stun(vict, PULSE_VIOLENCE * 1);
+      Stun(vict, ch, PULSE_VIOLENCE * 1);
       CharWait(vict, PULSE_VIOLENCE * 1);
       SET_POS(vict, POS_PRONE + GET_STAT(vict));
   }

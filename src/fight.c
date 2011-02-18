@@ -1013,7 +1013,7 @@ void update_pos(P_char ch)
           /*
            * ouchness
            */
-          Stun(ch, dice(3, 4) * 4);     /* 3 rounds max, avg, ~1.5 */
+          Stun(ch, ch, dice(3, 4) * 4);     /* 3 rounds max, avg, ~1.5 */
           break;
         }
         act("$n falls off $s mount!", TRUE, ch, 0, 0, TO_ROOM);
@@ -1044,7 +1044,7 @@ void update_pos(P_char ch)
           if (!number(0, 2))
           {
             if (GET_STAT(ch) > STAT_INCAP)
-              Stun(ch, dice(2, 3) * 4); /*
+              Stun(ch, ch, dice(2, 3) * 4); /*
                                          * 1.5 rounds max,
                                          * avg, ~1
                                          */
@@ -5619,7 +5619,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
            victim);
 
       if (GET_HIT(victim) < 2 && new_stat > STAT_INCAP && number(0, 1))
-        Stun(victim, PULSE_VIOLENCE);
+        Stun(victim, ch, PULSE_VIOLENCE);
     }
 
     /* new, unless vicious, no auto attacks on helpless targets */

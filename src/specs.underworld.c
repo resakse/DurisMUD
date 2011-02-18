@@ -2392,7 +2392,7 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
               
               if(CAN_ACT(vict))
               {                 // prevent cumulative stun/lag
-                Stun(vict, PULSE_VIOLENCE * 2);
+                Stun(vict, ch, PULSE_VIOLENCE * 2);
                 CharWait(vict, PULSE_VIOLENCE * 3);
               }
             }
@@ -3380,7 +3380,7 @@ int barb(P_obj obj, P_char ch, int cmd, char *arg)
       
       if (!number(0, 2) &&
          MIN_POS(vict, POS_STANDING + STAT_NORMAL)) // Adding this to prevent perpetual stunning with mauls.
-            Stun(vict, (int) (PULSE_VIOLENCE * .5));
+            Stun(vict, ch, (int) (PULSE_VIOLENCE * .5));
 
       if( affected_by_spell(vict, SPELL_STONE_SKIN) )
       {
@@ -4160,8 +4160,7 @@ int tendrils(P_obj obj, P_char ch, int cmd, char *arg)
       return FALSE;
 
     w_align = (RACE_EVIL(ch) && !(GET_RACE(ch) == RACE_PHANTOM)) ? 0 :
-      RACE_PUNDEAD(ch) ? 0 :
-      /*IS_EVIL(ch) ? 1 : */ GET_CLASS(ch, CLASS_MONK) ? 3 : 2;
+      RACE_PUNDEAD(ch) ? 0 : GET_CLASS(ch, CLASS_MONK) ? 3 : 2;
     if (w_align == 2)
       return (FALSE);
 
@@ -4258,7 +4257,7 @@ int tendrils(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if(!number(0, 4))
+  if(!number(0, 10))
   {
     act("Before $N can recover $n grabs $M by the throat and utters a single &+Wword&n.\n"
         "$N spasms in &+Rpain&n as tiny &+Bbolts&n of &+Blight&n surge through $S body!", FALSE, ch, 0, vict, TO_NOTVICT);
@@ -4267,7 +4266,7 @@ int tendrils(P_obj obj, P_char ch, int cmd, char *arg)
     act("Before $N can recover you grab $M by the throat and utter a single &+Wword&n.\n"
         "$N spasms in &+Rpain&n as tiny &+Bbolts&n of &+Blight&n surge through $S body!", FALSE, ch, 0, vict, TO_CHAR);
     spell_stone_skin(60, ch, 0, 0, ch, 0);
-    Stun(vict, PULSE_VIOLENCE * 2);
+    Stun(vict, ch, PULSE_VIOLENCE * 2);
     damage(ch, vict, dice(10, 45), TYPE_UNDEFINED);
   }
   return FALSE;

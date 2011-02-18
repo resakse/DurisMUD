@@ -1463,8 +1463,7 @@ void vampire_bite(P_char ch, P_char victim)
     "$n's savage bite opens a deadly wound in $N's neck!"
   };
 
-  //CharWait(victim, PULSE_VIOLENCE);
-  CharWait(ch, 2 * PULSE_VIOLENCE);
+  CharWait(ch, 3 * PULSE_VIOLENCE);
 
   if (melee_damage(ch, victim, dice(2, GET_LEVEL(ch)), 0, &messages) !=
       DAM_NONEDEAD || affected_by_spell(victim, TAG_VAMPIRE_BITE))
@@ -1474,7 +1473,7 @@ void vampire_bite(P_char ch, P_char victim)
   {
     send_to_char(
       "You are stunned and unable to defend yourself properly!\n", victim);
-    Stun(victim, PULSE_VIOLENCE);
+    Stun(victim, ch, PULSE_VIOLENCE);
   }
 
   memset(&af, 0, sizeof(af));

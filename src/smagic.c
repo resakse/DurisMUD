@@ -454,7 +454,7 @@ void event_elemental_fury(P_char ch, P_char victim, P_obj obj, void *data)
             CharWait(t, PULSE_VIOLENCE);
          
           if(make_wet(t, 3))
-            Stun(t, PULSE_VIOLENCE);
+            Stun(t, ch,  PULSE_VIOLENCE);
         }
       }
     }
@@ -4772,7 +4772,7 @@ void spell_cascading_elemental_beam(int level, P_char ch, char *arg, int type,
   }
   else if(IS_AFFECTED2(victim, AFF2_FIRESHIELD) ||
           ENJOYS_FIRE_DAM(victim) ||
-          GET_RACE(victim) == RACE_THRIKREEN)
+          IS_COLD_VULN(ch))
   {
     spell_damage(ch, victim, dam, SPLDAM_COLD, SPLDAM_NOSHRUG, &messages);
     
@@ -4799,19 +4799,17 @@ void spell_cascading_elemental_beam(int level, P_char ch, char *arg, int type,
   {
     spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, SPLDAM_NOSHRUG, &messages);
     // Chance to stun.
-    if(!NewSaves(victim, SAVING_BREATH, mod) &&
-      IS_ALIVE(victim) &&
+    if(IS_ALIVE(victim) &&
       !(deflect) &&
       !IS_AFFECTED2(victim, AFF2_STUNNED))
     {
-      Stun(victim, PULSE_VIOLENCE * 2);
+      Stun(victim, ch, PULSE_VIOLENCE * 2);
     } // Victims with deflect will also deflect stun affect.
-    else if(!NewSaves(ch, SAVING_BREATH, mod) &&
-           deflect &&
-           IS_ALIVE(ch) &&
-           !IS_AFFECTED2(ch, AFF2_STUNNED))
+    else if(deflect &&
+            IS_ALIVE(ch) &&
+            !IS_AFFECTED2(ch, AFF2_STUNNED))
     {
-      Stun(ch, PULSE_VIOLENCE * 2);
+      Stun(ch, ch, PULSE_VIOLENCE * 2);
     }
   }
   else if(IS_AFFECTED3(victim, AFF3_LIGHTNINGSHIELD))
@@ -4822,7 +4820,7 @@ void spell_cascading_elemental_beam(int level, P_char ch, char *arg, int type,
   else
   {
     spell_damage(ch, victim, dam, SPLDAM_ACID, SPLDAM_NOSHRUG, &messages);
-    // Chance to damge eq.
+    // Chance to damage eq.
     if(!deflect &&
       IS_ALIVE(victim))
     {
