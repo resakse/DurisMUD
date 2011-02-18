@@ -5905,22 +5905,15 @@ void spell_curse(int level, P_char ch, char *arg, int type, P_char victim,
   if(!victim)
     victim = ch;
 
-  if((GET_RACE(victim) == RACE_DRAGON) ||
-      (GET_RACE(victim) == RACE_DEVIL) ||
-      (GET_RACE(victim) == RACE_UNDEAD) ||
-      (GET_RACE(victim) == RACE_GHOST) ||
-      (GET_RACE(victim) == RACE_DEMON) || (GET_RACE(victim) == RACE_PLANT))
-  {
-    send_to_char("You sense that they would be unaffected by your curse.\n",
-                 ch);
-    return;
-  }
-
-  // play_sound(SOUND_CURSE, NULL, ch->in_room, TO_ROOM);
-
   if(victim)
     if(!IS_TRUSTED(ch) && resists_spell(ch, victim))
       return;
+
+  if(IS_TRUSTED(victim) || affected_by_spell(victim, SPELL_CURSE)))
+  {
+    send_to_char("Aren't they already cursed enough?");
+    return;
+  }
 
   if(obj)
   {
@@ -5932,17 +5925,21 @@ void spell_curse(int level, P_char ch, char *arg, int type, P_char victim,
       obj->value[2] = 1;
     act("&+r$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
   }
-  else
+  else if(IS_GREATER_RACE(victim) || IS_ELITE(victim))
   {
-    if(saves_spell(victim, SAVING_SPELL) ||
-        affected_by_spell(victim, SPELL_CURSE))
+     if(!NewSaves(victim, SAVING_SPELL, 5))
+       return;
+  }
+  else if(!NewSaves(victim, SAVING_SPELL, 2))
+  {
       return;
+  }
 
     bzero(&af, sizeof(af));
 
     af.type = SPELL_CURSE;
-    af.duration =  100;
-    af.modifier = -1;
+    af.duration = GET_LEVEL(ch);
+    af.modifier = IS_NPC(victim) ? -10 : -5;
     af.location = APPLY_HITROLL;
     affect_to_char(victim, &af);
     af.modifier = 10;
@@ -5950,7 +5947,7 @@ void spell_curse(int level, P_char ch, char *arg, int type, P_char victim,
     affect_to_char(victim, &af);
 
     act("&+r$n briefly reveals a red aura!", FALSE, victim, 0, 0, TO_ROOM);
-    act("&+rYou feel very uncomfortable.", FALSE, victim, 0, 0, TO_CHAR);
+    act("&+rYou suddenly feel very uncomfortable.", FALSE, victim, 0, 0, TO_CHAR);
   }
 }
 void spell_nether_touch(int level, P_char ch, char *arg, int type,
@@ -13063,7 +13060,7 @@ void spell_blackmantle(int level, P_char ch, char *arg, int type, P_char victim,
     return;
   }
   
-  if(IS_NPC(ch) && !NewSaves(victim, SAVING_SPELL, 5))
+  if(IS_NPC(ch) && !NewSaves(victim, SAVING_SPELL, 10))
   {  
     act("&+LA blanketing shroud of &+bnegative energy &+Lcoalesces around $N&+L...", FALSE, ch, 0, victim, TO_CHAR);
     act("&+LA blanketing shroud of &+bnegative energy &+Lcoalesces around $N&+L...", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -13075,7 +13072,7 @@ void spell_blackmantle(int level, P_char ch, char *arg, int type, P_char victim,
     af.modifier = 4000;
     affect_to_char(victim, &af);
   }
-  else if(IS_PC(ch) && !NewSaves(victim, SAVING_SPELL, -2))
+  else if(IS_PC(ch) && !NewSaves(victim, SAVING_SPELL, 2))
   {  
     act("&+LA blanketing shroud of &+bnegative energy &+Lcoalesces around $N&+L...", FALSE, ch, 0, victim, TO_CHAR);
     act("&+LA blanketing shroud of &+bnegative energy &+Lcoalesces around $N&+L...", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -13083,7 +13080,7 @@ void spell_blackmantle(int level, P_char ch, char *arg, int type, P_char victim,
 
     bzero(&af, sizeof(af));
     af.type = SPELL_BMANTLE;
-    af.duration = level * WAIT_SEC;
+    af.duration = level * PULSE_VIOLENCE;
     af.modifier = 300;
     affect_to_char(victim, &af);
   }
