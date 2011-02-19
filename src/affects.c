@@ -521,6 +521,28 @@ void apply_affs(P_char ch, int mode)
     {
       REMOVE_BIT(ch->specials.affected_by4, AFF4_NEG_SHIELD);
     }
+    if (IS_AFFECTED2(ch, AFF2_FIRE_AURA))
+    {
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_WATER_AURA);
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_EARTH_AURA);
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_AIR_AURA);
+      REMOVE_BIT(ch->specials.affected_by4, AFF4_ICE_AURA);
+    }
+    if (IS_AFFECTED2(ch, AFF2_EARTH_AURA))
+    {
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_WATER_AURA);
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_AIR_AURA);
+      REMOVE_BIT(ch->specials.affected_by4, AFF4_ICE_AURA);
+    }
+    if (IS_AFFECTED2(ch, AFF2_AIR_AURA))
+    {
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_WATER_AURA);
+      REMOVE_BIT(ch->specials.affected_by4, AFF4_ICE_AURA);
+    }
+    if (IS_AFFECTED4(ch, AFF4_ICE_AURA))
+    {
+      REMOVE_BIT(ch->specials.affected_by2, AFF2_WATER_AURA);
+    }
   }
   else
   {
@@ -803,7 +825,102 @@ void apply_affs(P_char ch, int mode)
   ch->points.hit_reg = TmpAffs.hit_reg;
   ch->points.move_reg = TmpAffs.move_reg;
   ch->points.mana_reg = TmpAffs.mana_reg;
+  switch(TmpAffs.spell_pulse)
+  {
+    case 10:
+      TmpAffs.spell_pulse = 4;
+      break;
+    case 9:
+    case 8:
+    case 7:
+    case 6:
+    case 5:
+      TmpAffs.spell_pulse = 3;
+      break;
+    case 4:
+    case 3:
+    case 2:
+      TmpAffs.spell_pulse = 2;
+      break;
+    case 1:
+      TmpAffs.spell_pulse = 1;
+      break;
+    case 0:
+      TmpAffs.spell_pulse = 0;
+      break;
+    case -1:
+      TmpAffs.spell_pulse = -1;
+      break;
+    case -2:
+    case -3:
+    case -4:
+      TmpAffs.spell_pulse = -2;
+      break;
+    case -5:
+    case -6:
+    case -7:
+    case -8:
+    case -9:
+      TmpAffs.spell_pulse = -3;
+      break;
+    case -10:
+      TmpAffs.spell_pulse = -4;
+      break;
+    default:
+      TmpAffs.spell_pulse = 0;
+      break;
+  }
   ch->points.spell_pulse = TmpAffs.spell_pulse;
+  
+  switch(TmpAffs.combat_pulse)
+  {
+    case 12:
+    case 11:
+    case 10:
+      TmpAffs.combat_pulse = 4;
+      break;
+    case 9:
+    case 8:
+    case 7:
+    case 6:
+    case 5:
+      TmpAffs.combat_pulse = 3;
+      break;
+    case 4:
+    case 3:
+    case 2:
+      TmpAffs.combat_pulse = 2;
+      break;
+    case 1:
+      TmpAffs.combat_pulse = 1;
+      break;
+    case 0:
+      TmpAffs.combat_pulse = 0;
+      break;
+    case -1:
+      TmpAffs.combat_pulse = -1;
+      break;
+    case -2:
+    case -3:
+    case -4:
+      TmpAffs.combat_pulse = -2;
+      break;
+    case -5:
+    case -6:
+    case -7:
+    case -8:
+    case -9:
+      TmpAffs.combat_pulse = -3;
+      break;
+    case -10:
+    case -11:
+    case -12:
+      TmpAffs.combat_pulse = -4;
+      break;
+    default:
+      TmpAffs.combat_pulse = 0;
+      break;
+  }
   ch->points.combat_pulse = TmpAffs.combat_pulse;
 
   if (mode)

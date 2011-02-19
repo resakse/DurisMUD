@@ -1214,7 +1214,7 @@ void cast_wall_of_bones(int level, P_char ch, char *arg, int type,
 
     sprintf(buf1, "&+LInfused by a powerful magic, %s &+Lmagically transforms into a pile of bones, blocking the %s!&n\r\n",
 	        corpse->short_description, dirs[var]);
-    sprintf(buf2, "&+LA pile of bones magicaly assembles to the %s!&n\r\n",
+    sprintf(buf2, "&+LA pile of bones magically assembles to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
@@ -1243,7 +1243,7 @@ void cast_wall_of_bones(int level, P_char ch, char *arg, int type,
 
     sprintf(buf1, "&+LInfused by powerful sorcery, some &+gdragonscales &+Lmagically transform into a delicate yet solid curtain, blocking exit to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2, "&+LA thin &+gdragonscale&+L curtain magicaly assembles to the %s!&n\r\n",
+    sprintf(buf2, "&+LA thin &+gdragonscale&+L curtain magically assembles to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
