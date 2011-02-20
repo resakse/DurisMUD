@@ -7707,7 +7707,7 @@ int MonkRiposte(P_char victim, P_char attacker, P_obj wpn)
   
   percent = (int)(skl / 2) - (int)(WeaponSkill(attacker, wpn) / 3);
 
-  percent += dex_app[STAT_INDEX(GET_C_DEX(victim))].reaction * 4;
+  percent += dex_app[STAT_INDEX(GET_C_DEX(victim))].reaction * 2;
   percent += str_app[STAT_INDEX(GET_C_STR(victim))].tohit * 1.5;
   percent -= (str_app[STAT_INDEX(GET_C_STR(attacker))].tohit +
               str_app[STAT_INDEX(GET_C_STR(attacker))].todam);

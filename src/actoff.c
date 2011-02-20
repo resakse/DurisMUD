@@ -8528,6 +8528,13 @@ void gaze(P_char ch, P_char victim)
     return;
   }
   
+  if(IS_AFFECTED4(ch, AFF4_NOFEAR))
+  {
+    act("$N &+Wgazes right back at you, completely immune to the fear.", FALSE, ch, 0, victim, TO_CHAR);
+    CharWait(ch, (int) (PULSE_VIOLENCE));
+    return;
+  }
+
   if(affected_by_spell(victim, SKILL_GAZE))
   {
     act("$N &+yis already &+Yterrifed!!!&n", FALSE, ch, 0, victim, TO_CHAR);

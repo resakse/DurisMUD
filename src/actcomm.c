@@ -693,7 +693,7 @@ void do_project(P_char ch, char *argument, int cmd)
   }
   for (i = descriptor_list; i; i = i->next)
     if ((i->character != ch) && !i->connected &&
-        ((GET_RACE(i->character) == RACE_ILLITHID) || IS_PILLITHID(ch) 
+        ((GET_RACE(i->character) == RACE_ILLITHID) || IS_PILLITHID(i->character) 
 ||
          IS_TRUSTED(i->character)) &&
         (IS_SET(i->character->specials.act2, PLR2_PROJECT)))

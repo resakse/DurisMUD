@@ -11614,7 +11614,8 @@ void spell_create_spring(int level, P_char ch, char *arg, int type,
   }*/
 
   if (world[ch->in_room].sector_type == SECT_NO_GROUND ||
-      world[ch->in_room].sector_type == SECT_UNDRWLD_NOGROUND)
+      world[ch->in_room].sector_type == SECT_UNDRWLD_NOGROUND ||
+      world[ch->in_room].sector_type == SECT_OCEAN)
   {
   	send_to_char("&+bA spring usually needs more solid ground for support!\n", ch);
   	return;
