@@ -1,0 +1,968 @@
+#200000
+M
+hi sa'dah~
+&+RSa'Dah &nsays to you, '&+LLittle one, how would you like to be given powers
+&+Lbeyond your wildest dreams?&n'
+~
+M
+yes dreams power powers dream~
+&+rSa'Dah &nsays to you, '&+LThere are four &+Wtraitors &+Lthat walk this world with
+&+Lyou and I. Go find them and bring me all four heads and I shall reward you
+&+Lgreatly.&n'
+~
+M
+traitor traitors~
+&+rSa'Dah &nsays to you, '&+LAye, the four traitors I speak of are &+gJorl'gan&+L,
+&+CCho'van&+L, &+MMerrova &+Land &+BThorne&+L. Cut out their hearts and bring them
+&+Lto me.&n'
+~
+QA
+&+rSa'Dah &ngrins darkly at you, '&+LYou have done very well little one. I
+&+Lhave spent many years trying to bring those traitors to justice.&n'
+
+&+rSa'Dah &ncackles an insane laugh.
+
+'&+LAnd now they are dead. The spoils of war are mine now.. and yours if
+&+Lyou decide to stick around and reap the rewards of serving me. Take this
+&+Litem and keep it protected, as I must now seek out the four lockets and
+&+Lbring them to the powerful &+mmy&+rst&+mic&+L.&n'&n
+~
+R C 1000000
+R E 1000000
+R I 200032
+G I 200016
+G I 200017
+G I 200018
+G I 200019
+D
+&+rSa'Dah &+Lsnaps his finger and summons a cloud of darkness. As the cloud
+&+Lpasses over him, he disappears.&n
+~
+S
+#200023
+M
+hi mystic power powerful~
+&+LThe powerful &+mmy&+rst&+mic &nsays to you, '&+LHello there traveler. Do not be
+&+Lalarmed by my presence. I am here as a result of what will come to
+&+Lpass. A great war is coming and wars are a passion of mine. Chaos
+&+Land destruction are positive forces. As creatures of this realm die,
+&+Lmy powers within the netherworld becomes stronger.&n'
+
+'&+LHowever, I cannot interfere directly with the actions of this world.
+&+LA powerful magic has blocked the powers of the netherworld from entering
+&+Lthis place. I have sent a minion of mine, &+rSa'Dah &+Lthe Labyrinth&+rmaster
+&+Lto find the keys that imprison my powers.&n'
+~
+M
+labyrinthmaster sa'dah minion servant return~
+&+LThe powerful &+mmy&+rst&+mic &nsays to you, '&+rSa'Dah &+Lhas not reported to me in
+&+La very long time and I grow tired of his slothful progress. You
+&+Lmust seek out the &+Wkeys &+Lthat will unlock my powers so that the war
+&+Lcan begin.&n'
+~
+M
+key keys~
+&+LThe powerful &+mmy&+rst&+mic &nsays to you, '&+LThe four mortals &+gJorl'gan&+L, &+CCho'van&+L,
+&+MMerrova &+Land &+BThorne &+Leach possess a locket that keeps the powers of the
+&+Lnetherworld outside of my reach. You must bring me the lockets and
+&+Lthe book of &+Ytomorrows &+Lthat &+rSa'Dah &+Lpossesses. Upon your successful return,
+&+LI shall bestow upon you a gift of unimaginable powers.&n'
+~
+QA
+&+LA blaze of &+Yenergy &+Lsuddenly engulfs the surround area, drawing
+&+Lcloser and closer to the powerful &+mmy&+rst&+mic&+L.&n
+
+&+LThe powerful &+mmy&+rst&+mic &nsmiles darkly, '&+LYou have done very well young traveler.
+&+LMy powers are restored, and it is now time for chaos to begin. Please take
+&+Lthis sash as appreciation for your efforts. In addition, this key will grant
+&+Lyou passage to a secret area near the entrance of &+CThe Transparent Tower&+L.&n'
+~
+R I 200033
+R I 200034
+G I 200028
+G I 200029
+G I 200030
+G I 200031
+G I 200032
+D
+&+LThe powerful &+mmy&+rst&+mic &nsays to you, '&+LBring me war young disciple...'
+
+&+LThe &+Yblazing &+Lcolumn of &+Yenergy &+Lsuddenly vanishes, taking the &+mmy&+rst&+mic &+Lwith it.&n
+~
+S
+#200024
+M
+qc_action 60~
+&+LJa'Gunk reels his line in and pulls off &+ca pike large&+L.
+&+LJa'Gunk sighs and tosses it aside.
+~
+M
+qc_action 50~
+&+LJa'Gunk says 'Arrghh!  Ja'Gunk need special fish, where is good fish!?'
+&+LJa'Gunk snorts and continues fishing.
+~
+M
+qc_action 50~
+&+LJa'Gunk grunts and throws several small &+yclams&+L back into the water
+&+Land says 'Clams again!? Why do I keep getting clams!?'
+~
+MA
+clams~
+&+LJa'Gunk says 'Ja'Gunk hate clams and Ja'Gunk hate YOU!'
+~
+MA
+hi hello frustrated~
+   &+LJa'Gunk says 'I need rainbow trout or speckled perch!  I'll give you 9 &+Ygold &+Leach!'
+~
+Q
+&+LJa'Gunk says 'Thanks!  Keep em comin!'
+~
+R C 900
+G I 355
+Q
+&+LJa'Gunk takes the fish and grins.
+~
+R C 900
+G I 356
+S
+#200026
+M
+qc_action 50~
+&+rKrekish &+WVice&nF&+Lang&+L ducks behind a nearby rock, spying on something.
+~
+M
+qc_action 50~
+&+rKrekish &+WVice&NF&+Lang checks the ground for tracks in the &+ydirt&+L.
+~
+MA
+hi hello~
+&+rKrekish &+WVice&NF&+Lang grunts, greeting you.
+&+L'I am hunting.'  Krekish says as he continues.
+~
+MA
+hunting hunt~
+&+rKrekish &+WVice&NF&+Lang says 'Yes, there is an Orog who has raided
+&+LShady Grove auction house again and again.  Orcs have seen this
+&+LOrog and I am hunting for his tracks.  He goes by the name of
+&+LGr'Tak.'
+~
+MA
+grtak gr'tak orog~
+&+L'Gr'Tak is an Orog raider and we must kill him before he threatens
+&+Lour Grove!!' &+rKrekish roars. &+L'Bring me his head and I shall
+&+Lreward you.'
+~
+QA
+&+rKrekish bows and says 'Excellent.  Now the raids will finally end.'
+~
+R C 10000
+R E 40000
+R I 200005
+G I 200004
+D
+&+rKrekish &+WVice&nF&+Lang says 'I shall now return to Shady Grove.'
+~
+S
+#200027
+M
+qc_action 50~
+&+rGr'Tak scans the surroundings and readies himself, preparing for the attack.
+~
+M
+qc_action 50~
+&+rStanding heavily, the Orog Gr'Tak turns around, scanning all directions.
+~
+M
+qc_action 50~
+&+rGr'Tak looks through a small goblin scope towards a distant Mountainside.
+~
+MA
+hi hello~
+&+rGr'Tak says 'Argh!  I am being hunted!  But you can kill him first!
+&+rReturn to me the head of Krekish ViceFang!'
+~
+Q
+~
+R I 200007
+R C 15000
+R E 90000
+G I 200006
+D
+&+rGr'Tak runs off into the distance.
+~
+S
+#200028
+M
+qc_action 50~
+&+BAgnut conjures an incantation.
+&+BAgnut's hands begin to &+Wglow&+B as the ether in the room bursts forth
+&+Bin resonating magic.
+~
+M
+qc_action 50~
+&+BAgnot says 'Agnot say ME best Ogre!'
+~
+M
+qc_action 50~
+&+BAgnut says 'Why tree no grow on mountain?'
+~
+MA
+hi hello~
+&+BAgnot says 'Agnot best Ogre, Agnot smartest!  Me make you bracer from green
+&+Ghydralisk scale!.  Bring Agnot three hydralisk glands, bronze-colored
+&+Gbracers to infuse, and 100 platinum for work!'
+~
+QA
+&+BAgnot graciously takes the bracer, glands, and money and thanks you
+&+Bwith a foul-breathed grunt.  Moments later, he finishes his creation.
+~
+R I 200008
+G I 43142
+G I 43142
+G I 43142
+G I 729
+G C 100000
+D
+&+BAgnot say 'Me see you later!'
+~
+S
+#200041
+M
+qc_action 50~
+&+WA decorated Winterhaven watchman peers out across the lands, aware of his surroundings.
+~
+M
+qc_action 50~
+&+WA decorated Winterhaven watchman says 'Move along...'
+~
+M
+qc_action 400~
+&+WA decorated Winterhaven watchman says 'These aren't the droids you're looking for.'
+~
+M
+qc_action 50~
+&+CA loud horn sounds in the distance from the city of Winterhaven.
+~
+M
+hi hello~
+&+WA decorated Winterhaven watchman ignores you.
+~
+S
+#200043
+M
+qc_action 50~
+&+WSeveral Winterhaven troops on horseback ride through here, disappearing into the distance.
+~
+M
+qc_action 50~
+&+BA huge bolt of lightning strikes far off to the southwest, rumbling as it hits.
+~
+S
+#200046
+M
+qc_action 50~
+&+YA dwarven trapper kneels down and sets up a small trap, covering it with a tumbleweed.
+~
+M
+qc_action 50~
+&+LDark clouds birth forked bolts of &+B&-Llightning&N&+L far off to the southwest.
+~
+S
+#200052
+M
+qc_action 50~
+&+GCrodog flexes, his massive dwarven muscles bulging under his mail.
+~
+M
+qc_action 50~
+&+yA small family of deer graciously leap across a small ravine below the mountains.
+~
+M
+qc_action 50~
+&+gCrodog says 'Aye.'
+~
+M
+hi hello~
+&+GCrodog says 'Greetings.  Aye, I only talk to mountaineers, friend.'
+~
+MA
+mountaineer mountaineers~
+&+GCrodog says 'Aye.  If you wish to become a mountaineer, bring me five
+&+Gnightcrawler claws.  You will find it on those horrid beasts that
+&+Gmanifest themselves from the shadow realm here on our glorious world.
+&+GWe must stop this evil and kill these nightcrawlers, found on the
+&+GIsle of Death to the southeast.'
+~
+QA
+&+GCrodog says 'Excellent, welcome to the mountaineer watch!'
+~
+R I 200021
+R E 105000
+G I 200020
+G I 200020
+G I 200020
+G I 200020
+G I 200020
+S
+#200055
+M
+qc_action 55~
+&+WMeldar the Winterhaven Marshall says 'Greetings.'
+~
+S
+#200059
+M
+qc_action 50~
+&+gA highwayman looks around and says 'Winterhaven is a beautiful realm, and we aim to keep it that way.'
+~
+M
+qc_action 50~
+&+gA highwayman peers across the horizon, possibly having noticed something in the distance.
+~
+M
+qc_action 45~
+&+WSudden freezing winds slice through the area, chilling everything they touch.
+~
+S
+#200066
+M
+qc_action 50~
+&+BWay off in the distant south, a lightning bolt lights up a small fraction of the sky.
+~
+M
+qc_action 50~
+&+CThe chilling winds of the Winterhaven Mountains to the southeast blow through here.
+~
+M
+qc_action 50~
+&+LA large spider in a nearby tree slowly descends down, &Ncasting a long sticky web.
+~
+S
+#200070
+M
+qc_action 50~
+&+WJonius the Verspin Watchman &Npeers across the Tundra, scanning the horizon.
+~
+M
+qc_action 50~
+&+WJonius the Verspin Watchman says 'No evil shall pass through the Gates of Verspin.'
+~
+MA
+hi hello~
+&+WJonius the Verspin Watchman &Nsays &+W'I must guard the road, so I will be brief.
+&+WLizardman of the southern swamps of the Isle of Evil are giving our scouts into
+&+WSkulldrach Lake trouble.  Kill any of their leaders.  For each one you slay, I will
+&+Wreward you fifty platinum!'
+~
+QA
+&+WJonius the Verspin Watchman says 'Excellent.  Thank you.  Your reward...'
+~
+R C 50000
+G I 200024
+S
+#200075
+M
+hi stargazer~
+&+gJorl'gan &nlooks at you and says, '&+LThese are dangerous times young
+&+Lone.. The labyrinthmaster is hunting us. You must not tell him where I
+&+Lam&n'&n
+~
+M
+labyrinthmaster sa'dah~
+&+gJorl'gan&n says to you, '&+rSa'Dah &+Lis an evil being who seeks a power
+&+Lthat is too great for any one mortal to possess. There are four of
+&+Lus that have bound the keys to unlocking this power to our souls.&n'
+
+'&+LAnd as long as &+rSa'Dah &+Lis alive, the only existence we will know is
+&+Lthe dreaded one we all live now.&n'
+
+'&+LPlease, bring me his head so that I may be rid of this curse.&n'
+~
+QA
+&+gJorl'gan &ngrins wickedly as you approach him. The head of
+&+rSa'Dah &nstarts to vaporize and quickly &+Yexplodes &ninto a cloud
+of &+Ldust &nand &+Lash&n.
+
+'&+LThank you for your help, young one. My soul is tired and longs
+&+Lto be laid to rest, with that minotaur slain, I no longer have
+&+Lto carry this burden.'
+
+'&+LYou have proven yourself worthy and it is not your responsibility
+&+Lto keep this locket away from the evils that would seek to unlock
+&+Lits power.&n'
+~
+R C 100000
+R E 100000
+R I 200031
+G I 200015
+D
+&+gJorl'gan &nbegins chanting an incantation.
+&+gJorl'gan &ncompletes his spell.
+&+gJorl'gan &nsuddenly turns to dust and blows away.&n
+~
+S
+#200076
+M
+hi cho'van~
+&+CCho'van &ngrins at you and says, '&+LDarkness surrounds us.. The vile
+&+Lcreatures of this existence plague our souls with their lust for &+rpower
+&+Lno mortals should control.&n'
+
+'&+LYou should be more careful when approaching strangers, not all are as
+&+Lplacid as I.&n'
+~
+M
+power~
+&+CCho'van &nsays to you, '&+LThere are those among us that are consumed
+&+Lby a hunger for raw power. And then there are those like myself, who
+&+Lhave chosen to defend the world against such endeavors.&n'
+
+'&+LA pleasurable existence it is not, but while creatures like &+rSa'Dah
+&+Lremain alive, I shall be forced to continue my &+cquest&+L.&n'
+~
+M
+quest~
+&+CCho'van &nsays to you, '&+LAye, it has been my responsibility to safeguard
+&+Lthe artifacts that keep the powers of netherworlds under lock and key. I
+&+Lshare this burden with three fellow companions, constantly trying to avoid
+&+Lthat treacherous minotaur &+rSa'Dah&+L.&n'
+
+'&+LWhile &+rSa'Dah &+Lremains on the loose, I shall never give up.&n'
+~
+QA
+&+CCho'van &nbeams a wide grin at you and says, '&+LWonderful! You have
+&+Lslain that bastard. You have proven yourself trustworthy.&n'
+
+'&+LThis locket is one of four that protect the netherworld. Guard it!&n'
+~
+R C 100000
+R E 100000
+R I 200030
+G I 200015
+D
+&+CCho'van &nutters a single word.
+&+CCho'van &+Yexplodes &ninto a cloud of dust.&n
+~
+S
+#200078
+M
+hi merrova~
+&+MMerrova &nsmiles at you and says, '&+LHello there adventurer, have
+&+Lyou come to help me in the fight against the &+revil&+L?&n'
+~
+M
+yes evil~
+&+MMerrova &nsays to you, '&+Lthere are powers in this world that we must
+&+Lkeep out of the hands of the untrusting. The balance of power must be
+&+Lmaintained. I am one of four guardians of one such &+mpower&+L.&n'
+~
+M
+power~
+&+MMerrova &nsays to you, '&+LIt is the power of the netherworlds, the boarder
+&+Lrealm between the living and the dead. We have shielded this power from
+&+Lour world by locking them within the four elements.&n'
+
+'&+LEach guardian possess one key, and it has been our struggle to keep these
+&+Lkeys from falling into the hands of creatures such as &+rSa'Dah&+L.&n'
+~
+M
+sa'dah~
+&+MMerrova &nsays to you, '&+rSa'Dah &+Lis an evil creature who has traversed
+&+Lthe deepest and darkest passages of the known world in search of the
+&+Lkeys to unlocking these powers.&n'
+
+'&+LWhile he is alive, I must remain vigilant in my quest to safeguard
+&+Lthe lockets.&n'
+~
+QA
+&+MMerrova &nsays to you, '&+LAhhh, bless you, young traveler. You have
+&+Ldefeated an evil that has ravaged this world for far too long. No
+&+Llonger must I remain on this world as a guardian.&n'
+~
+R C 100000
+R E 100000
+R I 200029
+G I 200015
+D
+&+MMerrova &nsays to you, '&+LProtect that locket as many new evils will seek
+&+Lit out in the future.&n'
+
+&+MMerrova &ngestures briefly and &+Lvanishes&n.&n
+~
+S
+#200079
+M
+hi~
+&+BThorne &nsays to you, '&+LUnless you have slain the great minotaur &+rSa'Dah&+L,
+&+Lthen I have no time speak with someone like you. Begone!&n'
+~
+M
+sa'dah~
+&+BThorne &nsays to you angrily, '&+RSa'Dah &+Lis a dark creature whome I have
+&+Lspent more than a lifetime avoiding. He seeks to destroy us all by unlocking
+&+La power that is too great for even one such as he to use.&n'
+
+'&+LOnly through his death can I finally rest.&n'
+~
+QA
+&+BThorne &ncheers wildly for you, '&+LYou have done me a great deed by
+&+Lbringing and end to that madman's life. My time as guardian is now
+&+Lover, and it is now your duty to defend the world.&n'
+
+'&+LProtect this token with your life.&n'
+~
+R C 100000
+R E 100000
+R I 200028
+G I 200015
+D
+&+BThorne &nopens up a doorway into nothingness and walks through it.
+&nThe doorway closes shut and disappears.&n
+~
+S
+#200092
+M
+qc_action 50~
+&+GKres'Nesthius casts his line far into the lake and lets his baiited hook sink.
+~
+M
+qc_action 50~
+&+GKres'Nesthius pulls his rod, tugging against a struggling catch.
+~
+M
+qc_action 50~
+&+GKres'Nesthius groans as he pulls in another load of seaweed.
+~
+MA
+hi hello~
+&+GKres'Thesius says 'Don't disturb me unless you've come to talk about fishing!'
+~
+MA
+fishing~
+&+GKres'Thesius says 'Aye I am a fisherman.  I am trying to collect a certain group
+&+Gof fish to turn into bait so I can hit the open seas and catch a SHARK!'
+&+GKres'Thesius cackles with insane glee.
+&+GKres'Thesius continues 'I require lobster, oysters, mussels, crabs, and clams, those
+&+Gsharks love them shelled fish!  Anyway, bring back to me any &+ysmall clam&N,
+&+rimpressive &+Rlobster&N, &+blarge &+Bmussel&N, large flat oyster, &+ylarge hairy crab&N you
+&+Gcan find and I will pay you for the quality of these catches.
+&+GKres'Thesius says 'Oh yeah and I am also getting kind of hungry, if you could travel to
+&+GBreale and get me some &+Wbass&+G from the &+Wfish vendors&+G I would be grateful!'
+~
+QA
+&+GKres'Theius says 'Excellent!  Thank you very much!'
+~
+R C 4000
+G I 2676
+QA
+&+GKres'Theius says 'Excellent catch!'
+~
+R C 1000
+G I 319
+QA
+&+GKres'Thesius says 'Looks like crab legs tonight, thank you!'
+~
+R C 800
+G I 330
+QA
+&+GKres'Thesius nods and says 'Thanks.'
+~
+R C 600
+G I 333
+QA
+&+GKres'Thesius says 'Thanks!'
+~
+R C 750
+G I 335
+QA
+&+GKres'Thesius says 'You know, I bet this clam will be extra tasty!'
+~
+R C 900
+G I 334
+S
+#200094
+M
+qc_action 50~
+&+CChesynn grimmaces as he squeezes a bandage around his wound.
+~
+M
+qc_action 50~
+&+CChesynn says 'Greetings...arrghh... little one' as he tightens a tourniquet.
+~
+MA
+hi hello~
+&+CChesynn says 'You must be wondering about my leg.  I took a nasty bite from a
+&+Cparticular tundra panther.  They call the beast 'Grey Fang' and he lurks in
+&+Cthe southeastern part of the Tundra.  Bring me his paw!'
+&NWith a pause, $n continues '$N, have you even encountered the &+Wpanthers?'
+~
+MA
+yes panther panthers tundra~
+&n$N and $n discuss the native &+Wtundra panthers&N for a moment.
+&N$n says 'Bring me five of their teeth, I will string them together for you $N.  You will have proven your worth as a tundra hunter.'
+~
+QA
+&+CChesynn the &+WTundra &+CHunter &+Csays 'Excellent! The beast is slain and I am
+&+Conce again free to.. well..'
+&+CChesynn bows before you.
+~
+R I 200023
+R E 90000
+G I 200022
+D
+&+CChesynn runs off into the distance.
+~
+QA
+&N$n bows at $N and says 'Well done.'
+After a few short moments of fiddling with the &+Wfangs&N and a bit of string..
+~
+R I 200053
+G I 43140
+G I 43140
+G I 43140
+G I 43140
+G I 43140
+S
+#200096
+M
+qc_action 50~
+&+LTren Tind &+yslowly starts chanting and his hands turn into cheetah claws.
+~
+M
+qc_action 50~
+&+LTren Tind begins humming, which eventually turns into a deep lion's growl.
+~
+M
+qc_action 50~
+&+LTren Tind's eyes dilate into tiny specks as he gazes off miles into the distance.
+~
+MA
+hi hello~
+   &+LTren Tind &+ysays &+L'Greetings.  I am Tren Tind, beastmaster of all realms.
+&+LI do not speak with many so it is good to see one who will speak with me.  It is
+&+Ltrue, however, that I do need your help, traveller.  Far off in the Ice Crag
+&+LTundra there is a hunter, you will find him at the end of the pile of dead
+&+Lpanthers, or perhaps selling his fur in Winterhaven.  At any rate, he is the
+&+Lman you must seek for he is the one with the &+Cfrosty &+Wwhite potion &+LI
+&+Lrequire, but I do not know how you will obtain this from him.  Try talking to
+&+Lhim and seeing what he wants, if you help him with something he may reward you
+&+Lwith one of these notorious potions - which of course you will return to me.'
+&+LTren Tind &+ysays &+L'Godspeed.'
+~
+QA
+~
+R E 50000
+R C 300000
+G I 200023
+D
+&+LTren Tind &+ysays &+L'Excellent!  Thank you graciously!'
+&+LWith the blink of an eye, Tren Tind is gone, and an eagle soars away...
+~
+S
+#200098
+M
+qc_action 50~
+&+LWaves of darkness seem to eminate from Snardag the Dark Wizard.
+~
+M
+qc_action 50~
+&+LSnardag the Dark Wizard raises his bony fingers, pointing to a far off mountain peak, causing an explosion.
+~
+M
+qc_action 50~
+&+LSnardag the Dark Wizard waves his wands across a series of peaks, causing them each to burst into flame.
+~
+MA
+hi hello~
+&+LSnardag the Dark Wizard says 'I have little time for chit chat.  You can either
+&+Lhelp me or not.  I seek three huge blood crystals.  Find them on the Isle of the
+&+LDead.  Go now!'
+~
+QA
+~
+R E 115000
+R C 200000
+G I 200025
+G I 200025
+G I 200025
+D
+&+LThe dark wizard suddenly disappears.
+~
+S
+#200099
+M
+qc_action 50~
+&+LKrethin&N looks about the mountains and closes his eyes, communing with the earth.
+~
+M
+qc_action 50~
+&+LKrethin&N says 'By the will of Mielikki, may nature bless you.'
+&NYou feel momentarily refreshed.
+~
+M
+qc_action 150~
+&+LKrethin &Nyells 'LOOK!!'
+&+yA large wyvern flies overhead and swoops into the distance.
+~
+M
+qc_action 50~
+&+LKrethin &Nsays 'There are all sorts of creatures who take home in the mountains.'
+~
+MA
+hi hello~
+&+LKrethin &Nsays 'Greetings.  I see you have travelled quite a distance to see me
+up here in these mountains.  If you wish to travel another great distance then I have
+a task for you.  Travel to Sarmiz'Duul where those filthy Half-Orcs are.  On the
+southwestern arm of the mountains south of Sarmiz'Duul you will find a wyvern nest.
+I believe it is these wyverns that protect the filthy orcs so well from our centaur
+invasions.  Go and find me an egg of one of these wyverns, but make sure it has not
+hatched yet, I want to study the species.
+~
+QA
+&+LKrethin &Nsays 'Thank you.'
+~
+R E 65000
+R C 95000
+G I 200026
+D
+&+LKrethin &Nsays 'I must now go study this egg.  Godspeed traveller.'
+~
+S
+#200100
+M
+qc_action 50~
+&+LA dark essence of undeath flows forth from Azikarzith.
+~
+MA
+hi hello~
+&+LAzikarzith invades your mind with 'Puny mortal, you cannot help me.   Or can you?
+&+LAzikarith stops for a moment and surges with dark power.
+&+L'I sense a body I can be born into once again, that of a powerful Wyvern.
+&+LBring forth to me a wyvern egg found southwest of Sarmiz'Duul and you will
+&+Lreceive your reward.....'
+&+LAzikarith finishes 'Your eternal reward.'
+~
+QA
+&+LAzikarzith accepts the egg and swirls with darkness...
+~
+R E 95000
+R C 95000
+G I 200026
+D
+&+LAzikarzith consumes the wyvern egg and is gone!
+~
+S
+#200101
+M
+qc_action 50~
+&+YFlegnus floats through, glowing with a strong golden aura.
+~
+MA
+hi hello~
+&+YFlegnus says 'Hail.  I see you are an adventurer as I once was.  There is something
+&+YI can make for you, if you return for me the proper materials.  I will require
+&+Yfour blood crystals, found from the Isle of Death.  Bring me fifty platinum as
+&+Ywell and I shall make for you this item.
+~
+QA
+&+YFlegnus says 'Excellent job... one moment, let me fuse these together.'
+&+YA moment later...
+~
+R I 200027
+G I 200025
+G I 200025
+G I 200025
+G I 200025
+G C 50000
+D
+&+YFlegnus floats off.
+~
+S
+#200111
+M
+qc_action 55~
+&+WModug &+ygrunts and casts a fishing line into the fresh &+Clake &+Bwaters&+y.
+~
+M
+qc_action 55~
+&+CA cool winter breeze blows through the foothills of Ice Crag continent.
+~
+MA
+hi hello~
+&+WModug &+ysmiles at $N and says '&+WGreetings.  I am a strong fisherman!  But my
+&+Wpeople have even stronger appetite!  Help me bring in tastey fish.  I am looking
+&+Wfor particular &+Bfish&+W'
+~
+MA
+fish~
+&+WModug &+ynods at $N and continues '&+WThere are certain fish we eat in my village.
+&+WBring me back any &+clarge bass&+y, &+Wmedium sized cod&+y, or even a..'
+&+WModug &+ybegins drooling &+W'Delicious &+rpiranha&+y'
+&+W'Go now!'&+y He says, &+W'You have fishing to do!'
+~
+Q
+&+WModug &+ythanks you.
+~
+R C 1000
+G I 293
+Q
+&+WModug &+ythanks you.
+~
+R C 950
+G I 295
+Q
+&+WModug &+ythanks you.
+~
+R C 2000
+G I 294
+S
+#200116
+M
+hi hello howdy hey~
+&+rThe &+RProphet &+rof &+RIce &+Wsays to you, 'Greetings traveler. Welcome
+&+Wto &+rthe Altar of &+RIce&+W. Have you come here to pledge your allegiance
+&+Wto the &+rinf&+Rin&+rite &+Wpower of the &+rscorching &+Rflames&+W?'&n
+~
+M
+pledge yes allegiance~
+&+rThe &+RProphet &+rof &+RIce &+Wsays to you, 'I sense that you are not yet
+&+Wready to be bestowed the gift that faith in the elemental powers
+&+Wof &+Ffire &+Wbrings. You must first prove yourself!
+
+&+WOn the lands of the barren tundra, you will find &+bthe &+CProphet &+bof
+&+CFire&+W. He resides on an Island near the &+YNorthern &+BLakes &+Wand
+&+MSettlement&+W. Bring me his head, and you will have proven yourself
+&+Wworthy.'&n
+~
+Q
+~
+R I 200003
+R I 200049
+R I 200049
+R I 200049
+G I 200048
+S
+#200117
+M
+hi hello howdy hey~
+&+bThe &+CProphet &+bof &+CIce &+Wsays to you, 'Greetings traveler. Welcome
+&+Wto &+Cthe Altar of &+WIce. Have you come here to pledge your allegiance
+&+Wto the &+bper&+Cpet&+bual &+Wpower of the &+bbitter &+Ccold&+W?'&n
+~
+M
+pledge yes allegiance~
+&+bThe &+CProphet &+bof &+CIce &+Wsays to you, 'I sense that you are not yet
+&+Wready to be bestowed the gift that faith in the elemental powers
+&+Wof &+Cice &+Wbrings. You must first prove yourself!
+
+&+WOn the lands of the holy and pure, you will find &+rthe &+RProphet &+rof
+&+RFire&+W. He resides above the &+LCaves of &+gMt. Skelenak&+W. Bring me his
+&+Whead, and you will have proven yourself worthy.'&n
+~
+Q
+~
+R I 200046
+R I 200050
+R I 200050
+R I 200050
+G I 200047
+S
+#200121
+M
+qc_action 400~
+&N$n says 'Hammer those nails, spread that sealant, load those cannons!'
+~
+S
+#200124
+M
+qc_action 500~
+&+yA dock worker climbs up on the side of a docked Ketch, hammering &+Cnails&N&+y into a new supporting beam.
+~
+M
+qc_action 500~
+&+yA dock worker douses a huge sealing substance across the hull of ship after ship, adding strength and weather-resistance to the bulky hulls.
+~
+M
+qc_action 500~
+&N&+yA dock worker ties on a large &+Wmast &N&+yatop the previously-damaged hull of a Ketch.
+~
+S
+#200167
+M
+qc_action 70~
+$n says, '&+WI've been living amongst and studying animals all my life.&n'
+~
+M
+qc_action 70~
+$n continues, '&+WA good friend of mine claimed she found a way to form an unbreakable bond with them.&n'
+$n sighs, '&+WI was on my way to visit her, but a fierce fomorian army has invaded the surrounding area.&n'
+$n whispers, '&+WI do hope she is alright...&n'
+~
+S
+#200169
+M
+qc_action 70~
+$n says thoughtfully, '&+WYou know, these animals obey me, but not of their own will.&n'
+$n whispers, '&+WIf my link to them were broken, they would leave me, or worse, try to destroy me...&n'
+~
+M
+qc_action 70~
+$n sighs, '&+WIf only I could learn the secret of the witch living by the briar patch.&n'
+$n continues, '&+WShe is bound to her pet so strongly that it would never desert her.&n'
+~
+S
+#200172
+M
+qc_action 50~
+$n says, '&+WI have heard there is a crazy lad, some kind of doctor who can teach you amazing things about one's body!&n'
+~
+S
+#200179
+M
+qc_action 100~
+$n whispers to you, '&+WI can bring down an entire swarm of meteors but this is not the most devastating force one can summon!&n'
+$e lowers $s voice and continues, '&+WThe &+cFrost Giants&+W, they have possessed powers to conjure dreadful blizzard. Find the wisest of them all, he may be willing to share the secrets for a price..&n'
+~
+M
+qc_action 70~
+$n says, '&+WI have studied magic all my life.&n'
+$n sighs, '&+WYet the most potent magics still evade me.&n'
+~
+M
+qc_action 70~
+$n says, '&+WThere are rumors of an ancient frost giant with arcane knowledge surpassing that of me and my brethren.&n'
+$n whispers, '&+WIf only I could find him, I might finally master my art.&n'
+~
+S
+#200188
+M
+qc_action 70~
+$n says warmly, '&+WGreetings!&n'
+$n says, '&+WI do everything in my power to scour the land and heal the sick.&n'
+~
+M
+qc_action 70~
+$n continues, '&+WMy master at temple cloister taught me well.&n'
+$n asks, '&+WI wonder, had I stayed, if he had more to teach me?&n'
+~
+S
+#200191
+M
+qc_action 50~
+$n says, '&+WThe most important thing is meditation.&n'
+$n continues, '&+WIf you achieve full alignment of your body and mind, you will be able to regain your energy faster but only a true master is able of this.&n'
+$n sighs, '&+WI wish I was paying more attention to father Tel's lessons&n.'
+~
+S
+#200196
+M
+qc_action 70~
+$n whispers, '&+WThere are legends of a hidden cathedral somewhere in the icy tundra of the north.&n'
+~
+M
+qc_action 70~
+$n says, '&+WI have scoured these lands many years in search of it.&n'
+$n continues, '&+WThe black mage there is said to possess a mastery over his spells unbeknownst to the rest of us.&n'
+$n sighs, '&+WAfter all these years of failure, I worry I may never find him.&n'
+~
+S

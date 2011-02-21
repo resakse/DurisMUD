@@ -1,0 +1,1210 @@
+#200000
+two-handed black minotaur axe~
+&+La &+rtwo&+L-handed black &+rmino&+Ltaur axe&n~
+&+La &+rtwo&+L-handed black &+rmino&+Ltaur axe lays here.&n~
+~
+5 16 3 0 10 0 4194305 8193 64 0 0
+1 3 4 0 0 77 5 50
+10 20000 100
+E
+_room_msg~
+&+LThe wicked battle-axe of the &+rMino&+Ltaur begins to &+Mhum&+L...&n
+~
+E
+_victim_msg~
+&+LThe wicked battle-axe of the &+rMino&+Ltaur &+Mhums &+Las it strikes you!&n
+~
+E
+_char_msg~
+&+LThe wicked battle-axe &+rMino&+Ltaur &+Mhums &+Las you strike $N&+L.&N
+~
+A
+18 3
+A
+19 3
+#200001
+pile crates large~
+&+ya large pile of crates&n~
+&+yA large pile of crates lies here.&n~
+~
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+pile crates large~
+&+y   These crates take up an amazing amount of space, and seem to filled
+&+ywith all sorts of highly sought after goods. Although it would be quite
+&+yprofitable to try to export these wares to the many ports of call around
+&+ythe oceans, something tells you the port authorities wouldn't be very
+&+yaccomodating if they caught you doing it.&n
+~
+#200002
+wooden cabin~
+&+yan old &+Ywooden &+ycabin&n~
+&+yAn old &+Ywooden &+ycabin sits on this island.&n~
+~
+25 15 3 0 7 0 0 0 0 0 0
+97906 7 -1 0 0 0 0 0
+0 0 100
+#200003
+flaming ring prophet~
+&+rthe &+RFlaming &+rring of the &+RProphet&n~
+&+rA strange &+Rring &+rburns quietly on the floor.&n~
+~
+8 15 3 0 7 0 1 3 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200004
+bloody head grtak gr'tak raider~
+&+rthe bloody head of Gr'Tak the Raider&N~
+&+rThe bloody head of Gr'Tak the Raider lies here in a puddle.~
+~
+8 2 3 0 7 0 8392704 16385 0 0 0
+0 0 0 0 0 0 0 0
+14 1 100
+E
+bloody head grtak gr'tak raider~
+   &+rThis head drips with blood.
+~
+#200005
+hunting arm bracer~
+&+ga &+Lhunting &+garm bracer&N~
+&+gA &+Lhunting &+garm bracer &+Lhas been left here in the &+ydirt&+L.~
+~
+9 15 3 0 7 0 0 4097 64 0 0
+6 0 0 3 0 0 0 0
+0 0 100
+E
+hunting arm bracer~
+   &+LThis orcish bracer is worn on the forearm.
+~
+A
+18 2
+A
+19 1
+#200006
+bloody head krekish vicefang~
+&+rthe bloody head of Krekish ViceFang&N~
+&+rThe bloody head of Krekish ViceFang lies here.~
+~
+8 2 3 0 7 0 8392704 16385 0 0 0
+0 0 0 0 0 0 0 0
+14 1 100
+E
+bloody head grtak gr'tak raider~
+   &+rThis head drips with blood.
+~
+#200007
+chainlinked chain raiders raider bracelet~
+&+La &Nc&+Lh&Na&+Li&Nn&+L-&Nl&+Li&Nn&+Lk&Ne&+Ld &+rraider's &+Lb&Nr&+La&Nc&+Le&Nl&Ne&+Lt&N~
+&+LA chain-linked raider's bracelet has been left here.~
+~
+9 15 3 0 7 0 0 4097 0 0 0
+10 0 0 0 0 0 0 0
+2 15434 100
+E
+chain-linked chain link raiders bracelet~
+&+LThis iron bracelet is made of seperate links with a single lion's tooth
+&+Lattached to the center.
+~
+A
+18 3
+A
+19 2
+#200008
+gaseous bracelet~
+&+La &+gga&+Gs&+Ye&+Go&+gus &+Lbr&+gac&+Lel&+get&N~
+&+LA &+ggaseous &+Lbracelet&N has been left here.~
+~
+9 20 2 0 7 0 0 4097 64 0 0
+6 0 0 0 0 0 0 0
+1 90434 100 0 4096 0 0
+E
+gaseous bracelet~
+   &+gThis bracelet is a simple &+Ybronze-colored bracer&+g imbued with
+&+ga magical, gaseous essence.
+~
+A
+23 -3
+A
+13 16
+#200009
+tharnadian long longsword sword~
+&+Wa &+LTharnadian &+Wlongsword&N~
+&+WA &+LTharnadian &+Wlongsword has been left here.~
+~
+5 15 3 0 7 0 0 8193 0 0 0
+5 3 3 0 0 0 0 0
+12 0 100
+E
+winterhaven longsword sword~
+   &+WThis simple steel longsword bares the crest of Winterhaven on the hilt.
+~
+#200010
+tharnadian shield crest~
+&+Wa shield bearing the &+LTharnadian &+Ccrest&N~
+&+WA &+LTharnadian &+Wshield has been left here in the &+ydirt&+W.~
+~
+37 16 3 0 9 0 0 513 0 0 0
+1 1 3 120 3 0 0 0
+15 14343 100
+E
+winterhaven shield~
+   &+WThis steel shield bares the Winterhaven crest.
+~
+A
+14 5
+A
+1 5
+#200011
+grenadier proc~
+&+Lgrenadier proc&N~
+&+Lgrenadier proc&N~
+~
+5 15 3 0 7 0 8389122 8192 0 0 128
+6 1 2 0 0 167 50 10
+0 0 100
+E
+_room_msg~
+&n$n &nhurls a large stick of &+Rgnomish &+rdynamite &Ntowards $N!
+~
+A
+18 20
+A
+19 -5
+#200012
+gnomish flamethrower flame thrower~
+&+Ra gnomish &+Yflame&+rthrower&N~
+&+RA gnomish &+Yflame&+rthrower &+Lhas been left here, &+rgiving off heat.~
+~
+3 7 2 0 7 0 513 16385 64 0 655488
+50 3 3 277 0 0 0 0
+0 1500 100
+E
+gnomish flamethrower~
+   &+WThis small glass mechanism is full of a flammable liquid, which is pumped up
+&+Wwith pressure and then released in short, but far squirts which immediately
+&+Ware ignited by a small magically flaming burning cinder located at the nose
+&+Wof the rifle.  This fire-shooting mechanism seems quite complicated and can
+&+Wprobably only be figured out by Goblins and Gnomes.
+~
+#200013
+tiny faerie potion~
+&+Ga tiny faerie potion&N~
+&+GA tiny faerie potion has been left here in the &+ydirt&+G.~
+~
+10 7 1 0 7 0 1 16385 64 0 0
+50 19 91 90 0 0 0 0
+0 15434 100
+E
+tiny faerie potion~
+   &+GThis tiny potion glows with a bright magic.
+~
+#200014
+huge silver claymore~
+&+Wa huge &+Csilver &+Wclaymore&N~
+&+WA huge silver claymore has been left here in the &+ydirt&+W.~
+~
+5 22 4 0 11 0 4194304 8193 0 0 0
+13 4 6 0 0 0 0 0
+10 88343 100
+E
+huge silver claymore~
+   &+CThis sword is quite large and thick.  Entirely made of silver, it is
+&+Csurprizingly excellently balanced for such a massive blade.
+~
+#200015
+heart sa'dah~
+&+Lthe still &+rbeating &+Lheart of &+rSa'Dah&n~
+&+La still &+rbeating &+Lheart lies here.&n~
+~
+13 2 3 0 7 0 8392712 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200016
+heart jorl'gan~
+&+Lthe still &+rbeating &+Lheart of &+gJorl'gan&n~
+&+La still &+rbeating &+Lheart lies here.&n~
+~
+13 2 3 0 7 0 8392712 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200017
+heart cho'van~
+&+Lthe still &+rbeating &+Lheart of &+CCho'van&n~
+&+La still &+rbeating &+Lheart lies here.&n~
+~
+13 2 3 0 7 0 8392712 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200018
+pulsing darkness throbbing merrova~
+&+Lthe &+mpulsing &+Ldarkness of &+MMerrova&n~
+&+LA &+mthrobbing &+Land &+mpulsing &+Ldarkness lies here.&n~
+~
+13 1 3 0 7 0 8392713 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200019
+heart thorne~
+&+Lthe still &+rbeating &+Lheart of &+BThorne&n~
+&+La still &+rbeating &+Lheart lies here.&n~
+~
+13 2 3 0 7 0 8388608 1 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200020
+nightcrawler claw~
+&+La n&+bi&+Lght&+bcr&+Lawler c&+bl&+Law&N~
+&+LA hideous nightcrawler claw has been left here.~
+~
+5 15 3 0 7 0 0 8193 0 0 0
+2 1 10 0 0 0 0 0
+0 0 100
+E
+nightcrawler claw~
+   &+LThis nasty claw has a black, poisonous edges.
+~
+A
+18 4
+A
+19 2
+#200021
+insignia kimordril mountaineers~
+&+Lan &+ginsignia&+L of the &+YKimordril &+gMountaineers&N~
+&+LAn insignia of the Kimordril Mountaineers lies here.~
+~
+9 15 3 0 7 0 0 2097153 0 0 0
+1 0 0 0 0 0 0 0
+0 0 100
+E
+insignia kimordril mountaineers~
+   &+LThis insignia bares an emblem of a hammer wielded by a mighty fist.
+~
+A
+5 6
+A
+1 6
+#200022
+bloody paw grey fang~
+&+rthe bloody paw of Grey Fang&N~
+&+rThe bloody paw of Grey Fang has been left here.~
+~
+8 2 3 0 7 0 8392704 16385 0 0 0
+0 0 0 0 0 0 0 0
+1 5 100
+E
+bloody paw grey fang~
+   &+rThis huge, clawed paw has been removed from the corpse of Grey Fang - the
+&+ralpha male of the tundra panthers.
+~
+#200023
+frosty white potion~
+&+Wa &+Cfrosty &+Wwhite potion&N~
+&+WA &+Cfrosty &+Wwhite potion has been left here.~
+~
+10 7 3 0 7 0 1 16385 0 0 0
+50 131 232 293 0 0 0 0
+0 15343 100
+E
+frosty white potion~
+   &+WThis small potion has a &+Cfrosty &+Wsheen.
+~
+#200024
+lizardman totem elemental~
+&+ga &+Ll&+Gi&+Lz&+Ga&+Lr&+Gd&+Lm&+Ga&+Ln &+gtotem&N~
+&+gA &+Llizardman &+gtotem&N has been left here.~
+~
+34 6 3 0 7 0 1 16385 64 0 0
+12 0 0 0 0 0 0 0
+4 15343 100
+E
+lizardman totem elemental~
+   &+LThis large wooden totem has strange icons and tiny skulls of swamp critters
+&+Lhanging from it.
+~
+A
+13 10
+A
+4 5
+#200025
+huge blood crystal~
+&+ra huge &+Rblood &+rcrystal&N~
+&+rJutting out of the ground, a huge &+Rblood crystal &+Lgrows here.~
+~
+8 26 3 0 15 0 8388609 16385 64 0 0
+0 0 0 0 0 0 0 0
+15 35000 100
+E
+huge blood crystal~
+   &+rThis heavy red crystal glows with an evil aura.
+~
+#200026
+wyvern egg~
+&+ya wyvern &+Wegg&N~
+&+yA wyvern &+Wegg &+yrests here in a thick wyvern nest.~
+~
+19 45 3 0 15 0 8388608 16385 0 0 0
+100 0 0 0 0 0 0 0
+1 15656 100
+E
+wyvern egg~
+   &+yThis large &+Wegg&+y looks ready to hatch at any minute.
+~
+#200027
+blood crystal wand~
+&+Ra blood cry&+rs&+Rt&+ral wand&N~
+&+RA blood crystal wand has been left here.~
+~
+3 23 3 0 7 0 1 16385 64 0 0
+51 4 4 25 0 0 0 0
+0 64343 100
+E
+blood crystal wand~
+   &+rThis blood crystal wand glows with a vampiric power.
+~
+#200028
+crumbling locket fire~
+&+Lthe &+wcrumbling &+Llocket of &+rfire&n~
+&+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
+~
+13 15 3 0 7 0 8 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+crumbling locket fire~
+&+L   This ornate locket is covered with strange &+mrunes &+Land &+minscriptions
+&+Lthat appear to be in motion, crawling around the decaying locket.
+&+LYou get the feeling that the &+minscriptions &+Lare beckoning you to heed
+&+Ltheir message.&n
+~
+E
+runes inscriptions~
+&+LStrange voices begin calling out inside you head...
+
+&+rFire&+L, &+bWater&+L, &+yEarth &+Land &+CAir&+L,
+&+LHave bound our souls in despair.
+&+LUnite the four tokens and the book of tomorrows,
+&+LAnd the powerful &+mmy&+rst&+mic &+Lshall mend our sorrows...&n
+~
+#200029
+crumbling locket water~
+&+Lthe &+wcrumbling &+Llocket of &+bwater&n~
+&+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
+~
+13 15 3 0 7 0 8 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+crumbling locket water~
+&+L   This ornate locket is covered with strange &+mrunes &+Land &+minscriptions
+&+Lthat appear to be in motion, crawling around the decaying locket.
+&+LYou get the feeling that the &+minscriptions &+Lare beckoning you to heed
+&+Ltheir message.&n
+~
+E
+runes inscriptions~
+&+LStrange voices begin calling out inside you head...
+
+&+rFire&+L, &+bWater&+L, &+yEarth &+Land &+CAir&+L,
+&+LHave bound our souls in despair.
+&+LUnite the four tokens and the book of tomorrows,
+&+LAnd the powerful &+mmy&+rst&+mic &+Lshall mend our sorrows...&n
+~
+#200030
+crumbling locket earth~
+&+Lthe &+wcrumbling &+Llocket of &+yearth&n~
+&+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
+~
+13 15 3 0 7 0 8 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+crumbling locket earth~
+&+L   This ornate locket is covered with strange &+mrunes &+Land &+minscriptions
+&+Lthat appear to be in motion, crawling around the decaying locket.
+&+LYou get the feeling that the &+minscriptions &+Lare beckoning you to heed
+&+Ltheir message.&n
+~
+E
+runes inscriptions~
+&+LStrange voices begin calling out inside you head...
+
+&+rFire&+L, &+bWater&+L, &+yEarth &+Land &+CAir&+L,
+&+LHave bound our souls in despair.
+&+LUnite the four tokens and the book of tomorrows,
+&+LAnd the powerful &+mmy&+rst&+mic &+Lshall mend our sorrows...&n
+~
+#200031
+crumbling locket fire~
+&+Lthe &+wcrumbling &+Llocket of &+Cair&n~
+&+LAn &+wancient &+Llocket lies here, decaying in the winds of time.&n~
+~
+13 15 3 0 7 0 8 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+crumbling locket air~
+&+L   This ornate locket is covered with strange &+mrunes &+Land &+minscriptions
+&+Lthat appear to be in motion, crawling around the decaying locket.
+&+LYou get the feeling that the &+minscriptions &+Lare beckoning you to heed
+&+Ltheir message.&n
+~
+E
+runes inscriptions~
+&+LStrange voices begin calling out inside you head...
+
+&+rFire&+L, &+bWater&+L, &+yEarth &+Land &+CAir&+L,
+&+LHave bound our souls in despair.
+&+LUnite the four tokens and the book of tomorrows,
+&+LAnd the powerful &+mmy&+rst&+mic &+Lshall mend our sorrows...&n
+~
+#200032
+strange powerful mystical book tomorrows~
+&+Lthe &+mmy&+rst&+mic&+ral &+Lbook of &+Ytommorrows&n~
+&+LA strange and powerful &+Ybook &+Llies here.&n~
+~
+13 15 3 0 7 0 8 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200033
+mystical sash netherworld~
+&+Lthe &+mmy&+rst&+mic&+ral &+Lsash of the Netherworld&n~
+&+LA really &+mpo&+rwe&+mrf&+rul &+Lsash lies here.&n~
+~
+9 15 3 0 7 0 1 2049 64 0 0
+0 0 0 5 0 0 0 0
+0 0 100 16 2048 0 33554432
+A
+24 -5
+A
+23 -5
+#200034
+mystical key~
+&+La &+mmy&+rst&+mic&+ral &+Lkey&n~
+&+LA strange looking &+mk&+re&+my &+lies here.&n~
+~
+13 15 3 0 7 0 8 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200035
+gnomish observatory~
+&+La &+RGn&+romi&+Rsh &+Lobservatory&n~
+&+LA &+RGn&+romi&+Rsh &+Lobservatory sits on the hill here, beckoning you to enter.&n~
+~
+25 15 3 0 7 0 0 0 0 0 0
+97952 7 -1 0 0 0 0 0
+0 0 100
+E
+crumbling locket fire~
+&+L   This ornate locket is covered with strange &+mrunes &+Land &+minscriptions
+&+Lthat appear to be in motion, crawling around the decaying locket.
+&+LYou get the feeling that the &+minscriptions &+Lare beckoning you to heed
+&+Ltheir message.&n
+~
+E
+runes inscriptions~
+&+LStrange voices begin calling out inside you head...
+
+&+rFire&+L, &+bWater&+L, &+yEarth &+Land &+CAir&+L,
+&+LHave bound our souls in despair.
+&+LUnite the four tokens and the book of tomorrows,
+&+LAnd the powerful &+mmy&+rst&+mic &+Lshall mend our sorrows...&n
+~
+#200036
+impaled halfling~
+&+Lan &+rimpaled &+yhalfling&N~
+&+LThe &+Wbody &+Lof a &+yhalfling &+Lhangs &+rimpaled &+Lon a &+Cpike&+L, limbs dangling lifelessly.~
+~
+13 2 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+impaled halfling~
+   &+yThe body of a dead halfling has been impaled onto a large minotaur war pike.  This
+&+ygesture of ruthless &+rbrutality &+ymay warn of danger ahead.
+~
+#200037
+huge sign~
+&+La &+W*HUGE* &+Lsign&N~
+&+LA &+W*HUGE* &+Lsign is posted at &+cClavados' Crossing&+L.~
+~
+13 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+huge sign~
+&+y+-----------------+
+&+y|                 |
+&+y| &+Y /\  Ugta &+y      |
+&+y|   &+Y   Evermeet&+y   |
+&+y|  &+W>   Winterhaven&+y|
+&+y|  &+W    Canderthal&+y |
+&+y|  &+C\/  Woodseer&+y   |
+&+y|   &+C   Calimshan&+y  |
+&+y+-----------------+
+&+y       |   |
+&+g\&+G|&+g/----\&+G\\//&+g/---\&+G|&+g/|
+~
+#200038
+large sign~
+&+La large &+ysign&N~
+&+LA large &+ysign &+Lhas been posted here at this turning point.~
+~
+13 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+large sign~
+&+y+-----------------+
+&+y| &+C >  Woodseer    &+y|
+&+y| &+C    Calimshan  &+y |
+&+y| &+W /\ Winterhaven&+y |
+&+y|  &+W   Evermeet  &+y  |
+&+y|  &+R<  Torrhan   &+y  |
+&+y|   &+R  Tharnadia &+y  |
+&+y+-----------------+
+&+y      |     |
+&+g\\//\\//\\//\\//\\//
+~
+#200039
+sign~
+&+La &+csign&+L~
+&+cA small &+Lsign &+cis posted here at this roadway intersection.~
+~
+13 5 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+sign~
+&+y+----------------------+
+&+y| &+C >  Woodseer     &+y    |
+&+y|  &+C   Calimshan   &+y     |
+&+y| &+R \/ Torrhan     &+y     |
+&+y| &+B <  Tharnadia&+y        |
+&+y+----------------------+
+&+y        |    |
+&+G\\//\\//\\//\\//\\//\\//
+~
+#200040
+snow-covered sign~
+&+La &+Wsnow-covered &+ysign&N~
+&+LA huge &+Wsnow-covered &+ysign &+Lis posted here at the &+Cfrozen &+Lcrossing.~
+~
+8 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+snow-covered sign~
+&+W+-------------------------+
+&+W|  &+C<  Verspin             &+W|
+&+W|  &+B\/ Menden-of-the-Deep  &+W|
+&+W|  &+c>  Werrun              &+W|
+&+W+-------------------------+
+&+W           |   |
+&+W           |   |
+&+G\\&+g//\\//\\//\\//\\//\\//\\&+G//
+~
+#200041
+old sign~
+&+Lan &+yold &+Lsign&N~
+&+LAn old &+ysign &+Lis posted here, partly &+Csheened &+Lby &+cfrost&+L.~
+~
+8 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+old sign~
+&+y+----------------------+
+&+y|&+W <   Ice Crag       &+y  |
+&+y|&+W     Bone Fort Inn  &+y  |
+&+y|&+M \/  Teka       &+y      |
+&+y|&+C >   Verspin&+y          |
+&+y+----------------------+
+&+y         |   |
+&+G\\//\\//\\//\\//\\//\\//|
+~
+#200042
+frozen sign~
+&+Ca &+Wfrozen &+Csign&N~
+&+CA frozen &+Wsign &+Cis posted here at the &+Lhi&Ngh&+Lway &+Ccrossing&+L.~
+~
+8 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+frozen sign~
+&+C+-------------------+
+&+C| &+c/\ Ice Crag&+C       |
+&+C| &+m<  Church of&+C      |
+&+C|    &+m  Eternal Dusk &+C|
+&+C| &+M\/ Teka   &+C        |
+&+C|   &+M Verspin   &+C     |
+&+C+-------------------+
+&+C        |   |
+&+C\\&+G//&+C\\&+G//&+G\\&+C//&+G\\&+C//&+G\\&+C//&+G\\&+C//
+~
+#200043
+old sign~
+&+Lan &Nold &+ysign&N~
+&+LAn &Nold &+ysign &+Lis posted here&+g in the grass.~
+~
+8 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+old sign~
+&+y+-----------------+
+&+y|&+W /\  Shady Grove &+y|
+&+y| <   FaanG       |
+&+y|&+W \/  Sto&+brm &+LPo&+Wrt&+y  |
+&+y+-----------------+
+&+y       |   |
+&+g\\//\\//\\//\\//\\//\\//
+~
+#200044
+sign small~
+&+ya small sign&N~
+&+yA small sign is posted here at the &+ggrassy &+yhighway intersection.~
+~
+8 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+sign small~
+&+y   .--.
+&+y   |  |
+&+y+-----------\
+&+y| &+WSto&+brm &+LPort&+y \
+&+y+-----------/
+&+y   |  |
+&+y /-------------+
+&+y/  &+WShady Grove&+y |
+&+y\--------------+
+&+y   |  |
+&+y   |  |
+&+G\\//\\//\\//\\//
+~
+#200045
+sign~
+&+La &+ysign&N~
+&+gA small &+ysign &+ypokes out of a patch of &+govergrown grass.~
+~
+8 6 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+E
+sign~
+&+y+-----------------+
+&+y|&+r /\  Bloodstone &+y |
+&+y| \/  Sarmiz'Duul |
+&+y+-----------------+
+&+y       |  |
+&+g\\//\\//\\//\\//\\/\\/
+~
+#200046
+frosty ring prophet~
+&+bthe &+CFrosty &+bring of the &+CProphet&n~
+&+bA &+Ccold &+bring lies here, chilling the floor.&n~
+~
+8 15 3 0 7 0 1 3 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200047
+head prophet fire~
+&+Lthe &+rhead &+Lof the &+RProphet &+rof &+RFire&n~
+&+LThe &+rhead &+Lof the &+RPropher &+rof &+RFire &+Lfloats here.&n~
+~
+3 15 3 0 7 0 0 16385 64 0 0
+50 5 5 277 0 0 0 0
+0 0 100
+A
+13 25
+A
+3 10
+#200048
+head prophet ice~
+&+LThe &+bhead &+Lof the &+CProphet &+bof &+CIce&n~
+&+LThe &+bhead &+Lof the &+CProphet &+bof &+CIce &+Lfloats here.&n~
+~
+3 15 3 0 7 0 0 16385 64 0 0
+50 5 5 325 0 0 0 0
+0 0 100
+A
+13 25
+A
+3 10
+#200049
+potion living flames~
+&+Lthe &+rpotion &+Lof &+Rliving &+rflames&n~
+&+LThe &+rpotion &+Lof &+Rliving &+rflames &+Llies here.&n~
+~
+10 15 3 0 7 0 0 16385 64 0 0
+52 492 144 0 0 0 0 0
+0 0 100
+#200050
+potion blistering cold~
+&+Lthe &+bpotion &+Lof &+Cblistering &+bcold&n~
+&+LThe &+bpotion &+Lof &+Cblistering &+bcold &+Llies here.&n~
+~
+10 15 3 0 7 0 0 16385 64 0 0
+52 56 411 0 0 0 0 0
+0 0 100
+#200051
+gnomish laboratory~
+&+La &+RGn&+romi&+Rsh &+LLaboratory&n~
+&+LA small &+RGn&+romi&+Rsh &+LLaboratory sits on this &+GSecluded Island&+L.&n~
+~
+25 15 3 0 7 0 0 0 0 0 0
+98016 7 -1 0 0 0 0 0
+0 0 100
+#200052
+small shabby hut~
+&+yA Small and Shabby &+gHut&n~
+&+yA Small and Shabby &+gHut &+ysits here.&n~
+~
+25 5 3 0 7 0 0 0 0 0 0
+98017 7 -1 0 0 0 0 0
+0 0 100
+#200053
+tundra hunter's necklace fangs~
+&+Ca tundra &+Chunter's &N&+ynecklace of &+Wfangs&N~
+&+cA tundra hunter's &N&+cnecklace of &+Wfangs&N has been left here.~
+~
+9 10 2 0 7 0 0 5 0 0 0
+0 0 0 0 0 0 0 0
+0 11223 100
+E
+tundra hunter's necklace fangs~
+   &+WThis necklace has been strong of several large tundra panther fangs,
+&+Wspaced in a formation where the largest fang rests in the center; the
+&+Wsmaller fangs flanked on the sides.  The symbol of the tundra hunter,
+&+Wthis string of fangs is worn with pride by only the bravest of striders
+&+Wwho face the frozen north.
+~
+A
+19 2
+A
+14 16
+#200054
+large chunk flamewood~
+&+ya large chunk of &+rfl&+Ra&+rme&+ywood&n~
+&+yA large chunk of &+rfl&+Ra&+rme&+ywood lies here.&n~
+~
+13 6 3 0 7 0 8388617 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200055
+large chunk spiritwood~
+&+ya large chunk of &+Wsp&+Cir&+Wit&+ywood&n~
+&+yA large chunk of &+Wsp&+Cir&+Wit&+ywood lies here.&n~
+~
+13 6 3 0 7 0 8388617 1 64 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#200056
+bracelet bronze _id_~
+&+ya thick bronze bracelet&n~
+&+yA thick bronze bracelet lies here, glinting in the light.&n~
+~
+9 20 3 3 7 0 1024 4097 64 37883812 0
+4 11 24 3 0 0 0 0
+3 3702 100
+E
+bracelet bronze~
+&+yThick and bronze, this appears to be a bracelet.  Runes line the inside
+&+ysurface.
+~
+E
+_id_name_~
+bracelet mage
+~
+E
+_id_short_~
+a &+ybracelet of the mage&n
+~
+E
+_id_desc_~
+A &+ybracelet of the mage&n lies here.
+~
+A
+3 4
+A
+13 6
+#200057
+chainmail armor suit chain~
+&+ca suit of finely crafted dwarven chainmail&n~
+&+cA suit of chainmail lies here, discarded.&n~
+~
+9 16 3 10 7 0 1024 9 0 87572571 0
+17 3 1 3 0 0 0 0
+20 7120 100
+E
+chainmail armor suit chain~
+&+cThis suit of chainmail looks much like any other, only smaller and
+&+cwith no noticeable flaws.
+~
+A
+1 5
+A
+5 5
+#200058
+shield embossed cross iron~
+&+can iron shield with an embossed &+Wcross&n~
+&+cAn iron shield lies here.&n~
+~
+37 15 3 15 7 0 1024 513 0 87572571 0
+2 1 3 120 4 0 0 0
+15 2530 100
+E
+shield embossed cross iron~
+&+cA simple iron shield with a white cross embossed on the surface, it
+&+cnonetheless looks effective.
+~
+A
+24 -2
+A
+4 5
+#200059
+book prayer small~
+a small prayer book~
+A small prayer book lies here, discarded.~
+~
+12 28 2 5 7 0 0 16385 2 0 0
+0 0 0 0 0 0 0 0
+1 1230 100
+E
+book prayer small~
+This tiny book contains just the most minimal of prayers needed to
+talk to the mighty gods above.
+~
+A
+4 4
+A
+24 -1
+#200060
+longsword sword long wicked black~
+&+La wicked black longsword&n~
+&+LA longsword lies here, wickedly curved.&n~
+~
+5 16 3 10 7 0 1024 8193 0 87572571 0
+5 3 4 3 0 0 0 0
+13 9312 100
+E
+longsword sword long wicked black~
+&+LAbout three feet long, this longsword has a "snake" shape, curving first
+&+Lone way, then the other.
+~
+A
+18 2
+A
+19 2
+#200061
+boots moss _id_~
+&+ga pair of moss-covered boots&n~
+&+gA pair of moss-covered boots lie here, discarded.&n~
+~
+9 30 3 8 7 0 0 65 64 0 0
+8 6 1 3 0 0 0 0
+2 2392 100
+E
+boots moss~
+&+gSeemingly made of moss, this pair of boots is extremely light.
+~
+E
+_id_name_~
+boots accurate speed
+~
+E
+_id_short_~
+a pair of &+gboots of accurate speed&n
+~
+E
+_id_desc_~
+A &+gpair of boots of accurate speed&n are here.
+~
+A
+14 15
+A
+18 1
+#200062
+gloves leather simple _id_~
+&+ya pair of simple leather gloves&n~
+&+yA pair of leather gloves lies here, discarded.&n~
+~
+9 13 3 6 7 0 0 129 64 4173708804 0
+4 7 6 3 0 0 0 0
+1 2319 100
+E
+gloves leather simple~
+&+cMade of leather, these gloves are so simple, it's scary.
+~
+E
+_id_name_~
+gloves monk
+~
+E
+_id_short_~
+a pair of &+ygloves of the monk&n
+~
+E
+_id_desc_~
+A pair of &+ygloves of the monk&n are here.
+~
+A
+19 1
+#200063
+cloak bodycloak silken silk long~
+&+ma long silken bodycloak&n~
+&+mA long bodycloak lies here, discarded.&n~
+~
+9 3 3 8 7 0 1024 1025 64 37883812 0
+6 9 1 3 0 0 0 0
+1 3212 100
+E
+cloak bodycloak silken silk long~
+&+mMade of a purple silken material and long enough to stretch from your
+&+mneck to your feet, this cloak feels like heaven.
+~
+A
+4 4
+A
+13 6
+#200064
+sleeves horsehide horse hide short _id_~
+&+ya pair of short horsehide sleeves&n~
+&+yA pair of horsehide sleeves are here, discarded.&n~
+~
+9 12 3 8 7 0 9216 257 64 37883812 0
+7 8 1 3 0 0 0 0
+3 4193 100
+E
+sleeves horsehide horse hide short~
+&+yShorter than your average sleeves, the horsehair feels strangely
+&+yattractive.
+~
+E
+_id_name_~
+sleeves focusing focus
+~
+E
+_id_short_~
+a pair of &+msleeves of focusing&n
+~
+E
+_id_desc_~
+A pair of &+msleeves of focusing&n are here.
+~
+A
+12 10
+A
+27 4
+#200065
+ring black tiny _id_~
+&+La tiny black ring&n~
+&+LA tiny black ring is here, discarded.&n~
+~
+11 16 1 1 7 0 1024 3 64 4197892 0
+0 0 0 0 0 0 0 0
+0 3921 100
+E
+ring black tiny~
+&+LMade from blackened steel, this ring barely fits over your finger.
+~
+E
+_id_name_~
+ring vitality
+~
+E
+_id_short_~
+a &+Lring of vitality&n
+~
+E
+_id_desc_~
+A &+Lring of vitality&n is here.
+~
+A
+17 -4
+A
+13 7
+#200066
+loop tube twine hollow necklace _id_~
+&+ya &+chollow tube&+y on a loop of twine&n~
+&+yA &+chollow tube&+y on a loop of twine lies here, discarded.&n~
+~
+9 15 3 2 7 0 1024 5 64 37883812 0
+3 2 0 3 0 0 0 0
+3 3291 100
+E
+loop tube twine hollow necklace~
+&+yA loop of dirty twine with a hollow tube on it, it must have some
+&+ygreater purpose..
+~
+E
+_id_name_~
+tube locan locans
+~
+E
+_id_short_~
+a &+cLocan's tube&n
+~
+E
+_id_desc_~
+A &+cLocan's tube&n is here.
+~
+A
+18 1
+A
+3 2
+#200067
+eyeglasses glasses gold rimmed~
+&+ca pair of &+Ygold-rimmed&+c eyeglasses&n~
+&+cA pair of eyeglasses lies here, discarded.&n~
+~
+9 24 0 0 7 0 1024 131073 0 8515584 0
+2 12 12 3 0 0 0 0
+0 4913 100
+E
+eyeglasses glasses gold rimmed~
+&+cMade from small glass rims, these glasses seem very effective.
+~
+A
+18 3
+A
+2 9
+#200068
+dagger steel thin~
+&+ca thin steel dagger&n~
+&+cA steel dagger lies here, discarded.&n~
+~
+5 16 2 3 7 0 0 8193 0 0 0
+2 3 2 11 0 0 0 0
+2 4912 100
+E
+dagger steel thin~
+&+cShort and narrow, this dagger appears surprisingly effective.
+~
+A
+19 2
+A
+18 1
+#200069
+leggings shin guards wooden soot shinguards~
+&+ya pair of wooden shin guards covered with &+Lsoot&n~
+&+yA pair of wooden shin guards lie here.&n~
+~
+9 6 3 8 7 0 8192 33 0 4165209604 0
+4 5 1 3 0 0 0 0
+3 3921 100
+E
+leggings shin guards wooden soot shinguards~
+&+yMade from type of wood and covered with soot, these leggings don't
+&+ylook like they would help much..
+~
+A
+14 10
+A
+26 3
+#200070
+lyre wooden simple instrument~
+&+ya simple wooden lyre&n~
+&+yA wooden lyre lies here, discarded.&n~
+~
+32 6 3 15 7 0 8192 16385 0 0 0
+185 13 2 15 0 0 0 0
+4 3291 100
+E
+lyre wooden simple~
+&+cWith but three strings, this lyre is simple indeed.
+~
+#200071
+ale goblet golden~
+&+Ya golden goblet&n~
+&+YA golden goblet lies here.&n~
+~
+17 24 0 0 7 0 0 16385 64 0 0
+30 30 3 0 0 0 0 0
+-3 5843 100
+E
+ale goblet golden~
+Constructed of pure gold, this goblet gleams lustrously with an inner fire all
+its own.
+~
+A
+3 3
+#200072
+robes black~
+&+La set of thick black robes&n~
+&+LSome black robes lie here.&n~
+~
+11 3 3 8 7 0 1024 9 64 4197892 0
+0 0 0 4 0 0 0 0
+8 2993 100
+E
+robes black~
+Thick and black, this set of robes was once worn by a great drow necromancer.  Now,
+not so much.
+~
+A
+17 -12
+A
+13 12
+#200073
+staff stonewood _id_~
+&+Lan ancient stonewood staff&n~
+&+LAn ancient staff lies here.&n~
+~
+4 6 3 10 7 0 1024 16385 64 4197892 0
+41 5 5 36 0 0 0 0
+12 9832 100
+E
+staff stonewood~
+This heavy staff has runes inscribed on its head.  It appears newly constructed.
+~
+E
+_id_name_~
+staff stoneskin stone
+~
+E
+_id_short_~
+&+La staff of stoneskin&n
+~
+E
+_id_desc_~
+A &+Lstaff of stoneskin&n lies here.
+~
+A
+24 -1
+A
+5 5
+#200074
+dagger iron~
+&+can iron dagger&n~
+&+cAn iron dagger lies here.&n~
+~
+5 15 2 3 7 0 0 8193 0 0 0
+2 1 4 11 0 0 0 0
+3 947 100
+E
+dagger iron~
+Small and sharp, this six-inch blade looks fairly deadly.
+~
+A
+19 1
+#200075
+bracer untapped power~
+&+cbracer&n of &+Luntapped&n &+Mpower&n~
+A &+cbracer&n of &+Luntapped&n &+Mpower&n lies here humming.~
+~
+9 15 3 0 5 0 8193 4097 2 67108864 0
+0 0 0 0 0 0 0 0
+0 8666 100
+E
+bracer untapped power~
+&+cThis bracer is enchanted with an unknown amount of power and will aid&n
+&+cthe wearer against harm.&n
+~
+A
+27 8
+A
+20 -2
