@@ -783,11 +783,45 @@ int flamberge(P_obj obj, P_char ch, int cmd, char *arg)
 
 int doombringer(P_obj obj, P_char ch, int cmd, char *arg)
 {
+  int      dam = cmd / 1000, curr_time, i, room;
   P_char   vict;
-  int i, room;
 
-  if (cmd != CMD_MELEE_HIT || !ch)
+  /*
+     check for periodic event calls
+   */
+  if (cmd == CMD_SET_PERIODIC)
+    return TRUE;
+  
+  if ((!ch || obj->loc.carrying) && cmd == CMD_PERIODIC)
+  {
+    hummer(obj);
+    return TRUE;
+  }
+
+  if (!OBJ_WORN_POS(obj, WIELD))
     return (FALSE);
+
+  if (arg && (cmd == CMD_SAY))
+  {
+    if (isname(arg, "stone"))
+    {
+      curr_time = time(NULL);
+
+      if (obj->timer[0] + 60 <= curr_time)
+      {
+        act("You say 'stone'", FALSE, ch, 0, 0, TO_CHAR);
+        act("Your $q hums briefly.", FALSE, ch, obj, obj, TO_CHAR);
+
+        act("$n says 'stone'", TRUE, ch, obj, NULL, TO_ROOM);
+        act("$n's $q hums briefly.", TRUE, ch, obj, NULL, TO_ROOM);
+        spell_stone_skin(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+
+        obj->timer[0] = curr_time;
+
+        return TRUE;
+      }
+    }
+  }
 
   vict = ((P_char) arg);
   room = ch->in_room;
@@ -798,8 +832,10 @@ int doombringer(P_obj obj, P_char ch, int cmd, char *arg)
     return false;
   }
 
-  if((CheckMultiProcTiming(ch) || !number(0, 2)) &&
-     (4 >= number(0, 100))) // 4% proc rate.
+  if((obj->loc.wearing == ch) &&
+     vict &&
+     (!number(0, 24)) &&
+     (CheckMultiProcTiming(ch) || !number(0, 2)))
   {
     act("&+LYour $q blurs as it calls upon the elements of &+Blightning, &N&+rfire, &+Cand ice to strike&N $N.",
        FALSE, ch, obj, vict, TO_CHAR);
@@ -849,7 +885,7 @@ int doombringer(P_obj obj, P_char ch, int cmd, char *arg)
       FALSE, ch, obj, vict, TO_NOTVICT);
     
     for (i = 0;
-          i < 4 &&
+          i < 3 &&
           IS_ALIVE(ch) &&
           IS_ALIVE(vict);
             i++)
@@ -1219,7 +1255,7 @@ int avernus(P_obj obj, P_char ch, int cmd, char *arg)
 
         act("$n says 'stone'", TRUE, ch, obj, NULL, TO_ROOM);
         act("$n's $q hums briefly.", TRUE, ch, obj, NULL, TO_ROOM);
-        spell_stone_skin(40, ch, 0, SPELL_TYPE_SPELL, ch, 0);
+        spell_stone_skin(60, ch, 0, SPELL_TYPE_SPELL, ch, 0);
 
         obj->timer[0] = curr_time;
 
@@ -1236,9 +1272,9 @@ int avernus(P_obj obj, P_char ch, int cmd, char *arg)
 
   if((obj->loc.wearing == ch) &&
      vict &&
-     (4 >= number(0, 100)) &&
+     (!number(0, 24)) &&
      (CheckMultiProcTiming(ch) || !number(0, 2)) &&
-     !IS_UNDEADRACE(vict))
+     !IS_UNDEADRACE(vict) && !IS_CONSTRUCT(vict))
   {
     act("&+LAvernus, the life stealer &N&+Wglows brightly in your hands as it dives into $N.&N",
        FALSE, ch, obj, vict, TO_CHAR);
