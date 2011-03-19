@@ -481,12 +481,18 @@ void do_outpost(P_char ch, char *arg, int cmd)
       building = get_building_from_rubble(rubble);
       int ownerid = get_outpost_owner(building);
       op = building->mob;
-      if (GET_A_NUM(ch)) // removed check for ownership, who cares about ownership due to kill, it's rubble until it's rebuilt
-                         // and that is when it gets assigned an owner - Jexni 3/18/11 
+      if (ownerid == 0 && 		
+          GET_A_NUM(ch))
       {
         send_to_char("You being the arduous task of rebuilding the destroyed tower, claiming it for your guild!\r\n", ch);
 	ownerid = GET_A_NUM(ch);
 	update_outpost_owner(ownerid, building);
+      }
+      if (GET_A_NUM(ch) != ownerid &&
+          ownerid != 0)
+      {
+        send_to_char("You don't own this outpost!\r\n", ch);
+        return;
       }
       if (!GET_A_NUM(ch))
       {
