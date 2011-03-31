@@ -1725,6 +1725,10 @@ const int hometown[] = {
  *      humans have the choice of Verzanan, Calimport, or Baulders Gate.
  *      Note though that only Verzanan is enable at this point for humans
  *      since the other hometowns are not finished.
+ *
+ *      As is standard practice here, the above comment is left for posterity's sake.
+ *      It is a relic of a bygone era, but should be kept as a memorial. - Jexni 3/30/11
+ *     
  *      Columns are ordered Human, Barbarian, Drow, Grey, Mountain, Duergar,
  *      Halfling, Gnome, Ogre, Troll, Half-elf, Illithid, Orc, Thrikreen,
  *      Centaur, Githyanki, Minotaur, Kobold, Drider, Wood Elf, Firbolg,

@@ -1626,7 +1626,7 @@ void spell_ethereal_grounds(int level, P_char ch, char *arg, int type,
                               event_ethereal_grounds, event_ethereal_grounds_bye) )
      return;
   
-  send_to_room("&+cThe ground starts to swirl togther...&n\n", ch->in_room);
+  send_to_room("&+cThe ground starts to swirl together...&n\n", ch->in_room);
 }
 
 //--------- SPELL_TRANS_MUD_ROCK ------------
@@ -1682,7 +1682,7 @@ void cast_transmute_mud_rock(int level, P_char ch, char *arg, int type, P_char t
                               event_trans_mud_rock, event_mud_rock_bye) )
      return;
   
-  send_to_room("&+yThe ground starts to swirl togther...&n\n", ch->in_room);
+  send_to_room("&+yThe ground starts to swirl together...&n\n", ch->in_room);
 }
 
 //--------- SPELL_TRANS_ROCK_MUD ------------
@@ -1747,7 +1747,7 @@ void cast_transmute_rock_mud(int level, P_char ch, char *arg, int type, P_char t
                               event_trans_rock_mud, event_rock_mud_bye) )
      return;
   
-  send_to_room("&+yThe ground starts to &+Bswirl togther...&n\n", ch->in_room);
+  send_to_room("&+yThe ground starts to &+Bswirl together...&n\n", ch->in_room);
 }
 
 //--------- SPELL_TRANS_MUD_WATER ------------

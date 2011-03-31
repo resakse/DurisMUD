@@ -4046,92 +4046,78 @@ void do_throw_potion(P_char ch, char *argument, int cmd)
 }
 
 
-void do_home(P_char homie, char *argument, int cmd)
+void do_home(P_char ch, char *argument, int cmd)
 {
 
   char     buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
   char     sign;
-  int      scrilla, plat, in_room;
+  int      cost, plat, in_room;
 
-  scrilla = (int)(1000 * (int)get_property("price.home.plat", 50.000));
+  cost = (int)(1000 * (int)get_property("price.home.plat", 50.000));
   
-  if(IS_NPC(homie))
+  if(IS_NPC(ch))
     return;
   
-  if(IS_SET(world[homie->in_room].room_flags, SAFE_ZONE))
+  if(IS_SET(world[ch->in_room].room_flags, SAFE_ZONE))
   {
-    send_to_char("Try somewhere else...\r\n", homie);
+    send_to_char("Try somewhere else...\r\n", ch);
     return;
   }
   
-  if (IS_ILLITHID(homie) && GET_LEVEL(homie) < 25)
+  if (IS_ILLITHID(ch) && GET_LEVEL(ch) < 25)
   {
-    send_to_char("Don't make me kill you.\n", homie);
+    send_to_char("Don't make me kill you.\n", ch);
     return;
   }
 
-//if (!CHAR_IN_TOWN(homie)) {
-  if ( RACE_EVIL(homie) )
+  if (!IS_SET(zone_table[world[ch->in_room].zone].flags, ZONE_TOWN))
   {
-    scrilla *= 10;
-    // Comment out the next two lines if evils are allowed to home again.
-    send_to_char("Sorry as an evil you can only home in your guild!\r\n",homie);
+    send_to_char("You must be in a town to make it your home.\r\n", ch);
     return;
   }
 
-  if (!IS_SET(zone_table[world[homie->in_room].zone].flags, ZONE_TOWN))
-  {
-    send_to_char("You must be in a town to make it your home.\r\n", homie);
-    return;
-  }
+  plat = cost/1000;
 
-  plat = scrilla/1000;
-
-  if (GET_MONEY(homie) < scrilla)
+  if (GET_MONEY(ch) < cost)
   {
-  if ( RACE_EVIL(homie) )
-   {
-    sprintf(buf2, "&+RIt costs &+W%d platinum&+R to change your home, you evil bastard!&n\r\n", plat);
-    act(buf2, TRUE, homie, 0, 0, TO_CHAR);
-    //send_to_char("&+RIt costs 500 platinum to change your home, you evil bastard!\r\n", homie);
-	return;
-   }
-  else if ( RACE_GOOD(homie) )
-   {
     sprintf(buf2, "&+RIt costs &+W%d platinum&+R to change your home, you need more money!&n\r\n", plat);
-    act(buf2, TRUE, homie, 0, 0, TO_CHAR);
-    //send_to_char("&+RIt costs 50 platinum to change your home, you need more money!\r\n", homie);
+    act(buf2, TRUE, ch, 0, 0, TO_CHAR);
     return;
-   } else {
+  } 
+  else {
     wizlog(MINLVLIMMORTAL, "do_home(): Non-good/evil race attempting to home.  If a new racewar is back in the game, fix this.");
-    send_to_char("Get out of here!", homie);
-   }
+    send_to_char("Get out of here!", ch);
   }
 
   // Only way I can figure to tell if a town is evil or good for now.
-  if (RACE_GOOD(homie) && IS_SET(hometowns[VNUM2TOWN(world[homie->in_room].number)-1].flags, JUSTICE_EVILHOME))
+  if (RACE_GOOD(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_EVILHOME))
   {
-    send_to_char("You can't home in an evil hometown.\n", homie);
+    send_to_char("You can't really see yourself living in such an awful place as this.\n", ch);
+    return;
+  }
+  else if (RACE_EVIL(ch) && IS_SET(hometowns[VNUM2TOWN(world[ch->in_room].number)-1].flags, JUSTICE_GOODHOME))
+  {
+    send_to_char("You can't really see yourself living in such an awful place as this.\n", ch);
     return;
   }
 
-  SUB_MONEY(homie, scrilla, 0);
+  SUB_MONEY(ch, cost, 0);
 
-  sprintf(buf, "char %s home %d", J_NAME(homie),
-          world[homie->in_room].number);
-  do_setbit(homie, buf, CMD_SETHOME);
+  sprintf(buf, "char %s home %d", J_NAME(ch),
+          world[ch->in_room].number);
+  do_setbit(ch, buf, CMD_SETHOME);
 
-  sprintf(buf, "char %s orighome %d", J_NAME(homie),
-          world[homie->in_room].number);
-  do_setbit(homie, buf, CMD_SETHOME);
+  sprintf(buf, "char %s orighome %d", J_NAME(ch),
+          world[ch->in_room].number);
+  do_setbit(ch, buf, CMD_SETHOME);
 
-  sprintf(buf, "char %s origbp %d", J_NAME(homie),
-          world[homie->in_room].number);
-  do_setbit(homie, buf, CMD_SETHOME);
+  sprintf(buf, "char %s origbp %d", J_NAME(ch),
+          world[ch->in_room].number);
+  do_setbit(ch, buf, CMD_SETHOME);
   
   send_to_char
     ("\r\n&+WThank you for the payment and welcome to your new birth home whenever you die you will return here.&n\r\n",
-     homie);
+     ch);
   return;
 
 }

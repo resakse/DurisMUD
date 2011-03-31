@@ -3627,7 +3627,7 @@ int attribute_scroll(P_obj obj, P_char ch, int cmd, char *arg)
 
 int earring_powers(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  int      curr_time, rand;
+  int      curr_time, rand, first, second;
   P_char   temp_ch;
   P_char   vict = NULL;
 
@@ -3656,7 +3656,7 @@ int earring_powers(P_obj obj, P_char ch, int cmd, char *arg)
     act("&nYour $q hums briefly.&n", TRUE, obj->loc.wearing, obj, vict, TO_CHAR);
     act("$n's $q hums briefly.&n", TRUE, ch, obj, vict, TO_ROOM);
 
-    switch(number(0,3))
+/*    switch(number(0,3))
     {
       case 0:
         obj->affected[2].location = APPLY_SAVING_SPELL;
@@ -3677,8 +3677,12 @@ int earring_powers(P_obj obj, P_char ch, int cmd, char *arg)
       default:
         break;
     }
+   Too much power for a single item.
+*/
+    first = number(0, 8);
+    do{second = number(0, 8);} while(second != first);
 
-    switch(number(0,8))
+    switch(first)
     {
       case 0:
         obj->affected[0].location = APPLY_STR_MAX;
@@ -3720,7 +3724,7 @@ int earring_powers(P_obj obj, P_char ch, int cmd, char *arg)
         break;
     }
 
-    switch(number(0,8))
+    switch(second)
     {
       case 0:
         obj->affected[1].location = APPLY_STR_MAX;

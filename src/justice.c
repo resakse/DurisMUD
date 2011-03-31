@@ -101,7 +101,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    */
 
   /* 1. Tharnadia */
-  {JUSTICE_LEVEL_CHAOS, 132618,
+  {JUSTICE_GOODHOME, 132618,
    {133050, 132628, 133057, 133065, 132504}, 132546, 132619, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 8},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -109,7 +109,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {6, 11, 16, 21, 26, 9999}},
 
   /* 2. iliithid  town */
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {96421, 0, 0, 0, 0}, 96421, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -117,7 +117,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
   /* 3. drow town */
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {36572, 36563, 36544, 0, 0}, 36436, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -125,7 +125,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
   /* 4. elftown */
-  {JUSTICE_LEVEL_CHAOS, 8096,
+  {JUSTICE_GOODHOME, 8096,
    {8096, 8087, 8214, 0, 0}, 8025, 8097, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 6},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -133,7 +133,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {6, 11, 16, 21, 26, 9999}},
 
   /* 5. dwarf town */
-  {JUSTICE_LEVEL_CHAOS, 95643,
+  {JUSTICE_GOODHOME, 95643,
    {95540, 95522, 95650, 0, 0}, 95532, 95644, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 10},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -141,7 +141,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {6, 11, 16, 21, 26, 9999}},
 
   /* 6. duergar */
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {17173, 0, 0, 0, 0}, 17173, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -149,7 +149,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
   /* 7. halfling */
-  {JUSTICE_LEVEL_CHAOS, 16512,
+  {JUSTICE_GOODHOME, 16512,
    {16506, 16522, 16526, 16653, 16551}, 16705, 16513, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 5, 0},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -157,7 +157,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {6, 11, 16, 21, 26, 9999}},
 
   /* 8. gnome town */
-  {JUSTICE_LEVEL_CHAOS, 66069,
+  {JUSTICE_GOODHOME, 66069,
    {66091, 0, 0, 0, 0}, 66001, 66074, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 6},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -165,7 +165,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {6, 11, 16, 21, 26, 9999}},
 
   /* 9. faange (ogres) */
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {15231, 0, 0, 0, 0}, 15231, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -173,7 +173,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
   /* 10. ghore (trolls) */
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {11503, 0, 0, 0, 0}, 11503, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -181,7 +181,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
   /* 11. "ugta"  (barb) */
-  {JUSTICE_LEVEL_CHAOS, 39310,
+  {JUSTICE_GOODHOME, 39310,
    {39100, 39109, 39166, 39310, 0}, 39105, 39341, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 2},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -197,7 +197,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
   /* 13. "shady"... orc town */
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {97682, 97569, 97682, 97607, 97612}, 97562, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -213,7 +213,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
   /* 15 "fort marigot" (centaur) */
-  {JUSTICE_LEVEL_CHAOS, 5307,
+  {JUSTICE_GOODHOME, 5307,
    {5319, 5306, 5371, 0, 0}, 5340, 5308, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 8},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -221,7 +221,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {6, 11, 16, 21, 26, 9999}},
 
   /* 16  new elftown */
-  {JUSTICE_LEVEL_CHAOS, 45006,
+  {JUSTICE_GOODHOME, 45006,
    {45189, 45205, 45152, 45153, 45036}, 45030, 45036, NULL,
    {0, 2, 5, 10, 15, 20, 10, 10, 5, 12, 20, 2, 2, 8, 8},
    {0, 0, 0, 10, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -245,7 +245,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
 //  19 "Githyanki Fortress",
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {19400, 0, 0, 0, 0}, 19400, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -253,7 +253,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {0, 0, 0, 0, 0, 0}},
 
 //  20 "Moregeeth",
-  {JUSTICE_LEVEL_CHAOS, 0,
+  {JUSTICE_EVILHOME, 0,
    {70187, 0, 0, 0, 0}, 70044, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -437,7 +437,7 @@ void do_justice(P_char ch, char *arg, int cmd)
 }
 
 
-/* fonction to send guard after a crime report */
+/* function to send guard after a crime report */
 
 void justice_dispatch_guard(int town, char *attacker, char *victim, int crime)
 {
@@ -515,6 +515,10 @@ int JusticeGuardAct(P_char ch)
 {
   hunt_data data;
   P_char   tch, nextch;
+
+#if 1
+return FALSE;
+#endif
 
   /* being all mobs check here anyway, its a good place townies to
      check for invaders */
@@ -1404,7 +1408,7 @@ void do_report_crime(P_char ch, char *arg, int cmd)
 
 
 /*
- * this fonction send the mob to report a crime if he's a CITIZEN
+ * this function sends the mob to report a crime if he's a CITIZEN
  */
 
 void justice_send_witness(P_char ch, P_char attacker, P_char victim, int rroom,
@@ -1427,7 +1431,7 @@ void justice_send_witness(P_char ch, P_char attacker, P_char victim, int rroom,
 }
 
 
-/* This fonction check for witness in room and in adj. room and set witness record
+/* This function check for witness in room and in adj. room and set witness record
    Some crime cannot be witness if not in same room, if send_witness is TRUE, send
    the witness to report the crime, we only send 2 witness max. */
 
@@ -1775,6 +1779,10 @@ void justice_action_invader(P_char ch)
 
   if (IS_TRUSTED(ch))
     return;
+
+#if 1
+return;
+#endif
 
 /*
   if (mini_mode)

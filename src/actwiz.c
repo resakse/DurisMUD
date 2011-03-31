@@ -8813,7 +8813,7 @@ void revert_sethome(P_char member)
 {
   char buf[MAX_STRING_LENGTH];
 
-  // Revert their home to their origional birthplace.
+  // Revert their home to their original birthplace.
   sprintf(buf, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
   do_setbit(member, buf, CMD_SETHOME);
   sprintf(buf, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
@@ -9304,7 +9304,7 @@ ACMD(do_tedit)
 #endif
 
 
-/* Fonction to list the witness record of player and mob
+/* Function to list the witness record of player and mob
    or the town crime record (replace function TASFALEN) */
 
 #define LWITNESS_SYNTAX "Syntax:\n   lwitness char|mob <name>\n   lwitness town <town # or name> \n   lwitness town <town # or name> <name> (remove records for <name>)\n"
@@ -9937,8 +9937,9 @@ void do_newb_spellup(P_char ch, char *arg, int cmd)
     wizlog(58, "(%s) newb buffed: (%s).", GET_NAME(ch), GET_NAME(victim));
     logit(LOG_WIZ, "(%s) newb buffed: (%s).", GET_NAME(ch), GET_NAME(victim));
 
-    //Insert cool ancii shit here
-    //send_to_char(file_to_string("lib/creation/bender"), victim);
+    //Insert cool ascii shit here
+    if(isname("Jexni", ch->player.name))
+     send_to_char(file_to_string("lib/creation/hypnotoad"), victim);
 
     //And lets spellup the noob!  A little good will goes a long way.
     spell_armor(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
