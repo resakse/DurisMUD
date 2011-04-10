@@ -45,6 +45,8 @@ extern struct zone_data *zone_table;
 extern int top_of_zone_table;
 extern P_index mob_index;
 
+extern void obj_affect_remove(P_obj, struct obj_affect *);
+
 #define USE_SPACE 0
 #define IN_WELL_ROOM(x) ((world[(x)->in_room].number == 55126) || (world[(x)->in_room].number == 8003))
 
@@ -5119,26 +5121,10 @@ void do_remove(P_char ch, char *argument, int cmd)
               (o_af = get_obj_affect(obj_object, SKILL_ENCHANT)))
           {
             affect_from_char(ch, o_af->data);
-            act("&+ysome of your magic dissipates..&n", FALSE, ch, obj_object,
+            act("&+cAs you remove the enchanted item, the &+Cenchantment &+cis broken...&n", FALSE, ch, obj_object,
                 0, TO_CHAR);
+            obj_affect_remove(obj_object, o_af);
           }
-
-
-
-          /* check to see if removing weapon in combat */
-          /* No - Zod
-             if (IS_FIGHTING(ch)) {
-             if (obj_object->type != ITEM_TOTEM) {
-             if (number(1,100) > GET_LEVEL(ch)) {
-             act("&+ROOPS!&N You lose your grip on $p.", FALSE, ch, obj_object, 0, TO_CHAR);
-             act("$n loses $s grip on $p, causing it to fall to the ground.", TRUE, ch, obj_object, 0, TO_ROOM);
-             obj_from_char(obj_object, TRUE);
-             obj_to_room(obj_object, ch->in_room);
-             CharWait(ch, PULSE_VIOLENCE);
-             }
-             }
-             }
-           */
         }
         else
         {
