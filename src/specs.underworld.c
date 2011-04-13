@@ -2518,7 +2518,7 @@ int bulette(P_char ch, P_char pl, int cmd, char *arg)
   }
 }
 
-int tail(P_obj obj, P_char ch, int cmd, char *arg)
+int tiamat_stinger(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int      dam = cmd / 1000;
   P_char   vict;
@@ -2536,7 +2536,7 @@ int tail(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!dam)                     /*
                                    if dam != 0, we have been called when
-                                   weapons hits someone
+                                   weapon hits someone
                                  */
     return (FALSE);
 
@@ -2559,7 +2559,7 @@ int tail(P_obj obj, P_char ch, int cmd, char *arg)
       act("$n's $q &+Gstrikes out in a blur of speed at $N.", FALSE,
           obj->loc.wearing, obj, vict, TO_ROOM);
       spell_poison(60, ch, 0, SPELL_TYPE_SPELL, vict, 0);
-      if (char_in_list(vict))
+      if (char_in_list(vict) && !isname("tiamat", GET_NAME(vict)))
         spell_major_paralysis(56, ch, 0, SPELL_TYPE_SPELL, vict, 0);
     }
   }

@@ -828,7 +828,7 @@ int purple_worm(P_char, P_char, int, char *);
 int tiamat(P_char, P_char, int, char *);
 int torment(P_obj, P_char, int, char *);
 int unholy_avenger_bloodlust(P_obj, P_char, int, char *);
-int tail(P_obj, P_char, int, char *);
+int tiamat_stinger(P_obj, P_char, int, char *);
 int gfstone(P_obj, P_char, int, char *);
 int tendrils(P_obj, P_char, int, char *);
 int elvenkind_cloak(P_obj, P_char, int, char*);

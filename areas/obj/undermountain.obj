@@ -124,7 +124,7 @@ a &+Rkris-bladed dagger&N~
 A &+Rkris-bladed dagger&N lies upon the ground.~
 ~
 5 16 2 3 7 0 0 8193 0 4194697632 0
-2 2 6 11 0 0 0 0
+2 2 5 11 0 0 0 0
 1 4000 80
 A
 19 3
@@ -361,11 +361,11 @@ An &+Wivory key&N lies discarded here.~
 0 50 100
 #92034
 dagger shadow~
-a &+Lshadow dagger&N~
+&+La shadow dagger&N~
 &+LA shadow dagger lies hidden upon the ground.&N~
 ~
 5 1 2 3 7 0 4128 8193 64 0 0
-2 4 4 11 0 0 0 0
+2 3 4 11 0 0 0 0
 1 40000 100
 E
 dagger shadow~
@@ -454,7 +454,7 @@ A
 19 2
 #92044
 dagger golden~
-a &+Ygolden dagger&N~
+&+Ya golden dagger&N~
 A &+Ygolden dagger&N lies upon the ground.~
 ~
 5 24 2 3 7 0 0 8193 64 4194697632 0
@@ -877,7 +877,7 @@ A
 10 2
 #92086
 dagger ornate~
-an &+Yornate dagger&N~
+&+Yan ornate dagger&N~
 An &+Yornate dagger&N lies on the ground.~
 ~
 5 16 2 3 7 0 0 8193 64 4194697632 0

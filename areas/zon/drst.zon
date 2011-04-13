@@ -407,7 +407,6 @@ D 0 34398 2 1 100 0 0 0
 *
 *
 O 0 34200 1 34200 100 0 0 0        * a sign
-
 O 0 34205 1 34301 100 0 0 0        * a small figurine
 O 0 34206 1 34303 100 0 0 0        * a green limestone statue
 O 0 34207 1 34305 100 0 0 0        * a yellow sash
@@ -422,14 +421,6 @@ O 0 34216 9 34373 100 0 0 0        * a small piece of meteorite
 O 0 34216 9 34375 100 0 0 0        * a small piece of meteorite
 O 0 34216 9 34377 100 0 0 0        * a small piece of meteorite
 O 0 34229 1 34380 100 0 0 0        * A HUGE SIGN
-M 1 34236 1 34398 100 0 0 0        * King StoutDorf
-E 1 34227 1 6 100 0 0 0            *   the great crown of the dwarven lords
-E 1 34228 1 13 100 0 0 0           *   a deep-blue sash of the great master
-E 1 34226 1 16 100 0 0 0           *   a huge battleaxe named 'DwarfSlayer'
-G 1 358 1 0 100 0 0 0              *    (object type not in this .obj file)
-F 1 34237 1 34398 100 0 0 0        * a royal bodyguard (following)
-F 1 34238 1 34398 100 0 0 0        * a pet basilisk (following)
-M 1 34239 1 34398 100 0 0 0        * an arch-devil
 *
 M 0 34204 19 34201 100 0 0 0       * a duergar guardian
 M 0 34204 19 34202 100 0 0 0       * a duergar guardian
@@ -721,5 +712,13 @@ E 1 34225 1 5 100 0 0 0            *   a suit of shiny black spiked armor
 M 0 34233 1 34397 100 0 0 0        * the lion head of a chimera
 F 1 34234 1 34397 100 0 0 0        * the dragon head of a chimera (following)
 F 1 34235 1 34397 100 0 0 0        * the goat head of a chimera (following)
+M 0 34236 1 34398 100 0 0 0        * King StoutDorf
+E 1 34227 1 6 100 0 0 0            *   the great crown of the dwarven lords
+E 1 34228 1 13 100 0 0 0           *   a deep-blue sash of the great master
+E 1 34226 1 16 100 0 0 0           *   a huge battleaxe named 'DwarfSlayer'
+G 1 358 1 0 100 0 0 0              *    (object type not in this .obj file)
+F 1 34237 1 34398 100 0 0 0        * a royal bodyguard (following)
+F 1 34238 1 34398 100 0 0 0        * a pet basilisk (following)
+M 0 34239 1 34398 100 0 0 0        * an arch-devil
 *
 S

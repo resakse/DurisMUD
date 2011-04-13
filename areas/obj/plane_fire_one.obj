@@ -217,7 +217,7 @@ stiletto flaming~
 a &+Rflaming stiletto&N has been left here.~
 ~
 5 19 3 0 14 0 1024 8193 0 8515584 0
-2 1 11 11 0 0 0 0
+2 3 4 11 0 0 0 0
 1 20000 100
 E
 stiletto flaming~
@@ -269,12 +269,12 @@ dagger fire~
 ~
 5 19 3 3 10 0 0 8193 0 0 0
 2 4 4 11 0 0 0 0
-1 20000 100
+4 25353 100
 E
 dagger fire~
 This is dagger is totally engulfed in flames.
 ~
 A
-3 9
+2 9
 A
-4 9
+19 3

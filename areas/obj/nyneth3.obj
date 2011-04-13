@@ -28,9 +28,9 @@ betrayers blood blade~
 2 4 4 11 0 0 0 0
 2 0 100
 A
-18 2
+18 4
 A
-19 2
+32 4
 #38703
 shard death dark~
 &+La shard of death&n~
@@ -65,7 +65,7 @@ tiny bronze dagger~
 &+yA tiny bronze dagger lies here in a small puddle of &+Rblood&+y.&n~
 ~
 5 20 3 0 10 20 0 8193 64 0 0
-2 3 5 11 0 0 0 0
+2 3 4 11 0 0 0 0
 2 0 100
 A
 13 20
@@ -263,7 +263,7 @@ stiletto dread siren wicked~
 &+rA wicked looking stiletto lies here, begging you to take it.&N~
 ~
 5 16 3 0 14 76 0 8193 64 0 0
-2 1 12 11 0 0 0 0
+2 4 5 11 0 0 0 0
 2 0 100 0 28 0 0
 A
 18 5
@@ -795,12 +795,12 @@ dagger stealth~
 &+LA long thin dagger has been dropped here.&n~
 ~
 5 19 3 0 15 100 256 8193 64 0 0
-2 3 4 11 0 0 0 0
+2 4 4 11 0 0 0 0
 4 0 100 524288 0 0 0
 A
-18 4
+18 5
 A
-19 4
+19 3
 #38777
 belt flight winged~
 &+Lthe &+Wwinged &+Lbelt of &+bflight&n~

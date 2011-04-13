@@ -1995,7 +1995,7 @@ void assign_objects(void)
      Plane of Hell One
    */
   obj_index[real_object0(51005)].func.obj = holy_weapon;
-  obj_index[real_object0(51006)].func.obj = tail;
+  obj_index[real_object0(51006)].func.obj = tiamat_stinger;
 
 
   /*

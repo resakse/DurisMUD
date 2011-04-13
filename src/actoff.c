@@ -4133,8 +4133,8 @@ void do_sneaky_strike(P_char ch, char *argument, int cmd)
    they end up in different rooms */
 bool single_stab(P_char ch, P_char victim, P_obj weapon)
 {
-  int room = ch->in_room, skil, dice_multiplier, dam = 0;
-  float final_multiplier, damroll_multiplier, strdex_mod, spinal_tap, critical_stab, critical_stab_multiplier;
+  int room = ch->in_room, skill, dice_mult, dam = 0;
+  float dice_mod, level_mult, final_mult, damroll_mult, strdex_mod, spinal_tap, critical_stab, critical_stab_mult;
   bool spinal = FALSE;
   struct damage_messages messages = {
     "$N makes a strange sound as you place $p in $S back.",
@@ -4146,21 +4146,23 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
     0, weapon
   };
   
-  if((skil = GET_CHAR_SKILL(ch, SKILL_BACKSTAB)) < 1)
+  if((skill = GET_CHAR_SKILL(ch, SKILL_BACKSTAB)) < 1)
     return 0;
 
-  damroll_multiplier = get_property("backstab.DamrollMultiplier", 0.500); 
-  strdex_mod = get_property("backstab.StrDexMultiplier", 4.000); 
+  dice_mod = get_property("backstab.diceMultiplier", 1.000);
+  final_mult = get_property("backstab.finalMultiplier", 1.000);
+  damroll_mult = get_property("backstab.DamrollMultiplier", 0.500); 
+  strdex_mod = get_property("backstab.StrDexMultiplier", 0.500); 
 
-  dam = (int) GET_DAMROLL(ch) * damroll_multiplier;
-  dam = (int) dam + ((GET_C_DEX(ch) + GET_C_STR(ch)) / strdex_mod); 
-  dam = (int) dam + (skil / 2);
-  dice_multiplier = (weapon->value[1] + weapon->value[2]) / 2;
-  dice_multiplier += weapon->value[1];
-  final_multiplier = (float) GET_LEVEL(ch) / 60;
-  dam *= (dice_multiplier / 10);
-  dam *= final_multiplier;
-  dam *= 4; // global melee / 4 does not apply to backstab
+  dam = (int) GET_DAMROLL(ch) * damroll_mult;
+  dam += (GET_C_DEX(ch) + GET_C_STR(ch)) * strdex_mod; 
+  dam = (int) dam * (skill / 100);
+  dice_mult = (int) (weapon->value[1] + (weapon->value[2] / 2)) / 2;
+  dice_mult += weapon->value[1] + (weapon->value[1] / 2);
+  level_mult = (float) GET_LEVEL(ch) / 56;
+  dam = (int) dam * (dice_mult * dice_mod);
+  dam = (int) dam * level_mult;
+  dam = (int) dam * final_mult;
 
   if(IS_IMMOBILE(victim) ||
      GET_STAT(victim) <= STAT_SLEEPING)
@@ -4168,7 +4170,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   
   spinal_tap = get_property("backstab.SpinalTap", 0.150);
   critical_stab = get_property("backstab.CriticalStab", 0.200);
-  critical_stab_multiplier = get_property("backstab.CriticalStab.Multiplier", 1.000);
+  critical_stab_mult = get_property("backstab.CriticalStab.Multiplier", 1.000);
  
   if(GET_STAT(victim) <= STAT_INCAP ||
      GET_STAT(victim) >= STAT_DYING)
@@ -4189,7 +4191,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
          (notch_skill(ch, SKILL_CRITICAL_STAB, get_property("skill.notch.offensive", 25)) ||
          (critical_stab * GET_CHAR_SKILL(ch, SKILL_CRITICAL_STAB)) > number(1, 100)))
   {
-    dam *= critical_stab_multiplier;
+    dam = dam + (dam * critical_stab_mult);
     
     if(melee_damage
       (ch, victim, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION, &messages) ||
@@ -4217,7 +4219,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
        FALSE, ch, 0, victim, TO_NOTVICTROOM);
     
     if(melee_damage
-        (ch, victim, GET_LEVEL(ch), PHSDAM_NOREDUCE | PHSDAM_NOPOSITION, &messages)
+        (ch, victim, number(-12, 12) + GET_LEVEL(ch), PHSDAM_NOREDUCE | PHSDAM_NOPOSITION, &messages)
         || !char_in_list(ch))
       return TRUE;
     
@@ -4403,7 +4405,7 @@ int backstab(P_char ch, P_char victim)
   if(has_innate(victim, INNATE_DRAGONMIND) && number(0,1) ){
     act("$N notices your lethal attempt!", FALSE, ch,
         0, victim, TO_CHAR);
-    act("$n tries to backstab $N but is to slow!", FALSE, ch,
+    act("$n tries to backstab $N but is too slow!", FALSE, ch,
         0, victim, TO_NOTVICT);
     act("$n's attempt to backstab you fails as the dragon mind within takes control!",
         FALSE, ch, 0, victim, TO_VICT);
@@ -4425,7 +4427,7 @@ int backstab(P_char ch, P_char victim)
     percent_chance = 101;
   }
   
-  CharWait(ch, (int) (PULSE_VIOLENCE * 1.1));
+  CharWait(ch, (int) (PULSE_VIOLENCE * 1.3));
 
   if(IS_PC(ch) && (!on_front_line(ch) || !on_front_line(victim)))
   {
@@ -4500,6 +4502,14 @@ int backstab(P_char ch, P_char victim)
     {
       hit(ch, victim, second_w);
     }
+  }
+  if(!affected_by_spell(victim, SKILL_AWARENESS))
+  {
+    bzero(&af, sizeof(af));
+    af.type = SKILL_AWARENESS;
+    af.duration = 10 * PULSE_VIOLENCE;
+    af.bitvector = AFF_AWARE;
+    affect_to_char(victim, &af);
   }
 
   return TRUE;

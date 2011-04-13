@@ -122,7 +122,7 @@ stiletto~
 &+LA deadly-looking stiletto lies on the ground.&n~
 ~
 5 15 3 0 7 0 0 8193 0 0 0
-2 3 4 11 0 0 0 0
+2 3 3 11 0 0 0 0
 1 12224 100
 E
 stiletto~
@@ -162,16 +162,16 @@ and is covered with jagged fins on the reverse side, making the stiletto
 rip the flesh as it is pulled from the victim.
 ~
 A
-18 3
+18 4
 A
-19 2
+19 4
 #34211
 stiletto black~
 &+La pitch-black &+Mglowing &+Lstiletto&n~
 A stiletto lies here, glowing furiously.&n~
 ~
 5 15 3 0 7 0 1 8193 0 0 0
-2 4 4 11 0 0 0 0
+2 3 3 11 0 0 0 0
 1 2828 100 0 16 0 0
 E
 stiletto black~

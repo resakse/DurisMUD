@@ -20,7 +20,7 @@ blood dagger tezcatlipoca tezcat~
 &+LA &+rbl&+Ro&+ro&+Rd &+Lstained dagger lays on the ground here.&n~
 ~
 5 18 3 0 15 80 20063504 8396801 67 2224131 0
-2 2 6 11 0 71103 56 35
+2 3 4 11 0 71103 56 35
 6 88000 100 65576 0 0 0
 E
 blood dagger tezcatlipoca tezcat~
@@ -687,7 +687,7 @@ a&+L dagger of &+ctwisted &+Cso&+cul&+Cs&n~
 &+LA &+ctwisted &+Llooking dagger is laying on the ground here.&n~
 ~
 5 22 3 0 12 55 16851216 8396801 67 0 0
-2 2 6 11 0 0 0 0
+2 2 5 11 0 0 0 0
 1 55000 100
 E
 twisted dagger souls~

@@ -4115,7 +4115,7 @@ slender adamantite dagger~
 &+LA slender adamantite dagger has been left here.~
 ~
 5 19 3 0 9 0 0 8193 64 0 0
-2 2 8 0 0 0 0 0
+2 3 5 0 0 0 0 0
 1 11232 100
 E
 slender adamantite dagger~
@@ -6330,7 +6330,7 @@ black dagger reckoning _noquest_~
 &+LThe black dagger of reckoning floats here on a &N&+rwisp of &+Yhell&N&+rfire&N.~
 ~
 5 19 3 0 14 0 33554432 8193 70 0 0
-2 2 8 0 7 324064321 41 25
+2 2 6 0 7 324064321 41 25
 0 66666 100 0 28 0 0
 E
 black dagger reckoning _noquest_~
@@ -6548,7 +6548,7 @@ slender mithril dagger~
 &+mA slender mithril dagger has been left here.~
 ~
 5 18 2 0 8 0 0 8193 0 0 0
-2 2 8 0 0 0 0 0
+2 2 5 0 0 0 0 0
 0 11448 100
 E
 slender mithril dagger~

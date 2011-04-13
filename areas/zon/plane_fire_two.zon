@@ -251,27 +251,27 @@ M 0 25190 57 25232 100 0 0 0       * an efreeti commoner
 M 0 25190 57 25232 100 0 0 0       * an efreeti commoner
 M 0 25215 1 25233 100 0 0 0        * the efreeti magi guardian
 M 0 25216 22 25234 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25234 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25234 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25234 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25235 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25235 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25235 100 0 0 0       * effretti magi
 M 0 25216 22 25235 100 0 0 0       * effretti magi
 M 0 25216 22 25235 100 0 0 0       * effretti magi
 M 0 25216 22 25235 100 0 0 0       * effretti magi
 M 0 25216 22 25237 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25237 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25237 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25237 100 0 0 0       * effretti magi
 M 0 25216 22 25238 100 0 0 0       * effretti magi
 M 0 25216 22 25238 100 0 0 0       * effretti magi
@@ -286,20 +286,20 @@ M 0 25217 10 25240 100 0 0 0       * an efreeti acolyte magi
 M 0 25217 10 25241 100 0 0 0       * an efreeti acolyte magi
 M 0 25217 10 25241 100 0 0 0       * an efreeti acolyte magi
 M 0 25216 22 25241 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25241 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25242 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25242 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25242 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25216 22 25242 100 0 0 0       * effretti magi
-E 1 25108 17 18 100 0 0 0          *   wand of flames
+E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25218 1 25242 100 0 0 0        * Caltoon the efreeti magi master
-E 1 25113 1 7 100 0 0 0            *   leggings of red flames
-E 1 25111 1 15 100 0 0 0           *   bracelet of blue flames
+E 1 25113 1 7 100 0 0 0            *   some leggings of red flames
+E 1 25111 1 15 100 0 0 0           *   a bracelet of blue flames
 G 1 67244 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 25112 1 0 100 0 0 0            *    the flaming head of Caltoon
 M 0 25190 57 25243 100 0 0 0       * an efreeti commoner
@@ -418,29 +418,29 @@ M 0 25102 7 25321 100 0 0 0        * An efreeti temple guard
 M 0 25102 7 25321 100 0 0 0        * An efreeti temple guard
 M 0 25102 7 25321 100 0 0 0        * An efreeti temple guard
 M 0 25103 9 25322 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25103 9 25322 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25107 9 25322 100 0 0 0        * an efreeti acolyte
 M 0 25107 9 25322 100 0 0 0        * an efreeti acolyte
 M 0 25103 9 25323 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25103 9 25323 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25107 9 25323 100 0 0 0        * an efreeti acolyte
 M 0 25107 9 25323 100 0 0 0        * an efreeti acolyte
 M 0 25103 9 25324 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25103 9 25324 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25107 9 25324 100 0 0 0        * an efreeti acolyte
 M 0 25107 9 25324 100 0 0 0        * an efreeti acolyte
 M 0 25103 9 25325 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25103 9 25325 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25103 9 25325 100 0 0 0        * an efreeti acolyte
-E 1 25107 9 3 100 0 0 0            *   prayer beads of kossuth
+E 1 25107 9 3 100 0 0 0            *   some prayer beads of Kossuth
 M 0 25107 9 25325 100 0 0 0        * an efreeti acolyte
 M 0 25107 9 25325 100 0 0 0        * an efreeti acolyte
 M 0 25107 9 25325 100 0 0 0        * an efreeti acolyte

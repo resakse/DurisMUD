@@ -415,7 +415,7 @@ G 1 29288 2 0 100 0 0 0            *    a wizards staff
 G 1 29306 1 0 100 0 0 0            *    a plain quill
 G 1 29307 1 0 100 0 0 0            *    an advanced mages tome of knowledge
 M 0 29285 1 29307 100 0 0 0        * a black wolf
-G 1 29274 1 0 100 0 0 0            *    a black wolve paw
+G 1 29274 1 0 100 0 0 0            *    a black wolf paw
 G 1 29275 1 0 100 0 0 0            *    a spotted wolfskin
 G 1 29276 1 0 100 0 0 0            *    a sharp wolf tooth
 M 0 29287 20 29309 100 0 0 0       * a stray cat
