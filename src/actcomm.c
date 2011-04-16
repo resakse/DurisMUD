@@ -687,7 +687,10 @@ void do_project(P_char ch, char *argument, int cmd)
     }
     else
       send_to_char("Ok.\r\n", ch);
-      
+    
+    sprintf(Gbuf1, "&+mYou project '&+M%s&n&+m' across the ether\r\n", argument);
+    write_to_pc_log(ch, Gbuf1, LOG_PRIVATE);
+    
     if (get_property("logs.chat.status", 0.000) && IS_PC(ch))
       logit(LOG_CHAT, "%s projects '%s'", GET_NAME(ch), argument);
   }
@@ -701,6 +704,8 @@ void do_project(P_char ch, char *argument, int cmd)
       sprintf(Gbuf1, "&+m$n projects '&+M%s&n&+m' across the ether&n",
               argument);
       act(Gbuf1, 0, ch, 0, i->character, TO_VICT | ACT_IGNORE_ZCOORD);
+      sprintf(Gbuf1, "&+m%s projects '&+M%s&n&+M' accross the ether&n", GET_NAME(ch), argument);
+      write_to_pc_log(i->character, Gbuf1, LOG_PRIVATE);
     }
 }
 
