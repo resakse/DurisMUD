@@ -51,7 +51,6 @@
 #include "profile.h"
 #include "guildhall.h"
 #include "outposts.h"
-#include "boon.h"
 
 /* external variables */
 
@@ -820,9 +819,6 @@ void game_loop(int s)
       outposts_upkeep();
     }
 
-    if (!(pulse % WAIT_SEC))
-      boon_maintenance();
-    
     PROFILE_END(activities);
 
     PROFILE_START(combat);
