@@ -827,6 +827,7 @@ extern unsigned int game_locked;
 #define CMD_WHITELIST   800
 #define CMD_EPICRESET   801
 #define CMD_FOCUS       802
+#define CMD_BOON        803
 
 /* cmds below are not real commands, they are
                 used in item special procedures to identify

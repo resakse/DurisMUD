@@ -70,6 +70,7 @@ OBJS	=  \
 	bard.o \
   beh_magic.o \
 	boards.o \
+	boon.o \
 	comm.o \
 	common.o \
 	condition.o \

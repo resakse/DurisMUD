@@ -106,11 +106,11 @@ Guildhall* Guildhall::find_by_id(int id)
   {
     if( guildhalls[i] && guildhalls[i]->id == id )
     {
-      debug("returning %d from find_by_id", i);
+      //debug("returning %d from find_by_id", i);
       return guildhalls[i];
     }
   }
-  debug("failed to return a guildhall in guildhall.c find_by_id");
+  //debug("failed to return a guildhall in guildhall.c find_by_id");
   return NULL;
 }
 
@@ -123,7 +123,7 @@ Guildhall* Guildhall::find_by_assoc_id(int id)
       return guildhalls[i];
     }
   }
-  debug("failed to return a guildhall in guildhall.c find_by_assoc_id");
+  //debug("failed to return a guildhall in guildhall.c find_by_assoc_id");
   return NULL;
 }
 

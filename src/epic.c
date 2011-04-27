@@ -25,6 +25,7 @@ using namespace std;
 #include "assocs.h"
 #include "nexus_stones.h"
 #include "auction_houses.h"
+#include "boon.h"
 
 extern P_room world;
 extern P_index obj_index;
@@ -582,6 +583,9 @@ void gain_epic(P_char ch, int type, int data, int amount)
     case EPIC_NEXUS_STONE:
       strcpy(type_str, "NEXUS_STONE");
       break;
+    case EPIC_BOON:
+      strcpy(type_str, "BOON");
+      break;
     default:
       strcpy(type_str, "");
       break;
@@ -923,6 +927,7 @@ void epic_stone_one_touch(P_obj obj, P_char ch, int epic_value)
   {
     epic_stone_level_char(obj, ch);
   }
+  check_boon_completion(ch, NULL, obj->value[2], BOPT_ZONE);
 }
 
 int epic_stone(P_obj obj, P_char ch, int cmd, char *arg)

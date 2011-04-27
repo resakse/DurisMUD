@@ -36,6 +36,8 @@ using namespace std;
 #include "map.h"
 #include "specializations.h"
 #include "defines.h"
+#include "sql.h"
+#include "mm.h"
 
 /*
  * extern variables
@@ -73,6 +75,8 @@ extern P_index mob_index;
 extern const int rev_dir[];
 extern void event_spellcast(P_char, P_char, P_obj, void *);
 int ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg);
+extern struct mm_ds *dead_mob_pool;
+extern struct mm_ds *dead_pconly_pool;
 
 char     GS_buf1[MAX_STRING_LENGTH];
 
@@ -4670,6 +4674,76 @@ P_char find_player_by_name(const char *name)
   }
   
   return NULL;  
+}
+
+// Doesn't have to be logged in
+P_char get_player_from_name(char *name)
+{
+  P_char player;
+
+  player = (struct char_data *) mm_get(dead_mob_pool);
+  player->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
+
+  if (restoreCharOnly(player, skip_spaces(name)) < 0 || !player)
+  {
+    if (player)
+      free_char(player);
+    return NULL;
+  }
+  return player;
+}
+
+// Doesn't have to be logged in
+int get_player_pid_from_name(char *name)
+{
+  P_char player;
+  int pid = 0;
+
+  player = (struct char_data *) mm_get(dead_mob_pool);
+  player->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
+
+  if (restoreCharOnly(player, skip_spaces(name)) < 0 || !player)
+  {
+    if (player)
+      free_char(player);
+    return 0;
+  }
+  if (player)
+  {
+    pid = GET_PID(player);
+    free_char(player);
+  }
+  return pid;
+}
+
+char *get_player_name_from_pid(int pid)
+{
+  static char name[MAX_STRING_LENGTH];
+
+  if (!pid)
+    return NULL;
+
+  if (!qry("SELECT name FROM players_core WHERE pid = '%d'", pid))
+  {
+    debug("get_player_name_from_pid(): cant read from db");
+    return NULL;
+  }
+
+  MYSQL_RES *res = mysql_store_result(DB);
+
+  if (mysql_num_rows(res) < 1)
+  {
+    mysql_free_result(res);
+    return NULL;
+  }
+
+  MYSQL_ROW row = mysql_fetch_row(res);
+
+  sprintf(name, "%s", row[0]);
+ 
+  mysql_free_result(res);
+
+  return name;
 }
 
 sh_int *char_stat(P_char ch, int stat)

@@ -601,6 +601,7 @@ void do_storage(P_char ch, char *arg, int cmd);
 void do_newb_spellup(P_char ch, char *arg, int cmd);
 void do_givepet(P_char ch, char *arg, int cmd);
 void do_petition_block(P_char, char *, int);
+void concat_which_flagsde(const char *flagType, const flagDef flagNames[], char *buf);
 
 /* artifact.c */
 

@@ -860,7 +860,7 @@ struct room_data {
 #define PLR2_HARDCORE_CHAR BIT_14
 #define PLR2_DAMAGE        BIT_15
 #define PLR2_B_PETITION      BIT_16 // Block petition channel
-#define PLR2_UNUSED_3      BIT_17
+#define PLR2_BOON          BIT_17
 #define PLR2_NEWBIEEQ      BIT_18
 #define PLR2_SHOW_QUEST    BIT_19
 #define PLR2_SPEC_TIMER    BIT_20
@@ -903,6 +903,7 @@ struct room_data {
 #define EXP_MELEE        7
 #define EXP_WORLD_QUEST  8
 #define EXP_TANKING      9
+#define EXP_BOON	 10
 
 struct racial_data_type {
   sh_int base_age, base_vitality, base_mana, max_mana, hp_bonus, max_age;

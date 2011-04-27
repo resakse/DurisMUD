@@ -30,5 +30,8 @@ int direction_tag(P_char ch);
 const char *condition_str(P_char ch);
 
 string pad_ansi(const char *str, int length, bool trim_to_length);
+P_char get_player_from_name(char *name);
+int get_player_pid_from_name(char *name);
+char *get_player_name_from_pid(int pid);
 
 #endif // _UTILITY_H_

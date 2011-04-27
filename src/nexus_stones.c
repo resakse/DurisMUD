@@ -23,6 +23,7 @@ using namespace std;
 #include "damage.h"
 #include "epic.h"
 #include "ship_npc.h"
+#include "boon.h"
 
 extern P_index mob_index;
 extern P_index obj_index;
@@ -483,6 +484,17 @@ bool nexus_stone_touch(P_obj stone, P_char ch)
     STONE_TURN_TIMER(stone) = time_now;
     
     nexus_stone_epics(ch, stone);
+  
+    if (ch->group)
+    {
+      for (struct group_list *gl = ch->group; gl; gl = gl->next)
+      {
+	if (gl->ch->in_room == ch->in_room)
+	  check_boon_completion(gl->ch, NULL, STONE_ID(stone), BOPT_NEXUS);
+      }
+    }
+    else
+      check_boon_completion(ch, NULL, STONE_ID(stone), BOPT_NEXUS);
   }      
   
   update_nexus_stat_mods();

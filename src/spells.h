@@ -1059,6 +1059,7 @@
 #define TAG_SPAWN                    2063
 #define TAG_HOLY_OFFENSE             2064  // for holy_weapon proc
 #define TAG_HOLY_DEFENSE             2065  // for holy_weapon proc
+#define TAG_BOON		     2066
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
 
 #define SAVING_PARA   0

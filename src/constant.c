@@ -72,6 +72,21 @@ const int troop_costs[NUM_TROOP_TYPES][4] = {
   {10, 50, 100}                 /* TROOP_MAGE */
 };
 
+extern const struct attr_names_struct attr_names[];
+const attr_names_struct attr_names[] = {
+  {0},
+  {"str", "Strength"},
+  {"dex", "Dexterity"},
+  {"agi", "Agility"},
+  {"con", "Constitution"},
+  {"pow", "Power"},
+  {"int", "Intelligence"},
+  {"wis", "Wisdom"},
+  {"pow", "Power"},
+  {"kar", "Karma"},
+  {"luc", "Luck"},
+  {0}
+};
 
 // if ch is class, which other classes can they secondary to
 

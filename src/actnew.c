@@ -48,7 +48,6 @@ extern struct dex_app_type dex_app[];
 extern struct shapechange_struct shapechange_name_list[];
 extern struct str_app_type str_app[];
 extern const char *item_types[];
-extern const flagDef affected1_bits[];
 extern const char *apply_types[];
 extern struct arena_data arena;
 extern const char *game_type[];

@@ -69,6 +69,7 @@ OBJS	=  \
 	bard.o \
   beh_magic.o \
 	boards.o \
+	boon.o \
 	buildings.o \
         comm.o \
 	common.o \

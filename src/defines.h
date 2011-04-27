@@ -590,6 +590,25 @@ typedef unsigned int uint;
 #define TONGUE_GOD             28
 #define TONGUE_LASTHEARD       28
 
+/* predifined attributes */
+
+struct attr_names_struct {
+  const char *abrv;
+  const char *name;
+};
+
+#define STR	1
+#define DEX	2
+#define AGI	3
+#define CON	4
+#define POW	5
+#define INT	6
+#define WIS	7
+#define CHA	8
+#define KARMA	9
+#define LUCK	10
+#define MAX_ATTRIBUTES LUCK
+
 /* Predifined  conditions */
 #define DRUNK        0
 #define FULL         1

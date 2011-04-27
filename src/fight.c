@@ -43,6 +43,7 @@
 #include "map.h"
 #include "dreadlord.h"
 #include "outposts.h"
+#include "boon.h"
 
 /*
  * external variables
@@ -809,6 +810,9 @@ void AddFrags(P_char ch, P_char victim)
 
         if (IS_ILLITHID(tch))
           illithid_advance_level(tch);
+
+	check_boon_completion(tch, victim, ((double)real_gain/100), BOPT_FRAG);
+	check_boon_completion(tch, victim, ((double)real_gain/100), BOPT_FRAGS);
       }
     }
   }
@@ -2424,6 +2428,8 @@ void die(P_char ch, P_char killer)
         deleteCharacter(ch);
         free_char(ch);
         ch = NULL;
+	check_boon_completion(killer, ch, 0, BOPT_MOB);
+	check_boon_completion(killer, ch, 0, BOPT_RACE);
         return;
       }
       
@@ -2601,6 +2607,9 @@ void die(P_char ch, P_char killer)
         arena.stage++;
       }
     }
+
+    check_boon_completion(killer, ch, 0, BOPT_MOB);
+    check_boon_completion(killer, ch, 0, BOPT_RACE);
 
     return;
 /*

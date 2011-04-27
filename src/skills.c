@@ -4801,6 +4801,7 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("troll burn", TAG_TROLL_BURN);
   TAG_CREATE("guildhall tag", TAG_GUILDHALL);
   TAG_CREATE("direction tag", TAG_DIRECTION);
+  TAG_CREATE("boon power", TAG_BOON);
 
   TAG_CREATE_WITH_MESSAGES("recently fragged", TAG_PLR_RECENT_FRAG, 
                            "&+rThe thrill of the &+Lrecent &+Rkill &+rleaves your veins.", "");

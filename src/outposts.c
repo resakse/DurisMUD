@@ -40,6 +40,7 @@ using namespace std;
 #include "guildhall.h"
 #include "alliances.h"
 #include "events.h"
+#include "boon.h"
 
 extern P_index mob_index;
 extern P_index obj_index;
@@ -885,6 +886,17 @@ void outpost_death(P_char outpost, P_char killer)
   }
   // Remove the outpost from the room.
   char_from_room(outpost);
+
+  if (killer->group)
+  {
+    for (struct group_list *gl = killer->group; gl; gl = gl->next)
+    {
+      if (gl->ch->in_room == killer->in_room)
+        check_boon_completion(gl->ch, NULL, building->id, BOPT_OP);
+    }
+  }
+  else
+    check_boon_completion(killer, NULL, building->id, BOPT_OP);
 }
 
 int get_killing_association(P_char ch)
@@ -1225,6 +1237,13 @@ void outpost_setup_gateguards(int location, int type, int amnt, Building *buildi
   {
     outpost_load_gateguard(location, type, building, i);
   }
+}
+
+int outpost_patrol_proc(P_char ch, P_char pl, int cmd, char *arg)
+{
+  SET_BIT(ch->specials.act, ACT_SPEC_DIE);
+
+
 }
 
 int outpost_gateguard_proc(P_char ch, P_char pl, int cmd, char *arg)
@@ -1639,6 +1658,8 @@ int outpost_meurtriere_attack(P_char ch)
 
   return 0;
 }
+
+
 
 #endif
 
