@@ -6710,6 +6710,22 @@ orb crystal~
 &+LThis &+Wcr&Nys&+Wta&Nlli&+Wne&N or&+Wb &+Lhangs on a &+Ydelicate gold
 &+Ychain,&+W glowing&+L softly with an &+Wop&Nal&+Wes&Nca&+Wnt&+L light.
 ~
+#792
+flag standard neutral~
+&+La standard neutral flag&n~
+&+LA standard neutral flag is here.&n~
+~
+8 16 3 0 7 0 73800 8193 0 0 0
+14 2 2 0 0 0 0 0
+1 11530 100
+#793
+wire woven strand garrote~
+&+La thin &+rwoven&+L-&+rstrand &+Lgarrote wire&n~
+&+LA long strand of &+rwoven wire &+Llies here.&n~
+~
+5 16 3 0 7 0 64 8193 0 0 0
+14 2 2 0 0 0 0 0
+1 11530 100
 #800
 grub swamp large _frg_~
 &+ya large swamp grub&n~

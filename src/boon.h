@@ -50,6 +50,7 @@ struct BoonShop {
   int pid;
   int points;
   int stats;
+  int cash;
 };
 
 // This will help the random generation keep a standard minimum boons

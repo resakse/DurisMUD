@@ -856,6 +856,7 @@ void epic_free_level(P_char ch)
      }
 
 }
+
 void epic_stone_level_char(P_obj obj, P_char ch)
 {
   if( IS_MULTICLASS_PC(ch) &&

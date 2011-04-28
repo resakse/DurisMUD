@@ -3,6 +3,9 @@
 // Created April 2011 - Venthix
 
 // TODO:
+// update AGGR_* flags to new setup.
+// learn to compile de in windows
+// figure out how to update website with updated copies of de for download.
 // in addition to the debug's setup some real logging incase someone completes a boon
 //   and gets an error message to contact an imm because the db wouldn't update or
 //   create.
@@ -10,6 +13,7 @@
 // make automatic random boon engine
 // finish boon command random controller
 // the boon shop
+// Add live boon listings to the website.
 
 // To add new boon types or options:
 // Add the define to boon.h
@@ -48,6 +52,7 @@ extern P_desc descriptor_list;
 extern P_room world;
 extern Skill skills[];
 extern struct race_names race_names_table[];
+extern P_index mob_index;
 extern const struct attr_names_struct attr_names[];
 extern int top_of_zone_table;
 extern struct zone_data *zone_table;
@@ -56,6 +61,7 @@ extern const flagDef affected2_bits[];
 extern const flagDef affected3_bits[];
 extern const flagDef affected4_bits[];
 extern const flagDef affected5_bits[];
+extern int new_exp_table[];
 
 struct boon_types_struct boon_types[] = {
   {"none",	"No bonus exists"}, 
@@ -374,7 +380,7 @@ bool get_boon_shop_data(int pid, BoonShop *bshop)
   if (!bshop)
     return FALSE;
 
-  if (!qry("SELECT id, pid, points, stats WHERE pid = '%d'", bshop->pid))
+  if (!qry("SELECT id, pid, points, stats, WHERE pid = '%d'", bshop->pid))
   {
     debug("get_boon_shop_data(): cant read from db");
     return FALSE;
@@ -449,6 +455,7 @@ int validate_boon_data(BoonData *bdata, int flag)
 	  case BOPT_NONE:
 	  case BOPT_ZONE:
 	    {
+	      debug("crit begin %d", (int)bdata->criteria);
 	      i = 0;
 	      while (i <= top_of_zone_table)
 	      {
@@ -461,12 +468,27 @@ int validate_boon_data(BoonData *bdata, int flag)
 	      {
 		return 1;
 	      }
-	      // Check and see if zone is already complete
 	      vector<epic_zone_data> epic_zones = get_epic_zones();
-	      if (bdata->option == BOPT_ZONE &&
-		  epic_zone_done_now(epic_zones[i].number))
-		return 2;
-	    break;
+	      if (bdata->option == BOPT_ZONE)
+	      {
+		int j;
+		// is epic zone complete
+		if (epic_zone_done_now(zone_table[i].number))
+		  return 2;
+		// is it even an epic zone
+		for (j = 0; j <= epic_zones.size(); j++)
+		{
+		  debug("%d %f", epic_zones[j].number, bdata->criteria);
+		  if (epic_zones[j].number == (int)bdata->criteria)
+		  {
+		    debug("found");
+		    break;
+		  }
+		}
+		if (j > epic_zones.size())
+		  return 3;
+	      }
+	      break;
 	    }
 	  case BOPT_MOB:
 	    {
@@ -537,7 +559,7 @@ int validate_boon_data(BoonData *bdata, int flag)
 	    }
 	  case BOPT_FRAGS:
 	    {
-	      if (bdata->criteria <= 0 || bdata->criteria)
+	      if (bdata->criteria <= 0)
 		return 1;
 	      break;
 	    }
@@ -783,6 +805,23 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
     }
     else if (!bdata->bonus)
       bdata->bonus = atof(arg);
+
+    if (bdata->type == BTYPE_LEVEL && *arg)
+    {
+      if (is_abbrev(arg, "yes"))
+	bdata->bonus2 = 1;
+      else if (is_abbrev(arg, "no"))
+	bdata->bonus2 = 0;
+      else if (atof(arg) == 0)
+	bdata->bonus2 = 0;
+      else if (atof(arg) == 1)
+	bdata->bonus2 = 1;
+      else
+      {
+	send_to_char("Invalid secondary bonus, please indicate whether or not to bypass epics (1 or yes, 0 or no).\r\n", ch);
+	return FALSE;
+      }
+    }
     
     if ((retval = validate_boon_data(bdata, BARG_BONUS)))
     {
@@ -858,13 +897,39 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 
     // Handle criteria argument
     argument = setbit_parseArgument(argument, arg);
-    
-    if (!*arg || atof(arg) < 0)
+
+    if (bdata->option == BOPT_NONE ||
+	bdata->option == BOPT_ZONE)
+    {
+      if (*arg && !isdigit(*arg))
+      {
+	for (i = 0; i <= top_of_zone_table; i++)
+	{
+	  if (is_abbrev(strip_ansi(zone_table[i].name).c_str(), arg) ||
+	      !strcmp(zone_table[i].filename, arg))
+	  {
+	    debug("strip: %s, zt: %s, arg: %s", strip_ansi(zone_table[i].name).c_str(), zone_table[i].filename, arg);
+	    break;
+	  }
+	}
+	if (i > top_of_zone_table)
+	{
+	  send_to_char_f(ch, "&+W'%s' is not a valid zone name or filename.  Try using single quotes (') if you're using the zone name.\r\n", arg);
+	  return FALSE;
+	}
+	bdata->criteria = zone_table[i].number;
+	debug("bdata->criteria: %d, i: %d, num: %d", (int)bdata->criteria, i, zone_table[i].number);
+      }
+    }
+
+    if (!bdata->criteria && (!*arg || !isdigit(*arg)))
     {
       send_to_char_f(ch, "&+W'%s' is not a valid criteria.  Please enter a number.&n\r\n", arg);
       return FALSE;
     }
-    bdata->criteria = atof(arg);
+    
+    if (!bdata->criteria)
+      bdata->criteria = atof(arg);
     
     if ((bdata->option == BOPT_MOB ||
 	 bdata->option == BOPT_RACE) &&
@@ -913,6 +978,8 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 	      send_to_char_f(ch, "&+W'%d' is an invalid criteria.  Zone does not exist.&n\r\n", (int)bdata->criteria);
 	    if (retval == 2)
 	      send_to_char("&+WThat zone is already complete.&n\r\n", ch);
+	    if (retval == 3)
+	      send_to_char("&+WThat is not an epic zone.&n\r\n", ch);
 	    break;
 	  }
 	case BOPT_MOB:
@@ -1499,6 +1566,8 @@ int boon_display(P_char ch, char *argument)
       case BTYPE_LEVEL:
 	{
 	  sprintf(bufftype, boon_types[type].desc, (int)bonus);
+	  if (bonus2)
+	    sprintf(bufftype + strlen(bufftype), " and bypass epics");
 	  break;
 	}
       case BTYPE_EXP:
@@ -2096,7 +2165,7 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
     sprintf(buff, " AND (criteria = '%d' OR criteria = '0')", GET_LEVEL(ch));
   else if (option == BOPT_MOB &&
            IS_NPC(victim))
-    sprintf(buff, " AND (criteria2 = '%d')", GET_RNUM(victim));
+    sprintf(buff, " AND (criteria2 = '%d')", GET_VNUM(victim));
   else if (option == BOPT_RACE &&
            (IS_NPC(victim) ||
 	    racewar(ch, victim)))
@@ -2237,11 +2306,11 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
       case BTYPE_CASH:
 	{
 	  boon_notify(bdata.id, ch, BN_COMPLETE);
-	  send_to_char_f(ch, "You receive %s&n.\r\n", coin_stringv(bdata.bonus));
-	  GET_PLATINUM(ch) += (bdata.bonus / 1000);
-	  GET_GOLD(ch) += (((int)bdata.bonus % 1000) / 100);
-	  GET_SILVER(ch) += ((((int)bdata.bonus % 1000) % 100) / 10);
-	  GET_COPPER(ch) += ((((int)bdata.bonus % 1000) % 100) % 10);
+	  send_to_char_f(ch, "Your bank receives a deposit of %s&n.\r\n", coin_stringv(bdata.bonus));
+	  GET_BALANCE_PLATINUM(ch) += (bdata.bonus / 1000);
+	  GET_BALANCE_GOLD(ch) += (((int)bdata.bonus % 1000) / 100);
+	  GET_BALANCE_SILVER(ch) += ((((int)bdata.bonus % 1000) % 100) / 10);
+	  GET_BALANCE_COPPER(ch) += ((((int)bdata.bonus % 1000) % 100) % 10);
 	  break;
 	}
       case BTYPE_LEVEL:
@@ -2250,9 +2319,17 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
 	  if ((GET_LEVEL(ch)+1) > (int)bdata.bonus)
 	  {
 	    send_to_char("&+WWell done, unfortionately you've already surpassed the max level this boon will grant.&n\r\n", ch);
-	    break;
+	    continue;
 	  }
-	  advance_level(ch);
+	  if ((int)bdata.bonus2)
+	  {
+	    //bypass epics
+	    GET_EXP(ch) -= new_exp_table[GET_LEVEL(ch) + 1];
+	    advance_level(ch);
+	  }
+	  else
+	    // We'll give them a free level, so long as they have the epics for it.
+	    epic_free_level(ch);
 	  break;
 	}
       case BTYPE_POWER:
@@ -2411,6 +2488,9 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
       default:
 	break;
     }
+
+    if (bdata.type != BTYPE_EXPM)
+      debug("%s has completed boon # %d.", GET_NAME(ch), bdata.id);
 
     // Check and expire boon's if they are player targeted and not repeatable..
     // all though boon_progress wont let them continue if its not repeatable,

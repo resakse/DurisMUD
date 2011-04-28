@@ -2428,8 +2428,11 @@ void die(P_char ch, P_char killer)
         deleteCharacter(ch);
         free_char(ch);
         ch = NULL;
-	check_boon_completion(killer, ch, 0, BOPT_MOB);
-	check_boon_completion(killer, ch, 0, BOPT_RACE);
+	if (!IS_PC_PET(ch))
+	{
+	  check_boon_completion(killer, ch, 0, BOPT_MOB);
+	  check_boon_completion(killer, ch, 0, BOPT_RACE);
+	}
         return;
       }
       
@@ -2608,8 +2611,11 @@ void die(P_char ch, P_char killer)
       }
     }
 
-    check_boon_completion(killer, ch, 0, BOPT_MOB);
-    check_boon_completion(killer, ch, 0, BOPT_RACE);
+    if (!IS_PC_PET(ch))
+    {
+      check_boon_completion(killer, ch, 0, BOPT_MOB);
+      check_boon_completion(killer, ch, 0, BOPT_RACE);
+    }
 
     return;
 /*
