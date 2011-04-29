@@ -135,6 +135,7 @@ typedef struct _mobType
   uint actionBits;
   uint aggroBits;
   uint aggro2Bits;
+  uint aggro3Bits;
   uint affect1Bits;
   uint affect2Bits;
   uint affect3Bits;

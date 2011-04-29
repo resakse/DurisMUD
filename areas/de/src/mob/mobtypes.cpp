@@ -142,7 +142,7 @@ const char *getMobSizeStrn(const int mobSize)
 
 bool isAggro(const mobType *mob)
 {
-  return (mob->aggroBits || mob->aggro2Bits);
+  return (mob->aggroBits || mob->aggro2Bits || mob->aggro3Bits);
 }
 
 
@@ -155,5 +155,6 @@ bool castingClass(const uint cl)
   return ((cl & CLASS_RANGER) || (cl & CLASS_PSIONICIST) || (cl & CLASS_PALADIN) ||
           (cl & CLASS_ANTIPALADIN) || (cl & CLASS_CLERIC) || (cl & CLASS_DRUID) ||
           (cl & CLASS_SHAMAN) || (cl & CLASS_SORCERER) || (cl & CLASS_NECROMANCER) ||
-          (cl & CLASS_CONJURER) || (cl & CLASS_WARLOCK));
+          (cl & CLASS_CONJURER) || (cl & CLASS_WARLOCK) || (cl & CLASS_ETHERMANCER) ||
+	  (cl & CLASS_ILLUSIONIST) || (cl & CLASS_THEURGIST) || (cl & CLASS_AVENGER));
 }

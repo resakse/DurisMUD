@@ -366,6 +366,12 @@ const menuChoice mobAggro12FlagsChoiceArr[] =
 { { "aggro1/2 flags", "aggro1 flags", 0, offsetof(mobType, aggroBits), mctMobAggro, mclNone, mcdDefault, 0, 
     mobAggro12FlagsChoiceAggro2ExtraArr }, { 0 } };
 
+// extra data for agg3 flags
+
+const menuChoice mobAggro3FlagsChoiceArr[] =
+{ { "aggro3 flags", 0, 0, offsetof(mobType, aggro3Bits), mctMobAggro3, mclNone, mcdDefault, 0, 
+    0 }, { 0 } };
+
 // extra data for aff1/aff2 flags (aff2 flags)
 
 const menuChoice mobAff12FlagsChoiceAff2ExtraArr[] =
@@ -448,6 +454,7 @@ const menuChoiceGroup mobGroupArr[] =
   { mobDescChoiceArr, 'D', 0 },
   { mobActFlagsChoiceArr, 'E', 0 },
   { mobAggro12FlagsChoiceArr, 'F', 'G' },
+  { mobAggro3FlagsChoiceArr, 'P', 0 },
   { mobAff12FlagsChoiceArr, 'H', 'I' },
   { mobAff34FlagsChoiceArr, 'J', 'K' },
   { mobMiscChoiceArr, 'M', 0 },

@@ -56,7 +56,7 @@
 extern zone g_zoneRec;
 extern "C" flagDef room_bits[], extra_bits[], extra2_bits[], wear_bits[],
                    affected1_bits[], affected2_bits[], affected3_bits[], affected4_bits[],
-                   action_bits[], aggro_bits[], aggro2_bits[];
+                   action_bits[], aggro_bits[], aggro2_bits[], aggro3_bits[];
 extern flagDef g_npc_class_bits[], g_race_names[];
 extern char *g_exitnames[];
 
@@ -277,6 +277,12 @@ uint checkAllFlags(FILE *file, size_t& numbLines, bool* userQuit)
 
       errors += checkFlags(file, mob->aggro2Bits, aggro2_bits,
                            "aggro2", "mob", mobNumb, numbLines, userQuit);
+
+      if (*userQuit)
+        return errors;
+      
+      errors += checkFlags(file, mob->aggro3Bits, aggro3_bits,
+                           "aggro3", "mob", mobNumb, numbLines, userQuit);
 
       if (*userQuit)
         return errors;

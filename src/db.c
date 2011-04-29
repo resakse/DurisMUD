@@ -1914,7 +1914,7 @@ P_char read_mobile(int nr, int type)
   P_char   mob = NULL;
   char     Gbuf1[MAX_STRING_LENGTH], buf[MAX_INPUT_LENGTH], letter = 0;
   int      foo, bar, i, j;
-  long     tmp, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8;
+  long     tmp, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9;
   static int idnum = 0;
 
   i = nr;
@@ -2032,6 +2032,21 @@ P_char read_mobile(int nr, int type)
 
   fgets(buf, sizeof(buf) - 1, mob_f);
   if (sscanf
+      (buf, " %lu %lu %lu %1u %lu %lu %lu %lu %lu %c \n", &tmp1, &tmp7, &tmp8, &tmp9,
+       &tmp2, &tmp3, &tmp4, &tmp5, &tmp6, &letter) == 10)
+  {
+    mob->specials.act = tmp1;
+    mob->only.npc->aggro_flags = tmp7;
+    mob->only.npc->aggro2_flags = tmp8;
+    mob->only.npc->aggro3_flags = tmp9;
+    mob->specials.affected_by = tmp2;
+    mob->specials.affected_by2 = tmp3;
+    mob->specials.affected_by3 = tmp4;
+    mob->specials.affected_by4 = tmp5;
+    mob->specials.affected_by5 = 0;
+    mob->specials.alignment = tmp6;
+  }
+  else if (sscanf
       (buf, " %lu %lu %lu %lu %lu %lu %lu %lu %c \n", &tmp1, &tmp7, &tmp8,
        &tmp2, &tmp3, &tmp4, &tmp5, &tmp6, &letter) == 9)
   {

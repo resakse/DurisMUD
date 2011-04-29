@@ -191,6 +191,9 @@ bool compareMobType(const mobType *mob1, const mobType *mob2)
   if (mob1->aggro2Bits != mob2->aggro2Bits)
     return false;
 
+  if (mob1->aggro3Bits != mob2->aggro3Bits)
+    return false;
+
   if (mob1->affect1Bits != mob2->affect1Bits)
     return false;
 

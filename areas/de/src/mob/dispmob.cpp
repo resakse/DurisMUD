@@ -43,7 +43,7 @@
 #include "mob.h"
 
 extern "C" flagDef action_bits[], affected1_bits[], affected2_bits[], affected3_bits[], affected4_bits[], 
-                   aggro_bits[], aggro2_bits[];
+                   aggro_bits[], aggro2_bits[], aggro3_bits[];
 extern "C" const struct race_names race_names_table[];                      
 extern "C" const struct class_names class_names_table[];
 extern room *g_currentRoom;
@@ -217,7 +217,7 @@ void displayMobSpeciesList(const char *searchStrn)
 void displayMobInfo(const char *args)
 {
   char strn[4096], strn2[2048];
-  char fstrn[2048], fstrn2[2048], fstrn3[2048], fstrn4[2048], fstrn5[2048], fstrn6[2048], fstrn7[2048];
+  char fstrn[2048], fstrn2[2048], fstrn3[2048], fstrn4[2048], fstrn5[2048], fstrn6[2048], fstrn7[2048], fstrn8[2048];
 
   const mobType *mob;
 
@@ -255,6 +255,7 @@ void displayMobInfo(const char *args)
 "&+YMob aff4 flags  :&n %u (%s)\n"
 "&+YMob aggro flags :&n %u (%s)\n"
 "&+YMob aggro2 flags:&n %u (%s)\n"
+"&+YMob aggro3 flags:&n %u (%s)\n"
 "\n"
 "&+CPress a key to continue...",
 
@@ -268,7 +269,8 @@ mob->affect2Bits, getFlagStrn(mob->affect2Bits, affected2_bits, fstrn3, 1023),
 mob->affect3Bits, getFlagStrn(mob->affect3Bits, affected3_bits, fstrn4, 1023),
 mob->affect4Bits, getFlagStrn(mob->affect4Bits, affected4_bits, fstrn5, 1023),
 mob->aggroBits, getFlagStrn(mob->aggroBits, aggro_bits, fstrn6, 1023),
-mob->aggro2Bits, getFlagStrn(mob->aggro2Bits, aggro2_bits, fstrn7, 1023));
+mob->aggro2Bits, getFlagStrn(mob->aggro2Bits, aggro2_bits, fstrn7, 1023),
+mob->aggro3Bits, getFlagStrn(mob->aggro3Bits, aggro3_bits, fstrn8, 1023));
 
   displayColorString(strn);
 

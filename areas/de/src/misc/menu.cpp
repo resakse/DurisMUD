@@ -47,14 +47,14 @@ extern flagDef g_roomManaList[], g_roomSectList[], g_objSizeList[], g_shopShopke
 
 extern "C" flagDef room_bits[], extra_bits[], extra2_bits[], wear_bits[], affected1_bits[], 
                    affected2_bits[], affected3_bits[], affected4_bits[],
-                   action_bits[], aggro_bits[], aggro2_bits[];
+                   action_bits[], aggro_bits[], aggro2_bits[], aggro3_bits[];
 
 extern uint g_roomFlagTemplates[], g_objExtraFlagTemplates[], g_objExtra2FlagTemplates[],
             g_objWearFlagTemplates[], g_objAntiFlagTemplates[], g_objAnti2FlagTemplates[],
             g_objAff1FlagTemplates[], g_objAff2FlagTemplates[], g_objAff3FlagTemplates[], 
             g_objAff4FlagTemplates[], g_mobActionFlagTemplates[], g_mobAff1FlagTemplates[], 
             g_mobAff2FlagTemplates[], g_mobAff3FlagTemplates[], g_mobAff4FlagTemplates[],
-            g_mobAggroFlagTemplates[], g_mobAggro2FlagTemplates[];
+            g_mobAggroFlagTemplates[], g_mobAggro2FlagTemplates[], g_mobAggro3FlagTemplates[];
 
 extern variable *g_varHead;
 
@@ -176,6 +176,7 @@ int getMenuDataTypeStrn(char *valstrn, const menuChoiceDataType dataType, const 
     case mctMobAction :
     case mctMobAggro :
     case mctMobAggro2 :
+    case mctMobAggro3 :
     case mctMobAffect1 :
     case mctMobAffect2 :
     case mctMobAffect3 :
@@ -1204,6 +1205,13 @@ bool editMenuValue(const menuChoice *choice, void *entityPtr)
 
       editFlags(aggro2_bits, &(mob->aggro2Bits), ENTITY_MOB, getMobShortName(mob), mob->mobNumber,
                 "aggro2", g_mobAggro2FlagTemplates, 0, true);
+      return true;
+
+    case mctMobAggro3 :
+      mob = (mobType *)entityPtr;
+
+      editFlags(aggro3_bits, &(mob->aggro3Bits), ENTITY_MOB, getMobShortName(mob), mob->mobNumber,
+                "aggro3", g_mobAggro3FlagTemplates, 0, true);
       return true;
 
     case mctMobAffect1 :

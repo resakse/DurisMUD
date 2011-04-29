@@ -246,7 +246,7 @@ mobType *readMobFromFile(FILE *mobFile, const bool checkDupes, const bool incNum
 
  // read first line of misc mob info - action, agg, agg2, aff1, aff2, aff3, aff4 flags, align, S
 
-  const size_t intMiscArgs[] = { 5, 7, 9, 0 };
+  const size_t intMiscArgs[] = { 5, 7, 9, 10, 0 };
 
   if (!readAreaFileLine(mobFile, strn, 512, ENTITY_MOB, mobNumb, ENTITY_TYPE_UNUSED, ENTITY_NUMB_UNUSED,
                         "misc info", 0, intMiscArgs, false, true))
@@ -278,6 +278,20 @@ mobType *readMobFromFile(FILE *mobFile, const bool checkDupes, const bool incNum
            &(mobPtr->actionBits),
            &(mobPtr->aggroBits),
            &(mobPtr->aggro2Bits),
+           &(mobPtr->affect1Bits),
+           &(mobPtr->affect2Bits),
+           &(mobPtr->affect3Bits),
+           &(mobPtr->affect4Bits),
+           &(mobPtr->alignment),
+           tempstrn);  // "S"
+  }
+  else if (numbArgs(strn) == 10)
+  {
+    sscanf(strn, "%u%u%u%u%u%u%u%u%d%s",
+           &(mobPtr->actionBits),
+           &(mobPtr->aggroBits),
+           &(mobPtr->aggro2Bits),
+           &(mobPtr->aggro3Bits),
            &(mobPtr->affect1Bits),
            &(mobPtr->affect2Bits),
            &(mobPtr->affect3Bits),
