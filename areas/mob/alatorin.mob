@@ -2895,7 +2895,7 @@ mithril statue laduguer~
 &+mA huge golem-sized mithril statue of the duergar god Laduguer stands here, arms crossed.
 ~
    &+mThis massive statue is that of Laduguer, the great duergar dwarven god
-&+mof strict and unforgiving evil judgement.  Although this seems to simply
+&+mof strict and unforgiving evil judgment.  Although this seems to simply
 &+mbe a mithril idol of the duergar god, it certainly is an imposing figure.
 &+mLaduguer appears as a tall, gaunt duergar with a thick mithril statue
 &+mteture.  He is bald and frowning in an aura of evil, glooming, and
@@ -3255,7 +3255,7 @@ brino stonehammer dwarf~
 ~
    &+YBrino Stonehammer, a sturdy mountain-shield dwarf crossbreed, has taken
 &+Yon the identity of his templar forefathers in a life of honor, faith, and
-&+Ychastity.  Brino has a long blonde beard tied off in three seperate braids.
+&+Ychastity.  Brino has a long blonde beard tied off in three separate braids.
 &+YHe moves with great speed and has green eyes.
 ~
 1073743944 0 0 402653320 14528 0 0 1000 S
@@ -3313,7 +3313,7 @@ dark dwarf taigorus~
 &+LA dark &+Ydwarf &+Lnamed &N&+rTaigorus &+Lrelaxes here&N, inviting strangers closer with his &+ggre&+Gen ey&N&+ges.
 ~
    &+LThis dark dwarf, a rare and ore-hungry cousin of the &N&+rduergar dwarf&+L is
-&+Lhere, completely seperated from whatever diplomatic strains that may exist between
+&+Lhere, completely separated from whatever diplomatic strains that may exist between
 &+Lthe pureblooded dwarves of the shield and dark distinctions.  &N&+rTaigorus &+Lwears
 &+Ldark, loose-fitting clothing and has been known for his reputation as a &N&+mscourge
 &+Lamong the surface races.  Nevertheless, he has been taken in with a certain liking by
@@ -3817,7 +3817,7 @@ burly dwarf guard gate khoralator fort~
    &+YThis burly mountain dwarf has traveled far to guard the fortress of Khoralator;
 &+Yready to die for his people in the unforgiving mountain of &N&+yShanatar&+Y.  He
 &+Yhas a long, golden beard braided in a tight knot down the middle - the standard
-&+Yfor his legion.  A &+Rfirey &+Ygaze stares from his deep-set eyes, armed and trained
+&+Yfor his legion.  A &+Rfiery &+Ygaze stares from his deep-set eyes, armed and trained
 &+Yby the &+WKhor&N&+calator &+CFort &N&+rmilitia &+Yto defend his post.
 ~
 2250 128 0 24 0 0 0 1000 S
@@ -3925,7 +3925,7 @@ fearless guard khoralator fort dwarf mountain~
    &+YThis burly mountain dwarf has traveled far to guard the fortress of Khoralator;
 &+Yready to die for his people in the unforgiving mountain of &N&+yShanatar&+Y.  He
 &+Yhas a long, golden beard braided in a tight knot down the middle - the standard
-&+Yfor his legion.  A &+Rfirey &+Ygaze stares from his deep-set eyes, armed and trained
+&+Yfor his legion.  A &+Rfiery &+Ygaze stares from his deep-set eyes, armed and trained
 &+Yby the &+WKhor&N&+calator &+CFort &N&+rmilitia &+Yto defend his post.
 ~
 1140852936 128 0 671162520 14528 0 0 1000 S
@@ -3941,7 +3941,7 @@ elite dwarven guard mountain dwarf~
    &+YThis burly mountain dwarf has traveled far to guard the fortress of Khoralator;
 &+Yready to die for his people in the unforgiving mountain of &N&+yShanatar&+Y.  He
 &+Yhas a long, golden beard braided in a tight knot down the middle - the standard
-&+Yfor his legion.  A &+Rfirey &+Ygaze stares from his deep-set eyes, armed and trained
+&+Yfor his legion.  A &+Rfiery &+Ygaze stares from his deep-set eyes, armed and trained
 &+Yby the &+WKhor&N&+calator &+CFort &N&+rmilitia &+Yto defend his post.
 ~
 2250 128 0 536879256 14528 0 0 0 S
@@ -4592,7 +4592,7 @@ halfling scribe~
 &+LA studious &N&+yhalfling &+Lscribe works away on his &N&+mspells&+L.
 ~
    &+LThis halfling &+Mmage &+Lis clearly one of the rare and
-&+Lpriviledged young halflings that has been granted the opportunity
+&+Lprivilegedd young halflings that has been granted the opportunity
 &+Lto train under the tutelage of &+CX&N&+ca&+Bmo&N&+cr&+Ca &+Lthe magician.
 ~
 1073743946 0 0 402727128 14556 0 0 1000 S
@@ -4606,7 +4606,7 @@ meditative halfling mage~
 &+LA &N&+yhalfling &N&+mmage &+Lrests here, his &+Weyes &+Lrolled back in a trance.
 ~
    &+LThis halfling &+Mmage &+Lis clearly one of the rare and
-&+Lpriviledged young halflings that has been granted the opportunity
+&+Lprivilegedd young halflings that has been granted the opportunity
 &+Lto train under the tutelage of &+CX&N&+ca&+Bmo&N&+cr&+Ca &+Lthe magician.
 ~
 2122 0 0 402727128 14556 0 0 1000 S
@@ -4840,7 +4840,7 @@ lord deramuth portmaster _spec1_~
 &+WLord Deramuth &N&+rthe portmaster&N~
 &+WLord Deramuth &N&+rsits behind a desk, pondering about you.
 ~
-   &N&+rAs very few are able to be priveledged with looking upon
+   &N&+rAs very few are able to be privileged with looking upon
 &+WLord Deramuth &N&+rdue to the heavy protection at the entrance
 &+rof his compound, it surely comes as quite as a surprise to see
 &+rthat he is half-&+Ymountain &N&+rand half-duergar &+Ydwarf.
@@ -5424,7 +5424,7 @@ troglodyte trog menacing savage~
 &+Lthroughout the realm.  Perhaps the result of secluded evolution,
 &+Lrampant inbreeding, or an otherwordly force - this scaled,
 &+Lbipedal cave-dweller is much more vicious and aggressive then
-&+Lits primative cousins.
+&+Lits primitive cousins.
 ~
 1073743882 1 0 0 0 0 0 -1000 S
 h 0 16385 -1
@@ -5458,7 +5458,7 @@ prowls through the mountain rock of Shanatar eyeing the females
 of the species, the meat captured by its cousins, and avoiding
 the more ferocious of his kind.  Always wandering and looking
 for opportunities to increase its survival, or prestige among
-the tribe, this scaled primative beast scavenges its domain.
+the tribe, this scaled primitive beast scavenges its domain.
 ~
 1073743944 1 0 0 0 0 0 -1000 S
 h 0 16385 -1
@@ -5583,7 +5583,7 @@ massive stone golem _spec1_~
    &+LThis massive golem is made of strange &+mpurple stone &+Lin an
 &+Lotherwise blackrock environment.  It stands nearly the entire length
 &+Lof this massive domed cavern, existing as a strange outcropping
-&+Llike a gargantuan stalagtite.  The most noticable feature of this
+&+Llike a gargantuan stalagtite.  The most noticeable feature of this
 &+Lhulking &+yearthen &+Lbeast are its massive tree-sized &+Warms&+L and huge fists.
 &+LThe &+Warms &+Lof this titanic golem are made up of the same &+mstone
 &+Las the body.  The golem seems to ignore the native troglodytes entirely.
@@ -5668,7 +5668,7 @@ marg d'ghor hooded figure trog troglodyte witch doctor witchdoctor~
 &+Was the all-knowing father, is a unique and powerful figure.
 &+WAlthough his body posesses the traits of the neighboring trogs,
 &+Whis posture and intellect suggest that his lifestyle is much
-&+Wmore then the primative ritualistic ways of his kin.  Marg D'ghor
+&+Wmore then the primitive ritualistic ways of his kin.  Marg D'ghor
 &+Wwears a long, hooded white robe, for instance.  Clothing of any
 &+Wtype is extremely uncharacteristic for his race.  He is also
 &+Wseen grasping a staff used for invokation, rather then as a blunt
@@ -6058,7 +6058,7 @@ prowls through the mountain rock of Shanatar eyeing the females
 of the species, the meat captured by its cousins, and avoiding
 the more ferocious of his kind.  Always wandering and looking
 for opportunities to increase its survival, or prestige among
-the tribe, this scaled primative beast scavenges its domain.
+the tribe, this scaled primitive beast scavenges its domain.
 ~
 1073743944 1 0 0 0 0 0 -1000 S
 h 0 16385 -1
@@ -6328,7 +6328,7 @@ trog beast troglodyte handler _spec1_~
 &+gA trog beast handler yanks on the &+cchain &+gnear the cockatrice.
 ~
    &+gThis young troglodyte has earned himself the esteemed
-&+g'priviledge' of containing the beasts that Kereghaktis
+&+g'privileged' of containing the beasts that Kereghaktis
 &+gamuses himself with in his personal throne room.  The
 &+gyouthfulness of this troglodyte may suggest that he
 &+gposesses some sort of qualities that the king sees in

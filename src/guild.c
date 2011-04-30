@@ -231,7 +231,7 @@ int notch_skill(P_char ch, int skill, int chance)
   }
 #endif
 
-  sprintf(buf, "&+cYe feel yer skill in %s improving.\n", skills[skill].name);
+  sprintf(buf, "&+cYou feel your skill in %s improving.\n", skills[skill].name);
   send_to_char(buf, ch);
   ch->only.pc->skills[skill].learned++;
 

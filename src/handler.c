@@ -524,7 +524,7 @@ void poison_lifeleak(int level, P_char ch, char *arg, int type, P_char victim,
   }
   else
   {
-    send_to_char("Ye feel a burning sensation in yer blood.\n", victim);
+    send_to_char("You feel a burning sensation in yer blood.\n", victim);
     GET_HIT(victim) = MAX(1, GET_HIT(victim) - 10);
   }
   if (number(0, 20))
@@ -618,14 +618,14 @@ void poison_weakness(int level, P_char ch, char *arg, int type, P_char victim,
   if (number(0, 100))
   {
     send_to_char
-      ("Ye feel a wave of strange weakness running through yer body.\n",
+      ("You feel a wave of strange weakness running through your body.\n",
        victim);
     add_event(event_poison, WAIT_SEC * 120, victim, 0, 0, 0, &af->type,
               sizeof(af->type));
   }
   else
   {
-    send_to_char("Ye feel at yer full strength again.\n", victim);
+    send_to_char("You feel full strength again.\n", victim);
     affect_remove(victim, af);
   }
 }

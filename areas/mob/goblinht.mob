@@ -19,11 +19,11 @@ HG 0 16384 -1
 #70001
 glub ghost form~
 &+Lthe ghost of Glub~
-&+LA &+wpale &+Ltranslucent form floats here fading in and out of existance.
+&+LA &+wpale &+Ltranslucent form floats here fading in and out of existence.
 ~
 &+L   This poor soul has been condemned to forever walk the world as little more
 &+Lthen a shadow, but a shadow of great evil.  He seeks only to cause pain to
-&+Lothers and search for ways to end his tortured existance.  In life he must
+&+Lothers and search for ways to end his tortured existence.  In life he must
 &+Lhave been a wealthy man, fine spectral robes cloak his body, and spectral
 &+Lrings and jewelry line his neck and hands.  The image of a short sword can be
 &+Lseen sticking into his back, he moans constantly as if it still causes him
@@ -37,12 +37,12 @@ UG 0 1 2
 #70002
 ghost form~
 &+Lthe ghost of a nobleman~
-&+LA &+wpale &+Ltranslucent form floats here fading in and out of existance.
+&+LA &+wpale &+Ltranslucent form floats here fading in and out of existence.
 ~
 &+L   The shadow of a man stands here dress in spectral robes and bedecked with
 &+Ltranslucent jewels.  He must have been a rich man in life, but his wealth
 &+Ldidn't buy him a permanent rest.  He looks about him for living souls to
-&+Ltorture and finally to join him in his endless undead existance.
+&+Ltorture and finally to join him in his endless undead existence.
 ~
 133194 8 0 134217770 2 0 0 -1000 S
 UG 0 1 2
@@ -103,7 +103,7 @@ prostitute homely~
 &+g   This homely looking creatures has spent many years plying her trade in
 &+rMoregeeth.  &+gThe many &+rscars &+gand &+Lbruises &+gattesting to the rough nature of goblin
 &+gpassion.  She looks at you without desire but as an inevitable drudgery that
-&+gmarks every moment of her existance.
+&+gmarks every moment of her existence.
 ~
 1073744074 0 16777216 0 2 0 0 -1000 S
 HG 0 16384 1
@@ -1284,12 +1284,12 @@ HG 0 1 -1
 #70085
 commoner goblin~
 &+ga &+Ggoblin &+gcommmoner~
-&+gA commoner squats here lamenting his existance.
+&+gA commoner squats here lamenting his existence.
 ~
-&+g   This wretched creature just barely manages to eke out an existance.  His
+&+g   This wretched creature just barely manages to eke out an existence.  His
 &+geyes are shrunken into his face, his body weak and emaciated.  He just
 &+gcrouches at the back of his hovel rocking back and forth lamenting his
-&+gexistance.  When he sees you enter the room he darts for his half-eatten rat,
+&+gexistence.  When he sees you enter the room he darts for his half-eatten rat,
 &+gclutches it to his chest and says, 'ITS MINE, YOU CAN'T HAVE IT!'
 ~
 2250 0 0 0 2 0 0 -1000 S

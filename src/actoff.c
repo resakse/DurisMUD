@@ -8007,7 +8007,7 @@ void do_trip(P_char ch, char *argument, int cmd)
   if(GET_POS(vict) != POS_STANDING)
   {
     act("$N is already on the ground!", FALSE, ch, 0, vict, TO_CHAR);
-    send_to_char("But hey you try anyways and you fall on yer ass!\n", ch);
+    send_to_char("But hey you try anyways and you fall on your ass!\n", ch);
     act("$n does some sort of dance, and winds up flat on $s ass.", TRUE, ch,
         0, vict, TO_VICT);
     act("$n seems to dance with $N, but winds up flat on $s ass.", TRUE, ch,

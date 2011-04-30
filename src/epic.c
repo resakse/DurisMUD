@@ -1255,7 +1255,7 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
       }
 
       sprintf(buffer, "$n takes you aside and teaches you the finer points of &+W%s&n.\n"
-                      "&+cYe feel yer skill in %s improving.&n\n",
+                      "&+cYou feel your skill in %s improving.&n\n",
               skills[skill].name, skills[skill].name);
       act(buffer, FALSE, ch, 0, pl, TO_VICT);
 

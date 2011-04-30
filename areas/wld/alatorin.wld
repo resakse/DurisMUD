@@ -5700,7 +5700,7 @@ S
 &+RA Red Hallway Vestibule&N~
    &+RThis secret, narrow hallway reaches throughout the &+bRogue Lair&+R and
 &+Rthrough the depths of &+cAlatorin&+R.  There are numerous stolen pieces
-&+Rof artwork, including brilliant &+Ypa&+Wi&+Bnt&+gin&+Lg&+gs &+Rseperated by burning &+Ytorches&+L.
+&+Rof artwork, including brilliant &+Ypa&+Wi&+Bnt&+gin&+Lg&+gs &+Rseparated by burning &+Ytorches&+L.
    &+RThis red hallway leads across the &+bLair&+R connecting to the southern
 &+Rexits.  The carpet itself is made of furry hide that has been dyed red.  Most
 &+Rlikely another piece of stolen furnishings, common throughout.
@@ -5725,7 +5725,7 @@ S
 &+RA Red Hallway&N~
    &+RThis secret, narrow hallway reaches throughout the &+bRogue Lair&+R and
 &+Rthrough the depths of &+cAlatorin&+R.  There are numerous stolen pieces
-&+Rof artwork, including brilliant &+Ypa&+Wi&+Bnt&+gin&+Lg&+gs &+Rseperated by burning &+Ytorches&+L.
+&+Rof artwork, including brilliant &+Ypa&+Wi&+Bnt&+gin&+Lg&+gs &+Rseparated by burning &+Ytorches&+L.
    &+RThis red hallway leads across the &+bLair&+R connecting to the southern
 &+Rexits.  The carpet itself is made of furry hide that has been dyed red.  Most
 &+Rlikely another piece of stolen furnishings, common throughout.
@@ -10904,7 +10904,7 @@ S
 ~
 831 0 14
 D2
-&+RA huge lock seperates the prisoner within the brig from civilization.
+&+RA huge lock separates the prisoner within the brig from civilization.
 ~
 brig~
 3 83472 83880
@@ -15627,7 +15627,7 @@ S
 &+yThe Trapper's &+BKeepers&N~
    &+yThis store, the Trapper's &+BKeepers&N&+y is a set in a small
 &+ydug-out niche in the deep undercity rock of Alatorin.  Although
-&+ythe shop itself is covered with filth, seperated from the rest of
+&+ythe shop itself is covered with filth, separated from the rest of
 &+ythe rogue's hideout by a simple curtain, and in general dissaray,
 &+ythe &+Ytrap &N&+yselection hanging from the walls and the rotting
 &+ywooden stall are of &+Cexquisite&N&+y quality.
@@ -15741,7 +15741,7 @@ S
 &+LBefore a &+rCavernous Lair&N~
    &+LA huge &+ciron&+L gate has been fastened onto the this natural
 &+Ltunnel, blocking off the portion just ahead to those of only
-&+Lpriviledged access.  Quite a marvel in troglodyte craftsmanship
+&+Lprivilegedd access.  Quite a marvel in troglodyte craftsmanship
 &+Lcauses one to wonder whether this was created by the trogs
 &+Lthemselves oer perhaps by some of their more advanced slaves.
 ~
@@ -15790,7 +15790,7 @@ S
 &+Lhas been made of an array of bones, bound together into a massive
 &+Larmed chair.
    &+LJust before the northern recess of this cavern, a huge crack sutures
-&+Lthe cavern into two halves, seperated by a deep chasm from which a foul
+&+Lthe cavern into two halves, separated by a deep chasm from which a foul
 &+Ggreen slime flows.  Deep below this bubbling, viscid fluid seems to
 &+Goriginate much further beneath the throne of the troglodyte king itself.
 ~
@@ -18646,7 +18646,7 @@ S
 &+LA Deep Cave Cluttered With Sharp Rocks~
    &+LThis jagged tunnel winds through the twisted underbelly
 &+Lof the Shanatar mountains and beneath the caves inhabited
-&+Lby the primative troglodytes.  There is colorful fungus
+&+Lby the primitive troglodytes.  There is colorful fungus
 &+Lgrowing all throughout these tunnels, seldomly releasing
 &+Lfine spores into the air and creating a thick, humid mist.
 &+LThese tunnels are quite dark and almost completely untra-
@@ -18668,7 +18668,7 @@ S
 &+LA Low, &NSlan&+Lting Tunnel&N~
    &+LThis jagged tunnel winds through the twisted underbelly
 &+Lof the Shanatar mountains and beneath the caves inhabited
-&+Lby the primative troglodytes.  There is colorful fungus
+&+Lby the primitive troglodytes.  There is colorful fungus
 &+Lgrowing all throughout these tunnels, seldomly releasing
 &+Lfine spores into the air and creating a thick, humid mist.
 &+LThese tunnels are quite dark and almost completely untra-
@@ -18694,7 +18694,7 @@ S
 &+LA Deep, Twisted Tunnel Junction&N~
    &+LThis jagged tunnel winds through the twisted underbelly
 &+Lof the Shanatar mountains and beneath the caves inhabited
-&+Lby the primative troglodytes.  There is colorful fungus
+&+Lby the primitive troglodytes.  There is colorful fungus
 &+Lgrowing all throughout these tunnels, seldomly releasing
 &+Lfine spores into the air and creating a thick, humid mist.
 &+LThese tunnels are quite dark and almost completely untra-
@@ -18723,7 +18723,7 @@ S
 &+yA Tight and Jagged Tunnel&n~
    &+LThis jagged tunnel winds through the twisted underbelly
 &+Lof the Shanatar mountains and beneath the caves inhabited
-&+Lby the primative troglodytes.  There is colorful fungus
+&+Lby the primitive troglodytes.  There is colorful fungus
 &+Lgrowing all throughout these tunnels, seldomly releasing
 &+Lfine spores into the air and creating a thick, humid mist.
 &+LThese tunnels are quite dark and almost completely untra-
@@ -18745,7 +18745,7 @@ S
 &+yA Tight and Jagged Tunnel&n~
    &+LThis jagged tunnel winds through the twisted underbelly
 &+Lof the Shanatar mountains and beneath the caves inhabited
-&+Lby the primative troglodytes.  There is colorful fungus
+&+Lby the primitive troglodytes.  There is colorful fungus
 &+Lgrowing all throughout these tunnels, seldomly releasing
 &+Lfine spores into the air and creating a thick, humid mist.
 &+LThese tunnels are quite dark and almost completely untra-
@@ -18767,7 +18767,7 @@ S
 &+LA &+mVaulted &+LTu&+mnn&+Lel&N~
    &+LThis jagged tunnel winds through the twisted underbelly
 &+Lof the Shanatar mountains and beneath the caves inhabited
-&+Lby the primative troglodytes.  There is colorful fungus
+&+Lby the primitive troglodytes.  There is colorful fungus
 &+Lgrowing all throughout these tunnels, seldomly releasing
 &+Lfine spores into the air and creating a thick, humid mist.
 &+LThese tunnels are quite dark and almost completely untra-

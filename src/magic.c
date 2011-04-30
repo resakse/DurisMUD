@@ -11224,7 +11224,7 @@ void spell_entangle(int level, P_char ch, char *arg, int type, P_char victim,
 
   if(!OUTSIDE(ch))
   {
-    send_to_char("Not too much to entangle yer opponent with here..\n", ch);
+    send_to_char("Not too much to entangle your opponent with here..\n", ch);
     return;
   }
 /*

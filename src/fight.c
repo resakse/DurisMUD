@@ -2626,7 +2626,7 @@ void die(P_char ch, P_char killer)
       }
     }
 */
-    send_to_char("couldn't find yer arena, this is bad.\r\n", ch);
+    send_to_char("couldn't find your arena, this is bad.\r\n", ch);
   }
 }
 // end of die

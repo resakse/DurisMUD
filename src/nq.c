@@ -607,7 +607,7 @@ void nq_reward_player(struct nq_action *action, struct nq_instance *instance,
     ch->only.pc->skills[action->reward->skill->skill].taught +=
       action->reward->skill->value;
     if (!IS_SPELL(action->reward->skill->skill))
-      sprintf(buf, "Ye feel yer potential in %s improve..\r\n",
+      sprintf(buf, "You feel your potential in %s improve..\r\n",
               skills[action->reward->skill->skill].name);
     else
       sprintf(buf,

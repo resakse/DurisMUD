@@ -15,9 +15,9 @@ X 0 1 -1
 0.0.0.0 0
 8 8 1
 #42901
-crazed raxian primative creature~
+crazed raxian primitive creature~
 a &+Lcrazed &+rraxian&n~
-&+LA primative creature walks here with a crazed look in his eyes.&n
+&+LA primitive creature walks here with a crazed look in his eyes.&n
 ~
 &+L   This creature has many scars upon his face and his arms.  It looks like&n
 &+Lsomeone or something has beaton this thing without mercy.  His eyes are a deep&n
@@ -133,9 +133,9 @@ PO 0 1 -1
 0.0.0.0 0
 8 8 1
 #42908
-raxian champion primative~
+raxian champion primitive~
 a &+rraxian &+Wchampion&n~
-&+LA primative looking &+Wchampion &+Lis sizing you up and down here.&n
+&+LA primitive looking &+Wchampion &+Lis sizing you up and down here.&n
 ~
 &+L   This creature stands a little over five feet in height and has a rather&n
 &+Ldecent sized build to him.  His arms are the size of a baby child and his chest&n
@@ -150,9 +150,9 @@ AA 0 1 2
 0.0.0.0 0
 8 8 1
 #42909
-raxian guard primative~
+raxian guard primitive~
 a &+rraxian &+Rguard&n~
-&+LA primative looking &+Rguard&+L stands here with an odd look in his eyes.&n
+&+LA primitive looking &+Rguard&+L stands here with an odd look in his eyes.&n
 ~
 &+L   This creature stands well over six feet in height and is built like an ogre.&n
 &+LHis chest is almost to massive for his frame and his arms are the size of a&n
@@ -168,9 +168,9 @@ AA 0 1 2
 0.0.0.0 0
 8 8 1
 #42910
-raxian warrior primative~
+raxian warrior primitive~
 a &+rraxian &+cwarrior&n~
-&+LA primative looking &+cwarrior&+L spits at you in disgust.&n
+&+LA primitive looking &+cwarrior&+L spits at you in disgust.&n
 ~
 &+L   This creature stands a little over five feet in height and has a stocky&n
 &+Lbuild to him.  His shoulder span is rather wide for a creature of his size and&n
@@ -264,7 +264,7 @@ PD 6 16384 2
 0.0.0.0 0
 8 8 1
 #42916
-raxian shady primative~
+raxian shady primitive~
 &na &+Lshady looking &+rraxian&n~
 &+LA rather shady looking &+rraxian &+Lis standing here looking at you strangely.&n
 ~
@@ -281,7 +281,7 @@ AA 0 1 2
 0.0.0.0 0
 8 8 1
 #42917
-raxian massive primative~
+raxian massive primitive~
 &na &+Lrather &+cmassive &+Llooking &+rraxian~
 &+LA rather &+cmassive &+Llooking &+rraxian &+Lis here looking to spar with someone.&n
 ~
@@ -351,7 +351,7 @@ ugly raxian disfigured~
 &na &+Rdisfigured &+rraxian&n~
 &+LA very ugly and &+Rdisfigured &+rraxian &+Lstands here, the sight sickens you.&n
 ~
-&+L   This creature seems to be rather tall for his primative race.  He stands a&n
+&+L   This creature seems to be rather tall for his primitive race.  He stands a&n
 &+Llittle over six feet in height and his shape is rather bulky.  He seems to have&n
 &+La fair amount of muscle to go with his bulk.  His face has been badly &+Rdeformed&+L,&n
 &+Lit looks like it has been &+rbranded &+Lwith hot steel many times.  Perhaps this poor&n

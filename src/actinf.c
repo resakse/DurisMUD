@@ -727,7 +727,7 @@ char    *show_obj_to_char(P_obj object, P_char ch, int mode, int print)
     }
     else if (object->type == ITEM_CORPSE)
     {
-      strcat(buf, "Ye roll up yer sleeves, and examine the dead...");
+      strcat(buf, "You roll up your sleeves, and examine the dead...");
       ageCorpse(ch, object, buf);
     }
     else if ((object->type == ITEM_DRINKCON))

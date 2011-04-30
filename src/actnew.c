@@ -1943,7 +1943,7 @@ bool shapechange_canShapechange(P_char ch)
   if (IS_SET(world[ch->in_room].room_flags, NO_MOB) ||
       IS_SET(world[ch->in_room].room_flags, SAFE_ZONE))
   {
-    send_to_char("Something in the air prevents yer magics!\r\n", ch);
+    send_to_char("Something in the air prevents your magic!\r\n", ch);
     return FALSE;
   }
   if (!has_innate(ch, INNATE_SHAPECHANGE) && !IS_TRUSTED(ch) && !IS_MORPH(ch))
@@ -3292,7 +3292,7 @@ void do_hamstring(P_char ch, char *arg, int cmd)
   {
     act("Such a maneuver appears to be useless against $N!", FALSE, ch, 0,
         vict, TO_CHAR);
-    send_to_char("And just for the attempt, you fall on yer ass.\r\n", ch);
+    send_to_char("And just for the attempt, you fall on your ass.\r\n", ch);
     act("$n tries a tricky maneuver on you, and winds up flat on $s ass.",
         TRUE, ch, 0, vict, TO_VICT);
     act("$n tries some fancy maneuver on $N, but winds up flat on $s ass.",
