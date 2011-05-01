@@ -2173,6 +2173,7 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
   for (i = 0; i < MAX_BOONS; i++)
     id[i] = 0;
 
+  buff = '\0'
   // Modify the SQL search based on the option
   if (option == BOPT_NONE)
     sprintf(buff, " AND (criteria = '%d')", ROOM_ZONE_NUMBER(ch->in_room));
@@ -2180,13 +2181,20 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
     sprintf(buff, " AND (criteria = '%d')", (int)data);
   else if (option == BOPT_LEVEL)
     sprintf(buff, " AND (criteria = '%d' OR criteria = '0')", GET_LEVEL(ch));
-  else if (option == BOPT_MOB &&
-           IS_NPC(victim))
-    sprintf(buff, " AND (criteria2 = '%d')", GET_VNUM(victim));
-  else if (option == BOPT_RACE &&
-           (IS_NPC(victim) ||
-	    racewar(ch, victim)))
-    sprintf(buff, " AND (criteria2 = '%d')", GET_RACE(victim));
+  else if (option == BOPT_MOB)
+  {
+    if (IS_NPC(victim))
+      sprintf(buff, " AND (criteria2 = '%d')", GET_VNUM(victim));
+    else
+      return;
+  }
+  else if (option == BOPT_RACE)
+  {
+    if (IS_NPC(victim) || racewar(ch, victim))
+      sprintf(buff, " AND (criteria2 = '%d')", GET_RACE(victim));
+    else
+      return;
+  }
   else if (option == BOPT_FRAG)
     sprintf(buff, " AND (criteria <= '%f')", data);
   //else if (option == BOPT_FRAGS) // No need for this, we check below in progress
