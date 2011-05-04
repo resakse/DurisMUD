@@ -69,7 +69,7 @@ struct boon_types_struct boon_types[] = {
   {"exp",	"Gain exp"},
   {"epic",	"Gain %d epics"},
   {"cash",	"Receive %s"},
-  {"level",	"Gain a level (up to %d)"},
+  {"level",	"Gain a level"},
   {"power",	"Gain the power of '%s'"},
   {"spell",	"Gain the spell '%s'"},
   {"stat",	"Notch the %s attribute"},
@@ -479,10 +479,8 @@ int validate_boon_data(BoonData *bdata, int flag)
 		// is it even an epic zone
 		for (j = 0; j <= epic_zones.size(); j++)
 		{
-		  debug("%d %f", epic_zones[j].number, bdata->criteria);
 		  if (epic_zones[j].number == (int)bdata->criteria)
 		  {
-		    debug("found");
 		    break;
 		  }
 		}
@@ -809,13 +807,14 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 
     if (bdata->type == BTYPE_LEVEL && *arg)
     {
+      argument = setbit_parseArgument(argument, arg);
       if (is_abbrev(arg, "yes"))
 	bdata->bonus2 = 1;
       else if (is_abbrev(arg, "no"))
 	bdata->bonus2 = 0;
-      else if (atof(arg) == 0)
+      else if (atoi(arg) == 0)
 	bdata->bonus2 = 0;
-      else if (atof(arg) == 1)
+      else if (atoi(arg) == 1)
 	bdata->bonus2 = 1;
       else
       {
@@ -1567,6 +1566,8 @@ int boon_display(P_char ch, char *argument)
       case BTYPE_LEVEL:
 	{
 	  sprintf(bufftype, boon_types[type].desc, (int)bonus);
+	  if ((int)bonus != -1)
+	    sprintf(bufftype + strlen(bufftype), " (up to %d)", (int)bonus);
 	  if (bonus2)
 	    sprintf(bufftype + strlen(bufftype), " and bypass epics");
 	  break;
