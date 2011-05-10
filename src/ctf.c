@@ -147,7 +147,7 @@ int ctf_flag_proc(P_obj flag, P_char ch, int cmd, char *argument)
       GET_RACEWAR(ch) != RACEWAR_EVIL)
     return FALSE;
 
-  if (*argument)
+  if (argument)
     argument = one_argument(argument, arg);
 
   if (cmd == CMD_TAKE || cmd == CMD_GET) 
