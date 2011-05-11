@@ -2126,7 +2126,7 @@ void die(P_char ch, P_char killer)
   /* count xp gained by killer */
 
   /* make mirror images disappear */
-  if(IS_NPC(ch) &&
+  if(IS_ALIVE(ch) && IS_NPC(ch) &&
     GET_VNUM(ch) == 250)
   {
     act("Upon being struck, $n disappears into thin air.", TRUE, ch, 0, 0, TO_ROOM);
