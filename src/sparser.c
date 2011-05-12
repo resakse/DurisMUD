@@ -36,6 +36,7 @@
 #include "profile.h"
 #include "guildhall.h"
 #include "buildings.h"
+#include "ctf.h"
 
 /*
    external variables
@@ -571,7 +572,15 @@ void add_follower(P_char ch, P_char leader)
     logit(LOG_EXIT, "assert: bogus parms");
     raise(SIGSEGV);
   }
-  
+ 
+#if defined(CTF_MUD) && (CTF_MUD == 1)
+    if (ctf_carrying_flag(ch) == CTF_PRIMARY)
+    {
+      send_to_char("You're too busy following someone now to carry that.\r\n", ch);
+      drop_ctf_flag(ch);
+    }
+#endif
+
   if( !IS_ALIVE(ch) || !IS_ALIVE(leader) )
     return;
   
