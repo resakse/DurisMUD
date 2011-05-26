@@ -56,6 +56,7 @@ struct BoonShop {
 // This will help the random generation keep a standard minimum boons
 // for each level range.
 struct BoonRandomStandards {
+  int id;	// id
   int racewar;	// racewar side
   int low;	// low level range
   int high;	// high level range
@@ -154,6 +155,7 @@ bool get_boon_shop_data(int, BoonShop*);
 int validate_boon_data(BoonData*, int);
 int parse_boon_args(P_char, BoonData*, char*);
 void do_boon(P_char, char*, int);
+void boon_shop(P_char, char*);
 int boon_display(P_char, char*);
 int create_boon(BoonData*);
 int create_boon_progress(BoonProgress*);
@@ -164,6 +166,7 @@ void boon_notify(int, P_char, int);
 void boon_randomize(P_char, char*);
 void boon_maintenance();
 void boon_random_maintenance();
+int boon_get_random_zone(int);
 void check_boon_completion(P_char, P_char, double, int);
 
 #endif // __BOON_H__
