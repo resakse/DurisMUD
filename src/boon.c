@@ -2418,6 +2418,7 @@ void boon_maintenance()
 
 void boon_random_maintenance()
 {
+  return;
   BoonData bdata;
   int i, j;
   int id[MAX_BOONS];
