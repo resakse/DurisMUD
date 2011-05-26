@@ -69,6 +69,7 @@ extern struct randomeq_material material_data[];
 extern void material_restrictions(P_obj);
 extern int find_map_place();
 extern struct forge_item forge_item_list[]; 
+extern bool is_neg_good(sbyte);
 
 void     set_keywords(P_obj t_obj, const char *newKeys);
 void     set_short_description(P_obj t_obj, const char *newShort);
@@ -92,7 +93,7 @@ struct mines_event_data {
   int map;
 };
 
-int forge_prices[] = {2000, 5000, 15000, 30000, 50000};
+int forge_prices[] = {20000, 50000, 150000, 300000, 500000};
 
 struct smith_data {
   int vnum;
@@ -154,14 +155,16 @@ P_obj get_hammer(P_char ch)
   return NULL;
 }
 
-// #define IS_MINING_PICK(obj) ( GET_OBJ_VNUM(obj) == 253 || \
-                              // GET_OBJ_VNUM(obj) == 338 || \
-                              // GET_OBJ_VNUM(obj) == 10640 || \
-                              // GET_OBJ_VNUM(obj) == 95531 || \
-                              // GET_OBJ_VNUM(obj) == 49018 )
-                              
-#define IS_MINING_PICK(obj) (isname("pick", obj->name) && \
-                             obj->type == ITEM_WEAPON)
+#define IS_MINING_PICK(obj) ( GET_OBJ_VNUM(obj) == 253 || \
+                              GET_OBJ_VNUM(obj) == 338 || \
+                              GET_OBJ_VNUM(obj) == 10640 || \
+                              GET_OBJ_VNUM(obj) == 95531 || \
+                              GET_OBJ_VNUM(obj) == 49018 || \
+                              GET_OBJ_VNUM(obj) == 83318 || \
+                              GET_OBJ_VNUM(obj) == 78052 || \
+                              GET_OBJ_VNUM(obj) == 30665 || \
+                              GET_OBJ_VNUM(obj) == 16069 || \
+                              GET_OBJ_VNUM(obj) == 66054)
 
 P_obj get_pick(P_char ch)
 {
@@ -255,7 +258,7 @@ P_obj forge_create(int choice, P_char ch, int material)
 
   if(!obj)
   {
-    wizlog(56, "unabled to load object 1255");
+    wizlog(56, "unable to load object 1255");
     return 0;
   } 
   sprintf(keywords, "%s", forge_item_list[choice].keywords);
@@ -287,8 +290,39 @@ P_obj forge_create(int choice, P_char ch, int material)
 
   obj->anti_flags |= forge_item_list[choice].classes;
 
+  //  Giving forge a bit better chance at creating something neat at higher
+  //  skill levels... - Jexni 5/25/11
+  if(GET_CHAR_SKILL(ch, SKILL_FORGE) > 80 && !number(0, 25))
+  {
+     SET_BIT(obj->extra_flags, ITEM_HUM);
+     if(number(0, 1))
+     {
+       int neggood = is_neg_good(obj->affected[1].modifier);
+       if(neggood)
+       {
+          obj->affected[1].modifier = (int) obj->affected[1].modifier * .1;
+       }
+       else
+       {
+          obj->affected[1].modifier += 1;
+       }
+     }
+     else
+     {
+       int neggood = is_neg_good(obj->affected[0].modifier);
+       if(neggood)
+       {
+          obj->affected[0].modifier = (int) obj->affected[0].modifier * .1;
+       }
+       else
+       {
+          obj->affected[0].modifier += 1;
+       }
+     }
+  }
+  
   if(forge_item_list[choice].allow_anti)
-    obj->extra_flags = ITEM_ALLOWED_CLASSES;;
+    obj->extra_flags = ITEM_ALLOWED_CLASSES;
 
   if(isname("quiver", obj->name)){    
     obj->value[0] = number(20, 80);
@@ -298,12 +332,12 @@ P_obj forge_create(int choice, P_char ch, int material)
     obj->type = ITEM_QUIVER;
   }
   else
-    obj->type == ITEM_ARMOR;
+    obj->type = ITEM_ARMOR;
 
-  if(obj->wear_flags == ITEM_WEAR_SHIELD)
-    obj->weight = (obj->weight * 2) * obj->wieght;  
-  else if(obj->wear_flags == ITEM_WEAR_BODY)
-    obj->weight = (obj->weight * obj->weight);
+  if((obj->wear_flags & ITEM_WEAR_SHIELD) == ITEM_WEAR_SHIELD)
+    obj->weight = BOUNDED(5, (obj->weight * number(2, 5)), 35);  
+  else if((obj->wear_flags & ITEM_WEAR_BODY) == ITEM_WEAR_BODY)
+    obj->weight = BOUNDED(5, (obj->weight * obj->weight + number(-5, 10)), 45);
 
   return obj;
 }
@@ -461,12 +495,11 @@ void do_forge(P_char ch, char *argument, int cmd)
           send_to_char(buf1, ch);
           extract_obj(t_obj, TRUE);
           FOUND++;
-          if(!number(0,2))
-            if(GET_CHAR_SKILL(ch, SKILL_FORGE) < number(0, 99))
-            {
-              send_to_char("You swing wildly, slip, fall, hurt yourself, and destroy the ore!\r\n", ch);
-              return;
-            }       
+          if(GET_CHAR_SKILL(ch, SKILL_FORGE) < number(0, 99))
+          {
+            send_to_char("You swing wildly, slip, fall, hurt yourself, and destroy the ore!\r\n", ch);
+            return;
+          }       
           break;
         }
       }
@@ -475,20 +508,20 @@ void do_forge(P_char ch, char *argument, int cmd)
     if(FOUND == NEEDED || IS_TRUSTED(ch))
     {
       if(FOUND == 0)
-        send_to_char("You are a god! Material type is created from the ore, since you used none it will be wrong..fyi!\n",ch); 
-      P_obj obj = forge_create(choice, ch, material);
+        send_to_char("Material type being taken from 1.ore in needed list, because you are an Immortal and have no ore!\n",ch); 
+      P_obj obj = forge_create(choice, ch, forge_item_list[choice].ore_needed[0]);
       if (!obj)
         return;
       obj_to_char(obj, ch);
       sprintf(buf1, "You finishing forging: %s!\n", obj->short_description); 
       send_to_char(buf1, ch);  
       wizlog(56, "%s forged %s" , GET_NAME(ch), buf1);
-      notch_skill(ch, SKILL_FORGE, 1);
+      notch_skill(ch, SKILL_FORGE, 5);
       return;
     }
     else
     {
-      send_to_char("You do not  have the required items. Type forge info # to find out what you need. You wasted some ore.\r\n", ch);
+      send_to_char("You do not have the required items.  Type forge info # to find out what you need.  You wasted some ore.\r\n", ch);
       return;
     }
     return;
