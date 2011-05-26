@@ -3,13 +3,9 @@
 // Created April 2011 - Venthix
 
 // TODO:
-// update AGGR_* flags to new setup.
-// learn to compile de in windows
-// figure out how to update website with updated copies of de for download.
 // in addition to the debug's setup some real logging incase someone completes a boon
 //   and gets an error message to contact an imm because the db wouldn't update or
 //   create.
-// ptest!
 // make automatic random boon engine
 // finish boon command random controller
 // the boon shop
@@ -191,9 +187,11 @@ struct boon_data_struct boon_data[] = {
 };
 
 struct BoonRandomStandards random_std[] = {
-// Racewar Side 	low	high	boon_data
-  {RACEWAR_GOOD,	1,	20,	0},
-  {RACEWAR_EVIL,	1,	20,	0}
+// ID	Racewar Side 	low	high	boon_data
+  {0,	0,		0,	0,	0},
+  {1,	RACEWAR_GOOD,	1,	20,	0},
+  {2,	RACEWAR_EVIL,	1,	20,	0},
+  {0}
 };
 
 bool check_boon_combo(int type, int option, int random)
@@ -1240,7 +1238,10 @@ void do_boon(P_char ch, char *argument, int cmd)
   else if (!strcmp(arg, "shop"))
   {
     //handle shop stuff
-    send_to_char("Boon Shops not implemented yet.\r\n", ch);
+    //send_to_char("Boon Shops not implemented yet.\r\n", ch);
+    //return;
+
+    boon_shop(ch, argument);
     return;
   }
 
@@ -1422,6 +1423,148 @@ void do_boon(P_char ch, char *argument, int cmd)
   // How'd we get here?  wrong arguments...
   send_to_char("Invalid control argument.  Valid arguments: list, add, remove, extend, random, help.\r\n", ch);
   return;
+}
+
+void boon_shop(P_char ch, char *argument)
+{
+  char arg[MAX_STRING_LENGTH];
+  int stat = 0;
+  int i;
+
+  argument = one_argument(argument, arg);
+
+  BoonShop bshop;
+  if (!get_boon_shop_data(GET_PID(ch), &bshop))
+  {
+    bshop.id = 0;
+    bshop.pid = GET_PID(ch);
+    bshop.points = 0;
+    bshop.stats = 0;
+  }
+  
+  // handle arg's.. buy, etc...
+  if (!strcmp(arg, "stat") ||
+      !strcmp(arg, "stats"))
+  {
+    if (!bshop.stats)
+    {
+      send_to_char("You don't have any stat points available.\r\n", ch);
+      return;
+    }
+
+    argument = one_argument(argument, arg);
+
+    if (!*arg ||
+	isdigit(*arg))
+    {
+      send_to_char("Please choose a stat you wish to apply your stat point towards.\r\n", ch);
+      return;
+    }
+    for (i = 1; i < MAX_ATTRIBUTES; i++)
+    {
+      if (is_abbrev(arg, attr_names[i].abrv) || is_abbrev(arg, attr_names[i].name))
+      {
+	stat = i;
+	break;
+      }
+    }
+    if (!stat)
+    {
+      send_to_char("That's not a valid stat, please choose from the following: str, dex, agi, con, pow, int, wis, con.\r\n", ch);
+      return;
+    }
+    else
+    {
+      bshop.stats--;
+      switch (stat)
+      {
+	case STR:
+	  {
+	    ch->base_stats.Str = BOUNDED(0, ch->base_stats.Str+1, 100);
+	    send_to_char("You feel stronger!\r\n", ch);
+	    break;
+	  }
+	case DEX:
+	  {
+	    ch->base_stats.Dex = BOUNDED(0, ch->base_stats.Dex+1, 100);
+	    send_to_char("You feel more dextrous!\r\n", ch);
+	    break;
+	  }
+	case AGI:
+	  {
+	    ch->base_stats.Agi = BOUNDED(0, ch->base_stats.Agi+1, 100);
+	    send_to_char("You feel more agile!\r\n", ch);
+	    break;
+	  }
+	case CON:
+	  {
+	    ch->base_stats.Con = BOUNDED(0, ch->base_stats.Con+1, 100);
+	    send_to_char("You feel ten years younger!\r\n", ch);
+	    break;
+	  }
+	case POW:
+	  {
+	    ch->base_stats.Pow = BOUNDED(0, ch->base_stats.Pow+1, 100);
+	    send_to_char("Your mind suddenly feels ten times as powerful!\r\n", ch);
+	    break;
+	  }
+	case INT:
+	  {
+	    ch->base_stats.Int = BOUNDED(0, ch->base_stats.Int+1, 100);
+	    send_to_char("You feel smarter! Man, you were a real dumbass before.\r\n", ch);
+	    break;
+	  }
+	case WIS:
+	  {
+	    ch->base_stats.Wis = BOUNDED(0, ch->base_stats.Wis+1, 100);
+	    send_to_char("You feel wiser!\r\n", ch);
+	    break;
+	  }
+	case CHA:
+	  {
+	    ch->base_stats.Cha = BOUNDED(0, ch->base_stats.Cha+1, 100);
+	    send_to_char("Suddenly one of the pimples on your face dissapears!\r\n", ch);
+	    break;
+	  }
+	case LUCK:
+	  {
+	    ch->base_stats.Luck = BOUNDED(0, ch->base_stats.Luck+1, 100);
+	    send_to_char("You feel as if you could roll Tripple Tiamat's at the slots...\r\n", ch);
+	    break;
+	  }
+	case KARMA:
+	  {
+	    ch->base_stats.Karma = BOUNDED(0, ch->base_stats.Karma+1, 100);
+	    send_to_char("You feel strange.\r\n", ch);
+	    break;
+	  }
+	default:
+	  {
+	    //well that's not suppose to happen... add the stat back.
+	    bshop.stats++;
+	    break;
+	  }
+      }
+      if (!qry("UPDATE boons_shop SET stats = '%d' WHERE pid = '%d'", bshop.stats, GET_PID(ch)))
+      {
+	debug("boon_shop(): failed to update shop DB entry");
+	return;
+      }
+    }
+  }
+  
+  // no arguments
+  if (!*arg)
+  {
+    send_to_char("&+WBoon Shop&n\r\n", ch);
+    send_to_char("&+CItems available:\r\n", ch);
+    //send data
+    // but for now...
+    send_to_char("No items available.\r\n\r\n", ch);
+    // reclaiming stats
+    send_to_char_f(ch, "&+CStat points available: %d\r\n", bshop.stats);
+    return;
+  }
 }
 
 int boon_display(P_char ch, char *argument)
@@ -1976,7 +2119,7 @@ int create_boon_shop_entry(BoonShop *bshop)
     return FALSE;
   }
 
-  if (!qry("INSERT into boons_shops (pid, points, stats) VALUES (%d, %d, %d)",
+  if (!qry("INSERT into boons_shop (pid, points, stats) VALUES (%d, %d, %d)",
 	bshop->pid, bshop->points, bshop->stats))
   {
     return FALSE;
@@ -2275,8 +2418,87 @@ void boon_maintenance()
 
 void boon_random_maintenance()
 {
-
+  BoonData bdata;
+  int i, j;
+  int id[MAX_BOONS];
+  int r[MAX_BOONS];
+  
   // assure appropriate levels of random boons in game
+  for (i = 0; i < MAX_BOONS; i++)
+  {
+    id[i] = 0;
+    r[i] = 0;
+  }
+
+
+  if (!qry("SELECT id, random FROM boons WHERE active = '1' & random > '0'"))
+  {
+    debug("boon_maintenance(): can't read from db");
+    return;
+  }
+
+  MYSQL_RES *res = mysql_store_result(DB);
+
+  if (mysql_num_rows(res) < 1)
+  {
+    mysql_free_result(res);
+    return;
+  }
+
+  MYSQL_ROW row;
+  
+  i = 0;
+  while (row = mysql_fetch_row(res))
+  {
+    id[i] = atoi(row[0]);
+    r[i] = atoi(row[1]);
+    i++;
+  }
+  
+  mysql_free_result(res);
+
+  // loop through random standards list and load missing boons
+  for (i = 1; random_std[i].id; i++)
+  {
+    for (j = 0; r[j]; j++)
+      if (r[j] == random_std[i].id)
+	break;
+    if (r[j])
+      continue;
+    // if we didn't find it, load one up
+    zero_boon_data(&bdata);
+   
+    bdata.duration = 120;
+    bdata.racewar = random_std[i].racewar;
+    bdata.type = boon_data[random_std[i].boon_data].type;
+    bdata.option = boon_data[random_std[i].boon_data].option;
+    bdata.random = i;
+    bdata.active = 1;
+    bdata.repeat = 1;
+
+    // refer to boon_data struct for which we're adding in 
+    switch (random_std[i].boon_data)
+    {
+      case 0: // BTYPE_EXPM, BOPT_NONE
+	{
+	  bdata.criteria = boon_get_random_zone(j);
+	  bdata.criteria2 = 0;
+	  bdata.bonus = number(20, 50);
+	  bdata.bonus2 = 0;
+	  break;
+	}
+      default:
+	continue;
+    }
+    // set boon
+    // create_boon(&bdata);
+  }
+}
+
+int boon_get_random_zone(int std)
+{
+  if (!random_std[std].id)
+    return 0;
 }
 
 // The function placed throughout the code to check for completion of boons
