@@ -164,6 +164,8 @@
 
 #define SOUL_TAKING_STILETTO 88314
 
+#define GET_CR_PNTS(d) ((d)->character->only.pc->creation_pnts)
+
 #define USES_MANA(ch) ((GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
 
 #define GET_SONG(ch) ((ch)->specials.song)

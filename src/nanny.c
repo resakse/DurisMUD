@@ -3770,10 +3770,8 @@ void select_attrib(P_desc d, char *arg)
   char buf1[MAX_INPUT_LENGTH];
   char buf2[MAX_STRING_LENGTH] = "\0";  
   char instr[MAX_STRING_LENGTH];
-  int num = 0, stat = 0, alloc = allocation_total(d->character, -1), choice = 0, allocation = ALLOCATE_AMT;
-  int min = (int)get_property("charcreation.stat.min", 30);
-  int max = (int)get_property("charcreation.stat.max", 80);
-
+  int num = 0, stat = 0, choice = 0, total = 0, allocation = ALLOCATE_AMT;
+  int min = get_property("charcreation.stat.min", 30);
   half_chop(arg, buf, buf1);
   num = atoi(buf1);
   
@@ -3805,9 +3803,9 @@ void select_attrib(P_desc d, char *arg)
     break;
     case 'x':
     {
-      if (alloc > 0)
+      if (GET_CR_PNTS(d) > 0)
       {
-	send_to_char_f(d->character, "You have not used all you're allocated attribute pointes.  You have %d left.\r\n", alloc);
+	send_to_char_f(d->character, "You have not used all you're allocated attribute points.  You have %d left.\r\n", GET_CR_PNTS(d));
 	return;
       }
       STATE(d) = CON_KEEPCHAR;
@@ -3823,10 +3821,11 @@ void select_attrib(P_desc d, char *arg)
     default:
     {
       display_stats(d);
-      sprintf(instr, "Please select an attribute to modify, and an amount to modify it by.\r\nYou are allowed a total of 300 points, but no stat can be below %d or above %d.\r\n                      Choose wisely.", min, max);
+      sprintf(instr, "Please select an attribute to modify, and an amount to modify it by.\r\nYou are allowed a total of %d points, but no stat can be below %d.\r\n                      Choose wisely.", ALLOCATE_AMT, min);
       SEND_TO_Q(instr, d);
       SEND_TO_Q(attribmod, d);
-      sprintf(buf2 + strlen(buf2), "\r\nYou have %d points remaining to allocate.\r\n", alloc - num);
+      GET_CR_PNTS(d) = ALLOCATE_AMT;
+      sprintf(buf2 + strlen(buf2), "\r\nYou have %d points remaining to allocate.\r\n", GET_CR_PNTS(d));
       SEND_TO_Q(buf2, d);
       return;
     }
@@ -3834,18 +3833,18 @@ void select_attrib(P_desc d, char *arg)
 
   if(stat > 0)
   {
-    if(alloc <= 0 && num > 0)
+    if(!allocation_check(d->character, stat, num) && num > 0)
     {
-      SEND_TO_Q("\r\nYou don't have any points left...\r\n", d);
-      SEND_TO_Q("Please choose a statistic to change, and an amount to change it by, or hit x to keep these settings. \r\n", d);
+      SEND_TO_Q("\r\nYou don't have enough points left...\r\n", d);
+      SEND_TO_Q("Please choose a statistic to change, and an amount to change it by, or (x) to keep these settings. \r\n", d);
       return;
     }
-    if (allocation_total(d->character, stat) >= max && num > 0)
+    if (!allocation_check(d->character, stat, num) && num < 0)
     {
-      SEND_TO_Q("\r\nYou can't allocate any more points to that stat...\r\n", d);
+      SEND_TO_Q("\r\nYou can't unallocate that many points from that stat...\r\n", d);
       return;
     }
-    else if (allocation_total(d->character, stat) <= min && num < 0)
+    else if (!allocation_check(d->character, stat, num) && num < 0)
     {
       SEND_TO_Q("\r\nYou can't go that low.\r\n", d);
       return;
@@ -3857,23 +3856,21 @@ void select_attrib(P_desc d, char *arg)
     }
     else
     {
-      int bal = 0;
-      if(allocation_total(d->character, stat) + num > max)
-	bal = num = (int)get_property("charcreation.stat.max", 80) - allocation_total(d->character, stat);
-      
-      if (allocation_total(d->character, stat) + num < min)
-	bal = num = (int)get_property("charcreation.stat.min", 30) - allocation_total(d->character, stat);
-
-      if (bal)
+      total = allocation_check(d->character, stat, num);
+      if(total == -1)
       {
-	sprintf(buf2, "\r\nYou can't apply that many points to that stat, using %d points.\r\n", bal);
-	SEND_TO_Q(buf2, d);
+        SEND_TO_Q("You cannot allocate that many points to that stat.\r\n", d);
+        return;
       }
-      
-      if(alloc > -1)
-      add_stat_bonus(d->character, stat, num);
+      else if(total > 0 || total < 0)
+      {
+        GET_CR_PNTS(d) -= total;
+        add_stat_bonus(d->character, stat, num);
+      }
+      else
+        SEND_TO_Q("Something has gone wrong...\r\n", d); 
       display_stats(d);
-      sprintf(buf2 + strlen(buf2), "\r\nYou have %d points remaining to allocate.\r\n", alloc - num);
+      sprintf(buf2 + strlen(buf2), "\r\nYou have %d points remaining to allocate.\r\n", GET_CR_PNTS(d));
       SEND_TO_Q(buf2, d);
     }
   }
@@ -3887,9 +3884,49 @@ void select_attrib(P_desc d, char *arg)
   }
 }
  
-int allocation_total(P_char ch, int which)
+int allocation_check(P_char ch, int which, int amt)
 {
-  int total = 0;
+  int total;
+
+  switch(which)
+  {
+    case 1:
+    total = calc_attr_cost(ch->base_stats.Str, amt);
+    break;
+    case 2:
+    total = calc_attr_cost(ch->base_stats.Dex, amt);
+    break;
+    case 3:
+    total = calc_attr_cost(ch->base_stats.Agi, amt);
+    break;
+    case 4:
+    total = calc_attr_cost(ch->base_stats.Con, amt);
+    break;
+    case 5:
+    total = calc_attr_cost(ch->base_stats.Pow, amt);
+    break;
+    case 6:
+    total = calc_attr_cost(ch->base_stats.Int, amt);
+    break;
+    case 7:
+    total = calc_attr_cost(ch->base_stats.Wis, amt);
+    break;
+    case 8:
+    total = calc_attr_cost(ch->base_stats.Cha, amt);
+    break;
+    default:
+    return 0;
+  }
+
+  if(total > ch->only.pc->creation_pnts)
+    return 0;
+
+  return total;
+}
+
+
+
+/*int total = 0;
 
   if(which == -1)
   {
@@ -3944,6 +3981,69 @@ int allocation_total(P_char ch, int which)
     }
   }
   return 0;
+}*/
+
+int calc_attr_cost(int attr, int amount)
+{
+  int final_cost = 0, i = 0;
+  int attr_floor = get_property("charcreation.stat.min", 30);
+  int attr_start = get_property("charcreation.stat.start", 50);
+
+  if(amount > 0)
+  {
+    for(amount;amount > 0;amount--)
+    {
+      i = attr++;
+      if(i > 74)
+        final_cost += 2;
+      else if(i > 79)
+        final_cost += 4;
+      else if(i > 84)
+        final_cost += 8;
+      else if(i > 89)
+        final_cost += 16;
+      else if(i > 94)
+        final_cost += 32;
+      else if(i < 75)
+        final_cost += 1;
+      else if(attr > 100)
+        break;
+    }
+  }
+  else if(amount < 0)
+  {
+    for(amount;amount > (-1 * (attr_start - attr_floor));amount--)
+    {
+      i = attr;
+      if(i > attr_floor && i < 75)
+        final_cost += 1;
+      else if(i > 74)
+        final_cost += 2;
+      else if(i > 79)
+        final_cost += 4;
+      else if(i > 84)
+        final_cost += 8;
+      else if(i > 89)
+        final_cost += 16;
+      else if(i > 94)
+        final_cost += 32;
+      attr--;
+      if(attr <= attr_floor)
+        break;
+    }
+  }
+  else
+  {
+    //nothing allocated!  derp!
+  }
+
+  if(attr + amount > 100)
+  {
+    final_cost = -1;
+  }
+  
+  return final_cost;
+
 }
   
 /* Krov: select_class_info eaten up by select_class */
@@ -4538,16 +4638,16 @@ void display_characteristics(P_desc d)
 
 
 
-/* Krov: this adds now 5/10/15 depending on what 1..3 to stat which */
+// Krov: this adds now 5/10/15 depending on what 1..3 to stat which
+// Jexni: No, now it adds a single point based upon which attribute was
+//        selected(wipe 2011)
 
 void add_stat_bonus(P_char ch, int which, int what)
 {
   int tmp = what;
-  int max = get_property("charcreation.stat.max", 80);     
+  int max = get_property("charcreation.stat.max", 100);     
   int min = get_property("charcreation.stat.min", 30);  
 
-  // changing these bounds from 100 to 85, as 85 will be our max stat after
-  // attribute allocation for wipe 2011 - Jexni 5/14/11
   switch (which)
   {
   case 1:
@@ -4583,8 +4683,6 @@ void add_stat_bonus(P_char ch, int which, int what)
 
 
 /* Krov: char_quals_for_class - gone for good */
-
-
 void show_avail_hometowns(P_desc d)
 {
   int      i, race;

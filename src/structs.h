@@ -1122,6 +1122,8 @@ struct pc_only_data {           /* values only used by PCs        */
   ush_int prompt;
   char pwd[12];                 /* 'CRYPT'ed password    */
 
+  int creation_pnts;            /* character creation points for wipe 2011 */
+
 /* coins in bank */
   int spare1;
   int spare2;
