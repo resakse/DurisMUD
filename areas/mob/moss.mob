@@ -12,8 +12,8 @@ chicken~
 &+Yit can take care of itself. It must know the area well, as it moves about
 &+Ycomfortably and without worry. It clucks contently as it goes about its way.&N
 ~
-64 0 0 0 0 0 0 0 S
-B 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -32,8 +32,8 @@ cow~
 &+ylooking gaze while it chews on some grass. It then looks away, and lowers
 &+yits neck to gather another mouthful of green.&N
 ~
-64 0 0 0 0 0 0 0 S
-AH 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -51,8 +51,8 @@ sow~
 &+Moblivious of that however, and until that time it is having a good life
 &+Mas can be clearly seen by both its dimensions and the look on its face.&N
 ~
-64 0 0 0 0 0 0 0 S
-AH 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -69,8 +69,8 @@ piglet~
 &+Mof behavior, and the presence of their brothers and sisters seems to only
 &+Minvigorate them more. The piglet looks to be several months old.&N
 ~
-64 0 0 0 0 0 0 0 S
-AH 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -88,8 +88,8 @@ pig~
 &+Mcertain that it will not wander off into the woods. Every so often, it
 &+Mlets go a deep oink. It looks to be a healthy and happy pig.&N
 ~
-2112 0 0 0 0 0 0 0 S
-AH 0 0 -1
+2112 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -107,8 +107,8 @@ black bird raven~
 &+Ldiminished it in one's mind. It is totally silent but moves it head with
 &+Lrapid intervals, to be sure that it does not miss any movement nearby.&N
 ~
-133312 0 0 0 0 0 0 0 S
-B 0 0 -1
+133312 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -127,8 +127,8 @@ villager~
 &+cmakes his way through town slowly, not seeming in any particular hurry to
 &+cget anywhere, greeting and chatting with most people he meets.&N
 ~
-1140852800 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852800 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -148,8 +148,8 @@ jurushka clothier~
 &+Bthe store anyway. She greets you as you enter, but does not immediately
 &+Brise to throw a sales pitch at you, allowing you to peruse the items.&N
 ~
-67108930 0 0 0 0 0 0 1000 S
-PH 0 512 -1
+67108930 0 0 0 0 0 0 0 1000 S
+PH 0 512 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -170,8 +170,8 @@ ralg smith~
 &+Cgreets you and makes a sweeping motion with his arm over the tables with
 &+Citems on both sides of the store, inviting you to have a look at them.&N
 ~
-67133506 0 0 16 0 0 0 1000 S
-PH 0 8 -1
+67133506 0 0 0 16 0 0 0 1000 S
+PH 0 8 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -189,8 +189,8 @@ a &+gMoss&+cwood &+gVillage&N child~
 &+Yfew times a week either, which is quite common for anyone who does not
 &+Ybelong to an upper class. The child giggles at you, then runs off.&N
 ~
-64 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+64 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -208,8 +208,8 @@ a &+gMoss&+cwood &+gVillage&N watchman~
 &+Rand he does not look very imposing despite the weapon hanging from his belt.
 &+RThe watchman looks you over and greets you in a friendly manner.&N
 ~
-1073743936 0 0 0 0 0 0 0 S
-PH 0 64 -1
+1073743936 0 0 0 0 0 0 0 0 S
+PH 0 64 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -227,8 +227,8 @@ woman female~
 &+Wlook any better. She scowls at several children who run past here playing,
 &+Wbut once they are gone her features are gentle again.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PH 0 8 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -248,8 +248,8 @@ old townsman~
 &+chard to catch any of it with the multitude of old, grizzled voices speaking
 &+cin slang. The townsman is wearing brown clothes that are many years old.&N
 ~
-1140852802 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1140852802 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -268,8 +268,8 @@ elderly woman~
 &+wwear any jewelry or other trinkets. She is busy talking and does not look
 &+wat you when you approach. Perhaps it is a daily ritual for them to meet.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -290,8 +290,8 @@ wise man wizard~
 &+Rfrom the village to the north, or an apprentice from one of his peers sent to
 &+Rpick up a magical item or spell component. The mage does not yet speak.&N
 ~
-1409288256 0 0 0 0 0 0 1000 S
-PH 0 512 -1
+1409288256 0 0 0 0 0 0 0 1000 S
+PH 0 512 0 -1
 30 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -310,8 +310,8 @@ boy teenage servant~
 &+ythe village is only twenty odd minutes away and possibly he comes and
 &+yleaves here every morning, returning to the house of his parents.&N
 ~
-64 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+64 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -330,8 +330,8 @@ wooden wood man golem~
 &+ya time and resource consuming task. Golems posess no intelligence and can
 &+yobey only the simplest of commands, but can be very useful nonetheless.&N
 ~
-64 0 0 0 0 0 0 1000 S
-OG 0 1 -1
+64 0 0 0 0 0 0 0 1000 S
+OG 0 1 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -350,8 +350,8 @@ farmer~
 &+yhe has grown weary of strangers coming to the town, but he does not scowl
 &+yat you or otherwise look angry. Instead, he continues with what he was doing.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 11 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -367,8 +367,8 @@ strong horse~
 &+yhead and carefully scrutinizes you, but then lowers it and continues to
 &+ychew on the grass. Its tail sweeps from left to right, chasing bugs away.&N
 ~
-134234176 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134234176 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -386,8 +386,8 @@ A child from &+gMoss&+cwood &+gVillage&N plays with his friends.&N
 &+Yprobably been playing around in the bushes or woods around the village
 &+Yas well. The playing boy has some freckles around his nose.&N
 ~
-64 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+64 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -407,8 +407,8 @@ small imp creature gargoyle mischievous~
 &+mimp has the features that can make it look evil, but a little mischievous
 &+msmile on its face and a strange giggle hint that it is a friendly creature.&N
 ~
-1073743940 1 0 0 0 0 0 -1000 S
-HF 0 512 -1
+1073743940 1 0 0 0 0 0 0 -1000 S
+HF 0 512 0 -1
 14 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -428,8 +428,8 @@ cat~
 &+ychildren in town who might not have the understanding how to deal with such
 &+yan animal just yet, taunting and chasing it. The cat's coat is mostly brown.&N
 ~
-64 0 0 0 0 0 0 1000 S
-A 0 0 -1
+64 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 3 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -446,8 +446,8 @@ black dog~
 &+Lfor its company, as dogs make loyal and trustworthy friends. At times it
 &+Lmight also be taken hunting, if its owner goes into the woods for game.&N
 ~
-64 0 0 0 0 0 0 1000 S
-A 0 0 -1
+64 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -464,8 +464,8 @@ mule~
 &+yshakes its head to chase away an irritating fly and returns to chewing on the
 &+ygrass. The donkey has a rope around its neck which is tied to a nearby pole.&N
 ~
-134217794 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217794 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 4 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -482,8 +482,8 @@ fuzzy sheep~
 &+Wpieces of mud intertwined in it. The sheep is not tied to anything and
 &+Wcan roam freely through the bushes and fields in the village.&N
 ~
-66 0 0 0 0 0 0 0 S
-AH 0 0 -1
+66 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -500,8 +500,8 @@ rat~
 &+Lis nearby, as they do not occur naturally in the woods here. The multitude
 &+Lof farms in the village provide it with an endless source of food.&M
 ~
-64 0 0 0 0 0 0 0 S
-A 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -520,8 +520,8 @@ craftsman craftsmen~
 &+Wfor personal use. The craftsman looks like a regular farmer, and cannot
 &+Wbe distinguished from most other villagers by his clothing.&N
 ~
-1140850752 0 0 0 0 0 0 1000 S
-PH 0 512 -1
+1140850752 0 0 0 0 0 0 0 1000 S
+PH 0 512 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -540,8 +540,8 @@ adventurer wandering~
 &+Cto stop here than to head further towards Waterdeep if one is coming from
 &+Cthe north. The adventurer pays you no attention as he looks for a store.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 12 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -561,8 +561,8 @@ merchant~
 &+Yintimidate the poorer townsfolk. The merchant looks at you quizically, as
 &+Yif wondering what your purpose in the town is.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 12 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -580,8 +580,8 @@ shopper citizen~
 &+rof splendor, or to buy something that is not available back home. He is a
 &+rman of average height, and does not look wealthy or poor, just a commoner.&N
 ~
-1073744064 0 0 0 0 0 0 1000 S
-PF 0 4096 -1
+1073744064 0 0 0 0 0 0 0 1000 S
+PF 0 4096 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -602,8 +602,8 @@ large brawny man barbarian~
 &+Bany of a great many directions. The barbarian stands still as he looks at you,
 &+Bfrom head to toe, but then he continues on his way without so much as a word.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PB 0 1 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PB 0 1 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -623,8 +623,8 @@ evil man apprentice~
 &+Lfrom here. He may be in town to purchase supplies, or meet with the mage
 &+Lwho is rumored to live somewhere in or near Mosswood Village.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-PH 0 1048576 -1
+2112 0 0 0 0 0 0 0 1000 S
+PH 0 1048576 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -642,8 +642,8 @@ villager commoner~
 &+yare equally in need of cleaning, but they do not really stand out in the
 &+yvillage where most men wear dirty garb due to their professions.&N
 ~
-66 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+66 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -661,8 +661,8 @@ fat toad~
 &+gtoad's big eyes are fixed on one point, but surely it is aware of what
 &+ggoes on around it. It looks well fed, this must be a good home for it.&N
 ~
-2112 0 0 0 0 0 0 0 S
-A 0 0 -1
+2112 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -680,8 +680,8 @@ soldier~
 &+Yworth asking him what his group is doing here. He is a professional guard
 &+Yand years of training and hands-on experience has made him a tough man.&N
 ~
-1140852800 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1140852800 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 11 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -699,8 +699,8 @@ mercenary soldier~
 &+Rguard. The mercenary's face is unshaven, unlike that of the men he is
 &+Rwith. He looks scruffy but tough, and can certainly put up a fight.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PH 0 16384 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PH 0 16384 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -717,8 +717,8 @@ tough intelligent man captain~
 &+Land gloves are better than standard issue. He would probably be the man to
 &+Ltalk to, if one wants to find out what the group of soldiers is doing here.&N
 ~
-66 0 0 0 0 0 0 1000 S
-PH 0 512 -1
+66 0 0 0 0 0 0 0 1000 S
+PH 0 512 0 -1
 19 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -736,8 +736,8 @@ deer~
 &+ysurely the townsfolk of Mosswood Village will kill them when they have the
 &+ychance. Strangely enough, this deer looks frozen in fear and does not run.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-AH 0 0 -1
+2112 0 0 0 0 0 0 0 1000 S
+AH 0 0 0 -1
 4 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -757,8 +757,8 @@ spider whisper~
 &+Lspider gradually moves closer every time it runs by, perhaps choosing a
 &+Lgood moment to attack. It has many round eyes on the front of its body.&N
 ~
-64 1 0 0 0 0 0 0 S
-AS 0 0 2
+64 1 0 0 0 0 0 0 0 S
+AS 0 0 0 2
 11 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -776,8 +776,8 @@ funnelweb spider~
 &+Wfangs protruding from its frontal section. A large number of eyes are above
 &+Wthese, and as it sits completely still it is hard to spot at first.&N
 ~
-2112 0 0 0 0 0 0 0 S
-AS 0 1 -1
+2112 0 0 0 0 0 0 0 0 S
+AS 0 1 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -795,8 +795,8 @@ hobgoblin small muscular humanoid~
 &+Gcome to raid some cattle, or steal weapons or armor from the stores. Then
 &+Gagain, it may just be here in the woods to hunt for some game.&N
 ~
-2112 0 0 0 0 0 0 -1000 S
-H2 0 1 -1
+2112 0 0 0 0 0 0 0 -1000 S
+H2 0 1 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -813,8 +813,8 @@ ettercap~
 &+cspiders, and they are as adept in setting traps as their arachnid friends.
 &+cThis particular ettercap has a mouth full of sharp teeth, visible clearly.&N
 ~
-2112 0 0 0 0 0 0 0 S
-A 0 0 -1
+2112 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -831,8 +831,8 @@ mold man~
 &+Glike a good meal pass by. He is not wearing any clothes, and does not have
 &+Gany weapons that are readily visible. Surely he is a good fighter, though.&N
 ~
-1073745984 0 0 0 0 0 0 -1000 S
-AP 0 1 -1
+1073745984 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -849,8 +849,8 @@ will o'wisp wisp ball light eerie~
 &+Cstrange creature is anyone's guess. It seems to be observing the area, and
 &+Cdoes not look like it is worried about being attacked by any man or animal.&N
 ~
-1073745984 0 0 0 0 0 0 1000 S
-HF 0 32 -1
+1073745984 0 0 0 0 0 0 0 1000 S
+HF 0 32 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -867,8 +867,8 @@ small man kobold~
 &+Gheight and is not as muscled as other humanoids, but he carries a spear with
 &+Ghim that can inflict some damage. Surely he is very quick as well.&N
 ~
-1073743936 0 0 0 0 0 0 -1000 S
-H2 0 16 -1
+1073743936 0 0 0 0 0 0 0 -1000 S
+H2 0 16 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -886,8 +886,8 @@ lanky troll~
 &+Gin that it is slimy and smooth, but there are also many patches and rough
 &+Gsections. It has long, sharp nails, and two black eye set deep in its skull.&N
 ~
-2114 64 0 0 0 0 0 -1000 S
-PT 9 1 -1
+2114 64 0 0 0 0 0 0 -1000 S
+PT 9 1 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -905,8 +905,8 @@ constricting snake thick~
 &+gis suited fine to this environment. The snake's tongue lashes out as it
 &+gmoves, constantly scanning the air for particles that are of interest.&N
 ~
-6208 0 0 0 0 0 0 -500 S
-RS 0 1 -1
+6208 0 0 0 0 0 0 0 -500 S
+RS 0 1 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -924,8 +924,8 @@ black dragon hatchling~
 &+Lsharp teeth, strong scales and dangerous claws make it a tough foe. Also, its
 &+Lmother may be nearby, and the wrath of a fully grown dragon is horrible.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-DK 0 33 -1
+2112 0 0 0 0 0 0 0 1000 S
+DK 0 33 0 -1
 26 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -942,8 +942,8 @@ bombardier beetle thick shelled~
 &+yThe farms here are full of juicy crops, which must be good eating, and
 &+ythis is probably why it is in this area. The beetle runs away from you.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-I 0 0 -1
+2112 0 0 0 0 0 0 0 1000 S
+I 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -959,8 +959,8 @@ beetle black boring~
 &+Llive around the village and feed on the farmers' crops, so surely they try
 &+Lto kill them whenever they see one. This insect runs in a zig-zag pattern.&N
 ~
-64 0 0 0 0 0 0 0 S
-I 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -976,14 +976,14 @@ fire beetle red~
 &+rfights, but whether these were with predators or other beetles is unknown.
 &+rIt moves about in a seemingly random pattern, and stops moving suddenly.&N
 ~
-64 0 0 0 0 0 0 0 S
-I 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
 #23451
 stag beetle~
-&+ga &+ystag beetle&N~
+&+ga &+ystag &+gbeetle&N~
 &+gA &+ystag beetle &+gchews on the grain here, a nuisance to the farmer.&N
 ~
 &+gA large beetle chews on the crops here, its impressive mandibles grinding
@@ -994,8 +994,8 @@ stag beetle~
 &+gsurely do everything in their power to get rid of these pests, but they
 &+gbreed prolifically and are very hard to get rid of. The beetle ignores you.&N
 ~
-64 0 0 0 0 0 0 0 S
-I 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1015,8 +1015,8 @@ bullywug scout frog-like humanoid~
 &+ca wide mouth, like a frog, and it looks stoic. The scout looks you over
 &+ccarefully, and then immediately moves. Perhaps it is going to get others.&N
 ~
-1073743936 0 0 0 0 0 0 -1000 S
-H2 0 1 -1
+1073743936 0 0 0 0 0 0 0 -1000 S
+H2 0 1 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1036,8 +1036,8 @@ bullywug warrior muscular frog-like humanoid~
 &+ca wide mouth, like a frog, and it looks stoic. Its muscles are clearly
 &+cvisible under the sickly green skin, and it looks like a strong fighter.&N
 ~
-64 0 0 0 0 0 0 -1000 S
-H2 0 1 -1
+64 0 0 0 0 0 0 0 -1000 S
+H2 0 1 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1058,8 +1058,8 @@ bullywug shaman frog-like humanoid~
 &+cset of small bones and twigs woven into a funny little patch of hair on top
 &+cof its broad head, and it carries a gnarled staff in its hand.&N
 ~
-4160 0 0 0 0 0 0 -1000 S
-H2 0 256 -1
+4160 0 0 0 0 0 0 0 -1000 S
+H2 0 256 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1076,8 +1076,8 @@ lizard man~
 &+greveals two rows of shawp teeth. The lizardman is without any weapons or
 &+gclothing, and one can see the one of his muscles. He looks like a tough foe.&N
 ~
-64 0 0 0 0 0 0 -1000 S
-R 0 1 -1
+64 0 0 0 0 0 0 0 -1000 S
+R 0 1 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1098,8 +1098,8 @@ leader bullywug frog-like humanoid~
 &+cair of superiority around it, and it gives orders to the others in a low
 &+cvoice. The language is strange, sounding like the croaking of frogs.&N
 ~
-2112 0 0 0 0 0 0 -1000 S
-H2 0 1 -1
+2112 0 0 0 0 0 0 0 -1000 S
+H2 0 1 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1115,8 +1115,8 @@ scaly fish~
 &+Cis a predator, and it may feed on insects and things which fall into
 &+Cthe pools. Whenever a shadow falls over the water, it quickly moves.&N
 ~
-66 0 0 0 0 0 0 0 S
-F 0 0 -1
+66 0 0 0 0 0 0 0 0 S
+F 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1132,8 +1132,8 @@ eel-like fish eel~
 &+mbe as thick as a man's arm. The eel has no scales, and it is an eerie
 &+mgrey colour. A layer of slime covers its body, and its fins are tiny.&N
 ~
-2112 0 0 0 0 0 0 0 S
-F 0 0 -1
+2112 0 0 0 0 0 0 0 0 S
+F 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1150,8 +1150,8 @@ mud muckdweller humanoid~
 &+ytraps. This muckdweller would be one of the more feared predators in
 &+ythis swamp, especially since its kind always operates in groups.&N
 ~
-2112 0 0 0 0 0 0 -1000 S
-H 0 512 -1
+2112 0 0 0 0 0 0 0 -1000 S
+H 0 512 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1170,8 +1170,8 @@ large green leech giant~
 &+Gvery large, and it would drain a good amount of blood until it is full.
 &+GAs you approach, it seems to tense up, as if ready to drop and attach.&N
 ~
-64 0 0 0 0 0 0 -1000 S
-AP 0 1 -1
+64 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1188,8 +1188,8 @@ large dragonfly~
 &+rhas the ability to fly in any direction it desires, even backward. These
 &+rinsects are common around ponds and lakes, and they are fierce predators.&N
 ~
-64 0 0 0 0 0 0 0 S
-I 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1208,8 +1208,8 @@ tiny frog poisonous~
 &+Ywarning to predators that it is highly poisonous. The frog's throat moves
 &+Yconstantly, and it lets loose a small croak every now and then.&N
 ~
-64 0 0 0 0 0 0 0 S
-A 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1227,8 +1227,8 @@ swamp spider~
 &+yor near a web, and it is probably a roaming hunter that preys on birds,
 &+yfish and small amphibians. Its legs move uneasily as you approach.&N
 ~
-64 0 0 0 0 0 0 -1000 S
-AS 0 1 -1
+64 0 0 0 0 0 0 0 -1000 S
+AS 0 1 0 -1
 11 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1240,8 +1240,8 @@ small humanoid grippli frog~
 &+gLarge eyes peer back at you. Its shiny green skin allowing it to blend in
 &+gwith the surrounding foliage.&n
 ~
-64 0 0 0 0 0 0 0 S
-H 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 12 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1260,8 +1260,8 @@ scarred orc scout~
 &+yarmor, the best of which may be some leather bracers, and it is mostly
 &+ycomposed of furs. The orc carries with it a short spear with a sharp end.&N
 ~
-1073743936 0 0 0 0 0 0 -1000 S
-HO 12 16 -1
+1073743936 0 0 0 0 0 0 0 -1000 S
+HO 12 16 0 -1
 19 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1278,8 +1278,8 @@ kobold~
 &+gdangerous. This kobold has brown skin, and wears nothing but simple rags.
 &+gHis kind is not particularly intelligent, but their numbers make up for this.&N
 ~
-2112 0 0 0 0 0 0 -1000 S
-H2 0 32 -1
+2112 0 0 0 0 0 0 0 -1000 S
+H2 0 32 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1298,8 +1298,8 @@ orc heavy infantry~
 &+Lsword. The orc has a somewhat cunning look on his face, which may be why
 &+Lhe has survived the battles he has fought. He snorts as he sees you here.&N
 ~
-67110976 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+67110976 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1318,8 +1318,8 @@ orc patrol~
 &+ylot more quiet. There does not seem to be any particular reason why he is
 &+yangry, but then again orcs mostly are and he probably revels in killing.&N
 ~
-1073743936 0 0 0 0 0 0 -1000 S
-HO 12 1 -1
+1073743936 0 0 0 0 0 0 0 -1000 S
+HO 12 1 0 -1
 16 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1338,8 +1338,8 @@ mound earth elemental~
 &+yidea to anger it, for it looks like a powerful creature. It stays to
 &+ythe rocky part of the area here, perhaps loathe to travel elsewhere.&N
 ~
-67110976 0 0 0 0 0 0 0 S
-EE 0 2048 -1
+67110976 0 0 0 0 0 0 0 0 S
+EE 0 2048 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1356,8 +1356,8 @@ trapper large strange mass~
 &+wIt may be a trapper, a creature that lurks in caves and the Underdark where
 &+wit pounces upon unsuspecting animals and adventurers who pass by its lair.&N
 ~
-2114 1 0 0 0 0 0 -1000 S
-AP 0 0 -1
+2114 1 0 0 0 0 0 0 -1000 S
+AP 0 0 0 -1
 14 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1375,8 +1375,8 @@ large muscular creature bugbear~
 &+ybody, and it looks as if it may also serve for holding items. The bugbear
 &+ygrunts as it moves through the area, turning over rocks and looking around.&N
 ~
-2116 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+2116 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 11 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1394,8 +1394,8 @@ hunter~
 &+Gcarries a bow in his right hand, while a pack is on his back. He looks as
 &+Gif he is prepared to stay in the woods here for several days on end.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PH 0 2 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1412,8 +1412,8 @@ jarbo strange bird~
 &+Ywhich also gives it a means to defend itself. It digs in the earth at its
 &+Yfeet, perhaps looking for bugs or roots, but keeps an eye on the area.&N
 ~
-133184 0 0 0 0 0 0 1000 S
-B 0 0 -1
+133184 0 0 0 0 0 0 0 1000 S
+B 0 0 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1429,8 +1429,8 @@ large bird creature human kenku~
 &+yif it were to wear a large cloak and were seen from a distance. Its feathers
 &+yare mostly brown, with some &+Wwhite &+yedges, and its eyes are a bright yellow.&N
 ~
-1073743936 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+1073743936 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 14 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1449,8 +1449,8 @@ spidery white plant thornslinger~
 &+WThis thornslinger is perhaps saturated from an earlier meal, and does
 &+Wnot attack or even move. Its stem and leaves are covered with a sap.&N
 ~
-2114 1 0 0 0 0 0 -1000 S
-VT 0 1 -1
+2114 1 0 0 0 0 0 0 -1000 S
+VT 0 1 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1466,8 +1466,8 @@ large cricket cave~
 &+mcreature. It is a brown colour, and has many ridges and other lines along
 &+mits body. Two large hind legs and antennae are the most apparent features.&N
 ~
-64 0 0 0 0 0 0 -1000 S
-I 0 0 -1
+64 0 0 0 0 0 0 0 -1000 S
+I 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1485,8 +1485,8 @@ lynx~
 &+wwhich is well-suited to its choice of habitats for it is a rocky region
 &+wwith shrubs and bushes where its favorite prey, fowl, can also be found.&N
 ~
-1073743936 0 0 0 0 0 0 0 S
-A 0 0 -1
+1073743936 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1504,8 +1504,8 @@ ankheg many-legged worm~
 &+bbut also for attacking prey. Disturbingly, it has a large mouth with many
 &+bteeth, and its eyes are suited to both the sunlight and the darkness.&N
 ~
-64 0 0 0 0 0 0 0 S
-R 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+R 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1526,8 +1526,8 @@ fairie little beautiful~
 &+Wwas on its face. The faerie looks very frail, but there could be nothing that
 &+Wwants to hurt such a gentle and loving creature save for the twisted orcs.&N
 ~
-133186 0 0 0 0 0 0 1000 S
-HF 0 32 1
+133186 0 0 0 0 0 0 0 1000 S
+HF 0 32 0 1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1548,8 +1548,8 @@ pseudodragon little mischievous~
 &+Band plays with the faeries as if it were a playful child. All pseudodragons
 &+Bare playful, no matter what their age, and this one is no exception.&N
 ~
-2114 0 0 0 0 0 0 0 S
-DK 0 0 -1
+2114 0 0 0 0 0 0 0 0 S
+DK 0 0 0 -1
 20 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1566,8 +1566,8 @@ bat~
 &+Lnearby village with its water and crops should ensure a steady supply of
 &+Lbugs, and the boulder here provides enough cracks to shelter the bat.&N
 ~
-66 1 0 0 0 0 0 -1000 S
-R 0 0 -1
+66 1 0 0 0 0 0 0 -1000 S
+R 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1585,8 +1585,8 @@ medium cave bear~
 &+yin excess of six feet if it rises upon two feet, and can deliver crushing
 &+yblows with its strong arms and clawed paws. The bear's growl continues.&N
 ~
-1073743938 0 0 0 0 0 0 0 S
-A 0 0 -1
+1073743938 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 14 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1603,8 +1603,8 @@ snake-like reptilian monster behir~
 &+cits body so it can move like a snake. There are two horns protruding from
 &+cbehind its head, making it look even more fearsome. It seems to be asleep.&N
 ~
-2114 0 0 0 0 0 0 -1000 S
-R 0 0 -1
+2114 0 0 0 0 0 0 0 -1000 S
+R 0 0 0 -1
 14 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1621,8 +1621,8 @@ cave fisher~
 &+Lunderground caverns such as caves, dungeons and the Underdark, although
 &+Lthey can rarely be seen in rocky regions on the surface. It remains still.&N
 ~
-1073743936 0 0 0 0 0 0 -1000 S
-A 0 1 -1
+1073743936 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1640,8 +1640,8 @@ owl~
 &+Yhunts on small snakes and rodents, which there must be a plentiful supply
 &+Yof with the nearby farms of Mosswood Village. The owl appears to be asleep.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-B 0 0 -1
+2112 0 0 0 0 0 0 0 1000 S
+B 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1658,8 +1658,8 @@ falcon bird prey~
 &+yyou quizically, ready to fly at an instant's notice should a threat present
 &+yitself. It looks like a fine beast, and a top predator around the farms.&N
 ~
-133184 0 0 0 0 0 0 0 S
-B 0 0 -1
+133184 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1678,8 +1678,8 @@ small humanoid brownie~
 &+yThe brownie is feeding some grass to a calf, and whispers something to
 &+yit but this cannot be heard from here. The brownie smiles sweetly.&N
 ~
-268437568 0 0 0 0 0 0 1000 S
-HF 0 32 -1
+268437568 0 0 0 0 0 0 0 1000 S
+HF 0 32 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1691,8 +1691,8 @@ phycomid fungus~
 &+gThis large clump of algae appears void of any intellect. It moves through
 &+gits own desire to feed.&n
 ~
-2114 0 0 0 0 0 0 -1000 S
-AP 0 0 -1
+2114 0 0 0 0 0 0 0 -1000 S
+AP 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1704,8 +1704,8 @@ shrieker fungus~
 This large fungus resembles a mushroom. A large hole at its top expels air
 creating a low whistling sound.&n
 ~
-2114 1 0 0 0 0 0 -1000 S
-AP 0 0 -1
+2114 1 0 0 0 0 0 0 -1000 S
+AP 0 0 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1724,8 +1724,8 @@ tiny green man gremlin~
 &+gbelt containing trinkets and other useless items, which probably makes
 &+ghim a gremlin. The pouches are open and small shiny objects can be seen.&N
 ~
-1073743936 0 0 0 0 0 0 0 S
-H 0 32 -1
+1073743936 0 0 0 0 0 0 0 0 S
+H 0 32 0 -1
 14 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1744,8 +1744,8 @@ fremlin plump gremlin~
 &+wlike to cause trouble as they are relatively worthless fighters, and fremlins
 &+ware no different. It probably likes to cause a lot of mischief and anger.&N
 ~
-2112 0 0 0 0 0 0 0 S
-H 0 0 -1
+2112 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1762,8 +1762,8 @@ duck~
 &+Ymay just have chosen this pond to live in by itself. Perhaps the towns-
 &+Yfolk feed it when they come here, or it can find enough food in the area.&N
 ~
-2114 0 0 0 0 0 0 0 S
-B 0 0 -1
+2114 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 3 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1781,8 +1781,8 @@ swideth~
 &+ris years old. Nevertheless, she looks like a friendly person, albeit also
 &+rtired and somewhat sad. She is busy arranging items in her store.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1801,8 +1801,8 @@ woman townswoman~
 &+Chair bas been braided behind her head so that it does not get in the way
 &+Cduring regular work around the farm. She looks somewhat tired.&N
 ~
-1073743936 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+1073743936 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1820,8 +1820,8 @@ excited villager~
 &+WThe situation does not look like a regular discussion of several people who
 &+Wmet, as there are perhaps half a dozen men and women here.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1839,8 +1839,8 @@ playing child boy~
 &+YThe child is so immersed in his games, that he pays no attention to his
 &+Ysurroundings. Several townsfolk pass and they greet him as they move by.&N
 ~
-64 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+64 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1859,8 +1859,8 @@ playing dog~
 &+Lworgs. It looks like some of its direct ancestors may have had some wolf or
 &+Lworg blood in them. It barks as it waits for the child to throw again.&N
 ~
-1073743936 0 0 0 0 0 0 0 S
-A 0 0 -1
+1073743936 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1876,8 +1876,8 @@ horse~
 &+yhead and carefully scrutinizes you, but then lowers it and continues to
 &+ychew on the grass. Its tail sweeps from left to right, chasing bugs away.&N
 ~
-134217792 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217792 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 4 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1895,8 +1895,8 @@ soldier~
 &+Yworth asking him what his group is doing here. He is a professional guard
 &+Yand years of training and hands-on experience has made him a tough man.&N
 ~
-1073743938 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743938 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 15 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1914,8 +1914,8 @@ mercenary soldier~
 &+Rguard. The mercenary's face is unshaven, unlike that of the men he is
 &+Rwith. He looks scruffy but tough, and can certainly put up a fight.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 16384 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 16384 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1932,8 +1932,8 @@ cook~
 &+Bdoes not look hopeless at the sight of the enormous pile of food that is
 &+Byet to be cleaned, cut and prepared. The cook whistles as he works.&N
 ~
-67110978 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+67110978 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1944,8 +1944,8 @@ echo maker~
 ~
 Your momma!
 ~
-66 0 0 0 0 0 0 0 S
-PH 0 0 -1
+66 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1964,8 +1964,8 @@ spidery white plant thornslinger~
 &+WThis thornslinger is perhaps saturated from an earlier meal, and does
 &+Wnot attack or even move. Its stem and leaves are covered with a sap.&N
 ~
-66 1 0 0 0 0 0 -1000 S
-VT 0 1 -1
+66 1 0 0 0 0 0 0 -1000 S
+VT 0 1 0 -1
 10 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -1983,8 +1983,8 @@ gnome~
 &+Rif he were dead weight. Or maybe he is just very rich, and can spend his days
 &+Rpracticing his hobbies. He notices your look and starts to talk to you!&N
 ~
-2112 0 0 0 0 0 0 1000 S
-PG 0 1 -1
+2112 0 0 0 0 0 0 0 1000 S
+PG 0 1 0 -1
 11 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2003,8 +2003,8 @@ ogre~
 &+bdumbest of humans. This ogre looks at you as if he is confused whether to hit
 &+byou or not.&N
 ~
-2112 64 0 0 0 0 0 -1000 S
-PO 0 1 -1
+2112 64 0 0 0 0 0 0 -1000 S
+PO 0 1 0 -1
 21 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2023,8 +2023,8 @@ recluse man reclusive~
 &+yor at the very least it has been worn intensly. The holes and tears in it are
 &+ynot patched, which makes him look like a pauper or beggar.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 512 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 512 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2042,8 +2042,8 @@ large black bird raven~
 &+Lthis because it does not hit a single one. It makes no sound at all, and lands
 &+Lon a branch from where it stares at you for several seconds before moving on.&N
 ~
-133186 0 0 0 0 0 0 0 S
-B 0 0 -1
+133186 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 3 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2062,8 +2062,8 @@ guard~
 &+bSeeing you here causes him some surprise, and he looks about ready to talk
 &+bto anyone passing by to give him a break from his apparently boring watch.&N
 ~
-67110978 0 0 0 0 0 0 1000 S
-PH 0 8 -1
+67110978 0 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 13 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2081,14 +2081,14 @@ large boar~
 &+ygrunts regularly, and despite its short legs it is doubtlessly capable of
 &+yincredible bursts of speed. Perhaps it is wise not to bother the animal.&N
 ~
-1073743938 0 0 0 0 0 0 0 S
-AH 0 0 -1
+1073743938 0 0 0 0 0 0 0 0 S
+AH 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
 #23510
 boy~
-&+y a young boy&n~
+&+ya young boy&n~
 &+LOne of the farmer's &+Bboys &+Lworks on the land.&N
 ~
 &+LGoing through the field here, this boy guides the beanstalks up the sticks
@@ -2099,8 +2099,8 @@ boy~
 &+Laround the farm strengthening him. Stubble covers parts of his face and he
 &+Lcould really use a shave, or a bath for that matter. He looks blankly at you.&N
 ~
-64 0 0 0 0 0 0 0 S
-PH 0 0 -1
+64 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2117,8 +2117,8 @@ daughter~
 &+mrepaired and stitched many times. Once it may have been cream colored, but it
 &+mis now a faded light brown. The girl does not wear any shoes.&N
 ~
-64 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+64 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 4 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2136,8 +2136,8 @@ wife~
 &+Wnot wearing anything to prevent stains on her clothing, but by their looks a
 &+Wnew blotch would not matter anyway. She is somewhat portly.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2155,8 +2155,8 @@ farmer~
 &+gthe normal collection of brown clothes, instead wearing both a green pants
 &+gand jerkin. He is wearing boots that look like they have been in a swamp.&N
 ~
-67110978 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+67110978 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2173,8 +2173,8 @@ farmer~
 &+ca heavy iron toothed section. What could possibly be the cause of this is best
 &+casked, but it is possible a wolf or other beast has been sighted on the farm.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2112 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2192,8 +2192,8 @@ oldest son~
 &+Ywields a heavy rake as though it were a weapon. They seem to be looking for
 &+Ysomething in the fields. The boy frowns when he sees you in their crops.&N
 ~
-64 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+64 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2210,8 +2210,8 @@ wife~
 &+rinside of the house has probably been given a lower priority, and many things
 &+reither need cleaning of fixing. Her hand supports her chin as she dozes off.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 7 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2227,8 +2227,8 @@ toddler~
 &+ywhich are potentially hazardous. Although it is difficult to be certain from
 &+yhere, it looks like it is a girl. A trail of spittle shows where she has been.&N
 ~
-66 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+66 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 3 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2245,8 +2245,8 @@ ijale salesgirl~
 &+glooks anxious to see a potential customer and it is possible that she has
 &+gonly just started this work, or has not sold much yet this day.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 17 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2263,8 +2263,8 @@ old man~
 &+ware probably not used for work on the farms around Mosswood Village. He
 &+wsmells like the horses, but he does not know or care as he shakes your hand.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2281,8 +2281,8 @@ woman~
 &+Cbut instead some cloth or fur slippers, as could have been expected by the
 &+Cclean state of the house. There are several beads of sweat on her forehead.&N
 ~
-66 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+66 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 6 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2300,8 +2300,8 @@ gardening man~
 &+ghas a small bag in his right hand in which he puts the weeds, so he must be
 &+gleft handed. His face is red from the position it is in, but he does not stop.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 8 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2318,8 +2318,8 @@ small girl~
 &+Yblonde&+w. She seems to be waiting for you to say or do something, and looks
 &+wto the room to the east where it is likely her mother or other kin are.&N
 ~
-66 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+66 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 5 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2337,8 +2337,8 @@ farmer~
 &+cpests, and hopes to skewer some of them on his scythe. He looks at you
 &+cand then at the wheat before you, as if daring you to tread over them.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2112 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 12 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2355,8 +2355,8 @@ woman wife~
 &+wsold for money. She is on her knees and the garden is a bit muddy, so her
 &+wclothes are surely dirty after this. She has her back to you at the moment.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 128 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 128 0 -1
 9 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2376,8 +2376,8 @@ bedgar armorer~
 &+Lfly around during his work. He has small burn marks all over his arms and
 &+Lhands as well. He works on the shoulder section with total concentration.&N
 ~
-2114 0 0 0 0 0 0 1000 S
-PH 0 9 -1
+2114 0 0 0 0 0 0 0 1000 S
+PH 0 9 0 -1
 25 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2395,8 +2395,8 @@ black horse~
 &+Lthrough with water. The horse looks well groomed, its hair combed finely
 &+Land braided down its neck. Its shorter hair shines and glistens.&N
 ~
-134219840 0 0 0 0 0 0 1000 S
-AE 0 0 -1
+134219840 0 0 0 0 0 0 0 1000 S
+AE 0 0 0 -1
 4 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
@@ -2414,8 +2414,8 @@ hunter~
 &+Gcarries a bow in his right hand, while a pack is on his back. He looks as
 &+Gif he is prepared to stay in the woods here for several days on end.&N
 ~
-2112 0 0 0 0 0 0 1000 S
-PH 0 2 -1
+2112 0 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 18 0 0 0d0+0 0d0+0
 0.0.0.0 0
 8 8 1
