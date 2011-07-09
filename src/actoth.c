@@ -5761,6 +5761,78 @@ void do_blood_scent(P_char ch, char *argument, int cmd)
   }*/ 
 }
 
+/*void ascend_theurgist(P_char ch)
+{
+  P_char teacher;
+  char buff[64];
+  int i;
+
+  if (!ch)
+  {
+    logit(LOG_EXIT, "ascend_theurgist called in actoth.c with no ch");
+    raise(SIGSEGV);
+  }
+  if (IS_NPC(ch))
+    return;
+
+  if (IS_TRUSTED(ch))
+  {
+    send_to_char("This would be really really really really really dumb........\n\r",ch);
+    return;
+  }
+
+  if(!(teacher = FindTeacher(ch)))
+  {
+    send_to_char("You need a teacher to help you with this.......\n\r", ch);
+    return;
+  }
+
+  if(ch->only.pc->epics < (int) get_property("ascend.epicCost.Eladrin", 250))
+  {
+    sprintf(buff, "It costs &+W%d&n epics to ascend...\n", (int) get_property("descend.epicCost", 10));
+    send_to_char(buff, ch);
+    return;
+  }
+
+  if((GET_CLASS(ch, CLASS_THEURGIST) && !GET_CLASS(teacher, CLASS_THEURGIST)))
+  {
+    send_to_char("How about finding the appropriate teacher first?\n", ch);
+    return;
+  }
+
+  for (i = 0; i < MAX_SKILLS; i++)
+  {
+    ch->only.pc->skills[i].learned = 0;
+  }
+  NewbySkillSet(ch);
+       ch->points.max_mana = 0;
+            do_start(ch, 1);
+
+  int k = 0;
+  P_obj temp_obj;
+  for (k = 0; k < MAX_WEAR; k++)
+  {
+    temp_obj = ch->equipment[k];
+    if(temp_obj)
+      obj_to_char(unequip_char(ch, k), ch);
+  }
+
+  GET_SIZE(ch) = SIZE_MEDIUM;
+  GET_RACE(ch) = RACE_ELADRIN;
+  ch->player.m_class = CLASS_THEURGIST;
+
+  send_to_char("You feel a chill and realize that you are naked.\r\n", ch);
+  generate_desc(ch);
+  GET_AGE(ch) = 500;
+  GET_VITALITY(ch) =  GET_MAX_VITALITY(ch) = 120;
+  forget_spells(ch, -1);
+  ch->player.spec = 0;
+  ch->player.secondary_class = 0;
+  ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("ascend.epicCost.Eladrin", 10));
+  // Lets not home them on the map.
+  //GET_HOME(ch) = GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch) = ch->in_room;
+}*/
+
 void ascend_theurgist(P_char ch)
 {
   P_char teacher;
@@ -5833,6 +5905,63 @@ void ascend_theurgist(P_char ch)
   //GET_HOME(ch) = GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch) = ch->in_room;
 }
 
+void make_alchemist(P_char ch)
+{
+  bool ascend = FALSE;
+ 
+  if(!ch)
+  {
+    logit(LOG_EXIT, "make_alchemist called in actoth.c with no ch");
+    raise(SIGSEGV);
+  }
+  if(ch) // Just making sure.
+  {
+    if(IS_NPC(ch))
+    {
+      return;
+    }
+    if(IS_TRUSTED(ch))
+    {
+      send_to_char
+        ("This would be really really really really really dumb........\n\r",ch);
+      return;
+    }
+    
+    if(GET_CLASS(ch, CLASS_DRUID) || GET_CLASS(ch, CLASS_SHAMAN) || GET_CLASS(ch, CLASS_CLERIC))
+    {
+    }
+    else
+    {
+      send_to_char("Your class cannot become an alchemist.\r\n", ch);
+      return;
+    }
+  
+    if(world[ch->in_room].number == ALCHEMIST_ASCEND_ROOM)
+    {
+      ascend = TRUE;
+    }
+    else
+    {
+      send_to_char("Nothing happens.\n", ch);
+      return;
+    }
+
+    if(ascend && GET_LEVEL(ch) > 50)
+    {
+      send_to_char("You feel a bit strange as knowledge flows into you from some unknown place...\n\n", ch);
+      ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("alchemist.epicCost", 250));
+      ch->player.m_class = CLASS_ALCHEMIST;
+      do_start(ch, 1);
+      return;
+    }
+    else
+    {
+      send_to_char("You haven't advanced far enough to undergo this change...\n\n", ch);
+      return;
+    }
+  }
+}
+
 void do_ascend(P_char ch, char *arg, int cmd)
 {
   int spec;
@@ -5855,51 +5984,52 @@ void do_ascend(P_char ch, char *arg, int cmd)
         ("This would be really really really really really dumb........\n\r",ch);
       return;
     }
+
     if (GET_CLASS(ch, CLASS_THEURGIST))
     {  
       ascend_theurgist(ch);
       return;
     }
-    
-    if(!GET_CLASS(ch, CLASS_PALADIN) &&
-      !GET_CLASS(ch, CLASS_AVENGER))
+    else if(GET_CLASS(ch, CLASS_PALADIN) && GET_CLASS(ch, CLASS_AVENGER))
     {
-      send_to_char("You raise your hands towards the skies and await a miracle.\n", ch);
-      return;
-    }
+      if(world[ch->in_room].number == 13272)
+      {
+        spec = SPEC_LIGHTBRINGER;
+      }
+      else if(world[ch->in_room].number == 75610)
+      {
+        spec = SPEC_INQUISITOR;
+      }
+      else
+      {
+        send_to_char("Ascension can happen only in a holy place.\n", ch);
+        return;
+      }
 
-    if(world[ch->in_room].number == 13272)
-    {
-      spec = SPEC_LIGHTBRINGER;
-    }
-    else if(world[ch->in_room].number == 75610)
-    {
-      spec = SPEC_INQUISITOR;
+      if(GET_CLASS(ch, CLASS_AVENGER))
+      {
+        ch->player.spec = spec;
+        send_to_char(
+          "You pray to your god, asking for judgement over your past deeds,\n"
+          "seeking further enlightment. A &+Wholy glow&n seems to encase you,\n"
+          "lifting your spirits and heightening your awareness.\n"
+          "Your prayers have been answered, as you ascend into the ranks of\n"
+          "the holy army, from this day on you will be an "
+          "&+WAvenger&n of divine law.\n\n", ch);
+        sprintf(buffer,
+          "You hear a loud voice exclaiming, '&+WWelcome my child, you shall\n"
+          "&+Wnow be the avenging hand of %s,\n"
+          "&+Wthe %s &+Wfor his enemies!'",
+          get_god_name(ch),
+          GET_SPEC_NAME(ch->player.m_class, spec-1));
+        send_to_char(buffer, ch);
+        ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("ascend.epicCost", 250));
+        return;
+      }
     }
     else
     {
-      send_to_char("Ascension can happen only in a holy place.\n", ch);
-      return;
-    }
-
-    if(GET_CLASS(ch, CLASS_AVENGER))
-    {
-      ch->player.spec = spec;
-      send_to_char(
-        "You pray to your god, asking for judgement over your past deeds,\n"
-        "seeking further enlightment. A &+Wholy glow&n seems to encase you,\n"
-        "lifting your spirits and heightening your awareness.\n"
-        "Your prayers have been answered, as you ascend into the ranks of\n"
-        "the holy army, from this day on you will be an "
-        "&+WAvenger&n of divine law.\n\n", ch);
-      sprintf(buffer,
-        "You hear a loud voice exclaiming, '&+WWelcome my child, you shall\n"
-        "&+Wnow be the avenging hand of %s,\n"
-        "&+Wthe %s &+Wfor his enemies!'",
-        get_god_name(ch),
-        GET_SPEC_NAME(ch->player.m_class, spec-1));
-      send_to_char(buffer, ch);
-      ch->only.pc->epics = MAX(0, ch->only.pc->epics - (int) get_property("ascend.epicCost", 250));
+      make_alchemist(ch);
       return;
     }
 

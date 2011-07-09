@@ -138,6 +138,8 @@
 /* room in heavens to store corpses if room is invalid */
 #define CORPSE_STORAGE 40
 
+#define ALCHEMIST_ASCEND_ROOM 500
+
 /* misc thingies */
 #define DEFAULT_MODE (SHOW_NAME | SHOW_ON)      /* information that whod reveals */
 
