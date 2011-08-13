@@ -3701,8 +3701,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
       if (showit)
       {
         if (IS_ILLITHID(ch) || IS_PILLITHID(ch))
-          send_to_char("Sorry, you can't wear anything on your head.\r\n",
-                       ch);
+          send_to_char("You can't wear that on your head and make use of your brain, so why would you?\r\n", ch);
         else
           send_to_char("You can't wear that on your head.\r\n", ch);
       }
@@ -3713,8 +3712,10 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_WEAR_LEGS) && 
        !IS_DRIDER(ch) &&
        !IS_CENTAUR(ch) &&
+       !IS_OGRE(ch) &&
+       !IS_SNOWOGRE(ch) &&
        !IS_HARPY(ch)/* &&
-       !IS_MINOTAUR(ch)*/)
+       !IS_MINOTAUR(ch) */)
     {
       if (ch->equipment[WEAR_BODY] &&
           IS_SET(ch->equipment[WEAR_BODY]->extra_flags, ITEM_WHOLE_BODY))
@@ -3846,12 +3847,8 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     break;
 
   case 8:
-    if(CAN_WEAR(obj_object, ITEM_WEAR_ARMS)
-      // &&
-      // !IS_OGRE(ch) &&
-      // !IS_SGIANT(ch) &&
-      // !(GET_RACE(ch) == RACE_SNOW_OGRE)
-      )
+    if(CAN_WEAR(obj_object, ITEM_WEAR_ARMS) && !IS_OGRE(ch) && !IS_SGIANT(ch) &&
+      !(GET_RACE(ch) == RACE_SNOW_OGRE))
     {
       if (HAS_FOUR_HANDS(ch))
       {
