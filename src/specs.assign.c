@@ -1973,6 +1973,10 @@ void assign_objects(void)
    */
   obj_index[real_object0(24404)].func.obj = magic_pool;
   obj_index[real_object0(24406)].func.obj = lightning;
+  /*
+    Plane of Air Two
+  */
+  obj_index[real_object0(131616)].func.obj = sevenoaks_longsword;
 
   /*
      Plane of Water

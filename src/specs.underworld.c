@@ -4117,8 +4117,9 @@ int sevenoaks_longsword(P_obj obj, P_char ch, int cmd, char *arg)
     return false;
   }
 
-  if(CheckMultiProcTiming(ch) &&
+  /* if(CheckMultiProcTiming(ch) &&
     !number(0, 32))
+  */
   {
     act("&+LYour $q blurs as it strikes $N.",
       FALSE, ch, obj, vict, TO_CHAR);
