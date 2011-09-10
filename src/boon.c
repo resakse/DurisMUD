@@ -1554,12 +1554,13 @@ void boon_shop(P_char ch, char *argument)
   if (!*arg)
   {
     send_to_char("&+WBoon Shop&n\r\n", ch);
+    send_to_char_f(ch, "&+CShop points available: %d\r\n", bshop.points);
+    send_to_char_f(ch, "&+CStat points available: %d\r\n", bshop.stats);
     send_to_char("&+CItems available:\r\n", ch);
     //send data
     // but for now...
-    send_to_char("No items available.\r\n\r\n", ch);
+    send_to_char("No items available.\r\n", ch);
     // reclaiming stats
-    send_to_char_f(ch, "&+CStat points available: %d\r\n", bshop.stats);
     return;
   }
 }
@@ -1959,6 +1960,7 @@ int boon_display(P_char ch, char *argument)
 	    break;
 	  }
 	  sprintf(buffoption, boon_options[option].desc, (int)criteria, J_NAME(mob));
+	  extract_char(mob);
 	  break;
 	}
       case BOPT_RACE:
@@ -2254,7 +2256,10 @@ void boon_notify(int id, P_char ch, int action)
 	      if ((int)bdata.criteria2 > 0 &&
 		  (r_num = real_mobile((int)bdata.criteria2)) > 0 &&
 		  (mob = read_mobile(r_num, REAL)))
+	      {
 		sprintf(tmp, "%s", J_NAME(mob));
+	        extract_char(mob);
+	      }
 	      else
 		sprintf(tmp, "Invalid Mob");
 	      sprintf(buff, "&+CYou have killed %d of %d %s&+C(s) for boon # %d.&n\r\n", (int)bpg.counter, (int)bdata.criteria, tmp, bdata.id);
