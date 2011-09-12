@@ -9915,6 +9915,23 @@ void do_storage(P_char ch, char *arg, int cmd)
   }
 }
 
+void do_newb_spellup_all(P_char ch, char *arg, int cmd)
+{
+  P_desc d;
+
+  for (d = descriptor_list; d; d = d->next)
+  {
+    if (d->connected == CON_PLYNG && 
+	ch != d->character)
+    {
+      if (GET_LEVEL(d->character) <= 36)
+      {
+	do_newb_spellup(ch, GET_NAME(d->character), CMD_NEWBSU);
+      }
+    }
+  }
+}
+
 void do_newb_spellup(P_char ch, char *arg, int cmd)
 {
   char buf[MAX_STRING_LENGTH];

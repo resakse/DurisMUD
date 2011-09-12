@@ -598,6 +598,7 @@ void do_read_player(P_char, char *, int);
 void do_nchat(P_char, char *, int);
 void do_tranquilize(P_char ch, char *argument, int cmd);
 void do_storage(P_char ch, char *arg, int cmd);
+void do_newb_spellup_all(P_char ch, char *arg, int cmd);
 void do_newb_spellup(P_char ch, char *arg, int cmd);
 void do_givepet(P_char ch, char *arg, int cmd);
 void do_petition_block(P_char, char *, int);

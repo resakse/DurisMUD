@@ -1049,6 +1049,7 @@ const char *command[] = {
   "focus",
   "boon",
   "ctf",
+  "newbsa",
   "\n"                          /* MAX_CMD_LIST is now 1000 */
 };
 
@@ -2213,6 +2214,7 @@ void assign_command_pointers(void)
   CMD_GRT(CMD_STATISTIC, STAT_DEAD + POS_PRONE, do_statistic, FORGER);
   CMD_GRT(CMD_STORAGE, STAT_DEAD + POS_PRONE, do_storage, GREATER_G);
   CMD_GRT(CMD_NEWBSU, STAT_DEAD + POS_PRONE, do_newb_spellup, LESSER_G);
+  CMD_GRT(CMD_NEWBSA, STAT_DEAD + POS_PRONE, do_newb_spellup_all, LESSER_G);
   CMD_GRT(CMD_GIVEPET, STAT_DEAD + POS_PRONE, do_givepet, GREATER_G);
   CMD_GRT(CMD_PETITION_BLOCK, STAT_DEAD + POS_PRONE, do_petition_block, FORGER);
   CMD_GRT(CMD_WHITELIST, STAT_DEAD + POS_PRONE, do_whitelist, IMMORTAL);
