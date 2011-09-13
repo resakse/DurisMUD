@@ -699,7 +699,7 @@ int lucky_weapon(P_obj, P_char, int, char *);
 int glades_dagger(P_obj, P_char, int, char *);
 int doom_blade_Proc(P_obj, P_char, int, char *);
 int rightous_blade(P_obj, P_char, int, char *);
-
+int flame_blade(P_obj, P_char, int, char *);
 
 int refreshing_fountain(P_obj, P_char, int, char *);
 int magical_fountain(P_obj, P_char, int, char *);

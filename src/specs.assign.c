@@ -1690,7 +1690,7 @@ void assign_objects(void)
 
   /*specs.object.c */
   obj_index[real_object0(23056)].func.obj = lifereaver;
-
+  obj_index[real_object0(366)].func.obj = flame_blade;
   /* sea kingdom */
 
   obj_index[real_object0(31514)].func.obj = SeaKingdom_Tsunami;
