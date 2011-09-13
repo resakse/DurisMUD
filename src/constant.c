@@ -1529,8 +1529,8 @@ struct racial_data_type racial_data[LAST_RACE + 1] = {
   {100, 120,   0,    0, 1,  300} ,              /* Whiner      */
   {500, 300, 500,  700, 1, 1500} ,              /* Incubus     */
   {500, 300, 500,  700, 1, 1500} ,              /* Succubus    */
-/* Fire Giant  */
-/* Frost Giant */
+  {14, 170, 200, 150, 2, 55} ,                 /* * Fire Giant * */
+  {14, 170, 200, 150, 2, 55} ,                 /* * Frost Giant * */
   {100, 300, 800, 1000, 1,  300}                /* Deva        */
 
 };
