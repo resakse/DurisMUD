@@ -117,7 +117,7 @@ const int allowed_secondary_classes[CLASS_COUNT + 1][5] = {
   {-1},                         		              /* Ber */
   {CLASS_SORCERER, -1},                         	      /* Rea */
   {-1},                         		              /* Ilu */
-  {-1},                      /* Spectral Piper not currently in game */
+  {-1},                                                       /* DtW */
   {-1},                                  	              /* Dre */
   {CLASS_SORCERER, CLASS_SHAMAN, -1},                         /* Eth */
   {-1},                                                       /* Ave */
@@ -1520,12 +1520,19 @@ struct racial_data_type racial_data[LAST_RACE + 1] = {
   {8, 170, 200, 150, 1, 20},                   /* * Void Elemental */
   {8, 170, 200, 150, 1, 20},                   /* * Ice Elemental */
   {500, 150, 300, 500, 2, 1500} ,              /* * Phoenix * */
-  {200, 250, 0, 0, 2, 1000} ,                  /* * Archon * */
-  {500, 300, 800, 1000, 1, 1500} ,             /* * Asura * */
-  {500, 300, 50, 100, 2, 1000} ,               /* * Titan * */
-  {125, 300, 50, 100, 2, 500} ,                /* * Avatar * */
-  {150, 170, 200, 150, 1, 500} ,               /* * Ghaele */
-  {100, 300, 800, 1000, 1, 300} ,              /* * Bralani * */
+  {200, 250,   0,    0, 2, 1000} ,              /* * Archon * */
+  {500, 300, 800, 1000, 1, 1500} ,              /* * Asura * */
+  {500, 300,  50,  100, 2, 1000} ,              /* * Titan * */
+  {125, 300,  50,  100, 2,  500} ,              /* * Avatar * */
+  {150, 170, 200,  150, 1,  500} ,              /* * Ghaele */
+  {100, 300, 800, 1000, 1,  300} ,              /* * Bralani * */
+  {100, 120,   0,    0, 1,  300} ,              /* Whiner      */
+  {500, 300, 500,  700, 1, 1500} ,              /* Incubus     */
+  {500, 300, 500,  700, 1, 1500} ,              /* Succubus    */
+  {14, 170, 200, 150, 2, 55} ,                 /* * Fire Giant * */
+  {14, 170, 200, 150, 2, 55} ,                 /* * Frost Giant * */
+  {100, 300, 800, 1000, 1,  300}                /* Deva        */
+
 };
 
 /*
@@ -1806,12 +1813,12 @@ const int avail_hometowns[][LAST_RACE + 1] = {
 extern const int guild_locations[][CLASS_COUNT + 1];
 const int guild_locations[][CLASS_COUNT + 1] = {
 /* I hated the previous class labels with a passion, so lets do them better -Z */
-/* CLASS_NONE, CLASS_WARRIOR, CLASS_RANGER, CLASS_PSIONICIST, CLASS_PALADIN
- * CLASS_ANTIPALADIN, CLASS_CLERIC, CLASS_MONK, CLASS_DRUID, CLASS_SHAMAN
- * CLASS_SORCERER, CLASS_NECROMANCER, CLASS_CONJURER, CLASS_ROGUE, CLASS_ASSASSIN
- * CLASS_MERCENARY, CLASS_BARD, CLASS_THIEF, CLASS_WARLOCK, CLASS_MINDFLAYER
- * CLASS_ALCHEMIST, CLASS_BERSERKER, CLASS_REAVER, CLASS_ILLUSIONIST, CLASS_UNUSED
- * CLASS_DREADLORD, CLASS_ETHERMANCER, CLASS_AVENGER CLASS_THEURGIST
+/* CLASS_NONE,        CLASS_WARRIOR,     CLASS_RANGER,   CLASS_PSIONICIST,   CLASS_PALADIN
+ * CLASS_ANTIPALADIN, CLASS_CLERIC,      CLASS_MONK,     CLASS_DRUID,        CLASS_SHAMAN
+ * CLASS_SORCERER,    CLASS_NECROMANCER, CLASS_CONJURER, CLASS_ROGUE,       CLASS_ASSASSIN
+ * CLASS_MERCENARY,   CLASS_BARD,        CLASS_THIEF,    CLASS_WARLOCK,     CLASS_MINDFLAYER
+ * CLASS_ALCHEMIST,   CLASS_BERSERKER,   CLASS_REAVER,   CLASS_ILLUSIONIST, CLASS_UNUSED
+ * CLASS_DREADLORD,   CLASS_ETHERMANCER, CLASS_AVENGER   CLASS_THEURGIST
  */
   /* * None */
   {-1, -1, -1, -1, -1,
@@ -1825,7 +1832,7 @@ const int guild_locations[][CLASS_COUNT + 1] = {
   {132575, 132575, 132978,     -1, 132544,
    132575, 132575, 132575, 132575, 132575,
    133019, 132656, 133018, 132575, 132575,
-   132575, 132575, 132575,     -1,     -1,
+   132575, 132575, 132575, 132575,     -1,
        -1,     -1,     -1, 132501,     -1,
        -1, 132575, 132575, 132935},
 

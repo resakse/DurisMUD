@@ -2550,14 +2550,14 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
     sprintf(buff, " AND (criteria = '%d' OR criteria = '0')", GET_LEVEL(ch));
   else if (option == BOPT_MOB)
   {
-    if (IS_NPC(victim))
+    if (IS_NPC(victim) && !IS_PC_PET(victim))
       sprintf(buff, " AND (criteria2 = '%d')", GET_VNUM(victim));
     else
       return;
   }
   else if (option == BOPT_RACE)
   {
-    if (IS_NPC(victim) || racewar(ch, victim))
+    if (IS_NPC(victim) && !IS_PC_PET(victim) || racewar(ch, victim))
       sprintf(buff, " AND (criteria2 = '%d')", GET_RACE(victim));
     else
       return;
@@ -2620,7 +2620,7 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
     if (!get_boon_progress_data(bdata.id, GET_PID(ch), &bpg))
     {
       // it doesn't exist, we create one, for anyone...
-      // this is for tracking purposes fror if the option is repeatable or not.
+      // this is for tracking purposes for if the option is repeatable or not.
       if (bdata.option == BOPT_FRAGS)
 	counter = data;
       else if (bdata.option == BOPT_RACE ||
@@ -2653,9 +2653,11 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
     }
     // or if we're dealing with non progression and it's not repeatable (counter = -1)
     else
+    {
       // They've completed this non repeatable boon before, so no bonuses for them!
-      if (bpg.counter = -1)
+      if (bpg.counter == -1)
 	continue;
+    }
       
     // and notify if its a progression boon option
     if (boon_options[option].progress)

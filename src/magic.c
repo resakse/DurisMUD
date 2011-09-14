@@ -5336,6 +5336,10 @@ void spell_flame_blade(int level, P_char ch, char *arg, int type,
   act("$p &+Warrives in a burst of &n&+rfire.", TRUE, ch, blade, 0, TO_ROOM);
   act("$p &+Warrives in a burst of &n&+rfire.", TRUE, ch, blade, 0, TO_CHAR);
   blade->timer[0] = 180;
+  if (IS_PC(ch))
+    blade->timer[1] = GET_PID(ch);
+  else
+    blade->timer[1] = -1;
 
   obj_to_char(blade, ch);
 }

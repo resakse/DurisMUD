@@ -495,7 +495,7 @@ void shopping_buy(char *arg, P_char ch, P_char keeper, int shop_nr)
   
   cost_factor = (float) cha_app[STAT_INDEX(MAX(100, GET_C_CHA(ch)))].modifier;
   if (GET_RACE(ch) != GET_RACE(keeper))
-    cost_factor = cost_factor / 2.;
+    cost_factor = cost_factor * 2.;
 
   cost_factor =
     shop_index[shop_nr].sell_percent * (1.0 - (cost_factor / 100.));
@@ -894,7 +894,7 @@ void shopping_list(char *arg, P_char ch, P_char keeper, int shop_nr)
 
   cost_factor = (float) cha_app[STAT_INDEX(MAX(100, GET_C_CHA(ch)))].modifier;
   if (GET_RACE(ch) != GET_RACE(keeper))
-    cost_factor = cost_factor / 2.;
+    cost_factor = cost_factor * 2.;
 
   cost_factor =
     shop_index[shop_nr].sell_percent * (1.0 - (cost_factor / 100.));

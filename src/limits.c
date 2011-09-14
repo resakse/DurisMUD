@@ -1302,7 +1302,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   int range = new_exp_table[GET_LEVEL(ch) + 1] / 3;
 // debug("check 4 xp (%d)", XP_final);  
   XP_final = BOUNDED(-range, XP_final, range);
-  
+ 
   // if(XP_final > 0 &&
      // GET_EXP(ch) > (new_exp_table[GET_LEVEL(ch) + 1]));
   // {

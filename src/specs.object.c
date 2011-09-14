@@ -14538,3 +14538,38 @@ int rightous_blade(P_obj obj, P_char ch, int cmd, char *arg)
 
   return FALSE;
 }
+
+int flame_blade(P_obj obj, P_char ch, int cmd, char *argument)
+{
+  if (!ch || !obj)
+    return FALSE;
+
+  if (cmd == CMD_SET_PERIODIC)
+    return FALSE;
+
+  P_char tch;
+
+  if (OBJ_WORN(obj))
+    tch = obj->loc.wearing;
+  else if (OBJ_CARRIED(obj))
+    tch = obj->loc.carrying;
+
+  if (!tch)
+    return FALSE;
+
+  if (GET_PID(tch) != obj->timer[1])
+  {
+    //Lamify it!
+    obj->value[5] = 0;
+    obj->value[6] = 0;
+    obj->value[7] = 0;
+    obj->bitvector = 0;
+    obj->bitvector2 = 0;
+    
+    //Lets go ahead and kill the timer
+    obj->timer[0] = 1;
+    return FALSE;
+  }
+  
+  return FALSE;
+}
