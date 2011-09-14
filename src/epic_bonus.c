@@ -158,7 +158,7 @@ float get_epic_bonus(P_char ch, int type)
 
   int accum_epics = 0;
 
-  if (!qry("SELECT SUM(epics) FROM epic_gain WHERE pid = '%i' AND time > DATE_SUB(curdate(), INTERVAL 7 DAY) AND time >'%s'", GET_PID(ch), ebdata.time))
+  if (!qry("SELECT SUM(epics) FROM epic_gain WHERE pid = '%i' AND time > DATE_SUB(curdate(), INTERVAL %d DAY) AND time >'%s'", GET_PID(ch), (int)get_property("epic.bonus.time", 7), ebdata.time))
     return 0;
 
   MYSQL_RES *res = mysql_store_result(DB);
