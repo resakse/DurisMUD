@@ -168,6 +168,7 @@ OBJS	=  \
 	specs.ioun.o \
 	specs.jot.o \
 	specs.library.o \
+	specs.lohrr.o \
 	specs.mobile.o \
 	specs.morgs.o \
         specs.mist.o \
