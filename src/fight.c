@@ -45,6 +45,7 @@
 #include "outposts.h"
 #include "boon.h"
 #include "ctf.h"
+#include "tether.h"
 
 /*
  * external variables
@@ -5107,6 +5108,13 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
             vamp(tch, sac_gain, GET_MAX_HIT(tch)); // Holy Sac only vamps to max hp - Jexni 12/9/10
       }
     }
+
+   // Tether code here
+   if( dam > 2 && is_tethering(ch) )
+   {
+      tetherheal( ch, dam);
+   }
+
   }
 }
 
