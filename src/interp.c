@@ -49,6 +49,7 @@
 #include "buildings.h"
 #include "boon.h"
 #include "ctf.h"
+#include "tether.h"
 
 /*
  * external variables
@@ -1049,6 +1050,7 @@ const char *command[] = {
   "focus",
   "boon",
   "ctf",
+  "tether",
   "newbsa",
   "\n"                          /* MAX_CMD_LIST is now 1000 */
 };
@@ -2569,6 +2571,7 @@ void assign_command_pointers(void)
   CMD_Y(CMD_FOCUS, STAT_RESTING + POS_KNEELING, do_assimilate, 0);
   CMD_Y(CMD_BOON, STAT_SLEEPING + POS_PRONE, do_boon, 0);
   CMD_Y(CMD_CTF, STAT_NORMAL + POS_STANDING, do_ctf, 0);
+  CMD_Y(CMD_TETHER, STAT_NORMAL + POS_STANDING, do_tether, 0);
 
   /*
    * 'commands' which exist only to trigger specials

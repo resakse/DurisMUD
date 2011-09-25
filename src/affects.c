@@ -1,3 +1,4 @@
+
 /*
  * ***************************************************************************
  *  file: affects.c                                          part of Duris
@@ -96,6 +97,7 @@ extern void essence_broken(struct char_link_data *);
 extern void event_broken(struct char_link_data *);
 extern void charm_broken(struct char_link_data *);
 extern void casting_broken(struct char_link_data *);
+extern void tether_broken(struct char_link_data *);
 void     unlink_char_affect(P_char, struct affected_type *);
 struct link_description link_types[LNK_MAX + 1];
 
@@ -2461,6 +2463,7 @@ void initialize_links()
    define_link(LNK_PALADIN_AURA, "PALADIN_AURA", aura_broken, LNKFLG_AFFECT | LNKFLG_ROOM);
   define_link(LNK_GRAPPLED, "GRAPPLED", NULL, LNKFLG_ROOM);
   define_link(LNK_CIRCLING, "CIRCLING", NULL, LNKFLG_ROOM | LNKFLG_EXCLUSIVE);
+  define_link(LNK_TETHER, "TETHERING", tether_broken, LNKFLG_ROOM);
 }
 
 //---------------------------------------------------------------------------------

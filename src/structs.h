@@ -278,7 +278,8 @@ struct edit_data {
 #define LNK_PALADIN_AURA    17
 #define LNK_GRAPPLED        18
 #define LNK_CIRCLING        19
-#define LNK_MAX             19
+#define LNK_TETHER	    20
+#define LNK_MAX             20
 
 #define LNKFLG_ROOM            BIT_1
 #define LNKFLG_AFFECT          BIT_2
