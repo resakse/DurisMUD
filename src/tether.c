@@ -80,6 +80,7 @@ void do_tether( P_char ch, char *argument, int cmd )
    if( victim == ch )
    {
       act( "Yes, you are your soul mate; try again.", FALSE, ch, NULL, NULL, TO_CHAR);
+      return;
    }
 
    // Success:
