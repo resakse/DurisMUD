@@ -141,9 +141,8 @@ void spell_faerie_sight(int level, P_char ch, char *arg, int type,
 
   if (GET_LEVEL(ch) >= 36)
   {
-    af.bitvector = AFF_DETECT_INVISIBLE;
+    af.bitvector = af.bitvector | AFF_DETECT_INVISIBLE;
     af.bitvector2 = 0;
-    affect_to_char(victim, &af);
   }
  
   for (count = 0, t_obj = ch->carrying; t_obj; t_obj = next_obj)
@@ -159,20 +158,13 @@ void spell_faerie_sight(int level, P_char ch, char *arg, int type,
         
   if (GET_LEVEL(ch) >= 50 || count > 0)
   {
-    af.bitvector2 = AFF2_DETECT_MAGIC;
-    affect_to_char(victim, &af);
-
-    af.bitvector2 = AFF2_DETECT_GOOD;
-    affect_to_char(victim, &af);
-
-    af.bitvector2 = AFF2_DETECT_EVIL;
-    affect_to_char(victim, &af);
+    af.bitvector2 = AFF2_DETECT_MAGIC | AFF2_DETECT_GOOD | AFF2_DETECT_EVIL;
     
-                if (count >  0) {
-                extract_obj(used_obj[0], TRUE);
-                }
+    if (count >  0)
+       extract_obj(used_obj[0], TRUE);
   }
 
+  affect_to_char(victim, &af);
   send_to_char("&+mYour eyes begin to twinkle.&n\r\n", ch);
 }
 

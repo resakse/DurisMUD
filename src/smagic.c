@@ -3096,23 +3096,15 @@ void spell_spirit_sight(int level, P_char ch, char *arg, int type,
 
   af.type = SPELL_SPIRIT_SIGHT;
 
-  af.bitvector2 = AFF2_DETECT_MAGIC;
-  affect_to_char(victim, &af);
-
-  af.bitvector2 = AFF2_DETECT_GOOD;
-  affect_to_char(victim, &af);
-
-  af.bitvector2 = AFF2_DETECT_EVIL;
-  affect_to_char(victim, &af);
+  af.bitvector2 = AFF2_DETECT_MAGIC | AFF2_DETECT_GOOD | AFF2_DETECT_EVIL;
 
   if(GET_LEVEL(ch) > 53 &&
      !IS_AFFECTED(victim, AFF_DETECT_INVISIBLE))
   {
     af.bitvector = AFF_DETECT_INVISIBLE;
-    af.bitvector2 = 0;
-    affect_to_char(victim, &af);
   }
 
+  affect_to_char(victim, &af);
   send_to_char("Your eyes tingle, dim white spots floating just outside your field of view.\n",
      victim);
 }
@@ -3155,17 +3147,10 @@ void spell_greater_spirit_sight(int level, P_char ch, char *arg, int type,
 
   af.type = SPELL_GREATER_SPIRIT_SIGHT;
 
-  af.bitvector2 = AFF2_DETECT_MAGIC;
-  affect_to_char(victim, &af);
-
-  af.bitvector2 = AFF2_DETECT_GOOD;
-  affect_to_char(victim, &af);
-
-  af.bitvector2 = AFF2_DETECT_EVIL;
-  affect_to_char(victim, &af);
+  af.bitvector2 = AFF2_DETECT_MAGIC | AFF2_DETECT_GOOD | AFF2_DETECT_EVIL;
   
   af.bitvector = AFF_DETECT_INVISIBLE;
-  af.bitvector2 = 0;
+
   affect_to_char(victim, &af);
 
   send_to_char
