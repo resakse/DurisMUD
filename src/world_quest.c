@@ -193,9 +193,7 @@ P_obj quest_item_reward(P_char ch)
     reward = create_random_eq_new(ch, ch, -1, -1);
   
   if(reward)
-  {
-    wizlog(56, "%s reward was: %s", GET_NAME(ch), reward->short_description);
-    
+  { 
     REMOVE_BIT(reward->extra_flags, ITEM_SECRET);
     REMOVE_BIT(reward->extra_flags, ITEM_INVISIBLE);
     if(!number(0, 2))  // wipe 2011, quest reward items only set to !repair 33% of the time - Jexni 7/13/11
@@ -383,7 +381,6 @@ int get_map_room(int zone_id)
                  world[world[i].dir_option[i2]->to_room].number,
                  world[i].dir_option[i2]->to_room,
                  world[world[i].dir_option[i2]->to_room].name);
-                 wizlog(56, "%s", o_buf);
                */
               return world[i].dir_option[i2]->to_room;
             }
@@ -565,13 +562,12 @@ void do_quest(P_char ch, char *args, int cmd)
   }
   else
   {
-    wizlog(56, "UNABLE TO LOAD Q MOB:%d for char %s reseting his quest.", ch->only.pc->quest_giver, GET_NAME(ch));
+    wizlog(56, "UNABLE TO LOAD Q MOB:%d for char %s resetting the quest.", ch->only.pc->quest_giver, GET_NAME(ch));
     send_to_char("HMMMMM (bug), Seems like you forgot your quest already, go grab a new one, if this one dont work, try another bartender around the world. Sorry we working on a fix ASAP.!\r\n", ch);
     resetQuest(ch);	
     return;
   }
 
-  //wizlog(56, "questmob num:%d",ch->only.pc->quest_mob_vnum);
   if (q_mob = read_mobile(real_mobile(ch->only.pc->quest_mob_vnum), REAL))
   {
     sprintf(q_name, "%s", q_mob->player.short_descr);
@@ -586,9 +582,6 @@ void do_quest(P_char ch, char *args, int cmd)
     {
       sprintf(buf, "Go kill %d %s (%d left) in %s!\r\n", ch->only.pc->quest_kill_original, q_name,  (ch->only.pc->quest_kill_original - ch->only.pc->quest_kill_how_many),  zone_table[real_zone0(ch->only.pc->quest_zone_number)].name );
       send_to_char(buf, ch);
-      wizlog(56, "%s got a quest to go kill %d of mob vnum %d; they have %d left.", 
-           GET_NAME(ch), ch->only.pc->quest_kill_original, ch->only.pc->quest_mob_vnum,
-           (ch->only.pc->quest_kill_original - ch->only.pc->quest_kill_how_many));
     }
 
     if (q_mob)

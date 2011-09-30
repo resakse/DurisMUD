@@ -4069,7 +4069,7 @@ void add_assoc_prestige(int assoc_id, int prestige_delta)
   }
   
   qry("UPDATE associations SET prestige = prestige + %d WHERE id = %d AND active = 1", prestige_delta, assoc_id);
-  statuslog(GREATER_G, "Association %s &ngained %d prestige points.", get_assoc_name(assoc_id).c_str(), prestige_delta);
+//  statuslog(GREATER_G, "Association %s &ngained %d prestige points.", get_assoc_name(assoc_id).c_str(), prestige_delta);
   logit(LOG_STATUS, "Association %s &ngained %d prestige points.", get_assoc_name(assoc_id).c_str(), prestige_delta);
   
   // add construction points  
@@ -4078,7 +4078,7 @@ void add_assoc_prestige(int assoc_id, int prestige_delta)
   
   if( cps_notches )
   {
-    statuslog(GREATER_G, "Association %s &ngained %d construction points.", get_assoc_name(assoc_id).c_str(), cps_notches);
+//    statuslog(GREATER_G, "Association %s &ngained %d construction points.", get_assoc_name(assoc_id).c_str(), cps_notches);
     logit(LOG_STATUS, "Association %s &ngained %d construction points.", get_assoc_name(assoc_id).c_str(), cps_notches);
     add_assoc_cps(assoc_id, cps_notches);
   }

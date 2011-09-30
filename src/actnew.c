@@ -4124,8 +4124,9 @@ void do_home(P_char ch, char *argument, int cmd)
     act(buf2, TRUE, ch, 0, 0, TO_CHAR);
     return;
   } 
-  else {
-    wizlog(MINLVLIMMORTAL, "do_home(): Non-good/evil race attempting to home.  If a new racewar is back in the game, fix this.");
+  else
+  {
+  //  wizlog(MINLVLIMMORTAL, "do_home(): Non-good/evil race attempting to home.  If a new racewar is back in the game, fix this.");
     send_to_char("Get out of here!", ch);
   }
 

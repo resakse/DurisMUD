@@ -1842,7 +1842,6 @@ void justice_action_invader(P_char ch)
   if(IS_INVADER(ch) && IS_PC(ch) && get_scheduled(ch, event_justice_raiding) && ch->only.pc->justice_level == 3)
   {
       call_out_the_army(ch);
-      wizlog(56, "calling out the fucking army for %s", GET_NAME(ch));
       ch->only.pc->justice_level = 4;
       return;
   }
@@ -1940,16 +1939,13 @@ void call_out_the_army(P_char ch)
            (GET_RACEWAR(tch) == RACEWAR_UNDEAD && RW == 3) ||
            (GET_RACEWAR(tch) == RACEWAR_GOOD && RW == 1))
         {
-           wizlog(56, "found an ally: %s at %d", GET_NAME(tch), world[tch->in_room].number);
            allies++;
-           wizlog(56, "adding to level sum: %d to %d", GET_LEVEL(tch), lvlsum);
            lvlsum += GET_LEVEL(tch);
         }
       }
    }
 
    lvlsum /= allies + 1;
-   wizlog(56, "calling out the army: allies in zone = %d, average level of invaders = %d", allies, lvlsum);
    for(i = 0;i < 5;i++)
    {
      guard_start = real_room(hometowns[town - 1].guard_room[i]);
@@ -1961,7 +1957,6 @@ void call_out_the_army(P_char ch)
 
    for(j = allies + (1 + allies / 4);j > 0;j--)
    { 
-     wizlog(56, "calling out the army: making a guard");
      tch = justice_make_guard(guard_start);
      if(!tch)
      {
@@ -1988,7 +1983,6 @@ void call_out_the_army(P_char ch)
                (RW == 2) ? strip_ansi(g_justice_descriptor[second]).c_str(): strip_ansi(e_justice_descriptor[second]).c_str(), 
                strip_ansi(justice_descriptor_last[third]).c_str());
      tch->player.name = str_dup(buf);
-     wizlog(56, "creating: %s", tch->player.long_descr, RW);
      SET_BIT(tch->only.npc->spec[2], MOB_SPEC_J_OUTCAST);
      if(RACE_GOOD(tch))
      {

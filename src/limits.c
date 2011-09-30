@@ -1402,7 +1402,7 @@ void point_update(void)
       i->specials.timer++;
 
     if (i->specials.timer > 3)
-      if (!IS_SET(i->specials.act, PLR_AFK) && !IS_TRUSTED(i))
+      if (!IS_SET(i->specials.act, PLR_AFK))
       {
         SET_BIT(i->specials.act, PLR_AFK);
 #if defined (CTF_MUD) && (CTF_MUD == 1)

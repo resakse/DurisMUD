@@ -1319,8 +1319,6 @@ int thrusted_eq_proc(P_obj obj, P_char ch, int cmd, char *arg)
   if(cmd != CMD_PERIODIC)
     return FALSE;
 
-  wizlog(56, "hi");
-
   if(OBJ_ROOM(obj))
   {
     for (i = world[obj->loc.room].people; i; i = i->next_in_room)
@@ -1402,7 +1400,6 @@ int thrusted_eq_proc(P_obj obj, P_char ch, int cmd, char *arg)
     }
   }
 
-  wizlog(56, "NOW!");
   return FALSE;
 
 }
