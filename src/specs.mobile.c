@@ -16138,6 +16138,8 @@ int clear_epic_task_spec(P_char npc, P_char ch, int cmd, char *arg)
       if (!nexus)
       {
         debug("clear_epic_task_spec(): error, can't find nexus");
+	send_to_char("Can't clear a bugged task, please ask an imm.\r\n", ch);
+	return TRUE;
       }
       if ( (RACE_GOOD(ch) && STONE_ALIGN(nexus) < STONE_ALIGN_GOOD) ||
            (RACE_EVIL(ch) && STONE_ALIGN(nexus) > STONE_ALIGN_EVIL) )

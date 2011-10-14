@@ -364,7 +364,8 @@ void epic_choose_new_epic_task(P_char ch)
   if(zone_number < 0 )
   {
     nexus = get_random_enemy_nexus(ch);
-    if ((number(0, 100) < 50) && (GET_LEVEL(ch) >= 51) && nexus)
+    // make sure nexus stone exists, in case there are no enemy nexus stones, nexus might be available, but lets make sure the stone_id isn't something wierd.
+    if ((number(0, 100) < 50) && (GET_LEVEL(ch) >= 51) && nexus && STONE_ID(nexus) >= 1 && STONE_ID(nexus) <= NEXUS_STONE_LAST)
     {
       act("The Gods of &+rDuris&n demand that you seek out $p and convert it!", FALSE, ch, nexus, 0, TO_CHAR);
       af.modifier = -STONE_ID(nexus);

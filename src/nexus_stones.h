@@ -24,6 +24,7 @@
 #define NEXUS_STONE_ANTU      2
 #define NEXUS_STONE_ENLIL     3
 #define NEXUS_STONE_NINGISHZIDA 4
+#define NEXUS_STONE_LAST	4
 #define MAX_NEXUS_STONES      9
 
 #define NEXUS_BONUS_NONE      0
