@@ -3087,7 +3087,8 @@ void reset_zone(int zone, int force_item_repop)
         {
 
           if (get_current_artifact_info
-              (temp, 0, NULL, NULL, NULL, NULL, FALSE, NULL))
+              (temp, 0, NULL, NULL, NULL, NULL, FALSE, NULL) ||
+	      get_property("artifact.respawn", 0) == 0)
           {
             statuslog(56, "didn't load arti obj #%d because already tracked",
                       obj_index[temp].virtual_number);
@@ -3130,7 +3131,8 @@ void reset_zone(int zone, int force_item_repop)
         }
 
         if (get_current_artifact_info
-            (temp, 0, NULL, NULL, NULL, NULL, FALSE, NULL))
+            (temp, 0, NULL, NULL, NULL, NULL, FALSE, NULL) ||
+	      get_property("artifact.respawn", 0) == 0)
         {
           statuslog(56, "didn't load arti obj #%d because already tracked",
                     obj_index[temp].virtual_number);
@@ -3160,7 +3162,8 @@ void reset_zone(int zone, int force_item_repop)
         if (obj_index[ZCMD.arg1].number < ZCMD.arg2)
         {
           if (get_current_artifact_info
-              (temp, 0, NULL, NULL, NULL, NULL, FALSE, NULL))
+              (temp, 0, NULL, NULL, NULL, NULL, FALSE, NULL) ||
+	      get_property("artifact.respawn", 0) == 0)
           {
             statuslog(56, "didn't load arti obj #%d because already tracked",
                       obj_index[temp].virtual_number);
@@ -3235,7 +3238,8 @@ void reset_zone(int zone, int force_item_repop)
             if (ZCMD.arg4 > number(0, 99))
             {
               if (get_current_artifact_info
-                  (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL))
+                  (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL) ||
+	          get_property("artifact.respawn", 0) == 0)
               {
                 last_cmd = 0;
                 statuslog(56,
@@ -3286,7 +3290,8 @@ void reset_zone(int zone, int force_item_repop)
           if (ZCMD.arg4 > number(0, 99))
           {
             if (get_current_artifact_info
-                (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL))
+                (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL) ||
+	      get_property("artifact.respawn", 0) == 0)
             {
               statuslog(56,
                         "didn't load arti obj #%d because already tracked",
@@ -3336,7 +3341,8 @@ void reset_zone(int zone, int force_item_repop)
           if (ZCMD.arg4 > number(0, 99))
           {
             if (get_current_artifact_info
-                (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL))
+                (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL) ||
+	      get_property("artifact.respawn", 0) == 0)
             {
               statuslog(56,
                         "didn't load arti obj #%d because already tracked",
@@ -3399,7 +3405,8 @@ void reset_zone(int zone, int force_item_repop)
           if (ZCMD.arg4 > number(0, 99))
           {
             if (get_current_artifact_info
-                (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL))
+                (ZCMD.arg1, 0, NULL, NULL, NULL, NULL, FALSE, NULL) ||
+	      get_property("artifact.respawn", 0) == 0)
             {
               statuslog(56,
                         "didn't load arti obj #%d because already tracked",
