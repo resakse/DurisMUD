@@ -62,7 +62,7 @@ Q
 "You must have got this from &+rBartis&N he said he had these for us.
 Thank you so much."
 ~
-R E 2000
+R E 300000
 R I 27040
 G I 27039
 D
@@ -115,6 +115,7 @@ running for the exit when the alarm went off.  You deserve more then this,
 but this is all I have to give you."
 ~
 R I 27043
+R E 500000
 G I 27040
 G I 27041
 G I 27042

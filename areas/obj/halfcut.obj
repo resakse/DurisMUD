@@ -5,7 +5,7 @@ a tree~
 ~
 13 5 5 0 7 0 1024 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 tree~
    &+LThe branches of this dark tree bear no leaves, and stretch at odd
@@ -27,7 +27,7 @@ A &+Wskull&N lies on the ground here near the cave entrance.~
 ~
 13 9 2 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 E
 skull~
    The &+Wskull&N appears to be that of some large herbivore, a cow or oxen
@@ -49,7 +49,7 @@ A small &+Rcooking&N &+Yfire&N burns in the center of the clearing.~
 ~
 13 13 3 0 7 0 262144 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #27004
 wagon~
 a wagon~
@@ -57,7 +57,7 @@ An old, overturned &+Ywagon&N lies on the side of the trail here.~
 ~
 15 5 5 0 7 0 0 0 0 0 0
 100 0 0 100 0 0 0 0
-0 0 100
+0 0 100 100
 E
 wagon~
    The wagon is not in usable shape.  The wheels have been broken off,
@@ -72,7 +72,7 @@ A tattered &+Wmap&N lies in the dust here.~
 ~
 13 3 1 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 100 100
+0 100 100 100
 E
 tattered map~
          ~~~                    ^
@@ -126,7 +126,7 @@ A &+Ygolden&N nugget lies here.~
 ~
 8 22 1 1 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-1 500 100
+1 500 100 100
 E
 nugget gold golden~
    The &+Ygold&N nugget sparkles, smooth and clean as if washed down by
@@ -139,7 +139,7 @@ A &+Ygolden&N nugget lies here.~
 ~
 8 22 1 1 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-2 1000 100
+2 1000 100 100
 E
 nugget gold golden~
    The &+Ygold&N nugget sparkles, smooth and clean as if washed down by
@@ -152,7 +152,7 @@ A long &+Wsteel&N pike rests here.~
 ~
 5 16 3 0 7 0 4195328 24577 0 87556123 0
 8 1 10 11 0 0 0 0
-0 4376 100
+0 4376 100 100
 E
 steel pike~
    The pike is roughly eight feet long, containing sharp &+Wsteel&N points
@@ -170,7 +170,7 @@ A broken &+Wskull&N lies here.~
 ~
 13 9 2 1 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-1 1 100
+1 1 100 100
 E
 broken skull~
    It appears to be the skull of some humanoid creature, though the
@@ -183,7 +183,7 @@ A light &+ycrossbow&N lies on the ground here.~
 ~
 6 5 2 4 7 0 0 8413185 0 0 0
 60 60 0 2 0 0 0 0
-2 1017 100
+2 1017 100 100
 #27011
 quiver~
 a quiver~
@@ -191,7 +191,7 @@ A leather quiver lies here.~
 ~
 30 14 2 4 7 0 0 1048577 0 0 0
 30 0 2 30 0 0 0 0
-1 934 100
+1 934 100 100
 #27012
 sword jagged bronze~
 &+Ya jagged sword&N~
@@ -199,7 +199,7 @@ A &+Ybronze&N sword with jagged edges lies here.~
 ~
 5 20 3 0 3 0 0 8193 0 4198895332 0
 5 1 6 3 0 0 0 0
-3 300 100
+3 300 100 100
 E
 sword jagged bronze~
    The sword was roughly pounded out of &+Ybronze&N.  The craftsmanship is
@@ -214,7 +214,7 @@ A shield made of animal &+Yhide&N rests here.~
 ~
 37 12 3 0 5 0 0 513 0 0 0
 1 1 2 76 3 0 0 0
-1 10 100
+1 10 100 100
 E
 shield hide~
    This shield is formed of some tanned skins, strapped with sinew over
@@ -228,7 +228,7 @@ A &+glimestone&N totem lies here.~
 ~
 34 39 1 0 8 50 67108864 16385 64 0 0
 17 0 0 0 0 0 0 0
-1 1000 100
+1 1000 100 100
 E
 limestone totem~
    This small statuette is crafted into a tiny &+ggargoyle&N.  Its wings
@@ -246,7 +246,7 @@ A small ring lies here.~
 ~
 11 36 1 0 7 0 0 3 0 0 0
 0 0 0 0 0 0 0 0
-1 100 100
+1 100 100 100
 E
 ring blackened~
    This ring was formed out of a smooth, &+Lblack&N stone, polished to have
@@ -263,7 +263,7 @@ A long &+ystick&N with a decorated &+Wsk&+Gu&+Wll&N lies here.~
 ~
 5 6 3 0 7 0 0 8193 0 0 0
 11 2 6 7 0 0 0 0
-2 1000 100
+2 1000 100 100
 E
 skull stick~
    A small &+Wdog-skull&N has been tied to the end of a hardwood stick.
@@ -281,7 +281,7 @@ a large chest~
 ~
 15 6 4 0 7 0 0 0 0 0 0
 300 5 0 250 0 0 0 0
-0 1 100
+0 1 100 100
 #27018
 treasure horde~
 a treasure horde~
@@ -289,7 +289,7 @@ a treasure horde~
 ~
 20 15 3 0 7 0 1 1 0 0 0
 1000 500 62 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27019
 dagger wavy~
 &+La black wavy dagger&N~
@@ -297,7 +297,7 @@ A dagger with a &+Lwavy&N blade lies here~
 ~
 5 15 2 0 8 0 1024 8193 64 85553153 0
 2 3 2 11 0 0 0 0
-0 2615 100
+0 2615 100 100
 E
 dagger wavy~
    This dagger is made from black iron, the blade has been fashioned
@@ -314,7 +314,7 @@ switch no-show rope~
 ~
 29 15 3 0 7 0 2 0 0 0 0
 65 27046 3 0 0 0 0 0
-0 0 100
+0 0 100 100
 #27021
 armplates dust~
 &+ysome armplates of dust&n~
@@ -322,7 +322,7 @@ Armplates made entirely of &+ydust&N.~
 ~
 9 11 3 3 7 0 262144 257 0 0 0
 8 0 0 3 0 0 0 0
-3 12445 100
+3 12445 100 100
 A
 5 8
 A
@@ -334,7 +334,7 @@ A &+rdeep red&N ring has been left here.&n~
 ~
 9 15 3 1 7 0 12288 3 64 0 0
 4 0 0 2 0 0 0 0
-1 24145 100
+1 24145 100 100
 A
 24 -2
 A
@@ -346,7 +346,7 @@ circle light ring~
 ~
 9 15 3 1 7 0 67379200 33554435 64 0 0
 5 0 0 1 0 0 0 0
-1 76986 100
+1 76986 100 100
 A
 24 -3
 A
@@ -358,7 +358,7 @@ black polished stone~
 ~
 25 15 3 0 7 0 0 0 0 0 0
 27242 65 -1 0 0 0 0 0
-0 0 100
+0 0 100 100
 #27025
 black polished stone~
 &+La polished black stone&n~
@@ -366,7 +366,7 @@ black polished stone~
 ~
 25 15 3 0 7 0 0 0 0 0 0
 27380 65 -1 0 0 0 0 0
-0 0 100
+0 0 100 100
 #27026
 bone broadsword~
 &+Wa bone broadsword&N~
@@ -374,7 +374,7 @@ A broadsword fashined from some huge bone lies here.~
 ~
 5 10 3 0 7 0 1024 8193 0 87572491 0
 5 1 5 3 0 0 0 0
-0 2498 100
+0 2498 100 100
 A
 18 2
 A
@@ -386,7 +386,7 @@ A small pair of &+Wsilver&N cones lies on the ground here.~
 ~
 9 22 3 0 8 0 0 134217729 0 0 0
 5 22 0 2 0 0 0 0
-0 5280 100
+0 5280 100 100
 A
 20 -1
 A
@@ -398,7 +398,7 @@ dagger silver~
 ~
 5 16 2 0 10 0 9216 8193 64 96071939 39680
 2 1 4 11 0 0 0 0
-1 40000 100
+1 40000 100 100
 A
 18 2
 A
@@ -410,7 +410,7 @@ stone well~
 ~
 25 15 3 0 7 0 262144 0 0 0 0
 27429 7 -1 0 0 0 0 0
-0 0 100
+0 0 100 100
 #27030
 stone mask~
 &+La stone mask&n~
@@ -418,7 +418,7 @@ stone mask~
 ~
 9 11 3 3 7 0 0 262145 66 0 0
 19 0 0 3 0 0 0 0
-3 328492 100
+3 328492 100 100
 A
 5 8
 A
@@ -430,7 +430,7 @@ no show switch lever~
 ~
 29 15 3 0 7 0 2 0 0 0 0
 340 27431 3 0 0 0 0 0
-0 0 100
+0 0 100 100
 #27032
 rose beautiful~
 &+Ga beautiful&+R rose&n~
@@ -438,7 +438,7 @@ rose beautiful~
 ~
 11 30 3 1 7 0 0 2113537 0 0 0
 0 0 0 0 0 0 0 0
-1 4533 100
+1 4533 100 100
 A
 13 3
 A
@@ -450,7 +450,7 @@ large key~
 ~
 18 15 3 4 7 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
-4 3 100
+4 3 100 100
 #27034
 large jagged deadly sword~
 &+Wa large,&+C jagged,&+W deadly looking sword&n~
@@ -458,7 +458,7 @@ large jagged deadly sword~
 ~
 5 15 3 3 7 0 1024 8193 66 95993883 0
 5 4 2 3 0 0 0 0
-4 64534 100
+4 64534 100 100
 A
 18 2
 A
@@ -470,7 +470,7 @@ A&+L M&+war&+Lbl&+we slab.~
 ~
 25 15 5 50 7 0 0 0 0 0 0
 27453 17 -1 0 0 0 0 0
-50 0 100
+50 0 100 100
 #27036
 vial life windship's~
 &+La vial of&+c Windship's&+L life&n~
@@ -478,7 +478,7 @@ vial life windship's~
 ~
 10 7 3 1 10 0 8392704 1 0 0 0
 40 56 -1 -1 0 0 0 0
-1 664543 100
+1 664543 100 100
 #27037
 green potion~
 &+Ga green potion&n~
@@ -486,7 +486,7 @@ green potion~
 ~
 10 7 3 1 7 0 0 1 64 0 0
 35 43 0 0 0 0 0 0
-1 3245 100
+1 3245 100 100
 #27038
 wooden box~
 &+ya simple wooden box&n~
@@ -494,7 +494,7 @@ wooden box~
 ~
 15 5 3 2 7 0 8396800 4194305 0 0 0
 80 5 0 80 0 0 0 0
-2 346 100
+2 346 100 100
 #27039
 brown jar~
 &+ya brown jar&n~
@@ -502,7 +502,7 @@ brown jar~
 ~
 13 7 3 1 7 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
-1 3 100
+1 3 100 100
 #27040
 piece badge miner's~
 &+Gpart of a miner's badge&n~
@@ -510,7 +510,7 @@ piece badge miner's~
 ~
 9 15 3 1 7 0 262145 2097153 64 0 0
 15 0 0 1 0 0 0 0
-1 2143 100
+1 2143 100 100
 #27041
 piece miner's badge~
 &+Ra piece of a miner's badge&n~
@@ -518,7 +518,7 @@ piece miner's badge~
 ~
 11 15 3 1 7 0 262145 2097153 64 0 0
 0 0 0 0 0 0 0 0
-1 23455 100
+1 23455 100 100
 A
 25 0
 #27042
@@ -528,7 +528,7 @@ badge miner's miner broken~
 ~
 11 15 3 1 7 0 262145 2097153 64 0 0
 0 0 0 0 0 0 0 0
-1 25233 100 2048 0 0 0
+1 25233 100 100 2048 0 0 0
 A
 19 2
 #27043
@@ -538,7 +538,7 @@ A &+Gcol&+Ror&+bful&n badge has been left here.~
 ~
 9 15 3 1 7 0 262145 2097153 64 0 0
 15 0 0 1 0 0 0 0
-1 53455 100 2048 0 0 0
+1 53455 100 100 2048 0 0 0
 A
 25 0
 A
@@ -550,7 +550,7 @@ A scrap of paper has been left here.~
 ~
 13 29 3 0 7 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27045
 earring dwarven dwarf~
 &+wa&+Y dwarven&+w earring&n~
@@ -558,7 +558,7 @@ An earring of a sword has been left here.~
 ~
 11 15 3 1 7 0 0 524289 64 0 0
 0 0 0 0 0 0 0 0
-1 21497 100
+1 21497 100 100
 A
 13 14
 A
@@ -570,7 +570,7 @@ A green potion shimmers on the ground.~
 ~
 10 7 3 1 7 0 8192 1 64 0 0
 36 34 201 -1 0 0 0 0
-1 81435 100
+1 81435 100 100
 #27047
 dark potion~
 &+wa&+L d&+yar&+Lk&+w potion&n~
@@ -578,7 +578,7 @@ A dark potion lies on the floor.~
 ~
 10 7 3 0 7 0 0 1 64 0 0
 43 1 3 221 0 0 0 0
-0 33765 100
+0 33765 100 100
 #27048
 scroll parchment rolled tightly~
 &+wa tightly rolled parchment&n~
@@ -586,7 +586,7 @@ A tightly rolled parchment.~
 ~
 2 29 3 0 7 0 0 1 64 0 0
 35 45 262 0 0 0 0 0
-0 24878 100
+0 24878 100 100
 #27049
 orb shimmering light~
 &+Wan orb of&+c s&+Ch&+Li&+Cm&+cm&+Le&+cr&+Ci&+Ln&+Cg&+W light&n~
@@ -594,7 +594,7 @@ orb shimmering light~
 ~
 11 7 3 3 7 0 33816576 16385 0 0 0
 0 0 0 0 0 0 0 0
-3 213453 100 33554432 0 0 0
+3 213453 100 100 33554432 0 0 0
 A
 13 15
 A
@@ -606,7 +606,7 @@ An earring with a &+gg&+Gree&+gn&N glint has been left here.~
 ~
 9 24 3 0 7 0 0 524289 64 0 0
 3 0 0 1 0 0 0 0
-0 25215 100
+0 25215 100 100
 A
 19 2
 A
@@ -618,7 +618,7 @@ A piece of bloodied skin has been cut off someone and left here.~
 ~
 13 2 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27052
 scalp leader~
 the &+Lorc's&N scalp~
@@ -626,7 +626,7 @@ A piece of bloodied skin has been cut off someone and left here.~
 ~
 13 2 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27053
 scalp leader~
 the &+mdrow's&N scalp~
@@ -634,7 +634,7 @@ A piece of bloodied skin has been cut off someone and left here.~
 ~
 13 2 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27054
 scalp leader~
 the &+Ggoblin's&N scalp~
@@ -642,7 +642,7 @@ A piece of bloodied skin has been cut off someone and left here.~
 ~
 13 2 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27055
 scalp leader~
 the &+rduergar's&N scalp~
@@ -650,7 +650,7 @@ A piece of bloodied skin has been cut off someone and left here.~
 ~
 13 2 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27056
 potion drow's~
 a &+mdrow's&N potion~
@@ -658,7 +658,7 @@ A potion has been dropped here.~
 ~
 10 7 3 0 7 0 0 1 0 0 0
 51 44 66 228 0 0 0 0
-0 477892 100
+0 477892 100 100
 #27057
 scalp bartis bartis'~
 &+rBartis'&N scalp~
@@ -666,7 +666,7 @@ A piece of bloodied skin has been cut off someone and left here.~
 ~
 13 2 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27058
 hulkuis hulkuis' scalp~
 &+BHulkuis'&N scalp~
@@ -674,7 +674,7 @@ A piece of bloodied skin has been cut off someone and left here.~
 ~
 13 2 3 0 7 0 4096 1 0 0 0
 0 0 0 0 0 0 0 0
-0 1 100
+0 1 100 100
 #27059
 duergar belt~
 a &+rduergar&n belt~
@@ -682,7 +682,7 @@ A thick strap of leather has been left here.~
 ~
 9 13 3 0 7 0 1056768 2049 0 0 0
 8 0 0 4 0 0 0 0
-0 123849 100 32 0 0 0
+0 123849 100 100 32 0 0 0
 A
 13 15
 A
@@ -694,4 +694,4 @@ A long &+Lblack&N pole has been left here.~
 ~
 4 6 3 0 7 0 0 16385 0 0 0
 50 5 5 188 0 0 0 0
-0 235079 100
+0 235079 100 100
