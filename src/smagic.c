@@ -2890,13 +2890,21 @@ void spell_greater_ravenflight(int level, P_char ch, char *arg, int type,
     spell_ravenflight(level, ch, NULL, SPELL_TYPE_SPELL, victim, 0);
 }
 
+void event_unmorph(P_char ch, P_char victim, P_obj obj, void *data)
+{
+
+  send_to_char("&+WYou shift back into your own shape.&N\r\n", ch);
+  act("&+W$n shifts back into $s own image.&N", FALSE, ch, 0, ch, TO_ROOM);
+  remove_disguise(ch, FALSE);
+
+  return;
+}
 
 void spell_call_of_the_wild(int level, P_char ch, char *arg, int type,
                             P_char victim, P_obj obj)
 {
-  struct affected_type af;
-  P_char   new_vict;
-  int      mob_num;
+  P_char mob;
+  int mob_num;
 
   if(!(ch) ||
      !IS_ALIVE(ch) ||
@@ -2924,7 +2932,7 @@ void spell_call_of_the_wild(int level, P_char ch, char *arg, int type,
   }
   mob_num = number(1051, 1059);
 
-  if((mob_num = real_mobile0(mob_num)) == 0)
+  if((mob = read_mobile(mob_num, VIRTUAL)) == 0)
   {
     send_to_char
       ("Oops!  There is an error in the list of this type of mob!\n", ch);
@@ -2939,21 +2947,39 @@ void spell_call_of_the_wild(int level, P_char ch, char *arg, int type,
     if(affect_total(victim, TRUE))
       return;
   }
-  new_vict = morph(victim, mob_num, REAL);
-  if(!new_vict)
-    return;                     /* nutty */
 
-  act("$N suddenly changes shape, reforming into $n!", FALSE, new_vict, 0,
-      victim, TO_ROOM);
-  act("\nYou've been changed into $n!", FALSE, new_vict, 0, 0, TO_CHAR);      /* extra CR/LF needed */
+  stop_riding(victim);
+  stop_riding(get_linking_char(victim, LNK_RIDING));
 
-  bzero(&af, sizeof(af));
+  act("\nYou've been changed into $n!", FALSE, victim, 0, mob, TO_CHAR);
+  act("$n suddenly changes shape, reforming into $N!", FALSE, victim, 0,
+      mob, TO_ROOM);
 
-  af.type = SPELL_CALL_OF_THE_WILD;
-  af.duration = (level / 25) + 1;
-  af.bitvector4 = AFF4_NO_UNMORPH;
+  if (IS_DISGUISE(victim))
+    remove_disguise(victim, FALSE);
+  IS_DISGUISE_PC(victim) = FALSE;
+  IS_DISGUISE_NPC(victim) = TRUE;
+  IS_DISGUISE_ILLUSION(victim) = FALSE;
+  IS_DISGUISE_SHAPE(victim) = TRUE;
+  victim->disguise.title = str_dup(GET_NAME(mob));
+  victim->disguise.name = str_dup(mob->player.short_descr);
+  victim->disguise.longname = str_dup(mob->player.long_descr);
+  victim->disguise.m_class = mob->player.m_class;
+  victim->disguise.racewar = GET_RACEWAR(mob);
+  victim->disguise.race = GET_RACE(mob);
+  // We want them to die before losing shape change(if it comes to that).
+  victim->disguise.hit = 2000;
 
-  affect_to_char(new_vict, &af);
+  SET_BIT(ch->specials.act, PLR_NOWHO);
+
+  balance_affects(ch);
+
+  extract_char(mob);
+
+// YOU ARE HERE
+  add_event(event_unmorph, WAIT_MIN * ( level / 25 + 1 ), victim, 0,
+    NULL, 0, &level, sizeof(level));
+
 }
 
 void spell_malison(int level, P_char ch, char *arg, int type, P_char victim,
