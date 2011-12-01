@@ -1,28 +1,191 @@
 #1352
 The Lair of Tiamat~
-135283 0 0 40 50 3
+135289 0 0 40 50 3
 *
 * Zone edited with durisEdit v2.99de
 *
 *
+D 0 135202 1 2 100 0 0 0
+*     east exit from "The Massive Entrance to the Azhural Caverns" to
+*     "A Massive Tunnel Within the Azhural Caverns" - closed/locked
 *
-O 0 135208 1 135201 100 0 0 0      * The Pillar of Skulls
+D 0 135203 3 2 100 0 0 0
+*     west exit from "A Massive Tunnel Within the Azhural Caverns" to
+*     "The Massive Entrance to the Azhural Caverns" - closed/locked
 *
-M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
-M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
-M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
-M 0 135212 4 135201 100 0 0 0      * a golem of fused demon bones
+D 0 135207 0 2 100 0 0 0
+*     north exit from "A Frigid Tunnel in the Azhural Caverns" to
+*     "A Huge Cavern Enshrouded in a Thick Frost" - closed/locked
+*
+D 0 135208 2 2 100 0 0 0
+*     south exit from "A Huge Cavern Enshrouded in a Thick Frost" to
+*     "A Frigid Tunnel in the Azhural Caverns" - closed/locked
+*
+D 0 135219 0 1 100 0 0 0
+*     north exit from "An Intersection of Tunnels Within the Azhural Caverns" to
+*     "The Pool of Worlds" - closed
+*
+D 0 135220 2 1 100 0 0 0
+*     south exit from "The Pool of Worlds" to
+*     "An Intersection of Tunnels Within the Azhural Caverns" - closed
+*
+D 0 135221 0 2 100 0 0 0
+*     north exit from "Entrance to the Cavern of the Dragonspawn Gateway" to
+*     "The Massive Cavern of the Dragonspawn Gateway" - closed/locked
+*
+D 0 135289 2 2 100 0 0 0
+*     south exit from "The Massive Cavern of the Dragonspawn Gateway" to
+*     "Entrance to the Cavern of the Dragonspawn Gateway" - closed/locked
+*
+D 0 135228 0 2 100 0 0 0
+*     north exit from "An Acid Etched Tunnel Nearing a Swamp Infested Lair" to
+*     "Within a Cavern of Vile Marshy Swamp" - closed/locked
+*
+D 0 135229 2 2 100 0 0 0
+*     south exit from "Within a Cavern of Vile Marshy Swamp" to
+*     "An Acid Etched Tunnel Nearing a Swamp Infested Lair" - closed/locked
+*
+D 0 135240 1 2 100 0 0 0
+*     east exit from "A Tunnel of Overgrown Jungle Inside the Azhural Caverns" to
+*     "An Overgrown Cavern of Ancient Forest" - closed/locked
+*
+D 0 135241 3 2 100 0 0 0
+*     west exit from "An Overgrown Cavern of Ancient Forest" to
+*     "A Tunnel of Overgrown Jungle Inside the Azhural Caverns" - closed/locked
+*
+D 0 135251 2 2 100 0 0 0
+*     south exit from "A Tunnel of Shifting Sands Within the Azhural Caverns" to
+*     "Within a Vast Lair of Rolling Sand Dunes" - closed/locked
+*
+D 0 135252 0 2 100 0 0 0
+*     north exit from "Within a Vast Lair of Rolling Sand Dunes" to
+*     "A Tunnel of Shifting Sands Within the Azhural Caverns" - closed/locked
+*
+D 0 135265 2 2 100 0 0 0
+*     south exit from "The Descent in the Depths of the Azhural Caverns" to
+*     "Within the Heart of a Smoldering Volcano" - closed/locked
+*
+D 0 135266 0 2 100 0 0 0
+*     north exit from "Within the Heart of a Smoldering Volcano" to
+*     "The Descent in the Depths of the Azhural Caverns" - closed/locked
+*
+D 0 135281 1 6 100 0 0 0
+*     east exit from "The Throne of Tiamat" to
+*     "The Vault of Tiamat" - closed/locked/secret
+*
+D 0 135282 3 6 100 0 0 0
+*     west exit from "The Vault of Tiamat" to
+*     "The Throne of Tiamat" - closed/locked/secret
+*
+*
+O 0 135208 2 135201 100 0 0 0      * The Pillar of Skulls
+O 0 135231 1 135282 100 0 0 0      * a fiery portal of swirling colors
+O 0 135208 2 135286 100 0 0 0      * The Pillar of Skulls
+O 0 135230 1 135289 100 0 0 0      * the Dragonspawn Arches
+*
+M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
+M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
+M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
+M 0 135212 8 135201 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
+M 0 135219 1 135202 100 0 0 0      * a shadowy figure
+M 0 135211 10 135207 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+M 0 135211 10 135207 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+G 1 135225 1 0 100 0 0 0           *    an ancient ward stone with icy runes
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
+M 0 135201 9 135209 100 0 0 0      * an ancient white dragon
 M 0 135209 1 135216 100 0 0 0      * Zenalithianathisa, the ancient white dragon consort
+G 1 135205 1 0 100 0 0 0           *    the essence of the white dragon flight
 M 0 135214 4 135220 100 0 0 0      * a dragonkin seer
 M 0 135214 4 135220 100 0 0 0      * a dragonkin seer
 M 0 135214 4 135220 100 0 0 0      * a dragonkin seer
 M 0 135214 4 135220 100 0 0 0      * a dragonkin seer
-M 0 135215 1 135221 100 0 0 0      * Mordukhavar the reaver
+M 0 135211 10 135228 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+M 0 135211 10 135228 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+G 1 135226 1 0 100 0 0 0           *    an ancient ward stone with acid etched runes
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
+M 0 135202 9 135234 100 0 0 0      * an ancient black dragon
 M 0 135208 1 135237 100 0 0 0      * Kalanakanitan, the ancient black dragon consort
+G 1 135204 1 0 100 0 0 0           *    the essence of the black dragon flight
+M 0 135211 10 135240 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+M 0 135211 10 135240 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+G 1 135227 1 0 100 0 0 0           *    an ancient ward stone covered in living vines
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
+M 0 135203 9 135243 100 0 0 0      * an ancient green dragon
 M 0 135207 1 135249 100 0 0 0      * Xasormalathin, the ancient green dragon consort
+G 1 135202 1 0 100 0 0 0           *    the essence of the green dragon flight
+M 0 135211 10 135251 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+M 0 135211 10 135251 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+G 1 135228 1 0 100 0 0 0           *    an ancient ward stone covered in sand blasted runes
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
+M 0 135204 9 135255 100 0 0 0      * an ancient blue dragon
 M 0 135210 1 135260 100 0 0 0      * Tenanizeothian, the ancient blue dragon consort
-M 0 135218 2 135266 100 0 0 0      * Zyla, the destroyer
+E 1 135235 1 16 100 0 0 0          *   hidden Tenanizeothian proc
+E 1 135203 1 18 100 0 0 0          *   the essence of the blue dragon flight
+M 0 135211 10 135265 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+M 0 135211 10 135265 100 0 0 0     * a dragon-knight protector
+E 1 135212 10 16 100 0 0 0         *   a wickedly barbed two-handed greatsword
+G 1 135229 1 0 100 0 0 0           *    an ancient ward stone covered in fiery runes
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
+M 0 135205 9 135269 100 0 0 0      * an ancient red dragon
 M 0 135206 1 135274 100 0 0 0      * Ephelemon, the ancient red dragon consort
-M 0 135218 2 135279 100 0 0 0      * Zyla, the destroyer
+G 1 135201 1 0 100 0 0 0           *    the essence of the red dragon flight
+M 0 135221 1 135281 100 0 0 0      * Tiamat Place Holder
+G 1 135232 1 0 100 0 0 0           *    a ruby encrusted key
+M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
+M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
+M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
+M 0 135212 8 135286 100 0 0 0      * a golem of fused demon bones
+G 1 135211 8 0 100 0 0 0           *    a shard of bone
 *
 S

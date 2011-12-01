@@ -1,0 +1,340 @@
+#1
+~
+100 0 0 0 5 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 27 0 0 100 0 0 0
+*     north exit from "The End of the Cave" to
+*     "The Black Hall" - open
+*
+D 0 28 2 0 100 0 0 0
+*     south exit from "The Black Hall" to
+*     "The End of the Cave" - open
+*
+D 0 29 0 0 100 0 0 0
+*     north exit from "Guard Room of the Black Hall" to
+*     "The Black Hall" - open
+*
+D 0 30 2 0 100 0 0 0
+*     south exit from "The Black Hall" to
+*     "Guard Room of the Black Hall" - open
+*
+D 0 35 0 1 100 0 0 0
+*     north exit from "The Western Wing" to
+*     "The Forum" - closed
+*
+D 0 40 2 1 100 0 0 0
+*     south exit from "The Forum" to
+*     "The Western Wing" - closed
+*
+D 0 35 2 1 100 0 0 0
+*     south exit from "The Western Wing" to
+*     "The Black Laboratory" - closed
+*
+D 0 41 0 1 100 0 0 0
+*     north exit from "The Black Laboratory" to
+*     "The Western Wing" - closed
+*
+D 0 36 0 1 100 0 0 0
+*     north exit from "The Western Wing" to
+*     "The Black Library" - closed
+*
+D 0 43 2 1 100 0 0 0
+*     south exit from "The Black Library" to
+*     "The Western Wing" - closed
+*
+D 0 37 0 1 100 0 0 0
+*     north exit from "End of the Western Wing" to
+*     "Zrack's Office" - closed
+*
+D 0 38 2 1 100 0 0 0
+*     south exit from "Zrack's Office" to
+*     "End of the Western Wing" - closed
+*
+D 0 37 2 0 100 0 0 0
+*     south exit from "End of the Western Wing" to
+*     "The Dining Room" - open
+*
+D 0 39 0 0 100 0 0 0
+*     north exit from "The Dining Room" to
+*     "End of the Western Wing" - open
+*
+D 0 44 0 1 100 0 0 0
+*     north exit from "The Eastern Wing" to
+*     "The Recruit's Quarters" - closed
+*
+D 0 45 2 1 100 0 0 0
+*     south exit from "The Recruit's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 44 2 1 100 0 0 0
+*     south exit from "The Eastern Wing" to
+*     "The Apprentice's Quarters" - closed
+*
+D 0 46 0 1 100 0 0 0
+*     north exit from "The Apprentice's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 47 0 1 100 0 0 0
+*     north exit from "The Eastern Wing" to
+*     "The Senior's Quarters" - closed
+*
+D 0 48 2 1 100 0 0 0
+*     south exit from "The Senior's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 47 2 1 100 0 0 0
+*     south exit from "The Eastern Wing" to
+*     "The Journeymen's Quarters" - closed
+*
+D 0 49 0 1 100 0 0 0
+*     north exit from "The Journeymen's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 50 0 1 100 0 0 0
+*     north exit from "The Eastern Wing" to
+*     "Marius's Quarters" - closed
+*
+D 0 51 2 1 100 0 0 0
+*     south exit from "Marius's Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 50 2 1 100 0 0 0
+*     south exit from "The Eastern Wing" to
+*     "The Female Quarters" - closed
+*
+D 0 52 0 1 100 0 0 0
+*     north exit from "The Female Quarters" to
+*     "The Eastern Wing" - closed
+*
+D 0 53 0 0 100 0 0 0
+*     north exit from "End of the Eastern Wing" to
+*     "A Bathroom" - open
+*
+D 0 54 2 0 100 0 0 0
+*     south exit from "A Bathroom" to
+*     "End of the Eastern Wing" - open
+*
+D 0 53 2 0 100 0 0 0
+*     south exit from "End of the Eastern Wing" to
+*     "The Study" - open
+*
+D 0 55 0 0 100 0 0 0
+*     north exit from "The Study" to
+*     "End of the Eastern Wing" - open
+*
+D 0 56 0 0 100 0 0 0
+*     north exit from "The Village of Fairlocke" to
+*     "Larra's House" - open
+*
+D 0 59 2 0 100 0 0 0
+*     south exit from "Larra's House" to
+*     "The Village of Fairlocke" - open
+*
+D 0 56 2 0 100 0 0 0
+*     south exit from "The Village of Fairlocke" to
+*     "Old Goods Store" - open
+*
+D 0 57 0 0 100 0 0 0
+*     north exit from "Old Goods Store" to
+*     "The Village of Fairlocke" - open
+*
+D 0 65 0 1 100 0 0 0
+*     north exit from "The Black Hall" to
+*     "End of the Black Hall" - closed
+*
+D 0 66 2 1 100 0 0 0
+*     south exit from "End of the Black Hall" to
+*     "The Black Hall" - closed
+*
+D 0 72 5 0 100 0 0 0
+*     down exit from "Newly Excavated Area" to
+*     "A Dwarven Resting Place" - open
+*
+D 0 76 4 0 100 0 0 0
+*     up exit from "A Dwarven Resting Place" to
+*     "Newly Excavated Area" - open
+*
+D 0 81 2 0 100 0 0 0
+*     south exit from "Beginning of the Wherston Road" to
+*     "Dralor's Trading Co." - open
+*
+D 0 82 0 0 100 0 0 0
+*     north exit from "Dralor's Trading Co." to
+*     "Beginning of the Wherston Road" - open
+*
+D 0 84 2 2 100 0 0 0
+*     south exit from "An Ancient Dwarven Hallway" to
+*     "The First Doorway" - closed/locked
+*
+D 0 86 0 1 100 0 0 0
+*     north exit from "The First Doorway" to
+*     "An Ancient Dwarven Hallway" - closed
+*
+D 0 86 2 2 100 0 0 0
+*     south exit from "The First Doorway" to
+*     "The Second Doorway" - closed/locked
+*
+D 0 94 0 1 100 0 0 0
+*     north exit from "The Second Doorway" to
+*     "The First Doorway" - closed
+*
+D 0 89 2 0 100 0 0 0
+*     south exit from "Beneath an Underground River" to
+*     "Before an Adamantium Grate" - open
+*
+D 0 90 0 0 100 0 0 0
+*     north exit from "Before an Adamantium Grate" to
+*     "Beneath an Underground River" - open
+*
+D 0 94 2 2 100 0 0 0
+*     south exit from "The Second Doorway" to
+*     "The Treasure Chamber of the Ironstar Dwarves" - closed/locked
+*
+D 0 95 0 1 100 0 0 0
+*     north exit from "The Treasure Chamber of the Ironstar Dwarves" to
+*     "The Second Doorway" - closed
+*
+D 0 99 1 0 100 0 0 0
+*     east exit from "An Ancient Dwarven Hallway" to
+*     "The Audience Chamber of the Ironstar Clan" - open
+*
+D 0 100 3 0 100 0 0 0
+*     west exit from "The Audience Chamber of the Ironstar Clan" to
+*     "An Ancient Dwarven Hallway" - open
+*
+*
+O 0 1 1 5 100 0 0 0                * a human bone
+O 0 2 1 5 100 0 0 0                * a human skeleton
+P 1 3 1 2 100 0 0 0                *   a scroll of human flesh
+P 1 4 1 2 100 0 0 0                *   Robert's diary
+O 0 5 3 37 100 0 0 0               * a glowing globe
+O 0 11 1 38 100 0 0 0              * a large desk
+P 1 13 1 11 100 0 0 0              *   a wand of lightning
+P 1 14 1 11 100 0 0 0              *   a gold ring
+O 0 5 3 40 100 0 0 0               * a glowing globe
+O 0 5 3 41 100 0 0 0               * a glowing globe
+O 0 12 1 42 100 0 0 0              * a black skull key
+O 0 54 1 43 100 0 0 0              * some bookcases
+P 1 55 1 54 100 0 0 0              *   a black velvet wrapped book
+O 0 23 1 51 100 0 0 0              * a small iron chest
+P 1 24 1 23 100 0 0 0              *   a yellow potion
+P 1 25 1 23 100 0 0 0              *   a scroll with red letters
+P 1 26 1 23 100 0 0 0              *   a patched cloak
+O 0 28 1 57 100 0 0 0              * a loose board
+P 1 29 1 28 100 0 0 0              *   a green emerald
+O 0 35 1 76 100 0 0 0              * a dwarven skeleton
+P 1 43 1 35 100 0 0 0              *   an old crown made of adamantium
+P 1 33 5 35 100 0 0 0              *   an ancient battleaxe
+P 1 34 5 35 100 0 0 0              *   some tattered chainmail
+O 0 45 1 78 100 0 0 0              * a small mithril hammer
+O 0 57 1 88 100 0 0 0              * a pile of stones and gravel
+P 1 56 1 57 100 0 0 0              *   a large mithril key
+*
+M 0 1 2 28 100 0 0 0               * a wandering skeleton
+M 0 2 9 29 100 0 0 0               * a guardian wight
+M 0 2 9 29 100 0 0 0               * a guardian wight
+M 0 6 12 31 100 0 0 0              * an apprentice necromancer
+M 0 2 9 34 100 0 0 0               * a guardian wight
+M 0 2 9 35 100 0 0 0               * a guardian wight
+M 0 6 12 39 100 0 0 0              * an apprentice necromancer
+M 0 5 1 40 100 0 0 0               * Marius
+E 1 8 1 16 100 0 0 0               *   a mithril engraved staff
+M 0 6 12 40 100 0 0 0              * an apprentice necromancer
+M 0 6 12 40 100 0 0 0              * an apprentice necromancer
+M 0 6 12 40 100 0 0 0              * an apprentice necromancer
+M 0 2 9 40 100 0 0 0               * a guardian wight
+M 0 3 1 41 100 0 0 0               * Janos
+E 1 7 1 1 100 0 0 0                *   a ring of human bone
+E 1 6 1 24 100 0 0 0               *   a skeletal hand
+M 0 1 2 41 100 0 0 0               * a wandering skeleton
+M 0 2 9 41 100 0 0 0               * a guardian wight
+M 0 8 1 42 100 0 0 0               * Kathrine
+M 0 6 12 43 100 0 0 0              * an apprentice necromancer
+M 0 6 12 43 100 0 0 0              * an apprentice necromancer
+M 0 6 12 44 100 0 0 0              * an apprentice necromancer
+M 0 10 1 45 100 0 0 0              * Kalzan
+F 1 11 1 45 100 0 0 0              * a frog zombie (following)
+M 0 6 12 45 100 0 0 0              * an apprentice necromancer
+M 0 6 12 45 100 0 0 0              * an apprentice necromancer
+M 0 6 12 46 100 0 0 0              * an apprentice necromancer
+M 0 6 12 46 100 0 0 0              * an apprentice necromancer
+M 0 12 1 48 100 0 0 0              * Ezzra
+E 1 18 1 19 100 0 0 0              *   a blue-lensed monocle
+M 0 13 1 48 100 0 0 0              * the demon, Caldron
+E 1 19 1 13 100 0 0 0              *   a red sash of blood
+E 1 20 1 16 100 0 0 0              *   a demonically forged two-handed sword
+M 0 14 1 49 100 0 0 0              * Xarlin
+E 1 21 1 21 100 0 0 0              *   a small black skull earring
+F 1 25 1 49 100 0 0 0              * a knight of Bloodstone (following)
+M 0 16 1 52 100 0 0 0              * the vampire Luka
+E 1 27 1 16 100 0 0 0              *   a sharp rapier
+M 0 15 1 52 100 0 0 0              * Natasha
+M 0 17 1 61 100 0 0 0              * Joseph McLarun
+E 1 30 2 16 100 0 0 0              *   a black bladed short sword
+M 0 9 1 62 100 0 0 0               * Larra
+M 0 18 1 64 100 0 0 0              * Igen, the henchman
+E 1 30 2 16 100 0 0 0              *   a black bladed short sword
+M 0 7 1 66 100 0 0 0               * Maltheas
+E 1 16 1 11 100 0 0 0              *   a shield of molten metal
+E 1 9 1 16 100 0 0 0               *   a burning blade called 'The Fury of Demons'
+F 1 26 1 66 100 0 0 0              * an angel of death (following)
+M 0 20 1 68 100 0 0 0              * Faethor
+E 1 49 1 7 100 0 0 0               *   some billowing black silk pants
+E 1 32 1 9 100 0 0 0               *   a pair of skeletal gauntlets
+F 1 21 12 68 100 0 0 0             * an undead dwarven warrior (following)
+F 1 21 12 68 100 0 0 0             * an undead dwarven warrior (following)
+F 1 21 12 68 100 0 0 0             * an undead dwarven warrior (following)
+F 1 2 9 68 100 0 0 0               * a guardian wight (following)
+M 0 19 1 71 100 0 0 0              * Ali
+E 1 48 1 3 100 0 0 0               *   a necklace of emeralds
+F 1 21 12 71 100 0 0 0             * an undead dwarven warrior (following)
+E 1 34 5 5 100 0 0 0               *   some tattered chainmail
+E 1 33 5 16 100 0 0 0              *   an ancient battleaxe
+F 1 21 12 71 100 0 0 0             * an undead dwarven warrior (following)
+E 1 34 5 5 100 0 0 0               *   some tattered chainmail
+E 1 33 5 16 100 0 0 0              *   an ancient battleaxe
+F 1 21 12 71 100 0 0 0             * an undead dwarven warrior (following)
+E 1 34 5 5 100 0 0 0               *   some tattered chainmail
+E 1 33 5 16 100 0 0 0              *   an ancient battleaxe
+F 1 2 9 71 100 0 0 0               * a guardian wight (following)
+M 0 24 1 78 100 0 0 0              * Charring Death
+G 1 10 1 0 100 0 0 0               *    the scales of Charring Death
+M 0 23 1 78 100 0 0 0              * Zrack
+E 1 47 1 12 100 0 0 0              *   a blood red robe of linked bones
+E 1 22 1 18 100 0 0 0              *   a small iron key
+F 1 21 12 78 100 0 0 0             * an undead dwarven warrior (following)
+E 1 34 5 5 100 0 0 0               *   some tattered chainmail
+E 1 33 5 16 100 0 0 0              *   an ancient battleaxe
+F 1 2 9 78 100 0 0 0               * a guardian wight (following)
+M 0 22 1 82 100 0 0 0              * Dralor
+M 0 27 4 85 100 0 0 0              * a skeletal baby dragon
+M 0 27 4 85 100 0 0 0              * a skeletal baby dragon
+M 0 27 4 85 100 0 0 0              * a skeletal baby dragon
+G 1 50 1 0 100 0 0 0               *    a silver mithril key
+M 0 27 4 85 100 0 0 0              * a skeletal baby dragon
+M 0 31 1 88 100 0 0 0              * Daxion, the duergar miner
+E 1 60 1 14 100 0 0 0              *   a duergar-made adamantine bracelet
+F 1 21 12 88 100 0 0 0             * an undead dwarven warrior (following)
+F 1 21 12 88 100 0 0 0             * an undead dwarven warrior (following)
+F 1 21 12 88 100 0 0 0             * an undead dwarven warrior (following)
+M 0 33 1 92 100 0 0 0              * an apprentice of Urian
+E 1 61 1 18 100 0 0 0              *   a long sealed letter
+E 1 62 1 21 100 0 0 0              *   a blood-colored crystal tear
+M 0 29 1 92 100 0 0 0              * a minion of Nakral
+G 1 53 1 0 100 0 0 0               *    a scroll of dragonhide
+G 1 52 1 0 100 0 0 0               *    a note written in blood
+F 1 30 2 92 100 0 0 0              * a guardian skeleton (following)
+F 1 30 2 92 100 0 0 0              * a guardian skeleton (following)
+M 0 28 1 92 100 0 0 0              * the spirit of Robert
+M 0 32 1 95 100 0 0 0              * a iron golem
+G 1 31 1 0 100 0 0 0               *    a backpack of the dragonkind
+G 1 58 1 0 100 0 0 0               *    the stone armor of Zaldran
+M 0 34 2 100 100 0 0 0             * a wraith of the forgotten dead
+F 1 21 12 100 100 0 0 0            * an undead dwarven warrior (following)
+M 0 34 2 100 100 0 0 0             * a wraith of the forgotten dead
+F 1 21 12 100 100 0 0 0            * an undead dwarven warrior (following)
+*
+S

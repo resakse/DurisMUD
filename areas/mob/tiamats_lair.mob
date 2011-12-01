@@ -6,53 +6,53 @@ ancient white dragon patrol~
 ~
 1342208584 1 0 0 0 0 0 0 -1000 S
 D 0 513 0 -1
-55 0 0 1d1+1 1d1+1
+57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #135202
-mob unnamed~
+ancient black dragon~
 &+Lan an&+wcien&+Lt black d&+wra&+Lgon&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LAn ancient black dragon lies here, basking in the fetid swampland.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+160776 1 0 0 402653208 2048 0 0 -1000 S
+D 0 513 0 -1
+57 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135203
-mob unnamed~
+ancient green dragon~
 &+gan an&+Gcien&+gt green d&+Gra&+ggon&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+gAn ancient green dragon rests here, nearly hidden in the thick foliage.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+524296 0 0 0 16777240 0 0 4096 -1000 S
+D 0 37748737 0 -1
+57 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135204
-mob unnamed~
+ancient blue dragon~
 &+Ban an&+bcien&+Bt blue d&+bra&+Bgon&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+bAn ancient blue dragon is here, frolicking in the hot sands.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+264 0 0 0 134217752 0 0 0 -1000 S
+D 0 33554432 1 -1
+57 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135205
-mob unnamed~
+ancient red dragon~
 &+ran an&+Rcien&+rt red d&+Rra&+rgon&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+rAn an&+Rcien&+rt red d&+Rra&+rgon rests here, b&+Rask&+ring in the fiery warmth.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+149608 1 0 0 402653208 1 0 0 -1000 S
+D 0 513 0 -1
+57 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135206
 ephelemon ancient red dragon consort _no_move_~
 &+rEp&+Rhelem&+ron&+L, the ancient &+rr&+Re&+rd &+Ldragon consort&n~
@@ -60,14 +60,14 @@ ephelemon ancient red dragon consort _no_move_~
 ~
 ~
 268458090 1 0 0 402653336 4194305 1048704 262144 -1000 S
-D 0 2561 0 -1
+D 0 17826304 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #135207
 xasormalathin ancient green dragon consort _no_move_~
 &+gXa&+Gsormalath&+gin&+L, the ancient &+gg&+Gr&+ge&+Ge&+gn &+Ldragon consort&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+gA GIANT ancient &+gg&+Gr&+ge&+Ge&+gn dragon sits here, entwined into the thick forest.&n
 ~
 ~
 268459082 1 0 0 939524248 2176 1048704 33555456 -1000 S
@@ -78,7 +78,7 @@ D 0 2099200 0 -1
 #135208
 kalanakanitan ancient black dragon consort _no_move_~
 &+LKa&+wlanakanit&+Lan, the ancient b&+wlac&+Lk dragon consort&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA MASSIVE black dragon rests here, parts of its massive body hidden in the marsh.&n
 ~
 ~
 268438602 1 0 0 939524248 2048 1048704 33554432 -1000 S
@@ -89,18 +89,18 @@ D 0 33554689 0 -1
 #135209
 zenalithiananthisa ancient white dragon consort _no_move_ _spec3_~
 &+WZenalithianathisa&+L, the ancient &+Wwhite &+Ldragon consort&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+WA HUGE white dragon lies here, surrounded by &+Cicy &+Wdeath.&n
 ~
 ~
 268458506 1 0 0 402727096 34880 128 4195328 -1000 S
-D 0 33554689 0 -1
+D 0 33554945 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
 #135210
 tenanizeothian ancient blue dragon consort _no_move_~
 &+bTe&+Bnanizeothi&+ban&+L, the ancient &+bb&+Bl&+bu&+Be &+Ldragon consort&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+BA GARGANTUAN blue dragon lies here, resting in the rolling sands.&n
 ~
 ~
 268458250 1 0 0 402653336 128 0 0 -1000 S
@@ -109,16 +109,16 @@ D 0 39845888 0 -1
 0.0.0.0 0
 8 8 1
 #135211
-mob unnamed~
+dragon knight protector guardian _no_move_~
 &+La dragon-&+mknight &+Lprotector&n~
-An unnamed mob stands here, looking lonely and forelorn.
+&+LA dragon-&+mknight &+Lprotector stands here, guarding entrance to the lair.&n
 ~
 ~
-8 0 0 0 0 0 0 0 0 S
-PH 0 0 0 -1
-1 0 0 1d1+1 1d1+1
+268466186 1 0 0 939524120 0 0 0 -1000 S
+dk 0 18874368 0 -1
+59 0 0 1d1+1 1d1+1
 0.0.0.0 0
-8 8 0
+8 8 1
 #135212
 golem fused bone demon _no_move_~
 &+La &+wgo&+Ll&+wem &+Lof &+rf&+Ru&+rs&+Re&+rd &+Ld&+we&+Lm&+wo&+Ln &+Wbones&n~
@@ -197,6 +197,39 @@ Y 0 520 0 -1
 0.0.0.0 0
 8 8 2
 #135219
+shadowy figure~
+&+La shadowy figure&n~
+&+LA tall, shadowy figure stands here, blocking entrance past the &+Bgate&+L.&n
+~
+~
+268529738 0 0 0 402653328 0 0 0 0 S
+dk 0 16779777 0 -1
+61 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#135220
+stone dragon ynndakaneil~
+&+Lthe &+cstone &+Ldragon &+rYnndakaneil&n~
+&+LA massive &+cstone &+Ldragon stands here, wings spread across the &+md&+Mr&+ma&+Mg&+mo&+Mn&+ms&+Mp&+ma&+Mw&+mn &+Lgateway.&n
+~
+~
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135221
+tiamat~
+Tiamat Place Holder~
+this is where tiamat will stand looking all evil
+~
+~
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
+1 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#135222
 mob unnamed~
 an unnamed mob~
 An unnamed mob stands here, looking lonely and forelorn.
@@ -207,7 +240,7 @@ PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#135220
+#135223
 mob unnamed~
 an unnamed mob~
 An unnamed mob stands here, looking lonely and forelorn.

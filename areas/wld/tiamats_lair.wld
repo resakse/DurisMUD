@@ -1,11 +1,23 @@
 #135201
-&+LBefore the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof &+LS&+wk&+Lu&+wl&+Ll&+ws&n~
+&+LBefore the Base of the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof &+LS&+wk&+Lu&+wl&+Ll&+ws&n~
 ~
 1352 0 0 0
+D0
+~
+~
+0 0 135284
 D1
 ~
 ~
 0 0 135202
+D2
+~
+~
+0 0 135285
+D3
+~
+~
+0 0 135286
 S
 #135202
 &+LThe Massive &+wE&+Ln&+wt&+Lr&+wa&+Ln&+wc&+Le &+Lto the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Caverns&n~
@@ -13,8 +25,8 @@ S
 1352 0 0 0
 D1
 ~
-~
-0 0 135203
+gate~
+3 135210 135203
 D3
 ~
 ~
@@ -31,7 +43,7 @@ D1
 D3
 ~
 ~
-0 0 135202
+3 135210 135202
 S
 #135204
 &+LAn Intersection of Tunnels in the &+LA&+rz&+Lh&+ru&+Lr&+ra&+Ll Ca&+wver&+Lns~
@@ -82,8 +94,8 @@ S
 1352 0 0 0
 D0
 ~
-~
-0 0 135208
+lair~
+3 135225 135208
 D2
 ~
 ~
@@ -91,6 +103,21 @@ D2
 S
 #135208
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D0
@@ -104,7 +131,7 @@ D1
 D2
 ~
 ~
-0 0 135207
+3 0 135207
 D3
 ~
 ~
@@ -112,6 +139,21 @@ D3
 S
 #135209
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D0
@@ -125,6 +167,21 @@ D3
 S
 #135210
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D0
@@ -142,6 +199,21 @@ D3
 S
 #135211
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D2
@@ -155,6 +227,21 @@ D3
 S
 #135212
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D1
@@ -172,6 +259,21 @@ D3
 S
 #135213
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D1
@@ -185,6 +287,21 @@ D2
 S
 #135214
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D0
@@ -202,6 +319,21 @@ D2
 S
 #135215
 &+LA Huge &+wCa&+Lve&+wrn &+WEn&+wsh&+Lro&+wud&+Wed &+Lin a Thick &+CF&+cr&+Co&+cs&+Ct&N~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D0
@@ -215,6 +347,21 @@ D1
 S
 #135216
 &+LThe &+WCenter &+Lof the Huge &+CF&+cr&+Co&+cs&+Ct &+LEn&+wsh&+Wro&+wud&+Led &+LLair&n~
+&+L   Spread out before you is a massive lair &+Wen&+wsh&+Lro&+wud&+Wed &+Lin a thick &+Cice&+L. A
+&+Lbrutal &+bchill &+Lpierces your body as the &+Wsnow &+Land &+Cice &+Lare whiped around in
+&+La &+rf&+Rr&+re&+Rn&+rz&+Ry&+L. Sheets of &+Cice &+Lcascade down the sides of the monsterous cavern
+&+Land create several large shelves where a faint &+Wir&+Cri&+Wde&+Wsc&+Cen&+Wt &+Lshimmer can
+&+Lbe seen at times. A thick, unnature &+cfog &+Lrolls through the cavern, then
+&+Lquickly followed by an abrasive &+Wsnow &+Lstorm that nearly knocks you off
+&+Lyour feet. Around the room, giant stalgmites and stalagtites of pure
+&+Cice &+Lrise and fall with a deadly chill. Upon the huge walls, various
+&+Lsmaller tunnels seem to have been carved into the &+Cice&+L, and look like
+&+Lthey could be smaller &+wlairs &+Lfor some of the dragons native to this
+&+Ltype of extreme &+bcold&+L. Admist the brutal &+Wsnow &+Lstorm, the forms of
+&+Lthe ancient &+Wwhite &+Ldragons seem to take shape as they lounge around
+&+Lin their &+Cfrozen &+Lwasteland of a lair. On the southern side of the
+&+Lcavern, you can see the tunnel that leads back into the great
+&+Ltunnels of the dragon queen's brood.&n
 ~
 1352 0 0 0
 D0
@@ -270,8 +417,8 @@ S
 1352 0 0 0
 D0
 ~
-~
-0 0 135220
+arches~
+1 0 135220
 D1
 ~
 ~
@@ -291,13 +438,17 @@ D0
 0 0 135221
 D2
 ~
-~
-0 0 135219
+archway~
+1 0 135219
 S
 #135221
-&+LA Massive Cavern of the &+mDragon&+Mborn &+rA&+Rrche&+rs&n~
+&+LEntrance to the Cavern of the &+mD&+Mr&+ma&+Mg&+mo&+Mn&+ms&+Mp&+ma&+Mw&+mn &+LGateway&n~
 ~
 1352 0 0 0
+D0
+~
+gateway~
+3 135214 135289
 D2
 ~
 ~
@@ -391,8 +542,8 @@ S
 1352 0 0 0
 D0
 ~
-~
-0 0 135229
+vines~
+3 135226 135229
 D2
 ~
 ~
@@ -400,6 +551,20 @@ D2
 S
 #135229
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D0
@@ -408,8 +573,8 @@ D0
 0 0 135230
 D2
 ~
-~
-0 0 135228
+vines~
+3 135226 135228
 D3
 ~
 ~
@@ -417,6 +582,20 @@ D3
 S
 #135230
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D0
@@ -434,6 +613,20 @@ D3
 S
 #135231
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D2
@@ -447,6 +640,20 @@ D3
 S
 #135232
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D1
@@ -464,6 +671,20 @@ D3
 S
 #135233
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D1
@@ -477,6 +698,20 @@ D2
 S
 #135234
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D0
@@ -494,6 +729,20 @@ D2
 S
 #135235
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D0
@@ -507,6 +756,20 @@ D1
 S
 #135236
 &+LWithin a Ca&+wve&+Lrn of V&+gi&+Ll&+ge &+LM&+ya&+Lr&+ys&+Lh&+yy &+mSwamp&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D0
@@ -524,6 +787,20 @@ D3
 S
 #135237
 &+LThe Center of a M&+ya&+Lr&+ys&+Lh Filled &+mSwamp &+LL&+wa&+Li&+wr&n~
+&+L  Spread out within this massive cavern deep inside the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wver&+Lns, this swamp filled m&+ya&+Lr&+ys&+Lh seems to have been created for
+&+Lthe nefarious black dragon flight. This cavern stretches far in
+&+Lall directions, with &+gf&+Le&+gt&+Li&+gd &+Lswamp water sectioning off different
+&+Lparts of this lair for the massive dragons. Thick, &+yr&+Lo&+rt&+Lt&+ye&+Ld &+gtrees
+&+Llie about the cavern, most of them looking to have been hundreds
+&+Lor thousands of years old, before having been &+rr&+Ra&+rv&+Ra&+rg&+Re&+rd &+Land torn
+&+Ldown. Massive &+gv&+gine&+Gs &+Lweave a thick matrix of &+yr&+Lo&+yt&+Lt&+ye&+Ld and disgusting
+&+gfoliage &+Lthroughout the entire swamp. Decent sized islands seem to
+&+Llurk admist the massive fallen trees. Thick &+ymud &+Lmakes up most of
+&+Lthe shoreline on the islands, while the &+gv&+mi&+gl&+me &+Lswamp waters bubble
+&+La vicious &+ggas &+Lthat has caused the air to grow fetid. A thick &+Gha&+wze
+&+Lof &+ggreen &+Land &+yyellow &+Lvapor hangs in the air, causing you to choke
+&+Land gag with nearly every breath.&n
 ~
 1352 0 0 0
 D0
@@ -579,8 +856,8 @@ S
 1352 0 0 0
 D1
 ~
-~
-0 0 135241
+jungle~
+3 135227 135241
 D3
 ~
 ~
@@ -588,6 +865,26 @@ D3
 S
 #135241
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D0
@@ -600,11 +897,31 @@ D1
 0 0 135242
 D3
 ~
-~
-0 0 135240
+jungle~
+3 135227 135240
 S
 #135242
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D0
@@ -622,6 +939,26 @@ D3
 S
 #135243
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D0
@@ -635,6 +972,26 @@ D3
 S
 #135244
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D0
@@ -652,6 +1009,26 @@ D3
 S
 #135245
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D2
@@ -665,6 +1042,26 @@ D3
 S
 #135246
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D1
@@ -682,6 +1079,26 @@ D3
 S
 #135247
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D1
@@ -695,6 +1112,26 @@ D2
 S
 #135248
 &+LAn &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D0
@@ -712,6 +1149,26 @@ D2
 S
 #135249
 &+LThe &+gC&n&+Gente&n&+gr &+Lof an &+gOve&+yrgr&+gown &+LCavern of &+mA&+Ln&+mc&+Li&+me&+Ln&+mt &+GF&+go&+Gr&+ge&+Gs&+gt&n~
+&+L   Before you lies a giant cavern set within the massive tunnels
+&+Lthat make up the Caverns of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Mountains. Layed out upon
+&+Lthe floor of this massive cavern is an ancient &+Gf&+go&+Gr&+ge&+Gs&+gt &+Lthat looks
+&+Lto be thousands of years old. Huge trees rise up to nearly three
+&+Lhundred feet into the air. Thick foliage coveres huge sections of
+&+Lthe floor while heavy &+ggreen &+Lvines seem to have wrapped around many
+&+Ltree's and woven into the thick upper mantle of the trees. Spaced
+&+Laround the cavern is a thick &+cstream &+Lof &+bwater &+Lthat &+cpools &+Lfrom the
+&+bwate&+Brf&+ca&+Cl&+Wl &+Lthat cascades down from the western wall of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll
+&+LCa&+wve&+Lrn wall. The stream winds its way through the &+gdense &+ywoods &+Land
+&+Lpast a large field of what looks to be giant &+mmushrooms &+Lbefore it
+&+Lturns and drops into a thin passage in the eastern ca&+wve&+Lrn wall.
+&+LThick patches of ground seemed to have been recently layed flat,
+&+Las if the form of a huge create was resting nearby recently.
+&+L   Deep within the &+ma&+Ln&+mc&+Li&+me&+Ln&+mt &+Gf&+go&+Gr&+ge&+Gs&+gt&+Gs&+L, it looks as if several large
+&+Ldragons have carved out deep lairs within several of the &+cenc&+Chan&+cted
+&+Ltrees. Faint shadows seem to move about as you look towards these
+&+Llairs and see massive &+rarchways &+Lcarved within the trunks. &+cEnc&+Chan&+cted
+&+Gv&+yi&+Gn&+ye&+Gs &+Land &+gfoliage &+Lseems to have grown around the lairs and guard
+&+Lthem while the dragons rest.&n
 ~
 1352 0 0 0
 D0
@@ -754,8 +1211,8 @@ D0
 0 0 135250
 D2
 ~
-~
-0 0 135252
+sand~
+3 135228 135252
 S
 #135252
 &+LWithin a &+wV&+La&+ws&+Lt L&+wa&+Li&+wr &+Lof Rolling &+YS&+ya&+Yn&+yd &+YD&+yu&+Yn&+ye&+Ys&n~
@@ -763,8 +1220,8 @@ S
 1352 0 0 0
 D0
 ~
-~
-0 0 135251
+sand~
+3 135228 135251
 D1
 ~
 ~
@@ -964,8 +1421,8 @@ D0
 0 0 135264
 D2
 ~
-~
-0 0 135266
+magma~
+3 135229 135266
 S
 #135266
 &+LWithin the &+rH&+Rear&+rt &+Lof a Sm&+rol&+Lde&+rri&+Lng &+rV&+Ro&+Yl&+Wc&+Ya&+Rn&+ro&n~
@@ -973,8 +1430,8 @@ S
 1352 0 0 0
 D0
 ~
-~
-0 0 135265
+magma~
+3 135229 135265
 D1
 ~
 ~
@@ -1192,8 +1649,8 @@ S
 1352 0 0 0
 D1
 ~
-~
-0 0 135282
+vault~
+7 135232 135282
 D3
 ~
 ~
@@ -1205,11 +1662,89 @@ The Vault of Tiamat~
 1352 0 0 0
 D3
 ~
-~
-0 0 135281
+vault~
+7 135232 135281
 S
 #135283
 &+BTh&+be G&+Bat&+bes &+Bof &+bM&+Ba&+bl&+Bs&+bp&+Be&+br&+Ba&+bn&+Bz&+be&n~
 ~
 1352 0 0 0
+S
+#135284
+&+LA Bleak Wasteland Nearing the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
+~
+1352 0 0 0
+D2
+~
+~
+0 0 135201
+D3
+~
+~
+0 0 135287
+S
+#135285
+&+LA Bleak Wasteland Nearing the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
+~
+1352 0 0 0
+D0
+~
+~
+0 0 135201
+D3
+~
+~
+0 0 135288
+S
+#135286
+&+LBefore the Base of the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
+~
+1352 0 0 0
+D0
+~
+~
+0 0 135287
+D1
+~
+~
+0 0 135201
+D2
+~
+~
+0 0 135288
+S
+#135287
+&+LA Bleak Wasteland Nearing the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
+~
+1352 0 0 0
+D1
+~
+~
+0 0 135284
+D2
+~
+~
+0 0 135286
+S
+#135288
+&+LA Bleak Wasteland Nearing the &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
+~
+1352 0 0 0
+D0
+~
+~
+0 0 135286
+D1
+~
+~
+0 0 135285
+S
+#135289
+&+LThe Massive Cavern of the &+mD&+Mr&+ma&+Mg&+mo&+Mn&+ms&+Mp&+ma&+Mw&+mn &+LGateway&n~
+~
+1352 0 0 0
+D2
+~
+gateway~
+3 135214 135221
 S

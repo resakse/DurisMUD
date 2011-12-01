@@ -7,35 +7,35 @@ An unnamed object lies here, looking lonely and forelorn.~
 0 0 0 0 0 0 0 0
 0 0 100
 #135202
-object unnamed~
+green essence dragon flight~
 &+Lthe &+gessence &+Lof the &+Gg&+gree&+Gn &+Ldragon flight&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+gA swirling ball of energy lies here.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 35 3 0 15 0 42008577 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135203
-object unnamed~
+essence blue dragon flight~
 &+Lthe &+bessence &+Lof the &+Bb&+blu&+Be &+Ldragon flight&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+bA swirling ball of blue energy lies here.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 35 3 0 15 0 33619969 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135204
-object unnamed~
+essence black dragon flight~
 &+Lthe essence of the black dragon flight&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LA ball of black swirling energy lies here.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 35 3 0 15 0 42008577 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135205
-object unnamed~
+essence white dragon flight~
 &+Lthe &+wessence &+Lof the &+Ww&+whit&+We &+Ldragon flight&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+WA white ball of swirling  energy lies here.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 35 3 0 15 0 33619969 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135206
@@ -63,89 +63,105 @@ object unnamed~
 0 0 0 0 0 0 0 0
 0 0 100
 #135209
-object unnamed~
+blackened bloodstone key~
 &+La blackened &+rbl&+Roo&+rdst&+Ro&+rne &+wk&+Le&+wy&n~
 &+LA blackened &+rbl&+Roo&+rdst&+Ro&+rne &+Lkey in the shape of a &+mdragons &+rtalon &+Llies here, discarded.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
+18 11 3 0 7 0 1 16385 0 0 0
+0 100 0 0 0 0 0 0
 0 0 100
 #135210
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
+key fused bone shards~
+&+La key of &+Gf&+gused &+wb&+Wo&+wn&+We &+Lshards&n~
+&+LA key of fused &+wb&+Wo&+wn&+We&+ws &+Llies here, &+Yglowing &+Lsoftly with a &+ggreen &+Lfire.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
+18 15 3 0 7 0 41951241 16385 0 0 0
+0 100 0 0 0 0 0 0
 0 0 100
 #135211
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
+shard bone~
+&+La shard of &+wb&+Wo&+wn&+We&n~
+&+LA shard of &+wb&+Wo&+wn&+We &+Llies here, discarded.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 10 3 0 14 0 8392705 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135212
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
+wickedly barbed two handed great sword greatsword~
+&+La wickedly b&+ra&+Lr&+rb&+Le&+rd &+Ltwo-handed greatsword&n~
+&+LA massive two handed greatsword lies here.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+5 16 3 0 13 0 1 8193 0 0 0
+13 3 10 0 0 0 0 0
+22 41929 100
+A
+18 4
+A
+19 4
 #135213
 object unnamed~
-an unnamed object~
+&+La thick &+rred &+Lpotion labeled '&+RFi&+Yre&+W's Emb&+Yra&+Rce&+L'&n~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135214
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
+talisman chromatic allowance~
+&+Lthe &+mtalisman &+Lof &+Wc&+Lh&+Gr&+Ro&+Bm&+Wa&+Gt&+Li&+Wc &+Ra&+rllowanc&+Re&n~
+&+LA discarded &+mtalisman &+Llies here, composed of five dragon scales.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
+18 19 3 0 15 0 8454145 16385 0 0 0
+0 100 0 0 0 0 0 0
 0 0 100
 #135215
 mighty scepter valhalla~
 &+ythe mighty scepter of v&+Ya&+yl&+Yh&+ya&+Yl&+yl&+Ya&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+yA &+Ygold &+ystudded scepter lies here, emitting a soft &+Lhum&+y.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+5 19 3 0 15 0 33554433 8193 0 62951396 270336
+6 6 4 0 0 0 0 0
+0 712324 100
+A
+18 5
+A
+19 5
 #135216
 hooded cloak isha wanderer black~
 &+Lthe black hooded cloak of &+cI&+Ls&+ch&+La the Wanderer~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LA dark hooded cloak lies here, absorbing light like the darkest of night.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
+9 15 3 0 7 0 69632 1025 0 267517926 0
+10 0 0 0 0 0 0 0
+0 0 100 268959744 0 0 0
+A
+17 -50
+A
+55 10
 #135217
 shadowforged shadow forged pendant dragon queen~
 &+La sh&+wa&+Ldow&+Bfor&+bged &+Lpe&+wnd&+Lan&+wt &+Lof the &+gd&+Gr&+ga&+Gg&+Go&+gn &+Mq&+mu&+Me&+me&+Mn&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LA pendant shaped like &+Wfive &+Lscreaming dragons lies here, &+cgli&+Cmmer&+cing&+L.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100 0 32768 0 0
+9 23 3 0 15 0 1 5 0 95514747 0
+8 0 0 0 0 0 0 0
+0 300123 100 0 32768 0 0
+A
+24 5
+A
+35 5
 #135218
 crown legendary sphinx prefects~
 &+La &+ycrown &+Lof the legendary &+Ys&+yp&+Yh&+yi&+Yn&+yx &+Gp&+gr&+Ge&+gf&+Ge&+gc&+Gt&+gs&n~
-&+LA power infused crown lies here, the image of twin sphinx's making up its amazing form.&n~
+&+LA crown of encircled &+ysphinx &+Llies here, discarded.&n~
 ~
-9 19 3 0 15 0 1 17 66 4157639 0
-14 0 0 0 0 0 0 0
-0 2112412 100 268435472 0 16777216 0
+9 19 3 0 7 0 1 17 0 234225247 0
+15 0 0 0 0 0 0 0
+0 1241010 100 134217744 0 0 0
 A
-33 5
+34 6
 A
-34 5
+35 6
 #135219
 shield battle dragon~
 &+La &+msh&+Mie&+mld &+Lof the &+mba&+Mtt&+mle &+Ldragon&n~
@@ -163,7 +179,7 @@ An unnamed object lies here, looking lonely and forelorn.~
 0 0 0 0 0 0 0 0
 0 0 100
 #135221
-object unnamed~
+boots volo~
 the mystic boots of Volo the Traveler~
 An unnamed object lies here, looking lonely and forelorn.~
 ~
@@ -199,14 +215,113 @@ A
 A
 29 6
 #135225
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
+anciant ward stone icy runes~
+&+Lan &+gancient &+yward &+Lstone with &+Cicy &+Lrunes&n~
+&+LAn ancient ward stone lies here, eminating a &+Cfr&+Wee&+Cz&+Wi&+Cng &+Laura.&n~
 ~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
+18 11 3 0 14 0 8388608 16385 0 0 0
+0 100 0 0 0 0 0 0
 0 0 100
 #135226
+ancient ward stone acid etched runes~
+&+Lan &+gancient &+yward &+Lstone with &+Ga&+gc&+Gi&+gd &+Me&+mtche&+Md &+Lrunes&n~
+&+LAn ancient rune stone lies here, dripping a never-ending supply of &+Ga&+gc&+Gi&+gd&+L.&n~
+~
+18 11 3 0 14 0 8388608 16385 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
+#135227
+ancient ward stone living vines~
+&+Lan &+gancient &+yward &+Lstone covered in &+Rl&+rivin&+Rg &+Gv&+gine&+Gs&n~
+&+LAn ancient ward stone lies here, encased in twisting &+Gv&+gine&+Gs&+L.&n~
+~
+18 11 3 0 14 0 8388608 16385 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
+#135228
+ancient ward stone sand blasted runes~
+&+Lan &+gancient &+yward &+Lstone covered in &+Ys&+ya&+Yn&+yd &+Lblasted runes&n~
+&+LAn ancient ward stone lies here, covered in &+Ysandy &+Lrunes.&n~
+~
+18 11 3 0 14 0 8388608 16385 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
+#135229
+ancient ward stone fiery runes~
+&+Lan &+gancient &+yward &+Lstone covered in &+rf&+Ri&+re&+Rr&+ry &+Lrunes&n~
+&+LAn ancient ward stone lies here, blazing with &+rf&+Ri&+re&+Rr&+ry &+Lrunes.&n~
+~
+18 11 3 0 14 0 8388608 16385 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
+#135230
+dragonspawn arches gateway~
+&+Lthe &+mD&+Mr&+ma&+Mg&+mo&+Mn&+ms&+Mp&+ma&+Mw&+mn &+rA&+Rr&+rc&+Rh&+re&+Rs&n~
+&+LThe towering &+mD&+Mr&+ma&+Mg&+mo&+Mn&+ms&+Mp&+ma&+Mw&+mn &+rA&+Rr&+rc&+Rh&+re&+Rs &+Lstand here, granting access to the l&+wa&+Li&+wr &+Lof the Dragon &+GQ&+guee&+Gn&+L.&n~
+~
+25 35 3 0 15 0 33554433 0 0 0 0
+135275 7 -1 0 0 0 0 0
+0 0 100
+#135231
+fiery portal swirling colors~
+&+La &+rf&+Ri&+re&+Rr&+ry &+Lportal of swirling &+Cc&+color&+Cs&n~
+&+LA swirling portal stands here, showing glimpses of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Ca&+wver&+Lns &+Linside.&n~
+~
+25 15 3 0 7 0 1 0 0 0 0
+135202 7 -1 0 0 0 0 0
+0 0 100
+#135232
+key ruby encrusted~
+&+La &+rruby &+Lencrusted &+ykey&n~
+A large key encrusted with rubies lies here.&n~
+~
+18 31 3 0 15 0 8392705 16385 0 0 0
+0 100 0 0 0 0 0 0
+0 0 100
+#135233
+proc ephelemon~
+&+Lhidden ephelemon proc 1&n~
+&+LA proc object that you cant see sits here.&n~
+~
+5 15 3 0 7 0 8454146 8192 0 0 0
+7 6 4 0 0 0 0 0
+0 0 100 16 0 0 0
+A
+58 4
+A
+18 15
+#135234
+green dragon consort proc~
+&+Lhidden &+Gxasormalathin &+Lproc&n~
+green dragon consort proc~
+~
+5 15 3 0 7 0 2 8192 0 0 0
+7 6 4 0 0 0 0 0
+0 0 100
+A
+58 4
+A
+18 15
+#135235
+tenanizeothian proc hidden~
+&+Lhidden &+BTenanizeothian &+Lproc&n~
+the hidden blue dragon consort proc~
+~
+5 15 3 0 7 0 2 8192 0 0 0
+7 6 4 0 0 62 60 10
+0 0 100
+E
+_room_msg~
+&+LTaking a deep breath in, the massive wings of &+bTe&+Bnanizeothi&+ban &+Lstretch
+&+Lwide as a crackling &+Ylightning &+wa&+Yr&+Wc&+Ys &+Lacross the form of the massive
+&+bb&+Bl&+bu&+Be &+Ldragon consort. &+YLighting &+Lseems to &+Gs&+ge&+Ge&+gp &+Lfrom every scale of the
+&+Lhis body as a torrent of energy bursts forth from the giant beast!&n
+~
+A
+58 4
+A
+18 15
+#135236
 object unnamed~
 an unnamed object~
 An unnamed object lies here, looking lonely and forelorn.~
@@ -214,7 +329,31 @@ An unnamed object lies here, looking lonely and forelorn.~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
-#135227
+#135237
+object unnamed~
+an unnamed object~
+An unnamed object lies here, looking lonely and forelorn.~
+~
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#135238
+object unnamed~
+an unnamed object~
+An unnamed object lies here, looking lonely and forelorn.~
+~
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#135239
+object unnamed~
+an unnamed object~
+An unnamed object lies here, looking lonely and forelorn.~
+~
+13 15 3 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#135240
 object unnamed~
 an unnamed object~
 An unnamed object lies here, looking lonely and forelorn.~

@@ -5,7 +5,7 @@ shimmering rift torn dreams~
 ~
 25 15 3 0 7 0 0 0 0 0 0
 135157 7 -1 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135102
 altar harnessed negative energy~
 &+Lan &+Waltar &+Lof harnessed n&+we&+Lg&+wa&+Lt&+wi&+Lv&+we &+Yenergy&n~
@@ -13,7 +13,7 @@ altar harnessed negative energy~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135103
 altar positive energy~
 &+Lan &+Waltar &+Lof harnessed &+Yp&+Wo&+Ys&+Wi&+Yt&+Wi&+Yv&+We &+cenergy&n~
@@ -21,7 +21,7 @@ altar positive energy~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135104
 altar astral forged metal~
 &+Lan &+Waltar &+Lof &+ra&+Rs&+rt&+Rr&+ra&+Rl &+Lforged &+cmetal&n~
@@ -29,7 +29,7 @@ altar astral forged metal~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135105
 altar imbued bloodstone~
 &+Lan &+Waltar &+Lof &+ci&+Lm&+cb&+Lu&+ce&+Ld &+rblood&+Lstone&n~
@@ -37,7 +37,7 @@ altar imbued bloodstone~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135106
 divine essence blood~
 &+Lthe &+Ydivine &+Lessence of &+rbl&+Roo&+rd&n~
@@ -45,7 +45,7 @@ divine essence blood~
 ~
 13 40 3 0 7 0 8388617 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135107
 divine essence fire~
 &+Lthe &+Ydivine &+Lessence of &+rf&+Ri&+rr&+Re&n~
@@ -53,7 +53,7 @@ divine essence fire~
 ~
 13 40 3 0 7 0 8388617 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135108
 divine essence mist~
 &+Lthe &+Ydivine &+Lessence of &+cm&+Ci&+cs&+Ct&n~
@@ -61,7 +61,7 @@ divine essence mist~
 ~
 13 40 3 0 7 0 8388617 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135109
 divine essence enchantment~
 &+Lthe &+Ydivine &+Lessence of en&+mch&+Lan&+mtm&+Len&+mt&n~
@@ -69,7 +69,7 @@ divine essence enchantment~
 ~
 13 40 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135110
 key divine passage~
 &+WTiliwibble's &+ws&+Wk&+we&+Wl&+we&+Wt&+wo&+Wn &+Lkey of &+cunlocking&n~
@@ -77,7 +77,7 @@ key divine passage~
 ~
 18 15 3 0 7 0 0 1 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135111
 forged steel key~
 &+La key of forged &+bshadow&+csteel&n~
@@ -85,7 +85,7 @@ forged steel key~
 ~
 18 15 3 0 7 0 8388608 0 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135112
 sword dancing fire~
 &+Lthe sword of dancing &+rf&+Ri&+Yr&+We&n~
@@ -93,7 +93,7 @@ sword dancing fire~
 ~
 5 15 3 0 7 0 0 8193 2048 0 0
 5 5 5 0 0 390521 51 1
-0 0 100
+0 0 100 100
 #135113
 frost encrusted hammer shadow steel shadowsteel~
 &+La &+Cf&+cr&+Co&+cs&+Ct&+L-&+we&+Wn&+wc&+Wr&+wu&+Ws&+wt&+We&+wd &+Lhammer of sh&+wa&+Ld&+wo&+Lw&+bsteel&n~
@@ -101,7 +101,7 @@ frost encrusted hammer shadow steel shadowsteel~
 ~
 5 15 3 0 7 0 1 8193 2048 0 0
 4 4 4 0 0 393525 56 1
-0 0 100
+0 0 100 100
 #135114
 hidden enchantment priest proc~
 &+Lhidden blood priest proc 1&n~
@@ -109,7 +109,7 @@ An unnamed object lies here, looking lonely and forelorn.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135115
 hidden enchantment priest proc~
 hidden enchantment priest proc 2~
@@ -117,7 +117,7 @@ An unnamed object lies here, looking lonely and forelorn.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135116
 priest proc weapon~
 hidden enchantment priest proc 1~
@@ -125,7 +125,7 @@ priest proc weapon sits here, not being seen by players.~
 ~
 5 15 3 0 7 0 2 8192 0 0 0
 4 4 4 0 0 1573425351 50 10
-0 0 100
+0 0 100 100
 E
 _room_msg~
 &N&+LCalling upon the &+bp&+Bo&+bw&+Be&+br&+Bs &+Lof &+cenc&+Chant&+cment&+L, $n &+Lbrings forth the power of the elements at $N!&n
@@ -143,7 +143,7 @@ An unnamed object lies here, looking lonely and forelorn.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135118
 wickedly barbed shadowsteel greatsword~
 &+La w&+ri&+Lc&+rk&+Le&+rd&+Ll&+ry &+Lbarbed &+bshadow&+csteel&+L greatsword&n~
@@ -151,7 +151,7 @@ wickedly barbed shadowsteel greatsword~
 ~
 5 15 3 0 7 0 1 8193 2048 0 0
 13 4 10 0 0 235 51 10
-0 0 100
+0 0 100 100
 E
 _victim_msg~
 &N$n &+Lfixes you with an intent gaze before lurching forward and spewing &N&-Rmolten &N&+bshadow&+csteel &+Lat you!&n
@@ -171,7 +171,7 @@ jagged hilt studded gems~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135120
 shattered fragment silvery blade~
 &+La &+yshattered &+rfragment &+Lof a &+cs&+Ci&+cl&+Cv&+ce&+Cr&+cy &+Lblade&n~
@@ -179,7 +179,7 @@ shattered fragment silvery blade~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135121
 hidden maelshem proc~
 hidden maelshem proc~
@@ -187,7 +187,7 @@ maelshem's proc lies here. dont even think about taking it.~
 ~
 5 15 3 0 7 0 2 8192 0 0 0
 13 5 8 0 0 535 50 15
-0 0 100
+0 0 100 100
 E
 _victim_msg~
 &N$n &+Llets out an &+Yinsane &+Wcackle &+Las he calls upon the power of &+cd&+Lr&+ce&+La&+cm&+Ls
@@ -207,7 +207,7 @@ hidden projection proc~
 ~
 5 15 3 0 7 0 2 8192 0 0 0
 5 5 5 0 0 264283 59 10
-0 0 100
+0 0 100 100
 E
 _room_msg~
 &N&+LThe shadow of the fallen god &+bMaelshem &+Lopens its arms wide as a surge of &+Yp&+Wr&+Gi&+Rs&+Bm&+Ma&+Lt&+Wi&+Yc &+Lenergy floods the nexus...
@@ -228,7 +228,7 @@ key blood~
 ~
 18 40 3 0 7 0 0 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135124
 key mist~
 &+La key of solidified &+cm&+Ci&+cs&+Ct&+cs&n~
@@ -236,7 +236,7 @@ key mist~
 ~
 18 1 3 0 7 0 0 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135125
 fire imbued key~
 &+La &+rfire &+Limbued key&n~
@@ -244,7 +244,7 @@ fire imbued key~
 ~
 18 15 3 0 7 0 0 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135126
 key binding enchantment~
 &+La key of binding en&+mch&+Lan&+mtm&+Len&+mt&n~
@@ -252,7 +252,7 @@ key binding enchantment~
 ~
 18 15 3 0 7 0 0 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135127
 torch~
 &+La large torch&n~
@@ -260,7 +260,7 @@ torch~
 ~
 13 15 3 0 7 0 1 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135128
 ebonwood desk~
 &+Lan ebonwood desk&n~
@@ -268,7 +268,7 @@ ebonwood desk~
 ~
 15 15 3 0 7 0 0 0 0 0 0
 10000 5 0 100 0 0 0 0
-0 0 100
+0 0 100 100
 #135129
 thick tome wizards guide dating~
 &+La thick &+ytome &+Lentitled '&+LThe &+MWizards &+LGuide to &+GDating&+L'&n~
@@ -276,7 +276,7 @@ thick tome wizards guide dating~
 ~
 33 29 3 0 14 0 0 8404993 0 0 0
 0 0 225 0 0 0 0 0
-0 33264 100
+0 33264 100 100
 E
 thick tome wizards guide dating~
                          8888  8888888
@@ -329,12 +329,12 @@ bloodstone key~
 ~
 18 11 3 0 7 0 4097 16385 0 0 0
 0 100 0 0 0 0 0 0
-0 0 100
+0 0 100 100
 #135131
 tear rift fabric dreams~
 &+La &+Bt&+bea&+Br &+Lin the &+rfa&+Rbr&+ric &+Lof d&+cr&+Le&+ca&+Lm&+cs&n~
 &+LA &+Bt&+bea&+Br &+Lin the &+rfa&+Rbr&+ric &+Lof the d&+Cr&+Le&+Ca&+Lm realm lies here, ri&+wppi&+Lng itself apart.&n~
 ~
 25 15 3 0 7 0 1 0 0 0 0
-0 7 -1 0 0 0 0 0
-0 0 100
+135171 7 -1 0 0 0 0 0
+0 0 100 100

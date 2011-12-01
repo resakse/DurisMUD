@@ -1,0 +1,97 @@
+#135219
+MA
+tiamat gate entrance pass hi~
+&+LEyeing you with a set of wicked yellow pupils, the shadowy figure
+&+Lmeasures you from head to toe.
+
+ &+W"This gate guards entrance to the Lair of Tiamat. Queen of all evil
+ &+Wdragons and Dark Lady of the Azhural Caverns. If you seek to speak
+ &+Wwith the Queen, you must bring me eight shards of the demons that
+ &+Wstand guard near the pillar of skulls. I will fashion a key that
+ &+Wwill grant you access to the Lair. However, you must be aware of
+ &+Wthe aggressive nature of the dragons within. If you can make it
+ &+Wto the Audiance Hall, the Queen may not just eat you right away."
+
+&+LHaving given its warning, the shadowy dragonkin goes back to standing
+&+Lguard before the gate of the A&+rz&+Lh&+ru&+Lr&+ra&+Ll Caverns.
+~
+QA
+~
+R I 135210
+G I 135211
+G I 135211
+G I 135211
+G I 135211
+G I 135211
+G I 135211
+G I 135211
+G I 135211
+D
+
+&+LTaking the &+wb&+Wo&+wn&+We &+Lfragments in hand, a smirk crosses the &+gs&+Gc&+ga&+Gl&+ge&+Gd &+Lface of
+&+Lthe dragonkin.&n
+
+&+W"I seeeeeeee. So you seek entrance to the lair of &+LTiamat...."&n
+
+&+LUtteriny a word of power, the bones float up into the air and start
+&+Lto spin in a circle above its hands. A torrent of &+Ggreen&+L, &+Bblue&+L, black
+&+rred &+Land &+Wwhite &+Lenergy seem to flow from its hands as the &+wb&+Wo&+wn&+We&+ws &+Lfuse
+&+Ltogether into the shape of a large key.&n
+
+&+W"You have come by force, and if you seek to confront the &+LDragon &+MQ&+mueen&+W,
+&+W you will have to fight your way through the lairs of her five dragon
+&+W consorts. The fights will not be easy, but the rewards that await
+&+W in the vault of Avernus are known throughout the realms of &+LDuris
+&+W as objects of incredible power. The &+LDark &+MQ&+mueen &+Wwill know of your
+&+W breach into her lair as the consorts fall. Prepair for the fight
+&+W of your lives......"
+
+&+LHanding the key off, the shadowy figure's eyes close as he seems to
+&+Lmelt into the stone of the massive cavern entrance.
+~
+S
+#135220
+MA
+tiamat archway gateway passage~
+sive form of the stone dragon seems to grow larger in front of
+&+Lyour eyes. A deep rumbling can be felt and heard as the dragon speaks
+&+Lin an voice that carries the depths of time with it.
+
+&+L "&+WTo gain passage to the Dragonspawn Archway, you must bring me the
+  &+Wessences of each dragon flight. Without these powers, I will not
+  &+Wallow weak mortals such as yourself into the presence of the
+  &+WDragon Queen. Prove your worthiness, and your audiance may be
+  &+Wgranted.&+L"
+
+&+LAs the stone dragon finishes his speach, the massive obsidian and
+&+Lbasalt wings stretch out and continue to block passage into the
+&+Lgateway.&n
+~
+QA
+&+LTaking the essences in hand, the thick head of the stone dragon shakes sadly.
+
+ &+L"&+WSilly mortals. You know not what you do....&+L"
+
+&+LCompressing the essences into its massive talons, a soft *pop* rends the air
+&+Las the magic is shoved into a multi colored locket.
+~
+R I 135214
+G I 135201
+G I 135202
+G I 135203
+G I 135204
+G I 135205
+D
+&+LThe stone dragon looks at you as you hand over each of the essences
+&+Lused to empower the consorts of Tiamat. Lowering his wings, the
+&+Ldragonspawn arches can be seen in the distance behind. Speaking in
+&+Lthat deep, rumbling voice, the dragon issues a final warning...
+
+ &+L"&+WInside the depths of Avernus you will meet with the dragon queen.
+&+W  Beware the powers of her temper. She does not take kindly to those
+&+W  who have breached her lair. Each of her heads have the ability to
+&+W  cast wicked magic... be ready for the elemental onslaught that she
+&+W  will bring forth. Good luck adventurers. Maybe I will see you again
+&+W  in the next life time.... if she doesn't consume your soul entirly...&+L"&n
+~
+S
