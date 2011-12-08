@@ -164,7 +164,7 @@ struct randomeq_material material_data[MAXMATERIAL + 1] = {
   {43,         "&+ghemp&n",         10,    1,   1},           //hemp
   {5,       "&+ysoftwood&n",        14,    2,   2},           //soft wood
   {42,      "&+Gr&+gee&+Gd&n",      13,    2,   1},           //reeds
-  {30,        "&+Gleafy&n",         12,    2,   1},           //leaves 
+  {30,        "&+Gleaf&n",          12,    2,   1},           //leaves 
   {46,       "&+rchitin&n",         16,    3,   1},           //chitin
   {47,  "&+Gs&+gc&+ya&+gl&+Ge&n",   19,    3,   2},           //reptilescale
   {41,     "&+yba&+wmb&+yoo&n",     15,    3,   2},           //bamboo
@@ -635,7 +635,6 @@ P_obj create_stones(P_char ch)
   return obj;
 
 }
-
 
 int check_random_drop(P_char ch, P_char mob, int piece)
 {
