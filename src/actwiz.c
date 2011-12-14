@@ -2779,9 +2779,9 @@ void do_stat(P_char ch, char *argument, int cmd)
       else
         strcpy(buf2, "");
       sprintf(buf,
-              "&+YHunger: &N%2d  &+YThirst: &N%2d  &+YDrunk: &N%2d &+Y%s%s\n",
+              "&+YHunger: &N%2d  &+YThirst: &N%2d  &+YDrunk: &N%2d /* &+YJustice Level: &N%d */&+Y%s%s\n",
               k->specials.conditions[FULL], k->specials.conditions[THIRST],
-              k->specials.conditions[DRUNK],// k->only.pc->justice_level, &+YJustice Level: &N%d  wipe2011
+              k->specials.conditions[DRUNK],// k->only.pc->justice_level,  wipe2011
               (k->desc) ? "Connected: " : "Linkdead", buf2);
       strcat(o_buf, buf);
     }
@@ -4751,9 +4751,9 @@ void roll_basic_abilities(P_char ch, int flag)
   ch->base_stats.Int = ch->curr_stats.Int = rolls[5];
   ch->base_stats.Wis = ch->curr_stats.Wis = rolls[6];
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
-  ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 100);
-  ch->base_stats.Luck = ch->curr_stats.Luck = number(50, 100);
-#elseif 0
+  ch->base_stats.Karma = ch->curr_stats.Karma = number(1, 100);
+  ch->base_stats.Luck = ch->curr_stats.Luck = number(1, 100);
+#endif
   if(IS_NPC(ch))
   {
     if(GET_LEVEL(ch) > 40)
@@ -4819,8 +4819,7 @@ void roll_basic_abilities(P_char ch, int flag)
     ch->base_stats.Luck = ch->curr_stats.Luck = number(30, 70);
   }
  
-}// WIPE2011
-#endif 
+/*}
 
 int rolls[8];
   int total, i;
@@ -4840,6 +4839,7 @@ int rolls[8];
   ch->base_stats.Int = ch->curr_stats.Int = rolls[5];
   ch->base_stats.Wis = ch->curr_stats.Wis = rolls[6];
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
+*/
   ch->base_stats.Karma = ch->curr_stats.Karma = number(50, 110); //  These two rolls are invisible
   ch->base_stats.Luck = ch->curr_stats.Luck = number(50, 110);   //  to players during creation on purpose - Jexni
 
