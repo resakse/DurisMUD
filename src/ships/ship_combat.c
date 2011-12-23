@@ -193,7 +193,7 @@ int calc_salvage(P_ship target)
     }
     else
     {
-      salvage = MAX((int)(salvage/get_property("ship.sinking.rewardDivider", 7.)), 0);
+      salvage = MAX((int)(salvage/get_property("ship.sinking.cash.rewardDivisor", 7.)), 0);
     }
     return salvage;
 }
@@ -205,7 +205,7 @@ int calc_frag_gain(P_ship ship)
 
 int calc_bounty(P_ship target)
 {
-    return (int) ( target->frags * 10000 / get_property("ship.sinking.rewardDivider", 7.0) );
+    return (int) ( target->frags * 10000 / get_property("ship.sinking.cash.rewardDivisor", 7.0) );
 }
 
 bool ship_gain_frags(P_ship ship, P_ship target, int frags)
