@@ -1050,6 +1050,7 @@ void assign_mobiles(void)
   mob_index[real_mobile0(19880)].func.mob = astral_succubus;
   mob_index[real_mobile0(19600)].func.mob = block_dir;
 
+  obj_index[real_object0(OBJECT_FIRESWORN)].func.obj = proc_load_firesworn;
   /* Shabo shouts */
 
   mob_index[real_mobile0(32828)].func.mob = strychnesch_shout;

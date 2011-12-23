@@ -1,4 +1,7 @@
+#include "db.h"
 #include "structs.h"
+#include "defines.h"
+#include "graph.h"
 #include "utils.h"
 #include "interp.h"
 #include "comm.h"
@@ -282,4 +285,67 @@ P_ship leviathan_find_ship( P_char leviathan, int room, int num_rooms )
       }
    }
    return NULL;
+}
+
+// This is a proc for loading Firesworn crew in Tiamat.
+int proc_load_firesworn( P_obj obj, P_char ch, int cmd, char *argument )
+{
+  P_char leader, mob;
+
+  if( !ch || !obj )
+    return FALSE;
+
+  // Movement proc only.
+  if(  cmd != CMD_NORTH && cmd != CMD_SOUTH
+    && cmd != CMD_EAST && cmd != CMD_WEST
+    && cmd != CMD_UP && cmd != CMD_DOWN
+    && cmd != CMD_NORTHWEST && cmd != CMD_NW
+    && cmd != CMD_NORTHEAST && cmd != CMD_NE
+    && cmd != CMD_SOUTHEAST && cmd != CMD_SE
+    && cmd != CMD_SOUTHWEST && cmd != CMD_SW )
+    return FALSE;
+
+  // Percent to load.
+  if( number(1,100) > 30 )
+    return FALSE;
+
+  // Maximum number of procs is 2.
+  if( obj->value[0] >= 2 )
+    return FALSE;
+  obj->value[0]++;
+
+  // Load the leader.
+  leader = read_mobile(LEADER_FIRESWORN, VIRTUAL);  
+  if( !leader )
+  {
+    wizlog( 56, "proc_load_firesworn : Failed to load leader mob." );
+    return FALSE;
+  }
+  char_to_room(leader, ROOM_FIRESWORN, 0);
+  // Start hating!
+  remember( leader, ch);
+
+  // Load the followers
+  for( int i = 0;i < 4;i++)
+  {
+    mob = read_mobile(FOLLOWER_FIRESWORN, VIRTUAL);  
+    if( !mob )
+    {
+      wizlog( 56, "proc_load_firesworn : Failed to load follower mob." );
+    }
+    else
+    {
+      char_to_room(mob, ROOM_FIRESWORN, 0);
+      add_follower(mob, leader);
+    }
+  }
+
+  // Send out a shout...
+  radiate_message_from_room(ROOM_FIRESWORN, "&+cYou hear a loud roar in the distance.&n\r\n", 15,
+    (RMFR_FLAGS) (RMFR_RADIATE_ALL_DIRS | RMFR_PASS_WALL | RMFR_PASS_DOOR | RMFR_CROSS_ZONE_BARRIER), 100);
+  // Send shout to the load room too.
+  act("&+cYou hear a loud roar in the distance.&n",
+    FALSE, leader, NULL, 0, TO_ROOM);
+  // We always return false 'cause we don't want to prevent movement.
+  return FALSE;
 }

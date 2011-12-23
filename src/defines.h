@@ -1286,4 +1286,10 @@ struct material_data {
 
 #define RANDOM_ZONES 1 // Set to 1 to enable
 
+// Tiamat stuff - OBJECT_FIRESWORN procs load leader + 4 followers 
+#define LEADER_FIRESWORN   135217
+#define FOLLOWER_FIRESWORN 135216
+#define OBJECT_FIRESWORN   135238
+#define ROOM_FIRESWORN      78596
+
 #endif /* _DURIS_DEFINES_H_ */

@@ -9709,7 +9709,8 @@ void mob_hunt_event(P_char ch, P_char victim, P_obj obj, void *d)
       if(vict)
       {
         if(world[cur_room].zone == world[vict->in_room].zone &&
-           npc_has_spell_slot(ch, SPELL_DIMENSION_DOOR))
+           npc_has_spell_slot(ch, SPELL_DIMENSION_DOOR)
+           && ch->followers == NULL)
         {
           MobCastSpell(ch, vict, 0, SPELL_DIMENSION_DOOR, GET_LEVEL(ch));
           add_event(mob_hunt_event, PULSE_MOB_HUNT, ch, NULL, NULL, 0,
