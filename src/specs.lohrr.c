@@ -292,7 +292,7 @@ int proc_load_firesworn( P_obj obj, P_char ch, int cmd, char *argument )
 {
   P_char leader, mob;
 
-  if( !ch || !obj )
+  if( !ch || !obj || IS_TRUSTED(ch) )
     return FALSE;
 
   // Movement proc only.
@@ -309,8 +309,8 @@ int proc_load_firesworn( P_obj obj, P_char ch, int cmd, char *argument )
   if( number(1,100) > 30 )
     return FALSE;
 
-  // Maximum number of procs is 2.
-  if( obj->value[0] >= 2 )
+  // Maximum number of procs is 1, so we don't load 2 groups at once.
+  if( obj->value[0] >= 1 )
     return FALSE;
   obj->value[0]++;
 
