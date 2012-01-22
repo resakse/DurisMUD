@@ -176,20 +176,23 @@ int torment(P_obj obj, P_char ch, int cmd, char *arg)
   
   vict = (P_char) arg;
   
+  if(IS_TRUSTED(vict))
+     return FALSE;
+
   if(OBJ_WORN_BY(obj, ch) &&
     vict &&
     CheckMultiProcTiming(ch))
   {
     if(!number(0, 25)) // 5%
     {
-      act("Your $q glows dark and bites into $N's neck.", FALSE,
+      act("&+LYour $q &+Lglows darkly and &+Gbites &+Linto $N&+L's neck.", FALSE,
           obj->loc.wearing, obj, vict, TO_CHAR);
-      act("$n's $q glows dark as it bites into your neck.", FALSE,
+      act("$n&+L's $q &+Lglows darkly as it bites into your neck.", FALSE,
           obj->loc.wearing, obj, vict, TO_VICT);
-      act("$n's $q glows dark and bites into $N's neck.", FALSE,
+      act("$n&+L's $q &+Lglows dark and bites into $N&+L's neck.", FALSE,
           obj->loc.wearing, obj, vict, TO_NOTVICT);
       save = vict->specials.apply_saving_throw[SAVING_SPELL];
-      vict->specials.apply_saving_throw[SAVING_SPELL] += 5;
+      vict->specials.apply_saving_throw[SAVING_SPELL] += 8;
       spell_poison(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, vict, 0);
       spell_blindness(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, vict, 0);
       vict->specials.apply_saving_throw[SAVING_SPELL] = save;
@@ -240,7 +243,7 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
     {
       curr_time = time(NULL);
 
-      if (obj->timer[0] + 60 <= curr_time)
+      if (obj->timer[0] + 600 <= curr_time)
       {
         act("You say 'protect me'", FALSE, ch, 0, 0, TO_CHAR);
         act("&+WYour $q &+Wcalls upon the power of the dragonkind.", FALSE,
@@ -268,12 +271,11 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
 
   vict = (P_char) arg;
 
-  if (!number(0, 24) && vict)
+  if (!number(0, 30) && vict)
   {
-
     if (!ch->specials.fighting)
       return FALSE;
-    //
+
     rand = number(1, 4);
     switch (rand)
     {

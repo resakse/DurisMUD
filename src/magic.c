@@ -6644,39 +6644,46 @@ void spell_improved_invisibility(int level, P_char ch, char *arg, int type,
   }
 }
 
-
-void spell_disease(int level, P_char ch, char *arg, int type, P_char victim,
-                   P_obj obj)
+void spell_disease(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct affected_type af;
-  int      temp;
+  int save;
 
-  temp = (int) (level / 10);
+  save = level / 10;
 
-  if(get_spell_from_room(&world[ch->in_room], SPELL_SUMMON_INSECTS)) {
-      temp += 3;
+  if(get_spell_from_room(&world[ch->in_room], SPELL_SUMMON_INSECTS))
+  {
+      save += 2;
   }
 
-  if(get_spell_from_room(&world[ch->in_room], SPELL_CONSECRATE_LAND)) {
-      temp -= 3;
+  if(get_spell_from_room(&world[ch->in_room], SPELL_CONSECRATE_LAND)) 
+  {
+      save -= 4;
   }
 
-  if(NewSaves(victim, SAVING_PARA, temp))
+  if(NewSaves(victim, SAVING_PARA, save))
+  {
+    send_to_char("Your spell had no effect.\n", ch);
     return;
+  }
 
   if(IS_UNDEADRACE(victim))
+  {
+    send_to_char("You can't disease the undead, wiseguy.\n", ch);
+    return;
+  }
+
+  if(resists_spell(ch, victim))
     return;
 
   if(!affected_by_spell(victim, SPELL_DISEASE))
   {
-
     bzero(&af, sizeof(af));
     send_to_char("&+yYou suddenly don't feel so well!\n", victim);
-    act("&+y$n &+ysuddenly does not look so well.", FALSE, victim, 0, 0,
-        TO_ROOM);
+    act("&+y$n &+ysuddenly does not look so well.", FALSE, victim, 0, 0, TO_ROOM);
     af.type = SPELL_DISEASE;
-    af.duration = 3 * (1 + temp);
-    af.modifier = -(5 * (1 + temp));
+    af.duration = WAIT_SEC * level * save;
+    af.modifier = -(save * 3);
     af.location = APPLY_STR;
     affect_to_char(victim, &af);
     af.location = APPLY_DEX;
@@ -6693,51 +6700,57 @@ void spell_disease(int level, P_char ch, char *arg, int type, P_char victim,
     for (af1 = victim->affected; af1; af1 = af1->next)
       if(af1->type == SPELL_DISEASE)
       {
-        af1->duration = MAX(5, level / 4);
+        af1->duration = WAIT_SEC * level * save;
       }
     send_to_char("&+yYou suddenly feel the disease in your body growing stronger!\n", victim);
     act("&+y$n &+ysuddenly looks even worse than before.", FALSE, victim, 0, 0, TO_ROOM);
   }
-
-
 }
 
-void spell_poison(int level, P_char ch, char *arg, int type, P_char victim,
-                  P_obj obj)
+void spell_poison(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   bool     was_poisoned;
 
-  if(victim)
+  if(!ch || !IS_ALIVE(ch))
   {
-    if(GET_STAT(victim) == STAT_DEAD)
-      return;
+    logit(LOG_DEBUG, "no ch or dead ch passed to spell_poison... whyyyyyyyy god whyyyyyyy");
+    return;
+  }
 
+  if(victim && IS_ALIVE(victim))
+  {
     if(IS_TRUSTED(victim))
       return;
+
+    if(IS_UNDEADRACE(victim))
+    {
+      send_to_char("You cannot poison the undead\n", ch);
+      return;
+    }
 
     if(resists_spell(ch, victim))
       return;
 
     if((level > 0) && NewSaves(victim, SAVING_SPELL, 0))
+    {
+      send_to_char("Your spell had no effect.\n", ch);
       return;
+    }
 
     was_poisoned = IS_SET(victim->specials.affected_by2, AFF2_POISONED);
 
-    if(!IS_TRUSTED(victim) && !IS_UNDEADRACE(victim))
-    {
+    if(level < 0)
+      level = number(1, 10);
 
-      level = abs(level);
-      (skills[number(FIRST_POISON, LAST_POISON)].spell_pointer) (level, ch, 0,
-                                                                 0, victim,
-                                                                 0);
+    (skills[number(FIRST_POISON, LAST_POISON)].spell_pointer) (level, ch, 0, 0, victim, 0);
 
-      act("&+G$n shivers slightly.", TRUE, victim, 0, 0, TO_ROOM);
-      if(was_poisoned)
-        send_to_char("&+GYou feel even more ill.\n", victim);
-      else
-        send_to_char("&+GYou feel very sick.\n", victim);
+    act("$n &+Gshivers slightly.", TRUE, victim, 0, 0, TO_ROOM);
 
-    }
+    if(was_poisoned)
+      send_to_char("&+GYou feel even more ill.\n", victim);
+    else
+      send_to_char("&+GYou feel very sick.\n", victim);
+
     if(IS_AFFECTED(ch, AFF_INVISIBLE) || IS_AFFECTED2(ch, AFF2_MINOR_INVIS))
       appear(ch);
 

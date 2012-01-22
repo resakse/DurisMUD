@@ -1072,52 +1072,52 @@ int shaboath_enchantment_tower(int room, P_char ch, int cmd, char *argument)
       switch (number(1, 16))
       {
       case 1:
-        spell_curse(50, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
+        spell_curse(56, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
         break;
       case 2:
-        spell_blindness(50, tch, 0, 0, tch, 0);
+        spell_blindness(56, tch, 0, 0, tch, 0);
         break;
       case 3:
-        spell_silence(50, tch, NULL, 0, tch, 0);
+        spell_silence(56, tch, NULL, 0, tch, 0);
         break;
       case 4:
-        spell_mousestrength(50, tch, 0, 0, tch, 0);
+        spell_mousestrength(56, tch, 0, 0, tch, 0);
         break;
       case 5:
-        spell_molevision(50, tch, 0, 0, tch, 0);
+        spell_molevision(56, tch, 0, 0, tch, 0);
         break;
       case 6:
-        spell_shrewtameness(50, tch, 0, 0, tch, 0);
+        spell_shrewtameness(56, tch, 0, 0, tch, 0);
         break;
       case 7:
-        spell_malison(50, tch, 0, 0, tch, 0);
+        spell_malison(56, tch, 0, 0, tch, 0);
         break;
       case 8:
-        spell_feeblemind(50, tch, NULL, 0, tch, 0);
+        spell_feeblemind(56, tch, NULL, 0, tch, 0);
         break;
       case 9:
-        spell_ray_of_enfeeblement(50, tch, NULL, 0, tch, 0);
+        spell_ray_of_enfeeblement(56, tch, NULL, 0, tch, 0);
         break;
       case 10:
-        spell_sleep(50, tch, NULL, 0, tch, 0);
+        spell_sleep(56, tch, NULL, 0, tch, 0);
         break;
       case 11:
-        spell_dispel_magic(50, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
+        spell_dispel_magic(56, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
         break;
       case 12:
-        spell_poison(50, tch, 0, 0, tch, 0);
+        spell_poison(56, tch, 0, 0, tch, 0);
         break;
       case 13:
-        spell_disease(50, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
+        spell_disease(56, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
         break;
       case 14:
-        spell_minor_paralysis(50, tch, NULL, 0, tch, 0);
+        spell_minor_paralysis(56, tch, NULL, 0, tch, 0);
         break;
       case 15:
-        spell_nether_touch(50, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
+        spell_nether_touch(56, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
         break;
       case 16:
-        spell_dispel_lifeforce(50, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
+        spell_dispel_lifeforce(56, tch, NULL, SPELL_TYPE_SPELL, tch, 0);
         break;
       }
     return TRUE;

@@ -3373,7 +3373,7 @@ int good_evil_fightingProc(P_char ch, P_obj obj, int isGood, int mana)
       act("&+GA green cloud shoots forth toward $n!&N", TRUE, opponent, 0, 0, TO_ROOM);
       save = opponent->specials.apply_saving_throw[SAVING_SPELL];
       opponent->specials.apply_saving_throw[SAVING_SPELL] += 15;
-      spell_poison(30, ch, 0, SPELL_TYPE_SPELL, opponent, 0);
+      spell_poison(60, ch, 0, SPELL_TYPE_SPELL, opponent, 0);
       opponent->specials.apply_saving_throw[SAVING_SPELL] = save;
       break;
     case 4:
@@ -13192,7 +13192,6 @@ int doom_blade_Proc(P_obj obj, P_char ch, int cmd, char *arg)
 
   int rand, i, dam = cmd / 1000, lvl = 1;
   P_char   vict, tar_ch, next;
-
 
   if(cmd == CMD_SET_PERIODIC)
   {

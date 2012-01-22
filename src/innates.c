@@ -1412,7 +1412,8 @@ void insectbite(P_char ch, P_char victim)
     "$n leaps towards $N and sinks $s jaws dripping with venom deep in $S flesh."};
   int i;
 
-  if ((GET_LEVEL(ch) + STAT_INDEX(GET_C_AGI(ch))) < number(1, GET_LEVEL(victim) + 2*STAT_INDEX(GET_C_AGI(victim)))) {
+  if((GET_LEVEL(ch) + STAT_INDEX(GET_C_AGI(ch))) < number(1, GET_LEVEL(victim) * STAT_INDEX(GET_C_AGI(victim)))) 
+  {
     send_to_char("You miss them by inches with your jaws!\n", ch);
     act("$n tries to sting $s foe with venom but misses.", FALSE, ch, 0, 0, TO_ROOM);
     return;
@@ -1422,17 +1423,13 @@ void insectbite(P_char ch, P_char victim)
       DAM_NONEDEAD)
   {
     i = 1 + GET_LEVEL(ch)/12;
-    while (i-- && !bite_poison(ch, victim, i))
-	  ;
-/*	replaced by the above statement, to prevent magical shrug working on non-magical innate */
-/*    while (i-- && !IS_AFFECTED2(victim, AFF2_POISONED))
-      spell_poison(GET_LEVEL(ch), ch, 0, 0, victim, 0);*/
+    while(i-- && !bite_poison(ch, victim, i)) {};
 
     struct affected_type af;
     memset(&af, 0, sizeof(struct affected_type));
     af.type = TAG_SKILL_TIMER;
     af.flags = AFFTYPE_SHORT;
-    af.duration = 8 * PULSE_VIOLENCE;
+    af.duration = 12 * PULSE_VIOLENCE;
     affect_to_char(ch, &af);  
   }
 }
@@ -1455,7 +1452,8 @@ void event_snakebite(P_char ch, P_char victim, P_obj obj, void *data)
   if (!is_char_in_room(victim, ch->in_room))
     return;
 
-  if ((GET_LEVEL(ch) + STAT_INDEX(GET_C_AGI(ch))) < number(1, GET_LEVEL(victim) + 2*STAT_INDEX(GET_C_AGI(victim)))) {
+  if((GET_LEVEL(ch) + STAT_INDEX(GET_C_AGI(ch))) < number(1, GET_LEVEL(victim) + STAT_INDEX(GET_C_AGI(victim)))) 
+  {
     act("$n misses $N by inches with $s fangs!", FALSE, ch, 0, victim, TO_NOTVICT);
     act("$n misses you by inches with $s fangs!", FALSE, ch, 0, victim, TO_VICT);
     return;
@@ -1465,11 +1463,7 @@ void event_snakebite(P_char ch, P_char victim, P_obj obj, void *data)
       DAM_NONEDEAD)
   {
     i = 1 + GET_LEVEL(ch)/12;
-    while (i-- && !bite_poison(ch, victim, i))
-	  ;
-/*	replaced by the above statement, to prevent magical shrug working on non-magical innate */
-/*    while (i-- && !IS_AFFECTED2(victim, AFF2_POISONED))
-      spell_poison(GET_LEVEL(ch), ch, 0, 0, victim, 0);*/
+    while (i-- && !bite_poison(ch, victim, i)) {};
   }
 }
 
@@ -1504,10 +1498,9 @@ int parasitebite(P_char ch, P_char victim)
   level = GET_LEVEL(ch);
   mod = (level >= 40) ? (level / 10) : (level / 15);
 
-  damage = dice(level, 8+mod);
+  damage = dice(level, 8 + mod);
 
-  if (!StatSave(victim, APPLY_AGI, BOUNDED(-3, (GET_LEVEL(victim) - GET_LEVEL(ch) -
-                                           STAT_INDEX(GET_C_AGI(ch))/2) / 5, 3)))
+  if(!StatSave(victim, APPLY_AGI, BOUNDED(-3, (GET_LEVEL(victim) - GET_LEVEL(ch) - (STAT_INDEX(GET_C_AGI(ch)) / 2)), 3)))
   {
 /*  if (has_innate(ch, INNATE_LATCH) && !IS_ATTACHED(ch) && !number(0, 7-mod))
     {
@@ -1534,7 +1527,6 @@ int parasitebite(P_char ch, P_char victim)
     af.flags = AFFTYPE_SHORT;
     af.duration = 8 * PULSE_VIOLENCE;
     affect_to_char(ch, &af);  
-
 }
 
 void bite(P_char ch, P_char victim)
@@ -1666,18 +1658,17 @@ void innate_gaze(P_char ch, P_char victim)
 {
   P_char   tch;
 
-  tch = get_random_char_in_room(ch->in_room, victim,
-      DISALLOW_UNGROUPED | DISALLOW_SELF);
+  tch = get_random_char_in_room(ch->in_room, victim, DISALLOW_UNGROUPED | DISALLOW_SELF);
 
   if (!tch)
     tch = victim;
 
-  act("$n directs $s &+Lcold&N gaze in your direction..", TRUE, ch, 0, tch,
+  act("$n directs $s &+Lcold&N gaze in your direction...", TRUE, ch, 0, tch,
       TO_VICT);
   act("$n's &+reyes&n glow &+Rred&N as $e gazes at $N!", TRUE, ch, 0, tch,
       TO_NOTVICT);
 
-  if (saves_spell(tch, SAVING_FEAR) || tch == victim)
+  if(NewSaves(victim, SAVING_FEAR, -2) || tch == victim)
     act("You avert your eyes!", TRUE, ch, 0, tch, TO_VICT);
   else
     attack(tch, victim);
@@ -1746,7 +1737,6 @@ void do_shift_astral(P_char ch, char *arg, int cmd)
   CharWait(ch, PULSE_VIOLENCE);
 }
 
-
 void do_shift_ethereal(P_char ch, char *arg, int cmd)
 {
   if (IS_FIGHTING(ch))
@@ -1773,8 +1763,6 @@ void do_shift_ethereal(P_char ch, char *arg, int cmd)
   cast_plane_shift(GET_LEVEL(ch), ch, "ethereal", SPELL_TYPE_SPELL, NULL, NULL);
   CharWait(ch, PULSE_VIOLENCE);
 }
-
-
 
 #define PLANE_ZONETARG_ROOMNUMB  19701  /* astral */
 
@@ -1920,7 +1908,7 @@ void do_ud_invisibility(P_char ch, char *arg, int cmd)
 
   bzero(&af, sizeof(af));
   af.type = SPELL_INVISIBLE;
-  af.duration = 45;
+  af.duration = GET_LEVEL(ch) * WAIT_MIN;
   af.bitvector = AFF_INVISIBLE;
   affect_to_char(ch, &af);
   send_to_char("You find a deep shadow and meld into it.\n", ch);
@@ -1936,7 +1924,8 @@ void do_strength(P_char ch, char *arg, int cmd)
     return;
   }
 
-  if (affected_by_spell(ch, SPELL_STRENGTH))
+  if (affected_by_spell(ch, SPELL_STRENGTH) || affected_by_spell(ch, SPELL_BEARSTRENGTH) ||
+      affected_by_spell(ch, SPELL_ELEPHANTSTRENGTH) || affected_by_spell(ch, SPELL_LIONRAGE))
   {
     send_to_char("You're already affected by strength enhancement!\n", ch);
     return;
@@ -1944,9 +1933,9 @@ void do_strength(P_char ch, char *arg, int cmd)
 
   bzero(&af, sizeof(af));
   af.type = SPELL_STRENGTH;
-  af.duration = 5;
+  af.duration = (GET_LEVEL(ch) / 10) * WAIT_MIN;
   af.location = APPLY_STR_MAX;
-  af.modifier = 7;
+  af.modifier = GET_LEVEL(ch) / 8;
   affect_to_char(ch, &af);
   send_to_char("You feel much stronger!\n", ch);
   CharWait(ch, PULSE_VIOLENCE);
