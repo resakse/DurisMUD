@@ -876,7 +876,7 @@ P_obj create_random_eq_new(P_char killer, P_char mob, int object_type,
     {
       obj = setsuffix_obj_new(obj);
       int sufcount = 0; // to ensure that we don't infinite loop if difficulty isn't set
-      while (!number(0, 5 - BOUNDED(1, zone->difficulty, 4)) && sufcount < 2)  // This check was making it harder to get a better
+      while (!number(0, 10 - BOUNDED(1, zone->difficulty, 9)) && sufcount < 2)  // This check was making it harder to get a better
       {                                                                        // item from a more difficult zone, derp? - Jexni
         obj = setsuffix_obj_new(obj);
         sufcount++; 

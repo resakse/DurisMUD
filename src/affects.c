@@ -1546,7 +1546,7 @@ char affect_total(P_char ch, int kill_ch)
 
     if( zone_difficulty > 1 )
     {
-      float damage_mod_mod = 1.0+(get_property("damage.zoneDifficulty.mod.factor", 0.200)*zone_difficulty);
+      float damage_mod_mod = 1.0 + (get_property("damage.zoneDifficulty.mod.factor", 0.200) * zone_difficulty);
       ch->specials.damage_mod = (float) (ch->specials.damage_mod * damage_mod_mod);
     }
   }
