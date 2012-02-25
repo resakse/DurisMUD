@@ -765,13 +765,14 @@ bool MobCastSpell(P_char ch, P_char victim, P_obj object, int spl, int lvl)
   bzero(&castdata, sizeof(struct spellcast_datatype));
 
   if(lvl < 60)
-    castdata.timeleft = ((number(1, 101) > (20 + 3 * GET_LEVEL(ch) / 2))
-                          ? duration : (duration >> 1));
-
+    castdata.timeleft = duration; // test to see if mobs cast super slow...
+                                  //((number(1, 101) > (20 + 3 * GET_LEVEL(ch) / 2)) ? duration : (duration >> 1));
+/*
   if(lvl >= 60)
   {
     castdata.timeleft = -1;
   }
+   wipe2011 doesn't have instacast */
 
   castdata.spell = spl;
   castdata.object = object;
