@@ -5,7 +5,7 @@ portal pool~
 ~
 25 40 10 0 15 0 67141632 0 64 0 0
 85796 7 -1 0 0 0 0 0
-0 0 100 100
+0 0 100 0
 E
 portal pool~
 &+LIt is made of a&+b dark liquid&+L.  As you peer through the portal you see a
@@ -18,7 +18,7 @@ portal pool~
 ~
 25 40 10 0 15 0 67141632 0 64 0 0
 85700 7 -1 0 0 0 0 0
-0 0 100 100
+0 0 100 0
 E
 portal pool~
 &+LIt is made of a &+bdark liquid&+L.  As you peer through the portal you see a
@@ -31,7 +31,7 @@ ale barrel huge~
 ~
 15 16 3 0 7 0 0 16385 0 0 0
 250 13 0 0 0 0 0 0
-5 6343 100 100
+5 6343 100 0
 E
 keg beer~
 &+LThe container labeled 'Killians &+rIrish Red&+L'.&n
@@ -43,7 +43,7 @@ wand life~
 ~
 4 8 3 0 7 0 1 8404993 66 0 0
 50 3 3 213 0 0 0 0
-1 102042 100 100
+1 102042 100 0
 E
 wand life~
 &+WAs you look at the wand you see a bright white light.&n
@@ -67,7 +67,7 @@ chest mystic~
 ~
 15 15 3 0 7 0 110592 1 0 0 0
 50 13 0 0 0 0 0 0
-12 4432 100 100
+12 4432 100 0
 E
 chest mystic~
 &+BThis is a strange&+M chest&+B with some engravings on the side.&n
@@ -81,7 +81,7 @@ rogue rogues murder cloak~
 ~
 9 3 9 0 13 20 0 1025 0 0 0
 13 0 0 3 0 0 0 0
-2 12341 100 100
+2 12341 100 0
 E
 cloak murder rogues~
 &+LThis cloak once belonged to &+ySlican&+L, the great r&+wog&+Lue of &+WA&+wrc&+Lium.&n
@@ -113,7 +113,7 @@ dagger amnesia~
 ~
 5 1 9 0 14 80 102400 8193 66 0 0
 2 3 3 0 0 0 0 0
-1 25000 100 100
+1 25000 100 0
 E
 dagger pale amnesia~
 &+LThis dagger has a forgotten past.&n
@@ -129,7 +129,7 @@ relic circlet erie~
 ~
 11 8 10 0 8 100 241792 528387 64 0 0
 0 0 0 0 0 0 0 0
-3 28640 100 100
+3 28640 100 0
 E
 relic circlet erie~
 &+LThis earring has no past stories told about it. &n
@@ -143,7 +143,7 @@ pendant royal~
 ~
 9 16 2 0 7 0 8192 5 0 0 0
 5 0 0 3 0 0 0 0
-1 4285 100 100
+1 4285 100 0
 E
 pendant royal~
 &+bThis is an old &+Wpendant &+bof the royal family when &+WA&+wrc&+Lium&+b was a great kingdom.&n
@@ -159,7 +159,7 @@ ring shadows~
 ~
 9 1 9 0 7 0 0 3 64 0 0
 5 0 0 3 0 0 0 0
-2 5012 100 100
+2 5012 100 0
 E
 ring shadows~
 &+LThe ring is a magical band of shadows.&n
@@ -175,7 +175,7 @@ shield black bone~
 ~
 37 10 9 0 7 0 0 513 0 0 0
 2 5 4 107 4 0 0 0
-4 5100 100 100
+4 5100 100 0
 E
 shield black bone~
 &+LThe shield is made of solid black bone.  It seems to be very strong.&n
@@ -191,7 +191,7 @@ belt liquid link links~
 ~
 9 40 9 0 14 0 8192 2049 0 0 0
 5 0 0 5 0 0 0 0
-3 13442 100 100
+3 13442 100 0
 E
 belt liquid link links~
 &+bThe belt is made of a strange dark blue liquid that has been shaped into
@@ -208,7 +208,7 @@ mask feathers festive~
 ~
 9 3 9 0 7 0 0 262145 0 0 0
 5 0 0 3 0 0 0 0
-1 7141 100 100
+1 7141 100 0
 E
 mask feathers festive~
 &+GThe mask is made of many different&+m col&+Yor&+Bful&+G feathers.  All of the feathers are
@@ -225,7 +225,7 @@ visor fire~
 ~
 9 1 9 0 7 0 262144 131073 0 0 0
 5 0 0 3 0 0 0 0
-1 18213 100 100
+1 18213 100 0
 E
 flaming visor fire~
 &+rThis visor e&+Rt&+Yer&+Rn&+ral f&+Yi&+Rr&+re is a very impressive sight.&n
@@ -241,7 +241,7 @@ silver stone amulet~
 ~
 9 22 9 0 7 0 0 5 2 0 0
 5 0 0 3 0 0 0 0
-4 10925 100 100
+4 10925 100 0
 E
 silver stone amulet~
 &+LThis a dull silver amulet.&n
@@ -257,7 +257,7 @@ spotted dragon egg~
 ~
 12 2 4 0 7 0 45056 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 11 100 100
+1 11 100 0
 E
 spotted dragon egg~
 &+YThis is a large yellow &+rdragon&+W e&+Ygg with &+Wwhite&+Y spots on it.&n
@@ -269,7 +269,7 @@ tail dragon dragonscale scale~
 ~
 9 35 3 0 7 0 4096 33554433 64 0 0
 5 0 0 4 0 0 0 0
-2 3312 100 100
+2 3312 100 0
 E
 dragon scale~
 &+CThis is one big &+rdragon&+C scale with straps on it.&n
@@ -285,7 +285,7 @@ meat salmon~
 ~
 19 2 3 0 7 0 8192 1 0 0 0
 24 0 0 0 0 0 0 0
-2 433 100 100
+2 433 100 0
 E
 salmon~
 &+RThis is a rotting corpse of a salmon.&n
@@ -297,7 +297,7 @@ lost book spellbook~
 ~
 33 28 9 0 7 0 73728 8404993 64 0 0
 0 0 250 0 0 0 0 0
-2 7883 100 100
+2 7883 100 0
 E
 lost book spellbook~
 &+bThis is a small book incased in &+yleather&+b, but it seems to have a neverending
@@ -331,7 +331,7 @@ golden medal honor~
 ~
 9 24 3 0 7 0 36864 5 2 0 0
 5 0 0 3 0 0 0 0
-2 2344 100 100
+2 2344 100 0
 E
 golden medal honor~
 &+YThis is a golden medal of honor.  It was once the highest medal of honor in
@@ -347,8 +347,8 @@ key skeleton~
 &+LA small &+Wskeleton key&+L lies here&n.~
 ~
 18 10 2 0 7 0 8388608 16385 0 0 0
-0 0 0 0 0 0 0 0
-1 223 100 100
+0 100 0 0 0 0 0 0
+1 223 100 0
 E
 key skeleton~
 &+LThis is a small &+Wskeleton key&+L made of&+W bone&+L.&n
@@ -360,7 +360,7 @@ badge royal arcium~
 ~
 11 16 10 0 7 0 262144 2097153 0 0 0
 0 0 0 3 0 0 0 0
-1 9834 100 100
+1 9834 100 0
 E
 badge royal~
 &+bThis is a small blue badge made of steel.&n
@@ -376,7 +376,7 @@ sinister cloak~
 ~
 9 10 9 0 7 0 0 1025 0 0 0
 5 0 0 3 1 0 0 0
-2 4342 100 100
+2 4342 100 0
 E
 sinister cloak~
 &+LThis is a pitch black cloak with a &+rred hood&+L.&n
@@ -392,7 +392,7 @@ purple scroll~
 ~
 3 15 3 0 7 0 0 16385 0 0 0
 25 2 2 155 0 0 0 0
-1 25952 100 100
+1 25952 100 0
 E
 purple scroll~
 &+MThis is a small simple looking purple wand.&n
@@ -404,7 +404,7 @@ bat skin batskin sleeves~
 ~
 9 2 3 0 7 0 0 257 0 0 0
 5 0 0 3 0 0 0 0
-2 4320 100 100
+2 4320 100 0
 E
 bat skin batskin sleeves~
 &+YThese are some sleeves made from &+Lbat&+Yskin.&n
@@ -420,7 +420,7 @@ skunk weed boots~
 ~
 9 43 3 0 7 0 12288 65 0 0 0
 10 0 0 4 0 0 0 0
-3 4300 100 100
+3 4300 100 0
 E
 skunk weed boots~
 &+gThese are some boots made from skunk &+Gweed&+g.&n
@@ -436,7 +436,7 @@ key green weed~
 ~
 18 43 3 0 7 0 8396800 16385 0 0 0
 0 0 0 0 0 0 0 0
-1 121 100 100
+1 121 100 0
 E
 key green weed~
 &+gThis green key is made out of skunk &+Gweed&+g.&n
@@ -448,7 +448,7 @@ clear wand~
 ~
 3 7 3 0 7 0 8224 8404993 0 0 0
 41 3 3 189 0 0 0 0
-1 20430 100 100
+1 20430 100 0
 E
 clear wand~
 &+CThis is a small glass wand that is transparent.&n
@@ -460,7 +460,7 @@ bow longbow royal arcium~
 ~
 6 15 3 0 7 0 0 8193 0 0 0
 70 60 0 1 0 0 0 0
-2 8820 100 100
+2 8820 100 0
 E
 bow longbow royal arcium~
 &+LThis is a fine longbow with &+WA&+wrc&+Lium's brand on the side.&n
@@ -476,7 +476,7 @@ sleeves flesh rotting~
 ~
 9 2 9 0 7 0 0 257 0 0 0
 5 0 0 4 0 0 0 0
-1 4201 100 100
+1 4201 100 0
 E
 sleeves flesh~
 &+LThe sle&+geve&+Ls are made of &+grot&+Lting fl&+gesh&+L.  They s&+gmell &+Lvery&+g bad&+L and don't look
@@ -493,7 +493,7 @@ earring rotting flesh~
 ~
 11 2 9 0 7 0 0 524289 0 0 0
 0 0 0 0 0 0 0 0
-1 2912 100 100
+1 2912 100 0
 E
 earring rotting flesh~
 &+LThe ear&+gri&+Lng is made of &+grot&+Lting fl&+gesh&+L.  It s&+gmells &+Lvery&+g bad&+L and doesn't look
@@ -510,7 +510,7 @@ cloak rotting flesh~
 ~
 9 2 9 0 7 0 0 1025 0 0 0
 5 0 0 3 0 0 0 0
-2 10026 100 100
+2 10026 100 0
 E
 cloak rotting flesh~
 &+LThe cl&+goa&+Lk is made of &+grot&+Lting fl&+gesh&+L.  It s&+gmells &+Lvery &+gbad&+L and doesn't look
@@ -527,7 +527,7 @@ hallow stump~
 ~
 15 15 3 0 7 0 8192 0 0 0 0
 500 0 0 0 0 0 0 0
-0 0 100 100
+0 0 100 0
 E
 hallow stump~
 &+yThe large hallow stump has &+Gfungus&+y and&+g grass&+y growing on it.&n
@@ -539,7 +539,7 @@ tombstone stone tomb~
 ~
 12 11 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
-0 0 100 100
+0 0 100 0
 E
 tombstone stone tomb~
 &+LThis is a tombstone of an &+WA&+wrc&+Lium elder.
@@ -552,7 +552,7 @@ kurlon horns~
 ~
 9 15 3 0 7 0 0 134217729 0 0 0
 5 0 0 3 0 0 0 0
-3 7234 100 100
+3 7234 100 0
 E
 kurlon horns~
 &+LThis set of horns once belonged to the mercenary master named K&+wur&+Llon.&N
@@ -566,7 +566,7 @@ silver dagger~
 ~
 5 15 3 0 7 0 16785680 8193 1 0 0
 2 2 4 11 0 0 0 0
-2 6231 100 100
+2 6231 100 0
 E
 silver dagger~
 &+LThis is a thin and simple d&+wa&+Wgg&+we&+Lr made of silver.&n
@@ -582,7 +582,7 @@ bottle ale~
 ~
 10 40 3 0 7 0 0 8404993 0 0 0
 40 39 0 0 10 0 0 0
-1 7828 100 100
+1 7828 100 0
 E
 bottle ale~
 &+yThis is a bottle of the local &+Ldark ale&+y.&n
@@ -594,7 +594,7 @@ fifth whiskey~
 ~
 10 40 3 0 7 0 0 8404993 0 0 0
 40 179 0 0 20 0 0 0
-1 12871 100 100
+1 12871 100 0
 E
 fifth whiskey~
 &+yThis is a full fifth of dirty whiskey.&n
@@ -606,7 +606,7 @@ mushroom food~
 ~
 19 48 2 0 7 0 0 16385 0 0 0
 30 0 0 0 0 0 0 0
-1 5 100 100
+1 5 100 0
 E
 mushroom food~
 The small yellow mushroom smell strange.
@@ -618,7 +618,7 @@ unholy water barrel~
 ~
 17 6 2 0 7 0 0 8388609 0 0 0
 25 25 28 0 0 0 0 0
-1 1000 100 100
+1 1000 100 0
 E
 skin dark~
 This is a dark colored water skin.
@@ -630,7 +630,7 @@ steel soldiers mask~
 ~
 9 16 3 0 7 0 0 262145 0 0 0
 5 0 0 3 0 0 0 0
-1 2641 100 100
+1 2641 100 0
 E
 steel soldiers mask~
 &+LThis is a standard issue steel m&+wa&+Wsk&+L for an &+WA&+wrc&+Lium soldier.&N
@@ -644,7 +644,7 @@ soldiers ring~
 ~
 9 16 3 0 7 0 0 3 0 0 0
 3 0 0 3 0 0 0 0
-1 1730 100 100
+1 1730 100 0
 E
 soldiers ring~
 &+LThis is a standard issue steel r&+wi&+Wng&+L for an &+WA&+wrc&+Lium soldier.&n
@@ -658,7 +658,7 @@ soldiers wristguard wrist guard~
 ~
 9 16 3 0 7 0 0 4097 0 0 0
 5 0 0 3 0 0 0 0
-1 2050 100 100
+1 2050 100 0
 E
 soldiers wristguard wrist guard~
 &+LThis is a standard issue steel wr&+wi&+Wst&+L gu&+wa&+Wrd &+Lfor an &+WA&+wrc&+Lium soldier.&n
@@ -672,7 +672,7 @@ soldiers quiver~
 ~
 30 16 3 0 7 0 0 1048577 0 0 0
 35 0 0 0 0 0 0 0
-1 2503 100 100
+1 2503 100 0
 E
 soldiers quiver~
 &+LThis is a standard issue steel qu&+wiv&+Wer&+L for an &+WA&+wrc&+Lium soldier.&n
@@ -686,7 +686,7 @@ soldiers tail clip~
 ~
 9 16 3 0 7 0 0 33554433 0 0 0
 3 0 0 3 0 0 0 0
-1 1830 100 100
+1 1830 100 0
 E
 soldiers tail clip~
 &+LThis is a standard issue steel t&+wa&+Wil&+L c&+wl&+Wip&+L for an &+WA&+wrc&+Lium soldier.&n
@@ -700,7 +700,7 @@ soldiers belt~
 ~
 9 16 3 0 7 0 0 2049 0 0 0
 5 0 0 3 0 0 0 0
-1 3021 100 100
+1 3021 100 0
 E
 soldiers belt~
 &+LThis is a standard issue steel b&+we&+Wlt&+L for an &+WA&+wrc&+Lium soldier.&n
@@ -714,7 +714,7 @@ pearl~
 ~
 8 52 2 0 7 0 12288 1 0 0 0
 0 0 0 0 0 0 0 0
-1 3039 100 100
+1 3039 100 0
 E
 pearl~
 &+CThe &+Mshiny&+C pearl is quite beautiful.&n
@@ -726,7 +726,7 @@ necklace pearl~
 ~
 9 52 3 0 7 0 0 5 0 0 0
 6 0 0 3 0 0 0 0
-3 21231 100 100
+3 21231 100 0
 E
 necklace pearl~
 &+CThe strand of pe&+Mar&+Cls is wrapped into a tight loop.&n
@@ -742,7 +742,7 @@ earring pearl~
 ~
 9 52 3 0 7 0 8192 524289 0 0 0
 4 0 0 3 0 0 0 0
-1 11523 100 100
+1 11523 100 0
 E
 earring pearl~
 &+CThe earring is a strand of four small pe&+Mar&+Cls.&N
@@ -758,7 +758,7 @@ loop plat platinum~
 ~
 9 25 3 0 7 0 0 67108865 0 0 0
 3 0 0 3 0 0 0 0
-2 25322 100 100
+2 25322 100 0
 E
 loop plat platinum~
 &+WThis nose ring is made from solid platinum.&N
@@ -774,7 +774,7 @@ heart king~
 ~
 8 2 3 0 7 0 4096 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 212 100 100
+1 212 100 0
 E
 heart~
 &+rThis was the heart of a cold blooded person.&n
@@ -786,7 +786,7 @@ heart granrn~
 ~
 8 2 3 0 7 0 4096 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 232 100 100
+1 232 100 0
 E
 heart~
 &+rThis was the heart of a cold blooded person.&n
@@ -798,7 +798,7 @@ heart kurlon~
 ~
 8 2 3 0 7 0 4096 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 121 100 100
+1 121 100 0
 E
 heart~
 &+rThis was the heart of a cold blooded person.&n
@@ -810,7 +810,7 @@ heart fragnox~
 ~
 8 2 3 0 7 0 4096 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 121 100 100
+1 121 100 0
 E
 heart~
 &+rThis was the heart of a cold blooded person.&n
@@ -822,7 +822,7 @@ heart kelien~
 ~
 8 2 3 0 7 0 4096 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 122 100 100
+1 122 100 0
 E
 heart~
 &+rThis was the heart of a cold blooded person.&n
@@ -834,7 +834,7 @@ heart slican~
 ~
 8 2 3 0 7 0 4096 8388609 0 0 0
 0 0 0 0 0 0 0 0
-1 211 100 100
+1 211 100 0
 E
 heart~
 &+rThis was the heart of a cold blooded person.&n
@@ -862,7 +862,7 @@ silver sword longsword~
 ~
 5 15 3 0 7 0 8192 8193 1 0 0
 5 3 3 0 0 0 0 0
-2 9532 100 100
+2 9532 100 0
 E
 silver sword longsword~
 &+LThis is a thin and simple long&+wsw&+Word&+L made of silver.&n
