@@ -14,24 +14,25 @@
 #define NECROPET_START      0
 #define NECROPET_SKELETON   0
 #define NECROPET_ZOMBIE     1
-#define NECROPET_SPECTRE    2
-#define NECROPET_WRAITH     3
+#define NECROPET_DKNIGHT    2
+#define NECROPET_SPECTRE    3
 #define NECROPET_VAMPIRE    4
-#define NECROPET_LICH       5
-#define NECROPET_SHADOW     6
-#define NECROPET_END        6
+#define NECROPET_WRAITH     5
+#define NECROPET_LICH       6
+#define NECROPET_SHADOW     7
+#define NECROPET_END        7
 
-#define THEURPET_START      7
-#define THEURPET_SKELETON   7
-#define THEURPET_ZOMBIE     8
-#define THEURPET_SPECTRE    9
-#define THEURPET_WRAITH     10
-#define THEURPET_VAMPIRE    11
-#define THEURPET_LICH       12
-#define THEURPET_SHADOW     13
-#define THEURPET_END        13
+#define THEURPET_START      8
+#define THEURPET_SKELETON   8
+#define THEURPET_ZOMBIE     9
+#define THEURPET_SPECTRE    10
+#define THEURPET_WRAITH     11
+#define THEURPET_VAMPIRE    12
+#define THEURPET_LICH       13
+#define THEURPET_SHADOW     14
+#define THEURPET_END        14
 
-#define NECROPET_LAST       13
+#define NECROPET_LAST       14
 
 #define NECROGOLEM_FLESH 0
 #define NECROGOLEM_BLOOD 1

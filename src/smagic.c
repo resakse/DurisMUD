@@ -551,7 +551,7 @@ void spell_corrosive_blast(int level, P_char ch, char *arg, int type, P_char vic
     struct affected_type af;
     memset(&af, 0, sizeof(af));
     af.type = SPELL_CORROSIVE_BLAST;
-    af.duration = level / 4 * WAIT_SEC;
+    af.duration = level / 4;
     af.modifier = corrode;
     af.location = APPLY_AC;
     affect_to_char(victim, &af);
@@ -919,7 +919,7 @@ void spell_greater_spirit_anguish(int level, P_char ch, char *arg, int type, P_c
     {
       bzero(&af, sizeof(af));
       af.type = SPELL_SLOW;
-      af.duration = level / 4 * WAIT_SEC;
+      af.duration = level / 4;
       af.modifier = 2;
       af.bitvector2 = AFF2_SLOW;
 
@@ -1267,13 +1267,13 @@ void earthen_grasp(int level, P_char ch, P_char victim, struct damage_messages *
       act("&+yAn earthen fist bursts from the ground, grasping $n&+y!", FALSE, victim, 0, 0, TO_ROOM);
       act("$n&+y struggles valiantly, making a tighter grasp impossible.", FALSE, victim, 0, 0, TO_ROOM);
       af.flags = AFFTYPE_SHORT;
-      af.duration = level / 2 * WAIT_SEC;
+      af.duration = level / 2;
     }
     else
     {
       send_to_char("&+yAn earthen fist bursts from the ground, grasping you tightly around the chest.\r\n", victim);
       act("&+yAn earthen fist bursts from the ground, grasping $n&+y tightly!", FALSE, victim, 0, 0, TO_ROOM);
-      af.duration = level * WAIT_SEC;
+      af.duration = level;
     }
     
     dam = dice(20, 2) + (level / 4);
@@ -4565,7 +4565,7 @@ void spell_cascading_elemental_beam(int level, P_char ch, char *arg, int type,
     {
       if(!NewSaves(victim, SAVING_SPELL, mod))
       {
-        blind(ch, victim, (int) (number(level / 3, level)) * WAIT_SEC);
+        blind(ch, victim, (int) (number(level / 3, level)));
       }
       // Victims with deflect will also deflect blind affect.
     }
@@ -4574,7 +4574,7 @@ void spell_cascading_elemental_beam(int level, P_char ch, char *arg, int type,
     {
       if(!NewSaves(victim, SAVING_SPELL, mod))
       {
-        blind(ch, ch, (int) (number(level / 3, level)) * WAIT_SEC);
+        blind(ch, ch, (int) (number(level / 3, level)));
       }
     }
   }

@@ -278,7 +278,7 @@ bool cleave(P_char ch, P_char victim)
     act("$n brings down $p in a mighty slash, cleaving you from your target!", TRUE,
         ch, ch->equipment[WIELD], victim, TO_VICT);
 
-    int dam = dice(GET_LEVEL(ch) / 2, 10);
+    int dam = dice(GET_LEVEL(ch) / 2, 4);
 
     if(damage(ch, victim, dam, SKILL_CLEAVE) != DAM_VICTDEAD )
       set_short_affected_by(victim, SKILL_CLEAVE, 4 * PULSE_VIOLENCE);
@@ -303,7 +303,7 @@ void event_smite_evil(P_char ch, P_char victim, P_obj obj, void *data)
         act("A stern look appears on $n's face, and $e rushes to extinguish the evil being!", FALSE, ch, 0, tch, TO_NOTVICT);
         act("You exploit the evil creature's momentary weakness, and dive in for the killing blow!", FALSE, ch, 0, 0, TO_CHAR);
         act("$n looks at you sternly, and then dives in, $s blade rushing for your heart!", FALSE, ch, 0, tch, TO_VICT);
-        damage(ch, tch, number(5,25), SKILL_SMITE_EVIL);
+        damage(ch, tch, number(5, 25), SKILL_SMITE_EVIL);
       }
     }
   }

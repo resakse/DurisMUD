@@ -6637,13 +6637,19 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
     dam = dice(ch->points.damnodice, ch->points.damsizedice);
   }
   else
-    dam = (GET_CHAR_SKILL(ch, SKILL_UNARMED_DAMAGE) / 100) + number(lvl / 12, lvl / 7);
+  {
+    if(lvl < 16)
+      dam = number(1, 4) + lvl / 8;
+    else
+      dam = (GET_CHAR_SKILL(ch, SKILL_UNARMED_DAMAGE) / 10) + number(1, 4);
+  }
+
 #ifdef FIGHT_DEBUG
   wizlog(56, "first damage calc(NPC/unarmed) for %s is %f", GET_NAME(ch), dam);
 #endif
 
   // damroll mitigation for wipe2011 - Jexni 12/17/11
-  dam = dam * BOUNDEDF(0.70, ((float)damroll / GET_LEVEL(victim)), 1.20);
+  dam = dam * BOUNDEDF(0.70, ((float)damroll / GET_LEVEL(victim) - 3), 1.20);
   dam = dam + ((float)damroll / 10);
 #ifdef FIGHT_DEBUG
   wizlog(56, "damage calc after damroll for %s is %f", GET_NAME(ch), dam);
@@ -6812,9 +6818,10 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   }
   
   dam = BOUNDED(1, dam, 1000);
+#ifdef FIGHT_DEBUG
   if(dam > 200)
-    wizlog(56, "DAMAGE ALERT: %s caused %d damage to %s", GET_NAME(ch), dam, GET_NAME(victim));
-
+    wizlog(56, "DAMAGE ALERT: %s caused %d damage", GET_NAME(ch), dam);
+#endif
   if(has_innate(victim, INNATE_WEAPON_IMMUNITY))
   {
     if(weapon)

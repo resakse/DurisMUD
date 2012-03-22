@@ -1464,7 +1464,7 @@ void lance_charge(P_char ch, char *argument)
       break;
   }
 
-  if(melee_damage(ch, victim, dam, PHSDAM_NOPOSITION, 0) != DAM_NONEDEAD)
+  if(melee_damage(ch, victim, dam / 4, PHSDAM_NOPOSITION, 0) != DAM_NONEDEAD)
     return;
 
   if(!IS_ALIVE(ch))
@@ -1777,7 +1777,7 @@ void do_charge(P_char ch, char *argument, int cmd)
          &messages))
 */
   
-    if(melee_damage(ch, victim, (number(1, level) + level) * 2,
+    if(melee_damage(ch, victim, (number(1, level) + level / 4),
       PHSDAM_TOUCH, &messages) != DAM_NONEDEAD)
         return;
 
@@ -2885,7 +2885,7 @@ void event_combination(P_char ch, P_char victim, P_obj obj, void *data)
     switch (stage)
     {
     case 0:
-      dam = number(1, 30);
+      dam = number(1, 8);
       if(GET_LEVEL(ch) < 50)
         percent -= 10;
       skill_req = 25;
@@ -2894,30 +2894,30 @@ void event_combination(P_char ch, P_char victim, P_obj obj, void *data)
       if(GET_LEVEL(ch) < 50)
         percent -= 5;
       skill_req = 35;
-      dam = number(30, 60);
+      dam = number(8, 16);
       break;
     case 2:
       if(GET_LEVEL(ch) < 50)
         percent -= 5;
       skill_req = 40;
-      dam = number(40, 70);
+      dam = number(16, 32);
       break;
     case 3:
       percent -= 5;
       skill_req = 55;
-      dam = number(50, 90);
+      dam = number(32, 56);
       break;
     case 4:
       percent -= 5;
       skill_req = 70;
-      dam = number(60, 100);
+      dam = number(56, 84);
       break;
     case 5:
       skill_req = 85;
-      dam = number(60, 120);
+      dam = number(84, 110);
       break;
     case 6:
-      dam = number(100, 150);
+      dam = number(110, 125);
       break;
     }
     move = number(0, 1);
@@ -3361,7 +3361,7 @@ bool kick(P_char ch, P_char victim)
       return false;
     }
     
-    dam = BOUNDED(10, (GET_LEVEL(ch) + number(5, 10)) * (GET_CHAR_SKILL(ch, SKILL_KICK) / 100), 75);
+    dam = (GET_LEVEL(ch) + 5) * (GET_CHAR_SKILL(ch, SKILL_KICK) / 100);
 
     CharWait(ch, PULSE_VIOLENCE * 2);
 
@@ -3689,7 +3689,7 @@ bool roundkick(P_char ch, P_char victim)
     return FALSE;
   }
   
-  dam = (GET_LEVEL(ch) + number(10, 20)) * (GET_CHAR_SKILL(ch, SKILL_ROUNDKICK) / 100);
+  dam = (GET_LEVEL(ch) + 5) * (GET_CHAR_SKILL(ch, SKILL_ROUNDKICK) / 100);
 
   if(!notch_skill(ch, SKILL_ROUNDKICK,
       get_property("skill.notch.offensive", 25)) &&
@@ -5180,7 +5180,7 @@ void bash(P_char ch, P_char victim)
     act("$n dives at $N skewering $M with $s $q.", FALSE, ch,
         ch->equipment[WIELD], victim, TO_NOTVICT);
   
-    if(melee_damage(ch, victim, dice(20, 10), 0, 0) == DAM_NONEDEAD)
+    if(melee_damage(ch, victim, ((float)GET_LEVEL(ch) / 3) + number(-3, 3), 0, 0) == DAM_NONEDEAD)
     {
       CharWait(victim, PULSE_VIOLENCE);
     }
@@ -6682,7 +6682,7 @@ void shieldpunch(P_char ch, P_char victim)
       number(0, 100) < percent_chance)
   {
     dambonus = (int) (MAX(20, GET_CHAR_SKILL(ch, SKILL_SHIELD_COMBAT) / 2));
-    dmg = 6 * (number(1, dambonus) + (ch->equipment[WEAR_SHIELD]->weight));
+    dmg = 2 * (number(1, dambonus) + (ch->equipment[WEAR_SHIELD]->weight));
 
     if(melee_damage(ch, victim, dmg, 0, &messages) != DAM_NONEDEAD)
     {
@@ -7095,7 +7095,7 @@ void do_rearkick(P_char ch, char *argument, int cmd)
     return;
   }
   
-  melee_damage(ch, victim, dam, PHSDAM_TOUCH, &messages);
+  melee_damage(ch, victim, dam / 4, PHSDAM_TOUCH, &messages);
 
   if(!IS_ALIVE(ch) ||
      !IS_ALIVE(victim))
@@ -7133,34 +7133,25 @@ void do_rearkick(P_char ch, char *argument, int cmd)
       door = number(0+gh, 3);
     if((CAN_GO(victim, door)) && (!check_wall(victim->in_room, door)))
     {
-      act("&+LYour mighty rearkick sends&n $N &+Lflying out of the room!&n",
-        FALSE, ch, 0, victim, TO_CHAR);
-      act("$n's &+Lmighty rearkick sends you flying out of the room!&n",
-        FALSE, ch, 0, victim, TO_VICT);
-      act("$n's &+Lmighty rearkick sends&n $N &+Lflying out of the room!&n",
-        FALSE, ch, 0, victim, TO_NOTVICT);
+      act("&+LYour mighty rearkick sends $N &+Lflying out of the room!", FALSE, ch, 0, victim, TO_CHAR);
+      act("$n's &+Lmighty rearkick sends you flying out of the room!", FALSE, ch, 0, victim, TO_VICT);
+      act("$n's &+Lmighty rearkick sends $N &+Lflying out of the room!", FALSE, ch, 0, victim, TO_NOTVICT);
       target_room = world[victim->in_room].dir_option[door]->to_room;
       char_from_room(victim);
       if(!char_to_room(victim, target_room, -1))
       {
-        act("$n &+Lflies in, crashing on the floor!&n",
-          TRUE, victim, 0, 0, TO_ROOM);
-        CharWait(victim, (int) (PULSE_VIOLENCE *
-          get_property("kick.roomkick.victimlag", 1.000)));
+        act("$n &+Lflies in, crashing on the floor!", FALSE, victim, 0, 0, TO_ROOM);
+        CharWait(victim, (int) (PULSE_VIOLENCE * get_property("kick.roomkick.victimlag", 1.000)));
         SET_POS(victim, POS_PRONE + GET_STAT(victim));
         stop_fighting(victim);
       }
     }
-    else
+    else if(world[ch->in_room].sector_type == SECT_INSIDE)
     {
-      act("&+rYour mighty rearkick sends&n $N &+rcrashing into the wall!&n",
-        FALSE, ch, 0, victim, TO_CHAR);
-      act("$n's &+rmighty kick sends you crashing into the wall!&n",
-        FALSE, ch, 0, victim, TO_VICT);
-      act("$n's &+rmighty kick sends&n $N &+rcrashing into the wall!&n",
-        FALSE, ch, 0, victim, TO_NOTVICT);
-      CharWait(victim, (int) (PULSE_VIOLENCE *
-        get_property("kick.wallkick.victimlag", 1.5)));
+      act("&+rYour mighty rearkick sends $N &+rcrashing into the wall!", FALSE, ch, 0, victim, TO_CHAR);
+      act("$n's &+rmighty kick sends you crashing into the wall!", FALSE, ch, 0, victim, TO_VICT);
+      act("$n's &+rmighty kick sends $N &+rcrashing into the wall!", FALSE, ch, 0, victim, TO_NOTVICT);
+      CharWait(victim, (int) (PULSE_VIOLENCE * get_property("kick.wallkick.victimlag", 1.5)));
       SET_POS(victim, POS_SITTING + GET_STAT(victim));
       stop_fighting(victim);
     }
@@ -8549,7 +8540,7 @@ void event_call_grave_target(P_char ch, P_char victim, P_obj obj, void *data)
      FALSE, ch, 0, victim, TO_VICT);
 
   // damage: [dreadlord_level +- 1d10] hp
-  dmg = 4 * (GET_LEVEL(ch) - 10 + number(0, 20));
+  dmg = (GET_LEVEL(ch) - 10 + number(0, 20));
 
   damage(ch, victim, MAX(1, dmg), TYPE_UNDEFINED);
 }
@@ -9083,8 +9074,6 @@ void do_shriek(P_char ch, char *argument, int cmd)
   skl_lvl = GET_CHAR_SKILL(ch, SKILL_SHRIEK);
 
   damage = (skl_lvl / 2) + dice(1, 20);
-
-  damage = damage * 4;
 
   // let the char know (s)he shrieked
   send_to_char

@@ -36,6 +36,7 @@ struct undead_description
   int      cost;
   uint     pet_class;
   int      race;
+  int      size;
 };
 
 struct golem_description
@@ -62,73 +63,52 @@ const struct golem_description golem_data[4] = {
 extern const struct undead_description undead_data[NECROPET_LAST + 1];
 const struct undead_description undead_data[NECROPET_LAST + 1] = {
   {
-   "skeleton", "", 2, ACT_NICE_THIEF, AFF_HASTE, 0, 1.2, 21, 10, CLASS_WARRIOR,
-   RACE_SKELETON},
+   "skeleton", "", 1, ACT_NICE_THIEF + ACT_MEMORY, AFF_PROTECT_GOOD, 0, 1.1, 14, 4, CLASS_NONE,
+    RACE_SKELETON, SIZE_MEDIUM},
   {
-   "zombie", "", 4, ACT_NICE_THIEF + ACT_MEMORY, AFF_PROTECT_GOOD, AFF2_SLOW, 1.8, 26, 10, CLASS_WARRIOR,
-   RACE_ZOMBIE},
+   "zombie", "", 6, ACT_NICE_THIEF + ACT_MEMORY, AFF_PROTECT_GOOD, AFF2_SLOW, 1.8, 18, 10, CLASS_WARRIOR,
+    RACE_ZOMBIE, SIZE_MEDIUM},
   {
-   "spectre", "", 20, ACT_MEMORY,
-   AFF_FLY + AFF_INVISIBLE + AFF_DETECT_INVISIBLE + AFF_PROTECT_GOOD +
-   AFF_SNEAK,
-   AFF2_PROT_COLD, 2, 31, 10, CLASS_ASSASSIN, RACE_SPECTRE},
+   "death knight", "", 11, ACT_MEMORY, AFF_PROTECT_GOOD, AFF_HASTE + AFF2_VAMPIRIC_TOUCH, 2.5, 24, 18, 
+    CLASS_ANTIPALADIN, RACE_PDKNIGHT, SIZE_LARGE},
   {
-   "wraith", "", 30, ACT_MEMORY, AFF_FLY + AFF_DETECT_INVISIBLE +
-   AFF_INVISIBLE + AFF_PROTECT_GOOD,
-   AFF2_PROT_COLD, 3.2, 36, 22, CLASS_SORCERER, RACE_WRAITH},
+   "spectre", "", 20, ACT_MEMORY, AFF_FLY + AFF_PROTECT_GOOD + AFF_SNEAK, // + AFF_INVISIBLE + AFF_DETECT_INVISIBLE
+    AFF2_PROT_COLD, 2, 31, 12, CLASS_ASSASSIN, RACE_SPECTRE, SIZE_SMALL},
   {
-   "vampire", "", 40, ACT_MEMORY,
-   AFF_FLY + AFF_DETECT_INVISIBLE + AFF_INVISIBLE + AFF_PROTECT_GOOD
-   + AFF_HASTE, AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH,
-   12, 50, 28, CLASS_WARRIOR,
-   RACE_VAMPIRE},
+   "vampire", "", 30, ACT_MEMORY, AFF_FLY + AFF_DETECT_INVISIBLE + AFF_PROTECT_GOOD + AFF_HASTE, 
+    AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH, 6, 50, 24, CLASS_WARRIOR, RACE_VAMPIRE, SIZE_MEDIUM},
   {
-   "lich", "", 45, ACT_MEMORY,
-   AFF_DETECT_INVISIBLE + AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE +
-   AFF_PROTECT_GOOD + AFF_HASTE,
-   AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH, 5, 46, 28, CLASS_SORCERER,
-   RACE_PLICH},
+   "wraith", "", 38, ACT_MEMORY, AFF_FLY + AFF_DETECT_INVISIBLE + AFF_PROTECT_GOOD,
+    AFF2_PROT_COLD, 4.2, 46, 35, CLASS_SORCERER, RACE_WRAITH, SIZE_SMALL},
   {
-   "shadow", "", 40, ACT_MEMORY,
-   AFF_HASTE + AFF_DETECT_INVISIBLE +
-   AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE + AFF_PROTECT_GOOD,
-   AFF2_PROT_COLD + AFF4_PHANTASMAL_FORM,
-   5, 50, 65, CLASS_PSIONICIST,
-   RACE_SHADOW},
+   "shadow", "", 45, ACT_MEMORY, AFF_HASTE + AFF_DETECT_INVISIBLE + AFF_FLY + AFF_PROTECT_GOOD,
+    AFF2_PROT_COLD + AFF4_PHANTASMAL_FORM, 5, 50, 60, CLASS_PSIONICIST, RACE_SHADOW, SIZE_TINY},
   {
-   "hound archon brawler", "&+yhou&+Yn&+yd &+Rarch&+Wo&+Rn &+rbr&+Raw&+rler&n", 2, ACT_NICE_THIEF, AFF_HASTE, 0, 1.2, 21, 10, CLASS_WARRIOR,
-   RACE_ARCHON},
+   "lich", "", 50, ACT_MEMORY, AFF_DETECT_INVISIBLE + AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE + AFF_PROTECT_GOOD + 
+    AFF_HASTE, AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH, 6, 51, 36, CLASS_SORCERER, RACE_PLICH, SIZE_MEDIUM},
   {
-   "lantern archon soldier", "&+Ylantern &+Rarch&+Wo&+Rn &+yso&+rldi&+yer&n", 4, ACT_NICE_THIEF + ACT_MEMORY, AFF_PROTECT_EVIL, AFF2_SLOW, 1.8, 26, 10, CLASS_WARRIOR,
-   RACE_ARCHON},
+   "hound archon brawler", "&+yhou&+Yn&+yd &+Rarch&+Wo&+Rn &+rbr&+Raw&+rler&n", 2, ACT_NICE_THIEF, AFF_HASTE,
+    0, 1.2, 21, 10, CLASS_WARRIOR, RACE_ARCHON, SIZE_MEDIUM},
   {
-   "asura avenger", "&+Rasu&+Yr&+Ra &+rave&+Lng&+rer&n", 20, ACT_MEMORY,
-   AFF_FLY + AFF_INVISIBLE + AFF_DETECT_INVISIBLE + AFF_PROTECT_EVIL +
-   AFF_SNEAK,
-   AFF2_PROT_COLD, 2, 31, 10, CLASS_ASSASSIN, RACE_ASURA},
+   "lantern archon soldier", "&+Ylantern &+Rarch&+Wo&+Rn &+yso&+rldi&+yer&n", 4, ACT_NICE_THIEF + ACT_MEMORY,
+    AFF_PROTECT_EVIL, AFF2_SLOW, 1.8, 26, 10, CLASS_WARRIOR, RACE_ARCHON, SIZE_MEDIUM},
+  {
+   "asura avenger", "&+Rasu&+Yr&+Ra &+rave&+Lng&+rer&n", 20, ACT_MEMORY, AFF_FLY + AFF_DETECT_INVISIBLE + 
+    AFF_PROTECT_EVIL + AFF_SNEAK, AFF2_PROT_COLD, 2, 31, 10, CLASS_ASSASSIN, RACE_ASURA, SIZE_SMALL},
   {
    "bralani battlemage", "&+Cbral&+Wa&+Cni &+Rbattle&+Mmage&n", 30, ACT_MEMORY, AFF_FLY + AFF_DETECT_INVISIBLE +
-   AFF_INVISIBLE + AFF_PROTECT_EVIL,
-   AFF2_PROT_COLD, 3.2, 36, 22, CLASS_SORCERER, RACE_BRALANI},
+    AFF_PROTECT_EVIL, AFF2_PROT_COLD, 3.2, 36, 22, CLASS_SORCERER, RACE_BRALANI, SIZE_SMALL},
   {
    "knight-errant knight errant ghaele", "&+cgha&+Ce&+cle &+wkn&+Wi&+wght&+W-e&+wrr&+Wa&+wnt&n", 40, ACT_MEMORY,
-   AFF_FLY + AFF_DETECT_INVISIBLE + AFF_INVISIBLE + AFF_PROTECT_EVIL
-   + AFF_HASTE, AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH,
-   12, 50, 28, CLASS_WARRIOR,
-   RACE_GHAELE},
+   AFF_FLY + AFF_DETECT_INVISIBLE + AFF_PROTECT_EVIL + AFF_HASTE, AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH,
+   12, 50, 28, CLASS_WARRIOR, RACE_GHAELE, SIZE_LARGE},
   {
-   "liberator holy eladrin", "&+ce&+Cl&+Wadr&+Ci&+cn &+Wholy &+Cliber&+Wator&n", 45, ACT_MEMORY,
-   AFF_DETECT_INVISIBLE + AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE +
-   AFF_PROTECT_EVIL + AFF_HASTE,
-   AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH, 5, 46, 28, CLASS_SORCERER,
-   RACE_ELADRIN},
+   "liberator holy eladrin", "&+ce&+Cl&+Wadr&+Ci&+cn &+Wholy &+Cliber&+Wator&n", 45, ACT_MEMORY, AFF_DETECT_INVISIBLE + 
+    AFF_SENSE_LIFE + AFF_FLY + AFF_PROTECT_EVIL + AFF_HASTE, AFF2_PROT_COLD + AFF2_VAMPIRIC_TOUCH, 5, 46, 28, 
+    CLASS_SORCERER, RACE_ELADRIN, SIZE_TINY},
   {
-   "deva astral", "&+Lastral &+wd&+Wev&+wa&n", 40, ACT_MEMORY,
-   AFF_HASTE + AFF_DETECT_INVISIBLE +
-   AFF_SENSE_LIFE + AFF_FLY + AFF_INVISIBLE + AFF_PROTECT_EVIL,
-   AFF2_PROT_COLD + AFF4_PHANTASMAL_FORM,
-   5, 50, 65, CLASS_PSIONICIST,
-   RACE_DEVA}
+   "deva astral", "&+Lastral &+wd&+Wev&+wa&n", 40, ACT_MEMORY, AFF_HASTE + AFF_DETECT_INVISIBLE + AFF_SENSE_LIFE + 
+    AFF_FLY + AFF_PROTECT_EVIL, AFF2_PROT_COLD + AFF4_PHANTASMAL_FORM, 5, 50, 65, CLASS_PSIONICIST, RACE_DEVA, SIZE_MEDIUM}
 };
 
 #define NECROPLASM_VNUM 67243
@@ -322,7 +302,7 @@ int can_raise_draco(P_char ch, int level, bool bGreater)
   if((numb + cost > necro_power))
   {
     act("You cannot control any more dracoliches.", FALSE, ch, 0, 0, TO_CHAR);
-    return false;;
+    return false;
   }
 
   return true; 
@@ -378,7 +358,7 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
   
   if (!OBJ_IN_ROOM(obj, ch->in_room))
   {
-    send_to_char("Something is screwed up with the code.\r\n", ch);
+    send_to_char("Raise what?\r\n", ch);
     return;
   }
   
@@ -416,7 +396,7 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
     return;
   }
   
-  if (clevel < 11) // was 4 (wipe2011)
+  if (clevel < 4)
   {
     send_to_char("The corpse is too weak to raise as undead!\r\n", ch);
     return;
@@ -425,6 +405,21 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
   if ((which_type >= 0) && (clevel < undead_data[which_type].corpse_level))
   {
     send_to_char("That corpse would make for a poor vessel for that type of undead.\r\n", ch);
+    return;
+  }
+
+  int necro_power = GET_LEVEL(ch) * 2;
+  wizlog(56, "necro power for %s is %d", GET_NAME(ch), necro_power);
+  if( GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE) ||
+     GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR) ) 
+     necro_power += 10;  
+     
+  if ((sum + undead_data[which_type].cost > necro_power) &&
+      !IS_TRUSTED(ch) &&
+      IS_PC(ch))
+  {
+    wizlog(56, "pet required %d", sum + undead_data[which_type].cost);
+    act("You do not possess enough power to control another undead of that type.", FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
 
@@ -455,19 +450,6 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
     typ = which_type;
   }
 
- int necro_power = GET_LEVEL(ch) * 2;
- if( GET_SPEC(ch, CLASS_NECROMANCER, SPEC_NECROLYTE) ||
-     GET_SPEC(ch, CLASS_THEURGIST, SPEC_TEMPLAR) ) 
-     necro_power += 10;  
-     
-  if ((sum + undead_data[typ].cost > necro_power) &&
-      !IS_TRUSTED(ch) &&
-      IS_PC(ch))
-  {
-    act("You are too weak to animate more corpses!", FALSE, ch, 0, 0, TO_CHAR);
-    return;
-  }
-
   undead = read_mobile(1201, VIRTUAL);
 
   if (!undead)
@@ -478,7 +460,7 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
   }
   
   /* okie, a few changes so zombies aren't god-like. -JAB */
-  GET_SIZE(undead) = SIZE_MEDIUM;
+  GET_SIZE(undead) = undead_data[typ].size;
   undead->specials.affected_by = undead_data[typ].aff1;
   undead->specials.affected_by2 = undead_data[typ].aff2;
 
@@ -533,7 +515,6 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
   undead->base_stats.Dex = BOUNDED(50, clevel + number(0, clevel), 100);
   undead->base_stats.Int = BOUNDED(50, clevel + number(0, clevel), 100);
 
-  /* max hp: 800 - really lucky lich.  */
   GET_HIT(undead) = GET_MAX_HIT(undead) = undead->points.base_hit =
     (int) (dice(clevel * 2, 10) + level * undead_data[typ].hps + (life * 2));
 
@@ -543,7 +524,7 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
   //undead->points.base_armor = 100 - GET_LEVEL(undead) - (typ * 15);
 
   //wipe2011
-  undead->points.base_armor = 0 - (typ * 5);
+  undead->points.base_armor = calculate_ac(ch, FALSE) - (typ * 5);
 
   MonkSetSpecialDie(undead);
   undead->points.base_hitroll = undead->points.hitroll = (int) (0.7 * clevel);
@@ -566,7 +547,6 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
       undead->player.short_descr = str_dup(Gbuf1);
       sprintf(Gbuf1, "An %s stands here.\r\n", undead_data[typ].short_desc);
       undead->player.long_descr = str_dup(Gbuf1);
-
     }
     else
     {
@@ -588,9 +568,9 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj, int which_type
 
   if (IS_SET(obj->value[CORPSE_FLAGS], PC_CORPSE))
   {
-    logit(LOG_CORPSE, "%s got raised while equipped ( by %s in room %d ).", obj->short_description,
+    logit(LOG_CORPSE, "%s got raised while equipped (by %s in room %d).", obj->short_description,
           (IS_PC(ch) ? GET_NAME(ch) : ch->player.short_descr), world[ch->in_room].number);
-    wizlog(57, "%s got raised while equipped ( by %s in room %d ).", obj->short_description,
+    wizlog(57, "%s got raised while equipped (by %s in room %d).", obj->short_description,
            (IS_PC(ch) ? GET_NAME(ch) : ch->player.short_descr), world[ch->in_room].number);
     corpselog = TRUE;
   }
