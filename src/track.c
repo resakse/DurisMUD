@@ -875,7 +875,7 @@ void show_tracks(P_char ch)
           }	
           else if ( (GET_CLASS(ch, CLASS_DRUID) || (IS_MULTICLASS_PC(ch) && GET_SECONDARY_CLASS(ch, CLASS_DRUID))) && 
                    !(GET_CLASS(ch, CLASS_RANGER)) /* && 
-                   !(GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND))*/ ) 
+                   !(GET_SPEC(ch, CLASS_DRUID, SPEC_FOREST))*/ ) 
           {
             if (outside == 1)
             {	
@@ -904,14 +904,14 @@ void show_tracks(P_char ch)
             // shamans get the straight chance for all of the outside terrains
             return;
           }  
-          else if (skill > percent || GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND))
+          else if (skill > percent || GET_SPEC(ch, CLASS_DRUID, SPEC_FOREST))
           {
             if (percent < 0)
             { 
               percent = 0;
             }
             if (skill - percent > 30 || 
-             ( (GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND)) &&	(world[ch->in_room].sector_type == SECT_FOREST) ) ) 
+             ( (GET_SPEC(ch, CLASS_DRUID, SPEC_FOREST)) &&	(world[ch->in_room].sector_type == SECT_FOREST) ) ) 
             {
               if (number(0,2))
               {
@@ -921,7 +921,7 @@ void show_tracks(P_char ch)
             }
             else
             {
-              if (GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND))
+              if (GET_SPEC(ch, CLASS_DRUID, SPEC_FOREST))
               {
                 return;
               }

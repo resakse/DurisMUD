@@ -154,6 +154,25 @@
  (world[(ch)->in_room].sector_type == SECT_SWAMP || \
   IS_WATER_ROOM(ch->in_room))
 
+#define IS_PURE_CASTER_CLASS(cls) ( (cls) &\
+  (CLASS_SORCERER | CLASS_CONJURER | CLASS_ILLUSIONIST |\
+  CLASS_NECROMANCER | CLASS_CLERIC | CLASS_SHAMAN |\
+  CLASS_DRUID | CLASS_ETHERMANCER | CLASS_THEURGIST | CLASS_CABALIST))
+#define IS_PARTIAL_CASTER_CLASS(cls) ( (cls) &\
+  (CLASS_BARD ))
+#define IS_SEMI_CASTER_CLASS(cls) ( (cls) &\
+  (CLASS_ANTIPALADIN | CLASS_PALADIN | CLASS_RANGER |\
+   CLASS_BARD | CLASS_REAVER | CLASS_AVENGER))
+#define IS_CASTER_CLASS(cls) (\
+  IS_PURE_CASTER_CLASS(cls) || IS_SEMI_CASTER_CLASS(cls) )
+#define IS_BOOK_CLASS(cls) ( (cls) &\
+  (CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER |\
+   CLASS_ILLUSIONIST | CLASS_BARD |\
+   CLASS_RANGER | CLASS_REAVER | CLASS_THEURGIST))
+#define IS_PRAYING_CLASS(cls) ( (cls) &\
+  (CLASS_CLERIC | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_AVENGER | CLASS_CABALIST))
+#define IS_MEMING_CLASS(cls) (IS_BOOK_CLASS(cls) || ((cls) & CLASS_SHAMAN))
+
 #define SWAMP_SNEAK(ch) (has_innate(ch, INNATE_SWAMP_SNEAK) && SWAMP_SNEAK_TERRAIN(ch))
 
 #define GET_LANGUAGE(ch,d) ((ch)->only.pc->talks[(d)])
@@ -256,14 +275,12 @@ SECS_PER_MUD_DAY)
     && world[r].sector_type != SECT_ASTRAL \
     && world[r].sector_type != SECT_NEG_PLANE)
 
-#define IS_LIGHT(r) ( (world[r].light > 0 ) || \
-                      IS_SUNLIT(r) || \
-                      IS_TWILIGHT_ROOM(r) )
+#define IS_LIGHT(r) ((world[r].light > 0) || IS_SUNLIT(r) || IS_MAGIC_LIGHT(r))
 
-#define IS_DARK(r) ( !IS_LIGHT(r) )
+#define IS_DARK(r) (!IS_LIGHT(r) || IS_MAGIC_DARK(r))
 
-#define IS_MAGIC_LIGHT(r) ( IS_SET(world[r].room_flags, MAGIC_LIGHT) && !IS_SET(world[r].room_flags, MAGIC_DARK ) )
-#define IS_MAGIC_DARK(r) ( IS_SET(world[r].room_flags, MAGIC_DARK) && !IS_SET(world[r].room_flags, MAGIC_LIGHT ) )
+#define IS_MAGIC_LIGHT(r) (IS_SET(world[r].room_flags, MAGIC_LIGHT) && !IS_SET(world[r].room_flags, MAGIC_DARK))
+#define IS_MAGIC_DARK(r) (IS_SET(world[r].room_flags, MAGIC_DARK) && !IS_SET(world[r].room_flags, MAGIC_LIGHT))
 
 #define IS_SUNLIT(r) \
            (IS_DAY && !IS_SET(world[r].room_flags, DARK) && \
@@ -1268,6 +1285,7 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch) || IS_EFREET(ch)) &&
     (affected_by_spell(ch, SPELL_MOUSESTRENGTH) || \
     affected_by_spell(ch, SPELL_BEARSTRENGTH) || \
     affected_by_spell(ch, SPELL_ELEPHANTSTRENGTH))
+
 
 #define IS_GREATER_ELEMENTAL(mob) \
     (IS_NPC(mob) && \

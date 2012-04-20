@@ -77,7 +77,7 @@ extern void event_spellcast(P_char, P_char, P_obj, void *);
 int ship_obj_proc(P_obj obj, P_char ch, int cmd, char *arg);
 extern struct mm_ds *dead_mob_pool;
 extern struct mm_ds *dead_pconly_pool;
-
+extern const char *get_function_name(void *);
 char     GS_buf1[MAX_STRING_LENGTH];
 
 
@@ -104,11 +104,11 @@ int get_vis_mode(P_char ch, int room)
 
   if (IS_TRUSTED(ch))
     return 1;
+  else if(EYELESS(ch))
+    return 2;
   else if (IS_AFFECTED(ch, AFF_WRAITHFORM))
     return 4;
   else if (IS_LIGHT(room) || flame)
-    return 2;
-  else if (!RACE_GOOD(ch))
     return 2;
   else if (IS_UNDERWORLD(room) && IS_AFFECTED(ch, AFF_UD_VISION))
     return 2;
@@ -122,7 +122,7 @@ int get_vis_mode(P_char ch, int room)
 // raiding
     return 2;
   else
-    return 2;
+    return 0;
 }
 
 int god_check(char *name)
@@ -1124,7 +1124,7 @@ int exist_in_equipment(P_char ch, int bitflag)
 
 int ac_can_see(P_char sub, P_char obj, bool check_z)
 {
-  int      globe, flame;
+  int      globe, flame, illum;
   P_char   tmp_char;
 
   globe = flame = 0;
@@ -1134,6 +1134,24 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
     logit(LOG_EXIT, "No P_char sub found during ac_can_see() call");
     raise(SIGSEGV);
   }
+
+  // mobs with quests can see in any light, to better facilitate questing, should pose no issues
+  // in zone situations, but will monitor - Jexni 4/19/12
+  if(IS_NPC(sub))
+  {
+    if(mob_index[GET_RNUM(sub)].func.mob &&
+        !strcmp(get_function_name((void*)mob_index[GET_RNUM(sub)].func.mob), "world_quest"))
+      {
+        return 1;
+      }
+      else if(mob_index[GET_RNUM(sub)].qst_func)
+      {
+        if(has_quest(sub))
+        {
+          return 1;
+        }
+      }
+   }
 
   // No idea what happened, but let's hack this until we figure it out.
   if(sub->in_room == -1)
@@ -1184,6 +1202,11 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
 
   for (tmp_char = world[sub->in_room].people; tmp_char; tmp_char = tmp_char->next_in_room)
   {
+    if(tmp_char->light > 0)
+      illum = 1;
+    else
+      illum = -1;
+
     if (IS_AFFECTED4(tmp_char, AFF4_MAGE_FLAME))
     {
       flame = 1;
@@ -1194,8 +1217,8 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
     }
   }
 
-   if(globe && flame)
-     return 1;
+  if(globe && flame)
+    return 1;
 
   /*
    * Room is magically dark
@@ -1205,7 +1228,9 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
     !IS_AFFECTED2(sub, AFF2_ULTRAVISION) &&
     !IS_TWILIGHT_ROOM(obj->in_room) &&
     !flame)
-      return 0;
+  {
+     return 0;
+  }
 
   /*
    * as wraithform is kind of kludge, semi-godsight.
@@ -1238,12 +1263,17 @@ int ac_can_see(P_char sub, P_char obj, bool check_z)
 
   if(IS_AFFECTED2(sub, AFF2_ULTRAVISION) && IS_PC(sub))
   {
-    if((IS_SUNLIT(obj->in_room) || IS_SET(world[obj->in_room].room_flags, MAGIC_LIGHT)) && !globe)
-      return 0;
-    else
-      return 1;
+    if(IS_SET(world[obj->in_room].room_flags, MAGIC_LIGHT) ||
+     IS_SUNLIT(obj->in_room))
+    {
+      if(!globe)
+        return 0;
+      else
+        return 1;
+    }
+    return 1;
   }
-  else if(IS_LIGHT(obj->in_room))
+  else if(IS_LIGHT(obj->in_room) || illum == 1)
   {
     return 1;
   }
@@ -4428,7 +4458,7 @@ int cast_as_damage_area(P_char ch,
       continue;
     if(!is_char_in_room(ch, ch_room))
       break;
-    if(has_innate(tch, INNATE_EVASION) && GET_SPEC(tch, CLASS_MONK, SPEC_WAYOFSNAKE))
+    if(has_innate(tch, INNATE_EVASION) && GET_SPEC(tch, CLASS_MONK, SPEC_ELAPHIDIST))
     {
       if((int) get_property("innate.evasion.removechance", 15.000) > number(1, 100))
       {
@@ -4625,7 +4655,7 @@ bool is_hot_in_room(int room)
 
 int IS_TWILIGHT_ROOM(int r)
 {
-  if(!IS_SET(world[r].room_flags, MAGIC_DARK) && IS_SET(world[r].room_flags, TWILIGHT)) 
+  if(IS_SET(world[r].room_flags, TWILIGHT)) 
     return TRUE;
  
   if(IS_UD_MAP(r))

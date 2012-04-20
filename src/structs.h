@@ -1926,16 +1926,11 @@ struct mcname {
 //#endif
 
 #define MIN_SPEC 0
-//Bard Specs
-#define SPEC_LOREMASTER 1
-#define SPEC_BATTLESEINGER 2
-#define SPEC_STORMSINGER 3
 
 //Monk Specs
-#define SPEC_WAYOFDRAGON 1
-#define SPEC_WAYOFSNAKE 2
+#define SPEC_REDDRAGON 1
+#define SPEC_ELAPHIDIST 2
 #define SPEC_CHIMONK 3
-
 
 // Dreadlord Specs
 #define SPEC_DEATHLORD 1
@@ -1958,7 +1953,7 @@ struct mcname {
 #define SPEC_BLACKSMITH 2
 
 //Merc Specs
-#define SPEC_OPPORTUNIST 1
+#define SPEC_BRIGAND 1
 #define SPEC_BOUNTY 2
 #define SPEC_PROFITEER 3
 
@@ -1981,28 +1976,25 @@ struct mcname {
 #define SPEC_SWASHBUCKLER 3
 
 /*AntiPaladin Specs */
-#define SPEC_DARKKNIGHT 1
+#define SPEC_KNIGHT 1
 #define SPEC_DEMONIC 2
 #define SPEC_SPAWN 3
 
 /* CLASS_PALADIN Specs */
 #define SPEC_CRUSADER 1
 #define SPEC_CAVALIER 2
+
 /* CLASS_SORCERER Specs */
 #define SPEC_WILDMAGE 1
 #define SPEC_WIZARD 2
 #define SPEC_SHADOW 3
-
-#define SPEC_TRICKSTER 1
-#define SPEC_CUTPURSE 2
-#define SPEC_ROGUE 3
 
 #define SPEC_ELEMENTALIST 1
 #define SPEC_SPIRITUALIST 2
 #define SPEC_ANIMALIST 3
 
 #define SPEC_BLADEMASTER 1
-#define SPEC_WOODSMAN    2
+#define SPEC_HUNTSMAN    2
 #define SPEC_MARSHALL    3
 
 #define SPEC_ZEALOT  1
@@ -2010,7 +2002,7 @@ struct mcname {
 #define SPEC_HOLYMAN 3
 
 //Druid Specs
-#define SPEC_WOODLAND 1
+#define SPEC_FOREST 1
 #define SPEC_STORM 2
 #define LUNAR_DRUID 3
 
@@ -2030,7 +2022,7 @@ struct mcname {
 #define SPEC_PSYCHEPORTER 3
 
 //Illu Specs
-#define SPEC_DECEIVER 1
+#define SPEC_MAGICIAN 1
 #define SPEC_DARK_DREAMER 2
 
 /* CLASS_CABALIST Specs */
@@ -2052,6 +2044,9 @@ struct mcname {
 #define SPEC_MEDIUM 1
 #define SPEC_TEMPLAR 2
 #define SPEC_THAUMATURGE 3
+
+#define SPEC_CUTPURSE 1
+#define SPEC_TRICKSTER 2
 
 #define MAX_SPEC 4
 

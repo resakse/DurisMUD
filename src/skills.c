@@ -215,14 +215,14 @@ void initialize_skills()
   /* Mercenary Specs */
   // Opportunitist
   SKILL_CREATE("disruptive blow", SKILL_DISRUPTIVE_BLOW, TAR_PHYS);
-  SPEC_SKILL_ADD(CLASS_MERCENARY, 46, 95, SPEC_OPPORTUNIST);
+  SPEC_SKILL_ADD(CLASS_MERCENARY, 46, 95, SPEC_BRIGAND);
 
   SKILL_CREATE("crippling strike", SKILL_CRIPPLING_STRIKE,
                TAR_PHYS);
-  SPEC_SKILL_ADD(CLASS_MERCENARY, 41, 90, SPEC_OPPORTUNIST);
+  SPEC_SKILL_ADD(CLASS_MERCENARY, 41, 90, SPEC_BRIGAND);
 
   SKILL_CREATE("ambush", SKILL_AMBUSH, TAR_PHYS);
-  SPEC_SKILL_ADD(CLASS_MERCENARY, 36, 90, SPEC_OPPORTUNIST);
+  SPEC_SKILL_ADD(CLASS_MERCENARY, 36, 90, SPEC_BRIGAND);
 
   SKILL_CREATE("mug", SKILL_MUG, TAR_PHYS);
   SPEC_SKILL_ADD(CLASS_MERCENARY, 51, 100, SPEC_PROFITEER);
@@ -329,12 +329,12 @@ void initialize_skills()
 
   SPELL_CREATE_MSG("dread blade", SPELL_DREAD_BLADE, PULSE_SPELLCAST * 3, TAR_SELF_ONLY,
                 spell_dread_blade, "&+LThe putrid &+raura&+L surrounding your weapon fades...&n");
-  SPEC_SPELL_ADD(CLASS_ANTIPALADIN, 9, SPEC_DARKKNIGHT);
+  SPEC_SPELL_ADD(CLASS_ANTIPALADIN, 9, SPEC_KNIGHT);
 
   SKILL_CREATE("skewer", SKILL_SKEWER, TAR_PHYS);
   SKILL_ADD(CLASS_ANTIPALADIN, 41, 80);
   SKILL_ADD(CLASS_PALADIN, 41, 80);
-  SPEC_SKILL_ADD(CLASS_ANTIPALADIN, 36, 90, SPEC_DARKKNIGHT);
+  SPEC_SKILL_ADD(CLASS_ANTIPALADIN, 36, 90, SPEC_KNIGHT);
   SPEC_SKILL_ADD(CLASS_PALADIN, 36, 90, SPEC_CRUSADER);
 
   SKILL_CREATE("smite evil", SKILL_SMITE_EVIL, TAR_PHYS);
@@ -428,14 +428,14 @@ void initialize_skills()
   /* Monk Specs */
   SKILL_CREATE_WITH_MESSAGES("fist of dragon", SKILL_FIST_OF_DRAGON,
     TAR_MENTAL, "The touch of the dragon leaves your soul.","");
-  SPEC_SKILL_ADD(CLASS_MONK, 46, 100, SPEC_WAYOFDRAGON);
+  SPEC_SKILL_ADD(CLASS_MONK, 46, 100, SPEC_REDDRAGON);
 
   SKILL_CREATE_WITH_MESSAGES("tiger palm", SKILL_TIGER_PALM,
     TAR_MENTAL, "The touch of the tiger leaves your soul.","");
-  SPEC_SKILL_ADD(CLASS_MONK, 46, 100, SPEC_WAYOFSNAKE);
+  SPEC_SKILL_ADD(CLASS_MONK, 46, 100, SPEC_ELAPHIDIST);
   
   SKILL_CREATE("flurry of blows", SKILL_FLURRY_OF_BLOWS, TAR_PHYS);
-  SPEC_SKILL_ADD(CLASS_MONK, 31, 80, SPEC_WAYOFSNAKE);
+  SPEC_SKILL_ADD(CLASS_MONK, 31, 80, SPEC_ELAPHIDIST);
 
   /* ranger specs */
   SKILL_CREATE("double strike", SKILL_DOUBLE_STRIKE, TAR_PHYS);
@@ -505,11 +505,11 @@ void initialize_skills()
   SPELL_CREATE_MSG("obscuring mist", SPELL_OBSCURING_MIST, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT,
     spell_obscuring_mist, "The mist creeps away, revealing much of the world to you.");
-  SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 10, SPEC_DECEIVER);
+  SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 10, SPEC_MAGICIAN);
 
   SPELL_CREATE_MSG("suppress sound", SPELL_SUPPRESSION, PULSE_SPELLCAST * 4, TAR_IGNORE,
                 spell_suppress_sound, "The world comes alive with sound around you.");
-  SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 11, SPEC_DECEIVER);
+  SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 11, SPEC_MAGICIAN);
 
   SPELL_CREATE("shadow merging", SPELL_SHADOW_MERGE, PULSE_SPELLCAST * 2,
                 TAR_SELF_ONLY | TAR_NOCOMBAT, spell_shadow_merge);
@@ -567,7 +567,7 @@ void initialize_skills()
   SPEC_SPELL_ADD(CLASS_CLERIC, 8, SPEC_HEALER);
 
   SPELL_CREATE("grow", SPELL_GROW, PULSE_SPELLCAST * 4, TAR_IGNORE | TAR_NOCOMBAT, cast_grow);
-  SPEC_SPELL_ADD(CLASS_DRUID, 10, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 10, SPEC_FOREST);
 
   SPELL_CREATE("depressed earth", SPELL_DEPRESSED_EARTH, PULSE_SPELLCAST * 4,
                 TAR_IGNORE | TAR_NOCOMBAT | TAR_SPIRIT,
@@ -616,11 +616,11 @@ void initialize_skills()
 
   SPELL_CREATE("vines", SPELL_VINES, PULSE_SPELLCAST * 3,
                 TAR_SELF_ONLY, cast_vines);
-  SPEC_SPELL_ADD(CLASS_DRUID, 9, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 9, SPEC_FOREST);
 
   SPELL_CREATE("awaken forest", SPELL_AWAKEN_FOREST, PULSE_SPELLCAST * 4, TAR_AREA | TAR_AGGRO, 
                 cast_awaken_forest);
-  SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_FOREST);
 
   SPELL_CREATE("spike growth", SPELL_SPIKE_GROWTH, PULSE_SPELLCAST * 5, TAR_AREA | TAR_AGGRO, 
                 cast_spike_growth);
@@ -647,7 +647,7 @@ void initialize_skills()
   SPELL_CREATE_MSG("endurance", SPELL_ENDURANCE, PULSE_SPELLCAST * 3 / 2, TAR_SELF_ONLY,
                    spell_endurance, "Your endurance fades away.");
   SPELL_ADD(CLASS_DRUID, 6);
-  SPEC_SPELL_ADD(CLASS_RANGER, 8, SPEC_WOODSMAN);
+  SPEC_SPELL_ADD(CLASS_RANGER, 8, SPEC_HUNTSMAN);
   SPEC_SPELL_ADD(CLASS_CLERIC, 7, SPEC_HEALER);
 
   SPELL_CREATE_MSG("fortitude", SPELL_FORTITUDE, PULSE_SPELLCAST, TAR_CHAR_ROOM,
@@ -1118,7 +1118,7 @@ void initialize_skills()
 
   SPELL_CREATE("call woodland beings", SPELL_CALL_WOODLAND, PULSE_SPELLCAST * 3, TAR_IGNORE | TAR_NOCOMBAT,
                spell_call_woodland_beings);
-  SPEC_SPELL_ADD(CLASS_DRUID, 7, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 7, SPEC_FOREST);
 
   SPELL_CREATE("earthen maul", SPELL_EARTHEN_MAUL, PULSE_SPELLCAST * 2,
                TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_earthen_maul);
@@ -1234,7 +1234,7 @@ void initialize_skills()
   SPELL_CREATE("harmonic resonance", SPELL_HARMONIC_RESONANCE, PULSE_SPELLCAST * 2,
                TAR_AREA | TAR_OFFAREA | TAR_AGGRO,
                spell_harmonic_resonance);
-  SPEC_SPELL_ADD(CLASS_DRUID, 7, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 7, SPEC_FOREST);
   SPEC_SPELL_ADD(CLASS_RANGER, 10, SPEC_MARSHALL);
 
   SPELL_CREATE("nova", SPELL_NOVA, PULSE_SPELLCAST * 3, TAR_IGNORE | TAR_AGGRO, spell_nova);
@@ -1242,11 +1242,11 @@ void initialize_skills()
 
   SPELL_CREATE("spore burst", SPELL_SPORE_BURST, PULSE_SPELLCAST * 3, TAR_IGNORE | TAR_AGGRO, 
                spell_spore_burst);
-  SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_FOREST);
   
   SPELL_CREATE("spore cloud", SPELL_SPORE_CLOUD, PULSE_SPELLCAST * 2,
                TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO, spell_spore_cloud);
-  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_FOREST);
 
   SPELL_CREATE("control weather", SPELL_CONTROL_WEATHER, PULSE_SPELLCAST * 3,
                TAR_IGNORE | TAR_NOCOMBAT, cast_control_weather);
@@ -1728,7 +1728,7 @@ void initialize_skills()
   SPELL_CREATE_MSG("ironwood", SPELL_IRONWOOD, PULSE_SPELLCAST * 4 / 3, TAR_CHAR_ROOM,
                    spell_ironwood, "You feel your skin once again take on a more barklike quality.");
   SPEC_SPELL_ADD(CLASS_RANGER, 11, SPEC_MARSHALL);
-  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_FOREST);
 
   SPELL_CREATE_MSG("stone skin", SPELL_STONE_SKIN, PULSE_SPELLCAST * 4 / 3, TAR_CHAR_ROOM,
                    spell_stone_skin, "You feel your skin soften and return to normal.");
@@ -1806,7 +1806,7 @@ void initialize_skills()
   SPELL_CREATE_MSG("pass without trace", SPELL_PASS_WITHOUT_TRACE, PULSE_SPELLCAST * 2, TAR_SELF_ONLY,
                    spell_pass_without_trace, "You feel less likely to pass unnoticed.");
   SPELL_ADD(CLASS_DRUID, 8);
-  SPEC_SPELL_ADD(CLASS_RANGER, 10, SPEC_WOODSMAN);
+  SPEC_SPELL_ADD(CLASS_RANGER, 10, SPEC_HUNTSMAN);
 
   SPELL_CREATE_MSG("sanctuary", SPELL_SANCTUARY, PULSE_SPELLCAST, TAR_SELF_ONLY,
                    spell_sanctuary, "&+WYour glowing sanctuary &n&+wfades...");
@@ -1950,7 +1950,7 @@ void initialize_skills()
   SPELL_CREATE2("summon insects", SPELL_SUMMON_INSECTS, PULSE_SPELLCAST * 3, TAR_IGNORE,
                 spell_summon_insects, "&+mThe insects in the area scurry away.",
                 "&+mThe insects in the area scurry away..");
-  SPEC_SPELL_ADD(CLASS_DRUID, 7, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 7, SPEC_FOREST);
 
   SPELL_CREATE("darkness", SPELL_DARKNESS, PULSE_SPELLCAST * 3, TAR_OBJ_ROOM | TAR_OBJ_INV | TAR_AREA, 
                spell_darkness);
@@ -2267,7 +2267,7 @@ void initialize_skills()
 
   SPELL_CREATE_MSG("battle ecstasy", SPELL_BATTLE_ECSTASY, PULSE_SPELLCAST * 3, TAR_SELF_ONLY, 
                    spell_battle_ecstasy, "&+WYou feel your inner turmoil disappear&n.");
-  SPEC_SPELL_ADD(CLASS_ANTIPALADIN, 10, SPEC_DARKKNIGHT);
+  SPEC_SPELL_ADD(CLASS_ANTIPALADIN, 10, SPEC_KNIGHT);
   SPEC_SPELL_ADD(CLASS_ANTIPALADIN, 10, SPEC_DEMONIC);
   SPELL_ADD(CLASS_ANTIPALADIN, 11);
 
@@ -2294,11 +2294,11 @@ void initialize_skills()
 
   SPELL_CREATE_MSG("tree", SPELL_TREE, PULSE_SPELLCAST * 2, TAR_SELF_ONLY | TAR_NOCOMBAT,
                 spell_tree, "You feel more like yourself.&n");
-  SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_FOREST);
 
   SPELL_CREATE("animal growth", SPELL_ANIMAL_GROWTH, PULSE_SPELLCAST * 2, TAR_CHAR_ROOM | TAR_ANIMAL,
                 spell_animal_growth);
-  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_FOREST);
   SPEC_SPELL_ADD(CLASS_SHAMAN, 7, SPEC_ANIMALIST);
 
   SPELL_CREATE_MSG("natures blessing", SPELL_NATURES_BLESSING, PULSE_SPELLCAST * 2, TAR_SELF_ONLY,
@@ -2722,7 +2722,7 @@ void initialize_skills()
 
   SPELL_CREATE("watching wall", SPELL_WATCHING_WALL, PULSE_SPELLCAST * 5, TAR_IGNORE | TAR_NOCOMBAT, 
                spell_watching_wall);
-  SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 6, SPEC_DECEIVER);
+  SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 6, SPEC_MAGICIAN);
 
   SPELL_CREATE_MSG("nightmare", SPELL_NIGHTMARE, PULSE_SPELLCAST, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                    spell_nightmare, "You feel less frightend.");
@@ -3106,7 +3106,7 @@ void initialize_skills()
   // Deceiver Skills
 
   SKILL_CREATE("expedited retreat", SKILL_EXPEDITED_RETREAT, TAR_PHYS);
-  SPEC_SKILL_ADD(CLASS_ILLUSIONIST, 41, 80, SPEC_DECEIVER);
+  SPEC_SKILL_ADD(CLASS_ILLUSIONIST, 41, 80, SPEC_MAGICIAN);
 
   SKILL_CREATE("craft", SKILL_CRAFT, TAR_PHYS);
   SKILL_ADD(CLASS_ALCHEMIST, 21, 100);
@@ -3614,7 +3614,7 @@ void initialize_skills()
 
   SPELL_CREATE_MSG("entangle", SPELL_ENTANGLE, PULSE_SPELLCAST * 1, TAR_CHAR_ROOM | TAR_FIGHT_VICT | TAR_AGGRO,
                    spell_entangle, "You are able to move normally again.");
-  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_WOODLAND);
+  SPEC_SPELL_ADD(CLASS_DRUID, 8, SPEC_FOREST);
 
   SPELL_CREATE("create spring", SPELL_CREATE_SPRING, PULSE_SPELLCAST * 2, TAR_IGNORE, spell_create_spring);
   SPELL_ADD(CLASS_DRUID, 4);
@@ -3680,7 +3680,7 @@ void initialize_skills()
   SPEC_SKILL_ADD(CLASS_ROGUE, 1, 100, SPEC_THIEF);
   SKILL_ADD(CLASS_MERCENARY, 1, 80);
   SKILL_ADD(CLASS_BARD, 1, 70);
-  SPEC_SKILL_ADD(CLASS_RANGER, 41, 60, SPEC_WOODSMAN);
+  SPEC_SKILL_ADD(CLASS_RANGER, 41, 60, SPEC_HUNTSMAN);
   SPEC_SKILL_ADD(CLASS_BARD, 1, 85, SPEC_SCOUNDREL);
 
   SKILL_CREATE("steal", SKILL_STEAL, TAR_PHYS);
@@ -3778,7 +3778,7 @@ void initialize_skills()
   SKILL_ADD(CLASS_BARD, 31, 50);
 
   SKILL_CREATE("trap", SKILL_TRAP, TAR_PHYS);
-  SPEC_SKILL_ADD(CLASS_RANGER, 31, 100, SPEC_WOODSMAN);
+  SPEC_SKILL_ADD(CLASS_RANGER, 31, 100, SPEC_HUNTSMAN);
   SPEC_SKILL_ADD(CLASS_MERCENARY, 51, 100, SPEC_BOUNTY);
   SKILL_ADD(CLASS_THIEF, 51, 100);
   SPEC_SKILL_ADD(CLASS_ROGUE, 51, 100, SPEC_THIEF);

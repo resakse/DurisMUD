@@ -1861,11 +1861,11 @@ void do_will(P_char ch, char *argument, int cmd)
       && number(0,100) > GET_C_AGI(ch)/2 + 50)
     add_event(event_abort_spell, number(0,10)*dura/10, ch, 0, 0, 0, 0, 0);
 
-  dura = BOUNDED(1, dura, 4);
+  dura = BOUNDED(1, dura, 6);
   tmp_spl.timeleft -= dura;
   DelayCommune(ch, dura);
   SET_BIT(ch->specials.affected_by2, AFF2_CASTING);
-  add_event(event_spellcast, BOUNDED(1, dura, 4), ch, 
+  add_event(event_spellcast, BOUNDED(1, dura, 6), ch, 
     common_target_data.t_char, 0, 0, &tmp_spl,
     sizeof(struct spellcast_datatype));
   if (common_target_data.t_char)
@@ -2184,8 +2184,9 @@ void do_cast(P_char ch, char *argument, int cmd)
       IS_SET(skills[spl].targets, TAR_INSTACAST))
     dura = 1;
   else if ((GET_CLASS(ch, CLASS_DRUID) && !IS_MULTICLASS_PC(ch)) ||
+           (IS_NPC(ch) && !number(0, 62 - GET_LEVEL(ch))) ||
            ((!is_tank || number(0, 1)) &&
-            (IS_NPC(ch) || IS_SET(ch->specials.act2, PLR2_QUICKCHANT)) &&
+            (IS_SET(ch->specials.act2, PLR2_QUICKCHANT)) &&
             (notch_skill(ch, SKILL_QUICK_CHANT, get_property("skill.notch.quickChant", 100)) ||
              (GET_CHAR_SKILL(ch, SKILL_QUICK_CHANT) > number(1, 100)))))
   {
@@ -2198,7 +2199,7 @@ void do_cast(P_char ch, char *argument, int cmd)
       && number(0,100) > GET_C_AGI(ch)/2 + 50)
     add_event(event_abort_spell, number(0, 9) * dura / 10, ch, 0, 0, 0, 0, 0);
 
-  dura = BOUNDED(1, dura, 4);
+  dura = BOUNDED(1, dura, 6);
   tmp_spl.timeleft -= dura;
   DelayCommune(ch, dura);
   if (cmd == CMD_SPELLWEAVE)
@@ -2214,7 +2215,7 @@ void do_cast(P_char ch, char *argument, int cmd)
     tmp_spl.arg = str_dup(common_target_data.arg);
 
   SET_BIT(ch->specials.affected_by2, AFF2_CASTING);
-  add_event(event_spellcast, BOUNDED(1, dura, 4), ch, common_target_data.t_char, 0, 0, &tmp_spl,
+  add_event(event_spellcast, BOUNDED(1, dura, 6), ch, common_target_data.t_char, 0, 0, &tmp_spl,
       sizeof(struct spellcast_datatype));
 
   if (common_target_data.t_char)

@@ -2272,7 +2272,7 @@ void shapechange_learn(P_char ch, char *mobname)
   if (!GET_CLASS(ch, CLASS_DRUID))
     chLevel -= 5;
 
-  if (GET_SPEC(ch, CLASS_DRUID, SPEC_WOODLAND)) 
+  if (GET_SPEC(ch, CLASS_DRUID, SPEC_FOREST)) 
     chLevel++;
   
   if ((chLevel < shapechange_levelNeeded(GET_RACE(mob))) && !IS_TRUSTED(ch)) {

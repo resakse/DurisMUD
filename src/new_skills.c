@@ -314,7 +314,7 @@ int wornweight(P_char ch)
   for (i = 0; i < MAX_WEAR; i++)
     if (ch->equipment[i])
       encumberance += (GET_OBJ_WEIGHT(ch->equipment[i]));
-  return encumberance;
+  return encumberance - STAT_INDEX(GET_C_STR(ch));
 }
 
 int MonkAcBonus(P_char ch)
@@ -352,20 +352,21 @@ void MonkSetSpecialDie(P_char ch)
     ch->points.damsizedice = 1;
     return;
   }
+
   switch (GET_LEVEL(ch))
   {
     case 1:
     case 2:
     case 3:
-      ch->points.damnodice = 2;
-      ch->points.damsizedice = 3;
+      ch->points.damnodice = 1;
+      ch->points.damsizedice = 4;
       break;
     case 4:
     case 5:
     case 6:
     case 7:
-      ch->points.damnodice = 3;
-      ch->points.damsizedice = 3;
+      ch->points.damnodice = 2;
+      ch->points.damsizedice = 4;
       break;
     case 8:
     case 9:
@@ -375,7 +376,7 @@ void MonkSetSpecialDie(P_char ch)
     case 13:
     case 14:
       ch->points.damnodice = 3;
-      ch->points.damsizedice = 5;
+      ch->points.damsizedice = 4;
       break;
     case 15:
     case 16:
@@ -385,7 +386,7 @@ void MonkSetSpecialDie(P_char ch)
     case 20:
     case 21:
       ch->points.damnodice = 4;
-      ch->points.damsizedice = 3;
+      ch->points.damsizedice = 4;
       break;
     case 22:
     case 23:
@@ -395,7 +396,7 @@ void MonkSetSpecialDie(P_char ch)
     case 27:
     case 28:
     case 29:
-      ch->points.damnodice = 4;
+      ch->points.damnodice = 5;
       ch->points.damsizedice = 4;
       break;
     case 30:
@@ -404,14 +405,14 @@ void MonkSetSpecialDie(P_char ch)
     case 33:
     case 34:
       ch->points.damnodice = 5;
-      ch->points.damsizedice = 4;
+      ch->points.damsizedice = 5;
       break;
     case 35:
     case 36:
     case 37:
     case 38:
       ch->points.damnodice = 5;
-      ch->points.damsizedice = 5;
+      ch->points.damsizedice = 6;
       break;
     case 39:
     case 40:
@@ -420,14 +421,14 @@ void MonkSetSpecialDie(P_char ch)
     case 43:
     case 44:
       ch->points.damnodice = 6;
-      ch->points.damsizedice = 5;
+      ch->points.damsizedice = 6;
       break;
     case 45:
     case 46:
     case 47:
     case 48:
     case 49:
-      ch->points.damnodice = 6;
+      ch->points.damnodice = 7;
       ch->points.damsizedice = 6;
       break;
     case 50:
@@ -437,7 +438,7 @@ void MonkSetSpecialDie(P_char ch)
     case 54:
     case 55:
       ch->points.damnodice = 7;
-      ch->points.damsizedice = 6;
+      ch->points.damsizedice = 7;
       break;
     case 56:
     case 57:
@@ -447,7 +448,7 @@ void MonkSetSpecialDie(P_char ch)
     case 61:
     case 62:
       ch->points.damnodice = 7;
-      ch->points.damsizedice = 7;
+      ch->points.damsizedice = 8;
       break;
     default:
       ch->points.damnodice = 1;
@@ -458,18 +459,26 @@ void MonkSetSpecialDie(P_char ch)
 
 int MonkDamage(P_char ch)
 {
-  int      dam;
+  double   dam;
   int      skl_lvl = 0;
+  P_char   victim;
 
   if (IS_PC(ch))
     skl_lvl = GET_CHAR_SKILL(ch, SKILL_MARTIAL_ARTS);
   else
-    skl_lvl = GET_LEVEL(ch) * 1.5;
+    skl_lvl = BOUNDED(20, (float)(GET_LEVEL(ch) * 1.5), 95);
+
+  if(ch->specials.fighting)
+    victim = ch->specials.fighting;
+  else
+    return 0;
 
   MonkSetSpecialDie(ch);
   dam = dice(ch->points.damnodice, ch->points.damsizedice);
-  dam = dam * (skl_lvl / 90);
-  dam = BOUNDED(1, dam - (wornweight(ch) + 56 - GET_LEVEL(ch)), dam); 
+  dam = dam * ((float)skl_lvl / 90);
+  if(IS_PC(ch))
+    dam = BOUNDED(1, dam - ((wornweight(ch) / 3) * (float)(GET_LEVEL(ch) / 56)), dam); 
+  dam = dam * BOUNDED(0.70, (float) (GET_DAMROLL(ch) / GET_LEVEL(victim)), 1.20);
   return dam;
 }
 
@@ -497,17 +506,16 @@ int MonkNumberOfAttacks(P_char ch)
     skl_lvl = BOUNDED(5, GET_LEVEL(ch) * 1.5, 100);
 
 
-  for (a = 0, l = ((4 * GET_LEVEL(ch)) / number(25, 38));
-       (a < 6) && (l > 0); l--)
+  for (a = 0, l = ((4 * GET_LEVEL(ch)) / number(25, 38)); (a < 6) && (l > 0); l--)
     if (number(1, 100) < skl_lvl)
       a++;
   if (GET_LEVEL(ch) >= 51)
     if (GET_LEVEL(ch) >= 56)
-      return BOUNDED(1, a + 2, 6);
+      return BOUNDED(1, a + 1, 6);
     else
-      return BOUNDED(1, a + 1, 5);
+      return BOUNDED(1, a, 5);
 
-  return BOUNDED(1, a, 5);      /* 1 to 4 */
+  return BOUNDED(1, a, 5);
 }
 
 void do_feign_death(P_char ch, char *arg, int cmd)
@@ -802,7 +810,7 @@ void chant_heroism(P_char ch, char *argument, int cmd)
   af.location = APPLY_DAMROLL;
   affect_to_char(ch, &af);
   
-  if(GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFDRAGON))
+  if(GET_SPEC(ch, CLASS_MONK, SPEC_REDDRAGON))
   {
     send_to_char("Something wicked just happened didn't it? My god you feel weird. \r\n", ch);
     bzero(&af1, sizeof(af1));
@@ -815,7 +823,7 @@ void chant_heroism(P_char ch, char *argument, int cmd)
   send_to_char(buf, ch);
   
   if(GET_LEVEL(ch) >= 36 &&
-    GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) &&
+    GET_SPEC(ch, CLASS_MONK, SPEC_ELAPHIDIST) &&
     !IS_AFFECTED4(ch, AFF4_DAZZLER))
   {
     bzero(&af2, sizeof(af2));
