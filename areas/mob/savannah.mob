@@ -1,0 +1,933 @@
+#138500
+bard woman lady lynstar~
+&+YLyn&+Ws&+Cta&+Wr&n~
+&+mA &+Lb&+bar&+Ld &+mwanders here, searching for something.&N
+~
+&+mThe fair skin of this woman is a shock, coming as it does in the middle of
+&+mthe Butsu village. The second shock is that she is utterly without clothing;
+&+mshe is, indeed, a bare naked lady. Suddenly she bursts into song:
+
+&+W"The Jade Jewel of Mitashi, home to Empress Wu Tang, sister to Emperor
+&+WWu Tang and
+&+Wher humble vassals of Noble Lords and Ladies! Killing off her brothers
+&+Wlieutenants &+WZhang Liu, Chang, Vile and Kobe Chi two at a time
+&+Wbut Kyan Itsu escaped through the shadows of night.
+&+WIf I possed the Katana's of the Lords and Ladies of Mitashi!
+&+WI would peel back that curtain of shadows and night and cut down Kyan Itsu!
+&+WOne, at a time, two at a time, three and at time, four at a time with the
+&+Wfinal stroke of the fifth katana!"
+
+&+LShe stops singing so suddenly with all seriousness and says
+
+&+W"For those I would bestow the gift of sweet laughter and music!"
+~
+1073743944 0 0 0 1048578 0 0 0 0 S
+pl 0 33280 0 -1
+56 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138501
+leopard mother~
+&+LA mother l&+ye&+Lo&+yp&+La&+yr&+Ld&N~
+&+LA mother l&+ye&+Lo&+yp&+La&+yr&+Ld watches over her young here.&N
+~
+&+LThis sleek cat has &N&+ytawny &+Lcoloring which is barely visible in the dark
+&+Lsurroundings. She stretches nearly five feet long and lazily brandishes
+&+La wickedly sharp set of &N&+wclaws&+L.&N
+~
+1073743946 0 0 0 0 64 0 0 0 S
+AC 0 1 0 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138502
+leopard young small~
+&+La young l&+ye&+Lo&+yp&+La&+yr&+Ld&N&N~
+&+LA small l&+ye&+Lo&+yp&+La&+yr&+Ld wrestles with its litter-mates.&N
+~
+&+yThis three-foot cat is learning to use its teeth and claws, as it bats at its
+&+ylittermates. Its tail thrashes wildly as it learns new ways to rend and tear
+&+yflesh.&N
+~
+2122 0 0 0 0 2 0 0 0 S
+AC 0 1 0 -1
+22 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138503
+panther leopard cub~
+&+La &+Wb&+Llac&+Wk p&+Lanthe&+Wr&n~
+&+La &+Wb&+Llac&+Wk p&+Lanthe&+Wr&n&+L sits here apart from the other cubs.&N
+~
+&+LOccasionally, there will be a leopard in a litter that does not share its
+&+Lsibling's tan markings, but is entirely black and known as a 'panther'. This
+&+Lspecimen is bigger and stronger than its siblings, but is shunned by them,
+&+Lsitting in a corner of the lair alone.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+AC 0 1 0 -1
+24 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138504
+termite giant~
+&+La giant &+Wt&+Lermite&N~
+&+LA three-foot &+Wt&+Lermite burrows through the trash here.&N
+~
+&+LThis gigantic insect bears a closer resemblance to a cockroach than to an
+&+Lant, having a pronounced thorax and virtually no midsection. It slowly makes
+&+Lits way through the trash scattered about this area, as if it is looking for
+&+Lsomething. Can whatever made these creatures bigger have made them smarter
+&+Las well?&N
+~
+1140852810 0 0 0 0 2 0 0 0 S
+I 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138505
+termite giant~
+&+La giant &+Wt&+Lermite&N~
+&+LA four-foot &+Wt&+Lermite scuttles through the passages.&N
+~
+&+LThis enormous insect is a member of the warrior caste, making its way through
+&+Lthe many passages of the termite tunnels. Perhaps it is looking for trouble
+&+Lin the colony, or perhaps it is on an errand for its &+Rqueen&+L. These creatures
+&+Lseem smart enough that such ideas are not entirely outlandish.&N
+~
+1140852808 0 0 0 0 2 0 0 0 S
+I 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138506
+termite giant worker~
+&+La giant worker &+Wt&+Lermite&N~
+&+LA three-foot &+Wt&+Lermite bustles through the tunnels here.&N
+~
+&+LThis huge insect is a member of its colony's worker caste and is on its way
+&+Lto the surface, to add on to the towering hive and expand the colony's
+&+Lterritory within the Savannah. The &+Rqueen &+Lhas ordered it, and what the &+Rqueen
+&+Lsays goes, after all.&N
+~
+1140852808 1 0 0 0 2 0 0 0 S
+I 0 1 0 -1
+29 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138507
+queen termite giant~
+&+Lthe &+Wt&+Lermite &+rq&+Rueen&N~
+&+LThe &+Wt&+Lermite &+rq&+Rueen &+Lstands here, pumping out eggs.&N
+~
+&+LThis ridiculous-looking creature is little more than a pair of ovaries. She
+&+Lpushes out an &N&+wegg &+Levery few seconds, which workers then carry to the south.
+&+LHer body is so bloated that she can barely move. Fortunately, the termites'
+&+Lmost dangerous enemies are ants, and ants pose little danger to these gigantic
+&+Linsects.&N
+~
+2122 1 0 0 0 2 0 0 0 S
+I 0 2 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138508
+guard termite giant~
+&+La &+Wt&+Lermite &+Rroyal guard&N~
+&+LA giant &+rr&+Royal &+rg&+Ruard &+Lstands here, protecting the &+rq&+Rueen&+L.&N
+~
+&+LThis impressive-looking creature is nearly five feet long and has a pair of
+&+Ltruly nasty-looking mandibles. It chitters about the &+Rqueen&+L's chamber, always
+&+Lon watch for danger.&N
+~
+1140852810 0 0 0 0 2 0 0 0 S
+I 0 1 0 -1
+33 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138509
+attendant termite giant~
+&+Lan attendant to the &+rq&+Rueen&N~
+&+LA giant &+Wt&+Lermite ferries &+We&+Lg&+Wg&+Ls from the &+rq&+Rueen &+Lto the hatchery.
+~
+&+LThis giant termite of the worker caste has been given the specific duty of
+&+Lmoving the eggs the &+Rqueen &+Llays to the south, into a special chamber reserved
+&+Lfor the hatching of the eggs. It basically follows the same eighty-foot route,
+&+Lback and forth, day and night. Pity this poor creature.&N
+~
+1140852808 0 0 0 0 2 0 0 0 S
+I 0 1 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138510
+termite giant newly hatchling~
+&+La newly hatched &+Wt&+Lermite~
+&+LA &+wne&+Lwl&+Wy&+L hatched &+Wt&+Lermite does &+Wt&+Lermite things here.&n
+~
+&+LThis termite is fresh out of the egg and barely two feet long. It wanders
+&+Lamong the hundreds of other eggs and wonder why it couldn't have been born
+&+Lsomething cooler, like a &+GThri-&+YKreen.&N
+~
+67108938 0 0 0 0 2 0 0 0 S
+I 0 1 0 -1
+23 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138511
+termite giant newly hatchling~
+&+La newly hatched &+Wt&+Lermite~
+&+LA &+wne&+Lwl&+Wy&+L hatched &+Wt&+Lermite waits to be put to work.&N
+~
+&+LThis termite is fresh out of the egg and barely two feet long. It wanders
+&+Lamong the hundreds of other eggs and wonder why it couldn't have been born
+&+Lsomething cooler, like a &+GThri-&+YKreen.&N
+~
+74 0 0 0 0 2 0 0 0 S
+I 0 1 0 -1
+24 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138512
+dromis sage elf~
+&+gDromis&N~
+&+gDromis, the ancient &+celven &+gsage, looks for inspiration here.&N
+~
+&+gElves do not show their age until the very end of their long lives, but this
+&+gwizened old creature reveals every one of the thousand years he has lived.
+&+gHe wanders through the area, muttering "&+wI just know the Savannah is around
+here somewhere.&+g" This &+YSavannah &N&+ghe speaks of must be his latest field of
+&+gstudy. In the past, he has written tomes on &+rTurol&+g, &+cCimmeria&+g, &+WFonstaf &N&+gand
+&+gthe &+LPlanes&N&+g, among many other subjects. He is justifiably proud of his work
+&+gand likes when people ask about his books.&N
+~
+1073776648 0 0 0 0 2 0 0 1000 S
+PE 0 2 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138513
+zebra~
+&+Wa &+Lz&+We&+Lb&+Wr&+La&N~
+A z&+Lebr&N&+wa g&+Lraz&N&+wes &+Lher&N&+we, &+Lutt&N&+werl&+Ly f&N&+wail&+Ling&N&+w to&+L bl&N&+wend&+L in.&N
+~
+&+LT&N&+whis hor&+Lse-lik&N&+we mam&+Lmal gr&N&+wazes t&+Lhe lon&N&+wg blon&+Ld sava&N&+wnnah gra&+Lsses, &N&+wgrind&+Ling them
+&+Lin &N&+wits m&+Lolars. &N&+wFor &+Lno reas&N&+won an&+Lyone c&N&+wan fat&+Lhom, &N&+wthe zeb&+Lra has &N&+wdevel&+Loped a
+&+Lstrik&N&+wing &+Lblack &N&+wand w&+Lhite s&N&+wtripe &+Lpatter&N&+wn on &+Lits h&N&+wide. P&+Lerhaps &N&+wthe i&+Lntention
+&+Lis to &N&+wperm&+Lanentl&N&+wy bli&+Lnd any &N&+wpred&+Lators &N&+wthat &+Lmight &N&+whappe&+Ln by.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+AE 0 1 0 -1
+31 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138514
+zebra~
+&+Wa &+Lz&+We&+Lb&+Wr&+La&N~
+A fe&+Lm&N&+wale &+Lz&N&+webr&+La &N&+wsta&+Ly&N&+ws cl&+Lo&N&+wse t&+Lo &N&+wthe &+Lh&N&+werd.&N
+~
+&+LT&N&+whis hor&+Lse-lik&N&+we mam&+Lmal gr&N&+wazes t&+Lhe lon&N&+wg blon&+Ld sava&N&+wnnah gra&+Lsses, &N&+wgrind&+Ling them
+&+Lin &N&+wits m&+Lolars. &N&+wFor &+Lno reas&N&+won an&+Lyone c&N&+wan fat&+Lhom, &N&+wthe zeb&+Lra has &N&+wdevel&+Loped a
+&+Lstrik&N&+wing &+Lblack &N&+wand w&+Lhite s&N&+wtripe &+Lpatter&N&+wn on &+Lits h&N&+wide. P&+Lerhaps &N&+wthe i&+Lntention
+&+Lis to &N&+wperm&+Lanentl&N&+wy bli&+Lnd any &N&+wpred&+Lators &N&+wthat &+Lmight &N&+whappe&+Ln by.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+AE 0 1 0 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138515
+gazelle~
+&+La &N&+wg&+La&N&+yz&+Le&N&+wlle&N~
+&+LA lo&N&+ynghor&+wned gaze&+Llle keep&N&+ys the sav&+Lannah gras&N&+wses in check.
+~
+&+LThis herbiv&N&+yore grazes &+wthe savannah &+Lgrasses, pr&N&+yeventing th&+Lem from gr&N&+wowing out
+&+Lof control. &N&+yIt stands &+wperhaps four &+Land a half &N&+yfeet high &+Lat the sho&N&+wulder and
+&+Lsports a pa&N&+yir of wick&+wed-looking ho&+Lrns sweeping &N&+ystraight &+Lback from &N&+wits head.&N
+~
+2122 0 0 0 0 2 0 0 0 S
+AE 0 1 0 -1
+33 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138516
+gazelle small~
+&+La &N&+wg&+ya&+Lz&N&+ye&+wlle&N~
+&+LA sma&N&+yll gazelle f&+Lollows t&N&+whe other&+ys in th&+Le herd.&N
+~
+&+LThis herbiv&N&+yore grazes &+wthe savannah &+Lgrasses, pr&N&+yeventing th&+Lem from gr&N&+wowing out
+&+Lof control. &N&+yIt stands &+wperhaps four &+Land a half &N&+yfeet high &+Lat the sho&N&+wulder and
+&+Lsports a pa&N&+yir of wick&+wed-looking ho&+Lrns sweeping &N&+ystraight &+Lback from &N&+wits head.&N
+~
+2122 0 0 0 0 2 0 0 0 S
+AE 0 1 0 -1
+33 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138517
+gazelle large~
+&+ya la&+wrge g&+Laze&N&+ylle~
+&+yA lar&+Lge gaze&N&+wlle lea&+yds its fe&+wllows t&+Lo a new a&N&+yrea.
+~
+&+LThis herbiv&N&+yore grazes &+wthe savannah &+Lgrasses, pr&N&+yeventing th&+Lem from gr&N&+wowing out
+&+Lof control. &N&+yIt stands &+wperhaps four &+Land a half &N&+yfeet high &+Lat the sho&N&+wulder and
+&+Lsports a pa&N&+yir of wick&+wed-looking ho&+Lrns sweeping &N&+ystraight &+Lback from &N&+wits head.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AE 0 1 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138518
+zebra large~
+a &+Ll&N&+wa&+Lr&N&+wg&+Le &N&+wz&+Le&N&+wb&+Lr&N&+wa~
+&+LA &N&+wlar&+Lge &N&+wzeb&+Lra &N&+wloo&+Lks &N&+waro&+Lund &N&+wfo&+Lr p&N&+wred&+Lato&N&+wrs.
+~
+&+LT&N&+whis hor&+Lse-lik&N&+we mam&+Lmal gr&N&+wazes t&+Lhe lon&N&+wg blon&+Ld sava&N&+wnnah gra&+Lsses, &N&+wgrind&+Ling them
+&+Lin &N&+wits m&+Lolars. &N&+wFor &+Lno reas&N&+won an&+Lyone c&N&+wan fat&+Lhom, &N&+wthe zeb&+Lra has &N&+wdevel&+Loped a
+&+Lstrik&N&+wing &+Lblack &N&+wand w&+Lhite s&N&+wtripe &+Lpatter&N&+wn on &+Lits h&N&+wide. P&+Lerhaps &N&+wthe i&+Lntention
+&+Lis to &N&+wperm&+Lanentl&N&+wy bli&+Lnd any &N&+wpred&+Lators &N&+wthat &+Lmight &N&+whappe&+Ln by.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AE 0 1 0 -1
+34 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138519
+lion proud~
+&+Ya pr&N&+youd l&+Yion&N~
+&N&+yA large lion stal&+Yks here, wondering wh&N&+yat to get for dinner.&N
+~
+&+yThe M'Bele tribesmen prize &+Ya lion's hide above mo&N&+yst everything else (except
+&+yone another's blood), and &+Yso there are few of the &N&+ypredators left in the
+&+ySavannah. This impressive &+Yexample of the species &N&+yis out hunting game for the
+&+yrest of his pride, which wa&+Yits near the watering &N&+yhole. He keeps low in the
+&+ygrass, waiting for a chance &+Yto make a sneak att&N&+yack on one of the herds of
+&+ygazelle or zebra that linger &+Yin the area.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AC 0 1 0 -1
+39 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138520
+lion mother _size_medium_~
+&+Ya mot&N&+yher li&+Yon&N~
+&+yA mother lion si&+Yts here, keeping a watc&N&+yhful eye on her cubs.&N
+~
+&+yThe M'Bele tribesmen a&+Yctively hunt lion in the Sav&N&+yannah, which makes the
+&+yanimals more prey than &+Ypredator. This concerned fem&N&+yale watches over one of
+&+ythe only full prides re&+Ymaining in the area. She keep&N&+ys a watchful eye in all
+&+ydirections, particular&+Yly the watering hole towards t&N&+yhe east, pausing once in
+&+yawhile to bat some re&+Yspect back into one of her you&N&+yng.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+AC 0 1 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138521
+lion young~
+&+Ya y&N&+young li&+Yon&N~
+&+yA youthful lion p&+Yaces restlessly ab&N&+yout the area.
+~
+&+yThis youthful lion does n&+Yot share the caution o&N&+yf its parents. It wonders why
+&+yit is not allowed to explo&+Yre the Savannah, and &N&+ygrows restless in the company
+&+yof its siblings. An occasio&+Ynal bat from its moth&N&+yer helps keep it in line.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+AC 0 1 0 -1
+34 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138522
+elephant~
+&+can elephant&N~
+&+cAn elephant basks in the hip-deep waters.
+~
+&+cElephants are not great in number in the Savannah; the M'Bele tribesmen value
+&+ctheir ivory far too much, for use in the tribes' charms and totems. This
+&+csleepy-looking creature does not seem to care that its life is constantly in
+&+cdanger; it simply swishes back and forth, occasionally spraying water over
+&+cits back in an effort to wash away dust and insects.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+AH 0 1 0 -1
+42 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138523
+elephant bull~
+&+ca bull elephant&N~
+&+cA mighty bull elephant watches for predators.&N
+~
+&+cThis large bull elephant is, unlike its fellows, not in the water. It is far
+&+ctoo busy looking in all directions for danger. Its grey hide has a distinct
+&+cbluish tint, perhaps due to some nutrient in the water. It is twelve feet
+&+chigh at the shoulder and almost eighteen feet long, with two mighty tusks
+&+cprotruding from its mouth.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+AH 0 1 0 -1
+44 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138524
+baboon~
+&+ya &+Lb&+ga&+Lb&+go&+Lo&+gn&N~
+&+LA &+Lb&+ga&+Lb&+go&+Lo&+gn&+L clings to a baobab limb, watching the savannah below.&N
+~
+&+yThis smallish primate watches the goings-on of the savannah below with
+&+yintense interest. It absentmindedly winds its prehensile tail around a
+&+ytapering branch, as a herd of zebra pass by to the east.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AA 0 1 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138525
+guard warrior tukluk~
+&+ya &+mT&+Mukluk &N&+yguard&N~
+&+yA &+mT&+Mukluk &N&+ywarrior guards his village, spear at the ready.&N
+~
+&+yThis ebon-skinned warrior is sleekly muscled, like a panther. He wears a
+&+ysimple loincloth and goes barefoot. His face is dabbed with small touches
+&+yof some sort of &+Mpurple &N&+ydye, forming a totemic pattern that represents the
+&+yTukluk tribe. He watches those visiting his village very closely, but those
+&+ynot obviously Butsu are allowed to pass unmolested.&N
+~
+67110986 1 0 0 8 2 0 0 500 S
+PH 0 1 0 -1
+38 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138526
+man tukluk villager~
+&+ya &+mT&+Mukluk &N&+yman&N~
+&+yAn exhausted &+mT&+Mukluk &N&+yvillager sleeps fitfully here.&N
+~
+&+yOne of the few remaining adult males in the Tukluk village, this man has been
+&+yhard at work defending it from the encroaching Butsus. He wears a pattern of
+&+Mpurple &N&+ystreaks across his face and chest, identifying his tribe.&N
+~
+1073743944 0 0 0 0 2 0 0 500 S
+PH 0 1 0 -1
+34 0 0 1d1+1 1d1+1
+0.0.0.0 0
+4 8 1
+#138527
+chief tukluk~
+&+WThe &+mT&+Mukluk &+WChief&N~
+&+yThe &+mT&+Mukluk &n&+wC&+Whief &N&+ywonders how he can possibly defeat the Butsus.&N
+~
+&+yIn a time long ago, the twenty most faithful worshippers of &+rM'Bele &+ywere each
+&+ygranted their own tribe and told that the last surviving chieftain would be
+&+ygiven the powers of &+rM'Bele &+yhimself. Six were killed within a day, during the
+&+ychaos that followed such a titanic announcement; the others began claiming
+&+yterritory and making plans for their eventual victory. By the time the number
+&+yof tribes had been whittled to ten, thirty years had passed, and the other
+&+yten chieftains realized that they were immune to the effects of aging. In
+&+ythe centuries since then, eight more of the contestants have met with the
+&+yspear-point of an enemy, until now only two chieftains are left. Soon enough
+&+ythe competition will end, and &+rM'Bele &+ywill once again walk the earth, wetting
+&+yit with the blood of warriors and innocents alike.&N
+~
+67110986 0 0 0 24 2 0 0 500 S
+PH 0 1 0 -1
+45 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138528
+woman female tukluk~
+&+ya &+mT&+Mukluk &N&+ywoman&N~
+&+yA female member of the &+mT&+Mukluk &N&+ytribe keeps hut here.&N
+~
+&+yTukluk life has left this woman hard and determined. She is nearly as good a
+&+ywarrior as the males of her tribe, having been forced to pick up a spear
+&+yagainst the Butsus on more than one occasion. The war is near an end, now,
+&+yand she tiredly performs the chores that keep the village alive from day to
+&+yday.&N
+~
+1140852808 1 0 0 0 2 0 0 500 S
+PH 0 1 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138529
+shaman tukluk~
+&+ya &+mT&+Mukluk &N&+Cshaman&N~
+&+yThe main &+Cshaman &N&+yof the &+mT&+Mukluk &N&+ytribe performs his duties here.&N
+~
+&+yNot many members of this tribe survive long enough to become old, but this
+&+Cshaman&N&+y's face is a network of wrinkles, and his hair has long since gone
+&+ygray. The &+MTukluk &N&+ytradition is to study the shamanic principles at an early
+&+yage, and then move on to the 'real' art of war in adolescence. As a result,
+&+ythis man's main job is to train the few remaining children in the village.
+&+yHe currently has them out running errands; he needs some animal parts in
+&+yorder to complete his current projects.&N
+~
+1073743946 0 0 0 8 2 0 0 500 S
+PH 0 256 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138530
+apprentice shaman tukluk boy~
+&+yan apprentice to the &+mT&+Mukluk &+Cshaman&N~
+&+yA young boy wanders the village here, practicing his &+Rspells&N&+y.&N
+~
+&+yThis young &+MTukluk &N&+yboy can't be more than twelve, but he seems well versed in
+&+ythe use of the less powerful shamanic spells. It is not long before he begins
+&+ytraining to become a warrior like his father, but the Tukluks believe it is
+&+ywell to learn some of the magical arts as well. The head &+Cshaman &N&+ygives each
+&+yof his apprentices a small token of his esteem; the boy wears his with great
+&+ypride.&N
+~
+1140852936 1 0 0 0 2 0 0 500 S
+PH 0 256 0 -1
+29 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138531
+villager tukluk~
+&+ya &+mT&+Mukluk &N&+yvillager&N~
+&+yA miserable &+mT&+Mukluk &N&+yvillager wanders about.&N
+~
+&+LDemoralized by the state of the war against the &N&+rButsus&+L, this &+MTukluk &+Lvillager
+&+Lis a sad creature indeed. It is impossible to tell whether it is male or
+&+Lfemale, as it keeps its head down while it shuffles about the village.
+&+LPutting this poor soul out of its misery might be a good thing.&N
+~
+1140852936 0 0 0 0 2 0 0 500 S
+PH 0 1 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138532
+cheetah cat _size_small_~
+&+Ya ch&N&+ye&+Yet&N&+ya&+Yh&N~
+&+YA sinewy ch&N&+ye&+Yet&N&+ya&+Yh slinks through the grasses, waiting to strike.&N
+~
+&+YThis impressive &N&+yfel&+Yine is well known as the fastest non-magi&N&+ycal&+Y land mammal
+&+Yon Basternae. (&N&+yIn fa&+Yct, they are occasionally &N&+ycap&+Ytured and &N&+yraced&+Y against
+&+Yh&N&+yast&+Yed Halfling &N&+ysla&+Yves in L'&N&+yRis&+Ytrizzen.) It b&N&+yoasts &+Ya beautif&N&+yul &+Yhide of
+&+ybrown &+Yon yellow. This parti&N&+ycular&+Y cheetah seems &N&+yto &+Ybe out on its own, stalking
+&+Yt&N&+yhe &+Ymany grazing herbivores &N&+yon &+Ythe Savannah.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AC 0 1 0 -1
+35 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138533
+shrike bird loggerhead~
+&+Wa log&N&+wgerhe&+Lad sh&N&+wri&+Wke&N~
+&+WA tiny bird skims just above the &+Ygrasses &+Where.&N
+~
+&+LThe loggerhead shrike can be found all over Basternae, but a large number of
+&+Lthem live in the Savannah of Broken Trusts. It is a small bird that resembles
+a robin or bluejay, with black wings, a gray back and a white chest. In this
+dangerous environment, the shrikes have evolved to be fairly large and lethal
+&+Wcompared to their brethren elsewhere, and posing a great threat to the insect
+&+Wlife below.&N
+~
+2120 0 0 0 0 2 0 0 0 S
+B 0 1 0 -1
+34 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138534
+giraffe~
+&+YA gir&+Laff&+Ye&N~
+&+yA &+Ygir&+Laff&+Ye &+ylooks about for a nearby tree.&N
+~
+&+yThis bull giraffe is part of no herd, having struck off to seek his own
+&+yfortune (or whatever giraffes use instead of fortune). He is headed towards
+&+ythe Savannah's edge, where the trees are more plentiful and he can more
+&+yeasily graze. From way up there he can undoubtedly see predators coming
+&+yfrom a mile off, so in the long run he'll probably do well for himself.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AH 0 1 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138535
+heron bird~
+&+Wa heron&N~
+&+WA stately heron steps carefully across the water.&N
+~
+&+WThis beautiful bird is in the middle of migrating towards the temparate
+&+Wclimes, and has stopped here to take advantage of this standing water. It
+&+Wis one half of a mated pair, who hope to start a family once they reach
+&+Wtheir destination.&N
+~
+1073744074 0 0 0 0 2 0 0 0 S
+B 0 1 0 -1
+29 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138536
+hippopotamus hippo dying~
+&+Lthe dying hippopotamus&N~
+&+LA hippop&N&+wotamus sits &+Lin the war&N&+wm water and wa&+Lits to die.&N
+~
+&+LThe M'Bele natives have done it! They have nearly rendered this species
+&+Lextinct. This hippopotamus is the last of his kind, and he knows it. He is
+&+Lvery old now, and is well aware that he has no one to mate with, all the
+&+Lother hippopotami having been killed by the natives. He has little left to
+&+Ldo but lounge in the water and wait for death to come.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AH 0 1 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138537
+roc bird~
+&+ya r&+ro&+yc&N~
+&+yA gargantuan &+rbird &+ysoars over the Savannah here.&N
+~
+&+yThe Savannah does not seem to be home to very many magical creatures, as
+&+yelsewhere on Basternae, but this enormous avian has muscled its way into
+&+rM'Bele&+y's domain. It has a wingspan of easily fifty feet, and a four-foot
+&+ybeak that can probably bite through adamantine plate armor. Occasionally
+&+yit swoops, picks up a zebra in its claws, and tears the zebra to shreds,
+&+yeating some and discarding the rest.&N
+~
+1073744072 0 0 0 24 2 0 0 0 S
+B 0 1 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138538
+kylian ranger~
+&+YKylian Br&+Wight&+Ystar&N~
+Kylian &+YBr&+Wight&+Ystar &+L*-*&N&+yClan &+rRoc&+yChaser&+L*-* &N&+wstands here.&N
+~
+&+yThis &+CHalf-&N&+cElf &+ywears the accoutrements of a ranger, but slinks about the area
+&+ymore like a rogue. He is dressed in brown and green garb, but wears several
+&+yitems of expensive jewelry that seem out of place. His hair and beard are &+Rred
+&+yand he has an impish expression on his face. He scans the horizon, looking
+&+yfor something, something big.&N
+~
+1140852744 256 0 0 0 2 0 0 1000 S
+P2 0 2 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138539
+ange morte warrior~
+&+WAnge de M&N&+ro&+Lr&N&+rt&+We&N~
+Ange de &+WM&N&+ro&+Lr&N&+rt&+We &+L*-*&N&+yClan &+rRoc&+yChaser&+L*-* &N&+wstands here.&N
+~
+&+WThis beautiful valkyrie stands nearly six feet tall, with striking blue eyes
+&+Wand hair that spills down her back in tight blonde ringlets. She tirelessly
+&+Wfollows &+YKylian &+Won their insane quest for a roc's tailfeather, enduring his
+&+Wlurid comments and chauvinism as well as &N&+yLuncke&+W's truly stunning stupidity.
+&+WAnyone else would have quit by now (indeed, several have); Ange shows a
+&+Wsimple faith that what she does is right.&N
+~
+67110922 256 0 0 0 2 0 0 1000 S
+PH 0 8 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138540
+luncke big dumb~
+&+yLuncke&N~
+Luncke &+bBIG &+wand &+bDUMB &+L*-*&N&+yClan &+rRoc&+yChaser&+L*-* &N&+wstands here.
+~
+&+yThis brute of a man ought to have been born a Barbarian. He stands six and a
+&+yhalf feet tall and weighs over three hundred pounds. Wispy brown hair covers
+&+yhis watermelon of a head, and he follows &+YKylian &N&+yabout with a puzzled look on
+&+yhis face. It is readily apparent that Luncke needs help to lace his own
+&+yboots.&N
+~
+67110922 256 0 0 0 2 0 0 1000 S
+pb 0 1048576 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138541
+golem motley~
+&+La &N&+ym&+wo&+Lt&N&+yl&+re&+wy &+Lgolem&N~
+&+LA golem composed &N&+wof &+rmany &+ythings &+Lstands here motionless.&N
+~
+&+LThis odd creation seems to be made of at least a half-dozen different
+&+Lsubstances, including &N&+yearth &+Lfrom the savannah outside, some sort of
+&+Limported stone, animal &N&+rflesh&+L, &N&+wbone&+L, and even a bit of iron. It looks
+&+Lrather fragile, as if its various components could separate from one
+&+Lanother at any time.&N
+~
+1073743946 0 0 0 0 2 0 0 0 S
+OG 0 1 0 -1
+41 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138542
+sprithnog gnome alchemist~
+&+CSpr&+cith&+Cnog &+ct&+Che &+CAlc&+chem&+Cist&n~
+&+CSpr&+cith&+Cnog&+C, the long-forgotten &+Rgn&+rom&+Rish &+Calc&+chem&+Cist&+C, works here.&N
+~
+&+BIt was nearly fifty years ago that Sprithnog closed down his apothecary in
+&+BParanel and vanished off the face of Basternae. Now he has been found. He
+&+Bdoesn't seem too concerned, though, as he is quite busy puttering around
+&+Bpouring beakers into one another and making sure that he doesn't set his
+&+Blab on fire.&N
+~
+1073743944 0 0 0 0 2 0 0 500 S
+PG 0 512 0 -1
+46 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138543
+zebra crazed~
+&+La &N&+wcr&+Laz&N&+wed &+Lz&N&+web&+Lra&N~
+&+LA crazed &N&+wze&+Lb&N&+wra &+Lmadly bucks and snorts, kicking everything in sight.&N
+~
+&+LThis poor creatu&N&+wre was the victim of a Tukluk atta&+Lck gone awry. A spear point
+&+Lcan be just bare&N&+wly seen, protruding from its left &+Lrear flank. The flesh
+&+Laround it is a h&N&+wuge, festering wound, and the infe&+Lction can be seen spreading
+&+Lall over the ani&N&+wmal's hindquarters. In an effort t&+Lo purge the spear head from
+&+Lits body, the ze&N&+wbra is rearing and stomping all ov&+Ler the Savannah, heedless
+&+Lof what gets in &N&+wits way.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+AE 0 1 0 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138544
+goshawk~
+&+Ca goshawk&N~
+&+cA &+Cgoshawk &N&+cswoops out of the sky to attack.&N
+~
+&+cThere are not many birds in the Savannah, but this goshawk thrives on the
+&+csmaller animals and insects that skulk within its tall grasses. It swoops
+&+cdownwards at a frightening rate, but then soars back into the sky.&N
+~
+1073743944 0 0 0 0 2 0 0 0 S
+B 0 1 0 -1
+32 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138545
+watcher~
+&+Wth&+Ce W&+Bat&N&+bch&+Ler &N&+bo&+Bf &+Cth&+We Contest&N~
+&+WThe W&+Catch&+Ber of t&N&+bhe Con&+Ltest roams the Sa&N&+bvanna&+Bh, overs&+Ceeing the&+W tribal wars.&N
+~
+&+WWhen M'Bele began the Great Contest, he appointed one of his eldest and most
+&+Cfaithful followers to be a sort of referee and recorder of the wars between
+&+Bthe tribes. He transformed the grateful old man into spirit form and sent him
+&N&+bforth. The Watcher has spent a thousand years tirelessly observing the twenty
+&+Ltribes of M'Bele slaughter one another. He has never needed to interfere,
+&+Luntil now.&N
+~
+1073743944 0 0 0 269484042 2 0 0 0 S
+UG 0 14 0 -1
+60 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138546
+kahir host remnants revenant ghost ghosts~
+&+Lthe &+Wghostly &+Lremnants of the &+gK&+Gahir &+Ltribe&N~
+&+LA host of revenants mills about the room, &N&+wglo&+Ww&N&+wing &+Lfaintly.&N
+~
+&+LIt would seem that this room is filled with spirits after all. It is a cruel
+&+Lirony that they are trapped in a tiny chamber with their own former bodies,
+&N&+wunable to inhabit them or escape. These are the spirits of the Kahir tribe,
+&+Wthe third-last tribe of M'Bele to be removed from the Great Contest. The
+&N&+wButsus did not perform the sacred rituals required upon the destruction of
+&+La tribe, but rather buried them in a custom taught by foreigners. These
+&+Lsouls will never know rest while in this state.&N
+~
+1073743946 1 0 0 403701786 2 67108864 0 -1000 S
+UG 0 1 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138547
+shaman butsu~
+&+ythe &+rButsu &+Cshaman&N~
+&+yA wizened &+Cshaman &N&+ystands here, making potions for his tribe.&N
+~
+&+yThis old man has a fine network of wrinkles on his dark face, a sign that he
+&+yhas survived many years of the Contest. The &+rButsu&+ys place even less stock in
+&+ythe magical arts than the &+MTukluks&N&+y, and as a result this man has but a single
+&+yapprentice. He has the boy working next to him, brewing some new potions for
+&+ythe &+rButsu &+ywarriors to use during their next raid to the north.&N
+~
+1073743946 1 0 0 8 2 0 0 -1000 S
+PH 0 256 0 -1
+30 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138548
+apprentice shaman butsu boy~
+&+ythe &+rButsu &+yapprentice &+Cshaman&N~
+&+yA boy of fifteen helps his teacher boil some &+YSavannah &N&+yherbs.&N
+~
+&+yThis boy has grown up, but not out yet, and is currently a jumble of skinny
+&+ylimbs and bones. He has some ritual scars on his dark skin that mark him as
+&+ythe next &+rButsu &+yshaman. Curiously enough, the first thing &+rButsu &+yshamans do
+&+yonce elevated to the role is to use magic to remove the scars.&N
+~
+1140852810 0 0 0 0 2 0 0 -1000 S
+pb 0 256 0 -1
+29 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138549
+tribesman proud cocky man butsu~
+&+ya proud &+rButsu &+ytribesman&N~
+&+yA cocky &+rButsu &+ytribesman puts his feet up after a day of hunting.&N
+~
+&+yThis ebon tribesman is a member of the &+rButsu&+r, which is generally considered
+&+ythe favorite tribe to win the &+WGreat Contest&N&+y. He believes he is destined to
+&+ybe one of &+rM'Bele&+y's chosen after not too long, mostly because of the deeds of
+&+yhis ancestors. As a result, he does little actual raiding on the &+MTukluk
+&+yvillage, and spends much of his time in leisure pursuits.&N
+~
+1073743946 1 0 0 0 2 0 0 -1000 S
+PH 0 1 0 -1
+44 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138550
+guard guardsman butsu man~
+&+ya &+rButsu &+yguardsman&N~
+&+yA dangerous-looking &+rButsu &+yman stands guard here.&N
+~
+&+yThis strapping warrior has foregone a rest period in order to protect his
+&+yvillage from Tukluk intruders. You are obviously not Tukluk, and as a
+&+yresult he will give you no trouble- unless you ask for it.&N
+~
+67110986 0 0 0 0 2 0 0 -1000 S
+PH 0 1 0 -1
+44 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138551
+drozilanan drow scout~
+&+mDrozilanan&N~
+&+mDrozilanan, a drow scout of some fame, talks with the &+rButsu &+mchief.&N
+~
+&+mWhat a Drow Elf is doing here on the surface is anyone's guess. Actually, his
+&+mintent is obvious; he is forging some sort of alliance with the &+rButsu &+mchief,
+&+mthe better to wreak havoc on the surface races. The real question is how he
+&+mgot here in the first place.&N
+~
+2154 0 0 0 8 2 0 0 -1000 S
+PL 0 2 0 -1
+50 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138552
+chief butsu~
+&+ythe &+rButsu &+ychief&N~
+&+yThe mighty chief of the &+rButsu &+ytribe stands here, planning victory.&N
+~
+&+yThis man has an incredibly powerful build, although his thousand years of
+&+ylife are showing. As one of the two remaining Chiefs of a Tribe of &+rM'Bele&+y,
+&+yhis only goal is to destroy the &+MTukluk &N&+ytribe and draw the remaining power
+&+yof &+rM'Bele &+yinto himself. Releasing such a destructive war god onto Basternae
+&+ywould mean much woe for many people. It is imperative that he not succeed.&N
+~
+67110986 0 0 0 24 3 0 0 -1000 S
+PH 0 1 0 -1
+48 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138553
+woman butsu~
+&+ya haughty &+rButsu &+ywoman&N~
+&+yA haughty &+rButsu &+ywoman puts up her nose at housework.&N
+~
+&+yWith the &+rButsus &+yso close to defeating the &+MTukluks &N&+yand winning the Great
+&+yContest, this woman looks about her cluttered cabin and wonders why she
+&+yshould be bothered to clean it. Surely that is what lesser peoples are
+&+yfor...&N
+~
+1073743946 0 0 0 0 2 0 0 -1000 S
+PH 0 1 0 -1
+40 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 2
+#138554
+child butsu~
+&+ya sniveling &+rButsu &+ychild&N~
+&+yA &+rButsu &+ychild pouts, because he isn't allowed to go kill zebras.&N
+~
+&+yThis annoying little child seems to be eleven or twelve years of age, but
+&+ybecause of his &+rButsu &+yheritage is already a decent fighter. He wants to go
+&+yout to the &+YSavannah &N&+yto hunt, but his parents have made him stay in the
+&+yvillage for now. He thrusts his lower lip out an amazing distance and
+&+ymakes keening noises. Somebody really ought to shut him up.&N
+~
+1073743946 0 0 0 0 2 0 0 -1000 S
+PH 0 1 0 -1
+24 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138555
+warrior butsu~
+&+ya powerful &+rButsu &+ywarrior&N~
+&+yA powerful &+rButsu &+ywarrior prepares to go raiding.&N
+~
+&+yThis man is tall and powerful, with the physique of a &+BBarbarian &N&+yand the ebon
+&+yskin of a &+mDrow Elf&+y. He is entirely human, however, with the taste for combat
+&+ythat race so often has. He is rounding up some fellows in order to form a war
+&+yparty and go harass the remaining &+MTukluks&N&+y.&N
+~
+1073743944 1 0 0 0 2 0 0 -1000 S
+pb 0 1 0 -1
+43 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138556
+scout tukluk~
+&+ya brave &+MTukluk &N&+yscout&N~
+&+yAn extremely brave &+MTukluk &N&+yscout observes the Butsu village.&N
+~
+&+yThis exceptionally courageous (or perhaps just foolhardy) Tukluk warrior has
+&+yapproached to within a few hundred yards of the Butsu village, and is utterly
+&+ystill, watching the movements of his ancient enemy. He is prepared at any
+&+ymoment to leap from his perch and sprint back to his own village, to warn
+&+yhis people of any Butsu activity.&N
+~
+1073744202 1 0 0 0 2 0 0 500 S
+PH 0 1 0 -1
+36 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1
+#138557
+tree thorn root thorn-root~
+&+ya thorn-root tree&N~
+&+yA thorn-root tree stands amidst the grasses here, looking out of place.&N
+~
+&+yThere are not many magical creatures in the &+YSavannah&N&+y, but some sorcery has
+&+yanimated these dangerous trees and brought them to life. Its branches can
+&+ylash out up to fifteen feet, causing stinging pain and sometimes lacerations.&N
+~
+2122 0 0 0 0 2 0 0 0 S
+VT 0 1 0 -1
+37 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 0
+#138558
+m'bele god demi-god~
+&+rM'Bele&N~
+&+rM'Bele&+L, a demi-god of &+Rwar &+Land &+Rpain&+L, stalks his prey.&N
+~
+&+LThis terrifying creature has the body of a black Human, but it is nearly
+&+Lthirty feet tall and the arms terminate in enormous animal claws. He
+&+Lstares down at the lesser beings around him and laughs mercilessly. He is
+&+Lhere for one purpose only, and nothing will stand in his way.&N
+~
+1073743882 0 0 0 8 2 0 0 -1000 S
+X 0 7 0 -1
+59 0 0 1d1+1 1d1+1
+0.0.0.0 0
+8 8 1

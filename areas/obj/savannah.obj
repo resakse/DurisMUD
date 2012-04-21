@@ -1,0 +1,653 @@
+#138507
+skin panther pantherskin cloak~
+&+Lsome &+Wb&+Llack &+Wp&+Lathe&+Wr&+Lskin &+Wr&+Lob&+Wes&N~
+&+LThe skin of a M'Bele panther lies here in a heap.&N~
+~
+9 14 3 0 7 0 0 1025 0 1 0
+8 0 0 3 0 0 0 0
+2 10000 100
+E
+skin panther pantherskin cloak~
+&+LThis is a very primitive cloak, little more than the broad back of a panther
+&+Lcut off its body, cured briefly, and strung up. It is said, though, that a
+&+Lpanther from the Savannah of Broken Trusts is a magical creature.&N
+~
+A
+13 10
+A
+14 20
+#138508
+head termite~
+&+Lthe &+Whead&+L of a giant &+Wt&+Lermite &+rq&+Rueen&N~
+&+LAn insectoid head lies here, severed from its body.~
+~
+11 46 3 0 7 0 0 16385 0 1 0
+0 0 0 0 0 0 0 0
+4 10000 100
+E
+head termite~
+This grisly prize will undoubtedly frighten off those who cross its holder's
+path. Carry it with pride and watch your path become clear.
+~
+A
+13 15
+A
+14 10
+#138509
+spear~
+&+ya tribesman's spear&N~
+&+yA twisted spear of baobab wood lies here at an angle.&N~
+~
+5 6 3 0 7 0 0 8193 128 33182 0
+16 2 5 11 0 0 0 0
+4 2000 100
+E
+spear~
+&+yThis primitive weapon is made from a length of baobab wood. The original wood
+&+ywas quite twisted and the creator of the weapon was unsuccessful in forming
+&+ya straight shaft. The head is made of a &+wbone &+yshard and seems quite sharp.&N
+~
+#138510
+spear tukluk~
+&+Rth&+Me &+rgre&+Mat sp&+rear&+M o&+Rf &+Mt&+Rhe &+mT&+Mukluks&N~
+&+yA long, thick spear lies here, its point glistening.&N~
+~
+5 6 3 0 11 0 16777472 8193 192 134123494 0
+16 3 9 11 0 0 0 0
+9 25000 100 0 0 0 1048576
+E
+spear tukluk~
+&+yThis magnificent spear is made out of a perfectly straight baobab branch, a
+&+ytrue rarity. It is sanded to a precise finish on all sides, and is decorated
+&+ywith some sort of &+Mpurple &N&+ydye. Its head is made out of bone, and the edge is
+&+yrazor-sharp.&N
+~
+A
+18 2
+A
+19 2
+#138511
+strip zebra zebrahide wristband~
+&+La &+Wb&+Llack and &+Ww&+Lhite &+Wz&+Le&+Wb&+Lr&+Wa&+L-hide &+Wwr&+Listba&+Wnd&n~
+&+yA small strip of &+Lz&N&+we&+Lb&N&+wr&+La&N&+yhide lies here.&N~
+~
+9 14 3 0 7 0 64 4097 0 1 0
+5 0 0 3 0 0 0 0
+1 15000 100
+E
+strip zebra zebrahide wristband~
+&+yThis is a simple strip of &+Lz&N&+we&+Lb&N&+wr&+La&N&+yhide that was sewn into a circle, intended to
+&+ybe worn about the wrist. It is not particularly well made, but it carries the
+&+ymark of the &+MTukluk &+Cshaman&N&+y, and is probably magically enchanted.&N
+~
+A
+13 10
+A
+5 4
+#138512
+gloves straps leather spellshield tukluk~
+&+Lsome an&+Wcie&+Lnt &+mT&+Mukluk &+Lspe&+Wllshi&+Leld &+Wgl&+Lov&+Wes&n~
+&+ySome straps of leather lie on the ground here.&N~
+~
+9 14 3 0 7 0 64 129 0 0 0
+5 0 0 2 0 0 0 0
+1 24000 100
+E
+straps leather spellshield tukluk~
+&+yThis odd assortment of leather straps was created by the &+MTukluk &+Cshaman &N&+yas a
+&+yway to protect his tribesmen from magical attacks. It is meant to be wound
+&+yaround all ten fingers and tied at the back of the hand.&N
+~
+A
+24 -2
+A
+5 4
+#138513
+mask tukluk leather spirit~
+&+Ca &+mT&+Mukluk &+Csp&+cir&+Cit mask&n~
+&+yA nondescript leather mask lies forgotten here.&N~
+~
+9 14 3 0 7 0 0 262145 0 1 0
+5 0 0 3 0 0 0 0
+1 21000 100 0 16 0 0
+E
+mask tukluk leather~
+&+yThis simply cut mask is made from the hide of a leopard and is little more
+&+ythan a circle of leather with two small eye-holes. The &+MTukluk &+Cshaman &N&+ycreated
+&+ythis item in order to show his apprentice the &+Wspirit &N&+yworld. It restricts
+&+ymotion slightly, but can reveal some wondrous things.&N
+~
+A
+24 -1
+A
+20 -1
+#138514
+essence crystal kahir~
+&+Wthe &+cc&+Crystallized &+ce&+Cssence &+Wof the &+gK&+Gahir &+gt&+Gribe&N~
+&+WA &+Ccrystal &+Wthat hums with the voices of a hundred souls has been placed here.&N~
+~
+8 8 3 0 7 0 8392769 1 0 1 0
+0 0 0 0 0 0 0 0
+4 291200 100
+E
+essence crystal kahir~
+&+WThis large crystal has a hexagonal pattern and is nearly a foot long. There
+&+Care many tiny points of light within the &N&+ccrystal&+C, that flicker and appear to
+&+Cmove about. Voices can be heard coming from within the shard, so many voices
+&+Wthat they drown one another into a sea of incomprehensibility.&N
+~
+#138515
+cloak past epics~
+&+Cthe &+cc&+Cloak of the &N&+ca&+Cgeless &+cs&+Cpi&+Writ&+C of the &+cw&+Ci&+Wnd~
+&+WA &+Ccloak &+Wspun of the stuff of the &N&+cpast &+Wlies here.&N~
+~
+9 1 3 0 7 0 1048681 1025 0 0 0
+1 0 0 1 0 0 0 0
+1 12200 100 16 0 0 0
+E
+cloak past epics~
+&+WThis cloak is nearly insubstantial and cannot possibly afford much protection
+&+Cin combat. However, it throbs with ancient power and those within a hundred
+&N&+cfeet of it are overwhelmed with awe. It whispers of times past, and can much
+&+Lincrease the abilities of a storyteller.&N
+~
+A
+35 1
+A
+2 4
+#138516
+feather tailfeather roc~
+&+ya &+Rr&+roc&+y's &+Yt&+Rail&+Wf&+Leather&N~
+&+yA four-foot feather lies here, looking amazingly out of place.&N~
+~
+13 50 3 0 7 0 8392704 1 0 1 0
+0 0 0 0 0 0 0 0
+3 2011 100
+E
+feather tailfeather roc~
+&+yThe magical &+rroc &+yis a gigantic bird. To quote the old saying, "It's just big."
+&+yThis is one of its tailfeathers, a great monster of a thing weighing in at
+&+yover three pounds and extending nearly four feet. This would undoubtedly make
+&+ya good trophy in some tavern somewhere.&N
+~
+#138517
+insignia feathers water flowing~
+&+Wthe i&+Mn&+ms&+Lignia&+W of &+Cswir&+Wling &+Yf&+ye&+Ma&+mth&+Me&+yr&+Ys&+W and &+Cflo&+Wwing &+bw&+Bater&n~
+&+CA shiny, sparkly, begging-to-be-picked-up badge is lying here.&N~
+~
+4 15 3 0 7 0 4104 2113537 0 0 0
+31 6 6 140 0 0 0 0
+1 132210 100
+E
+badge insignia roc~
+&+cThis small iron curio is circular, with a diagonal slash cutting through the
+&+ccircle. Within the circle and behind the slash is a giant bird with a truly
+&+cterrified look in its eye. Surely this must be the badge of the famous &+yClan
+&+rRoc&+yChaser&+c! Wait a minute... nobody's ever heard of &+yClan &+rRoc&+yChaser&+c.&N
+~
+A
+14 20
+#138518
+ring tarnished abused~
+&+ca &+wtarnished &+cand &+Labused &N&+cring&N~
+A ring was treated horribly, and then thrown here for good measure.&N~
+~
+9 15 3 0 7 0 4224 3 0 1 0
+1 0 0 2 0 0 0 0
+1 24222 100
+E
+ring tarnished abused~
+&+cThis sad example of mistreated jewelry was loved, once. Then its owner got
+&+ceaten by a roc. Stomach acid does horrible things to burnished iron.&N
+~
+A
+19 2
+A
+13 5
+#138519
+book spellbook sprithnog~
+&+CSpr&+cith&+Cnog's &+Ltravelling &+Wbook&+L of &+Mspells&N~
+&+LA think &+Bspellbook &+Llies here, closed.&N~
+~
+33 28 3 0 7 0 4160 16385 0 2048 0
+0 0 150 0 0 0 0 0
+2 23232 100 67108864 0 0 0
+E
+book spellbook sprithnog~
+&+BThis thick book has a blue binding with silver tracery on it. From the
+&+Bselection of spells inside, it is obvious that it once belonged to the
+&+Bgreat &+RGnomish &+Bconjurer, &N&+bSprithnog&+B. Where else could one find the
+&+B'&N&+wconjure cheese elemental&+B' spell?&N
+~
+A
+24 -2
+A
+13 10
+#138520
+potion root green~
+&+La b&N&+gubb&+Glin&+Wg g&+Gree&N&+gn pot&+Lion&N~
+&+yA baobab root lies here, dripping a &+ggreen&+yish liquid.&N~
+~
+10 5 3 0 7 0 64 1 0 1 0
+35 206 201 35 0 0 0 0
+1 23000 100
+E
+potion root green~
+&+yA fat, thick baobab root has been hollowed out and capped. The inside is
+&+ymostly filled with a bubbling, fizzing &+ggreen &+yliquid that looks far too
+&+ynoxious to actually drink.&N
+~
+#138521
+longsword sword twin drow drozilanan~
+&+mone of the &+WT&+mwin &+WS&+mwords of &+MD&+mrozilanan&N~
+&+mA drow longsword lies here, wondering where its twin went.&N~
+~
+5 19 3 0 7 0 262144 8193 0 132055036 0
+5 2 7 3 0 0 0 0
+6 10101 100
+E
+longsword sword twin drow drozilanan~
+&+mThis is one of a mated pair of swords that has been in the House of Darkearth
+&+mfor centuries. Its last wielder was Drozilanan the Scout, who was well known
+&+mas the assassin of &+cDodecimus &+mthe &+cCimmerian &+mchieftain and the discoverer of
+&+mthe Southwest Passage through the Underdark. Drozilanan was last seen heading
+&+mto the surface in an attempt to establish contact with an evil tribe of
+&+mhumans.&N
+~
+A
+18 2
+A
+19 2
+#138522
+necklace fangs drider~
+&+La &+Mn&+mecklace &+Lof dangling &N&+Md&+mrider &+Wf&+La&+Wn&+Lg&+Ws&N~
+&+LA necklace made of what looks like &N&+mfangs &+Lis lying here.&N~
+~
+9 10 3 0 7 0 192 5 0 0 0
+2 0 0 2 0 0 0 0
+1 34034 100
+E
+necklace fangs drider~
+&+mThis grisly piece of jewelry has been made from the cuspid fangs of driders.
+&+mDriders only have two cuspid fangs each, and this necklace sports more than
+&+mthirty of the things. You do the math.&N
+~
+A
+20 -2
+A
+19 2
+#138523
+shield m'bele~
+&+Yt&+yhe &+Rs&+rhield &+Bo&+bf &N&+MM&+W'&+mBele&N~
+&+YA &+Rbrightly &+Bpainted &N&+rshield &+ylies abandoned here.&N~
+~
+37 6 3 0 7 0 65600 513 0 0 0
+1 5 4 150 5 0 0 0
+18 34233 100
+E
+shield m'bele~
+&+YThis shield consists of &+Rlong, well-cut planks of bao&+Ybab wood held together
+&+Ywith some sort of glu&+Be. The &+Rfront side is brightl&+By pain&+Yted in a three-color
+&+Ypattern meant to repr&+Besent &+Rsome sort of evil face&+B, perh&+Yaps intended to ward
+&+Yoff enemies. The shield &+Ris enchanted with the power &+Yof M'Bele, a warrior
+&+Ygod whose followers can &+Rbe found in the Savannah of &+YBroken Trusts.&N
+~
+A
+18 3
+A
+19 2
+#138524
+potion vermilion~
+&+ma vermilion &+Wpotion&N~
+&+mA small vermilion potion lies here, out of the way.&N~
+~
+10 15 3 0 7 0 4160 1 0 1 0
+36 19 84 41 0 0 0 0
+0 23000 100
+E
+potion vermilion~
+&+mA swirling blue liquid swirls inside the glass beakers, on the stopper is a sigil of&n
+&+man eye surrended by feathers.&n
+~
+#138525
+charm savannah~
+&+Lthe &+Yne&+Lck-cha&+Yrm&+L of &+gSa&+Gva&+Wnn&+Lah &+Wo&+Lf B&+Wro&+gke&+Gn &+GT&+gr&+Wus&+Lts&n~
+&+yA small charm of twigs and blond grass lies here forgotten.&N~
+~
+9 4 3 0 7 0 64 4101 0 0 0
+1 0 0 1 0 0 0 0
+1 23233 100
+E
+charm savannah~
+&+yThis odd little charm consists of a small 'cage' of baobab twigs, within
+&+ywhich is a tuft of yellow grass from the &+YSavannah of Broken Trusts&N&+y. It is
+&+yattached to a thin leather strip which can be tied around one's wrist or
+&+yneck.&N
+~
+A
+34 1
+A
+4 4
+#138526
+tusk~
+&+Wan elephant's tusk&N~
+&+WA long, curved elephant's tusk is lying here.&N~
+~
+13 34 3 0 7 0 4096 1 0 1 0
+0 0 0 0 0 0 0 0
+8 23244 100
+E
+tusk~
+&+WThis tusk is high-quality and has a pleasing curve to it. It's too bad an
+&+Welephant had to die in order for you to be manhandling it now. Don't you
+&+Wjust feel terrible?&N
+~
+#138527
+curio ivory~
+&+Wan ivory curio&N~
+&+WA small curio made of ivory lies here gathering dust.&N~
+~
+9 34 3 0 7 0 64 5 0 0 0
+2 0 0 1 0 0 0 0
+1 45555 100
+E
+curio ivory~
+&+WThis small charm is made of fine ivory. Three different pieces of elephant
+&+Wtusk are interlinked in a chain pattern, and strung onto a small strip of
+&N&+yleather.&N
+~
+A
+26 4
+A
+22 -2
+#138528
+skin piece~
+an &+yga&+Lzel&N&+wle sk&+yin&N~
+A pie&+yce of gaz&+Lelle sk&N&+yin lie&+ws here.&N~
+~
+13 13 3 0 7 0 4096 1 0 1 0
+0 0 0 0 0 0 0 0
+4 4288 100
+E
+skin piece~
+Thi&+Ls is simp&N&+wly a piec&+ye of gaz&N&+welle h&+Lide tha&N&+yt has bee&+Ln cut fro&N&+wm the ca&+yrcass.&N
+~
+#138529
+sleeves gazelle gazelle-skin~
+&+ysome g&+waz&+Lell&N&+ye-skin sleeves&N~
+&+ySome g&+waz&+Lell&N&+ye-skin sleeves have been tossed here.&N~
+~
+9 14 3 0 7 0 64 257 0 1 0
+7 0 0 3 0 0 0 0
+3 34444 100
+E
+sleeves gazelle gazelle-skin~
+&+yThis pair of arm coverings have been made from ga&+wze&+Llle&N&+ys slain in the &+YSavannah
+&+Yof Broken Trusts&N&+y. A &+MTukluk &N&+yshaman then proceeded to enchant them with the
+&+ypower of &+rM'Bele&N&+y, the mighty war god.&N
+~
+A
+19 2
+A
+18 1
+#138530
+bones skeleton lion~
+&+Wa pile of lion &N&+wbones&N~
+&+WA lion's &N&+wskeleton &+Wlies here, looking formerly ferocious.&N~
+~
+13 10 3 0 7 0 4096 1 0 1 0
+0 0 0 0 0 0 0 0
+16 10 100
+E
+bones skeleton lion~
+&+WThis is not a full skeleton, but it comes close. The individual bones have
+&+Wbeen thrown together into a big mess, with a grinning skull on top.&N
+~
+#138531
+monocle gnomish gnome spell-reading~
+&+La &+Mse&+Rt&+M o&+Lf &+Rgn&+romi&+Rsh mono&+Mcles&+R o&+Lf &+Rspe&+Mll&+W-&+Mread&+Ring&n~
+&+CA finely made monocle lies here, getting dirty.&N~
+~
+9 44 3 0 7 0 64 131073 0 0 0
+1 0 0 2 0 0 0 0
+1 23233 100
+E
+monocle gnomish gnome~
+&+CThis is a simple monocle in a steel frame. The frame has etchings in the form
+&+Cof ancient Gnomish runes that state '&N&+wHe who sees, knows.&+C' A small silver
+&+Cchain is meant to attach the monocle to a shirt.&N
+~
+A
+3 9
+A
+13 5
+#138532
+claws m'bele~
+&+yt&+Yhe &+Wc&+Llaws &N&+yo&+Yf &+mM&+W'&+MBele&N~
+&+yA pair of enormous, &+rbloody &+yanimal claws lies here.&N~
+~
+13 15 3 0 7 0 4161 129 0 1 0
+0 0 0 0 0 0 0 0
+0 23221 100
+E
+claws m'bele~
+&+yThese &+rclaws &+yare nearly three feet long, and are able to magically conform
+&+ythemselves to the hands of the wielder. They are not made of earthly
+&+ysubstances, but seem to have been created by a &+Lgod&N&+y.&N
+~
+#138533
+legendary drums chaos heroism instrument~
+&+Lthe &+Wleg&n&+wend&+Lary &+yd&+Yrums&+L of &+Wc&+mh&+ra&+yo&+Ys&+L and &+Wh&+Cerois&+Wm&n~
+&+Lsome &+yd&+Yrums&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 14 0 0 8404993 192 125796351 0
+188 41 0 1 0 0 0 0
+0 100000 100
+E
+legendary drums chaos heroism instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+24 -3
+A
+20 -3
+#138534
+legendary horn flight dragons dragon instrument~
+&+Lthe &+Wleg&n&+wend&+Lary &+yh&+Yorn&+L of &+wfl&+Wig&+wht&+L and &+gdr&+Gago&+gns&n~
+&+Lthe &+yh&+Yorn&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 14 10 0 14 0 0 8404993 64 125796351 0
+189 41 0 1 0 0 0 0
+0 100000 100
+E
+legendary horn flight dragons dragon instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+14 25
+A
+3 8
+#138535
+legendary lyre healing harming instrument~
+&+Lthe &+Wleg&n&+wend&+Lary &+yl&+Yyre&+L of &+Ch&+cea&+Cling&+L and &+Rha&+rrmi&+Rng&n~
+&+Lthe &+yl&+Yyre&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 14 0 0 8404993 192 0 0
+185 41 0 1 0 0 0 0
+0 100000 100
+E
+legendary lyre healing harming instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+5 10
+A
+13 20
+#138536
+legendary flute sleeping charming instrument~
+&+Lthe &+Wleg&n&+wend&+Lary &+yf&+Ylute&+L of &+bs&+Bl&+Leepi&+Bn&+bg&+L and &+mc&+Mh&+Warmi&+Mn&+mg&n~
+&+Lthe &+yf&+Ylute&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 14 0 0 8404993 192 125796351 0
+184 41 0 1 0 0 0 0
+0 100000 100
+E
+legendary flute sleeping charming instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+28 10
+A
+30 10
+#138537
+legendary mandolin revelations forgetfulness instrument~
+&+Lthe &+Wleg&n&+wend&+Lary &+ym&+Yandolin&+L of &+mr&+Me&+Lvelatio&+Mn&+ms&+L and &+Lfo&+grg&+Cetfu&+gln&+Less&n~
+&+Lthe &+ym&+Yandolin&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 14 0 0 8404993 192 125796351 0
+186 41 0 1 0 0 0 0
+0 100000 100
+E
+legendary mandolin revelations forgetfulness instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+21 -3
+A
+17 -10
+#138538
+legendary harp peace calming~
+&+Lthe &+Wleg&n&+wend&+Lary &+yh&+Yarp&+L of &+Wp&+Ceac&+We&+L and &+Cc&+Walmin&+Cg&n~
+&+Lthe &+yh&+Yarp&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 14 0 0 8404993 192 125796351 0
+187 41 0 1 0 0 0 0
+0 100000 100
+E
+legendary harp peace calming~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+2 10
+A
+26 10
+#138539
+epic drums chaos heroism instrument~
+&+Lthe &+Me&+mpi&+Mc &+yd&+Yrums&+L of &+Wc&+mh&+ra&+yo&+Ys&+L and &+Wh&+Cerois&+Wm&n~
+&+Lsome &+yd&+Yrums&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 15 0 0 9453569 192 125796351 0
+188 51 0 1 0 0 0 0
+0 250000 100 0 0 0 33554432
+E
+epic drums chaos heroism instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+57 -1
+A
+24 -5
+#138540
+epic horn flight dragons instrument~
+&+Lthe &+Me&+mpi&+Mc &+yh&+Yorn&+L of &+wfl&+Wig&+wht&+L and &+gdr&+Gago&+gns&n~
+&+Lthe &+yh&+Yorn&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 15 0 0 9453569 192 125796351 0
+189 51 0 1 0 0 0 0
+0 250000 100 537395200 0 0 0
+E
+epic horn flight dragons instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+25 0
+A
+14 30
+#138541
+epic lyre healing harming instrument~
+&+Lthe &+Me&+mpi&+Mc &+yl&+Yyre&+L of &+Ch&+cea&+Cling&+L and &+Rha&+rrmi&+Rng&n~
+&+Lthe &+yl&+Yyre&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 15 0 0 9453569 192 125796351 0
+185 51 0 1 0 0 0 0
+0 250000 100 16777216 32768 64 0
+E
+epic lyre healing harming instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+35 5
+A
+13 25
+#138542
+epic flute sleeping charming instrument~
+&+Lthe &+Me&+mpi&+Mc &+yf&+Ylut&+ye&+L of &+bs&+Bl&+Leepi&+Bn&+bg&+L and &+mc&+Mh&+Warmi&+Mn&+mg&n~
+&+Lthe &+yf&+Ylute&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 15 0 0 9453569 192 0 0
+184 51 0 1 0 0 0 0
+0 250000 100 2048 0 0 0
+E
+epic flute sleeping charming instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+38 5
+A
+13 25
+#138543
+epic mandolin revelations forgetfulness instrument~
+&+Lthe &+Me&+mpi&+Mc &+ym&+Yandolin&+L of &+mr&+Me&+Lvelatio&+Mn&+ms&+L and &+Lfo&+grg&+Cetfu&+gln&+Less&n~
+&+Lthe &+ym&+Yandolin&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 15 0 0 9453569 192 125796351 0
+186 51 0 1 0 0 0 0
+0 250000 100 0 0 0 67108864
+E
+epic mandolin revelations forgetfulness instrument~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+21 -5
+A
+5 10
+#138544
+epic harp peace calming~
+&+Lthe &+Me&+mpi&+Mc &+yh&+Yarp&+L of &+Wp&+Ceac&+We&+L and &+Cc&+Walmin&+Cg&n~
+&+Lthe &+yh&+Yarp&+L of &+Wleg&+wen&+Lds has been foolishly left here&n~
+~
+32 35 10 0 15 0 0 9453569 192 125796351 0
+187 51 0 1 0 0 0 0
+0 250000 100
+E
+epic harp peace calming~
+&+LThis is the instrument of legends! Few in the realm know the
+&+Lsecets to creating such an item, but those whom dont would pay
+&+La pretty penny to learn its secrets!
+~
+A
+2 10
+A
+55 8

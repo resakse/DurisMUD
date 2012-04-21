@@ -1,0 +1,291 @@
+#1
+&+WT&+Lh&+ge Sa&+Gva&+Wnn&+Lah &+Wo&+Lf B&+Wro&+gke&+Gn &+GT&+gr&+Wus&+Lts&n~
+138666 2 0 35 40 1
+*
+* Zone edited with durisEdit v2.99de
+*
+*
+D 0 138580 3 5 100 0 0 0
+*     west exit from "Edge of The Savannah of Broken Trusts" to
+*     "A Small Leopard Warren" - closed/secret
+*
+D 0 138585 1 5 100 0 0 0
+*     east exit from "A Small Leopard Warren" to
+*     "Edge of The Savannah of Broken Trusts" - closed/secret
+*
+D 0 138619 1 5 100 0 0 0
+*     east exit from "A Termite Tunnel" to
+*     "A Dank Pit" - closed/secret
+*
+D 0 138665 3 5 100 0 0 0
+*     west exit from "A Dank Pit" to
+*     "A Termite Tunnel" - closed/secret
+*
+D 0 138623 2 5 100 0 0 0
+*     south exit from "A Termite Tunnel" to
+*     "A Room of Undeath" - closed/secret
+*
+D 0 138629 0 5 100 0 0 0
+*     north exit from "A Room of Undeath" to
+*     "A Termite Tunnel" - closed/secret
+*
+*
+*
+M 0 138533 5 138502 100 0 0 0      * a loggerhead shrike
+M 0 138534 12 138504 100 0 0 0     * A giraffe
+M 0 138534 12 138504 100 0 0 0     * A giraffe
+M 0 138534 12 138504 100 0 0 0     * A giraffe
+M 0 138533 5 138505 100 0 0 0      * a loggerhead shrike
+M 0 138545 1 138507 100 0 0 0      * the Watcher of the Contest
+M 0 138557 4 138508 100 0 0 0      * a thorn-root tree
+M 0 138532 9 138509 100 0 0 0      * a cheetah
+M 0 138532 9 138509 100 0 0 0      * a cheetah
+M 0 138532 9 138509 100 0 0 0      * a cheetah
+M 0 138532 9 138511 100 0 0 0      * a cheetah
+M 0 138537 1 138512 100 0 0 0      * a roc
+G 1 138516 1 0 100 0 0 0           *    a roc's tailfeather
+G 1 138518 1 0 100 0 0 0           *    a tarnished and abused ring
+M 0 138557 4 138513 100 0 0 0      * a thorn-root tree
+M 0 138533 5 138514 100 0 0 0      * a loggerhead shrike
+M 0 138518 2 138516 100 0 0 0      * a large zebra
+F 1 138513 5 138516 100 0 0 0      * a zebra (following)
+F 1 138514 5 138516 100 0 0 0      * a zebra (following)
+F 1 138513 5 138516 100 0 0 0      * a zebra (following)
+F 1 138514 5 138516 100 0 0 0      * a zebra (following)
+M 0 138520 3 138518 100 0 0 0      * a mother lion
+M 0 138521 3 138518 100 0 0 0      * a young lion
+M 0 138521 3 138518 100 0 0 0      * a young lion
+M 0 138520 3 138518 100 0 0 0      * a mother lion
+M 0 138521 3 138518 100 0 0 0      * a young lion
+M 0 138520 3 138518 100 0 0 0      * a mother lion
+M 0 138519 7 138518 100 0 0 0      * a proud lion
+M 0 138519 7 138518 100 0 0 0      * a proud lion
+M 0 138535 2 138519 100 0 0 0      * a heron
+M 0 138522 4 138519 100 0 0 0      * an elephant
+G 1 138526 3 0 100 0 0 0           *    an elephant's tusk
+M 0 138523 2 138519 100 0 0 0      * a bull elephant
+G 1 138526 3 0 100 0 0 0           *    an elephant's tusk
+M 0 138535 2 138519 100 0 0 0      * a heron
+M 0 138522 4 138519 100 0 0 0      * an elephant
+G 1 138526 3 0 100 0 0 0           *    an elephant's tusk
+M 0 138536 3 138519 100 0 0 0      * the dying hippopotamus
+M 0 138522 4 138519 100 0 0 0      * an elephant
+M 0 138522 4 138519 100 0 0 0      * an elephant
+M 0 138523 2 138519 100 0 0 0      * a bull elephant
+M 0 138536 3 138519 100 0 0 0      * the dying hippopotamus
+M 0 138536 3 138519 100 0 0 0      * the dying hippopotamus
+M 0 138534 12 138521 100 0 0 0     * A giraffe
+M 0 138534 12 138521 100 0 0 0     * A giraffe
+M 0 138534 12 138521 100 0 0 0     * A giraffe
+M 0 138532 9 138522 100 0 0 0      * a cheetah
+M 0 138532 9 138522 100 0 0 0      * a cheetah
+M 0 138532 9 138522 100 0 0 0      * a cheetah
+M 0 138533 5 138524 100 0 0 0      * a loggerhead shrike
+M 0 138524 18 138526 100 0 0 0     * a baboon
+M 0 138524 18 138526 100 0 0 0     * a baboon
+M 0 138524 18 138526 100 0 0 0     * a baboon
+M 0 138524 18 138526 100 0 0 0     * a baboon
+M 0 138524 18 138526 100 0 0 0     * a baboon
+M 0 138524 18 138527 100 0 0 0     * a baboon
+M 0 138524 18 138527 100 0 0 0     * a baboon
+M 0 138524 18 138527 100 0 0 0     * a baboon
+M 0 138524 18 138527 100 0 0 0     * a baboon
+M 0 138524 18 138528 100 0 0 0     * a baboon
+M 0 138524 18 138528 100 0 0 0     * a baboon
+M 0 138524 18 138528 100 0 0 0     * a baboon
+M 0 138524 18 138528 100 0 0 0     * a baboon
+M 0 138524 18 138528 100 0 0 0     * a baboon
+M 0 138524 18 138529 100 0 0 0     * a baboon
+M 0 138524 18 138529 100 0 0 0     * a baboon
+M 0 138524 18 138529 100 0 0 0     * a baboon
+M 0 138524 18 138529 100 0 0 0     * a baboon
+M 0 138543 1 138530 100 0 0 0      * a crazed zebra
+M 0 138534 12 138531 100 0 0 0     * A giraffe
+M 0 138534 12 138531 100 0 0 0     * A giraffe
+M 0 138534 12 138531 100 0 0 0     * A giraffe
+M 0 138519 7 138533 100 0 0 0      * a proud lion
+G 1 138530 1 0 100 0 0 0           *    a pile of lion bones
+M 0 138519 7 138533 100 0 0 0      * a proud lion
+M 0 138518 2 138535 100 0 0 0      * a large zebra
+F 1 138514 5 138535 100 0 0 0      * a zebra (following)
+F 1 138513 5 138535 100 0 0 0      * a zebra (following)
+F 1 138514 5 138535 100 0 0 0      * a zebra (following)
+F 1 138513 5 138535 100 0 0 0      * a zebra (following)
+F 1 138514 5 138535 100 0 0 0      * a zebra (following)
+F 1 138513 5 138535 100 0 0 0      * a zebra (following)
+M 0 138557 4 138536 100 0 0 0      * a thorn-root tree
+M 0 138517 2 138538 100 0 0 0      * a large gazelle
+G 1 138528 3 0 100 0 0 0           *    an gazelle skin
+F 1 138515 4 138538 100 0 0 0      * a gazelle (following)
+F 1 138516 4 138538 100 0 0 0      * a gazelle (following)
+F 1 138515 4 138538 100 0 0 0      * a gazelle (following)
+G 1 138528 3 0 100 0 0 0           *    an gazelle skin
+F 1 138516 4 138538 100 0 0 0      * a gazelle (following)
+F 1 138515 4 138538 100 0 0 0      * a gazelle (following)
+M 0 138534 12 138539 100 0 0 0     * A giraffe
+M 0 138534 12 138539 100 0 0 0     * A giraffe
+M 0 138534 12 138539 100 0 0 0     * A giraffe
+M 0 138525 9 138542 100 0 0 0      * a Tukluk guard
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138525 9 138542 100 0 0 0      * a Tukluk guard
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138556 1 138548 100 0 0 0      * a brave Tukluk scout
+E 1 138525 1 14 100 0 0 0          *   the neck-charm of Savannah of Broken Trusts
+M 0 138544 2 138556 100 0 0 0      * a goshawk
+M 0 138519 7 138558 100 0 0 0      * a proud lion
+M 0 138519 7 138558 100 0 0 0      * a proud lion
+M 0 138557 4 138563 100 0 0 0      * a thorn-root tree
+M 0 138532 9 138565 100 0 0 0      * a cheetah
+M 0 138532 9 138565 100 0 0 0      * a cheetah
+M 0 138519 7 138573 100 0 0 0      * a proud lion
+M 0 138544 2 138574 100 0 0 0      * a goshawk
+M 0 138533 5 138576 100 0 0 0      * a loggerhead shrike
+M 0 138517 2 138578 100 0 0 0      * a large gazelle
+F 1 138516 4 138578 100 0 0 0      * a gazelle (following)
+F 1 138515 4 138578 100 0 0 0      * a gazelle (following)
+G 1 138528 3 0 100 0 0 0           *    an gazelle skin
+F 1 138516 4 138578 100 0 0 0      * a gazelle (following)
+M 0 138512 1 138584 100 0 0 0      * Dromis
+M 0 138538 1 138584 100 0 0 0      * Kylian Brightstar
+F 1 138539 1 138584 100 0 0 0      * Ange de Morte (following)
+F 1 138540 1 138584 100 0 0 0      * Luncke (following)
+M 0 138501 1 138585 100 0 0 0      * A mother leopard
+M 0 138502 5 138585 100 0 0 0      * a young leopard
+M 0 138502 5 138585 100 0 0 0      * a young leopard
+M 0 138502 5 138585 100 0 0 0      * a young leopard
+M 0 138503 1 138585 100 0 0 0      * a black panther
+G 1 138507 1 0 100 0 0 0           *    some black patherskin robes
+M 0 138502 5 138585 100 0 0 0      * a young leopard
+M 0 138502 5 138585 100 0 0 0      * a young leopard
+M 0 138542 1 138588 100 0 0 0      * Sprithnog the Alchemist
+G 1 138519 1 0 100 0 0 0           *    Sprithnog's travelling book of spells
+M 0 138541 4 138588 100 0 0 0      * a motley golem
+M 0 138541 4 138588 100 0 0 0      * a motley golem
+M 0 138541 4 138588 100 0 0 0      * a motley golem
+M 0 138541 4 138588 100 0 0 0      * a motley golem
+M 0 138505 8 138589 100 0 0 0      * a giant termite
+M 0 138531 5 138590 100 0 0 0      * a Tukluk villager
+M 0 138506 8 138592 100 0 0 0      * a giant worker termite
+M 0 138504 13 138594 100 0 0 0     * a giant termite
+M 0 138504 13 138594 100 0 0 0     * a giant termite
+M 0 138506 8 138595 100 0 0 0      * a giant worker termite
+M 0 138505 8 138597 100 0 0 0      * a giant termite
+M 0 138506 8 138599 100 0 0 0      * a giant worker termite
+M 0 138506 8 138601 100 0 0 0      * a giant worker termite
+M 0 138505 8 138602 100 0 0 0      * a giant termite
+M 0 138506 8 138604 100 0 0 0      * a giant worker termite
+M 0 138504 13 138605 100 0 0 0     * a giant termite
+M 0 138504 13 138605 100 0 0 0     * a giant termite
+M 0 138504 13 138605 100 0 0 0     * a giant termite
+M 0 138504 13 138606 100 0 0 0     * a giant termite
+M 0 138504 13 138606 100 0 0 0     * a giant termite
+M 0 138504 13 138606 100 0 0 0     * a giant termite
+M 0 138504 13 138607 100 0 0 0     * a giant termite
+M 0 138504 13 138607 100 0 0 0     * a giant termite
+M 0 138504 13 138607 100 0 0 0     * a giant termite
+M 0 138504 13 138608 100 0 0 0     * a giant termite
+M 0 138504 13 138608 100 0 0 0     * a giant termite
+M 0 138505 8 138610 100 0 0 0      * a giant termite
+M 0 138506 8 138612 100 0 0 0      * a giant worker termite
+M 0 138506 8 138614 100 0 0 0      * a giant worker termite
+M 0 138505 8 138615 100 0 0 0      * a giant termite
+M 0 138507 1 138617 100 0 0 0      * the termite queen
+G 1 138508 1 0 100 0 0 0           *    the head of a giant termite queen
+M 0 138508 2 138617 100 0 0 0      * a termite royal guard
+M 0 138508 2 138617 100 0 0 0      * a termite royal guard
+M 0 138505 8 138618 100 0 0 0      * a giant termite
+M 0 138506 8 138622 100 0 0 0      * a giant worker termite
+M 0 138505 8 138623 100 0 0 0      * a giant termite
+M 0 138505 8 138624 100 0 0 0      * a giant termite
+M 0 138509 2 138628 100 0 0 0      * an attendant to the queen
+M 0 138509 2 138628 100 0 0 0      * an attendant to the queen
+M 0 138510 3 138628 100 0 0 0      * a newly hatched termite
+M 0 138511 3 138628 100 0 0 0      * a newly hatched termite
+M 0 138510 3 138628 100 0 0 0      * a newly hatched termite
+M 0 138511 3 138628 100 0 0 0      * a newly hatched termite
+M 0 138510 3 138628 100 0 0 0      * a newly hatched termite
+M 0 138511 3 138628 100 0 0 0      * a newly hatched termite
+M 0 138546 5 138629 100 0 0 0      * the ghostly remnants of the Kahir tribe
+M 0 138546 5 138629 100 0 0 0      * the ghostly remnants of the Kahir tribe
+G 1 138514 1 0 100 0 0 0           *    the crystallized essence of the Kahir tribe
+M 0 138546 5 138629 100 0 0 0      * the ghostly remnants of the Kahir tribe
+M 0 138546 5 138629 100 0 0 0      * the ghostly remnants of the Kahir tribe
+M 0 138546 5 138629 100 0 0 0      * the ghostly remnants of the Kahir tribe
+M 0 138530 3 138630 100 0 0 0      * an apprentice to the Tukluk shaman
+E 1 138511 1 14 100 0 0 0          *   a black and white zebra-hide wristband
+M 0 138531 5 138631 100 0 0 0      * a Tukluk villager
+M 0 138525 9 138631 100 0 0 0      * a Tukluk guard
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138525 9 138631 100 0 0 0      * a Tukluk guard
+M 0 138531 5 138633 100 0 0 0      * a Tukluk villager
+M 0 138525 9 138633 100 0 0 0      * a Tukluk guard
+M 0 138525 9 138634 100 0 0 0      * a Tukluk guard
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138525 9 138634 100 0 0 0      * a Tukluk guard
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138531 5 138634 100 0 0 0      * a Tukluk villager
+M 0 138530 3 138635 100 0 0 0      * an apprentice to the Tukluk shaman
+E 1 138513 1 20 100 0 0 0          *   a Tukluk spirit mask
+M 0 138530 3 138636 100 0 0 0      * an apprentice to the Tukluk shaman
+E 1 138512 1 9 100 0 0 0           *   some ancient Tukluk spellshield gloves
+M 0 138528 9 138638 100 0 0 0      * a Tukluk woman
+M 0 138531 5 138638 100 0 0 0      * a Tukluk villager
+M 0 138526 5 138639 100 0 0 0      * a Tukluk man
+M 0 138528 9 138639 100 0 0 0      * a Tukluk woman
+M 0 138529 1 138640 100 0 0 0      * a Tukluk shaman
+M 0 138526 5 138641 100 0 0 0      * a Tukluk man
+M 0 138528 9 138641 100 0 0 0      * a Tukluk woman
+M 0 138528 9 138641 100 0 0 0      * a Tukluk woman
+M 0 138528 9 138641 100 0 0 0      * a Tukluk woman
+M 0 138528 9 138641 100 0 0 0      * a Tukluk woman
+M 0 138526 5 138645 100 0 0 0      * a Tukluk man
+M 0 138528 9 138646 100 0 0 0      * a Tukluk woman
+M 0 138526 5 138647 100 0 0 0      * a Tukluk man
+M 0 138528 9 138647 100 0 0 0      * a Tukluk woman
+M 0 138526 5 138648 100 0 0 0      * a Tukluk man
+M 0 138528 9 138648 100 0 0 0      * a Tukluk woman
+M 0 138525 9 138651 100 0 0 0      * a Tukluk guard
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138525 9 138651 100 0 0 0      * a Tukluk guard
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138527 1 138651 100 0 0 0      * The Tukluk Chief
+E 1 138510 1 16 100 0 0 0          *   the great spear of the Tukluks
+M 0 138550 4 138652 100 0 0 0      * a Butsu guardsman
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138550 4 138652 100 0 0 0      * a Butsu guardsman
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138555 3 138654 100 0 0 0      * a powerful Butsu warrior
+M 0 138555 3 138655 100 0 0 0      * a powerful Butsu warrior
+M 0 138555 3 138656 100 0 0 0      * a powerful Butsu warrior
+M 0 138553 5 138657 100 0 0 0      * a haughty Butsu woman
+M 0 138554 4 138657 100 0 0 0      * a sniveling Butsu child
+M 0 138549 5 138658 100 0 0 0      * a proud Butsu tribesman
+M 0 138553 5 138658 100 0 0 0      * a haughty Butsu woman
+M 0 138549 5 138659 100 0 0 0      * a proud Butsu tribesman
+M 0 138554 4 138659 100 0 0 0      * a sniveling Butsu child
+M 0 138553 5 138660 100 0 0 0      * a haughty Butsu woman
+M 0 138554 4 138660 100 0 0 0      * a sniveling Butsu child
+M 0 138549 5 138661 100 0 0 0      * a proud Butsu tribesman
+M 0 138553 5 138661 100 0 0 0      * a haughty Butsu woman
+M 0 138549 5 138662 100 0 0 0      * a proud Butsu tribesman
+M 0 138554 4 138662 100 0 0 0      * a sniveling Butsu child
+M 0 138549 5 138663 100 0 0 0      * a proud Butsu tribesman
+M 0 138553 5 138663 100 0 0 0      * a haughty Butsu woman
+M 0 138547 1 138664 100 0 0 0      * the Butsu shaman
+M 0 138548 1 138664 100 0 0 0      * the Butsu apprentice shaman
+G 1 138520 1 0 100 0 0 0           *    a bubbling green potion
+M 0 138500 1 138665 100 0 0 0      * Lynstar
+M 0 138550 4 138666 100 0 0 0      * a Butsu guardsman
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138550 4 138666 100 0 0 0      * a Butsu guardsman
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+M 0 138551 1 138666 100 0 0 0      * Drozilanan
+E 1 138522 1 3 100 0 0 0           *   a necklace of dangling drider fangs
+E 1 138521 2 16 100 0 0 0          *   one of the Twin Swords of Drozilanan
+E 1 138521 2 17 100 0 0 0          *   one of the Twin Swords of Drozilanan
+G 1 138524 1 0 100 0 0 0           *    a vermilion potion
+M 0 138552 1 138666 100 0 0 0      * the Butsu chief
+E 1 138523 1 11 100 0 0 0          *   the shield of M'Bele
+E 1 138509 12 16 100 0 0 0         *   a tribesman's spear
+*
+S
