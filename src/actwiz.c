@@ -2523,18 +2523,18 @@ void do_stat(P_char ch, char *argument, int cmd)
     }
 
     sprintf(buf,
-            "&+YLevel: &N%d&+Y(&n%d&+Y)&n  &+YExperience: &N%s %s  &+YAlignment [&N%d&+Y] Assoc:&n %d\n",
+            "&+YLevel: &N%d&+Y(&n%d&+Y) &+YExperience: &N%s %s &+YAlignment: &N%d &+YAssoc:&n %d\n",
             k->player.level,
             IS_PC(k) ? k->only.pc->highest_level : GET_LEVEL(k),
             comma_string((int) GET_EXP(k)), buf2, GET_ALIGNMENT(k), GET_A_NUM(k));
     strcat(o_buf, buf);
 
 
-    sprintf(buf, "&+YRace: &N%s  &+YClass: &N",
+    sprintf(buf, "&+YRace: &N%s &+YClass: &N",
             race_names_table[k->player.race].ansi);
     get_class_string(k, buf2);
     strcat(buf, buf2);
-    sprintf(buf + strlen(buf), " &+YRacewar: ");
+    sprintf(buf + strlen(buf), "&+YRacewar: ");
     if(IS_NPC(k))
       sprintf(buf + strlen(buf), "&+wNPC&n");
     else if(GET_RACEWAR(k) == RACEWAR_GOOD)
@@ -2549,7 +2549,7 @@ void do_stat(P_char ch, char *argument, int cmd)
       sprintf(buf + strlen(buf), "&+RINVALID&n");
 
     sprintf(buf2,
-            "\n&+YHometown: &N%d  &+YBirthplace: &N%d  &+YOrig BP: &n%d\n",
+            " &+YHometown: &N%d &+YBirthplace: &N%d &+YOrig BP: &n%d\n",
             GET_HOME(k), GET_BIRTHPLACE(k), GET_ORIG_BIRTHPLACE(k));
     strcat(buf, buf2);
     strcat(o_buf, buf);
@@ -2559,22 +2559,20 @@ void do_stat(P_char ch, char *argument, int cmd)
       fragnum = 0;
     fragnum /= 100;
 
-    sprintf(buf, "&+YPulse: &N%4d&+Y  Current Pulse: &N%4d&+Y  "
-            "Dam Multiplier: &N%1.2f  &+YFrags:&n %+.02f\n",
+    sprintf(buf, "&+YPulse: &n%2d &+YCurrent Pulse: &n%2d&+Y "
+            "Dam Multiplier: &N%1.2f &+YFrags:&n %+.02f\n",
             k->specials.base_combat_round,
             k->specials.combat_tics,
             k->specials.damage_mod);
     strcat(o_buf, buf);
-
-    strcat(o_buf, "\n");
     
     if(IS_PC(k))
     {
-      sprintf(buf, "&+YEpic points: &n%u&+Y  Epic skill points: &n%u\n", k->only.pc->epics, k->only.pc->epic_skill_points);
+      sprintf(buf, "&+YEpic points: &n%u &+YEpic skill points: &n%u\n", k->only.pc->epics, k->only.pc->epic_skill_points);
       strcat(o_buf, buf);
 
       sprintf(buf,
-              "&+YAge: &N%4d &+Yyears  &N%2d &+Ymonths  &N%2d &+Ydays  &N%2d &+YHours\n",
+              "&+YAge: &N%4d &+Yyears, &N%2d &+Ymonths, &N%2d &+Ydays, &N%2d &+Yhours\n",
               age(k).year, age(k).month, age(k).day, age(k).hour);
       strcat(o_buf, buf);
 
@@ -2601,7 +2599,7 @@ void do_stat(P_char ch, char *argument, int cmd)
       strcat(o_buf, buf);
     }
 
-    strcat(o_buf, "      &+gCur (Bas)      Cur (Bas)\n");
+    strcat(o_buf, "     &+gCur (Bas)         Cur (Bas)\n");
 
     for (i = 0, i3 = 0; i < MAX_WEAR; i++)
       if(k->equipment[i])
@@ -2630,13 +2628,13 @@ void do_stat(P_char ch, char *argument, int cmd)
     strcat(o_buf, buf);
 
     sprintf(buf,
-            "&+YCon: &n%3d&+Y (&n%3d&+Y)    Cha: &n%3d&+Y (&n%3d&+Y)   Equipped Items: &n%3d&+Y     Carried weight:&n%5d\n",
+            "&+YCon: &n%3d&+Y (&n%3d&+Y)    Cha: &n%3d&+Y (&n%3d&+Y)    Equipped Items: &n%3d&+Y  Carried Weight: &n%4d\n",
             GET_C_CON(k), k->base_stats.Con, GET_C_CHA(k), k->base_stats.Cha,
             i3, IS_CARRYING_W(k));
     strcat(o_buf, buf);
 
     sprintf(buf,
-            "&+YKar: &n%3d&+Y (&n%3d&+Y)    Luc: &n%3d&+Y (&n%3d&+Y)    Carried Items: &n%3d&+Y   Max Carry Weight:&n%5d\n",
+            "&+YKar: &n%3d&+Y (&n%3d&+Y)    Luc: &n%3d&+Y (&n%3d&+Y)    Carried  Items: &n%3d&+Y  Max Carry Weight: &n%4d\n",
             GET_C_KARMA(k), k->base_stats.Karma, GET_C_LUCK(k),
             k->base_stats.Luck, IS_CARRYING_N(k), CAN_CARRY_W(k));
     strcat(o_buf, buf);
@@ -2650,7 +2648,7 @@ void do_stat(P_char ch, char *argument, int cmd)
       k->base_stats.Wis + k->base_stats.Cha;
 
     sprintf(buf,
-            "&+YAvg: &n%3d&+Y (&n%3d&+Y)  Total mod: (&n%3d&+Y)              Load modifer: &n%3d\n\n",
+            "&+YAvg: &n%3d&+Y (&n%3d&+Y)  Total mod: (&n%3d&+Y)    Load  Modifier: &n%3d\n",
             (int) (i / 8), (int) (i2 / 8), (i - i2), load_modifier(k));
     strcat(o_buf, buf);
 
@@ -2732,7 +2730,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 
     i2 = calculate_thac_zero(k, 100); // Assumes 100 weapon skill.
 
-    sprintf(buf, "&+Y thAC0: &N%d &+Y  +Hit: &N%d", i2,
+    sprintf(buf, "&+YthAC0: &N%d &+Y+Hit: &N%d", i2,
             GET_HITROLL(k));// + str_app[STAT_INDEX(GET_C_STR(k))].tohit); wipe2011, str does not apply to hitroll
     if(IS_NPC(k) ||
         (GET_CLASS(k, CLASS_MONK) &&
@@ -2741,7 +2739,7 @@ void do_stat(P_char ch, char *argument, int cmd)
         !k->equipment[HOLD] &&
         !k->equipment[SECONDARY_WEAPON]))
     {
-      sprintf(buf, "%s   &+YUnarmed damage: &N%d&+Yd&N%d  &+Y+Dam: &N%d\n",
+      sprintf(buf, "%s &+YUnarmed damage: &N%d&+Yd&N%d &+Y+Dam: &N%d\n",
               buf, k->points.damnodice, k->points.damsizedice,
               GET_DAMROLL(k)); // + str_app[STAT_INDEX(GET_C_STR(k))].todam); wipe2011, apply is already done in affects.c
     }
@@ -2752,9 +2750,9 @@ void do_stat(P_char ch, char *argument, int cmd)
     }
     strcat(o_buf, buf);
 
-    strcat(o_buf, "&+YSaves:    Para   Wands  Fear   Breath Spell\n");
+    strcat(o_buf, "&+YSaves:    Para  Wands  Fear  Bre   Spell\n");
     sprintf(buf,
-            "&+Y (actual) [&N%3d&+Y]  [&N%3d&+Y]  [&N%3d&+Y]  [&N%3d&+Y]  [&N%3d&+Y]\n",
+            "&+Y(actual)  [&N%2d&+Y]  [&N%2d&+Y]   [&N%2d&+Y]  [&N%2d&+Y]  [&N%2d&+Y]\n",
             BOUNDED(1, (find_save(k, SAVING_PARA ) + k->specials.apply_saving_throw[0] * 5), 100),
             BOUNDED(1, (find_save(k, SAVING_ROD  ) + k->specials.apply_saving_throw[1] * 5), 100),
             BOUNDED(1, (find_save(k, SAVING_FEAR ) + k->specials.apply_saving_throw[2] * 5), 100),
@@ -2762,15 +2760,13 @@ void do_stat(P_char ch, char *argument, int cmd)
             BOUNDED(1, (find_save(k, SAVING_SPELL) + k->specials.apply_saving_throw[4] * 5), 100));
     strcat(o_buf, buf);
     sprintf(buf,
-            "&+Y (mods)   [&N%3d&+Y]  [&N%3d&+Y]  [&N%3d&+Y]  [&N%3d&+Y]  [&N%3d&+Y]\n",
+            "&+Y (mods)   [&N%2d&+Y]  [&N%2d&+Y]   [&N%2d&+Y]  [&N%2d&+Y]  [&N%2d&+Y]\n",
             k->specials.apply_saving_throw[0],
             k->specials.apply_saving_throw[1],
             k->specials.apply_saving_throw[2],
             k->specials.apply_saving_throw[3],
             k->specials.apply_saving_throw[4]);
     strcat(o_buf, buf);
-
-    strcat(o_buf, "\n");
 
     if(IS_PC(k))
     {
@@ -2811,16 +2807,16 @@ void do_stat(P_char ch, char *argument, int cmd)
     }
     else
       sprintf(buf, "&+YPosition: &N%s", buf1);
-    sprintf(buf1, "%s  &+YFighting:&n %s", buf,
+    sprintf(buf1, "%s &+YFighting:&n %s\n", buf,
             ((k->specials.fighting) ? GET_NAME(k->specials.
-                                               fighting) : "---"));
+                                               fighting) : "---\n"));
     if(IS_NPC(k))
     {
       strcat(buf1, "\n");
       strcpy(buf, buf1);
     }
     else
-      sprintf(buf, "%-61s  &+YTimer: &N%d\n", buf1, k->specials.timer);
+      sprintf(buf, "&+YTimer: &N%d\n", buf1, k->specials.timer);
     strcat(o_buf, buf);
 
     if(IS_NPC(k))
