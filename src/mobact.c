@@ -2621,8 +2621,7 @@ bool CastDruidSpell(P_char ch, P_char victim, int helping)
       spl = SPELL_BARKSKIN;
   }
 
-  if(!spl && (affected_by_spell(target, SPELL_POISON) || IS_AFFECTED2(target,
-                                                                       AFF2_POISONED))
+  if(!spl && (affected_by_spell(target, SPELL_POISON) || IS_AFFECTED2(target, AFF2_POISONED))
       && npc_has_spell_slot(ch, SPELL_AID))
     spl = SPELL_AID;
 
@@ -2925,8 +2924,7 @@ bool CastShamanSpell(P_char ch, P_char victim, int helping)
       }
     }
 
-
-    if(!spl && !ARMORED(target) &&
+    if(!spl && !IS_AFFECTED2(target, SPELL_SPIRIT_ARMOR) &&
         npc_has_spell_slot(ch, SPELL_SPIRIT_ARMOR))
       spl = SPELL_SPIRIT_ARMOR;
 
