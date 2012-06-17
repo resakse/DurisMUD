@@ -3131,7 +3131,7 @@ void reset_zone(int zone, int force_item_repop)
           obj = read_object(temp, REAL);
           if (!obj)
              break;
-          if(IS_ARTIFACT(obj)) &&
+          if(IS_ARTIFACT(obj) &&
              get_property("artifact.respawn", 0) == 0)
           {
             extract_obj(obj, TRUE);
@@ -3180,7 +3180,7 @@ void reset_zone(int zone, int force_item_repop)
         obj = read_object(temp, REAL);
         if (!obj)
           break;
-        if(IS_ARTIFACT(obj)) &&
+        if(IS_ARTIFACT(obj) &&
            get_property("artifact.respawn", 0) == 0)
         {
           extract_obj(obj, TRUE);
@@ -3216,7 +3216,7 @@ void reset_zone(int zone, int force_item_repop)
           obj = read_object(temp, REAL);
           if (!obj)
             break;
-          if(IS_ARTIFACT(obj)) &&
+          if(IS_ARTIFACT(obj) &&
              get_property("artifact.respawn", 0) == 0)
           {
             extract_obj(obj, TRUE);
@@ -3305,7 +3305,7 @@ void reset_zone(int zone, int force_item_repop)
               }
               if (obj)
               {
-                if(IS_ARTIFACT(obj)) &&
+                if(IS_ARTIFACT(obj) &&
                    get_property("artifact.respawn", 0) == 0)
                 {
                   extract_obj(obj, TRUE);
@@ -3364,7 +3364,7 @@ void reset_zone(int zone, int force_item_repop)
               obj_to = get_obj_num(ZCMD.arg3);
               if (obj_to)
               {
-                if(IS_ARTIFACT(obj)) &&
+                if(IS_ARTIFACT(obj) &&
                    get_property("artifact.respawn", 0) == 0)
                 {
                   extract_obj(obj, TRUE);
@@ -3417,7 +3417,7 @@ void reset_zone(int zone, int force_item_repop)
             }
             if (obj)
             {
-              if(IS_ARTIFACT(obj)) &&
+              if(IS_ARTIFACT(obj) &&
                  get_property("artifact.respawn", 0) == 0)
               {
                 extract_obj(obj, TRUE);
@@ -3486,7 +3486,7 @@ void reset_zone(int zone, int force_item_repop)
             }
             if (obj)
             {
-              if(IS_ARTIFACT(obj)) &&
+              if(IS_ARTIFACT(obj) &&
                  get_property("artifact.respawn", 0) == 0)
               {
                 extract_obj(obj, TRUE);
