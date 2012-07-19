@@ -1065,8 +1065,8 @@ void handle_undead_mem(P_char ch)
 
   if(highest_empty)
   {
-    // time = get_circle_memtime(ch, highest_empty);
-    time = (int) new_circle_memtime(ch, highest_empty) / 4;
+    time = get_circle_memtime(ch, highest_empty);
+//    time = (int) new_circle_memtime(ch, highest_empty) / 4;
     add_event(event_memorize, time * WAIT_SEC, ch, 0, 0, 0, &time, sizeof(time));
   }
   else if(!(USES_COMMUNE(ch) || USES_FOCUS(ch)))
@@ -1141,8 +1141,8 @@ void handle_memorize(P_char ch)
     {
       if(memorized)
       {
-        //time = get_circle_memtime(ch, get_spell_circle(ch, af->modifier));
-        time = (int) new_circle_memtime(ch, get_spell_circle(ch, af->modifier));
+        time = get_circle_memtime(ch, get_spell_circle(ch, af->modifier));
+//        time = (int) new_circle_memtime(ch, get_spell_circle(ch, af->modifier));
         add_event(event_memorize, time / 2, ch, 0, 0, 0, &time, sizeof(time));
         return;
       }
@@ -1297,16 +1297,16 @@ void do_assimilate(P_char ch, char *argument, int cmd)
     {
       need_mem = circle;
       sprintf(Gbuf1 + strlen(Gbuf1), "  (%d seconds)", 
-           //(get_circle_memtime(ch, circle, true) * (max_spells_in_circle(ch, circle) - available))/WAIT_SEC);
-             ((int) new_circle_memtime(ch, circle, true) * (max_spells_in_circle(ch, circle) - available)) / 4);
+           (get_circle_memtime(ch, circle, true) * (max_spells_in_circle(ch, circle) - available))/WAIT_SEC);
+//             ((int) new_circle_memtime(ch, circle, true) * (max_spells_in_circle(ch, circle) - available)) / 4);
     }
     strcat(Gbuf1, "\n");
   }
   send_to_char(Gbuf1, ch);
 
   if((USES_COMMUNE(ch) || USES_FOCUS(ch)) && need_mem && !get_scheduled(ch, event_memorize))
-   // add_event(event_memorize, get_circle_memtime(ch, need_mem), ch, 0, 0, 0, 0, 0);
-     add_event(event_memorize, (int) new_circle_memtime(ch, need_mem) * WAIT_SEC, ch, 0, 0, 0, 0, 0);
+    add_event(event_memorize, get_circle_memtime(ch, need_mem), ch, 0, 0, 0, 0, 0);
+//     add_event(event_memorize, (int) new_circle_memtime(ch, need_mem) * WAIT_SEC, ch, 0, 0, 0, 0, 0);
 
   if(!need_mem || USES_COMMUNE(ch) || USES_FOCUS(ch))
     return;
@@ -1346,8 +1346,8 @@ void do_assimilate(P_char ch, char *argument, int cmd)
 
   if(!IS_AFFECTED2(ch, AFF2_MEMORIZING))
   {
-    // add_event(event_memorize, get_circle_memtime(ch, get_max_circle(ch)) / 2, ch, 0, 0, 0, 0, 0);
-     add_event(event_memorize, (int) new_circle_memtime(ch, get_max_circle(ch)) / 2, ch, 0, 0, 0, 0, 0);
+    add_event(event_memorize, get_circle_memtime(ch, get_max_circle(ch)) / 2, ch, 0, 0, 0, 0, 0);
+//    add_event(event_memorize, (int) new_circle_memtime(ch, get_max_circle(ch)) / 2, ch, 0, 0, 0, 0, 0);
   }
 
   SET_BIT(ch->specials.affected_by2, AFF2_MEMORIZING);
@@ -1375,8 +1375,8 @@ void do_npc_commune(P_char ch)
 
   if(need_mem && !get_scheduled(ch, event_memorize))
   {
-     // add_event(event_memorize, get_circle_memtime(ch, need_mem), ch, 0, 0, 0, 0, 0);
-     add_event(event_memorize, (int) new_circle_memtime(ch, need_mem), ch, 0, 0, 0, 0, 0);
+    add_event(event_memorize, get_circle_memtime(ch, need_mem), ch, 0, 0, 0, 0, 0);
+//     add_event(event_memorize, (int) new_circle_memtime(ch, need_mem), ch, 0, 0, 0, 0, 0);
   }
 }
 
@@ -1558,8 +1558,8 @@ void do_memorize(P_char ch, char *argument, int cmd)
           if(shown_one)
             shown_one = FALSE;
           else
-            // time += get_circle_memtime(ch, circle, true);
-            time += new_circle_memtime(ch, circle, true);
+            time += get_circle_memtime(ch, circle, true);
+            //time += new_circle_memtime(ch, circle, true);
           sprintf(Gbuf1 + strlen(Gbuf1), "%5d seconds:  (%2d%s) %s%s\n",
                   time / 4, circle, (circle == 1) ? "st" :
                   (circle == 2) ? "nd" : (circle == 3) ? "rd" :
@@ -1628,8 +1628,8 @@ void do_memorize(P_char ch, char *argument, int cmd)
                 "praying intently.", IS_EVIL(ch) ? "un" : "");
       }
       act(Gbuf1, TRUE, ch, sbook, 0, TO_ROOM);
-      //time = get_circle_memtime(ch, get_spell_circle(ch, first_to_mem));
-      time = (int) new_circle_memtime(ch, get_spell_circle(ch, first_to_mem));
+      time = get_circle_memtime(ch, get_spell_circle(ch, first_to_mem));
+//      time = (int) new_circle_memtime(ch, get_spell_circle(ch, first_to_mem));
       add_event(event_memorize, time / 2, ch, 0, 0, 0, &time, sizeof(time));
       SET_BIT(ch->specials.affected_by2, AFF2_MEMORIZING);
     }
@@ -1709,8 +1709,8 @@ void do_memorize(P_char ch, char *argument, int cmd)
   new_mem.duration = -1;
   new_mem.modifier = spl;
   affect_to_end(ch, &new_mem);
-  //time = get_circle_memtime(ch, get_spell_circle(ch, spl));
-  time = (int) new_circle_memtime(ch, get_spell_circle(ch, spl));
+  time = get_circle_memtime(ch, get_spell_circle(ch, spl));
+//  time = (int) new_circle_memtime(ch, get_spell_circle(ch, spl));
 
   if(!IS_AFFECTED2(ch, AFF2_MEMORIZING))
   {
@@ -1925,8 +1925,8 @@ void use_spell(P_char ch, int spell)
     if((USES_COMMUNE(ch) || USES_FOCUS(ch)) &&
       !get_scheduled(ch, event_memorize))
     {
-      //add_event(event_memorize, get_circle_memtime(ch, get_spell_circle(ch, spell)), ch, 0, 0, 0, 0, 0);
-      add_event(event_memorize, (int) new_circle_memtime(ch, get_spell_circle(ch, spell)), ch, 0, 0, 0, 0, 0);
+      add_event(event_memorize, get_circle_memtime(ch, get_spell_circle(ch, spell)), ch, 0, 0, 0, 0, 0);
+//      add_event(event_memorize, (int) new_circle_memtime(ch, get_spell_circle(ch, spell)), ch, 0, 0, 0, 0, 0);
     }
   }
   else
