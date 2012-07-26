@@ -973,9 +973,12 @@ void do_practice(P_char ch, char *arg, int cmd)
     *buf='\0';
     
     arg = skip_spaces(arg);
-    if (meming_cl && !str_cmp(arg, "all"))
+    if (!str_cmp(arg, "all"))
     {
-      prac_all_spells(ch);
+      if( meming_cl )
+        prac_all_spells(ch);
+      else
+        send_to_char( "Try practicing a specific skill.", ch );
       return;
     }
     skl = search_block(arg, (const char **) spells, FALSE);
