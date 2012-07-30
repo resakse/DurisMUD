@@ -5845,8 +5845,9 @@ void do_ascend(P_char ch, char *arg, int cmd)
   }
   if(ch) // Just making sure.
   {
-    if(IS_NPC(ch))
+    if(!IS_NPC(ch))
     {
+	send_to_char("&+WThis is too powerful an enchantment for you to master...&n\n\r",ch);
       return;
     }
     if(IS_TRUSTED(ch))
@@ -5973,8 +5974,9 @@ void do_descend(P_char ch, char *arg, int cmd)
   }
   if(ch) // Just making sure.
   { 
-    if(IS_NPC(ch))
+    if(!IS_NPC(ch)) //disabling
     {
+	send_to_char("&+LThese powers are too dark for you to master...&n\n\r",ch);
       return;
     }
     if(IS_TRUSTED(ch))
