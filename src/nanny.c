@@ -300,6 +300,10 @@ void load_obj_to_newbies(P_char ch)
                                             {
                                             105, 106, 107, 1144, 1145, 1146,
                                             1127, -1}));
+  CREATE_KIT(RACE_BARBARIAN, CLASS_BERSERKER, ((int[])
+                                            {
+                                            105, 106, 107, 1144, 1145, 1146,
+                                            1127, -1}));
   CREATE_KIT(RACE_BARBARIAN, CLASS_MERCENARY, ((int[])
                                                {
                                                1101, 1102, 1103, 1104, 1106,
@@ -324,11 +328,17 @@ void load_obj_to_newbies(P_char ch)
   CREATE_KIT(RACE_GITHZERAI, CLASS_MONK, ((int[])
                                       {
                                       1147, 1148, 1149, 1150, 1151, -1}));
+  CREATE_KIT(RACE_GITHZERAI, CLASS_PALADIN, ((int[])
+                                         {
+                                         1101, 1102, 1103, 1107, 1110, -1}));
 
   CREATE_KIT(RACE_GITHZERAI, CLASS_CLERIC, ((int[])
                                         {
                                         1119, 1120, 1121, 1122, 1124, 1126,
                                         1127, -1}));
+  CREATE_KIT(RACE_GITHZERAI, CLASS_ETHERMANCER, ((int[])
+                                             {
+                                             706, 735, 731, 731, -1}));
 
 
 /*Human Basics*/
@@ -528,10 +538,18 @@ void load_obj_to_newbies(P_char ch)
                                          1112, 1128, 1129, 1130, 1131, 1132,
                                          412, 412, 412, 412, 412, -1}));
 
+  CREATE_KIT(RACE_DUERGAR, CLASS_ANTIPALADIN, ((int[])
+                                             {
+                                             1101, 1102, 1103, 1107, 1111,
+                                             -1}));
+
   CREATE_KIT(RACE_DUERGAR, CLASS_WARRIOR, ((int[])
                                            {
                                            1101, 1102, 1103, 1104, 1105, 1105,
                                            1106, 1107, 1108, 1109, -1}));
+
+  CREATE_KIT(RACE_DUERGAR, CLASS_BERSERKER, ((int[])
+                                         {1101, 1104, 1105, 1105, 1107, 699, 699, -1}));
 /*END Duergar Classes*/
 
 /*Gnome Basics*/
@@ -891,6 +909,10 @@ void load_obj_to_newbies(P_char ch)
                                              1101, 1102, 1103, 1104, 1105,
                                              1105, 1106, 1107, 1108, 1108,
                                              -1}));
+
+  CREATE_KIT(RACE_GITHYANKI, CLASS_ETHERMANCER, ((int[])
+                                             {
+                                             706, 735, 731, 731, -1}));
 /*End Githyanki Classes*/
 
 /*Phantom Basic*/
@@ -1026,6 +1048,10 @@ void load_obj_to_newbies(P_char ch)
                                             {
                                             254, 1101, 1102, 1103, 1104, 1105,
                                             1105, 1106, 1107, 1109, -1}));
+  
+  CREATE_KIT(RACE_MOUNTAIN, CLASS_PALADIN, ((int[])
+	                                         {
+			                 1101, 1102, 1103, 1107, 1110, -1}));
 
 /*END Dwarf Classes*/
 
