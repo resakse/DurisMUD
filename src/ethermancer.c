@@ -2020,13 +2020,13 @@ void spell_ethereal_travel(int level, P_char ch, char *arg, int type,
     send_to_char("The magic in this room prevents you from leaving.\n", ch);
     return;
   }
-  /* To enhance ship combat - Lucrot
+ 
   if (world[ch->in_room].sector_type == SECT_OCEAN)
   {
     send_to_char("Yeah, break out the bathing suit and...idiot.\n", ch);
     return;
   }
-  */
+  
   if (IS_NPC(victim) || (victim == ch))
   {
     send_to_char("Can only travel to another player.\n", ch);
@@ -2081,7 +2081,10 @@ void spell_ethereal_travel(int level, P_char ch, char *arg, int type,
 
         // show the new room they've arrived
         act("&+WA HUGE ethereal portal opens up, and&n $n&+W emerges from the mists!&n", FALSE, gl->ch, 0, 0, TO_ROOM);
+	CharWait(gl->ch, 2 * PULSE_VIOLENCE); 
+	
       }
+    CharWait(ch, 2.5 * PULSE_VIOLENCE);
     }
   }
   else
