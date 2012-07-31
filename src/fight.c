@@ -4883,7 +4883,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     !IS_AFFECTED4(ch, AFF4_BATTLE_ECSTASY) &&
     dam >= 4)
   {
-    vamped = vamp(ch, dam * 0.050, GET_MAX_HIT(ch) * 1.3);
+    vamped = vamp(ch, dam * 0.050, GET_MAX_HIT(ch) * 1.1);
   }
 
 // Physical type actions that vamp
@@ -4903,39 +4903,39 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     
     else if(GET_CLASS(ch, CLASS_MONK))
     {
-      vamped = vamp(ch, dam * dam_factor[DF_MONKVAMP], GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * dam_factor[DF_MONKVAMP], GET_MAX_HIT(ch) * 1.1);
     }
     else if(GET_CLASS(ch, CLASS_MERCENARY))
     {
-      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.mercs", 0.100), GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.mercs", 0.100), GET_MAX_HIT(ch) * 1.1);
     }
     else if(GET_CLASS(ch, CLASS_WARRIOR))
     {
-      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.warriors", 0.100), GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.warriors", 0.100), GET_MAX_HIT(ch) * 1.1);
     }
     else if(GET_CLASS(ch, CLASS_BERSERKER))
     {
-      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.berserkers", 0.100), GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.berserkers", 0.100), GET_MAX_HIT(ch) * 1.1);
     }
     else if(GET_CLASS(ch, CLASS_ROGUE))
     {
-      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.rogues", 0.100), GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.rogues", 0.100), GET_MAX_HIT(ch) * 1.1);
     }
     else if(GET_CLASS(ch, CLASS_PALADIN))
     {
-      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.paladins", 0.100), GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.paladins", 0.100), GET_MAX_HIT(ch) * 1.1);
     }
     else if(GET_CLASS(ch, CLASS_RANGER))
     {
-      vamped = vamp(ch,  dam * get_property("vamping.vampiricTouch.rangers", 0.100), GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch,  dam * get_property("vamping.vampiricTouch.rangers", 0.100), GET_MAX_HIT(ch) * 1.1);
     }
     else if(GET_CLASS(ch, CLASS_AVENGER) || GET_CLASS(ch, CLASS_DREADLORD))
     {
-      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.dreadaven", 0.100), GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * get_property("vamping.vampiricTouch.dreadaven", 0.100), GET_MAX_HIT(ch) * 1.1);
     }
     else
     {
-      vamped = vamp(ch, dam * dam_factor[DF_TOUCHVAMP], GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, dam * dam_factor[DF_TOUCHVAMP], GET_MAX_HIT(ch) * 113);
     }
   }
 
@@ -4946,7 +4946,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     IS_NPC(ch) &&
     !IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM))
   {
-    vamped = vamp(ch, dam * dam_factor[DF_TOUCHVAMP], GET_MAX_HIT(ch) * 1.3);
+    vamped = vamp(ch, dam * dam_factor[DF_TOUCHVAMP], GET_MAX_HIT(ch) * 1.1);
   }
   // end TOUCHVAMP
 
@@ -4976,7 +4976,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     if(IS_NPC(ch))
     {
       temp_dam = dam * get_property("vamping.self.NPCbattleEcstasy", 0.050);
-      vamp(ch, temp_dam, GET_MAX_HIT(ch) * 1.3);
+      vamp(ch, temp_dam, GET_MAX_HIT(ch) * 1.1);
     }
   }
 
@@ -4997,7 +4997,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
            tch->in_room == ch->in_room &&
            tch != ch)
         {
-          vamp(tch, dam * get_property("vamping.battleEcstasy", .140), GET_MAX_HIT(ch) * 1.3);
+          vamp(tch, dam * get_property("vamping.battleEcstasy", .140), GET_MAX_HIT(ch) * 1.1);
         }
       }
     }
@@ -5017,7 +5017,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
           tch->in_room == ch->in_room &&
           tch != ch)
         {
-          vamp(tch, temp_dam, GET_MAX_HIT(ch) * 1.3);
+          vamp(tch, temp_dam, GET_MAX_HIT(ch) * 1.1);
         }
       }
     }
@@ -5028,7 +5028,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     (flags & RAWDAM_TRANCEVAMP) &&
     (IS_AFFECTED4(ch, AFF4_VAMPIRE_FORM)))
   {
-    vamped = vamp(ch, dam * dam_factor[DF_TRANCEVAMP], GET_MAX_HIT(ch) * 1.3);
+    vamped = vamp(ch, dam * dam_factor[DF_TRANCEVAMP], GET_MAX_HIT(ch) * 1.1);
   }
   
   // hellfire vamp
@@ -5050,7 +5050,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     }
     if(wdam)
     {
-      vamped = vamp(ch, wdam * dam_factor[DF_HFIREVAMP], GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, wdam * dam_factor[DF_HFIREVAMP], GET_MAX_HIT(ch) * 1.1);
     }
   }
 
@@ -5079,7 +5079,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
     if(IS_NPC(ch))
     {
       fhits = dam * dam_factor[DF_NPCVAMP];
-      vamped = vamp(ch, fhits, GET_MAX_HIT(ch) * 1.3);
+      vamped = vamp(ch, fhits, GET_MAX_HIT(ch) * 1.1);
     }
     else if(dam >= 25 &&
             IS_PC(ch))
@@ -5096,7 +5096,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
      ch->equipment[WIELD] &&
      (obj_index[ch->equipment[WIELD]->R_num].virtual_number == HOA_ILLESARUS_VNUM))
   {
-     vamped = vamp(ch, MIN(dam, number(2, 7)), (GET_MAX_HIT(ch) * 1.3));
+     vamped = vamp(ch, MIN(dam, number(2, 7)), (GET_MAX_HIT(ch) * 1.1));
   }
   
   if((dam >= 2 &&
