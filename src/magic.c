@@ -1065,7 +1065,7 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
   if(NewSaves(victim, SAVING_SPELL, 0))
   {
     saved = TRUE;
-    dam = (int)(dam * 0.85);
+    dam = (int)(dam * 0.80);
   }
   
   if(GET_LEVEL(victim) <= (level / 10))
@@ -1084,13 +1084,14 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
     if(!IS_AFFECTED4(victim, AFF4_NEG_SHIELD) &&
        !IS_UNDEADRACE(victim))
     {
-      if(IS_PC(ch) ||
+     /* if(IS_PC(ch) || //disabling vamp
          IS_PC_PET(ch))
       {
         vamp(ch, (int)(dam / 5), (int) (GET_MAX_HIT(ch) * 1.25));
       }
       else
         vamp(ch, (int)(dam / 2), (int) (GET_MAX_HIT(ch) * 1.25));
+	*/ 
     }
 
     send_to_char("&+LYour life energy is &+rtapped&+L.\n", victim);
@@ -1098,7 +1099,7 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
     if(GET_VITALITY(victim) >= 25 &&
       !IS_AFFECTED4(victim, AFF4_NEG_SHIELD))
     {
-      moves = number(5, level);
+      moves = number(5, 30); //old value (5, level)
       
       if(affected_by_spell(victim, SPELL_ENERGY_DRAIN))
         moves /= 2;

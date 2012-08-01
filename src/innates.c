@@ -341,7 +341,7 @@ const struct innate_data
   {"aura_of_endurance", do_aura_endurance},
   {"aura_of_improved_healing", do_aura_healing},
   {"aura_of_vigor", do_aura_vigor},
-  //{"speedy", do_flurry},
+  {"speedy"},
   {"dauntless", 0},
   {"summon totem", do_summon_totem},
   {"entrapment", 0},
@@ -931,7 +931,7 @@ void assign_innates()
 
   ADD_CLASS_INNATE(INNATE_FLY, CLASS_ETHERMANCER, 1, 0);
   ADD_CLASS_INNATE(INNATE_FLY, CLASS_CONJURER, 1, SPEC_AIR);
-  ADD_CLASS_INNATE(INNATE_HASTE, CLASS_CONJURER, 1, SPEC_AIR);
+  //ADD_CLASS_INNATE(INNATE_HASTE, CLASS_CONJURER, 1, SPEC_AIR);
   ADD_CLASS_INNATE(INNATE_PROT_FIRE, CLASS_CONJURER, 1, SPEC_FIRE);
   ADD_CLASS_INNATE(INNATE_WATERBREATH, CLASS_CONJURER, 1, SPEC_WATER);
   ADD_CLASS_INNATE(INNATE_CONJURE_WATER, CLASS_CONJURER, 1, SPEC_WATER);

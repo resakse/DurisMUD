@@ -53,7 +53,7 @@ struct allowed_race_spec_struct {
         {RACE_HUMAN, CLASS_CABALIST,    SPEC_ALL},
 	{RACE_HUMAN, CLASS_ETHERMANCER, SPEC_ALL},
 	{RACE_HUMAN, CLASS_THEURGIST,   SPEC_ALL},
-	{RACE_HUMAN, CLASS_MONK,        SPEC_ALL},
+ 	{RACE_HUMAN, CLASS_MONK,        SPEC_ALL},
 	/* End Human Options */
 
 	/* Start Barbarian Options */
