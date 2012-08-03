@@ -1032,7 +1032,8 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
   {
     bzero(&af, sizeof(af));
     af.type = SPELL_PSYCHIC_CRUSH;
-    af.duration = (int) (level / 2);
+    //af.duration = (int) (level / 2);
+    af.duration = (int) .05;
     af.modifier = (int) (-1 * (level / 2));
 
     act("$n &+msuddenly clutches their head, as if trying to shrug off some unknown malady.&n",

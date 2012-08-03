@@ -550,6 +550,7 @@ const struct minor_create_struct minor_create_name_list[] = {
   {"fishing pole", 336},
   {"whetstone", 367},
   {"bandage", 393},
+  {"lockpicks", 412},
 
   {"\0", 0}
 };
