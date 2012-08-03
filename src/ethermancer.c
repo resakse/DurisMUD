@@ -925,6 +925,11 @@ void spell_greater_ethereal_recharge(int level, P_char ch, char *arg,
 {
   int      healpoints;
 
+  if (!IS_PC_PET(victim))
+  {
+    send_to_char("The power of this spell can only be used on beings of the ethereal plane.\r\n", ch);
+    return;
+  }
   if (IS_PC_PET(victim) && GET_RACE(victim) != RACE_A_ELEMENTAL)
   {
     send_to_char("They are not composed of ethereal matter...\r\n", ch);
