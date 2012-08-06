@@ -4724,10 +4724,11 @@ void attack(P_char ch, P_char victim)
   struct affected_type *af;
   int      skl;
 
-  if(!ch ||
-    !victim ||
-    !CanDoFightMove(ch, victim) ||
-    IS_IMMOBILE(ch))
+  if( !ch || !victim
+    || !CanDoFightMove(ch, victim)
+    || IS_IMMOBILE(ch)
+    // If victim & ch are at different heights, we don't attack.
+    || victim->specials.z_cord != ch->specials.z_cord )
   {
     return;
   }

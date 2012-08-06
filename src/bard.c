@@ -507,6 +507,7 @@ void bard_drifting(int l, P_char ch, P_char victim, int song)
     spell_group_teleport(l, ch, 0, 0, victim, 0);
 }
 
+
 void bard_healing(int l, P_char ch, P_char victim, int song)
 {
   struct affected_type af;

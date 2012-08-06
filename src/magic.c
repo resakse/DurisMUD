@@ -3186,7 +3186,7 @@ void spell_cyclone(int level, P_char ch, char *arg, int type, P_char victim,
     return;
   }
 
-        dam = dice(level * 3, 9);
+        dam = dice(level * 2, 9);
 
 /*  play_sound(SOUND_WIND3, NULL, ch->in_room, TO_ROOM); */
 

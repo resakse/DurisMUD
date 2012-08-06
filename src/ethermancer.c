@@ -860,8 +860,12 @@ void spell_conjure_air(int level, P_char ch, char *arg, int type,
 
   if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_WINDTALKER))
   {
-        GET_MAX_HIT(mob) = GET_HIT(mob) = mob->points.base_hit =
+     GET_MAX_HIT(mob) = GET_HIT(mob) = mob->points.base_hit = 
+     ch->points.base_hit + (GET_LEVEL(ch) * 2) + charisma;
+    /*   
+     GET_MAX_HIT(mob) = GET_HIT(mob) = mob->points.base_hit =
     dice(GET_LEVEL(mob) / 2, 45) + GET_LEVEL(mob) + charisma;
+    */
   }
   else
   {

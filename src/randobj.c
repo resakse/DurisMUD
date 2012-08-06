@@ -282,6 +282,10 @@ unsigned int getMonsterDiffNumber(unsigned int level, unsigned int zoneDiff)
     numb = 6;
   else if (level <= 30)         // 21-30
     numb = 7;
+  else
+    numb = NULL;
+  
+/*
   else if (level <= 35)         // 31-35
     numb = 8;
   else if (level <= 40)         // 36-40
@@ -298,6 +302,7 @@ unsigned int getMonsterDiffNumber(unsigned int level, unsigned int zoneDiff)
     numb = 20;
   else                          // 61+
     numb = 25;
+*/
 
   numb += number(-1, 1);        // slight randomization
 
@@ -575,7 +580,9 @@ P_obj createRandomItem(P_char pc, P_char mob, int moblvl, int zoneDiff,
   if (!pc || !moblvl)
     return NULL;
 
-  if (moblvl > 30) //no randoms from lvl 20+ mobs
+
+
+  if (GET_LEVEL(mob) > 30)
 	return NULL;
   
   if (GET_LEVEL(pc) > 20)//no randoms from lvl 20+ characters
