@@ -1060,12 +1060,28 @@ void spell_psychic_crush(int level, P_char ch, char *arg, int type, P_char victi
     affect_to_char(victim, &af);
   }
 
-  if(ch &&
+if(!StatSave(victim, APPLY_POW, (GET_LEVEL(victim) - GET_LEVEL(ch)) / 5) &&
+           !IS_ELITE(victim))
+   {
+      if(ch &&
+      victim &&
+      (spell_damage(ch, victim, dam, SPLDAM_PSI, 0, &messages) !=
+        DAM_NONEDEAD))
+    {
+    return;
+    }
+
+  }
+  else
+  {
+    if(ch &&
     victim &&
-    (spell_damage(ch, victim, dam, SPLDAM_PSI, 0, &messages) !=
+    (spell_damage(ch, victim, dam >> 1, SPLDAM_PSI, 0, &messages) !=
       DAM_NONEDEAD))
   {
     return;
+  }
+
   }
   //special affect on crush for +specced casters.
   if(ch &&
@@ -1197,7 +1213,16 @@ spell_detonate2(int level, P_char ch, char *arg, int type, P_char victim,
     else
       return;
 
-  spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG, &messages);
+  
+if(!StatSave(victim, APPLY_POW, (GET_LEVEL(victim) - GET_LEVEL(ch)) / 5) &&
+           !IS_ELITE(victim))
+  {
+    spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG, &messages); 
+ }
+  else
+  {
+   spell_damage(ch, victim, dam >> 1, SPLDAM_PSI, SPLDAM_NOSHRUG, &messages);
+  }
 
   CharWait(ch, (int) (PULSE_SPELLCAST * 1));
 }
@@ -1230,7 +1255,15 @@ spell_detonate(int level, P_char ch, char *arg, int type, P_char victim,
     else
       return;
 
-  spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG, &messages);
+if(!StatSave(victim, APPLY_POW, (GET_LEVEL(victim) - GET_LEVEL(ch)) / 5) &&
+           !IS_ELITE(victim))
+  {
+    spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG, &messages); 
+ }
+  else
+  {
+   spell_damage(ch, victim, dam >> 1, SPLDAM_PSI, SPLDAM_NOSHRUG, &messages);
+  }
 
   CharWait(ch, (int) (PULSE_SPELLCAST * 1));
 }
