@@ -7,8 +7,8 @@ elite dwarf dwarven tunnel guard~
 beard that is knotted off in a forked manner.  He wears mithril armor and
 stands here protecting this portion of the tunnel from evil intruders.
 ~
-1140983882 0 0 16 0 0 0 0 S
-PM 5 1 -1
+1140983882 0 0 0 16 0 0 0 0 S
+PM 5 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -19,8 +19,8 @@ tiny spider~
 ~
    &+LThis tiny spider is black and is about the size of one's fist.
 ~
-131144 1 0 0 0 0 0 -400 S
-AS 0 1 0
+131144 1 0 0 0 0 0 0 -400 S
+AS 0 1 0 0
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -32,8 +32,8 @@ worm~
    &+LThis worm is about six inches long and wriggles through the tunnel
 &+Lburrowing in and out of the natural cavern walls.
 ~
-131144 0 0 0 0 0 0 0 S
-AH 0 1 0
+131144 0 0 0 0 0 0 0 0 S
+AH 0 1 0 0
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -45,8 +45,8 @@ purple worm~
    &+LThis worm is about six inches long and wriggles through the tunnel
 &+Lburrowing in and out of the natural cavern walls.
 ~
-131144 0 0 0 0 0 0 0 S
-AH 0 1 0
+131144 0 0 0 0 0 0 0 0 S
+AH 0 1 0 0
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -58,8 +58,8 @@ flaming skeleton~
    &+RThis flaming skeleton is made completely of roaring fire.  Bones are
 &+Rreplaced by bone-resembling stalks of flame.
 ~
-131144 1 0 24 0 0 0 -1000 S
-EF 0 1 -1
+131144 1 0 0 24 0 0 0 -1000 S
+EF 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -73,8 +73,8 @@ human adventurer~
 &+Cfrom his home.  Tired and weak from his travels, the human rests here
 &+Cregaining his strength and keeping out of the outdoors.
 ~
-133130 0 0 0 0 0 0 0 S
-PH 0 1 -1
+133130 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -88,8 +88,8 @@ elven ranger elf huntsman~
 &+gbones and stern expression exhibit his dedication as he searches
 &+gfor tracks in this tunnel.
 ~
-1073875016 128 0 24 0 0 0 0 S
-PE 0 2 -1
+1073875016 128 0 0 24 0 0 0 0 S
+PE 0 2 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -103,8 +103,8 @@ roper vegetation~
 &+gsprouting from its massive trunk-like body.  Thick vegetation covers
 &+gthis disgusting beast.
 ~
-133130 1 0 16777240 0 0 0 -1000 S
-TK 0 1 -1
+133130 1 0 0 16777240 0 0 0 -1000 S
+TK 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -116,8 +116,8 @@ vicious bat~
    &+LThis vicious bat is about the size of a soft ball.  It flies around
 &+Lhere startled by motion and ready to attack with its small, pointy teeth.
 ~
-131144 1 0 0 0 0 0 -1000 S
-B 0 1 1
+131144 1 0 0 0 0 0 0 -1000 S
+B 0 1 0 1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -129,8 +129,8 @@ cave fisher floor~
    &+CThis cave fisher disguises itself perfectly into the ground, taking
 &+Con the shapes and colors of the rocky cavern floor.
 ~
-133130 1 0 56 0 0 0 -400 S
-I 0 1 1
+133130 1 0 0 56 0 0 0 -400 S
+I 0 1 0 1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -142,8 +142,8 @@ centipede~
    &+LThis centipede has hundreds of tiny legs.  It moves almost in the
 &+Lsame fashion as a snake and attacks at will.
 ~
-131080 1 0 0 0 0 0 -1000 S
-I 0 1 -1
+131080 1 0 0 0 0 0 0 -1000 S
+I 0 1 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -156,8 +156,8 @@ hill giant~
 &+yshort for a giant.  He, however, is currently resting and asleep on
 &+ythis massive peak that he must call home.
 ~
-133130 0 0 0 0 0 0 -400 S
-G 0 1 -1
+133130 0 0 0 0 0 0 0 -400 S
+G 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -169,8 +169,8 @@ mountain goat~
    &+WThis white mountain goat has two small antlers and trots
 &+Wgallantly through this mountain pass.
 ~
-133192 0 0 0 0 0 0 0 S
-A 0 1 -1
+133192 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -183,8 +183,8 @@ orc brigand~
 but his bare hands and a small length of rope.  He appears to be quite
 sneaky and ready to ambush anyone in this mountain pass.
 ~
-1073875016 1 0 0 0 0 0 -1000 S
-HO 12 16384 -1
+1073875016 1 0 0 0 0 0 0 -1000 S
+HO 12 16384 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -198,8 +198,8 @@ a suit of black leather armor and waits at this gate.  Apparently he seems
 to be charging a fee to go through these gates in the woods, but seems to
 be ignoring you completely.
 ~
-133194 0 0 0 0 0 0 -1000 S
-HO 12 1 -1
+133194 0 0 0 0 0 0 0 -1000 S
+HO 12 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -212,8 +212,8 @@ orc scout~
 &+Lhe visors his his eyes with his hand while he uses his other hand
 &+Lto clutch onto the tree branch as he peers out into the horizon.
 ~
-133130 0 0 0 0 0 0 -1000 S
-HO 12 1 -1
+133130 0 0 0 0 0 0 0 -1000 S
+HO 12 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -226,8 +226,8 @@ ugly black crow~
 &+Ltall dark tree.  His constant shrieks act as a reminder of how
 &+Lfrightening this place is.
 ~
-133130 0 0 16 0 0 0 -1000 S
-B 0 1 -1
+133130 0 0 0 16 0 0 0 -1000 S
+B 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -240,8 +240,8 @@ vicious wolf black~
 &+Lfrom the corners of its large fanged mouth.  Its eyes glow red in
 &+Lthe moonlight as it is ready to charge and tear its victims apart.
 ~
-1073875016 1 0 24 0 0 0 -1000 S
-A 0 1 -1
+1073875016 1 0 0 24 0 0 0 -1000 S
+A 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -255,8 +255,8 @@ club and a toothy grin.  The ogre stands on the rope bridge waiting for someone 
 may not be the wiesest of plans, but this ogre is certainly foreboding in size
 and strength.
 ~
-133130 1 0 0 0 0 0 -1000 S
-PO 8 16384 -1
+133130 1 0 0 0 0 0 0 -1000 S
+PO 8 16384 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -269,8 +269,8 @@ mountain lion~
 &+Yin many confrontations in its old age and at this time is mostly just
 &+Yrelaxing and lying back on this mountain.
 ~
-133192 0 0 0 0 0 0 0 S
-A 0 1 -1
+133192 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -283,8 +283,8 @@ wounded gypsy man~
 reclined here in this tunnel clutching his shoulder.  He appears to have
 suffered some sort of bite.  He winces in pain.
 ~
-133130 0 0 0 0 0 0 0 S
-PH 0 0 -1
+133130 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -297,8 +297,8 @@ large vampire bat~
 &+Lone of its victims.  It currently hangs on the top of the ceiling here -
 &+Lpossibly sleeping, possibly waiting for another victim.
 ~
-133194 1 0 0 0 0 0 -1000 S
-B 0 1 1
+133194 1 0 0 0 0 0 0 -1000 S
+B 0 1 0 1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -312,8 +312,8 @@ half lich necromancer~
 &+LThis process seems to cause more flesh to spring forth to his body as the
 &+Llich becomes more and more human-like.
 ~
-133130 0 0 0 0 0 0 -1000 S
-UL 0 1024 -1
+133130 0 0 0 0 0 0 0 -1000 S
+UL 0 1024 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -327,8 +327,8 @@ skeleton stag~
 &+Lperhaps this creature was killed somewhere else and has been brought here
 &+Lby its master.
 ~
-33687624 1 0 0 0 0 0 -1000 S
-U 0 1 2
+33687624 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 2
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -341,8 +341,8 @@ an &+baqu&+Bat&+bi&+Bc &+rzombie&N~
 mountain creatures all raised into one horrifically terrifying yet mindless
 spawn.
 ~
-133128 1 0 2048 0 0 0 -1000 S
-U 0 1 2
+133128 1 0 0 2048 0 0 0 -1000 S
+U 0 1 0 2
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -353,8 +353,8 @@ troll mercenary~
 ~
     This troll mercenary is traveling the land and rests here comfortably on the bridge.  He is wearing various skins and tutrle shell armor that he's collected.
 ~
-1073874954 1 0 402653336 0 67108864 0 -1000 S
-PT 0 16384 -1
+1073874954 1 0 0 402653336 0 67108864 0 -1000 S
+PT 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -365,8 +365,8 @@ orc trader~
 ~
    This orc from Shady Grove and is traveling towards Storm Port.&n
 ~
-131146 320 0 0 0 0 0 -1000 S
-HO 0 1 -1
+131146 320 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -377,8 +377,8 @@ An ogre warrior moshes through the camp.
 ~
    This ogre warrior is almost naked, dressed only in a few skins and wielding a small tree.
 ~
-1073875016 0 0 0 0 0 0 -1000 S
-PO 0 1 -1
+1073875016 0 0 0 0 0 0 0 -1000 S
+PO 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -389,8 +389,8 @@ ogre chief~
 ~
    This ogre chief looks much like the other ogres, but is much stronger.
 ~
-1073874954 1 0 0 0 0 0 -1000 S
-PO 0 16384 -1
+1073874954 1 0 0 0 0 0 0 -1000 S
+PO 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -403,8 +403,8 @@ treant large tree~
 are its arms, and its roots are its feet.  It moves slowly
 through the forest, sometimes rarely even noticed.
 ~
-1073875016 0 0 152 0 67108864 0 0 S
-VT 0 1 6
+1073875016 0 0 0 152 0 67108864 0 0 S
+VT 0 1 0 6
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -415,8 +415,8 @@ roc~
 ~
    This bird is gigantic, purely enormous!
 ~
-1073875016 1 0 0 0 0 0 0 S
-B 0 1 7
+1073875016 1 0 0 0 0 0 0 0 S
+B 0 1 0 7
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -428,8 +428,8 @@ spider sand~
    This spider is quite large and has a jagged skeleton
 that protects it from the elements.
 ~
-1073875016 1 0 0 0 0 0 0 S
-AS 0 1 -1
+1073875016 1 0 0 0 0 0 0 0 S
+AS 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -440,8 +440,8 @@ fire elemental small~
 ~
     A 4 feet column of fire, that is alive.
 ~
-133192 1 0 0 0 0 0 0 S
-EF 0 1 -1
+133192 1 0 0 0 0 0 0 0 S
+EF 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -452,8 +452,8 @@ spider large~
 ~
 A spider, but bigger.
 ~
-1073875016 0 0 0 0 0 0 0 S
-AS 0 1 -1
+1073875016 0 0 0 0 0 0 0 0 S
+AS 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -464,8 +464,8 @@ bear brown~
 ~
     A big brown bear with lots of fur and sharp claws.
 ~
-1073875018 1 0 0 0 0 0 0 S
-A 0 1 -1
+1073875018 1 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -482,8 +482,8 @@ it, this orc was then raised as a skeleton and forever cursed
 to guard this gate from all who pass.  He doesn't even recognize
 friend from foe anymore.
 ~
-1073875018 1 0 0 0 0 0 -1000 S
-u 0 1 -1
+1073875018 1 0 0 0 0 0 0 -1000 S
+u 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -495,8 +495,8 @@ huge pike fish~
    &+WThis silverish-white fish swims through the stream here.  Its
 &+Wscaled body shimmers as it moves.
 ~
-133128 0 0 2048 0 0 0 0 S
-F 0 1 0
+133128 0 0 0 2048 0 0 0 0 S
+F 0 1 0 0
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -511,8 +511,8 @@ half elven half-elven storm druid~
 &+Win meditation, communing with the nature of the mountain
 &+Wwithin this pleasant grove.
 ~
-133130 0 0 0 0 0 0 0 S
-P2 0 128 -1
+133130 0 0 0 0 0 0 0 0 S
+P2 0 128 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -525,8 +525,8 @@ human trapper~
 &+Cthick hide pants.  He walks through these breezy mountains in
 &+Csearch of some sort of prey.
 ~
-133128 0 0 0 0 0 0 0 S
-PH 0 1 -1
+133128 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -538,8 +538,8 @@ mountain eagle~
    &+yThis eagle is about the size of a dog.  It has large wings and
 &+ybright &+Wfeathers&+y.  The eagle soars through the mountains.
 ~
-133128 0 0 0 0 0 0 0 S
-B 0 1 1
+133128 0 0 0 0 0 0 0 0 S
+B 0 1 0 1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -553,8 +553,8 @@ travelling barbarian craftsman~
 &+ywaiting to break camp and move on.  He looks very crafty and
 &+ywears all sorts of &+wfeathered&+y necklaces and belts.
 ~
-131080 0 0 0 0 0 0 0 S
-PB 0 1 -1
+131080 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -567,8 +567,8 @@ human hunter~
 &+msome studded leather armor.  He walks through the mountains
 &+mhunting his prey.
 ~
-1073874952 0 0 134217728 0 0 0 0 S
-PH 0 1 -1
+1073874952 0 0 0 134217728 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -580,8 +580,8 @@ rock lizard~
    &+rThis small lizard is quite tiny.  It has a red scaled body and
 &+rbeady eyes.
 ~
-133128 0 0 524288 0 0 0 0 S
-R 0 1 1
+133128 0 0 0 524288 0 0 0 0 S
+R 0 1 0 1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -595,8 +595,8 @@ large mountain yeti~
 &+Wprotecting it from the harsh winds at this high point on the
 &+Wmountain.
 ~
-133130 1 0 0 0 0 0 0 S
-H 0 1 -1
+133130 1 0 0 0 0 0 0 0 S
+H 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -610,8 +610,8 @@ traveller half-elf elven~
 &+cgarb, including a furred leather jacket and a pair of finely
 &+ccrafted hide slacks.
 ~
-133128 0 0 0 0 0 0 0 S
-P2 0 1 -1
+133128 0 0 0 0 0 0 0 0 S
+P2 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -625,8 +625,8 @@ human fisherman~
 &+Blike he has caught that much, but he contently continues casting
 &+Bhis line.
 ~
-133130 0 0 0 0 0 0 0 S
-PH 0 1 -1
+133130 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -640,8 +640,8 @@ wraith bridge guard~
 &+Linto a foul other-wordly undead creature that now haunts the
 &+Lbridge, rather than protects it.
 ~
-133192 1 0 8 0 0 0 -1000 S
-U 0 512 -1
+133192 1 0 0 8 0 0 0 -1000 S
+U 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -656,8 +656,8 @@ skeleton warrior~
 &+Wwalks and lives on this bridge, only to kill for the forces
 &+Wof evil.
 ~
-133128 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+133128 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -671,8 +671,8 @@ elven elf rock climber~
 &+Lvery happy with his progress.  He wears fine leather
 &+Lgarments and a smile on his face.
 ~
-133130 0 0 0 0 0 0 0 S
-PE 0 1 -1
+133130 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -686,8 +686,8 @@ large warg~
 &+ythis animal most likely escaped from its master, or was born a
 &+ystray.
 ~
-131144 1 0 0 0 0 0 0 S
-A 0 1 -1
+131144 1 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -701,8 +701,8 @@ proud high elven sentry elf~
 &+Whelps underscore his status as sentry guardian, responsible
 &+Wfor the outer defenses of this mountain outpost.
 ~
-67242058 128 0 24 0 0 0 450 S
-PE 0 1 -1
+67242058 128 0 0 24 0 0 0 450 S
+PE 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -716,8 +716,8 @@ worshipper~
 &+YJustice and Truth to himself, in honor of the great King
 &+YLareth.
 ~
-133192 0 0 0 0 0 0 400 S
-PH 0 1 -1
+133192 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -731,8 +731,8 @@ robed worshipper~
 &+YJustice and Truth to himself, in honor of the great King
 &+YLareth.
 ~
-133192 0 0 0 0 0 0 400 S
-PH 0 1 -1
+133192 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -746,8 +746,8 @@ young worshipper~
 &+YJustice and Truth to himself, in honor of the great King
 &+YLareth.
 ~
-133192 0 0 0 0 0 0 400 S
-PH 0 1 -1
+133192 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -762,8 +762,8 @@ stern powerful guardian shrine~
 &+Yhelmet.  He stands here, arms folded, protecting the
 &+YShrine of Lareth from the evils of the world.
 ~
-1140981834 128 0 24 0 0 0 955 S
-PB 0 9 4
+1140981834 128 0 0 24 0 0 0 955 S
+PB 0 9 0 4
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -778,8 +778,8 @@ shrine guardsman guard~
 &+Yhelmet.  He stands here, arms folded, protecting the
 &+YShrine of Lareth from the evils of the world.
 ~
-1140981834 128 0 24 0 0 0 400 S
-PB 0 1 4
+1140981834 128 0 0 24 0 0 0 400 S
+PB 0 1 0 4
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -795,8 +795,8 @@ innkeeper high elf~
 &+Wwithin the protection of this city, but has since taken up
 &+Wthe position of a peaceful innkeeper.
 ~
-133130 0 0 8 0 0 0 100 S
-PE 0 1 -1
+133130 0 0 0 8 0 0 0 100 S
+PE 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -811,8 +811,8 @@ high elf guard patrolling~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-1140983880 128 0 0 0 0 0 280 S
-PE 0 1 -1
+1140983880 128 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -828,8 +828,8 @@ chauseis high elf priestess~
 &+Wgreat shrine of Beleth, tending to the worship wishes
 &+Wof her people as well as curious adventurers.
 ~
-133130 0 0 24 0 0 0 951 S
-PE 0 32 -1
+133130 0 0 0 24 0 0 0 951 S
+PE 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 5 2
@@ -844,8 +844,8 @@ high elf guard lieutenant~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-1140983882 128 0 0 0 0 0 280 S
-PE 0 1 -1
+1140983882 128 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -860,8 +860,8 @@ high elf sentinel~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-1140983882 128 0 0 0 0 0 280 S
-PE 0 1 -1
+1140983882 128 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -876,8 +876,8 @@ high elf guard training~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-1073875018 128 0 0 0 0 0 280 S
-PE 0 1 -1
+1073875018 128 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -892,8 +892,8 @@ high elf guard sparring~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-1073875018 128 0 0 0 0 0 280 S
-PE 0 1 -1
+1073875018 128 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -908,8 +908,8 @@ high elf tired~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-1073875018 128 0 0 0 0 0 280 S
-PE 0 1 -1
+1073875018 128 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -924,8 +924,8 @@ high elf sleepy~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-1073875018 128 0 0 0 0 0 280 S
-PE 0 1 -1
+1073875018 128 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -940,8 +940,8 @@ glacienus captain guard~
 &+Yin the mountain outpost of Shaledrieth.  He has flowing silver
 &+Yhair and piercing &+Bblue &+Yeyes.
 ~
-1140983880 128 0 24 0 0 0 950 S
-PE 0 1 -1
+1140983880 128 0 0 24 0 0 0 950 S
+PE 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -956,8 +956,8 @@ travelling merchant~
 &+Mnot uncommon in the realm, as wares from other peoples
 &+Mtend to find their ways across the world.
 ~
-133192 0 0 0 0 0 0 0 S
-PH 0 1 -1
+133192 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -971,8 +971,8 @@ gardener high elf~
 &+gTending to this garden, this high elf happily cleans
 &+gand nurtures the crystal growing here.
 ~
-131080 0 0 0 0 0 0 0 S
-PE 0 1 -1
+131080 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -986,8 +986,8 @@ elderly gardener~
 &+mTending to this garden, this high elf happily cleans
 &+mand nurtures the crystal growing here.
 ~
-133192 0 0 0 0 0 0 0 S
-PE 0 1 -1
+133192 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1000,8 +1000,8 @@ A wandering human walks calmly here, interested in the high elves.
 great city of Tharnadia.  He carries a smile on his face
 as he watches the proud and disciplined nature of the elves.
 ~
-133132 0 0 0 0 0 0 0 S
-PH 0 1 -1
+133132 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1016,8 +1016,8 @@ guards filling the streets of this city that &+RFeliusius &Nis
 the man to talk to about quests.  He carries a smile on his
 middle-aged, hairless elven face and continues serving drinks.
 ~
-133130 0 0 8 0 0 0 0 S
-PE 0 1 -1
+133130 0 0 0 8 0 0 0 0 S
+PE 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1032,8 +1032,8 @@ off-duty off duty high elf guard~
 &+Wbuild for an elf, which is not uncommon among the high elves.
 &+WHe has silver hair and piercing blue eyes.
 ~
-133194 0 0 0 0 0 0 280 S
-PE 0 1 -1
+133194 0 0 0 0 0 0 0 280 S
+PE 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1047,8 +1047,8 @@ surly dwarf dwarven warrior~
 &+Yelven ale at the same pace as the high elves seem to casually
 &+Ysip it.
 ~
-133194 0 0 0 0 0 0 0 S
-PM 5 1 -1
+133194 0 0 0 0 0 0 0 0 S
+PM 5 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1062,8 +1062,8 @@ half-elf adventurer~
 &+Wrecently passed through the &+YSunwell&+W.  He smiles proudly,
 &+Wconfident in his heritage.
 ~
-133192 0 0 0 0 0 0 0 S
-P2 0 1 -1
+133192 0 0 0 0 0 0 0 0 S
+P2 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1077,8 +1077,8 @@ high elf scout~
 &+Can early advance on the outpost seen to the southeast.  He wears
 &+Ctight leather apparel and wields crystal daggers.
 ~
-1073875146 128 0 404226072 0 0 0 0 S
-PE 0 8192 -1
+1073875146 128 0 0 404226072 0 0 0 0 S
+PE 0 8192 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1094,8 +1094,8 @@ burly lizardman warrior~
 &+La thick, muscular neck.  Sharp teeth peer out of the lipless
 &+Lface of this lizardman, ready to aid in the devouring of his prey.
 ~
-133192 1 0 67108864 0 0 0 -650 S
-H 0 1 4
+133192 1 0 0 67108864 0 0 0 -650 S
+H 0 1 0 4
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1111,8 +1111,8 @@ huge lizardman hunter~
 &+La thick, muscular neck.  Sharp teeth peer out of the lipless
 &+Lface of this lizardman, ready to aid in the devouring of his prey.
 ~
-1073875016 1 0 67108864 0 0 0 -650 S
-H 0 16385 4
+1073875016 1 0 0 67108864 0 0 0 -650 S
+H 0 16385 0 4
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1128,8 +1128,8 @@ vicious lizardman~
 &+La thick, muscular neck.  Sharp teeth peer out of the lipless
 &+Lface of this lizardman, ready to aid in the devouring of his prey.
 ~
-133192 1 0 67108864 0 0 0 -650 S
-H 0 1 4
+133192 1 0 0 67108864 0 0 0 -650 S
+H 0 1 0 4
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1144,8 +1144,8 @@ lizardman witch doctor~
 &+Gas well as bone necklaces and prayer beads in search of further
 &+Gprey.
 ~
-133192 1 0 67108888 0 0 0 -650 S
-H 0 256 4
+133192 1 0 0 67108888 0 0 0 -650 S
+H 0 256 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1159,8 +1159,8 @@ giant swamp rat~
 &+Lhas missing patches of fur and scars covering it.  This disgusting
 &+Lcreature is a parasite of all forms.
 ~
-131144 1 0 67108872 0 0 0 -750 S
-A 0 1 2
+131144 1 0 0 67108872 0 0 0 -750 S
+A 0 1 0 2
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1174,8 +1174,8 @@ large crocodile~
 &+ggaping jaws of this massive reptillian beast.  It is a dull green
 &+gcolor with a muddy brown layer.
 ~
-1073875016 1 0 67108864 0 0 0 0 S
-R 0 1 3
+1073875016 1 0 0 67108864 0 0 0 0 S
+R 0 1 0 3
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1188,8 +1188,8 @@ light will wisp~
 &+Loff the magical and life energy of those around it.  It simply
 &+Lbobs around in the area like a flameless light.
 ~
-133192 1 0 134217754 0 0 0 -1000 S
-UG 0 1 1
+133192 1 0 0 134217754 0 0 0 -1000 S
+UG 0 1 0 1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1203,8 +1203,8 @@ catobelas~
 &+Lfangs arch out of the gaping mouth of this grotesque creature
 &+Las it dips its mouth into the soft muck.
 ~
-1073872968 1 0 67108880 0 0 0 -670 S
-AC 0 1 4
+1073872968 1 0 0 67108880 0 0 0 -670 S
+AC 0 1 0 4
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1219,8 +1219,8 @@ hydra seven-headed~
 &+Lmove and shriek independently, snarling and looking
 &+Lfor food.
 ~
-1073875016 1 0 671088664 12480 0 0 -1000 S
-D 0 1 6
+1073875016 1 0 0 671088664 12480 0 0 -1000 S
+D 0 1 0 6
 52 0 0 1d1+1 1d1+1
 0.0.0.50 0
 8 8 0
@@ -1235,8 +1235,8 @@ crimson death mist~
 &+rfrom the apparitional head of this creature, as it seeks to feed
 &+ron the lifeforce of those unfortunate enough to enter this area.
 ~
-131144 1 0 134742040 262144 524288 0 -1000 S
-UG 0 1 -1
+131144 1 0 0 134742040 262144 524288 0 -1000 S
+UG 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1250,8 +1250,8 @@ shambling mound~
 &+gswamps.  The vegetated body of this golem-like creature
 &+gshines with a glistening membrane of slime and muck.
 ~
-2120 1 0 134217752 8192 0 0 -600 S
-VT 0 1 5
+2120 1 0 0 134217752 8192 0 0 -600 S
+VT 0 1 0 5
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1264,8 +1264,8 @@ orc brigand~
 but his bare hands and a small length of rope.  He appears to be quite
 sneaky and ready to ambush anyone in these mountains.
 ~
-1073875016 1 0 0 0 0 0 -1000 S
-HO 12 16384 -1
+1073875016 1 0 0 0 0 0 0 -1000 S
+HO 12 16384 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1278,8 +1278,8 @@ devious orc thief~
 but his bare hands and a small length of rope.  He appears to be quite
 sneaky and ready to ambush anyone in these mountains.
 ~
-1073875016 1 0 0 0 0 0 -1000 S
-HO 12 20480 -1
+1073875016 1 0 0 0 0 0 0 -1000 S
+HO 12 20480 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1292,8 +1292,8 @@ wyvern~
 &+ytalons.  Resembling a rock, the wyvern is much more dragon-like
 &+yas it screeches and paralyzes its victims.
 ~
-1073743944 1 0 134217752 0 0 0 -350 S
-B 0 1 6
+1073743944 1 0 0 134217752 0 0 0 -350 S
+B 0 1 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1306,8 +1306,8 @@ skeletal skeleton leucrotta~
 &+Ltravelers. The large fangs and teeth that line its mouth are clearly visible
 &+Land inspire you not to come any closer.&n
 ~
-2120 1 0 1048584 0 0 0 0 S
-u 0 1 -1
+2120 1 0 0 1048584 0 0 0 0 S
+u 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1320,8 +1320,8 @@ orc raider~
 &+Ltravelers and merchants. He is obviously trying to score himself some
 &+Lquick loot and by the look in his eyes, you might be his next target.&n
 ~
-1073743880 1 0 1048576 0 0 0 0 S
-ho 0 1 -1
+1073743880 1 0 0 1048576 0 0 0 0 S
+ho 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1332,8 +1332,8 @@ spider large~
 ~
 A spider, but bigger.
 ~
-1073875016 1 0 1048584 0 0 0 0 S
-AS 0 1 -1
+1073875016 1 0 0 1048584 0 0 0 0 S
+AS 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1348,8 +1348,8 @@ aventi kraken princess~
 &+Lused a weapon. She is very intent on defending her domain
 &+Lfrom her sworn nemesis, &+mAhanz &+Lthe Shadow Stalker.&n
 ~
-67242058 0 0 0 0 0 0 0 S
-r 0 2 5
+67242058 0 0 0 0 0 0 0 0 S
+r 0 2 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1363,8 +1363,8 @@ kraken guard royal~
 &+Lone aggresive step towards him, he would quickly remove
 &+Lthat head of yours from your shoulders.&n
 ~
-67242058 0 0 0 0 0 0 0 S
-r 0 512 4
+67242058 0 0 0 0 0 0 0 0 S
+r 0 512 0 4
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1378,8 +1378,8 @@ kraken guard royal~
 &+Lone aggresive step towards him, he would quickly remove
 &+Lthat head of yours from your shoulders.&n
 ~
-67242058 0 0 0 0 0 0 0 S
-r 0 1 4
+67242058 0 0 0 0 0 0 0 0 S
+r 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1394,8 +1394,8 @@ kraken prince itneva~
 &+Ldestruction. Among the many enemies that the krakens have
 &+Lgained, none is more feared than &+mAhanz &+Lthe Shadow Stalker.&n
 ~
-67242058 0 0 0 0 0 0 0 S
-r 0 2 5
+67242058 0 0 0 0 0 0 0 0 S
+r 0 2 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1409,8 +1409,8 @@ kraken commoner~
 &+Leat. You should be thankful that this creature hasn't put
 &+Lyou on the menu.&n
 ~
-67242056 0 0 0 0 0 0 0 S
-r 0 1 3
+67242056 0 0 0 0 0 0 0 0 S
+r 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1425,8 +1425,8 @@ kraken shaman~
 &+Lparticular faith, this individual has found that the
 &+Lblessings of the Gods are well worth the effort.&n
 ~
-67242056 0 0 0 0 0 0 0 S
-r 0 256 3
+67242056 0 0 0 0 0 0 0 0 S
+r 0 256 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1440,8 +1440,8 @@ kraken hunter~
 &+Lcreatures include, but are not limited to, small humans,
 &+Lgnomes, and even the occassional drow.&n
 ~
-67242056 0 0 0 0 0 0 0 S
-r 0 1048576 3
+67242056 0 0 0 0 0 0 0 0 S
+r 0 1048576 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1456,8 +1456,8 @@ kraken servant~
 &+Lservant rarely has the time to enjoy the finer things in
 &+Llife.&n
 ~
-67242056 0 0 0 0 0 0 0 S
-r 0 1 3
+67242056 0 0 0 0 0 0 0 0 S
+r 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1472,8 +1472,8 @@ ahanz shadow stalker~
 &+mHe grins a wicked smile at you and flexes his arms, proudly
 &+mdisplaying a tattoo of a &+gkraken&+m's head.&n
 ~
-67242056 0 0 524312 0 0 0 0 S
-us 0 1056768 3
+67242056 0 0 0 524312 0 0 0 0 S
+us 0 1056768 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1487,8 +1487,8 @@ misty figure~
 &+Gtranslucent vapor seems to float about his body,
 &+Gseemingly blinking in and out of existence.&n
 ~
-67242058 0 0 24 0 0 0 0 S
-ug 0 1 3
+67242058 0 0 0 24 0 0 0 0 S
+ug 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1508,8 +1508,8 @@ fallen shadow strange~
 &+Lcan definitely get the sense that there is something
 &+Lthis being wants to share with you.&n
 ~
-67242058 0 0 524288 0 0 0 0 S
-sp 0 1064961 -1
+67242058 0 0 0 524288 0 0 0 0 S
+sp 0 1064961 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1524,8 +1524,8 @@ lich guardian~
 &+Llike you from finding out what secrets are hidden
 &+Lin this place.&n
 ~
-67242058 1 0 1048600 0 0 0 0 S
-ul 0 512 5
+67242058 1 0 0 1048600 0 0 0 0 S
+ul 0 512 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1540,8 +1540,8 @@ once great adventurer~
 &+Lavoided him entirely. He smiles warmly at you and offers
 &+Lhis greetings.&n
 ~
-67242058 0 0 0 0 0 0 0 S
-ph 0 524289 3
+67242058 0 0 0 0 0 0 0 0 S
+ph 0 524289 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1555,8 +1555,8 @@ corpse devourer~
 &+LIts jaws are equipped with some viciously sharp teeth,
 &+Lperfect for tearing flesh off dead and living bodies.&n
 ~
-1140983880 1 0 1048600 0 0 0 0 S
-zo 0 16 -1
+1140983880 1 0 0 1048600 0 0 0 0 S
+zo 0 16 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1570,8 +1570,8 @@ corpse devourer~
 &+LIts jaws are equipped with some viciously sharp teeth,
 &+Lperfect for tearing flesh off dead and living bodies.&n
 ~
-1140983880 1 0 1048600 0 0 0 0 S
-zo 0 64 -1
+1140983880 1 0 0 1048600 0 0 0 0 S
+zo 0 64 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1585,8 +1585,8 @@ corpse devourer~
 &+LIts jaws are equipped with some viciously sharp teeth,
 &+Lperfect for tearing flesh off dead and living bodies.&n
 ~
-1140983880 1 0 1048600 0 0 0 0 S
-zo 0 1048576 -1
+1140983880 1 0 0 1048600 0 0 0 0 S
+zo 0 1048576 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1600,8 +1600,8 @@ colorless worm~
 &+cUnlike most worms, this one does not live in the dirt, but
 &+cinside damp mountain caves.&n
 ~
-131144 0 0 0 0 0 0 0 S
-i 0 1 -1
+131144 0 0 0 0 0 0 0 0 S
+i 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1619,8 +1619,8 @@ fat troggler~
 &+Ldefensive mechanism that keeps parasites and other insects
 &+Laway.&n
 ~
-8 0 0 0 0 0 0 0 S
-pt 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+pt 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1638,8 +1638,8 @@ warty troggler~
 &+Ldefensive mechanism that keeps parasites and other insects
 &+Laway.&n
 ~
-8 0 0 0 0 0 0 0 S
-pt 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+pt 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1657,8 +1657,8 @@ smelly troggler~
 &+Ldefensive mechanism that keeps parasites and other insects
 &+Laway.&n
 ~
-8 0 0 0 0 0 0 0 S
-pt 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+pt 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1676,8 +1676,8 @@ skinny troggler~
 &+Ldefensive mechanism that keeps parasites and other insects
 &+Laway.&n
 ~
-8 0 0 0 0 0 0 0 S
-pt 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+pt 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1690,8 +1690,8 @@ filthy maggot~
 &+LIt is about six inches in length, which is pretty big for a
 &+Lmaggot.&n
 ~
-8 0 0 0 0 0 0 0 S
-ap 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+ap 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1704,8 +1704,8 @@ disgusting maggot~
 &+LIt is about six inches in length, which is pretty big for a
 &+Lmaggot.&n
 ~
-8 0 0 0 0 0 0 0 S
-ap 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+ap 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1718,8 +1718,8 @@ filthy maggot~
 &+LIt is about six inches in length, which is pretty big for a
 &+Lmaggot.&n
 ~
-8 0 0 0 0 0 0 0 S
-ap 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+ap 0 1 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1736,8 +1736,8 @@ large carcass beetle~
 &+Land clean source of food for the many maggots that it will
 &+Llay.&n
 ~
-67110922 0 0 0 0 0 0 0 S
-AC 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+AC 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1750,8 +1750,8 @@ colorless small worm~
 &+Llooks to also be completely blind. There are no eyes
 &+Land the only senses this animal has seems to be touch.&n
 ~
-393224 0 0 0 0 0 0 0 S
-i 0 0 1
+393224 0 0 0 0 0 0 0 0 S
+i 0 0 0 1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1764,8 +1764,8 @@ funnel web spider carnivorous~
 &+Lthe floor as an attempt to feast upon the many colorless
 &+Lworms that thrive in this cave system.&n
 ~
-2058 0 0 0 0 0 0 0 S
-ap 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+ap 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1782,8 +1782,8 @@ large carcass beetle~
 &+Land clean source of food for the many maggots that it will
 &+Llay.  This particular beetle seems agitated by your presence.
 ~
-2122 1 0 40 0 0 0 0 S
-AC 0 8192 2
+2122 1 0 0 40 0 0 0 0 S
+AC 0 8192 0 2
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1799,8 +1799,8 @@ asus gnome brewer~
 &+Rfortunate to grace his tent.  Asus is quite an eccentric gnome,
 &+Rmixing his concoctions almost like a witch.
 ~
-2250 0 0 0 0 0 0 600 S
-pg 0 256 -1
+2250 0 0 0 0 0 0 0 600 S
+pg 0 256 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

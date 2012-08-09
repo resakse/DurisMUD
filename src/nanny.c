@@ -4812,11 +4812,13 @@ void set_char_size(P_char ch)
     break;
   case RACE_HARPY:
   case RACE_HALFLING:
-  case RACE_GNOME:
   case RACE_GOBLIN:
   case RACE_SHADE:
-  case RACE_KOBOLD:
     GET_SIZE(ch) = SIZE_SMALL;
+    break;
+  case RACE_GNOME:
+  case RACE_KOBOLD:
+    GET_SIZE(ch) = SIZE_TINY;
     break;
   case RACE_TROLL:
   case RACE_PDKNIGHT:
