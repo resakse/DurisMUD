@@ -1569,8 +1569,32 @@ char affect_total(P_char ch, int kill_ch)
     return TRUE;
   }
 
-  ch->specials.base_combat_round = (int) (combat_by_race[GET_RACE(ch)][0]);
-  ch->specials.base_combat_round += (int)(get_property("damage.pulse.class.all", 2));
+  ch->specials.base_combat_round = (int) (combat_by_race[GET_RACE(ch)][0]); //original
+  ch->specials.base_combat_round += (int)(get_property("damage.pulse.class.all", 2)); //original
+  
+/*
+* This is the new style combat calculation - Drannak
+  ch->specials.base_combat_round = (200 - ch->base_stats.Agi);
+  ch->specials.base_combat_round *= .13;
+  if(GET_C_AGI(ch) > 100) //diminishing returns
+   {
+     int cmod = (GET_C_AGI(ch) - 100);
+     if (cmod > 0 && cmod < 5)
+	ch->specials.base_combat_round -= 1;
+     else if(cmod >=5 && cmod < 15)
+	ch->specials.base_combat_round -= 2;
+     else if(cmod >=15 && cmod < 30)
+       ch->specials.base_combat_round -= 3;
+     else if(cmod >=30)
+	ch->specials.base_combat_round -= 4;
+   }
+  else
+   {
+    int cmod = (100 - GET_C_AGI(ch));
+	cmod *= .1;
+	ch->specials.base_combat_round += (int)cmod;
+    }
+*/
   ch->specials.damage_mod = combat_by_race[GET_RACE(ch)][1];
 
   if (IS_PC(ch))

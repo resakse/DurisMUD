@@ -18,6 +18,7 @@
 #include "spells.h"
 #include "structs.h"
 #include "utils.h"
+#include "utility.h"
 #include "profile.h"
 #include "guildhall.h"
 
@@ -2003,6 +2004,7 @@ void add_scribing(P_char ch, int spl, P_obj book, int flag, P_obj obj,
   {
     act("You start to teach $N..", TRUE, teacher, 0, ch, TO_CHAR);
     sprintf(Gbuf1, "$n starts to teach you %s..", skills[spl].name);
+    act(Gbuf1, TRUE, teacher, 0, ch, TO_VICT );
   }
   add_scribe_data(spl, ch, book, flag, obj, teacher);
 
@@ -2220,6 +2222,7 @@ void do_scribe(P_char ch, char *arg, int cmd)
   int      spl = 0;
   P_obj    o1, o2, o3;
   struct scribing_data_type *tmp_s;
+  P_char   teacher;
 
   if (IS_NPC(ch))               /*
                                    no scribing services, at least of now. we'll
@@ -2272,16 +2275,26 @@ void do_scribe(P_char ch, char *arg, int cmd)
        FindSpellBookWithSpell(ch, spl,
                               SBOOK_MODE_IN_INV + SBOOK_MODE_ON_BELT)))
   {
-    send_to_char
-      ("You don't have that spell in any of your books or scrolls in learnable form!\n",
-       ch);
-    return;
+    // Only fail if there's no teacher to teach it.
+    teacher = FindTeacher(ch);
+    if( !teacher
+      || GET_LVL_FOR_SKILL(ch, spl) > GET_LEVEL(ch)
+      || GET_LVL_FOR_SKILL(teacher, spl) > GET_LEVEL(teacher) )
+    {
+      send_to_char("You don't have that spell in any of your books or scrolls in learnable form!\n", ch);
+      return;
+    }
+    else
+    {
+      add_scribing(ch, spl, o1, FALSE, NULL, teacher );
+      return;
+    }
   }
   /*
      urp.. all taken care of (I fervently hope, anyway)
    */
 
-  add_scribing(ch, spl, o1, 1, o3, NULL);
+  add_scribing(ch, spl, o1, TRUE, o3, NULL);
 }
 
 void event_scribe(P_char ch, P_char victim, P_obj obj, void *data)
