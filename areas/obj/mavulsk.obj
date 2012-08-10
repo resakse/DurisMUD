@@ -1,4 +1,4 @@
-#139500
+#1
 nosering rusty ring~
 &n&+wa&n&+y rusty&n&+L no&n&+wser&n&+Ling&n~
 &+yA rusty ring&n&+g lies dropped here.&n~
@@ -14,7 +14,7 @@ A
 18 1
 A
 19 1
-#139501
+#2
 flail steel~
 &n&+La&n&+w st&n&+Leel&n&+w fla&n&+Lil&n~
 &n&+LA fl&n&+wail lies forgotten here.&n~
@@ -32,7 +32,7 @@ A
 18 3
 A
 19 3
-#139502
+#3
 key stone~
 &n&+La s&n&+wton&n&+Le k&n&+wey&n~
 &n&+LSomeone have dropped a stone key here.&n~
@@ -44,7 +44,7 @@ E
 key stone~
 &n&+L   Made of g&n&+wran&n&+Lite this key looks solid and won't break easily.&n
 ~
-#139503
+#4
 monocle strange odd piece~
 &n&+ma s&n&+wt&n&+Lra&n&+Mn&n&+rge&n&+c monocle&n~
 &n&+MA&+Wn o&n&+Mdd piece&n&+g lies here, looking lonely and forelorn.&n~
@@ -64,7 +64,7 @@ A
 33 2
 A
 13 10
-#139504
+#5
 necklace golden gold~
 &na &+Ygolden&n necklace&n~
 &n&+gSomeone have tossed a &+Ygolden necklace&n&+g aside here.&n~
@@ -78,7 +78,7 @@ necklace gold golden~
 ~
 A
 27 6
-#139505
+#6
 dress purple~
 &n&+ma purple dress&n~
 &n&+mA purple dress&n&+g lies here.&n~
@@ -90,7 +90,7 @@ E
 dress purple~
 &n&+m   The dress is made of fine purple cloth and looks expensive.&n
 ~
-#139506
+#7
 key golden tiny~
 &n&+Ya tiny golden key&n~
 &n&+gSomeone has lost his&n&+Y key&n&+g here.&n~
@@ -102,13 +102,13 @@ E
 key golden tiny~
 &+G   A plain little golden key.&n
 ~
-#139507
+#8
 counter ebonwood elegant~
 &n&+wan&n&+L ebonwood&n&+w counter&n~
 &nAn&n&+c elegant&n&+L ebonwood&n&+w counter&n&+g stands here.&n~
 ~
 15 6 3 0 9 0 0 0 0 1 0
-300 29 139508 0 0 0 0 0
+300 29 9 0 0 0 0 0
 300 44 100
 E
 counter ebonwood elegant~
@@ -120,7 +120,7 @@ counter ebonwood elegant~
 
 &+Lmade of this rare tree sofar north.&n
 ~
-#139508
+#9
 key ebonwood~
 &n&+Lan ebonwood key&n~
 &n&+LSomeone have lost his key here.&n~
@@ -134,7 +134,7 @@ key ebonwood~
 
 &n&+Lebonwood. It appears to be the work of a master and won't break easy.&n
 ~
-#139509
+#10
 dagger blade long black~
 &+La long black dagger&n~
 &n&+LA black blade lies here forgotten.&n~
@@ -150,7 +150,7 @@ A
 18 3
 A
 19 3
-#139510
+#11
 desk pinewood pine wood~
 &na&n&+r pine&n&+ywood desk&n~
 &nA heavy&n&+r pine&n&+ywood desk&n&+w stands here.&n~
@@ -164,7 +164,7 @@ desk pinewood pine wood~
 
 &n&+yand looks like it has been made of a skilled craftsman.&n
 ~
-#139511
+#12
 sleeves jewelled~
 &na pair of&n&+W je&n&+cw&n&+Ce&n&+Wlled sl&n&+Ree&n&+wves&n~
 &nA pair of&n&+W sl&n&+Ree&n&+wves&n&+g has been dropped here.&n~
@@ -184,7 +184,7 @@ A
 2 7
 A
 24 -3
-#139512
+#13
 nosering emerald ring~
 an&n&+g em&n&+Geral&n&+gd&n&+w nosering&n~
 &n&+wA &n&+Gnosering&n&+g has been dropped here.&n~
@@ -200,7 +200,7 @@ nosering emerald ring~
 ~
 A
 13 10
-#139513
+#14
 tailring stone ring~
 &+ga &n&+wsto&n&+gne &n&+wtailring&n~
 &+wA tai&n&+glri&n&+wng&n&+g lies here, looking forelorn.&n~
@@ -214,7 +214,7 @@ This tailring is made of pure hard granite.&n
 ~
 A
 18 1
-#139514
+#15
 table pinewood wood~
 a &n&+rpine&n&+ywood table&n~
 A &n&+rpine&n&+ywood table &n&+gstands here.&n~
@@ -228,7 +228,7 @@ table pinewood wood~
 
 &+yancient pinewood found in these parts of the land.&n
 ~
-#139515
+#16
 sword shortsword bronze~
 &n&+ya bronze shortsword&n~
 &n&+gSomeone have lost&n&+y a sword&n&+g here.&n~
@@ -248,7 +248,7 @@ A
 18 3
 A
 19 3
-#139516
+#17
 belt purple~
 &n&+ma purple belt&n~
 &n&+mA belt&n&+g lies forgotten here.&n~
@@ -262,7 +262,7 @@ belt purple~
 ~
 A
 2 2
-#139517
+#18
 flute small~
 &+ca s&n&+Cma&n&+cll f&n&+Clu&n&+Wte&n~
 &n&+cA sm&n&+Call flute lies here.&n~
@@ -282,7 +282,7 @@ A
 5 5
 A
 14 25
-#139518
+#19
 fountain granite~
 &na g&n&+gr&n&+wan&n&+Li&n&+wte fo&n&+gu&n&+wntain&n~
 &+wA g&n&+gr&n&+wan&n&+Li&n&+wte fo&n&+gu&n&+wnta&n&+Li&n&+wn stands here&n&+b bu&n&+Bbbli&n&+bng&n&+w with&n&+b w&n&+Bate&n&+br.&n~
@@ -300,7 +300,7 @@ freshwater night and day from the pressure of
 
 an underground spring.
 ~
-#139519
+#20
 apron stained foodstained~
 &+Wa s&n&+Gt&n&+ga&n&+Win&n&+Red &n&+Wapron&n~
 &+WA &n&+yfo&+god&n&+Wstained apron lies here.&n~
@@ -318,7 +318,7 @@ apron stained foodstained~
 
 &+Wcleaned.&n
 ~
-#139520
+#21
 cloak avlir~
 &n&+cthe cloak of&n&+M avlir&n~
 &n&+cA cloak &n&+gis lying here.&n~
@@ -338,7 +338,7 @@ A
 4 5
 A
 13 20
-#139521
+#22
 shortsword sword steel~
 &na steel&n&+L shortsword&n~
 Someone has thrown away their sword, here.&n~
@@ -354,7 +354,7 @@ A
 18 2
 A
 19 2
-#139522
+#23
 tailring ring stone granite~
 &n&+La grey&n&+w tailring&n~
 Someone has lost a tailring here.~
@@ -368,7 +368,7 @@ This tailring is made of granite stone and has no markings at all.
 ~
 A
 5 1
-#139523
+#24
 desk pinewood pine wood~
 a&n&+r pine&n&+ywood desk&n~
 &nA &n&+rpine&n&+ywood desk&n stand here.&n~
@@ -382,7 +382,7 @@ desk pinewood pine wood~
 
 &n&+yin this region and seems to be a nice piece of furniture.&n
 ~
-#139524
+#25
 anvil~
 &n&+rgri&n&+Lber&n&+W's&+L anvil~
 &n&+wAn &n&+Lan&n&+rvil&n&+w stand here in the middle of the room.&n~
@@ -400,7 +400,7 @@ anvil~
 
 &n&+Lhave had some sort of liftingdevince.&n
 ~
-#139525
+#26
 armor leather dirty~
 &n&+Lsome dirty leather armor&n~
 &n&+LSome dirty leather armor lies here.&n~
@@ -414,7 +414,7 @@ armor leather dirty~
 
 &n&+Lbut all the dirt have made it almost black.&n
 ~
-#139526
+#27
 barrel tanner tanner's~
 &+ya tanner's barrel&n~
 &n&+yA tanner's barrel sits in the corner.&n~
@@ -428,7 +428,7 @@ barrel tanner tanner's~
 
 &+yprepare a fresh skin and it smells awful.&n
 ~
-#139527
+#28
 key dirty~
 &+La dirty key&n~
 &n&+LA dirty key lies here.&n~
@@ -444,7 +444,7 @@ key dirty~
 
 &n&+Ldirty but looks ok except from that.&n
 ~
-#139528
+#29
 earring mist mass piece~
 &+man earring o&n&+wf mi&n&+mst&n~
 &n&+mAn odd piece of mass lies here.&n~
@@ -468,7 +468,7 @@ A
 19 2
 A
 26 10
-#139529
+#30
 workdesk black desk~
 &n&+La black workdesk&n~
 &n&+La black workdesk&n&+w stands in the middle of the room&n.~
@@ -484,7 +484,7 @@ workdesk black desk~
 
 &n&+Ldesk as they wait for&n&+r Wal&n&+Lgor to start working with them.&n
 ~
-#139530
+#31
 hammer black battlehammer~
 &n&+La black battlehammer&n~
 &+LSomeone has thrown away a black hammer here.&n~
@@ -502,7 +502,7 @@ A
 18 1
 A
 19 3
-#139531
+#32
 shield steel~
 a steel shield~
 A steel shield lies here.~
@@ -514,7 +514,7 @@ E
 shield steel~
 The shield is made of plain steel.
 ~
-#139532
+#33
 mask tribal pinewood wood~
 &n&+Ca tribal&n&+r pine&n&+ywood mask&n~
 &n&+yA piece of&n&+r pine&n&+ywood lies here.&n~
@@ -534,7 +534,7 @@ A
 4 7
 A
 13 20
-#139533
+#34
 wrappings horn birchbark bark~
 &n&+Wso&n&+Lm&n&+We &n&+Wb&n&+Li&n&+Wrc&n&+Lhb&n&+Wark h&n&+Lo&n&+Wrn w&n&+Lr&n&+Wa&np&n&+Wp&n&+Li&n&+wngs&n~
 &+WSome b&n&+La&n&+Wrk o&n&+Lf&n&+W a bi&n&+Lrc&n&+Wh is lying here.&n~
@@ -554,7 +554,7 @@ A
 34 4
 A
 24 -3
-#139534
+#35
 evidence handful~
 &n&+LA handful of evidence&n~
 &n&+LA handful of evidence lies buried here in the &n&+washes&+L.&n~
@@ -570,7 +570,7 @@ evidence handful~
 
 &n&+Lsay what it is?&n
 ~
-#139535
+#36
 horncaps steel~
 &nso&n&+Lme s&n&+wte&n&+Wel&n&+w horn&n&+Lcaps&n~
 &n&+LSomeone have dropped some hornwear here.&n~
@@ -586,7 +586,7 @@ A
 18 2
 A
 1 8
-#139536
+#37
 table pinewood pine wood~
 &n&+ya&n&+r pine&n&+ywood table&n~
 &n&+yA&n&+r pine&n&+ywood table stands here.&n~
@@ -598,7 +598,7 @@ E
 table pinewood pine wood~
 &n&+y   This table is made of finest&n&r pine&n&+ywood and seem very solid.&n
 ~
-#139537
+#38
 spear pinewood pine wood~
 &+ya&n&+r pine&n&+ywood spear&n&+w with a steel tip&n~
 &n&+yA pinewood spear&n&+g lies forgotten here.&n~
@@ -614,7 +614,7 @@ A
 18 3
 A
 19 3
-#139538
+#39
 water barrel drinking~
 &+ga s&n&+Gki&n&+gncov&n&+wered&n&+r bar&n&+yrel&n~
 &n&+gSomeone lost his dri&n&+Gnk&n&+ging &n&+ybarrel&n&+g here.&n~
@@ -630,7 +630,7 @@ water barrel drinking~
 
 &+gwet &n&+Gs&n&+gkin.&n
 ~
-#139539
+#40
 eyepatch goblin~
 &+ga go&n&+Gbl&n&+gin's eye&+Gpa&n&+gtch&n~
 &n&+gAn ey&n&+Gep&n&+gatch&n&+w lies here.&n~
@@ -648,7 +648,7 @@ A
 13 10
 A
 4 8
-#139540
+#41
 nosering heavy black ring~
 &+La heavy black nosering~
 &n&+La black ring lies forgotten here.&n~
@@ -664,7 +664,7 @@ A
 19 2
 A
 18 4
-#139541
+#42
 bar black bardesk~
 &+La black bar&n~
 &+LA black bar stands by the northern wall.&n~
@@ -680,7 +680,7 @@ bardesk black bar~
 
 &n&+Lthat easy with all these drunks around him.&n
 ~
-#139542
+#43
 band wristband red hide band~
 &n&+ra red-hide wristband&n~
 &n&+rA band is lying on the ground here.&n~
@@ -700,7 +700,7 @@ A
 18 2
 A
 2 6
-#139543
+#44
 card ace spades spade~
 &N&+Lthe A&n&+wce&n&+L of Sp&n&+wad&n&+Les&n~
 &n&+LA single c&nard l&n&+Lies here forgotten.&N~
@@ -718,7 +718,7 @@ A
 30 10
 A
 40 1
-#139544
+#45
 blade long thin dagger~
 &n&+ma l&n&+Lo&n&+mng t&n&+Lh&n&+min&n&+L blade&n~
 &n&+mA long blade&n&+w lies here on the ground.&n~
@@ -734,7 +734,7 @@ A
 18 4
 A
 19 4
-#139545
+#46
 leggings black leather~
 &n&+La pair of black leggings&n~
 &+LSome black leather leggings lies here.&n~
@@ -750,7 +750,7 @@ leggings black leather~
 ~
 A
 18 2
-#139546
+#47
 earring tiny water watery~
 &n&+Ba tiny ea&n&+brr&n&+Bing o&n&+bf w&n&+Bater~
 &+BA tiny &n&+bwatery&+B object lies here on the ground.~
@@ -770,7 +770,7 @@ A
 27 6
 A
 37 2
-#139547
+#48
 hide watery waterfiend~
 &n&+bthe h&n&+Bid&n&+be of a wa&n&+Bte&n&+brfiend&n~
 &n&+bA wa&n&+Bte&n&+bry h&n&+Bi&n&+bde lies here.&n~
@@ -786,7 +786,7 @@ hide watery waterfiend~
 
 &+bhas a magic glow around it.&n
 ~
-#139548
+#49
 bowl crystal small~
 &n&+ba s&n&+Bmall c&n&+Cry&n&+Bstal&n&+b bowl&n~
 &n&+bA smal&n&+Bl bo&n&+bwl stand h&n&+Bere burried in the&n&+Y sand.&n~
@@ -804,7 +804,7 @@ bowl crystal small~
 
 &+Bas it moves through the water inside the bowl.&n
 ~
-#139549
+#50
 sleeves waterfiend watery~
 &n&+bsle&n&+Beves &n&+bof the w&n&+Bat&n&+berf&n&+ri&n&+bend&n~
 &n&+bA watery pair of&n&+B slee&n&+bves lies here on the ground.&n~
@@ -828,7 +828,7 @@ A
 1 6
 A
 19 2
-#139550
+#51
 hide prepared waterhide~
 &n&+ba pr&n&+Bep&n&+bared w&n&+Bat&n&+berhide&n~
 &n&+bA strange hide lies abandoned here.&n~
@@ -844,7 +844,7 @@ hide prepared waterhide~
 
 &+bwith it.&n
 ~
-#139551
+#52
 shield red-steel~
 &n&+ra round red-steel shield&n~
 &n&+rA humming piece of red-steel lies here.&n~
@@ -870,7 +870,7 @@ A
 13 25
 A
 4 10
-#139552
+#53
 eye serpent evil~
 &n&+ge&n&+Gy&n&+ge&n&+G o&n&+gf&n&+g th&n&+Le &n&+gse&n&+Grp&n&+gent~
 &n&+gA very evil &n&+gey&n&+Ge o&n&+gf a se&n&+Grp&n&+gent is lying here.&n~
@@ -890,7 +890,7 @@ A
 4 10
 A
 13 18
-#139553
+#54
 seal stone~
 a s&n&+Le&nal of st&n&+Lo&nne~
 A seal of some sort is lying here.~
@@ -910,7 +910,7 @@ A
 18 2
 A
 19 2
-#139554
+#55
 platemail mithril~
 &+La heavy &n&+cmi&n&+Cthri&n&+cl&n&+L platemail~
 &nA platemail of&n&+c mi&n&+wth&n&+cril lies here.&n~
@@ -930,7 +930,7 @@ A
 13 15
 A
 18 3
-#139555
+#56
 key black~
 &n&+La pitch-black key&n~
 &n&+LA pitch-black key lies here in the &n&+washes&+L.&n~
@@ -942,7 +942,7 @@ E
 key black~
 &+L   This key looks like it has been in a fire, and maybe it has.&n
 ~
-#139556
+#57
 face mask demon hideous~
 &+rthe hi&n&+Ld&n&+re&n&+Lo&n&+rus face of a demon&n~
 &n&+rA disgusting piece of hide lies here.&n~
@@ -958,7 +958,7 @@ A
 24 -4
 A
 4 10
-#139557
+#58
 face hide bloodsoaked demon mask~
 &+rthe bloodsoaked face of a demon&n~
 &n&+rA bloodsoaked piece of hide lies here.&n~
@@ -970,7 +970,7 @@ E
 face hide demon mask bloodsoaked~
 &n&+r   This piece of meat is the face of a killed demon.&n
 ~
-#139558
+#59
 hide demon red prepared~
 &n&+ra prepared demon hide&n~
 &n&+rA red hide lies here.&n~
@@ -982,7 +982,7 @@ E
 hide red demon prepared~
 &n&+r   This hide has been prepared for further use by a skilled tanner.&n
 ~
-#139559
+#60
 key gold golden~
 &+Ya golden key&n~
 &n&+YA golden key lies here.&n~
@@ -994,7 +994,7 @@ E
 key gold golden~
 &n&+Y   This is a small key made of pure gold.&n
 ~
-#139560
+#61
 crown amethyst sparkling~
 &+ma c&n&+Mro&n&+mwn o&n&+Mf a&n&+mm&n&+Me&n&+mth&n&+Mys&n&+mt&n~
 &+MA spa&n&+mrk&n&+Mling crown lies here.&n~
@@ -1010,7 +1010,7 @@ A
 24 -5
 A
 28 10
-#139561
+#62
 tiara mithril~
 &+wa &n&+Cmi&n&+Wt&n&+Chr&n&+cil &n&+ct&n&+Cia&n&+cra~
 &+CA tiara&n&+g lies forgotten on the floor here.&n~
@@ -1026,7 +1026,7 @@ A
 13 10
 A
 3 10
-#139562
+#63
 sword two-handed black~
 &n&+La black two-handed sword&n~
 &+LA black sword lies on the floor here.&n~
@@ -1044,7 +1044,7 @@ A
 18 2
 A
 19 4
-#139563
+#64
 chainmail goblin green~
 &n&+ga beautiful&n&+G goblin&n cha&n&+Wi&n&+wn&n&+Lma&ni&n&+Ll&n~
 &nA&n&+G green&n chainmail &n&+glies thrown on the floor here.&n~
@@ -1062,7 +1062,7 @@ A
 24 -5
 A
 5 10
-#139564
+#65
 stiletto long thin~
 &+ra long thin stiletto&n~
 &n&+rA stiletto is lying here all alone.&n~
@@ -1078,13 +1078,13 @@ A
 18 4
 A
 19 3
-#139565
+#66
 chest mithril huge~
 &+Wa huge &n&+cmi&n&+Wth&n&+Cril chest~
 &n&+WA huge&n&+c mi&n&+Wth&n&+Cril chest stand here.&n~
 ~
 15 18 3 0 9 64 0 0 0 0 0
-1000 29 139566 1000 0 0 0 0
+1000 29 67 1000 0 0 0 0
 1400 103 100
 E
 chest mithril huge~
@@ -1092,7 +1092,7 @@ chest mithril huge~
 
 &+Cbeautiful ornaments and has a sturdy lock.&n
 ~
-#139566
+#67
 key mithril large~
 &+Ca large mithril key&n~
 &n&+CSomeone has lost a key here.&n~
@@ -1104,7 +1104,7 @@ E
 key mithril large~
 &+CThe key is made of finest mithril and looks unbreakable.&n
 ~
-#139567
+#68
 horncaps red steel red-steel~
 &n&+rsome red-steel horncaps&n~
 &n&+rSomeone have dropped a pair of horncaps here.&n~
@@ -1124,7 +1124,7 @@ A
 18 3
 A
 19 2
-#139568
+#69
 skin strange thin illithid~
 &+Lth&n&+me th&n&+Min s&n&+mkin of an&n&+M Illithid~
 &n&+MA stra&n&+mnge &n&+Mskin&n lies here forgotten.&n~
@@ -1138,7 +1138,7 @@ skin illithid strange illithid~
 
 &+Mto an Illithid.&n
 ~
-#139569
+#70
 sleeves illithid hide~
 &n&+ysome&n&+M illithid&n-&n&+mhide&n&+y sleeves~
 &n&+Ma pair of sleeves&n lies here in a heap.~
@@ -1158,7 +1158,7 @@ A
 37 2
 A
 27 5
-#139570
+#71
 skin hide illithid~
 &+ya prepared skin of an&n&+M Illithid&n~
 &+yA&n&+M skin&n&+y lies here in the dirt.&n~
@@ -1170,7 +1170,7 @@ E
 skin hide illithid~
 &n&+yThis is by a skilled tanner prepared skin of an&n&+M illithid.&n
 ~
-#139571
+#72
 key iron prison~
 the p&n&+Lri&nson&n&+L key&n~
 An unwanted&n&+L key&n lies here in the dirt.&n~
@@ -1182,7 +1182,7 @@ E
 key iron prison~
 This key is made of&n&+L pitch-black&n iron.&n
 ~
-#139572
+#73
 abyssal horns baphomet horned king~
 &+Lthe &+rab&+Ryss&+ral &+Wh&+worn&+Ws&+L of &+rBa&+Rphom&+ret&+L, the &+WH&+wo&+Wr&+wn&+We&+wd &+WK&+wi&+Wn&+wg&n~
 &n&+LA strange gathering of&n&+r demonic fire &n&+Lis lying here.&n~
@@ -1204,7 +1204,7 @@ A
 31 6
 A
 13 50
-#139573
+#74
 scalp miner dwarf~
 &n&+ythe sca&n&+Llp of &na pe&n&+Lrvert~
 &n&+LA sc&n&+yalp li&n&+Les here.~
@@ -1218,7 +1218,7 @@ scalp miner dwarf~
 
 &n&+Lfrom that it seems to be of an orc.&n
 ~
-#139574
+#75
 scalp miner dwarf~
 the s&n&+ycalp of &n&+La miner&n~
 A sloppy scalp is lying here.~
@@ -1230,7 +1230,7 @@ E
 scalp miner dwarf~
 &n&+yThis scalp comes from a mountaindwarf and is still wet from &n&+rblood.&n
 ~
-#139575
+#76
 key grey stone granite~
 a g&n&+Lrey s&nto&n&+Lne key~
 &nA gr&n&+Ley ke&ny is ly&n&+Ling here forgotten.&n~
@@ -1242,7 +1242,7 @@ E
 key grey stone granite~
 This &n&+Lkey &nis ma&n&+Lde of g&n&+gra&n&+Lnit&ne and lo&n&+Lokes stu&nrdy.&n
 ~
-#139576
+#77
 knife butcherknife sharp~
 a &n&+rbut&n&+Rch&n&+rer&nknife~
 &nA &n&+rsh&n&+Rar&n&+rp &nknife lies on the ground here.&n~
@@ -1258,7 +1258,7 @@ slice off the more thick parts of the body.
 ~
 A
 19 3
-#139577
+#78
 veil silken beautiful thin~
 a be&n&+Wautif&n&+cul s&n&+Cil&n&+Wken veil~
 &nA th&n&+cin &n&+Cve&n&+Wil &nlies forgotten here.&n~
@@ -1274,13 +1274,13 @@ and must have &n&+Wcome from a&n&+C far aw&n&+cay land.&n
 ~
 A
 5 8
-#139578
+#79
 mass darkness swirling strange~
 &n&+La strange swirling mass of darkness&n~
 &n&+LA strange swirling mass of darkness floats here.&n~
 ~
 25 1 3 0 7 12384 0 0 0 0 0
-139653 7 -1 0 0 0 0 0
+154 7 -1 0 0 0 0 0
 0 12 100
 E
 mass darkness swirling strange~
@@ -1290,7 +1290,7 @@ mass darkness swirling strange~
 
 &+Lseems somehow to be alive.&n
 ~
-#139579
+#80
 fang devil waterdevil~
 &n&+Ba fang of a &n&+bwater&n&+rdevil&n~
 &+BA long twisted fang lies here.&n~
@@ -1306,7 +1306,7 @@ A
 18 4
 A
 19 3
-#139580
+#81
 red-steel clump steel~
 &+ra large clump of red-steel&n~
 &n&+rA large clump of red-steel lies here burried in the m&n&+Ra&n&+rg&n&+Rma.&n~
@@ -1322,13 +1322,13 @@ red-steel clump steel~
 
 &+rfor shat purpose is unknown.&n
 ~
-#139581
+#82
 portal fire~
 &+ra portal of f&+Yi&n&+r&n&+Rr&n&+re~
 &n&+rA portal of f&+Yi&n&+Rr&n&+re fl&n&+Roa&n&+rts in mid-air here.&n~
 ~
 25 1 3 0 7 96 0 0 0 0 0
-139652 7 -1 0 0 0 0 0
+153 7 -1 0 0 0 0 0
 0 11 100
 E
 portal fire~
@@ -1338,13 +1338,13 @@ portal fire~
 
 &+rnearly engulf you when you look at it.&n
 ~
-#139582
+#83
 cloud fire~
 &n&+ra cl&n&+Rou&n&+rd of f&n&+Ri&n&+rre&n~
 &n&+rA cl&n&+Rou&n&+rd of f&n&+Ri&n&+rre hangs in m&n&+Rid&n&+r-air.&n~
 ~
 25 1 3 0 7 24641 0 0 0 0 0
-139675 7 -1 0 0 0 0 0
+176 7 -1 0 0 0 0 0
 0 12 100
 E
 cloud fire~
@@ -1354,7 +1354,7 @@ cloud fire~
 
 &+Ra huge man and is constantly moving.&n
 ~
-#139583
+#84
 eye beholder small mass~
 &n&+rthe &n&+re&n&+Ry&n&+re of a b&n&+Re&n&+rhold&n&+Re&n&+rr&n~
 &+rA small sw&+Rirli&n&+rng mass lies forgotten here.&n~
@@ -1374,7 +1374,7 @@ A
 33 3
 A
 35 2
-#139584
+#85
 platemail bloodlust black heavy~
 &n&+Lthe platemail of &n&+rBloodLust&n~
 &n&+LA heavy black platemail lies here.&n~
@@ -1400,7 +1400,7 @@ A
 13 50
 A
 31 5
-#139585
+#86
 infernal black wings prince devil~
 &+Lthe &+rd&+Re&+rv&+Ri&+rl &+Lpr&+win&+Wce &+rIn&+Rfern&+ral&+L &+Ww&+win&+Lgs of the &+rNi&+Rn&+Ye &+WH&+Ye&+Rl&+rls&n~
 &n&+LA swirling mass floats here above the ground.&n~
@@ -1416,7 +1416,7 @@ A
 35 5
 A
 37 4
-#139586
+#87
 heart pulsating devil~
 &n&+rthe pu&n&+Rlsa&n&+rting h&n&+Rear&n&+rt of a d&n&+Rev&n&+rilprince&n~
 &n&+rA pu&n&+Rls&n&+rating heart lies here.&n~
@@ -1430,13 +1430,13 @@ heart pulsating devil~
 
 &+ras if it still were pumping blood.&n
 ~
-#139587
+#88
 portal black pulsating~
 &+La black pulsating portal&n~
 &+LA black pulsating portal hangs here in mid-air.&n~
 ~
 25 1 3 0 7 20544 0 0 0 1 0
-139652 7 -1 0 0 0 0 0
+153 7 -1 0 0 0 0 0
 0 11 100
 E
 portal black pulsating~
@@ -1446,7 +1446,7 @@ portal black pulsating~
 
 &+Linto it to see where it leads.&n
 ~
-#139588
+#89
 boots firelizard red skin red-skin~
 &n&+rsome &n&+rboots of t&n&+Rhe f&n&+Yir&n&+Rel&n&+rizard&n~
 &n&+rA pair of re&n&+Rd-sk&n&+rin boots lies here.&n~
@@ -1466,7 +1466,7 @@ A
 35 3
 A
 13 28
-#139589
+#90
 nugget gold large~
 &n&+ya &n&+Ylarge gold &n&+ynugget&n~
 &n&+wA large &n&+Ygold nugget &nlies here on the tunnel floor.&n~
@@ -1484,7 +1484,7 @@ nugget gold large~
 
 &+Ymust have dropped it there, intentional or just lost it.&n
 ~
-#139590
+#91
 morningstar steel red~
 &+ra red-st&+Ree&n&+rl mor&n&+Rin&n&+ringstar&n~
 &n&+rA large metal club lies here forgotten.&n~
@@ -1504,13 +1504,13 @@ A
 13 18
 A
 19 4
-#139591
+#92
 pool blood disgusting~
 &n&+La disgusting p&n&+roo&n&+Ll of &n&+rblood&n~
 &n&+LA &n&+gd&n&+Gis&n&+gg&n&+Lus&n&+Gt&n&+ging &n&+Lpool of &n&+rblood&n&+L lies here on the floor.&n~
 ~
 25 2 3 0 7 64 0 0 0 1 0
-139725 11 -1 0 0 0 0 0
+226 11 -1 0 0 0 0 0
 1000 4 100
 E
 pool disgusting blood~
@@ -1518,7 +1518,7 @@ pool disgusting blood~
 
 &n&+rdeep red liquid.&n
 ~
-#139592
+#93
 cloak skin large troll~
 &+gan ancient t&n&+Gr&n&+goll&n-&n&+yhide&n&+g cl&n&+Go&n&+gak&n~
 &n&+gA la&n&+Grg&n&+ge p&n&+Gie&n&+gce of skin lies here.&n~
@@ -1538,7 +1538,7 @@ A
 19 2
 A
 5 8
-#139593
+#94
 scalp bloody cheiftain~
 &n&+rthe bloody scalp of the chieftain&n~
 &n&+rA bloody scalp lies here.&n~
@@ -1554,13 +1554,13 @@ scalp chieftain bloody~
 
 &+rfrom the blood of that troll.&n
 ~
-#139594
+#95
 pool blood disgusting~
 &n&+La p&n&+gool of&n&+r blood&n~
 &n&+gA d&n&+Gis&n&+ggust&n&+Lin&n&+gg&n&+L pool of &n&+rblood &n&+Llies here.&n~
 ~
 25 2 3 0 7 64 0 0 0 1 0
-139724 7 -1 0 0 0 0 0
+225 7 -1 0 0 0 0 0
 1000 4 100
 E
 pool blood disgusting~
@@ -1570,7 +1570,7 @@ pool blood disgusting~
 
 &n&+rcolour than humanoid blood.&n
 ~
-#139595
+#96
 throne granite~
 &+La g&nr&n&+ga&n&+Ln&ni&n&+gt&n&+Le t&nhr&n&+Lone&n~
 &n&+LA l&na&n&+Lr&n&+gg&ne &n&+Lg&nr&n&+ga&n&+Ln&ni&n&+gt&ne &n&+Lt&nhr&n&+Lone stands here.&n~
@@ -1584,7 +1584,7 @@ throne granite~
 
 &+Lit is covered with wolfskin to make it somewhat comfortable.&n
 ~
-#139596
+#97
 altar stone bloodcovered~
 &+La &n&+rblood&nco&n&+Lv&n&+ge&n&+Lred &nstone altar&n~
 &nA &n&+rblood&nc&n&+Lov&ner&n&+Led &nstone &n&+Laltar&n stands here.&n~
@@ -1600,7 +1600,7 @@ altar stone bloodcovered~
 
 &+Land it is covered with coagulated &n&+rblood&n.&n
 ~
-#139597
+#98
 club oaken oak huge~
 &n&+ya huge oaken club&n~
 &n&+yA huge wooden club lies here forgotten.&n~
@@ -1618,7 +1618,7 @@ A
 18 2
 A
 19 2
-#139598
+#99
 finger troll dangling~
 &n&+ga da&n&+Gng&n&+gling tr&n&+Go&n&+gll&n&+y finger&n~
 &n&+gA &n&+ydried &n&+gfinger of a tr&n&+Go&n&+gll is lying here.&n~
@@ -1642,7 +1642,7 @@ A
 5 8
 A
 13 10
-#139599
+#100
 scalp~
 &n&+rthe scalp &n&+gof a tr&n&+Go&n&+gll sh&n&+ra&n&+gman&n~
 &n&+rA bloody&n&+g scalp lies here in the dirt.&n~
@@ -1658,7 +1658,7 @@ scalp~
 
 &+gquite mess&n&+ry in your&n&+g hand.&n
 ~
-#139600
+#101
 fangs serpent~
 &n&+gfa&n&+Gn&n&+ggs o&n&+gf t&n&+Gh&n&+ge s&n&+Ge&n&+grp&n&+Ge&n&+gnt&n~
 &n&+gSome odd&n&+Gly tw&n&+gisted fangs lies here looking very sharp.&n~
@@ -1680,7 +1680,7 @@ A
 18 4
 A
 19 4
-#139601
+#102
 dirty boy~
 &n&+La d&n&+yi&nr&n&+yt&n&+Ly li&nttle &n&+rb&n&+Loy&n~
 &n&+LA d&n&+yi&nr&n&+yt&n&+Ly li&nttle &n&+rb&n&+Loy &n&+yhides here behind &n&+ga bush.&n~
@@ -1702,7 +1702,7 @@ dirty boy~
 
 &+yfrom them.&n
 ~
-#139602
+#103
 letter paper gratitude~
 a letter of gratitude&n~
 A piece of paper lies here.~
@@ -1717,7 +1717,7 @@ letter~
 
 &n&+W  This brave adventurer found our son for us.&n
 ~
-#139603
+#104
 leggings scalemail seaserpent~
 &n&+gs&n&+be&n&+gas&n&+Ge&n&+grp&n&+Ge&n&+gnt s&n&+Gca&n&+glem&n&+Gail &n&+gl&n&+ye&n&+gggi&n&+yn&n&+ggs&n~
 &n&+gSome s&n&+Gca&n&+glem&n&+Ga&n&+gil leggings lies here on the ground.&n~
@@ -1735,7 +1735,7 @@ A
 36 5
 A
 32 5
-#139604
+#105
 scale~
 &n&+gthe sc&n&+Ga&n&+gle of a s&n&+be&n&+gas&n&+Ge&n&+grp&n&+Ge&n&+gnt&n~
 &n&+gA la&n&+Gr&n&+gge sc&n&+Ga&n&+gle lies here in the &n&+ydirt.&n~
@@ -1753,7 +1753,7 @@ scale~
 
 &n&+gcarry it al&n&+Gone.&n
 ~
-#139605
+#106
 face devil mask~
 &+Lthe &+rInf&+Rernal &+Wvisage&+L of a to&+Rrm&+Lente&+rd d&+Re&+rv&+Ri&+rl&n~
 &n&+rA piece of red skin lies here forgotten.&n~
@@ -1773,7 +1773,7 @@ A
 19 4
 A
 25 0
-#139606
+#107
 leggings flaming feathers phoenix~
 &+rs&+Rome &+rf&+Rl&+Ya&+Wm&+Yi&+Rn&+rg&+R &+rl&+Reggins &+ro&+Rf &+rp&+Rh&+Yo&+We&+Yn&+Ri&+rx f&+Reathers&n~
 &n&+rA pair of metal leggings lies here on the &n&+yground&+r.&n~
@@ -1795,7 +1795,7 @@ A
 31 3
 A
 23 -5
-#139607
+#108
 cloth coat traveller's~
 &n&+ya tra&nvel&n&+yle&nr's &n&+ycoat&n~
 &n&+yA larg&ne p&n&+yiece o&nf cl&n&+yoth lies here.&n~
@@ -1815,7 +1815,7 @@ A
 14 15
 A
 2 5
-#139608
+#109
 sign ancient abused~
 &nan abused &n&+ysign&n~
 &nAn ancient and abused &n&+ysign&n is obscured by &n&+gve&+Gr&n&+gd&+Gur&n&+ge&n, aside the south road.&n~
@@ -1849,7 +1849,7 @@ sign ancient abused~
 
 &n&+g                      __,--.__,&+G"&n&+g.__&n&+y|#&n&+g/&+G"     "&n&+g---._______&n
 ~
-#139609
+#110
 hide dragon sleeves~
 &n&+ra pair of dr&n&+Ra&n&+rg&n&+Ron&n&+g-&n&+Lhide &n&+rsleeves&n~
 &n&+rpieces of a dragon hide lies here forlorn.&n~

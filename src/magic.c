@@ -16415,6 +16415,12 @@ void spell_reduce(int level, P_char ch, char *arg, int type, P_char victim, P_ob
   if(type == SPELL_ANIMAL_GROWTH)
     animal_growth = TRUE;
   
+  if(GET_SIZE(victim) == SIZE_TINY && !(victim->specials.affected_by3, AFF3_REDUCE))
+    {
+       send_to_char("Why would you want to reduce them? They are tiny enough!&n\n\r", ch);
+	return; //check to make sure they are not racial tiny.
+    }
+  
   if(!NewSaves(victim, SAVING_SPELL, 0) || (ch == victim) ||
       is_linked_to(ch, victim, LNK_CONSENT))
   {

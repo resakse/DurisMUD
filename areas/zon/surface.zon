@@ -325,6 +325,7 @@ M 0 500109 10 526109 100 0 0 0     * a centaur guardsman
 M 0 500109 10 526109 100 0 0 0     * a centaur guardsman
 M 0 500205 1 526480 100 0 0 0      * Zermeiel the centaur
 M 0 500230 1 527250 100 0 0 0      * Eom, the grand inquisitor
+M 0 500130 1 527518 100 0 0 0      * Krunx, the barbarian Ragelord
 M 0 500223 1 528894 100 0 0 0      * the grey elf swashbuckler Llwystyn
 M 0 500199 1 531269 100 0 0 0      * Sythandria, the discordant harmonist
 M 0 500070 1 531517 100 0 0 0      * Sir Jonius the Verspin Watchman
@@ -527,6 +528,7 @@ M 0 500051 20 546066 100 0 0 0     * a mountaineer
 M 0 500054 12 546866 100 0 0 0     * a gnomish grenadier
 E 1 500011 14 16 100 0 0 0         *   grenadier proc
 E 1 500011 14 17 100 0 0 0         *   grenadier proc
+M 0 500132 1 547117 100 0 0 0      * Braxxus, the dwarvern MaUleR
 M 0 500053 12 547671 100 0 0 0     * a green iguana
 M 0 500053 12 547671 100 0 0 0     * a green iguana
 M 0 500053 12 547671 100 0 0 0     * a green iguana

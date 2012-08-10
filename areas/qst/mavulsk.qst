@@ -1,4 +1,4 @@
-#139517
+#18
 M
 gruber~
 &+W Oh, yes my dear son. I told him to go and play outside
@@ -10,10 +10,10 @@ Q
 &+W Give this letter to my husband and maybe he
 &+W can give you something for your great job!&n
 ~
-R I 139602
-G I 139601
+R I 103
+G I 102
 S
-#139521
+#22
 M
 skin hide~
  Yes that's my speciality.. skins of all kinds.
@@ -26,14 +26,14 @@ Q
  this in ages. I'll keep most of it but I'll make you
  a pair of sleeves as a token of my appreciation.
 ~
-R I 139549
-G I 139550
+R I 50
+G I 51
 Q
  He turns away and says:
  &n&+W I have to work now, so please leave.
 ~
-R I 139556
-G I 139558
+R I 57
+G I 59
 Q
  Alilzalin works with the hide for a couple of hours
  then turns back to you and says:
@@ -42,10 +42,10 @@ Q
 &+W    this skin. Now leave me I have other
 &+W    work.&n
 ~
-R I 139569
-G I 139570
+R I 70
+G I 71
 S
-#139522
+#23
 Q
 &+g After an hours work with chemicals of all kinds
 &+g Walgor turns to you with a much smaller, but
@@ -55,23 +55,23 @@ Q
 &n&+W now you need to find a skilled tailor to work
 &n&+W with it!&n
 ~
-R I 139550
-G I 139547
+R I 51
+G I 48
 Q
  After been working on it for a while he turns to
  you and says:
   &n&+WNow, take this hide and leave me please!
 ~
-R I 139558
-G I 139557
+R I 59
+G I 58
 Q
 Walgor says: Here take this hide and get
              someone to work with it.
 ~
-R I 139570
-G I 139568
+R I 71
+G I 69
 S
-#139524
+#25
 M
 one-eye eye~
 &+C One-Eye yes, poor fellow lost his eye due
@@ -102,10 +102,10 @@ Q
 &+W assistant I got a strange weapon from him. I'd
 &+W say you have earned you're right to it.&n
 ~
-R I 139600
-G I 139599
+R I 101
+G I 100
 S
-#139535
+#36
 M
 eye~
 &+W Yes, my lost eye, well that story is nothing I wanna talk
@@ -138,10 +138,10 @@ Q
 
 &+L Go in peace my friend.
 ~
-R I 139551
-G I 139552
+R I 52
+G I 53
 S
-#139547
+#48
 M
 fire~
 &+W Ah, yes that fire. The house was burnt out before
@@ -167,18 +167,18 @@ Q
 &+W house. I don't know where it goes but you're
 &+W welcome to try it anywhere you want.
 ~
-R I 139555
-G I 139534
+R I 56
+G I 35
 Q
 &+W  I can't belive you found them!
 
 &+W Oh well, I shall reward you for your
 &+W honourable deeds, take this cloak.&n
 ~
-R I 139592
-G I 139593
+R I 93
+G I 94
 S
-#139550
+#51
 M
 fish aquarium~
 &+B Oh yes. Can you imagine anything more exiting
@@ -193,17 +193,17 @@ Q
 &+W I'll trade it for my crown,
 &+W here take it.&n
 ~
-R I 139560
-G I 139548
+R I 61
+G I 49
 S
-#139551
+#52
 M
 trouble~
 &+W How am I gonna convince the Baron ?
 &+W Imagine this task yourself..&n
 ~
 S
-#139557
+#58
 M
 trouble~
 &+W Yes, as if it weren't enough with the constant
@@ -252,8 +252,8 @@ And he says: &+WA so you found that little rat, well
              have caused the trouble in the mines for
              me.
 ~
-R I 139575
-G I 139574
+R I 76
+G I 75
 Q
 &+W  Oh, I never thought you had it in you!
 
@@ -263,10 +263,10 @@ Q
 &+W  key to my treasurechest and take whatever
 &+W  you want from it!&n
 ~
-R I 139566
-G I 139586
+R I 67
+G I 87
 S
-#139563
+#64
 M
 hysteric daughter~
  She turns to you and peers at you as she responds:
@@ -292,10 +292,10 @@ over her lips and she says:
    &+WI don't know how I can thank you but take
    &+Wmy veil as a token of my gratitude.
 ~
-R I 139577
-G I 139573
+R I 78
+G I 74
 S
-#139581
+#82
 M
 metal~
  Metal yes, it's so hard to get hold on raw material.
@@ -352,11 +352,11 @@ Q
  you got my skilled work now in your hands, and
  that is worth quite much I guess.
 ~
-R I 139590
-G I 139589
-G I 139580
+R I 91
+G I 90
+G I 81
 S
-#139593
+#94
 M
 plate~
 &+L Yes this useless piece of steel is getting
@@ -375,11 +375,11 @@ Q
 &+L As a token of my gratitude for finding my son and bringing me this
 &+L interesting piece of material I'll give you these leggings.&n
 ~
-R I 139603
-G I 139602
-G I 139604
+R I 104
+G I 103
+G I 105
 S
-#139597
+#98
 M
 travel~
 &+g I've been travelling allower the know world and my
@@ -407,7 +407,7 @@ Q
 &+g items in this short time! Here take my leggings, they have
 &+g been a great help to me in my quest.&n
 ~
-R I 139606
-G I 139511
-G I 139551
+R I 107
+G I 12
+G I 52
 S

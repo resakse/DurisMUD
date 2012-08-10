@@ -7,8 +7,8 @@ ball flesh blood~
 &+GPu&+gs&+ys&+r coming out of its every orifice, this monster is nothing more than a&n
 &+rcollection of organs and fluids.  It obviously has a nasty temper as well.&n
 ~
-1073752076 1 0 33554520 14558 0 0 -1000 S
-U 0 2 -1
+1073752076 1 0 0 33554520 14558 0 0 -1000 S
+U 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -22,8 +22,8 @@ cube transparent~
 &+Wthe blood from the ground and finds sustenance thereon.  Letting only a teeny&n
 &+Wshiver off every now and then, this cube of jelly seems amorphous. &n
 ~
-1074018380 0 0 34078792 12508 0 0 -1000 S
-AP 0 64 -1
+1074018380 0 0 0 34078792 12508 0 0 -1000 S
+AP 0 64 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -38,8 +38,8 @@ no obvious marks, nor does it have any identifying traits; but its
 demeanor and select clothes make it to resemble a traditional angel - save
 for the fact that it has three wings instead of two.
 ~
-14410 1 0 301990032 262144 0 0 -1000 S
-OG 0 32 -1
+14410 1 0 0 301990032 262144 0 0 -1000 S
+OG 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -53,8 +53,8 @@ raging jelly red~
 &+rpeace.  Truly an aberrate species, it frantically bounces off of everything&n
 &+rin sight, staying still only when feeding.&n
 ~
-1107302472 1 0 33554516 0 0 0 -1000 S
-UV 0 16384 -1
+1107302472 1 0 0 33554516 0 0 0 -1000 S
+UV 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -70,8 +70,8 @@ child~
 &+Llost within the wind's song.  Looking briefly in to the sky she simply&n
 &+Lsmiles and turns about, immersed in some quiet daydream.&n
 ~
-1107703820 0 0 302612668 14557 0 0 -1000 S
-UV 0 128 -1
+1107703820 0 0 0 302612668 14557 0 0 -1000 S
+UV 0 128 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -84,8 +84,8 @@ buffalo beast gorgon~
 &+Lcovered with scales so thick one could swear they were made of metal.  Its&n
 &+Ldeep red eyes say nothing more than &+rrage&+L.
 ~
-1141114956 1 0 33554432 0 0 0 -650 S
-AE 0 1 -1
+1141114956 1 0 0 33554432 0 0 0 -650 S
+AE 0 1 0 -1
 53 0 0 9d9+1000 6d7+1
 0.0.0.0 0
 8 8 0
@@ -103,8 +103,8 @@ large warrior angry man~
 &+Lintent on clearing out the room, this displayed so by his agitated thrashing&n
 &+Lgestures.&n
 ~
-1141258250 1 0 33554576 0 0 0 -1000 S
-UV 0 1 -1
+1141258250 1 0 0 33554576 0 0 0 -1000 S
+UV 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -118,8 +118,8 @@ naked woman~
 &+mdelicious torso.  She is entirely exposed, her previous stance indicating&n
 &+mthat she was about to have intercourse.&n
 ~
-1141258250 1 0 33554472 0 0 0 -1000 S
-UV 0 512 -1
+1141258250 1 0 0 33554472 0 0 0 -1000 S
+UV 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -132,8 +132,8 @@ young daughter girl~
 &+mloose black shoulder-length hair and a very pallid skin.  She also has these&n
 &+mmagnificent&+G green &+geyes &+mthat shine with confidence.&n
 ~
-1073756298 1 0 33554528 0 0 0 -1000 S
-UV 0 32 -1
+1073756298 1 0 0 33554528 0 0 0 -1000 S
+UV 0 32 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -149,8 +149,8 @@ young man warrior~
 &+Lsurreal greyish glow that discloses his altered state.  Once human, he&n
 &+Lcould have surely become one of the greater warriors of the lands.&n
 ~
-1074149580 1 0 33554448 32768 0 0 -1000 S
-UV 0 1 -1
+1074149580 1 0 0 33554448 32768 0 0 -1000 S
+UV 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -167,8 +167,8 @@ from harm.  It's probably the only thing that scares the gorgons off from the
 poor child in any case.  He seems quite docile, and makes no agitated
 gestures.
 ~
-67123274 0 0 33554432 0 0 0 -50 S
-D 0 1 -1
+67123274 0 0 0 33554432 0 0 0 -50 S
+D 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -184,8 +184,8 @@ giant soul water~
 &+bwhich extend much like hands and arms yet they have no definition.&n
 &+bObviously not your average lifeform, perhaps caution should be advised.&n
 ~
-1107703884 1 0 301991960 276672 557056 0 0 S
-EW 0 128 -1
+1107703884 1 0 0 301991960 276672 557056 0 0 S
+EW 0 128 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -201,8 +201,8 @@ anaem pheonix~
 &+rshould go undisturbed.  The consequences are otherwise quite obvious.  Legend&n
 &+rhas it that this bird carries souls to judgment when they die.&n
 ~
-1140996108 1 0 33554432 2048 0 0 -250 S
-DK 0 1 -1
+1140996108 1 0 0 33554432 2048 0 0 -250 S
+DK 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -216,8 +216,8 @@ infant morkoth angry~
 &+Wquite sturdy looking.  He has fins that resemble arms and legs&n
 &+Wthe latter seemingly for underwater propulsion.  &n
 ~
-1074006028 1 0 33554432 0 0 0 -350 S
-MF 0 8192 -1
+1074006028 1 0 0 33554432 0 0 0 -350 S
+MF 0 8192 0 -1
 55 60 -200 5d5+900 7d6+0
 0.0.0.4 0
 8 8 0
@@ -232,8 +232,8 @@ mother morkoth~
 &+Wto that of her youngen who have a perfectly white exterior; perhaps a result&n
 &+Wof being exposed to blood for so many years.&n
 ~
-1090922570 1 0 33554432 309440 67371008 0 -1000 S
-MF 0 32 -1
+1090922570 1 0 0 33554432 309440 67371008 0 -1000 S
+MF 0 32 0 -1
 60 0 -200 5d5+8000 8d8+50
 0.0.0.6 0
 8 8 2
@@ -249,8 +249,8 @@ ssidrn master~
 &+Lbook about underneath one of his four arms.  He has an intense look about&n
 &+Lhim - like he's mad about something.&n
 ~
-1074149386 1 0 33554432 34816 0 0 -1000 S
-TK 0 1 -1
+1074149386 1 0 0 33554432 34816 0 0 -1000 S
+TK 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -265,8 +265,8 @@ neogi soldier~
 &+Lbeing intensely musculated.  His strong arachnid legs are firmly&n
 &+Lplanted into the ground as he gazes about looking for intruders to kill.&n
 ~
-1140983886 1 0 301989944 0 0 0 -1000 S
-TK 0 1 -1
+1140983886 1 0 0 301989944 0 0 0 -1000 S
+TK 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -281,8 +281,8 @@ cute neogi child~
 &+Wdemand compassion, and according to his constant rubbing of his stomach,&n
 &+Wperhaps even a little food.&n
 ~
-2056 0 0 33554432 0 0 0 0 S
-TK 0 512 -1
+2056 0 0 0 33554432 0 0 0 0 S
+TK 0 512 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -296,8 +296,8 @@ old neogi~
 &+Lit for him.  His eyes are dim, and close quite often.  This Neogi must have&n
 &+Lseen many things; perhaps he should be writing instead of reading.&n
 ~
-1140852750 0 0 33554432 0 0 0 -250 S
-TK 0 2048 -1
+1140852750 0 0 0 33554432 0 0 0 -250 S
+TK 0 2048 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -314,8 +314,8 @@ umber hulk slave~
 &+bspaced eyes line his forehead.  His pair of antennae twitches quickly as&n
 &+bhe apparently senses danger.&n
 ~
-67504266 0 0 33554456 2048 0 0 -500 S
-PO 0 1 -1
+67504266 0 0 0 33554456 2048 0 0 -500 S
+PO 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -332,8 +332,8 @@ giant crystal golem tower guardian~
 &+csurely deadly, this being makes for the quasi-perfect protector - or killer&n
 &+cat that.&n
 ~
-14410 1 0 33554432 14528 0 0 -1000 S
-G 0 64 -1
+14410 1 0 0 33554432 14528 0 0 -1000 S
+G 0 64 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -347,8 +347,8 @@ rasdarn~
 &+La series of &+Ygold&+L colored tattoos on all of his limbs.  Quite frustrated&n
 &+Lhowever, he seems intent on studying in an empty room.&n
 ~
-17184974 1 0 301989932 14528 0 0 -1000 S
-GI 0 512 -1
+17184974 1 0 0 301989932 14528 0 0 -1000 S
+GI 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -361,8 +361,8 @@ kikkrn~
 &+Leffortlessly manoeuvre his daggers about the air.  Deadly fast, this Neogi&n
 &+Lcould surely inflict some serious pain in a very short amount of time.&n
 ~
-1074149454 0 0 33554448 2048 0 0 -1000 S
-TK 0 8192 -1
+1074149454 0 0 0 33554448 2048 0 0 -1000 S
+TK 0 8192 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -376,8 +376,8 @@ militia guard~
 &+Lgoal is to keep it safe from outsiders - hence why he attacks them on the&n
 &+Lspot.&n
 ~
-1141245960 1 0 33554456 0 0 0 -1000 S
-TK 0 64 -1
+1141245960 1 0 0 33554456 0 0 0 -1000 S
+TK 0 64 0 -1
 60 0 0 5d5+1200 7d6+10
 0.0.0.0 0
 8 8 1
@@ -391,8 +391,8 @@ young shopkeeper~
 &+Linventory is well accounted for.  The crest of the Neogi thieves is burnt&n
 &+Lonto his arachnid abdomen.&n
 ~
-2186 0 0 33554432 0 0 0 -550 S
-PL 0 8192 -1
+2186 0 0 0 33554432 0 0 0 -550 S
+PL 0 8192 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -408,8 +408,8 @@ fat neogi innkeeper~
 &+Lfor a second, and starts working again.  Much like every other of his hard&n
 &+Lworked days.&n
 ~
-1073743882 0 0 33554488 2048 0 0 -450 S
-TK 0 32768 -1
+1073743882 0 0 0 33554488 2048 0 0 -450 S
+TK 0 32768 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -425,8 +425,8 @@ drunken drunk~
 &+Lonly intent seems to be drinking though, and makes it quite clear that any&n
 &+Ldisturbance might result in an altercation.&n
 ~
-1074149450 1 0 33554560 268730368 0 1024 1000 S
-TK 0 64 -1
+1074149450 1 0 0 33554560 268730368 0 1024 1000 S
+TK 0 64 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -442,8 +442,8 @@ captain~
 &+Lsigil of the captain guard on her forehead, tattooed there with the ritual&n
 &+Lcombination of herbs and oils that the &+MNe&+mo&+Lg&+ci&+L traditionally use.&n
 ~
-2056 1 0 33554432 0 0 0 -1000 S
-TK 0 4 -1
+2056 1 0 0 33554432 0 0 0 -1000 S
+TK 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -460,8 +460,8 @@ sakkaet ambassador~
 &+rspider legs are quite thicker than those of the common &+MNe&+mo&+Lg&+ci&+r and she is also&n
 &+rsomewhat larger than the latter as well.&n
 ~
-1090926810 1 0 302514364 2077 0 0 -1000 S
-TK 0 16 -1
+1090926810 1 0 0 302514364 2077 0 0 -1000 S
+TK 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -477,8 +477,8 @@ demon towering watcher~
 &+rdripping with blood and excrement.  She seems to constantly chant the same&n
 &+rhymn repeatedly, save for when she is interrupted of course.&n
 ~
-395338 1 0 33554432 0 0 0 -1000 S
-X 0 32 -1
+395338 1 0 0 33554432 0 0 0 -1000 S
+X 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -492,8 +492,8 @@ spider cyanide~
 &+Lonto its abdomen where it expands to form the shape of a &+Gskull.&n  A green liquid
 &+Ldrips continuously from the edge if its inset mandibles.&n
 ~
-67381326 1 0 33554432 0 0 0 -1000 S
-AS 0 1 -1
+67381326 1 0 0 33554432 0 0 0 -1000 S
+AS 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -509,8 +509,8 @@ umber hulk druid apprentice~
 &+blook lay on his giant head and is mandibles begin to twitch quickly as he&n
 &+benters into deep concentration once again.&n
 ~
-1074149578 1 0 33554432 0 0 0 0 S
-PO 0 128 -1
+1074149578 1 0 0 33554432 0 0 0 0 S
+PO 0 128 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -525,8 +525,8 @@ sajjess air elemental~
 &+cwilts and freezes over as he passes through them, and if not that...things&n
 &+ctend to die.&n
 ~
-1074149514 0 0 33554432 0 0 0 -1000 S
-EA 0 16384 -1
+1074149514 0 0 0 33554432 0 0 0 -1000 S
+EA 0 16384 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -541,8 +541,8 @@ priest~
 &+bSynchronously chanting scripture from the book of Aan with the Great Spirit,&n
 &+bhis prime directive is to ensure the spirit's health.&n
 ~
-67516426 0 0 33554432 0 0 0 -1000 S
-UV 0 32 -1
+67516426 0 0 0 33554432 0 0 0 -1000 S
+UV 0 32 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -561,8 +561,8 @@ aan huge dragon _ignore_~
 &+bjaw that is lined with giant ivory teeth.  His white serpentine eyes twitch&n
 &+bquickly as he stares about, contemplating what his next meal will be.&n
 ~
-1090927178 1 0 318873788 307229 88604672 1024 -1000 S
-D 0 4 -1
+1090927178 1 0 0 318873788 307229 88604672 1024 -1000 S
+D 0 4 0 -1
 62 0 -400 8000d4+8000 14d9+90
 0.0.0.2500 42500000
 8 8 1
@@ -578,8 +578,8 @@ ghastly apparition jadem~
 &+Wnote, he is tattooed with the insignia of the Order of the Fire Templars on&n
 &+Whis upper left arm.  &n
 ~
-14344 0 0 33554432 0 0 0 1000 S
-UG 0 0 -1
+14344 0 0 0 33554432 0 0 0 1000 S
+UG 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -595,8 +595,8 @@ angry beholder~
 &+LThis thing is obviously hungry, as its mouth starts salivating wildly whilst&n
 &+Lit turns about in rage.&n
 ~
-1073752142 1 0 33554432 0 0 0 -1000 S
-BH 0 16 -1
+1073752142 1 0 0 33554432 0 0 0 -1000 S
+BH 0 16 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -610,8 +610,8 @@ sick green spider~
 &+gseemingly has a dozen or so long stringy legs.  To come to think of it,&n
 &+git looks like a oversized, overlegged, dandy long legs.&n
 ~
-1073743880 1 0 33554432 0 0 0 -1000 S
-AS 0 1 -1
+1073743880 1 0 0 33554432 0 0 0 -1000 S
+AS 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -633,8 +633,8 @@ taken from his home as a child for having some kind of physical handicap
 or defect.  Mentioning ghosts, this man is so pale he looks like one himself,
 perhaps he just needs to sleep.
 ~
-2058 0 0 33554432 0 0 0 1000 S
-UG 0 128 -1
+2058 0 0 0 33554432 0 0 0 1000 S
+UG 0 128 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -649,8 +649,8 @@ race through his mind all at once just by the expression on his face.  He
 has a series of burn marks on his legs, and bears the 'outcast' mark from the
 order of the Fire Templars.  He seems to have lost something or someone.
 ~
-2058 0 0 33554432 0 0 0 0 S
-UG 0 4 -1
+2058 0 0 0 33554432 0 0 0 0 S
+UG 0 4 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -665,8 +665,8 @@ xamael blacksmith~
 &+Lof the stuff he's made, as if he were trying to kill it.  Whatever it is,&n
 &+Lit's probably best to leave him alone.&n
 ~
-2058 0 0 33554432 0 0 0 1000 S
-X 0 2 -1
+2058 0 0 0 33554432 0 0 0 1000 S
+X 0 2 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -683,8 +683,8 @@ old woman one-eyed~
 &+Lthat is there however, fall the most heartfelt tears one could ever see, she&n
 &+Lis truly sad.&n
 ~
-2058 0 0 33554432 0 0 0 1000 S
-UG 0 4 -1
+2058 0 0 0 33554432 0 0 0 1000 S
+UG 0 4 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -698,8 +698,8 @@ little child~
 &+Wthis child isn't deformed or handicapped as the other inhabitants of this&n
 &+Wvillage are.  Still, some drastic event has left him scarred for life.&n
 ~
-1074137098 0 0 33554432 0 0 0 1000 S
-UG 0 4 -1
+1074137098 0 0 0 33554432 0 0 0 1000 S
+UG 0 4 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -710,8 +710,8 @@ death~
 ~
 &+L   Darkness.
 ~
-2062 1 0 33554432 0 0 0 -1000 S
-U 0 0 -1
+2062 1 0 0 33554432 0 0 0 -1000 S
+U 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -726,8 +726,8 @@ lost man aberrate~
 &+Wseems locked in some kind of stasis, imprisoned in a timeless world of&n
 &+Wdarkness and silence.&n
 ~
-2056 0 0 33554432 0 0 0 0 S
-PE 0 0 -1
+2056 0 0 0 33554432 0 0 0 0 S
+PE 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -742,8 +742,8 @@ vile wretch~
 &+Lsupernatural powers.  It groans loudly from time to time, probably expressing&n
 &+Lits contempt for this sick life it has led.&n
 ~
-2056 0 0 33554432 0 0 0 -1000 S
-X 0 0 -1
+2056 0 0 0 33554432 0 0 0 -1000 S
+X 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -757,8 +757,8 @@ mass~
 &+Lthe whole of the mass, its shape shifts quickly every second or so in&n
 &+Lresponse to these convulsions - quite a strange organism.&n
 ~
-2056 0 0 33554432 0 0 0 -600 S
-AP 0 64 -1
+2056 0 0 0 33554432 0 0 0 -600 S
+AP 0 64 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -774,8 +774,8 @@ akckx~
 &+rThe tales said that he only existed in the afterlife, which would mean&n
 &+rthat...&n
 ~
-1090529482 1 0 33554432 0 0 0 -1000 S
-X 0 2048 -1
+1090529482 1 0 0 33554432 0 0 0 -1000 S
+X 0 2048 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -788,8 +788,8 @@ guardian soul light~
 &+mperfectly still, emitting a constant humming sound.  This being seems&n
 &+mharmless.&n
 ~
-1107437578 1 0 33554432 0 0 0 -1000 S
-UG 0 0 -1
+1107437578 1 0 0 33554432 0 0 0 -1000 S
+UG 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -803,8 +803,8 @@ neogi assassin~
 &+Lmake himself more slippery as his skin gleams brightly in the sun.  His&n
 &+Leyes are squinting, and his sharp teeth showing, he looks pretty mad.&N
 ~
-1073743944 1 0 35127296 0 0 0 -1000 S
-TK 0 8192 -1
+1073743944 1 0 0 35127296 0 0 0 -1000 S
+TK 0 8192 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -817,8 +817,8 @@ human maiden~
 &+mceremonial robes.  She is close to five and a half feet tall, and has a&n
 &+msparkling blue color in her eyes.  She seems like she's in a hurry.&n
 ~
-1073743880 0 0 33554432 0 0 0 0 S
-PH 0 256 -1
+1073743880 0 0 0 33554432 0 0 0 0 S
+PH 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -830,8 +830,8 @@ shadow death _nofear_~
 &+L   Without much form or shape, this shadow has no more indication of its&n
 &+Lpresence that its emitted shrill vibrant tone permits.&n
 ~
-67123274 1 0 33554432 0 0 0 -1000 S
-UG 0 1 -1
+67123274 1 0 0 33554432 0 0 0 -1000 S
+UG 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -844,8 +844,8 @@ shadow sin _nofear_~
 &+Llightless room.  It chants a dark hymn relenltlessly, awaiting the final&n
 &+Lphophecy of Aan.&n
 ~
-2122 1 0 33554432 0 0 0 -1000 S
-UG 0 1 -1
+2122 1 0 0 33554432 0 0 0 -1000 S
+UG 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -858,8 +858,8 @@ shadow strife _nofear_~
 &+Lquality to it.  Of a pale magenta hue, what seems to be its limbs are quickly&n
 &+Lgesturing about as it articulates strange words of sorcery.&n
 ~
-2122 1 0 33554432 0 0 0 -1000 S
-UG 0 16 -1
+2122 1 0 0 33554432 0 0 0 -1000 S
+UG 0 16 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -875,8 +875,8 @@ demon aruyka~
 &+rdistort in double of themselves...the ghastly remainder of which is seemingly&n
 &+rdrawn into her body by some unreal, supernatural power.  &n
 ~
-1090922572 1 0 33554492 34816 0 0 -1000 S
-D 0 512 -1
+1090922572 1 0 0 33554492 34816 0 0 -1000 S
+D 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

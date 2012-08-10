@@ -288,7 +288,7 @@ mask watery ice~
 &+Cof liquid, it molds around your face as it is applied.  &n
 ~
 A
-18 2
+18 5
 A
 19 3
 #77716
@@ -313,35 +313,35 @@ razor sharp seashell~
 &na &+Cra&+czor &+Wsh&nar&+Wp &+Gs&+ge&+Ga&+gs&+Gh&+ge&+Gl&+gl&+G&n~
 &+WA pretty, &+coddly&+W shaped &+Gs&+ge&+Ga&+gs&+Gh&+ge&+Gl&+gl &+Wlay here glittering in the sun.~
 ~
-5 10 3 0 7 0 1049601 8193 0 77824 0
-2 2 4 11 0 0 0 0
-0 423 100
+5 10 3 0 7 0 1049601 8193 192 126977 0
+2 3 4 11 0 0 0 0
+0 55423 100
 E
 razor sharp seashell~
 &+W   Glimmering violently in the light, this pretty seashell has been&n
 &+Wsharpened to a razor-fine trim.   &n
 ~
 A
-18 3
+18 4
 A
-19 3
+19 4
 #77718
 amulet neogi~
 &+Lan amulet of the &+MNe&+mo&+Lg&+ci &+CLords~
 &+LA pretty little amulet lay on the ground here.~
 ~
 9 22 3 0 7 0 0 5 67 0 0
-5 0 0 5 0 0 0 0
-3 25000 100
+10 0 0 5 0 0 0 0
+3 125000 100 0 2 0 0
 E
 amulet neogi~
 &+W   Made of a thick silver, this polished amulet has the drawing of four&n
 &+Whalf-spider, half eel beings standing on a &+mpurple&+M sun.&n
 ~
 A
-33 3
+33 4
 A
-13 20
+13 25
 #77719
 shiny chunk glowing ore rock~
 &+man &+Madamantium&+m rock~
@@ -398,8 +398,8 @@ ring~
 &+LA pretty &+Mglowing&+c ri&+Cng&+L lay on the floor here.&n~
 ~
 9 22 3 0 7 0 1 3 0 0 0
-5 0 0 3 0 0 0 0
-0 48093 100 32 0 0 0
+10 0 0 3 0 0 0 0
+0 94093 100 0 28 0 0
 E
 ring~
 &+L   Magnificently crafted, this ring has an inlain &+geme&+Grald&+L, somewhere along&n
@@ -407,7 +407,7 @@ ring~
 &+Land it intermittently bleeds with a &+Gstunning &+ggreen &+Wlight&+L.&n
 ~
 A
-33 2
+33 4
 A
 35 4
 #77723
@@ -415,7 +415,7 @@ gloves~
 &+Wa set of &nglas&+Csteel&+c gloves~
 A scintillant set of gloves were dropped on the floor here.~
 ~
-9 44 3 0 13 0 3146753 129 2 2207810 0
+9 44 3 0 13 0 3146753 129 2 87158875 0
 15 0 0 3 0 0 0 0
 0 20000 100
 E
@@ -427,7 +427,7 @@ The gloves themselves are rather nice, a fine display of craftsmanship.
 A
 19 4
 A
-13 22
+13 25
 #77724
 tiny shard ivory~
 &+La tiny ebony shard~
@@ -446,8 +446,8 @@ silence dagger white~
 &+WSi&nle&+Bn&+bce&+B,&+W the dagger of anguish~
 &+BA fluorescent &+Wwhite &+Bdagger lay on the floor here.&n~
 ~
-5 19 3 0 15 0 263424 8193 64 2191360 16640
-2 3 4 11 0 127 60 30
+5 19 3 0 15 0 263424 8193 65 2224131 16640
+2 4 4 11 0 127 60 25
 0 250000 100
 E
 silence dagger white~
@@ -458,7 +458,7 @@ silence dagger white~
 &+binspiring.&n
 ~
 A
-19 3
+19 4
 A
 18 4
 #77726
@@ -482,9 +482,9 @@ crystal lockpick shard~
 &+ca &+Ccrystal &+clockpick~
 &+cA tiny &+Ccrystal&+c shard lay forgotten on the ground here.&n~
 ~
-31 8 3 0 7 0 0 16385 0 0 0
+31 8 3 0 15 0 0 8404993 0 0 0
 45 0 0 0 0 0 0 0
-1 2000 100
+1 25000 100
 E
 crystal lockpick shard~
 &+c   Quite pretty, this lockpick is made of one of the most durable &+Ccrystals&n
@@ -508,9 +508,9 @@ glowing bangle dreamer~
 &+cthe bangle of the &+CDreamer~
 &+cA &+Cglowing &+cbangle lay forgotten on the floor here.~
 ~
-9 27 3 0 7 0 1052672 4097 64 0 0
+9 27 3 0 12 0 1052672 4097 64 0 0
 8 11 0 3 0 0 0 0
-0 4903 100
+0 94903 100 16 0 64 0
 E
 glowing bangle dreamer~
 &+c   This bangle is somewhat soft to the touch, and glows blue when its holder&n
@@ -518,9 +518,9 @@ glowing bangle dreamer~
 &+cengraved within.&n
 ~
 A
-14 25
+31 4
 A
-19 2
+19 3
 #77730
 blood red axe _id_~
 &+ra &+Rblood &+rred axe~
@@ -603,12 +603,14 @@ claws giant sacred~
 ~
 A
 17 100
+A
+13 50
 #77735
 crown demon~
 &+Lthe &nw&+Win&nge&+Ld c&nr&+cow&+Cn o&nf t&+Lhe &+Rde&+rm&+Ron &+Lthieves~
 &+LA black, wing-laden crown lay on the floor here.&n~
 ~
-9 2 2 4 15 100 160 17 64 0 0
+9 2 2 4 15 100 8192 17 64 0 0
 10 0 0 2 1 0 0 0
 1 1 100 403177472 0 0 0
 E
@@ -695,7 +697,7 @@ eye~
 &+ca &+Cfr&+cos&nt d&+gra&+Ggon&+Y's &+Weye~
 &+LA severed eye, optical nerve and all, lay forgotten on the ground here.~
 ~
-11 27 3 1 12 100 5121 131073 0 46305188 0
+11 27 3 1 12 100 4097 2228225 0 0 0
 0 0 0 0 0 0 0 0
 1 20000 100 8 0 0 0
 E
@@ -709,9 +711,9 @@ eye~
 &+bdweomers.  &n
 ~
 A
-5 6
+5 10
 A
-23 -4
+23 -5
 #77741
 ring~
 &+Ya t&+yar&+Ynis&+yhe&+Ld g&+yo&+Ylden ring~
@@ -784,12 +786,12 @@ bar steel magical~
 ~
 #77746
 plate platemail awe~
-&+Wthe &ntransparent &+Wpl&+Cat&+cemail o&+Cf a&+Wwe~
+&+Wthe &+Wpl&+Cat&+cemail o&+Cf a&+Wwe~
 &+cA majestic platemail lay on the ground here, just begging to be worn.&n~
 ~
-9 7 3 14 13 80 1088 9 66 25 16777472
-20 3 1 5 0 0 0 0
-2 1 100 0 0 0 2048
+9 7 3 14 15 0 1088 9 66 83886105 0
+60 0 0 5 0 0 0 0
+1 200000 100 0 0 0 256
 E
 plate platemail awe~
 &+W   Somewhat transparent, this armor is surely made of some magical type&n
@@ -798,7 +800,7 @@ plate platemail awe~
 &+Wclarified.  It is medium in size.&n
 ~
 A
-17 -100
+24 -4
 A
 58 -1
 #77747

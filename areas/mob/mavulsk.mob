@@ -1,4 +1,4 @@
-#139500
+#1
 guard huge minotaur~
 &n&+wa&n&+r huge&+L minotaur&n&+w guard&n~
 &n&+wA&n&+r huge &n&+Lminotaur&n&+w guard&n&+g stands here.&n
@@ -10,11 +10,11 @@ of Mavulsk.  Anyone foolish enough to challenge him will experience the
 &n&+rBloodLust&n&+w of the&n&+r Mino&n&+Ltaurs.&n
 ~
 75499530 0 0 0 8 0 0 0 -500 S
-MT 0 1 0 -1
+MT 0 1 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139501
+#2
 olvriana woman~
 &n&+cOlvr&n&+miana&n~
 &n&+cOlvr&n&+miana&n&+g, the &n&+mAdvisor's&n&+g wife, stands here.&n
@@ -31,11 +31,11 @@ olvriana woman~
 &+Meyes back to her book.&n
 ~
 2056 0 0 0 402653384 0 0 0 -1000 S
-PH 0 10 0 -1
+PH 0 2 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#139502
+#3
 valtor~
 &+LValtor&n~
 &n&+LValtor&n&+g stands here, examining&n&+G a s&n&+gma&n&+Gll s&n&+wtone.&n
@@ -50,11 +50,11 @@ valtor~
 &+wso Valtor filled this slot in the society and has managed to do well.&n
 ~
 2059 0 0 0 268435464 0 0 0 -1000 S
-HO 0 17 0 -1
+HO 0 16 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139503
+#4
 bodyguard guard minotaur~
 &n&+La body&n&+rguard&n~
 A fierce&n&+r mino&n&+Ltaur bodyguard&n&+g stands here.&n
@@ -67,11 +67,11 @@ less paid, life as a regular city guard. Whoever might be stupid enough
 to challenge this guard will regret.
 ~
 67110922 0 0 0 8 0 0 0 -400 S
-MT 0 15 0 -1
+MT 0 1 1 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139504
+#5
 minotaur citizen male~
 &n&+wa ma&n&+rle ci&n&+Ltizen&n~
 &n&+wA ma&n&+rle ci&n&+Ltizen&n&+g stands here pondering about something.&n
@@ -88,7 +88,7 @@ MT 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139505
+#6
 female minotaur~
 &n&+wa female&n&+r mino&n&+Ltaur&n~
 A female&n&+r mino&n&+Ltaur&n&+g stands here.&n
@@ -105,7 +105,7 @@ MT 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#139506
+#7
 waiter fat~
 &+ca&n&+c fat waiter&n~
 A&n&+c fat waiter&n&+g stands here awaiting the customers orders.&n
@@ -120,7 +120,7 @@ PH 0 0 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139507
+#8
 merchant minotaur~
 &n&+wa local &n&+rmerc&n&+Lhant&n~
 &n&+wA local&n&+r merc&n&+Lhant&n&+g sits here conversing.&n
@@ -138,7 +138,7 @@ MT 0 0 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
-#139508
+#9
 merchant fat human~
 &n&+Ca fat merchant~
 &n&+CA fat merchant&n&+g sits here complaining about the high toll.&n
@@ -153,7 +153,7 @@ PH 0 0 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
-#139509
+#10
 midget halfling tradesman~
 &n&+ya midget&n~
 &n&+yA midget&n&+g tradesman stands here looking nervous.
@@ -164,11 +164,11 @@ midget halfling tradesman~
 &+yhe is enjoying the fine steak and baked potatoe of Avlir's Restaurant.&n
 ~
 2056 0 0 0 0 0 0 0 100 S
-PF 0 13 0 -1
+PF 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 6 0
-#139510
+#11
 guard bodyguard minotaur~
 a hir&n&+red gu&n&+Lard&n~
 A hir&n&+red gu&n&+Lard&n&+g stands here.&n
@@ -181,11 +181,11 @@ less paid, life as a regular city guard. Whoever might be stupid enough
 to challenge this guard will regret.
 ~
 67110922 0 0 0 8 0 0 0 0 S
-MT 0 15 0 -1
+MT 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139511
+#12
 drow bard~
 &n&+ma Drow bard&n~
 &n&+mA Drow bard sits here playing his flute.&n
@@ -196,11 +196,11 @@ drow bard~
 &+mthe customers at this famous Restaurant.&n
 ~
 2056 0 0 0 402653208 0 0 0 -1000 S
-PL 0 32768 0 -1
+PL 0 32768 2 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139512
+#13
 assistant cook~
 &+Wthe assistant cook&n~
 &+WThe cook's assistant&n&+g stands here looking nervous.&n
@@ -216,7 +216,7 @@ MT 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139513
+#14
 cook minotaur~
 &n&+Wa pl&n&+rump&n&+W cook&n~
 &n&+WA pl&n&+rump&n&+W cook is busy preparing the next order&n.
@@ -232,7 +232,7 @@ MT 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139514
+#15
 minotaur avlir~
 &+MAvlir&n~
 &+MAvlir&n&+w sits here doing the books.&n
@@ -245,11 +245,11 @@ minotaur avlir~
 &+gsays, '&n&+WYes?&+g'&n
 ~
 2056 0 0 0 152 0 0 0 0 S
-MT 0 9 0 -1
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139515
+#16
 merchant minotaur~
 &n&+wa merc&n&+rhant&n~
 &n&+wA merc&n&+rhant&n&+w stands here.&n
@@ -260,11 +260,11 @@ as the average Minotaur but still a fierce opponent to an orc or a
 human in duel. In his belt he has a shortsword.
 ~
 2056 0 0 0 0 0 0 0 0 S
-MT 0 15 0 -1
+MT 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139516
+#17
 assistant minotaur~
 &n&+rGri&n&+Lber&n&+W's &n&+gassistant&n~
 &n&+rGri&n&+Lber&n&+W's &n&+gassistant stands here ready to serve.&n
@@ -279,7 +279,7 @@ MT 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139517
+#18
 wife minotaur~
 &n&+rGri&n&+Lber&n&+W's&n&+c wife&n~
 &n&+rGri&n&+Lber&n&+W's&n&+c wife is standing here.&n
@@ -298,7 +298,7 @@ MT 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#139518
+#19
 wife minotaur~
 a&n&+y tanner's&n&+w wife&n~
 &n&+yA tanner&n&+w's wife stand here.&n
@@ -313,7 +313,7 @@ MT 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#139519
+#20
 tanner orc~
 a&n&+y tanner&n~
 &n&+yA tanner&n&+w stands here working on a skin.&n
@@ -329,7 +329,7 @@ HO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139520
+#21
 tanner minotaur~
 a&n&+r mino&n&+Ltaur&n&+y tanner&n~
 A &n&+rmino&n&+Ltaur &n&+ytanner&n&+g stands here.&n
@@ -345,7 +345,7 @@ MT 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139521
+#22
 alizalin~
 &n&+mAlizalin&n~
 &n&+mAlizalin&n&+r Wal&n&+Lgor&n&+w's new associate stands here work&n&+gin&n&+Gg wi&n&+gth a h&n&+Gid&n&+ge.&n
@@ -359,11 +359,11 @@ alizalin~
 &+minterest in skins and hides.&n
 ~
 133128 0 0 0 201326744 0 0 0 -1000 S
-PL 0 22 0 -1
+PL 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139522
+#23
 walgor minotaur tanner~
 &n&+rWal&n&+Lgor&n~
 &n&+rWal&n&+Lgor&n&+w stands here preparing&n&+y a skin.&n
@@ -382,7 +382,7 @@ MT 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139523
+#24
 lieutenant minotaur~
 &n&+wa lie&n&+rute&n&+Lnant&n~
 &n&+wA lie&n&+ruten&n&+Lant &n&+w is standing here.&n
@@ -398,7 +398,7 @@ MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139524
+#25
 doctor minotaur~
 &n&+Cthe doctor&n~
 The t&n&+rown&n&+w's&n&+C doctor&n&+g sits here behind his desk.&n
@@ -410,11 +410,11 @@ The t&n&+rown&n&+w's&n&+C doctor&n&+g sits here behind his desk.&n
 &+Cmatter of fact he is the Shaman teacher of the city.&n
 ~
 2059 0 0 0 268435592 0 0 0 0 S
-MT 0 9 0 -1
+MT 0 8 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139525
+#26
 gateguard guard minotaur~
 &n&+wa g&n&+rategu&n&+Lard&n~
 &n&+wA &n&+rmino&n&+Ltaur&n&+w g&n&+rategu&n&+Lard&n&+w stands here&n
@@ -430,7 +430,7 @@ MT 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139526
+#27
 controller~
 &n&+LThe C&n&+wontr&n&+Loller&n~
 &n&+LThe C&n&+wontro&n&+Lller&n&+w stands here keeping an eye on the traffic.&n
@@ -447,7 +447,7 @@ MT 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139527
+#28
 off-duty minotaur~
 an&n&+r off&n&+w-&n&+Lduty&n&+w guard~
 An&n&+r off&n&+w-&n&+Lduty&n&+w guard sits here playing cards.&n
@@ -462,7 +462,7 @@ MT 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139528
+#29
 guard palisade~
 a&n&+y palisade&n&+w guard&n~
 A&n&+y palisade&n&+L guard&n&+w stands here scanning&n&+g the landscape.&n
@@ -478,7 +478,7 @@ MT 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139529
+#30
 nilstin goblin~
 &n&+GNilstin&n~
 &+LA small&n&+G Goblin&n&+L named&n&+G Nilstin&n&+L stands here working on a barrel.&n
@@ -493,11 +493,11 @@ nilstin goblin~
 &+Lthem.&n
 ~
 2058 0 0 0 268435672 0 0 0 -1000 S
-HG 0 6 0 -1
+HG 0 256 1 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139530
+#31
 apprentice~
 &n&+GNilstin&n&+g's apprentice&n~
 &n&+GNilstin&n&+g's apprentice&n&+w stands here helping his master.&n
@@ -510,11 +510,11 @@ so hard to be all what Nilstin is and makes no effort to even look back at
 you when you look at him.
 ~
 8 0 0 0 16 0 0 0 -800 S
-HO 0 13 0 -1
+HO 0 256 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139531
+#32
 bouncer burly~
 &+LOne E&n&+wye's burly&n&+L bouncer&n~
 &+LOne E&n&+wye's burly&n&+L bouncer&n&+w stands here with a mean expression on his face.&n
@@ -527,11 +527,11 @@ bouncer burly~
 &+La spy for justice.&n
 ~
 75499562 0 0 0 152 0 0 0 -1000 S
-MT 0 15 0 -1
-51 0 0 1d1+1 1d1+1
+MT 0 1048576 1 -1
+52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139532
+#33
 orc drunk~
 a drunk&n&+L orcish&n&+w worker&n~
 &n&+wA drunk&n&+L orcish&n&+w worker sits here.&n
@@ -547,7 +547,7 @@ HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
-#139533
+#34
 drunk minotaur~
 &n&+wa drunk &n&+rmino&n&+Ltaur&n~
 A drunk&n&+r mino&n&+Ltaur&n&+w stands here leaning against the bar.
@@ -559,11 +559,11 @@ fast to be violent this minotaur will surely enjoy a fight since he
 can't get anymore to drink.
 ~
 2058 0 0 0 0 0 0 0 -1000 S
-MT 0 15 0 -1
+MT 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139534
+#35
 merchant human~
 a drunk&n&+c merchant&n~
 A drunk &n&+cmerchant&n&+w sits here drowning his sorrows.&n
@@ -579,7 +579,7 @@ PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
-#139535
+#36
 one-eye one eye~
 &n&+LOn&n&+we E&n&+Lye&n~
 &+LOn&n&+we Ey&n&+Le stands here serving his customers.&n
@@ -597,11 +597,11 @@ one-eye one eye~
 &n&+Lnot even his friend&n&+r Nor&n&+Laus.&n
 ~
 8390666 0 0 0 24 0 0 0 -1000 S
-PM 0 15 0 -1
+PM 0 4096 2 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139536
+#37
 sly card shark~
 &n&+ra card shark&n~
 &n&+LA sly&n&+r card shark&n&+w sits here gambling.&n
@@ -613,11 +613,11 @@ sly card shark~
 &+rone that hides in the shadows and try to stab his opponent in the back.&n
 ~
 67110923 0 0 0 16 0 0 0 -1000 S
-MT 0 13 0 -1
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139537
+#38
 drow saliniz~
 &n&+mSaliniz&n~
 &n&+mSaliniz &n&+L, the knife juggler, sits here gambling.&n
@@ -629,11 +629,11 @@ drow saliniz~
 &+Mdressed in some loose-fitting black leggings and wields a&n&+m strange&n&+L blade.&n
 ~
 67110922 0 0 0 0 0 0 0 -1000 S
-PL 0 14 0 -1
+PL 0 512 2 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139538
+#39
 noraus minotaur~
 &n&+rNor&n&+Laus~
 &n&+rNor&n&+Laus sits here with some friends.&n
@@ -647,11 +647,11 @@ gives a proper impression which is rare here in claw alley. No doubt
 he is a dangerous opponent.&n
 ~
 2056 0 0 0 24 0 0 0 -1000 S
-MT 0 15 0 -1
+MT 0 4096 2 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139539
+#40
 assassin~
 &n&+Lan a&n&+wll&n&+Ley&n&+G a&n&+Lss&n&+Gass&n&+Lin&n~
 &n&+LAn a&n&+wll&n&+Ley&n&+G a&n&+Lss&n&+Gass&n&+Lin hides in the shadows.&n
@@ -663,11 +663,11 @@ assassin~
 &+Lhis next victim.
 ~
 4202 0 0 0 8 0 0 0 -1000 S
-HO 0 14 0 -1
+HO 0 4096 1 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139540
+#41
 commoner poor~
 &n&+La poor&n&+r comm&n&+Loner&n~
 &n&+LA poor&n&+r comm&n&+Loner sits here in the dark.&n
@@ -678,11 +678,11 @@ is dressed in a shabby leather dress and looks back at you with
 despair in his eyes as you look at him.
 ~
 2058 0 0 0 0 0 0 0 -400 S
-MT 0 15 0 -1
+MT 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139541
+#42
 watersnake snake huge~
 &n&+ba huge&n&+B wa&n&+bte&n&+Br&n&+gsna&n&+Gk&n&+ge&n~
 &+bA huge&n&+B wa&n&+bte&n&+Br&n&+gsna&n&+Gk&n&+ge slithers here.&n
@@ -698,7 +698,7 @@ RS 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139542
+#43
 waterfiend fiend~
 &n&+ba w&n&+Bat&n&+befriend&n~
 &n&+bA w&n&+Bat&n&+berfiend &n&+Bfloats here in the water.&n
@@ -714,7 +714,7 @@ X 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139543
+#44
 faerie tiny waterfaerie~
 &+Ba water&n&+Rf&n&+Ba&n&+Ge&n&+Br&n&+Wi&n&+be&n~
 &n&+BA &n&+Rt&n&+bin&n&+By creature&n&+B sits here staring into a bowl.&n
@@ -726,11 +726,11 @@ faerie tiny waterfaerie~
 &+Ba loud noise from within as you look at it.&n
 ~
 2089 0 0 0 2200 2048 2097152 0 -1000 S
-HF 0 3 0 -1
+HF 0 512 2 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139544
+#45
 huge guard minotaur~
 &n&+La huge&n&+r mino&n&+Ltaur&n&+w guard&n~
 A huge&n&+r mino&n&+Ltaur&n guard stands here.&n
@@ -746,7 +746,7 @@ MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139545
+#46
 lieutenant guard minotaur~
 the&n&+r Lieut&n&+Lenant&n~
 The &n&+rLieut&n&+Lenant&n sits here working on the shift roster.&n
@@ -758,11 +758,11 @@ and he surely have had his share of serious battle. When you look
 at him he says, '&n&+W Who let you in??&n'
 ~
 2088 0 0 0 24 0 0 0 -1000 S
-MT 0 1 0 -1
+MT 0 1 2 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139546
+#47
 huge guard stairguard~
 a &n&+rstair&n&+Lguard&n~
 A &n&+rhuge sta&n&+Lirguard&n stands on guard here.
@@ -774,11 +774,11 @@ admittance here. As you look at him he see that you lack permission
 to enter this floor and attacks.
 ~
 75499562 0 0 0 24 0 0 0 -1000 S
-MT 0 1 0 -1
+MT 0 1 2 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139547
+#48
 captain minotaur~
 &n&+Lthe&n&+r Capt&n&+Lain&n~
 &n&+LThe&n&+r Capt&n&+Lain of &n&+rMavu&n&+Llsk&n is watching the area here.&n
@@ -792,11 +792,11 @@ going on in the city. He wears a pair of odd fur sleeves over his arms
 and has a black shield with silver inlays strapped to his left arm.
 ~
 67110920 0 0 0 402653336 2048 1024 0 0 S
-MT 0 1 0 -1
+MT 0 1048576 1 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139548
+#49
 demon~
 &n&+ra hi&n&+Rd&n&+reous d&n&+Re&n&+rmon&n~
 &n&+rA hi&n&+Rd&n&+reous d&n&+Re&n&+rmon stands here trapped inside the &n&+wpentagram.&n
@@ -809,11 +809,11 @@ demon~
 &n&+rlong black claws.&n
 ~
 2057 0 0 0 152 2048 0 0 -1000 S
-X 0 1 0 -1
+X 0 1 2 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139549
+#50
 cook~
 &+Wthe cook&n~
 &+WThe cook stands here stirring in a pot.&n
@@ -828,7 +828,7 @@ PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#139550
+#51
 advisor ivlor~
 &+mIvlor&n~
 &+mAdvisor Ivlor&n stands here reading a book.&n
@@ -843,11 +843,11 @@ advisor ivlor~
 &+Mhas in the living room in his home in the city.&n
 ~
 2056 0 0 0 402653192 2048 0 0 -1000 S
-PL 0 10 0 -1
+PL 0 512 2 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139551
+#52
 orc emissary~
 &+Lan orc emissary&n~
 &+LAn orc emissary &n&+gstands here by the window.&n
@@ -859,11 +859,11 @@ orc emissary~
 &+Lhis face.&n
 ~
 75499528 0 0 0 136 1 0 0 -1000 S
-HO 0 10 0 -1
+HO 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139552
+#53
 bodyguard orc~
 &+La bodyguard&n~
 &+LA bodyguard &n&+wstands here guarding the emissary.&n
@@ -875,11 +875,11 @@ bodyguard orc~
 &+Lto protect his emissary.&n
 ~
 67110920 0 0 0 152 2048 0 0 -1000 S
-HO 0 5 0 -1
+HO 0 1 2 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139553
+#54
 emissary goblin muttering~
 &+Gan emissary&n~
 &+wA muttering&n&+G emissary&n stands here grumbling about something.&n
@@ -890,11 +890,11 @@ emissary goblin muttering~
 &+Gsuccessful. He snarls at you as you look at him and attacks.&n
 ~
 67110953 0 0 0 402653336 2048 192 8192 -1000 S
-HG 0 9 0 -1
+HG 0 256 2 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139554
+#55
 duergar emissary~
 &n&+ran emissary&n~
 &n&+rA duergar&n emissary sits here by the desk writing a letter.&n
@@ -908,11 +908,11 @@ duergar emissary~
 &+Rsomething even worse.&n
 ~
 67110921 0 0 0 152 0 0 0 -1000 S
-PD 0 6 0 -1
+PD 0 32 3 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139555
+#56
 assassin duergar~
 &n&+ran emissary's a&n&+Ls&n&+rsa&n&+Lssin&n~
 &n&+rThe emissary's a&n&+Ls&n&+rsa&n&+Lssin hides here in the shadows.&n
@@ -925,11 +925,11 @@ assassin duergar~
 &+Land is wielding a long thin stiletto.&n
 ~
 67110920 0 0 0 135790744 0 0 0 -1000 S
-PD 0 14 0 -1
+PD 0 4096 1 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139556
+#57
 elite guard minotaur~
 an&n&+r eli&n&+Lte guard&n~
 An&n&+r eli&n&+Lte guard&n stands here guarding the chamber.
@@ -940,11 +940,11 @@ visitors can expect to return to the city decapitated. He is
 dressed in a black kilt and wields a huge black axe.
 ~
 2090 0 0 0 152 2048 0 0 -1000 S
-MT 0 1 0 -1
+MT 0 1 1 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139557
+#58
 baron minotaur~
 &n&+wthe&n&+r Bar&n&+Lon&n~
 &+LThe&n&+r Bar&n&+Lon&n sits upon his throne with a troubled mind.&n
@@ -963,7 +963,7 @@ MT 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139558
+#59
 illithid~
 an&n&+M illithid&n~
 &n&+wAn&n&+M illithid&n&+w stands here chained to the wall.&n
@@ -976,11 +976,11 @@ an&n&+M illithid&n~
 &+Mto the riddle with the mines here.&n
 ~
 10285 0 0 0 268435592 2048 0 0 -1000 S
-MF 0 3 0 -1
+MF 0 4 1 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139559
+#60
 hobgoblin torturer~
 &nthe &+mhob&n&+Ggoblin&n&+g torturer&n~
 A &n&+mhob&n&+Ggoblin&n&+g torturer&n stands here with malice in his eyes.&n
@@ -994,7 +994,7 @@ HG 0 10 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139560
+#61
 prisonguard guard~
 the&n&+L pr&niso&n&+Ln gu&nard&n~
 The &n&+Lpr&niso&n&+Ln gu&nard stands here keeping an eye on the torturer.
@@ -1010,7 +1010,7 @@ PO 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139561
+#62
 pervert orc~
 a f&n&+Lil&n&+yth&n&+Ly per&nvert~
 &+LA fil&n&+ythy p&n&+Lerv&ner&n&+Lt hides here in the&n&+y excrements.&n
@@ -1025,7 +1025,7 @@ HO 0 5 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139562
+#63
 miner dwarf~
 &n&+La sa&n&+ytur&n&+Lated mi&nner~
 A &n&+ysat&n&+Lur&n&+yat&n&+Led mi&nner hides here in the office.&n
@@ -1040,7 +1040,7 @@ PM 0 15 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139563
+#64
 hysterical woman~
 a&n&+M hysterical&+c woman&n~
 A&n&+M hysterical&n&+C woman&n&+M runs around here looking paranoid.&n
@@ -1056,7 +1056,7 @@ PH 0 14 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#139564
+#65
 ghost miner~
 the&n&+W ghost&n of a m&n&+Liner&n~
 The&n&+W ghost&n of a m&n&+Liner&n stands here, moaning.&n
@@ -1070,7 +1070,7 @@ UG 0 10 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139565
+#66
 fiend huge waterfiend~
 &n&+ba huge waterf&n&+rien&n&+bd&n~
 &n&+bA huge waterf&n&+rien&n&+bd&n&+B stands here at the bottom of the lake.&n
@@ -1085,7 +1085,7 @@ X 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139566
+#67
 devil waterdevil~
 &+Ba blue wate&n&+rrde&n&+Bvil&n~
 &+BA water&n&+rdevil&n&+b sneaks around the lake.&n
@@ -1099,7 +1099,7 @@ Y 0 14 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139567
+#68
 beholder~
 &n&+rthe B&n&+Re&n&+rhold&n&+Re&n&+rr&n~
 &+rA hide&n&+Ro&n&+rus cre&n&+Ra&n&+rture with long t&n&+Re&n&+rntacles stands here.&n
@@ -1116,7 +1116,7 @@ BH 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139568
+#69
 firedragon dragon~
 &n&+ra f&n&+Ri&n&+Wr&n&+Re&n&+r dragon&n~
 &n&+rA large f&n&+Rir&n&+re dragon stands here with mal&n&+Ri&n&+rce in its eyes.&n
@@ -1132,7 +1132,7 @@ D 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139569
+#70
 prince devil~
 &n&+ra small de&n&+Rvi&n&+rl pr&n&+Ri&n&+rnce&n~
 &n&+rA small de&n&+Rvi&n&+rl pr&n&+Ri&n&+rnce sits here upon the &+Lcoal t&nhr&n&+Lone.&n
@@ -1152,7 +1152,7 @@ Y 0 10 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139570
+#71
 demon magma~
 &n&+ra m&n&+Ra&n&+rg&n&+Rm&n&+ra demon&n~
 &+rA &n&+Rm&n&+rag&n&+Rm&n&+ra demon floats here next to its master.&n
@@ -1169,7 +1169,7 @@ X 0 10 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139571
+#72
 large demon~
 &n&+ra large d&n&+Rem&n&+ron from Hell&n~
 &n&+rA large d&+Rem&n&+ron from Hell stands here protecting the prince.&n
@@ -1184,7 +1184,7 @@ X 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139572
+#73
 golem red steel red-steel~
 &+ra red-st&+Ree&n&+rl golem&n~
 &+rA golem made of red st&+Ree&n&+rl stands here guarding the portal.&n
@@ -1199,7 +1199,7 @@ OG 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139573
+#74
 lizard dragon firedragon~
 &n&+rA sm&n&+Ral&n&+rl f&n&+Rir&n&+redragon&n~
 &+rA large l&n&+Riz&n&+rard, b&n&+Rur&n&+Yn&n&+Ri&n&+rng with h&n&+Rea&n&+rt, sneaks through the tunnels.&n
@@ -1215,7 +1215,7 @@ DK 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139574
+#75
 demon creature small~
 &n&+ra small demon&n~
 &n&+rA creature with long sharp fangs stands here.&n
@@ -1231,7 +1231,7 @@ X 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139575
+#76
 demon large~
 &n&+ra large demon&n~
 &n&+rA large dem&n&+Ron&n&+ric creature wa&n&+Rnd&n&+rers the outer l&n&+Ray&n&+rers of Hell.&n
@@ -1247,7 +1247,7 @@ X 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139576
+#77
 shopper human~
 &+ca shopper&n~
 &+cA loud shopper wanders the&n&+m market.&n
@@ -1262,7 +1262,7 @@ PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139577
+#78
 merchant fat~
 &+wa fat &n&+mmerchant&n~
 A fat &n&+mmerchant&n stands here trying sell something.
@@ -1277,7 +1277,7 @@ HO 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139578
+#79
 street sweeper human~
 a street&n&+c sweeper&n~
 A street&n&+c sweeper wanders there city.&n
@@ -1292,7 +1292,7 @@ PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139579
+#80
 street sweeper minotaur~
 &n&+La street&n&+r sweeper&n~
 &n&+LA street&n&+r sweeper&n&+w cleans the street here.&n
@@ -1307,7 +1307,7 @@ MT 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139580
+#81
 commoner minotaur~
 a &n&+Lcomm&n&+roner&n~
 &n&+LA comm&n&+roner&n wanders the street here.&n
@@ -1323,7 +1323,7 @@ MT 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139581
+#82
 drablin dwarf~
 &n&+LD&nr&n&+ya&n&+Lblin&n~
 &n&+LD&nr&n&+ya&n&+Lblin&n stands here beating on a piece of raw metal.&n
@@ -1348,7 +1348,7 @@ PM 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139582
+#83
 large wolf~
 &n&+La large wolf&n~
 &n&+LA large wolf stalks the forest for prey.&n
@@ -1363,7 +1363,7 @@ AC 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139583
+#84
 wolf huge~
 &+La huge black wolf&n~
 &n&+LA huge black wolf searches the forest.&n
@@ -1378,7 +1378,7 @@ AC 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139584
+#85
 snake god serpent serpentgod enormous~
 &n&+gth&n&+Ge &n&+gS&n&+Ge&n&+grp&n&+Ge&n&+gntgod&n~
 &n&+gThe en&n&+Go&n&+rr&n&+gm&n&+Lo&n&+gus S&n&+Ge&n&+grp&n&+re&n&+gntg&n&+Lo&n&+gd lies coiled here.&n
@@ -1397,7 +1397,7 @@ D 0 9 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139585
+#86
 bear rabid~
 &n&+ya rabid bear&n~
 &n&+yA rabid bear roams the forest in the search for its next kill.&n
@@ -1412,7 +1412,7 @@ AC 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139586
+#87
 troll guard huge~
 &n&+ga huge tr&n&+Go&n&+gll gu&n&+Ga&n&+grd&n~
 &n&+gA&n&+y huge&n&+g tr&n&+Go&n&+gll gu&n&+Ga&n&+grd stands here guarding the clan.&n
@@ -1427,7 +1427,7 @@ PT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139587
+#88
 male troll cavetroll~
 &n&+ga male tr&n&+Go&n&+gll&n~
 &n&+gA &n&+ymale &n&+Lcave&n&+gtr&n&+Go&n&+gll stands here.&n
@@ -1443,7 +1443,7 @@ PT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139588
+#89
 female troll cavetroll~
 &n&+ga&n&+y female &n&+Lcave&n&+gtr&n&+Go&n&+gll&n~
 &n&+gA &n&+yfemale &n&+Lcave&n&+gtr&n&+Go&n&+gll stands here with malice in her eyes.&n
@@ -1459,7 +1459,7 @@ PT 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
-#139589
+#90
 troll small child~
 &n&+ga sm&n&+Ga&n&+gll tr&n&+Go&n&+gll&n~
 &n&+gA sm&n&+Ga&n&+gll tr&n&+Go&n&+gll scavenge the caves for something.&n
@@ -1473,7 +1473,7 @@ PT 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139590
+#91
 troll chieftain~
 &n&+gthe Ch&n&+Gie&n&+gft&n&+yain&n~
 &n&+gThe Ch&n&+Gie&n&+gft&n&+yain&n sits here on this &n&+Lth&nr&n&+Lo&n&+gn&ne.&n
@@ -1490,7 +1490,7 @@ PT 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139591
+#92
 troll berserker~
 &n&+ga tr&n&+Go&n&+gll &n&+rberserker&n~
 &n&+gA Tr&n&+Go&n&+gll &n&+rBerserker&n&+L stands here guarding the &n&+gch&n&+Gie&n&+gft&n&+yain.&n
@@ -1506,7 +1506,7 @@ PT 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139592
+#93
 shaman troll~
 &n&+gthe cl&n&+ra&n&+gn's sh&n&+ra&n&+Gm&n&+gan&n~
 &n&+gThe cl&n&+ra&n&+gn's sh&n&+ra&n&+Gm&n&+gan &n&+Lstands here performing some primitive ritual.&n
@@ -1524,7 +1524,7 @@ PT 0 9 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139593
+#94
 griber~
 &n&+rGri&n&+Lber&n~
 &n&+rGri&n&+Lber &nstrands here beating on a met&n&+Lal p&nla&n&+Lte.&n
@@ -1543,7 +1543,7 @@ MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139594
+#95
 serpent seaserpent~
 &n&+ga large s&n&+be&n&+ga&n&+Gs&n&+gerp&n&+Gent&n~
 &n&+gA large s&n&+be&n&+ga&n&+Gs&n&+gerp&n&+Gent &n&+bfloats here inches above the &n&+ysand.&n
@@ -1560,7 +1560,7 @@ R 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139595
+#96
 wolverine~
 &n&+ya wolverine&n~
 &n&+yA &n&+rhungry &n&+ywolverine stands here.&n
@@ -1575,7 +1575,7 @@ AC 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
-#139596
+#97
 devil lifeform strange red~
 &n&+ra red devil&n~
 &n&+rA str&n&+Ran&n&+rge lifeform moves about, here.&n
@@ -1592,7 +1592,7 @@ Y 0 64 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
-#139597
+#98
 dwarf disguised~
 &n&+La p&n&+woo&n&+Lrly &n&+wdisguised &n&+Ydwarf&n~
 &n&+LA p&noo&n&+Lrly &n&+wdisguised &n&+Ydwarf &n&+Lpeers around him looking for something.&n

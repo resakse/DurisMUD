@@ -1,6 +1,6 @@
 #1316
 &+CThe &+WTem&+Cpes&+Wt &+CCourt&n~
-131799 0 0 40 50 2
+131799 0 0 40 50 3
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -142,10 +142,13 @@ O 0 131603 1 131720 100 0 0 0      * a smoky gate
 O 0 131604 1 131736 100 0 0 0      * a smoky gate
 O 0 131607 1 131751 100 0 0 0      * a gate of ice
 O 0 131614 1 131768 100 0 0 0      * a gate of tempests
+O 0 131651 1 131791 25 0 0 0       * the unseen divine spark of Akadi
+O 0 131654 1 131791 100 0 0 0      * Akadi Elemental Swarm Attack
 *
 M 0 131603 17 131601 100 0 0 0     * a slyph
 M 0 131649 6 131602 100 0 0 0      * a djinni warrior
 R 1 131605 7 131602 100 0 0 0      * a living tempest (being ridden)
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
 M 0 131604 11 131603 100 0 0 0     * a slyph
 M 0 131600 8 131604 100 0 0 0      * an invisible stalker
 M 0 131602 47 131608 100 0 0 0     * an aerial servant
@@ -159,6 +162,7 @@ M 0 131602 47 131612 100 0 0 0     * an aerial servant
 M 0 131602 47 131612 100 0 0 0     * an aerial servant
 M 0 131604 11 131612 100 0 0 0     * a slyph
 M 0 131605 7 131613 100 0 0 0      * a living tempest
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
 M 0 131619 1 131613 40 0 0 0       * Ixteal
 G 1 131615 1 0 100 0 0 0           *    the heart of ixteal
 M 0 131602 47 131614 100 0 0 0     * an aerial servant
@@ -176,6 +180,7 @@ M 0 131617 1 131623 100 0 0 0      * Maelthron
 G 1 131624 1 0 100 0 0 0           *    the fabled ruby of the Dragons
 M 0 131649 6 131624 100 0 0 0      * a djinni warrior
 R 1 131605 7 131624 100 0 0 0      * a living tempest (being ridden)
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
 M 0 131606 22 131625 100 0 0 0     * a large air elemental
 M 0 131606 22 131625 100 0 0 0     * a large air elemental
 M 0 131608 27 131626 100 0 0 0     * a HUGE air elemental
@@ -193,22 +198,25 @@ M 0 131623 1 131633 50 0 0 0       * Amophar, the Wind Duke
 G 1 131642 1 0 100 0 0 0           *    the swirling essence of the Four Storms
 M 0 131625 1 131633 50 0 0 0       * Icosiol, the Wind Duke
 E 1 131638 1 3 100 0 0 0           *   a breeze of floating clouds and drifting motes
-G 1 131643 1 0 100 0 0 0           *    the swirling essence of the Winds of Fate
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
+E 1 131643 1 18 100 0 0 0          *   the swirling essence of the Winds of Fate
 M 0 131624 1 131633 50 0 0 0       * Zosiel, the Wind Duke
 E 1 131637 1 10 100 0 0 0          *   some vambraces depicting a stylized hurricane
-G 1 131644 1 0 100 0 0 0           *    the swirling essence of the Great Maelstrom
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
+E 1 131644 1 18 100 0 0 0          *   the swirling essence of the Great Maelstrom
 M 0 131627 1 131633 50 0 0 0       * Emoniel, the Wind Duke
 G 1 131645 1 0 100 0 0 0           *    the swirling essence of the Boundless Blue
 M 0 131626 1 131633 50 0 0 0       * Uriel, the Wind Duke
 G 1 131646 1 0 100 0 0 0           *    the swirling essence of the Unseen Breeze
 M 0 131606 22 131634 100 0 0 0     * a large air elemental
 M 0 131602 47 131634 100 0 0 0     * an aerial servant
-M 0 131621 1 131634 100 0 0 0      * Darthikya, the Githyanki Hunter
+M 0 131621 1 131634 40 0 0 0       * Darthikya, the Githyanki Hunter
 M 0 131608 27 131636 100 0 0 0     * a HUGE air elemental
 M 0 131600 8 131639 100 0 0 0      * an invisible stalker
 M 0 131604 11 131640 100 0 0 0     * a slyph
 M 0 131649 6 131641 100 0 0 0      * a djinni warrior
 R 1 131605 7 131641 100 0 0 0      * a living tempest (being ridden)
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
 M 0 131616 1 131643 100 0 0 0      * the north wind
 M 0 131606 22 131644 100 0 0 0     * a large air elemental
 M 0 131606 22 131646 100 0 0 0     * a large air elemental
@@ -230,6 +238,7 @@ M 0 131602 47 131665 100 0 0 0     * an aerial servant
 M 0 131602 47 131667 100 0 0 0     * an aerial servant
 M 0 131649 6 131669 100 0 0 0      * a djinni warrior
 R 1 131605 7 131669 100 0 0 0      * a living tempest (being ridden)
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
 M 0 131603 17 131670 100 0 0 0     * a slyph
 M 0 131600 8 131672 100 0 0 0      * an invisible stalker
 M 0 131608 27 131674 100 0 0 0     * a HUGE air elemental
@@ -239,6 +248,7 @@ M 0 131606 22 131678 100 0 0 0     * a large air elemental
 M 0 131618 1 131679 100 0 0 0      * Aurilium
 M 0 131649 6 131680 100 0 0 0      * a djinni warrior
 R 1 131605 7 131680 100 0 0 0      * a living tempest (being ridden)
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
 M 0 131606 22 131682 100 0 0 0     * a large air elemental
 M 0 131602 47 131682 100 0 0 0     * an aerial servant
 M 0 131622 7 131683 100 0 0 0      * an air mephit
@@ -271,6 +281,7 @@ M 0 131622 7 131722 100 0 0 0      * an air mephit
 M 0 131622 7 131722 100 0 0 0      * an air mephit
 M 0 131649 6 131723 100 0 0 0      * a djinni warrior
 R 1 131605 7 131723 100 0 0 0      * a living tempest (being ridden)
+E 1 131658 9 16 100 0 0 0          *   a sword of air and lightning
 M 0 131608 27 131726 100 0 0 0     * a HUGE air elemental
 M 0 131600 8 131727 100 0 0 0      * an invisible stalker
 M 0 131650 5 131729 100 0 0 0      * a djinni mage
@@ -344,7 +355,7 @@ E 1 131620 1 14 100 0 0 0          *   a bracelet of rainbows
 F 1 131643 2 131770 100 0 0 0      * a sylph handmaiden (following)
 F 1 131643 2 131770 100 0 0 0      * a sylph handmaiden (following)
 M 0 131641 8 131771 100 0 0 0      * a GIGANTIC air elemental
-M 0 131644 1 131772 100 0 0 0      * Gogol
+M 0 131644 1 131772 50 0 0 0       * Gogol
 E 1 131619 1 16 100 0 0 0          *   a tricksters dagger of deception and illusions
 E 1 131657 3 17 100 0 0 0          *   a dagger of illusions
 E 1 131657 3 25 100 0 0 0          *   a dagger of illusions
@@ -373,13 +384,11 @@ M 0 131608 27 131788 100 0 0 0     * a HUGE air elemental
 M 0 131608 27 131792 100 0 0 0     * a HUGE air elemental
 M 0 131648 1 131792 100 0 0 0      * Akadi
 E 1 131617 1 12 100 0 0 0          *   the frost-covered cloak of the north wind
-E 1 131654 1 16 100 0 0 0          *   Akadi Elemental Swarm Attack
-E 1 131655 1 17 100 0 0 0          *   Akadi Elemental Swarm Banishing Act
+E 1 131656 1 16 100 0 0 0          *   Akadi lIGHTNING Attack
+E 1 131653 1 17 100 0 0 0          *   Akadi Air Attack
 E 1 131618 1 21 100 0 0 0          *   an earring of rainbows
-E 1 131653 1 25 100 0 0 0          *   Akadi Maelstrom Attack
-E 1 131656 1 26 100 0 0 0          *   Akadi Maelstrom Attack
+E 1 131616 1 25 100 0 0 0          *   the dagger of Wind
 G 1 359 1 0 100 0 0 0              *    (object type not in this .obj file)
-G 1 131616 1 0 100 0 0 0           *    the dagger of Wind
 M 0 131641 8 131796 100 0 0 0      * a GIGANTIC air elemental
 M 0 131607 1 131797 100 0 0 0      * Veri'throck, the Ultraloth
 E 1 131626 1 16 100 0 0 0          *   a black barbed whip

@@ -402,11 +402,11 @@ efreeti earring tenflames~
 ~
 9 1 3 0 15 0 49216 524289 64 0 0
 25 0 0 4 0 0 0 0
-0 156000 100 536870928 64 0 0
+0 156000 100 536870912 64 0 0
 A
-13 40
+13 25
 A
-37 4
+34 4
 #131636
 legendary silverish gith's blessingsilvery gauntlets~
 &+cthe &+Wleg&+wend&+Lary &+Csilv&+cerish &+cga&+Cuntle&+cts of &+GGith's &+cB&+Cl&+Wessi&+Cn&+cg&n~
@@ -414,11 +414,11 @@ legendary silverish gith's blessingsilvery gauntlets~
 ~
 9 22 3 0 15 0 164416 129 65 0 536903680
 15 7 0 5 0 0 0 0
-0 456544 100 16 0 16777216 68157440
+0 456544 100 0 0 16777216 67108864
 A
-18 6
+18 4
 A
-19 4
+19 3
 #131637
 hurricane vambraces~
 &+csome &+cva&+Wmbra&+Cces &+cdepicting a st&+Cyliz&+ced &+Whur&+Crica&+cne~
@@ -622,12 +622,12 @@ yan-c-bin unseen divine spark~
 0 0 0 0 0 0 0 0
 0 0 100
 #131653
-akadi maelstrom _id_~
-&+CAkadi Maelstrom Attack~
+air akadi maelstrom _id_~
+&+CAkadi Air Attack~
 &+cAkadi Maelstrom Attack~
 ~
 5 15 2 0 10 0 2 8193 2048 0 0
-5 5 5 3 0 1480006449 60 2
+5 5 5 3 0 1449076480 60 45
 2 0 100 16 64 0 0
 E
 akadi maelstrom~
@@ -703,12 +703,12 @@ A
 A
 19 5
 #131656
-akadi maelstrom _id_~
-&+CAkadi Maelstrom Attack~
+lightning akadi maelstrom attack _id_~
+&+CAkadi lIGHTNING Attack~
 &+cAkadi Maelstrom Attack~
 ~
-5 15 2 0 10 0 2 8193 2048 0 0
-5 5 5 3 0 1480006449 60 2
+14 15 2 0 10 0 2 8193 2048 0 0
+5 5 5 3 0 1006577480 60 40
 2 0 100 16 64 0 0
 E
 akadi maelstrom~
@@ -748,3 +748,26 @@ A
 18 5
 A
 19 5
+#131658
+sword of air lightning _id_~
+&+Ca &+cs&+Cword of a&+Wi&+Cr and &+cl&+Cightning&n~
+&+cA glimmering sword of &+Bice&N&+c rests here.&N~
+~
+5 15 2 0 10 0 2 8193 64 0 0
+5 5 5 3 0 76006374 56 35
+2 0 100 0 64 0 0
+E
+sword of air lightning~
+~
+E
+_victim_msg~
+&+cA gathering storm of &+CA&+Wi&+Cr&+c and &+cL&+Cightning&n
+~
+E
+_room_msg~
+&+cA gathering storm of &+CA&+Wi&+Cr&+c and &+cL&+Cightning&n
+~
+A
+18 10
+A
+19 4
