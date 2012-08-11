@@ -5002,11 +5002,14 @@ void bash(P_char ch, P_char victim)
 
    if(GET_POS(victim) != POS_STANDING)
   {
-    act("$n topples over $mself as $e tries to bash $N.", FALSE, ch, 0, victim, TO_NOTVICT);
-    act("$n topples over $mself as $e tries to bash you.", FALSE, ch, 0, victim, TO_VICT);
-    act("You topple over yourself as you try to bash $N - $E's just too small!\n", FALSE, ch, 0, victim, TO_CHAR);
+    act("As $N avoids your bash, you topple over and fall to the ground.",
+          FALSE, ch, 0, victim, TO_CHAR);
+      act("You dodge a bash from $n, who loses $s balance and falls.",
+          FALSE, ch, 0, victim, TO_VICT);
+      act("$N avoids being bashed by $n, who loses $s balance and falls.",
+          FALSE, ch, 0, victim, TO_NOTVICT);
     SET_POS(ch, POS_SITTING + GET_STAT(ch));
-    CharWait(ch, (int) (PULSE_VIOLENCE * 0.500));
+    CharWait(ch, (int) (PULSE_VIOLENCE * 2.000));
     return;
   }
   
