@@ -936,7 +936,7 @@ int unholy_avenger_bloodlust(P_obj obj, P_char ch, int cmd, char *arg)
     spell_damage(ch, vict, 300, SPLDAM_NEGATIVE,
         SPLDAM_NODEFLECT | SPLDAM_NOSHRUG | RAWDAM_NOKILL, &messages);
 
-    vamp(ch, dam / 2, (int) (GET_MAX_HIT(ch) * 1.1));
+    vamp(ch, dam / 2, (int) (GET_MAX_HIT(ch) * 1.4));
 
     return TRUE;
   }
@@ -1299,7 +1299,7 @@ int avernus(P_obj obj, P_char ch, int cmd, char *arg)
     act("&+LYou feel your life flowing away and $n &+Wlooks revitalized.",
         FALSE, ch, obj, vict, TO_VICT);
 
-    vamp(ch, dam / 2, (int) (GET_MAX_HIT(ch) * 1.3));
+    vamp(ch, dam / 2, (int) (GET_MAX_HIT(ch) * 1.6));
 
     spell_damage(ch, vict, (BOUNDED(0, (GET_HIT(vict) + 9), 150) * 4),
            SPLDAM_NEGATIVE, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, 0);
