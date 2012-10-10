@@ -2013,7 +2013,7 @@ SPELL_CREATE("vigorize light", SPELL_VIGORIZE_LIGHT, PULSE_SPELLCAST * 2,
   SPELL_CREATE_MSG("sanctuary", SPELL_SANCTUARY, PULSE_SPELLCAST,
                 TAR_SELF_ONLY,
                 spell_sanctuary, "&+WYour glowing sanctuary &n&+wfades.");
-  SPELL_ADD(CLASS_PALADIN, 11);
+  SPELL_ADD(CLASS_PALADIN, 10);
 
   SPELL_CREATE_MSG("hellfire", SPELL_HELLFIRE, PULSE_SPELLCAST,
                 TAR_SELF_ONLY,
