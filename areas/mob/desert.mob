@@ -6,8 +6,8 @@ huge scorpion~
 &+YA huge scorpion protecting the gates, he is controlled by the beastmaster. He
 &+Ycould &+Yeat you whole and spit you back out.
 ~
-1140852810 0 0 8 8 0 2 -999 S
-AS 0 1 5
+1140852810 0 0 0 8 8 0 2 -999 S
+AS 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 200000
 8 8 1
@@ -20,8 +20,8 @@ beastmaster master beast~
 &+Ythan a month now, and since he's so talented at overseeing security at the front
 &+Ygate, he &+Yhas the privelage of overseeing it 27/4.
 ~
-1140852810 0 0 24 0 0 0 -999 S
-PH 0 513 -1
+1140852810 0 0 0 24 0 0 0 -999 S
+PH 0 513 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.200 250000
 8 8 1
@@ -34,8 +34,8 @@ elite guard~
 &+Ygood greater then they. He stands six foot three inches with a waste size twice
 &+Ythat of a normal man's.
 ~
-1073743944 1 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743944 1 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -47,8 +47,8 @@ heavily cloaked man mercenary~
 &+yThis man wanders the desert in search of fame and fortune. He wears a light
 &+ydesert &+ygarb with a sword at his hip.
 ~
-1090521160 0 0 56 0 67108864 0 -555 S
-PH 0 16384 -1
+1090521160 0 0 0 56 0 67108864 0 -555 S
+PH 0 16384 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -61,8 +61,8 @@ A&+L gate &+Yguard &ninspects visitors as they enter city limits.
 &+Ysix feet tall with a muscular build. He's ready to cut threats down limb from
 &+Ylimb. He is a powerful wearrior.
 ~
-1140852810 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1140852810 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -73,8 +73,8 @@ ragged peddler~
 ~
 &+yThis ragged peasant has seen better days.
 ~
-2120 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ desert vagabond~
 &+yThis vagabond has seen better days. He wears rags and looks like he hasn't had
 &+ya good meal in a long time.
 ~
-72 0 0 0 0 0 0 0 S
-PH 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -98,8 +98,8 @@ a &+yde&+ys&+ge&+yr&+gt &+ype&+ga&nsa&+ynt~
 ~
 &+yThis peasant is a no body within this city. He just tries to survive.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -110,8 +110,8 @@ ragged peasant~
 ~
 &+yThis peasant is a no body within this city. He just tries to survive.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -122,8 +122,8 @@ A mule stands here loaded with ragged bags.&n
 ~
 This mule is a beast of burden. He does all the work that no human could do.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 4
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -134,8 +134,8 @@ plump woman~
 ~
 &+gThis woman is plump. She looks well fed and ready to feed herself again.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -147,8 +147,8 @@ A small child plays here.&n
 This small child plays in the desert sand with other children. He wears rags
 just like all the other peasants.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -160,8 +160,8 @@ A peasant &+Yelder&n settles a feud.&n
 This elder is old and wise. Wisdom does make one older, or vice versa. It is
 said that this elder is over one hundred. He must be very wise.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -174,8 +174,8 @@ mereer soothsayer~
 &+Lconcerns the may have and she quickly puts them at ease with her visions.
 &+LShe is &+Mugly&+L though.
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 128 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 128 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -188,8 +188,8 @@ morgian elder town~
 &+Yvillage. In cases regarding ordinances or anything to do with the city as a
 &+Ywhole, he is the person who speaks for this village.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 32 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -201,8 +201,8 @@ drunken peasant~
 &+LThis peasant is drunk and smells horribly. He is ugly and looks to have seen
 &+Lbetter days. His rags stink horribly from vomit and alcohol.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -215,8 +215,8 @@ This peasant argues with the village drunk over some dispute over something. He
 stinks horribly and looks to have seen better days. The rags he wears aren't too
 appealing and the dirt that covers his person is unsitely.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -228,8 +228,8 @@ dusty gleeman~
 &+YThis gleeman looks to have an audience. He plays his instruments and tells his
 &+Ystories to small children.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 32 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 32 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -240,8 +240,8 @@ A small child listens to the gleeman joyfully.&n
 ~
 This child listens to the gleeman.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 0 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -253,8 +253,8 @@ elderly peasant~
 &+yThis elderly peasant enjoys the music. He is really old and looks ready to fall
 &+yover. If, he did infact fall over, he would probably die.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 0 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -266,8 +266,8 @@ A wounded &+yminer&n moans in agony.&n
 &+yThis miner is wounded horribly. Perhaps if he had some help he would give
 &+ysome sort of reward.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -278,8 +278,8 @@ tiny cavern worm~
 ~
 &+mThis worm burrows through the undermountain. The mountain is now its home.
 ~
-2120 0 0 0 0 0 0 0 S
-A 0 0 1
+2120 0 0 0 0 0 0 0 0 S
+A 0 0 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -290,8 +290,8 @@ small cavern worm~
 ~
 &+mThis worm burrows through the undermountain. The mountain is now its home.
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 1 2
+2056 0 0 0 0 0 0 0 0 S
+A 0 1 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -302,8 +302,8 @@ large earthworm~
 ~
 &+mThis worm burrows through the undermountain. The mountain is now its home.
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 1 4
+2056 0 0 0 0 0 0 0 0 S
+A 0 1 0 4
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -316,8 +316,8 @@ huge fire wyrm~
 &+rdomain. It is indeed kin to a dragon and its scales are just as protective as
 &+rone. Its magic may not be as fierce as a true dragon, but it is just as deadly.
 ~
-2154 1 0 24 1 0 0 -500 S
-D 0 513 5
+2154 1 0 0 24 1 0 0 -500 S
+D 0 513 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -329,8 +329,8 @@ A mining &+yforeman&n cooridinates the rescue effort.
 &+yThis foreman is in anguish. He was in the mines when the tunnel collapsed.
 &+yHe feels horrible about what happened and is nearly in tears.
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -342,8 +342,8 @@ A &+yminer&n grimaces at the thought of what has happened.&n
 &+yThis miner was inside the mines when it collapsed. He is in tears and blood
 &+yis smeared across his brow.
 ~
-67110986 0 0 0 0 0 0 0 S
-PH 0 0 -1
+67110986 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -356,8 +356,8 @@ A &+yminer&n grunts as he attempts to push the boulder.&n
 &+yThis would, in theory, clear the mining entrance tunnel of most of the
 &+ydebris that blocks it.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -369,8 +369,8 @@ A &+Lburly&+y miner&n searches for a something.&n
 &+LThis miner searches for something. He is really big and looks ready to leap out
 &+Lof his skin for some reason.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -383,8 +383,8 @@ myranx dockmaster~
 &+Beverything that comes in and out of these docks. He answers only to the
 &+Bsultan. No one enters the docks without his key.
 ~
-2122 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+2122 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -396,8 +396,8 @@ auctioneer~
 &+LThis auctioneer is loud and ugly. He wears a blood stained cloak around
 &+Lhimself and shouts out deals.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -409,8 +409,8 @@ An &+Lorc&n is chained to the street.&n
 &+LThis orc has seen better days. His life now is as a slave to whomever buys
 &+Lhim. He growls at everyone who looks at him.
 ~
-2058 0 0 0 0 0 0 -999 S
-HO 0 1 -1
+2058 0 0 0 0 0 0 0 -999 S
+HO 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -421,8 +421,8 @@ A &+Mflind&n is in chains and shackles.&n
 ~
 &+MThis flind has seen better days. His life now is as a slave to whomever buys him.
 ~
-2058 0 0 0 0 0 0 -999 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -999 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -434,8 +434,8 @@ A &+Chuman&n is shackled to the ground.&n
 &+CThis human has seen better days. His life now is as a slave to whomever buys
 &+Chim. He begins to cry.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -447,8 +447,8 @@ A &+cgrey elf &nis in shackles.&n
 &+cThis grey elf has seen better days. His life now is as a slave to whomever buys
 &+chim. He whispers a soft prayer to his gods and homeland.
 ~
-2058 0 0 0 0 0 0 -555 S
-PE 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PE 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -460,8 +460,8 @@ A mercenary keeps an eye on slaves.&n
 This mercenary has been hired to keep an eye on the slaves. The slave market
 is very profitable and it would unlikely that his services go cheaply.
 ~
-67110920 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110920 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -473,8 +473,8 @@ A &+Yrich merchant&n inspects a slave.&n
 &+YThis rich merchant browses the slave markets. He looks ready to spend a lot
 &+Yof money to buy many slaves.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -486,8 +486,8 @@ A &+Rplump merchant&n examines a slave.&n
 &+RThis plump merchant is plump and ugly. He barks out to his serviceman to
 &+Rinspect the closest slave.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -499,8 +499,8 @@ A one-armed &+ggith&+Wyanki&n growls at passerbyers.&n
 &+gThis one-armed githyanki is quite the sideshow attraction. Not many people have
 &+geverseen one, let alone a one-armed one.
 ~
-2058 0 0 0 0 0 0 -555 S
-GI 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+GI 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -511,8 +511,8 @@ A &+Ythree&n-eyed &+Wrabbit&n is chained to the ground.&n
 ~
 &+WHow many people can say they've seen a three-eyed rabbit?
 ~
-10 0 0 0 0 0 0 -555 S
-A 0 0 1
+10 0 0 0 0 0 0 0 -555 S
+A 0 0 0 1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -524,8 +524,8 @@ A tall &+Ymountain dwarf&n glares at everyone.&n
 &+YThis mountain dwarf glares around at everyone. He stands six feet tall. Very
 &+Ystrange for a mountain dwarf.
 ~
-2058 0 0 0 0 0 0 -555 S
-PM 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PM 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -537,8 +537,8 @@ A &+ypeddler&n wanders the bizarre.&n
 &+yThis peddler wanders the bizarre. His rags for clothes stink and his face is
 &+ydirty. People pretent he doesn't exist.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -550,8 +550,8 @@ A gazing &+gmerchant&n wanders the bizaare.&n
 &+gThis merchant browses the bizarre in an effort to buy something he wants. He
 &+gstands six feet tall and has a bag full of cash.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -563,8 +563,8 @@ A desert &+ymerchant&n browses the shops.&n
 &+yThis merchant browses the bizarre in an effort to buy something he wants. He
 &+ystands six feet &+ytall and has a bag full of cash.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -576,8 +576,8 @@ A &+yfilthy peasant&n rushes through the crowd.&n
 &+yThis merchant browses the bizarre in an effort to buy something he wants. He
 &+ystands six feet tall and has a bag full of cash.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -590,8 +590,8 @@ A &+Wfat merchant&n displays his items for the market.&n
 &+Wsells a lot of merchandise and seems to enjoy interacting with everyone who
 &+Wcomes and goes.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -604,8 +604,8 @@ sleepy soldier~
 &+Ynight, so when he finds the time he gets himself some rests. Its not easy being
 &+Ya soldier under the command of the sultan, its a very demanding life.
 ~
-67110922 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -619,8 +619,8 @@ noble nobleman~
 &+Yand wants. The only prices this man has to pay is his life. He gives the sultan
 &+Yundivided attention and gets anything and everything the man wants done.
 ~
-2056 1 0 24 0 0 0 -555 S
-GZ 0 33 3
+2056 1 0 0 24 0 0 0 -555 S
+GZ 0 33 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -633,8 +633,8 @@ An &+gelven&+B diplomat&n talks politics.&n
 &+geat exotic dishes. He has a plate in his hands and quickly eats it so he
 &+gcan enjoy the great many pleasures that the palace has to offer.
 ~
-1073743880 1 0 24 0 0 0 -555 S
-PE 0 2 -1
+1073743880 1 0 0 24 0 0 0 -555 S
+PE 0 2 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -647,8 +647,8 @@ A &+Bbarbarian diplomat&n examines a finely forged sword.&n
 &+Bmeals that come with these conventions and talks readily about politics and
 &+Bother concerns that face the nation he represents. He is an articulate speaker.
 ~
-1073743880 1 0 24 2048 67239936 0 -555 S
-PB 0 1 4
+1073743880 1 0 0 24 2048 67239936 0 -555 S
+PB 0 1 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -662,8 +662,8 @@ A &+Rgnome&+B diplomat&n examines his invention.&n
 &+Rannoying if you're looking for a normal conversation, however, he's almost
 &+Ralways overlooked.
 ~
-1073743880 1 0 24 0 0 0 -555 S
-PG 0 2560 -1
+1073743880 1 0 0 24 0 0 0 -555 S
+PG 0 2560 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -678,8 +678,8 @@ A plump &+Bbarbarian&n with a golden embroided cloak rests easy in a chair.
 &+Bhands onto. Living up in the mountains is a hard life full of eating dreadul
 &+Bthings.
 ~
-1073743882 1 0 24 0 0 512 -555 S
-PB 0 1 -1
+1073743882 1 0 0 24 0 0 512 -555 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -691,8 +691,8 @@ a &+Lgangmember~
 &+LThis gangmember is ready to pummel anyone who enters his territory. He is a
 &+Lrather large individual and just uses brute forces to make individuals submit.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -705,8 +705,8 @@ An &+rimper&+Bial gua&+rrdian&n protects the room of pleasure.&n
 &+rskilled in the art of swordsmanship as a well trained ranger, but he utterly
 &+rand totally prepared to lay down his life for the sultan.
 ~
-2058 1 0 24 0 0 0 -555 S
-PB 0 1 -1
+2058 1 0 0 24 0 0 0 -555 S
+PB 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -718,8 +718,8 @@ A &+bservant&n hurries through the corridor with a task at hand.&n
 &+bThis is a servant that does anything his master wants. He is indebted somehow
 &+band must work the debt off.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -732,8 +732,8 @@ mathanyal weaponsmaster master weapons weapon math _spec1_~
 &+Ldoes so many tricks with his pair of longswords that the crowd gasps and
 &+Lapplauds.
 ~
-1073743882 0 0 24 0 262144 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 24 0 262144 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -746,8 +746,8 @@ verdadd weapons dealer~
 &+Lwell made and reknown throughout th city as the finest. He stands over six
 &+Lfeet tall and is imposing.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -760,8 +760,8 @@ A &+gwoman&n dressed in a tinker garb handles a small crate.&n
 &+gdisplay. She is rather plump and looks well fed in contrast to the people of
 &+gthis desert city. She smiles warmly.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 128 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 128 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -774,8 +774,8 @@ ungulato inn innkeeper keeper~
 &+gkeeps the place running smoothly. He is a burly man with a smell white beard
 &+gand has seen many days.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -788,8 +788,8 @@ grumor baker~
 &+ythe people that visit this inn everyday for the passed twelved years. Its
 &+ygreat for business that he can provide anything asked for.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -802,8 +802,8 @@ A &+Lpatron&n of the bar drinks his brew.&n
 &+Lfrom time to time as he does his everyday thing. He smells a little but no
 &+Lmore than anyone else.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -816,8 +816,8 @@ heavily cloaked figure~
 &+Lthis lone black cloaked man can only spell on thing, an assassin. People stay
 &+Lclear of this guy.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 8192 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -830,8 +830,8 @@ A &+gpatron &nof the bar enjoys the entertainment.&n
 &+gthat Narggle's beer is the best within the city, perhaps that is why there are
 &+gso many patrons always coming and going.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -843,13 +843,13 @@ A &+Wbarmaid &nservices a patron under the counter.&n
 &+WThis barmaid where's a short skirt and is known to give sexual favors to anyone
 &+Wfor a special price. She is very sexy and smells great.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
 #49064
-narggle~
+narggle bartender~
 &+GNarggle&n~
 &+GNarggle&n, the bartender, serves drinks.
 ~
@@ -857,8 +857,8 @@ narggle~
 &+Gto any paying customer. He is quick to smile and shows his teeth readily. One
 &+Gthing Narggle can not stand, is a bumb who doesn't pay for his drinks.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -871,8 +871,8 @@ A &+gtinker&n sits on a stool next to the wagon.&n
 &+gno place for so long that he has become accustomed to moving within a day
 &+gor two after setting up for the night. He sells his goods from his travels.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -884,8 +884,8 @@ small scorpion~
 &+yThis small scorpion can inflict massive amounts of pain. Some scorpions are
 &+ypoisonous, however, this one is not.
 ~
-8 0 0 0 0 0 0 -555 S
-A 0 0 1
+8 0 0 0 0 0 0 0 -555 S
+A 0 0 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -897,8 +897,8 @@ large scorpion~
 &+yThis scorpion is large. I can cause death to small animals and even small
 &+ychildren.
 ~
-8 1 0 0 0 0 0 -555 S
-A 0 0 1
+8 1 0 0 0 0 0 0 -555 S
+A 0 0 0 1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -909,8 +909,8 @@ small spider~
 ~
 &+yThis small spider is hungry. He searches for something to eat.
 ~
-8 1 0 0 0 0 0 0 S
-A 0 0 1
+8 1 0 0 0 0 0 0 0 S
+A 0 0 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -921,8 +921,8 @@ desert arachnid~
 ~
 &+yThis desert arachnid is small and furry. He searches for food.
 ~
-8 1 0 0 0 0 0 0 S
-AS 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+AS 0 0 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -933,8 +933,8 @@ large tarantula~
 ~
 &+yThis tarantula is large.
 ~
-8 1 0 0 0 0 0 0 S
-PH 0 0 1
+8 1 0 0 0 0 0 0 0 S
+PH 0 0 0 1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -947,8 +947,8 @@ The &+Ycaptain&n of the brigade issues orders to his men.
 &+Yhis men to do the same. It is said he will serve the sultan even after his
 &+Yfateful death.
 ~
-1140852810 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+1140852810 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -962,8 +962,8 @@ A &+Lburly&+y bouncer&n scratches his left nut.&n
 &+Lhappen, which is why he has an associate right next to him to toss people
 &+Lout.
 ~
-67110922 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -976,8 +976,8 @@ A &+yfat&n bouncer is here, with his arms folded across his chest.
 &+ypick people up and toss them around. He does his job well and is rewarded
 &+yhandsomely by Narggle with free beer.
 ~
-67110922 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -989,8 +989,8 @@ A commoner in &+yrags&n searches the bazaar.
 This commoner wanders the city. He's lived within these desert walls for so
 long he doesn't pay much attention to his surroundings like any one else.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1003,8 +1003,8 @@ choad lighthouse attendant~
 &+Yweather he is vital for ships docking. He is a astute individual who takes care
 &+Ywith to do his job well.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1017,8 +1017,8 @@ An &+gelven&n sailor prepares the vessel.&n
 &+gwell trained sailor in the service of the elven empire to do some bartering
 &+gfor goods. He is an excellent sailor.
 ~
-2056 0 0 0 0 0 0 -555 S
-PE 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PE 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1029,8 +1029,8 @@ A &+gfilthy peasant&n begs for spare change.
 ~
 This peasant is filthy !
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1041,8 +1041,8 @@ A &+yfilthy peasant&n begs for spare change.
 ~
 &+yThis peasant is filthy !
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1053,8 +1053,8 @@ A filthy peasant&n begs for spare change.
 ~
 This peasant is filthy !
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1065,8 +1065,8 @@ A &+yfilthy peasant &nbegs for spare change.
 ~
 &+yThis peasant is filthy !
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1078,8 +1078,8 @@ gypsy king~
 &+YA gypsy king leads his followers. He stands over six feet tall and wears some
 &+Ygold on his person. He leads his band of misfit thieves unheroicly.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1092,8 +1092,8 @@ ragged gypsy~
 &+yvery badly. Gypsies are known for their uncertain ways, this one is no
 &+ydifferent.
 ~
-67108872 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+67108872 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1106,8 +1106,8 @@ dark knight~
 &+Lsix feet in height and looks dreadful. Its almost as if he were dead. There
 &+Lis no color in his face and his eyes look solemn and unwary.
 ~
-2058 1 0 24 0 0 0 -555 S
-PH 0 16 -1
+2058 1 0 0 24 0 0 0 -555 S
+PH 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1118,8 +1118,8 @@ A student of the arcane art studies intently.
 ~
 This student studies the dark ways.
 ~
-8 1 0 0 0 0 0 0 S
-PH 0 512 -1
+8 1 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1132,8 +1132,8 @@ vernal sergeant~
 &+Ythe sultan and takes special care to provide the most security. He is a
 &+Ymerciless fighter and has taken on dragons and survived.
 ~
-1140852746 1 0 24 0 262144 0 -555 S
-GZ 0 513 3
+1140852746 1 0 0 24 0 262144 0 -555 S
+GZ 0 513 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1147,8 +1147,8 @@ fhgoo evileye~
 &+Lsects near tharnadia consider him the most gruesome necromancer ever for his
 &+Lcreations.
 ~
-1073743882 1 0 24 0 0 0 -555 S
-PH 0 1024 -1
+1073743882 1 0 0 24 0 0 0 -555 S
+PH 0 1024 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1161,8 +1161,8 @@ A &+Ydesert &+ytraveler&n wishes he had a compass.
 &+YI be?", he curses himself. He looks to the north and wonders where he can
 &+Yfind one.
 ~
-2058 0 0 24 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1176,8 +1176,8 @@ high priest nelson~
 &+WPriests are not likely to succumb to weakness like most fools. They study a
 &+Whigher power and would not seek riches or glory.
 ~
-1073743882 1 0 24 0 0 0 555 S
-PH 0 32 -1
+1073743882 1 0 0 24 0 0 0 555 S
+PH 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1190,8 +1190,8 @@ small purple worm~
 &+mhas taken up refuge here. There are many like it all through the tunnels, larger
 &+mones and smaller ones.
 ~
-2056 0 0 0 0 0 0 0 S
-PW 0 1 4
+2056 0 0 0 0 0 0 0 0 S
+PW 0 1 0 4
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1204,8 +1204,8 @@ large purple worm~
 &+mhas taken up refuge here. There are many like it all through the tunnels, larger
 &+mones and smaller ones.
 ~
-2056 0 0 0 0 0 0 0 S
-PW 0 1 5
+2056 0 0 0 0 0 0 0 0 S
+PW 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1218,8 +1218,8 @@ huge purple worm~
 &+mhas taken up refuge here. There are many like it all through the tunnels, larger
 &+mones and smaller ones.
 ~
-2056 0 0 0 0 0 0 0 S
-PW 0 1 6
+2056 0 0 0 0 0 0 0 0 S
+PW 0 1 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1232,8 +1232,8 @@ A &+Ggoblin slave&n is shackled to the ground.&n
 &+Gthroat. It is difficult to imagine having a goblin working for anyone, because
 &+Gthey are so treacherous.
 ~
-2058 0 0 0 0 0 0 -555 S
-HG 0 0 2
+2058 0 0 0 0 0 0 0 -555 S
+HG 0 0 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1246,8 +1246,8 @@ A &+rduergar slave&n is chained to the ground.
 &+ranyone who wants productivity from their slaves. He stands less than six feet
 &+rand growls all the time.
 ~
-2058 0 0 0 0 0 0 -555 S
-PD 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PD 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1259,8 +1259,8 @@ An &+bogre slave&n is nailed to a couple of totems.
 &+bThis ogre is a prize for anyone who wants a strong worker. The only problem
 &+bwith having an ogre as a slave is that he might eat you.
 ~
-10 0 0 0 0 0 0 -555 S
-PO 0 1 -1
+10 0 0 0 0 0 0 0 -555 S
+PO 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1273,8 +1273,8 @@ A &+ggith&+Wyanki slave&n is chained to the ground.&n
 &+gforced into the slave markets. If perhaps someone could free him, he would
 &+gbe grateful.
 ~
-2058 0 0 0 0 0 0 -999 S
-GI 0 1 -1
+2058 0 0 0 0 0 0 0 -999 S
+GI 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1286,8 +1286,8 @@ A &+rmino&+Ltaur &nshipmate is here, searching for something.
 &+LThis minotaur shipmate is a warrior. He searches for something but can't
 &+Lseem to find it. He wears a sword at his hip, however, he's not wielding it.
 ~
-2058 0 0 0 0 0 0 -555 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1300,8 +1300,8 @@ elven navigator~
 &+ghe performs exceptionally and manages to please his queen. He is a powerful
 &+gfighter and a sharp captain.
 ~
-1073743882 0 0 8 0 0 0 -555 S
-PE 0 2 -1
+1073743882 0 0 0 8 0 0 0 -555 S
+PE 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1313,8 +1313,8 @@ a &+ydesert soldier&n~
 &+yThis soldier is in the service of the sultan. He serves under the captain
 &+yof this troop loyaly.
 ~
-1140852810 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1140852810 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1327,8 +1327,8 @@ evil wizard shrouded figure dark~
 &+Lto this guy might not be a bad idea, however, he could tell you something of
 &+Lgreat importance. He might even send you one some sort of quest.
 ~
-2058 0 0 0 0 0 0 -599 S
-PH 0 512 -1
+2058 0 0 0 0 0 0 0 -599 S
+PH 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1341,8 +1341,8 @@ sexy slut~
 &+Malong with it. She is very sexy and does a dance for someone. Every guy eyes
 &+Mher in the room with her incredibly sexy body and long blonde here.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1355,8 +1355,8 @@ exotic dancer~
 &+mit well as some men relieve their tensions openly in front of her. It is
 &+mpossible for her to men to achieve orgasms without the use of touch.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1368,8 +1368,8 @@ naked tramp~
 &+bThis naked tramp is being punished for her sluttiness. She is tied up to the
 &+bwall and is being spanked. She moans and sniffs slightly.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1381,8 +1381,8 @@ hooker~
 &+BThis hooker gives a man some serious pleasure. She is going down on him and
 &+Bhe looks ready to blow his load.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1395,8 +1395,8 @@ A &+Chuman&+r emissary &nof &+WTharnadia &nreceives oral pleasure.&n
 &+Cand has an awesome build. He looks to be of the holier type devoted to some
 &+Csort of cause. He is definately a person to have on your good side.
 ~
-1073743880 1 0 24 0 0 0 -555 S
-PH 0 513 -1
+1073743880 1 0 0 24 0 0 0 -555 S
+PH 0 513 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1410,8 +1410,8 @@ A &+Ydwarven&+r emissary &nof &+LKimordril&n laughs heartedly as he cums.&n
 &+YThe dwarf grins as he places his hands on the woman's head as she moves up
 &+Yand down on his private parts. He's about ready to come.
 ~
-1073743880 1 0 24 0 0 0 -555 S
-PM 0 33 -1
+1073743880 1 0 0 24 0 0 0 -555 S
+PM 0 33 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1424,8 +1424,8 @@ A &+rmino&+Ltaur&+r emissary &nfrom &+LNax'Varan &npleasures four women at once.
 &+Lchooses the closest girl and begins to make out with her. He is an animal,
 &+Lliterally, and a well hung one at that.
 ~
-1073743880 1 0 24 0 0 0 -555 S
-MT 0 513 -1
+1073743880 1 0 0 24 0 0 0 -555 S
+MT 0 513 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1437,8 +1437,8 @@ a &+Lshady rogue&n~
 &+LThis shady rogue is up to no good. If you're seeing him, then you're probably
 &+Lthe victim of his evil doing.
 ~
-10 1 0 0 0 0 0 -555 S
-PH 0 4096 -1
+10 1 0 0 0 0 0 0 -555 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1450,8 +1450,8 @@ A &+Ws&+Be&+Cagu&+Bl&+Cl &nsquabbles.
 &+WThis seagull squabbles and walks along the beach. It looks ready to take
 &+Wflight again.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1462,8 +1462,8 @@ pelican~
 ~
 &+WThis white pelican walks along the shore and leaves a small trail.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1475,8 +1475,8 @@ A &+ydrunk sailor&n is passed out on the beach.&n
 &+yThis sailor is passed out on the beach. He looks to be dressed well, however,
 &+yhe stinks of alchohol and his clothes are drenched in water and smell.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -1489,8 +1489,8 @@ A &+rmino&+Ltaur sailor&n eyes you suspiciously.
 &+Lto find it, and every second wasted not searching for it is every second
 &+Lwasted not rich. He's always in a hurry to set off to sea.
 ~
-2056 0 0 0 0 0 0 -555 S
-MT 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1503,8 +1503,8 @@ The &+Lcaptain&n of this &+rmino&+Ltaur&n vessel studies some orders.&n
 &+Lmintains order on his ship at all times. His skills with the sword are
 &+Lunmatched on this ship.
 ~
-1140852746 0 0 24 0 0 0 -555 S
-MT 0 1 -1
+1140852746 0 0 0 24 0 0 0 -555 S
+MT 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1517,8 +1517,8 @@ A &+rmino&+Ltaur sailor&n eyes you suspiciously.
 &+Lto find it, and every second wasted not searching for it is every second
 &+Lwasted not rich. He's always in a hurry to set off to sea.
 ~
-2056 0 0 0 0 0 0 -555 S
-MT 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1531,8 +1531,8 @@ An &+gelven&n sailor prepares the vessel.&n
 &+gwell trained sailor in the service of the elven empire to do some bartering
 &+gfor goods. He is an excellent sailor.
 ~
-2056 0 0 0 0 0 0 -555 S
-PE 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PE 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1545,8 +1545,8 @@ luncaster~
 &+Wit goes without saying that messing with him is a bad idea. Perhaps one day
 &+Whe will run for the sultan's head, however, that could cost him his life.
 ~
-1073743882 0 0 24 0 0 0 0 S
-PH 0 33 -1
+1073743882 0 0 0 24 0 0 0 0 S
+PH 0 33 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1559,8 +1559,8 @@ A &+Lgangleader&n stares everyone down.&n
 &+Lbrute and possess no special training or anything, he just leads a gang to
 &+Lpummel and break people for their money and belongings.
 ~
-2058 0 0 0 0 0 0 -599 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -599 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1573,8 +1573,8 @@ gigantic purple worm~
 &+mhas taken up refuge here. There are many like it all through the tunnels, larger
 &+mones and smaller ones.
 ~
-2056 0 0 0 0 0 0 0 S
-PW 0 1 6
+2056 0 0 0 0 0 0 0 0 S
+PW 0 1 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1587,8 +1587,8 @@ gargantuan purple worm~
 &+mhas taken up refuge here. There are many like it all through the tunnels, larger
 &+mones and smaller ones.
 ~
-2056 0 0 0 0 0 0 0 S
-PW 0 1 6
+2056 0 0 0 0 0 0 0 0 S
+PW 0 1 0 6
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1601,8 +1601,8 @@ great worm~
 &+mhas taken up refuge here. There are many like it all through the tunnels, larger
 &+mones and smaller ones.
 ~
-2058 1 0 0 0 0 0 0 S
-PW 0 1 6
+2058 1 0 0 0 0 0 0 0 S
+PW 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1615,8 +1615,8 @@ varmith~
 &+mis allowed to study secretly here in this tower. The sultan doesn't bother
 &+mwith spies and magikas to spy on Varmith, because they never succeed.
 ~
-1073743882 1 0 24 0 0 0 -555 S
-PH 0 512 -1
+1073743882 1 0 0 24 0 0 0 -555 S
+PH 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1629,8 +1629,8 @@ insect queen~
 &+Lthis silver mine with a great many insects like herself. She always has
 &+Lprotection around her at all times.
 ~
-2058 1 0 24 0 0 0 0 S
-TK 0 1 -1
+2058 1 0 0 24 0 0 0 0 S
+TK 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1643,8 +1643,8 @@ thri-kreen thri kreen warrior~
 &+ball times to ensure that no bodily harm comes to her. She pops out an egg
 &+bevery half hour.
 ~
-1140852746 1 0 8 0 0 0 0 S
-TK 0 1 -1
+1140852746 1 0 0 8 0 0 0 0 S
+TK 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1658,8 +1658,8 @@ thri kreen thri-kreen insect warrior~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1673,8 +1673,8 @@ thri kreen thri-kreen insect warrior~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1688,8 +1688,8 @@ thri-kreen thri kreen insect warrior~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1703,8 +1703,8 @@ insect warrior thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1718,8 +1718,8 @@ insect warrior thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1733,8 +1733,8 @@ insect warrior thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1748,8 +1748,8 @@ insect warrior thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1763,8 +1763,8 @@ tunnel thri thri-kreen dweller~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1778,8 +1778,8 @@ tunnel thri thri-kreen dweller~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1793,8 +1793,8 @@ tunnel thri thri-kreen dweller~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1808,8 +1808,8 @@ tunnel thri thri-kreen dweller~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1823,8 +1823,8 @@ tunnel thri thri-kreen dweller~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1838,8 +1838,8 @@ tunnel thri thri-kreen dweller~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1853,8 +1853,8 @@ insect thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1868,8 +1868,8 @@ insect thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1883,8 +1883,8 @@ thri-kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1898,8 +1898,8 @@ insect thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1913,8 +1913,8 @@ insect thri-kreen thri kreen~
 &+Lonly way to rid the undermountain of all these insects is to kill the
 &+Lqueen.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1927,8 +1927,8 @@ gigantic tarantula~
 &+Ygates of this palace. It is huge and could eat a man in one bite. It's sting
 &+Ycould cripple a man and its skin is tough as steel.
 ~
-1140852746 0 0 8 0 0 0 0 S
-AS 0 1 6
+1140852746 0 0 0 8 0 0 0 0 S
+AS 0 1 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1941,8 +1941,8 @@ wandering merchant~
 &+Ywears a gold rimmed cloak and a pointy top hat. He speaks with a hearty
 &+Yvoice and wears a top hat. Something about this man's eyes speaks volumes.
 ~
-2056 0 0 8 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 8 0 0 0 0 S
+PH 0 0 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1955,8 +1955,8 @@ An experienced &+gelven sailor&n prepares the ship.&n
 &+gHe is experienced in all things associated with sailing and he
 &+gtakes orders readily for pay. He is an excellent sailor.
 ~
-2056 0 0 0 0 0 0 -555 S
-PE 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PE 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1969,8 +1969,8 @@ An &+gelven&n sailor prepares the vessel.
 &+gHe is experienced in all things associated with sailing and he
 &+gtakes orders readily for pay. He is an excellent sailor.
 ~
-2056 0 0 0 0 0 0 -555 S
-PE 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PE 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1983,8 +1983,8 @@ An experienced &+gelven sailor&n prepares the ship.&n
 &+gHe is experienced in all things associated with sailing and he
 &+gtakes orders readily for pay. He is an excellent sailor.
 ~
-2056 0 0 0 0 0 0 -555 S
-PE 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PE 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1997,8 +1997,8 @@ A &+rmino&+Ltaur sailor&n eyes you suspiciously.
 &+rwealth. He serves under a minotaur captain who understands such things
 &+ras glory and honor, together with his crew he may obtain both.
 ~
-2120 0 0 0 0 0 0 -555 S
-MT 0 1 -1
+2120 0 0 0 0 0 0 0 -555 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2011,8 +2011,8 @@ A &+rmino&+Ltaur sailor&n eyes you suspiciously.
 &+rwealth. He serves under a minotaur captain who understands such things
 &+ras glory and honor, together with his crew he may obtain both.
 ~
-2056 0 0 0 0 0 0 -555 S
-MT 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2025,8 +2025,8 @@ A &+rmino&+Ltaur sailor&n eyes you suspiciously.
 &+rwealth. He serves under a minotaur captain who understands such things
 &+ras glory and honor, together with his crew he may obtain both.
 ~
-2056 0 0 0 0 0 0 -555 S
-MT 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2038,8 +2038,8 @@ mijium shady rogue~
 &+LMijium is a master smuggler. He runs a smuggling ring around the sultans own
 &+Land makes an enormous profit.
 ~
-1073743882 1 0 0 0 0 0 -555 S
-PH 0 4096 -1
+1073743882 1 0 0 0 0 0 0 -555 S
+PH 0 4096 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2051,8 +2051,8 @@ A &+ywretched vagabond&n begs for some food.&n
 &+yThis vagabond is wretched. Nothing in the city is as dispicable as this filthy
 &+ybump. He has a sour face and looks ready to vomit on himself.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2064,8 +2064,8 @@ A &+yfilthy vagabond&n begs for some food.&n
 &+yThis vagabond is filthy. He wears rags as clothing and has dirt all over his
 &+yperson. He smells horrible and needs a shower.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2077,8 +2077,8 @@ A &+gfilthy vagabond&n begs for some food.&n
 &+yThis vagabond is filthy. He wears rags as clothing and has dirt all over his
 &+yperson. He smells horrible and needs a shower.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2091,8 +2091,8 @@ guardian ward~
 &+Gfrom intruders and invaders. It is a powerful ward that can kill just by
 &+Gtouch. It is a mist ward that can pass through rock to hunter down aggressors.
 ~
-1073743882 1 0 8 0 256 0 -499 S
-UG 0 0 5
+1073743882 1 0 0 8 0 256 0 -499 S
+UG 0 0 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2106,8 +2106,8 @@ elite guard~
 &+Yprivelage by those within the armed forces. He is adept with all forms of
 &+Ycombat.
 ~
-67110922 0 0 24 0 0 0 -555 S
-pb 0 16385 -1
+67110922 0 0 0 24 0 0 0 -555 S
+pb 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2120,8 +2120,8 @@ A &+Lshady &+mmerchant&n argues over some merchandise.&n
 &+mseems to stem from a deal going sour. He stands over seven feet tall and must
 &+mhave huge brass balls because his voice is really low.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2134,8 +2134,8 @@ A &+Ldark sailor&n deals with a merchant.&n
 &+Lcost of some product. He has a sour face on his mouth and looks ready to
 &+Lmove on.
 ~
-2058 0 0 0 0 0 0 -499 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -499 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2146,8 +2146,8 @@ scarab~
 ~
 &+yThis scarab and chew through bone. Don't ever let it do that.
 ~
-8 0 0 0 0 0 0 -555 S
-R 0 0 1
+8 0 0 0 0 0 0 0 -555 S
+R 0 0 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2158,8 +2158,8 @@ A dirty peasant scratches his ear.
 ~
 This peasant is dirty. He smells from head to toe.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2171,8 +2171,8 @@ A &+ydirty &+gpeasant&n scratches his balls.
 &+gThis dirty peasant is covered from head to toe in filth. Sand and stains
 &+gcover his clothing and he smells very badly.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2184,8 +2184,8 @@ A &+gdirty &+ypeasant&n scratches his arm.
 &+gThis peasant is dirty. He is covered head to toe in filth. He smells horrible
 &+gand needs a bath.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2198,8 +2198,8 @@ eriic wanderer~
 &+Yof dusty boots on his feet that just look magical. Eriic undoubtably has
 &+Ypicked up some useful skills with the sword as well as magic.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 32768 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 32768 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2212,8 +2212,8 @@ ruffus shaman~
 &+Bmany spells. However, these people of this settlement could care less as
 &+Blong as he able to cast a few spells that are useful here in these parts.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 256 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2226,8 +2226,8 @@ butcher parnn~
 &+rmoney by charging whatever he wants. He works only when he feels like it
 &+rand wields a great axe.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2240,8 +2240,8 @@ nox innkeeper~
 &+Ya booming voice. He must drink a lot of beer and eat well because his gut is
 &+Yreally large and round.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2254,8 +2254,8 @@ A &+ymilitia &+Lguard&n is covered is sand.
 &+Lto old for combat and now serves under the city's militia, which is small in
 &+Lnumber.
 ~
-67110984 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110984 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2267,8 +2267,8 @@ crazy man~
 &+LThis man must be on some sort of drug. He stares at everyone with one eye
 &+Lclosed and one open. He always does this.
 ~
-1073743880 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2282,8 +2282,8 @@ A young &+rwarrior&n trains vigorously.&n
 &+rbrings special privelages, one of which is training in any art or craft within
 &+rthe city.
 ~
-2058 0 0 0 0 0 0 -500 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -500 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2296,8 +2296,8 @@ jussin nomad~
 &+Ymany times. It is rumored that he lives off the fat of the desert and never
 &+Yenters the city itself. His one great love is for the desert.
 ~
-1073747976 0 0 56 0 67108864 0 -555 S
-pb 0 16384 -1
+1073747976 0 0 0 56 0 67108864 0 -555 S
+pb 0 16384 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2310,8 +2310,8 @@ noxxon merchant dealer~
 &+mnumber of merchants that have banded together for the greater good. They all
 &+mshare profits equally.
 ~
-2058 1 0 24 0 0 0 0 S
-PH 0 33 -1
+2058 1 0 0 24 0 0 0 0 S
+PH 0 33 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2325,8 +2325,8 @@ ushuur vernadad lord lo~
 &+Lwalks the night and never in the daylight. Very strange indeed for he heads
 &+LThe most powerful guild within the city.
 ~
-1073743882 1 0 8 0 0 0 -999 S
-UM 0 8193 -1
+1073743882 1 0 0 8 0 0 0 -999 S
+UM 0 8193 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2339,8 +2339,8 @@ A &+Lburly guard&n forbids entry into the complex.
 &+Lwith. He stands over six feet tall with a sword at his hip, undoubtably he
 &+Lis skilled in the art of killing.
 ~
-1140852746 0 0 0 0 0 0 -555 S
-pb 0 16385 -1
+1140852746 0 0 0 0 0 0 0 -555 S
+pb 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2351,8 +2351,8 @@ A &+rservant&n hurries through the corridor with a task at hand.&n
 ~
 &+rThis servant hurries on some errand.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2363,8 +2363,8 @@ A &+gservant&n hurries through the corridor with a task at hand.&n
 ~
 &+gThis servant hurries along on some errand.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2377,8 +2377,8 @@ a &+Lshady dealer&n~
 &+Lillegal merchandise. He stands over six feet tall and could pounce a smaller
 &+Lperson very easily.
 ~
-1073743880 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2391,8 +2391,8 @@ A &+ycamel&n is standing here.&n
 &+yCamels can survive in the desert for a considerable amount of time before
 &+yhaving to have water sustenance.
 ~
-524296 0 0 0 0 0 0 0 S
-l 0 0 4
+524296 0 0 0 0 0 0 0 0 S
+l 0 0 0 4
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2405,8 +2405,8 @@ A &+Ldisheveled &+Bbarbarian&n lays in a drunken heap.&n
 &+Btype just visiting the city because he doesn't fit in well. His physique
 &+Bis really awesome and wears a nice helmet.
 ~
-1073743882 0 0 24 0 0 0 0 S
-PB 0 1 -1
+1073743882 0 0 0 24 0 0 0 0 S
+PB 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2419,8 +2419,8 @@ angry big bully~
 &+Lwhy he's not been caught yet, because he hangs around the garbage all day. He
 &+Lsmells horrible and just the odor of him could knock someone senseless.
 ~
-10 1 0 16 0 0 0 0 S
-PH 0 1 -1
+10 1 0 0 16 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2432,8 +2432,8 @@ A &+ydesert dweller&n enjoys the comfort of shelter.&n
 &+yThis city dweller lives within the desert city Venan'Trut. He wears rags for
 &+yclothing and seems easy to please. He wears a small smile on his face.
 ~
-2058 0 0 8 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 -555 S
+PH 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2447,8 +2447,8 @@ A &+mdrow &+Lrogue &nhides in a crevice.&n
 &+Laccumulate a lot of money and worth because he's dressed in fine clothing
 &+Land decorated with a lot of gold.
 ~
-1073743946 0 0 1572872 0 0 0 -555 S
-PL 0 4096 -1
+1073743946 0 0 0 1572872 0 0 0 -555 S
+PL 0 4096 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2460,8 +2460,8 @@ a &+Lvicious&+g snake&n~
 &+LThis snake is very scary. It isn't the size of it that is frightening, just
 &+Lhue of its scales.
 ~
-10 268435457 0 1048576 0 0 0 -555 S
-RS 0 0 1
+10 268435457 0 0 1048576 0 0 0 -555 S
+RS 0 0 0 1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2474,8 +2474,8 @@ A &+mshopkeeper&n secretly sells his goods.
 &+mand keeps a clean tight ledger of all transactions that happen within this
 &+mguild shop.
 ~
-2058 0 0 8 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2487,8 +2487,8 @@ A &+msleeping merchant&n enjoys some rest.&n
 &+mThis merchant sleeps the day away. He is a very busy person always running
 &+merrands and making deals. The long hours he puts in justifies his snoring.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2501,8 +2501,8 @@ A &+msleeping &+mmember&n finds some rest.&n
 &+ma larger warrior type of individual, rather just an ordinary person you
 &+mmight meet on the street. That is scary in a way.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2516,8 +2516,8 @@ A &+msleeping &+mmember&n finds some rest.&n
 &+msure which one of these guys is lazy and who is not, because they all look
 &+malike to the unsuspecting eye.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2530,8 +2530,8 @@ A &+Lterrifying ViSAgE &nof a &+gsphinx&n is here.&n
 &+Lhis treasure chamber. It is rumored within the city that these things are the
 &+Lsouless who are to weep for eternity in the sultan's service.
 ~
-2099274 1 0 24 268435456 0 0 -500 S
-UG 0 0 7
+2099274 1 0 0 24 268435456 0 0 -500 S
+UG 0 0 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2545,8 +2545,8 @@ nigglenaggle famous gnome chef niggle naggle~
 &+Rhis mind on the job and focuses, he can do anything in the kitchen and creates
 &+Rsome memorable meals.
 ~
-1073743946 1 0 24 0 0 0 -599 S
-PG 0 512 -1
+1073743946 1 0 0 24 0 0 0 -599 S
+PG 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2561,8 +2561,8 @@ sultan audience~
 &+Ygreat power to call his own. The loyalists that protect him do so out of their
 &+Yown will and are his retainers.
 ~
-16803850 1 0 24 0 0 8192 -500 S
-PH 0 513 3
+16803850 1 0 0 24 0 0 8192 -500 S
+PH 0 513 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2575,8 +2575,8 @@ A &+Ythrone room &+Lg&+Yu&+La&+Yrd&n protects the sultan.&n
 &+Yman that looks to have survived many campaigns. He is undoubtably handy with the
 &+Ysort and an experienced killer.
 ~
-2058 1 0 8 0 0 0 0 S
-PH 0 1 -1
+2058 1 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2589,8 +2589,8 @@ A &+gwandering druid&n sits at the bar.
 &+ghowever, this one does not. He is somewhat of a unique individual and must
 &+gposess great &+gpower and will.
 ~
-2122 0 0 24 0 0 0 -500 S
-PH 0 128 -1
+2122 0 0 0 24 0 0 0 -500 S
+PH 0 128 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2602,8 +2602,8 @@ insect thri-kreen thri kreen~
 &+LThis insect chitters something that can not be understood. He is a warrior
 &+Lbug.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2617,8 +2617,8 @@ boof boofukussass ass thri thri-kreen~
 &+Yunderstands anything that he has to say. He is a delicate warrior capable of
 &+Yslicing and dicing anyone up.
 ~
-1073743880 1 0 24 2112 67108864 0 -599 S
-TK 0 1 -1
+1073743880 1 0 0 24 2112 67108864 0 -599 S
+TK 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2631,8 +2631,8 @@ A burly &+Lguard &nensures order in the market.&n
 &+Lbefore it begins. He is well prepared to take on anyone who has the notion
 &+Lof starting trouble. He's very mean.
 ~
-1140852808 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852808 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2645,8 +2645,8 @@ A &+Wtharnadian merchant&n looks for a slave.&n
 &+Wis very wealthy and respected back in tharnadia, however, here hs is just
 &+Wanother prospective buyer of slaves.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2659,8 +2659,8 @@ A &+mwell &+Wdressed merchant&n searches for some fine slaves.
 &+msport an attired similiar to the nobles of tharnadia. He is an older gentleman
 &+mand very weak. Someone should rob him.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2672,8 +2672,8 @@ tiny desert spider~
 &+yThis tiny desert spider searches for food. He is little and can only eat so
 &+ymuch, however, his bite could hurt a hell of a lot and maybe have poison.
 ~
-8 1 0 0 0 0 0 -484 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 -484 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2687,8 +2687,8 @@ the desert encampment. Since the age of ten, when he was forced into this
 lower class society, he's been working anyplace doing anything just for shelter
 and food.
 ~
-2056 0 0 0 0 0 0 -382 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 -382 S
+PH 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2700,8 +2700,8 @@ A small child plays in the sand.&n
 This small child has no home. He was orphaned when he was young and has been
 on his own ever since.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2714,8 +2714,8 @@ This adult is grown. He's dressed moderately well, with all things considering.
 He has a child or two playing in these parts and he looks for them with an
 angry look on his face.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2727,8 +2727,8 @@ brown dog~
 &+yThis dog just will not stop barking. It stinks really badly and needs a master
 &+yto give it a bath.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2740,8 +2740,8 @@ A religious &+Wzealot &npreaches about the end of the world.&n
 &+WThis zealot has come to preach the good word to the heathens. He is extremely
 &+Wdevout and offers these people a chance to save themselves and their souls.
 ~
-2056 0 0 0 0 0 0 -549 S
-PH 0 32 -1
+2056 0 0 0 0 0 0 0 -549 S
+PH 0 32 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2754,8 +2754,8 @@ keeper peace~
 &+Ycivil disbutes between the town folk. He is not one to be trifled with because
 &+Yhe is skilled with the blade.
 ~
-67110922 0 0 0 0 0 0 -589 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 -589 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2768,8 +2768,8 @@ ordinary citizen~
 &+Wcity. He's just so ordinary that its curious why he's even in this city or
 &+Wthis ordinary white washed dwelling.
 ~
-1140852746 0 0 0 0 0 0 -669 S
-PH 0 1 -1
+1140852746 0 0 0 0 0 0 0 -669 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2784,8 +2784,8 @@ burnn~
 &+bmanaged to procure. Now he sells these goods at a higher price to the richer
 &+bcitizens and passerbyers of the city.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2798,8 +2798,8 @@ A &+msleeping &+mmember&n finds some rest.&n
 &+mscars onhimself, which means he's probably a contract killer employed by the
 &+mguild to provide services to men with means.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2812,8 +2812,8 @@ A &+msleeping &+mmember&n finds some rest.&n
 &+mscars onhimself, which means he's probably a contract killer employed by the
 &+mguild to provide services to men with means.
 ~
-1073743882 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2826,8 +2826,8 @@ A &+Lburly&+r bodyguard &nprotects Luncaster.&n
 &+Lluncaster with his person at all times. He even watches over him as he sleeps
 &+Land uses the toilet. They are deadly with the sword.
 ~
-1140852810 0 0 8 0 0 0 -555 S
-PH 0 1 -1
+1140852810 0 0 0 8 0 0 0 -555 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2840,8 +2840,8 @@ blackfoot black foot~
 &+Lblacksmith from some other continent from some other nation for the longest
 &+Ltime and now he sets up shop here.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2853,8 +2853,8 @@ tiny desert spider~
 &+yThis is a small desert spider. I sleeps mostly at night and preys upon anything
 &+yit can during the day.
 ~
-8 0 0 0 0 0 0 -555 S
-AS 0 0 -1
+8 0 0 0 0 0 0 0 -555 S
+AS 0 0 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2865,8 +2865,8 @@ insect thri-kreen thri kreen~
 ~
 &+LThis insect is dangerous. Its many limbs could pummel someone down quickly.
 ~
-2056 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2881,8 +2881,8 @@ A member of the guild &+reats&n some red meat.&n
 &+rmeet him in person. He brings smiles to these members faces and they would do
 &+rall that he asked.
 ~
-1073743882 0 0 0 0 0 0 -566 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -566 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2895,8 +2895,8 @@ A &+ydesert dweller&n enjoys the comfort of shelter.&n
 &+ythings that count the most to this city dweller, like shelft from the sun
 &+yand elements.
 ~
-2058 0 0 8 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2908,8 +2908,8 @@ A &+ydesert traveler&n enjoys a meal.&n
 &+yThis traveler wanders the desert city. He is a casual visitor to this city
 &+yand enjoys the desert lifestyle.
 ~
-2058 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2921,8 +2921,8 @@ A performing &+mbard &nplays a tune.&n
 &+mThis bard plays a merry tune on this instrument. He is wearing a ridiculous
 &+mgarb and but his music soothes the soul.
 ~
-2058 0 0 24 0 0 0 -555 S
-PH 0 32768 -1
+2058 0 0 0 24 0 0 0 -555 S
+PH 0 32768 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2934,8 +2934,8 @@ hoggie chef~
 &+YHoggie is the chef of this fine inn. He cooks anything and everything that
 &+Ya customer could possibly want.
 ~
-2058 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2948,8 +2948,8 @@ deraisem prophet wandering~
 &+Wis a powerful magic user who is reknown for his benevolent teaches and strong
 &+Wwisdom. His potent personality and skills are legendary.
 ~
-1073743946 0 0 24 0 0 0 -555 S
-AN 0 512 -1
+1073743946 0 0 0 24 0 0 0 -555 S
+AN 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2962,8 +2962,8 @@ A &+bfisherman&n is here, testing out a rod.&n
 &+bfor every fish caught. It's not a bad way to earn money in this city and provides
 &+ba regular amount of money.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2976,8 +2976,8 @@ A large &+bfisherman&n is ready to begin fishing.&n
 &+bfor every fish caught. It's not a bad way to earn money in this city and provides
 &+ba regular amount of money.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2989,8 +2989,8 @@ A bulky &+bfisherman&n prepares his equipment.&n
 &+bThis fisherman fishes the shores of the lake. He is a burly man and very
 &+bstrong. He smells like fish and needs a bath.
 ~
-2056 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3003,8 +3003,8 @@ rubaak master~
 &+bmanager of sorts that does the routine that provides the city with fresh fish.
 &+bHe smells horribly.
 ~
-1073743882 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+1073743882 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3018,8 +3018,8 @@ mysterious white robed figure~
 &+Wa soft prayer of some type. By the way he's dressed, he undoubtably a stranger
 &+Wto these lands. Curious.
 ~
-1073743946 0 0 8 0 0 0 999 S
-PH 0 96 -1
+1073743946 0 0 0 8 0 0 0 999 S
+PH 0 96 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3032,8 +3032,8 @@ jolly old merchant~
 &+Min a not so nice way. He's hired cut throats, mercenaries, women, politicians,
 &+Mand god knows what else to get his way. He is not a very nice guy.
 ~
-1073743946 0 0 24 0 0 0 -555 S
-PH 0 96 -1
+1073743946 0 0 0 24 0 0 0 -555 S
+PH 0 96 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3046,8 +3046,8 @@ A &+Ylighthouse&+L sentry&n assists Choad.&n
 &+Ywho would harm him or the lighthouse. He is a skillful warrior adept at keeping
 &+Ythe peace.
 ~
-67110922 0 0 0 0 0 0 -555 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3061,8 +3061,8 @@ goranon hunter~
 &+yformer mines of Khul'Lor in the mountain with a great many baby thris. His
 &+ymission is simple. Seek and destroy the Queen.
 ~
-2058 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+2058 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3075,8 +3075,8 @@ nogglin adventurer~
 &+bsome day. If there were an adventure happening that he could join he would
 &+bdo so in a minute.
 ~
-2122 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+2122 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3089,8 +3089,8 @@ varrgle treasure hunter~
 &+Ya journal of his travels and things. He stands only five feet six, however,
 &+Yhe's deadly with all forms of weaponry.
 ~
-2122 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+2122 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3101,8 +3101,8 @@ large desert scorpion~
 ~
 &+YThis is a large desert scorpion, very dangerous and lethal.
 ~
-8 1 0 0 0 0 0 0 S
-AS 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+AS 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3114,8 +3114,8 @@ tiny desert spider~
 &+YThis tiny desert spider is small and searches for something to eat in this
 &+Yscarce land.
 ~
-8 1 0 0 0 0 0 0 S
-PH 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3126,8 +3126,8 @@ scarab~
 ~
 &+YThis scarab searches for something to eat.
 ~
-8 1 0 0 0 0 0 0 S
-R 0 0 1
+8 1 0 0 0 0 0 0 0 S
+R 0 0 0 1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3139,8 +3139,8 @@ ferocious dog~
 &+yThis dog has no master but its own. It barks loudly when outsiders approach
 &+ythe enampment and immediately attacks them when they're close enough.
 ~
-2058 1 0 0 0 0 0 -555 S
-A 0 0 -1
+2058 1 0 0 0 0 0 0 -555 S
+A 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3152,8 +3152,8 @@ hardened desert nomad~
 &+yThis nomad protects the encampment from outsiders. He would not hesitate to
 &+yslice them in half, which is why he stands guard now.
 ~
-1073743882 1 0 0 0 0 0 -555 S
-PH 0 1 -1
+1073743882 1 0 0 0 0 0 0 -555 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3166,8 +3166,8 @@ aracthos lord~
 &+ycompromise and is prepared to goto great lengths to ensure that outsiders
 &+yare killed on site. He is a ruthless man leading ruthless men.&n
 ~
-2058 1 0 24 0 0 0 -555 S
-PH 0 514 -1
+2058 1 0 0 24 0 0 0 -555 S
+PH 0 514 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3180,8 +3180,8 @@ A &+Cmaster &+cswordsman&n protects aracthos.&n
 &+cfiercely loyal and are willing to goto great lengths to protect the lord. They
 &+care extremely proficient with all swords and knows how to kill.
 ~
-1140852746 0 0 24 0 0 0 -555 S
-PH 0 1 -1
+1140852746 0 0 0 24 0 0 0 -555 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3192,8 +3192,8 @@ vicious desert snake~
 ~
 &+yThis desert snake seeks pray.
 ~
-10 1 0 1048576 0 0 0 -555 S
-RS 0 0 1
+10 1 0 0 1048576 0 0 0 -555 S
+RS 0 0 0 1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3204,8 +3204,8 @@ pike~
 ~
 &+bThis is vicious water pike, it attacks all that enters its domain.
 ~
-8 1 0 0 0 0 0 -555 S
-R 0 0 1
+8 1 0 0 0 0 0 0 -555 S
+R 0 0 0 1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3218,8 +3218,8 @@ armed bodyguard body guard~
 &+mHe stands well over six feet tall with many battlescars apparent on his person.
 &+mHe has a tatoo saying 'Death before dishonor' tatooed on his right shoulder.
 ~
-1140852744 0 0 8 0 0 0 -555 S
-PH 0 1 -1
+1140852744 0 0 0 8 0 0 0 -555 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3232,8 +3232,8 @@ yugly commander high _spec2_~
 &+Won four of the finest swordsman in the city and defeat them with ease. He
 &+Wis truely a dangerous opponent.&n
 ~
-1073743946 1 0 24 268435456 67502080 0 -555 S
-PB 0 1 3
+1073743946 1 0 0 24 268435456 67502080 0 -555 S
+PB 0 1 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3246,8 +3246,8 @@ A &+Wterrifying ViSAgE &nof a &+gsphinx&n is here.&n
 &+Whis treasure chamber. It is rumored within the city that these things are the
 &+Wsouless who are to weep for eternity in the sultan's service.
 ~
-526410 1 0 24 268435456 0 0 -500 S
-UG 0 1 7
+526410 1 0 0 24 268435456 0 0 -500 S
+UG 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3260,8 +3260,8 @@ a &+Lscarred warrior&n~
 &+Lwith. He stands over six feet tall with a sword at his hip, undoubtably he
 &+Lis skilled in the art of killing.
 ~
-1140852746 1 0 8 0 0 0 -555 S
-zo 0 1 -1
+1140852746 1 0 0 8 0 0 0 -555 S
+zo 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3274,8 +3274,8 @@ A &+ggnoll &+Gw&+ri&+gt&+Lc&+Rh&+Gd&+go&+bc&+Bt&+ce&+Yr &nis here, wondering abo
 &+gpurchase his products, things that he creates. He stands less than six feet
 &+gtall and has a hairy mole on his left cheek. Alone he stands.
 ~
-1073743880 0 0 0 0 0 0 -555 S
-PT 0 256 -1
+1073743880 0 0 0 0 0 0 0 -555 S
+PT 0 256 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3288,8 +3288,8 @@ A &+mbrilliant &+Msorcerer&n visits the city bazaar.
 &+mwith normal people. He's cooped up inside his tower all the time studying and
 &+mpondering the secrets of society. He's free here to roam.
 ~
-1073743944 0 0 0 0 0 0 0 S
-PH 0 512 -1
+1073743944 0 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3302,8 +3302,8 @@ A &+Whuman &+Ccleric&n preaches the good word.
 &+Wis on a mission from his god to convert as many peope as he can to his
 &+Wreligion. He is a zealot and preaches nonstop.
 ~
-2056 0 0 0 0 0 0 555 S
-PH 0 32 -1
+2056 0 0 0 0 0 0 0 555 S
+PH 0 32 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3316,8 +3316,8 @@ An &+Yoff&+L-&+yduty &+gpatrolman&n kicks back and relaxes.
 &+greceives a great deal of satisfaction in helping people. He might not know
 &+git, but he is a target by those who would seek to harm the city.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3330,8 +3330,8 @@ An &+rimper&+Bial gua&+rrdian&n protects the stairway.&n
 &+rskilled in the art of swordsmanship as a well trained ranger, but he utterly
 &+rand totally prepared to lay down his life for the sultan.
 ~
-2058 1 0 24 0 0 0 -555 S
-PB 0 1 -1
+2058 1 0 0 24 0 0 0 -555 S
+PB 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3345,8 +3345,8 @@ fugly shipwright~
 &+cable to run the docks. Apparently he's able to keep his eyes on the docks as
 &+cwell as the ships without any extra effort.&n
 ~
-2058 0 0 0 0 0 0 0 S
-pm 0 1 4
+2058 0 0 0 0 0 0 0 0 S
+pm 0 1 0 4
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

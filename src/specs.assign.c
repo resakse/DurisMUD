@@ -797,6 +797,7 @@ void assign_mobiles(void)
 
  mob_index[real_mobile0(132551)].func.mob = world_quest;
  mob_index[real_mobile0(38309)].func.mob = world_quest;
+ mob_index[real_mobile0(49064)].func.mob = world_quest;
 
    mob_index[real_mobile0(132542)].func.mob = tharn_shady_mercenary;
   mob_index[real_mobile0(132543)].func.mob = tharn_shady_youth;
