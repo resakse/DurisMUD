@@ -7,8 +7,8 @@ This huge golem was crafted of obsidian, and has a very reptilian
 appearance.  Lacking wings, but with talon adorned claws, and a
 distinctively snake-like mouth, this construct looks very fearsome.
 ~
-1107363947 1 0 536870936 0 131072 0 -1000 S
-OG 0 1 -1
+1107363947 1 0 0 536870936 0 131072 0 -1000 S
+OG 0 1 0 -1
 54 190 -100 1d20+25000 7d6+40
 0.0.0.0 40000000
 8 8 0
@@ -21,8 +21,8 @@ This tall, reptilian creature is dressed in dark robes, embroidered
 with the designs of the chromatic dragons.  The five colored heads
 intertwine around the robe, forming a star pattern on the back.
 ~
-33622090 1 0 536871064 2048 131072 0 -1000 S
-G 0 1 -1
+33622090 1 0 0 536871064 2048 131072 0 -1000 S
+G 0 1 0 -1
 52 200 -100 1d100+20000 7d6+60
 0.0.0.0 4000000
 8 8 1
@@ -32,8 +32,8 @@ black dragon guard~
 &+LA huge dragon stands here ready to kill intruders.&N
 ~
 ~
-1107363912 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+1107363912 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 56 200 -100 1d100+20000 7d6+60
 0.0.0.0 4000000
 8 8 1
@@ -46,8 +46,8 @@ The ancient wyrm is very tall and thin, rising up some one-hundred
 feet into the air.  It's head is also long and thin, perched upon
 a long neck.
 ~
-33622090 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+33622090 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 58 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 0
@@ -61,8 +61,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-33622090 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+33622090 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 54 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 0
@@ -76,8 +76,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-33622090 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+33622090 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 52 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 2
@@ -91,8 +91,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-1107363914 1 0 536871064 2048 131072 0 -1000 S
-D 0 256 -1
+1107363914 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 256 0 -1
 56 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 0
@@ -106,8 +106,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-1107363914 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+1107363914 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 55 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 0
@@ -121,8 +121,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-33622090 1 0 536871064 2048 131072 0 -1000 S
-D 0 16 -1
+33622090 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 16 0 -1
 55 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 1
@@ -136,8 +136,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-1107363914 1 0 536871064 2048 131072 0 -1000 S
-D 0 512 -1
+1107363914 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 512 0 -1
 55 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 0
@@ -151,8 +151,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-33622090 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+33622090 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 57 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 1
@@ -166,8 +166,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-34670666 1 0 536871064 2048 131072 0 -1000 S
-D 0 512 -1
+34670666 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 512 0 -1
 57 200 -100 1d100+30000 7d6+60
 0.0.0.0 10000000
 8 8 0
@@ -181,8 +181,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-35719242 1 0 536871064 2048 131072 0 -1000 S
-D 0 256 -1
+35719242 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 256 0 -1
 59 200 -100 1d100+30000 7d6+60
 0.0.0.0 10000000
 8 8 2
@@ -195,8 +195,8 @@ This tall, reptilian creature is dressed in dark robes, embroidered
 with the designs of the chromatic dragons.  The five colored heads
 intertwine around the robe, forming a star pattern on the back.
 ~
-1107380302 1 0 538443928 2048 131072 0 -1000 S
-G 0 512 -1
+1107380302 1 0 0 538443928 2048 131072 0 -1000 S
+G 0 512 0 -1
 60 200 -100 1d100+20000 7d6+60
 0.0.0.0 2000000
 8 8 0
@@ -210,8 +210,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-1109461066 1 0 536870936 0 0 0 0 S
-D 0 256 -1
+1109461066 1 0 0 536870936 0 0 0 0 S
+D 0 256 0 -1
 50 200 -100 1d100+30000 7d6+60
 0.0.0.0 10000000
 8 8 2
@@ -224,8 +224,8 @@ The ancient wyrm is very tall and thin, rising up some one-hundred
 feet into the air.  It's head is also long and thin, perched upon
 a long neck.
 ~
-1174472778 1 0 536870936 0 0 0 -1000 S
-D 0 1 -1
+1174472778 1 0 0 536870936 0 0 0 -1000 S
+D 0 1 0 -1
 50 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 0
@@ -236,8 +236,8 @@ oddly clothed man~
 ~
 An oddly clothed man tells you 'You have something for me?'
 ~
-201355338 0 0 524472 296961 67108864 9970208 0 S
-PO 0 550 -1
+201355338 0 0 0 524472 296961 67108864 9970208 0 S
+PO 0 550 0 -1
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -248,8 +248,8 @@ pitiful slave human wretch~
 ~
 &+LThis wretch, practically dead already, begs you to end his torment.&n
 ~
-8396808 0 0 436207656 2 0 67108864 0 S
-PH 0 0 -1
+8396808 0 0 0 436207656 2 0 67108864 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -263,8 +263,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-1107363914 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+1107363914 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 51 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 0
@@ -278,8 +278,8 @@ into the air.  Its huge body and massive wings buffet the air around
 it.  Baleful eyes that have seen countless years, and countless
 armies destroyed, glare in anger at your approach.
 ~
-33622090 1 0 536871064 2048 131072 0 -1000 S
-D 0 1 -1
+33622090 1 0 0 536871064 2048 131072 0 -1000 S
+D 0 1 0 -1
 56 200 -100 1d100+30000 7d6+60
 0.0.0.0 4000000
 8 8 1
