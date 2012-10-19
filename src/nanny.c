@@ -3691,13 +3691,13 @@ void select_race(P_desc d, char *arg)
   case '1':
     GET_RACE(d->character) = RACE_KOBOLD;
     break;
-/*
   case 'p':
     GET_RACE(d->character) = RACE_FIRBOLG;
     break;
   case 'P':
     strcpy(Gbuf, "FIRBOLG");
     break;
+/*
   case 'w':
     GET_RACE(d->character) = RACE_WOODELF;
     break;
