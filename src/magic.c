@@ -7655,15 +7655,19 @@ void spell_sleep(int level, P_char ch, char *arg, int type, P_char victim,
   int      i;
 
   if(GET_STAT(ch) == STAT_DEAD)
+   {
    send_to_char("They are already... quite... asleep... for good.&n\n", ch);
     return;
+   }
 
   if(IS_AFFECTED(ch, AFF_INVISIBLE) || IS_AFFECTED2(ch, AFF2_MINOR_INVIS))
     appear(ch);
 
   if(resists_spell(ch, victim))
-   send_to_char("Your victim resists your attempt to make them sleep.&n\n", ch);
+  { 
+    send_to_char("Your victim resists your attempt to make them sleep.&n\n", ch);
     return;
+  }
 
   if(level > 0)
     for (i = 0; i < MAX_WEAR; i++)
