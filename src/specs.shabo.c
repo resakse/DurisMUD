@@ -213,7 +213,7 @@ int stalker_cloak(P_obj obj, P_char ch, int cmd, char *argument)
         act("You whisper 'reduce' to your $q...", FALSE, ch, obj, obj,
             TO_CHAR);
         act("$n whispers 'reduce' to $q...&N", TRUE, ch, obj, NULL, TO_ROOM);
-        spell_reduce(35, ch, 0, 0, ch, 0);
+        spell_reduce(35, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         obj->timer[0] = curr_time;
       }
       return TRUE;
@@ -235,7 +235,7 @@ int stalker_cloak(P_obj obj, P_char ch, int cmd, char *argument)
         act("You whisper 'enlarge' to your $q...", FALSE, ch, obj, obj,
             TO_CHAR);
         act("$n whispers 'enlarge' to $q...&N", TRUE, ch, obj, NULL, TO_ROOM);
-        spell_enlarge(35, ch, 0, 0, ch, 0);
+        spell_enlarge(35, ch, 0, SPELL_TYPE_SPELL, ch, 0);
         obj->timer[0] = curr_time;
       }
       return TRUE;
