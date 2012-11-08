@@ -45,10 +45,11 @@
 #include "events.h"
 #include "ships/ships.h"
 
+
 extern P_desc descriptor_list;
 extern const struct race_names race_names_table[];
 extern P_room world;
-
+extern void purge_linked_auras(P_char ch);
 
 
 struct mm_ds *dead_group_pool = NULL;
@@ -563,8 +564,9 @@ void do_group(P_char ch, char *argument, int cmd)
         }
       }
       group_remove_member(ch);
-
-
+      purge_linked_auras(ch);
+      REMOVE_BIT(ch->specials.affected_by3, AFF3_PALADIN_AURA);
+      clear_links(ch, LNK_PALADIN_AURA);
     }
     //Client
     for (gl = ch->group; gl; gl = gl->next)

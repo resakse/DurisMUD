@@ -11,8 +11,8 @@ webbed hands and feet and fins protruding from its back.  It has no eyes
 that you can see, no teeth or tongue in its mouth, and doesn't seem to
 acknowledge the presense of any non-ethereal creatures.
 ~
-33716424 1 0 134217784 2048 0 0 0 S
-UG 0 4 -1
+33716424 1 0 0 134217784 2048 0 0 0 S
+UG 0 4 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -22,8 +22,8 @@ shadow demon~
 &+LA demon of the shadows looms out of the mist.&n
 ~
 ~
-1174423560 1 0 135790712 2048 0 0 -1000 S
-X 0 1 -1
+1174423560 1 0 0 135790712 2048 0 0 -1000 S
+X 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ ethereal plains, looking like some horrible nightmare that's come to life.
 Burning red eyes, hot with rage and battle lust, peer out over the barren
 landscape of the Ethereal Plane.
 ~
-16392 1 0 134742072 2048 0 0 -1000 S
-PO 0 1 -1
+16392 1 0 0 134742072 2048 0 0 -1000 S
+PO 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -48,8 +48,8 @@ hound phaze~
 &+bA large phaze hound strides across the ethereal plane.&n
 ~
 ~
-1073760264 1 0 1572920 2048 0 0 -500 S
-ug 0 16777216 -1
+1073760264 1 0 0 1572920 2048 0 0 -500 S
+ug 0 16777216 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -61,8 +61,8 @@ vortex demon _block_down_~
    At the heart of the maelstrom, this vortex demon thrashes about madly,
 a towering incarnation of the vortex's chaotic nature.
 ~
-1107982346 1 0 134217752 14528 0 0 -1000 S
-X 0 1048576 -1
+1107982346 1 0 0 134217752 14528 0 0 -1000 S
+X 0 1048576 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -75,8 +75,8 @@ shadow guardian golem~
 plains are composed, stands here.  Passage up the stairway is blocked by
 the mighty creation.
 ~
-67127370 1 0 73784 2048 0 0 0 S
-OG 0 1 -1
+67127370 1 0 0 73784 2048 0 0 0 S
+OG 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -89,8 +89,8 @@ shadow guardian golem~
 plains are composed, stands here.  Passage up the stairway is blocked by
 the mighty creation.
 ~
-67127370 1 0 73784 2048 0 0 0 S
-OG 0 1048576 -1
+67127370 1 0 0 73784 2048 0 0 0 S
+OG 0 1048576 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -103,8 +103,8 @@ shadow guardian golem~
 plains are composed, stands here.  Passage up the stairway is blocked by
 the mighty creation.
 ~
-67127370 1 0 73784 2048 0 0 0 S
-OG 0 64 -1
+67127370 1 0 0 73784 2048 0 0 0 S
+OG 0 64 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -123,8 +123,8 @@ to trick the immortal Lord of &+rD&+yr&+ge&+wa&+cm&+rs&n... but &+RAramus&n lear
 and destroyed the spirit of the mighty warrior, cursing him to live in the
 eerie &+Bworld of dreams&n forever.
 ~
-1174947854 1 0 100663608 2050 0 0 -1000 S
-GI 0 276 -1
+1174947854 1 0 0 100663608 2050 0 0 -1000 S
+GI 0 276 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -139,8 +139,8 @@ easier for him to travel in the ocean of multi-colored fog.  He searches
 the area for prey such as the ethereal swimmers or other natives to the
 ethereal plane.
 ~
-1107314696 1 0 56 2048 0 0 -1000 S
-AC 0 4 -1
+1107314696 1 0 0 56 2048 0 0 -1000 S
+AC 0 4 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -153,8 +153,8 @@ A ghostly image of some horribly disfigured warrior, this thing moves
 around the fortress in a mindless shuffle.  Seeking only vengeance against
 the living, this grim spectre guards the tower in an eternal vigil.
 ~
-1174423564 1 0 268435608 264192 67108864 0 -1000 S
-UG 0 1 -1
+1174423564 1 0 0 268435608 264192 67108864 0 -1000 S
+UG 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -170,8 +170,8 @@ present on its face, nor does the creature have any hair on its body.
 Sharp blade-like spines cover its body, giving the nightmarish creature
 its name.
 ~
-1140869196 1 0 268959770 2048 67108864 8401920 -1000 S
-UV 0 2097152 -1
+1140869196 1 0 0 268959770 2048 67108864 8401920 -1000 S
+UV 0 2097152 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -188,8 +188,8 @@ indicating ownership.  Ravagers are mean-spirited beasts, standing
 anywhere from 4 to 8 feet in height, a thick collection of muscle and
 teeth with thought of only war and destruction.
 ~
-1140881482 1 0 536870968 2112 0 0 0 S
-X 0 1048640 -1
+1140881482 1 0 0 536870968 2112 0 0 0 S
+X 0 1048640 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -203,8 +203,8 @@ multiple eyes watching everything in the area.  Some of the beast's
 eyestalks have rotted and fallen away, while other eyes have become filmed
 over and no longer move.
 ~
-1175091274 1 0 369098936 2048 0 0 -1000 S
-BH 0 2097668 -1
+1175091274 1 0 0 369098936 2048 0 0 -1000 S
+BH 0 2097668 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -219,8 +219,8 @@ alerted to the intrusion of the fortress.  His face is expressionless as
 he observes his surroundings, but his actions certainly don't lack
 expression as he grips his halberd tightly and moves to attack.
 ~
-1174947918 1 0 167772472 34818 0 0 -1000 S
-G 0 1048644 -1
+1174947918 1 0 0 167772472 34818 0 0 -1000 S
+G 0 1048644 0 -1
 60 211 -110 1d1+23000 9d6+70
 0.0.45.7 228560
 8 8 1
@@ -237,8 +237,8 @@ indicating ownership.  Ravagers are mean-spirited beasts, standing
 anywhere from 4 to 8 feet in height, a thick collection of muscle and
 teeth with thought of only war and destruction.
 ~
-1075857484 1 0 269484314 47326 67108864 8401920 -1000 S
-PL 0 2105860 -1
+1075857484 1 0 0 269484314 47326 67108864 8401920 -1000 S
+PL 0 2105860 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -253,8 +253,8 @@ soul repear figure cloaked~
 &+Lare shrouded in his clothing, and he nevers looks up so his face is always
 &+Lburied in his hood.
 ~
-1140869194 1 0 939524184 14528 0 0 -500 S
-UV 0 1 -1
+1140869194 1 0 0 939524184 14528 0 0 -500 S
+UV 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -267,8 +267,8 @@ red slaad~
 thrives on chaos and confusion.  A large glowing symbol of Aramus, the
 Dreameater, has been emblazoned on the slaad's forehead.
 ~
-67651658 1 0 805306392 2048 0 0 -1000 S
-OG 0 64 -1
+67651658 1 0 0 805306392 2048 0 0 -1000 S
+OG 0 64 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -281,8 +281,8 @@ blue slaad~
 thrives on chaos and confusion.  A large glowing symbol of Aramus, the
 Dreameater, has been emblazoned on the slaad's forehead.
 ~
-1141393482 1 0 805306456 2048 0 0 -1000 S
-OG 0 16 -1
+1141393482 1 0 0 805306456 2048 0 0 -1000 S
+OG 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -295,8 +295,8 @@ A giant grey slaad flexes his clawed hands as he waits.
 thrives on chaos and confusion.  A large glowing symbol of Aramus, the
 Dreameater, has been emblazoned on the slaad's forehead.
 ~
-67127370 1 0 805306392 2049 0 0 -1000 S
-G 0 1048576 -1
+67127370 1 0 0 805306392 2049 0 0 -1000 S
+G 0 1048576 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -309,8 +309,8 @@ death slaad~
 from his throne.  Hired or enslaved by Aramus, he and his slaadi have been
 assigned the duty of protecting this area of the tower.
 ~
-1107843146 1 0 805306456 14529 0 0 0 S
-G 0 1048640 -1
+1107843146 1 0 0 805306456 14529 0 0 0 S
+G 0 1048640 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -324,8 +324,8 @@ shape.  Most likely this is a real person who has fallen asleep and dreamt
 their way into the realm of the Dreameaster.  Many people die from this
 fate, since death in this reality causes death in the real world as well.
 ~
-26698 0 0 33554712 2050 0 0 1000 S
-UG 0 2 -1
+26698 0 0 0 33554712 2050 0 0 1000 S
+UG 0 2 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -340,8 +340,8 @@ else within its reach.  Like a gladiator in an arena fight, this monster is
 obviously deep within a battle rage and yearns only for the blood of his
 opponents.
 ~
-18504 1 0 570425624 2049 0 0 -1000 S
-EF 0 1 -1
+18504 1 0 0 570425624 2049 0 0 -1000 S
+EF 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -356,8 +356,8 @@ else within its reach.  Like a gladiator in an arena fight, this monster is
 obviously deep within a battle rage and yearns only for the blood of his
 opponents.
 ~
-1073760328 1 0 570425624 2049 0 0 -1000 S
-EF 0 32 -1
+1073760328 1 0 0 570425624 2049 0 0 -1000 S
+EF 0 32 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -371,8 +371,8 @@ frolics through the trees, without a care in the world.  From time to time
 though, you think you can see him look up at you with a &+rdeep, evil red
 &+rgaze&n.  Nahhhh, it's only a rabbit.  Must be your imagination.
 ~
-8413192 0 0 16 2048 0 0 0 S
-X 0 0 -1
+8413192 0 0 0 16 2048 0 0 0 S
+X 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -388,8 +388,8 @@ at the wind as it blows playfully and carefree through the garden.  He
 glances over at you, and for a millisecond, a feeling of &+Lsheer horror&n passes
 through you.  Odd.  It is only a squirrel after all.
 ~
-8413192 0 0 16 2048 0 0 0 S
-X 0 0 -1
+8413192 0 0 0 16 2048 0 0 0 S
+X 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -407,8 +407,8 @@ into the depths of your soul and bringing your worst nightmares to the
 surface... then he's back to quacking happily at the bugs and fish and you
 stand wondering what the heck just happened.
 ~
-8413192 0 0 16 2048 0 0 0 S
-X 0 0 -1
+8413192 0 0 0 16 2048 0 0 0 S
+X 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -425,8 +425,8 @@ to light up the already pleasant forest.  Apparently you aren't what she was
 hoping for, because she looks back down at the ground and starts to softly
 cry again.
 ~
-24650 0 0 301990200 2048 0 0 1000 S
-PH 0 0 -1
+24650 0 0 0 301990200 2048 0 0 1000 S
+PH 0 0 0 -1
 10 30 -20 1d1+10000 2d4+3
 0.0.0.0 0
 6 6 2
@@ -440,8 +440,8 @@ branches around in a berserk manner.  Possessed by some demonic spirit of
 the forest, it now hungers for the blood of any living being that tries to
 pass north.
 ~
-100689994 1 0 855646520 14530 0 0 0 S
-VT 0 16 -1
+100689994 1 0 0 855646520 14530 0 0 0 S
+VT 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -455,8 +455,8 @@ has apparently moved to attempt to block passage north.  Its branches whip
 around like a living tornado, mindless thrashing at the ground, other trees,
 and anything foolish enough to be on the path.
 ~
-117467210 1 0 587276600 14528 0 0 0 S
-VT 0 1048576 -1
+117467210 1 0 0 587276600 14528 0 0 0 S
+VT 0 1048576 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -470,8 +470,8 @@ of burnt hair, sickly pink skin, and bony spikes that jut out like
 razor-sharp spines.  Fiendish red eyes glow in malicious hatred of all
 living things, and the beasts fangs drip with a poisonous saliva.
 ~
-100821066 1 0 838861112 2051 0 0 -1000 S
-X 0 3145792 -1
+100821066 1 0 0 838861112 2051 0 0 -1000 S
+X 0 3145792 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -487,8 +487,8 @@ with power, this demoness is seductively beautiful as she attacks.
 Lightning crackles from the her fingertips, and her four arms move in
 impossibly quick physical attacks.
 ~
-1192257610 1 0 905970104 2050 0 0 -1000 S
-X 0 836 -1
+1192257610 1 0 0 905970104 2050 0 0 -1000 S
+X 0 836 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -503,8 +503,8 @@ His face is bright red as he rages on about sin, heathen gods, and the
 superiority of his religion.  His white robes flutter about him wildly as
 he makes expansive gestures with his hands to punctuate his tirade.
 ~
-1174956362 1 0 33628472 34844 0 0 1000 S
-PH 0 96 -1
+1174956362 1 0 0 33628472 34844 0 0 1000 S
+PH 0 96 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -520,8 +520,8 @@ Her hair is a brilliant purple color, obviously dyed.  Her lips match her
 hair color, and her short black robe, covered in glittering sequence,
 barely seems to cover her lithe frame.
 ~
-1191209066 1 0 33628472 34844 0 0 -1000 S
-PL 0 32 -1
+1191209066 1 0 0 33628472 34844 0 0 -1000 S
+PL 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -537,8 +537,8 @@ His left eye has been filmed over, and where his left ear should be there
 is now only an ugly bump.  He stomps around in a small circular path as he
 rants, doing small loops but never leaving the colored stone circle.
 ~
-1174432842 1 0 33628472 34844 0 0 -1000 S
-HG 0 288 -1
+1174432842 1 0 0 33628472 34844 0 0 -1000 S
+HG 0 288 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -554,8 +554,8 @@ pair of gold-rimmed spectacles are balanced precariously on his nose.
 It's amazing they haven't fallen off yet, as he occassionlly whips his
 head around at a new victim to shout at.
 ~
-1174432330 1 0 33628472 34844 0 0 1000 S
-PM 0 33 -1
+1174432330 1 0 0 33628472 34844 0 0 1000 S
+PM 0 33 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -569,8 +569,8 @@ of burnt hair, sickly pink skin, and bony spikes that jut out like
 razor-sharp spines.  Fiendish red eyes glow in malicious hatred of all
 living things, and the beasts fangs drip with a poisonous salivy.
 ~
-1174562888 1 0 838861112 2051 0 0 -1000 S
-X 0 84 -1
+1174562888 1 0 0 838861112 2051 0 0 -1000 S
+X 0 84 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -587,8 +587,8 @@ aramus dreameater _ignore_ _size_gargantuan_ br_s~
 &+Rintrusion.  His reptilian body begins to shimmer with light, and he
 &+Rscreams as the battlerage kicks in.
 ~
-1192392779 1 0 973676856 14558 0 0 -1000 S
-D 0 517 -1
+1192392779 1 0 0 973676856 14558 0 0 -1000 S
+D 0 517 0 -1
 60 250 -400 30d10+12000 12d6+70
 0.0.0.2500 12370840
 8 8 1
@@ -600,8 +600,8 @@ drow paladin demon _ignore_~
 A demonic creation of the Dreameater, this drow paladin rushes to protect
 Aramus, Lord of the Ethereal Plane.
 ~
-33712138 1 0 973078904 2050 0 0 1000 S
-PL 0 8 -1
+33712138 1 0 0 973078904 2050 0 0 1000 S
+PL 0 8 0 -1
 55 174 -116 1000d4+12000 7d6+34
 71.34.25.4 210600
 8 8 1
@@ -613,8 +613,8 @@ ogre druid demon _ignore_~
 A horrible creation of the Otherworld of Dreams, this ogre druid appears
 from the portal to the dream world and moves to defend Aramus.
 ~
-100823050 1 0 838861176 2050 0 0 0 S
-PO 0 128 -1
+100823050 1 0 0 838861176 2050 0 0 0 S
+PO 0 128 0 -1
 56 181 -114 1200d4+13000 7d6+40
 60.34.23.3 206550
 8 8 1
@@ -626,8 +626,8 @@ dwarf conjurer demon _ignore_~
 A spawn of the chaos of the Otherworld, a dwarven sorcerer rages against
 the attack on Aramus.
 ~
-101347402 1 0 167772440 2050 0 0 -1000 S
-PM 0 2048 -1
+101347402 1 0 0 167772440 2050 0 0 -1000 S
+PM 0 2048 0 -1
 53 164 -132 1200d10+8000 7d6+35
 46.31.17.4 240570
 8 8 1
@@ -639,8 +639,8 @@ human psi psionicist demon _ignore_~
 A human mentalist, imbibed with a demonic spirit from the world of dreams,
 rushes to defend Aramus.
 ~
-101609546 1 0 436207896 2048 0 0 -1000 S
-PH 0 4 -1
+101609546 1 0 0 436207896 2048 0 0 -1000 S
+PH 0 4 0 -1
 55 179 -145 1000d4+12000 7d6+43
 134.57.34.12 213450
 8 8 0
@@ -655,8 +655,8 @@ form wraith~
 &+Lthe ethereal, as it is a form of undead its hate for the living is&N
 &+Lwithout equal. Its dark form crackles with powerful energy.&N
 ~
-147532 1 0 24 2048 0 0 -500 S
-UG 0 512 -1
+147532 1 0 0 24 2048 0 0 -500 S
+UG 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -672,8 +672,8 @@ illithid robed ixilik~
 &+gEthereal&+L Stalker, &+YYves.&+M It however takes notice of your entry&N
 &+Mand turns to hurl its slaying magic upon you.&N
 ~
-1073760330 1 0 24 2048 0 0 0 S
-MF 0 516 -1
+1073760330 1 0 0 24 2048 0 0 0 S
+MF 0 516 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -695,8 +695,8 @@ creature neogi shadow~
 &+cimmense and it appears it is looking for new slaves. Those that won't&N
 &+cbecome slaves willingly, are destroyed.&N
 ~
-1083197512 1 0 134217752 264192 0 8192 -1000 S
-x 0 4 -1
+1083197512 1 0 0 134217752 264192 0 8192 -1000 S
+x 0 4 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

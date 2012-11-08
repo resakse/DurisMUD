@@ -1560,6 +1560,12 @@ void show_char_to_char(P_char i, P_char ch, int mode)
             strcat(buffer, ", floating");
           if (!IS_RIDING(i))
             strcat(buffer, " here");
+
+              if (IS_SET(i->specials.act3, PLR3_FRAGLEAD))
+		  strcat(buffer, " (&+rF&+Rr&+ra&+Rg &+rL&+Ro&+rr&+Rd&n&N)");
+		if (IS_SET(i->specials.act3, PLR3_FRAGLOW))
+		  strcat(buffer, " (&+yFrag &+YFood&n&N)");
+	  //drannak2
           break;
         }
         if (IS_RIDING(i))
@@ -5841,6 +5847,12 @@ void do_who(P_char ch, char *argument, int cmd)
 		if (IS_SET((who_list[j])->specials.act2, PLR2_NEWBIE_GUIDE))
 		  strcat(who_output, " (&+GGuide&N)");
 
+                if (IS_SET((who_list[j])->specials.act3, PLR3_FRAGLEAD))
+		  strcat(who_output, " (&+rF&+Rr&+ra&+Rg &+rL&+Ro&+rr&+Rd&n&N)");
+
+                if (IS_SET((who_list[j])->specials.act3, PLR3_FRAGLOW))
+		  strcat(who_output, " (&+yFrag &+YFood&n&N)");
+
 		if( ( IS_TRUSTED(ch) || IS_NEWBIE_GUIDE(ch) ) && IS_NEWBIE(who_list[j]) ) {
 			strcat(who_output, " (&+GNewbie&N)");
 		}
@@ -7869,8 +7881,9 @@ void do_scan(P_char ch, char *argument, int cmd)
           {
              sprintf(buf, "$N is %s here.", GET_POS(vict) == POS_PRONE ? "reclining" : GET_POS(vict) == POS_KNEELING ? "kneeling" : GET_POS(vict) == POS_SITTING ? "sitting" : "standing");
              act(buf , FALSE, ch, 0, vict, TO_CHAR);
+             
              found = TRUE;
-          }
+          } //drannak
         }
     if (!found)
       send_to_char("Noone here that you can see.\r\n", ch);

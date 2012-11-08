@@ -1864,11 +1864,11 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
     if(IS_MAP_ROOM(ch->in_room))
     {
       // Probably too simple, just count the number of allies in a room.
-      //noise_var = get_number_allies_in_room(ch, ch->in_room);
-	noise_var = get_weight_allies_in_room(ch, ch->in_room); //changing to use weight code - 10/5/2012 Drannak
+      noise_var = get_number_allies_in_room(ch, ch->in_room);
+	//noise_var = get_weight_allies_in_room(ch, ch->in_room); //changing to use weight code - 10/5/2012 Drannak
       
       // Let us randomize the noise a tad.
-      //noise_var = noise_var + number(-1, 1);
+      noise_var = noise_var + number(-1, 1);
       
       // Sounds suppression threshold is 13.
       if(affected_by_spell(ch, SPELL_SUPPRESSION) &&
@@ -1916,7 +1916,7 @@ void send_movement_noise(P_char ch, int num)
       }
       
       int dist = calculate_map_distance(ch->in_room, i->character->in_room);
-/*
+
       if(num >= 20 &&
          dist <= 400)
       {
@@ -1941,7 +1941,7 @@ void send_movement_noise(P_char ch, int num)
       {
         send_to_char("&+cYou hear the sounds of movement in the distance.&n\r\n", i->character);
       }
-*/
+/*
       if(num >= 30 &&
          dist <= 400)
       {
@@ -1972,6 +1972,7 @@ void send_movement_noise(P_char ch, int num)
       {
        send_to_char("&nYou can hear the sound of &+ymovement &nin the distance.&n\r\n", i->character);
       }
+*/
     }
   }
 }

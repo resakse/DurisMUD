@@ -617,7 +617,7 @@ void checkFragList_internal(P_char ch, char type)
     logit(LOG_DEBUG, buffer);
     return;
   }
-
+  char     tmp_buf[MAX_STRING_LENGTH];
   pfrags = ch->only.pc->frags;
 
   /* read ten highest */
@@ -633,6 +633,21 @@ void checkFragList_internal(P_char ch, char type)
     }
 
     fscanf(fraglist, "%s %d\n", highPlayerName[i], &highFrags[i]);
+    
+    if(isname(highPlayerName[1], GET_NAME(ch)))
+       {
+        //spell_biofeedback(60, ch, 0, 0, ch, 0);
+        SET_BIT(ch->specials.act3, PLR3_FRAGLEAD);
+	}
+    if(!isname(highPlayerName[1], GET_NAME(ch)))
+      {
+        REMOVE_BIT(ch->specials.act3, PLR3_FRAGLEAD);
+      }
+
+     //debug("&+gKick&n (%s) chance (%d) at (%s).", GET_NAME(ch), highPlayerName[0], highPlayerName[i]);
+
+    //highPlayerName[1]->player.title = "&+WVICTORY!&n";
+    
   }
 
 /* read ten lowest */
@@ -648,6 +663,16 @@ void checkFragList_internal(P_char ch, char type)
     }
 
     fscanf(fraglist, "%s %d\n", lowPlayerName[i], &lowFrags[i]);
+     if(isname(lowPlayerName[1], GET_NAME(ch)))
+       {
+        //spell_biofeedback(60, ch, 0, 0, ch, 0);
+        SET_BIT(ch->specials.act3, PLR3_FRAGLOW);
+	}
+    if(!isname(lowPlayerName[1], GET_NAME(ch)))
+      {
+        REMOVE_BIT(ch->specials.act3, PLR3_FRAGLOW);
+      }
+
   }
 
   fclose(fraglist);

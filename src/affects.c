@@ -334,6 +334,11 @@ int calculate_hitpoints(P_char ch)
    * -Zion 10/31/07 (happy halloween!)
    */
 
+  if(IS_AFFECTED3(ch, AFF3_PALADIN_AURA) && (GET_RACEWAR(ch) == 1))
+   {
+    hps = (hps + (GET_LEVEL(ch) * 3));
+   }
+
   if (IS_ILLITHID(ch))
   {
     // 10 hps at level 1, 1 points in max con = 1 hp, gains 1 hp per level.

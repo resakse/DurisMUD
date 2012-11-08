@@ -883,6 +883,10 @@ struct room_data {
 #define PLR2_NEWBIE_GUIDE  BIT_31
 #define PLR2_ACC           BIT_32
 
+/* For players : specials.act3 */
+#define PLR3_FRAGLEAD      BIT_1  /* FragList Leader */
+#define PLR3_FRAGLOW       BIT_2  /* Lowest Fragger */
+
 /* For players : Prompt flags (16 bits max) */
 #define PROMPT_NONE        BIT_1
 #define PROMPT_HIT         BIT_2
@@ -1240,6 +1244,7 @@ struct char_special_data {
   ubyte position;               /* posture and status                      */
   unsigned int act;             /* flags for NPC behavior                  */
   unsigned int act2;            /* extra toggles - Zod                     */
+  unsigned int act3;            /* achievement flags - Drannak             */
 
   int           base_combat_round;
   int           combat_tics;
