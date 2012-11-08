@@ -663,16 +663,16 @@ void checkFragList_internal(P_char ch, char type)
     }
 
     fscanf(fraglist, "%s %d\n", lowPlayerName[i], &lowFrags[i]);
-     if(isname(lowPlayerName[1], GET_NAME(ch)))
+     if(isname(lowPlayerName[0], GET_NAME(ch)))
        {
         //spell_biofeedback(60, ch, 0, 0, ch, 0);
         SET_BIT(ch->specials.act3, PLR3_FRAGLOW);
 	}
-    if(!isname(lowPlayerName[1], GET_NAME(ch)))
+    if(!isname(lowPlayerName[0], GET_NAME(ch)))
       {
         REMOVE_BIT(ch->specials.act3, PLR3_FRAGLOW);
       }
-
+     //debug("&+gKick&n (%s) chance (%d) at (%s).", GET_NAME(ch), lowPlayerName[1], lowPlayerName[i]);
   }
 
   fclose(fraglist);
