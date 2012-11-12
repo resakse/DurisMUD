@@ -2132,7 +2132,10 @@ void die(P_char ch, P_char killer)
       affect_remove(ch, af);
     }
   }
-  
+
+      REMOVE_BIT(ch->specials.affected_by3, AFF3_PALADIN_AURA);
+      clear_links(ch, LNK_PALADIN_AURA);
+
   /* switched god */
   if(ch->desc &&
      ch->desc->original &&

@@ -336,7 +336,11 @@ int calculate_hitpoints(P_char ch)
 
   if(IS_AFFECTED3(ch, AFF3_PALADIN_AURA) && (GET_RACEWAR(ch) == 1))
    {
-    hps = (hps + (GET_LEVEL(ch) * 3));
+    if(ch->group)
+	{
+    	 if(ch->in_room == ch->group->ch->in_room)
+    	 hps = (hps + BOUNDED(1, (GET_LEVEL(ch) * 2), 110));
+	}
    }
 
   if (IS_ILLITHID(ch))

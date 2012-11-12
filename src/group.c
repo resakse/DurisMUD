@@ -830,6 +830,8 @@ bool group_remove_member(P_char ch)
        (who is the second person in the group list */
     for (elem = gl->next; elem; elem = elem->next)
     {
+      if (IS_AFFECTED3(elem->ch, AFF3_PALADIN_AURA))
+      purge_linked_auras(elem->ch);
       if (in_command_aura(elem->ch))
         remove_aura_message(elem->ch, ch);
       elem->ch->group = gl->next;

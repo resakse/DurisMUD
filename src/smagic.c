@@ -2991,7 +2991,10 @@ void spell_malison(int level, P_char ch, char *arg, int type, P_char victim,
   }
 
   if(NewSaves(victim, SAVING_SPELL, 2))
-    return;
+  {
+	send_to_char("Your victim has saved against your malison spell!&n\n", ch);  
+  	return;
+  }
 
   bzero(&af, sizeof(af));
 

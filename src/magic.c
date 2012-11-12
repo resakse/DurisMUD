@@ -6168,7 +6168,7 @@ void spell_curse(int level, P_char ch, char *arg, int type, P_char victim, P_obj
 
   if(IS_TRUSTED(victim) || affected_by_spell(victim, SPELL_CURSE))
   {
-    send_to_char("Aren't they already cursed enough?", ch);
+    send_to_char("Aren't they already cursed enough?\r", ch);
     return;
   }
 
@@ -6184,15 +6184,18 @@ void spell_curse(int level, P_char ch, char *arg, int type, P_char victim, P_obj
   }
   else if(IS_GREATER_RACE(victim) || IS_ELITE(victim))
   {
-     if(!NewSaves(victim, SAVING_SPELL, 5))
+     if(NewSaves(victim, SAVING_SPELL, 5))
+     send_to_char("Your victim has saved against your curse spell!&n\n", ch);
        return;
   }
-  else if(IS_NPC(victim) && !NewSaves(victim, SAVING_SPELL, 10))
+  else if(IS_NPC(victim) && NewSaves(victim, SAVING_SPELL, 10))
   {
+   send_to_char("Your victim has saved against your curse spell!&n\n", ch);
       return;
   }
-  else if(IS_PC(victim) && !NewSaves(victim, SAVING_SPELL, 0))
+  else if(IS_PC(victim) && NewSaves(victim, SAVING_SPELL, 0))
   {
+    send_to_char("Your victim has saved against your curse spell!&n\n", ch);
      return;
   }
   else
