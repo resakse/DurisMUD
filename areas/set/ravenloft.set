@@ -1,4 +1,4 @@
 set MainZoneName ravenloft
-set LASTCOMMAND load o 25745
-set STARTROOM 58449
+set LASTCOMMAND l
+set STARTROOM 58564
 set ObjAffect true

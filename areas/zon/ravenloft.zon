@@ -512,8 +512,6 @@ O 0 360 1 58449 100 0 0 0          * (object type not in this .obj file)
 O 0 58424 1 58449 100 0 0 0        * the tome of Strahd
 O 0 58427 1 58449 100 0 0 0        * a glorious copper mallet
 O 0 914 1 58449 100 0 0 0          * (object type not in this .obj file)
-O 0 915 1 58449 100 0 0 0          * (object type not in this .obj file)
-O 0 25745 1 58449 100 0 0 0        * (object type not in this .obj file)
 O 0 58392 1 58453 100 0 0 0        * some dirty beds
 P 1 58335 4 58392 100 0 0 0        *   some change
 P 1 58336 4 58392 100 0 0 0        *   some change
@@ -535,6 +533,8 @@ P 1 58374 1 58372 100 0 0 0        *   a small heap of coins
 O 0 58404 1 58552 100 0 0 0        * the altar of blood
 O 0 58406 1 58560 100 0 0 0        * the bone throne of slime
 O 0 58430 1 58564 100 0 0 0        * a sword case
+P 1 25745 1 58430 100 0 0 0        *   (object type not in this .obj file)
+O 0 915 1 58564 100 0 0 0          * (object type not in this .obj file)
 *
 M 0 58304 3 58302 100 0 0 0        * a large gargoyle
 E 1 58314 26 16 100 0 0 0          *   a stone claw

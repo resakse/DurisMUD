@@ -735,12 +735,12 @@ A
 A
 19 3
 #25745
-sunlash whip injustice pain barbed unique~
-&+YSunlash&+W, &+Lthe barbed whip of &+rInjustice &+Land &+rPain&n~
-&+yA glowing cat-o-nine-tails whip lies here &+Ypulsating.&n~
+sunblade sword~
+&+YSunblade&+W, the longsword of &+YJustice&n~
+&+YSome idiot has left Sunblade here on the floor!&n~
 ~
-5 43 4 0 15 100 271720456 8193 64 0 0
-14 6 4 3 0 0 0 0
+5 35 4 0 15 100 271720457 8193 64 0 0
+5 6 6 3 0 0 0 0
 20 1000000 100 536870912 0 0 0
 E
 sunlash whip injustice pain barbed~
@@ -755,9 +755,9 @@ ensued in the realm of Ravenloft, and in the midst of the horrific struggle
 between the forces of good and evil, a Vistani agent stole the whip...
 ~
 A
-18 9
+18 7
 A
-19 3
+19 7
 #25746
 key mist~
 &+ca small key of mist&n~

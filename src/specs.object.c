@@ -4077,20 +4077,20 @@ int sunblade(P_obj obj, P_char ch, int cmd, char *arg)
   
   if (cmd == CMD_PERIODIC)
   {
-    // if (OBJ_WORN(obj))
-    // {
-      // temp_ch = obj->loc.wearing;
-      // curr_time = time(NULL);
+     if (OBJ_WORN(obj))
+     {
+       temp_ch = obj->loc.wearing;
+       curr_time = time(NULL);
 
-      // if (!has_skin_spell(temp_ch) &&
-          // obj->timer[0] +
-          // (int) get_property("timer.stoneskin.artifact.sunblade", 30) <= curr_time)
-      // {
-        // spell_stone_skin(45, temp_ch, 0, SPELL_TYPE_POTION, temp_ch, 0);
-        // obj->timer[0] = curr_time;
-        // return TRUE;
-      // }
-    // }
+       if (!has_skin_spell(temp_ch) &&
+           obj->timer[0] +
+           (int) get_property("timer.stoneskin.artifact.sunblade", 30) <= curr_time)
+       {
+         spell_stone_skin(45, temp_ch, 0, SPELL_TYPE_POTION, temp_ch, 0);
+         obj->timer[0] = curr_time;
+         return TRUE;
+       }
+     }
     hummer(obj);
     return TRUE;
   }
