@@ -2489,15 +2489,18 @@ void die(P_char ch, P_char killer)
         deleteCharacter(ch);
         free_char(ch);
         ch = NULL;
-	if (!IS_PC_PET(ch))
-	{
-	  check_boon_completion(killer, ch, 0, BOPT_MOB);
-	  check_boon_completion(killer, ch, 0, BOPT_RACE);
-	}
+	
         return;
       }
+  
+			// This code has never been tested, so commenting out. Torgal 11/21/12
+			//if (!IS_PC_PET(ch))
+			//{
+	  	//	check_boon_completion(killer, ch, 0, BOPT_MOB);
+	  	//	check_boon_completion(killer, ch, 0, BOPT_RACE);
+			//}    
       
-      GET_MANA(ch) = 0;
+			GET_MANA(ch) = 0;
 
       for(af = ch->affected; af; af = next_af)
       {
