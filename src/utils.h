@@ -897,10 +897,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define GOOD_RACE(ch) RACE_GOOD(ch)
 #define PUNDEAD_RACE(ch) RACE_PUNDEAD(ch)
 
-#define USES_COMMUNE(ch) ( \
-              (IS_NPC(ch) || \
-               IS_SET((ch)->player.m_class, CLASS_DRUID)))// || \
-            //   GET_CLASS(ch, CLASS_RANGER)))
+#define USES_COMMUNE(ch) ((IS_NPC(ch) || GET_CLASS(ch, CLASS_DRUID) || GET_CLASS(ch, CLASS_RANGER)))
+
 #define USES_MANA(ch) ((GET_RACE(ch) == RACE_PILLITHID) || \
 						(GET_RACE(ch) == RACE_ILLITHID)  || \
 						(GET_CLASS(ch, CLASS_PSIONICIST)) || \

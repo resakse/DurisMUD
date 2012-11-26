@@ -38,7 +38,7 @@
 #define IS_BOOK_CLASS(cls) ( (cls) &\
   (CLASS_SORCERER | CLASS_CONJURER | CLASS_NECROMANCER |\
    CLASS_ILLUSIONIST | CLASS_BARD |\
-   CLASS_RANGER | CLASS_REAVER | CLASS_THEURGIST))
+   CLASS_REAVER | CLASS_THEURGIST))
 #define IS_PRAYING_CLASS(cls) ( (cls) &\
   (CLASS_CLERIC | CLASS_PALADIN | CLASS_ANTIPALADIN | CLASS_AVENGER | CLASS_ETHERMANCER | CLASS_CABALIST))
 #define IS_MEMING_CLASS(cls) (IS_BOOK_CLASS(cls) || ((cls) & CLASS_SHAMAN))
@@ -659,7 +659,8 @@ int get_circle_memtime(P_char ch, int circle, bool bStatOnly)
   }
   else
   {
-    time_mult = 1.25;
+    //time_mult = 1.25;
+    time_mult = 1.00;
   }
 
   if(book_class(ch))
