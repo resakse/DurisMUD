@@ -1282,10 +1282,13 @@ int avernus(P_obj obj, P_char ch, int cmd, char *arg)
   dam = BOUNDED(0, (GET_HIT(vict) + 9), 200);
 
   if((obj->loc.wearing == ch) &&
-     vict &&
+     vict 
+
+	/*&&
      (!number(0, 24)) &&
      (CheckMultiProcTiming(ch) || !number(0, 2)) &&
-     !IS_UNDEADRACE(vict) && !IS_CONSTRUCT(vict))
+     !IS_UNDEADRACE(vict) && !IS_CONSTRUCT(vict)*/
+	)
   {
     act("&+LAvernus, the life stealer &+Wglows brightly in your hands as it dives into $N.",
        FALSE, ch, obj, vict, TO_CHAR);
@@ -4258,7 +4261,7 @@ int tendrils(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (!obj)
     return FALSE;
-
+/*
   if (cmd == CMD_PERIODIC)
   {
     if (!number(0, 9))
@@ -4272,7 +4275,7 @@ int tendrils(P_obj obj, P_char ch, int cmd, char *arg)
       ch = obj->loc.carrying;
     else
       return FALSE;
-   /* Evils now have monks
+  
     w_align = (RACE_EVIL(ch) && !(GET_RACE(ch) == RACE_PHANTOM)) ? 0 :
       RACE_PUNDEAD(ch) ? 0 : GET_CLASS(ch, CLASS_MONK) ? 3 : 2;
     if (w_align == 2)
@@ -4345,12 +4348,13 @@ int tendrils(P_obj obj, P_char ch, int cmd, char *arg)
             FALSE, ch, obj, vict, TO_VICT);
       }
       return TRUE;
-    }*/
+    }
 
   }
-
+*/
   if (cmd != CMD_GOTHIT || number(0, 7))
     return FALSE;
+
 
   data = (struct proc_data *) arg;
   vict = data->victim;
@@ -4365,13 +4369,13 @@ int tendrils(P_obj obj, P_char ch, int cmd, char *arg)
   act
     ("You completely sidestep $N's lunge, only to slam your elbow into $s face!",
      TRUE, ch, 0, vict, TO_CHAR);
-
+/*
   if ((damage(ch, vict, dice(5, 20), TYPE_UNDEFINED) != DAM_NONEDEAD))
   {
     return TRUE;
   }
-
-  if(!number(0, 10))
+*/
+  if(!number(0, 7))
   {
     act("Before $N can recover $n grabs $M by the throat and utters a single &+Wword.\n"
         "$N spasms in &+Rpain as tiny &+Bbolts of &+Blight surge through $S body!", FALSE, ch, 0, vict, TO_NOTVICT);
