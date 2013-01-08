@@ -2000,10 +2000,10 @@ guard town protector guardian~
 &+WA &+bDec&+Bora&+Lted &+WTown &+yGuardian &+Wstands watch over the &+Lcity&+W gates.&n
 ~
 ~
-67514442 128 0 0 939524152 220 0 0 0 S
-PH 0 1 2 -1
+1141256202 128 0 0 939524152 220 0 0 0 S
+PH 0 33 2 -1
 58 0 0 1d1+1 1d1+1
-0.0.0.0 0
+0.0.0.0 50
 8 8 0
 #500150
 reaver snudk goblin shock_reaver teacher _spec3_~
