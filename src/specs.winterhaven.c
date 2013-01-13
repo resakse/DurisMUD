@@ -4005,6 +4005,14 @@ int collar_frost(P_obj obj, P_char ch, int cmd, char *arg)
   if (IS_SET(world[ch->in_room].room_flags, LOCKER))
     return FALSE;
 
+  int level = GET_LEVEL(ch);
+
+  if(!can_conjure_lesser_elem(ch, level))
+    {
+     send_to_char("You have too many followers already.\n\r", ch);
+    return FALSE;
+    }
+
   if (arg && (cmd == CMD_SAY))
   {
     if ((isname(arg, "frost")))
@@ -4140,6 +4148,14 @@ int collar_flames(P_obj obj, P_char ch, int cmd, char *arg)
   if (ch->in_room &&
       IS_SET(world[ch->in_room].room_flags, LOCKER))
     return FALSE;
+  
+  int level = GET_LEVEL(ch);
+
+  if(!can_conjure_lesser_elem(ch, level))
+    {
+     send_to_char("You have too many followers already.\n\r", ch);
+    return FALSE;
+    }
   
   if (arg &&
      (cmd == CMD_SAY))

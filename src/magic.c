@@ -1664,7 +1664,7 @@ bool can_conjure_lesser_elem(P_char ch, int level)
   for (k = ch->followers, i = 0, j = 0; k; k = k->next)
   {
     victim = k->follower;
-    
+/*    
     if(IS_ELEMENTAL(victim))
     {
       if(!IS_GREATER_ELEMENTAL(victim))
@@ -1675,9 +1675,11 @@ bool can_conjure_lesser_elem(P_char ch, int level)
       {
         j++;
       }
-    }
+    }*/
+    if(IS_ELEMENTAL(victim))
+    i++;
   }
-
+/*
   if(GET_LEVEL(ch) >= 56)
   {
     j--;
@@ -1698,6 +1700,9 @@ bool can_conjure_lesser_elem(P_char ch, int level)
   }
 
   if(j && i >= 2)
+    return FALSE;
+*/
+  if(i >= 3)
     return FALSE;
 
   if(GET_LEVEL(ch) >= 41 && i >= 3)
