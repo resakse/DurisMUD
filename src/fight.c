@@ -8538,7 +8538,8 @@ int calculate_attacks(P_char ch, int attacks[])
 
   if (IS_AFFECTED2(ch, AFF2_FLURRY) && number_attacks > 4)
   {
-    number_attacks = 4;
+    int maxattacks = number_attacks;
+    number_attacks = number(4, maxattacks);
   }
 
   if (IS_AFFECTED3(ch, AFF3_BLUR))
