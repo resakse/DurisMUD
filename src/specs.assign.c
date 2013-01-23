@@ -1522,6 +1522,7 @@ void assign_objects(void)
   obj_index[real_object0(99447)].func.obj = nightcrawler_dagger;
   obj_index[real_object0(66419)].func.obj = rightous_blade;
 
+
   /* mobs */
   mob_index[real_mobile0(70535)].func.mob = long_john_silver_shout;
   mob_index[real_mobile0(70542)].func.mob = undead_parrot;
@@ -1591,6 +1592,7 @@ void assign_objects(void)
   obj_index[real_object0(1252)].func.obj = set_proc;
   obj_index[real_object0(1251)].func.obj = encrusted_eq_proc;
   obj_index[real_object0(251)].func.obj = parchment_forge;
+  obj_index[real_object0(400210)].func.obj = learn_recipe;
 
   obj_index[real_object0(58)].func.obj = relic_proc;
   obj_index[real_object0(59)].func.obj = relic_proc;

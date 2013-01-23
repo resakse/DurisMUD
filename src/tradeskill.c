@@ -14,6 +14,7 @@
 #include <string.h>
 #include <math.h>
 
+
 #include "comm.h"
 #include "db.h"
 #include "events.h"
@@ -1425,3 +1426,89 @@ void do_bandage(P_char ch, char *arg, int cmd)
   CharWait(ch, 2 * PULSE_VIOLENCE);
   return;
 }
+
+
+//Drannak Stuff
+static FILE *recipefile;
+
+
+
+void create_recipes_file(const char *dir, char *name)
+{
+  char     buf[256], *buff;
+  char     Gbuf1[MAX_STRING_LENGTH];
+  FILE    *f;
+
+  strcpy(buf, name);
+  buff = buf;
+  for (; *buff; buff++)
+    *buff = LOWER(*buff);
+  sprintf(Gbuf1, "%s/%c/%s", dir, buf[0], buf);
+  f = fopen(Gbuf1, "w");
+  fclose(f);
+}
+
+
+void create_recipes_name(char *name)
+{
+  create_recipes_file("Players/Tradeskills", name);
+}
+
+
+int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
+{
+/*
+  char     filename[1024];
+  char     buf[256], *buff;
+  char     Gbuf1[MAX_STRING_LENGTH];
+*/
+  FILE    *f;
+  FILE    *fraglist;
+  char     fraglist_file[1024];
+  P_char temp_ch;
+
+  if(!ch)
+    return FALSE;
+
+  if(cmd != CMD_RECITE)
+    return FALSE;
+
+  temp_ch = obj->loc.wearing;
+
+  if(!temp_ch)
+    return FALSE;
+
+  if(ch != temp_ch)
+    return FALSE;
+
+  //check if tradeskill file exists for player
+  //recipefile = fopen("Players/Tradeskills/%s", GET_NAME(ch));
+  //if(!player_recipe_exists("Players/Tradeskills", GET_NAME(ch))
+  //strcpy(buf, name);
+  //sprintf(Gbuf1, "Players/Tradeskills/%s", GET_NAME(ch));
+  
+  //if (!(recipefile = fopen("Players/Tradeskills/d/duris", "rt")))
+  //do creation of file here
+/* if(0, 1)
+  {*/
+ 
+
+  fraglist = fopen("Players/Tradeskills/d/duris", "rt");
+  if (!fraglist)
+  {
+ 
+    send_to_char("You have'nt yet learned any recipes... lets fix that...\r\n", ch);
+    create_recipes_name(GET_NAME(ch));
+  }
+  
+ // }
+  //recipefile = fopen("Players/Tradeskills/%s", GET_NAME(ch));
+  recipefile = fopen("Players/Tradeskills/d/duris", "a");
+  fprintf(recipefile, "%d\n", obj->value[6]);
+  send_to_char("You take out your &+Ltome &+yof &+Lcraftsmanship&n and write down the recipe.\r\n", ch);
+  //fprintf(recipefile, "blah\n");
+  //fflush(recipefile);
+   fclose(recipefile);
+   return TRUE;
+}
+

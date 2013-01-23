@@ -13519,7 +13519,7 @@ struct set_data {
 
 int set_proc(P_obj obj, P_char ch, int cmd, char *arg)
 {
-return FALSE;
+//return FALSE; -muhahaha drannak
   P_obj tobj, included[MAX_WEAR], cobj = obj;
   int s, i, j, count = 0;
   unsigned int flag = cmd ? ITEM2_NOPROC : ITEM2_NOTIMER;

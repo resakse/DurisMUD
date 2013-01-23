@@ -558,6 +558,7 @@ int thrusted_eq_proc(P_obj, P_char, int, char *);
 
 int thrusted_eq_proc(P_obj, P_char, int, char *);
 int parchment_forge(P_obj, P_char, int, char *);
+int learn_recipe(P_obj, P_char, int, char *);
 
 // 51 potion chest
 int treasure_chest(P_obj, P_char, int, char *);

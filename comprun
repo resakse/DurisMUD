@@ -1,0 +1,5 @@
+cd src
+make
+cp dms_new ..
+cd ..
+./dms_new 8888
