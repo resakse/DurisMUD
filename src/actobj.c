@@ -4905,6 +4905,16 @@ void do_salvage(P_char ch, char *argument, int cmd)
 	 act("There is apparently no &+Yworth &nto that item.", FALSE, ch, 0, 0, TO_CHAR); 
         return;
 	}
+  if(temp->type == ITEM_MONEY || 
+      temp->type == ITEM_KEY ||
+      temp->type == ITEM_BOOK ||
+      temp->type == ITEM_SCROLL ||
+      temp->type == ITEM_SPELLBOOK ||
+      temp->type == ITEM_WAND)
+    {
+	 act("There is apparently no &+Yworth &nto that item.", FALSE, ch, 0, 0, TO_CHAR); 
+        return;
+    }
 
   if (temp->type == ITEM_FOOD)
    {

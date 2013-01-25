@@ -4158,11 +4158,11 @@ void do_headbutt(P_char ch, char *argument, int cmd)
   if ((GET_C_LUCK(ch) / 2) > number(0, 80)) {
      success = (int) (success * 1.1);
   }
-/*
+
   if ((GET_C_LUCK(victim) / 2) > number(0, 80)) {
      success = (int) (success * 0.9);
   }
-*/
+
   
   if (IS_TRUSTED(ch) || !AWAKE(victim))
   {
@@ -4255,7 +4255,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
 
     tmp_num = number(1, 100 - (success / 2));
 
-    if (tmp_num < 10 && !IS_AFFECTED(victim, AFF_KNOCKED_OUT)) // 10% chance at 100% success - Jexni 2/15/11
+    if (tmp_num < 6 && !IS_AFFECTED(victim, AFF_KNOCKED_OUT)) // 6% chance at 100% success - Jexni 2/15/11
     {
       knock_out(victim, PULSE_VIOLENCE * number(2,3));
     }

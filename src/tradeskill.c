@@ -341,6 +341,53 @@ void do_forge(P_char ch, char *argument, int cmd)
   int      choice = 0;  
   P_obj hammer, foundry;
 
+/***DISPLAYRECIPES STUFF***/
+ 
+  char     buf[256], *buff, buf2[256], rbuf[MAX_STRING_LENGTH];
+  char     Gbuf1[MAX_STRING_LENGTH], selectedrecipe[MAX_STRING_LENGTH];
+  char buffer[256];
+  FILE    *f;
+  FILE    *recipelist;
+  int line, recfind, recnum2;
+  unsigned long	linenum = 0;
+  long recnum;
+ 
+	
+  //Create buffers for name
+  strcpy(buf, GET_NAME(ch));
+  buff = buf;
+  for (; *buff; buff++)
+  *buff = LOWER(*buff);
+  //buf[0] snags first character of name
+  sprintf(Gbuf1, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
+  recipelist = fopen(Gbuf1, "r");
+    if (!recipelist)
+  {
+    send_to_char("You dont know any recipes yet.\r\n", ch);
+    return;
+  }
+  
+     // while ( (line=fgetc(recipelist)) != EOF ) 
+      while((fscanf(recipelist, "%i", &recnum)) != EOF )
+	{
+	P_obj tobj;
+	tobj = read_object(recnum, VIRTUAL);
+       sprintf(buffer, "%s&n\n", tobj->short_description);
+	//stores the actual vnum written in file into rbuf
+       sprintf(rbuf, "%d\n", recnum);
+	page_string(ch->desc, buffer, 1);
+       linenum++;
+   	}
+
+ 
+  
+    //printf("%lu newline characters\n", newline_count); 
+    //sprintf(buf2, "%lu newline characters\n", newline_count); 
+    //page_string(ch->desc, buf2, 1);
+  fclose(recipelist);
+  
+  /***ENDDISPLAYRECIPES***/
+/*
   if (GET_CHAR_SKILL(ch, SKILL_FORGE) == 0){
     send_to_char("&+LYou dont know how to forge.\r\n", ch);
     return;
@@ -485,6 +532,7 @@ void do_forge(P_char ch, char *argument, int cmd)
     }
     return;
   }
+ */
 }
 
 bool mine_friendly(int to_room) {
