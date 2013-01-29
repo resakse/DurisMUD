@@ -4954,7 +4954,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
     act("Why would you want to salvage anything from your &+Ydinner&n?", FALSE, ch, 0, 0, TO_CHAR);
     return;
    }
-  if (temp->type == ITEM_TREASURE)
+  if (temp->type == ITEM_TREASURE || temp->type == ITEM_POTION)
    {
     act("That's probably more valuable than what you could break it down into... lets not.", FALSE, ch, 0, 0, TO_CHAR);
     return;
