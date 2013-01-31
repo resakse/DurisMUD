@@ -216,12 +216,12 @@ struct epic_teacher_skill {
   {20242, SKILL_IMPROVED_TRACK, 0, 100, SKILL_TRACK, 0, 95},
   {99548, SKILL_EMPOWER_SONG, 0, 100, 0, 0},
   {22436, SKILL_FIX, 0, 100, 0, 0, 0}, //smith in stormport
-  {9454,  SKILL_CRAFT, 0, 100, 0, 0, 0}, //Rjinal in Samirz
+  //{9454,  SKILL_CRAFT, 0, 100, 0, 0, 0}, //Rjinal in Samirz
   {40760, SKILL_ENCRUST, 0, 100, SKILL_CRAFT, 0, 100}, //Snent in Divine Home
   //{78006, SKILL_ENCHANT, 0, 100, 0, SKILL_SPELLBIND, 0}, //Bargor in Oasis
   //{94017, SKILL_SPELLBIND, 0, 100, 0, SKILL_ENCHANT, 0}, //Kalroh in Maze of Undead Army
   {37145, SKILL_SMELT, 0, 100, 0, 0, 0}, //Carmotee in Dumaathe
-  {21618, SKILL_FORGE, 0, 100, 0, 0, 0}, //Tenkuss in Aravne
+  //{21618, SKILL_FORGE, 0, 100, 0, 0, 0}, //Tenkuss in Aravne
   {49162, SKILL_TOTEMIC_MASTERY, 0, 100, 0, 0, 0},
   {76008, SKILL_INFUSE_MAGICAL_DEVICE, 0, 100, 0, 0, 0},  //Deathium in Ultarium
   {28975, SKILL_INDOMITABLE_RAGE, 0, 100, 0, 0, 0},

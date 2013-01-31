@@ -340,6 +340,14 @@ void do_forge(P_char ch, char *argument, int cmd)
   int choice = 0;  
   P_obj hammer, foundry;
 
+ if (!GET_CHAR_SKILL(ch, SKILL_FORGE))
+  {
+    act("You do not know how to &+Lforge&n.",
+        FALSE, ch, 0, 0, TO_CHAR);
+    return;
+  }
+
+
 /***DISPLAYRECIPES STUFF***/
  
   char     buf[256], *buff, buf2[256], rbuf[MAX_STRING_LENGTH];
@@ -1329,6 +1337,10 @@ void do_mine(P_char ch, char *arg, int cmd)
   // If you don't get the idea, give me a hollar.
   // From hearing Torgal's responses to it as well as knowing nobody ever uses
   // this command, i'm going to go ahead and get the engine in game. -Venthix
+  if (GET_CHAR_SKILL(ch, SKILL_MINE) <= 1){
+    send_to_char("&+LYou dont know how to mine.\r\n", ch);
+    return;
+  }
 
  
   int i;
@@ -1701,9 +1713,9 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
                       "&+cYou feel your skill in %s improving.&n\n",
               skills[SKILL_FORGE].name, skills[SKILL_FORGE].name);
       act(buffer, FALSE, ch, 0, pl, TO_VICT);
-      pl->only.pc->skills[SKILL_FORGE].taught =
-        pl->only.pc->skills[SKILL_FORGE].learned =
-        MIN(100, pl->only.pc->skills[SKILL_FORGE].learned + 10);
+      pl->only.pc->skills[SKILL_FORGE].taught = 100;
+        pl->only.pc->skills[SKILL_FORGE].learned = 10;
+        //MIN(100, pl->only.pc->skills[SKILL_FORGE].learned + 10);
       do_save_silent(pl, 1); // tradeskills require a save.
       CharWait(pl, PULSE_VIOLENCE);
       return TRUE;
@@ -1720,9 +1732,9 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
                       "&+cYou feel your skill in %s improving.&n\n",
               skills[SKILL_MINE].name, skills[SKILL_MINE].name);
       act(buffer, FALSE, ch, 0, pl, TO_VICT);
-      pl->only.pc->skills[SKILL_MINE].taught =
-        pl->only.pc->skills[SKILL_MINE].learned =
-        MIN(100, pl->only.pc->skills[SKILL_MINE].learned + 10);
+      pl->only.pc->skills[SKILL_MINE].taught = 100;
+        pl->only.pc->skills[SKILL_MINE].learned = 10;
+        //MIN(100, pl->only.pc->skills[SKILL_MINE].learned + 10);
       do_save_silent(pl, 1); // tradeskills require a save.
       CharWait(pl, PULSE_VIOLENCE);
       return TRUE;

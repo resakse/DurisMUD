@@ -3610,7 +3610,7 @@ void do_vote(P_char ch, char *argument, int cmd)
 
 void do_craft(P_char ch, char *argument, int cmd)
 {
-
+/*
   P_obj    craft_obj1, craft_obj2, craft_obj3, obj;
   P_obj    t_obj, nextobj;
   int      i, bits, j, in_room, material_type, item_type, howmany,
@@ -3623,15 +3623,152 @@ void do_craft(P_char ch, char *argument, int cmd)
 
   equipped = FALSE;
   obj = 0;
-
+*/
   if (!GET_CHAR_SKILL(ch, SKILL_CRAFT))
   {
-    act("You need to find someone more skilled to do this.",
+    act("You do not know how to &+rcraft&n items.",
         FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
 
+   char     buf1[MAX_STRING_LENGTH];
+  char     first[MAX_INPUT_LENGTH];
+  char     second[MAX_INPUT_LENGTH];
+  char     rest[MAX_INPUT_LENGTH];
+  int i = 0;  
+  int choice = 0;  
+  P_obj hammer, foundry;
 
+/***DISPLAYRECIPES STUFF***/
+ 
+  char     buf[256], *buff, buf2[256], rbuf[MAX_STRING_LENGTH];
+  char     Gbuf1[MAX_STRING_LENGTH], selectedrecipe[MAX_STRING_LENGTH];
+  char buffer[256];
+  FILE    *f;
+  FILE    *recipelist;
+  int line, recfind;
+  unsigned long	linenum = 0;
+  long recnum, choice2;
+  long selected = 0;
+  P_obj tobj;
+ 
+	
+  //Create buffers for name
+  strcpy(buf, GET_NAME(ch));
+  buff = buf;
+  for (; *buff; buff++)
+  *buff = LOWER(*buff);
+  //buf[0] snags first character of name
+  sprintf(Gbuf1, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
+  recipelist = fopen(Gbuf1, "r");
+    if (!recipelist)
+  {
+    send_to_char("You dont know any recipes yet.\r\n", ch);
+    return;
+  }
+       half_chop(argument, first, rest);
+       half_chop(rest, second, rest);
+       choice2 = atoi(second);
+
+ 
+ if (!*argument)
+  {
+  send_to_char("&+wcraft Syntax:\n&n", ch);
+  send_to_char("&+w(craft info <number> - list required materials to craft the item.)\n&n", ch);
+  send_to_char("&+w(craft stat <number> - display properties of the item.)\n&n", ch);
+  send_to_char("&+w(craft make <number> - create the item.)\n&n", ch);
+  send_to_char("&+yYou know the following recipes:\n&n", ch);
+  send_to_char("----------------------------------------------------------------------------\n", ch);
+  send_to_char("&+BRecipe Number		              &+MItem&n\n\r", ch);
+      while((fscanf(recipelist, "%i", &recnum)) != EOF )
+	{  
+       /* debug
+       char bufbug[MAX_STRING_LENGTH];
+       */
+       if(recnum == choice2)
+       selected = choice2;
+       /* debug
+       sprintf(bufbug, "choice is: %d\r\n", selected);
+       send_to_char(bufbug, ch);
+       if(recnum == choice2)
+	send_to_char("The one below here is selected.\r\n", ch);
+	*/
+	tobj = read_object(recnum, VIRTUAL);
+ 	sprintf(rbuf, "%d\n", recnum);
+    sprintf(buffer, "   &+W%-22d&n%s&n\n", recnum, tobj->short_description);
+	//stores the actual vnum written in file into rbuf 
+	page_string(ch->desc, buffer, 1);
+    send_to_char("----------------------------------------------------------------------------\n", ch);
+      extract_obj(tobj, FALSE);
+   	}
+     fclose(recipelist);
+  /***ENDDISPLAYRECIPES***/
+
+  return;
+  }
+
+  while((fscanf(recipelist, "%i", &recnum)) != EOF )
+	{  
+       /* debug
+       char bufbug[MAX_STRING_LENGTH];
+       */
+       if(recnum == choice2)
+       selected = choice2;
+       /* debug
+       sprintf(bufbug, "choice is: %d\r\n", selected);
+       send_to_char(bufbug, ch);
+       if(recnum == choice2)
+	send_to_char("The one below here is selected.\r\n", ch);
+	*/
+	//tobj = read_object(recnum, VIRTUAL);
+ 	sprintf(rbuf, "%d\n", recnum);
+	}
+  fclose(recipelist);
+ 
+
+  if (is_abbrev(first, "stat"))
+  {
+    if(choice2 == 0)
+     {
+      send_to_char("What &+Wrecipe&n would you like &+ystatistics&n about?\n", ch);
+      return;
+     }
+    if(selected == 0)
+     {
+      send_to_char("You dont appear to have that &+Wrecipe&n in your list.&n\n", ch);
+      return;
+     }
+    tobj = read_object(selected, VIRTUAL);
+    send_to_char("&+yYou open your &+Ltome &+yof &+Ycra&+yftsm&+Lanship &+yand examine the &+Litem&n.\n", ch);
+    spell_identify(GET_LEVEL(ch), ch, 0, 0, 0, tobj);
+     extract_obj(tobj, FALSE);
+    return;
+  }
+  else if(is_abbrev(first, "info"))
+  {
+    if(choice2 == 0)
+     {
+      send_to_char("What &+Wrecipe&n would you like &+yinformation&n about?\n", ch);
+      return;
+     }
+    if(selected == 0)
+     {
+      send_to_char("You dont appear to have that &+Wrecipe&n in your list.&n\n", ch);
+      return;
+     }
+   tobj = read_object(selected, VIRTUAL);
+   //First - See if there's a magical affect that we need a component for.
+
+  //Second - See what material it is. make a method called: find_material(obj)
+   send_to_char("RECIPE CRAP IN THIS\r\n", ch);
+    extract_obj(tobj, FALSE);
+   return;
+  }
+
+
+
+
+  /*
   argument = one_argument(argument, Gbuf1);
   howmany = 0;
   i = 0;
@@ -3738,9 +3875,9 @@ void do_craft(P_char ch, char *argument, int cmd)
   }
 
 
-/*
-        wizlog(56, "%s crafted.", GET_NAME(ch));
 */
+/*        wizlog(56, "%s crafted.", GET_NAME(ch));
+
   if (howmany > 0)
     extract_obj(craft_obj1, TRUE);
   if (howmany > 1)
@@ -3760,7 +3897,7 @@ void do_craft(P_char ch, char *argument, int cmd)
   act("&+WYou crafted a $q&N", TRUE, ch, obj, 0, TO_CHAR);
 
   return;
-
+*/
 }
 
 
