@@ -229,6 +229,7 @@ G 1 38758 1 0 100 0 0 0            *    the bone wand of Ny'Neth
 G 1 38757 1 0 100 0 0 0            *    the treasure room key
 G 1 360 1 0 100 0 0 0              *    (object type not in this .obj file)
 G 1 26665 1 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 903 1 0 100 0 0 0              *    (object type not in this .obj file)
 F 1 38738 2 38809 100 0 0 0        * a guardian golem (following)
 G 1 38759 2 0 100 0 0 0            *    a potion of the guardian
 F 1 38738 2 38809 100 0 0 0        * a guardian golem (following)

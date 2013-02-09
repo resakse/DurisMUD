@@ -156,5 +156,6 @@ M 0 19617 1 19624 100 0 0 0        * a pitiful slave
 G 1 32019 3 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 32019 3 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 32019 3 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 911 1 0 100 0 0 0              *    (object type not in this .obj file)
 *
 S

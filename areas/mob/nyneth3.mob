@@ -9,8 +9,8 @@ shadow golem~
 &+LA pair of black pits serve as its eyes, observing everything as it carries
 &+Lout its masters will.&n
 ~
-1194058 1 0 440 2078 0 0 -1000 S
-OG 0 1 5
+1194058 1 0 0 440 2078 0 0 -1000 S
+OG 0 1 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -24,8 +24,8 @@ betrayer vampire~
 &+Lof thin curved assassins knives are clutched in his hands.  His face is pale
 &+Lwith terrible hunger, and his eyes gleam ferociously.&n
 ~
-145418 1 0 135790908 30 2097152 0 -1000 S
-UV 0 8192 4
+145418 1 0 0 135790908 30 2097152 0 -1000 S
+UV 0 8192 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -39,8 +39,8 @@ reaper vampire blackness~
 &+Lof a curved assassins dagger can be witnessed, other times a pair of &+rfiery
 &+Leyes &+rburn &+Lforth as they search for victims.&n
 ~
-1073903818 1 0 1573180 2078 2097152 0 -1000 S
-UV 0 8192 4
+1073903818 1 0 0 1573180 2078 2097152 0 -1000 S
+UV 0 8192 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ keth'kel kethkel dark imp~
 &+Lwith the &+ggreed &+Lhis race is known for, although they are sometimes obscured
 &+Lby the murky shadows which curl upwards from his mouth like thick oily smoke.&n
 ~
-1073887436 1 0 672661784 30 0 0 -1000 S
-X 0 73728 2
+1073887436 1 0 0 672661784 30 0 0 -1000 S
+X 0 73728 0 2
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -72,8 +72,8 @@ ravener lord taezuul vampire~
 &+Bneeds no weapons other than his hands and vicious bite, his great age showing
 &+Bin the incredible strength of his powers.&n
 ~
-1073887304 1 0 805306812 30 67108864 1024 -1000 S
-UV 0 65 4
+1073887304 1 0 0 805306812 30 67108864 1024 -1000 S
+UV 0 65 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -89,8 +89,8 @@ saaloth greater fury demon~
 &+rfrom his muscular torso, spined along their entire length and ending in
 &+rwickedly curved claws.&n
 ~
-1073756264 1 0 536871324 30 67108864 33555456 -1000 S
-X 0 64 5
+1073756264 1 0 0 536871324 30 67108864 33555456 -1000 S
+X 0 64 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -107,8 +107,8 @@ dragon wyrm corsc-alaath corscalaath armaggedon~
 &+Rthousands of years.  Now entering the final centuries of her long existence,
 &+Rshe has come here to give birth to the next generation of dragons.&n
 ~
-1073903656 1 0 671089084 2079 67108864 1024 -1000 S
-D 0 513 7
+1073903656 1 0 0 671089084 2079 67108864 1024 -1000 S
+D 0 513 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -123,8 +123,8 @@ lo'taan lotaan demon knight~
 &+Lits foes.  Feeding off the &+rpain &+Lof its enemies, it grows stronger as it
 &+Linflicts damage and actively searches for the opportunity to do so.&n
 ~
-1062986 1 0 536871324 30 0 0 -1000 S
-X 0 16 5
+1062986 1 0 0 536871324 30 0 0 -1000 S
+X 0 16 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -139,8 +139,8 @@ tescuuden betrayer vampire lord~
 &+rwound.  His strength and reserves are such that he could pass decades
 &+rwithout a feeding, although he seldom goes a day without doing so.&n
 ~
-1073772616 1 0 806879644 2142 2097152 8396800 -1000 S
-UV 0 8192 4
+1073772616 1 0 0 806879644 2142 2097152 8396800 -1000 S
+UV 0 8192 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ asgoth undead wyrm~
 &+Wan errant bolt occasionally raging through air instantaneosly and tearing to
 &+Wpieces its unfortunate destination.&n
 ~
-1210698 1 0 671089086 30 0 0 -1000 S
-D 0 512 7
+1210698 1 0 0 671089086 30 0 0 -1000 S
+D 0 512 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -179,8 +179,8 @@ montaleus fallen wyrm dragon~
 &+cWhen the thousand years has passed, she will return to Astar to fight for
 &+cher redemption and choose a new mate.&n
 ~
-1073903944 1 0 134218172 2078 0 4195328 1000 S
-D 0 33 7
+1073903944 1 0 0 134218172 2078 0 4195328 1000 S
+D 0 33 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -195,8 +195,8 @@ desmuth slayer lord dark vampire~
 &+La &+Wfull moon&+L, the dried red stains about his mouth stand out vividly.  Upon
 &+Lhis forehead a glowing &+rpentagram &+Lpulsates with malevolence.&n
 ~
-1073772616 1 0 404226494 2078 69206016 8388608 -1000 S
-UV 0 8192 4
+1073772616 1 0 0 404226494 2078 69206016 8388608 -1000 S
+UV 0 8192 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -211,8 +211,8 @@ lun-val avenger demon fury~
 &+Ras they force its hands to clutch ever tighter.  A look of sheer fury stares
 &+Rforth from its deep set eyes, framed by a face of rigid determination.&n
 ~
-161898 1 0 671089086 262175 67108864 1024 -1000 S
-X 0 64 6
+161898 1 0 0 671089086 262175 67108864 1024 -1000 S
+X 0 64 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -227,8 +227,8 @@ kassis watcher eye beholder~
 &+Weye&+Lstalks flail about slowly, &+rel&+yem&+bent&+Wal &+Lforces arcing off of them
 &+Llike small pulses of &+blightning&+L.&n
 ~
-1073904456 1 0 402653630 14558 0 0 -1000 S
-BH 0 512 5
+1073904456 1 0 0 402653630 14558 0 0 -1000 S
+BH 0 512 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -245,8 +245,8 @@ sycatunn pestilence lord~
 &+gto be dissolved into the life force of the world itself where they exert
 &+LS&+gy&+Lcat&+gu&+Lnn's &+gwill.&n
 ~
-2783242 1 0 2818572716 2078 0 0 -1000 S
-SL 0 272 5
+2783242 1 0 0 2818572716 2078 0 0 -1000 S
+SL 0 272 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -262,8 +262,8 @@ assud master spirit~
 &+ctrue &+Ldarkness &+cdoes the faint luminescence of its &+mmagical &+cnature cause
 &+cthe outline of its form to be held in the sight of the living.&n
 ~
-1074427912 1 0 402719022 2142 0 33554432 -1000 S
-UG 0 256 4
+1074427912 1 0 0 402719022 2142 0 33554432 -1000 S
+UG 0 256 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -299,8 +299,8 @@ vathor slayer head vampire~
 &+Lthe rest of eternity drinking the blood of others and suffering the pain of
 &+Ldecapitation, while his lands and people are now protected by his final wish.&n
 ~
-1074952200 1 0 940048668 94 2097152 0 -1000 S
-UV 0 1 2
+1074952200 1 0 0 940048668 94 2097152 0 -1000 S
+UV 0 1 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -320,8 +320,8 @@ kortheos devil lord chaos~
 &+Lconcentration and &+rfury&+L.  To speak his name is death, and to fall to
 &+Lhis sword is committing your &+csoul &+Lto &+rtorture &+Lfor a thousand years.&n
 ~
-161834 1 0 939524508 30 67108864 4194304 -1000 S
-Y 0 16 6
+161834 1 0 0 939524508 30 67108864 4194304 -1000 S
+Y 0 16 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -340,8 +340,8 @@ tet'azuul blood god vampire~
 &+bolder and more powerfull, those rumors do nothing to console the victims
 &+bwhich fall to his incredible strength.&n
 ~
-33716234 1 0 940048828 2078 67108864 33555456 -1000 S
-UV 0 65 4
+33716234 1 0 0 940048828 2078 67108864 33555456 -1000 S
+UV 0 65 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -357,8 +357,8 @@ oesthes death wisp ghost~
 &+cwere being pulled from the entire area and collecting here to be absorbed
 &+cby the &+Ldeath &+caura of this wisp.&n
 ~
-1074952392 1 0 940048702 2078 67108864 4194304 -1000 S
-UG 0 1 2
+1074952392 1 0 0 940048702 2078 67108864 4194304 -1000 S
+UG 0 1 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -373,8 +373,8 @@ sytania dread siren devil~
 &+rweakest point of her opponents at their most vulnerable point and often
 &+rvanquishing them before they are even aware of their own imminent death.&n
 ~
-1073903848 1 0 941097406 30 0 0 -1000 S
-Y 0 8192 3
+1073903848 1 0 0 941097406 30 0 0 -1000 S
+Y 0 8192 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -391,8 +391,8 @@ brumen dread knight~
 &+Lsearches endlessly for those worthy of his skill, seeking only then to enter
 &+Linto battle.&n
 ~
-1079370 1 0 939590028 2078 0 8389120 -1000 S
-H2 0 16 4
+1079370 1 0 0 939590028 2078 0 8389120 -1000 S
+H2 0 16 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -410,8 +410,8 @@ nouthayk greater nightmare~
 &+Lhistory, and those records lie long lost and forgotten in the dusty ruins
 &+Lof a once great library.  It is doubtfull history will repeat itself here.&n
 ~
-35026954 1 0 939590044 32798 67108864 41943040 -1000 S
-AE 0 33 4
+35026954 1 0 0 939590044 32798 67108864 41943040 -1000 S
+AE 0 33 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -428,8 +428,8 @@ kaska valkyrie centaur~
 &+Yhuddle here, trusting blindly in fate that some strange divine occurrance
 &+Ywill bring them the means of somehow completing their mission.&n
 ~
-67139594 417 0 939532728 32798 67108864 4195328 1000 S
-CT 0 34 4
+67139594 417 0 0 939532728 32798 67108864 4195328 1000 S
+CT 0 34 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -446,8 +446,8 @@ cavadd agent avenger paladin~
 &+Wfists, he stands guard relentlessly, ready at any time for the final assault
 &+Wwhich may at any time finish their intrusion here in a bloody demise.&n
 ~
-67139594 10657 0 3087008156 30 524288 4194304 1000 S
-PH 0 9 3
+67139594 10657 0 0 3087008156 30 524288 4194304 1000 S
+PH 0 9 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -464,8 +464,8 @@ retreagg griffon high~
 &+Yirridescent feathers shine even here where precious metals appear dull and
 &+Ymundane.&n
 ~
-69367882 10401 0 939532732 34846 1140850688 4195328 1000 S
-A 0 1 5
+69367882 10401 0 0 939532732 34846 1140850688 4195328 1000 S
+A 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -483,8 +483,8 @@ yrachan chaos wyrm dragon~
 &+Lthat great strongholds collapse, the proof only a rumor and a pile of rubble
 &+Lthat was once a great mountain dwarven kingdom.&n
 ~
-1074952200 1 0 939524494 30 67108864 0 -1000 S
-D 0 17 7
+1074952200 1 0 0 939524494 30 67108864 0 -1000 S
+D 0 17 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -504,8 +504,8 @@ sebelabek mad underwyrm wyrm dragon~
 &+mdeformities, while his deadly breath seems never to unleash the same
 &+melements twice.&n
 ~
-1077575528 1 0 939524540 2078 67108864 0 -1000 S
-D 0 1 7
+1077575528 1 0 0 939524540 2078 67108864 0 -1000 S
+D 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -524,8 +524,8 @@ qudisocc illithid lord~
 &+Mrules of space and time do not apply here unless they are willed to do
 &+Mby this fiend.&n
 ~
-145480 1 0 671089064 30 0 0 -1000 S
-MF 0 4 7
+145480 1 0 0 671089064 30 0 0 -1000 S
+MF 0 4 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -541,8 +541,8 @@ sornfewel ripper beastwyrm~
 &+gand a battle scar curls its left cheek upward giving it the appearance of
 &+ga permanent smirk.&n
 ~
-2783240 1 0 671089052 30 67108864 1024 -1000 S
-D 0 64 6
+2783240 1 0 0 671089052 30 67108864 1024 -1000 S
+D 0 64 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -558,8 +558,8 @@ lazebaaz pyre lord inferno demon~
 &+Rpower such that their image is burned into the retinas for minutes, quite
 &+Rlike looking at a &+Ysun&+R.&n
 ~
-161896 1 0 671089052 31 0 8388608 -1000 S
-X 0 513 6
+161896 1 0 0 671089052 31 0 8388608 -1000 S
+X 0 513 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -576,8 +576,8 @@ nainutom dwarf dwarven infiltrator~
 &+Ymood, that would not be uncommon amoung his kin, famous for their instense
 &+Rbattle rage&+Y and steadfastness under pressure.&n
 ~
-67139658 1 0 941097404 30 67108864 0 0 S
-PM 0 8192 2
+67139658 1 0 0 941097404 30 67108864 0 0 S
+PM 0 8192 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -594,8 +594,8 @@ dannyk reverend~
 &+Cbinds them to his cause.  The only human known to be bonded to an &+cangel
 &+Cwyrm, he stands here keeping watch over his sleeping winged mount.&n
 ~
-67270730 1 0 939532700 34846 1073741824 4718592 1000 S
-PH 0 9 3
+67270730 1 0 0 939532700 34846 1073741824 4718592 1000 S
+PH 0 9 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -613,8 +613,8 @@ lecani wyrm angel dragon~
 &+Wtook a bolt destined for her chosen knights neck, saving his life and bonding
 &+Wthem forever.&n
 ~
-67271498 1 0 939524508 2206 67108864 4195328 1000 S
-D 0 3 5
+67271498 1 0 0 939524508 2206 67108864 4195328 1000 S
+D 0 3 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -629,8 +629,8 @@ hell hound~
 &+rshining with hatred in the &+Ldarkness&+r, and its nostrils flare as it takes
 &+rin the scent of the neverending &+Lhunt&+r.&n
 ~
-1140996200 1 0 671088924 2079 67108864 1024 -1000 S
-L 0 1 4
+1140996200 1 0 0 671088924 2079 67108864 1024 -1000 S
+L 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -646,8 +646,8 @@ fury~
 &+rbrutally quick claw attacks.  It knows nothing of emotion other than blind
 &+rrage, and a FuRious battery of &+Yfists &+rassaults all who oppose it.
 ~
-1140983912 1 0 671089052 2079 67108864 0 -1000 S
-X 0 576 3
+1140983912 1 0 0 671089052 2079 67108864 0 -1000 S
+X 0 576 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -661,8 +661,8 @@ hunger~
 &+Lwith suggestions of violence and death, and seems to convey the idea that
 &+Lit would like you to bring it &+csouls &+Lto devour.&n
 ~
-159754 0 0 134217740 30 0 8192 -1000 S
-X 0 0 4
+159754 0 0 0 134217740 30 0 8192 -1000 S
+X 0 0 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -680,8 +680,8 @@ ny'neth nyneth dark wizard~
 &+Lforces crush his enemies, and barriers of intense power are erected about
 &+Lthe wizard himself.&n
 ~
-16939082 1 0 939524510 276702 0 545259520 -1000 S
-PL 0 4195840 4
+16939082 1 0 0 939524510 276702 0 545259520 -1000 S
+PL 0 4195840 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -698,8 +698,8 @@ guardian golem~
 &+Lwith considerable magical abilities, it holds some innate talents imbued
 &+Lduring its creation.&n
 ~
-161898 1 0 939524508 2143 67108864 0 -1000 S
-OG 0 1 7
+161898 1 0 0 939524508 2143 67108864 0 -1000 S
+OG 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -714,8 +714,8 @@ dark entity~
 &+Leffect the living, and uses that ability with terrifying effectiveness on
 &+Lall those who oppose his black &+mmaster&+L.&n
 ~
-1210378 1 0 941097406 2142 2097152 0 -1000 S
-X 0 5 7
+1210378 1 0 0 941097406 2142 2097152 0 -1000 S
+X 0 5 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -731,8 +731,8 @@ ancient earth wyrm dragon~
 &+LIts great age indicates it likely has magical and physical prowess to match,
 &+Ldeveloped over time as the natural progression of dragon developement.&n
 ~
-2127946 1 0 939524508 30 0 0 -1000 S
-D 0 256 7
+2127946 1 0 0 939524508 30 0 0 -1000 S
+D 0 256 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -747,8 +747,8 @@ treasure bearer~
 &+Lof its strength and lifeforce by the object it possesses.  Only death will
 &+Lset him free.&n
 ~
-131144 0 0 134217728 0 0 0 -1000 S
-PH 0 1 3
+131144 0 0 0 134217728 0 0 0 -1000 S
+PH 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -763,8 +763,8 @@ treasure bearer~
 &+Lof its strength and lifeforce by the object it possesses.  Only death will
 &+Lset him free.&n
 ~
-131148 0 0 134217736 0 0 0 -1000 S
-PH 0 1 3
+131148 0 0 0 134217736 0 0 0 -1000 S
+PH 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
