@@ -4043,6 +4043,9 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         dam *= dam_factor[DF_ELSHIELDRED];
       else if (IS_AFFECTED2(victim, AFF2_PROT_COLD))
         dam *= dam_factor[DF_PROTECTION];
+
+	if(GET_RACE(victim) == RACE_BARBARIAN)
+	  dam *= .6;
       
       if(IS_AFFECTED2(victim, AFF2_FIRESHIELD))
       {
@@ -7956,8 +7959,8 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   
   // If attacker is significantly stronger than the defender, parry is reduced.
   // This will benefit giants, dragons, etc... which is logical.
-  /*if(GET_C_STR(attacker) > GET_C_STR(victim) + 100)
-    learnedattacker += GET_C_STR(attacker) - 100 - GET_C_STR(victim);Removing this for now - Drannak*/ 
+  if(GET_C_STR(attacker) > GET_C_STR(victim) + 65)
+    learnedattacker += GET_C_STR(attacker) - 65 - GET_C_STR(victim); 
   
   // Harder to parry incoming attacks when not standing.
   if(!MIN_POS(victim, POS_STANDING + STAT_NORMAL))
