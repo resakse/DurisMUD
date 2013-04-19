@@ -8411,16 +8411,15 @@ int calculate_attacks(P_char ch, int attacks[])
 		   break;
 		   case 3:
 		   bzero(&af, sizeof(af));
-		   af.duration = 30;
+                 if(GET_C_STR(ch) >= 300)
+                 bonus = 0;
+                 else
+                 bonus = number(5, 10);
+		   af.duration = 50;
 		   af.location = APPLY_STR_MAX;
-		   af.modifier = 80;
+		   af.modifier = bonus;
 		   af.flags = AFFTYPE_SHORT;
-		   affect_to_char(ch, &af);
-		   af.location = APPLY_DAMROLL;
-		   af.modifier = 30;
-		   af.flags = AFFTYPE_SHORT;
-		   affect_to_char(ch, &af);
-		   act("&nThe power of your &+Wgod&n suddenly fills your body and you feel &+BMUCH&n stronger!&n",
+		   affect_to_char(ch, &af);		   act("&nThe power of your &+Wgod&n suddenly fills your body and you feel &+BMUCH&n stronger!&n",
            FALSE, ch, 0, 0, TO_CHAR);
 		   act("&n$n gasps suddenly as their body is &+Benhanced&n by some &+Wother-worldly &npower!&n",
            FALSE, ch, 0, 0, TO_NOTVICT);

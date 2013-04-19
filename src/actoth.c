@@ -1410,6 +1410,8 @@ void do_save_silent(P_char ch, int type)
     checkLeaderBoard(ch, tmp_buf);
    }
 
+  update_achievements(ch, 0, 0);
+
   if ((ch->desc && !ch->desc->connected) || !ch->desc)
   {
     if (IS_SET(GET_PLYR(ch)->specials.act, PLR_SNOTIFY))
@@ -1485,6 +1487,8 @@ void do_save(P_char ch, char *argument, int cmd)
     sprintf(tmp_buf, "%d", ch->only.pc->numb_deaths);
     checkLeaderBoard(ch, tmp_buf);
    }
+
+  update_achievements(ch, 0, 0);
 
 
   if (IS_NPC(ch) && !IS_MORPH(ch))

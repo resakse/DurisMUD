@@ -1113,6 +1113,22 @@
 #define TAG_CTF_BONUS		     2068
 #define TAG_RACIAL_SKILLS		  2069
 #define TAG_SOULBIND			  2070
+#define ACH_UNSTOPPABLE		  2071
+#define ACH_LETSGETDIRTY		  2072
+#define ACH_SERIALKILLER		  2073
+#define ACH_JOURNEYBEGINS	         2074
+#define AIP_ARACHNOPHOBIA		  2075
+#define ACH_ARACHNOPHOBIA  		  2076
+#define ACH_TROLLIN			  2077
+#define ACH_MOOJUICE  		  2078
+#define ACH_DRAGONSLAYER		  2079
+#define ACH_MAYIHEALSYOU		  2080
+#define ACH_YOUSTRAHDME		  2081
+#define AIP_MOOJUICE			  2082
+#define AIP_DRAGONSLAYER		  2083
+#define AIP_MAYIHEALSYOU		  2084
+#define AIP_YOUSTRAHDME		  2085
+#define AIP_TROLLIN			  2086
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
 
 #define SAVING_PARA   0

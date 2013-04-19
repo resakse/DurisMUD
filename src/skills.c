@@ -4911,6 +4911,30 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("witch spell", TAG_WITCHSPELL);
   TAG_CREATE("racial skills", TAG_RACIAL_SKILLS);
   TAG_CREATE("soulbind", TAG_SOULBIND);
+
+/*  ACHIEVEMENT TAGS - FORMAT: ACH_XXXX (completed), AIP_XXXX (Achievement In Progress) */
+  //PVP
+  TAG_CREATE("ach - unstoppable", ACH_UNSTOPPABLE);  //static check, 40 frags
+  TAG_CREATE("ach - lets get dirty", ACH_LETSGETDIRTY); //static, 1.0 frags
+  TAG_CREATE("ach - serial killer", ACH_SERIALKILLER); //static, 10.00 frags
+
+  //PVE
+  TAG_CREATE("ach - journey begins", ACH_JOURNEYBEGINS); //static, gain 1.0 levels
+  TAG_CREATE("aip - arachnophobia", AIP_ARACHNOPHOBIA); 
+  TAG_CREATE("ach - arachnophobia", ACH_ARACHNOPHOBIA);
+  TAG_CREATE("aip - Trollin", AIP_TROLLIN);
+  TAG_CREATE("ach - trollin", ACH_TROLLIN);
+  TAG_CREATE("aip - moo juice", AIP_MOOJUICE);
+  TAG_CREATE("ach - moo juice", ACH_MOOJUICE);
+  TAG_CREATE("aip - dragonslayer", AIP_DRAGONSLAYER);
+  TAG_CREATE("ach - dragonslayer", ACH_DRAGONSLAYER);
+  TAG_CREATE("aip - mayihealsyou", AIP_MAYIHEALSYOU);
+  TAG_CREATE("ach - mayihealsyou", ACH_MAYIHEALSYOU);
+  TAG_CREATE("aip - strahd me at hello", AIP_YOUSTRAHDME);
+  TAG_CREATE("ach - strahd me at hello", ACH_YOUSTRAHDME);
+
+  
+
   TAG_CREATE("recent frag obj", TAG_OBJ_RECENT_FRAG);
   TAG_CREATE_WITH_MESSAGES("phantasmal form", TAG_PHANTASMAL_FORM,
                            "&+WYou feel yourself return to normal as you leave your phantasmal form.&n",

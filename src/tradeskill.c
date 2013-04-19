@@ -2249,6 +2249,8 @@ void display_achievements(P_char ch, char *arg, int cmd)
   sprintf(buf2, "   &+W%-10s           &+W%-15s     &+W%s\r\n",
           "-----------", "-------------", "-------------");
   strcat(buf, buf2);
+
+  //-----Achievement: Soul Reaper
   if(get_frags(ch) >= 2000)
   sprintf(buf2, "   &+L%-28s           &+L%-15s     &+L%s\r\n",
           "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+BObtain 20 Frags", "&+BAccess to the soulbind ability");
@@ -2256,11 +2258,21 @@ void display_achievements(P_char ch, char *arg, int cmd)
   sprintf(buf2, "   &+L%-28s           &+L%-15s     &+L%s\r\n",
           "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+wObtain 20 Frags", "&+wAccess to the soulbind ability");
   strcat(buf, buf2);
-  sprintf(buf2, "\r\n");
+  //-----End Soul Reaper
+
+  //-----Achievement: Let's Get Dirty
+  if(affected_by_spell(ch, ACH_LETSGETDIRTY))
+  sprintf(buf2, "   &+L%-34s      &+L%-15s   &+L%s\r\n",
+          "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+BObtain 1.00 Frags", "&+BGain 2 CON points");
+  else
+  sprintf(buf2, "   &+L%-34s      &+L%-15s   &+L%s\r\n",
+          "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+wObtain 1.00 Frags", "&+wGain 2 CON points");
   strcat(buf, buf2);
+  //-----End Let's Get Dirty
 
 /*  PVE ACHIEVEMENTS */
-
+  sprintf(buf2, "\r\n");
+  strcat(buf, buf2);
   sprintf(buf3, "   &+W%-23s           &+W%s\r\n",
           " ", "&+L(&+gP&+Gv&+gE&+L)&n");
   strcat(buf, buf3);
@@ -2272,3 +2284,83 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
 
 }
+
+void update_achievements(P_char ch, P_char victim, int cmd)
+{
+  char     argument[MAX_STRING_LENGTH];
+  P_char   target;
+  struct affected_type af;
+
+  if (IS_NPC(ch))
+    return;
+
+ 
+  //PvP Achievements
+  int frags = get_frags(ch);
+
+  if((frags >= 100) && !affected_by_spell(ch, ACH_LETSGETDIRTY)) 
+   {
+    send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RLet's Get Dirty&+r achievement!&n\r\n", ch);
+    ch->base_stats.Con += 2;
+    if(ch->base_stats.Con > 100)
+    ch->base_stats.Con = 100;
+
+  	apply_achievement(ch, ACH_LETSGETDIRTY);
+   }
+
+  if(cmd == 0 && !victim) //no exp or other value means nothing else to do.
+  return;
+/*
+  struct affected_type *af, *next_af;
+  for(af = ch->affected; af; af = next_af)
+  {
+    next_af = af->next;
+    if(findaf && findaf->type == TAG_SOULBIND)
+      {
+        //affect_remove(ch, af);
+       result = findaf->modifier;
+      }
+
+  }
+*/
+}
+
+void apply_achievement(P_char ch, int ach)
+{
+ struct affected_type af;
+ 
+   if(!ach)
+   return;
+       memset(&af, 0, sizeof(struct affected_type));
+  	af.type = ach;
+  	af.modifier = 0;
+  	af.duration = -1;
+       af.location = 0;
+       af.flags = AFFTYPE_NOSHOW | AFFTYPE_PERM | AFFTYPE_NODISPEL;
+       affect_to_char(ch, &af);
+
+}
+
+/*
+
+   		     affect_remove(victim, findaf);
+
+int has_soulbind(P_char ch)
+{
+  int result = 0;
+  struct affected_type *findaf, *next_af;
+     //  affect_remove(ch, af); save for later - from bard.c
+
+  for (findaf = ch->affected; findaf; findaf = next_af)
+   {
+    next_af = findaf->next;
+    if(findaf &&
+      findaf->type == TAG_SOULBIND)
+      {
+        //affect_remove(ch, af);
+       result = findaf->modifier;
+      }
+   }
+   return result;
+}
+*/

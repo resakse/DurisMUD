@@ -330,6 +330,8 @@ bool is_stat_max(sbyte);
 /* tradeskill.c */
 int get_frags(P_char);
 void display_achievements(P_char ch, char *arg, int cmd);
+void update_achievements(P_char ch, P_char victim, int cmd);
+void apply_achievement(P_char ch, int ach);
 
 /* actoff.c */
 bool CheckMultiProcTiming(P_char);

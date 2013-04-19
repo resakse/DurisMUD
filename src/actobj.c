@@ -3347,7 +3347,7 @@ void perform_wear(P_char ch, P_obj obj_object, int keyword)
   }
 
   //Battlemage Coat
-    if (obj_index[obj_object->R_num].virtual_number == 400218 && !IS_MULTICLASS_PC(ch))
+    if (obj_index[obj_object->R_num].virtual_number == 400218 && !IS_MULTICLASS_PC(ch) && !affected_by_spell(ch, SPELL_BATTLEMAGE))
     {
 	send_to_char("&+rAs you cover yourself with your &+Ymaje&+rst&+Yic &+Yrobe&+r,\r\n&+ryou suddenly feel an enhanced &+mpower&+r rise up within your &+Ybody&+r!&n\r\n", ch);
 	act("&+L$n's &+Yeyes&+r suddenly glow &+yg&+Yo&+yl&+Yd&+ye&+Yn&+r with po&+Rwe&+rr!&n", TRUE, ch, 0, 0, TO_ROOM);
