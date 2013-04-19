@@ -2260,6 +2260,16 @@ void display_achievements(P_char ch, char *arg, int cmd)
   strcat(buf, buf2);
   //-----End Soul Reaper
 
+  //-----Achievement: Serial Killer
+  if(affected_by_spell(ch, ACH_SERIALKILLER))
+  sprintf(buf2, "   &+L%-34s      &+L%-15s  &+L%s\r\n",
+          "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+BObtain 10.00 Frags", "&+BGain 2 points in every attribute");
+  else
+  sprintf(buf2, "   &+L%-34s      &+L%-15s  &+L%s\r\n",
+          "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+wObtain 10.00 Frags", "&+wGain 2 points in every attribute");
+  strcat(buf, buf2);
+  //-----End Serial Killer
+
   //-----Achievement: Let's Get Dirty
   if(affected_by_spell(ch, ACH_LETSGETDIRTY))
   sprintf(buf2, "   &+L%-34s      &+L%-15s   &+L%s\r\n",
@@ -2306,6 +2316,20 @@ void update_achievements(P_char ch, P_char victim, int cmd)
     ch->base_stats.Con = 100;
 
   	apply_achievement(ch, ACH_LETSGETDIRTY);
+   }
+
+  if((frags >= 1000) && !affected_by_spell(ch, ACH_SERIALKILLER)) 
+   {
+    send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RSerial Killer&+r achievement!&n\r\n", ch);
+    ch->base_stats.Str = BOUNDED(1, (ch->base_stats.Str+ 2), 100);
+    ch->base_stats.Agi = BOUNDED(1, (ch->base_stats.Agi+ 2), 100);
+    ch->base_stats.Dex = BOUNDED(1, (ch->base_stats.Dex+ 2), 100);
+    ch->base_stats.Con = BOUNDED(1, (ch->base_stats.Con+ 2), 100);
+    ch->base_stats.Pow = BOUNDED(1, (ch->base_stats.Pow+ 2), 100);
+    ch->base_stats.Wis = BOUNDED(1, (ch->base_stats.Wis+ 2), 100);
+    ch->base_stats.Int = BOUNDED(1, (ch->base_stats.Int+ 2), 100);
+    ch->base_stats.Cha = BOUNDED(1, (ch->base_stats.Cha+ 2), 100);
+    apply_achievement(ch, ACH_SERIALKILLER);
    }
 
   if(cmd == 0 && !victim) //no exp or other value means nothing else to do.
