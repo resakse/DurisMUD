@@ -841,6 +841,7 @@ extern unsigned int game_locked;
 #define CMD_LEADERBOARD 814
 #define CMD_SOULBIND    815
 #define CMD_ACHIEVEMENTS 816
+#define CMD_SALVATION   817
 
 /* cmds below are not real commands, they are
                 used in item special procedures to identify

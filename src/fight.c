@@ -581,6 +581,7 @@ if(affected_by_spell(ch, TAG_NOMISFIRE)) //misfire code - drannak
 	}
 */
   hits = vamp(ch, hits, cap);
+  update_achievements(healer, ch, hits, 1);
 
 // debug("Hitting heal function in fight with (%d) hits.", hits);
   if(IS_PC(healer) && IS_FIGHTING(ch))

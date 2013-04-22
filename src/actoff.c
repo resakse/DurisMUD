@@ -5361,6 +5361,12 @@ void bash(P_char ch, P_char victim)
     return;
   }
 
+  if(IS_AFFECTED2(ch, AFF2_AIR_AURA) || (GET_RACE(ch) == RACE_F_ELEMENTAL) || (GET_RACE(ch) == RACE_A_ELEMENTAL))
+  {
+    send_to_char("You couldnt bash in your current form if you wanted to.\r\n", ch);
+    return;
+  }
+
   mount = get_linked_char(ch, LNK_RIDING);
   
   if(mount)

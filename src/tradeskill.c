@@ -2243,39 +2243,39 @@ void display_achievements(P_char ch, char *arg, int cmd)
   sprintf(buf2, "   &+W%-23s           &+W%s\r\n",
           " ", "&+L(&+rP&+Rv&+rP&+L)&n");
   strcat(buf, buf2);
-  sprintf(buf2, "   &+W%-10s           &+W%-15s     &+W%s\r\n",
+  sprintf(buf2, "   &+W%-22s&+W%-42s&+W%s\r\n",
           "Achievement", "Requirement", "Affect/Reward");
   strcat(buf, buf2);
-  sprintf(buf2, "   &+W%-10s           &+W%-15s     &+W%s\r\n",
+  sprintf(buf2, "   &+W%-22s&+W%-42s&+W%s\r\n",
           "-----------", "-------------", "-------------");
   strcat(buf, buf2);
 
   //-----Achievement: Soul Reaper
   if(get_frags(ch) >= 2000)
-  sprintf(buf2, "   &+L%-28s           &+L%-15s     &+L%s\r\n",
+  sprintf(buf2, "   &+L%-49s&+L%-45s&+L%s\r\n",
           "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+BObtain 20 Frags", "&+BAccess to the soulbind ability");
   else
-  sprintf(buf2, "   &+L%-28s           &+L%-15s     &+L%s\r\n",
+  sprintf(buf2, "   &+L%-49s&+L%-45s&+L%s\r\n",
           "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+wObtain 20 Frags", "&+wAccess to the soulbind ability");
   strcat(buf, buf2);
   //-----End Soul Reaper
 
   //-----Achievement: Serial Killer
   if(affected_by_spell(ch, ACH_SERIALKILLER))
-  sprintf(buf2, "   &+L%-34s      &+L%-15s  &+L%s\r\n",
+  sprintf(buf2, "   &+L%-40s&+L%-45s&+L%s\r\n",
           "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+BObtain 10.00 Frags", "&+BGain 2 points in every attribute");
   else
-  sprintf(buf2, "   &+L%-34s      &+L%-15s  &+L%s\r\n",
+  sprintf(buf2, "   &+L%-40s&+L%-45s&+L%s\r\n",
           "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+wObtain 10.00 Frags", "&+wGain 2 points in every attribute");
   strcat(buf, buf2);
   //-----End Serial Killer
 
   //-----Achievement: Let's Get Dirty
   if(affected_by_spell(ch, ACH_LETSGETDIRTY))
-  sprintf(buf2, "   &+L%-34s      &+L%-15s   &+L%s\r\n",
+  sprintf(buf2, "   &+L%-43s&+L%-45s&+L%s\r\n",
           "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+BObtain 1.00 Frags", "&+BGain 2 CON points");
   else
-  sprintf(buf2, "   &+L%-34s      &+L%-15s   &+L%s\r\n",
+  sprintf(buf2, "   &+L%-43s&+L%-45s&+L%s\r\n",
           "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+wObtain 1.00 Frags", "&+wGain 2 CON points");
   strcat(buf, buf2);
   //-----End Let's Get Dirty
@@ -2286,6 +2286,27 @@ void display_achievements(P_char ch, char *arg, int cmd)
   sprintf(buf3, "   &+W%-23s           &+W%s\r\n",
           " ", "&+L(&+gP&+Gv&+gE&+L)&n");
   strcat(buf, buf3);
+
+  //-----Achievement: The Journey Begins
+  if(affected_by_spell(ch, ACH_JOURNEYBEGINS))
+  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+          "&+gThe Jou&+Grney Beg&+gins&n", "&+BGain a level", "&+B&+ya rugged a&+Yd&+yv&+Ye&+yn&+Yt&+yu&+Yr&+ye&+Yr&+ys &+Lsatchel");
+  else
+  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+          "&+gThe Jou&+Grney Beg&+gins&n", "&+wGain a level", "&+wan Unknown Item");
+  strcat(buf, buf3);
+  //-----The Journey Begins
+
+  //-----Achievement: May I Heals You
+  if(affected_by_spell(ch, ACH_MAYIHEALSYOU))
+  sprintf(buf3, "   &+L%-39s&+L%-45s&+L%s\r\n",
+          "&+WMay I &+WHe&+Ya&+Wls &+WYou?&n", "&+BHeal 1,000,000 points of player damage", "&+BAccess to the salvation command");
+  else
+  sprintf(buf3, "   &+L%-39s&+L%-45s&+L%s\r\n",
+          "&+WMay I &+WHe&+Ya&+Wls &+WYou?&n", "&+wHeal 1,000,000 points of player damage", "&+wAccess to the salvation command");
+  strcat(buf, buf3);
+  //-----May I Heals You
+
   sprintf(buf3, "\r\n&+L=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-&n\r\n\r\n", GET_NAME(ch));
   strcat(buf, buf3);
  /* sprintf(buf2, "   &+w%-15s          &+Y% 6.2f\t\r\n",
@@ -2295,19 +2316,28 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
 }
 
-void update_achievements(P_char ch, P_char victim, int cmd)
+void update_achievements(P_char ch, P_char victim, int cmd, int ach)
 {
   char     argument[MAX_STRING_LENGTH];
-  P_char   target;
   struct affected_type af;
+
+  /* Achievement int ach list:
+  1 - may i heals you
+  */
 
   if (IS_NPC(ch))
     return;
 
+  //assign accumulation affects if missing and ach is of type.
+  if ((ach == 1) && !affected_by_spell(ch, AIP_MAYIHEALSYOU))
+  apply_achievement(ch, AIP_MAYIHEALSYOU);
  
   //PvP Achievements
-  int frags = get_frags(ch);
+  int frags;
+  frags = get_frags(ch);
+  
 
+  /* LETS GET DIRTY */
   if((frags >= 100) && !affected_by_spell(ch, ACH_LETSGETDIRTY)) 
    {
     send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RLet's Get Dirty&+r achievement!&n\r\n", ch);
@@ -2318,6 +2348,7 @@ void update_achievements(P_char ch, P_char victim, int cmd)
   	apply_achievement(ch, ACH_LETSGETDIRTY);
    }
 
+  /*  SERIAL KILLER */
   if((frags >= 1000) && !affected_by_spell(ch, ACH_SERIALKILLER)) 
    {
     send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RSerial Killer&+r achievement!&n\r\n", ch);
@@ -2332,23 +2363,45 @@ void update_achievements(P_char ch, P_char victim, int cmd)
     apply_achievement(ch, ACH_SERIALKILLER);
    }
 
+  /* The Journey Begins */
+  if((GET_LEVEL(ch) >= 2) && !affected_by_spell(ch, ACH_JOURNEYBEGINS))
+    {
+      send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RThe Journey Begins&+r achievement!&n\r\n", ch);
+      send_to_char("&+yThis &+Yachievement&+y rewards an &+Yitem&+y! Check your &+Winventory &+yby typing &+Wi&+y!&n\r\n", ch);
+      apply_achievement(ch, ACH_JOURNEYBEGINS);
+      obj_to_char(read_object(400222, VIRTUAL), ch);
+    }
+
   if(cmd == 0 && !victim) //no exp or other value means nothing else to do.
   return;
-/*
-  struct affected_type *af, *next_af;
-  for(af = ch->affected; af; af = next_af)
+
+  //begin cumulative achievements
+  struct affected_type *findaf, *next_af;  //initialize affects
+
+  for(findaf = ch->affected; findaf; findaf = next_af)
   {
-    next_af = af->next;
-    if(findaf && findaf->type == TAG_SOULBIND)
+    next_af = findaf->next;
+
+    /* May I Heals You */
+    if((findaf && findaf->type == AIP_MAYIHEALSYOU) && !affected_by_spell(ch, ACH_MAYIHEALSYOU) && ach == 1)
       {
-        //affect_remove(ch, af);
-       result = findaf->modifier;
+       //check to see if we've hit 1000000 healing
+	  int result = findaf->modifier;
+         if(result >= 1000000)
+          {
+         affect_remove(ch, findaf);
+         apply_achievement(ch, ACH_MAYIHEALSYOU);
+         send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RMay I Heals You&+r achievement!&n\r\n", ch);
+         send_to_char("&+yYou may now access the &+Wsalvation&+y command!&n\r\n", ch);
+          }
+           if((ch != victim) && !IS_NPC(victim))
+           {
+	    findaf->modifier += cmd;
+           }
       }
-
+    /* end may i heals you */
   }
-*/
 }
-
 void apply_achievement(P_char ch, int ach)
 {
  struct affected_type af;
@@ -2365,26 +2418,33 @@ void apply_achievement(P_char ch, int ach)
 
 }
 
-/*
-
-   		     affect_remove(victim, findaf);
-
-int has_soulbind(P_char ch)
+void do_salvation(P_char ch, char *arg, int cmd)
 {
-  int result = 0;
-  struct affected_type *findaf, *next_af;
-     //  affect_remove(ch, af); save for later - from bard.c
+    struct affected_type af;
+ if(!affected_by_spell(ch, ACH_MAYIHEALSYOU) && !IS_TRUSTED(ch))
+  {
+    send_to_char("&+CYou have not earned the right to use this skill.&n\r\n", ch);
+    return;
+  }
 
-  for (findaf = ch->affected; findaf; findaf = next_af)
-   {
-    next_af = findaf->next;
-    if(findaf &&
-      findaf->type == TAG_SOULBIND)
-      {
-        //affect_remove(ch, af);
-       result = findaf->modifier;
-      }
-   }
-   return result;
+ if(affected_by_spell(ch, TAG_SALVATION))
+ {
+  send_to_char("You must rest before invoking this spell again.\r\n", ch);
+  return;
+ }
+
+   if(!ch)
+   return;
+       memset(&af, 0, sizeof(struct affected_type));
+  	af.type = TAG_SALVATION;
+  	af.modifier = 0;
+  	af.duration = 24;
+       af.location = 0;
+       af.flags = AFFTYPE_NODISPEL;
+       affect_to_char(ch, &af);
+    act("&+YYou raise your eyes &+Cskyward&+Y in a plea for assistance...\n"
+        "&+Y..after a brief moment, your body &+Ctingles&+Y with warmth, and you feel &+Crenewed&+Y.", FALSE, ch, 0, ch, TO_CHAR);
+    act("&+Y$n raises their eyes &+Cskyward&+Y in a plea for assistance...\n"
+        "&+Y..after a brief moment, $n's body &+Ctingles&+Y with warmth, and they feel &+Crenewed&+Y.", FALSE, ch, 0, 0, TO_ROOM);
+        vamp(ch, number(100, 200), GET_MAX_HIT(ch));
 }
-*/

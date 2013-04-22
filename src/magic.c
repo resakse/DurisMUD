@@ -14450,7 +14450,9 @@ void spell_pword_blind(int level, P_char ch, char *arg, int type,
 void spell_pword_stun(int level, P_char ch, char *arg, int type,
                       P_char victim, P_obj obj)
 {
-  int percent = 50;
+  //int percent = 50;
+  int percent;
+  percent = (int) (GET_C_POW(ch) - GET_C_POW(victim)); //we now initate percent by checking difference between minds - Drannak 4/21/13
 
   if(!(ch) ||
     !(victim) ||
@@ -14479,7 +14481,7 @@ void spell_pword_stun(int level, P_char ch, char *arg, int type,
  
   percent += (int) (GET_LEVEL(ch) - GET_LEVEL(victim));
   
-  percent += (int) (GET_C_POW(ch) - GET_C_POW(victim)) * .75;
+  //percent += (int) (GET_C_POW(ch) - GET_C_POW(victim)) * .75;
   
   if(IS_PC_PET(victim))
     percent *= 2;
@@ -14491,7 +14493,13 @@ void spell_pword_stun(int level, P_char ch, char *arg, int type,
     percent *= 1.5;
 
   if(NewSaves(ch, SAVING_SPELL, number(-3, 3)))
+    {
     percent = (int) percent * .75;
+    }
+  else
+    {
+      percent = (int) percent * 1.15;
+    }
 
   if(percent < 30)
   {

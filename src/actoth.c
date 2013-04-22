@@ -1410,7 +1410,7 @@ void do_save_silent(P_char ch, int type)
     checkLeaderBoard(ch, tmp_buf);
    }
 
-  update_achievements(ch, 0, 0);
+  update_achievements(ch, 0, 0, 0);
 
   if ((ch->desc && !ch->desc->connected) || !ch->desc)
   {
@@ -1488,7 +1488,7 @@ void do_save(P_char ch, char *argument, int cmd)
     checkLeaderBoard(ch, tmp_buf);
    }
 
-  update_achievements(ch, 0, 0);
+  update_achievements(ch, 0, 0, 0);
 
 
   if (IS_NPC(ch) && !IS_MORPH(ch))

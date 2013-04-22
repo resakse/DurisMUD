@@ -1129,6 +1129,7 @@
 #define AIP_MAYIHEALSYOU		  2084
 #define AIP_YOUSTRAHDME		  2085
 #define AIP_TROLLIN			  2086
+#define TAG_SALVATION		  2087
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
 
 #define SAVING_PARA   0
