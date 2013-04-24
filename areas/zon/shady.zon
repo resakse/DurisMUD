@@ -1,6 +1,6 @@
 #975
 &+LShady &+GGrove&n~
-97759 2 4 20 30 1
+97758 2 4 20 30 1
 *
 * Zone edited with durisEdit v2.99de
 *
@@ -371,7 +371,6 @@ O 0 97545 3 97688 100 0 0 0        * a large bed
 O 0 3097 99 97703 100 0 0 0        * (object type not in this .obj file)
 O 0 97533 3 97722 100 0 0 0        * a large casket
 O 0 97533 3 97723 100 0 0 0        * a large casket
-O 0 400216 1 97759 100 0 0 0       * (object type not in this .obj file)
 *
 M 0 97500 10 97500 100 0 0 0       * a slimy maggot
 M 0 97500 10 97500 100 0 0 0       * a slimy maggot
@@ -884,7 +883,6 @@ G 1 97574 4 0 100 0 0 0            *    a small green leaf
 M 0 97520 14 97688 100 0 0 0       * an orcish warrior
 M 0 97567 6 97688 100 0 0 0        * a strange green potted plant
 M 0 97538 17 97690 100 0 0 0       * an orcish shaman
-M 0 97606 1 97691 100 0 0 0        * Gixnif
 M 0 97549 23 97692 100 0 0 0       * a baby orc
 E 1 97561 20 7 100 0 0 0           *   an old diaper
 M 0 97524 10 97692 100 0 0 0       * the grinning bobcat
@@ -1106,6 +1104,5 @@ M 0 97594 1 97758 100 0 0 0        * a wood golem
 M 0 97595 1 97758 100 0 0 0        * a deep gnome slave
 M 0 97596 1 97758 100 0 0 0        * a rakshasa slave
 M 0 97597 1 97758 100 0 0 0        * an ettin warrior
-M 0 400000 1 97759 100 0 0 0       * (mob type not in this .mob file)
 *
 S

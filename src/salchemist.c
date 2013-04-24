@@ -520,11 +520,24 @@ void do_mix(P_char ch, char *argument, int cmd)
       while (TRUE)
       {
         P_obj    potion;
+        char gbuf2[MAX_STRING_LENGTH], buffer[MAX_STRING_LENGTH];
 
+
+	if(number(1, 160) < ((GET_C_WIS(ch) + GET_C_DEX(ch)) / 2))
+	{
         potion = read_object(potion_data[i].vnum, VIRTUAL);
         potion->value[0] = GET_LEVEL(ch);
         act("You've &+Wcreated&n $p.", FALSE, ch, potion, 0, TO_CHAR);
+        sprintf(gbuf2, "%s %s", GET_NAME(ch), potion->name);
+        potion->name = str_dup(gbuf2);
+	 sprintf(buffer, "%s mixed by %s", potion->short_description, GET_NAME(ch));
+	 set_short_description(potion, buffer);
         obj_to_char(potion, ch);
+       }
+        else
+       {
+        act("&+RYou clumsily spill your ingredients everywhere, ruining your creation!", FALSE, ch, 0, 0, TO_CHAR);
+       }
         extract_obj(bottle, TRUE);
 
         if(number(0, 5))

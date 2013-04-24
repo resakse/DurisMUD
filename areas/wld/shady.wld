@@ -3726,10 +3726,6 @@ The small pathway continues to the east.
 ~
 ~
 0 0 97665
-D2
-~
-~
-0 0 97691
 D4
 The Bar of the Eleventh Hour is above this alley.
 ~
@@ -4330,24 +4326,6 @@ D2
 ~
 ~
 0 0 97699
-S
-#97691
-&+GGixnif's &+Lhouse of &+gGreed&n~
-&+yBuilt from &+Ldirt&+y and rubble from the &+Walley&+y, this room is nothing more than
-&+ya makeshift burrow carved from the &+Learth&+y. &+wRats&+y and other vermin dart throughout
-&+ythe &+Lsh&+wad&+Lows&+y fighting for whatever scraps of &+rfood&+y they can find. In the
-&+yfar back of the room sits a &+Lshifty-eyed&+y, &+gfat &+Ggoblin&+y, picking its teeth with
-&+ya &+Ymuddy&+y &+Lpick axe&+y.
-~
-975 176193544 0
-D0
-~
-~
-0 0 97664
-D4
-~
-~
-0 0 97759
 S
 #97692
 &+WThe Path of the Damned&N~
@@ -5712,17 +5690,4 @@ S
 Shady hireling load room~
 ~
 975 134250496 0
-S
-#97759
-&+WKannard's &+mS&+Me&+Yc&+Gr&+Ce&+Rt &+yShop &nof &+CIntrigue&n~
-Formed by a &+clight blue&n, &+Mglowing &+cmist&n, this room seems to &+Cpulsate&n
-in and out of &+Lexistence&n. Various &+Cartifacts&n from reaches far beyond our own &+rrealm&n
-slowly &+cphase&n into view, providing a &+Cglimpse&n into &+Lother-worldy &nrealms. A
-&+Lcl&+woa&+Wked&n, &+Lhooded&n figure &+rhovers&n in the center of the room, beckoning you closer.
-~
-975 142639168 0
-D5
-~
-~
-0 0 97691
 S

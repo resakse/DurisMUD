@@ -1130,11 +1130,12 @@ bool ground_casting_check(P_char ch, int spl)
   /* check for if they were casting but just bashed, then check their groundcast skill */
   if( IS_SET(ch->specials.affected_by2, AFF2_CASTING) &&
       !IS_SET(skills[spl].targets, TAR_NOCOMBAT) &&
-      //( number(0,100) < (int) ( GET_CHAR_SKILL(ch, SKILL_GROUND_CASTING) / 2 ) ||
-      //  notch_skill(ch, SKILL_GROUND_CASTING, get_property("skill.notch.groundCasting", 50) ) )    
-      ( number(0,120) < (int) ( GET_CHAR_SKILL(ch, SKILL_CONCENTRATION / 2)  ||
-        notch_skill(ch, SKILL_CONCENTRATION, 50) ))       
-      )
+
+      (number(0,100) < (int) (GET_CHAR_SKILL(ch, SKILL_GROUND_CASTING) / 2 )) ||
+     //  notch_skill(ch, SKILL_GROUND_CASTING, get_property("skill.notch.groundCasting", 50) ) )
+      ( number(0,120) < (int) ( GET_CHAR_SKILL(ch, SKILL_CONCENTRATION / 2))))
+         
+      
   {
     act("$n continues preparing $s spell from the ground...", FALSE, ch, 0, 0, TO_ROOM);
     act("You continue preparing your spell from the ground...", FALSE, ch, 0, 0, TO_CHAR);
@@ -2583,7 +2584,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
   if(tar_char && (tar_char != ch) &&
     IS_AGG_SPELL(arg->spell))
   {
-    appear(ch);
+   appear(ch);
     tar_char = guard_check(ch, tar_char);
   }
   

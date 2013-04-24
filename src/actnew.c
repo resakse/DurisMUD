@@ -3923,6 +3923,9 @@ int chance_throw_potion(P_char ch, P_char victim)
     chance = GET_LEVEL(ch) * 2;
   }
   
+  if(number(1, 140) > GET_C_AGI(ch))
+  chance = 1;
+  
   return (int) chance;
 
 }
@@ -3944,6 +3947,15 @@ bool throw_potion(P_char ch, P_obj scroll, P_char victim, P_obj obj)
     act("Well, trying might not hurt.", FALSE, ch, 0, 0, TO_CHAR);
     return FALSE;
   }
+  
+
+  
+
+    if(!isname(GET_NAME(ch), scroll->short_description))
+    {
+     send_to_char("&+YThrowing potions of unknown origin might be hazardous to your health... better not!&n\r\n", ch);
+     return FALSE;
+    }
 
   if (scroll == ch->equipment[HOLD])
     equipped = TRUE;
@@ -3966,6 +3978,22 @@ bool throw_potion(P_char ch, P_obj scroll, P_char victim, P_obj obj)
 
   if (victim)
   {
+
+     if(chance == 1)
+      {
+      send_to_char("As you slip......\r\n", ch);
+        if (equipped)
+          unequip_char(ch, HOLD);
+        obj_from_char(scroll, TRUE);
+        send_to_char
+          ("&+YYou aim your throw a little too high, sending your potion flying across the room!\r\n&n",
+           ch);
+        act
+          ("$n slips as $e throws a $p, sending it bouncing along the ground!",
+           TRUE, ch, scroll, 0, TO_ROOM);
+        return FALSE;
+      }
+
     if (number(0, chance))
     {
       victim = victim;

@@ -1750,6 +1750,7 @@ This sign contains information about the items for sale in this store:
 &+W 3) &+Wa &+mm&+My&+Ys&+Bt&+Gc&+Ra&+Gl &+MFaerie &+Wbag of &+Lstolen loot&n
 &+C-This item contains a random item from the entire world of &+rDuris&+C. When opened, the bag will disappear
 &+C and the item will magically appear in your inventory.&n
+&+WCan be purchased for &+Lplatinum &+Wby giving &+L1000 platinum &+Wto Kannard.
 
 &+W 4) &+Ya r&+ro&+Yb&+re &+Yof a &+mN&+We&+Mt&+Wh&+me&+Wr&+Mi&+Wl &+rBa&+Ytt&+rle&+Y M&+rag&+Ye&n
 &+C-This powerful item grants the wearer secret abilities of the battle mages. When wearing the robe, a person
@@ -1766,7 +1767,7 @@ bag faerie mystical loot stolen~
 ~
 15 1 3 0 7 0 8201 16385 64 0 0
 100 5 0 100 0 0 0 0
-0 0 100
+0 1000000 100
 E
 bag faerie mystical loot stolen~
 &+WHeld together by &+mmagical mists&+W, you wonder just exactly what item might be inside! Only one way to find out!

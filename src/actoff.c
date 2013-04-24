@@ -4669,6 +4669,12 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   dam = (int) dam * level_mult;
   dam = (int) dam * final_mult;
 
+ if(IS_AFFECTED(victim, AFF_AWARE))
+  {
+   send_to_char("&+LSince your victim is &+raware&+L of their surroundings, you are unable to take full advantage of them...\r\n", ch);
+   dam *= .5;
+  }
+
   if(IS_IMMOBILE(victim) ||
      GET_STAT(victim) <= STAT_SLEEPING)
       dam = MAX(80, dam);
@@ -4967,6 +4973,8 @@ int backstab(P_char ch, P_char victim)
   if(!CAN_SEE(victim, ch))
     percent_chance = (int) (percent_chance * 1.5);
 
+
+
   if(has_innate(victim, INNATE_DRAGONMIND) && number(0,1) ){
     act("$N notices your lethal attempt!", FALSE, ch,
         0, victim, TO_CHAR);
@@ -5028,6 +5036,7 @@ int backstab(P_char ch, P_char victim)
                     get_property("skill.notch.offensive", 15)) ||
         percent_chance > number(0, 100))
     {
+  
       if(single_stab(ch, victim, first_w))
         return TRUE;
     }
@@ -5361,7 +5370,7 @@ void bash(P_char ch, P_char victim)
     return;
   }
 
-  if(IS_AFFECTED2(ch, AFF2_AIR_AURA) || (GET_RACE(ch) == RACE_F_ELEMENTAL) || (GET_RACE(ch) == RACE_A_ELEMENTAL))
+  if(IS_AFFECTED2(ch, AFF2_AIR_AURA) || (GET_RACE(ch) == RACE_F_ELEMENTAL) || (GET_RACE(ch) == RACE_A_ELEMENTAL) || affected_by_spell(ch, SPELL_ETHEREAL_FORM))
   {
     send_to_char("You couldnt bash in your current form if you wanted to.\r\n", ch);
     return;
