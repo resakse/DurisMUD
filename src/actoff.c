@@ -4669,7 +4669,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   dam = (int) dam * level_mult;
   dam = (int) dam * final_mult;
 
- if(IS_AFFECTED(victim, AFF_AWARE))
+ if(IS_AFFECTED(victim, AFF_AWARE) && IS_PC(victim))
   {
    send_to_char("&+LSince your victim is &+raware&+L of their surroundings, you are unable to take full advantage of them...\r\n", ch);
    dam *= .5;
