@@ -2607,10 +2607,10 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
   //-----Achievement: Dragonslayer
   if(affected_by_spell(ch, ACH_DRAGONSLAYER))
-  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
           "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+BKill 1000 Dragons", "&+B10% damage increase vs Dragons");
   else
-  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
           "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+wKill 1000 Dragons", "&+w10% damage increase vs Dragons");
   strcat(buf, buf3);
   //-----DRagonslayer
@@ -2794,24 +2794,12 @@ void do_salvation(P_char ch, char *arg, int cmd)
 
 void do_drandebug(P_char ch, char *arg, int cmd)
 {
- /* float newcost;
-  float charskil = GET_CHAR_SKILL(ch, SKILL_MINE);
-  float bullshit = ((float)50 / (float)100);
-  debug("GET_CHAR_SKILL(ch, SKILL_MINE) = %f\r\n", charskil);
-  debug("charskil * bullshit = %f\r\n", (charskil * bullshit));
-  debug(" this  = %f\r\n", bullshit);
-  debug("casting charskil to int %d\r\n", ((int)(charskil)));*/
- 
-   float newcost = 120000; //120 p starting point
-   float charskil = (GET_CHAR_SKILL(ch, SKILL_MINE));
-   debug("newcost value %f\r\n", newcost);
-   newcost = (newcost * ((float)GET_LEVEL(ch) / (float)56));
-   debug("newcost value %f\r\n", newcost);
-    newcost = (newcost * ((charskil / (float)100)));
-    debug("mine skill level %f\r\n", charskil);
-    debug("newcost value %f\r\n", newcost);
-    debug("newcost to int %d\r\n", ((int)newcost));
-
+  return;
+/*
+ P_obj obj;
+ int value = itemvalue(ch, obj);
+ debug("Item's value is: %d\r\n&n", value);
+ */
 }
 
 int get_matstart(P_obj obj)
