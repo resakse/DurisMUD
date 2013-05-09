@@ -3291,7 +3291,7 @@ void do_brief(P_char ch, char *argument, int cmd)
 
 void do_area(P_char ch, char *argument, int cmd)
 {
-  char  buf[MAX_STRING_LENGTH];
+  char  buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
 	if (IS_NPC(ch) && !IS_MORPH(ch))
 	{
@@ -3300,7 +3300,15 @@ void do_area(P_char ch, char *argument, int cmd)
   }
 
   sprintf(buf, " %s\n", pad_ansi(zone_table[world[ch->in_room].zone].name, 30).c_str());
-  
+  sprintf(buf2 + strlen(buf2), "&+LAverage &+rmob&+L level in zone: &N%d ",
+            zone->avg_mob_level);
+  int zdiff = (zone->avg_mob_level - GET_LEVEL(ch));
+  strcat(buf, buf2);
+  if (zdiff > 15)
+  {
+  sprintf(buf2, "&-L&+RWarning&+L, some mobs in this zone may be very hazardous for you! Travel with care!&n\r\n");
+  strcat (buf, buf2);
+  }
   send_to_char(buf, ch);
   
 }
