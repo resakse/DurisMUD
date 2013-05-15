@@ -9932,25 +9932,26 @@ void do_dreadnaught(P_char ch, char *, int)
     af.type = SKILL_DREADNAUGHT;
     af.bitvector5 = AFF5_DREADNAUGHT;
     af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL ;
-    af.duration = 25;
+    af.duration = 40;
 	affect_to_char(ch, &af);
-	
+
+    memset(&af, 0, sizeof(af));
     af.type = SKILL_DREADNAUGHT;
     af.bitvector4 = AFF4_NOFEAR;
-    af.duration = 25;
+    af.duration = 40;
     af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL ;
 
     affect_to_char_with_messages(ch, &af,
                                  "&+yYou lower your &+Yguard&+y, and assume an offensive stance.",
                                  "$n &+ylowers his guard, and assumes an offensive stance.&n");
 								 
-	set_short_affected_by(ch, TAG_DREADNAUGHT, 50);
+	set_short_affected_by(ch, TAG_DREADNAUGHT, 65);
     notch_skill(ch, SKILL_DREADNAUGHT, 15);
     return;
     }
     act("&nYou attempt to assume a &+ydefensive &nposition, but fail horribly!&n", FALSE, ch, 0, 0, TO_CHAR);
     act("$n &+yattempts to assume a &+Ydefensive&+y position, but fails horribly!&n", FALSE, ch, 0, 0, TO_ROOM);
-    set_short_affected_by(ch, TAG_DREADNAUGHT, 50);
+    set_short_affected_by(ch, TAG_DREADNAUGHT, 65);
     notch_skill(ch, SKILL_DREADNAUGHT, 15);
 }
 

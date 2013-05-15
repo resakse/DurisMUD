@@ -653,6 +653,7 @@ flagDef  extra2_bits[] = {
   {"CRUMBLELOOT", "Crumble when looted", 1, 0},
   {"STOREITEM", "Bought from shop", 0, 0},
   {"SOULBIND", "Soul bound item", 0, 0},
+  {"CRAFTED", "Crafted Item", 0, 0},
   {0}
 };
 
@@ -965,7 +966,6 @@ flagDef  affected5_bits[] = {
   {"DHARMA", "Unused", 1, 0},
   {"ENH_HIDE", "Enhanced hide", 0, 0},
   {"LISTEN", "Listen", 0, 0},
-//  {"DAKTAS_FURY", "Daktas furry", 1, 0},
   {"PROT_UNDEAD", "Prot undead", 1, 0},
   {"IMPRISON", "Imprisoned", 1, 0},
   {"TITAN FORM", "Titan form", 1, 0},

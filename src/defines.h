@@ -223,6 +223,7 @@ typedef unsigned int uint;
 #define ITEM2_CRUMBLELOOT  BIT_12
 #define ITEM2_STOREITEM    BIT_13  /* Item Bought From a Shop */
 #define ITEM2_SOULBIND     BIT_14  /* Item is Soulbound */
+#define ITEM2_CRAFTED      BIT_15
 /* Bitvector for 'anti_flags' */
 /*
 #define ITEM_ALLOW_ALL         BIT_1
@@ -774,21 +775,22 @@ struct attr_names_struct {
 #define AFF5_ENH_HIDE           BIT_10
 #define AFF5_LISTEN             BIT_11
 #define AFF5_PROT_UNDEAD        BIT_12
-#define AFF5_IMPRISON           BIT_14
-#define AFF5_TITAN_FORM         BIT_15
-#define AFF5_DELIRIUM           BIT_16
-#define AFF5_SHADE_MOVEMENT     BIT_17
-#define AFF5_NOBLIND            BIT_18
-#define AFF5_MAGICAL_GLOW       BIT_19
-#define AFF5_REFRESHING_GLOW    BIT_20
-#define AFF5_MINE               BIT_21
-#define AFF5_STANCE_OFFENSIVE   BIT_22
-#define AFF5_STANCE_DEFENSIVE   BIT_23
-#define AFF5_OBSCURING_MIST     BIT_24
-#define AFF5_NOT_OFFENSIVE      BIT_25
-#define AFF5_DECAYING_FLESH     BIT_26
-#define AFF5_DREADNAUGHT	    BIT_27
-#define AFF5_FOREST_SIGHT	    BIT_28
+#define AFF5_IMPRISON           BIT_13
+#define AFF5_TITAN_FORM         BIT_14
+#define AFF5_DELIRIUM           BIT_15
+#define AFF5_SHADE_MOVEMENT     BIT_16
+#define AFF5_NOBLIND            BIT_17
+#define AFF5_MAGICAL_GLOW       BIT_18
+#define AFF5_REFRESHING_GLOW    BIT_19
+#define AFF5_MINE               BIT_20
+#define AFF5_STANCE_OFFENSIVE   BIT_21
+#define AFF5_STANCE_DEFENSIVE   BIT_22
+#define AFF5_OBSCURING_MIST     BIT_23
+#define AFF5_NOT_OFFENSIVE      BIT_24
+#define AFF5_DECAYING_FLESH     BIT_25
+#define AFF5_DREADNAUGHT	    BIT_26
+#define AFF5_FOREST_SIGHT	    BIT_27
+
 
 /* modifiers to char's abilities */
 

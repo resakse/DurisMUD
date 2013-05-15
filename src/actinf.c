@@ -5143,6 +5143,15 @@ void do_score(P_char ch, char *argument, int cmd)
                                  * affects with 2 structs
                                  */
           strcat(buf, skills[aff->type].name);
+    if(IS_SET(aff->flags, AFFTYPE_SHORT))
+    {
+
+            strcat(buf, " (&+Rless than a minute remaining&n)\n");
+
+    }
+
+    else
+      {
 	  if(aff->duration < 0)
           {
 	    char buf1[MAX_STRING_LENGTH];
@@ -5150,8 +5159,7 @@ void do_score(P_char ch, char *argument, int cmd)
 	     sprintf(buf1, " (&+Bno expiration timer&n)\n");
             strcat(buf, buf1);
           }
-          else if(aff->duration > 1) //(!IS_AFFECTED2(ch, AFF2_DETECT_MAGIC) ||
-             
+          else if(aff->duration > 1) //(!IS_AFFECTED2(ch, AFF2_DETECT_MAGIC) ||  
           {
 	    char buf1[MAX_STRING_LENGTH];
             //strcat(buf, "\n");
@@ -5166,7 +5174,8 @@ void do_score(P_char ch, char *argument, int cmd)
           {
             strcat(buf, " (fading)\n");
           }
-        }
+       }
+      }
         last = aff->type - 1;
       }
     

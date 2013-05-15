@@ -631,7 +631,7 @@ void do_forge(P_char ch, char *argument, int cmd)
       wizlog(56, "%s crafted %s" , GET_NAME(ch), tobj->short_description);
       notch_skill(ch, SKILL_FORGE, 1);
   P_obj reward = read_object(selected, VIRTUAL);
-  SET_BIT(reward->extra2_flags, ITEM2_STOREITEM);
+  SET_BIT(reward->extra2_flags, ITEM2_CRAFTED);
   obj_to_char(reward, ch);
   act
     ("&+W$n &+Lgently takes their &+ymaterials&+L, their &nflux&+L, and places them into the &+rf&+Ro&+Yr&+Rg&+re&+L.\r\n"

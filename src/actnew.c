@@ -3920,7 +3920,7 @@ if(difference == 0)
       wizlog(56, "%s crafted %s" , GET_NAME(ch), tobj->short_description);
       notch_skill(ch, SKILL_CRAFT, 1);
   P_obj reward = read_object(selected, VIRTUAL);
-  SET_BIT(reward->extra2_flags, ITEM2_STOREITEM);
+  SET_BIT(reward->extra2_flags, ITEM2_CRAFTED);
   obj_to_char(reward, ch);
   act
     ("&+W$n &+Ldelicately opens their &+ybox &+mof &+Rgnomish &+rcrafting &+mtools&+L and starts their work...\r\n"

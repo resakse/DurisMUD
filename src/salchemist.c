@@ -1083,7 +1083,7 @@ void do_fix(P_char ch, char *argument, int cmd)
         TO_ROOM);
     act("You fiddle with $p, fixing it quickly!", TRUE, ch, item, 0, TO_CHAR);
     item->condition = 100 - number(0, 10);
-
+    obj_from_char(needed, TRUE);
   }
   else
   {

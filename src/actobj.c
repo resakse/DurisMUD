@@ -2119,6 +2119,8 @@ void do_give(P_char ch, char *argument, int cmd)
 
   argument = one_argument(argument, obj_name);
 
+
+
   if (is_number(obj_name))
   {
     if (strlen(obj_name) > 7)
@@ -2179,6 +2181,7 @@ void do_give(P_char ch, char *argument, int cmd)
       send_to_char("They couldn't carry that if they tried.\r\n", ch);
       return;
     }
+
 
     send_to_char("Ok.\r\n", ch);
 
@@ -2241,6 +2244,7 @@ void do_give(P_char ch, char *argument, int cmd)
     send_to_char("You do not seem to have anything like that.\r\n", ch);
     return;
   }
+
   if (IS_SET(obj->extra_flags, ITEM_NODROP) && !IS_TRUSTED(ch))
   {
     send_to_char("You can't let go of it! Yeech!!\r\n", ch);
@@ -2252,11 +2256,7 @@ void do_give(P_char ch, char *argument, int cmd)
     send_to_char("You may not relinquish posession of a &+Wsoulbound &nitem!\r\n", ch);
     return;
   }
-  if(IS_OBJ_STAT2(obj, ITEM2_STOREITEM) && IS_NPC(vict))
-  {
-    send_to_char("You may not give store bought or crafted/forged items to mobs.\r\n", ch);
-    return;
-  }
+
   if (!(vict = get_char_room_vis(ch, vict_name)))
   {
     send_to_char("No one by that name around here.\r\n", ch);
@@ -2271,6 +2271,11 @@ void do_give(P_char ch, char *argument, int cmd)
       IS_SET(vict->specials.act2, PLR2_NOTAKE))
   {
     act("$N rejects your offering.", TRUE, ch, 0, vict, TO_CHAR);
+    return;
+  }
+  if(IS_SET(obj->extra2_flags, ITEM2_CRAFTED) && IS_NPC(vict))
+  {
+    send_to_char("You may not give crafted/forged items to mobs.\r\n", ch);
     return;
   }
   if ((IS_NPC(vict) && (GET_RNUM(vict) == real_mobile(250))) ||
@@ -5083,7 +5088,7 @@ void do_salvage(P_char ch, char *argument, int cmd)
     act("Why would you want to salvage anything from your &+Ydinner&n?", FALSE, ch, 0, 0, TO_CHAR);
     return;
    }
-  if (temp->type == ITEM_TREASURE || temp->type == ITEM_POTION || temp->type == ITEM_KEY)
+  if (temp->type == ITEM_TREASURE || temp->type == ITEM_POTION || temp->type == ITEM_MONEY || temp->type == ITEM_KEY)
    {
     act("That's probably more valuable than what you could break it down into... lets not.", FALSE, ch, 0, 0, TO_CHAR);
     return;
