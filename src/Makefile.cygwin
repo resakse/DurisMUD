@@ -80,6 +80,7 @@ OBJS	=  \
         db.o \
 	debug.o \
 	disguise.o \
+	drannak.o \
 	dreadlord.o \
 	editor.o \
   encounters.o \

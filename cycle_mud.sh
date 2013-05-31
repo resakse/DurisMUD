@@ -33,7 +33,6 @@ while [ $RESULT != 0 ]; do
 		/usr/local/bin/sendEmail -t kitsero@durismud.com \
 			-f mud@durismud.com -u "Duris Booting..." \
 			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
-    sleep 10 # slow down in order to prevent 83284828234 emails from being sent per second
 	fi
 
   echo "Starting duris..."
@@ -52,4 +51,7 @@ while [ $RESULT != 0 ]; do
 	esac	
 
 	echo "Mud stopped, reason: ${STOP_REASON} [${RESULT}]"
+
+  echo "Sleeping 10 seconds to prevent coreflood..."
+  sleep 10
 done
