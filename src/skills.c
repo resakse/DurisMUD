@@ -4939,6 +4939,7 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("aip - mayihealsyou", AIP_MAYIHEALSYOU);
   TAG_CREATE("ach - mayihealsyou", ACH_MAYIHEALSYOU);
   TAG_CREATE("aip - strahd me at hello", AIP_YOUSTRAHDME);
+  TAG_CREATE("aip - strahd me at hello pt 2", AIP_YOUSTRAHDME2);
   TAG_CREATE("ach - strahd me at hello", ACH_YOUSTRAHDME);
 
   //TRAPS

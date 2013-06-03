@@ -2782,6 +2782,16 @@ void display_achievements(P_char ch, char *arg, int cmd)
   strcat(buf, buf3);
   //-----DRagonslayer
 
+  //-----Achievement: You Strahd Me
+  if(affected_by_spell(ch, ACH_DRAGONSLAYER))
+  sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
+          "&+LYou &+rStrahd &+LMe At Hello&n", "&+Bsee &+chelp achievements&n", "&+B10% increased undead damage, 1000 epics&n");
+  else
+  sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
+          "&+LYou &+rStrahd &+LMe At Hello&n", "&+wsee &+chelp achievements&n", "&+wan unknown reward&n");
+  strcat(buf, buf3);
+  //-----You Strahd Me
+
 
   //-----Achievement: May I Heals You
   if(affected_by_spell(ch, ACH_MAYIHEALSYOU))
@@ -2822,6 +2832,12 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
 
   if ((ach == 2) && !affected_by_spell(ch, AIP_DRAGONSLAYER))
   apply_achievement(ch, AIP_DRAGONSLAYER);
+
+  if ((ach == 2) && (GET_VNUM(victim) == 91031) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && !affected_by_spell(ch, AIP_YOUSTRAHDME))
+  apply_achievement(ch, AIP_YOUSTRAHDME);
+
+
+
  
   //PvP Achievements
   int frags;
@@ -2910,8 +2926,37 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
            }
       }
     /* end Dragonslayer */
+
+ /* You Strahd Me2
+doru = 91031
+cher = 58835
+strahd = 58383
+*/
+    if((findaf && findaf->type == AIP_YOUSTRAHDME) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && (ach == 2) && (GET_VNUM(victim) == 58835) )
+    {
+	affect_remove(ch, findaf);
+	apply_achievement(ch, AIP_YOUSTRAHDME2);
+    }
+    /* end You Strahd Me2 */
+
+ /* You Strahd Me3 
+doru = 91031
+cher = 58835
+strahd = 58383
+*/
+    if((findaf && findaf->type == AIP_YOUSTRAHDME2) && !affected_by_spell(ch, ACH_YOUSTRAHDME) && (ach == 2) && (GET_VNUM(victim) == 58383) )
+    {
+	affect_remove(ch, findaf);
+	apply_achievement(ch, ACH_YOUSTRAHDME);
+       send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RYou Strahd Me At Hello&+r achievement!&n\r\n", ch);
+       send_to_char("&+yPlease see &+chelp you strahd me &+yfor reward details!&n\r\n", ch);
+
+    }
+    /* end You Strahd Me2 */
   }
+
 }
+
 void apply_achievement(P_char ch, int ach)
 {
  struct affected_type af;

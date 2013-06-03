@@ -1561,12 +1561,13 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
         send_to_char ("That weapon cannot be placed in that position, try another one.\r\n", ch);
         return TRUE;
     }
-
+/* -Removing frag requirements for weapons - Drannak 6/3/2013
     if (ship->frags < weapon_data[w].min_frags)
     {
         send_to_char ("I'm sorry, but not just anyone can buy this weapon!  You must earn it!\r\n", ch);
         return TRUE;
     }
+*/
 
     if (IS_SET(weapon_data[w].flags, CAPITOL)) 
     {

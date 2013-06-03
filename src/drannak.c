@@ -65,10 +65,205 @@ extern struct time_info_data time_info;
 extern struct zone_data *zone_table;
 extern int find_map_place();
 
+void set_surname(P_char ch, int num)
+{
+  /* Surname List
+  0 - Leaderboard Based (default)
+  1 - User Toggled Custom Surname Off
+  2 - Lightbringer
+  3 - Dragonslayer
+  */
+
+ if((num == 0 && !IS_SET(ch->specials.act3, PLR3_NOSUR)) || num == 1 )
+  {
+  int points = getLeaderBoardPts(ch);
+  points *= .01;
+  debug("points: %d", points);
+  clear_surname(ch);
+  if(points < 500)
+  {
+  SET_BIT(ch->specials.act3, PLR3_SURSERF);
+  return;
+  }
+
+  if(points < 1000)
+  {
+  SET_BIT(ch->specials.act3, PLR3_SURCOMMONER);
+  return;
+  }
+
+  if(points < 2000)
+  {
+  SET_BIT(ch->specials.act3, PLR3_SURKNIGHT);
+  return;
+  }
+
+  if(points < 3000)
+  {
+  SET_BIT(ch->specials.act3, PLR3_SURNOBLE);
+  return;
+  }
+
+  if(points < 4000)
+  {
+  SET_BIT(ch->specials.act3, PLR3_SURLORD);
+  return;
+  }
+
+  if(points >= 4000)
+  {
+  SET_BIT(ch->specials.act3, PLR3_SURKING);
+  return;
+  }
+ }
+
+ if (num == 2)
+  {
+   if(affected_by_spell(ch, ACH_YOUSTRAHDME))
+    {
+      clear_surname(ch);
+      SET_BIT(ch->specials.act3, PLR3_SURLIGHT);
+      SET_BIT(ch->specials.act3, PLR3_NOSUR);
+      return;
+    }
+  send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
+  }
+
+ if (num == 3)
+  {
+   if(affected_by_spell(ch, ACH_DRAGONSLAYER))
+    {
+      clear_surname(ch);
+      SET_BIT(ch->specials.act3, PLR3_SURDRAGON);
+      SET_BIT(ch->specials.act3, PLR3_NOSUR);
+      return;
+    }
+  send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
+  }
+
+ if (num == 4)
+  {
+   if(affected_by_spell(ch, ACH_MAYIHEALSYOU))
+    {
+      clear_surname(ch);
+      SET_BIT(ch->specials.act3, PLR3_SURHEALS);
+      SET_BIT(ch->specials.act3, PLR3_NOSUR);
+      return;
+    }
+  send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
+  }
+ if (num == 5)
+  {
+   if(affected_by_spell(ch, ACH_SERIALKILLER))
+    {
+      clear_surname(ch);
+      SET_BIT(ch->specials.act3, PLR3_SURSERIAL);
+      SET_BIT(ch->specials.act3, PLR3_NOSUR);
+      return;
+    }
+  send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
+  }
+ if (num == 6)
+  {
+    if(get_frags(ch) >= 2000)
+    {
+      clear_surname(ch);
+      SET_BIT(ch->specials.act3, PLR3_SURREAPER);
+      SET_BIT(ch->specials.act3, PLR3_NOSUR);
+      return;
+    }
+  send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
+  }
+
+}
+
+void display_surnames(P_char ch)
+{
+  char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
+
+  sprintf(buf, "\r\n&+L=-=-=-=-=-=-=-=-=-=--= &+rTitles &+Lfor &+r%s &+L=-=-=-=-=-=-=-=-=-=-=-&n\r\n", GET_NAME(ch));
+
+
+  sprintf(buf2, "   &+W%-22s\r\n",
+          "Syntax: toggle surname <number>");
+  strcat(buf, buf2);
+    sprintf(buf2, "   &+L%-49s\r\n",
+          "&+W1)&+WFeudal Rank &n(default)&n");
+    strcat(buf, buf2);
+  
+   if(affected_by_spell(ch, ACH_YOUSTRAHDME))
+   {
+    sprintf(buf2, "   &+L%-49s\r\n",
+          "&+W2)&+WLight&+wbri&+Lnger&n");
+    strcat(buf, buf2);
+   }
+
+   if(affected_by_spell(ch, ACH_DRAGONSLAYER))
+   {
+    sprintf(buf2, "   &+L%-49s\r\n",
+          "&+W3)&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n");
+    strcat(buf, buf2);
+   }
+
+   if(affected_by_spell(ch, ACH_MAYIHEALSYOU))
+   {
+    sprintf(buf2, "   &+L%-49s\r\n",
+          "&+W4)&+WD&+Ro&+rct&+Ro&+Wr&n");
+    strcat(buf, buf2);
+   }
+
+   if(affected_by_spell(ch, ACH_SERIALKILLER))
+   {
+    sprintf(buf2, "   &+L%-49s\r\n",
+          "&+W5)&+LSe&+wr&+Wi&+wa&+Ll &+rKiller&n");
+    strcat(buf, buf2);
+   }
+
+   if(get_frags(ch) >= 2000)
+   {
+    sprintf(buf2, "   &+L%-49s\r\n",
+          "&+W6)&+LGrim Reaper&n");
+    strcat(buf, buf2);
+   }
+
+
+
+  sprintf(buf2, "\r\n   &+W%-22s\r\n",
+          "Note: Some &+cachievements&n grant access to additional surnames&n\r\n");
+  strcat(buf, buf2);
+
+
+ page_string(ch->desc, buf, 1);
+}
+
+void clear_surname(P_char ch)
+{
+  REMOVE_BIT(ch->specials.act3, PLR3_SURLIGHT);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURSERF);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURCOMMONER);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURKNIGHT);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURNOBLE);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURLORD);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURKING);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURDRAGON);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURHEALS);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURSERIAL);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURREAPER);
+  REMOVE_BIT(ch->specials.act3, PLR3_NOSUR);
+}
+
 void vnum_from_inv(P_char ch, int item, int count)
 {
   int i = count;
   P_obj t_obj, nextobj;
+
+  int checkit = vnum_in_inv(ch, item);
+  if (checkit < count)
+  {
+   send_to_char("You don't have enough of that item in your inventory.\r\n", ch);
+   return;
+  }
+
   for (t_obj = ch->carrying; t_obj; t_obj = nextobj)
      {
       nextobj = t_obj->next_content;
@@ -250,3 +445,56 @@ int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
   return FALSE;
 }
 
+bool lightbringer_weapon_proc(P_char ch, P_char victim)
+{
+  int num, room = ch->in_room, save, pos;
+  P_obj wpn;
+  
+  typedef void (*spell_func_type) (int, P_char, char *, int, P_char, P_obj);
+  spell_func_type spells[5] = {
+    spell_bigbys_crushing_hand,
+    spell_bigbys_clenched_fist,
+    spell_disintegrate,
+    spell_destroy_undead,
+    spell_flamestrike
+  };
+  spell_func_type spell_func;
+  
+  if (!IS_FIGHTING(ch) ||
+      !(victim = ch->specials.fighting) ||
+      !IS_ALIVE(victim) ||
+      !(room) ||
+      number(0, 15)) // 3%
+    return false;
+    
+  P_char vict = victim;
+ 
+  for (wpn = NULL, pos = 0; pos < MAX_WEAR; pos++)
+  {
+    if((wpn = ch->equipment[pos]) &&
+        wpn->type == ITEM_WEAPON &&
+        CAN_SEE_OBJ(ch, wpn))
+      break;
+  }
+
+  if(wpn == NULL)
+    return false;
+
+	
+  
+  act("&+LAs you strike your &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill you with &+wundead &+Lpurging &+Ymight&+L!&n",
+    TRUE, ch, wpn, vict, TO_CHAR);
+  act("&+LAs $n strikes their &+rfoe&+L, the power of the &+WLight&+wbri&+Lngers fill them with &+wundead &+Lpurging &+Ymight&+L!&n",
+    TRUE, ch, wpn, vict, TO_NOTVICT);
+  
+  
+  num = number(0, 4);
+  
+  spell_func = spells[num];
+  
+  spell_func(number(1, GET_LEVEL(ch)), ch, 0, 0, victim, 0);
+  /*
+  return !is_char_in_room(ch, room) || !is_char_in_room(victim, room);
+  victim->specials.apply_saving_throw[SAVING_SPELL] = save;
+  */
+}

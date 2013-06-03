@@ -1134,6 +1134,7 @@
 #define TAG_SALVATION		  2087
 #define TAG_DREADNAUGHT		  2088
 #define TAG_CRIPPLED			  2089
+#define AIP_YOUSTRAHDME2		  2090
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
 
 #define SAVING_PARA   0

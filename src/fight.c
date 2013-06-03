@@ -7116,6 +7116,24 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
   if (GET_CLASS(ch, CLASS_PALADIN) && holy_weapon_proc(ch, victim))
     return true;
 
+  if(affected_by_spell(ch, ACH_YOUSTRAHDME))
+  debug("youstrahdme\r\n");
+  if(GET_RACE(victim) == RACE_PVAMPIRE)
+  debug("is vampire\r\n");
+  if(!IS_PC(victim))
+  debug("isnt pc\r\n");
+
+  if (affected_by_spell(ch, ACH_YOUSTRAHDME) && ((GET_RACE(victim) == RACE_UNDEAD) || 
+	(GET_RACE(victim) == RACE_PVAMPIRE) ||
+	(GET_RACE(victim) == RACE_PLICH) ||
+	(GET_RACE(victim) == RACE_ZOMBIE) ||
+	(GET_RACE(victim) == RACE_SKELETON) ||
+	(GET_RACE(victim) == RACE_WIGHT) ||
+	(GET_RACE(victim) == RACE_GHOST) ||
+	(GET_RACE(victim) == RACE_REVENANT)) && 
+	!IS_PC(victim) && lightbringer_weapon_proc(ch, victim))
+    return true;
+
   blade_skill = GET_CLASS(ch, CLASS_AVENGER) ? SKILL_HOLY_BLADE : SKILL_TAINTED_BLADE;
   if (notch_skill(ch, blade_skill, get_property("skill.notch.offensive.auto", 100)) ||
       (GET_CHAR_SKILL(ch, blade_skill) > number(1, 100) &&

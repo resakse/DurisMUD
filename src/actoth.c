@@ -1411,6 +1411,7 @@ void do_save_silent(P_char ch, int type)
    }
 
   update_achievements(ch, 0, 0, 0);
+  set_surname(ch, 0);
 
   if ((ch->desc && !ch->desc->connected) || !ch->desc)
   {
@@ -1489,6 +1490,7 @@ void do_save(P_char ch, char *argument, int cmd)
    }
 
   update_achievements(ch, 0, 0, 0);
+  set_surname(ch, 0);
 
 
   if (IS_NPC(ch) && !IS_MORPH(ch))
@@ -3838,6 +3840,7 @@ void show_toggles(P_char ch)
 	  "&+r     Show Quests :&+g %-3s    &+y|&N"
           "&+rBoon Notification:&+g %-3s    &+y|&N\r\n"
 	  "&+r   Newbie EQ   :&+g %-3s    &+y|&N\r\n"
+	  "&+r   Surname   :&+g %-3s    &+y|&N\r\n"
           "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
           "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n",
           ONOFF(!PLR_FLAGGED(ch, PLR_NOTELL)),
@@ -3874,7 +3877,8 @@ void show_toggles(P_char ch)
           ONOFF(PLR2_FLAGGED(ch, PLR2_WEBINFO)),
 	  ONOFF(PLR2_FLAGGED(ch, PLR2_SHOW_QUEST)),
 	  ONOFF(PLR2_FLAGGED(ch, PLR2_NEWBIEEQ)),
-	  ONOFF(PLR2_FLAGGED(ch, PLR2_BOON)));
+	  ONOFF(PLR2_FLAGGED(ch, PLR2_BOON)),
+	  ONOFF(PLR3_FLAGGED(ch, PLR3_NOSUR)));
   send_to_char(Gbuf1, send_ch);
 
   if (GET_LEVEL(ch) >= AVATAR)
@@ -4014,6 +4018,7 @@ static const char *toggles_list[] = {
   "quest",
   "boon",
   "newbie",
+  "surname",
   "\n"
 };
 
@@ -4613,6 +4618,33 @@ void do_toggle(P_char ch, char *arg, int cmd)
     break;
   case 57:
     result = PLR2_TOG_CHK(ch, PLR2_NEWBIEEQ);
+    break;
+  case 58: //surname
+    arg = one_argument(arg, Gbuf1);
+
+   /* if (is_number(Gbuf1) && (wimp_lev = atoi(Gbuf1)))
+    {
+      if ((wimp_lev < 12) || (wimp_lev > 48))
+      {
+        send_to_char("Screen length must be between 12 and 48 lines\r\n",
+                     send_ch);
+        return;
+      }*/
+	  if(is_number(Gbuf1) && (wimp_lev = atoi(Gbuf1)))
+	  {
+	    set_surname(ch, wimp_lev);
+		return;
+    }
+  /*  else if (isname(Gbuf1, "off") || isname(Gbuf1, "default"))
+    {
+      result = FALSE;
+      strcpy(Gbuf3, " 24");
+    }*/
+    else
+    {
+      display_surnames(ch);
+      return;
+    }
     break;
   default:
     break;

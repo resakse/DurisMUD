@@ -4149,7 +4149,7 @@ bool throw_potion(P_char ch, P_obj scroll, P_char victim, P_obj obj)
   CharWait(ch, (int) (get_property("alchemist.throwp.lag.rounds", 0.75) * PULSE_VIOLENCE) );
   set_short_affected_by(ch, SKILL_THROW_POTIONS, (int) (lag * PULSE_VIOLENCE));
 
-  notch_skill(ch, SKILL_THROW_POTIONS, 100);
+  notch_skill(ch, SKILL_THROW_POTIONS, 15);
 
   if (victim)
   {

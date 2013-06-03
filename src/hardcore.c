@@ -61,7 +61,7 @@ extern struct time_info_data time_info;
 extern struct zone_data *zone_table;
 
 #define MAX_HALLOFFAME_SIZE    20       /* max size of high/low lists */
-#define MAX_LEADERBOARD_SIZE    50       /* max size of high/low lists */
+#define MAX_LEADERBOARD_SIZE    20       /* max size of high/low lists */
 int getHardCorePts(P_char ch)
 {
   

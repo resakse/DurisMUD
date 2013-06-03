@@ -419,7 +419,7 @@ int got_all_ingredients(P_char ch, int required[])
     }
   }
 
-  notch_skill(ch, SKILL_MIX, 100);
+  notch_skill(ch, SKILL_MIX, 15);
 
   return 1;
 }
@@ -565,7 +565,7 @@ void do_mix(P_char ch, char *argument, int cmd)
           break;
         }
       }
-      notch_skill(ch, SKILL_MIX, 100);
+      notch_skill(ch, SKILL_MIX, 15);
       CharWait(ch, PULSE_VIOLENCE * 2);
 
       return;

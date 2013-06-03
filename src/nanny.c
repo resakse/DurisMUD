@@ -2171,6 +2171,12 @@ void enter_game(P_desc d)
     ch->specials.affected_by4 = 0;
     ch->specials.affected_by5 = 0;
 
+    if(affected_by_spell(ch, AIP_YOUSTRAHDME))
+    affect_from_char(ch, AIP_YOUSTRAHDME);
+
+    if(affected_by_spell(ch, AIP_YOUSTRAHDME2))
+    affect_from_char(ch, AIP_YOUSTRAHDME2);
+
     ch->specials.z_cord = 0;    /* prevent swim crash bug */
 
     /* remove any morph flag that might be leftover */
@@ -2224,6 +2230,8 @@ void enter_game(P_desc d)
     set_char_size(ch);
 
     update_skills(ch);
+
+    set_surname(ch, 0);
 
 
 
