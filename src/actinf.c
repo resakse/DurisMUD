@@ -5857,7 +5857,7 @@ void do_who(P_char ch, char *argument, int cmd)
         if(IS_SET((who_list[j])->specials.act3, PLR3_SURCOMMONER))
         strcat(who_output, "&+YCommoner&n ");
         if(IS_SET((who_list[j])->specials.act3, PLR3_SURKNIGHT))
-        strcat(who_output, "&+LK&+wn&+Wig&+wh&+Lt&nn ");
+        strcat(who_output, "&+LK&+wn&+Wig&+wh&+Lt&n ");
         if(IS_SET((who_list[j])->specials.act3, PLR3_SURNOBLE))
         strcat(who_output, "&+mN&+Yo&+mb&+Yl&+me&n ");
         if(IS_SET((who_list[j])->specials.act3, PLR3_SURLORD))
