@@ -382,6 +382,7 @@ const struct innate_data
   {"two-handed sword mastery", 0},
   {"holy combat", 0},
   {"giant avoidance", 0},
+  {"seadog", 0},
 };
 
 string list_innates(int race, int cls, int spec)
@@ -553,6 +554,7 @@ void assign_innates()
   //ADD_RACIAL_INNATE(INNATE_BARTER, RACE_HALFLING, 1);
   ADD_RACIAL_INNATE(INNATE_QUICK_THINKING, RACE_HALFLING, 1);
   /* List of Human Innates          */
+  ADD_RACIAL_INNATE(INNATE_SEADOG, RACE_HUMAN, 1);
   /* List of Wood Elf Innates       */
   ADD_RACIAL_INNATE(INNATE_OUTDOOR_SNEAK, RACE_WOODELF, 11);
   ADD_RACIAL_INNATE(INNATE_FOREST_SIGHT, RACE_WOODELF, 11);
@@ -649,6 +651,7 @@ void assign_innates()
   ADD_RACIAL_INNATE(INNATE_ULTRAVISION, RACE_ORC, 1);
   ADD_RACIAL_INNATE(INNATE_DAYVISION, RACE_ORC, 1);
   ADD_RACIAL_INNATE(INNATE_SUMMON_HORDE, RACE_ORC, 11);
+  ADD_RACIAL_INNATE(INNATE_SEADOG, RACE_ORC, 1);
   /* List of Swamp Troll Innates     */
   ADD_RACIAL_INNATE(INNATE_ULTRAVISION, RACE_TROLL, 1);
   ADD_RACIAL_INNATE(INNATE_REGENERATION, RACE_TROLL, 1);

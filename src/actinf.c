@@ -5902,6 +5902,8 @@ void do_who(P_char ch, char *argument, int cmd)
         strcat(who_output, "&n[&+LSe&+wr&+Wi&+wa&+Ll &+rKiller&n]");
         if(IS_SET((who_list[j])->specials.act3, PLR3_SURREAPER))
         strcat(who_output, "&n[&+LGr&+wi&+Wm Rea&+wp&+Ler&n]");
+        if(IS_SET((who_list[j])->specials.act3, PLR3_SURDECEPTICON))
+        strcat(who_output, "&n[&+LDe&+mCePTiC&+LoN&n]");
 
                /* if (IS_SET((who_list[j])->specials.act3, PLR3_FRAGLOW))
 		  strcat(who_output, " (&+yFrag &+YFood&n&N)"); */

@@ -260,8 +260,8 @@ void initialize_skills()
   SKILL_ADD(CLASS_THIEF, 51, 100);
   SPEC_SKILL_ADD(CLASS_ROGUE, 51, 100, SPEC_THIEF);
 
-  SKILL_CREATE("instant kill", SKILL_INSTANT_KILL, TAR_PHYS);
-  SPEC_SKILL_ADD(CLASS_ROGUE, 56, 100, SPEC_ASSASSIN);
+ /* SKILL_CREATE("instant kill", SKILL_INSTANT_KILL, TAR_PHYS);
+  SPEC_SKILL_ADD(CLASS_ROGUE, 56, 100, SPEC_ASSASSIN);*/
   
   SPELL_CREATE("repair one item", SPELL_REPAIR_ONE_ITEM, PULSE_SPELLCAST * 1,
     TAR_OBJ_INV | TAR_OBJ_EQUIP, spell_repair_one_item);
@@ -4944,6 +4944,8 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("aip - strahd me at hello", AIP_YOUSTRAHDME);
   TAG_CREATE("aip - strahd me at hello pt 2", AIP_YOUSTRAHDME2);
   TAG_CREATE("ach - strahd me at hello", ACH_YOUSTRAHDME);
+  TAG_CREATE("aip - decepticon", AIP_DECEPTICON);
+  TAG_CREATE("ach - decepticon", ACH_DECEPTICON);
 
   //TRAPS
   TAG_CREATE_WITH_MESSAGES("crippled", TAG_CRIPPLED,

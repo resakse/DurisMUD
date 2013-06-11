@@ -72,6 +72,7 @@ void set_surname(P_char ch, int num)
   1 - User Toggled Custom Surname Off
   2 - Lightbringer
   3 - Dragonslayer
+  4 - Decepticon
   */
 
  if((num == 0 && !IS_SET(ch->specials.act3, PLR3_NOSUR)) || num == 1 )
@@ -174,6 +175,17 @@ void set_surname(P_char ch, int num)
     }
   send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
   }
+ if (num == 7)
+  {
+   if(affected_by_spell(ch, ACH_DECEPTICON))
+    {
+      clear_surname(ch);
+      SET_BIT(ch->specials.act3, PLR3_SURDECEPTICON);
+      SET_BIT(ch->specials.act3, PLR3_NOSUR);
+      return;
+    }
+  send_to_char("You have not obtained that &+Wtitle&n yet.\r\n", ch);
+  }
 
 }
 
@@ -226,6 +238,13 @@ void display_surnames(P_char ch)
     strcat(buf, buf2);
    }
 
+   if(affected_by_spell(ch, ACH_DECEPTICON))
+   {
+    sprintf(buf2, "   &+L%-49s\r\n",
+          "&+W6)&+LDe&+mceptic&+LoN&n");
+    strcat(buf, buf2);
+   }
+
 
 
   sprintf(buf2, "\r\n   &+W%-22s\r\n",
@@ -249,6 +268,7 @@ void clear_surname(P_char ch)
   REMOVE_BIT(ch->specials.act3, PLR3_SURHEALS);
   REMOVE_BIT(ch->specials.act3, PLR3_SURSERIAL);
   REMOVE_BIT(ch->specials.act3, PLR3_SURREAPER);
+  REMOVE_BIT(ch->specials.act3, PLR3_SURDECEPTICON);
   REMOVE_BIT(ch->specials.act3, PLR3_NOSUR);
 }
 

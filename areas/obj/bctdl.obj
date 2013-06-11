@@ -84,12 +84,12 @@ dagger ages~
 &+LSomeone dropped an expensive looking dagger here!&n~
 ~
 5 1 2 1 15 100 50357505 8193 64 2224131 0
-2 3 5 11 0 0 0 0
+2 2 8 11 0 0 0 0
 3 0 100
 A
-18 5
+14 20
 A
-19 5
+55 10
 #32429
 mask avernus~
 &+Lthe mask of Avernus&n~
@@ -128,12 +128,12 @@ shield tiamat scales~
 &+CA shield made from dragon scales lies here&n.~
 ~
 37 35 3 4 12 99 25601 513 64 95993859 0
-1 3 4 200 5 0 0 0
-20 0 100 536944640 12480 0 0
+1 3 4 -50 5 0 0 0
+20 0 100 671162368 12480 0 0
 A
-18 2
+5 10
 A
-19 1
+36 5
 #32433
 baatezu sword power~
 &+r'B&+Laa&+rt&+Le&+rz&+Lu', &+Wthe sword of &+mpower&n~
@@ -141,11 +141,11 @@ baatezu sword power~
 ~
 5 19 3 5 14 0 37748736 8192 64 0 0
 13 5 7 3 0 0 0 0
-0 0 100 0 32768 0 0
+0 0 100 0 2048 16777216 0
 A
-18 6
+32 6
 A
-19 6
+27 15
 #32434
 glowing sleeves devil skin~
 &+rsome glowing sleeves made of &+mdevil &+rskin&n~
@@ -682,8 +682,8 @@ whip flaming balor~
 &+La sinewy whip lies here, &+wenshrouded in &+Rflames&n~
 ~
 5 18 3 0 12 0 8193 8193 66 55292410 0
-14 3 5 0 0 0 0 0
-0 250000 100 0 1 0 0
+14 5 5 0 0 0 0 0
+0 250000 100 16 0 0 1024
 E
 whip flaming balor~
 &+wThere are conflicting rumors as&+r to where and how the whips balor lords

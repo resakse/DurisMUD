@@ -15,6 +15,9 @@
 #include "epic.h"
 #include "ships.h"
 #include "epic_bonus.h"
+#include "defines.h"
+#include "spells.h"
+#include "structs.h"
 
 extern char buf[MAX_STRING_LENGTH];
 extern char arg1[MAX_STRING_LENGTH];
@@ -453,10 +456,15 @@ int sell_cargo_slot(P_char ch, P_ship ship, int slot, int rroom)
         int profit = 100;
 	if(has_eq_diplomat(ship))
 	{
-	  int profit = profit - 10;
+	  cost *= 0.9;
 	}
+       if(has_innate(ch, INNATE_SEADOG))
+       {
+        send_to_char("Your &+csea&+Cfaring&n heritage has earned you a &+Ybonus&n in your sale...&n\r\n", ch);
+        cost *= 1.10;
+       }
         if (ship->slot[slot].val1 != 0)
-            profit = (int)(( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * 100.0);
+            profit = (int)(( ((float)cost / (float)ship->slot[slot].val1) - 1.00 ) * float(profit));
         ship->slot[slot].clear();
 
         if (IS_WARSHIP(ship))
@@ -470,6 +478,8 @@ int sell_cargo_slot(P_char ch, P_ship ship, int slot, int rroom)
         logit(LOG_SHIP, strip_ansi(buf).c_str());
         
         send_to_char_f(ch, "You sell &+W%d&n crates of %s&n for %s&n, for a %d%% profit.\r\n", crates, cargo_type_name(type), coin_stringv(cost), profit);
+        /*if(affected_by_spell(ch, SPELL_STONE_SKIN))
+         send_to_char("You are stoned!\r\n", ch); Hell yeah - Drannak */
 
         // economy affect
         adjust_ship_market(SOLD_CARGO, rroom, type, crates);

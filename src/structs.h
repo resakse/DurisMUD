@@ -454,7 +454,8 @@ struct edit_data {
 #define TWO_HANDED_SWORD_MASTERY 162
 #define HOLY_COMBAT		     163
 #define INNATE_GIANT_AVOIDANCE	     164
-#define LAST_INNATE              164   // LAST means last, not last + 1 or whatever
+#define INNATE_SEADOG	     165
+#define LAST_INNATE              165   // LAST means last, not last + 1 or whatever
 
 struct extra_descr_data {
   char *keyword;                /* Keyword in look/examine          */
@@ -902,6 +903,7 @@ struct room_data {
 #define PLR3_SURHEALS      BIT_13
 #define PLR3_SURSERIAL     BIT_14
 #define PLR3_SURREAPER     BIT_15
+#define PLR3_SURDECEPTICON BIT_16
 
 /* For players : Prompt flags (16 bits max) */
 #define PROMPT_NONE        BIT_1

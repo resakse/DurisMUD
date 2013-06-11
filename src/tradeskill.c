@@ -2727,39 +2727,39 @@ void display_achievements(P_char ch, char *arg, int cmd)
   sprintf(buf2, "   &+W%-23s           &+W%s\r\n",
           " ", "&+L(&+rP&+Rv&+rP&+L)&n");
   strcat(buf, buf2);
-  sprintf(buf2, "   &+W%-22s&+W%-42s&+W%s\r\n",
+  sprintf(buf2, "  &+W%-23s&+W%-42s&+W%s\r\n",
           "Achievement", "Requirement", "Affect/Reward");
   strcat(buf, buf2);
-  sprintf(buf2, "   &+W%-22s&+W%-42s&+W%s\r\n",
+  sprintf(buf2, "  &+W%-23s&+W%-42s&+W%s\r\n",
           "-----------", "-------------", "-------------");
   strcat(buf, buf2);
 
   //-----Achievement: Soul Reaper
   if(get_frags(ch) >= 2000)
-  sprintf(buf2, "   &+L%-49s&+L%-45s&+L%s\r\n",
+  sprintf(buf2, "  &+L%-50s&+L%-45s&+L%s\r\n",
           "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+BObtain 20 Frags", "&+BAccess to the soulbind ability");
   else
-  sprintf(buf2, "   &+L%-49s&+L%-45s&+L%s\r\n",
+  sprintf(buf2, "  &+L%-50s&+L%-45s&+L%s\r\n",
           "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+wObtain 20 Frags", "&+wAccess to the soulbind ability");
   strcat(buf, buf2);
   //-----End Soul Reaper
 
   //-----Achievement: Serial Killer
   if(affected_by_spell(ch, ACH_SERIALKILLER))
-  sprintf(buf2, "   &+L%-40s&+L%-45s&+L%s\r\n",
+  sprintf(buf2, "  &+L%-41s&+L%-45s&+L%s\r\n",
           "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+BObtain 10.00 Frags", "&+BGain 2 points in every attribute");
   else
-  sprintf(buf2, "   &+L%-40s&+L%-45s&+L%s\r\n",
+  sprintf(buf2, "  &+L%-41s&+L%-45s&+L%s\r\n",
           "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+wObtain 10.00 Frags", "&+wGain 2 points in every attribute");
   strcat(buf, buf2);
   //-----End Serial Killer
 
   //-----Achievement: Let's Get Dirty
   if(affected_by_spell(ch, ACH_LETSGETDIRTY))
-  sprintf(buf2, "   &+L%-43s&+L%-45s&+L%s\r\n",
+  sprintf(buf2, "  &+L%-44s&+L%-45s&+L%s\r\n",
           "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+BObtain 1.00 Frags", "&+BGain 2 CON points");
   else
-  sprintf(buf2, "   &+L%-43s&+L%-45s&+L%s\r\n",
+  sprintf(buf2, "  &+L%-44s&+L%-45s&+L%s\r\n",
           "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+wObtain 1.00 Frags", "&+wGain 2 CON points");
   strcat(buf, buf2);
   //-----End Let's Get Dirty
@@ -2773,30 +2773,30 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
   //-----Achievement: The Journey Begins
   if(affected_by_spell(ch, ACH_JOURNEYBEGINS))
-  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-34s&+L%-45s&+L%s\r\n",
           "&+gThe Jou&+Grney Beg&+gins&n", "&+BGain level 5", "&+B&+ya rugged a&+Yd&+yv&+Ye&+yn&+Yt&+yu&+Yr&+ye&+Yr&+ys &+Lsatchel");
   else
-  sprintf(buf3, "   &+L%-33s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-34s&+L%-45s&+L%s\r\n",
           "&+gThe Jou&+Grney Beg&+gins&n", "&+wGain level 5", "&+wan Unknown Item");
   strcat(buf, buf3);
   //-----The Journey Begins
 
   //-----Achievement: Dragonslayer
   if(affected_by_spell(ch, ACH_DRAGONSLAYER))
-  sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s\r\n",
           "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+BKill 1000 Dragons", "&+B10% damage increase vs Dragons");
   else
-  sprintf(buf3, "   &+L%-42s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s\r\n",
           "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+wKill 1000 Dragons", "&+w10% damage increase vs Dragons");
   strcat(buf, buf3);
   //-----DRagonslayer
 
   //-----Achievement: You Strahd Me
   if(affected_by_spell(ch, ACH_YOUSTRAHDME))
-  sprintf(buf3, "   &+L%s&+L%-50s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-34s&+L%-50s&+L%s\r\n",
           "&+LYou &+rStrahd &+LMe At Hello&n", "&+Bsee &+chelp achievements&n", "&+Bsee &+chelp you strahd me&n");
   else
-  sprintf(buf3, "   &+L%s&+L%-50s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-34s&+L%-50s&+L%s\r\n",
           "&+LYou &+rStrahd &+LMe At Hello&n", "&+wsee &+chelp achievements&n", "&+wan unknown reward&n");
   strcat(buf, buf3);
   //-----You Strahd Me
@@ -2804,13 +2804,23 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
   //-----Achievement: May I Heals You
   if(affected_by_spell(ch, ACH_MAYIHEALSYOU))
-  sprintf(buf3, "   &+L%-39s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
           "&+WMay I &+WHe&+Ya&+Wls &+WYou?&n", "&+BHeal 1,000,000 points of player damage", "&+BAccess to the salvation command");
   else
-  sprintf(buf3, "   &+L%-39s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
           "&+WMay I &+WHe&+Ya&+Wls &+WYou?&n", "&+wHeal 1,000,000 points of player damage", "&+wAccess to the salvation command");
   strcat(buf, buf3);
   //-----May I Heals You
+
+  //-----Achievement: Master of Deception
+  if(affected_by_spell(ch, ACH_DECEPTICON))
+  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
+          "&+LMa&+rst&+Rer of De&+rcep&+Ltion&n", "&+BSuccessfully use 500 disguise kits", "&+BDisguise without disguise kits&n");
+  else
+  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
+          "&+LMa&+rst&+Rer of De&+rcep&+Ltion&n", "&+wSuccessfully use 500 disguise kits", "&+wDisguise without disguise kits&n");
+  strcat(buf, buf3);
+  //-----Master of Deception
 
   sprintf(buf3, "\r\n&+L=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-&n\r\n\r\n", GET_NAME(ch));
   strcat(buf, buf3);
@@ -2830,17 +2840,21 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
   /* Achievement int ach list:
   1 - may i heals you
   2 - kill type quest where victim is passed
+  3 - disguise
   */
 
   if (IS_NPC(ch))
     return;
 
   //assign accumulation affects if missing and ach is of type.
-  if ((ach == 1) && !affected_by_spell(ch, AIP_MAYIHEALSYOU))
+  if ((ach == 1) && !affected_by_spell(ch, AIP_MAYIHEALSYOU) && !affected_by_spell(ch, ACH_MAYIHEALSYOU))
   apply_achievement(ch, AIP_MAYIHEALSYOU);
 
-  if ((ach == 2) && !affected_by_spell(ch, AIP_DRAGONSLAYER))
+  if ((ach == 2) && !affected_by_spell(ch, AIP_DRAGONSLAYER) && !affected_by_spell(ch, ACH_DRAGONSLAYER))
   apply_achievement(ch, AIP_DRAGONSLAYER);
+
+  if ((ach == 3) && !affected_by_spell(ch, AIP_DECEPTICON) && !affected_by_spell(ch, ACH_DECEPTICON))
+  apply_achievement(ch, AIP_DECEPTICON);
 
   if(ach ==2)
   {
@@ -2922,6 +2936,23 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
            }
       }
     /* end may i heals you */
+
+    /* Decepticon */
+    if((findaf && findaf->type == AIP_DECEPTICON) && !affected_by_spell(ch, ACH_DECEPTICON) && ach == 3)
+      {
+       //check to see if we've hit 500 disguise kits
+	  int result = findaf->modifier;
+         if(result >= 500)
+          {
+         affect_remove(ch, findaf);
+         apply_achievement(ch, ACH_DECEPTICON);
+         send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RMaster of Deception&+r achievement!&n\r\n", ch);
+         send_to_char("&+yYou may now use the &+Ydisguise&+y skill without needing a &+Ldisguise kit&+y!&n\r\n", ch);
+          }
+	    findaf->modifier += cmd;
+
+      }
+    /* Decepticon */
 
     /* Dragonslayer */
     if((findaf && findaf->type == AIP_DRAGONSLAYER) && !affected_by_spell(ch, ACH_DRAGONSLAYER) && (ach == 2) && (GET_RACE(victim) == RACE_DRAGON) )

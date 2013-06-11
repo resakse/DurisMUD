@@ -3753,7 +3753,7 @@ void do_nchat(P_char ch, char *argument, int cmd)
     }
     else
     {
-      sprintf(Gbuf1, "&+W%s&n&+m tells your racewar: &+w'&+w%s&n&+w'\n",
+      sprintf(Gbuf1, "&+W%s&n&+m tells your racewar: &+w'&+Y%s&n&+w'\n",
               PERS(ch, i->character, FALSE), language_CRYPT(ch, i->character,
                                                             argument));
     }

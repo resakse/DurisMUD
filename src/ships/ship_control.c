@@ -407,6 +407,10 @@ int carrying_flag(P_ship ship)
 int order_speed(P_char ch, P_ship ship, char* arg)
 {
     int      speed;
+    int realspeed = ship->get_maxspeed();
+    
+    if(has_innate(ch, INNATE_SEADOG))
+    realspeed += 5;
 
     if (!is_valid_sailing_location(ship, ship->location)) 
     {
@@ -422,21 +426,25 @@ int order_speed(P_char ch, P_ship ship, char* arg)
         if (is_number(arg)) 
         {
             speed = atoi(arg);
-            if ((speed <= ship->get_maxspeed()) && speed >=0) 
+	     
+           // if ((speed <= ship->get_maxspeed()) && speed >=0) 
+             if ((speed <= realspeed) && speed >=0)
             {
                 ship->setspeed = speed;
                 act_to_all_in_ship_f(ship, "Speed set to &+W%d&N.", ship->setspeed);
             } 
             else 
             {
-                send_to_char_f(ch, "This ship can only go from &+W%d&N to &+W%d&N.\r\n", 0, ship->get_maxspeed());
+                //send_to_char_f(ch, "This ship can only go from &+W%d&N to &+W%d&N.\r\n", 0, ship->get_maxspeed());
+	         send_to_char_f(ch, "This ship can only go from &+W%d&N to &+W%d&N.\r\n", 0, realspeed);
             }
         } 
         else if (isname(arg, "max maximum")) 
         {
             if (!SHIP_IMMOBILE(ship)) 
             {
-                ship->setspeed = ship->get_maxspeed();
+               // ship->setspeed = ship->get_maxspeed();
+		  ship->setspeed = realspeed;
                 act_to_all_in_ship_f(ship, "Speed set to &+W%d&N.", ship->setspeed);
             } 
             else 
@@ -446,7 +454,8 @@ int order_speed(P_char ch, P_ship ship, char* arg)
         {
             if (!SHIP_IMMOBILE(ship)) 
             {
-                ship->setspeed = MAX(1, ship->get_maxspeed() * 2 / 3);
+              //  ship->setspeed = MAX(1, ship->get_maxspeed() * 2 / 3);
+	 	  ship->setspeed = MAX(1, realspeed * 2 / 3);
                 act_to_all_in_ship_f(ship, "Speed set to &+W%d&N.", ship->setspeed);
             } 
             else 
@@ -456,7 +465,8 @@ int order_speed(P_char ch, P_ship ship, char* arg)
         {
             if (!SHIP_IMMOBILE(ship)) 
             {
-                ship->setspeed = MAX(1, ship->get_maxspeed() / 3);
+                //ship->setspeed = MAX(1, ship->get_maxspeed() / 3);
+		  ship->setspeed = MAX(1, realspeed / 3);
                 act_to_all_in_ship_f(ship, "Speed set to &+W%d&N.", ship->setspeed);
             } 
             else
@@ -1263,6 +1273,9 @@ int look_ship(P_char ch, P_ship ship)
 {
     char name_format[20];
     sprintf(name_format, "%%-%ds", strlen(ship->name) + (20 - strlen(strip_ansi(ship->name).c_str())));
+    int realspeed = ship->get_maxspeed();
+    if(has_innate(ch, INNATE_SEADOG))
+    realspeed += 5;
 
     char target_str[100];
     P_ship target = ship->target;
@@ -1281,7 +1294,8 @@ int look_ship(P_char ch, P_ship ship)
     send_to_char_f(ch, "        %s%3d&N/&+G%-3d      &+LSpeed Range: &+W0-%-3d      &+LCrew: &+W%-20s&N\r\n",
             SHIP_ARMOR_COND(SHIP_MAX_FARMOR(ship), SHIP_FARMOR(ship)),
             SHIP_FARMOR(ship), SHIP_MAX_FARMOR(ship),
-            ship->get_maxspeed(), ship_crew_data[ship->crew.index].name);
+            //ship->get_maxspeed(), ship_crew_data[ship->crew.index].name);
+	     realspeed, ship_crew_data[ship->crew.index].name);
     send_to_char_f(ch, "                          &+LWeight: &+W%3d,000          &+W%-20s&N\r\n",
             SHIP_HULL_WEIGHT(ship), (ship->crew.sail_chief == NO_CHIEF) ? "" : ship_chief_data[ship->crew.sail_chief].name);
     send_to_char_f(ch, "           &+y||&N               &+LLoad: &+W%3d/&+W%3d&N          %-20s&N\r\n",

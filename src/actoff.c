@@ -4819,7 +4819,8 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
     
     spinal = TRUE;
   }
-  else if(GET_CHAR_SKILL(ch, SKILL_CRITICAL_STAB) &&
+  //no longer else if - can spinal as well as critical stab.
+  if(GET_CHAR_SKILL(ch, SKILL_CRITICAL_STAB) &&
          (notch_skill(ch, SKILL_CRITICAL_STAB, get_property("skill.notch.offensive", 25)) ||
          (critical_stab * GET_CHAR_SKILL(ch, SKILL_CRITICAL_STAB)) > number(1, 100)))
   {
@@ -4838,6 +4839,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
       FALSE, ch, 0, victim, TO_NOTVICTROOM);
   }
   else if(melee_damage(ch, victim, dam, PHSDAM_NOREDUCE | PHSDAM_NOPOSITION, &messages) || 
+	   (room < 1) ||
           !is_char_in_room(ch, room))
     return TRUE;
 
@@ -8674,7 +8676,7 @@ void do_trip(P_char ch, char *argument, int cmd)
   }
 
   percent_chance =
-    (int) (percent_chance * ((double) BOUNDED(72, GET_C_AGI(ch), 133)) / 100);
+    (int) (percent_chance * ((double) BOUNDED(72, GET_C_AGI(ch), 160)) / 100);
   percent_chance =
     takedown_check(ch, vict, percent_chance, SKILL_TRIP, APPLY_ALL);
 

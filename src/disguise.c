@@ -240,7 +240,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
   equipped = FALSE;
 
   // Check if we have a disguise kit
-  if (!IS_TRUSTED(ch))
+  if (!IS_TRUSTED(ch) || !affected_by_spell(ch, ACH_DECEPTICON))
   {
     if (!(temp = get_obj_in_list_vis(ch, "_disguise_kit_", ch->carrying)))
     {
@@ -255,7 +255,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
       }
     }
   }
-  if (IS_TRUSTED(ch))
+  if (IS_TRUSTED(ch) || affected_by_spell(ch, ACH_DECEPTICON))
     skl_lvl = 200;
 
   percent = number(1, 101);
@@ -284,7 +284,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
     notch_skill(ch, SKILL_DISGUISE, 3);
     justice_witness(ch, NULL, CRIME_DISGUISE);
     CharWait(ch, PULSE_VIOLENCE * 3);
-    if (!IS_TRUSTED(ch) && number(0, 1))
+    if (!IS_TRUSTED(ch) && !affected_by_spell(ch, ACH_DECEPTICON) && number(0, 1))
     {
       send_to_char(", and ruin your disguise kit in the process.\r\n", ch);
       if (equipped)
@@ -315,6 +315,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
   }
   else
   {
+    update_achievements(ch, 0, 1, 3); //char, novictim, 1 increment, decepticon achievement
     if (target)
     {
       IS_DISGUISE_PC(ch) = TRUE;
@@ -365,7 +366,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
     SET_BIT(ch->specials.act, PLR_NOWHO);
     justice_witness(ch, NULL, CRIME_DISGUISE);
     act(Gbuf1, TRUE, ch, 0, target, TO_ROOM);
-    if (!IS_TRUSTED(ch))
+    if (!IS_TRUSTED(ch) && !affected_by_spell(ch, ACH_DECEPTICON))
     {
       if (equipped)
         unequip_char(ch, HOLD);
