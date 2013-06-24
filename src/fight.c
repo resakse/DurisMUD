@@ -2188,7 +2188,7 @@ void die(P_char ch, P_char killer)
      act("&-L&+rYour soul leaves your body in the cold sleep of death...&n", FALSE, ch, 0, 0, TO_CHAR);
   }
 
-  if(
+  if(  (IS_PC(ch)) &&
 	((GET_LEVEL(killer) - GET_LEVEL(ch)) > 15) && 
 	(IS_PC(killer) || (IS_NPC(killer) && IS_PC_PET(killer))) &&
 	(equipped_value(ch) < 250)
