@@ -768,7 +768,7 @@ void random_recipe(P_char ch, P_char victim)
  if(IS_ELITE(victim))
  chance *= 5;
 
- int result = number(1, 10000);
+ int result = number(1, 20000);
 
  if(result < chance)
  {

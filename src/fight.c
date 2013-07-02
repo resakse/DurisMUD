@@ -7165,7 +7165,7 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 
 
   if (affected_by_spell(ch, ACH_YOUSTRAHDME) && ((GET_RACE(victim) == RACE_UNDEAD) || 
-	(GET_RACE(victim) == RACE_PVAMPIRE) ||
+	(GET_RACE(victim) == RACE_VAMPIRE) ||
 	(GET_RACE(victim) == RACE_PLICH) ||
 	(GET_RACE(victim) == RACE_ZOMBIE) ||
 	(GET_RACE(victim) == RACE_SKELETON) ||

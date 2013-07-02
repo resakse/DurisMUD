@@ -3469,10 +3469,11 @@ bool kick(P_char ch, P_char victim)
       takedown_chance = (int) (takedown_chance * 1.2);
     }
 
-    if(IS_CENTAUR(ch) && !IS_NPC(ch))
+    if((IS_CENTAUR(ch) || IS_OGRE(ch) || (GET_RACE(ch) == RACE_FIRBOLG) || (GET_RACE(ch) == RACE_BARBARIAN) || (GET_RACE(ch) == RACE_TROLL)) && !IS_NPC(ch))
     {
       takedown_chance = (int) (takedown_chance * 1.4);
     }
+
 
     takedown_chance = takedown_check(ch, victim, takedown_chance, SKILL_KICK,
                                      APPLY_ALL ^ AGI_CHECK ^ FOOTING);
@@ -3707,7 +3708,7 @@ int chance_roundkick(P_char ch, P_char victim)
   if(IS_AFFECTED(victim, AFF_AWARE) &&
     AWAKE(victim))
   {
-    percent_chance = (int) (percent_chance * 0.75);
+    percent_chance = (int) (percent_chance * 0.95);
   }
   
   percent_chance =
@@ -8114,7 +8115,7 @@ void bodyslam(P_char ch, P_char victim)
 
   if(IS_AFFECTED(victim, AFF_AWARE))
   {
-    percent_chance /= 2;
+    percent_chance *= .90;
   }
 
   percent_chance =

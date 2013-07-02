@@ -1052,6 +1052,8 @@ G 1 364 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 146 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 145 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 147 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 400223 999 0 100 0 0 0         *    (object type not in this .obj file)
+G 1 400224 999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 97571 9 97738 100 0 0 0        * an orcish thief
 M 0 97520 14 97738 100 0 0 0       * an orcish warrior
 M 0 97572 10 97739 100 0 0 0       * an orcish assassin
