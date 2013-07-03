@@ -2113,17 +2113,17 @@ void do_cast(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (GET_CLASS(ch, CLASS_RANGER) && !IS_GOOD(ch) && !IS_MULTICLASS_PC(ch))
+/*  if (GET_CLASS(ch, CLASS_RANGER) && !IS_GOOD(ch) && !IS_MULTICLASS_PC(ch))
   {
     send_to_char("Alas, your spellcasting abilities are no good unless YOU are good.\n", ch);
     return;
-  }
+  }*/
 
-  if (get_linking_char(ch, LNK_RIDING) != NULL)
+ /* if (get_linking_char(ch, LNK_RIDING) != NULL)
   {
     send_to_char("Sorry, you can't cast with someone on your back!\n", ch);
     return;
-  }
+  }*/
 
   if (P_char mount = get_linked_char(ch, LNK_RIDING))
   {

@@ -4513,7 +4513,7 @@ void event_sneaky_strike(P_char ch, P_char victim, P_obj obj, void *data)
 	  	act
     	  	("$n &+Lfades into the sh&+wad&+Wows&+L and quickly strikes at $N's &+Wface&+L, causing them to see stars.",
      	  	TRUE, ch, 0, victim, TO_NOTVICT);
-	   	blind(ch, victim, 6 * PULSE_VIOLENCE);
+	   	blind(ch, victim, 1 * PULSE_VIOLENCE);
           }
 	 }
     

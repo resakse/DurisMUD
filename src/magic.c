@@ -6582,7 +6582,7 @@ void spell_full_heal(int level, P_char ch, char *arg, int type, P_char victim,
   healpoints *= .3;
 
 
-  if(GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN) && (ch != victim) && ((GET_RACEWAR(ch) != GET_RACEWAR(victim) && !IS_PC_PET(victim)) || (IS_NPC(victim) && !IS_PC_PET(victim))))
+  if(GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN) && IS_PC(ch) && (ch != victim) && ((GET_RACEWAR(ch) != GET_RACEWAR(victim) && !IS_PC_PET(victim)) || (IS_NPC(victim) && !IS_PC_PET(victim))))
  {
     struct damage_messages messages = {
     "&+cYou call upon the &+Cmight&+c of your &+Wgod &+cto &+rde&+Rst&+Wroy &+cthe &+rbody &+cof $N&+c, who stumbles from the &+Cimpact&+c!",
@@ -6692,7 +6692,7 @@ void spell_heal(int level, P_char ch, char *arg, int type, P_char victim, P_obj 
   if(GET_CLASS(victim, CLASS_ANTIPALADIN) && affected_by_spell(victim, SPELL_HELLFIRE) && (GET_RACEWAR(ch) == GET_RACEWAR(victim)))
   healpoints *= .3;
 
-  if(GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN) && ((GET_RACEWAR(ch) != GET_RACEWAR(victim) && !IS_PC_PET(victim)) || (IS_NPC(victim) && !IS_PC_PET(victim))))
+  if(GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN) && IS_PC(ch) && ((GET_RACEWAR(ch) != GET_RACEWAR(victim) && !IS_PC_PET(victim)) || (IS_NPC(victim) && !IS_PC_PET(victim))))
  {
     struct damage_messages messages = {
     "&+cYou call upon the &+Cmight&+c of your &+Wgod &+cto &+rde&+Rst&+Wroy &+cthe &+rbody &+cof $N&+c, who stumbles from the &+Cimpact&+c!",

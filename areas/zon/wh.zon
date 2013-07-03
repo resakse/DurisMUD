@@ -957,10 +957,9 @@ M 0 55135 1 55400 100 0 0 0        * an Ambassador from The Forgotten Mansion
 M 0 55136 1 55400 100 0 0 0        * an Ambassador from the Village of Werrun
 M 0 55137 1 55400 100 0 0 0        * an Ambassador from Quintaragon Castle
 M 0 55034 1 55401 100 0 0 0        * Tarn Bloodblade, the outlaw of Tharnadia
-E 1 55377 1 16 30 0 0 0            *   a gladius called 'Backstabber'
+E 1 55376 6 16 100 0 0 0           *   a blood-soaked dagger
 E 1 55376 6 17 100 0 0 0           *   a blood-soaked dagger
 E 1 55375 1 24 100 0 0 0           *   the mark of the dagger
-G 1 55376 6 0 100 0 0 0            *    a blood-soaked dagger
 F 1 55052 4 55401 100 0 0 0        * a grim mercenary (following)
 E 1 55376 6 16 100 0 0 0           *   a blood-soaked dagger
 F 1 55052 4 55401 100 0 0 0        * a grim mercenary (following)

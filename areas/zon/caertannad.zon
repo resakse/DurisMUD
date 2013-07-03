@@ -1227,6 +1227,7 @@ E 1 78418 1 16 100 0 0 0           *   bostas proc1
 E 1 78419 1 18 100 0 0 0           *   the scepter of Bostas Firebraid
 G 1 78515 1 0 100 0 0 0            *    a life shard
 G 1 359 2 0 100 0 0 0              *    (object type not in this .obj file)
+G 1 55377 1 0 100 0 0 0            *    (object type not in this .obj file)
 F 1 78431 1 78642 100 0 0 0        * a pet firelizard (following)
 F 1 78432 1 78642 100 0 0 0        * a sly-looking advisor (following)
 F 1 78425 5 78642 100 0 0 0        * a dark iron high guard (following)

@@ -2400,7 +2400,7 @@ spellbook book spell~
 &+ya spellbook&n~
 A spellbook lies here, discarded.~
 ~
-33 28 2 1 7 0 0 16385 0 0 0
+33 28 2 1 7 0 8 16385 0 0 0
 0 0 80 0 0 0 0 0
 1 20 100
 #204
@@ -2408,7 +2408,7 @@ quill~
 a quill~
 A quill lies here, discarded.~
 ~
-21 5 1 1 7 0 0 16385 0 0 0
+21 5 1 1 7 0 8 16385 0 0 0
 0 0 0 0 0 0 0 0
 1 10 100
 #205
@@ -8797,7 +8797,7 @@ wooden lyre instrument~
 &+ya plain wooden lyre&N~
 &+yA small wooden lyre is here.&N~
 ~
-32 6 3 0 7 0 1024 16385 0 8421920 0
+32 6 3 0 7 0 1032 16385 0 8421920 0
 185 1 1 1 0 0 0 0
 0 1 100
 E
