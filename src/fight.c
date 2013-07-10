@@ -2308,8 +2308,8 @@ void die(P_char ch, P_char killer)
   /* count xp loss for victim and apply */
   if(IS_PC(ch) &&
     !CHAR_IN_ARENA(ch) &&
-    !IS_TRUSTED(ch) &&
-    (GET_RACEWAR(ch) != 1))
+    !IS_TRUSTED(ch)) // &&
+   //    (GET_RACEWAR(ch) != 1)) Goods lose exp again.
   {
     loss = gain_exp(ch, NULL, 0, EXP_DEATH);
   }
