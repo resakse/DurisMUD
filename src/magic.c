@@ -6714,10 +6714,12 @@ void spell_heal(int level, P_char ch, char *arg, int type, P_char victim, P_obj 
     "&+cThe &+Cpower &+cof &n$n's&+W god&+c is the last thing your &+rbody &+cfeels before &+Cexploding &+cinto chunky bits.",
     "&+cThe &+Cpower &+cof &n$n's&+W god&+c destroys &n$N's &+rbody&+c which explodes, leaving only a pool of &+rblood &+cand &+ysinew&+c!", 0  };
 
-  int dam = 10 * level + number(1, 25);
+  int dam = 5 * level + number(1, 25);
 
   if(!NewSaves(victim, SAVING_SPELL, 0))
-    dam = (int) (dam);
+    dam = (int) (dam * 2);
+
+
 
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
  }
