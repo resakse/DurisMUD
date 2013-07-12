@@ -964,7 +964,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
 
     if((GET_LEVEL(tobj) > 56) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch))
     {
-     send_to_char("You must have a &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+YConjuring&n in your &+Winventory&n in order to &+Ysummon&+ a being of such &+Mgreat&n power.\r\n", ch);
+     send_to_char("You must have a &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+YConjuring&n in your &+Winventory&n in order to &+Ysummon&n a being of such &+Mgreat&+M power&n.\r\n", ch);
     extract_char(tobj);
      return;
     }

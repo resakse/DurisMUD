@@ -13649,6 +13649,7 @@ int unspec_altar(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
 
   unspecialize(ch, obj);
+  update_racial_skills(ch);
 }
 
 int unmulti_altar(P_obj obj, P_char ch, int cmd, char *arg)
