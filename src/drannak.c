@@ -332,7 +332,7 @@ int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
 	       "&+LThe Harvester&+L &+wsays 'Additionally, I offer a reward for &+R6 &+we&+Wt&+Lh&+rer&+Le&+Wa&+wl &+Wsoul &+rshards&n from beings who have fallen in battle&n.&+L.&n'\n"
 	       "&+LThe Harvester&+L &+wsays 'Simply have them in your &+Winventory&n and buy the item from the list below&n.&+L.&n'\n"
               "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n"
-		"&+y|		&+cItem Name					           Frags Required        &+y|\n"																
+		"&+y|		&+cItem Name					           Frags Required       &+y|\n"																
               "&+y|&+W 1) &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+YConjuring&n&+C%30d&n		                        &+y|\n"
               "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n"
 		"\n", 0);
@@ -946,7 +946,8 @@ void do_conjure(P_char ch, char *argument, int cmd)
      return;
     }
 
-    if((GET_LEVEL(tobj) > 51) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch))
+
+    if((GET_LEVEL(tobj) > 56) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch))
     {
      send_to_char("You must have a &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+YConjuring&n in your &+Winventory&n in order to &+Ysummon&n a being of such &+Mgreat&+M power&n.\r\n", ch);
     extract_char(tobj);

@@ -2823,7 +2823,7 @@ void kill_gain(P_char ch, P_char victim)
     else
      {
       int chance = GET_C_CHA(ch);
-      chance -= GET_LEVEL(victim);
+      chance /= (GET_LEVEL(ch) - GET_LEVEL(victim));
       if((number(1, GET_C_INT(victim)) < chance) && (GET_VNUM(victim) != 1255))
       learn_conjure_recipe(ch, victim);
      }
