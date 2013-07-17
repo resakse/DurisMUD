@@ -2352,12 +2352,12 @@ void die(P_char ch, P_char killer)
 
   if(IS_NPC(ch) && (GET_LEVEL(ch) > 51) && !IS_PC_PET(ch) && !affected_by_spell(ch, TAG_CONJURED_PET)) //soul shard - Drannak
    {
-    int dchance = 2;
+    int dchance = 5;
 
     if(IS_ELITE(ch))
     dchance +=5;
     
-    if(number(1, 300) < dchance)
+    if(number(1, 250) < dchance)
     {
 	P_obj teobj = read_object(400230, VIRTUAL);
        obj_to_char(teobj, ch);
