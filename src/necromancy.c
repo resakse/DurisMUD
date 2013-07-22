@@ -693,7 +693,6 @@ void raise_undead(int level, P_char ch, P_char victim, P_obj obj,
   }
   if(GET_RACE(undead) == RACE_PLICH)
   {
-  undead->player.m_class = CLASS_SORCERER;
   undead->player.m_class += CLASS_CONJURER;
   send_to_char("is lich\r\n", ch);
   }
