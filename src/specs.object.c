@@ -3798,7 +3798,7 @@ void good_evil_configSword(P_char ch, P_obj obj)
   obj->affected[0].location = APPLY_HITROLL;
   obj->affected[1].location = APPLY_DAMROLL;
 
-  if (GET_CLASS(ch, CLASS_PALADIN) || GET_CLASS(ch, CLASS_ANTIPALADIN) || GET_CLASS(ch, CLASS_AVENGER) || GET_CLASS(ch, CLASS_DREADLORD) || (GET_RACE(ch) == RACE_OGRE))
+  if (GET_CLASS(ch, CLASS_PALADIN) || GET_CLASS(ch, CLASS_ANTIPALADIN) || GET_CLASS(ch, CLASS_AVENGER) || GET_CLASS(ch, CLASS_DREADLORD) || (GET_RACE(ch) == RACE_OGRE) || (GET_RACE(ch) == RACE_MINOTAUR))
   {
     SET_BIT(obj->extra_flags, ITEM_TWOHANDS);
     obj->value[0] = 13;
