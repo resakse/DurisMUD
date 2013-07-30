@@ -3997,7 +3997,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
     strcat(o_buf, buf);
 
     sprintf(buf,
-            "&+YCon: &n%3d&+Y (&n%3d&+Y)    Cha: &n%3d&+Y (&n%3d&+Y)\n   Equipped Items: &n%3d&+Y     Carried weight:&n%5d\n\n",
+            "&+YCon: &n%3d&+Y (&n%3d&+Y)    Cha: &n%3d&+Y (&n%3d&+Y)\n&+cEquipped Items: &n%3d&+Y     &+cCarried weight:&n%5d\n\n",
             GET_C_CON(k), k->base_stats.Con, GET_C_CHA(k), k->base_stats.Cha,
             i3, IS_CARRYING_W(k));
     strcat(o_buf, buf);
