@@ -2148,7 +2148,8 @@ void die(P_char ch, P_char killer)
 
   if(IS_PC(ch) && GET_CLASS(ch, CLASS_CONJURER))
   do_dismiss(ch, NULL, NULL);
-  
+  int oldlev = GET_LEVEL(ch);
+
 #if defined(CTF_MUD) && (CTF_MUD == 1)
   if (affected_by_spell(ch, TAG_CTF))
   {
@@ -2318,6 +2319,13 @@ void die(P_char ch, P_char killer)
    //    (GET_RACEWAR(ch) != 1)) Goods lose exp again.
   {
     loss = gain_exp(ch, NULL, 0, EXP_DEATH);
+  }
+
+  if(IS_PC(ch))
+  {
+  if((oldlev <= GET_LEVEL(ch)) && (GET_RACE(ch) == RACE_PLICH))
+  lose_level(ch);
+    GET_EXP(ch) = 1;
   }
 
   if(IS_PC(killer))
@@ -4342,7 +4350,12 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
       type == SPLDAM_COLD)
     {
       dam *= dam_factor[DF_VULNCOLD];
-      if(IS_PC(victim) &&
+        send_to_char("&+CThe freezing cold causes you intense pain!\n", victim);
+        act("&+CThe freezing cold causes&n $n&+C intense pain!&n",
+          FALSE, victim, 0, 0, TO_ROOM);
+    }
+    
+   /*  if(IS_PC(victim) &&
         !NewSaves(victim, SAVING_PARA, 2))
       {
         struct affected_type af;
@@ -4367,7 +4380,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         if(IS_FIGHTING(victim))
           stop_fighting(victim);
       }
-    }
+    }*/
 
     if (parse_chaos_shield(ch, victim))
     {

@@ -6135,7 +6135,7 @@ void do_descend(P_char ch, char *arg, int cmd)
   vnum_from_inv(ch, 58424, 1);
   vnum_from_inv(ch, 500032, 1);
   vnum_from_inv(ch, 400231, 5);
-    
+    forget_spells(ch, -1);
     GET_HOME(ch) = GET_BIRTHPLACE(ch) = GET_ORIG_BIRTHPLACE(ch) = 98735;
     char_from_room(ch);
     char_to_room(ch, real_room(98735), 0);
@@ -6143,7 +6143,7 @@ void do_descend(P_char ch, char *arg, int cmd)
     GET_SIZE(ch) = SIZE_MEDIUM;
     GET_RACE(ch) = RACE_PLICH;
     ch->player.m_class = CLASS_NECROMANCER;
-   ch->player.secondary_class = CLASS_SORCERER;
+    ch->player.secondary_class = CLASS_SORCERER;
     secede_asc(ch); //leave your guild!
     ch->only.pc->frags = 0;
     ch->only.pc->epics = 0;
