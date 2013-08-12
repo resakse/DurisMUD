@@ -130,6 +130,12 @@ void new_ah_call(P_char ch, char *arguments, int cmd)
   }
 */
 
+    if(!IS_TRUSTED(ch))
+    {
+     send_to_char("Auctions are disabled in preparation for the upcoming wipe\r\n", ch);
+     return;
+    }
+
 
 	if( !check_db_active() ) 
 	{
