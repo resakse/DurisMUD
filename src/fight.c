@@ -2321,11 +2321,13 @@ void die(P_char ch, P_char killer)
     loss = gain_exp(ch, NULL, 0, EXP_DEATH);
   }
 
-  if(IS_PC(ch))
+  if(IS_PC(ch) && (GET_RACE(ch) == RACE_PLICH))
   {
   if((oldlev <= GET_LEVEL(ch)) && (GET_RACE(ch) == RACE_PLICH))
+  {
   lose_level(ch);
     GET_EXP(ch) = 1;
+   }
   }
 
   if(IS_PC(killer))
