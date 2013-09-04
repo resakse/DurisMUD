@@ -2090,7 +2090,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
               "&+y|&+W 6) &+ca &+Cbr&+Will&+Bia&+Wnt &+cset of &+rLantan &+CScientific&+L Tools&n    &n&+C%30d&n               &+y|\n"
               "&+y|&+W 7) &+Lthe &+ge&+Gy&+ge&+Gs &+Lof the &+gHi&+Ggh For&+gest&n     &n              &+C%30d&n&+y               |\n"
               "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n"
-		"\n", 125, 85, 20, 5000, 500, 150, 2500);
+		"\n", 125, 85, 50, 5000, 500, 150, 2500);
       send_to_char(buffer, pl);
       return TRUE;
     }//endifnoarg
@@ -2153,17 +2153,17 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
     //400217 - faerie bag
 	else if(strstr(arg, "3"))
     {//buy3
-	//check for 20 epics required to reset
+	//check for 50 epics required to reset
 	int availepics = pl->only.pc->epics;
-	if (availepics < 20)
+	if (availepics < 50)
 	{
 	  send_to_char("&+WKannard&+L &+wsays '&nI'm sorry, but you do not seem to have the &+Wepics&n available for that item.\r\n&n", pl);
 	  return TRUE;
         }
-	//subtract 20 epics
+	//subtract 50 epics
        P_obj obj;
 	obj = read_object(400217, VIRTUAL);
-	pl->only.pc->epics -= 20;
+	pl->only.pc->epics -= 50;
        send_to_char("&+WKannard&+L &+wsays '&nAh, good choice! Quite a rare item!'\n", pl);
 	send_to_char("&+WKannard &+Lthe &+ctra&+Cvell&+cer &nmakes a strange gesture about your body, and hands you your item.\r\n&n", pl);
        act("You now have $p!\r\n", FALSE, pl, obj, 0, TO_CHAR);
@@ -2605,6 +2605,9 @@ int itemvalue(P_char ch, P_obj obj)
  if (IS_SET(obj->bitvector4, AFF4_PROT_LIVING))
 	 workingvalue += 4;
 
+ if (IS_SET(obj->bitvector3, AFF3_ENLARGE))
+        workingvalue +=20;
+
  if (IS_SET(obj->bitvector4, AFF4_DETECT_ILLUSION))
 	 workingvalue += 7;
 
@@ -2653,6 +2656,16 @@ int itemvalue(P_char ch, P_obj obj)
 	) 
    {
     workingvalue += (int)(obj->affected[i].modifier *.1);
+   }
+
+  //hit, move, mana, regen are generally large #'s - 1/10
+   if (
+	(obj->affected[i].location == APPLY_HIT_REG) ||
+	(obj->affected[i].location == APPLY_MOVE_REG) ||
+	(obj->affected[i].location == APPLY_MANA_REG) 
+	) 
+   {
+    workingvalue += (int)(obj->affected[i].modifier *.2);
    }
 
   //racial attributes #'s - 1/10

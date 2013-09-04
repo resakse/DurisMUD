@@ -1257,6 +1257,16 @@ void learn_conjure_recipe(P_char ch, P_char victim)
     extract_char(victim);
      return;
     }
+
+  if(mob_index[GET_RNUM(victim)].func.mob == shop_keeper || (mob_index[GET_RNUM(victim)].qst_func == shop_keeper))
+    {
+    act("$n &+Ltries to charm their listeners &+Lbut suddenly &+rDrannak&+L appears from the skies!", TRUE, ch, NULL, 0, TO_ROOM);
+    act("You attempt to charm your listeners, but suddenly &+rDrannak&n appears from the skies!", FALSE, ch, NULL, 0, TO_CHAR);
+    act("&+rDrannak&n makes a strange gesture, causing a large brick of &+Ycheese&n the size of a whale to suddenly fall on $n, crushing them completely!", TRUE, ch, NULL, 0, TO_ROOM);
+    act("&+rDrannak&n makes a strange gesture, causing a large brick of &+Ycheese&n the size of a whale to suddenly fall on you, crushing you completely!", FALSE, ch, NULL, 0, TO_CHAR);
+	die(ch, ch);
+       return;
+    }
 	
  int recipenumber = GET_VNUM(victim);
  	

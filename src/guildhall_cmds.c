@@ -603,10 +603,10 @@ void do_construct_upgrade(P_char ch, char *arg)
             get_property("guildhalls.construction.points.upgrade.bank", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "town", "a portal to your local hometown", 
+    /*sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "town", "a portal to your local hometown", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.town_portal", 0) * 1000), 
             get_property("guildhalls.construction.points.upgrade.town_portal", 0));
-    send_to_char(buff, ch);
+    send_to_char(buff, ch);*/
 
     sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "library", "a library with a tome from which you can memorize all spells", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.library", 0) * 1000), 
@@ -652,12 +652,12 @@ void do_construct_upgrade(P_char ch, char *arg)
     plat_cost = get_property("guildhalls.construction.platinum.upgrade.bank", 0) * 1000;
     cp_cost = get_property("guildhalls.construction.points.upgrade.bank", 0);
   }  
-  else if( isname(buff, "town") )
+ /* else if( isname(buff, "town") )
   {
     type = GH_ROOM_TYPE_TOWN_PORTAL;    
     plat_cost = get_property("guildhalls.construction.platinum.upgrade.town_portal", 0) * 1000;
     cp_cost = get_property("guildhalls.construction.points.upgrade.town_portal", 0);
-  }    
+  }   */ 
   else if( isname(buff, "library") )
   {
     type = GH_ROOM_TYPE_LIBRARY;    

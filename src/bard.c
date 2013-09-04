@@ -666,6 +666,7 @@ void bard_charm(int l, P_char ch, P_char victim, int song)
   if(GET_MASTER(victim))
     return;
 
+
   if(IS_PC(victim))
   return;
  /*
@@ -695,8 +696,14 @@ void bard_charm(int l, P_char ch, P_char victim, int song)
 	(CLASS_WARLOCK | CLASS_ILLUSIONIST) && IS_PC(ch))
 	return;
 
-  if(bard_saves(ch, victim, song) && !IS_NPC(ch))
+   if(bard_saves(ch, victim, song) && !IS_NPC(ch))
     return;
+
+  if(mob_index[GET_RNUM(victim)].func.mob == shop_keeper || (mob_index[GET_RNUM(victim)].qst_func == shop_keeper))
+    {
+       return;
+    }
+
 
   for (tmp_obj = victim->carrying; tmp_obj; tmp_obj = tmp_obj->next_content)
     if(IS_SET(tmp_obj->extra_flags, ITEM_NOCHARM))
@@ -705,6 +712,8 @@ void bard_charm(int l, P_char ch, P_char victim, int song)
     if(victim->equipment[i] &&
         IS_SET(victim->equipment[i]->extra_flags, ITEM_NOCHARM))
       return;
+
+
 
   if(count_pets(ch) >= 3)
     return;

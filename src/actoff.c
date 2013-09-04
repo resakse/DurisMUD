@@ -8177,6 +8177,7 @@ void bodyslam(P_char ch, P_char victim)
     fall = FALSE;
     CharWait(victim, PULSE_VIOLENCE * 3);
     SET_POS(victim, POS_PRONE + GET_STAT(victim));
+    engage(ch, victim);
     CharWait(ch, 3 * PULSE_VIOLENCE);
     if(!damage
         (ch, victim, str_app[STAT_INDEX(GET_C_STR(ch))].todam + 5,
@@ -8209,8 +8210,6 @@ void bodyslam(P_char ch, P_char victim)
       SET_POS(ch, POS_SITTING + GET_STAT(ch));
     else
       SET_POS(ch, POS_KNEELING + GET_STAT(ch));
-
-  engage(ch, victim);
 
   if(!affected_by_spell(victim, SKILL_AWARENESS))
   {

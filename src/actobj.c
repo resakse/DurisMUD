@@ -5093,6 +5093,13 @@ void do_salvage(P_char ch, char *argument, int cmd)
     return;
   }
 
+  if(obj_index[temp->R_num].virtual_number == 1252)
+      {
+    act("That item cannot be &+ysalvaged&n.", FALSE, ch, 0, 0, TO_CHAR);
+    return;
+   }
+
+
 //make sure its not food or container
   if ((temp->type == ITEM_CONTAINER ||
        temp->type == ITEM_STORAGE) && temp->contains)
