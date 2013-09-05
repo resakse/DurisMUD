@@ -4103,7 +4103,6 @@ G 1 83542 1 0 100 0 0 0            *    some slime-covered aboleth skin
 G 1 83547 1 0 20 0 0 0             *    a long slime-covered tendril with an unblinking eye
 G 1 23045 2 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 23045 2 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 69 1 0 100 0 0 0               *    (object type not in this .obj file)
 F 1 83465 3 83936 100 0 0 0        * a writhing tendril (following)
 F 1 83465 3 83936 100 0 0 0        * a writhing tendril (following)
 F 1 83465 3 83936 100 0 0 0        * a writhing tendril (following)
