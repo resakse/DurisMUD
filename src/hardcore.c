@@ -312,6 +312,9 @@ long getLeaderBoardPts(P_char ch)
 
  update_shipfrags();
  int sf = calculate_shipfrags(ch); 
+
+ debug("ch: %s, shipfrags: %d, levelpoints: %d, exppoints: %d, fragpoints: %d, deathpoints: %d\r\n", GET_NAME(ch), sf, (GET_LEVEL(ch) * 1000), (ch->points.curr_exp / 10000), (ch->only.pc->frags * 100), (ch->only.pc->numb_deaths * 25));
+
  long hardcorepts =
        (GET_LEVEL(ch) * 1000) + (ch->points.curr_exp / 10000) + (sf * 100) +
              (ch->only.pc->frags * 100) - (ch->only.pc->numb_deaths * 25);
