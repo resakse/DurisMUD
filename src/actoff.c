@@ -4742,7 +4742,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
 
   dam += (GET_C_DEX(ch) + GET_C_STR(ch)) * strdex_mod; 
 
-  dam += (number (2, GET_C_LUCK(ch)) / 2);
+  dam += (number (10, GET_C_LUCK(ch)) / 10);
   
   dam =  (int)((float)dam * ((float)skill / (float)100)); //(goes to 0)
 
