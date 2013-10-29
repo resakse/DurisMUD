@@ -919,7 +919,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-       if(isname("bloodstone", t_obj->name))
+       else if(isname("bloodstone", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
@@ -952,7 +952,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-       if(isname("black", t_obj->name))
+       else if(isname("black", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
@@ -985,7 +985,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-      if(isname("pink", t_obj->name))
+      else if(isname("pink", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
@@ -1018,7 +1018,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-      if(isname("rubin", t_obj->name))
+      else if(isname("rubin", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
@@ -1051,7 +1051,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-      if(isname("green", t_obj->name))
+      else if(isname("green", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
@@ -1084,7 +1084,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-      if(isname("red", t_obj->name))
+      else if(isname("red", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
@@ -1117,7 +1117,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-      if(isname("yellow", t_obj->name))
+      else if(isname("yellow", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
@@ -1150,7 +1150,7 @@ while (i < 2)
           extract_obj(t_obj, TRUE);
     	  }
 
-      if(isname("blue", t_obj->name))
+      else if(isname("blue", t_obj->name))
 	  {
           rchance = (number(1, 100));
  	   if(rchance < 5)
