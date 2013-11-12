@@ -7185,14 +7185,15 @@ void spell_invisibility(int level, P_char ch, char *arg, int type,
 
       af.type = SPELL_INVISIBLE;
       af.duration = level / 2;
-      if(GET_SPEC(ch, CLASS_SORCERER, SPEC_SHADOW) &&
+
+    /*  if(GET_SPEC(ch, CLASS_SORCERER, SPEC_SHADOW) && Drannak - disabling for now
          ch == victim &&
          !IS_WATER_ROOM(ch->in_room) &&
          world[room].sector_type != SECT_OCEAN)
       {
         af.bitvector = AFF_HIDE;
       }
-      
+      */
       af.bitvector2 = AFF2_MINOR_INVIS;
       affect_to_char(victim, &af);
     }
@@ -20460,6 +20461,9 @@ void spell_moonstone(int level, P_char ch, char *arg, int type,
   P_obj    moonstone;
   struct affected_type af, *afp;
   int duration = level * 4 * WAIT_MIN;
+
+  if(IS_NPC(ch))
+  return;
 
   if(IS_SET(world[ch->in_room].room_flags, NO_TELEPORT) ||
       world[ch->in_room].sector_type == SECT_OCEAN) {
