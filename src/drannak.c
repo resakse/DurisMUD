@@ -1929,7 +1929,7 @@ void enhance(P_char ch, P_obj source, P_obj material)
 		 {
 		  validobj = 0;
 		 }
-		else if(!IS_SET(robj->wear_flags, ITEM_TAKE) || robj->type == ITEM_KEY || IS_SET(robj->extra_flags, ITEM_ARTIFACT) || IS_SET(robj->extra_flags, ITEM_NORENT) || IS_SET(robj->extra_flags, ITEM_NOSHOW) || IS_SET(robj->extra_flags, ITEM_TRANSIENT))
+		else if(!IS_SET(robj->wear_flags, ITEM_TAKE) || robj->type == ITEM_KEY || IS_SET(robj->extra_flags, ITEM_ARTIFACT) || IS_SET(robj->extra_flags, ITEM_NOSELL) || IS_SET(robj->extra_flags, ITEM_NORENT) || IS_SET(robj->extra_flags, ITEM_NOSHOW) || IS_SET(robj->extra_flags, ITEM_TRANSIENT))
 		 {
 		  validobj = 0;
                 extract_obj(robj, FALSE);
