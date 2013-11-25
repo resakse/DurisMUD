@@ -4966,6 +4966,7 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE("ach - strahd me at hello", ACH_YOUSTRAHDME);
   TAG_CREATE("aip - decepticon", AIP_DECEPTICON);
   TAG_CREATE("ach - decepticon", ACH_DECEPTICON);
+  TAG_CREATE("aip - Addicted to Blood", AIP_ATB);
 
   TAG_CREATE("fragged victim", TAG_RECENTLY_FRAGGED);
   TAG_CREATE("merc defensive proc", TAG_MERC_DEFENSE);
@@ -4979,6 +4980,11 @@ SPELL_ADD(CLASS_NONE, 1);
   TAG_CREATE_WITH_MESSAGES("Potion Timer", TAG_POTION_TIMER,
                            "&+cYou feel like a potion could do you good once again.&n",
                            "&+c$n's body appears to recover from the affects of the &+Wpotion&+c.&n");
+
+  //Prestige Races
+  TAG_CREATE("pr - rock gnome", PR_ROCKGNOME);
+  TAG_CREATE("pr - forest gnome", PR_FORESTGNOME);
+  TAG_CREATE("pr - deep gnome", PR_DEEPGNOME);
 
   //TRAPS
   TAG_CREATE_WITH_MESSAGES("crippled", TAG_CRIPPLED,

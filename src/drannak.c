@@ -2088,3 +2088,25 @@ void do_enhance(P_char ch, char *argument, int cmd)
 
  enhance(ch, source, material);
 }
+
+int get_progress(P_char ch, int ach, long required)
+{
+  int prog = 0, percentage = 0;
+  struct affected_type *findaf, *next_af;  //initialize affects
+
+  for(findaf = ch->affected; findaf; findaf = next_af)
+  {
+   if(findaf && findaf->type == ach)
+   prog = findaf->modifier;
+  }
+
+
+  
+  if(prog > 0)
+  {
+  prog *= 100;
+  percentage = prog / required;
+  }
+
+ return percentage;
+}

@@ -2879,8 +2879,8 @@ void display_achievements(P_char ch, char *arg, int cmd)
   sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s\r\n",
           "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+BKill 1000 Dragons", "&+B10% damage increase vs Dragons");
   else
-  sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s\r\n",
-          "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+wKill 1000 Dragons", "&+w10% damage increase vs Dragons");
+  sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s &+W%d%\r\n",
+          "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+wKill 1000 Dragons", "&+w10% damage increase vs Dragons", get_progress(ch, AIP_DRAGONSLAYER, 1000));
   strcat(buf, buf3);
   //-----DRagonslayer
 
@@ -2897,11 +2897,11 @@ void display_achievements(P_char ch, char *arg, int cmd)
 
   //-----Achievement: May I Heals You
   if(affected_by_spell(ch, ACH_MAYIHEALSYOU))
-  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
+  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n", 
           "&+WMay I &+WHe&+Ya&+Wls &+WYou?&n", "&+BHeal 1,000,000 points of player damage", "&+BAccess to the salvation command");
   else
-  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
-          "&+WMay I &+WHe&+Ya&+Wls &+WYou?&n", "&+wHeal 1,000,000 points of player damage", "&+wAccess to the salvation command");
+  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s  &+W%d%\r\n", 
+          "&+WMay I &+WHe&+Ya&+Wls &+WYou?&n", "&+wHeal 1,000,000 points of player damage", "&+wAccess to the salvation command", get_progress(ch, AIP_MAYIHEALSYOU, 1000000));
   strcat(buf, buf3);
   //-----May I Heals You
 
@@ -2910,8 +2910,14 @@ void display_achievements(P_char ch, char *arg, int cmd)
   sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
           "&+LMa&+rst&+Rer of De&+rcep&+Ltion&n", "&+BSuccessfully use 500 disguise kits", "&+BDisguise without disguise kits&n");
   else
-  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s\r\n",
-          "&+LMa&+rst&+Rer of De&+rcep&+Ltion&n", "&+wSuccessfully use 500 disguise kits", "&+wDisguise without disguise kits&n");
+  sprintf(buf3, "  &+L%-40s&+L%-45s&+L%s  &+W%d%\r\n",
+          "&+LMa&+rst&+Rer of De&+rcep&+Ltion&n", "&+wSuccessfully use 500 disguise kits", "&+wDisguise without disguise kits&n", get_progress(ch, AIP_DECEPTICON, 500));
+  strcat(buf, buf3);
+  //-----Master of Deception
+
+  //-----Achievement: Addicted to Blood
+  sprintf(buf3, "  &+L%-28s&+L%-51s&+L%s  &+W%d%\r\n",
+          "&+rAddicted to Blood&n", "&+wKill &+W30 &+wmobs within 30 minutes", "&+wEXP and Plat Bonus&n", get_progress(ch, AIP_ATB, 30));
   strcat(buf, buf3);
   //-----Master of Deception
 
@@ -2943,6 +2949,7 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
 {
   char     argument[MAX_STRING_LENGTH];
   struct affected_type af;
+  int required = 1;
 
   /* Achievement int ach list:
   1 - may i heals you
@@ -2969,6 +2976,18 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
    {
     if ((ach == 2) && (GET_VNUM(victim) == 91031) && !affected_by_spell(ch, AIP_YOUSTRAHDME2) && !affected_by_spell(ch, AIP_YOUSTRAHDME))
     apply_achievement(ch, AIP_YOUSTRAHDME);
+
+      if(!affected_by_spell(ch, AIP_ATB))
+	{
+            struct affected_type aaf;
+       memset(&aaf, 0, sizeof(struct affected_type));
+  	aaf.type = AIP_ATB;
+  	aaf.modifier = 0;
+  	aaf.duration = 60;
+       aaf.location = 0;
+       aaf.flags = AFFTYPE_NOSHOW | AFFTYPE_PERM | AFFTYPE_NODISPEL;
+       affect_to_char(ch, &aaf);
+	}
     }
   }
 
@@ -3079,6 +3098,35 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
            }
       }
     /* end Dragonslayer */
+
+   /* Exp Addicted to Blood */
+    if((findaf && findaf->type == AIP_ATB) && (ach == 2) && (GET_LEVEL(victim) > (GET_LEVEL(ch) - 5)) && !IS_PC(victim) )
+      {
+       //check to see if we've hit 30 kills
+	  int result = findaf->modifier;
+         if(result >= 30)
+          {
+         affect_remove(ch, findaf);
+         //put the apply achieve on here
+        struct affected_type aaf;
+       memset(&aaf, 0, sizeof(struct affected_type));
+  	aaf.type = AIP_ATB;
+  	aaf.modifier = 0;
+  	aaf.duration = 60;
+       aaf.location = 0;
+       aaf.flags = AFFTYPE_NOSHOW | AFFTYPE_PERM | AFFTYPE_NODISPEL;
+       affect_to_char(ch, &aaf);
+         send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+rAddicted to Blood&+r achievement!&n\r\n", ch);
+         send_to_char("&+yEnjoy an &+Yexp bonus&+y and &+W5 platinum coins&+y!&n\r\n", ch);
+         ADD_MONEY(ch, 5000);
+         gain_exp(ch, NULL, GET_EXP(victim) * 10, EXP_BOON);
+          }
+           if(GET_LEVEL(victim) > (GET_LEVEL(ch) - 5))
+           {
+	    findaf->modifier += 1;
+           }
+      }
+    /* end Addicted to Blood */
 
  /* You Strahd Me2
 doru = 91031

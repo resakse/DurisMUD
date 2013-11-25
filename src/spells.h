@@ -1145,7 +1145,11 @@
 #define TAG_POTION_TIMER	         2096
 #define TAG_MERC_DEFENSE             2097
 #define TAG_LAYONHANDS		  2098
+#define PR_DEEPGNOME			  2099
 #define DAMAGE_FALLING               2100       /* From falling to the ground */
+#define PR_FORESTGNOME		  2101
+#define PR_ROCKGNOME			  2102
+#define AIP_ATB			  2103
 
 #define SAVING_PARA   0
 #define SAVING_ROD    1

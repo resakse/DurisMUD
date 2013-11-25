@@ -810,6 +810,7 @@ void randomizeitem(P_char, P_obj);
 bool calmcheck(P_char ch);
 void enhance(P_char, P_obj, P_obj);
 void do_enhance(P_char ch, char *argument, int cmd);
+int get_progress(P_char ch, int ach, long required);
 
 
 /* editor.c */
