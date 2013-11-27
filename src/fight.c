@@ -2207,9 +2207,11 @@ void die(P_char ch, P_char killer)
      act("$n is dead! &+RR.I.P.&n", TRUE, ch, 0, 0, TO_ROOM);
      act("&-L&+rYou feel yourself falling to the ground.&n", FALSE, ch, 0, 0, TO_CHAR);
      act("&-L&+rYour soul leaves your body in the cold sleep of death...&n", FALSE, ch, 0, 0, TO_CHAR);
-      if (get_property("thanksgiving", 0.000) &&
+     if(IS_NPC(ch) && GET_LEVEL(ch) > 44)
+     { if (get_property("thanksgiving", 0.000) &&
       (number(0, 100) < get_property("thanksgiving.turkey.chance", 5.000)))
     thanksgiving_proc(ch);
+     }
   }
 
  /* if(  (IS_PC(ch)) &&
