@@ -3149,8 +3149,8 @@ void capture(P_char ch, P_char victim)
   if (GET_C_DEX(ch) - GET_C_DEX(victim))
     ch_chance += ((GET_C_DEX(ch) - GET_C_DEX(victim)) / 5);
 
-  if (GET_C_LUCK(ch) - GET_C_LUCK(victim)) {
-    ch_chance += ((GET_C_LUCK(ch) - GET_C_LUCK(victim)) / 5);
+  if (GET_C_LUK(ch) - GET_C_LUK(victim)) {
+    ch_chance += ((GET_C_LUK(ch) - GET_C_LUK(victim)) / 5);
   }
 
   ch_chance = BOUNDED(1, ch_chance, 85);        /*

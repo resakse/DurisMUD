@@ -3175,7 +3175,7 @@ void do_throat_crush(P_char ch, char *arg, int cmd)
     i = (int) (i * 0.9);
   }
 
-  if (GET_C_LUCK(ch) > GET_C_LUCK(vict))
+  if (GET_C_LUK(ch) > GET_C_LUK(vict))
   {
     i = (int) (i * 1.1);
   }

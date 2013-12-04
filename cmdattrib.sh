@@ -9,10 +9,13 @@ parsefile ( )
   declare -i FOUNDIT number
   FOUNDIT=0
 
+  FILENAME=`grep -l "void $FUNCTIONNAME" ./src/*.c`
+  echo $FUNCTIONNAME
+
   cat $FILENAME | 
   while read LINE;
   do
-    if [[ $LINE = "$FUNCTIONNAME"* ]]; then
+    if [[ $LINE = "void $FUNCTIONNAME"* ]]; then
       # Count the damn brackets and do the math
       COUNT1=`grep -o "{" <<<"$LINE" | wc -l`
       COUNT2=`grep -o "}" <<<"$LINE" | wc -l`
@@ -21,8 +24,7 @@ parsefile ( )
       FOUNDIT=1
     elif [[ $FOUNDIT = 1 ]]; then
       # Hunt for the GET_C_...( crap.
-      ATTRIB=$ATTRIB grep -o "GET_C_..." <<<"$LINE"
-      
+      ATTRIB=$ATTRIB grep -o "GET_C_...(.." <<<"$LINE"
       # Count the damn brackets and do the math
       COUNT1=`grep -o "{" <<<"$LINE" | wc -l`
       COUNT2=`grep -o "}" <<<"$LINE" | wc -l`
@@ -34,19 +36,15 @@ parsefile ( )
       fi
     fi
   done
+
+  echo $ATTRIB
 }
 
 #remove the old command_att. file.
 rm -f command_attributes.txt
 
-FUNCTIONNAME="void bash"
-FILENAME=`grep -l "$FUNCTIONNAME" ./src/*.c`
-echo $FILENAME $FUNCTIONNAME
+FUNCTIONNAME="bash"
 parsefile
-echo $ATTRIB
 
-FUNCTIONNAME="void do_tackle"
-FILENAME=`grep -l "$FUNCTIONNAME" ./src/*.c`
-echo $FILENAME $FUNCTIONNAME
+FUNCTIONNAME="do_tackle"
 parsefile
-echo $ATTRIB

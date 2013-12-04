@@ -559,12 +559,12 @@ int takedown_check(P_char ch, P_char victim, int chance, int skill,
     chance = (int) (chance * get_property("skill.bash.NPC_Modifier", 1.2));
   }
   
-  if(GET_C_LUCK(ch) / 10 > number(0, 100))
+  if(GET_C_LUK(ch) / 10 > number(0, 100))
   {
     chance = (int) (chance * 1.1);
   }
 
-  if(GET_C_LUCK(victim) / 10 > number(0, 100))
+  if(GET_C_LUK(victim) / 10 > number(0, 100))
   {
     chance = (int) (chance * 0.9);
   }
@@ -901,10 +901,10 @@ void lance_charge(P_char ch, char *argument)
   percent_chance =
     (int) (0.9 * MAX(70, GET_CHAR_SKILL(ch, SKILL_LANCE_CHARGE)));
 
-  if(GET_C_LUCK(ch) / 10 > number(0, 100))
+  if(GET_C_LUK(ch) / 10 > number(0, 100))
     percent_chance = (int) (percent_chance * 1.1);
 
-  if(GET_C_LUCK(victim) / 10 > number(0, 100))
+  if(GET_C_LUK(victim) / 10 > number(0, 100))
     percent_chance = (int) (percent_chance * 0.9);
 
   percent_chance =
@@ -1020,7 +1020,7 @@ void lance_charge(P_char ch, char *argument)
     else
       effect = number(0, 8);
 
-    if(GET_C_LUCK(ch) / 2 > number(0, 100))
+    if(GET_C_LUK(ch) / 2 > number(0, 100))
       effect++;
 
     if(effect == 0)
@@ -1432,12 +1432,12 @@ void do_charge(P_char ch, char *argument, int cmd)
 
   percent_chance = 95;
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
 
-  if(GET_C_LUCK(victim) / 2 > number(0, 100))
+  if(GET_C_LUK(victim) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.9);
   }
@@ -2618,7 +2618,7 @@ void event_combination(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent = (int) (percent * 1.05);
   }
@@ -2789,7 +2789,7 @@ void event_barrage(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent = (int) (percent * 1.05);
   }
@@ -3347,12 +3347,12 @@ int chance_kick(P_char ch, P_char victim)
           ((int) BOUNDED(80, GET_C_STR(ch) + GET_C_AGI(ch) -
           GET_C_AGI(victim), 125)) / 100);
 
-  if((int) (GET_C_LUCK(ch) / 10) > number(1, 100))
+  if((int) (GET_C_LUK(ch) / 10) > number(1, 100))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if((int)(GET_C_LUCK(victim) / 10) > number(1, 100))
+  if((int)(GET_C_LUK(victim) / 10) > number(1, 100))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
@@ -3709,12 +3709,12 @@ int chance_roundkick(P_char ch, P_char victim)
    ((double)
    BOUNDED(20, 100 + (int) (1.5 * (GET_C_DEX(ch) - GET_C_AGI(victim))), 150)) / 100);
 
-  if(GET_C_LUCK(ch) / 10 > number(0, 10))
+  if(GET_C_LUK(ch) / 10 > number(0, 10))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if(GET_C_LUCK(victim) / 10 > number(0, 100))
+  if(GET_C_LUK(victim) / 10 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
@@ -4170,11 +4170,11 @@ void do_headbutt(P_char ch, char *argument, int cmd)
 
   /*  maybe the attacker or victim are lucky */
 
-  if ((GET_C_LUCK(ch) / 2) > number(0, 80)) {
+  if ((GET_C_LUK(ch) / 2) > number(0, 80)) {
      success = (int) (success * 1.1);
   }
 
-  if ((GET_C_LUCK(victim) / 2) > number(0, 80)) {
+  if ((GET_C_LUK(victim) / 2) > number(0, 80)) {
      success = (int) (success * 0.9);
   }
 
@@ -4742,7 +4742,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
 
   dam += (GET_C_DEX(ch) + GET_C_STR(ch)) * strdex_mod; 
 
-  dam += (number (10, GET_C_LUCK(ch)) / 10);
+  dam += (number (10, GET_C_LUK(ch)) / 10);
   
   dam =  (int)((float)dam * ((float)skill / (float)100)); //(goes to 0)
 
@@ -5022,12 +5022,12 @@ int backstab(P_char ch, P_char victim)
 
   percent_chance = (int) (0.9 * GET_CHAR_SKILL(ch, SKILL_BACKSTAB));
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
 
-  if(GET_C_LUCK(victim) / 2 > number(0, 100))
+  if(GET_C_LUK(victim) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.9);
   }
@@ -5942,7 +5942,7 @@ void parlay(P_char ch, P_char victim)
     return;
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100)) {
+  if(GET_C_LUK(ch) / 2 > number(0, 100)) {
     skl_lvl = (int) (skl_lvl * 1.1);
   }
 
@@ -6090,10 +6090,10 @@ void do_tackle(P_char ch, char *arg, int cmd)
     percent_chance = (int) (percent_chance * 0.5);
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(1, 100))
+  if(GET_C_LUK(ch) / 2 > number(1, 100))
     percent_chance = (int) (percent_chance * 1.1);
   
-  if(GET_C_LUCK(vict) / 2 > number(1, 100))
+  if(GET_C_LUK(vict) / 2 > number(1, 100))
     percent_chance = (int) (percent_chance * 0.90);
 
   if(IS_AFFECTED(vict, AFF_AWARE))
@@ -7128,11 +7128,11 @@ void shieldpunch(P_char ch, P_char victim)
   {
     percent_chance = GET_CHAR_SKILL(ch, SKILL_SHIELDPUNCH);
   }
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
-  if(GET_C_LUCK(victim) / 2 > number(0, 100))
+  if(GET_C_LUK(victim) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 0.9);
   }
@@ -9145,7 +9145,7 @@ void battle_orders(P_char ch, P_char victim)
 
   percent_chance = GET_CHAR_SKILL(ch, SKILL_BATTLE_ORDERS);
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 100))
+  if(GET_C_LUK(ch) / 2 > number(0, 100))
   {
     percent_chance = (int) (percent_chance * 1.1);
   }
@@ -9385,12 +9385,12 @@ void gaze(P_char ch, P_char victim)
     percent_chance = (int) (percent_chance * 0.6);
   }
   
-  if(GET_C_LUCK(ch) / 2 > number(0, 110))
+  if(GET_C_LUK(ch) / 2 > number(0, 110))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if(GET_C_LUCK(victim) / 2 > number(0, 90))
+  if(GET_C_LUK(victim) / 2 > number(0, 90))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
@@ -9643,12 +9643,12 @@ void restrain(P_char ch, P_char victim)
     percent_chance = (int) (percent_chance * 0.6);
   }
 
-  if(GET_C_LUCK(ch) / 2 > number(0, 110))
+  if(GET_C_LUK(ch) / 2 > number(0, 110))
   {
     percent_chance = (int) (percent_chance * 1.05);
   }
   
-  if(GET_C_LUCK(victim) / 2 > number(0, 90))
+  if(GET_C_LUK(victim) / 2 > number(0, 90))
   {
     percent_chance = (int) (percent_chance * 0.95);
   }
