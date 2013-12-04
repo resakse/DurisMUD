@@ -43,10 +43,16 @@ parsefile ( )
 #remove the old command_att. file.
 rm -f command_attributes.txt
 
+FUNCTIONNAME="void do_apply_poison"
+parsefile
+
 FUNCTIONNAME="bool backstab"
 parsefile
 
 FUNCTIONNAME="void bash"
+parsefile
+
+FUNCTIONNAME="void event_combination"
 parsefile
 
 FUNCTIONNAME="void do_charge"
@@ -55,13 +61,31 @@ parsefile
 FUNCTIONNAME="bool circle"
 parsefile
 
+FUNCTIONNAME="void do_craft"
+parsefile
+
+FUNCTIONNAME="void do_dirttoss"
+parsefile
+
+FUNCTIONNAME="void do_disarm"
+parsefile
+
 FUNCTIONNAME="void do_drag"
 parsefile
 
 FUNCTIONNAME="void do_flee"
 parsefile
 
+FUNCTIONNAME="void do_flurry_of_blows"
+parsefile
+
+FUNCTIONNAME="void do_hamstring"
+parsefile
+
 FUNCTIONNAME="void do_hit"
+parsefile
+
+FUNCTIONNAME="void do_hitall"
 parsefile
 
 FUNCTIONNAME="void kick"
@@ -70,74 +94,38 @@ parsefile
 FUNCTIONNAME="void do_murder"
 parsefile
 
+FUNCTIONNAME="void do_search"
+parsefile
+
+FUNCTIONNAME="void do_smith"
+parsefile
+
+FUNCTIONNAME="void do_stampede"
+parsefile
+
 FUNCTIONNAME="void do_stance"
+parsefile
+
+FUNCTIONNAME="void do_subterfuge"
 parsefile
 
 FUNCTIONNAME="void do_tackle"
 parsefile
 
-return
+FUNCTIONNAME="void do_throat_crush"
+parsefile
 
-#actmove.c:void do_drag(P_char ch, char *argument, int cmd)
-#actnew.c:void do_offensive(P_char ch, char *arg, int cmd)
-#actnew.c:void do_aggr(P_char ch, char *arg, int cmd)
-#actnew.c:void do_gsay(P_char ch, char *arg, int cmd)
-#actnew.c:void do_consent(P_char ch, char *argument, int cmd)
-#actnew.c:void do_stampede(P_char ch, char *arg, int cmd)
-#actnew.c:void do_war_cry(P_char ch, char *arg, int cmd)
-#actnew.c:void do_flurry_of_blows(P_char ch, char *arg)
-#actnew.c:void do_hitall(P_char ch, char *arg, int cmd)
-#actnew.c:void do_trap(P_char ch, char *arg, int cmd)
-#actnew.c:void do_commands(P_char ch, char *arg, int cmd)
-#actnew.c:void do_subterfuge(P_char ch, char *arg, int cmd)
-#actnew.c:void do_disarm(P_char ch, char *arg, int cmd)
-#actnew.c:void do_meditate(P_char ch, char *arg, int cmd)
-actnew.c:void do_shapechange(P_char ch, char *arg, int cmd)
-actnew.c:void do_dirttoss(P_char ch, char *arg, int cmd)
-actnew.c:void do_lore(P_char ch, char *arg, int cmd)
-actnew.c:void do_make(P_char ch, char *arg, int cmd)
-actnew.c:void do_throat_crush(P_char ch, char *arg, int cmd)
-actnew.c:void do_hamstring(P_char ch, char *arg, int cmd)
-actnew.c:void do_arena(P_char ch, char *arg, int cmd)
-actnew.c:void do_vote(P_char ch, char *argument, int cmd)
-actnew.c:void do_craft(P_char ch, char *argument, int cmd)
-actnew.c:void do_smith(P_char ch, char *argument, int cmd)
-actnew.c:void do_throw_potion(P_char ch, char *argument, int cmd)
-actnew.c:void do_home(P_char ch, char *argument, int cmd)
-actnew.c:void do_thrust(P_char ch, char *argument, int cmd)
-actnew.c:void do_unthrust(P_char ch, char *argument, int cmd)
-actobj.c:void do_get(P_char ch, char *argument, int cmd)
-actobj.c:void do_junk(P_char ch, char *argument, int cmd)
-actobj.c:void do_dropalldot(P_char ch, char *name, int cmd)
-actobj.c:void do_drop(P_char ch, char *argument, int cmd)
-actobj.c:void do_put(P_char ch, char *argument, int cmd)
-actobj.c:void do_give(P_char ch, char *argument, int cmd)
-actobj.c:void do_drink(P_char ch, char *argument, int cmd)
-actobj.c:void do_eat(P_char ch, char *argument, int cmd)
-actobj.c:void do_pour(P_char ch, char *argument, int cmd)
-actobj.c:void do_fill(P_char ch, char *argument, int cmd)
-actobj.c:void do_sip(P_char ch, char *argument, int cmd)
-actobj.c:void do_taste(P_char ch, char *argument, int cmd)
-actobj.c:void do_wear(P_char ch, char *argument, int cmd)
-actobj.c:void do_wield(P_char ch, char *argument, int cmd)
-actobj.c:void do_grab(P_char ch, char *argument, int cmd)
-actobj.c:void do_remove(P_char ch, char *argument, int cmd)
-actobj.c:void do_salvage(P_char ch, char *argument, int cmd)
-actobj.c:void do_search(P_char ch, char *argument, int cmd)
-actobj.c:void do_apply_poison(P_char ch, char *argument, int cmd)
-actoff.c:void do_stance(P_char ch, char *argument, int cmd)
-actoff.c:void do_hit(P_char ch, char *argument, int cmd)
-actoff.c:void do_murde(P_char ch, char *argument, int cmd)
-actoff.c:void do_murder(P_char ch, char *argument, int cmd)
-actoff.c:void do_charge(P_char ch, char *argument, int cmd)
-actoff.c:void do_kill(P_char ch, char *argument, int cmd)
-actoff.c:void do_backstab(P_char ch, char *argument, int cmd)
-actoff.c:void do_circle(P_char ch, char *argument, int cmd)
-actoff.c:void do_circle(P_char ch, char *argument, int cmd)
-actoff.c:void do_order(P_char ch, char *argument, int comd)
-actoff.c:void do_flee(P_char ch, char *argument, int cmd)
-actoff.c:void do_combination(P_char ch, char *argument, int cmd)
-actoff.c:void do_consume(P_char ch, char *argument, int cmd)	
+FUNCTIONNAME="void do_throw_potion"
+parsefile
+
+FUNCTIONNAME="void do_trap"
+parsefile
+
+FUNCTIONNAME="void do_war_cry"
+parsefile
+
+exit
+
 actoff.c:void do_barrage(P_char ch, char *argument, int cmd)
 actoff.c:void do_bash(P_char ch, char *argument, int cmd)
 actoff.c:void do_buck(P_char ch, char *argument, int cmd)
