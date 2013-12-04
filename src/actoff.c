@@ -1694,7 +1694,7 @@ void circling_broken(struct char_link_data *cld)
       cld->linked, TO_CHAR);
 }
 
-int circle(P_char ch, P_char victim)
+bool circle(P_char ch, P_char victim)
 {
   P_char   tch;
   P_char   t;
@@ -4923,7 +4923,7 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
  * used by MobStartFight and AggAttack.  JAB
  */
 
-int backstab(P_char ch, P_char victim)
+bool backstab(P_char ch, P_char victim)
 {
   struct affected_type af, *af_ptr;
   int      learned, old_pos, old_victhp, duergarcrit = 0;
