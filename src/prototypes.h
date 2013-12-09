@@ -165,6 +165,7 @@ void do_projects(P_char, char *, int);
 void do_faq(P_char, char *, int);
 void do_glance(P_char, char *, int);
 void do_help(P_char, char *, int);
+void load_cmd_attributes();
 void do_ignore(P_char, char *, int);
 void do_info(P_char, char *, int);
 void do_inventory(P_char, char *, int);

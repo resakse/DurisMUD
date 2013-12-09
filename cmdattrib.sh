@@ -331,7 +331,7 @@ FUNCTIONNAME="void rush"
 parsefile
 
 echo "search" >> command_attributes.txt
-FUNCTIONNAME="void do_search"
+FUNCTIONNAME="bool find_chance"
 parsefile
 
 echo "shadow" >> command_attributes.txt
