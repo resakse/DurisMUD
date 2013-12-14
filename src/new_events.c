@@ -137,8 +137,9 @@ void add_event(event_func func, int delay,
   if (delay < 0)
     return;
 
-  if (obj && (ch || victim))
-    return;
+// No reason an event can't have an object and a ch/victim. - Lohrr
+//  if (obj && (ch || victim))
+//    return;
 
   if (victim && !ch)
     return;

@@ -1174,6 +1174,9 @@ void assign_mobiles(void)
   /* Heaven */
   
   obj_index[real_object0(1270)].func.obj = treasure_chest;
+  obj_index[real_object0(461)].func.obj = ballista;
+  obj_index[real_object0(462)].func.obj = battering_ram;
+  obj_index[real_object0(463)].func.obj = catapult;
 
   /*
      torg

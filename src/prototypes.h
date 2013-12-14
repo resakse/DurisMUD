@@ -2806,6 +2806,8 @@ void spell_natures_calling(int, P_char, char *, int, P_char, P_obj);
 void spell_natures_call(int, P_char, char*, int, P_char, P_obj);
 void event_natures_call(P_char, P_char, P_obj, void *);
 
+/* Siege Engines */
+void event_move_engine(P_char ch, P_char victim, P_obj obj, void *data);
 
 /* track.c */
 

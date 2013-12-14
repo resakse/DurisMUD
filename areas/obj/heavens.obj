@@ -4779,6 +4779,30 @@ shirt white cloth~
 11 3 3 8 7 0 0 9 0 0 0
 0 0 0 4 0 0 0 0
 2 15 100
+#461
+big ole ballista~
+&+Wa big ole ballista&N~
+&+WA big ole ballista sits here.&N~
+~
+13 15 3 0 7 0 67117056 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#462
+battering ram~
+&+Wa battering ram&N~
+&+WA big ole battering ram sits here.&N~
+~
+13 15 3 0 7 0 67117056 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
+#463
+big ole catapult~
+&+Wa big ole catapult&N~
+&+WA big ole catapult sits here.&N~
+~
+13 15 3 0 7 0 67117056 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 100
 #500
 disguise kit _disguise_kit_~
 &+La disguise kit&N~

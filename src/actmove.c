@@ -227,6 +227,9 @@ int leave_by_exit(P_char ch, int exitnumb)
       (exitnumb < 0) || (exitnumb > (NUM_EXITS - 1)))
     return FALSE;
 
+  if( world[ch->in_room].dir_option[exitnumb] == NULL )
+    return FALSE;
+
   room_to = world[ch->in_room].dir_option[exitnumb]->to_room;
 
   /*

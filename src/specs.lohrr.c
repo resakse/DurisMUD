@@ -1,4 +1,5 @@
 #include "structs.h"
+#include "graph.h"
 #include "utils.h"
 #include "interp.h"
 #include "comm.h"
@@ -268,4 +269,226 @@ P_ship leviathan_find_ship( P_char leviathan, int room, int num_rooms )
       }
    }
    return NULL;
+}
+
+// Dependent on ch's weight and str.  Pretty simple atm.
+int siege_move_wait( P_char ch )
+{
+  // Base: 100 str, 100 weight, 2 secs
+  int retval = 100*100*2*WAIT_SEC;
+
+  retval /= GET_C_STR( ch );
+  retval /= ch->player.weight;
+
+  return retval;
+}
+
+// Having to write this is a pain! Ok.. so not so bad.
+bool can_move( P_char ch, int dir )
+{
+  if( IS_FIGHTING(ch) )
+    return FALSE;
+
+  if( !EXIT( ch, dir ) )
+    return FALSE;
+  if( !can_enter_room(ch, EXIT(ch, dir)->to_room, FALSE) )
+    return FALSE;
+
+  if( IS_CLOSED( ch->in_room, dir ) )
+    return FALSE;
+  if( IS_HIDDEN( ch->in_room, dir ) )
+    return FALSE;
+  if( IS_WALLED( ch->in_room, dir ) )
+    return FALSE;
+
+  return TRUE;
+}
+
+// This proc is for a ballista(OBJ # 461).
+int ballista( P_obj obj, P_char ch, int cmd, char *arg )
+{
+  char arg1[MAX_STRING_LENGTH];
+  char arg2[MAX_STRING_LENGTH];
+  char buf[MAX_STRING_LENGTH];
+  int dir;
+
+  if( cmd == CMD_SET_PERIODIC )
+    return TRUE;
+  if( cmd == CMD_PUSH )
+  {
+    // Parse argument.
+    argument_interpreter(arg, arg1, arg2);
+    if(  isname( arg1, "ballista" )
+      || isname( arg1, obj->name ) )
+    {
+      dir = -1;
+      // Figure out what direction.
+      if( is_abbrev(arg2, "north") )
+        dir = NORTH;
+      else if( is_abbrev(arg2, "south") )
+        dir = SOUTH;
+      else if( is_abbrev(arg2, "east") )
+        dir = EAST;
+      else if( is_abbrev(arg2, "west") )
+        dir = WEST;
+      if( dir == -1 || *arg2 == '\0' )
+        send_to_char( "Move the ballista what direction?\n", ch );
+      else
+      {
+        // If there is no exit in that direction, or it's blocked.
+        if( !can_move( ch, dir ) )
+        {
+          send_to_char( "You can't leave that way right now.\n", ch );
+          return TRUE;
+        }
+        // Move it that direction.
+        sprintf( buf, "You begin to push $p %sward.", dirs[dir] );
+        act( buf, FALSE, ch, obj, NULL, TO_CHAR );
+        sprintf( buf, "$n starts pushing $p %sward.", dirs[dir] );
+        act( buf, TRUE, ch, obj, 0, TO_ROOM);
+        // Yes, this lags you to stop you from spamming.
+        CharWait(ch, siege_move_wait(ch) );
+        add_event(event_move_engine, siege_move_wait(ch), ch, NULL, 
+          obj, 0, &dir, sizeof(int) );
+      }
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+// This proc is for a battering ram(OBJ # 462).
+int battering_ram( P_obj obj, P_char ch, int cmd, char *arg )
+{
+  char arg1[MAX_STRING_LENGTH];
+  char arg2[MAX_STRING_LENGTH];
+  char buf[MAX_STRING_LENGTH];
+  int dir;
+
+  if( cmd == CMD_SET_PERIODIC )
+    return TRUE;
+  if( cmd == CMD_PUSH )
+  {
+    // Parse argument.
+    argument_interpreter(arg, arg1, arg2);
+    if(  isname( arg1, "battering ram" )
+      || isname( arg1, obj->name ) )
+    {
+      dir = -1;
+      // Figure out what direction.
+      if( is_abbrev(arg2, "north") )
+        dir = NORTH;
+      else if( is_abbrev(arg2, "south") )
+        dir = SOUTH;
+      else if( is_abbrev(arg2, "east") )
+        dir = EAST;
+      else if( is_abbrev(arg2, "west") )
+        dir = WEST;
+      if( dir == -1 || *arg2 == '\0' )
+        send_to_char( "Move the battering ram what direction?\n", ch );
+      else
+      {
+        // If there is no exit in that direction, or it's blocked.
+        if( !can_move( ch, dir ) )
+        {
+          send_to_char( "You can't leave that way right now.\n", ch );
+          return TRUE;
+        }
+        // Move it that direction.
+        sprintf( buf, "You begin to push $p %sward.", dirs[dir] );
+        act( buf, FALSE, ch, obj, NULL, TO_CHAR );
+        sprintf( buf, "$n starts pushing $p %sward.", dirs[dir] );
+        act( buf, TRUE, ch, obj, 0, TO_ROOM);
+        // Yes, this lags you to stop you from spamming.
+        CharWait(ch, siege_move_wait(ch) );
+        add_event(event_move_engine, siege_move_wait(ch), ch, NULL, 
+          obj, 0, &dir, sizeof(int) );
+      }
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+// This proc is for a catapult(OBJ # 463).
+int catapult( P_obj obj, P_char ch, int cmd, char *arg )
+{
+  char arg1[MAX_STRING_LENGTH];
+  char arg2[MAX_STRING_LENGTH];
+  char buf[MAX_STRING_LENGTH];
+  int dir;
+
+  if( cmd == CMD_SET_PERIODIC )
+    return TRUE;
+  if( cmd == CMD_PUSH )
+  {
+    // Parse argument.
+    argument_interpreter(arg, arg1, arg2);
+    if(  isname( arg1, "catapult" )
+      || isname( arg1, obj->name ) )
+    {
+      dir = -1;
+      // Figure out what direction.
+      if( is_abbrev(arg2, "north") )
+        dir = NORTH;
+      else if( is_abbrev(arg2, "south") )
+        dir = SOUTH;
+      else if( is_abbrev(arg2, "east") )
+        dir = EAST;
+      else if( is_abbrev(arg2, "west") )
+        dir = WEST;
+      if( dir == -1 || *arg2 == '\0' )
+        send_to_char( "Move the catapult what direction?\n", ch );
+      else
+      {
+        // If there is no exit in that direction, or it's blocked.
+        if( !can_move( ch, dir ) )
+        {
+          send_to_char( "You can't leave that way right now.\n", ch );
+          return TRUE;
+        }
+        // Move it that direction.
+        sprintf( buf, "You begin to push $p %sward.", dirs[dir] );
+        act( buf, FALSE, ch, obj, NULL, TO_CHAR );
+        sprintf( buf, "$n starts pushing $p %sward.", dirs[dir] );
+        act( buf, TRUE, ch, obj, 0, TO_ROOM);
+        // Yes, this lags you to stop you from spamming.
+        CharWait(ch, siege_move_wait(ch) );
+        add_event(event_move_engine, siege_move_wait(ch), ch, NULL, 
+          obj, 0, &dir, sizeof(int) );
+      }
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+// Attempt to move the siege engine a direction.
+void event_move_engine(P_char ch, P_char victim, P_obj obj, void *data)
+{
+  char buf[MAX_STRING_LENGTH];
+  int dir = *((int *)data);
+  int to_room;
+
+  // If there's an exit and it's unblocked.
+  if( can_move( ch, dir ) )
+  {
+    sprintf( buf, "You push $p %sward.", dirs[dir] );
+    act( buf, FALSE, ch, obj, NULL, TO_CHAR );
+    sprintf( buf, "$n pushes $p %sward.", dirs[dir] );
+    act( buf, TRUE, ch, obj, 0, TO_ROOM);
+
+    to_room = EXIT(ch, dir)->to_room;
+    obj_from_room(obj);
+    obj_to_room(obj, to_room);
+
+    char_from_room( ch );
+    char_to_room( ch, to_room, dir );
+
+    sprintf( buf, "$n pushes $p in from the %s.", dirs[rev_dir[dir]] );
+    act( buf, TRUE, ch, obj, 0, TO_ROOM);
+  }
+  else
+    send_to_char( "You can't leave that way right now.\n", ch );
+
 }
