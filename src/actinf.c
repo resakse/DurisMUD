@@ -129,6 +129,7 @@ extern HelpFilesCPPClass help_index;
 
 int astral_clock_setMapModifiers(void);
 void unmulti(P_char ch, P_obj obj);
+void where_stat(P_char ch, char *argument);
 
 const char *stat_names1[18] = {
   "bad",                        /* 0 */
@@ -6952,6 +6953,7 @@ void do_motd(P_char ch, char *argument, int cmd)
 void do_where(P_char ch, char *argument, int cmd)
 {
   char     buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
+  char    *args;
   int      length = 0, count = 0, o_count = 0, v_num;
   bool     flag = FALSE;
   register P_char i;
@@ -7172,7 +7174,14 @@ void do_where(P_char ch, char *argument, int cmd)
   }
   else if (is_abbrev(argument, "trap"))
     do_traplist(ch, argument, 0);
-
+  
+  args = one_argument(argument, buf);
+  if (is_abbrev(buf, "stat") )
+  {
+    
+    where_stat(ch, args);
+    return;
+  }
 
   /* mobs */
 
@@ -8513,3 +8522,308 @@ void unmulti(P_char ch, P_obj obj)
   update_skills(ch);
   epic_gain_skillpoints(ch, -1);
 }
+
+void where_stat(P_char ch, char *argument)
+{
+  char   arg1[MAX_STRING_LENGTH];
+  char   arg2[MAX_STRING_LENGTH];
+  char   buf[MAX_STRING_LENGTH];
+  int    amount;
+  int    flags;
+  int    i;
+  P_obj  obj;
+
+  argument_interpreter(argument, arg1, arg2);    
+
+  if( arg1[0] == '\0' || arg2[0] == '\0' )
+  {
+    send_to_char( "Format: where stat <flag> <amount>\n", ch );
+    send_to_char( "i.e. 'where stat maxint 5' for all items with 5maxint.\n", ch );
+    return;
+  }
+  if( (amount = atoi(arg2)) <= 0 )
+  {
+    send_to_char( "The second argument must be a number > 0.\n", ch );
+    return;
+  }
+
+  // Header for list: shows the flag and amount to ch.
+  send_to_char( "Flag: '", ch);
+  send_to_char( arg1, ch);
+  send_to_char( "', Amount: '", ch);
+  send_to_char( arg2, ch);
+  send_to_char( "'\n", ch);
+
+  if( is_abbrev( arg1, "strength" ) )
+  {
+    flags = APPLY_STR;
+  }
+  else if( is_abbrev( arg1, "dexterity" ) )
+  {
+    flags = APPLY_DEX;
+  }
+  else if( is_abbrev( arg1, "intelligence" ) )
+  {
+    flags = APPLY_INT;
+  }
+  else if( is_abbrev( arg1, "wisdom" ) )
+  {
+    flags = APPLY_WIS;
+  }
+  else if( is_abbrev( arg1, "constitution" ) )
+  {
+    flags = APPLY_CON;
+  }
+  else if( is_abbrev( arg1, "sex" ) )
+  {
+    flags = APPLY_SEX;
+  }
+  else if( is_abbrev( arg1, "class" ) )
+  {
+    flags = APPLY_CLASS;
+  }
+  else if( is_abbrev( arg1, "level" ) )
+  {
+    flags = APPLY_LEVEL;
+  }
+  else if( is_abbrev( arg1, "age" ) )
+  {
+    flags = APPLY_AGE;
+  }
+  else if( is_abbrev( arg1, "weight" ) )
+  {
+    flags = APPLY_CHAR_WEIGHT;
+  }
+  else if( is_abbrev( arg1, "height" ) )
+  {
+    flags = APPLY_CHAR_HEIGHT;
+  }
+  else if( is_abbrev( arg1, "mana" ) )
+  {
+    flags = APPLY_MANA;
+  }
+  else if( is_abbrev( arg1, "hitpoints" ) )
+  {
+    flags = APPLY_HIT;
+  }
+  else if( is_abbrev( arg1, "move" ) )
+  {
+    flags = APPLY_MOVE;
+  }
+  else if( is_abbrev( arg1, "gold" ) )
+  {
+    flags = APPLY_GOLD;
+  }
+  else if( is_abbrev( arg1, "exp" ) )
+  {
+    flags = APPLY_EXP;
+  }
+  else if(  is_abbrev( arg1, "armor" )
+         || is_abbrev( arg1, "ac" ) )
+  {
+    flags = APPLY_AC;
+  }
+  else if( is_abbrev( arg1, "hitroll" ) )
+  {
+    flags = APPLY_HITROLL;
+  }
+  else if( is_abbrev( arg1, "damroll" ) )
+  {
+    flags = APPLY_DAMROLL;
+  }
+  else if( is_abbrev( arg1, "para" ) )
+  {
+    flags = APPLY_SAVING_PARA;
+  }
+  else if( is_abbrev( arg1, "rod" ) )
+  {
+    flags = APPLY_SAVING_ROD;
+  }
+  else if( is_abbrev( arg1, "fear" ) )
+  {
+    flags = APPLY_SAVING_FEAR;
+  }
+  else if( is_abbrev( arg1, "breath" ) )
+  {
+    flags = APPLY_SAVING_BREATH;
+  }
+  else if( is_abbrev( arg1, "spell" ) )
+  {
+    flags = APPLY_SAVING_SPELL;
+  }
+  else if( is_abbrev( arg1, "pff" )
+         || is_abbrev( arg1, "fire" ) )
+  {
+    flags = APPLY_FIRE_PROT;
+  }
+  else if( is_abbrev( arg1, "agility" ) )
+  {
+    flags = APPLY_AGI;
+  }
+  else if( is_abbrev( arg1, "power" ) )
+  {
+    flags = APPLY_POW;
+  }
+  else if( is_abbrev( arg1, "charisma" ) )
+  {
+    flags = APPLY_CHA;
+  }
+  else if( is_abbrev( arg1, "karma" ) )
+  {
+    flags = APPLY_KARMA;
+  }
+  else if( is_abbrev( arg1, "luck" ) )
+  {
+    flags = APPLY_LUCK;
+  }
+  else if(  is_abbrev( arg1, "maxstr" )
+    || is_abbrev( arg1, "max_str" ) )
+  {
+    flags = APPLY_STR_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxdex" )
+    || is_abbrev( arg1, "max_dex" ) )
+  {
+    flags = APPLY_DEX_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxint" )
+    || is_abbrev( arg1, "max_int" ) )
+  {
+    flags = APPLY_INT_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxwis" )
+    || is_abbrev( arg1, "max_wis" ) )
+  {
+    flags = APPLY_WIS_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxcon" )
+    || is_abbrev( arg1, "max_con" ) )
+  {
+    flags = APPLY_CON_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxagi" )
+    || is_abbrev( arg1, "max_agi" ) )
+  {
+    flags = APPLY_AGI_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxpow" )
+    || is_abbrev( arg1, "max_pow" ) )
+  {
+    flags = APPLY_POW_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxcha" )
+    || is_abbrev( arg1, "max_cha" ) )
+  {
+    flags = APPLY_CHA_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxkarma" )
+    || is_abbrev( arg1, "max_karma" ) )
+  {
+    flags = APPLY_KARMA_MAX;
+  }
+  else if(  is_abbrev( arg1, "maxluck" )
+    || is_abbrev( arg1, "max_luck" ) )
+  {
+    flags = APPLY_LUCK_MAX;
+  }
+  else if( is_abbrev( arg1, "racestr" ) )
+  {
+    flags = APPLY_STR_RACE;
+  }
+  else if( is_abbrev( arg1, "racedex" ) )
+  {
+    flags = APPLY_DEX_RACE;
+  }
+  else if( is_abbrev( arg1, "raceint" ) )
+  {
+    flags = APPLY_INT_RACE;
+  }
+  else if( is_abbrev( arg1, "racewis" ) )
+  {
+    flags = APPLY_WIS_RACE;
+  }
+  else if( is_abbrev( arg1, "racecon" ) )
+  {
+    flags = APPLY_CON_RACE;
+  }
+  else if( is_abbrev( arg1, "raceagi" ) )
+  {
+    flags = APPLY_AGI_RACE;
+  }
+  else if( is_abbrev( arg1, "racepow" ) )
+  {
+    flags = APPLY_POW_RACE;
+  }
+  else if( is_abbrev( arg1, "racecha" ) )
+  {
+    flags = APPLY_CHA_RACE;
+  }
+  else if( is_abbrev( arg1, "racekarma" ) )
+  {
+    flags = APPLY_KARMA_RACE;
+  }
+  else if( is_abbrev( arg1, "raceluck" ) )
+  {
+    flags = APPLY_LUCK_RACE;
+  }
+  else if( is_abbrev( arg1, "curse" ) )
+  {
+    flags = APPLY_CURSE;
+  }
+  else if( is_abbrev( arg1, "skillgrant" ) )
+  {
+    flags = APPLY_SKILL_GRANT;
+  }
+  else if( is_abbrev( arg1, "skilladd" ) )
+  {
+    flags = APPLY_SKILL_ADD;
+  }
+  else if( is_abbrev( arg1, "hitreg" ) )
+  {
+    flags = APPLY_HIT_REG;
+  }
+  else if( is_abbrev( arg1, "movereg" ) )
+  {
+    flags = APPLY_MOVE_REG;
+  }
+  else if( is_abbrev( arg1, "manareg" ) )
+  {
+    flags = APPLY_MANA_REG;
+  }
+  else if( is_abbrev( arg1, "pulsecombat" ) )
+  {
+    flags = APPLY_COMBAT_PULSE;
+  }
+  else if( is_abbrev( arg1, "pulsespell" ) )
+  {
+    flags = APPLY_SPELL_PULSE;
+  }
+  else
+  {
+    send_to_char( "Could not find flag.  :(\n", ch );
+    return;
+  }
+
+  // For each real object..
+  for( int r_num = 0; r_num <= top_of_objt; r_num++ )
+  {
+    // Load a copy of object.
+    obj = read_object(r_num, REAL);
+
+    // Check flags for match.
+    for (i = 0; i < MAX_OBJ_AFFECT; i++)
+    {
+      if( obj->affected[i].location == flags
+        && obj->affected[i].modifier == amount )
+      {
+        sprintf( buf, "%d: '%s'\n", obj_index[r_num].virtual_number, 
+          obj->short_description );
+        send_to_char( buf, ch );
+      }
+    }
+
+    // Free up the object copy.
+    extract_obj( obj, TRUE );
+  }
+}
+
