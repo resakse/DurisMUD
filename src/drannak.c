@@ -2506,3 +2506,53 @@ void christmas_proc(P_char ch)
  obj_to_char(read_object(400217, VIRTUAL), mob);
  char_to_room(mob, ch->in_room, 0);
 }
+
+void add_bloodlust(P_char ch, P_char victim)
+{
+ if (!ch)
+ return;
+ 
+ if (!victim)
+ return;
+ 
+ if (IS_PC_PET(victim))
+ return;
+ 
+ if (GET_LEVEL(victim) < (GET_LEVEL(ch) - 5))
+ return;
+ 
+ send_to_char("&+rThe smell of fresh &+Rblood &+renters your body, &+Rinfusing&+r you with &+Rpower&+r!\r\n", ch);
+  struct affected_type af;
+  if(!affected_by_spell(ch, TAG_BLOODLUST))
+  {
+  memset(&af, 0, sizeof(struct affected_type));
+  	af.type = TAG_BLOODLUST;
+  	af.modifier = 1;
+  	af.duration = 5;
+    af.location = 0;
+    af.flags = AFFTYPE_NODISPEL;
+	affect_to_char(ch, &af);
+   }
+   else
+   {
+    struct affected_type *findaf, *next_af;  //initialize affects
+    for(findaf = ch->affected; findaf; findaf = next_af)
+	{
+    next_af = findaf->next;
+	 if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 30)
+	 {
+	 findaf->modifier += 1;
+        findaf->duration = 5;
+	 }
+	 else if(findaf && findaf->type == TAG_BLOODLUST)
+        {
+	 findaf->modifier = 30;
+  	 findaf->duration = 5;
+        }
+	}
+
+   }
+
+
+}
+

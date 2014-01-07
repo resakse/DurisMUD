@@ -814,6 +814,7 @@ int get_progress(P_char ch, int ach, uint required);
 void thanksgiving_proc(P_char ch);
 void christmas_proc(P_char ch);
 void enhancematload(P_char ch);
+void add_bloodlust(P_char ch, P_char victim);
 
 
 /* editor.c */

@@ -1150,6 +1150,7 @@
 #define PR_FORESTGNOME		  2101
 #define PR_ROCKGNOME			  2102
 #define AIP_ATB			  2103
+#define TAG_BLOODLUST		  2104
 
 #define SAVING_PARA   0
 #define SAVING_ROD    1

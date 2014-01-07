@@ -4182,6 +4182,20 @@ void do_attributes(P_char ch, char *argument, int cmd)
       remod += 30;
       }
 
+      // Bloodlust:
+      int bloodlust = 0;
+      if(affected_by_spell(ch, TAG_BLOODLUST))
+      {
+       struct affected_type *findaf, *next_af;  //initialize affects
+       for(findaf = ch->affected; findaf; findaf = next_af)
+	{
+        next_af = findaf->next;
+	 if((findaf && findaf->type == TAG_BLOODLUST))
+         bloodlust = ((findaf->modifier * 10) + 100);
+       }
+      }
+
+
 
        /* sprintf(buf, "&+cMelee Critical Percentage(int): &+Y%d%   &n&+cMax Spell Damage Reduction Percent(wis): &+Y%d%\r\n",
             critroll,
@@ -4207,6 +4221,8 @@ sprintf(buf, "&+cMax Spell Damage Reduction Percent&n(&+cwis&n): &+Y%d% \r\n",
   send_to_char(buf, ch);
         sprintf(buf, "&+cSpell Damage Modifier&n(&+rstr&n): &+Y%d% \r\n",
             (int)remod);
+  send_to_char(buf, ch);
+        sprintf(buf, "&+rBloodlust &+cDamage Bonus&n(&+yvs mob only&n): &+Y%d% \r\n", (int)bloodlust);
 	}
 
 

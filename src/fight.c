@@ -2831,6 +2831,7 @@ void kill_gain(P_char ch, P_char victim)
   {
     send_to_char("You receive your share of experience.\r\n", ch);
     gain_exp(ch, victim, gain, EXP_KILL);
+    add_bloodlust(ch, victim);
 
     update_achievements(ch, victim, 0, 2);//this is for all kinds of kill-type quests
     if((GET_LEVEL(victim) > 30) && !IS_PC(victim) && !affected_by_spell(victim, TAG_CONJURED_PET))
@@ -2931,6 +2932,7 @@ void kill_gain(P_char ch, P_char victim)
       
       send_to_char("You receive your share of experience.\r\n", gl->ch);
       gain_exp(gl->ch, victim, (XP + (XP*(group_size*.25))), EXP_KILL);
+          add_bloodlust(gl->ch, victim);
     update_achievements(gl->ch, victim, 0, 2);//this is for all kinds of kill-type quests
     if((GET_LEVEL(victim) > 30) && !IS_PC(victim) && !affected_by_spell(victim, TAG_CONJURED_PET))
 	{
@@ -4114,6 +4116,19 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
       {
         dam = (int) (dam * get_property("damage.mob.bonus", 1.0));
         dam = MIN(dam, 800);
+      }
+
+      if(affected_by_spell(ch, TAG_BLOODLUST) && !IS_PC_PET(victim) && IS_NPC(victim))
+      {
+       int dammod;
+       struct affected_type *findaf, *next_af;  //initialize affects
+       for(findaf = ch->affected; findaf; findaf = next_af)
+	{
+        next_af = findaf->next;
+	 if((findaf && findaf->type == TAG_BLOODLUST))
+         dammod = findaf->modifier;
+       }
+       dam = (int) (dam * (1 + (dammod * .1)));
       }
 
       if(has_innate(victim, INNATE_VULN_FIRE))
@@ -5576,6 +5591,20 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
         dam = (int) (dam * get_property("damage.mob.bonus", 1.0));
         dam = MIN(dam, 800);
       }
+
+      if(affected_by_spell(ch, TAG_BLOODLUST) && !IS_PC_PET(victim) && IS_NPC(victim))
+      {
+       int dammod;
+       struct affected_type *findaf, *next_af;  //initialize affects
+       for(findaf = ch->affected; findaf; findaf = next_af)
+	{
+        next_af = findaf->next;
+	 if((findaf && findaf->type == TAG_BLOODLUST))
+         dammod = findaf->modifier;
+       }
+       dam = (int) (dam * (1 + (dammod * .1)));
+      }
+
 
       if (IS_HARDCORE(ch))
         dam = (int) dam *1.09;
