@@ -1190,8 +1190,10 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
 	 
     }
 
-/*    send_to_char("&+LYour life energy is &+rtapped&+L.\n", victim);
- No more sapping moves - drannak
+
+if(GET_SPEC(ch, CLASS_NECROMANCER, SPEC_REAPER))
+{   
+ send_to_char("&+LYour life energy is &+rtapped&+L.\n", victim);
     if(GET_VITALITY(victim) >= 25 &&
       !IS_AFFECTED4(victim, AFF4_NEG_SHIELD))
     {
@@ -1205,10 +1207,11 @@ void spell_energy_drain(int level, P_char ch, char *arg, int type,
       debug("E DRAIN: (%s&n) loses and (%s&n) gained (%d) moves.", 
         J_NAME(victim), J_NAME(ch), moves);
     }
-*/
+
 
     StartRegen(ch, EVENT_MOVE_REGEN);
     StartRegen(victim, EVENT_MOVE_REGEN);
+}
       
 // Vamping still occurs as above. We do not want double vamping undead. 
     spell_damage(ch, victim, dam, SPLDAM_NEGATIVE, SPLDAM_NOSHRUG | SPLDAM_NOVAMP, &messages);
