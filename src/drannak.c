@@ -2539,14 +2539,14 @@ void add_bloodlust(P_char ch, P_char victim)
     for(findaf = ch->affected; findaf; findaf = next_af)
 	{
     next_af = findaf->next;
-	 if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 30)
+	 if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 20)
 	 {
 	 findaf->modifier += 1;
         findaf->duration = 5;
 	 }
 	 else if(findaf && findaf->type == TAG_BLOODLUST)
         {
-	 findaf->modifier = 30;
+	 findaf->modifier = 20;
   	 findaf->duration = 5;
         }
 	}
