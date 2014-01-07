@@ -4110,6 +4110,12 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         dam *= dam_factor[DF_VULNFIRE];
       }
 
+      if(IS_NPC(ch) && !IS_PC_PET(ch))
+      {
+        dam = (int) (dam * get_property("damage.mob.bonus", 1.0));
+        dam = MIN(dam, 800);
+      }
+
       if(has_innate(victim, INNATE_VULN_FIRE))
       {
         dam *= dam_factor[DF_VULNFIRE];
