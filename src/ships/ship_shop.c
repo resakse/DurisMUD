@@ -661,45 +661,45 @@ int sell_contra(P_char ch, P_ship ship, int slot)
 
 int sell_slot (P_char ch, P_ship ship, int slot)
 {
-    if (ship->location != ch->in_room) 
-    {
-        send_to_char("Your ship is not here!\r\nYou can only sell your entire ship, not specific parts!\r\n", ch);
-        return TRUE;
-    }
-    if (slot < 0 || slot >= MAXSLOTS) 
-    {
-        send_to_char("Invalid slot number.\r\n", ch);
-        return TRUE;
-    }
-    if (ship->slot[slot].type == SLOT_WEAPON) 
-    {
-        int cost;
-        if (SHIP_WEAPON_DAMAGED(ship, slot))
-            cost = (int) (weapon_data[ship->slot[slot].index].cost * .1);
-        else
-            cost = (int) (weapon_data[ship->slot[slot].index].cost * .9);
+  if (ship->location != ch->in_room) 
+  {
+    send_to_char("Your ship is not here!\r\nYou can only sell your entire ship, not specific parts!\r\n", ch);
+    return TRUE;
+  }
+  if (slot < 0 || slot >= MAXSLOTS) 
+  {
+    send_to_char("Invalid slot number.\r\n", ch);
+    return TRUE;
+  }
+  if (ship->slot[slot].type == SLOT_WEAPON) 
+  {
+    int cost;
+    if (SHIP_WEAPON_DAMAGED(ship, slot))
+      cost = (int) (weapon_data[ship->slot[slot].index].cost * .1);
+    else
+      cost = (int) (weapon_data[ship->slot[slot].index].cost * .9);
 
-        ADD_MONEY(ch, cost);
-        send_to_char_f(ch, "Here's %s for that %s.\r\n", coin_stringv(cost), ship->slot[slot].get_description());
-        ship->slot[slot].clear();
-        update_ship_status(ship);
-        write_ship(ship);
-        return TRUE;
-    } 
-    else if (ship->slot[slot].type == SLOT_EQUIPMENT) 
-     {
-	 for (int i = 0; i < MAXSLOTS; i++)
+    ADD_MONEY(ch, cost);
+    send_to_char_f(ch, "Here's %s for that %s.\r\n", coin_stringv(cost), ship->slot[slot].get_description());
+    ship->slot[slot].clear();
+    update_ship_status(ship);
+    write_ship(ship);
+    return TRUE;
+  } 
+  else if (ship->slot[slot].type == SLOT_EQUIPMENT) 
+  {
+    for (int i = 0; i < MAXSLOTS; i++)
+    {
+      if ((ship->slot[i].type == SLOT_CONTRABAND) || (ship->slot[i].type == SLOT_CARGO))
+      {
+        if(has_eq_diplomat(ship))
         {
-        if ((ship->slot[i].type == SLOT_CONTRABAND) || (ship->slot[i].type == SLOT_CARGO))
-		{
-		 if(has_eq_diplomat(ship))
-               {
-		 send_to_char("You cannot sell your diplomat flag with cargo onboard. Sell the cargo first!\r\n", ch);
-		 return TRUE;
-               }
-		} 
-	else
-     {
+          send_to_char("You cannot sell your diplomat flag with cargo onboard. Sell the cargo first!\r\n", ch);
+          return TRUE;
+        }
+      } 
+      else
+      {
         int cost = equipment_data[ship->slot[slot].index].cost;
         if (ship->slot[slot].index == E_RAM) cost = eq_ram_cost(ship);
         cost = cost * 0.9;
@@ -710,22 +710,24 @@ int sell_slot (P_char ch, P_ship ship, int slot)
         update_ship_status(ship);
         write_ship(ship);
         return TRUE;
-    } 
-   }
+      } 
+    }
   }
-    else if (ship->slot[slot].type == SLOT_CARGO)
-    {
-        return sell_cargo(ch, ship, slot);
-    }
-    else if (ship->slot[slot].type == SLOT_CONTRABAND)
-    {
-        return sell_contra(ch, ship, slot);
-    }
-    else 
-    {
-        send_to_char ("That slot does not contain anything to sell!\r\n", ch);
-        return TRUE;
-    }
+  else if (ship->slot[slot].type == SLOT_CARGO)
+  {
+    return sell_cargo(ch, ship, slot);
+  }
+  else if (ship->slot[slot].type == SLOT_CONTRABAND)
+  {
+    return sell_contra(ch, ship, slot);
+  }
+  else 
+  {
+    send_to_char ("That slot does not contain anything to sell!\r\n", ch);
+    return TRUE;
+  }
+
+  return FALSE;
 }
 
 
@@ -1608,9 +1610,9 @@ int buy_weapon(P_char ch, P_ship ship, char* arg1, char* arg2)
     SUB_MONEY(ch, cost, 0);
     set_weapon(ship, slot, w, arc);
     int buildtime = weapon_data[w].weight * 75;
-    int pvp = false;
+  //int pvp = false;
 	//pvp = ocean_pvp_state();
-       // if (pvp) buildtime *= 4;
+  //if (pvp) buildtime *= 4;
     send_to_char_f(ch, "Thank you for your purchase, it will take %d hours to install the part.\r\n", (int) (buildtime / 75));
     if (!IS_TRUSTED(ch) && BUILDTIME)
         ship->timer[T_MAINTENANCE] += buildtime;
