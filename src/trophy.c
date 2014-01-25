@@ -242,12 +242,15 @@ void do_trophy(P_char ch, char *arg, int cmd)
 
 void update_zone_trophy(P_char ch, int zone_number, int XP)
 {
+  // No more trophy!
+  return;
+
   if( !ch || !IS_PC(ch) )
     return;
     
   if( XP <= 0 )
     return;
-  
+
   struct zone_info zone;
   if( !get_zone_info(zone_number, &zone) || !zone.trophy_zone )
     return;  
@@ -323,6 +326,9 @@ void save_zone_trophy(P_char ch)
 #else
 void load_zone_trophy(P_char ch)
 {
+  // No more trophy!
+  return;
+
   if( !ch || !IS_PC(ch) )
     return;
     
