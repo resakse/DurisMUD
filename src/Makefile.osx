@@ -149,6 +149,7 @@ OBJS	=  \
 	rogues.o \
 	shaman.o \
 	shop.o \
+  siege.o \
 	signals.o \
 	skills.o \
 	smagic.o \
