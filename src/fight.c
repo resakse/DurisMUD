@@ -5217,7 +5217,7 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
   {
     can_mana = MAX(10, dam);
     can_mana *= GET_LEVEL(ch) / 30;
-    can_mana = MIN(GET_MANA(victim), can_mana);
+    can_mana = BOUNDED(0, GET_MANA(victim), can_mana);
     
     GET_MANA(ch) += can_mana;
 
