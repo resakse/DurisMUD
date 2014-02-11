@@ -2169,7 +2169,6 @@ void do_cast(P_char ch, char *argument, int cmd)
       weave_af->modifier == common_target_data.ttype)
   {
     send_to_char("You call forth your prepared spell...\n", ch);
-    affect_remove(ch, weave_af);
     weaved = true;
   } 
   else 
@@ -2232,6 +2231,7 @@ void do_cast(P_char ch, char *argument, int cmd)
     {
       send_to_char("The spell fails, dispersing magical energy into the surroundings.\n", ch);
     }
+    affect_remove(ch, weave_af);
     return;
   }
 
@@ -2362,6 +2362,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
   P_char  tar_char;
   P_obj tar_obj;
   bool weaving = (arg->flags & CST_SPELLWEAVE) != 0;
+  struct affected_type *weave_af;
 
   if (!ch || (ch->in_room == NOWHERE))
     return;
@@ -2478,7 +2479,9 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
      so now we *FINALLY*, actually cast the spell.  JAB
    */
 
-  use_spell(ch, arg->spell);
+  if( !((weave_af = get_spell_from_char(ch, SKILL_SPELLWEAVE)) &&
+      weave_af->modifier == common_target_data.ttype) )
+    use_spell(ch, arg->spell);
 
   if (weaving) {
     struct affected_type af;
