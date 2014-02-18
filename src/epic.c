@@ -2092,7 +2092,8 @@ void do_epic(P_char ch, char *arg, int cmd)
   argument_interpreter(arg, buff2, buff3);
   if(!str_cmp("reset", buff2))
   {
-    do_epic_reset(ch, arg, cmd);
+    send_to_char("&+CEpic resetting is unavailable - choose your epic skills wisely\r\n.", ch);
+    //do_epic_reset(ch, arg, cmd);
     return;
   }
   
