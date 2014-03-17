@@ -2279,8 +2279,10 @@ void do_cast(P_char ch, char *argument, int cmd)
       is_tank = TRUE;
   }
 
-  if (IS_TRUSTED(ch) || GET_CLASS(ch, CLASS_PSIONICIST) || 
-      IS_SET(skills[spl].targets, TAR_INSTACAST))
+  // Why were Psi's set to instacast?? This must've been really old code.
+  // It only showed up when caster/psi multi was played, making a psi
+  //  secondary trigger on the code in do_cast instead of do_will.
+  if( IS_TRUSTED(ch) || IS_SET(skills[spl].targets, TAR_INSTACAST))
     dura = 1;
   else if ((GET_CLASS(ch, CLASS_DRUID) && !IS_MULTICLASS_PC(ch)) ||
            ((!is_tank || number(0, 1)) &&
