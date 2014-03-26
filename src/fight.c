@@ -4135,7 +4135,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
         dam = MIN(dam, 800);
       }
 
-      if(affected_by_spell(ch, TAG_BLOODLUST) && !IS_PC_PET(victim) && IS_NPC(victim))
+      if(ch && affected_by_spell(ch, TAG_BLOODLUST) && !IS_PC_PET(victim) && IS_NPC(victim) && !CHAR_IN_JUSTICE_AREA(ch))
       {
        int dammod;
        struct affected_type *findaf, *next_af;  //initialize affects

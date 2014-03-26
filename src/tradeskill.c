@@ -2469,6 +2469,40 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
 int itemvalue(P_char ch, P_obj obj)
 {
  long workingvalue = 0;
+ double multiplier = 1;
+
+ if (!obj)
+ return 0;
+
+
+
+
+   if(IS_SET(obj->wear_flags, ITEM_WEAR_EYES))
+    multiplier = 2.0;
+
+   if(IS_SET(obj->wear_flags, ITEM_WEAR_EARRING))
+    multiplier = 2.5;
+
+  if (IS_SET(obj->wear_flags, ITEM_WEAR_FACE))
+    multiplier = 1.5;
+
+  if (IS_SET(obj->wear_flags, ITEM_WEAR_QUIVER))
+    multiplier = 1.5;
+
+  if (IS_SET(obj->wear_flags, ITEM_WEAR_FINGER))
+    multiplier = 2.5;
+
+  if (IS_SET(obj->wear_flags, ITEM_GUILD_INSIGNIA))
+    multiplier = 2.5;
+
+  if (IS_SET(obj->wear_flags, ITEM_WEAR_NECK))
+    multiplier = 1.5;
+
+  if (IS_SET(obj->wear_flags, ITEM_WEAR_WAIST))
+    multiplier = 1.5;
+
+  if (IS_SET(obj->wear_flags, ITEM_WEAR_WRIST))
+    multiplier = 1.5;
 
  if (IS_SET(obj->bitvector, AFF_STONE_SKIN))
 	 workingvalue += 60;
@@ -2803,6 +2837,7 @@ int itemvalue(P_char ch, P_obj obj)
    if(workingvalue < 1)
    workingvalue = 1;
 
+   workingvalue *= multiplier;
    //debug("&+YItem value is: &n%d", workingvalue); 
    return workingvalue;
 }
