@@ -1532,3 +1532,15 @@ HO 0 1 0 -1
 51 -1 -300 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
+#97606
+shady quartermaster warmaster~
+&+Lthe &+WShady &+yQuartermaster&n~
+&+LThe &+WShady &+yQuartermaster&+L stands here.&n
+~
+~
+100665418 640 0 0 216 0 0 0 -1000 S
+HO 1 1 0 -1
+36 2 -15 36d88+792 4d7+10
+0.1.2.2 46656
+8 8 1
+
