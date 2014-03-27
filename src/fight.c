@@ -4144,7 +4144,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
 	 if((findaf && findaf->type == TAG_BLOODLUST))
          dammod = findaf->modifier;
        }
-       dam = (int) (dam * (1 + (dammod * .05)));
+       dam = (int) (dam * (1 + (dammod * .01)));
       }
 
       if(has_innate(victim, INNATE_VULN_FIRE))
