@@ -919,16 +919,20 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
     if( IS_SET( pl->specials.act3, PLR3_SURCOMMONER ) )
       return TRUE;
     send_to_char( "You can buy a catapult, ballista, or battering ram.\n", pl );
-    send_to_char( "You can buy town gates.\n", pl );
+    if( town->resources >= 150000 )
+      send_to_char( "You can buy town gates.\n", pl );
     if( IS_SET( pl->specials.act3, PLR3_SURKNIGHT ) )
       return TRUE;
     if( IS_SET( pl->specials.act3, PLR3_SURNOBLE ) )
       return TRUE;
-    send_to_char( "You can deploy guards/stop deployment with the deploy command.\n", pl );
-    send_to_char( "You can deploy town portals/stop deployment with the deploy command.\n", pl );
+    if( town->resources >= 50000 )
+      send_to_char( "You can deploy guards/stop deployment with the deploy command.\n", pl );
+    if( town->resources >= 600000 )
+      send_to_char( "You can deploy town portals/stop deployment with the deploy command.\n", pl );
     if( IS_SET( pl->specials.act3, PLR3_SURLORD ) )
       return TRUE;
-    send_to_char( "You can deploy cavalry/stop deployment with the deploy command.\n", pl );
+    if( town->resources >= 450000 )
+      send_to_char( "You can deploy cavalry/stop deployment with the deploy command.\n", pl );
     if( IS_SET( pl->specials.act3, PLR3_SURKING ) )
       return TRUE;
 
@@ -979,11 +983,23 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
     one_argument( arg, arg1 );
     if( *arg1 == '\0' )
     {
-      send_to_char( "You can deploy: guards, calvary, or portals.\n", pl );
+      if( town->resources >= 600000 )
+        send_to_char( "You can deploy: guards, calvary, or portals.\n", pl );
+      else if( town->resources >= 450000 )
+        send_to_char( "You can deploy: guards or calvary.\n", pl );
+      else if( town->resources >= 50000 )
+        send_to_char( "You can deploy: guards.\n", pl );
       return TRUE;
     }
     if( is_abbrev( arg1, "guards" ) )
     {
+      if( town->resources < 50000 )
+      {
+        send_to_char( "This town lacks the resources to deploy guards.\n"
+                      "You must have 50,000 in resources to deploy them.\n", pl );
+        return TRUE;
+      }
+
       // Toggle deploy guard and save
       if( town->deploy_guard )
       {
@@ -1002,6 +1018,14 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
     {
       if( IS_SET( pl->specials.act3, PLR3_SURLORD ) )
         return FALSE;
+
+      if( town->resources < 450000 )
+      {
+        send_to_char( "This town lacks the resources to deploy cavalry.\n"
+                      "You must have 450,000 in resources to deploy them.\n", pl );
+        return TRUE;
+      }
+
       // Toggle deploy guard and save
       if( town->deploy_cavalry )
       {
@@ -1018,6 +1042,13 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
     }
     else if( is_abbrev( arg1, "portals" ) )
     {
+      if( town->resources < 600000 )
+      {
+        send_to_char( "This town lacks the resources to deploy portals.\n"
+                      "You must have 600,000 in resources to deploy them.\n", pl );
+        return TRUE;
+      }
+
       // Toggle deploy guard and save
       if( town->deploy_portals )
       {
@@ -1046,7 +1077,8 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
     if( *arg1 == '\0' )
     {
       send_to_char( "You can buy a catapult, ballista, or battering ram.\n", pl );
-      send_to_char( "You can buy some town gates.\n", pl );
+      if( town->resources >= 150000 )
+        send_to_char( "You can buy some town gates.\n", pl );
       return TRUE;
     }
     if( is_abbrev( arg1, "ballista" ) )
@@ -1131,6 +1163,13 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
       {
         logit(LOG_DEBUG, "warmaster: 'buy gates' called outside of town.");
         return FALSE;
+      }
+
+      if( town->resources < 150000 )
+      {
+        send_to_char( "This town lacks the resources to have gates.\n"
+                      "You must have 150,000 in resources to buy them.\n", pl );
+        return TRUE;
       }
 
       if( 5000 * 1000 > GET_MONEY(pl) )
