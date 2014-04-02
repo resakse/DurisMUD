@@ -1392,7 +1392,15 @@ void multihit_siege( P_char ch )
     }
     else
       damage = dice( weapon->value[1], weapon->value[2] ) + GET_DAMROLL(ch) / 2;
-    siege->condition -= MAX( 1, damage / 20 );
+    // Siege->value[7] holds the current hps left..
+    siege->value[7] -= MAX( 1, damage );
+    while( siege->value[7] < 0 )
+    {
+      // 800 hps / unit condition -> 80000 total hps.
+      siege->value[7] += 800;
+      siege->condition--;
+    }
+    // If siege is destroyed..
     if( siege->condition <= 0 )
       break;
   }
