@@ -69,7 +69,7 @@ sprintf(bufCOLOR, "&+R");
 
 
 if(obj->condition < 90)
-sprintf(buf, " [%s%d&n%]             ", bufCOLOR , obj->condition);
+sprintf(buf, " [%s%d&n%%]             ", bufCOLOR , obj->condition);
 else
 sprintf(buf, "");
 

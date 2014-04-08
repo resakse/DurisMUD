@@ -4193,13 +4193,13 @@ void do_attributes(P_char ch, char *argument, int cmd)
             (int)modifier);
   send_to_char(buf, ch);*/
 
-        sprintf(buf, "&+cMelee Critical Percentage&n(&+Mint&n): &+Y%d%\r\n", critroll);
+        sprintf(buf, "&+cMelee Critical Percentage&n(&+Mint&n): &+Y%d%%\r\n", critroll);
   send_to_char(buf, ch);        
-sprintf(buf, "&+cMax Spell Damage Reduction Percent&n(&+cwis&n): &+Y%d% \r\n",
+sprintf(buf, "&+cMax Spell Damage Reduction Percent&n(&+cwis&n): &+Y%d%%\r\n",
             (int)modifier);
   send_to_char(buf, ch);
 
-        sprintf(buf, "&+cCalming Chance&n(&+Ccha&n): &+Y%d% \r\n",
+        sprintf(buf, "&+cCalming Chance&n(&+Ccha&n): &+Y%d%% \r\n",
             calmroll);
   send_to_char(buf, ch);
 
@@ -4207,13 +4207,13 @@ sprintf(buf, "&+cMax Spell Damage Reduction Percent&n(&+cwis&n): &+Y%d% \r\n",
             (int)vamppct,
             (int)remod);*/
 	
-        sprintf(buf, "&+cHP Vamp Cap Percentage&n(&+mpow&n): &+Y%d% \r\n",
+        sprintf(buf, "&+cHP Vamp Cap Percentage&n(&+mpow&n): &+Y%d%% \r\n",
             (int)vamppct);
   send_to_char(buf, ch);
-        sprintf(buf, "&+cSpell Damage Modifier&n(&+rstr&n): &+Y%d% \r\n",
+        sprintf(buf, "&+cSpell Damage Modifier&n(&+rstr&n): &+Y%d%% \r\n",
             (int)remod);
   send_to_char(buf, ch);
-        sprintf(buf, "&+rBloodlust &+cDamage Bonus&n(&+yvs mob only&n): &+Y%d% \r\n", (int)bloodlust);
+        sprintf(buf, "&+rBloodlust &+cDamage Bonus&n(&+yvs mob only&n): &+Y%d%% \r\n", (int)bloodlust);
 	}
 
 
@@ -4448,7 +4448,7 @@ void do_score(P_char ch, char *argument, int cmd)
     send_to_char("Compression ratio: ", ch);
     if (ch->desc && ch->desc->z_str)
     {
-      sprintf(buf, "%d\%\n", compress_get_ratio(ch->desc));
+      sprintf(buf, "%d%%\n", compress_get_ratio(ch->desc));
       send_to_char(buf, ch);
     }
     else
@@ -4705,7 +4705,7 @@ void do_score(P_char ch, char *argument, int cmd)
     }
     else if( IS_DESTROYING(ch) )
     {
-      sprintf(buf + strlen(buf), ", destroying %s.", ch->specials.destroying_obj);
+      sprintf(buf + strlen(buf), ", destroying %s.", ch->specials.destroying_obj->short_description);
     }
     else if (NumAttackers(ch) > 0)
     {
@@ -4833,32 +4833,32 @@ void do_score(P_char ch, char *argument, int cmd)
 
       if (afp = get_epic_task(ch)) {
         if (afp->modifier == SPILL_BLOOD)
-          sprintf(buf, "&n&+YEpic points:&n &+W%d&n  &+YSkill points:&n &+W%d&n  Current task: &+rspill enemy blood&n\n",
+          sprintf(buf, "&n&+YEpic points:&n &+W%ld&n  &+YSkill points:&n &+W%ld&n  Current task: &+rspill enemy blood&n\n",
               ch->only.pc->epics, ch->only.pc->epic_skill_points);
         else if (afp->modifier >= 0)
-          sprintf(buf, "&nEpic points: &+W%d&n  Skill points: &+W%d&n  Current task: find runestone of %s\n",
+          sprintf(buf, "&nEpic points: &+W%ld&n  Skill points: &+W%ld&n  Current task: find runestone of %s\n",
               ch->only.pc->epics, ch->only.pc->epic_skill_points, zone_table[real_zone0(afp->modifier)].name);
 	else if (afp->modifier <= MAX_NEXUS_STONES && afp->modifier < 0)
 	{
 	  nexus = get_nexus_stone(-(afp->modifier));
           if (nexus)
 	  {
-	  sprintf(buf, "&nEpic points: &+W%d&n  Skill points: &+W%d&n  Current task: &+Gturn %s.&n\n",
+	  sprintf(buf, "&nEpic points: &+W%ld&n  Skill points: &+W%ld&n  Current task: &+Gturn %s.&n\n",
               ch->only.pc->epics, ch->only.pc->epic_skill_points, nexus->short_description);
 	  }
 	  else
 	  {
-	  sprintf(buf, "&nEpic points: &+W%d&n  Skill points: &+W%d&n  Current task: &+RERROR - can't find nexus, report to imms&n\n",
+	  sprintf(buf, "&nEpic points: &+W%ld&n  Skill points: &+W%ld&n  Current task: &+RERROR - can't find nexus, report to imms&n\n",
               ch->only.pc->epics, ch->only.pc->epic_skill_points);
           }
 	}
 	else
 	{
-	  sprintf(buf, "&nEpic points: &+W%d&n  Skill points: &+W%d&n  Current task: &+RERROR - report to imms&n\n",
+	  sprintf(buf, "&nEpic points: &+W%ld&n  Skill points: &+W%ld&n  Current task: &+RERROR - report to imms&n\n",
               ch->only.pc->epics, ch->only.pc->epic_skill_points);
 	}
       } else {
-        sprintf(buf, "&nEpic points: &+W%d&n  Skill points: &+W%d&n\n",
+        sprintf(buf, "&nEpic points: &+W%ld&n  Skill points: &+W%ld&n\n",
              ch->only.pc->epics, ch->only.pc->epic_skill_points);
       }
       send_to_char(buf, ch);
@@ -4878,7 +4878,7 @@ void do_score(P_char ch, char *argument, int cmd)
 
   fragnum = (float) ch->only.pc->frags;
   fragnum /= 100;
-  sprintf(buf, "%+.2f   &n&+LDeaths:&n   %d\n", fragnum, ch->only.pc->numb_deaths);
+  sprintf(buf, "%+.2f   &n&+LDeaths:&n   %lu\n", fragnum, ch->only.pc->numb_deaths);
   send_to_char(buf, ch);
 
   if(ch->linking)
@@ -5127,7 +5127,7 @@ void do_score(P_char ch, char *argument, int cmd)
     strcat(buf, "\n");
     send_to_char(buf, ch);
 
-    sprintf(buf, "&+LLea&+wder&+Wboard Points&n: &n%4d&n ", (getLeaderBoardPts(ch) / 100));
+    sprintf(buf, "&+LLea&+wder&+Wboard Points&n: &n%4ld&n ", (getLeaderBoardPts(ch) / 100));
     strcat(buf, "\n");
     send_to_char(buf, ch);
   }
@@ -5495,7 +5495,7 @@ void do_time(P_char ch, char *argument, int cmd)
 
   if (IS_TRUSTED(ch))
   {
-    sprintf(Gbuf2, "Kvark time&n: %d \n", time(NULL));
+    sprintf(Gbuf2, "Kvark time&n: %ld \n", time(NULL));
     send_to_char(Gbuf2, ch);
   }
   displayShutdownMsg(ch);
@@ -6244,7 +6244,7 @@ void do_who(P_char ch, char *argument, int cmd)
             (new_exp_table[GET_LEVEL(tch) + 1] - GET_EXP(tch)));
     strcat(buf, buf3);
     sprintf(buf3, 
-            "      Epic points = %d.\n", tch->only.pc->epics );
+            "      Epic points = %ld.\n", tch->only.pc->epics );
     strcat(buf, buf3);
 
     sprintf(buf3,
@@ -6425,7 +6425,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
     if (d && d->z_str)
     {
       mccp_ratio = compress_get_ratio(d);
-      sprintf(line + strlen(line), " C:%s%3d\%&n",
+      sprintf(line + strlen(line), " C:%s%3d%%&n",
               mccp_ratio > 0 ? "&n" : "&+R", mccp_ratio);
       num_mccp++;
     }
@@ -6647,7 +6647,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
     if (d && d->z_str)
     {
       mccp_ratio = compress_get_ratio(d);
-      sprintf(buf + strlen(buf), " C:%s%3d\%&n",
+      sprintf(buf + strlen(buf), " C:%s%3d%%&n",
               mccp_ratio > 0 ? "&n" : "&+R", mccp_ratio);
       num_mccp++;
     }
@@ -6820,19 +6820,19 @@ bool get_equipment_list(P_char ch, char *buf, int list_only)
 
           if ((blood / 3600) <= 15)
           {
-            sprintf(tempbuf, "[&+R%ld&+Lh &+R%ld&+Lm &+R%ld&+Ls&n]",
+            sprintf(tempbuf, "[&+R%d&+Lh &+R%d&+Lm &+R%d&+Ls&n]",
                     blood / 3600, (blood / 60) % 60, blood % 60);
           }
 
           if ((blood / 3600) > 15 && ((blood / 3600) <= 50))
           {
-            sprintf(tempbuf, "[&+Y%ld&+Lh &+Y%ld&+Lm &+Y%ld&+Ls&n]",
+            sprintf(tempbuf, "[&+Y%d&+Lh &+Y%d&+Lm &+Y%d&+Ls&n]",
                     blood / 3600, (blood / 60) % 60, blood % 60);
           }
 
           if ((blood / 3600) >= 50)
           {
-            sprintf(tempbuf, "[&+G%ld&+Lh &+G%ld&+Lm &+G%ld&+Ls&n]",
+            sprintf(tempbuf, "[&+G%d&+Lh &+G%d&+Lm &+G%d&+Ls&n]",
                     blood / 3600, (blood / 60) % 60, blood % 60);
           }
 
@@ -7159,8 +7159,8 @@ void do_where(P_char ch, char *argument, int cmd)
           {
             sprintf(buf2, "%-20s - [%6d] %s (In body of %s&n)\n",
                     d->original->player.name,
-                    world[d->character->in_room].name,
                     world[d->character->in_room].number,
+                    world[d->character->in_room].name,
                     FirstWord(d->character->player.name));
           }
           else

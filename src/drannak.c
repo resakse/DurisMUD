@@ -1346,14 +1346,14 @@ void do_conjure(P_char ch, char *argument, int cmd)
   send_to_char("&+MYou have learned the following &+mMobs&+M:\n&n", ch);
   send_to_char("----------------------------------------------------------------------------\n", ch);
   send_to_char("&+M Mob Number		          &+mMob Name		&n\n\r", ch);
-      while((fscanf(recipelist, "%i", &recnum)) != EOF )
+      while((fscanf(recipelist, "%ld", &recnum)) != EOF )
 	{  
        if(recnum == choice2)
        selected = choice2;
       
     tobj = read_mobile(recnum, VIRTUAL);
- 	sprintf(rbuf, "%d\n", recnum);
-    sprintf(buffer, "   &+W%-22d&n%-41s&n\n", recnum, tobj->player.short_descr);
+ 	sprintf(rbuf, "%ld\n", recnum);
+    sprintf(buffer, "   &+W%-22ld&n%-41s&n\n", recnum, tobj->player.short_descr);
 	//stores the actual vnum written in file into rbuf 
 	page_string(ch->desc, buffer, 1);
     send_to_char("----------------------------------------------------------------------------\n", ch);
@@ -1365,12 +1365,12 @@ void do_conjure(P_char ch, char *argument, int cmd)
   return;
   }
 
-  while((fscanf(recipelist, "%i", &recnum)) != EOF )
+  while((fscanf(recipelist, "%ld", &recnum)) != EOF )
 	{  
        if(recnum == choice2)
        selected = choice2;
      
- 	sprintf(rbuf, "%d\n", recnum);
+ 	sprintf(rbuf, "%ld\n", recnum);
 	}
   fclose(recipelist);
  

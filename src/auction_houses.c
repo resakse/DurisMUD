@@ -1133,13 +1133,13 @@ string format_time(long seconds) {
 		sprintf(tmp, "&+R<1m&n", seconds );
 		
 	} else if( seconds < ( 60 * 60 ) ) {
-		sprintf(tmp, "&+R%dm&n", (seconds / 60) % 60 );
+		sprintf(tmp, "&+R%ldm&n", (seconds / 60) % 60 );
 		
 	} else if( seconds < ( 6 * 60 * 60  ) ) {
-		sprintf(tmp, "&+Y%dh %dm&n", (seconds / 3600) % ( 60 * 60 ) , (seconds / 60 ) % 60 );
+		sprintf(tmp, "&+Y%ldh %ldm&n", (seconds / 3600) % ( 60 * 60 ) , (seconds / 60 ) % 60 );
 		
 	} else {
-		sprintf(tmp, "&+W%dh&n", (seconds / 3600) % ( 60 * 60 ) );
+		sprintf(tmp, "&+W%ldh&n", (seconds / 3600) % ( 60 * 60 ) );
 		
 	}
 	

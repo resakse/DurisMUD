@@ -2159,7 +2159,10 @@ void die(P_char ch, P_char killer)
   }
 
   if(IS_PC(ch) && GET_CLASS(ch, CLASS_CONJURER))
-  do_dismiss(ch, NULL, NULL);
+  {
+    do_dismiss(ch, NULL, 0);
+  }
+
   int oldlev = GET_LEVEL(ch);
 
 #if defined(CTF_MUD) && (CTF_MUD == 1)
@@ -5829,7 +5832,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags,
       act_flag = 0;
 
   char showdam[MAX_STRING_LENGTH];
-    sprintf(showdam, " [&+wDamage: %d&n] ", dam);
+    sprintf(showdam, " [&+wDamage: %d&n] ", (int) dam);
 
     new_stat = calculate_ch_state(victim);
     

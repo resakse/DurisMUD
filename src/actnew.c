@@ -3704,7 +3704,7 @@ void do_craft(P_char ch, char *argument, int cmd)
   send_to_char("&+yYou know the following recipes:\n&n", ch);
   send_to_char("----------------------------------------------------------------------------\n", ch);
   send_to_char("&+BRecipe Number		              &+MItem&n\n\r", ch);
-      while((fscanf(recipelist, "%i", &recnum)) != EOF )
+      while((fscanf(recipelist, "%ld", &recnum)) != EOF )
 	{  
        /* debug
        char bufbug[MAX_STRING_LENGTH];
@@ -3718,8 +3718,8 @@ void do_craft(P_char ch, char *argument, int cmd)
 	send_to_char("The one below here is selected.\r\n", ch);
 	*/
 	tobj = read_object(recnum, VIRTUAL);
- 	sprintf(rbuf, "%d\n", recnum);
-    sprintf(buffer, "   &+W%-22d&n%s&n\n", recnum, tobj->short_description);
+ 	sprintf(rbuf, "%ld\n", recnum);
+    sprintf(buffer, "   &+W%-22ld&n%s&n\n", recnum, tobj->short_description);
 	//stores the actual vnum written in file into rbuf 
 	page_string(ch->desc, buffer, 1);
     send_to_char("----------------------------------------------------------------------------\n", ch);
@@ -3731,7 +3731,7 @@ void do_craft(P_char ch, char *argument, int cmd)
   return;
   }
 
-  while((fscanf(recipelist, "%i", &recnum)) != EOF )
+  while((fscanf(recipelist, "%ld", &recnum)) != EOF )
 	{  
        /* debug
        char bufbug[MAX_STRING_LENGTH];
@@ -3745,7 +3745,7 @@ void do_craft(P_char ch, char *argument, int cmd)
 	send_to_char("The one below here is selected.\r\n", ch);
 	*/
 	//tobj = read_object(recnum, VIRTUAL);
- 	sprintf(rbuf, "%d\n", recnum);
+ 	sprintf(rbuf, "%ld\n", recnum);
 	}
   fclose(recipelist);
  

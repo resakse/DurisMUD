@@ -292,8 +292,7 @@ void UpdateArtiBlood(P_char ch, P_obj obj, int mod)
         statuslog(56, "could not open arti file %s for writing", fname);
         return;
       }
-      fprintf(f, "%s %d %d 0 %d", GET_NAME(ch), GET_PID(ch), time(NULL),
-              obj->timer[3]);
+      fprintf(f, "%s %d %ld 0 %ld", GET_NAME(ch), GET_PID(ch), time(NULL), obj->timer[3]);
       fclose(f);
 //                wizlog(56, "Artifact timer reset: %s now owns %s (#%d).", GET_NAME(ch), name, vnum);
     }
@@ -381,8 +380,7 @@ void feed_artifact(P_char ch, P_obj obj, int feed_seconds, int bypass)
       statuslog(56, "could not open arti file %s for writing", fname);
       return;
     }
-    fprintf(f, "%s %d %d 0 %d", GET_NAME(ch), GET_PID(ch), time(NULL),
-            obj->timer[3]);
+    fprintf(f, "%s %d %ld 0 %ld", GET_NAME(ch), GET_PID(ch), time(NULL), obj->timer[3]);
     fclose(f);
   }
     
@@ -443,7 +441,7 @@ int add_owned_artifact(P_obj arti, P_char ch, int blood)
   // if(exist)
   if (f)
   {
-    fprintf(f, "%s %d %d 0 %d", GET_NAME(ch), GET_PID(ch), time(NULL), blood);
+    fprintf(f, "%s %d %ld 0 %d", GET_NAME(ch), GET_PID(ch), time(NULL), blood);
     /*
        else
        fprintf(f, "%s %d %d 0 %d", GET_NAME(ch), GET_PID(ch), time(NULL), time(NULL));

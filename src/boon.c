@@ -1408,7 +1408,7 @@ void do_boon(P_char ch, char *argument, int cmd)
     send_to_char(buffline, ch);
     for (i = 0; i < MAX_BOPT; i++)
     {
-      sprintf(buff, "&+C%+10s&n", boon_options[i].option);
+      sprintf(buff, "&+C%-10s&n", boon_options[i].option);
       for (int k = 1; k < MAX_BTYPE; k++)
       {
 	if (check_boon_combo(k, i, FALSE))

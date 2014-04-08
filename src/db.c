@@ -2033,8 +2033,7 @@ P_char read_mobile(int nr, int type)
 
   fgets(buf, sizeof(buf) - 1, mob_f);
   if (sscanf
-      (buf, " %u %u %u %u %u %u %u %u %u %c \n", &tmp1, &tmp7, &tmp8, &tmp9,
-       &tmp2, &tmp3, &tmp4, &tmp5, &tmp6, &letter) == 10)
+      (buf, " %ld %ld %ld %ld %ld %ld %ld %ld %ld %c \n", &tmp1, &tmp7, &tmp8, &tmp9, &tmp2, &tmp3, &tmp4, &tmp5, &tmp6, &letter) == 10)
   {
     mob->specials.act = tmp1;
     mob->only.npc->aggro_flags = tmp7;
@@ -2105,8 +2104,7 @@ P_char read_mobile(int nr, int type)
   if (letter == 'S')
   {
     fgets(buf, sizeof(buf) - 1, mob_f);
-    if (sscanf
-	(buf, " %s %i %u %i %i \n", Gbuf1, &tmp, &tmp2, &tmp3, &tmp4) == 5)
+    if (sscanf(buf, " %s %ld %ld %ld %ld \n", Gbuf1, &tmp, &tmp2, &tmp3, &tmp4) == 5)
     {
       mob->player.race = 0;
 
@@ -2122,7 +2120,7 @@ P_char read_mobile(int nr, int type)
     }
     else
     {
-      sscanf(buf, " %s %i %u %i \n", Gbuf1, &tmp, &tmp2, &tmp3);
+      sscanf(buf, " %s %ld %ld %ld \n", Gbuf1, &tmp, &tmp2, &tmp3);
 
       mob->player.race = 0;
 

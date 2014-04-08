@@ -2217,7 +2217,7 @@ int read_ships()
             fclose(f2);
             return FALSE;
         }
-        intime = time(NULL);
+        //intime = time(NULL);
         name_ship(ship->name, ship);
 
         if (!load_ship(ship, real_room0(ship->anchor)))
