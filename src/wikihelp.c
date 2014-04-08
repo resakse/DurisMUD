@@ -508,7 +508,7 @@ void load_cmd_attributes()
     cmd_attribs[count].name = cmd_attribs[count].attributes = NULL;
   }
 
-  cmd_file = fopen( "command_attributes.txt", "r" );
+  cmd_file = fopen( "lib/information/command_attributes.txt", "r" );
   if( !cmd_file )
   {
     logit( LOG_DEBUG, "Could not open command_attributes.txt." );

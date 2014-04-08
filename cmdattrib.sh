@@ -1,4 +1,8 @@
 #!/bin/bash
+# This script hunts through the code and looks up each set of attributes
+#  for the listed functions.
+# i.e. Looks through the code to see what attributes (str/dex/etc) are
+#  used for bash/trip/headbutt/etc.
 
 #Parses the file for attribs
 parsefile ( )
@@ -494,3 +498,4 @@ echo "will" >> command_attributes.txt
 FUNCTIONNAME="void do_will"
 parsefile
 
+mv command_attributes.txt ./lib/information/
