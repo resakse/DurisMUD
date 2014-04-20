@@ -29,8 +29,8 @@ while [ $RESULT != 0 ]; do
   echo "Generating list of function names.."
   nm --demangle dms | grep " T " | sed -e 's/[(].*//g' > lib/misc/event_names
 
-	if [ -f /usr/local/bin/sendEmail ]; then
-		/usr/local/bin/sendEmail -t kitsero@durismud.com \
+	if [ -f /usr/bin/sendemail ]; then
+		/usr/bin/sendEmail -t alert@durismud.com \
 			-f mud@durismud.com -u "Duris Booting..." \
 			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
 	fi
