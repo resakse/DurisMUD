@@ -1719,18 +1719,24 @@ void do_stat(P_char ch, char *argument, int cmd)
         zone = &zone_table[zone_id];
       }
     }
-    else if( !strcmp( arg2, "teleports" ) )
+    else if( !strcmp( arg2, "portable" ) )
     {
-      int i;
+      if( IS_MAP_ROOM(ch->in_room) )
+      {
+        send_to_char("&+rThis command is not available in a map zone, there are too many rooms.\n", ch);
+        return;
+      }
+
+      send_to_char("&+YPortable rooms in current zone:\n", ch);
 
       zone_id = world[ch->in_room].zone;
       zone = &zone_table[zone_id];
-      for( i = zone->real_bottom;i < zone->real_top ;i++ )
+      for( int i = zone->real_bottom; i < zone->real_top; i++ )
       {
-        // If the room is teleportable, display it w/room number.
+        // If the room is teleportable, display it w/room vnum.
         if( !IS_SET(world[i].room_flags, NO_TELEPORT) )
         {
-          sprintf( buf, "%d) %s\n", world[i].number, world[i].name );
+          sprintf( buf, "[&+C%d&n] %s\n", world[i].number, world[i].name );
           send_to_char( buf, ch );
         }
       }
