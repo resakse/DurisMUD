@@ -1215,8 +1215,12 @@ void do_society(P_char member, char *argument, int cmd)
   }
   /* success -> update */
   if (test == 1)
-    if ((victim = get_char_vis(member, second)) != NULL)
+  {
+    if ((victim = get_char_online(second)) != NULL)
       update_member(victim, full);
+    else
+      send_to_char( "Couldn't update member.  Tell a God.\n", member );
+  }
   if (test > 1)
     update_asc(member, GET_A_NUM(member), full);
   return;
@@ -1506,24 +1510,25 @@ void update_member(P_char member, int full)
   /* can we fix this guy from a file? */
   asc_number = GET_A_NUM(member);
   temp = GET_A_BITS(member);
-  
+
   // check to see if they are homed in a guildhall
   // and reset to their original birthplace if they are no longer a guild member, or are homed in the wrong guildhall
   Guildhall *gh = Guildhall::find_by_vnum(GET_BIRTHPLACE(member));
 
-  if( !gh )
-    return;
-
-  if( !IS_MEMBER(temp) || gh->assoc_id != asc_number )
+  // If they're homed in a guildhall,
+  if( gh )
   {
-    logit(LOG_DEBUG, "%s was homed in GH but doesn't belong to guild, resetting to original home", GET_NAME(member));
-    sprintf(home, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
-    do_setbit(member, home, CMD_SETHOME);
-    sprintf(home, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
-    do_setbit(member, home, CMD_SETHOME);
-    return;
+    // If they're no longer a member, or are a member of a different guild.
+    if( !IS_MEMBER(temp) || gh->assoc_id != asc_number )
+    {
+      logit(LOG_DEBUG, "%s was homed in GH but doesn't belong to guild, resetting to original home", GET_NAME(member));
+      sprintf(home, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+      do_setbit(member, home, CMD_SETHOME);
+      sprintf(home, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+      do_setbit(member, home, CMD_SETHOME);
+    }
   }
-  
+
 // old guildhalls (deprecated)
 //    /* let's check to see they are not still sethomed to a guildhall */
 //    temp_house = first_house;
@@ -3884,7 +3889,7 @@ void do_gmotd(P_char ch, char *argument, int cmd)
   f = fopen(buf, "w");
   text = str_dup(obj->action_description);
   strcat(text, "\r\n");
-  fprintf(f, text);
+  fprintf(f, "%s", text);
   fclose(f);
   obj_from_char(obj, TRUE);
   extract_obj(obj, TRUE);
