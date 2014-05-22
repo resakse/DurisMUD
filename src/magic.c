@@ -4766,6 +4766,13 @@ void spell_clairvoyance(int level, P_char ch, char *arg, int type,
     return;
   }
 
+  // Disabling this spell to stop ppl from cheating.
+  if(TRUE)
+  {
+    send_to_char("&+CYou failed.\n", ch);
+    return;
+  }
+
   where = world[victim->in_room].number;
   target = victim->in_room;
   if(number(0, 3))
