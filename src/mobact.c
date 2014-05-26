@@ -8273,9 +8273,10 @@ PROFILE_END(mundane_assist);
       // ground, in order of value.
       //
 
-      if(IS_SET(obj->extra_flags, ITEM_SECRET) || IS_SET(obj->extra_flags,
-                                                          ITEM_NOSHOW)
-          || IS_SET(obj->extra_flags, ITEM_BURIED))
+      if( IS_SET(obj->extra_flags, ITEM_SECRET)
+        || IS_SET(obj->extra_flags, ITEM_NOSHOW)
+        || IS_SET(obj->extra_flags, ITEM_BURIED)
+        || !CAN_WEAR(obj, ITEM_TAKE) )
         continue;
 
       if(CAN_GET_OBJ(ch, obj) || IS_CONTAINER(obj))
@@ -8311,9 +8312,10 @@ PROFILE_END(mundane_assist);
              obj && (CAN_CARRY_N(ch) > IS_CARRYING_N(ch)); obj = obj2)
         {
           obj2 = obj->next_content;
-          if(IS_SET(obj->extra_flags, ITEM_SECRET) ||
-              IS_SET(obj->extra_flags, ITEM_NOSHOW) ||
-              IS_SET(obj->extra_flags, ITEM_BURIED))
+          if( IS_SET(obj->extra_flags, ITEM_SECRET)
+            || IS_SET(obj->extra_flags, ITEM_NOSHOW)
+            || IS_SET(obj->extra_flags, ITEM_BURIED)
+            || !CAN_WEAR(obj, ITEM_TAKE) )
             continue;
           if(obj->type == ITEM_MONEY)
           {
@@ -8335,9 +8337,10 @@ PROFILE_END(mundane_assist);
         }
         goto normal;
       }
-      else if(!IS_SET(best_obj->extra_flags, ITEM_SECRET) &&
-               !IS_SET(best_obj->extra_flags, ITEM_BURIED) &&
-               !IS_SET(best_obj->extra_flags, ITEM_NOSHOW))
+      else if( !IS_SET(best_obj->extra_flags, ITEM_SECRET)
+             && !IS_SET(best_obj->extra_flags, ITEM_BURIED)
+             && !IS_SET(best_obj->extra_flags, ITEM_NOSHOW)
+             && CAN_WEAR(best_obj, ITEM_TAKE) )
       {
         if(OBJ_ROOM(best_obj))
           obj_from_room(best_obj);
