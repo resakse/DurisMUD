@@ -6066,9 +6066,15 @@ void do_tackle(P_char ch, char *arg, int cmd)
   struct affected_type af;
   int i, door, target_room, percent_chance;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-        return;
+  if(!(ch) || !IS_ALIVE(ch))
+    return;
+
+  if(IS_CENTAUR(ch) ||  GET_RACE(ch) == RACE_QUADRUPED || GET_RACE(ch) == RACE_DRIDER)
+  {
+    send_to_char("You rear up and .. wait, how does you tackle?!\n", ch);
+    return;
+  }
+
   if( IS_DESTROYING(ch) )
   {
     send_to_char( "You can't tackle an object.\n", ch );
@@ -6101,7 +6107,7 @@ void do_tackle(P_char ch, char *arg, int cmd)
   }
 
   appear(ch);
-  
+
   if((has_innate(vict, INNATE_HORSE_BODY) ||
      GET_RACE(ch) == RACE_QUADRUPED)  &&
      (get_takedown_size(ch) < get_takedown_size(vict)) + 1)
@@ -6115,10 +6121,10 @@ void do_tackle(P_char ch, char *arg, int cmd)
 
     SET_POS(ch, POS_SITTING + GET_STAT(ch));
     CharWait(ch, PULSE_VIOLENCE * 1);
-    
+
     if(!IS_FIGHTING(ch) && !IS_DESTROYING(ch))
       set_fighting(ch, vict);
-    
+
     return;
   }
 
@@ -8740,10 +8746,16 @@ void do_trip(P_char ch, char *argument, int cmd)
 
   if(!(ch) || !IS_ALIVE(ch))
     return;
-  
+
   if(GET_CHAR_SKILL(ch, SKILL_TRIP) < 1)
   {
     send_to_char("Battle-field tripping is too acrobatic for you to attempt.\n", ch);
+    return;
+  }
+
+  if(IS_CENTAUR(ch) ||  GET_RACE(ch) == RACE_QUADRUPED || GET_RACE(ch) == RACE_DRIDER)
+  {
+    send_to_char("You worry about breaking your leg and decide not to try.\n", ch);
     return;
   }
 
@@ -8776,7 +8788,7 @@ void do_trip(P_char ch, char *argument, int cmd)
       FALSE, ch, ch->specials.destroying_obj, 0, TO_CHAR);
     return;
   }
-  
+
   if(IS_FIGHTING(ch) &&
     vict->specials.fighting != ch &&
     ch->specials.fighting != vict)
@@ -8788,7 +8800,7 @@ void do_trip(P_char ch, char *argument, int cmd)
 
   if(!CanDoFightMove(ch, vict))
     return;
-    
+
   appear(ch);
 
   /* you must be size of centaur to springleap it */
