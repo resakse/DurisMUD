@@ -11995,6 +11995,16 @@ int frost_beacon(P_obj obj, P_char ch, int cmd, char *argument)
 
   if (cmd == CMD_DECAY)
   {
+    // Give a message to the caster if they're not in the room.
+    for (tch = character_list; tch; tch = tch->next)
+      if (IS_PC(tch) && GET_PID(tch) == obj->value[0])
+      {
+        if( tch->in_room != obj->loc.room )
+          act("$p melts into nothingness.", TRUE, tch, obj, 0, TO_CHAR);
+        break;
+      }
+
+    // Give a message to all in the room.
     if (world[obj->loc.room].people)
     {
       act("$p melts into nothingness.", TRUE, world[obj->loc.room].people,
