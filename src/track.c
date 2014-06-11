@@ -413,21 +413,36 @@ void add_track(P_char ch, int dir)
   char    buf2[MAX_STRING_LENGTH];
   char    buf3[MAX_STRING_LENGTH];
   struct extra_descr_data *ed;
-  
+
+  // Gods don't leave tracks.
+  if (IS_TRUSTED(ch))
+    return;
+
+  // NPCs don't leave tracks.
+  if (!IS_PC(GET_PLYR(ch)))
+    return;
+
+  if (IS_AFFECTED3(ch, AFF3_PASS_WITHOUT_TRACE))
+    return;
+
+  // These races leave no tracks
+  if( GET_RACE(ch) == RACE_INSECT || GET_RACE(ch) == RACE_GHOST
+    || GET_RACE(ch) == RACE_FAERIE || GET_RACE(ch) == RACE_PARASITE )
+    return;
+
+  // If they're in nowhere.. no tracks.
+  if (ch->in_room == NOWHERE)
+    return;
+
+  // If they hit a wall.. no tracks.
+  if (!EXIT(ch, dir))
+    return;
+
   dura = MAX_TRACK_DURATION;
-  
-  if (IS_AFFECTED(ch, AFF_SNEAK)) {
+
+  if (IS_AFFECTED(ch, AFF_SNEAK))
     dura -= 700;
-  }
 
-  if (IS_TRUSTED(ch)) {
-    return;
-  }
-
-  if (IS_AFFECTED3(ch, AFF3_PASS_WITHOUT_TRACE)) {
-    return;
-  }
-	
   switch (world[ch->in_room].sector_type)
   {
   case SECT_WATER_SWIM:
@@ -453,48 +468,41 @@ void add_track(P_char ch, int dir)
     break;
   case SECT_DESERT:
   case SECT_ARCTIC:
-    if (GET_RACE(ch) == RACE_BARBARIAN) {
+    if (GET_RACE(ch) == RACE_BARBARIAN)
       dura -= 200;
-    } else {
+    else
       dura += 200;
-    }
     break;
   case SECT_FOREST:
 
-    if (GET_RACE(ch) == RACE_GREY) {
+    if (GET_RACE(ch) == RACE_GREY)
       dura -= 800;
-    }
-    if (GET_RACE(ch) == RACE_CENTAUR) {
+    else if (GET_RACE(ch) == RACE_CENTAUR)
       dura -= 300;
-    }
-    if (GET_RACE(ch) == RACE_HALFELF) {
+    else if (GET_RACE(ch) == RACE_HALFELF)
       dura -= 500;
-    }
-    break;   
+    break;
   case SECT_UNDRWLD_MOUNTAIN:
   case SECT_UNDRWLD_SLIME:
   case SECT_UNDRWLD_MUSHROOM:
   case SECT_UNDRWLD_LIQMITH:
   case SECT_UNDRWLD_WILD:
   case SECT_UNDRWLD_CITY:
-    if (GET_RACE(ch) == RACE_DROW || GET_RACE(ch) == RACE_DUERGAR) {
+    if (GET_RACE(ch) == RACE_DROW || GET_RACE(ch) == RACE_DUERGAR)
       dura -= 600;
-    } else {
+    else
       dura += 600;
-    }
     break;
   case SECT_HILLS:
 
-    if (GET_RACE(ch) == RACE_HALFLING || GET_RACE(ch) == RACE_GOBLIN) {
+    if (GET_RACE(ch) == RACE_HALFLING || GET_RACE(ch) == RACE_GOBLIN)
       dura -= 500;
-    }
     break;
   case SECT_MOUNTAIN:
-    if (GET_RACE(ch) == RACE_MOUNTAIN || GET_RACE(ch) == RACE_DUERGAR) {
+    if (GET_RACE(ch) == RACE_MOUNTAIN || GET_RACE(ch) == RACE_DUERGAR)
       dura -= 500; 
-    } else {
+    else
       dura += 500;
-    }
     break;
   default:
     break;                      /* stuff is as we want it to be.      */
@@ -511,42 +519,30 @@ void add_track(P_char ch, int dir)
        (100 - sector_table[zon].conditions.windspeed) / 100 / 100;
 */
 
-  if (!IS_PC(GET_PLYR(ch))) {
-    return;
-  }
-
   // flying people break branches and push down grasses as they 
   // fly around
-  if (IS_AFFECTED(ch, AFF_FLY)) {
-    if (number(0,2)) {
-      dura -= 900; 
-    } else {
+  if( IS_AFFECTED(ch, AFF_FLY) )
+  {
+    // Sneaking makes no difference while flying.
+    if (IS_AFFECTED(ch, AFF_SNEAK))
+      dura += 700;
+
+    if (number(0,2))
+      dura -= 900;
+    else
       return;
-    }
   }
 
   // Dragonkin tracks are gigantic
-  if (GET_RACE(ch) == RACE_DRAGONKIN) {
+  if( GET_RACE(ch) == RACE_DRAGONKIN )
     dura *= 2;
-  }
 
-  if (GET_RACE(ch) == RACE_INSECT || GET_RACE(ch) == RACE_GHOST ||
-      GET_RACE(ch) == RACE_FAERIE || GET_RACE(ch) == RACE_PARASITE) {
-  return;
-  }
-  if (ch->in_room == NOWHERE) {
-    return;
-  }
-  if (!EXIT(ch, dir)) {
-    return;
-  }
-  
   dura += GET_WEIGHT(ch);
-	
-  if ( (dura <= 0) || (!dura)) {
-	  dura = 60; // 15 seconds
-  }
-	
+
+  // Minimum 15 seconds, maximum MAX_TRACK_DURATION.
+  dura = BOUNDED( 60, dura, MAX_TRACK_DURATION );
+
+  // Count the number of tracks in the room.
   counter = 0;
   for (obj = world[ch->in_room].contents; obj; obj = next_obj)
   {
@@ -554,29 +550,32 @@ void add_track(P_char ch, int dir)
      if (obj->R_num == real_object(1276))
        counter++;
   }
-  
-  if (counter >= track_limit[world[ch->in_room].sector_type]) { 
+
+  // If there are too many tracks for the sector type..
+  if (counter >= track_limit[world[ch->in_room].sector_type])
+  {
     for (obj = world[ch->in_room].contents; obj; obj = next_obj)
     {
       if (counter >= track_limit[world[ch->in_room].sector_type])
       {
+        // Remove one set of tracks.
         if (obj->R_num == real_object(1276))
-	{
-	  extract_obj(obj, TRUE);
-	  obj = NULL;
-	  break;
-	}
-       }
+      	{
+          extract_obj(obj, TRUE);
+  	      obj = NULL;
+	        break;
+        }
+      }
       next_obj = obj->next_content;
-    } 
-  } 
-  
+    }
+  }
+
   track = read_object(1276, VIRTUAL);
- 
+
   strcpy(buf1, "");
   strcpy(buf2, "");
-  strcpy(buf3, ""); 
-  
+  strcpy(buf3, "");
+
   if (IS_DISGUISE_SHAPE(ch))
   {
     sprintf(buf1, "There are %s tracks going %s.",
@@ -591,7 +590,7 @@ void add_track(P_char ch, int dir)
     strcpy(buf3, ch->player.short_descr);
     track->value[0] = dir;
   }
-  
+
   //sprintf(buf1, "There are tracks here going %s.", dirs[dir]);
 
   set_long_description(track, buf1);  
@@ -599,10 +598,11 @@ void add_track(P_char ch, int dir)
   sprintf(buf2, "These appear to be the track of %s", buf3);
   set_short_description(track, buf2); 
   */
-  
+
   ed = track->ex_description;
   ed->description = str_dup(buf2);
- 
+
+/* ch in NOWHERE already checked for with return.
   if (ch->in_room == NOWHERE)
   {
     if (real_room(ch->specials.was_in_room) != NOWHERE)
@@ -614,13 +614,12 @@ void add_track(P_char ch, int dir)
     }
   }
   else
-    obj_to_room(track, ch->in_room);
- 
-  dura = BOUNDED(1, dura, MAX_TRACK_DURATION);
+*/
+  obj_to_room(track, ch->in_room);
+
   set_obj_affected(track, dura, TAG_OBJ_DECAY, 0);
-  
-  return; 
-  
+  return;
+
 #if 0
   {
     tmp->weight = (GET_WEIGHT(ch) / 5);
@@ -648,7 +647,7 @@ void add_track(P_char ch, int dir)
 
   if(tmp2->tracks_in_room > track_limit[world[ch->in_room].sector_type])
     nuke_track(tmp2->first);
-  
+
 #   if 0
   /* This practically lowers it to from 1/25 to 1/1 of the original      */
   dura = dura * (16 - STAT_INDEX(GET_C_DEX(ch))) / 23;
@@ -657,10 +656,10 @@ void add_track(P_char ch, int dir)
   /* Ok, now weather      */
 
   tmp2->tracks_in_room++;
-  
+
   dura = BOUNDED(1, dura, MAX_TRACK_DURATION);
   AddEvent(EVENT_TRACK_DECAY, dura, TRUE, tmp, 0);
-#endif 
+#endif
 }
 
 void nuke_track(struct trackrecordtype *hmm)
