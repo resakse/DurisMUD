@@ -340,16 +340,27 @@ void apply_achievement(P_char ch, int ach)
 void do_addicted_blood(P_char ch, char *arg, int cmd)
 {
   char buf[MAX_STRING_LENGTH];
+  int  bloodtime;
+  struct affected_type *af;
 
-  sprintf(buf, "&+L%-28s&+L%-51s&+L%s &+W%d%%&n\r\n",
+  if( !ch )
+  {
+    return;
+  }
+  sprintf( buf, "&+L%-28s&+L%-51s&+L%s &+W%d%%&n\r\n",
       "&+rAddicted to Blood&n", "&+wKill &+W30 &+wmobs within 30 minutes", "&+wEXP and Plat Bonus&n", get_progress(ch, TAG_ADDICTED_BLOOD, 30));
   send_to_char( buf, ch );
-
+  af = ch->affected;
+  while( af && !(af->type == TAG_ADDICTED_BLOOD) )
+    af = af->next;
+  bloodtime = af ? af->duration : 30;
+  sprintf( buf, "You have %d minutes left.\n", bloodtime );
+  send_to_char( buf, ch );
 }
 
 void update_addicted_to_blood(P_char ch, P_char victim)
 {
-  if( !IS_PC(victim) && GET_LEVEL(victim) > GET_LEVEL(ch) - 5 )
+  if( !IS_PC(victim) && GET_LEVEL(victim) >= GET_LEVEL(ch) - 5 )
   {
     // Add addicted to blood if it isn't already there
     if( !affected_by_spell(ch, TAG_ADDICTED_BLOOD) )
@@ -358,7 +369,7 @@ void update_addicted_to_blood(P_char ch, P_char victim)
       memset(&aaf, 0, sizeof(struct affected_type));
       aaf.type = TAG_ADDICTED_BLOOD;
       aaf.modifier = 0;
-      aaf.duration = 60;
+      aaf.duration = 30;
       aaf.location = 0;
       aaf.flags = AFFTYPE_NOSHOW | AFFTYPE_PERM | AFFTYPE_NODISPEL;
       affect_to_char(ch, &aaf);
