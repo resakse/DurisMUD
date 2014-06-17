@@ -597,8 +597,13 @@ void list_artifacts(P_char ch, char *arg, int type)
     send_to_char( "Invalid artifact type.\n\r", ch );
     return;
   }
+  // Skip whitespaces..
+  while ( *arg == ' ' )
+  {
+    arg++;
+  }
 
-  if( !IS_TRUSTED(ch) && type == ARTIFACT_MAIN )
+  if( (!IS_TRUSTED(ch) || is_abbrev(arg, "mortal")) && type == ARTIFACT_MAIN )
   {
     if( artilist_mortal_main )
     {
@@ -636,7 +641,7 @@ void list_artifacts(P_char ch, char *arg, int type)
     return;
   }
 
-  if (IS_TRUSTED(ch))
+  if( IS_TRUSTED(ch) && !is_abbrev(arg, "mortal") )
     send_to_char("&+YOwner               Time       Last Update                   Artifact\r\n\r\n", ch);
   else
     send_to_char("&+YOwner               Artifact\r\n\r\n", ch);
@@ -690,7 +695,7 @@ void list_artifacts(P_char ch, char *arg, int type)
       others++;
     }
 
-    if (IS_TRUSTED(ch))
+    if (IS_TRUSTED(ch) && !is_abbrev(arg, "mortal") )
     {
       strcpy(strn2, ctime(&last_time));
       strn2[strlen(strn2) - 1] = '\0';

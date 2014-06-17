@@ -566,6 +566,7 @@ struct allowed_race_spec_struct {
   {RACE_DRIDER, CLASS_ANTIPALADIN,    SPEC_DARKKNIGHT},
   {RACE_DRIDER, CLASS_SORCERER,       SPEC_ALL},
   {RACE_DRIDER, CLASS_REAVER,         SPEC_ALL},
+  {RACE_DRIDER, CLASS_NECROMANCER,    SPEC_ALL},
 	/* End Drider Options */
 
 	/* Start Agathinon Options */
