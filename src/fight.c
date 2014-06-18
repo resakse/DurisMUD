@@ -66,6 +66,7 @@ extern const struct race_names race_names_table[];
 extern const int exp_table[];
 extern void set_long_description(P_obj t_obj, const char *newDescription);
 extern void set_short_description(P_obj t_obj, const char *newDescription);
+extern void event_wait(P_char ch, P_char victim, P_obj obj, void *data);
 
 //extern const int material_absorbtion[][];
 extern const struct stat_data stat_factor[];
@@ -8395,7 +8396,7 @@ int MonkRiposte(P_char victim, P_char attacker, P_obj wpn)
   percent += dex_app[STAT_INDEX(GET_C_DEX(victim))].reaction * 2;
   percent += str_app[STAT_INDEX(GET_C_STR(victim))].tohit * 1.5;
   percent -= (str_app[STAT_INDEX(GET_C_STR(attacker))].tohit +
-      str_app[STAT_INDEX(GET_C_STR(attacker))].todam);
+    str_app[STAT_INDEX(GET_C_STR(attacker))].todam);
 
   if(!MIN_POS(victim, POS_STANDING + STAT_NORMAL))
   {
@@ -8406,7 +8407,7 @@ int MonkRiposte(P_char victim, P_char attacker, P_obj wpn)
     // All this does is set someone up to be repeatedly bashed and lagged,
     // utterly and insanely stupid. -- Jexni 1/21/11
 
-    if(GET_C_AGI(victim) > number(1, 1000) &&
+    if( GET_C_AGI(victim) > number(1, 1000) &&
         GET_CHAR_SKILL(victim, SKILL_MARTIAL_ARTS) > number(1, 100))
     {
       act("$n tucks in $s arms, rolls quickly away, then thrust $s feet skywards, leaping back to $s feet!",
@@ -8416,10 +8417,11 @@ int MonkRiposte(P_char victim, P_char attacker, P_obj wpn)
       act("You tuck in your arms, roll away from $N's blow, then leap to your feet!",
           TRUE, victim, 0, attacker, TO_CHAR);
       SET_POS(victim, POS_STANDING + GET_STAT(victim));
-      // Dunno if this will clear lag or not.
-      CharWait(victim, 0);
+      // Clear the lag!
+      disarm_char_events(victim, event_wait);
+      REMOVE_BIT(victim->specials.act2, PLR2_WAIT);
       update_pos(victim);
-      return false;
+      return FALSE;
     }
 
     percent = 5;
