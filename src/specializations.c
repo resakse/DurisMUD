@@ -162,6 +162,7 @@ struct allowed_race_spec_struct {
 	{RACE_GREY, CLASS_BARD,         SPEC_ALL},
 	{RACE_GREY, CLASS_SHAMAN,       SPEC_ALL},
   {RACE_GREY, CLASS_PSIONICIST,   SPEC_ALL},
+ 	{RACE_GREY, CLASS_MONK,         SPEC_ALL},
 	/* End Grey Elf Options */
 
 	/* Start Drow Elf Options */
@@ -183,6 +184,7 @@ struct allowed_race_spec_struct {
 	{RACE_DROW, CLASS_BARD,         SPEC_ALL},
 	{RACE_DROW, CLASS_SHAMAN,       SPEC_ALL},
 	{RACE_DROW, CLASS_PSIONICIST,   SPEC_ALL},
+ 	{RACE_DROW, CLASS_MONK,         SPEC_ALL},
 	/* End Drow Elf Options */
 
 	/* Start Gnome Options */
