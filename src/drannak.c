@@ -2605,10 +2605,7 @@ void add_bloodlust(P_char ch, P_char victim)
     memset(&af, 0, sizeof(struct affected_type));
     af.type = TAG_BLOODLUST;
     af.modifier = 1;
-    if(GET_RACE(ch) == RACE_OGRE)
-      af.duration = 10;
-    else
-      af.duration = dur;
+    af.duration = dur;
     af.location = 0;
     af.flags = AFFTYPE_NODISPEL;
     affect_to_char(ch, &af);
@@ -2619,14 +2616,22 @@ void add_bloodlust(P_char ch, P_char victim)
     for(findaf = ch->affected; findaf; findaf = next_af)
     {
       next_af = findaf->next;
-      if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 20)
+      // Everyone gets 100% bloodlust
+      if((findaf && findaf->type == TAG_BLOODLUST) && findaf->modifier < 10)
+      {
+        findaf->modifier += 1;
+        findaf->duration = dur;
+      }
+      // Lvls 1-41 get 200% bloodlust
+      else if((findaf && findaf->type == TAG_BLOODLUST)
+        && findaf->modifier < 20 && GET_LEVEL(ch) < 42)
       {
         findaf->modifier += 1;
         findaf->duration = dur;
       }
       else if(findaf && findaf->type == TAG_BLOODLUST)
       {
-        findaf->modifier = 20;
+        findaf->modifier = (GET_LEVEL(ch)<42) ? 20 : 10;
         findaf->duration = dur;
       }
     }
