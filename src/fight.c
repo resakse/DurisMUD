@@ -6897,8 +6897,8 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 */
   // At 100 int : 5% crit, at 200 int : 25% crit
   int critroll = (GET_C_INT(ch) - 100)/5 + 5;
-  // Min crit % is 3%.
-  if( critroll < 3 ) critroll = 3;
+  // Min crit % is 8%.
+  if( critroll < 8 ) critroll = 8;
   if(critroll > number(1, 100)) 
     sic = -1;
   else if (diceroll < 96) //fumble
