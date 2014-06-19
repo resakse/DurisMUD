@@ -6262,8 +6262,8 @@ void do_who(P_char ch, char *argument, int cmd)
             "      Experience to next level = %d.\n",
             (new_exp_table[GET_LEVEL(tch) + 1] - GET_EXP(tch)));
     strcat(buf, buf3);
-    sprintf(buf3, 
-            "      Epic points = %ld.\n", tch->only.pc->epics );
+    sprintf(buf3, "      Epic points = %ld.   Epic skill points = %ld.\n",
+      tch->only.pc->epics, tch->only.pc->epic_skill_points );
     strcat(buf, buf3);
 
     sprintf(buf3,
