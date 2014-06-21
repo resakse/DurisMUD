@@ -8723,7 +8723,6 @@ void do_whirlwind(P_char ch, char *argument, int cmd)
   af.duration = 3 * PULSE_VIOLENCE;
   af.flags = AFFTYPE_SHORT;
   affect_to_char(ch, &af);
-  StartRegen(ch, EVENT_MOVE_REGEN);
 }
 
 void do_trip(P_char ch, char *argument, int cmd)

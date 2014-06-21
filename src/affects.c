@@ -1641,11 +1641,6 @@ char affect_total(P_char ch, int kill_ch)
 
   ch->specials.base_combat_round += ch->points.combat_pulse;
 
-  if (affected_by_spell(ch, SKILL_WHIRLWIND))
-  {
-    ch->specials.base_combat_round -= (ch->specials.base_combat_round >> 1);
-  }
-
   if (innate_two_daggers(ch))
     ch->specials.base_combat_round += (int) get_property("innate.dualDaggers.pulse", -3.0);
 

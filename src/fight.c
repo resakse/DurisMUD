@@ -9362,6 +9362,18 @@ void perform_violence(void)
     else
     {
       ch->specials.combat_tics = ch->specials.base_combat_round;
+      if (affected_by_spell(ch, SKILL_WHIRLWIND))
+      {
+        GET_VITALITY(ch) -=(int)(get_property("skill.whirlwind.movement.drain", 10));
+        if( GET_VITALITY(ch) > 0 )
+        {
+          ch->specials.combat_tics -= (ch->specials.combat_tics >> 1);
+        }
+        else
+        {
+          affect_from_char( ch, SKILL_WHIRLWIND );
+        }
+      }
     }
 
     if(IS_PC(ch) &&
