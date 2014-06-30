@@ -1573,13 +1573,13 @@ void create_spellbook_file(P_char ch)
 
 bool valid_conjure(P_char ch, P_char victim)
 {
-  if(!victim)
+  if( !victim || !ch )
     return FALSE;
 
-  if(!ch)
+  if( IS_PC(victim) || IS_MULTICLASS_NPC(victim) )
     return FALSE;
 
-  if(IS_PC(victim))
+  if( GET_LEVEL(victim) > GET_LEVEL(ch) )
     return FALSE;
 
   if(GET_VNUM(victim) != 400003)
