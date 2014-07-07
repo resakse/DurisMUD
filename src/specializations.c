@@ -78,7 +78,7 @@ struct allowed_race_spec_struct {
 	{RACE_ORC, CLASS_BERSERKER,     SPEC_ALL},
 	{RACE_ORC, CLASS_BARD,          SPEC_ALL},
 	{RACE_ORC, CLASS_SHAMAN,        SPEC_ALL},
-	{RACE_ORC, CLASS_PSIONICIST,    SPEC_ALL},
+	{RACE_ORC, CLASS_BLIGHTER,      SPEC_ALL},
 	/* End Orc Options */
 
 	/* Start Mountain Dwarf Options */
@@ -103,6 +103,7 @@ struct allowed_race_spec_struct {
 	{RACE_DUERGAR, CLASS_ROGUE,         SPEC_ASSASSIN},
 	{RACE_DUERGAR, CLASS_CLERIC,        SPEC_ALL},
 	{RACE_DUERGAR, CLASS_BERSERKER,     SPEC_ALL},
+	{RACE_DUERGAR, CLASS_BLIGHTER,      SPEC_ALL},
   /* End Duergar Dwarf Options */
 
 	/* Start Centaur Options */
@@ -121,6 +122,7 @@ struct allowed_race_spec_struct {
   {RACE_DRIDER, CLASS_SORCERER,       SPEC_ALL},
   {RACE_DRIDER, CLASS_REAVER,         SPEC_ALL},
   {RACE_DRIDER, CLASS_NECROMANCER,    SPEC_ALL},
+	{RACE_DRIDER, CLASS_BLIGHTER,       SPEC_ALL},
 	/* End Drider Options */
 
 	/* Start Barbarian Options */
@@ -185,6 +187,7 @@ struct allowed_race_spec_struct {
 	{RACE_DROW, CLASS_SHAMAN,       SPEC_ALL},
 	{RACE_DROW, CLASS_PSIONICIST,   SPEC_ALL},
  	{RACE_DROW, CLASS_MONK,         SPEC_ALL},
+	{RACE_DROW, CLASS_BLIGHTER,     SPEC_ALL},
 	/* End Drow Elf Options */
 
 	/* Start Gnome Options */
@@ -239,8 +242,8 @@ struct allowed_race_spec_struct {
 	/* End Halfling Options */
 
 	/* Start Goblin Options */
-	{RACE_GOBLIN, CLASS_WARRIOR,   SPEC_GUARDIAN},
-	{RACE_GOBLIN, CLASS_WARRIOR,   SPEC_SWORDSMAN},
+	{RACE_GOBLIN, CLASS_WARRIOR,       SPEC_GUARDIAN},
+	{RACE_GOBLIN, CLASS_WARRIOR,       SPEC_SWORDSMAN},
 	{RACE_GOBLIN, CLASS_MERCENARY,     SPEC_ALL},
 	{RACE_GOBLIN, CLASS_ANTIPALADIN,   SPEC_ALL},
 	{RACE_GOBLIN, CLASS_REAVER,        SPEC_ALL},
@@ -248,14 +251,15 @@ struct allowed_race_spec_struct {
 	{RACE_GOBLIN, CLASS_ROGUE,         SPEC_ASSASSIN},
 	{RACE_GOBLIN, CLASS_CLERIC,        SPEC_ALL},
   {RACE_GOBLIN, CLASS_SORCERER,      SPEC_ALL},
-	{RACE_GOBLIN, CLASS_CONJURER,    SPEC_AIR},
-	{RACE_GOBLIN, CLASS_CONJURER,    SPEC_WATER},
-	{RACE_GOBLIN, CLASS_CONJURER,    SPEC_EARTH},
+	{RACE_GOBLIN, CLASS_CONJURER,      SPEC_AIR},
+	{RACE_GOBLIN, CLASS_CONJURER,      SPEC_WATER},
+	{RACE_GOBLIN, CLASS_CONJURER,      SPEC_EARTH},
 	{RACE_GOBLIN, CLASS_ETHERMANCER,   SPEC_ALL},
 	{RACE_GOBLIN, CLASS_NECROMANCER,   SPEC_ALL},
   {RACE_GOBLIN, CLASS_ILLUSIONIST,   SPEC_ALL},
 	{RACE_GOBLIN, CLASS_BARD,          SPEC_ALL},
 	{RACE_GOBLIN, CLASS_SHAMAN,        SPEC_ALL},
+	{RACE_GOBLIN, CLASS_BLIGHTER,      SPEC_ALL},
 	/* End Goblin Options */
 
 	/* Start Githzerai Options */
@@ -295,6 +299,7 @@ struct allowed_race_spec_struct {
   {RACE_GITHYANKI, CLASS_ILLUSIONIST,   SPEC_ALL},
 	{RACE_GITHYANKI, CLASS_BARD,          SPEC_ALL},
 	{RACE_GITHYANKI, CLASS_PSIONICIST,    SPEC_ALL},
+	{RACE_GITHYANKI, CLASS_BLIGHTER,      SPEC_ALL},
   /* End Githyanki Options */
 
   /* Start Firbolg Options */
