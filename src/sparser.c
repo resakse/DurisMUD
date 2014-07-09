@@ -1400,8 +1400,8 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data,
             (GET_STAT(ch->specials.fighting) != STAT_DEAD) &&
             (ch->specials.fighting->in_room == ch->in_room))
         {
-          if( GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN)
-            || ( spl != SPELL_HEAL && spl != SPELL_FULL_HEAL ) )
+//          if( GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN)
+//            || ( spl != SPELL_HEAL && spl != SPELL_FULL_HEAL ) )
           {
             /* WARNING, MAKE INTO POINTER  */
             vict = ch->specials.fighting;

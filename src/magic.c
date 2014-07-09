@@ -6663,82 +6663,75 @@ void spell_full_heal(int level, P_char ch, char *arg, int type, P_char victim,
   /*if(GET_CLASS(victim, CLASS_ANTIPALADIN) && affected_by_spell(victim, SPELL_HELLFIRE) && (GET_RACEWAR(ch) == GET_RACEWAR(victim)))
   healpoints *= .3;*/
 
-
+  /* Removing holy destruction spells from holymen.
   if(GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN) && IS_PC(ch) && (ch != victim) && ((GET_RACEWAR(ch) != GET_RACEWAR(victim) && !IS_PC_PET(victim)) || (IS_NPC(victim) && !IS_PC_PET(victim))))
- {
+  {
     struct damage_messages messages = {
-    "&+cYou call upon the &+Cmight&+c of your &+Wgod &+cto &+rde&+Rst&+Wroy &+cthe &+rbody &+cof $N&+c, who stumbles from the &+Cimpact&+c!",
-    "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon your &+rbody&+c, causing massive &+Cdamage&+c!",
-    "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon &n$N&+c, causing massive &+Cdamage&+c!",
-    "&+cYou &+Cdestroy &+cwhat little there is left of &n$N's &+cbody, leaving only a pool of &+rblood &+cand &+ysinew&+c!",
-    "&+cThe &+Cpower &+cof &n$n's&+W god&+c is the last thing your &+rbody &+cfeels before &+Cexploding &+cinto chunky bits.",
-    "&+cThe &+Cpower &+cof &n$n's&+W god&+c destroys &n$N's &+rbody&+c which explodes, leaving only a pool of &+rblood &+cand &+ysinew&+c!", 0  };
+      "&+cYou call upon the &+Cmight&+c of your &+Wgod &+cto &+rde&+Rst&+Wroy &+cthe &+rbody &+cof $N&+c, who stumbles from the &+Cimpact&+c!",
+      "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon your &+rbody&+c, causing massive &+Cdamage&+c!",
+      "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon &n$N&+c, causing massive &+Cdamage&+c!",
+      "&+cYou &+Cdestroy &+cwhat little there is left of &n$N's &+cbody, leaving only a pool of &+rblood &+cand &+ysinew&+c!",
+      "&+cThe &+Cpower &+cof &n$n's&+W god&+c is the last thing your &+rbody &+cfeels before &+Cexploding &+cinto chunky bits.",
+      "&+cThe &+Cpower &+cof &n$n's&+W god&+c destroys &n$N's &+rbody&+c which explodes, leaving only a pool of &+rblood &+cand &+ysinew&+c!", 0  };
 
-  int dam = 10 * level + number(1, 25);
+    int dam = 10 * level + number(1, 25);
 
-  if(!NewSaves(victim, SAVING_SPELL, 0))
-    dam = (int) (dam * 2.0);
+    if(!NewSaves(victim, SAVING_SPELL, 0))
+      dam = (int) (dam * 2.0);
 
-  dam = (int) (dam * .75);
+    dam = (int) (dam * .75);
 
-  spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
-
- }
- else
- {
-     if(type == SPELL_TYPE_SPELL)
-  {
-    if( GET_CHAR_SKILL(ch, SKILL_ANATOMY) &&
-        ( (GET_CHAR_SKILL(ch, SKILL_ANATOMY) + 5) / 10 ) > number(0, 100) )
-    {
-      act("$n quickly diagnoses your wounds.", FALSE, ch, 0, victim, TO_VICT);
-      act("$n quickly diagnoses $N&n's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
-      act("You quickly diagnose $N&n's wounds and apply accurate healing.", FALSE,
-        ch, 0, victim, TO_CHAR);
-      healpoints += number(10, 2 * GET_CHAR_SKILL(ch, SKILL_ANATOMY));
-    }
-  }
-  
-  if( ch == victim )
-  {
-    act("&+WA torrent of divine energy flows into your body, and your wounds begin to heal!",
-      FALSE, ch, 0, victim, TO_CHAR);
+    spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
   }
   else
   {
-    act("&+WA torrent of divine energy flows into $N&+W's body, and $S wounds begin to heal!",
-      FALSE, ch, 0, victim, TO_CHAR);
+  */
+
+  if(type == SPELL_TYPE_SPELL)
+  {
+    if( GET_CHAR_SKILL(ch, SKILL_ANATOMY)
+      && ( (GET_CHAR_SKILL(ch, SKILL_ANATOMY) + 5) / 10 ) > number(0, 100) )
+    {
+      act("$n quickly diagnoses your wounds.", FALSE, ch, 0, victim, TO_VICT);
+      act("$n quickly diagnoses $N&n's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
+      act("You quickly diagnose $N&n's wounds and apply accurate healing.", FALSE, ch, 0, victim, TO_CHAR);
+      healpoints += number(10, 2 * GET_CHAR_SKILL(ch, SKILL_ANATOMY));
+    }
   }
 
-  act("A torrent of divine energy flows from $n &ninto your body, and your wounds begin to heal!",
-    FALSE, ch, 0, victim, TO_VICT);
-  act("&+WA torrent of divine energy flows from $n &+Winto $N&+W's body, and $S wounds begin to heal!",
-    FALSE, ch, 0, victim, TO_NOTVICT);
+  if( ch == victim )
+  {
+    act("&+WA torrent of divine energy flows into your body, and your wounds begin to heal!", FALSE, ch, 0, victim, TO_CHAR);
+  }
+  else
+  {
+    act("&+WA torrent of divine energy flows into $N&+W's body, and $S wounds begin to heal!", FALSE, ch, 0, victim, TO_CHAR);
+  }
+
+  act("A torrent of divine energy flows from $n &ninto your body, and your wounds begin to heal!", FALSE, ch, 0, victim, TO_VICT);
+  act("&+WA torrent of divine energy flows from $n &+Winto $N&+W's body, and $S wounds begin to heal!", FALSE, ch, 0, victim, TO_NOTVICT);
 
   spell_cure_blind(level, ch, NULL, SPELL_TYPE_SPELL, victim, obj);
   grapple_heal(victim);
   heal(victim, ch, healpoints, GET_MAX_HIT(victim) - number(1, 4));
-  update_pos(victim);  }
+  update_pos(victim);
 }
 
 void spell_heal(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int num_dice = 1, healpoints;
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
     return;
   }
-  
+
   if(ch->in_room != victim->in_room)
   {
     act("You cannot find $N!", FALSE, ch, 0, victim, TO_CHAR);
     return;
   }
-  
+
   if(GET_SPEC(ch, CLASS_CLERIC, SPEC_HEALER))
   {
     if(level >= 33)
@@ -6770,42 +6763,44 @@ void spell_heal(int level, P_char ch, char *arg, int type, P_char victim, P_obj 
     if(level >= 41)
       num_dice += 1;
   }
-  
+
   healpoints = 100 + dice(num_dice, 5);
 
  /* if(GET_CLASS(victim, CLASS_ANTIPALADIN) && affected_by_spell(victim, SPELL_HELLFIRE) && (GET_RACEWAR(ch) == GET_RACEWAR(victim)))
   healpoints *= .3;*/
 
+  /* Removing holy destruction spells from holymen.
   if(GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN) && IS_PC(ch) && ((GET_RACEWAR(ch) != GET_RACEWAR(victim) && !IS_PC_PET(victim)) || (IS_NPC(victim) && !IS_PC_PET(victim))))
- {
+  {
     struct damage_messages messages = {
-    "&+cYou call upon the &+Cmight&+c of your &+Wgod &+cto &+rde&+Rst&+Wroy &+cthe &+rbody &+cof $N&+c, who stumbles from the &+Cimpact&+c!",
-    "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon your &+rbody&+c, causing &+Wsignificant &+Cdamage&+c!",
-    "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon &n$N&+c, causing &+Wsignificant &+Cdamage&+c!",
-    "&+cYou &+Cdestroy &+cwhat little there is left of &n$N's &+cbody, leaving only a pool of &+rblood &+cand &+ysinew&+c!",
-    "&+cThe &+Cpower &+cof &n$n's&+W god&+c is the last thing your &+rbody &+cfeels before &+Cexploding &+cinto chunky bits.",
-    "&+cThe &+Cpower &+cof &n$n's&+W god&+c destroys &n$N's &+rbody&+c which explodes, leaving only a pool of &+rblood &+cand &+ysinew&+c!", 0  };
+      "&+cYou call upon the &+Cmight&+c of your &+Wgod &+cto &+rde&+Rst&+Wroy &+cthe &+rbody &+cof $N&+c, who stumbles from the &+Cimpact&+c!",
+      "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon your &+rbody&+c, causing &+Wsignificant &+Cdamage&+c!",
+      "&+cThe &+Cmight&+c of &n$n's&+W god &+cis thrust upon &n$N&+c, causing &+Wsignificant &+Cdamage&+c!",
+      "&+cYou &+Cdestroy &+cwhat little there is left of &n$N's &+cbody, leaving only a pool of &+rblood &+cand &+ysinew&+c!",
+      "&+cThe &+Cpower &+cof &n$n's&+W god&+c is the last thing your &+rbody &+cfeels before &+Cexploding &+cinto chunky bits.",
+      "&+cThe &+Cpower &+cof &n$n's&+W god&+c destroys &n$N's &+rbody&+c which explodes, leaving only a pool of &+rblood &+cand &+ysinew&+c!", 0  };
 
-  int dam = 5 * level + number(1, 25);
+    int dam = 5 * level + number(1, 25);
 
-  if(!NewSaves(victim, SAVING_SPELL, 0))
-    dam = (int) (dam * 2);
+    if(!NewSaves(victim, SAVING_SPELL, 0))
+      dam = (int) (dam * 2);
 
-  dam = (int) (dam * .75);
+    dam = (int) (dam * .75);
 
-  spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
- }
-else
- {
+    spell_damage(ch, victim, dam, SPLDAM_GENERIC, 0, &messages);
+  }
+  else
+  {
+  */
+
   if(type == SPELL_TYPE_SPELL)
   {
-    if(GET_CHAR_SKILL(ch, SKILL_ANATOMY) &&
-        ((GET_CHAR_SKILL(ch, SKILL_ANATOMY) + 5) / 10 ) > number(0, 100) )
+    if( GET_CHAR_SKILL(ch, SKILL_ANATOMY)
+      && ((GET_CHAR_SKILL(ch, SKILL_ANATOMY) + 5) / 10 ) > number(0, 100) )
     {
       act("$n quickly diagnoses your wounds.", FALSE, ch, 0, victim, TO_VICT);
       act("$n quickly diagnoses $N&n's wounds.", FALSE, ch, 0, victim, TO_NOTVICT);
-      act("You quickly diagnose $N&n's wounds and apply accurate healing.", FALSE,
-        ch, 0, victim, TO_CHAR);
+      act("You quickly diagnose $N&n's wounds and apply accurate healing.", FALSE, ch, 0, victim, TO_CHAR);
       healpoints += number(1, (GET_CHAR_SKILL(ch, SKILL_ANATOMY) / 2));
     }
   }
@@ -6826,13 +6821,10 @@ else
   {
     spell_cure_blind(level, ch, NULL, SPELL_TYPE_SPELL, victim, obj);
   }
-  
+
   grapple_heal(victim);
-  heal(victim, ch, healpoints , GET_MAX_HIT(victim) - number(1, 4));
+  heal(victim, ch, healpoints, GET_MAX_HIT(victim) - number(1, 4));
   update_pos(victim);
- }
-  
-  return;
 }
 /* OLD HEAL - 21 Sep 08 -Lucrot
 {
