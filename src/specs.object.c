@@ -8713,6 +8713,7 @@ int blighter_pond(P_obj obj, P_char ch, int cmd, char *arg)
     {
       if( obj->value[0] < 31 )
       {
+        CharWait( ch, WAIT_SEC );
         return FALSE;
       }
 
