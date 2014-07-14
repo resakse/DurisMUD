@@ -300,7 +300,7 @@ int get_numb_free_hands(P_char);
 bool put(P_char, P_obj, P_obj, int);
 int wear(P_char, P_obj, int, int);
 int remove_item(P_char, P_obj, int);
-int remove_and_wear(P_char, P_obj, int, int, int);
+int remove_and_wear(P_char, P_obj, int, int, int, int);
 bool find_chance(P_char);
 bool is_salvageable(P_obj);
 void do_drink(P_char, char *, int);

@@ -3584,7 +3584,7 @@ int stop_or_wear(const char denied[], P_char ch, P_obj obj_object, int position,
  * Helper function which wraps about Execute_Wear() and allows for the remove
  * and replace behavior used on single location items (ie. head, arms, body, etc). -Sniktiorg (Dec.1.12)
  */
-int remove_and_wear(P_char ch, P_obj obj_object, int position, int keyword, int comnd)
+int remove_and_wear(P_char ch, P_obj obj_object, int position, int keyword, int comnd, int showit)
 {
   // Remove Item Already in Place
    //send_to_char(sprintf("%1", ch->equipment[position]), ch);
@@ -3596,7 +3596,7 @@ int remove_and_wear(P_char ch, P_obj obj_object, int position, int keyword, int 
     return false;
   } else {
   // Wear Item
-    execute_wear(ch, obj_object, position, keyword, true);
+    execute_wear(ch, obj_object, position, keyword, showit);
     return true;
   }
 }
@@ -3828,7 +3828,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         }
       }
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_BODY, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_BODY, keyword, comnd, showit);
     }
     else
     {
@@ -3863,7 +3863,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         }
       }
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_HEAD, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_HEAD, keyword, comnd, showit);
     }
     else
     {
@@ -3893,7 +3893,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         break;
       }
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_LEGS, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_LEGS, keyword, comnd, showit);
     }
     else
     {
@@ -3917,7 +3917,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         || (IS_CENTAUR(ch) && !strcmp(obj_object->name, "horseshoe")))) 
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_FEET, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_FEET, keyword, comnd, showit);
     }
     else
     {
@@ -4004,7 +4004,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_WEAR_ABOUT))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_ABOUT, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_ABOUT, keyword, comnd, showit);
     }
     else
     {
@@ -4017,7 +4017,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if ((CAN_WEAR(obj_object, ITEM_WEAR_WAIST)))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_WAIST, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_WAIST, keyword, comnd, showit);
     }
     else
     {
@@ -4294,7 +4294,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         break;
       }
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_EYES, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_EYES, keyword, comnd, showit);
     }
     else
     {
@@ -4316,7 +4316,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         break;
       }
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_FACE, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_FACE, keyword, comnd, showit);
     }
     else
     {
@@ -4349,7 +4349,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_WEAR_QUIVER))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_QUIVER, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_QUIVER, keyword, comnd, showit);
     }
     else
     {
@@ -4362,7 +4362,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_GUILD_INSIGNIA))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, GUILD_INSIGNIA, keyword, comnd);
+      return remove_and_wear(ch, obj_object, GUILD_INSIGNIA, keyword, comnd, showit);
     }
     else
     {
@@ -4375,7 +4375,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_WEAR_BACK))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_BACK, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_BACK, keyword, comnd, showit);
     }
     else
     {
@@ -4427,7 +4427,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_HORSE_BODY) && (IS_CENTAUR(ch)))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_HORSE_BODY, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_HORSE_BODY, keyword, comnd, showit);
     }
     else
     {
@@ -4442,7 +4442,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
       if (CAN_WEAR(obj_object, ITEM_WEAR_TAIL))
       {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_TAIL, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_TAIL, keyword, comnd, showit);
       }
       else
       {
@@ -4460,7 +4460,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_WEAR_NOSE) && IS_MINOTAUR(ch))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_NOSE, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_NOSE, keyword, comnd, showit);
     }
     else
     {
@@ -4474,7 +4474,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         (IS_MINOTAUR(ch) || IS_HARPY(ch) || IS_PSBEAST(ch)))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_HORN, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_HORN, keyword, comnd, showit);
     }
     else
     {
@@ -4487,7 +4487,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     if (CAN_WEAR(obj_object, ITEM_WEAR_IOUN))
     {
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_IOUN, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_IOUN, keyword, comnd, showit);
     }
     break;
 
@@ -4501,7 +4501,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         break;
       }
       // Replace if Wearing Something or Wear New Item
-      return remove_and_wear(ch, obj_object, WEAR_SPIDER_BODY, keyword, comnd);
+      return remove_and_wear(ch, obj_object, WEAR_SPIDER_BODY, keyword, comnd, showit);
     }
     else
       if (showit)

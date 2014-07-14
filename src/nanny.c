@@ -3104,10 +3104,10 @@ void enter_game(P_desc d)
     ch->specials.affected_by5 = 0;
 
     if(affected_by_spell(ch, AIP_YOUSTRAHDME))
-    affect_from_char(ch, AIP_YOUSTRAHDME);
+      affect_from_char(ch, AIP_YOUSTRAHDME);
 
     if(affected_by_spell(ch, AIP_YOUSTRAHDME2))
-    affect_from_char(ch, AIP_YOUSTRAHDME2);
+      affect_from_char(ch, AIP_YOUSTRAHDME2);
 
     ch->specials.z_cord = 0;    /* prevent swim crash bug */
 
@@ -3119,7 +3119,7 @@ void enter_game(P_desc d)
     //    clear_sacks(ch);
 
     /* this may fix the disguise not showing on who bug */
-    if (PLR_FLAGGED(ch, PLR_NOWHO))
+    if( PLR_FLAGGED(ch, PLR_NOWHO) )
       PLR_TOG_CHK(ch, PLR_NOWHO);
 
     /* check mail
@@ -3298,7 +3298,6 @@ void enter_game(P_desc d)
     ch->only.pc->wiz_invis = 56;
     do_vis(ch, 0, -4);          /* remind them of vis level */
   }
-
   if (d->rtype == RENT_DEATH)
   {
     act("$n has returned from the dead.", TRUE, ch, 0, 0, TO_ROOM);

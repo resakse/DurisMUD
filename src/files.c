@@ -4047,7 +4047,6 @@ int restoreItemsOnly(P_char ch, int flatrate)
 #endif
     return -2;
   }
-
   for (tmp = 0; tmp < MAX_WEAR; tmp++)
     if (save_equip[tmp] != NULL)
     {
