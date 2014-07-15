@@ -353,9 +353,9 @@ void spell_blight(int level, P_char ch, char *arg, int type, P_char victim, P_ob
     dam = (dam * 112) / 100;
   }
 
-  if(NewSaves(victim, SAVING_SPELL, 0))
+  if( !NewSaves(victim, SAVING_SPELL, 0) )
   {
-    dam /= 2;
+    dam *= 2;
   }
 
   spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_GLOBE | SPLDAM_GRSPIRIT, &messages);
