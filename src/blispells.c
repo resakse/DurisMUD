@@ -1008,7 +1008,8 @@ void spell_sap_nature(int level, P_char ch, char *arg, int type, P_char victim, 
     return;
   }
 
-  if( affected_by_spell(ch, SPELL_FALUZURES_VITALITY) )
+  if( affected_by_spell(ch, SPELL_FALUZURES_VITALITY)
+    && !GET_CLASS(victim, CLASS_BLIGHTER) )
   {
     send_to_char( "&+yFa&+Lluz&+yure refuses to help you further.&n\r\n", ch);
     return;
