@@ -2069,7 +2069,11 @@ void enhance(P_char ch, P_obj source, P_obj material)
       validobj = 0;
       extract_obj(robj, FALSE);
     }
-    else if(itemvalue(ch, robj) != mod)
+    else if( itemvalue(ch, robj) != mod
+      || (robj->type == ITEM_STAFF && robj->value[3] > 0)
+      || robj->type == ITEM_TREASURE || robj->type == ITEM_POTION
+      || robj->type == ITEM_MONEY || robj->type == ITEM_KEY
+      || robj->type == ITEM_WAND )
     {
       validobj = 0;
       extract_obj(robj, FALSE);
