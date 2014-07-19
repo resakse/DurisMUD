@@ -151,40 +151,65 @@ P_char pick_target(P_char ch, unsigned int flags)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if(!is_aggr_to(ch, tch) && tch->specials.fighting != ch &&
-        ch->specials.fighting != tch)
+    if(!is_aggr_to(ch, tch) && tch->specials.fighting != ch
+      && ch->specials.fighting != tch)
+    {
       continue;
+    }
+    if( !CAN_SEE_Z_CORD( ch, tch ) )
+    {
+      continue;
+    }
     if(flags & PT_SIZE_TOLERANT)
+    {
       if(!any || !number(0, 3))
+      {
         any = tch;
-    if((flags & PT_SMALLER) &&
-        get_takedown_size(ch) <= get_takedown_size(tch))
+      }
+    }
+    if((flags & PT_SMALLER) && get_takedown_size(ch) <= get_takedown_size(tch))
+    {
       continue;
-    if((flags & PT_BASH_SIZE) &&
-        (get_takedown_size(ch) > get_takedown_size(tch) + 1 ||
-        (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    }
+    if((flags & PT_BASH_SIZE)
+      && (get_takedown_size(ch) > get_takedown_size(tch) + 1
+      || (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    {
       continue;
-    if((flags & PT_TRIP_SIZE) &&
-        (get_takedown_size(ch) > get_takedown_size(tch) ||
-        (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    }
+    if((flags & PT_TRIP_SIZE)
+      && (get_takedown_size(ch) > get_takedown_size(tch)
+      || (get_takedown_size(ch) < get_takedown_size(tch) - 1)))
+    {
       continue;
+    }
     if(flags & PT_TOLERANT)
+    {
       if(!any || !number(0, 3))
+      {
         any = tch;
+      }
+    }
     if(IS_PC_PET(tch) && (flags & PT_WEAKEST))
+    {
       continue;
-    if((flags & PT_NUKETARGET) &&
-        (IS_AFFECTED4(tch, AFF4_DEFLECT) ||
-         IS_AFFECTED4(tch, AFF4_STORNOGS_SPHERES) ||
-         (has_innate(tch, INNATE_MAGIC_RESISTANCE) &&
-          get_innate_resistance(tch) > number(0,100))))
+    }
+    if((flags & PT_NUKETARGET)
+      && (IS_AFFECTED4(tch, AFF4_DEFLECT)
+      || IS_AFFECTED4(tch, AFF4_STORNOGS_SPHERES)
+      || (has_innate(tch, INNATE_MAGIC_RESISTANCE)
+      && get_innate_resistance(tch) > number(0,100))))
+    {
       continue;
-    good = tch;
+    }
     if((flags & PT_STANDING) && GET_POS(tch) < POS_STANDING)
+    {
       continue;
-    good = tch;
+    }
     if((flags & PT_FRONT) && IS_BACKRANKED(tch))
+    {
       continue;
+    }
     good = tch;
     if((flags & PT_CASTER) && IS_CASTER(tch))
     {
@@ -9405,7 +9430,7 @@ bool InitNewMobHunt(P_char ch)
     if(!SanityCheck(tmpch, "InitNewMobHunt"))
       continue;
 
-    if(GET_STAT(tmpch) == STAT_DEAD)
+    if( GET_STAT(tmpch) == STAT_DEAD || !CAN_SEE(ch, tmpch) )
       continue;
 
     if(CheckFor_remember(ch, tmpch) &&
