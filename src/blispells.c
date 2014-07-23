@@ -881,7 +881,7 @@ void spell_create_pond(int level, P_char ch, char *arg, int type, P_char victim,
   }
 
   pond->value[0] = GET_LEVEL(ch);
-  send_to_room("&+bA pool grows out of nowhere!\n", ch->in_room);
+  send_to_room("&+bA pond grows out of nowhere!\n", ch->in_room);
   set_obj_affected(pond, 60 * 10, TAG_OBJ_DECAY, 0);
   obj_to_room(pond, ch->in_room);
 }
