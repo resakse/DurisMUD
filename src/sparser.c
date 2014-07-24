@@ -1032,31 +1032,42 @@ int find_save(P_char ch, int save_type)
 
 bool NewSaves(P_char ch, int save_type, int mod)
 {
-  int      save, i;
+  int  save;
+  bool i;
 
-  if (IS_TRUSTED(ch))
-    return TRUE;
-
-  if (!ch || (save_type < SAVING_PARA) || (save_type > SAVING_SPELL))
+  if( !ch || (save_type < SAVING_PARA) || (save_type > SAVING_SPELL) )
   {
     logit(LOG_DEBUG, "Invalid arguments to NewSaves");
+    debug( "NewSaves: %s has invalid argument: %d.", ch ? J_NAME(ch) : "Nobody", save_type );
     return FALSE;
   }
 
+  if( IS_TRUSTED(ch) )
+  {
+    return TRUE;
+  }
+
+  // Calculate the base save amount with class/race mods.
+  save = find_save(ch, save_type);
+/* find_save does not return an error ever. - Lohrr
+  // error in find_save
   if ((save = find_save(ch, save_type)) == -1)
-    return FALSE;               /* error in find_save  */
+  {
+    return FALSE;
+  }
+*/
 
    /*
      save file scale has changed, so need to change meaning of the mods to it.
      For now, we just multiply the mod by 5.
    */
-  
   save += (ch->specials.apply_saving_throw[save_type] + mod) * 5;
 
   /* always 1% chance to fail/save regardless of saving throw  */
   i = (BOUNDED(1, save, 99) < number(1, 100));
 
-  if (has_innate(ch, INNATE_QUICK_THINKING) && (i == 0))
+  // Quick thinking gives you a second chance to save.
+  if( has_innate(ch, INNATE_QUICK_THINKING) && (i == FALSE) )
   {
     return (BOUNDED(1, save, 99) < number(1, 100));
   }

@@ -634,7 +634,8 @@ void spell_shambler(int level, P_char ch, char *arg, int type, P_char victim, P_
 // Target Damage.
 void spell_implosion(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
-  int dam = dice(level * 3, 10);
+  // Slight decrease in damage and decent cecrease in damage variance.
+  int dam = 5*level + dice(level * 2, 10);
 
   struct damage_messages messages = {
     "Your &+We&+wy&+We&+ws&n roll back into your head as you cause $N's &+Gcells&n to &+rimplode&n!",
@@ -651,7 +652,7 @@ void spell_implosion(int level, P_char ch, char *arg, int type, P_char victim, P
     return;
   }
 
-  if(!NewSaves(victim, SAVING_SPELL, 0))
+  if(NewSaves(victim, SAVING_SPELL, level/17))
   {
     dam /= 1.8;
   }
