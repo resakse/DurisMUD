@@ -2656,11 +2656,19 @@ void check_room_links(P_char ch, int old_room, int new_room)
 void clear_all_links(P_char ch)
 {
   struct char_link_data *cld;
+  P_char rider;
 
-  while (cld = ch->linking)
+  // If there's someone riding ch, they fall off/down.
+  if( (rider = GET_RIDER(ch)) != NULL )
+  {
+    send_to_char( "You fall on your ass!\n\r", rider );
+    SET_POS(rider, POS_SITTING + GET_STAT(rider));
+  }
+
+  while( cld = ch->linking )
     unlink_char(ch, cld->linked, cld->type);
 
-  while (cld = ch->linked)
+  while( cld = ch->linked )
     unlink_char(cld->linking, ch, cld->type);
 }
 
