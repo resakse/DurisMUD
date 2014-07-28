@@ -2283,29 +2283,28 @@ void cast_ardgral(int level, P_char ch, char *arg, int type, P_char tar_ch,
     /*bad  */ 0
   };
 
-  int      to_room;
+  int to_room;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
+  if( !IS_ALIVE(ch) )
   {
     return;
   }
 
   to_room = real_room0(number(30401, 30464));
 
-  if (IS_SET(world[ch->in_room].room_flags, NO_GATE))
+  if( IS_SET(world[ch->in_room].room_flags, NO_GATE)
+    || IS_HOMETOWN(ch->in_room) )
   {
     send_to_char(msg.fail_to_caster, ch);
     return;
   }
 
-  if(ch &&
-     !is_Raidable(ch, 0, 0))
+  if(ch && !is_Raidable(ch, 0, 0))
   {
     send_to_char("&+WYou are not raidable. The spell fails!\r\n", ch);
     return;
   }
-  
+
   set.to_room = to_room;
   set.throughput         = get_property("portals.gate.maxToPass", -1);
   set.init_timeout       = get_property("portals.gate.initTimeout", 0);
