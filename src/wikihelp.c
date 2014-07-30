@@ -70,11 +70,11 @@ string wiki_help(string str)
 string wiki_help(string str)
 {
   string return_str;
-  
+
   // send the default help message
   if( str.length() < 1 )
   {
-    return wiki_help_single(string("help"));    
+    return wiki_help_single(string("help"));
   }
 
   // first, find the list of help topics that match the search string
@@ -89,18 +89,18 @@ string wiki_help(string str)
   if( mysql_num_rows(res) < 1 )
   {
     mysql_free_result(res);
-    return string("&+GSorry, but there are no help topics that match your search.");    
+    return string("&+GSorry, but there are no help topics that match your search.");
   }
 
   // if there is only one that matches, go ahead and display it
   if( mysql_num_rows(res) == 1 )
   {
-    row = mysql_fetch_row(res); 
+    row = mysql_fetch_row(res);
     return_str = row[0];
     mysql_free_result(res);
-    return wiki_help_single(return_str);    
-  }  
-  
+    return wiki_help_single(return_str);
+  }
+
   // scan through the results to see if the search string matches one exactly.
   // if so, display that one first and then the rest as "see also" links
   vector<string> matching_topics;
@@ -118,19 +118,19 @@ string wiki_help(string str)
       matching_topics.push_back(match);
     }
   }
-  
+
   mysql_free_result(res);
 
   if( exact_match )
   {
-    return_str += wiki_help_single(str);    
+    return_str += wiki_help_single(str);
     return_str += "\n\n&+GThe following help topics also matched your search:\n";
   }
   else
   {
     return_str += "&+GThe following help topics matched your search:\n";
   }
-  
+
   // list the topics
   for( int i = 0; i < matching_topics.size(); i++ )
   {
@@ -335,7 +335,7 @@ string wiki_innates(string title)
   for (i = 0; i <= RACE_PLAYER_MAX; i++)
   {
     if (!strcmp(tolower(race_names_table[i].normal).c_str(), tolower(title).c_str()))
-    { 
+    {
       found = 1;
       break;
     }
@@ -347,8 +347,8 @@ string wiki_innates(string title)
     {
       if (!strcmp(tolower(class_names_table[i].normal).c_str(), tolower(title).c_str()))
       {
-	found = 2;
-	break;
+	      found = 2;
+      	break;
       }
     }
   }
@@ -362,27 +362,28 @@ string wiki_innates(string title)
       for (j = 0; j < MAX_SPEC; j++)
       {
         if (!strcmp(tolower(strip_ansi(specdata[i][j])).c_str(), tolower(title).c_str()))
-	{
-	  found = 2;
-	  break;
-	}
+        {
+          found = 2;
+          break;
+        }
       }
-      if (found == 2)
+      if( found == 2 )
       {
-	j++;
-	break;
+        // Specs range from 1-4 not 0-3.
+        j++;
+        break;
       }
     }
   }
-  
+
   return_str += "==Innate abilities==\n";
-  
-  if (!found)
+
+  if( !found )
   {
     return_str += "No entries found.\n";
     return return_str;
   }
-  
+
   return_str += list_innates(((found == 1) ? i : 0), ((found == 2) ? i : 0), j);
 
   return return_str;
@@ -442,25 +443,25 @@ string wiki_help_single(string str)
   }
 
   MYSQL_RES *res = mysql_store_result(DB);
-  
+
   if( mysql_num_rows(res) < 1 )
   {
     mysql_free_result(res);
     return string("&+GHelp topic not found.");
   }
-  
+
   MYSQL_ROW row = mysql_fetch_row(res);
-  
+
   return_str += "&+c";
   return_str += row[0];
   return_str += "\n";
-  
+
   return_str += "&+L=========================================\n";
-  
+
   return_str += dewikify(trim(string(row[1]), " \t\n"));
-  
+
   // Race type help files
-  if (atoi(row[2]) == 25)
+  if( atoi(row[2]) == 25 )
   {
     title += row[0];
     return_str += wiki_classes(title);
@@ -470,7 +471,7 @@ string wiki_help_single(string str)
     return_str += wiki_innates(title);
   }
   // Class type help files
-  else if (atoi(row[2]) == 9)
+  else if( atoi(row[2]) == 9 )
   {
     title += row[0];
     return_str += wiki_races(title);
@@ -480,13 +481,27 @@ string wiki_help_single(string str)
     return_str += wiki_specs(title);
   }
   // Spec type help files
-  // Going to leave spec help files alone.
-  else if (atoi(row[2]) == 16)
+  else if( atoi(row[2]) == 16 )
   {
+    title += row[0];
+    return_str += "\n";
+    return_str += wiki_innates(title);
+    return_str += "\n";
+    return_str += wiki_spells(title);
+  }
+  // Class skillsets type help files
+  else if( atoi(row[2]) == 10 )
+  {
+    // Need to pull " Skills" off the title.
+    char buf[MAX_INPUT_LENGTH];
+    one_argument( row[0], buf );
+    title += buf;
+    return_str += "\n";
+    return_str += wiki_spells(title);
   }
 
   mysql_free_result(res);
-  
+
   return return_str;
 }
 
@@ -671,4 +686,55 @@ logit( LOG_DEBUG, "The search string is '%s'.", arg );
   }
 
   return NULL;
+}
+
+string wiki_spells(string title)
+{
+  string return_str;
+  int i, j, innate;
+  bool found = FALSE;
+
+  for (i = 0; i <= CLASS_COUNT; i++)
+  {
+    if (!strcmp(tolower(class_names_table[i].normal).c_str(), tolower(title).c_str()))
+    {
+	    found = TRUE;
+      j = 0;
+    	break;
+    }
+  }
+
+  if (!found)
+  {
+    for (i = 0; i <= CLASS_COUNT; i++)
+    {
+      for (j = 0; j < MAX_SPEC; j++)
+      {
+        if (!strcmp(tolower(strip_ansi(specdata[i][j])).c_str(), tolower(title).c_str()))
+        {
+          found = TRUE;
+          break;
+        }
+      }
+      if( found == TRUE )
+      {
+        // Specs range from 1-4 not 0-3.
+        j++;
+        break;
+      }
+    }
+  }
+
+  return_str += "==Spells==\n";
+
+  if( !found )
+  {
+    return_str += "No entries found.\n";
+    return return_str;
+  }
+
+  // List spells( class, spec )
+  return_str += list_spells( i, j );
+
+  return return_str;
 }

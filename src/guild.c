@@ -1558,3 +1558,60 @@ void demote_skillpoints( P_char ch )
   send_to_char( "Skill points not implemented yet.\n", ch );
   return;
 }
+
+string list_spells( int cls, int spec )
+{
+  int      spl, circle, i, oldcircle;
+  char     buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH],
+    buf2[MAX_STRING_LENGTH];
+  struct spl_list spell_list[LAST_SPELL+1];
+
+  *buf = '\0';
+  *buf1 = '\0';
+  *buf2 = '\0';
+  memset( spell_list, 0, sizeof(spl_list) * (LAST_SPELL+1) );
+
+  // first, build a list of all the spells for this class/spec.
+  i = 0;
+  for( spl = FIRST_SPELL; spl <= LAST_SPELL; spl++ )
+  {
+    circle = get_spell_circle(cls, spec, spl);
+
+    if (circle < MAX_CIRCLE + 1)
+    {
+      spell_list[i].circle = circle;
+      spell_list[i++].spell = spl;
+    }
+  }
+  /* then sort the list... */
+  qsort(spell_list, i, sizeof(struct spl_list), spell_cmp);
+
+  oldcircle = 0;
+  /* finally, show it */
+  for( spl = 0; spl < i; spl++ )
+  {
+    int      spell = spell_list[spl].spell;
+    circle = spell_list[spl].circle;
+
+    // If they don't have the spell..
+    if( !(skills[spell_list[spl].spell].m_class[cls-1]).maxlearn[spec] )
+    {
+      continue;
+    }
+    if( !spl || circle != oldcircle )
+    {
+      sprintf( buf, "\n&+B%d%s CIRCLE:&N\n", circle,
+        circle == 1 ? "st" : circle == 2 ? "nd" : circle == 3 ? "rd" : "th" );
+      strcat( buf1, buf );
+      oldcircle = circle;
+    }
+    strcpy(buf2, " ");
+
+    sprintf(buf, "%s", skills[spell].name);
+    strcat(buf, "\n");
+    strcat(buf1, buf);
+  }
+  strcat(buf1, "\n");
+  return string(buf1);
+}
+

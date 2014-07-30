@@ -10,6 +10,7 @@ string wiki_specs(string str);
 string wiki_innates(string str);
 string wiki_races(string str);
 string wiki_help_single(string str);
+string wiki_spells(string title);
 
 struct cmd_attrib_data {
   char *name;

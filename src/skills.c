@@ -41,8 +41,8 @@ extern int SortedSkills[];
 #include "blispells.h"
 #include "necromancy.h"
 
-Skill    skills[MAX_AFFECT_TYPES+1];
-void initialize_skills_new();
+Skill skills[MAX_AFFECT_TYPES+1];
+//void initialize_skills_new();
 
 #if defined(_DE_) || defined(_PFILE_)
 #   define SPELL_CREATE_MSG(Name, Index, Beats, Targets, Spell_pointer, Wear_off) \
@@ -203,22 +203,17 @@ void create_tags();
 
 void initialize_skills()
 {
-  int      i;
+  int i;
 
   memset(skills, 0, sizeof(Skill) * (MAX_AFFECT_TYPES+1));
 
-  for (i = 0; i < MAX_AFFECT_TYPES; i++)
+  for( i = 0; i < MAX_AFFECT_TYPES; i++ )
   {
     skills[i].name = "Undefined";
   }
 
   //needed by setbit
   skills[MAX_AFFECT_TYPES].name = "\n";
- 
-//#ifdef SKILLPOINTS
-//  initialize_skills_new();
-//  return;
-//#endif
 
   SKILL_CREATE("establish camp", SKILL_CAMP, 0);
 

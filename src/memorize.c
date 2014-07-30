@@ -2487,3 +2487,36 @@ void spell_mordenkainens_lucubration(int level, P_char ch, char *arg, int type, 
     
   }
 }
+
+// Returns the circle of the spell
+// If spec is 0, returns circle for base class.
+// If spec > 0 returns circle for spec spell or MAX_CIRCLE+1 if not specifically a spec spell.
+int get_spell_circle( int cls, int spec, int spl )
+{
+  // If we're not looking at a spec..
+  if( spec == 0 )
+  {
+    // Just check the base for a rlevel.
+    if( skills[spl].m_class[cls-1].rlevel[0] )
+    {
+      return skills[spl].m_class[cls-1].rlevel[0];
+    }
+    else
+    {
+      return MAX_CIRCLE+1;
+    }
+  }
+  else
+  {
+    // If it's a pure spec spell..
+    if( !skills[spl].m_class[cls-1].rlevel[0]
+      && skills[spl].m_class[cls-1].rlevel[spec] )
+    {
+      return skills[spl].m_class[cls-1].rlevel[spec];
+    }
+    else
+    {
+      return MAX_CIRCLE+1;
+    }
+  }
+}
