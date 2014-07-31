@@ -497,11 +497,13 @@ void bard_drifting(int l, P_char ch, P_char victim, int song)
 {
   int skill = GET_CHAR_SKILL(ch, SONG_DRIFTING);
 
-  if(!(ch) || !IS_ALIVE(ch))
+  if( !IS_ALIVE(ch) )
     return;
 
   if(skill > number(1, 300) || IS_TRUSTED(ch) )
+  {
     spell_group_teleport(l, ch, 0, 0, victim, 0);
+  }
 }
 
 /*

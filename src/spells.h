@@ -880,7 +880,7 @@
 #define SKILL_SHADOW_MOVEMENT        1183
 #define SKILL_SHRIEK		             1184
 #define SKILL_LEGEND_LORE            1185
-#define SONG_DRIFTING                1186
+//#define SONG_DRIFTING                1186
 #define SKILL_DISPERSE_FLAMES        1187
 #define SKILL_FLAME_MASTERY          1188
 #define SKILL_SOUL_TRAP              1189
@@ -1049,7 +1049,8 @@
 #define SONG_HARMONY                 (FIRST_SONG+17)
 #define SONG_SNATCHING		           (FIRST_SONG+18)
 #define SONG_DISSONANCE              (FIRST_SONG+19)
-#define LAST_SONG                    (SONG_DISSONANCE)
+#define SONG_DRIFTING                (FIRST_SONG+20)
+#define LAST_SONG                    (SONG_DRIFTING)
 
 #define FIRST_POISON                 (LAST_SONG+1)
 #define POISON_LIFELEAK              (FIRST_POISON)
