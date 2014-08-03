@@ -956,15 +956,15 @@ void spell_greater_spirit_anguish(int level, P_char ch, char *arg, int type,
 {
   int  dam;
   struct affected_type af;
+  bool saved = TRUE;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-        return;
-  
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim))
+  {
+    return;
+  }
+
   do_point(ch, victim);
-  
+
   if(IS_SOULLESS(victim))
   {
     send_to_char("&+YYour victim lacks a &+Wsoul!\r\n", ch);
@@ -972,14 +972,19 @@ void spell_greater_spirit_anguish(int level, P_char ch, char *arg, int type,
   }
 
   dam = dice(level * 3, 6);
-  
-  if(IS_SPIRITUALIST(ch))
-    dam += level * 2;
-  
-  dam = shaman_shield_damage_adjustments(ch, victim, dam); 
 
-  if(!NewSaves(victim, SAVING_FEAR, 0))
+  if( IS_SPIRITUALIST(ch ))
+  {
+    dam += level * 4;
+  }
+
+  dam = shaman_shield_damage_adjustments(ch, victim, dam);
+
+  if( !NewSaves(victim, SAVING_FEAR, IS_SPIRITUALIST(ch) ? level/8 : level/14) )
+  {
+    saved = FALSE;
     dam = (int) (dam * 1.20);
+  }
 
   act("Your &+Wspiritual&N assault devastates $N from within, $E &+LSCREAMS&N in utter anguish!",
      TRUE, ch, 0, victim, TO_CHAR);
@@ -987,27 +992,22 @@ void spell_greater_spirit_anguish(int level, P_char ch, char *arg, int type,
      TRUE, ch, 0, victim, TO_VICT);
   act("$N &+LSCREAMS&N in utter anguish, caused by $n's &+Wspiritual&N assault!",
      TRUE, ch, 0, victim, TO_NOTVICT);
-  
+
   if(spell_damage(ch, victim, dam, SPLDAM_PSI, SPLDAM_NOSHRUG, 0) == DAM_NONEDEAD && GET_SPEC(ch, CLASS_SHAMAN, SPEC_SPIRITUALIST))
   {
-    int rand1 = number(1, 100);
-    if(rand1 > 70)
-	{
-	if((dam > 200) && !IS_AFFECTED2(victim, AFF2_SLOW))
-   	 	{
-      		bzero(&af, sizeof(af));
-      		af.type = SPELL_SLOW;
-      		af.duration = .0001;
-      		af.modifier = .01;
-      		af.bitvector2 = AFF2_SLOW;
+    if( (number(1,100) > 50) && !saved && !IS_AFFECTED2(victim, AFF2_SLOW))
+    {
+      bzero(&af, sizeof(af));
+      af.type = SPELL_SLOW;
+      af.duration = 1;
+      af.modifier = 1;
+      af.bitvector2 = AFF2_SLOW;
 
-      		affect_to_char(victim, &af);
+      affect_to_char(victim, &af);
 
-
-      		act("$n &+mbegins to sllooowwww down.", TRUE, victim, 0, 0, TO_ROOM);
-      		send_to_char("&+WYour will to live wavers! &+mYou feel yourself slowing&n down.\r\n", victim);
-   	       }
-	}
+      act("$n &+mbegins to sllooowwww down.", TRUE, victim, 0, 0, TO_ROOM);
+      send_to_char("&+WYour will to live wavers! &+mYou feel yourself slowing&n down.\r\n", victim);
+    }
   }
 }
 
