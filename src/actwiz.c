@@ -4974,8 +4974,7 @@ void do_start(P_char ch, int nomsg)
   GET_COND(ch, FULL) = 96;
 
   /* set some defaults. */
-  ch->specials.act =
-    (PLR_PETITION | PLR_ECHO | PLR_SNOTIFY | PLR_PAGING_ON | PLR_MAP);
+  ch->specials.act = (PLR_PETITION | PLR_ECHO | PLR_SNOTIFY | PLR_PAGING_ON | PLR_MAP);
 
   /* preserve hardcore and newbie bits */
   ch->specials.act2 &= (PLR2_HARDCORE_CHAR | PLR2_NEWBIE);
@@ -4986,8 +4985,12 @@ void do_start(P_char ch, int nomsg)
   SET_BIT(ch->specials.act2, PLR2_SPEC);
   SET_BIT(ch->specials.act2, PLR2_HINT_CHANNEL);
   SET_BIT(ch->specials.act2, PLR2_SHOW_QUEST);
+  SET_BIT(ch->specials.act2, PLR2_SHIPMAP);
+
   if(!GET_CLASS(ch, CLASS_PALADIN))
+  {
     SET_BIT(ch->specials.act, PLR_VICIOUS);
+  }
 
   ch->only.pc->wimpy = 10;
   ch->only.pc->aggressive = -1;
