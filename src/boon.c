@@ -694,37 +694,51 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 
     // Handle racewar argument
     argument = one_argument(argument, arg);
-    if (!strcmp(arg, "all"))
+    if( !strcmp(arg, "all") )
+    {
       bdata->racewar = 0;
-    else if (!strcmp(arg, "good"))
+    }
+    else if( !strcmp(arg, "good") )
+    {
       bdata->racewar = RACEWAR_GOOD;
-    else if (!strcmp(arg, "evil"))
+    }
+    else if( !strcmp(arg, "evil") )
+    {
       bdata->racewar = RACEWAR_EVIL;
-    else if (!strcmp(arg, "undead"))
+    }
+    else if( !strcmp(arg, "undead") )
+    {
       bdata->racewar = RACEWAR_UNDEAD;
-    else if (!strcmp(arg, "neutral"))
+    }
+    else if( !strcmp(arg, "neutral") )
+    {
       bdata->racewar = RACEWAR_NEUTRAL;
+    }
     else
     {
       send_to_char_f(ch, "&+W'%s' is not a valid racewar.&n\r\n", arg);
       send_to_char("&+cAvailable Racewars:&n\r\nall\r\ngood\r\nevil\r\nundead\r\nneutral\r\n", ch);
       return FALSE;
     }
-    
+
     // Handle type argument
     argument = one_argument(argument, arg);
-    for (i = 1; i < MAX_BTYPE; i++)
+    for( i = 1; i < MAX_BTYPE; i++ )
     {
       if (!strcmp(boon_types[i].type, arg))
-	break;
+      {
+        break;
+      }
     }
     bdata->type = i;
-    if (validate_boon_data(bdata, BARG_TYPE))
+    if( validate_boon_data(bdata, BARG_TYPE) )
     {
       send_to_char_f(ch, "&+W'%s' is not a valid boon type.&n\r\n", arg);
       send_to_char("&+cAvailable Boon Types:&n\r\n", ch);
-      for (i = 1; i < MAX_BTYPE; i++)
-	send_to_char_f(ch, "%s\r\n", boon_types[i].type);
+      for( i = 1; i < MAX_BTYPE; i++ )
+      {
+        send_to_char_f(ch, "%s\r\n", boon_types[i].type);
+      }
       return FALSE;
     }
 
@@ -736,118 +750,118 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
     {
       if (!*arg)
       {
-	send_to_char("&+WPlease enter an affect.&n\r\n", ch);
-	return FALSE;
+        send_to_char("&+WPlease enter an affect.&n\r\n", ch);
+        return FALSE;
       }
       int aff = 0, bit = 0;
       for (i = 0; affected1_bits[i].flagLong; i++)
       {
-	if (!strcasecmp(arg, affected1_bits[i].flagLong) ||
-	    !strcasecmp(arg, affected1_bits[i].flagShort))
-	{
-	  aff = 1;
-	  bit = i;
-	  break;
-	}
-	else if (!strcasecmp(arg, affected2_bits[i].flagLong) ||
-	         !strcasecmp(arg, affected2_bits[i].flagShort))
-	{
-	  aff = 2;
-	  bit = i;
-	  break;
-	}
-	else if (!strcasecmp(arg, affected3_bits[i].flagLong) ||
-	         !strcasecmp(arg, affected3_bits[i].flagShort))
-	{
-	  aff = 3;
-	  bit = i;
-	  break;
-	}
-	else if (!strcasecmp(arg, affected4_bits[i].flagLong) ||
-	         !strcasecmp(arg, affected4_bits[i].flagShort))
-	{
-	  aff = 4;
-	  bit = i;
-	  break;
-	}
-	else if (affected5_bits[i].flagLong &&
-	        (!strcasecmp(arg, affected5_bits[i].flagLong) ||
-	         !strcasecmp(arg, affected5_bits[i].flagShort)))
-	{
-	  aff = 5;
-	  bit = i;
-	  break;
-	}
+        if( !strcasecmp(arg, affected1_bits[i].flagLong)
+          || !strcasecmp(arg, affected1_bits[i].flagShort) )
+        {
+          aff = 1;
+          bit = i;
+          break;
+	      }
+        else if( !strcasecmp(arg, affected2_bits[i].flagLong)
+          || !strcasecmp(arg, affected2_bits[i].flagShort) )
+        {
+          aff = 2;
+          bit = i;
+          break;
+        }
+        else if( !strcasecmp(arg, affected3_bits[i].flagLong)
+          || !strcasecmp(arg, affected3_bits[i].flagShort) )
+        {
+          aff = 3;
+          bit = i;
+          break;
+        }
+        else if( !strcasecmp(arg, affected4_bits[i].flagLong)
+          || !strcasecmp(arg, affected4_bits[i].flagShort) )
+        {
+          aff = 4;
+          bit = i;
+          break;
+        }
+        else if( affected5_bits[i].flagLong
+          && (!strcasecmp(arg, affected5_bits[i].flagLong)
+          || !strcasecmp(arg, affected5_bits[i].flagShort)) )
+        {
+          aff = 5;
+          bit = i;
+          break;
+        }
       }
       if (!bit || !aff)
       {
-	send_to_char_f(ch, "&+W'%s' is not a valid affect.  Valid options are:&n\r\n", arg);
-	char flagbuff[MAX_STRING_LENGTH];
-	*flagbuff = '\0';
-	concat_which_flagsde("Aff1", affected1_bits, flagbuff);
-	concat_which_flagsde("Aff2", affected2_bits, flagbuff);
-	concat_which_flagsde("Aff3", affected3_bits, flagbuff);
-	concat_which_flagsde("aff4", affected4_bits, flagbuff);
-	concat_which_flagsde("aff5", affected5_bits, flagbuff);
-	page_string(ch->desc, flagbuff, 1);
-	return FALSE;
+        char flagbuff[MAX_STRING_LENGTH];
+
+        send_to_char_f(ch, "&+W'%s' is not a valid affect.  Valid options are:&n\r\n", arg);
+        *flagbuff = '\0';
+        concat_which_flagsde("Aff1", affected1_bits, flagbuff);
+        concat_which_flagsde("Aff2", affected2_bits, flagbuff);
+        concat_which_flagsde("Aff3", affected3_bits, flagbuff);
+        concat_which_flagsde("aff4", affected4_bits, flagbuff);
+        concat_which_flagsde("aff5", affected5_bits, flagbuff);
+        page_string(ch->desc, flagbuff, 1);
+        return FALSE;
       }
       bdata->bonus = aff;
       bdata->bonus2 = bit;
     }
 
-    if (bdata->type == BTYPE_SPELL)
+    if( bdata->type == BTYPE_SPELL )
     {
-      if (!*arg)
+      if( !*arg)
       {
-	send_to_char("&+WPlease enter a spell name.&n\r\n", ch);
-	return FALSE;
+        send_to_char("&+WPlease enter a spell name.&n\r\n", ch);
+        return FALSE;
       }
-      if (isdigit(*arg))
+      if( isdigit(*arg) )
       {
-	send_to_char("&+WThat's not a valid spell name.  Use single quotes (') if necessesary.&n\r\n", ch);
-	return FALSE;
+        send_to_char("&+WThat's not a valid spell name.  Use single quotes (') if necessesary.&n\r\n", ch);
+        return FALSE;
       }
-      for (i = 1; i <= LAST_SPELL; i++)
+      for( i = 1; i <= LAST_SPELL; i++ )
       {
-	if (is_abbrev(skills[i].name, arg))
-	{
-	  break;
-	}
+        if( is_abbrev(skills[i].name, arg) )
+        {
+          break;
+        }
       }
-      if (i > LAST_SPELL)
+      if( i > LAST_SPELL )
       {
-	send_to_char_f(ch, "&+W'%s' is not a valid spell name.  Try using single quotes (') if needed.&n\r\n", arg);
-	return FALSE;
+        send_to_char_f(ch, "&+W'%s' is not a valid spell name.  Try using single quotes (') if needed.&n\r\n", arg);
+        return FALSE;
       }
       bdata->bonus = i;
     }
-    
-    if (bdata->type == BTYPE_STAT)
+    if( bdata->type == BTYPE_STAT )
     {
-      if (!*arg)
+      if( !*arg )
       {
-	send_to_char("&+WPlease enter an attribute.&n\r\n", ch);
-	return FALSE;
+        send_to_char("&+WPlease enter an attribute.&n\r\n", ch);
+        return FALSE;
       }
-      if (isdigit(*arg))
+      if( isdigit(*arg) )
       {
-	send_to_char("&+WThat bonus is not a valid stat, please choose from: str, dex, agi, con, pow, int, wis, cha, karma, and luck.&n\r\n", ch);
-	return FALSE;
+        send_to_char("&+WThat bonus is not a valid stat, please choose from: str, dex, agi, con, pow, int, wis, cha, karma, and luck.&n\r\n", ch);
+        return FALSE;
       }
-      
-      for (i = 1; i < MAX_ATTRIBUTES; i++)
+
+      for( i = 1; i < MAX_ATTRIBUTES; i++ )
       {
-	if (is_abbrev(arg, attr_names[i].abrv) || is_abbrev(arg, attr_names[i].name))
-	{
-	  bdata->bonus = i;
-	  break;
-	}
+        if( is_abbrev(arg, attr_names[i].abrv) || is_abbrev(arg, attr_names[i].name) )
+        {
+          bdata->bonus = i;
+          break;
+        }
       }
-      if (!bdata->bonus)
+      if( !bdata->bonus )
       {
-	send_to_char("The bonus is not a valid stat, please choose from: str, dex, agi, con, pow, int, wis, cha, karma, and luck.\r\n", ch);
-	return FALSE;
+        send_to_char("The bonus is not a valid stat, please choose from: str, dex, agi, con, pow, int, wis, cha, karma, and luck.\r\n", ch);
+        return FALSE;
       }
     }
 
@@ -863,21 +877,28 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
     if (bdata->type == BTYPE_LEVEL)
     {
       argument = setbit_parseArgument(argument, arg);
-      if (*arg && !strcmp(arg, "yes"))
-	bdata->bonus2 = 1;
-      else if (*arg && !strcmp(arg, "no"))
-	bdata->bonus2 = 0;
-      else if (*arg && atoi(arg) == 0)
-	bdata->bonus2 = 0;
-      else if (*arg && atoi(arg) == 1)
-	bdata->bonus2 = 1;
+      if( *arg && !strcmp(arg, "yes") )
+      {
+        bdata->bonus2 = 1;
+      }
+      else if( *arg && !strcmp(arg, "no") )
+      {
+        bdata->bonus2 = 0;
+      }
+      else if( *arg && atoi(arg) == 0 )
+      {
+        bdata->bonus2 = 0;
+      }
+      else if( *arg && atoi(arg) == 1 )
+      {
+        bdata->bonus2 = 1;
+      }
       else
       {
-	send_to_char("Invalid secondary bonus, please indicate whether or not to bypass epics (1 or yes, 0 or no).\r\n", ch);
-	return FALSE;
+        send_to_char("Invalid secondary bonus, please indicate whether or not to bypass epics (1 or yes, 0 or no).\r\n", ch);
+        return FALSE;
       }
     }
-    
     if ((retval = validate_boon_data(bdata, BARG_BONUS)))
     {
       switch (bdata->type)
@@ -1015,11 +1036,13 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
 	return FALSE;
       }
       else
-	bdata->criteria2 = atof(arg);
+      {
+        bdata->criteria2 = atof(arg);
+      }
       if (bdata->racewar != RACEWAR_NONE)
       {
-	send_to_char("CTF Flag Boons must be for all racewars, setting racewar to all.\r\n", ch);
-	bdata->racewar = RACEWAR_NONE;
+        send_to_char("CTF Flag Boons must be for all racewars, setting racewar to all.\r\n", ch);
+        bdata->racewar = RACEWAR_NONE;
       }
     }
 
@@ -1028,48 +1051,50 @@ int parse_boon_args(P_char ch, BoonData *bdata, char *argument)
       send_to_char_f(ch, "&+W'%s' is not a valid criteria.  Please enter a number.&n\r\n", arg);
       return FALSE;
     }
-    
+
     if (!bdata->criteria)
+    {
       bdata->criteria = atof(arg);
-    
-    if ((bdata->option == BOPT_MOB ||
-	 bdata->option == BOPT_RACE) &&
-	bdata->type == BTYPE_EXPM &&
-	bdata->bonus > 1)
+    }
+
+    if( (bdata->option == BOPT_MOB || bdata->option == BOPT_RACE)
+      && bdata->type == BTYPE_EXPM && bdata->bonus > 1 )
     {
       send_to_char("Exp modification is designed to work per mob, so defaulting your kills per completion criteria to 1.\r\n", ch);
       bdata->criteria = 1;
     }
-    
+
     // secondary arguments
     if (bdata->option == BOPT_MOB)
     {
       argument = one_argument(argument, arg);
       if (!*arg || !atof(arg))
       {
-	send_to_char_f(ch, "&+W'%s' is not a valid secondary criteria.  Please enter a number.&n\r\n", arg);
-	return FALSE;
+        send_to_char_f(ch, "&+W'%s' is not a valid secondary criteria.  Please enter a number.&n\r\n", arg);
+        return FALSE;
       }
       bdata->criteria2 = atof(arg);
     }
-    
+
     if (bdata->option == BOPT_RACE)
     {
       argument = setbit_parseArgument(argument, arg);
       if (!*arg || isdigit(*arg))
       {
-	send_to_char_f(ch, "&+W'%s' is not a valid race.  Please enter a race name.&n\r\n", arg);
-	return FALSE;
+        send_to_char_f(ch, "&+W'%s' is not a valid race.  Please enter a race name.&n\r\n", arg);
+        return FALSE;
       }
       // check for exact match first
       for (i = 0; i <= LAST_RACE; i++)
       {
-	if (!strcmp(arg, race_names_table[i].normal))
-	  bdata->criteria2 = i;
+        if( !str_cmp(arg, race_names_table[i].normal) )
+        {
+          bdata->criteria2 = i;
+        }
       }
       // otherwise check for abbreviation
       if (i == 0)
-      {	
+      {
 	for (i = 0; i <= LAST_RACE; i++)
 	{
 	  if (is_abbrev(arg, race_names_table[i].normal))
