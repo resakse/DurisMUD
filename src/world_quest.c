@@ -635,50 +635,67 @@ void do_quest(P_char ch, char *args, int cmd)
 
 }
 
-int createQuest(P_char ch, P_char giver)
+// Attempts to create a quest for ch (a PC), given by giver (a NPC).
+// Returns TRUE if successful, and FALSE if failed.
+bool createQuest(P_char ch, P_char giver)
 {
   int quest_zone = -1;
   int quest_mob  = -1;
   int QUEST_TYPE = -1;
 
-  if(!giver || !ch)
-    return -1;
+  // Fail if missing an arg, or ch not a PC, or giver not an NPC or God.
+  if( !giver || !ch || IS_NPC(ch) || (IS_PC(giver) && !IS_TRUSTED(giver)) )
+  {
+    return FALSE;
+  }
 
-
-  //No valid zone found return -1
+  //No valid zone found return FALSE
   vector<int> valid_zones;
   getQuestZoneList(ch, valid_zones);
 
   if( valid_zones.empty() )
   {
     wizlog(56, "Unable to find a quest zone for %s", GET_NAME(ch));
-    return -1;
+    return FALSE;
   }
 
   for (int z = 0; z < 10; z++)
   {
     quest_zone  = valid_zones[number(0, valid_zones.size() - 1)];
- 
+
     for (int m = 0; m < 3; m++)
     {
-      QUEST_TYPE = number(2,4) / 2;
+      QUEST_TYPE = number(1,2);
       if(GET_LEVEL(ch) > 49)
+      {
         QUEST_TYPE = FIND_AND_KILL;
-
+      }
       //wizlog(56, "suggesting zone:%s for this dude",zone_table[quest_zone].name);
       quest_mob = suggestQuestMob(quest_zone,ch, QUEST_TYPE);
-      //wizlog(56, "suggesting quest mob :%d for this dude",quest_mob);
-      if(quest_mob == -1 && GET_LEVEL(ch) < 50)
+      // If there aren't enough mobs to complete a quest (Need 2 for kill, 1 for ask)..
+      if( quest_mob > 0 && ((QUEST_TYPE == FIND_AND_KILL && mob_index[real_mobile(quest_mob)].number <= 1)
+        || (QUEST_TYPE == FIND_AND_ASK && mob_index[real_mobile(quest_mob)].number < 1)) )
       {
-        if(QUEST_TYPE == 1)
-          QUEST_TYPE = 2;
-        else
-          QUEST_TYPE = 1;
+        quest_mob = -1;
+      }
+      //wizlog(56, "suggesting quest mob :%d for this dude",quest_mob);
+      if( quest_mob == -1 && GET_LEVEL(ch) < 50 )
+      {
+        // Swap Quest type and try again.
+        QUEST_TYPE = (QUEST_TYPE == FIND_AND_KILL) ? QUEST_TYPE = FIND_AND_ASK : QUEST_TYPE = FIND_AND_KILL;
+
         quest_mob = suggestQuestMob(quest_zone,ch, QUEST_TYPE);
+        // If there aren't enough mobs to complete a quest (Need 2 for kill, 1 for ask)..
+        if( quest_mob > 0 && ((QUEST_TYPE == FIND_AND_KILL && mob_index[real_mobile(quest_mob)].number <= 1)
+          || (QUEST_TYPE == FIND_AND_ASK && mob_index[real_mobile(quest_mob)].number < 1)) )
+        {
+          quest_mob = -1;
+          break;
+        }
       }
 
       if(sql_world_quest_done_already(ch, quest_mob))
-      { 
+      {
         quest_mob = -1;
       }
 
@@ -693,7 +710,7 @@ int createQuest(P_char ch, P_char giver)
   if(quest_mob == -1)
   {
     wizlog(56, "Unable to find a valid quest for %s", GET_NAME(ch));
-    return -1; 
+    return FALSE;
   }
 
   ch->only.pc->quest_shares_left = 4;
@@ -709,29 +726,27 @@ int createQuest(P_char ch, P_char giver)
 
   int rnum = real_mobile(quest_mob);
 
-  ch->only.pc->quest_kill_original =  MIN(number(7,9) , mob_index[rnum].limit - 1);
-  debug("Quest Kill Original Value: %d, mob_index number: %d, mob_index limit: %d, mob_vnum: %d", 
-       ch->only.pc->quest_kill_original, mob_index[rnum].number, mob_index[rnum].limit -1, mob_index[rnum].virtual_number);
+  ch->only.pc->quest_kill_original =  MIN(number(7,9) , mob_index[rnum].number - 1);
+  debug("Quest Kill Original Value: %d, mob_index number: %d, mob_index limit: %d, mob_vnum: %d",
+    ch->only.pc->quest_kill_original, mob_index[rnum].number, mob_index[rnum].limit -1, mob_index[rnum].virtual_number);
 
-  return 1;
+  return TRUE;
 }
 
 void show_map_at(P_char ch, int room)
 {
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     IS_NPC(ch))
+  if( !IS_ALIVE(ch) || IS_NPC(ch) )
   {
     return;
   }
 
-  if(!(room))
+  if( !(room) )
   {
-    send_to_char("&+W* There is a bug with this quest please contact the Admin.&n.\r\n", ch);
+    send_to_char("&+W* There is a bug with the map for this quest please contact an Admin.&n.\r\n", ch);
     logit(LOG_DEBUG, "World quest: (%s) failed in show_map_at for room (%d).", GET_NAME(ch), room);
     return;
   }
-  
+
   if(ch->only.pc->quest_map_bought == 1)
   {
     if(room == -1)
