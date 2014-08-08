@@ -3444,9 +3444,9 @@ void reset_zone(int zone, int force_item_repop)
               }
               if (mob)
               {
-                if(!IS_ARTIFACT(obj))
                 //Drannak trying out item stat randomization 3/28/14
-                randomizeitem(mob, obj);
+                if(!IS_ARTIFACT(obj))
+                  randomizeitem(mob, obj);
                 obj_to_char(obj, mob);
                 // Artifact poof timer to BLOOD_DAYS * secs in a day.
                 obj->timer[3] = time(NULL);
@@ -3519,8 +3519,9 @@ void reset_zone(int zone, int force_item_repop)
               obj->timer[3] = time(NULL);
               if (mob && (ZCMD.arg3 > 0) && (ZCMD.arg3 <= CUR_MAX_WEAR))
               {
+                // Drannak trying out item stat randomization 3/28/14
                 if(!IS_ARTIFACT(obj))
-            	  	randomizeitem(mob, obj); //Drannak trying out item stat randomization 3/28/14
+            	  	randomizeitem(mob, obj);
                 if (mob->equipment[ZCMD.arg3])
                   unequip_char(mob, ZCMD.arg3);
                 equip_char(mob, obj, ZCMD.arg3, 1);

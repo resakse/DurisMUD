@@ -178,6 +178,7 @@ void do_randobj(P_char ch, char *strn, int val)
   int tmp = 0;
   char Gbuf5[MAX_STRING_LENGTH];
   extern const struct class_names class_names_table[];
+
   if (!IS_TRUSTED(ch))
   {
     send_to_char("bad.\r\n", ch);
@@ -261,7 +262,7 @@ void do_randobj(P_char ch, char *strn, int val)
 
 
 
-  send_to_char("Syntax: rando <stones, piece, eq, mob, zone> \r\n", ch);
+  send_to_char("Syntax: randobj <stone, piece, eq, mob, zone> \r\n", ch);
 
 
 }

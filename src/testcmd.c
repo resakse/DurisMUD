@@ -359,6 +359,22 @@ void do_test(P_char ch, char *arg, int cmd)
     sprintf( buf, "The mincircle for spell '%s' (%d), is %d.\n\r", spells[num], num, get_mincircle(num) );
     send_to_char( buf, ch );
   }
+  else if ( isname("randomize", buff) )
+  {
+    P_obj obj;
+
+    arg = one_argument( arg, buff );
+    if( (obj = get_obj_in_list(buff, ch->carrying)) != NULL )
+    {
+      randomizeitem(ch, obj);
+    }
+    else
+    {
+      send_to_char( "Could not find object '", ch );
+      send_to_char( buff, ch );
+      send_to_char( "' in your inventory to randomize.\n\r", ch );
+    }
+  }
   else
   {
     send_to_char("Invalid keyword.\r\n", ch);
