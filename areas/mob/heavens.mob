@@ -483,7 +483,7 @@ large fire elemental~
 &+rlook to happy to be here, and seems a tad upset.
 ~
 65538 0 0 0 570425352 1 0 0 0 S
-EF 0 1 0 -1
+EF 0 1 0 4
 51 1 -75 1d1+2500 1d7+10
 0.0.0.0 50544
 8 8 0
@@ -496,7 +496,7 @@ large earth elemental~
 &+ylook to happy to be here, and seems a tad upset.
 ~
 65538 0 0 0 33554568 0 0 0 0 S
-EE 0 1 0 -1
+EE 0 1 0 4
 51 1 -100 1d1+2600 1d7+15
 0.0.0.0 50544
 8 8 0
@@ -509,7 +509,7 @@ large air elemental~
 &+Clook to happy to be here, and seems a tad upset.
 ~
 65538 0 0 0 167772184 192 0 0 0 S
-EA 0 1 0 -1
+EA 0 1 0 4
 51 1 -120 1d1+2200 1d7+10
 0.0.0.0 50544
 8 8 0
@@ -522,7 +522,7 @@ large water elemental~
 &+band does not look to be ready to do anything other then fight.
 ~
 327682 0 0 0 33556488 128 0 0 0 S
-EW 1 1 0 -1
+EW 1 1 0 4
 51 2 -110 1d1+2500 1d7+15
 0.0.0.0 50544
 8 8 0

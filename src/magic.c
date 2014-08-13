@@ -2536,8 +2536,7 @@ void conjure_specialized(P_char ch, int level)
 
   if( !IS_ALIVE(ch) || !(mob) || !(room) )
   {
-    logit(LOG_DEBUG, "conjure_specialized(): mob %d not loadable",
-          pets[summoned].vnum);
+    logit(LOG_DEBUG, "conjure_specialized(): mob %d not loadable", pets[summoned].vnum);
     if( ch )
     {
       send_to_char("Bug in conjour greater elemental.  Tell a god!\n", ch);
@@ -2620,7 +2619,7 @@ void conjure_specialized(P_char ch, int level)
       pets[summoned].damroll + number(20, 30);
     GET_MAX_HIT(mob) = GET_HIT(mob) = mob->points.base_hit =
       (int) (GET_LEVEL(ch) * 30 + number(1, 100) + (life * 4) + (charisma * 2));
-    GET_SIZE(mob) = SIZE_MEDIUM;
+    GET_SIZE(mob) = SIZE_HUGE;
     mob->base_stats.Str = 100;
     mob->base_stats.Dex = 100;
     mob->base_stats.Agi = 100;
