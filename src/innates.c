@@ -4427,7 +4427,7 @@ bool innate_two_daggers(P_char ch)
   if( has_innate(ch, INNATE_TWO_DAGGERS) && weap1 && IS_DAGGER(weap1) && weap2 && IS_DAGGER(weap2) )
     return TRUE;
 
-  return TRUE;
+  return FALSE;
 }
 
 struct fade_data {
