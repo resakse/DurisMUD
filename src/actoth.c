@@ -3851,7 +3851,7 @@ void show_toggles(P_char ch)
           "&+r     Underline   :&+g %-3s    &+y|&N\r\n"
           "&+r   Surname     :&+g %-3s    &+y|"
           "&+r     Damage      :&+g %-3s    &+y|&n"
-          "&+r                 :&+g        &+y|&n\r\n"
+          "&+r     No Level    :&+g %-3s    &+y|&n\r\n"
           "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
           "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n",
           ONOFF(!PLR_FLAGGED(ch, PLR_NOTELL)),
@@ -3891,7 +3891,8 @@ void show_toggles(P_char ch)
           ONOFF(PLR3_FLAGGED(ch, PLR3_NOBEEP)),
           ONOFF(PLR3_FLAGGED(ch, PLR3_UNDERLINE)),
           ONOFF(PLR3_FLAGGED(ch, PLR3_NOSUR)),
-          ONOFF(PLR2_FLAGGED(ch, PLR2_DAMAGE)) );
+          ONOFF(PLR2_FLAGGED(ch, PLR2_DAMAGE)),
+          ONOFF(PLR3_FLAGGED(ch, PLR3_NOLEVEL)) );
   send_to_char(Gbuf1, send_ch);
 
   if (GET_LEVEL(ch) >= AVATAR)
@@ -4014,30 +4015,31 @@ static const char *toggles_list[] = {
   "take",
   "terse",
   "quickchant",
-  "rwc",                        /*37 */
-  "project",                    /*38 */
-  "zzxyzz",                     /*39 */
-  "afk",
+  "rwc",                        /* 37 */
+  "project",                    /* 38 */
+  "zzxyzz",                     /* 39 */
+  "afk",                        /* 40 */
   "nchat",
   "damage",
   "spec1",
   "spec2",
-  "spec3",
+  "spec3",                      /* 45 */
   "spec4",
   "spec_timer",
   "heal",
   "group needed",
-  "experience",
+  "experience",                 /* 50 */
   "showspec",
-  "hint",                       //52
+  "hint",                       /* 52 */
   "webinfo",
   "acc",
-  "quest",
+  "quest",                      /* 55 */
   "boon",
   "newbie",
   "beep",
   "underline",
-  "surname",
+  "surname",                    /* 60 */
+  "nolevel",
   "\n"
 };
 
@@ -4152,7 +4154,10 @@ static const char *tog_messages[][2] = {
   {"You can be beeped.\r\n",
    "You can not be beeped.\r\n"},
   {"You will receive blinking instead of underlined text.\r\n",
-   "You will receive underlined instead of blinking text.\r\n"}
+   "You will receive underlined instead of blinking text.\r\n"},
+  {NULL, NULL }, // Surname does its own messaging.
+  {"You will level at an epic stone.\r\n",
+   "You will not level at an epic stone.\r\n"}
 };
 
 void do_more(P_char ch, char *arg, int cmd)
@@ -4672,7 +4677,7 @@ void do_toggle(P_char ch, char *arg, int cmd)
 	  if(is_number(Gbuf1) && (wimp_lev = atoi(Gbuf1)))
 	  {
 	    set_surname(ch, wimp_lev);
-		return;
+  		return;
     }
   /*  else if (isname(Gbuf1, "off") || isname(Gbuf1, "default"))
     {
@@ -4685,15 +4690,21 @@ void do_toggle(P_char ch, char *arg, int cmd)
       return;
     }
     break;
+  case 61:
+    result = PLR3_TOG_CHK(ch, PLR3_NOLEVEL);
+    break;
   default:
     break;
   }
 
-  if (result)
+  if( result )
+  {
     sprintf(Gbuf1, tog_messages[tog_nr][TOG_ON], Gbuf3);
+  }
   else
+  {
     sprintf(Gbuf1, tog_messages[tog_nr][TOG_OFF], Gbuf3);
-
+  }
   send_to_char(Gbuf1, send_ch);
 }
 

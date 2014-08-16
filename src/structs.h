@@ -941,6 +941,7 @@ struct room_data {
 #define PLR3_SURDECEPTICON BIT_16
 #define PLR3_NOBEEP        BIT_17
 #define PLR3_UNDERLINE     BIT_18
+#define PLR3_NOLEVEL       BIT_19
 
 /* For players : Prompt flags (16 bits max) */
 #define PROMPT_NONE        BIT_1

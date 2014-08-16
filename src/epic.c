@@ -706,8 +706,9 @@ void epic_stone_level_char(P_obj obj, P_char ch)
     logit(LOG_EPIC, "epic_stone_level_char: Bad argument(s)." );
     return;
   }
-  // Already attained max level.
-  if( GET_LEVEL(ch) >= MAXLVLMORTAL )
+
+  // Already attained max level or doesn't want to spend epics to level.
+  if( GET_LEVEL(ch) >= MAXLVLMORTAL || PLR3_FLAGGED(ch, PLR3_NOLEVEL) )
   {
     return;
   }
