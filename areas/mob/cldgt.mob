@@ -9,8 +9,8 @@ This giant seems to be at home in the clouds and enjoys the mist. He
 sits here meditating on the outcomes of the day, and what will happen
 tomorrow.
 ~
-1073741898 32 0 24 0 0 0 1000 S
-G 0 32 -1
+1073741898 32 0 0 24 0 0 0 1000 S
+G 0 32 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ and has many scars where he has slipped with his needles. He wears,
 of course, the best furs of the area.
 &+WA fur trader tells you 'Let's do some trading!'
 ~
-10 0 0 64 0 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 64 0 0 0 1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -39,8 +39,8 @@ giant sneaky cloud thief~
 the other giants. Although he is good at heart, he seems to be quite
 greedy.
 ~
-10 32 0 1572874 0 0 0 1000 S
-G 0 8192 -1
+10 32 0 0 1572874 0 0 0 1000 S
+G 0 8192 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -53,8 +53,8 @@ yeti mountain~
 over four hundred pounds. He has a thick furry coat, and
 silvery hair. His eyes are small round and glass like.
 ~
-1073741832 32 0 524288 0 0 0 1000 S
-H 0 0 -1
+1073741832 32 0 0 524288 0 0 0 1000 S
+H 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -67,8 +67,8 @@ farmer~
 the floor that he sits on. Although he is short, he has a very
 large hairy chest.
 ~
-10 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -81,8 +81,8 @@ yeti~
 over four hundred pounds. He has a thick furry coat, and
 silvery hair. His eyes are small round and glass like.
 ~
-10 0 0 0 0 0 0 1000 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 1000 S
+H 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -96,8 +96,8 @@ many battle scars. On his feet is his most prised possession.. a pair
 of duergar-hide boots. He seems to cherish these from when he killed
 one of the most dangerous duergar warriors of all times.
 ~
-1140850696 0 0 0 0 0 0 1000 S
-G 0 1 -1
+1140850696 0 0 0 0 0 0 0 1000 S
+G 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -110,8 +110,8 @@ giant cloud warrior~
 bigger muscles than most of the other giants around here. There aren't
 even that many giants around here, just mist.
 ~
-1140850698 32 0 0 0 0 0 1000 S
-G 0 1 -1
+1140850698 32 0 0 0 0 0 0 1000 S
+G 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -127,8 +127,8 @@ He has pinkish skin, and he seems to laugh at anything people say.
 &+Wthe leader tells you in common 'thank god for those giants, they let us
 &+Wkeep our village here by their city!'
 ~
-1140850698 32 0 0 0 0 0 1000 S
-PH 0 1 -1
+1140850698 32 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -141,8 +141,8 @@ farmer~
 here lifting some weights to build up some muscle. He has very tanned
 skin, and a dark face.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -155,8 +155,8 @@ rooster~
 &+rIt has beautiful red feathers on the top of its head and seems
 &+rto scavenger about the area looking for things to eat.
 ~
-8 0 0 0 0 0 0 800 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 800 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -170,8 +170,8 @@ piglet~
 &+MUsually, these pigs are seen wallowing in their filth or laying around
 &+Mtheir barn.
 ~
-8 0 0 0 0 0 0 350 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 350 S
+A 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -184,8 +184,8 @@ chicken~
 &+yIt is rather plump and large for a chicken, and the farmers probably
 &+yare able to get quite a lot of use out of these big chickens.
 ~
-8 0 0 0 0 0 0 0 S
-B 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -198,8 +198,8 @@ A very &+ytired &nfarmer sleeps here.
 long today and has just passed out right on the floor from exhaustion.
 He has very big muscles that need rest due to the his hard work.
 ~
-10 32 0 0 0 0 0 850 S
-PH 0 8 -1
+10 32 0 0 0 0 0 0 850 S
+PH 0 8 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -213,8 +213,8 @@ admired things in the town. She has long flowing brown hair, and red
 eyes that match blush red lips. She has many freckles, and a set of
 perfect ivory white teeth.
 ~
-10 0 0 0 0 0 0 700 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -228,8 +228,8 @@ and he usually sits about his small cottage, which has many windows, and
 basks in the sun. He has incredibly large muscles, and a stare that could
 shatter ice.
 ~
-10 0 0 0 0 0 0 800 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 800 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -242,8 +242,8 @@ farmer quiet~
 or participated in the clergy, because he seems to be always sitting
 in this room, meditating.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -257,8 +257,8 @@ incredibly strong. He seems to be getting purplish skin, and his eyes
 are growing wider. He no longer has fingernails, they have pealed off,
 only to reveal nothing but scales underneath.
 ~
-10 0 0 0 0 0 0 -1000 S
-PT 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+PT 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -271,8 +271,8 @@ fish razor~
 &+Bvery large razor sharp fins. It swims around madly looking for
 &+Bsomething to take a bite out of.
 ~
-1073743880 0 0 0 0 0 0 0 S
-F 0 0 -1
+1073743880 0 0 0 0 0 0 0 0 S
+F 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -286,8 +286,8 @@ the almost nightly attacks of undead hordes, he has been drafted
 into the guards of the village.  He stands quivering in the night
 and has obviously not gotten much sleep in weeks.
 ~
-2058 32 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 32 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -308,8 +308,8 @@ now and then about hating those damn evils that killed her. Across her
 right arm, is the tattoo of a bright red rose, that seems to be illuminating
 the area.
 ~
-1140883466 0 0 10430 14529 0 0 1000 S
-G 0 10 -1
+1140883466 0 0 0 10430 14529 0 0 1000 S
+G 0 10 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -322,8 +322,8 @@ Anne's spirit guard stands here, ready to protect her.
 this village and seems to have also been killed by the huge evil raid, and
 now is only a protector of dear Anne.
 ~
-1140852810 0 0 90 1 0 0 1000 S
-G 0 1 -1
+1140852810 0 0 0 90 1 0 0 1000 S
+G 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -337,8 +337,8 @@ ever leaves his hut.. ever. He wears a full set of dark magenta robes, and
 tries to conceal himself as much as possible. He usually spends most of
 his time trying to create things with his great magic.
 ~
-1073741834 64 0 589888 0 0 0 -1000 S
-PH 0 512 -1
+1073741834 64 0 0 589888 0 0 0 -1000 S
+PH 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -351,8 +351,8 @@ bat huge~
 &+Ldrips of blood its face. It has huge muscular wings, and flaps about
 &+Lfrantically as people walk by it.
 ~
-1073741832 1 0 0 0 0 0 -1000 S
-B 0 1 -1
+1073741832 1 0 0 0 0 0 0 -1000 S
+B 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -365,8 +365,8 @@ duergar~
 skin. He has long black dirty hair, and many scars. He also seems that he
 has never bathed in his entire life.
 ~
-1073741832 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073741832 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -379,8 +379,8 @@ troll~
 has dark black eyes that seem far into his head, and he has muscles that
 would compare to any barbarian.
 ~
-1073741834 1 0 152 0 0 0 -1000 S
-PT 0 1 -1
+1073741834 1 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -393,8 +393,8 @@ illithid~
 very intelligent and floats slightly above the ground. Small parts of
 brains have been pressed into its robes.
 ~
-1073741834 64 0 152 0 0 0 -1000 S
-MF 0 1 -1
+1073741834 64 0 0 152 0 0 0 -1000 S
+MF 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -408,8 +408,8 @@ hundred pounds, if not many more. He has huge thick muscles, that are
 covered with the blood of his enemies. Twigs and sticks have gotten
 stuck in his hair from uprooting trees to kill with.
 ~
-1073741834 64 0 152 0 0 0 -1000 S
-PO 0 1 -1
+1073741834 64 0 0 152 0 0 0 -1000 S
+PO 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -422,8 +422,8 @@ drow~
 grey elf, except for its very dark skin. In most other aspects, if not
 more so, it is highly agile and sly.
 ~
-1073741834 1 0 152 0 0 0 -1000 S
-PL 0 1 -1
+1073741834 1 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -438,8 +438,8 @@ always gets the job done quickly. He has small scars all about his body
 and small burn marks around this chest. As you approach him, he turns to
 you and says "busy hands are happy hands!"
 ~
-1073741834 1 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073741834 1 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -454,8 +454,8 @@ giant flying~
 &+Wsuch an emergency, he can call his fellow giant brothers to
 &+Wdestroy the evils.
 ~
-1140850698 128 0 134217880 0 0 0 1000 S
-G 0 1 -1
+1140850698 128 0 0 134217880 0 0 0 1000 S
+G 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -469,8 +469,8 @@ the almost nightly attacks of undead hordes, he has been drafted
 into the guards of the village.  He stands quivering in the night
 and has obviously not gotten much sleep in weeks.
 ~
-1073743880 0 0 0 0 0 0 0 S
-PH 0 0 -1
+1073743880 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -483,8 +483,8 @@ guard giant cloud~
 giants and stands almost 20 feet tall.  He wields a large
 claymore and stands tall at the gates.
 ~
-2058 0 0 2200 0 0 0 1000 S
-G 0 1 -1
+2058 0 0 0 2200 0 0 0 1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -497,8 +497,8 @@ guard giant cloud~
 giants and stands almost 20 feet tall.  He wields a large
 claymore and stands tall at the gates.
 ~
-67110922 0 0 2200 0 0 0 1000 S
-G 0 1 -1
+67110922 0 0 0 2200 0 0 0 1000 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -510,8 +510,8 @@ guest~
   This guest of the castle sits comfortable in their
 quarters, awaiting a visit with the king.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -523,8 +523,8 @@ guest~
   This guest of the castle sits comfortable in their
 quarters, awaiting a visit with the king.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -536,8 +536,8 @@ guest~
   This guest of the castle sits comfortable in their
 quarters, awaiting a visit with the king.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -549,8 +549,8 @@ A guest of the cloud giants paces back and forth here.
   This guest of the castle sits comfortable in their
 quarters, awaiting a visit with the king.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -562,8 +562,8 @@ guest~
   This guest of the castle sits comfortable in their
 quarters, awaiting a visit with the king.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -575,8 +575,8 @@ guest~
   This guest of the castle sits comfortable in their
 quarters, awaiting a visit with the king.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -588,8 +588,8 @@ guest~
   This guest of the castle sits comfortable in their
 quarters, awaiting a visit with the king.
 ~
-1073743882 0 0 152 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -603,8 +603,8 @@ and is about 20 feet tall when standing.  He wears a great
 white robe in honor of Stronmaus, the god of the cloud giants.
 His sword is by his side while he is sleeping.
 ~
-1073743882 0 0 134217864 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 134217864 0 0 0 0 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -618,8 +618,8 @@ from the settlement.  He has multiple weapons strapped
 to his back and wears an apron while forging new weapons.
 He stands nearly 20 feet tall.
 ~
-1073743882 0 0 136 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 136 0 0 0 0 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -632,8 +632,8 @@ giant cloud sergeant~
 a sergeant in the cloud giant battalion.  He
 has a pitch-black sword and a pearly-white crown.
 ~
-1073743882 0 0 136 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 136 0 0 0 0 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -645,8 +645,8 @@ giant cloud warrior~
   This is a warrior of the cloud giants, and
 is dressed in the standard white robe of the tribe.
 ~
-1073743882 0 0 152 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 152 0 0 0 0 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -659,8 +659,8 @@ guard giant cloud~
 giants and stands almost 20 feet tall.  He wields a large
 claymore and stands tall at the gates.
 ~
-67110922 0 0 2200 0 0 0 1000 S
-G 0 1 -1
+67110922 0 0 0 2200 0 0 0 1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -673,8 +673,8 @@ guard giant cloud~
 giants and stands almost 20 feet tall.  He wields a large
 claymore and stands tall at the gates.
 ~
-67110922 0 0 2200 0 0 0 1000 S
-G 0 1 -1
+67110922 0 0 0 2200 0 0 0 1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -687,8 +687,8 @@ guard giant cloud~
 giants and stands almost 20 feet tall.  He wields a large
 claymore and stands tall at the gates.
 ~
-67110922 0 0 2200 0 0 0 1000 S
-G 0 1 -1
+67110922 0 0 0 2200 0 0 0 1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -700,8 +700,8 @@ nonstros giant bard cloud~
   This cloud giant has picked up the art of the lyre
 and plays for the visitors of the castle.
 ~
-1073743880 0 0 152 0 0 0 0 S
-G 0 32768 -1
+1073743880 0 0 0 152 0 0 0 0 S
+G 0 32768 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -715,8 +715,8 @@ village at the base of the mountain allowed to come
 to the cloud giant castle.  He wears a standard
 uniform provided by the king.
 ~
-2056 0 0 152 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 152 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -731,8 +731,8 @@ A dusty cloak lies on the floor beside him along with a pair of muddy boots
 showing that when he finally got home he just took off his clothes and
 collapsed.
 ~
-1073743880 0 0 152 0 0 0 0 S
-PF 0 1 -1
+1073743880 0 0 0 152 0 0 0 0 S
+PF 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -749,8 +749,8 @@ halflings have constructed here.  Elves love to see buildings constructed in
 harmony with nature, they just hate to see lesser races do such a good job of
 it.
 ~
-1073743880 0 0 152 0 0 0 0 S
-PE 0 1 -1
+1073743880 0 0 0 152 0 0 0 0 S
+PE 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -765,8 +765,8 @@ sitting in his magnificent throne.  He is beyond
 the skills of a normal warrior and holds a spellbook
 at his side.
 ~
-1073743882 0 0 152 34816 0 0 1000 S
-G 0 2 -1
+1073743882 0 0 0 152 34816 0 0 1000 S
+G 0 2 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -779,8 +779,8 @@ guard giant cloud~
 giants and stands almost 20 feet tall.  He wields a large
 claymore and stands tall at the throne.
 ~
-67110922 0 0 2200 0 0 0 1000 S
-G 0 1 -1
+67110922 0 0 0 2200 0 0 0 1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -793,8 +793,8 @@ selanis queen~
 named after her.  She is trained in the arts of
 shamanism and wears the appropriate robes.
 ~
-1140852746 0 0 140 0 0 0 0 S
-G 0 256 -1
+1140852746 0 0 0 140 0 0 0 0 S
+G 0 256 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -809,8 +809,8 @@ sit in the hall.  He has a tool belt that contains
 his carving tools, and an intricate pair of
 eyeglasses.
 ~
-1073743882 0 0 152 0 67108864 1024 1000 S
-G 0 1 -1
+1073743882 0 0 0 152 0 67108864 1024 1000 S
+G 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -823,8 +823,8 @@ dwarf dwarven cleric~
 wears the robes of his temple.  He appears to be visiting
 the cloud giants on business.
 ~
-1073743882 0 0 152 0 0 0 1000 S
-PM 0 32 -1
+1073743882 0 0 0 152 0 0 0 1000 S
+PM 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -837,8 +837,8 @@ disciple stronmaus~
 the cloud giants.  He spends most of his day in
 the temple, praying and keeping the temple clean.
 ~
-1073743880 0 0 152 0 0 0 1000 S
-G 0 1 -1
+1073743880 0 0 0 152 0 0 0 1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -851,8 +851,8 @@ disciple stronmaus~
 the cloud giants.  He spends most of his day in
 the temple, praying and keeping the temple clean.
 ~
-1073743880 0 0 152 0 0 0 1000 S
-G 0 1 -1
+1073743880 0 0 0 152 0 0 0 1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -865,8 +865,8 @@ disciple stronmaus~
 the cloud giants.  He spends most of his day in
 the temple, praying and keeping the temple clean.
 ~
-1073743880 0 0 152 0 0 0 1000 S
-G 0 1 -1
+1073743880 0 0 0 152 0 0 0 1000 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -879,8 +879,8 @@ ankha priest giant cloud~
 Stronmaus, god of the storm giants.  She wears
 a loose-fitting robe and holds a magical scepter.
 ~
-1073743882 0 0 140 0 0 0 1000 S
-G 0 32 -1
+1073743882 0 0 0 140 0 0 0 1000 S
+G 0 32 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -892,8 +892,8 @@ priest assistant~
   The assistant priest looks almost exactly like Ankha,
 except the assistant is a male.  Strange, isn't it?
 ~
-1073743882 0 0 140 0 0 0 1000 S
-G 0 32 -1
+1073743882 0 0 0 140 0 0 0 1000 S
+G 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -907,8 +907,8 @@ large that it could be used as a sail on a boat.
 His arms are covered in the blood of elephants as
 he chops them up to be served.
 ~
-1073743882 0 0 140 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 140 0 0 0 0 S
+G 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

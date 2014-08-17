@@ -6,7 +6,7 @@ N
 23606
 23609
 0
-1.00
+0.80
 1.50
 5
 9
@@ -49,8 +49,8 @@ N
 23612
 23613
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -83,8 +83,10 @@ X
 N
 23614
 0
-1.00
-1.00
+0.80
+1.10
+19
+17
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~

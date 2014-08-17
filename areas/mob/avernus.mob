@@ -10,8 +10,8 @@ pit fiend goap~
 &+Rcities.  He travels with erinyes, and usually sticks around the
 &+Rentrance to Bel's citadel.&n
 ~
-1174435880 1 0 537395200 0 0 8192 -1000 S
-X 0 16 6
+1174435880 1 0 0 537395200 0 0 8192 -1000 S
+X 0 16 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ an &+Werinyes~
 &+Werinyes appear beautiful to humanoids, resembling very comely
 &+Wwomen except for their huge, feathery wings and sinister eyes.&n
 ~
-1174427848 1 0 2953314456 294912 67108864 8396800 -1000 S
-Y 0 9216 -1
+1174427848 1 0 0 2953314456 294912 67108864 8396800 -1000 S
+Y 0 9216 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -41,8 +41,8 @@ Amduscias~
 &+Lskin.  He wears long flowing black robes with a deep red lining.
 &+LHe seems to be a very feared greater devil.&n
 ~
-1140881512 1 0 2684879002 296961 84934656 8396800 -1000 S
-Y 0 65 4
+1140881512 1 0 0 2684879002 296961 84934656 8396800 -1000 S
+Y 0 65 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -58,8 +58,8 @@ Malphas~
 &+Ldeep and compelling voice, which he uses to deceive others -
 &+Lparticularly non-devils.&n
 ~
-1175484424 1 0 2684354712 264192 0 4464640 -1000 S
-Y 0 20 -1
+1175484424 1 0 0 2684354712 264192 0 4464640 -1000 S
+Y 0 20 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -76,8 +76,8 @@ devil nergal~
 &+ycolorless ichor.  This liquid is deadly poisonous to
 &+yhuman like creatures.&n
 ~
-1108375624 1 0 805830810 264192 2097152 8658944 -1000 S
-Y 0 384 4
+1108375624 1 0 0 805830810 264192 2097152 8658944 -1000 S
+Y 0 384 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -94,8 +94,8 @@ bist hellcat devil~
 &+rappears as a faintly luminescent, wraith-like, and unusually
 &+rlarge hellcat - retaining the flaming eyes.&n
 ~
-1073772776 1 0 2684354688 262144 0 0 -1000 S
-Y 0 8192 3
+1073772776 1 0 0 2684354688 262144 0 0 -1000 S
+Y 0 8192 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -109,8 +109,8 @@ caim devil~
 &+Was a large, upright, darkly handsome bird - a thrush - with a
 &+Wlong sharp beak and a belt around the hips.&n
 ~
-1073773768 3716136960 0 2684354712 264192 0 8192 -1000 S
-Y 0 512 3
+1073773768 3716136960 0 0 2684354712 264192 0 8192 -1000 S
+Y 0 512 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -125,8 +125,8 @@ short, foward-thrusting horns on his forehead.  His eyes are
 a luminous blue-green.  He stands here practicing his magics,
 and selling his magical items on the side.
 ~
-1075853322 0 0 536870912 0 0 0 -1000 S
-Y 0 512 4
+1075853322 0 0 0 536870912 0 0 0 -1000 S
+Y 0 512 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -145,8 +145,8 @@ azazel devil~
 &+W        but don't be fooled by legends and lore, he still weilds
 &+Wmore power than any mortal.&n
 ~
-1140881992 1 0 2684354696 0 0 0 -1000 S
-Y 0 1536 -1
+1140881992 1 0 0 2684354696 0 0 0 -1000 S
+Y 0 1536 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -161,8 +161,8 @@ a human face of cruelly handsome aspect, and a pinkish-white
 barbed tail.  Cahor's eye are yellowish brown, that quickly shine
 green as danger approaches.
 ~
-1140881640 1 0 536870912 0 0 0 -1000 S
-Y 0 2048 4
+1140881640 1 0 0 536870912 0 0 0 -1000 S
+Y 0 2048 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -176,8 +176,8 @@ dagon~
 &+Ltwo of which ends in digits tipped with long sharp talons. Dagon is traveling away
 &+Lfrom his home plane of Shadowsea, 89th Layer of the Abyss, gathering followers.&n
 ~
-1157658888 1 0 536871056 2048 67108864 12592640 -1000 S
-x 0 544 3
+1157658888 1 0 0 536871056 2048 67108864 12592640 -1000 S
+x 0 544 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -193,8 +193,8 @@ duskur lady devil~
 &+Lare smokey-grey and white, leathery rather than feathered,
 &+Land she is wearing a long, hooded cloak.&n
 ~
-1074296904 1 0 536870912 0 0 0 -1000 S
-Y 0 512 2
+1074296904 1 0 0 536870912 0 0 0 -1000 S
+Y 0 512 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -209,8 +209,8 @@ muscled arms set in two opposing pairs, with two bony-plated,
 spike-horn-protected shoulder.  His eyes are a brilliant flashing
 yellow.
 ~
-1142962248 1 0 2954363032 264192 67108864 545269248 -1000 S
-TK 0 1 5
+1142962248 1 0 0 2954363032 264192 67108864 545269248 -1000 S
+TK 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -226,8 +226,8 @@ Malarea swoops down at you!
 &+wmuscled and of a faintly luminescent, "ghostly" white hue.
 &+wHer hands have long claws, and she has large vampire like fangs.&n
 ~
-1073773768 1 0 2684354688 0 0 0 -1000 S
-Y 0 288 4
+1073773768 1 0 0 2684354688 0 0 0 -1000 S
+Y 0 288 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -243,8 +243,8 @@ a &+gkobold&n~
 &+gfive and a half feet tall, and has a bulky build.  He holds
 &+ga spear in both hands and is covered in black leather.&n
 ~
-1107310794 1 0 536870912 0 0 0 -1000 S
-H 0 1 3
+1107310794 1 0 0 536870912 0 0 0 -1000 S
+H 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -258,8 +258,8 @@ landscape of Avernus for the riches of the greater devils.
 His flesh is green and is very scorched.  He's about 3 feet
 tall, and is dressed in rags.
 ~
-33568968 1 0 805830818 0 0 0 -1000 S
-HG 0 106496 1
+33568968 1 0 0 805830818 0 0 0 -1000 S
+HG 0 106496 0 1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -272,8 +272,8 @@ This crazed little creature is flailing himself wildly acorss
 the Avernus landscape.  He is a very pale creature, with a
 slinky body and long wirey limbs.
 ~
-1174435976 1 0 536870928 0 0 0 -1000 S
-H 0 256 2
+1174435976 1 0 0 536870928 0 0 0 -1000 S
+H 0 256 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -287,8 +287,8 @@ looks like a disfigured blob of molten flesh and have no
 means of communication.  They are the grunts of the devil
 armies.
 ~
-1073752202 1 0 536870912 0 0 0 -1000 S
-Y 0 1 4
+1073752202 1 0 0 536870912 0 0 0 -1000 S
+Y 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -301,8 +301,8 @@ These things are similar to lemures, but are even more amorphous.
 Although slightly higher standing than lemures, they are still
 horribly abused by the rest of the devils.
 ~
-1073752520 1 0 536870912 0 0 0 -1000 S
-Y 0 65 5
+1073752520 1 0 0 536870912 0 0 0 -1000 S
+Y 0 65 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -316,8 +316,8 @@ out the Hells.  They serve mostly as messangers, scouts, and
 recruiters of the devil aries.  This one seems to be lost
 among the barren lanscape.
 ~
-1140865096 1 0 537395216 0 67108864 0 -1000 S
-Y 0 64 3
+1140865096 1 0 0 537395216 0 67108864 0 -1000 S
+Y 0 64 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -333,8 +333,8 @@ a &+gkobold&n~
 &+gfive feet tall, and has a bulky build.  She holds a spear in
 &+gboth hands and is covered in black leather.&n
 ~
-1107310794 1 0 536870912 0 0 0 -1000 S
-H 0 1 3
+1107310794 1 0 0 536870912 0 0 0 -1000 S
+H 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -348,8 +348,8 @@ landscape of Avernus for the riches of the greater devils.
 His flesh is green and is very scorched.  He's about 3 feet
 tall, and is dressed in rags.
 ~
-33568968 0 0 805830818 0 0 0 -1000 S
-HG 0 66048 1
+33568968 0 0 0 805830818 0 0 0 -1000 S
+HG 0 66048 0 1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ baby dragon~
 &+Lof food other than the lemures that happen to make it out of the
 &+Lmaggot pit.  It stands there, bravely guarding its mother's cavern.&n
 ~
-33569768 1 0 940048538 264385 67371008 8397824 -1000 S
-D 0 544 5
+33569768 1 0 0 940048538 264385 67371008 8397824 -1000 S
+D 0 544 0 5
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -375,8 +375,8 @@ hezrou~
 &+LThis evil looking &+rmane&+L snarls viciously at his surroundings.&n
 ~
 ~
-1141245962 1 0 1573048 0 0 0 -1000 S
-x 0 1 -1
+1141245962 1 0 0 1573048 0 0 0 -1000 S
+x 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -386,8 +386,8 @@ hezrou~
 &+LA snarling &+rmane &+Lstands here, radiating with power.&n
 ~
 ~
-1141245962 1 0 1573048 0 0 0 -1000 S
-x 0 512 -1
+1141245962 1 0 0 1573048 0 0 0 -1000 S
+x 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

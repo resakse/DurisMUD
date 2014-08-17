@@ -2,27 +2,27 @@
 the Dark Guildhall~
 29242 0 0 40 50 1
 *
-* Zone edited with dikuEdit v2.98h
+* Zone edited with durisEdit v2.99de
 *
 *
 *
-O 0 11051 999 29200 100 0 0 0      * (object not in this .OBJ file)
-O 0 11101 999 29202 100 0 0 0      * (object not in this .OBJ file)
-O 0 11013 999 29203 100 0 0 0      * (object not in this .OBJ file)
+O 0 11051 999 29200 100 0 0 0      * (object type not in this .obj file)
+O 0 11101 999 29202 100 0 0 0      * (object type not in this .obj file)
+O 0 11013 999 29203 100 0 0 0      * (object type not in this .obj file)
 O 0 29201 1 29206 100 0 0 0        * a glowing portal
 O 0 29203 1 29209 100 0 0 0        * a glowing portal
-O 0 11051 999 29210 100 0 0 0      * (object not in this .OBJ file)
-O 0 11101 999 29211 100 0 0 0      * (object not in this .OBJ file)
+O 0 11051 999 29210 100 0 0 0      * (object type not in this .obj file)
+O 0 11101 999 29211 100 0 0 0      * (object type not in this .obj file)
 O 0 29200 1 29212 100 0 0 0        * a glowing portal
-O 0 11051 999 29220 100 0 0 0      * (object not in this .OBJ file)
-O 0 11101 999 29221 100 0 0 0      * (object not in this .OBJ file)
+O 0 11051 999 29220 100 0 0 0      * (object type not in this .obj file)
+O 0 11101 999 29221 100 0 0 0      * (object type not in this .obj file)
 O 0 29205 1 29221 100 0 0 0        * a glowing portal
 O 0 29202 1 29222 100 0 0 0        * a glowing portal
-O 0 11051 999 29230 100 0 0 0      * (object not in this .OBJ file)
-O 0 11101 999 29231 100 0 0 0      * (object not in this .OBJ file)
+O 0 11051 999 29230 100 0 0 0      * (object type not in this .obj file)
+O 0 11101 999 29231 100 0 0 0      * (object type not in this .obj file)
 O 0 29204 1 29232 100 0 0 0        * a glowing portal
-O 0 11051 999 29240 100 0 0 0      * (object not in this .OBJ file)
-O 0 11101 999 29241 100 0 0 0      * (object not in this .OBJ file)
+O 0 11051 999 29240 100 0 0 0      * (object type not in this .obj file)
+O 0 11101 999 29241 100 0 0 0      * (object type not in this .obj file)
 O 0 29206 1 29242 100 0 0 0        * a glowing portal
 *
 M 0 29200 12 29200 100 0 0 0       * a dark golem
@@ -30,17 +30,17 @@ M 0 29200 12 29200 100 0 0 0       * a dark golem
 M 0 29200 12 29200 100 0 0 0       * a dark golem
 M 0 29200 12 29200 100 0 0 0       * a dark golem
 M 0 29201 1 29204 100 0 0 0        * a drugdealer
-G 1 377 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 3050 999 0 100 0 0 0           *    (object not in this .OBJ file)
-G 1 398 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 6089 999 0 100 0 0 0           *    (object not in this .OBJ file)
-G 1 364 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 412 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 53 999 0 100 0 0 0             *    (object not in this .OBJ file)
-G 1 347 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 108 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 109 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 111 999 0 100 0 0 0            *    (object not in this .OBJ file)
+G 1 377 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 3050 999 0 100 0 0 0           *    (object type not in this .obj file)
+G 1 398 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 6089 999 0 100 0 0 0           *    (object type not in this .obj file)
+G 1 364 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 412 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
+G 1 347 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 108 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 109 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 111 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 29200 12 29210 100 0 0 0       * a dark golem
 M 0 29200 12 29210 100 0 0 0       * a dark golem
 M 0 29200 12 29210 100 0 0 0       * a dark golem

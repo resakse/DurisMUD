@@ -1,9 +1,11 @@
 #139041~
 N
 0
-1.00
-1.00
+0.80
+1.10
 5
+6
+7
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -35,8 +37,9 @@ X
 #139076~
 N
 0
-1.00
-1.07
+0.80
+1.10
+19
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -75,8 +78,8 @@ N
 96
 97
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -108,8 +111,9 @@ X
 #139078~
 N
 0
-1.00
+0.80
 1.50
+8
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -141,8 +145,8 @@ X
 #139079~
 N
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -184,7 +188,7 @@ N
 139146
 0
 0.50
-1.00
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -216,7 +220,7 @@ X
 #139082~
 N
 0
-1.00
+0.80
 5.00
 0
 I'm not selling that, %s!~
@@ -249,8 +253,12 @@ X
 #139083~
 N
 0
-1.00
-1.00
+0.80
+1.10
+6
+7
+5
+30
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -282,8 +290,15 @@ X
 #139084~
 N
 0
-1.00
-1.00
+0.80
+1.10
+23
+2
+4
+3
+10
+33
+30
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -316,26 +331,16 @@ X
 N
 0
 0.75
-1.00
-1
-2
-4
+1.10
 3
-5
-18
-6
-7
 8
-9
 10
 15
 23
 30
-31
 32
 33
 34
-36
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -367,8 +372,8 @@ X
 #139086~
 N
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -400,8 +405,8 @@ X
 #139121~
 N
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -433,8 +438,8 @@ X
 #139122~
 N
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -466,8 +471,8 @@ X
 #139123~
 N
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -499,8 +504,14 @@ X
 #139124~
 N
 0
-1.00
-1.00
+0.80
+1.10
+2
+3
+4
+10
+33
+23
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -532,8 +543,11 @@ X
 #139125~
 N
 0
-1.00
-1.00
+0.80
+1.10
+8
+12
+15
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -605,8 +619,8 @@ X
 #139127~
 N
 0
-1.00
-1.00
+0.80
+1.10
 32
 0
 I'm not selling that, %s!~

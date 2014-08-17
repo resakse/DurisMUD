@@ -8,8 +8,8 @@ long grey hair and wrinkled skin.  Dressed in a loose fitting grey robe wearing
 leather sandals he looks rather unimposing except for power that seems to
 radiate from the man.
 ~
-1107429448 0 0 570433576 2048 0 0 0 S
-PH 0 512 -1
+1107429448 0 0 0 570433576 2048 0 0 0 S
+PH 0 512 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -19,8 +19,8 @@ Scarlock~
 Scarlock the assassin, appears to be looking for someone.
 ~
 ~
-1107302602 0 0 1572880 0 0 0 -1000 S
-PH 0 8192 -1
+1107302602 0 0 0 1572880 0 0 0 -1000 S
+PH 0 8192 0 -1
 50 -3 -95 50d100+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -32,8 +32,8 @@ undead skeleton humanoid~
    The skeleton of what could only have been a human who's skin has long since
 rotted away.  Its bones look clean except for the mud that covers its feet.
 ~
-2120 1 0 33619968 0 0 0 -1000 S
-U 0 1 -1
+2120 1 0 0 33619968 0 0 0 -1000 S
+U 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 0.0.0.0 907
 8 8 0
@@ -45,8 +45,8 @@ specter undead troll~
    The specter of a large troll warrior looks just as it did in life, having
 putrid gray skin with powerful hands and sharp claws but now transparent.
 ~
-6216 1 0 101187594 0 0 0 -1000 S
-U 0 1 -1
+6216 1 0 0 101187594 0 0 0 -1000 S
+U 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -58,8 +58,8 @@ skeleton serpent undead~
    The skeleton looks like a huge snake covered in mud and grime, its head
 and upper portions standing upright and looking fearsome.
 ~
-67656 1 0 33554448 0 0 0 -1000 S
-U 0 0 -1
+67656 1 0 0 33554448 0 0 0 -1000 S
+U 0 0 0 -1
 23 11 26 23d40+184 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -71,8 +71,8 @@ wraith undead~
    This horrible creature looks like reddish-black man-shaped clouds with a
 head that has two glowing red eyes, each look hungerly at you.
 ~
-1073746120 1 0 168296458 0 0 0 -1000 S
-U 0 256 -1
+1073746120 1 0 0 168296458 0 0 0 -1000 S
+U 0 256 0 -1
 15 15 51 15d25+75 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -84,8 +84,8 @@ A ghost of a long dead humanoid, fades in and out looking for life.
    This ghost seems to be a spirit of a human and is transparent, its
 non-corporeal form hates all things living and seeks only there destruction.
 ~
-8 1 0 167772170 0 0 0 0 S
-U 0 0 -1
+8 1 0 0 167772170 0 0 0 0 S
+U 0 0 0 -1
 23 11 26 23d40+184 3d5+3
 0.0.0.0 20493
 8 8 0
@@ -96,8 +96,8 @@ A shadowy apparition floats along here, totally silent.
 ~
    It looks like a shadow weaving through the fog and nothing more.
 ~
-2248 1 0 101187584 2048 0 0 -1000 S
-U 0 0 -1
+2248 1 0 0 101187584 2048 0 0 -1000 S
+U 0 0 0 -1
 17 13 45 17d30+85 3d4+2
 0.0.0.0 8262
 8 8 0
@@ -111,8 +111,8 @@ thin fingers is wearing just a simple lite-blue robe with a small belt and
 buckle.  He is a merchant and like all of his race deals only in magical items
 and potions.
 ~
-1107298440 0 0 570425514 2112 0 0 0 S
-PH 0 512 -1
+1107298440 0 0 0 570425514 2112 0 0 0 S
+PH 0 512 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 6 5 1

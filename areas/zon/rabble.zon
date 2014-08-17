@@ -2,7 +2,7 @@
 Rabble~
 65105 1 0 20 30 1
 *
-* Zone edited with dikuEdit v2.98h
+* Zone edited with durisEdit v2.99de
 *
 *
 *
@@ -16,12 +16,12 @@ M 0 65100 4 65100 100 0 0 0        * an Obsidian Demon
 M 0 65100 4 65100 100 0 0 0        * an Obsidian Demon
 M 0 65100 4 65100 100 0 0 0        * an Obsidian Demon
 M 0 65101 1 65103 100 0 0 0        * Frothe
-G 1 377 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 347 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 399 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 53 999 0 100 0 0 0             *    (object not in this .OBJ file)
-G 1 6094 999 0 100 0 0 0           *    (object not in this .OBJ file)
-G 1 6098 999 0 100 0 0 0           *    (object not in this .OBJ file)
+G 1 377 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 347 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 399 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
+G 1 6094 999 0 100 0 0 0           *    (object type not in this .obj file)
+G 1 6098 999 0 100 0 0 0           *    (object type not in this .obj file)
 G 1 65102 999 0 100 0 0 0          *    HoT Wings
 G 1 65103 999 0 100 0 0 0          *    Guiness
 G 1 65104 999 0 100 0 0 0          *    A Rabble Insignia Patch

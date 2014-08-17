@@ -3159,9 +3159,10 @@ void do_stat(P_char ch, char *argument, int cmd)
     }
     else
     {
-      for (i = 0; (i < number_of_shops) && (shop_index[i].keeper != GET_RNUM(k));
-           i++) ;
-
+      for( i = 0; (i < number_of_shops) && (shop_index[i].keeper != GET_RNUM(k)); i++ )
+      {
+        ;
+      }
       if(((mob_index[GET_RNUM(k)].func.mob != shop_keeper) &&
            (mob_index[GET_RNUM(k)].qst_func != shop_keeper)) ||
           (i >= number_of_shops))
@@ -3195,54 +3196,41 @@ void do_stat(P_char ch, char *argument, int cmd)
           num_pr++;
       }
     }
-    sprintf(o_buf,
-            "&+Y%s%sShop, Number: &N%d&+Y  for [&N%d&+Y](&n%d&+Y)&N %s\n\n",
-            shop_index[i].shop_new_options ? "New " : "Old ",
-            shop_index[i].shop_is_roaming ? "Roaming " : "", i,
-            mob_index[GET_RNUM(k)].virtual_number, GET_RNUM(k),
-            k->player.short_descr ? k->player.short_descr : "&+rNone");
-    sprintf(o_buf + strlen(o_buf),
-            "&+YHours: &N%d&+Y-&N%d&+Y,&N %d&+Y-&N%d  &+YAttackable?: %c  Allow Casting?: %c\n",
-            shop_index[i].open1, shop_index[i].close1, shop_index[i].open2,
-            shop_index[i].close2, shop_index[i].shop_killable ? 'Y' : 'N',
-            shop_index[i].magic_allowed ? 'Y' : 'N');
-    sprintf(o_buf + strlen(o_buf),
-            "&+YBuys for: &N%d%%&+Y, Sells for: &N%d%%&+Y, Produces &N%d &+YItems, Trades in &N%d &+YTypes\n",
-            (int) (shop_index[i].buy_percent * 100),
-            (int) (shop_index[i].sell_percent * 100), num_pr, num_tr);
+    sprintf(o_buf, "&+Y%s %sShop, Number: &N%d&+Y  for [&N%d&+Y](&n%d&+Y)&N %s\n\n",
+      shop_index[i].shop_new_options ? "New" : "Old",
+      shop_index[i].shop_is_roaming ? "Roaming " : "", i,
+      mob_index[GET_RNUM(k)].virtual_number, GET_RNUM(k),
+      k->player.short_descr ? k->player.short_descr : "&+rNone");
+    sprintf(o_buf + strlen(o_buf), "&+YHours: &N%d&+Y-&N%d&+Y,&N %d&+Y-&N%d  &+YAttackable?: %c  Allow Casting?: %c\n",
+      shop_index[i].open1, shop_index[i].close1, shop_index[i].open2,
+      shop_index[i].close2, shop_index[i].shop_killable ? 'Y' : 'N',
+      shop_index[i].magic_allowed ? 'Y' : 'N');
+    sprintf(o_buf + strlen(o_buf), "&+YBuys for: &N%d%%&+Y, Sells for: &N%d%%&+Y, Produces &N%d &+YItems, Trades in &N%d &+YTypes\n",
+      (int) (shop_index[i].buy_percent * 100),
+      (int) (shop_index[i].sell_percent * 100), num_pr, num_tr);
 
     /* various messages that shop has stored. */
 
     sprintf(o_buf + strlen(o_buf), "&+YRacist       :&N %s\n",
-            shop_index[i].racist_message ? shop_index[i].
-            racist_message : "&+R<NONE>");
+      shop_index[i].racist_message ? shop_index[i].racist_message : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YOpening      :&N %s\n",
-            shop_index[i].open_message ? shop_index[i].
-            open_message : "&+R<NONE>");
+      shop_index[i].open_message ? shop_index[i].open_message : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YClosing      :&N %s\n",
-            shop_index[i].close_message ? shop_index[i].
-            close_message : "&+R<NONE>");
+      shop_index[i].close_message ? shop_index[i].close_message : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YDon't have   :&N %s\n",
-            shop_index[i].no_such_item1 ? shop_index[i].
-            no_such_item1 : "&+R<NONE>");
+      shop_index[i].no_such_item1 ? shop_index[i].no_such_item1 : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YCh don't have:&N %s\n",
-            shop_index[i].no_such_item2 ? shop_index[i].
-            no_such_item2 : "&+R<NONE>");
+      shop_index[i].no_such_item2 ? shop_index[i].no_such_item2 : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YToo poor     :&N %s\n",
-            shop_index[i].missing_cash1 ? shop_index[i].
-            missing_cash1 : "&+R<NONE>");
+      shop_index[i].missing_cash1 ? shop_index[i].missing_cash1 : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YCh too poor  :&N %s\n",
-            shop_index[i].missing_cash2 ? shop_index[i].
-            missing_cash2 : "&+R<NONE>");
+      shop_index[i].missing_cash2 ? shop_index[i].missing_cash2 : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YWrong Type   :&N %s\n",
-            shop_index[i].do_not_buy ? shop_index[i].
-            do_not_buy : "&+R<NONE>");
+      shop_index[i].do_not_buy ? shop_index[i].do_not_buy : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YSOLD!        :&N %s\n",
-            shop_index[i].message_buy ? shop_index[i].
-            message_buy : "&+R<NONE>");
+      shop_index[i].message_buy ? shop_index[i].message_buy : "&+R<NONE>");
     sprintf(o_buf + strlen(o_buf), "&+YBought       :&N %s\n",
-            shop_index[i].message_sell ? shop_index[i].
-            message_sell : "&+R<NONE>");
+      shop_index[i].message_sell ? shop_index[i].message_sell : "&+R<NONE>");
 
     strcat(o_buf, "\n&+YItems traded: &N");
     for (i2 = 0;

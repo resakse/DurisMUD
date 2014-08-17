@@ -11,8 +11,8 @@ Perhaps
 its
 &+Creal strength lays in its mind, and its ability to alter reality.
 ~
-2122 1 0 24 0 256 0 -500 S
-OG 0 32 6
+2122 1 0 0 24 0 256 0 -500 S
+OG 0 32 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -27,8 +27,8 @@ A&+C giant&n without eyes reaches out with its senses.
 &+Ctrue mystery indeed. Although the size of this creature is impressive, its
 &+Creal strength lays in its brutality.
 ~
-2122 1 0 24 0 67109120 0 -500 S
-OG 0 1 6
+2122 1 0 0 24 0 67109120 0 -500 S
+OG 0 1 0 6
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -45,8 +45,8 @@ Perhaps
 its
 &+Creal strength lays in its mind, and its ability to alter reality.
 ~
-2122 1 0 8 0 256 0 -500 S
-OG 0 512 6
+2122 1 0 0 8 0 256 0 -500 S
+OG 0 512 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -64,8 +64,8 @@ Perhaps
 its
 &+Creal strength lays in its mind, and its ability to alter reality.
 ~
-2122 1 0 8 0 256 0 -500 S
-OG 0 4 6
+2122 1 0 0 8 0 256 0 -500 S
+OG 0 4 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -78,8 +78,8 @@ huge elemental earth~
 &+ymagical in nature. Its soul purpose is to defend its territory from unwanted
 &+yintruders into the tower.
 ~
-10 1 0 24 268435456 67108864 0 -999 S
-EE 0 1 5
+10 1 0 0 24 268435456 67108864 0 -999 S
+EE 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 700000
 8 8 0
@@ -93,8 +93,8 @@ huge elemental ice~
 &+Cby some powerful magician to do his bidding, a truly powerful magician this
 &+Cwizard must be.
 ~
-8 1 0 24 268435456 67108864 0 -999 S
-EA 0 1 5
+8 1 0 0 24 268435456 67108864 0 -999 S
+EA 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 700000
 8 8 0
@@ -107,8 +107,8 @@ huge elemental water~
 &+bguests. The power of the wizard who summoned this mental must be truly great,
 &+bfor who could control so many.
 ~
-8 1 0 8 0 0 0 -999 S
-EW 0 1 5
+8 1 0 0 8 0 0 0 -999 S
+EW 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 70000
 8 8 0
@@ -121,8 +121,8 @@ fire huge elemental~
 &+rguests. The power of the wizard who summoned this mental must be truly great,
 &+rfor who could control so many.
 ~
-1073741832 1 0 24 268435456 67108864 0 -999 S
-EF 0 1 5
+1073741832 1 0 0 24 268435456 67108864 0 -999 S
+EF 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 700000
 8 8 0
@@ -137,8 +137,8 @@ An&+W &+cae&+Cth&+Wer d&+Cra&+cgon &nprepares to attack with its deadly energies
 &+Wdeath is unparallel. Its black scales glitter as aether bombards its body.
 &+WThe cold blue eyes of seem to stare straight into souls.
 ~
-17160 1 0 8 268435456 67108864 0 -999 S
-D 0 1 7
+17160 1 0 0 8 268435456 67108864 0 -999 S
+D 0 1 0 7
 54 0 0 1d1+1 1d1+1
 0.0.0.1000 10000000
 8 8 0
@@ -160,8 +160,8 @@ wingless dragon massive green~
 &+Gweapon in its arsonal. It could effectively reduce an army to a bunch of ants
 &+Gawaiting to be squashed with its mere presence.
 ~
-16714 1 0 24 268435456 0 0 -999 S
-D 0 1 7
+16714 1 0 0 24 268435456 0 0 -999 S
+D 0 1 0 7
 57 0 0 1d1+1 1d1+1
 0.0.0.200 0
 8 8 0
@@ -183,8 +183,8 @@ more far out hypothesis is he was unafraid because he was never in danger.
 Perhaps he and the dragon were a team, or perhaps this man is also powerful in
 magic, and chooses to conceal himself for now.
 ~
-1140869192 0 0 24 268468224 67108864 0 0 S
-BH 0 1 3
+1140869192 0 0 0 24 268468224 67108864 0 0 S
+BH 0 1 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -209,8 +209,8 @@ his people, destroyed the elfs, destroyed the humans, and every other life
 in their former home. "If only they would've helped us, elven magic could've
 saved my people." he thinks.
 ~
-1140852810 0 0 24 268435456 67108864 0 -999 S
-PM 0 8192 -1
+1140852810 0 0 0 24 268435456 67108864 0 -999 S
+PM 0 8192 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -232,8 +232,8 @@ their people were destroyed by giants who were unleashed into the world by
 the humans, or so they believe, and so they have every right to hate and loth
 humans and dwarfs.
 ~
-1140852808 0 0 24 268435456 67108864 0 -999 S
-PE 0 128 -1
+1140852808 0 0 0 24 268435456 67108864 0 -999 S
+PE 0 128 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -257,8 +257,8 @@ could've had royal blood in her veins, and if it weren't for the fact that
 her mother was a whore, she might have some. Or even yet likely, her mother had
 royal clientel, who secretly bought off her silence.
 ~
-1140852808 0 0 24 268435456 67108864 0 -999 S
-PH 0 32 -1
+1140852808 0 0 0 24 268435456 67108864 0 -999 S
+PH 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -281,8 +281,8 @@ seem affected by the outside world, as if too senile to realize that he's in
 anykind of danger. But, perhaps there is more to this man than the image he
 projects, perhaps there lies more under the mask than out.
 ~
-1140852744 0 0 24 268435456 67108864 0 -999 S
-PH 0 2560 -1
+1140852744 0 0 0 24 268435456 67108864 0 -999 S
+PH 0 2560 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -305,8 +305,8 @@ as he expects imenent danger from the wingless dragon that's been tracking them
 all through the forest and then some, if only he could devise a plan to get
 them into the castle to the north, but it is locked.
 ~
-1140852808 0 0 24 268435456 67108864 0 -999 S
-PH 0 1 -1
+1140852808 0 0 0 24 268435456 67108864 0 -999 S
+PH 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -330,8 +330,8 @@ influx of
 &+Cthirty feet in height, his thunderous laugh shakes the very mountain
 itself.
 ~
-1073743946 0 0 8 2048 0 0 -999 S
-G 0 36 6
+1073743946 0 0 0 8 2048 0 0 -999 S
+G 0 36 0 6
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -350,8 +350,8 @@ giant titan~
 &+Marts of destruction. However large this creature is, its one true great
 &+Mpower can be overlooked by the naked eye, magic.
 ~
-1073743946 1 0 24 268435456 67108864 0 -999 S
-G 0 512 6
+1073743946 1 0 0 24 268435456 67108864 0 -999 S
+G 0 512 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -376,8 +376,8 @@ as to
 master's
 &+Bgarden, searching for something.
 ~
-1073743946 1 0 24 0 0 0 -999 S
-G 0 1 6
+1073743946 1 0 0 24 0 0 0 -999 S
+G 0 1 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -395,8 +395,8 @@ giant cyclops~
 &+Bwarpage in the fabric of space and time is all it would take. Rising over
 &+Bthirty feet in height, his thunderous laugh shakes the very mountain itself.
 ~
-1073743944 1 0 24 268437504 0 0 -999 S
-OG 0 4 6
+1073743944 1 0 0 24 268437504 0 0 -999 S
+OG 0 4 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -411,8 +411,8 @@ swirling tentacled mass plant~
 &+Gwander by. Whomever planted the seed remains a mystery, however, whoever it
 &+Gwas must have done so to prevent anyone from going any further into the tunnel.
 ~
-527370 1 0 17825816 0 67502080 0 -999 S
-VT 0 1 -1
+527370 1 0 0 17825816 0 67502080 0 -999 S
+VT 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -428,8 +428,8 @@ fire draco~
 &+Rvunerable to magical attacks. Its breath is a very potent weapon also, aside
 &+Rfrom its bite.
 ~
-2154 1 0 24 4194305 67108864 0 -999 S
-D 0 1 7
+2154 1 0 0 24 4194305 67108864 0 -999 S
+D 0 1 0 7
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -450,8 +450,8 @@ that
 brute,
 &+Bbut its creator embued this giant with the power of the animals.
 ~
-1073743944 1 0 24 0 0 0 -999 S
-G 0 1 6
+1073743944 1 0 0 24 0 0 0 -999 S
+G 0 1 0 6
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -469,8 +469,8 @@ has
 its
 &+gextremeties is larger than a large house.
 ~
-1073743976 1 0 24 0 262144 0 -999 S
-G 0 0 6
+1073743976 1 0 0 24 0 262144 0 -999 S
+G 0 0 0 6
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -485,8 +485,8 @@ A &+Cs&+cw&+Wi&+Br&+bl&+ci&+Cn&+bg &+Wm&+ba&+Bs&+cs&n of&+C c&+bo&+Bl&+Co&+cr&+b
 &+Wmust have been cast to create it. The colors spiraling at its center is almost
 &+Wblinding as it releashes deadly and potent shafts of light towards its enemies.
 ~
-16458 1 0 24 268435456 67109120 1024 -999 S
-BH 0 0 7
+16458 1 0 0 24 268435456 67109120 1024 -999 S
+BH 0 0 0 7
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -504,8 +504,8 @@ A &+rde&+Lmo&+rni&+Lc &+rd&+Le&+rv&+Li&+rl&n summoned from the pits of hell prot
 &+rlook tougher than rawhide. A shroud of darkness follows this beast at all
 &+rtimes, discerning anything else about its features is nearly impossible.
 ~
-1140852776 1 0 24 268435457 67371008 0 -999 S
-X 0 1 6
+1140852776 1 0 0 24 268435457 67371008 0 -999 S
+X 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -528,8 +528,8 @@ The &+Ll&+mo&+Lr&+md&n of &+LD&+mar&+Lkn&+mes&+Ls &nreigns his almighty forces.
 &+mthat has taken control, for he is becoming of dragon-kind from the many
 &+mexperiments and incantations that have changed him forever.
 ~
-10 1 0 24 268697600 0 0 -999 S
-D 0 1024 5
+10 1 0 0 24 268697600 0 0 -999 S
+D 0 1024 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -547,8 +547,8 @@ A &+Wghost&n of a caretaker&n hovers in mid-air.
 &+Wbetray him. It hovers above the ground a few feet looking over the master's
 &+Wgarden, searching for something.
 ~
-2058 1 0 1048600 268435456 67108864 0 -999 S
-UG 0 517 -1
+2058 1 0 0 1048600 268435456 67108864 0 -999 S
+UG 0 517 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -566,8 +566,8 @@ A &+Wghost&n of a librarian&n hovers in mid-air.
 &+Wbetray him. It hovers above the ground a few feet looking over the master's
 &+Wgarden, searching for something.
 ~
-2058 1 0 1048600 268435456 67108864 0 -999 S
-UG 0 517 -1
+2058 1 0 0 1048600 268435456 67108864 0 -999 S
+UG 0 517 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -585,8 +585,8 @@ An &+mar&ncan&+me a&+mpp&nrent&nic&+me &nstudies an ancient spellbook.
 &+mto it, most of which containing ingredients for spells. The hair on his head
 &+mis jet black, making his body uniform with his mind.
 ~
-1342179338 1 0 24 268435456 67108864 0 -999 S
-H 0 512 -1
+1342179338 1 0 0 24 268435456 67108864 0 -999 S
+H 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -603,8 +603,8 @@ A &+Lde&+Bat&+bh&+b &+Lkn&+Big&+bht&n calls upon the forces of &+Lda&+wrk&+Lne&+
 &+Binto dragon-kin with all the powers of the darkened kind. It serves its lich
 &+Bdragon-kin king under the forces of darkness.
 ~
-2152 1 0 1048600 294912 69206016 0 -999 S
-D 0 16 6
+2152 1 0 0 1048600 294912 69206016 0 -999 S
+D 0 16 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -622,8 +622,8 @@ A massive&+g green &+Gscaled &+bbeast&n awakes from his slumber.
 &+gthe fresh blood of a virgin. The mortals of this realm rarely see the kraken
 &+gbecause it is only awakened once in a lifetime.
 ~
-4721930 1 0 24 268697600 67108864 0 -999 S
-BH 0 4 7
+4721930 1 0 0 24 268697600 67108864 0 -999 S
+BH 0 4 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -638,8 +638,8 @@ A &+Lra&+cven tr&+Libe se&+cntry&n stands on sentry duty in the cold.
 &+Llong shifts securing the encampment from intruders and provides a safe secure
 &+Lnights rest for his tribe.
 ~
-1073743882 0 0 24 0 0 0 -999 S
-PB 0 1 -1
+1073743882 0 0 0 24 0 0 0 -999 S
+PB 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -652,8 +652,8 @@ A &+Bbarbarian &+btribe &+Lg&+Wu&+Lar&+Wd&n protects the encampment.
 &+Bwith me, he looks like he expects an attack at any moment from invaders from
 &+Ba foreign nation, or perhaps a beast of some sort.
 ~
-1140852746 1 0 24 0 67108864 0 -999 S
-PB 0 1 -1
+1140852746 1 0 0 24 0 67108864 0 -999 S
+PB 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -665,8 +665,8 @@ A drunken &+Bbarbarian&n staggers around.
 This barbarian is stone cold drunk, he staggers about blindly looking for a
 fight. His huge belly hints how much he likes to drinks.
 ~
-8 0 0 8 0 0 0 0 S
-PB 0 1 -1
+8 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -681,8 +681,8 @@ totems
 weigh
 &+Cover two hundred pounds.
 ~
-67110922 0 0 8 0 0 0 -999 S
-PB 0 256 -1
+67110922 0 0 0 8 0 0 0 -999 S
+PB 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -693,8 +693,8 @@ A &+Wsnow fox&n plays in the snow.
 ~
 &+WThis small fox jumps in the snow, playfully.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -708,8 +708,8 @@ barkeep~
 &+ygut, if he wasn't standing behind a counter one could see the full extent of
 &+yhis belly.
 ~
-1073743882 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -727,8 +727,8 @@ A &+Bbarbarian &+Lw&+wo&+Ll&+wf &+wl&+Lord &nsits comfortably in his furs.
 &+Bmarks, claw wounds, and gashes from blunt instruments. Arik has personal
 &+Bguardsmen trained in the arts of war around him at all times.
 ~
-67110986 0 0 24 268435456 67141632 0 -999 S
-PB 0 257 -1
+67110986 0 0 0 24 268435456 67141632 0 -999 S
+PB 0 257 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -743,8 +743,8 @@ A &+Ltri&+Wbal gua&+Lrd&n protects the wolf lord.
 &+Lhearty appetite but has been trained in the brutal martial arts that
 &+Lbarbarians are known for.
 ~
-1140852746 0 0 24 268435456 67108864 0 -999 S
-PB 0 1 -1
+1140852746 0 0 0 24 268435456 67108864 0 -999 S
+PB 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -761,8 +761,8 @@ A &+Cmerch&+Bant lo&+Crd&n prepares to market his goods.
 &+Can armed escort, usually to a tent of some woman ready to to consumate their
 &+Crelationship.
 ~
-71305738 0 0 24 268435456 0 0 -999 S
-PB 0 16640 -1
+71305738 0 0 0 24 268435456 0 0 -999 S
+PB 0 16640 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -777,8 +777,8 @@ A &+Bbarbarian &+bshaman&n chants softly to the spirits.
 &+bhas been chosen as one of the best to defend the town against the wild
 &+bcold beasts and all the threats that lay outside.
 ~
-2122 1 0 24 0 0 8192 -999 S
-PB 0 256 -1
+2122 1 0 0 24 0 0 8192 -999 S
+PB 0 256 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -792,8 +792,8 @@ An &+ginn&+Gkee&+gper&n awaits paying customers.
 &+Gleave this realm for a bit. He laughs heartily at jokes and has a natural
 &+Gcharisma that draws people to him.
 ~
-2058 0 0 8 0 0 0 0 S
-PB 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -806,8 +806,8 @@ A &+bfallen &+Bbarba&+Wrian sha&+Bman&n communes with the spirits.
 &+Bweigh over two hundred pounds, if he was ever called upon to defend the city
 &+Bhe'd do so without question.
 ~
-2634 1 0 8 268443648 67108864 0 -999 S
-PB 0 256 -1
+2634 1 0 0 8 268443648 67108864 0 -999 S
+PB 0 256 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -823,8 +823,8 @@ A &+Bbarbarian &+Cminer&n works his way through the tunnel.
 &+Cof silver and he is paid with more than just money for his business with
 &+Crespect that this work brings.
 ~
-1073743944 0 0 24 268435456 67108864 0 0 S
-PB 0 1 -1
+1073743944 0 0 0 24 268435456 67108864 0 0 S
+PB 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.50000.0.0 0
 8 8 1
@@ -838,8 +838,8 @@ A &+yh&+Yug&+ye &+gse&+Grp&+gent &nslithers in the foilage.
 &+gvenom in its fangs can drop anything very quickly. The most dangerous part of
 &+gthis serpent is its enormous body. It can crush an opponenet very easily.
 ~
-1075841096 1 0 1572888 268697600 67108864 0 -999 S
-RS 0 1 5
+1075841096 1 0 0 1572888 268697600 67108864 0 -999 S
+RS 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -854,8 +854,8 @@ A &+ygi&+Yan&+yt &+yp&+Yyt&+yhon&n slithers its way through the jungle.
 &+ydangerous and fierce predators. It is best to be done with them all if they
 &+yhave a nest nearby.
 ~
-1073744970 1 0 524312 268697600 67108864 0 -999 S
-RS 0 1 6
+1073744970 1 0 0 524312 268697600 67108864 0 -999 S
+RS 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -870,8 +870,8 @@ An &+Le&+Wvi&+Ll sp&+Wir&+Lit&n searches for souls to feed upon.
 &+LIt has a darker aura that consumes the air around it. The darkly chants
 &+Lit is reciting is reminiscent of something that a cleric has power over.
 ~
-1073743946 1 0 24 0 67108864 0 -999 S
-UG 0 32 3
+1073743946 1 0 0 24 0 67108864 0 -999 S
+UG 0 32 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -884,8 +884,8 @@ A&+c sil&+Lver mi&+cne for&+Leman &nexpects a new load of silver.
 &+Che just sits back and instructs his crew on their daily work load. If anything
 &+Cgoes wrong in the mine, he's to blame.
 ~
-10 0 0 24 0 0 0 0 S
-PB 0 1 -1
+10 0 0 0 24 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -900,8 +900,8 @@ A &+Yg&+yi&+Yan&+yt &+ga&+Gna&+gco&+Gnd&+ga&n devours something.
 &+gquickly maneuver and devour almost anything. Small cows are said to have
 &+gbeen swallowed whole by a beast this size.
 ~
-1074268234 1 0 24 268697600 67108864 0 -999 S
-RS 0 1 6
+1074268234 1 0 0 24 268697600 67108864 0 -999 S
+RS 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -915,8 +915,8 @@ A little &+ga&+Gna&+gco&+Gnd&+ga&n curls among the vines.
 &+gIt is protected by its mother and eats regularly. It will eventually grow
 &+ginto a full size anaconda and eat anything up to the size of a horse.
 ~
-1073743944 1 0 24 0 0 0 -999 S
-RS 0 1 2
+1073743944 1 0 0 24 0 0 0 -999 S
+RS 0 1 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -929,8 +929,8 @@ A &+B&+Bbarbarian &ntribe &+Ls&ne&+Ln&nt&+Lr&ny is posted before the tower.
 &+Bseriously, for he is the protection any town needs against wild boars and
 &+Bbeasts or even marauders.
 ~
-1140852810 0 0 24 268435456 67108864 0 -999 S
-PB 0 1 -1
+1140852810 0 0 0 24 268435456 67108864 0 -999 S
+PB 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -946,8 +946,8 @@ A hired &+Bbarbarian&+C bodyguard&n protects the merchant lord.
 &+Cside arm for two-handed slashing, and a dagger on the opposite side of his
 &+Cwaist, but no shield.
 ~
-1073743882 0 0 24 268435456 67108864 0 -999 S
-PB 0 1 -1
+1073743882 0 0 0 24 268435456 67108864 0 -999 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -961,8 +961,8 @@ The &+Ybe&+War&+Y cla&+Wn ch&+Yief&n relaxes and smokes a pipe rolled our furs.
 &+Ymade decisions that affect the lives of his entire tribe, and his tribe accepts
 &+Yhis decisions without question.
 ~
-4196426 0 0 24 268697600 67108864 0 -999 S
-PB 0 257 -1
+4196426 0 0 0 24 268697600 67108864 0 -999 S
+PB 0 257 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -975,8 +975,8 @@ A &+Bba&+Wrbar&+Bian&n &+Wt&+Yr&+Wib&+Ye&+Ws&+Ym&+Wan&n stands ceremoniously bes
 &+Bprotect his lord, to give his life for his master would be an honor. He stands
 &+Bwell over six feet tall and must weigh at least two hundred pounds.
 ~
-1140852810 0 0 24 268435456 0 0 -999 S
-PB 0 1 -1
+1140852810 0 0 0 24 268435456 0 0 -999 S
+PB 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -989,8 +989,8 @@ A &+Yclan bear &+Bbarbarian &nrests in his tent.
 &+Bpounds. His girth is unparalled, which might be the reason why he's in the
 &+Bbear clan, for he looks like a bear.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1003,8 +1003,8 @@ barbarian elder wong wongwicky wicky~
 &+Bpounds. He wears a long flowing robe made of fox fur and some nice leather
 &+Bboots, for he is in a very prestigeous position.
 ~
-2122 0 0 168 268435456 67108864 0 -999 S
-PB 0 257 -1
+2122 0 0 0 168 268435456 67108864 0 -999 S
+PB 0 257 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1017,8 +1017,8 @@ A &+Bbra&+bwny &+bbar&+Bbar&+bian&n &+Ywarden&n protects the elder enforcer.
 &+bprotect his lord, to give his life for his master would be an honor. He stands
 &+bwell over six feet tall and must weigh at least two hundred pounds.
 ~
-1140852810 0 0 24 268435456 67108864 0 -999 S
-PB 0 1 -1
+1140852810 0 0 0 24 268435456 67108864 0 -999 S
+PB 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1031,8 +1031,8 @@ A &+Rgnome&n prisoner shrieks as he charges.
 &+Rattempted to penetrate into the camp in an attempt to assassinate the elder.
 &+RHe now hopes to escape his vile prison.
 ~
-2154 1 0 24 268697600 67108864 0 -999 S
-PG 0 4 -1
+2154 1 0 0 24 268697600 67108864 0 -999 S
+PG 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1047,8 +1047,8 @@ A &+bweapons&+Bmaster&n awaits paying customers.
 &+banything imaginable. His ingenious weapon fighting skills can take down an
 &+bopponent at will and have been trained tirelessly and relentlessly for years.
 ~
-2058 0 0 24 268435456 67108864 0 -999 S
-PB 0 16385 -1
+2058 0 0 0 24 268435456 67108864 0 -999 S
+PB 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1062,8 +1062,8 @@ A &+Lsh&+Wop&+Lke&+Weper&n attends his store meticulously.
 &+La weight of well over two hundred pounds. He keeps bottles strap around his
 &+Lwaste that posess powerful magic.
 ~
-2570 0 0 8 268435456 67108864 0 -999 S
-PB 0 1 -1
+2570 0 0 0 8 268435456 67108864 0 -999 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1075,8 +1075,8 @@ horse~
 &+yThis horse works the fields along with the mules. It also serves as a valuable
 &+ymeans of transportation.
 ~
-10 0 0 0 0 0 0 0 S
-A 0 0 4
+10 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 5 0 0 1d1+1 1d1+1
 0.0.0.0 300000
 8 8 0
@@ -1092,8 +1092,8 @@ The spirit of a &+Bbarbarian&+b hunter &nscopes the jungle for reptiles.
 &+Band his skills were undoubtably great but yet he succumbed to the treacheries
 &+Bof this life consumable mountain.
 ~
-74 0 0 1048584 0 0 0 0 S
-PB 0 1 -1
+74 0 0 0 1048584 0 0 0 0 S
+PB 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1109,8 +1109,8 @@ rungrat warrior~
 &+Bchildhood from people making fun of it so much. He is always looking to
 &+Bpound anyone who looks at him funny or pronounces his name in a silly way.
 ~
-1073744394 0 0 24 0 0 0 0 S
-PB 0 1 -1
+1073744394 0 0 0 24 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1123,8 +1123,8 @@ A &+rravenous&n &+Wroc&n squaks as it dives to attack!
 &+Wit were human, it might be a face of bloodlust. It has white feathers and looks
 &+Wto take flight into the air to devour some prey.
 ~
-10 1 0 16 268435456 67108864 0 0 S
-B 0 0 2
+10 1 0 0 16 268435456 67108864 0 0 S
+B 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1140,8 +1140,8 @@ A &+Wsn&+gow cov&+Ger&+Wed&+g c&+Ga&+Wt&n jumps from trail to trail.
 &+Win this village that feed off scraps and find their homes in many of the
 &+Wtents but the barbarians don't mind.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1155,8 +1155,8 @@ A &+Wfu&+Br cl&+Woaked&n &+bbar&+Bbar&+bian&n orders a frothy ale.
 &+blon gas you love him so, let it snow. His real name is Grongala, but call him
 &+bthat, and you'll soon find out why no one does.
 ~
-2058 0 0 24 268435456 67108864 0 0 S
-PB 0 16640 -1
+2058 0 0 0 24 268435456 67108864 0 0 S
+PB 0 16640 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1168,8 +1168,8 @@ A&+W ro&+gusty pat&+Wron&n raises his voice merrily with laughter.
 &+gThis barbarian has one too many mugs of ale. It owuld be best if he kept his
 &+gvoice down or he stands the risk of being tossed out into the cold.
 ~
-2058 0 0 8 0 0 0 0 S
-PB 0 0 -1
+2058 0 0 0 8 0 0 0 0 S
+PB 0 0 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1183,8 +1183,8 @@ A &+Bhe&+Wavily cl&+boak&+Wed tr&+Bibes&+Wman &nplows through the snow.&n
 &+Bmuscles broadly. His jet black hair is soaked as it snows heavily but he
 &+Bdoesn't mind, because he is used to it.
 ~
-2120 0 0 24 0 67108864 0 -999 S
-PB 0 1 -1
+2120 0 0 0 24 0 67108864 0 -999 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.200 250000
 8 8 1
@@ -1198,8 +1198,8 @@ barbarian tribal~
 &+Bhe can prove to his elders that he can battle such a beast, they will
 &+Brecognize his warrior skills.
 ~
-2058 0 0 8 0 0 0 0 S
-PB 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1213,8 +1213,8 @@ A &+Wsn&+Low&+W covered &+Lbe&+War&n searches for a meal.
 &+Wtribe for a week and its could be used are warm covered clothing for the
 &+Wtall mountain peak's cold air and wintery weather.
 ~
-1073743880 1 0 16 0 67108864 0 -999 S
-A 0 1048576 4
+1073743880 1 0 0 16 0 67108864 0 -999 S
+A 0 1048576 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 100000
 8 8 0
@@ -1229,8 +1229,8 @@ huge worm earthly~
 &+ytunnels. These tunnels are wide enough for anyone to travel through and
 &+yit isn't unheard of.
 ~
-1073741832 1 0 152 269484032 67108864 0 -999 S
-EE 0 1 5
+1073741832 1 0 0 152 269484032 67108864 0 -999 S
+EE 0 1 0 5
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1242,8 +1242,8 @@ small snow fox~
 &+WThis small snow fox runs through the snow hoping to catch a rodent. It is tiny
 &+Wand the forest is filled with such tiny animals.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1257,8 +1257,8 @@ A &+Wgigantic sasquach&n &+RROARS &nand thumps its chest!
 &+Wgood. Many barbarians have tried to hunt this beast, however, none have
 &+Wever survived an encounter.
 ~
-2570 1 0 24 268435456 67108864 0 -999 S
-G 0 1 7
+2570 1 0 0 24 268435456 67108864 0 -999 S
+G 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1275,8 +1275,8 @@ gooran~
 &+gsome side work as a crafter for people and he makes a great deal of money
 &+gdoing that. He is a mercenary by trade.
 ~
-1073743882 0 0 24 0 67108864 0 0 S
-PB 0 16384 -1
+1073743882 0 0 0 24 0 67108864 0 0 S
+PB 0 16384 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1292,8 +1292,8 @@ rungar~
 &+Ythe burden of them riding on their backs, and as such, the deer tribe is well
 &+Yrespected.
 ~
-2056 0 0 24 0 0 0 -999 S
-PB 0 1 -1
+2056 0 0 0 24 0 0 0 -999 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1306,8 +1306,8 @@ large snowpack wolf~
 &+Lglades in search for food. Its black fur keeps it warm during the long cold days
 &+Lon top of this mountain.
 ~
-1073743880 1 0 0 268435456 0 0 -500 S
-A 0 1 -1
+1073743880 1 0 0 0 268435456 0 0 -500 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1319,8 +1319,8 @@ pack wolf~
 &+LThis wolf follows behind a large black wolf in search of food, its fangs drip
 &+Lwith saliva as it prepares to devour its prey.
 ~
-8 1 0 8 268435456 0 0 -500 S
-A 0 0 -1
+8 1 0 0 8 268435456 0 0 -500 S
+A 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1338,8 +1338,8 @@ A &+ywh&+Yit&+We &+ywi&+Yng&+Wed &+ygriffon&n takes flight from the side of the 
 &+yare domesticated through the power of magic to serve some wizard. Its frost
 &+ybreathe and razor sharp talons are very dangerous.
 ~
-1073875530 1 0 268435464 0 0 0 -999 S
-B 0 1 5
+1073875530 1 0 0 268435464 0 0 0 -999 S
+B 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1358,8 +1358,8 @@ A one-eyed &+gtroll&n is here, looking hungry.
 &+gwould seem, because some of the more fiercesome can regenerate arms and
 &+glegs over time.
 ~
-10 0 0 1048584 16 0 0 0 S
-PT 0 1 -1
+10 0 0 0 1048584 16 0 0 0 S
+PT 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1374,8 +1374,8 @@ A &+Wsnow leopard&n is on the prowl and prepares to attack.&n
 &+WThere must be some sort of den they sleep in to keep from freezing all year
 &+Waround, especially when it storms there is a blizzard.
 ~
-8 1 0 256 268435456 67108864 0 -500 S
-A 0 0 -1
+8 1 0 0 256 268435456 67108864 0 -500 S
+A 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1389,8 +1389,8 @@ wild bear~
 entire
 &+Btribe for a week.
 ~
-1073743880 1 0 24 0 0 0 -999 S
-A 0 0 4
+1073743880 1 0 0 24 0 0 0 -999 S
+A 0 0 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 100000
 8 8 0
@@ -1404,8 +1404,8 @@ snow bear~
 entire
 &+Wtribe for a week.
 ~
-1073743880 0 0 24 0 0 0 -999 S
-A 0 0 4
+1073743880 0 0 0 24 0 0 0 -999 S
+A 0 0 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1422,8 +1422,8 @@ A &+Lhorr&+yific &+ygh&+Was&+Ltly &+Lgh&+gou&+Ll &nsurrounds the world with dark
 &+Llevitate on an aura of darkness that transmutates from the netherworld to
 &+Lbind it to the world of the living.
 ~
-8 1 0 524296 268435456 0 0 0 S
-U 0 32 -1
+8 1 0 0 524296 268435456 0 0 0 S
+U 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1440,8 +1440,8 @@ A &+rter&+Rrify&+ring de&+Rvi&+rl&n cackles with insane glee!
 &+rred for skin is scary as its humongous and terrifying physique is curved and
 &+rripped and is a symbolic symbol of strength and wizardry.
 ~
-10 1 0 8 268697600 0 0 -999 S
-Y 0 1 -1
+10 1 0 0 8 268697600 0 0 -999 S
+Y 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1458,8 +1458,8 @@ A &+Ldark &+Wsk&+Lel&+We&+Lt&+Won&n has been brought back by some ancient art.
 &+Wdarkened energy and terrifying depression even from the other side of the
 &+Wmountain. The demonic powers of that tall dark tower hold sway here.
 ~
-8 1 0 24 0 0 0 -999 S
-U 0 1 -1
+8 1 0 0 24 0 0 0 -999 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1476,8 +1476,8 @@ ancient twisted skeleton~
 &+Wfeet. It breathes a dark death because it has been endowed with a larger
 &+Wamounts of lifelust souls and sacrifices that raised it from the grave.
 ~
-1048586 1 0 24 0 67108864 0 0 S
-U 0 1 6
+1048586 1 0 0 24 0 67108864 0 0 S
+U 0 1 0 6
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1489,8 +1489,8 @@ vicious pike~
 &+bThis pike swims in the river. Its belly is fat and round from all the
 &+bflesh it has eatten. It wants flesh.
 ~
-2058 0 0 24 0 0 0 0 S
-F 0 0 -1
+2058 0 0 0 24 0 0 0 0 S
+F 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1504,8 +1504,8 @@ pet illithid~
 &+Mforces at work. Its body is slick and thin. Sunlight could destroy this
 &+Mpowerful illithid even if an army can not.
 ~
-1073743880 1 0 8 268435456 67108864 0 -999 S
-MF 0 262144 3
+1073743880 1 0 0 8 268435456 67108864 0 -999 S
+MF 0 262144 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1520,8 +1520,8 @@ demon great sang dragula sang'dragula~
 &+rthe devil and his demons. His red-hued skin is very scary. His voice screams
 &+rvenom.
 ~
-1048586 1 0 268435480 268478657 0 0 -999 S
-X 0 1 6
+1048586 1 0 0 268435480 268478657 0 0 -999 S
+X 0 1 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1536,8 +1536,8 @@ barbarian sergeant~
 &+bman leading the underlings along the mountainside fighting the wild, elements,
 &+band protecting against any intruders.
 ~
-1140852744 1 0 24 0 0 0 -999 S
-PB 0 1 -1
+1140852744 1 0 0 24 0 0 0 -999 S
+PB 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1550,8 +1550,8 @@ barbarian soldier~
 &+Blongsword with the best of them. He stands over six feet tall and must weigh
 &+Bat least two hundred pounds.
 ~
-1073743880 1 0 8 268435456 0 0 -999 S
-PB 0 16385 -1
+1073743880 1 0 0 8 268435456 0 0 -999 S
+PB 0 16385 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1567,8 +1567,8 @@ A &+Lgr&+mot&+Les&+mq&+Lue l&+mic&+Lh&n devours the light into darkness.
 &+Lnow covered in maggots and &+gvermin&+L. Legs and arms now are covered in
 &+Lgut wrenching smells and odours.
 ~
-8 1 0 24 268435456 0 0 -999 S
-UL 0 512 -1
+8 1 0 0 24 268435456 0 0 -999 S
+UL 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1580,8 +1580,8 @@ baby griffon~
 &+yThis is a baby griffon. It is just a baby and depends on its mother for
 &+ysurvival.
 ~
-2058 0 0 8 0 0 0 -999 S
-B 0 0 -1
+2058 0 0 0 8 0 0 0 -999 S
+B 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1595,8 +1595,8 @@ An &+yas&+Lhy ear&+yth wo&+Lrm&n is munching on some rock.&n
 &+ybecause it feeds off the ash and sulfuric residue. During the winter months
 &+yits trails serve as a warning sign of danger.
 ~
-10 1 0 0 269484032 67371008 0 0 S
-A 0 1 4
+10 1 0 0 0 269484032 67371008 0 0 S
+A 0 1 0 4
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1614,8 +1614,8 @@ giant cyclops~
 &+bwarpage in the fabric of space and time is all it would take. Rising over
 &+bthirty feet in height, his thunderous laugh shakes the very mountain itself.
 ~
-1073743946 1 0 24 268437504 67108864 0 -999 S
-G 0 4 6
+1073743946 1 0 0 24 268437504 67108864 0 -999 S
+G 0 4 0 6
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1632,8 +1632,8 @@ barbarian ruff brong large~
 &+bwith an amazing build. His jet black hair is always ruff and in need of
 &+ba swift combing.
 ~
-1140853258 0 0 24 0 67371008 1024 0 S
-PB 0 1 -1
+1140853258 0 0 0 24 0 67371008 1024 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1650,8 +1650,8 @@ singu human cleric~
 &+csix feet tall and resembles the barbarians he preaches to with his long
 &+cblack hair and strong build. He has a coarse voice but he must be tired.
 ~
-1073743882 0 0 24 0 0 0 0 S
-PH 0 32 -1
+1073743882 0 0 0 24 0 0 0 0 S
+PH 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1668,8 +1668,8 @@ roxon~
 &+Cfrequents the pub, drinking himself into a tupor. When he's not doing that,
 &+Che's doing what he likes to call creative work in bed with women.
 ~
-1073744394 0 0 24 0 0 0 0 S
-PB 0 256 -1
+1073744394 0 0 0 24 0 0 0 0 S
+PB 0 256 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1679,8 +1679,8 @@ test~
 test mob
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1703,8 +1703,8 @@ yunger dragon figher~
 &+Yand soul searching. His claim to fame is through valor, repute, and valuing
 &+Ydrivers of honor and dignity that others can not.
 ~
-2568 0 0 2550210712 269778944 67141632 34604032 -222 S
-PB 0 16385 -1
+2568 0 0 0 2550210712 269778944 67141632 34604032 -222 S
+PB 0 16385 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1718,8 +1718,8 @@ A &+rre&+Rd hai&+rred &+Wfox&n scurries away from the path.
 &+Wpointy ears perk at the signs of danger, because it considers carriages
 &+Whorses and armaments sharp contrasts to the natural wild.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1734,8 +1734,8 @@ An &+Le&+cvi&+Ll sp&+cir&+Lit&n searches for souls to feed upon.
 &+LIt has a darker aura that consumes the air around it. The darkly chants
 &+Lit is reciting is reminiscent of something that a cleric has power over.
 ~
-1073743946 1 0 8216 0 67108864 0 -999 S
-UG 0 32 3
+1073743946 1 0 0 8216 0 67108864 0 -999 S
+UG 0 32 0 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1750,8 +1750,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -1766,8 +1766,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -1782,8 +1782,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -1798,8 +1798,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -1816,8 +1816,8 @@ Perhaps
 its
 &+Creal strength lays in its mind, and its ability to alter reality.
 ~
-2122 1 0 8 0 256 0 -500 S
-OG 0 512 6
+2122 1 0 0 8 0 256 0 -500 S
+OG 0 512 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1832,8 +1832,8 @@ A &+Cde&+cer tri&+Cbe &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1848,8 +1848,8 @@ A &+Cde&+cer tri&+Cbe &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1864,8 +1864,8 @@ A &+Cde&+cer tri&+Cbe &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1877,8 +1877,8 @@ A &+rbloodthirsty &+Lshadow&+rbeast&n materializes from the shadows.
 &+LLiving in the dark, this shadow beast slowly materializes into thin air and
 &+Lreveals itself as an assailant, as it prepares to attack.
 ~
-8 1 0 1572872 268435456 0 0 -555 S
-US 0 8192 -1
+8 1 0 0 1572872 268435456 0 0 -555 S
+US 0 8192 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1888,8 +1888,8 @@ a &+Wdracolich~
 A &+Wdracolich&n from returned from the netherworld.
 ~
 ~
-1073743882 1 0 24 0 0 0 -555 S
-UD 0 1 -1
+1073743882 1 0 0 24 0 0 0 -555 S
+UD 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1904,8 +1904,8 @@ A &+Wpha&+Lntom&+r m&+Len&+ra&+Lc&+re&n is in the service of its master.
 &+Wmake further sacrifices to the dark order to procure more power. This shade
 &+Wis his adjutant, his otherwise assistant in study.
 ~
-1073743880 1 0 8 268697600 67108864 0 -999 S
-UP 0 131072 -1
+1073743880 1 0 0 8 268697600 67108864 0 -999 S
+UP 0 131072 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1924,8 +1924,8 @@ A terrified &+Chuman&n man lays covered in blood.
 &+Cof the dead westward. Dried blood has caked around his orifices, particularly
 &+Chis eyes, ears, nose, and mouth.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1943,8 +1943,8 @@ slippin~
 &+CIt is nothing more than a mound endowed with ferocious techniques to
 &+Ceviscerate intruders into the tower.
 ~
-1073744394 1 0 24 0 2097152 0 -999 S
-EA 0 513 -1
+1073744394 1 0 0 24 0 2097152 0 -999 S
+EA 0 513 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 140000
 8 8 0
@@ -1958,8 +1958,8 @@ flamme~
 &+Rbarrage is enough to route armies, and the lesser elementals at his side do
 &+Rhis bidding without question.
 ~
-1073743914 1 0 24 4194304 67108864 0 -999 S
-EF 0 513 -1
+1073743914 1 0 0 24 4194304 67108864 0 -999 S
+EF 0 513 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 280000
 8 8 0
@@ -1973,8 +1973,8 @@ albatross~
 &+bhere to do some bidding of some deprived of reality arch lich magi. Great in
 &+bmagic, powerful physical force, he will be tough to defeat.
 ~
-268437514 1 0 24 2097152 67108864 0 -999 S
-EW 0 513 5
+268437514 1 0 0 24 2097152 67108864 0 -999 S
+EW 0 513 0 5
 57 0 0 1d1+1 1d1+1
 0.0.0.0 420000
 8 8 1
@@ -1984,8 +1984,8 @@ terrifying visage death poseidon~
 A &+rterrifying visage &nof &+bPo&+Bsei&+Wd&+Bo&+bn&n awakens the &+gKraken&n.
 ~
 ~
-1074794506 1 0 24 0 0 0 -1000 S
-UG 0 16908288 -1
+1074794506 1 0 0 24 0 0 0 -1000 S
+UG 0 16908288 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2001,8 +2001,8 @@ An elder &+Bbarbarian &+bshaman&n collects water from the spring.
 &+Btouches and flows passed his shoulders as he kneels near the hotspring to
 &+Bfill up a flask.
 ~
-2058 0 0 24 0 0 0 0 S
-PB 0 256 -1
+2058 0 0 0 24 0 0 0 0 S
+PB 0 256 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2012,8 +2012,8 @@ a &+Wfrost draco~
 A &+Wfrost draco&n wards against invaders.
 ~
 ~
-335546890 0 0 24 0 0 0 0 S
-DK 0 512 6
+335546890 0 0 0 24 0 0 0 0 S
+DK 0 512 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2028,8 +2028,8 @@ A &+bst&+Lone &+Lgo&+blem&n is standing protectively before the tower.
 &+btall and towers above the flesh and meat on top of the bones of the barbarians
 &+bthat it serves in front of the tower.
 ~
-71321610 0 0 2147483800 0 0 0 0 S
-OG 0 1 7
+71321610 0 0 0 2147483800 0 0 0 0 S
+OG 0 1 0 7
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2039,8 +2039,8 @@ a &+Bbarbarian&+W frost &+Cmagus~
 A &+Bbarbarian &+Wfrost&+C magus&n practices an incantation.
 ~
 ~
-67110922 0 0 24 0 0 0 0 S
-PB 0 512 -1
+67110922 0 0 0 24 0 0 0 0 S
+PB 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2050,8 +2050,8 @@ a &+Lpl&+bag&+Lued &+bsp&+Lirit~
 A &+Lpl&+bag&+Lued &+bsp&+Lirit&n reconciles the demons within.
 ~
 ~
-1050634 1 0 268435464 262144 0 0 -999 S
-UG 0 1 -1
+1050634 1 0 0 268435464 262144 0 0 -999 S
+UG 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2061,8 +2061,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2072,8 +2072,8 @@ a &+RFIRE &+Lant~
 A &+RFIRE &+Lant &nbreathes terrifying &+Rflame&n!
 ~
 ~
-40 1 0 24 268435456 67108864 0 -999 S
-A 0 0 -1
+40 1 0 0 24 268435456 67108864 0 -999 S
+A 0 0 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2083,8 +2083,8 @@ spirit walker~
 &+WA spirit walker rests beside a totem.
 ~
 ~
-2058 1 0 2415919128 268435456 67108928 8192 -555 S
-UG 0 256 -1
+2058 1 0 0 2415919128 268435456 67108928 8192 -555 S
+UG 0 256 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2094,8 +2094,8 @@ an unnamed mob~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2105,8 +2105,8 @@ a &+rM&+LA&+be&+cL&+ys&+bT&+rr&+gO&+cM&n~
 A &+rM&+LA&+be&+cL&+ys&+bT&+rr&+cO&+cM&n launches &+RMaDnEss&n and &+Rchaos&n towards you.
 ~
 ~
-18442 1 0 24 268697600 67108864 8192 -999 S
-BH 0 0 -1
+18442 1 0 0 24 268697600 67108864 8192 -999 S
+BH 0 0 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2116,8 +2116,8 @@ a &+Lvic&+yio&+Lus sn&+mar&+Lling ar&+mac&+Lhnid~
 A &+Lvic&+yio&+Lus sn&+mar&+Lling ar&+mac&+Lhnid &nstrikes with venom.
 ~
 ~
-3082 0 0 1048600 268435456 131072 0 -999 S
-AS 0 1 6
+3082 0 0 0 1048600 268435456 131072 0 -999 S
+AS 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2127,8 +2127,8 @@ a &+Ldark L&+mic&+Lh~
 A&+L L&+mic&+Lh &nnecromancer recites a ritual incantation.
 ~
 ~
-1074792458 1 0 24 0 0 0 -999 S
-UL 0 1024 3
+1074792458 1 0 0 24 0 0 0 -999 S
+UL 0 1024 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2138,8 +2138,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2149,8 +2149,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2164,8 +2164,8 @@ A &+bpat&+Bron&n of the inn shrugs off the snow and prepares to enter the inn.
 &+bpeers. He has a long unshaven beard that many of the barbarians sport on this
 &+bmountainside, because it keeps them warm.
 ~
-2058 0 0 8 0 0 0 0 S
-PB 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2175,8 +2175,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2186,8 +2186,8 @@ a well-trained &+Bswordsman~
 A well-trained &+Bswordsman&n exhibits impressive skill.
 ~
 ~
-67110922 0 0 24 0 67371008 0 0 S
-PB 0 1 -1
+67110922 0 0 0 24 0 67371008 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2202,8 +2202,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2213,8 +2213,8 @@ a &+bs&+Bpi&+bri&+Btu&+bal w&+Bar&+bdian~
 A &+bs&+Bpi&+bri&+Btu&+Bal &+bw&+Bar&+bdian&n stands protectively before the entrance to the shrine.
 ~
 ~
-2570 1 0 24 0 67108864 0 0 S
-PB 0 257 -1
+2570 1 0 0 24 0 67108864 0 0 S
+PB 0 257 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2224,8 +2224,8 @@ a &+mmyst&+Merious&n &+Wwhi&+Lte ro&+Wbed&n &+Lwizard~
 A &+mmyst&+Merious &+Wwh&+Lite ro&+Wbed &+Lwizard&n dons his hat.
 ~
 ~
-335546378 0 0 268435480 0 0 0 0 S
-PH 0 2560 -1
+335546378 0 0 0 268435480 0 0 0 0 S
+PH 0 2560 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2235,8 +2235,8 @@ an unnamed mob~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2246,8 +2246,8 @@ a &+Lshackled &+Whydra &+bbeast~
 A &+Lshackled&+W hydra &+bbeast&n receives orders from the controller.
 ~
 ~
-335544586 0 0 268435480 268697600 67108864 0 -555 S
-BH 0 0 4
+335544586 0 0 0 268435480 268697600 67108864 0 -555 S
+BH 0 0 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2257,8 +2257,8 @@ a &+Gcontroller~
 A &+Gcontroller&n protects the wolf lord.
 ~
 ~
-67110922 0 0 16 0 0 0 0 S
-PB 0 262144 -1
+67110922 0 0 0 16 0 0 0 0 S
+PB 0 262144 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2268,8 +2268,8 @@ mob unnamed~
 An unnamed mob stands here, looking lonely and forelorn.
 ~
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2287,8 +2287,8 @@ A &+ggh&+Las&+gtly &+Wg&+Lho&+Wul&n devours the light of the world.
 &+Lsomething to the world of the living, something within this world must
 &+Ldie spiritually.
 ~
-8 1 0 24 268435456 67108864 0 -555 S
-UP 0 2097152 -1
+8 1 0 0 24 268435456 67108864 0 -555 S
+UP 0 2097152 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2298,8 +2298,8 @@ rokker~
 &+yRokker&n, the &+yel&+Yem&+yen&+Yta&+yl w&+Yar&+ydi&+yan&n of &+yearth&n, cause an earthquake.
 ~
 ~
-1342177290 1 0 24 269746176 67108864 0 -555 S
-EE 0 513 -1
+1342177290 1 0 0 24 269746176 67108864 0 -555 S
+EE 0 513 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2314,8 +2314,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2330,8 +2330,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2346,8 +2346,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2362,8 +2362,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2378,8 +2378,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2394,8 +2394,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2410,8 +2410,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2426,8 +2426,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2442,8 +2442,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2458,8 +2458,8 @@ A &+Cde&+cer tri&+Cbe &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2474,8 +2474,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2490,8 +2490,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2506,8 +2506,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -2522,8 +2522,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -2538,8 +2538,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 24 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 24 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -2554,8 +2554,8 @@ A &+Rcl&+ran be&+Rar &+Bba&+Wrbar&+Bian &nsleeps in this tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 1 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 1 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 4 1
@@ -2570,8 +2570,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2586,8 +2586,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2602,8 +2602,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2618,8 +2618,8 @@ A &+Ycl&+yan be&+Yar &+Bba&+Wrbar&+Bian &nrests in his tent.
 &+Bof their might fortitude and strength in battle, as they are have said to
 &+Blift trees in time of great need and brandish it as a weapon.
 ~
-1073743946 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1073743946 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

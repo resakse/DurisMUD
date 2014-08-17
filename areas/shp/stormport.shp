@@ -1,8 +1,14 @@
 #22431~
 N
 0
-1.00
-1.00
+0.80
+1.10
+8
+10
+5
+2
+3
+4
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -44,8 +50,8 @@ N
 368
 369
 0
-1.00
-1.00
+0.80
+1.10
 5
 13
 9
@@ -90,8 +96,8 @@ N
 22415
 22416
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -128,8 +134,8 @@ N
 73
 77
 0
-1.00
-1.00
+0.80
+1.10
 9
 5
 0
@@ -165,9 +171,8 @@ N
 22402
 22436
 0
-1.00
-1.00
-1
+0.80
+1.10
 2
 3
 4
@@ -177,7 +182,6 @@ N
 9
 10
 30
-37
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~

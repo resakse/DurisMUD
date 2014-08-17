@@ -8,8 +8,8 @@ xertrath bunny wrath~
 &+Wbunny looks as if he has been in many a fight and come out victorious.  His&n
 &+Weyes glow with a red &+rhatred &+Wand his right ear has a good amount of it missing.&n
 ~
-33564746 1 0 34144512 2 0 0 0 S
-A 0 1 -1
+33564746 1 0 0 34144512 2 0 0 0 S
+A 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ aplon bunny master~
 &+Wand wise looking.  His eyes are a deep &+Bocean &+Wof &+bazure &+Cblue&+W, he seems to be a&n
 &+Wrather well muscled bunny as well.&n
 ~
-33564746 1 0 589824 0 0 0 0 S
-A 0 1 1
+33564746 1 0 0 589824 0 0 0 0 S
+A 0 1 0 1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ warthog dangerous hog~
 &+ybattles evident on it.  His jaws are a horrid sight as well long white &+Wteeth&n
 &+ycovered with a layer of thick &+Rblood&+y.&n
 ~
-72 1 0 65536 0 0 0 0 S
-A 0 1 2
+72 1 0 0 65536 0 0 0 0 S
+A 0 1 0 2
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ ravenous chipmunk chip~
 &+yburns from deep within its soul.  His hair stands at end and he lets out an odd&n
 &+yhorrid &+Lsound&+y.  His tiny &+Wclaws &+yare draped in stains of a deep &+rcrimson &+ysubstance.&n
 ~
-72 1 0 65536 0 0 0 0 S
-A 0 1 1
+72 1 0 0 65536 0 0 0 0 S
+A 0 1 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ hostile woodchuck chuck~
 &+yare dotted with spots of a redish substance.  His tiny &+Wclaws &+yalso seem to be&n
 &+ymade rich by some sort of deep &+rcrimson&+y.&n
 ~
-72 1 0 65536 0 0 0 0 S
-A 0 1 1
+72 1 0 0 65536 0 0 0 0 S
+A 0 1 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ sparrow bird small~
 &+yis not even one foot tall, and his build is very small even for a bird.  This&n
 &+ysparrow seems to be rather young and new to this realm.&n
 ~
-131144 0 0 33619968 0 0 0 1000 S
-B 0 1 1
+131144 0 0 0 33619968 0 0 0 1000 S
+B 0 1 0 1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -102,8 +102,8 @@ dew faerie~
 &+cto flower.  Her skin is an odd sort of &+Bblue &+cand her eyes are a &+Ygold &+caura filled&n
 &+bazure &+Cblue&+c.  She sings a song of joy as she goes about her timeless task.&n
 ~
-131144 32 0 33554432 0 0 0 1000 S
-HF 0 1 1
+131144 32 0 0 33554432 0 0 0 1000 S
+HF 0 1 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -117,8 +117,8 @@ beatle weevil~
 &+Lsix legs and is only a few inches in height.  This insect also seems to be&n
 &+Lrather preoccupied with trying to find something to devour.&n
 ~
-131144 0 0 33554432 0 0 0 1000 S
-I 0 1 0
+131144 0 0 0 33554432 0 0 0 1000 S
+I 0 1 0 0
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -132,8 +132,8 @@ swallow bird~
 &+cto show some signs of aging.  She flys around looking for food, or perhaps she&n
 &+cis in search of one of her wayward young.&n
 ~
-131144 0 0 33619968 0 0 0 1000 S
-B 0 1 1
+131144 0 0 0 33619968 0 0 0 1000 S
+B 0 1 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -148,8 +148,8 @@ swift rodent~
 &+ystains are &+Rblood &+yor just simple dirt.  This creature seems to be roaming this&n
 &+yforest in search of food.&n
 ~
-72 0 0 33619968 0 0 0 1000 S
-A 0 1 1
+72 0 0 0 33619968 0 0 0 1000 S
+A 0 1 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -165,8 +165,8 @@ mistgrave mist grave hare~
 &+yplaces that are out of the ordinary.  This hare has very deep and bold brown&n
 &+yeyes that seem to posses great wisdom.&n
 ~
-72 0 0 33619968 0 0 0 1000 S
-A 0 1 1
+72 0 0 0 33619968 0 0 0 1000 S
+A 0 1 0 1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -181,8 +181,8 @@ bluejay bird majestic~
 &+Bth&+bi&+Bs b&+beau&+Bty f&+bi&+Blls m&+bo&+Brt&+ba&+Bl &+be&+By&+be&+Bs.  Fly&+bi&+Bng &+bo&+Bn th&+be &+Bw&+bi&+Bnds &+bo&+Bf &+WOdin &+ba&+Bnd s&+bi&+Bng&+bi&+Bng s&+bo&+Bngs&n
 &+bo&+Bf &+bu&+Bnbr&+bi&+Bdl&+be&+Bd j&+bo&+By.  Th&+bi&+Bs b&+bi&+Brd tr&+bu&+Bly &+bi&+Bs gr&+bea&+Bt&+be&+Br th&+ba&+Bn th&+be &+Bb&+bu&+Brd&+be&+Bn &+bo&+Bf l&+bi&+Bf&+be i&+Bts&+be&+Blf.&n
 ~
-131144 0 0 33619968 0 0 0 1000 S
-B 0 1 1
+131144 0 0 0 33619968 0 0 0 1000 S
+B 0 1 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -197,8 +197,8 @@ squirrel fuzzy cute~
 &+yslightly as he patrols the floor of the forest.  He has two small brownish eyes&n
 &+yand seems to be rather buff as far as fuzzy wuzzy squirrels go.&n
 ~
-72 0 0 33619968 0 0 0 1000 S
-A 0 1 1
+72 0 0 0 33619968 0 0 0 1000 S
+A 0 1 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -213,8 +213,8 @@ doe baby female~
 &+ydeep and innocent shade of brown.  She looks like she is in search of her&n
 &+ymother.&n
 ~
-72 0 0 65536 0 0 0 1000 S
-A 0 1 1
+72 0 0 0 65536 0 0 0 1000 S
+A 0 1 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -228,8 +228,8 @@ mother deer female~
 &+ylooking for something or someone.  Perhaps she is looking for her child or&n
 &+ymaybe even a mate.&n
 ~
-72 0 0 65536 0 0 0 1000 S
-A 0 1 2
+72 0 0 0 65536 0 0 0 1000 S
+A 0 1 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -245,8 +245,8 @@ male buff deer~
 &+yalso has many &+rscars &+ythat adorn his face, perhaps from past battles with other&n
 &+ymales over mating.&n
 ~
-72 0 0 65536 0 0 0 1000 S
-A 0 1 2
+72 0 0 0 65536 0 0 0 1000 S
+A 0 1 0 2
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -260,8 +260,8 @@ humming bird hummer~
 &+csomething to behold.  Her nose seems to come to a rather odd looking point and&n
 &+cextends a fair amount of distance away from her minuscule body.&n
 ~
-131144 0 0 33619968 0 0 0 1000 S
-B 0 1 0
+131144 0 0 0 33619968 0 0 0 1000 S
+B 0 1 0 0
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -275,8 +275,8 @@ robin bird female~
 &+Rworry, filling this &+Wpeaceful &+Rplace with a mother's sorrow.  She seems to be&n
 &+Ccircling &+Rhere, looking for her lost child.&n
 ~
-131144 0 0 33619968 0 0 0 1000 S
-B 0 1 1
+131144 0 0 0 33619968 0 0 0 1000 S
+B 0 1 0 1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -292,8 +292,8 @@ battle scarred seagull~
 &+Wspan to his chest for his size.  He lets out a battle cry that fills the air&n
 &+Wwith an &+raura &+Wof fear.&n
 ~
-131144 0 0 33619968 0 0 0 1000 S
-B 0 1 1
+131144 0 0 0 33619968 0 0 0 1000 S
+B 0 1 0 1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -307,8 +307,8 @@ deadly wolf~
 &+Wteeth&+L, and slivers of flesh stick out.  This wolf seems to be looking for&n
 &+Lsomething to satisfy his &+Rappetite&+L.&n
 ~
-2120 1 0 33619968 2 0 0 -1000 S
-A 0 1 2
+2120 1 0 0 33619968 2 0 0 -1000 S
+A 0 1 0 2
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -323,8 +323,8 @@ crow evil bird~
 &+Lon the winds of &+WOdin&+L.  This crow lets out an eerie sound that sends an odd&n
 &+Bchill &+Linto the air.&n
 ~
-1073879112 33558536 0 33554432 0 0 0 -1000 S
-B 0 1 1
+1073879112 33558536 0 0 33554432 0 0 0 -1000 S
+B 0 1 0 1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -339,8 +339,8 @@ vischacha rodent~
 &+Lare rather useful in burrowing.  He patrols here in search of something to&n
 &+Lsatisfy his &+Rhunger&+L.&N
 ~
-72 0 0 33619968 0 0 0 1000 S
-A 0 1 1
+72 0 0 0 33619968 0 0 0 1000 S
+A 0 1 0 1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -353,8 +353,8 @@ diamondback terrapin turtle diamond~
 &+grather large shell that seems rather sturdy.  He has tiny black &+Leyes &+gthat gaze&n
 &+gout with an odd look to them.&N
 ~
-270408 0 0 33556480 0 0 0 1000 S
-R 0 1 -1
+270408 0 0 0 33556480 0 0 0 1000 S
+R 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -368,8 +368,8 @@ tarpon fish~
 &+bcrimson color and have some small &+rscars &+bon them.  She &+Bswims &+bwith an elegant&n
 &+bgrace, the like of which you have never seen.&n
 ~
-33824840 0 0 33556480 0 0 0 1000 S
-F 0 0 1
+33824840 0 0 0 33556480 0 0 0 1000 S
+F 0 0 0 1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -384,8 +384,8 @@ malstrog tentabeast beast tenta~
 &+Bpitched noise that kind of sounds like a bird.  This creature is probably a&n
 &+Bmutation, or was made by &+revil &+Bor misguided magic.&n
 ~
-33830986 1 0 1148936 12482 0 0 0 S
-TK 0 0 -1
+33830986 1 0 0 1148936 12482 0 0 0 S
+TK 0 0 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -398,8 +398,8 @@ axolotl salamander amphibian~
 &+gcreature kind of resembles a fish with legs.  This axolotl looks like he is in&n
 &+gsearch of something to eat.&N
 ~
-33824840 0 0 33556480 0 0 0 1000 S
-R 0 0 1
+33824840 0 0 0 33556480 0 0 0 1000 S
+R 0 0 0 1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -413,8 +413,8 @@ george bunny daft~
 &+Wrather large build for a bunny.  He seems like he can handle himself in a fight&n
 &+Wrather well.&n
 ~
-33562696 0 0 0 0 0 0 0 S
-A 0 1 1
+33562696 0 0 0 0 0 0 0 0 S
+A 0 1 0 1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -428,8 +428,8 @@ jade bunny~
 &+rscars &+gthat adorn his right leg, they look like bite marks.  This bunny seems&n
 &+glike it has gotten into a few fights.&n
 ~
-33554504 0 0 0 0 0 0 1000 S
-A 0 1 1
+33554504 0 0 0 0 0 0 0 1000 S
+A 0 1 0 1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -443,8 +443,8 @@ hare odd peculiar~
 &+ceyes&+y, and his &+Lpaws &+yhave odd markings on them.  He seems like he is in search&n
 &+yfor something to eat.&n
 ~
-33554504 0 0 0 0 0 0 1000 S
-A 0 1 1
+33554504 0 0 0 0 0 0 0 1000 S
+A 0 1 0 1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -458,8 +458,8 @@ rabid bunny~
 &+Wwas suffering from insanity.  Foam gathers around his mouth and falls upon the&n
 &+Wground.  This bunny of &+Ldoom &+Wseems to be &+rrabid &+Wand impossible to reason with.&n
 ~
-33554504 1 0 33554432 0 0 0 0 S
-A 0 1 1
+33554504 1 0 0 33554432 0 0 0 0 S
+A 0 1 0 1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -473,8 +473,8 @@ female bunny~
 &+Wpowder white and no scars are evident on her.  Her fuzzy tail wobbles as she&n
 &+Wtries to attract a mate.&n
 ~
-33554504 0 0 0 0 0 0 1000 S
-A 0 1 1
+33554504 0 0 0 0 0 0 0 1000 S
+A 0 1 0 1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -488,8 +488,8 @@ fuzzy bunny~
 &+Wmother to feed her.  Her eyes are a pale &+Bocean &+Cblue&+W, and her nose is a deep&n
 &+Webon &+Lblack&+W.&n
 ~
-33554504 0 0 0 0 0 0 1000 S
-A 0 1 1
+33554504 0 0 0 0 0 0 0 1000 S
+A 0 1 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -502,8 +502,8 @@ baby rabbit~
 &+Whas a desperate look in her tiny &+Cblue &+Beyes&+W.  She seems like she is rather new&n
 &+Wto this realm.&n
 ~
-72 0 0 0 0 0 0 0 S
-A 0 1 1
+72 0 0 0 0 0 0 0 0 S
+A 0 1 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -518,8 +518,8 @@ dolgar ancient dragon~
 &+rancient &+Ldecrepid hands.  His black scales seem to absorb all the light in the&N
 &+Lroom.  He gives off a rather strong aura of &+revil&+L, a cold &+Bchill &+Lfills the air.&n
 ~
-33963082 1 0 805404984 307202 0 0 -1000 S
-D 0 16 -1
+33963082 1 0 0 805404984 307202 0 0 -1000 S
+D 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -536,8 +536,8 @@ otsurd ohlin shopkeeper~
 &+Lback.  This being does not seem like he is from this world, or maybe he is no&n
 &+Llonger alive.&n
 ~
-33962570 0 0 838959548 309443 0 0 -1000 S
-G 0 16 -1
+33962570 0 0 0 838959548 309443 0 0 -1000 S
+G 0 16 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -553,8 +553,8 @@ sanrabb diabolical dragonlord~
 &+Cso&+cul&+Cle&+css &+Lbestial face.  An eerie &+Bchill &+Lfrom the grave fills this gloomy unholy&n
 &+Lplace.&n
 ~
-33963082 1 0 805404984 45250 0 0 -1000 S
-D 0 1 -1
+33963082 1 0 0 805404984 45250 0 0 -1000 S
+D 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -570,8 +570,8 @@ dargast black dragon~
 &+Ldismal looking lair.  The gaze of this dragon fills the room with an eerie&N
 &+Lunearthly &+Bchill&+L.&n
 ~
-33962058 1 0 805404984 45250 0 0 -1000 S
-D 0 1 -1
+33962058 1 0 0 805404984 45250 0 0 -1000 S
+D 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -586,8 +586,8 @@ svartalo black dragon~
 &+Rblood &+Lthat are evident in various spots upon them.  This creature gives off a&n
 &+Lvery powerful &+raura &+Lof absolute darkness.&n
 ~
-33963082 1 0 805929400 276675 0 0 -1000 S
-D 0 1 -1
+33963082 1 0 0 805929400 276675 0 0 -1000 S
+D 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -603,8 +603,8 @@ hatchling black dragon~
 &+Lit hatched from.  This creature gives off a very strong &+Raura &+Lof &+revil&+L, that&n
 &+Lfills the air with an odd &+Bchill&+L.&n
 ~
-33962058 3661036552 6817999 805404984 45058 0 0 -1000 S
-D 0 1 2
+33962058 3661036552 6817999 0 805404984 45058 0 0 -1000 S
+D 0 1 0 2
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -620,8 +620,8 @@ ivar leader bjornson~
 &+Lare a very &+bdeep &+Bazure &+Cblue &+Land seem to hold much knowledge.  This being seems&n
 &+Llike he can handle himself exceptionally well in a fight.&n
 ~
-33568842 0 0 24 0 0 0 1000 S
-PH 0 1 -1
+33568842 0 0 0 24 0 0 0 1000 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -637,8 +637,8 @@ dorno blacksmith town~
 &+Lhis muscular back.  This creature looks like he has been in many battles in his&n
 &+Llife, with many &+rscars &+Levident in various places on his body.&n
 ~
-33568842 0 0 33587256 0 0 0 1000 S
-PM 0 1 2
+33568842 0 0 0 33587256 0 0 0 1000 S
+PM 0 1 0 2
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -653,8 +653,8 @@ oystein eithun great warrior~
 &+Lhis broad shoulders.  He has a few &+rscars &+Lof past battles that adorn his pale&n
 &+Wface&+L.  This being looks like he is a survivor of many a hard fought war.&n
 ~
-33568842 0 0 24 0 0 0 1000 S
-PH 0 1 -1
+33568842 0 0 0 24 0 0 0 1000 S
+PH 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -669,8 +669,8 @@ keebo great hunter half~
 &+garm, and has a look of determination and concentration on his face.  This being&n
 &+gseems to be some sort of &+Rgame &+gh&+Gu&+gnt&+Ge&+gr.&n
 ~
-1107310666 33560576 0 33554456 0 0 0 1000 S
-P2 0 2 -1
+1107310666 33560576 0 0 33554456 0 0 0 1000 S
+P2 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -685,8 +685,8 @@ raltron village healer~
 &+Lmany signs of old &+rage&+L.  This being seems like he is some sort of &+Wcleric&+L or&n
 &+Lperhaps even a &+cshaman&+L.&n
 ~
-33568842 0 0 56 0 0 0 1000 S
-PH 0 32 -1
+33568842 0 0 0 56 0 0 0 1000 S
+PH 0 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -701,8 +701,8 @@ tarlator village shaman~
 &+Lsharp &+Wpearl &+Lcolored teeth.  This being seems to be a &+cshaman &+Lof some sort and he&n
 &+Lis chanting to some unknown &+Rdeity&+L.&n
 ~
-33568842 0 0 33620024 2 0 0 1000 S
-MT 0 256 -1
+33568842 0 0 0 33620024 2 0 0 1000 S
+MT 0 256 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -716,8 +716,8 @@ ilvorntas village magician~
 &+yhair on his hands and feet.  This being seems to be a &+cmagic &+yuser of some sort&n
 &+yand is chanting to some strange god.&n
 ~
-1107310666 0 0 167772184 0 0 0 1000 S
-PF 0 512 -1
+1107310666 0 0 0 167772184 0 0 0 1000 S
+PF 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -732,8 +732,8 @@ forvos drunk town~
 &+Lhe has had to much to &+ydrink &+Lalready.  He staggers about barely managing to stop&n
 &+Lhimself from falling.&n
 ~
-33568842 0 0 33587200 0 0 0 1000 S
-PM 0 1 2
+33568842 0 0 0 33587200 0 0 0 1000 S
+PM 0 1 0 2
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -746,8 +746,8 @@ bat cave ghastly~
 &+Leyes filled with an eerie &+rhatred&+L.  The being makes a loud high pitch sound as&n
 &+Lit flys around here.&n
 ~
-131144 0 0 33554432 0 0 0 0 S
-A 0 0 1
+131144 0 0 0 33554432 0 0 0 0 S
+A 0 0 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -760,8 +760,8 @@ crag female spider~
 &+Lsix legs and a dull black body.  This creature seems to be looking for&n
 &+Lsomething to eat.&n
 ~
-72 0 0 33554432 0 0 0 0 S
-AS 0 0 0
+72 0 0 0 33554432 0 0 0 0 S
+AS 0 0 0 0
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -774,8 +774,8 @@ male crag spider~
 &+Lsix legs and a dull black body.  This creature seems to be looking for&n
 &+Lsomething to mate with.&n
 ~
-72 0 0 33554432 0 0 0 0 S
-AS 0 0 0
+72 0 0 0 33554432 0 0 0 0 S
+AS 0 0 0 0
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -787,8 +787,8 @@ vorvite acid pool~
 &+g   This seems to be a living pool of a nasty looking acrid acid.  It appears to&n
 &+gbe moving on its own as if it were alive.&n
 ~
-72 0 0 33554432 0 0 0 1000 S
-AP 0 0 0
+72 0 0 0 33554432 0 0 0 1000 S
+AP 0 0 0 0
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -801,8 +801,8 @@ dorvet water pool _size_tiny~
 &+Bfloor of the &+Lcave&+B, as if guided by some sort of mind.  This being is probably&n
 &+Bsome sort of parasite that feeds on decayed &+rflesh&+B.&n
 ~
-72 0 0 33554432 0 0 0 1000 S
-AP 0 0 -1
+72 0 0 0 33554432 0 0 0 1000 S
+AP 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -814,8 +814,8 @@ azure mold~
 &+B   This &+bazure &+Bcolored mold moves around the floor of this dark &+Lcave&+B.  It seems&n
 &+Bto be searching for some small slivers of &+rflesh &+Bto satisfy its &+Rhunger&+B.&n
 ~
-72 0 0 33554432 0 0 0 1000 S
-AP 0 0 0
+72 0 0 0 33554432 0 0 0 1000 S
+AP 0 0 0 0
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -828,8 +828,8 @@ crimson mold~
 &+rpuddle of blood.  This creature appears to feed on the decayed &+Wbones &+rof dead&n
 &+ranimals.&n
 ~
-72 0 0 33554432 0 0 0 1000 S
-AP 0 0 0
+72 0 0 0 33554432 0 0 0 1000 S
+AP 0 0 0 0
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -844,8 +844,8 @@ dravos village guardian~
 &+ybrown &+Lcolor and he has long raven black hair.  This man seems to be a village&n
 &+rguardian &+Lof some sort.&n
 ~
-1174419530 0 0 33554688 2 0 0 1000 S
-PH 0 1 -1
+1174419530 0 0 0 33554688 2 0 0 1000 S
+PH 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -860,8 +860,8 @@ draxel village guardian~
 &+ybrown &+Lcolor and he has long raven black hair.  This man seems to be a village&n
 &+Rguardian &+Lof some sort.&n
 ~
-1174419530 0 0 33554688 2 0 0 1000 S
-PH 0 1 2
+1174419530 0 0 0 33554688 2 0 0 1000 S
+PH 0 1 0 2
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -875,8 +875,8 @@ tiny infant~
 &+Lmostly skin and &+Wbones&+L.  Her small frame is &+Wpale &+Land sickly looking, her ribs&n
 &+Lpertruding alarmingly through her skin as if she has been left to die.&n
 ~
-10 0 0 0 0 0 0 1000 S
-PH 0 0 1
+10 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -890,8 +890,8 @@ child small~
 &+cstare upon his face.  His hair is short and a dull &+ybrownish &+ccolor, with some&n
 &+cstreaks of &+Lblack&+c.  This child seems to be searching for his mother.&n
 ~
-72 0 0 0 0 0 0 1000 S
-PH 0 1 2
+72 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -906,8 +906,8 @@ boy small villager~
 &+yblonde color, with some unnatural blue &+Bstreaks&+y.  This creature appears to be&n
 &+ylittle more than a young boy looking for something to do.&n
 ~
-72 0 0 0 0 0 0 1000 S
-PH 0 1 2
+72 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -923,8 +923,8 @@ drunk villager~
 &+Lhas a few &+rscars &+Lupon his &+Wpale &+Lface.  His eyes have a lost daft look that holds&n
 &+Lvery little intelligence.&n
 ~
-10 0 0 0 1024 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 0 1024 0 0 1000 S
+PH 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -940,8 +940,8 @@ drunk villager~
 &+Lhas a few &+rscars &+Lupon his &+Wpale &+Lface.  His eyes have a lost daft look that holds&n
 &+Lvery little intelligence.&n
 ~
-10 0 0 0 1024 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 0 1024 0 0 1000 S
+PH 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -957,8 +957,8 @@ drunken villager~
 &+Lhas a few &+rscars &+Lupon his &+Wpale &+Lface.  His eyes have a lost daft look that holds&n
 &+Lvery little intellegence.&n
 ~
-10 0 0 0 1024 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 0 1024 0 0 1000 S
+PH 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -973,8 +973,8 @@ wench female young villager~
 &+ythat fills the room with an air of beauty.  This &+cfemale &+yseems to be in her teen&n
 &+yyears, and is very pretty.&n
 ~
-72 0 0 0 0 0 0 1000 S
-PH 0 1 2
+72 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 2
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -988,8 +988,8 @@ peasant commoner~
 &+yThis commoner seems to be trying to keep a very low profile.  Perhaps he is&n
 &+yafraid of someone or something harming him.&n
 ~
-2120 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1004,8 +1004,8 @@ citizen village commoner male~
 &+yhis shoulders.  This male seems to be searching for something interesting to&n
 &+yoccupy his time.&n
 ~
-2120 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1020,8 +1020,8 @@ pudgy commoner~
 &+ytail and slicked back.  This creature seems to be a bit of a low life and&n
 &+ysmells rather &+Rputrid&+y.&n
 ~
-2120 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1036,8 +1036,8 @@ muscular villager~
 &+yseems like he can handle himself very well in a fight.  He walks here looking&n
 &+yfor someone to try their luck with him.&n
 ~
-33830984 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+33830984 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1052,8 +1052,8 @@ merchant wandering salesman~
 &+yhis right arm, and a small &+rscar &+yis evident above his right eye.  His hair is a&n
 &+ylong brown color and runs past his shoulders.&n
 ~
-33830984 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+33830984 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1068,8 +1068,8 @@ merchant traveling female bony~
 &+yher left arm, and a small &+rscar &+yis evident above her right eye.  Her hair is a&n
 &+ylong &+Lraven &+yblack that runs past her shoulders.&n
 ~
-33568840 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+33568840 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1084,8 +1084,8 @@ dorf traveling adventurer stocky~
 &+ylook of &+Bcold &+yapathy.  His hair is a dirty looking &+Lraven &+yblack and runs past his&n
 &+yshoulders and onto his bulky back.&n
 ~
-33830984 0 0 33587200 0 0 0 1000 S
-PM 0 1 -1
+33830984 0 0 0 33587200 0 0 0 1000 S
+PM 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1100,8 +1100,8 @@ dorf wandering adventurer dirty~
 &+ylook of &+Bcold &+yapathy.  His hair is a dirty looking &+Lraven &+yblack and runs past his&n
 &+yshoulders.&n
 ~
-276552 0 0 33587200 0 0 0 1000 S
-PM 0 1 -1
+276552 0 0 0 33587200 0 0 0 1000 S
+PM 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1117,8 +1117,8 @@ warrior village~
 &+Lruns down past his muscular shoulders.  This creature wanders here looking for&n
 &+Lany signs of trouble.&n
 ~
-1107572808 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1107572808 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1134,8 +1134,8 @@ champion village~
 &+Lruns down past his muscular shoulders.  This creature wanders here looking for&N
 &+Lsigns of trouble.&N
 ~
-1174681608 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1174681608 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1150,8 +1150,8 @@ azcatlipoca dark figure~
 &+Llike it is not right.  A small symbol of a winged &+Rdemon &+Lis also evident upon&N
 &+Lthe &+wdecayed &+Lright arm of this being.&N
 ~
-1107704010 0 0 1673264 307406 0 0 -1000 S
-GI 0 16 -1
+1107704010 0 0 0 1673264 307406 0 0 -1000 S
+GI 0 16 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

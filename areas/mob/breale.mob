@@ -8,8 +8,8 @@ several warts growing on her face, along with several hairs
 festering on her chin. Her skin is a pale-green. Her teeth are
 crooked and covered with black. Her breath could kill an ox.
 ~
-11 0 0 152 0 0 0 -800 S
-PH 0 512 -1
+11 0 0 0 152 0 0 0 -800 S
+PH 0 512 0 -1
 56 -7 -114 56d96+5768 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -24,8 +24,8 @@ creature. Her long black hair hangs down to her waist. Her black
 velvet gown with weavings of moons and stars delicately caress
 her shapely figure. Her beauty is almost mesmorizing.
 ~
-11 0 0 8 0 0 0 -750 S
-PH 0 1024 -1
+11 0 0 0 8 0 0 0 -750 S
+PH 0 1024 0 -1
 54 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
 8 8 2
@@ -39,8 +39,8 @@ eyes are piercing. You feel like you have to shield your eyes
 from them to avoid falling into his power. Pontif suddenly
 notices you glaring at him and grins evilly.
 ~
-11 0 0 136 128 0 0 -900 S
-PH 0 256 -1
+11 0 0 0 136 128 0 0 -900 S
+PH 0 256 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -55,8 +55,8 @@ entire body. There are two small horns sticking out of his
 forehead. His legs are that of a horse, with each foot being a
 hoof. Bacca licks his lips before engaging you in battle.
 ~
-8202 1 0 24 0 0 0 -1000 S
-X 0 1 -1
+8202 1 0 0 24 0 0 0 -1000 S
+X 0 1 0 -1
 35 6 -27 35d83+840 4d6+7
 9.9.1.3 68040
 8 8 1
@@ -68,8 +68,8 @@ A &+Wgrey rat&N scurries on the floor here.
 The grey rat has razor sharp teeth and attacks anything in its
 path. Its whiskers twitch as it sniffs the air for food.
 ~
-200 1 0 0 0 0 0 0 S
-A 0 0 -1
+200 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 1
@@ -81,8 +81,8 @@ A &+Wwitch&N cackles while she weaves her arms to cast spells.
 The witch is hideous looking. She wears a pointed hat and dark-
 black robes. Her fingernails look like claws and her skin pale.
 ~
-72 0 0 8 0 0 0 -360 S
-PF 0 512 -1
+72 0 0 0 8 0 0 0 -360 S
+PF 0 512 0 -1
 30 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -95,8 +95,8 @@ The warlock wears a normal leather tunic and would fool just
 about anyone into believing that he is not a warlock. But his
 eyes tell you that he is-- they glow a dark red.
 ~
-72 0 0 8 0 0 0 -400 S
-PF 0 2048 -1
+72 0 0 0 8 0 0 0 -400 S
+PF 0 2048 0 -1
 15 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -109,8 +109,8 @@ These hags seem to be witches that did not quite make it to be
 called a "witch". They basically help out their fellow witchkind
 by mixing reagents and such.
 ~
-72 0 0 0 0 0 0 -360 S
-PF 0 2048 -1
+72 0 0 0 0 0 0 0 -360 S
+PF 0 2048 0 -1
 20 15 61 12d18+48 2d5+2
 6.4.2.0 5832
 8 8 2
@@ -125,8 +125,8 @@ business going. She looks at you with the side of her mouth at a
 slight angle, her eyebrows in an angry slant. She does not like
 you bothering her.
 ~
-78 0 0 32 0 0 0 0 S
-PF 0 512 -1
+78 0 0 0 32 0 0 0 0 S
+PF 0 512 0 -1
 10 18 67 10d14+35 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -139,8 +139,8 @@ The creature has blotches of black and blue on its back. It
 basically moves like a snail and smells like rotten 20-year-old
 bread.
 ~
-200 1 0 0 0 0 0 -1000 S
-AP 0 0 -1
+200 1 0 0 0 0 0 0 -1000 S
+AP 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 0.0.0.0 6804
 8 8 0
@@ -154,8 +154,8 @@ very holy person. He wears long white robes and a piece of red
 cloth with cross symbols is wrapped around his shoulders. He
 raises his hands to bless you, then goes about his work.
 ~
-72 0 0 0 0 0 0 700 S
-PH 0 32 -1
+72 0 0 0 0 0 0 0 700 S
+PH 0 32 0 -1
 32 15 55 14d25+70 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -168,8 +168,8 @@ The boy is about 8 to 10 years of age. He has rosy cheeks and
 short blonde hair. He helps the acolytes and priests with certain
 ceremonies.
 ~
-200 0 0 0 0 0 0 600 S
-PH 0 0 -1
+200 0 0 0 0 0 0 0 600 S
+PH 0 0 0 -1
 26 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -182,8 +182,8 @@ The priest is adorned with clean, white robes and a gold shawl.
 Wrapped around his waist is a silver sash. He takes no notice of
 you in his prayer.
 ~
-72 0 0 0 0 0 0 700 S
-PH 0 32 -1
+72 0 0 0 0 0 0 0 700 S
+PH 0 32 0 -1
 33 15 51 15d25+75 2d5+2
 7.6.2.0 7290
 6 8 1
@@ -196,8 +196,8 @@ The man is definitely from Breale. He has the distinct look
 attributable to Brealeans-- the long forehead, the blonde hair,
 and the sharp nose. He wears a white shirt and tunic.
 ~
-201 0 0 0 0 0 0 0 S
-PH 0 0 -1
+201 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 22 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -210,8 +210,8 @@ The woman is clearly Brealean from her blonde hair and facial
 features. She wears a green dress with leather straps. She
 curtseys as you pass by.
 ~
-201 0 0 0 0 0 0 0 S
-PH 0 0 -1
+201 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 20 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 2
@@ -224,8 +224,8 @@ The child is running around the area with a careless, carefree
 attitude. The child pulls your pants down, laughs at your
 underwear, then quickly runs away teasing you.
 ~
-201 0 0 0 0 0 0 0 S
-PH 0 0 -1
+201 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 18 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -239,8 +239,8 @@ continually studies his charts of the human body making notes
 when he can. One of his eyebrows raise as he notices you watching
 him. He wonders whether you are sick and need help.
 ~
-33554443 0 0 0 0 0 0 0 S
-PH 0 4096 -1
+33554443 0 0 0 0 0 0 0 0 S
+PH 0 4096 0 -1
 36 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -254,8 +254,8 @@ She is dying from several stab wounds on her torso. She beckons
 you to come closer so that she may talk to you. She fervently
 points to her wrist.
 ~
-139 0 0 0 0 0 0 0 S
-PF 0 0 -1
+139 0 0 0 0 0 0 0 0 S
+PF 0 0 0 -1
 38 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 2
@@ -268,8 +268,8 @@ Hagatha would be just your plain old Brealean villager. She wears
 a blue dress with a leather tunic. She looks suspiciously at your
 wrist from the corner of her eyes.
 ~
-11 0 0 16 0 0 0 0 S
-PH 0 1 -1
+11 0 0 0 16 0 0 0 0 S
+PH 0 1 0 -1
 50 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 2
@@ -282,8 +282,8 @@ The merchant is expensively dressed, adorned with jewelry and
 other costly items. He sees you and immediately pulls something
 out of his wagon. He wants you to buy it.
 ~
-72 0 0 0 0 0 0 0 S
-PH 0 1 -1
+72 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 34 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -296,8 +296,8 @@ The vendor smells like old fish-- but he sells fresh trout and
 salmon from the River Krent. He happily looks at you showing you
 his fresh catch of the day.
 ~
-73 0 0 0 0 0 0 0 S
-PH 0 1 -1
+73 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -310,8 +310,8 @@ The vendor's wagon smells wonderful. Fresh pears, apples, grapes,
 and plums are stuffed into certain sections of his wagon. He
 polishes the fruit one by one, giving you a glance.
 ~
-73 0 0 0 0 0 0 0 S
-PH 0 1 -1
+73 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 34 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -324,8 +324,8 @@ The jeweler grins at you and motions his head toward his jewels
 and bracelets. He takes out a white cloth and wipes each
 bracelet, then he returns them to his wrist.
 ~
-73 0 0 0 0 0 0 0 S
-PH 0 1 -1
+73 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 13 45 17d30+85 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -337,8 +337,8 @@ A &+WBreale city guard&N stands here looking serious.
 The Breale city guard looks around him for thieves and other
 suspicious miscreants. He takes his job seriously.
 ~
-67110922 128 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 128 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 11 23 24d47+240 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -353,8 +353,8 @@ anything. If his guards let a thief get away, it could mean a
 demotion for them. His arms are muscular and he has many scars on
 them from battles past.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -368,8 +368,8 @@ You can be sure that they are of the best quality in all of
 Myranthea. He strokes his beard and motions you to come see his
 wagon.
 ~
-72 32 0 0 0 0 0 800 S
-PE 0 1 -1
+72 32 0 0 0 0 0 0 800 S
+PE 0 1 0 -1
 35 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -382,8 +382,8 @@ Brim always has a good selection of meats for the hungry patron.
 His sheer size says that he must have snacked on a few himself.
 He looks at you waiting for an order of beef.
 ~
-11 0 0 0 0 0 0 0 S
-PH 0 1 -1
+11 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -397,8 +397,8 @@ problems with them and listens to their stories and tales. He is
 a thin man and wears a leather suit. Several splotches of ale
 have decorated his suit today from spillings.
 ~
-11 0 0 0 0 0 0 0 S
-PH 0 1 -1
+11 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 8 3 30d55+330 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -413,8 +413,8 @@ at the thought of being its target. Bart thinks about battles
 long gone, and daydreams of adventure. It seems he doesn't even
 know you're there.
 ~
-11 0 0 0 0 0 0 0 S
-PH 0 1 -1
+11 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -428,8 +428,8 @@ business. This has crushed his dreams of ever becoming a Bastine
 Knight for King Mrotha. He barely knows you are there,
 dreaming of battles he could be fighting.
 ~
-11 0 0 0 0 0 0 0 S
-PH 0 1 -1
+11 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 39 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1

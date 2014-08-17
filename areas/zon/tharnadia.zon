@@ -911,6 +911,7 @@ M 0 132640 23 132573 100 0 0 0     * a militia guard
 M 0 132640 23 132573 100 0 0 0     * a militia guard
 M 0 132640 23 132573 100 0 0 0     * a militia guard
 M 0 132640 23 132573 100 0 0 0     * a militia guard
+M 0 401000 1 132573 100 0 0 0      * (mob type not in this .mob file)
 M 0 132563 1 132575 100 0 0 0      * the receptionist
 M 0 132619 2 132575 100 0 0 0      * an elite guard
 M 0 132619 2 132575 100 0 0 0      * an elite guard
@@ -1045,7 +1046,7 @@ M 0 132550 1 132617 100 0 0 0      * the High Justice of Tharnadia
 M 0 132549 1 132617 100 0 0 0      * the bailiff
 M 0 132609 1 132617 100 0 0 0      * The Justice Clerk
 M 0 132544 1 132618 100 0 0 0      * a jailor
-M 0 132677 20 132618 100 0 0 0     * a Tharnadian militia guard
+M 0 132677 20 132618 100 0 0 0     * (mob type not in this .mob file)
 M 0 132536 4 132620 100 0 0 0      * a working commoner
 M 0 132537 3 132621 100 0 0 0      * a female commoner
 M 0 132562 1 132622 100 0 0 0      * a giant tarantula
@@ -1826,6 +1827,5 @@ G 1 132507 999 0 100 0 0 0         *    a piece of fried mutton
 M 0 400000 1 133072 100 0 0 0      * (mob type not in this .mob file)
 M 0 132675 1 133073 100 0 0 0      * Kotil
 M 0 400001 1 133074 100 0 0 0      * (mob type not in this .mob file)
-M 0 401000 1 132573 100 0 0 0      * the Tharnadian Quartermaster
 *
 S

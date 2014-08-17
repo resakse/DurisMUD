@@ -47,8 +47,8 @@ X
 #45831~
 N
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -89,8 +89,8 @@ N
 369
 191
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~

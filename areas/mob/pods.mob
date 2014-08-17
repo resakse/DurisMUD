@@ -8,8 +8,8 @@ bird purple mauve~
 &+gsong, but instead makes grunting hoots as its call.  When it utters one of its&n
 &+ghoots, all &+minsects&+g in the area flee.&n
 ~
-395274 0 0 33556480 28 0 0 0 S
-B 0 128 2
+395274 0 0 0 33556480 28 0 0 0 S
+B 0 128 0 2
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -23,8 +23,8 @@ bird blue~
 &+gswamp with an air of ownership.  When it spots a cloud of &+minsects,&+g it utters&n
 &+ga grunting hoot instead of a cheerful song, and the &+minsects&+g flee.&n
 ~
-395274 0 0 33556480 28 0 0 0 S
-B 0 128 1
+395274 0 0 0 33556480 28 0 0 0 S
+B 0 128 0 1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -38,8 +38,8 @@ bird yellow gold white~
 &+gover the area around its tree with a sharp eye. When it spots any &+minsects,&+g it&n
 &+gutters a groaning hoot instead of a sweet song, and the &+minsects&+g flee.&n
 ~
-395274 0 0 167774208 28 0 0 0 S
-B 0 256 1
+395274 0 0 0 167774208 28 0 0 0 S
+B 0 256 0 1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ bird red~
 &+gbeset by the annoying &+mpests&+g a welcome respite.   The &+rb&+Rir&n&+rd&+g seems to be highly&n
 &+gintelligent, and watches its area closely, appraising all who pass it.&n
 ~
-395274 0 0 167774208 28 0 0 0 S
-B 0 256 1
+395274 0 0 0 167774208 28 0 0 0 S
+B 0 256 0 1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -69,8 +69,8 @@ An &+ya&+Ymb&+yer b&+Yutt&+yer&+Yfl&+yy &+Yflu&+ytt&+Yer&+ys&n by.
 &+ypie&+Yc&+ye of &+whanging moss&+y after an&+Yot&+yher, socia&+Yl&+yizing with the other &+Rbu&+Yt&+Gte&+Br&+Wf&+Cl&+Yies&n
 &+yclin&+Ygi&+yng there.&n
 ~
-393416 0 0 167772160 28 0 0 150 S
-I 0 0 1
+393416 0 0 0 167772160 28 0 0 150 S
+I 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -84,8 +84,8 @@ A &+Rru&+rb&+Ry &+rbu&+Rtt&+rerf&+Rl&+ry fl&+Ru&+rtte&+Rr&+rs&n by.
 &+rof co&+Rlo&+rr to an othe&+Rr&+rwise dismal &+gswamp.&+r  It goes f&+Rr&+rom one bit &+Ro&+rf &+whanging moss&n
 &+rto anot&+Rhe&+rr, soci&+Ra&+rlizi&+Rn&+rg with other &+Ybr&+Gi&+Bght &+Yb&+Cutt&+Rer&+Gfl&+Yies.&n
 ~
-393416 0 0 167772160 28 0 0 0 S
-PH 0 0 1
+393416 0 0 0 167772160 28 0 0 0 S
+PH 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -99,8 +99,8 @@ A &+bsa&+Bpph&+bir&+Be &+bb&+Bu&+btter&+Bf&+bly flut&+Bt&+bers&n by.
 &+BWhen a &+ccreature&+B or &+Yb&+Ri&+Yrd&+B bur&+bs&+Bts out of the &+wmoss,&+B the &+bb&+Bu&+btter&+Bf&+blies t&+Bhat sat upon&n
 &+Bthe &+wmoss&+B scatter, pu&+btt&+Bing bri&+bg&+Bht color i&+bn&+Bto an other&+bw&+Bise dismal &+gswamp.&n
 ~
-393416 0 0 134217728 28 0 0 0 S
-I 0 0 1
+393416 0 0 0 134217728 28 0 0 0 S
+I 0 0 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -114,8 +114,8 @@ An &+Geme&+gr&+Ga&+Gld &+gbu&+Gt&+gterf&+Gly fl&+gutt&+Gers&n by.
 &+gother bu&+Gt&+gterf&+Glie&+gs. When a &+ccreature&+g or &+Yb&+Ri&+Yrd&+g disturbs the &+wmoss,&+g it fli&+Gt&+gs up into&n
 &+gthe air, ma&+Gk&+ging &+Gbr&+gight spo&+Gt&+gs of co&+Glo&+gr in an othe&+Gr&+gwise disma&+Gl&+g swamp.&n
 ~
-393416 0 0 167772160 28 0 0 0 S
-I 0 0 1
+393416 0 0 0 167772160 28 0 0 0 S
+I 0 0 0 1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -129,8 +129,8 @@ A &+Mc&+mor&+Mal &+mb&+Mut&+mterf&+Ml&+my &+Mf&+mlut&+Mte&+mrs&n by.
 &+mb&+Mut&+mter&+Mf&+mlie&+Ms.  When some&+mth&+Ming disturbs &+mt&+Mhe &+wmoss&+M it si&+mt&+Ms upon, it &+mfl&+Mies up into&n
 &+Mthe ai&+mr, &+Mgiving an o&+mth&+Merwi&+ms&+Me dismal &+gswamp&+M some b&+mit&+Ms of bri&+mg&+Mht &+mc&+Molor.&n
 ~
-393416 0 0 167772160 28 0 0 0 S
-I 0 1 1
+393416 0 0 0 167772160 28 0 0 0 S
+I 0 1 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -145,8 +145,8 @@ A &+Wp&+we&+War&+wl &+Wb&+wu&+Wtte&+wr&+Wfly flut&+wt&+Wers&n by.
 &+wwind, dis&+Wt&+wurbs the moss.  T&+Wh&+wen they sca&+Wt&+wter into the ai&+Wr&+w, giving the oth&+We&+wrwise&n
 &+wdisma&+Wl&+g swamp&+w a bit o&+Wf&+w bri&+Wg&+wht col&+Wo&+wr.&n
 ~
-1074135240 0 0 167772160 28 0 0 0 S
-I 0 1 1
+1074135240 0 0 0 167772160 28 0 0 0 S
+I 0 1 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -161,8 +161,8 @@ A &+cq&+Cu&+car&+Ct&+cz &+Cb&+cut&+Cterf&+cl&+Cy f&+cl&+Cutt&+cers&n by.
 &+Cit s&+ci&+Cts it flies &+cu&+Cp into the air g&+civ&+Cing an other&+cw&+Cise dismal &+gswamp&+C some bri&+cg&+Cht&n
 &+Cspo&+ct&+Cs of c&+co&+Clor.&n
 ~
-1074135240 0 0 167772160 28 0 0 0 S
-I 0 1 1
+1074135240 0 0 0 167772160 28 0 0 0 S
+I 0 1 0 1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -177,8 +177,8 @@ A &+Bla&+bpi&+Ys &+bla&+Bzu&+Yl&+Bi &+Yb&+butt&+Be&+Yr&+Bf&+bly &+Bfl&+but&+Yt&+
 &+bit sit&+Bs&+b, it flies up &+Bi&+bnto the air, cr&+Ye&+bating a &+Yb&+Bri&+bght spot of &+Bc&+Yo&+bl&+Yo&+Br&+b in a dismal&n
 &+gswamp.&n
 ~
-1074135240 0 0 167772160 30 0 0 0 S
-I 0 1 1
+1074135240 0 0 0 167772160 30 0 0 0 S
+I 0 1 0 1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -193,8 +193,8 @@ A &+rspi&+yne&+rl bu&+ytt&+rer&+yf&+rly flu&+ytt&+rers&n by.
 &+rjust a li&+yttl&+re, it flies i&+yn&+rto the air, c&+yr&+reating a s&+yp&+rot of br&+yi&+rght c&+yolo&+rr in the&n
 &+rotherw&+yi&+rse dismal &+gswamp.&n
 ~
-1074135240 0 0 167772160 30 0 0 0 S
-I 0 1 1
+1074135240 0 0 0 167772160 30 0 0 0 S
+I 0 1 0 1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -208,8 +208,8 @@ An &+Co&+Yp&+Cal &+Ybu&+Ctt&+ge&+Crf&+Yl&+Cy flu&+Ytt&+Cers&n by.
 &+Cthe &+wmoss&+C to so&+gc&+Cialize wi&+Yt&+Ch other &+Ybu&+Ctt&+ge&+Crf&+Yl&+Cies.  When some&+Yth&+Cing distur&+gb&+Cs where&n
 &+Cit sit&+gs&+C it flies &+Yi&+Cnto the air, c&+Yr&+Ceati&+gn&+Yg&+C a bri&+Yg&+Cht spot of &+Yc&+go&+Cl&+go&+Yr&+C in the &+gswamp.&n
 ~
-1074135240 0 0 167772160 30 0 0 0 S
-I 0 1 1
+1074135240 0 0 0 167772160 30 0 0 0 S
+I 0 1 0 1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -225,8 +225,8 @@ fizgig fluffball fluff ball~
 &+gtaken care of.  If it does attack, it hurts quite a bit, for those &+Wteeth&+g may&n
 &+gbe little, but they are razor sharp, and the &+yfizgig&+g attacks quite fast.&n
 ~
-1074004044 0 0 33556752 30 0 0 0 S
-AC 0 1 2
+1074004044 0 0 0 33556752 30 0 0 0 S
+AC 0 1 0 2
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -242,8 +242,8 @@ fizgig mouth fluff~
 &+ythough and its sharp little &+Wteeth&+y cut through even the toughest &+Mflesh&+y fast. A&n
 &+yfizgig may look small and easy, but it is not.&n
 ~
-1074006092 0 0 34081040 30 0 0 0 S
-AC 0 1 2
+1074006092 0 0 0 34081040 30 0 0 0 S
+AC 0 1 0 2
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -258,8 +258,8 @@ rollie fluff ball~
 &+ya squeaking sound.  These tiny creatures are considered delicacies by the evil&n
 &+BSkexis&+y who love to pop the &+brollies&+y in their mouths while they are still alive.&n
 ~
-264396 0 0 33556736 30 0 0 0 S
-A 0 0 1
+264396 0 0 0 33556736 30 0 0 0 S
+A 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -274,8 +274,8 @@ root tip rootling~
 &+Bcatches a minute &+mvictim,&+B swallowing it.  The shape of the &+mvictim&+B can be seen&n
 &+Bon the &+yrootlet&+B as waves of action force it down toward the base of the &+gtree.&n
 ~
-262222 0 0 33556480 30 0 0 0 S
-AC 0 0 2
+262222 0 0 0 33556480 30 0 0 0 S
+AC 0 0 0 2
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -291,8 +291,8 @@ root tip medium~
 &+Bdownward toward the base of the &+gtree,&+B providing food for the strange, twisted&n
 &+gplant.&n
 ~
-264206 0 0 50333696 30 0 0 0 S
-AC 0 1 3
+264206 0 0 0 50333696 30 0 0 0 S
+AC 0 1 0 3
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -307,8 +307,8 @@ root tip large~
 &+Bcan be seen as they move down the &+rro&+yo&+rt&+B toward the base of the &+gtree&+B to feed&n
 &+Bthis strange, twisted &+gplant.&n
 ~
-264206 0 0 50333696 30 0 0 0 S
-AC 0 1 4
+264206 0 0 0 50333696 30 0 0 0 S
+AC 0 1 0 4
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -324,8 +324,8 @@ cloud insect insects gnats~
 &+geven be noticed as they are the size of &+Bgnats,&+g but in a large group like this&n
 &+gthey are very annoying.&n
 ~
-393288 1 0 436209920 30 0 0 0 S
-I 0 0 1
+393288 1 0 0 436209920 30 0 0 0 S
+I 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -339,8 +339,8 @@ cloud insect housefly flies insects~
 &+gthe one that disturbed them. Individually, the &+minsects&+g would merely be pests&n
 &+gbut as a group, they are painful.&n
 ~
-1074135116 0 0 402655232 30 0 0 0 S
-I 0 16384 1
+1074135116 0 0 0 402655232 30 0 0 0 S
+I 0 16384 0 1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -356,8 +356,8 @@ cloud insect insects wasp~
 &+gnormal &+minsects&+g at all, with ten legs, all of which end in nasty pincers. Their&n
 &+gbodies appear to be made of a dark stone, rather than any kind of flesh.&n
 ~
-1074137164 0 0 436209680 30 0 0 0 S
-I 0 16384 1
+1074137164 0 0 0 436209680 30 0 0 0 S
+I 0 16384 0 1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -372,8 +372,8 @@ adult neberi~
 &+gyoung.  If at all possible, it will flee down into the depths of the waters&n
 &+gof the swamp instead of fighting.&n
 ~
-1074006090 0 0 840435968 30 0 0 0 S
-AH 0 1 5
+1074006090 0 0 0 840435968 30 0 0 0 S
+AH 0 1 0 5
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -388,8 +388,8 @@ neberi female adult large~
 &+gto the safety of the depths of the swamp when it can.  Unfortunately, it is&n
 &+ga favorite food of the evil &+BSkexis,&+g who send their &+bG&+Ba&+brth&+Ba&+bm&+g to hunt it down.&n
 ~
-1074006094 0 0 840435712 30 0 0 950 S
-AH 0 8 5
+1074006094 0 0 0 840435712 30 0 0 950 S
+AH 0 8 0 5
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -404,8 +404,8 @@ neberi baby~
 &+gbody of a &+bpil&+wl&+bbug.&+g  At the first sign of danger, this small &+ccreature&+g sinks&n
 &+gback down into the &+Bwater,&+g to hide in the depths until danger is past.&n
 ~
-262346 0 0 303564800 30 0 0 950 S
-AH 0 0 3
+262346 0 0 0 303564800 30 0 0 950 S
+AH 0 0 0 3
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -421,8 +421,8 @@ small neberi~
 &+ginstead of fighting.  If it is forced to, it fights well, using its mass to&n
 &+ggreat effect.&n
 ~
-1074006218 0 0 303564800 30 0 0 950 S
-AH 0 1 3
+1074006218 0 0 0 303564800 30 0 0 950 S
+AH 0 1 0 3
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -439,8 +439,8 @@ striderling gray creature~
 &+gseem even taller than it is.  These ears are very sensitive and can pick up&n
 &+geven the smallest of sounds.  The &+ccreature&+g has a coat of short &+wgray fur.&n
 ~
-134481992 0 0 302514432 30 536870912 0 950 S
-A 0 8 3
+134481992 0 0 0 302514432 30 536870912 0 950 S
+A 0 8 0 3
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -458,8 +458,8 @@ strider mother creature~
 &+ga &+wl&+yand st&+wri&+yd&+wer&+g of this color is a mother.  But if a tired traveler is lucky&n
 &+ghe will find this tireless mount.&n
 ~
-1208223816 0 0 302514432 30 536870912 0 0 S
-AH 0 16384 4
+1208223816 0 0 0 302514432 30 536870912 0 0 S
+AH 0 16384 0 4
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -476,8 +476,8 @@ strider father creature~
 &+ginstead.  It is very shy, preferring to stay hidden, but a tired traveler may&n
 &+gbe lucky enough to find one of these tireless mounts.&n
 ~
-1208223818 0 0 302516224 30 536870912 0 0 S
-AH 0 16384 5
+1208223818 0 0 0 302516224 30 536870912 0 0 S
+AH 0 16384 0 5
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -493,8 +493,8 @@ plantling pitcher~
 &+gle&+Ya&+Gves&+g to try to take a drink, the two le&+Ya&+Gve&+gs snap together, enclosing what&n
 &+gstepped on them in a fatal embrace.&n
 ~
-262222 0 0 318767104 4126 0 0 0 S
-AC 0 16384 3
+262222 0 0 0 318767104 4126 0 0 0 S
+AC 0 16384 0 3
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -510,8 +510,8 @@ large pitcher plant~
 &+gth&+Yic&+Gk l&+geaf is stepped on, all three &+Gth&+Yi&+gck le&+Ya&+Gves&+g snap together, trapping the
 &+gvictim which it then suffocates before slowly digesting it.&n
 ~
-264206 0 0 318769152 12318 0 1056768 0 S
-AC 0 16384 4
+264206 0 0 0 318769152 12318 0 1056768 0 S
+AC 0 16384 0 4
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -528,8 +528,8 @@ humongous pitcher plant~
 &+gso even anything traveling with the victim would have a hard time getting them&n
 &+gout of the plant which is suffocating them before digesting them.&n
 ~
-264270 0 0 587204608 12318 262144 1056768 0 S
-AC 0 81920 5
+264270 0 0 0 587204608 12318 262144 1056768 0 S
+AC 0 81920 0 5
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -548,8 +548,8 @@ whimpering chamberlain skexis~
 &+yalone in his place, seeming to be unaware of an occasional whining sound that&n
 &+yhe makes as he ponders how to become emperor.&n
 ~
-1074178186 0 0 302516480 264222 262144 8192 -1000 S
-DK 0 1024 4
+1074178186 0 0 0 302516480 264222 262144 8192 -1000 S
+DK 0 1024 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -569,8 +569,8 @@ gartham guard~
 &+barmor.&+y  Though they are tiny, they appear not to miss a single thing that is&n
 &+ygoing on around them.&n
 ~
-67373134 0 0 872491432 12382 262144 1056768 -1000 S
-X 0 80 5
+67373134 0 0 0 872491432 12382 262144 1056768 -1000 S
+X 0 80 0 5
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -586,8 +586,8 @@ colorful bird~
 &+gtheir &+ynests,&+g or as they chase after their meal.  It doesn't matter to them;&n
 &+gthey seem to be a cheerful species.&n
 ~
-393416 0 0 167774208 30 0 0 0 S
-B 0 1 1
+393416 0 0 0 167774208 30 0 0 0 S
+B 0 1 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -602,8 +602,8 @@ colorful bird~
 &+gon the wing, chasing &+minsects,&+g these &+Yb&+Ri&+Yrds&+g sing cheerful songs, making their
 &+glittle area in the swamp feel a bit brighter.
 ~
-1074137288 0 0 167774208 30 0 0 0 S
-B 0 1 1
+1074137288 0 0 0 167774208 30 0 0 0 S
+B 0 1 0 1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -621,8 +621,8 @@ dark bird~
 &+Blook at, and its &+bclaws&+B and &+bbeak&+B are also a deep black.  Its &+Geyes,&+B though, are&n
 &+Gbright, &+Balmost glowing, &+Ggreen.&n
 ~
-1074137166 0 0 184551680 30 0 1056768 0 S
-B 0 16 3
+1074137166 0 0 0 184551680 30 0 1056768 0 S
+B 0 16 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -637,8 +637,8 @@ catfish~
 &+BIts smooth skin is deep blue on the top and sides, and pink on the bottom.&n
 &+BThough it feeds on the nastiest of things, its meat is quite good to eat.&n
 ~
-264270 0 0 34081024 30 0 1048576 0 S
-F 0 1 2
+264270 0 0 0 34081024 30 0 1048576 0 S
+F 0 1 0 2
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -655,8 +655,8 @@ catfish large~
 &+Bnearby even in the darkest of environments. It investigates everything that is&n
 &+Bout of place in its home.&n
 ~
-1074006094 0 0 570951936 30 0 1056768 0 S
-F 0 16384 3
+1074006094 0 0 0 570951936 30 0 1056768 0 S
+F 0 16384 0 3
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -673,8 +673,8 @@ bullfrog~
 &+Bjust below the surface of the water, with only his eyes above the water, or&n
 &+Bsitting on top of a particularly thick layer of &+Gscum&+B floating on the water.&n
 ~
-1208223822 0 0 33556736 94 536870912 1056768 0 S
-AC 0 256 3
+1208223822 0 0 0 33556736 94 536870912 1056768 0 S
+AC 0 256 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -690,8 +690,8 @@ frog tiny poisonous~
 &+gfew moments after it has been bitten, and only moments after that, the victim&n
 &+gfalls over dead.&n
 ~
-262350 0 0 33556736 30 0 1056768 0 S
-AC 0 1 1
+262350 0 0 0 33556736 30 0 1056768 0 S
+AC 0 1 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -707,8 +707,8 @@ tiny frog poisonous~
 &+gbeing bitten, smaller &+ccreatures&+g begin to shiver and shudder, soon dying from&n
 &+gthe &+rpoisonous &+Gf&+rr&+go&+Gg&+g's bite.&n
 ~
-1074006158 0 0 839387392 30 536870912 1048576 0 S
-AC 0 1 2
+1074006158 0 0 0 839387392 30 536870912 1048576 0 S
+AC 0 1 0 2
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -723,8 +723,8 @@ waterbeetle beetle~
 &+Bhas a hard shell covering its entire body that is &+bglo&+gs&+bsy b&+gl&+back&+B with some tiny&n
 &+ggreen &+bsp&+ge&+bc&+bks&+B dotting it.&n
 ~
-1074004046 0 0 50333712 30 262144 0 0 S
-I 0 1 1
+1074004046 0 0 0 50333712 30 262144 0 0 S
+I 0 1 0 1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -739,8 +739,8 @@ treefrog frog~
 &+gblends in well with the vegetation, with its &+Gmo&+gt&+Gtled &+gg&+Gre&+gen skin that has dots&n
 &+gof &+ybro&+Yw&+yn&+g and &+Yye&+yl&+Ylow.&n
 ~
-264396 0 0 570951936 30 0 0 0 S
-A 0 1 1
+264396 0 0 0 570951936 30 0 0 0 S
+A 0 1 0 1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -754,8 +754,8 @@ striped fish~
 &+Blikes to swallow its food whole to suffocate in its big belly.  Occasionally
 &+Bits belly can be seen moving as its food tries in vain to find a way out.&n
 ~
-264270 0 0 570951936 30 262144 1056768 -750 S
-AC 0 16384 4
+264270 0 0 0 570951936 30 262144 1056768 -750 S
+AC 0 16384 0 4
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -770,8 +770,8 @@ mouth striped fish~
 &+Bvictim's skin.  Once the victim ceases struggling, the fish either swallows&n
 &+Bit whole, or saws it apart into swallowable chunks with its sharp &+Wteeth.&n
 ~
-133198 0 0 570951936 30 262144 1056768 0 S
-AC 0 1 4
+133198 0 0 0 570951936 30 262144 1056768 0 S
+AC 0 1 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -786,8 +786,8 @@ small bloodworm worm blood~
 &+gnot a large &+ccreature,&+g but it has quite a voracious appetite, so it chases all&n
 &+gwho cross its path to try to eat them.&n
 ~
-262344 1 0 301992232 30 262144 1048576 0 S
-AC 0 0 2
+262344 1 0 0 301992232 30 262144 1048576 0 S
+AC 0 0 0 2
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -802,8 +802,8 @@ large blood worm bloodworm~
 &+gits mouth to things too big to eat, and sucking on their &+Rblood&+g until either&n
 &+gthey kill it or it kills them.&n
 ~
-264396 1 0 318769448 30 0 1048576 0 S
-AC 0 0 2
+264396 1 0 0 318769448 30 0 1048576 0 S
+AC 0 0 0 2
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -818,8 +818,8 @@ flying gray rat bat little~
 &+gtwilit area, and it dives down to attack anything that moves without reason,&n
 &+gapparently just reacting to the movement without any thought.&n
 ~
-393356 0 0 436207872 30 0 1048578 0 S
-A 0 1 2
+393356 0 0 0 436207872 30 0 1048578 0 S
+A 0 1 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -833,8 +833,8 @@ flying brown rat medium bat~
 &+gfruit that has fallen from the tree.  As it eats, it watches around the area,&n
 &+gtwitching nervously as it expects an attack at any time.&n
 ~
-395468 0 0 168296704 30 0 1048578 0 S
-A 0 1 3
+395468 0 0 0 168296704 30 0 1048578 0 S
+A 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -850,8 +850,8 @@ flying pink rat large bat~
 &+git sitting there.  Its pure &+Wwhite eyes&+g seem not to see anything beyond the&n
 &+gfood it is eating.&n
 ~
-1208363148 0 0 436732160 30 0 1056770 0 S
-A 0 2 4
+1208363148 0 0 0 436732160 30 0 1056770 0 S
+A 0 2 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -865,8 +865,8 @@ blue angel fish~
 &+Bafter larger creatures, too, for a taste, but it usually will not attack what&n
 &+Bit knows it cannot kill.&n
 ~
-264398 0 0 301992192 30 0 1048576 0 S
-F 0 16384 2
+264398 0 0 0 301992192 30 0 1048576 0 S
+F 0 16384 0 2
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -881,8 +881,8 @@ red finned angel fish~
 &+Bit a little nibble just to see if it tastes good, but it won't attach things&n
 &+Bit probably can't kill.&n
 ~
-264398 0 0 33556736 30 0 1048576 0 S
-F 0 16384 2
+264398 0 0 0 33556736 30 0 1048576 0 S
+F 0 16384 0 2
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -897,8 +897,8 @@ yellow finned angel fish~
 &+Blarger, just to see what it tastes like, but it would not be foolish enough&n
 &+Bto attack anything that it could not kill.&n
 ~
-264398 0 0 33556736 30 0 1056768 0 S
-F 0 65536 2
+264398 0 0 0 33556736 30 0 1056768 0 S
+F 0 65536 0 2
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -914,8 +914,8 @@ green finned angel fish~
 &+Bnibble at large creatures to get a taste of them, but it is unusual for it to&n
 &+Battack something much larger than it is.&n
 ~
-264398 0 0 301992192 30 0 1056768 0 S
-F 0 16384 2
+264398 0 0 0 301992192 30 0 1056768 0 S
+F 0 16384 0 2
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -930,8 +930,8 @@ gray bird sing~
 &+gsings a haunting melody without ceasing, sending a song of intense loneliness&n
 &+gand sadness out into the swamp.&n
 ~
-1143351374 0 0 436805944 30 67108864 1048576 0 S
-AC 0 272 2
+1143351374 0 0 0 436805944 30 67108864 1048576 0 S
+AC 0 272 0 2
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -946,8 +946,8 @@ green bird~
 &+ythe hillside.  From a distance, a faint bellowed hoot comes back in reply, and&n
 &+ythis one takes back off, flitting from &+Mf&+mlo&+Yw&+mer&+y to &+Mf&+mlo&+Yw&+mer.&n
 ~
-1074137294 0 0 402653440 30 0 1048576 0 S
-B 0 16 1
+1074137294 0 0 0 402653440 30 0 1048576 0 S
+B 0 16 0 1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -962,8 +962,8 @@ warrior ant~
 &+gthey carry.  Anything that disturbs the &+rwor&+yk&+rers&+g or attacks the warrior quickly&n
 &+gfinds that these &+ra&+yn&+rts&+g are very fast and very vicious.&n
 ~
-1275332686 0 0 319365136 30 262144 1048576 0 S
-AC 0 16 3
+1275332686 0 0 0 319365136 30 262144 1048576 0 S
+AC 0 16 0 3
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -978,8 +978,8 @@ warrior ant~
 &+ywo&+rr&+yke&+rrs.&+g  Sometimes it becomes bored and defends anything in its area that is&n
 &+gattacked.&n
 ~
-1275345102 0 0 318767360 30 262144 1048576 0 S
-AC 0 16 2
+1275345102 0 0 0 318767360 30 262144 1048576 0 S
+AC 0 16 0 2
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -993,8 +993,8 @@ worker ant~
 &+gthings not directly related to the job it is doing, marching along the path of&n
 &+gfood supply without deviation.&n
 ~
-134480078 0 0 50331904 30 262144 1048576 0 S
-I 0 1 2
+134480078 0 0 0 50331904 30 262144 1048576 0 S
+I 0 1 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1008,8 +1008,8 @@ worker ant~
 &+gwavering from its path, the worker ant just marches along, ignoring everything
 &+goutside of its own little world.&n
 ~
-134482124 0 0 50331904 30 262144 1048576 0 S
-I 0 1 2
+134482124 0 0 0 50331904 30 262144 1048576 0 S
+I 0 1 0 2
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1023,8 +1023,8 @@ branch snake~
 &+git for a meal.  Its mottled skin camouflages it well, and with all the small&n
 &+ccreatures&+g that are moving around in the tree canopy, it eats well.&n
 ~
-264396 0 0 50858240 30 0 1048576 0 S
-RS 0 1 2
+264396 0 0 0 50858240 30 0 1048576 0 S
+RS 0 1 0 2
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1039,8 +1039,8 @@ leaf snake~
 &+git will occasionally bite larger &+ccreatures,&+g depending on its poison, not its&n
 &+gstrength, to kill them.&n
 ~
-262348 0 0 50858240 30 536870912 1048576 0 S
-RS 0 16 2
+262348 0 0 0 50858240 30 536870912 1048576 0 S
+RS 0 16 0 2
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1055,8 +1055,8 @@ large warrior ant~
 &+gwatches around the area, alert to possible trouble.  In fact, it seems to want&n
 &+gtrouble to start so that it can tear apart its foe.&n
 ~
-201722954 0 0 301990288 30 262144 1056768 0 S
-AC 0 16 4
+201722954 0 0 0 301990288 30 262144 1056768 0 S
+AC 0 16 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1071,8 +1071,8 @@ and seem to find most who approach to be lesser than him.  Though what he has
 on is in rags, he has exquisitely worked leathers on the shelves.  Very well-
 crafted bows are among the wooden items on the shelves.
 ~
-1074051150 0 0 369697064 30 605028352 1056768 500 S
-P2 0 2 3
+1074051150 0 0 0 369697064 30 605028352 1056768 500 S
+P2 0 2 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1086,8 +1086,8 @@ woman wife shoppie~
 &+ma pleasant smile on her face, though the look in her eyes shows that she would&n
 &+mrather be left to her lonely solitude.&n
 ~
-292938 0 0 3120636200 268382 85983232 1056768 0 S
-P2 0 4 3
+292938 0 0 0 3120636200 268382 85983232 1056768 0 S
+P2 0 4 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1102,8 +1102,8 @@ slow lizard~
 &+git finds.  It also lays in wait when it hears movement nearby, its &+wgra&+gy a&+wn&+gd&n
 &+ggr&+we&+gen &+ws&+gtri&+wp&+ged s&+wk&+gin the perfect camouflage for this swamp.&n
 ~
-134482126 0 0 302063744 30 0 1056768 -351 S
-R 0 1 4
+134482126 0 0 0 302063744 30 0 1056768 -351 S
+R 0 1 0 4
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1118,8 +1118,8 @@ huge lizard~
 &+gits prey to move close enough to just snap it up.  Even if nothing ventures by&n
 &+git will not go hungry as it will feast on any carcasses it finds, too.&n
 ~
-134481934 0 0 302064000 30 1310720 1056768 0 S
-R 0 16384 4
+134481934 0 0 0 302064000 30 1310720 1056768 0 S
+R 0 16384 0 4
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1134,8 +1134,8 @@ giant lizard~
 &+garea unseen and it is quick to rush out to protect its lair if it thinks there&n
 &+gis even the slightest hint of a threat.&n
 ~
-134511694 0 0 302064000 30 0 1056768 0 S
-R 0 16384 6
+134511694 0 0 0 302064000 30 0 1056768 0 S
+R 0 16384 0 6
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1151,8 +1151,8 @@ sabre lion~
 &+gits den, curled up and sleeping, but wakes at the slightest sound that is out&n
 &+gof place in its area.&n
 ~
-1208223822 0 0 302514432 30 536870912 1048576 0 S
-AC 0 4097 4
+1208223822 0 0 0 302514432 30 536870912 1048576 0 S
+AC 0 4097 0 4
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1178,8 +1178,8 @@ keera elf-kin woman female elf~
 &+gShe learned at a very young age how to duck and hide from the soulless &+bGar&+Bt&+bham&n
 &+gand has remained free from them.&n
 ~
-1141258442 0 0 436806052 30 537919488 1048576 0 S
-P2 0 384 3
+1141258442 0 0 0 436806052 30 537919488 1048576 0 S
+P2 0 384 0 3
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1193,8 +1193,8 @@ bird song cheerful~
 &+gthe song it sings is anything but &+wgray.&+g  It keeps a careful watch around its&n
 &+gperch with bright eyes, reacting fast to anything that approaches it.&n
 ~
-395342 0 0 168370480 30 553648128 1056768 0 S
-B 0 1 1
+395342 0 0 0 168370480 30 553648128 1056768 0 S
+B 0 1 0 1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1209,8 +1209,8 @@ mouse mouseling creature~
 &+gfound up in one of the larger trees as on the ground.  This &+rm&+yous&+reli&+yng&+g is not&n
 &+gafraid of much that it comes across and will attack if it feels threatened.&n
 ~
-272462 0 0 302516496 30 537919488 1056768 0 S
-AC 0 16384 3
+272462 0 0 0 302516496 30 537919488 1056768 0 S
+AC 0 16384 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1227,8 +1227,8 @@ a hint of a breeze, the &+gle&+ra&+gve&+rs&n seem to be whispering against each 
 &+yhu&+rg&+ye t&+gr&+yu&+rn&+yk&+g is mostly hidden by the limbs, but at times it seems that the &+rbark&n
 is arranged in such a way that there is a face on the trunk.&n
 ~
-272462 1 0 855640376 158 17039360 34611200 -1001 S
-AC 0 528 6
+272462 1 0 0 855640376 158 17039360 34611200 -1001 S
+AC 0 528 0 6
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1242,8 +1242,8 @@ standing near a workbench littered with unworked &+ywood, &+Wgems,&n and &+wston
 looks up as anyone enters, a clear question on her face despite the fact that
 she has a &+mb&+Mir&+md's&n face, not one even closely resembling humanoid.
 ~
-403530 0 0 3121162680 276702 621805568 2182620192 0 S
-B 0 264 3
+403530 0 0 0 3121162680 276702 621805568 2182620192 0 S
+B 0 264 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1264,8 +1264,8 @@ his hands move skillfully, carving the things he holds into exquisite shapes.
 he is not working on it at the moment, he could stop carving and start making
 the ornaments again at any time.
 ~
-272462 0 0 33628416 30 0 0 0 S
-H 0 1 2
+272462 0 0 0 33628416 30 0 0 0 S
+H 0 1 0 2
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -1279,8 +1279,8 @@ dragonfly red~
 &+Beat.  It is curious and will watch any who enter the area with its huge eyes,&n
 &+Bwatching for any hint of a threat to its well-being.&n
 ~
-395370 0 0 705169664 30 0 1056768 0 S
-DK 0 2 2
+395370 0 0 0 705169664 30 0 1056768 0 S
+DK 0 2 0 2
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1295,8 +1295,8 @@ dragonfly blue~
 &+Banything it does not know.  Though it is not aggressive, it does not hesitate&n
 &+Bto defend itself to the best of its abilities.&n
 ~
-403790 0 0 436734208 158 0 1056768 0 S
-DK 0 16 2
+403790 0 0 0 436734208 158 0 1056768 0 S
+DK 0 16 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1310,8 +1310,8 @@ dragonfly white~
 &+Bhuge eyes, suspicious of anything that enters its area that it doesn't know.&n
 &+BThough it will not initiate combat, it is fast to defend itself when needed.&n
 ~
-404046 0 0 436734208 94 2097152 1056768 0 S
-DK 0 8 2
+404046 0 0 0 436734208 94 2097152 1056768 0 S
+DK 0 8 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1331,8 +1331,8 @@ bird teacher choril~
 &+yin his love for the arcane arts, and is more than willing to share with any&n
 &+ywho thirst for the knowledge he has.&n
 ~
-440394 0 0 319367456 30 16777216 1056768 0 S
-B 0 512 4
+440394 0 0 0 319367456 30 16777216 1056768 0 S
+B 0 512 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1350,8 +1350,8 @@ podaling parj teacher~
 &+ythirst for knowledge even greater than that which he already possesses, and&n
 &+ywhich he will gladly share with those who are ready.&n
 ~
-309322 0 0 302590240 30 16777216 1056768 0 S
-H 0 2048 2
+309322 0 0 0 302590240 30 16777216 1056768 0 S
+H 0 2048 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1368,8 +1368,8 @@ troll shoppie shopkeeper~
 &+Bas no one would venture in here unless they intended to buy something out of&n
 &+Bhis stock of wares.&n
 ~
-276554 0 0 1040787896 276686 16777216 0 -1001 S
-PT 0 16 4
+276554 0 0 0 1040787896 276686 16777216 0 -1001 S
+PT 0 16 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1388,8 +1388,8 @@ mite~
 &+gfrom plants, making the plants move in unexpected ways. They are shy, trying&n
 &+gnot to be seen by any, but even these little creatures make mistakes.&n
 ~
-264398 0 0 33556736 30 537919488 1056768 -500 S
-H 0 65537 0
+264398 0 0 0 33556736 30 537919488 1056768 -500 S
+H 0 65537 0 0
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1406,8 +1406,8 @@ mite~
 &+gnot miss anything that is around the creature.  It has translucent wings that&n
 &+git can fold down on its back when it is not flying.&n
 ~
-395342 0 0 436734208 30 537919488 1056768 -750 S
-H 0 65537 0
+395342 0 0 0 436734208 30 537919488 1056768 -750 S
+H 0 65537 0 0
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1423,8 +1423,8 @@ crystal crystalline bat~
 &+gthat look like &+Lcr&+ba&+Lcke&+bd &+Lblack l&+be&+Lather&+g stretched into wing shapes on &+btwigs.&+g  The&n
 &+mb&+Ma&+mt&+g is clearly a construct and not a living being.&n
 ~
-1074146378 0 0 436732292 158 537919488 1056768 0 S
-AC 0 20 1
+1074146378 0 0 0 436732292 158 537919488 1056768 0 S
+AC 0 20 0 1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1442,8 +1442,8 @@ podaling shoppie solemn~
 &+gherbs and other plants on one side. Also on the table are a crucible, beakers,&n
 &+ga set of scales, and vials.&n
 ~
-424010 0 0 990456124 276686 553648128 1056768 0 S
-H 0 2 2
+424010 0 0 0 990456124 276686 553648128 1056768 0 S
+H 0 2 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1458,8 +1458,8 @@ duergar lurk lurker~
 &+rto attack those who do not threaten him as those who do.  His dark eyes shine&n
 &+rwith greed and a lust for things that he does not have.&n
 ~
-1074014284 0 0 301990176 30 0 1048576 0 S
-PD 0 8192 3
+1074014284 0 0 0 301990176 30 0 1048576 0 S
+PD 0 8192 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1473,8 +1473,8 @@ podaling smile harmank placid ill illusionist~
 &+yplacid smile on his face.  He does not appear to be affected by the choas of&n
 &+ylife in the &+Gswamp&n&+y, but seems to be in his own special place of peace and quiet.&n
 ~
-309322 0 0 33554688 28 0 0 0 S
-H 0 4194304 2
+309322 0 0 0 33554688 28 0 0 0 S
+H 0 4194304 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1491,8 +1491,8 @@ ogre wild~
 &+gto reason, muttering to himself about &+Yb&+Ri&+Gr&+Bd&+Ys&n&+g and &+Wdr&n&+wag&+Bo&n&+bnf&+wl&+Wies&n&+g and &+ra&+ynts&+g, while&n
 &+glooking about him, searching for threats.&n
 ~
-264268 0 0 256 28 0 0 -900 S
-po 0 16384 5
+264268 0 0 0 256 28 0 0 -900 S
+po 0 16384 0 5
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1508,8 +1508,8 @@ barb barbarian stumbling~
 &+ggetting back to his proud &+Bbarbarian&n&+g mate, as well as complaints to the company&n
 &+ghe has been forced to keep in an attempt to survive this hellish place.&n
 ~
-1074006092 0 0 268435456 28 0 0 500 S
-pb 0 1 -1
+1074006092 0 0 0 268435456 28 0 0 500 S
+pb 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1524,8 +1524,8 @@ dwarf frothing~
 &+git is clear that her mind has snapped from the constant noise from the many&n
 &+gcreatures that surround her.&n
 ~
-262220 0 0 0 28 0 0 500 S
-pm 0 32 -1
+262220 0 0 0 0 28 0 0 500 S
+pm 0 32 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1540,8 +1540,8 @@ creeping goblin~
 &+gas he helps flush out the sneakier of the creatures, they tolerate having
 &+ghim follow them around.&n
 ~
-264396 0 0 524288 28 0 0 -900 S
-hg 0 65536 -1
+264396 0 0 0 524288 28 0 0 -900 S
+hg 0 65536 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1555,8 +1555,8 @@ fuming human~
 &+gcompanion are forced to continue to wander until they can find the correct&n
 &+gpodaling to get her special item made.&n
 ~
-264268 0 0 0 28 0 0 0 S
-PH 0 128 3
+264268 0 0 0 0 28 0 0 0 S
+PH 0 128 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1571,8 +1571,8 @@ grim elf~
 &+rta&+yi&+rls&+g and &+Ge&n&+bar&+ms&+g on her belt, she is not having trouble finding all the other&n
 &+gthings that want to eat them in this &+Gswamp&n&+g.&n
 ~
-1074006092 0 0 0 28 0 0 1000 S
-pe 0 2 3
+1074006092 0 0 0 0 28 0 0 1000 S
+pe 0 2 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1585,8 +1585,8 @@ frowning duergar~
 &+ga defensive barrier.  The &+wbo&+Wne&n&+ws&+g that litter the area attest that the barrier&n
 &+gis very effective as he is still here while the things he has fought are not.&n
 ~
-67373070 0 0 256 28 0 0 -1000 S
-pd 0 16384 -1
+67373070 0 0 0 256 28 0 0 -1000 S
+pd 0 16384 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1600,8 +1600,8 @@ humming goblin~
 &+gor the screams of death emanating from other parts of the &+Gswamp&n&+g.  He seems to&n
 &+gnot notice how nervous his companion is,either, but seems at home here.&n
 ~
-262222 0 0 256 28 0 0 -1000 S
-hg 0 32 -1
+262222 0 0 0 256 28 0 0 -1000 S
+hg 0 32 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1616,8 +1616,8 @@ intense podaling~
 &+goff chance that he finds something needed to make one of the many projects&n
 &+ghe is currently working on.&n
 ~
-264268 0 0 100663296 30 0 0 750 S
-h 0 1 2
+264268 0 0 0 100663296 30 0 0 750 S
+h 0 1 0 2
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1631,8 +1631,8 @@ intent podaling~
 &+gwhere she can grab the one needed at the time she needs it.  A few unfinished&n
 &+gprojects can be glimpsed in the backpack.&n
 ~
-264268 0 0 100663552 30 0 0 750 S
-h 0 1 2
+264268 0 0 0 100663552 30 0 0 750 S
+h 0 1 0 2
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1645,8 +1645,8 @@ wild elf female elfling~
 &+gnext meal.  She looks at everything in the area with bright eyes, alert for&n
 &+gthe slightest hint of movement.&n
 ~
-1074137164 0 0 168296736 30 0 1048576 750 S
-h 0 1 2
+1074137164 0 0 0 168296736 30 0 1048576 750 S
+h 0 1 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1660,8 +1660,8 @@ male wild elf elfling~
 &+gof movement catch his attention, and he quickly goes into a defensive crouch&n
 &+gbefore anything could possibly catch him by surprise.&n
 ~
-1074006092 0 0 101187872 30 0 1048576 750 S
-h 0 257 2
+1074006092 0 0 0 101187872 30 0 1048576 750 S
+h 0 257 0 2
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1675,8 +1675,8 @@ staring githyanki~
 &+ghis stare is disquieting as it allows no attention to anything outside of the&n
 &+gvines he is studying.&n
 ~
-272458 0 0 100663552 30 0 0 0 S
-gi 0 33554432 3
+272458 0 0 0 100663552 30 0 0 0 S
+gi 0 33554432 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1690,8 +1690,8 @@ wild male elf elfling~
 &+gHe is watching the area with a fierce look, ready to jump at anything that even&n
 &+glooks a tiny bit threatening.&n
 ~
-67373128 0 0 100663556 30 0 1048576 150 S
-h 0 16416 3
+67373128 0 0 0 100663556 30 0 1048576 150 S
+h 0 16416 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -11,8 +11,8 @@ moreg mayor goblin~
 &+rthough a hard look in his eyes makes you think he can probably handle trouble
 &+rwell enough.
 ~
-1140852938 64 0 524296 2 0 0 -1000 S
-HG 0 16384 -1
+1140852938 64 0 0 524296 2 0 0 -1000 S
+HG 0 16384 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -29,8 +29,8 @@ glub ghost form~
 &+Lseen sticking into his back, he moans constantly as if it still causes him
 &+Lpain.
 ~
-133194 8 0 134217770 2 0 0 -1000 S
-UG 0 1 2
+133194 8 0 0 134217770 2 0 0 -1000 S
+UG 0 1 0 2
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -44,8 +44,8 @@ ghost form~
 &+Ldidn't buy him a permanent rest.  He looks about him for living souls to
 &+Ltorture and finally to join him in his endless undead existance.
 ~
-133194 8 0 134217770 2 0 0 -1000 S
-UG 0 1 2
+133194 8 0 0 134217770 2 0 0 -1000 S
+UG 0 1 0 2
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -59,8 +59,8 @@ zombie~
 &+Lhis never-ending hunger for living flesh.  As he ambles about small bits of
 &+Lflesh and the occasional maggot drops from his ever decaying body.
 ~
-2252 1 0 0 2 0 0 -1000 S
-U 0 1 2
+2252 1 0 0 0 2 0 0 -1000 S
+U 0 1 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -74,8 +74,8 @@ zombie~
 &+Lto wander endlessly trying to satisfy her own hungers.  She looks about as
 &+Lthough she's looking for something that she can't quite remember.
 ~
-2252 1 0 0 2 0 0 -1000 S
-U 0 1 2
+2252 1 0 0 0 2 0 0 -1000 S
+U 0 1 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -90,8 +90,8 @@ skeleton~
 &+whatred of the living, a sadistic envy, it looks for anyone it can find to sate
 &+wits &+Rrage.
 ~
-2252 1 0 0 2 0 0 -1000 S
-U 0 1 2
+2252 1 0 0 0 2 0 0 -1000 S
+U 0 1 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -105,8 +105,8 @@ prostitute homely~
 &+gpassion.  She looks at you without desire but as an inevitable drudgery that
 &+gmarks every moment of her existance.
 ~
-1073744074 0 16777216 0 2 0 0 -1000 S
-HG 0 16384 1
+1073744074 0 16777216 0 0 2 0 0 -1000 S
+HG 0 16384 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -120,8 +120,8 @@ baby goblin~
 &+Gin the dirt.  A disgusting goo covers much of its puke-green body.  As it
 &+Gnotices you looking at it it starts to bawl loudly.
 ~
-2184 0 0 0 2 0 0 0 S
-HG 0 0 1
+2184 0 0 0 0 2 0 0 0 S
+HG 0 0 0 1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -135,8 +135,8 @@ worm purple young~
 &+Mooze.  It swings its gapping maw back and forth trying to sense food that it
 &+Mcannot see with its vestigial eyes.
 ~
-1074006218 1 0 32 2 0 0 0 S
-AP 0 1 4
+1074006218 1 0 0 32 2 0 0 0 S
+AP 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -148,8 +148,8 @@ air elemental~
 &nThis being, composed of pure air, seems to be a bit upset at your intrustion
 &nin its homeland.
 ~
-1073875144 1 0 134217754 2 0 0 0 S
-EA 0 1 3
+1073875144 1 0 0 134217754 2 0 0 0 S
+EA 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -161,8 +161,8 @@ large air elemental~
 &nThis huge elemental, some fifteen feet high seems to want to blow you
 &naway with his mighty fist of wind.
 ~
-1073875144 1 0 134217752 2 0 0 0 S
-EA 0 1 4
+1073875144 1 0 0 134217752 2 0 0 0 S
+EA 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -173,8 +173,8 @@ jann powerful~
 ~
 &nThis huge white skined jinni-kin has a nasty breath of freezing cold.
 ~
-1073875144 1 0 134217752 2 0 0 -1000 S
-EA 0 1 5
+1073875144 1 0 0 134217752 2 0 0 -1000 S
+EA 0 1 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ water elemental~
 &nThis being, composed of pure water, and seems to be a bit upset
 &nat your intrustion in its homeland.
 ~
-1074006216 1 0 2048 2 0 0 0 S
-EW 0 1 3
+1074006216 1 0 0 2048 2 0 0 0 S
+EW 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -199,8 +199,8 @@ large water elemental~
 &nThis huge elemental, some fifteen feet high seems to want to wash you
 &naway with his mighty fist of water.
 ~
-1074006216 1 0 2048 2 0 0 0 S
-EW 0 1 4
+1074006216 1 0 0 2048 2 0 0 0 S
+EW 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -212,8 +212,8 @@ marid noble~
 &+bThis most powerful of all genie kind, hates those who invade his homeland,
 &+band moves to attack you at once!
 ~
-1074006216 1 0 2048 2 0 0 -1000 S
-EW 0 1 5
+1074006216 1 0 0 2048 2 0 0 -1000 S
+EW 0 1 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -225,8 +225,8 @@ earth elemental~
 &+yThis being, composed of pure earth, and seems to be a bit upset at your
 &+yintrustion in its homeland.
 ~
-1074006216 1 0 128 2 0 0 0 S
-EE 0 1 3
+1074006216 1 0 0 128 2 0 0 0 S
+EE 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -238,8 +238,8 @@ large earth elemental~
 &+yThis huge elemental, some twenty feet high seems to move out from the rock
 &+yitself swinging with its mighty fist.
 ~
-1074006216 1 0 128 2 0 0 0 S
-EE 0 1 4
+1074006216 1 0 0 128 2 0 0 0 S
+EE 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -251,8 +251,8 @@ dao noble~
 &+yThis powerful genie kind, hates those who invade his homeland,
 &+yand moves to attack you at once!
 ~
-1074006216 1 0 128 2 0 0 -1000 S
-EE 0 1 5
+1074006216 1 0 0 128 2 0 0 -1000 S
+EE 0 1 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -266,8 +266,8 @@ tired goblin~
 &+yDressed only in a simple night shirt its hard to miss his barreled chest and
 &+ystrong arms that only a life time of work could produce.
 ~
-2250 0 0 0 2 0 0 -1000 S
-HG 0 0 -1
+2250 0 0 0 0 2 0 0 -1000 S
+HG 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -279,8 +279,8 @@ fire elemental~
 &nThis being, composed of pure fire, seems to be a bit upset at your intrustion
 &nin its homeland.
 ~
-1073875144 1 0 134217728 3 0 0 0 S
-EF 0 1 3
+1073875144 1 0 0 134217728 3 0 0 0 S
+EF 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -292,8 +292,8 @@ large fire elemental~
 &nThis huge elemental, some fifteen feet high seems to want to flash fry
 &nyou as soon as he sees you!
 ~
-1073875144 1 0 134217728 3 0 0 0 S
-EF 0 1 4
+1073875144 1 0 0 134217728 3 0 0 0 S
+EF 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -305,8 +305,8 @@ efreeti scout~
 &nThis efreeti is out scouting the fire plane for slaves for his masters in
 &nthe city of brass.
 ~
-1073875144 1 0 134217728 3 0 0 -1000 S
-EF 0 1 5
+1073875144 1 0 0 134217728 3 0 0 -1000 S
+EF 0 1 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -319,8 +319,8 @@ gimbatul conjurer master~
 &+gbecoming one of the most powerful and well respected mages in &+rMoregeeth.
 &+gDressed only in simple robes as most of his protection is &+Mmagical.
 ~
-1073776714 64 0 67109064 2 2097152 0 -1000 S
-HG 0 2048 -1
+1073776714 64 0 0 67109064 2 2097152 0 -1000 S
+HG 0 2048 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -334,8 +334,8 @@ gorblag sorcerer master~
 &+gto focus magical energy.  Judging from his lack of eyebrows and other facial
 &+ghair not with much success.
 ~
-1073776714 64 0 67108936 2 2097152 0 -1000 S
-HG 0 512 -1
+1073776714 64 0 0 67108936 2 2097152 0 -1000 S
+HG 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -348,8 +348,8 @@ apprentice sorcerer's~
 &+gbut completely lacking in any magical aptitude just stands here trying in vain
 &+gto absorb his lessons.
 ~
-1073743946 64 0 67108864 2 0 0 -1000 S
-HG 0 512 -1
+1073743946 64 0 0 67108864 2 0 0 -1000 S
+HG 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -362,8 +362,8 @@ sorcerer young~
 &+Rfireballs &+rwith great glee.  He dreams of the day when he can turn his power on
 &+GGorblag &+rand usurp his position as the most powerful mage in Moregeeth.
 ~
-1073743946 64 0 67108864 2 0 0 -1000 S
-HG 0 512 -1
+1073743946 64 0 0 67108864 2 0 0 -1000 S
+HG 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -376,8 +376,8 @@ conjurer young~
 &+Lof sixth circle spells.  Dressed in simple robes his face is a mask of
 &+Lconcentration as he practices his spells over and over.
 ~
-1073743946 64 0 67108864 2 0 0 -1000 S
-HG 0 2048 -1
+1073743946 64 0 0 67108864 2 0 0 -1000 S
+HG 0 2048 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -390,8 +390,8 @@ apprentice conjurer's~
 &+Lhas been training many years under &+GGimbatul's &+Lstrict tutelage.  Eager for more
 &+Lmagical power, he listens attentively and practices often.
 ~
-1073743946 0 64 67108864 2 0 0 -1000 S
-HG 0 2048 -1
+1073743946 0 64 0 67108864 2 0 0 -1000 S
+HG 0 2048 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -406,8 +406,8 @@ brogan~
 &+ya &+rscar.  &+yHe looks at you up and down trying to figure out if your worth his
 &+ytime.
 ~
-1140852810 64 0 956301496 2 0 67109376 -1000 S
-HG 6 1 3
+1140852810 64 0 0 956301496 2 0 67109376 -1000 S
+HG 6 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -420,8 +420,8 @@ bartender gruff~
 &+yand disillusioned about his pathetic life.  He serves the customers here with
 &+yjoyless resigned expression on his face.
 ~
-2186 64 0 8 2 0 0 -1000 S
-HG 0 32768 -1
+2186 64 0 0 8 2 0 0 -1000 S
+HG 0 32768 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -435,8 +435,8 @@ drunk goblin male~
 &+yHis face has shrunken into his skull leaving his looking gaunt and unhealthy,
 &+ya testiment to many days of drinking with little food.
 ~
-2250 64 0 0 1026 0 0 -1000 S
-HG 0 1 -1
+2250 64 0 0 0 1026 0 0 -1000 S
+HG 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -450,8 +450,8 @@ slut goblin~
 &+Lpromise of favors to come.  And occasionally, when the opportunity presents
 &+Litself, to rob the patron of their remaining coins.
 ~
-2254 64 0 0 1026 0 0 0 S
-HG 0 0 1
+2254 64 0 0 0 1026 0 0 0 S
+HG 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -465,8 +465,8 @@ member press-gang~
 &+ghe prefers to loaf about trying to extort money out of those too scared to
 &+gstand up for themselves.
 ~
-2122 0 0 67108872 2 0 0 -1000 S
-HG 0 1 -1
+2122 0 0 0 67108872 2 0 0 -1000 S
+HG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -479,8 +479,8 @@ leader press-gang~
 &+gwhat ever the latest threat is, this man instead abuses his position to beat-
 &+gup or harass who ever he feels like.  And he loves his job.
 ~
-1073743944 1 0 67108872 2 0 0 -1000 S
-HG 0 1 -1
+1073743944 1 0 0 67108872 2 0 0 -1000 S
+HG 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -494,8 +494,8 @@ dura priestess~
 &+ra hand in the towns prostitution racket and uses the information she gains to
 &+rblack-mail various officials from the mine leader to the mayor himself.
 ~
-1073776714 64 0 604053536 45278 0 0 -1000 S
-HG 0 32 -1
+1073776714 64 0 0 604053536 45278 0 0 -1000 S
+HG 0 32 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -508,8 +508,8 @@ apprentice cleric~
 &+Ldesperate to prove herself to &+rDura.  &+LFor those that aren't worthy of serving
 &+LLoviatar are pressed into other areas of service less desirable...
 ~
-1073743946 0 0 73760 12510 0 0 -1000 S
-HG 0 32 -1
+1073743946 0 0 0 73760 12510 0 0 -1000 S
+HG 0 32 0 -1
 17 0 1 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -524,8 +524,8 @@ senior cleric~
 &+rmore intense rituals conducted within the temple.  A look of enthusiasm
 &+rbetrays the immense joy she gets out of her job.
 ~
-1073743946 0 0 73760 12510 0 0 -1000 S
-HG 0 32 -1
+1073743946 0 0 0 73760 12510 0 0 -1000 S
+HG 0 32 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -540,8 +540,8 @@ initiate eager~
 &+rrobe and a smile, she longs for the day when she to will be ready to assist
 &+rDura by conducting rituals.
 ~
-1073743946 0 0 73760 12510 0 0 -1000 S
-HG 0 32 -1
+1073743946 0 0 0 73760 12510 0 0 -1000 S
+HG 0 32 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -556,8 +556,8 @@ smog~
 &+mseparate customers of as much money as possible, and relies on the town
 &+mguards' protection.
 ~
-2250 0 0 67108872 2 0 0 -1000 S
-HG 0 0 -1
+2250 0 0 0 67108872 2 0 0 -1000 S
+HG 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -570,8 +570,8 @@ bard gaily~
 &+gsongs on his mandolin and juggles for the crowd.  Mean while his companion
 &+gworks the crowd for donations from the willing and unwilling alike.
 ~
-2122 64 0 8 2 0 0 -1000 S
-HG 0 32768 -1
+2122 64 0 0 8 2 0 0 -1000 S
+HG 0 32768 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -585,8 +585,8 @@ shopkeeper runt~
 &+gchasing away any competitors he tries to exact his revenge on the performers
 &+gthat wouldn't accept him.
 ~
-2122 64 0 8 2 0 0 -1000 S
-HG 0 32768 1
+2122 64 0 0 8 2 0 0 -1000 S
+HG 0 32768 0 1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -602,8 +602,8 @@ skai bard~
 &+mhopefuls to take her place before the crowds, provided they're willing to
 &+msplit their take with her.
 ~
-1140885578 72 0 67108936 2 0 0 -1000 S
-HG 0 32768 -1
+1140885578 72 0 0 67108936 2 0 0 -1000 S
+HG 0 32768 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -617,8 +617,8 @@ bard young~
 &+band dance &+MSkai &+bhas also taught several survival skills to keep him alive in
 &+bfront of the roughest audiences.
 ~
-1140885578 64 0 67108864 2 0 0 -1000 S
-HG 0 32768 -1
+1140885578 64 0 0 67108864 2 0 0 -1000 S
+HG 0 32768 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -632,8 +632,8 @@ rogue sly~
 &+Lhis fingers into the pouches of the patrons too drunk or distracted to notice
 &+Lhim.
 ~
-1073744090 72 0 524288 2 0 0 -1000 S
-HG 0 73728 1
+1073744090 72 0 0 524288 2 0 0 -1000 S
+HG 0 73728 0 1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -648,8 +648,8 @@ elite goblin guard~
 &+gwell trained or very disciplined anyone who's lived in this town must know how
 &+gto take care of themselves.
 ~
-67373130 33556544 0 671154236 12510 131072 0 -1000 S
-HG 0 1 -1
+67373130 33556544 0 0 671154236 12510 131072 0 -1000 S
+HG 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -663,8 +663,8 @@ shopkeeper odd goblin~
 &+Ycollection of enchanted items, hoping that eventually he can make more
 &+Ypowerful items himself.
 ~
-133194 0 0 134217864 2050 0 0 -1000 S
-HG 0 2048 1
+133194 0 0 0 134217864 2050 0 0 -1000 S
+HG 0 2048 0 1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -679,8 +679,8 @@ shopkeeper mage old man~
 &+mmiles.  He now uses those contacts to obtain rare spell components to anyone
 &+mwho can pay the price.
 ~
-2122 0 0 134217816 2 0 0 -1000 S
-HG 0 512 -1
+2122 0 0 0 134217816 2 0 0 -1000 S
+HG 0 512 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -695,8 +695,8 @@ mercenary goblin~
 &+yhis way out of his commission.  Having had a hard day of training he has
 &+ycollapsed here to sleep, still wearing his uniform.
 ~
-1140852810 64 0 67108864 2 0 0 -1000 S
-HG 0 16384 -1
+1140852810 64 0 0 67108864 2 0 0 -1000 S
+HG 0 16384 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -711,8 +711,8 @@ olog troll mercenary~
 &+gRecruits are trained in hand-to-hand combat, armed combat, stealth, and
 &+gintimidation.
 ~
-1073776714 64 0 67698696 2 0 0 -1000 S
-PT 0 16384 -1
+1073776714 64 0 0 67698696 2 0 0 -1000 S
+PT 0 16384 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -727,8 +727,8 @@ mercenary goblin~
 &+yhis way out of his commission.  For now he does as he is told going endlessly
 &+ythough the same battle moves.
 ~
-1140852810 64 0 67108864 2 0 0 -1000 S
-HG 0 16384 -1
+1140852810 64 0 0 67108864 2 0 0 -1000 S
+HG 0 16384 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -743,8 +743,8 @@ warrior goblin~
 &+gbring.  Being trained from an early age to do nothing but kill it would be
 &+gvery unwise to disturb his sleep.
 ~
-1140852810 64 0 67108864 2 0 0 -1000 S
-HG 0 1 -1
+1140852810 64 0 0 67108864 2 0 0 -1000 S
+HG 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -758,8 +758,8 @@ warrior goblin~
 &+glook forward to but long hours guarding the city he almost hopes he will die
 &+gduring training.
 ~
-1140852810 64 0 67108864 2 0 0 -1000 S
-HG 0 1 -1
+1140852810 64 0 0 67108864 2 0 0 -1000 S
+HG 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -774,8 +774,8 @@ golgash captain guard~
 &+ghis troops.  Most of his students are young and don't take easily to their
 &+glessons, so the sergeant is almost always in a foul mood.
 ~
-1073776714 64 0 67698696 2 0 0 -1000 S
-HG 0 1 -1
+1073776714 64 0 0 67698696 2 0 0 -1000 S
+HG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -792,8 +792,8 @@ roper young~
 &+gropers use to procreate.  With shed tentacles growing into smaller ropers that
 &+gquickly grow owing to their ravonous appetites.
 ~
-1074137162 1 0 67108924 2 262144 0 -1000 S
-TK 0 1 -1
+1074137162 1 0 0 67108924 2 262144 0 -1000 S
+TK 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -808,8 +808,8 @@ elite goblin guard~
 &+gwell trained or very disciplined anyone who's lived in this town must know how
 &+gto take care of themselves.
 ~
-67373130 64 0 671154236 12510 131072 0 -1000 S
-HG 0 1 -1
+67373130 64 0 0 671154236 12510 131072 0 -1000 S
+HG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -824,8 +824,8 @@ elite goblin guard~
 &+gwell trained or very disciplined anyone who's lived in this town must know how
 &+gto take care of themselves.
 ~
-1074006088 2112 0 671154236 12510 131072 0 -1000 S
-HG 0 1 -1
+1074006088 2112 0 0 671154236 12510 131072 0 -1000 S
+HG 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -839,8 +839,8 @@ scout goblin~
 &+gdies.  He stands here trying to decide whether to keep standing here or take
 &+ghis chances in the wild outside of town.
 ~
-1141114952 64 0 671154236 12510 131072 0 -1000 S
-HG 0 1 -1
+1141114952 64 0 0 671154236 12510 131072 0 -1000 S
+HG 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -854,8 +854,8 @@ bat vampire~
 &+rpuncture holes in the back of herd animals and feed off the blood.  Between
 &+rfeeds they secret themselves in small caves where large preditors can't fit.
 ~
-1073875018 1 0 0 2 0 0 -1000 S
-A 0 0 1
+1073875018 1 0 0 0 2 0 0 -1000 S
+A 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 0
@@ -871,8 +871,8 @@ caretaker cemetery~
 &+ySome even buy body parts for use in aphrodisiacs, though there is little
 &+ymarket for love potions made of goblins.
 ~
-1073744078 0 0 0 2 0 0 -1000 S
-HG 0 1 -1
+1073744078 0 0 0 0 2 0 0 -1000 S
+HG 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -885,8 +885,8 @@ necromancer young~
 &+Rfireballs &+rwith great glee.  He dreams of the day when he can turn his power on
 &+GGorblag &+rand usurp his position as the most powerful mage in Moregeeth.
 ~
-1073743946 0 0 67108864 2 0 0 -1000 S
-HG 0 1024 -1
+1073743946 0 0 0 67108864 2 0 0 -1000 S
+HG 0 1024 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -904,8 +904,8 @@ tala necromancer mistress~
 &+mand the skin around her eyes has sunken inward.  She dresses in simple robes,
 &+mtoo busy to bother with appearance unlike her vain adversary.
 ~
-1073776714 64 0 67108936 2 2097152 0 -1000 S
-HG 0 1024 -1
+1073776714 64 0 0 67108936 2 2097152 0 -1000 S
+HG 0 1024 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -920,8 +920,8 @@ necromancer young~
 &+Lhis are sunk deeply into their sockets.  His clothes as his mood are all
 &+Lblack.
 ~
-1073743946 64 0 67108864 2 0 0 -1000 S
-HG 0 1024 -1
+1073743946 64 0 0 67108864 2 0 0 -1000 S
+HG 0 1024 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -936,8 +936,8 @@ maitre'd head waiter~
 &+Wup at your approach as though even the air around you is unworthy.  As you
 &+Wcontinue to press he decides its time for you to leave.
 ~
-67242186 1 0 67108864 2 0 0 -1000 S
-HG 0 1 -1
+67242186 1 0 0 67108864 2 0 0 -1000 S
+HG 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -952,8 +952,8 @@ noble goblin~
 &+Buses to cut his food before downing it in haste, he moves the blade with short
 &+Bpracticed cuts.
 ~
-1073743946 64 0 67108872 2 0 0 -1000 S
-HG 0 1 -1
+1073743946 64 0 0 67108872 2 0 0 -1000 S
+HG 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -968,8 +968,8 @@ noble woman goblin~
 &+Mthe limited light, drawing your gaze to her.  Her eyes linger on yours before
 &+Mshe turns away.
 ~
-1073743946 64 0 67108872 2 0 0 -1000 S
-HG 0 64 -1
+1073743946 64 0 0 67108872 2 0 0 -1000 S
+HG 0 64 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
@@ -984,8 +984,8 @@ gambler shifty~
 &+Leyes you nervously, whether afraid of you or nervously anticipating another
 &+Lmark is hard to tell.
 ~
-1073744074 64 0 0 2 0 0 -1000 S
-HG 0 65536 -1
+1073744074 64 0 0 0 2 0 0 -1000 S
+HG 0 65536 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -999,8 +999,8 @@ bouncer ogre~
 &+bwill falsely call someone a welsher, or welsh themselves.  At least thats
 &+bhow he sees it, and no one has tried to contradict him.
 ~
-1073743882 72 0 0 2 0 0 -1000 S
-PO 0 16384 -1
+1073743882 72 0 0 0 2 0 0 -1000 S
+PO 0 16384 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1014,8 +1014,8 @@ chef bossy~
 &+Wslaves and occasionally whipping them, for cause or not.  He enjoys his work
 &+Wgreatly.
 ~
-2186 64 0 0 2 0 0 -1000 S
-HG 0 1 -1
+2186 64 0 0 0 2 0 0 -1000 S
+HG 0 1 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1029,8 +1029,8 @@ slave halfling~
 &+Lbroken his spirit, his eyes never leave the floor.  He just walks about in a
 &+Lhalf-daze trying desperately to believe this is all a bad dream.
 ~
-2186 0 0 33554432 0 0 0 500 S
-PF 7 0 -1
+2186 0 0 0 33554432 0 0 0 500 S
+PF 7 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1044,8 +1044,8 @@ rogue young~
 &+Lfrom being a mere pick pocket to a burglar or maybe even an assassin.  That
 &+Lhope gives his eyes a sparkle and help him to endure many the painful lessons.
 ~
-8 64 0 0 2 0 0 -1000 S
-HG 0 4096 -1
+8 64 0 0 0 2 0 0 -1000 S
+HG 0 4096 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1059,8 +1059,8 @@ zagh master thief~
 &+LZagh considers it his job to make sure all his students are well trained and
 &+Lready when it comes their time to help the guild with "fund raising".
 ~
-1073776778 64 0 67108872 2 0 0 -1000 S
-HG 0 65536 -1
+1073776778 64 0 0 67108872 2 0 0 -1000 S
+HG 0 65536 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1074,8 +1074,8 @@ thief apprentice~
 &+L"would you rather be dead?".  He can't wait to be back on the streets where
 &+Lthere are only guards and bullies to worry about.
 ~
-1073744078 0 0 524288 2 0 0 -1000 S
-HG 0 65536 -1
+1073744078 0 0 0 524288 2 0 0 -1000 S
+HG 0 65536 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1091,8 +1091,8 @@ merchant roguish~
 &+Lcustomers pay ten times what goods are worth and go away feeling like they got
 &+La deal!
 ~
-2122 64 0 524288 2 0 0 -1000 S
-HG 0 4096 -1
+2122 64 0 0 524288 2 0 0 -1000 S
+HG 0 4096 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1106,8 +1106,8 @@ ungal master assassin~
 &+rwhat makes him so good, and why he doesn't retire.  He stands here training
 &+rothers to see the joy he does, the love of a quick silent &+Rkill.
 ~
-1073776714 64 0 67108872 2 0 0 -1000 S
-HG 0 8192 -1
+1073776714 64 0 0 67108872 2 0 0 -1000 S
+HG 0 8192 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1121,8 +1121,8 @@ apprentice assassin~
 &+rshe tells herself as she stabs the practice dummy over and over and imagining
 &+rall the people she'd love to &+Rkill.
 ~
-1073744074 64 0 0 2 0 0 -1000 S
-HG 0 8192 -1
+1073744074 64 0 0 0 2 0 0 -1000 S
+HG 0 8192 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1136,8 +1136,8 @@ crayfish giant~
 &+wbrought by underground streams, now it survives by killing the numerous fish
 &+wthat live here.
 ~
-1074006090 0 0 1050624 2 0 0 0 S
-F 0 1 4
+1074006090 0 0 0 1050624 2 0 0 0 S
+F 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1150,8 +1150,8 @@ fish white pale~
 &+wis a pale white and its eyes are pupilless and glazed over.  It swims here
 &+wwith its mouth open trying to find insects to eat.
 ~
-264200 0 0 2048 2 0 0 0 S
-F 0 1 -1
+264200 0 0 0 2048 2 0 0 0 S
+F 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1166,8 +1166,8 @@ shark freshwater~
 &+Lwithin a mile come to feed.  The resulting feeding frenzy is both fascinating
 &+Land horrible to behold.
 ~
-1074006024 1 0 2048 2 0 0 0 S
-F 0 1 3
+1074006024 1 0 0 2048 2 0 0 0 S
+F 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1181,8 +1181,8 @@ merchant shaman shamanic~
 &+rmagic, he has found &+Ygold.  &+rHe sits here selling his wares and offering to
 &+rmake things for &+Lgold.
 ~
-2122 0 0 67108872 2 0 0 -1000 S
-HG 0 256 -1
+2122 0 0 0 67108872 2 0 0 -1000 S
+HG 0 256 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1196,8 +1196,8 @@ burgo shaman master~
 &+yEventually he found a shaman to teach him to understand the voices and use the
 &+Lspirit world &+yto gain power in this one.
 ~
-1073776714 64 0 67108904 94 0 0 -1000 S
-HG 0 256 -1
+1073776714 64 0 0 67108904 94 0 0 -1000 S
+HG 0 256 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1213,8 +1213,8 @@ spirit dark~
 &+Lplots that play themselves out over time, thus it stands here waiting for its
 &+Lplans to unfold.
 ~
-1073875018 0 0 135266336 2 0 0 -1000 S
-UG 0 1 -1
+1073875018 0 0 0 135266336 2 0 0 -1000 S
+UG 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1228,8 +1228,8 @@ apprentice shaman~
 &+gof the spirit world.  Having been given the right items he needs to focus
 &+gthese powers he now hold these totems in front of him as he practices.
 ~
-1073743950 0 0 0 2 0 0 -1000 S
-HG 0 256 -1
+1073743950 0 0 0 0 2 0 0 -1000 S
+HG 0 256 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1244,8 +1244,8 @@ ghash~
 &+rnot forging new weapons he sits at the counter in his shop polish his
 &+rcreations or sometimes just staring at them.
 ~
-2122 88 0 67108872 2 0 0 -1000 S
-PD 0 1 -1
+2122 88 0 0 67108872 2 0 0 -1000 S
+PD 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1259,8 +1259,8 @@ roge~
 &+rfrom his forge, sparks have perforated the material.  This doesn't bother him
 &+ra bit, he is happy as long as he's shaping metal.
 ~
-2122 0 0 67108872 2 0 0 -1000 S
-HG 0 1 -1
+2122 0 0 0 67108872 2 0 0 -1000 S
+HG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1276,8 +1276,8 @@ glab banker~
 &+Ywards around the vault are operating properly, for they prevent anyone but
 &+Yhimself from entering.
 ~
-2122 0 0 67108872 2 0 0 -1000 S
-HG 0 1 -1
+2122 0 0 0 67108872 2 0 0 -1000 S
+HG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1292,8 +1292,8 @@ commoner goblin~
 &+gexistance.  When he sees you enter the room he darts for his half-eatten rat,
 &+gclutches it to his chest and says, 'ITS MINE, YOU CAN'T HAVE IT!'
 ~
-2250 0 0 0 2 0 0 -1000 S
-HG 0 0 -1
+2250 0 0 0 0 2 0 0 -1000 S
+HG 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -1306,8 +1306,8 @@ grub~
 &+wcarrion.  It spends its larval stage trying to find corpses on which to gorge
 &+witself till its ready for the metamophosis into its adult stage.
 ~
-2120 1 0 0 2 0 0 0 S
-AP 0 0 -1
+2120 1 0 0 0 2 0 0 0 S
+AP 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1320,8 +1320,8 @@ beetle scarab~
 &+Ltown waiting for one or the other to be delivered, which generally happens
 &+Lwith greater regularity.
 ~
-2120 0 0 0 2 0 0 0 S
-I 0 0 -1
+2120 0 0 0 0 2 0 0 0 S
+I 0 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1336,8 +1336,8 @@ noble goblin~
 &+Mshopping.  That someone of this wealth walks about town without escort hint
 &+Mshe might not be all she appears.
 ~
-1073875018 2368 0 67108872 2 0 0 -1000 S
-HG 0 1 -1
+1073875018 2368 0 0 67108872 2 0 0 -1000 S
+HG 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1352,8 +1352,8 @@ noble goblin~
 &+Mgoes through his business records, he just doesn't trust his servants to look
 &+Mafter this job.
 ~
-1073875018 64 0 67108872 2 0 0 -1000 S
-HG 0 512 -1
+1073875018 64 0 0 67108872 2 0 0 -1000 S
+HG 0 512 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1367,8 +1367,8 @@ fish gold~
 &+Ygrows very large but forms the basis of the food chain here, feeding off the
 &+Yalgae that grow in the light given off by the fungus in this cave.
 ~
-264264 0 0 2048 2 0 0 0 S
-F 0 0 -1
+264264 0 0 0 2048 2 0 0 0 S
+F 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1382,8 +1382,8 @@ roper~
 &+geyes in its torso and a large mouth or sharp teeth in its midsection.  This
 &+gparticular roper looks a big smaller then normal, probably not fully grown.
 ~
-395338 1 0 67108924 2 262144 0 -1000 S
-TK 0 1 -1
+395338 1 0 0 67108924 2 262144 0 -1000 S
+TK 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1397,8 +1397,8 @@ pup warg~
 &+Lneedles.  Though small and harmless now this animal will grow into a large and
 &+Lfearsome preditor.
 ~
-72 0 0 0 2 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 2 0 0 0 S
+A 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1412,8 +1412,8 @@ young warg~
 &+ymale referred to as the alpha male.  It is also at this time that it is
 &+ytrained what to kill, and how.
 ~
-2122 0 0 0 2 0 0 0 S
-A 0 0 -1
+2122 0 0 0 0 2 0 0 0 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1429,8 +1429,8 @@ adult warg~
 &+yintelligence and hierarchical society to train them into the perfect mounts
 &+yfor their soldiers.
 ~
-134219850 0 0 0 2 0 0 0 S
-A 0 0 -1
+134219850 0 0 0 0 2 0 0 0 S
+A 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 0
@@ -1443,8 +1443,8 @@ piglet~
 &+Mhere sucking milk from its mother.  In a few weeks when its weaned from milk
 &+Mit will be placed with the other pigs till its fat enough for slaughter.
 ~
-2122 0 0 0 0 0 0 0 S
-A 0 0 -1
+2122 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1457,8 +1457,8 @@ sow~
 &+Mas she produces litter after litter of pigs for consumption by townsfolks.
 &+MOnce she ceases to be able to produce new litters she will be slaughtered.
 ~
-2122 0 0 0 0 0 0 0 S
-A 0 0 -1
+2122 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 0
@@ -1472,8 +1472,8 @@ pig~
 &+Mfilth to be devoured.  This has caused the pig to grow large and fat, soon it
 &+Mwill be slaughtered for its meat.
 ~
-2122 0 0 0 0 0 0 0 S
-A 0 0 -1
+2122 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1488,8 +1488,8 @@ agh~
 &+wwork with.  One copper per loaf is all he charges, little wonder many
 &+wcommoners shop here when they can.
 ~
-2122 72 0 0 2 0 0 -1000 S
-HG 0 0 -1
+2122 72 0 0 0 2 0 0 -1000 S
+HG 0 0 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1503,8 +1503,8 @@ gulg tailor~
 &+yflax for making clothes; or buys raw rothe hide which is dried, treated and
 &+ysewn into tunics.  Not a very profitable exsist but it does keep him going.
 ~
-2122 72 0 0 2 0 0 -1000 S
-HG 0 0 -1
+2122 72 0 0 0 2 0 0 -1000 S
+HG 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -1518,8 +1518,8 @@ bubgol~
 &+Lhave.  There are never any questions asked here, and if there is anything you
 &+Lneed chances are Bubgol will know where to find it.
 ~
-2122 88 0 0 2 0 0 -1000 S
-HG 0 0 -1
+2122 88 0 0 0 2 0 0 -1000 S
+HG 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1534,8 +1534,8 @@ golag~
 &+yfor washing, as a result he smells terribly!  When ever he is about town folks
 &+ygive him a wide berth.
 ~
-2122 88 0 0 2 0 0 -1000 S
-HG 0 0 -1
+2122 88 0 0 0 2 0 0 -1000 S
+HG 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1548,8 +1548,8 @@ overgrown goblin~
 &+Gany unwelcome visitors.  However, due to his overly large physique and rather dull mannerisms,
 &+Ga wise observer would realize that this guy is just here to be out of the way!
 ~
-2250 1 0 0 0 0 0 0 S
-HG 0 8192 3
+2250 1 0 0 0 0 0 0 0 S
+HG 0 8192 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1563,8 +1563,8 @@ A &+rvampire &+Lbat hangs here waiting for its next meal.&N
 &+rpuncture holes in the back of herd animals and feed off the blood.  Between
 &+rfeeds they secret themselves in small caves where large preditors can't fit.
 ~
-1073875018 1 0 0 2 0 0 -1000 S
-A 0 0 1
+1073875018 1 0 0 0 2 0 0 -1000 S
+A 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1578,8 +1578,8 @@ gorblog illusionist master~
 &+gto focus magical energy.  Judging from his lack of eyebrows and other facial
 &+ghair, not with much success.
 ~
-3221260362 88 0 67108936 2 2097152 0 -1000 S
-HG 0 4194304 -1
+3221260362 88 0 0 67108936 2 2097152 0 -1000 S
+HG 0 4194304 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1592,8 +1592,8 @@ apprentice illusionist~
 &+cbut impossible to guess his true apperence. He is currently practicing a spell
 &+che just learned on an orc who is sobbing and howls.
 ~
-1073743946 88 0 67108864 2 0 0 -1000 S
-HG 0 1024 -1
+1073743946 88 0 0 67108864 2 0 0 -1000 S
+HG 0 1024 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1607,8 +1607,8 @@ Only Brogon, the innkeeper, is larger and the resemblence between
 them is striking. The orcish blood that runs in their veins can
 almost be noticed by their strong, but blunt features.
 ~
-8 64 0 671088696 0 0 0 0 S
-HG 13 0 3
+8 64 0 0 671088696 0 0 0 0 S
+HG 13 0 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1624,8 +1624,8 @@ for one thing, to destroy. A large chain attached to a large
 iron ring in the ground is fastened in the spiked collar around
 its neck.
 ~
-1073743882 64 128 536870968 0 0 0 0 S
-L 13 1 4
+1073743882 64 128 0 536870968 0 0 0 0 S
+L 13 1 0 4
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1641,8 +1641,8 @@ is dirty and filled with flees and other parasites. A thick mane
 runs from its head down the backside. Large yellow fangs sprout from
 its mouth.
 ~
-8 1 0 16 0 0 0 0 S
-L 13 0 2
+8 1 0 0 16 0 0 0 0 S
+L 13 0 0 2
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

@@ -168,8 +168,9 @@ N
 16634
 16635
 0
-1.00
-1.00
+0.80
+1.10
+19
 0
 %s Just the fish you see here, you want anything else catch it yourself.~
 %s I just sell fish.~
@@ -205,8 +206,9 @@ N
 16640
 16641
 0
-1.00
-1.00
+0.80
+1.10
+19
 0
 %s I sell the fruit that is in season.~
 %s I don't buy anything silly.~
@@ -277,8 +279,8 @@ N
 16643
 16644
 0
-1.00
-1.00
+0.80
+1.10
 0
 %s We only sell the dishes we prepare ourselves.~
 %s I don't do any buying.~
@@ -625,7 +627,7 @@ N
 16664
 16665
 0
-0.90
+0.80
 1.10
 0
 %s We only carry the fine foods in listed in the menu.~
@@ -695,7 +697,7 @@ N
 16616
 16627
 0
-1.00
+0.80
 1.20
 0
 %s I only sell the ales you see here.~

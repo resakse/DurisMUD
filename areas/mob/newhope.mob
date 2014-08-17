@@ -7,8 +7,8 @@ squirrel~
 &+yits food in a place that seems lifeless.  It darts around on a path where food&n
 &+yin the form of the nuts the seemingly lifeless plants produce can be found.&n
 ~
-270408 0 0 33628160 30 0 0 0 S
-A 0 0 2
+270408 0 0 0 33628160 30 0 0 0 S
+A 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -22,8 +22,8 @@ dung beetle~
 &+rand will attack anything that it comes across because this area is very barren&n
 &+rand it is desperate for something to lay its &+Reggs&+r in.&n
 ~
-401480 0 0 436281344 30 0 1048576 0 S
-I 0 0 1
+401480 0 0 0 436281344 30 0 1048576 0 S
+I 0 0 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ mongoose~
 &+rwill track down no matter where the snake goes.  This makes it a very deadly&n
 &+renemy for the sa&+Ln&+yd v&+Li&+rpers that live in the area.&n
 ~
-270408 0 0 302063648 30 0 1048576 0 S
-AC 0 0 2
+270408 0 0 0 302063648 30 0 1048576 0 S
+AC 0 0 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ viper snake sand~
 &+rbites someone, they need to get help fast or they will probably die a painful&n
 &+rdeath from the venom - unless the snake has attacked something else recently.&n
 ~
-270408 1 0 302063648 30 0 0 0 S
-RS 0 0 2
+270408 1 0 0 302063648 30 0 0 0 S
+RS 0 0 0 2
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -70,8 +70,8 @@ ogre snarling guard~
 &+rhere except for the fact that he betrayed his people by showing the minions of&n
 &+rthe &+bmaster&+r of the &+Ldark keep&+r the weak points of his tribe's defenses.&n
 ~
-272458 14336 0 302063664 30 0 2148532224 -1000 S
-PO 0 16 -1
+272458 14336 0 0 302063664 30 0 2148532224 -1000 S
+PO 0 16 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ barbarian barb woman proud guard~
 &+rthe consequences of that decision.  Three totems dangle from a &+yleather wrist&n
 &+ystrap,&+r convenient for her to grab and use as needed.&n
 ~
-272458 14336 0 302063632 30 0 2148532224 -350 S
-PB 0 256 -1
+272458 14336 0 0 302063632 30 0 2148532224 -350 S
+PB 0 256 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -104,8 +104,8 @@ troll bored guard~
 &+rto be here since he worked for the &+bmaster&+r of the &+Lkeep,&+r he seems content to be&n
 &+rstanding at this gate.&n
 ~
-272458 14336 0 302063648 30 0 2148532224 -1000 S
-PT 0 256 -1
+272458 14336 0 0 302063648 30 0 2148532224 -1000 S
+PT 0 256 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -120,8 +120,8 @@ thri thri-kreen jittery guard~
 &+reasy to sneak up on this one, though, as it surveys the surrounding area with&n
 &+rits multi-faceted eyes constantly.&n
 ~
-272458 14336 0 318840880 30 0 2148532224 -500 S
-TK 0 1 -1
+272458 14336 0 0 318840880 30 0 2148532224 -500 S
+TK 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -136,8 +136,8 @@ goblin child~
 &+Gtoe, with its eyes and its yellowing teeth as it grins being the only things&n
 &+Gclearly seen on it.&n
 ~
-270408 3145728 0 33628160 0 0 0 -1000 S
-HG 0 0 1
+270408 3145728 0 0 33628160 0 0 0 -1000 S
+HG 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -151,8 +151,8 @@ goblin female~
 &+Gclear that she is waiting for someone, it is also clear that they are not on&n
 &+Gthe way.&n
 ~
-270412 0 0 33628160 0 0 0 -1000 S
-HG 0 1 -1
+270412 0 0 0 33628160 0 0 0 -1000 S
+HG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -166,8 +166,8 @@ goblin male~
 &+Gis trying to remember something as he walks and he is not paying attention to&n
 &+Gwhere he is going, but rather is just walking.&n
 ~
-270412 0 0 33628160 0 0 0 -1000 S
-HG 0 1 -1
+270412 0 0 0 33628160 0 0 0 -1000 S
+HG 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -181,8 +181,8 @@ gnome child~
 &+Rhas worn out the knees again.  He has smears of dirt on his bare arms. where&n
 &+Rsomeone has tried to catch him.&n
 ~
-270408 2147483648 0 33628160 0 0 0 0 S
-PG 0 0 1
+270408 2147483648 0 0 33628160 0 0 0 0 S
+PG 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -197,8 +197,8 @@ gnome female~
 &+Rthe choice to serve the master of the keep, and as such they have been outcast&n
 &+Rfrom gnomish society.&n
 ~
-270412 0 0 33628160 0 0 0 -100 S
-PG 0 1 -1
+270412 0 0 0 33628160 0 0 0 -100 S
+PG 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -213,8 +213,8 @@ gnome male~
 &+Rhis boots have worn thin on the soles.  But he has chosen to serve the master&n
 &+Rof the keep, and he cannot go back to gnomish society now.&n
 ~
-270412 0 0 33628160 0 0 0 -200 S
-PG 0 1 -1
+270412 0 0 0 33628160 0 0 0 -200 S
+PG 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -228,8 +228,8 @@ halfling child~
 &+yit should not have.  But it has tucked whatever it has taken into a pocket in&n
 &+yits dirty shirt and his holding tight onto it.&n
 ~
-270412 2147483648 0 0 0 0 0 0 S
-PF 0 0 1
+270412 2147483648 0 0 0 0 0 0 0 S
+PF 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -243,8 +243,8 @@ halfling female~
 &+yhas done something wrong. She is wearing a homespun gown that swirls about&n
 &+yher ankles while she moves along.&n
 ~
-270412 0 0 33628160 0 0 0 -100 S
-PF 0 1 -1
+270412 0 0 0 33628160 0 0 0 -100 S
+PF 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -260,8 +260,8 @@ halfling male~
 &+ythat he wishes he could go back to the halfling village but that is impossible&n
 &+ysince he aided the &+bmaster&+y of the &+Lkeep.&n
 ~
-270408 0 0 33628160 0 0 0 -200 S
-PF 0 1 -1
+270408 0 0 0 33628160 0 0 0 -200 S
+PF 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -276,8 +276,8 @@ orc child~
 &+Lbruises show on the dirty skin that can be seen through the many rips that the&n
 &+Lclothing has sustained.&n
 ~
-270408 16384 0 0 0 0 0 -1000 S
-HO 0 0 2
+270408 16384 0 0 0 0 0 0 -1000 S
+HO 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -292,8 +292,8 @@ female orc~
 &+Ldirt and oil.  A low growl can be heard as she stomps along the walkway going&n
 &+Lafter someone - or something - that has made her angry.&n
 ~
-270412 0 0 33628160 30 0 1048576 -1000 S
-HO 0 1 -1
+270412 0 0 0 33628160 30 0 1048576 -1000 S
+HO 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -308,8 +308,8 @@ male orc~
 &+Lgood deal of gold, but he hadn't realized that his tribal elders would disown&n
 &+Lhim and his family, casting them out.&n
 ~
-270412 0 0 33628160 30 0 1048576 -1000 S
-HO 0 1 -1
+270412 0 0 0 33628160 30 0 1048576 -1000 S
+HO 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -323,8 +323,8 @@ drow child~
 &+malong the walkway observing all the activity and the peoples in the town while&n
 &+mtrying to avoid being noticed.&n
 ~
-270408 131072 0 33628160 30 0 0 -1000 S
-PL 0 0 2
+270408 131072 0 0 33628160 30 0 0 -1000 S
+PL 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -340,8 +340,8 @@ drow female~
 &+mtown and the keep, she remains covered, not revealing anything about her looks&n
 &+mor her thoughts.&n
 ~
-272460 0 0 33628190 0 0 1048576 -1000 S
-PL 0 1 -1
+272460 0 0 0 33628190 0 0 1048576 -1000 S
+PL 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -357,8 +357,8 @@ drow male~
 &+mto the Underdark, as his kind now shuns him because of his alliance with this&n
 &+Lkeep's &+bmaster.&n
 ~
-272460 0 0 302063616 30 0 1048576 -1000 S
-PL 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 -1000 S
+PL 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -373,8 +373,8 @@ grey elf child~
 &+ca pet.  He watches where it is going, and manages to avoid running into those&n
 &+cwho are sharing the walkway with him.&n
 ~
-270408 65536 0 33628160 14 0 0 0 S
-PE 0 0 2
+270408 65536 0 0 33628160 14 0 0 0 S
+PE 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -389,8 +389,8 @@ grey elf female~
 &+cher family to become outcast.  She has no other choice but to serve the &+bmaster&n
 &+cof the &+Lkeep&+c now.&n
 ~
-272460 0 0 302063616 30 0 1048576 -200 S
-PE 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 -200 S
+PE 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -406,8 +406,8 @@ grey elf male~
 &+ceven he did not understand all of the consequences or he would have tried to&n
 &+ctalk her out of it.&n
 ~
-272460 0 0 302063616 30 0 1048576 0 S
-PE 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 0 S
+PE 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -421,8 +421,8 @@ human child~
 &+Conly it is completely coated with sand.  She is humming a happy little tune,&n
 &+Cwandering around the walkways completely oblivious to her surroundings.&n
 ~
-270408 67108864 0 73728 0 0 0 0 S
-PH 0 0 2
+270408 67108864 0 0 73728 0 0 0 0 S
+PH 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -436,8 +436,8 @@ human female~
 &+Chave been outcast from human society, she does like the gold that she and her&n
 &+Cmate earn serving the &+bmaster&+C of the &+Lkeep.&n
 ~
-272460 0 0 268509184 30 0 1048576 -500 S
-PH 0 1 -1
+272460 0 0 0 268509184 30 0 1048576 -500 S
+PH 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -452,8 +452,8 @@ human male~
 &+Cbeing outcast from human society, and will not hesitate to steal whatever he&n
 &+Csees that he wants.&n
 ~
-272460 0 0 268509184 30 0 1048576 -250 S
-PH 0 1 -1
+272460 0 0 0 268509184 30 0 1048576 -250 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -467,8 +467,8 @@ thri thri-kreen child~
 &+Gsand underfo&+Yot.&+G  Its faceted eyes &+Ymove&+G about, surveyi&+Yng t&+Ghe area, a&+Ys it&+G rushes&n
 &+Gpast on some unknown &+Yerra&+Gnd.&n
 ~
-270408 0 0 33628160 30 0 0 0 S
-TK 0 0 2
+270408 0 0 0 33628160 30 0 0 0 S
+TK 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -482,8 +482,8 @@ thri thri-kreen adult~
 &+bmaster&+G of the &+Lkeep&+G faith&+Yfull&+Gy, but knows that it&+Ys li&+Gfe is no more impor&+Ytant&+G to&n
 &+Gthe &+bmaster&+G than any other here.&n
 ~
-403532 0 0 436283392 30 0 1048576 -500 S
-TK 0 1 -1
+403532 0 0 0 436283392 30 0 1048576 -500 S
+TK 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -497,8 +497,8 @@ mino minotaur child~
 &+Lcharges alo&+rng, &+Lshe is just havin&+rg fu&+Ln.  Aside from &+ra fe&+Lw yells fr&+rom w&+Lhoever&n
 &+Lshe hurts, she is pre&+rtty &+Lmuch ignored.&n
 ~
-270408 0 0 33628160 30 0 0 -350 S
-MT 0 0 3
+270408 0 0 0 33628160 30 0 0 -350 S
+MT 0 0 0 3
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -513,8 +513,8 @@ mino minotaur female~
 &+La bit darker around her &+rblac&+Lk eyes.  She is frow&+rning&+L at everyone she p&+rasse&+Ls as
 &+Lshe &+rcont&+Linues her search.&n
 ~
-272460 0 0 33628160 30 0 1048576 -500 S
-MT 0 1 -1
+272460 0 0 0 33628160 30 0 1048576 -500 S
+MT 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -529,8 +529,8 @@ mino minotaur male~
 &+Ltips on his &+rblac&+Lk horns.  Short dark fur covers &+rhim,&+L and his &+reyes&+L are gleaming&n
 &+Lblack.&n
 ~
-272460 0 0 302063616 30 0 2148532224 -500 S
-MT 0 1 -1
+272460 0 0 0 302063616 30 0 2148532224 -500 S
+MT 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -544,8 +544,8 @@ troll child~
 &+gand dirty.  Red dust coats him from head to toe, but it does not bother him in&n
 &+gthe least.&n
 ~
-270408 32768 0 33628160 30 0 1048576 -1000 S
-PT 0 0 3
+270408 32768 0 0 33628160 30 0 1048576 -1000 S
+PT 0 0 0 3
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -559,8 +559,8 @@ troll female~
 &+gmaterial, it is clear that she had not taken care of it as it has large stains&n
 &+gbeneath the arms as well as down the front from food she has eaten.&n
 ~
-272460 0 0 302063616 30 0 1048576 -1000 S
-PT 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 -1000 S
+PT 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -575,8 +575,8 @@ troll male~
 &+gthe keep, but most of the time he is too happy with his present life to wonder&n
 &+gwhy his tribe threw him out.&n
 ~
-272460 0 0 302063616 30 0 2148532224 -1000 S
-PT 0 1 -1
+272460 0 0 0 302063616 30 0 2148532224 -1000 S
+PT 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -590,8 +590,8 @@ barb barbarian child~
 &+Bhow hard he has played.  Though there are fresh scratches and bruises on him,&n
 &+Bhe is laughing as he runs along.&n
 ~
-270408 8388608 0 33628160 30 0 0 0 S
-PB 0 0 3
+270408 8388608 0 0 33628160 30 0 0 0 S
+PB 0 0 0 3
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -606,8 +606,8 @@ barb barbarian female~
 &+Bshe had never heard of this place. But now it is too late to try to return to&n
 &+Bthe tribe now as they have been outcast.&n
 ~
-272460 0 0 302063616 30 0 1048576 0 S
-PB 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 0 S
+PB 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -624,8 +624,8 @@ barb barbarian male~
 &+Bhave been outcast.  But, he still feels that his future is brighter here than&n
 &+Bit ever was in the tribe.&n
 ~
-272460 0 0 302063616 30 0 2148532224 -500 S
-PB 0 1 -1
+272460 0 0 0 302063616 30 0 2148532224 -500 S
+PB 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -640,8 +640,8 @@ ogre child~
 &+binadequate wooden sword, threatening mayhem on any who tell her to calm down&n
 &+bwhile she's around others.&n
 ~
-270408 268435456 0 33628160 30 0 0 -1000 S
-PO 0 0 4
+270408 268435456 0 0 33628160 30 0 0 -1000 S
+PO 0 0 0 4
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -657,8 +657,8 @@ ogre female~
 &+ba tattoo in the center of her forehead of a crossed bone and sword that has&n
 &+ba raven head above it and a single dark eye below it.&n
 ~
-272460 0 0 302063616 30 0 1048576 -1000 S
-PO 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 -1000 S
+PO 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -674,8 +674,8 @@ ogre male~
 &+btattoo of a bone crossed over a sword with a raven head above it and a single&n
 &+bdark eye below it.&n
 ~
-272460 0 0 302063616 30 0 2148532224 -1000 S
-PO 0 1 -1
+272460 0 0 0 302063616 30 0 2148532224 -1000 S
+PO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -689,8 +689,8 @@ centaur child~
 &+Ghere.  He avoids &+Lcont&+Gact with those he c&+Lan, &+Gand takes great c&+Lare &+Gnot to step&n
 &+Gon anyone's feet as he goes&+L by.&n
 ~
-270408 4194304 0 33628160 30 0 0 0 S
-CT 0 0 4
+270408 4194304 0 0 33628160 30 0 0 0 S
+CT 0 0 0 4
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -705,8 +705,8 @@ centaur female~
 &+Ga&+L job&+G that aided the master of th&+Le ke&+Gep, and was &+Loutc&+Gast from her peo&+Lple &+Gwhen&n
 &+Gthey found &+Lout &+Gshe worked for him.&n
 ~
-272460 0 0 302063616 30 0 1048576 0 S
-CT 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 0 S
+CT 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -721,8 +721,8 @@ centaur male~
 &+Genough to be able to afford&+L a b&+Getter place for his family far&+L awa&+Gy, in a pla&+Lce&n
 &+Gthat has never heard of this cursed &+Lkeep.&n
 ~
-272460 0 0 302063616 30 0 2148532224 0 S
-CT 0 1 -1
+272460 0 0 0 302063616 30 0 2148532224 0 S
+CT 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -737,8 +737,8 @@ duergar child~
 &+rthem dirty as she has crawled about, waiting for the opportunity to steal what&n
 &+rcaught her attention.&n
 ~
-270408 262144 0 73728 30 0 0 -1000 S
-PD 0 0 2
+270408 262144 0 0 73728 30 0 0 -1000 S
+PD 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -753,8 +753,8 @@ duergar female~
 &+ron her left arm along with the tattoo that symbolizes her expertise in using&n
 &+ra dagger as well as a sword.&n
 ~
-272460 0 0 33628160 30 0 1048576 -1000 S
-PD 0 1 -1
+272460 0 0 0 33628160 30 0 1048576 -1000 S
+PD 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -768,8 +768,8 @@ duergar male~
 &+rof his family.  He has decided to serve the master of this keep to the best of&n
 &+rhis abilities until he has made enough money to live elsewhere comfortably.&n
 ~
-272460 0 0 302063616 30 0 2148532224 -1000 S
-PD 0 1 -1
+272460 0 0 0 302063616 30 0 2148532224 -1000 S
+PD 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -783,8 +783,8 @@ dwarf child~
 &+Yruns past without making a sound, trying to get home and change his clothing&n
 &+Ybefore any adults find out he's ruined another set.&n
 ~
-270408 524288 0 33628160 30 0 0 0 S
-PM 0 0 2
+270408 524288 0 0 33628160 30 0 0 0 S
+PM 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -800,8 +800,8 @@ dwarf female~
 &+Yher side as she is continuing to further her skills in the hopes of moving to&n
 &+Ya better place soon.&n
 ~
-272460 0 0 302063616 30 0 1048576 0 S
-PM 0 1 -1
+272460 0 0 0 302063616 30 0 1048576 0 S
+PM 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -820,8 +820,8 @@ dwarf male~
 &+Yhim again.  But now he has been outcast from all dwarven holds because he gave&n
 &+Ythem aid.&n
 ~
-272460 0 0 302063616 30 0 2148532224 0 S
-PM 0 1 -1
+272460 0 0 0 302063616 30 0 2148532224 0 S
+PM 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -840,8 +840,8 @@ bovine critter cow horse mount~
 &+yof its forehead.  It h&+ra&+ys a short coat that is d&+wa&+yrk with lighter &+ws&+yplotche&+rs&+y and&n
 &+wst&+rrip&+wes,&+y giving it a &+wv&+yery odd appearance inde&+we&+yd.&n
 ~
-134479882 0 0 0 0 0 0 0 S
-AH 0 1 3
+134479882 0 0 0 0 0 0 0 0 S
+AH 0 1 0 3
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -856,8 +856,8 @@ storm giant child~
 &+wscrap&+We on h&+wis che&+Wek and&+w his h&+Wand ar&+we stil&+Wl oozi&+wng a l&+Wittle &+rblood.&+W  He we&+wars a&n
 &+Wclo&+wth v&+West &+wand &+Wthic&+wk cl&+Woth &+wpant&+Ws th&+wat a&+Wlso &+whave&+W dro&+wps o&+Wf &+rblood&+W on &+wthem.&n
 ~
-262220 33554432 0 33554688 28 0 0 0 S
-G 0 0 -1
+262220 33554432 0 0 33554688 28 0 0 0 S
+G 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -872,8 +872,8 @@ female storm giant~
 &+Win a&+B blue &+wslee&+Wvele&+wss t&+Wop a&+wnd &+Lblack&+W clo&+wth p&+wants&+W.  A&+y b&+rr&+ya&+rid&+yed l&+re&+yat&+rhe&+yr&+W hea&+wdban&+Wd is&n
 &+wworn t&+Wo keep&+w the h&+Wair ou&+wt of h&+Wer fac&+we as s&+Whe mov&+wes abo&+Wut the&+w city.&n
 ~
-264268 0 0 302063876 28 0 1048576 0 S
-G 0 1 -1
+264268 0 0 0 302063876 28 0 1048576 0 S
+G 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -888,8 +888,8 @@ male storm giant~
 &+wthat&+W he &+wis l&+Wooki&+wng f&+Wor. &+w He &+Wis w&+weari&+Wng a&+w sle&+Wevle&+wss t&+Wunic&+w sta&+Wined&+w dee&+Wp &+rred,&+w and&n
 &+Wa p&+wair&+W of&+w cl&+Woth&+w pa&+Wnts&+w th&+Wat &+ware&+L black.&n
 ~
-264268 0 0 302063876 28 0 1048576 0 S
-G 0 1 -1
+264268 0 0 0 302063876 28 0 1048576 0 S
+G 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -903,8 +903,8 @@ bug trundling~
 &+ywith a f&+re&+yw &+rred&+y swirl&+rs&+y, making it &+rhard to spot &+rw&+yhile it is &+rf&+yoraging throug&+rh&+y a&n
 &+ypile of &+Ystraw&+y f&+ro&+yr food that &+rh&+yas been d&+rr&+yopped.&n
 ~
-393290 0 0 33554688 28 0 0 0 S
-I 0 0 1
+393290 0 0 0 33554688 28 0 0 0 S
+I 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -918,8 +918,8 @@ ratling rat~
 &+rrushing through the straw on the floor, looking for anything that is edible,&n
 &+reven the &+yb&+ru&+ygs&+r that move too slow.&n
 ~
-264266 0 0 33554688 28 0 0 -500 S
-AC 0 0 1
+264266 0 0 0 33554688 28 0 0 -500 S
+AC 0 0 0 1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -935,8 +935,8 @@ ratkin rat~
 &+rwith deadly accuracy at the &+bspider.&+r  It is clear that the &+wra&+Lt&+wkin&+r is protecting
 &+rthe &+Lra&+wt&+Llings&+r as they search for something to eat.&n
 ~
-264270 0 0 302063872 28 0 1048576 -750 S
-AC 0 0 2
+264270 0 0 0 302063872 28 0 1048576 -750 S
+AC 0 0 0 2
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -951,8 +951,8 @@ spider~
 &+rdeadly.  The &+wwebs&+r that the &+bsp&+ri&+bders&+r weave are very sticky and strong, and able&n
 &+rto hold even small children.&n
 ~
-2126 0 0 302063872 28 0 1048576 -500 S
-AS 0 0 2
+2126 0 0 0 302063872 28 0 1048576 -500 S
+AS 0 0 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -966,8 +966,8 @@ tipsy ant~
 &+ythe effe&+rc&+yts of thi&+rs&+y alcohol, an&+rd&+y has becom&+re&+y a bi&+rt&+y tipsy as &+ri&+yt carr&+ri&+yes the &+Ydrop&n
 &+yof beer back t&+ro&+y its nes&+rt.&n
 ~
-262220 0 0 33554468 28 0 0 0 S
-I 0 0 2
+262220 0 0 0 33554468 28 0 0 0 S
+I 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -981,8 +981,8 @@ grinning human drunk~
 &+cthey have several patches on them.  It is clear that he is not wealthy, even&n
 &+cby the standards of the goblins who are watching him, grinning.&n
 ~
-262222 0 0 301989924 28 0 1048576 0 S
-PH 0 1 -1
+262222 0 0 0 301989924 28 0 1048576 0 S
+PH 0 1 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -997,8 +997,8 @@ smirking goblin drunk~
 &+gto sleep - at which time they intend to enjoy the &+chuman women&+g that would be&n
 &+gleft unprotected.&n
 ~
-262350 0 0 301989924 28 0 1048576 0 S
-HG 0 1 -1
+262350 0 0 0 301989924 28 0 1048576 0 S
+HG 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1014,8 +1014,8 @@ smiling woman~
 &+cabout the smirking &+ggoblins&+c sitting nearby, as even they would not be stupid&n
 &+cenough to start a fight so close to the &+Lkeep&+y of the &+bmayor.&n
 ~
-264270 0 0 33554468 28 0 0 0 S
-PH 0 0 -1
+264270 0 0 0 33554468 28 0 0 0 S
+PH 0 0 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
@@ -1029,8 +1029,8 @@ guard troll~
 &+rlive here.  Though he is young, he appears to be well trained to use the huge&n
 &+yclub&+r he wields, and almost eager to add another layer of dried blood to it.&n
 ~
-264268 0 0 301989888 28 0 1048576 -1000 S
-PT 0 1 -1
+264268 0 0 0 301989888 28 0 1048576 -1000 S
+PT 0 1 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1047,8 +1047,8 @@ giant stone smith armorsmith~
 &+ywho enter his forge are given a close scrutiny as he is expecting a group of&n
 &+ynew students to come learn how to be better mercenaries under his tutelage.&n
 ~
-305230 0 0 302063632 28 0 2182086656 -750 S
-G 0 16384 -1
+305230 0 0 0 302063632 28 0 2182086656 -750 S
+G 0 16384 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1066,8 +1066,8 @@ cook impassive~
 &+Rf&+ri&+Rr&+Ye&+Rp&+ri&+Rt&+y and the preparation table, other than the swishing sound of its hair&n
 &+ymakes as it sways around the cook.&n
 ~
-270410 0 0 33554468 28 0 1048576 0 S
-VT 0 1 3
+270410 0 0 0 33554468 28 0 1048576 0 S
+VT 0 1 0 3
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1082,8 +1082,8 @@ ogre scowling~
 &+yhide vest and loincloth, and has no visible weapons other than his huge fists&n
 &+yand stained teeth.&n
 ~
-272462 0 0 302063620 28 0 1048576 -1000 S
-PO 0 1 -1
+272462 0 0 0 302063620 28 0 1048576 -1000 S
+PO 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -1099,8 +1099,8 @@ ogress laughing~
 &+yloincloth, and has a huge double-bladed &+caxe&+y strapped to her back.  Anyone with&n
 &+yany sense will just leave her alone unless they wish to meet her &+caxe.&n
 ~
-264270 0 0 33628160 28 0 1048576 -1000 S
-PO 0 1 -1
+264270 0 0 0 33628160 28 0 1048576 -1000 S
+PO 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
@@ -1115,8 +1115,8 @@ troll drunk~
 &+yhe realizes that a waitress is near, he asks her to bring him yet another ale,&n
 &+ywhich he will gulp down just like he has all the others she has brought him.&n
 ~
-272462 0 0 73728 28 0 1048576 -1000 S
-PT 0 1 -1
+272462 0 0 0 73728 28 0 1048576 -1000 S
+PT 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -1132,8 +1132,8 @@ duergar whistling~
 &+rappearing to, searching for any easy mark to relieve of those &+Yvaluables&+r which&n
 &+rthey must not have wanted because they did not protect them well enough.&n
 ~
-272462 0 0 73728 28 0 1048576 -1000 S
-PD 0 4096 -1
+272462 0 0 0 73728 28 0 1048576 -1000 S
+PD 0 4096 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1150,8 +1150,8 @@ giant hill brutish~
 &+ywaitress for another round of drinks as they add their own little twists of&n
 &+ycrude humor to the poor &+wgiant's &+ymistake.&n
 ~
-270414 0 0 73728 28 0 0 0 S
-G 0 1 -1
+270414 0 0 0 73728 28 0 0 0 S
+G 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1166,8 +1166,8 @@ centaur giggling~
 &+ywords that anyone is saying.  Since he has braced himself well no one suspects&n
 &+yjust how drunk he is as he just stands and giggles as they continue talking.&n
 ~
-270414 0 0 8192 28 0 0 0 S
-CT 0 1 -1
+270414 0 0 0 8192 28 0 0 0 S
+CT 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1182,8 +1182,8 @@ elf grey laughing~
 &+ythey would rather fight the little twit than laugh with her. She doesn't care&n
 &+ywhat anyone else in here thinks, she is just here to have a good time.&n
 ~
-270414 0 0 73728 28 0 0 0 S
-PE 0 1 -1
+270414 0 0 0 73728 28 0 0 0 S
+PE 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 2
@@ -1199,8 +1199,8 @@ halfling chuckling~
 &+ya close eye on the &+rduergar&+y that is near her, making sure that the things she&n
 &+ybrought in with her stay with her.&n
 ~
-272462 0 0 73728 28 0 0 0 S
-PF 0 4096 -1
+272462 0 0 0 73728 28 0 0 0 S
+PF 0 4096 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1215,8 +1215,8 @@ goblin grinning~
 &+Gat the table, he might as well be for all the attention he is paying to them&n
 &+Gand the lack of attention he is receiving from the others beside him.&n
 ~
-270414 0 0 73728 28 0 0 -1000 S
-HG 0 0 -1
+270414 0 0 0 73728 28 0 0 -1000 S
+HG 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1231,8 +1231,8 @@ dwarf somber~
 &+YThe other dwarves at the table are more than willing to argue the finer points&n
 &+Yof using different &+cmetals,&+Y making this table quite loud at times.&n
 ~
-270414 0 0 73728 28 0 0 0 S
-PM 0 1 -1
+270414 0 0 0 73728 28 0 0 0 S
+PM 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -1248,8 +1248,8 @@ gnome inattentive~
 &+RHer dark eyes dance with laughter as she listens to the conversations nearby,&n
 &+Rbut she doesn't seem to see the one she is supposed to meet.&n
 ~
-270414 0 0 73728 28 0 0 0 S
-PG 0 1 -1
+270414 0 0 0 73728 28 0 0 0 S
+PG 0 1 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1265,8 +1265,8 @@ thri thri-kreen leaning~
 &+gto protect it during combat.  Its antennae droop slightly, making it seem that&n
 &+git is more than slightly drunk.&n
 ~
-270414 0 0 73728 28 0 0 0 S
-TK 0 1 -1
+270414 0 0 0 73728 28 0 0 0 S
+TK 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1280,8 +1280,8 @@ orc squinting~
 &+ychances at taking any of them, trying to figure out if they might have hidden&n
 &+yabilities that might affect his chances.&n
 ~
-270414 0 0 73732 28 0 0 -750 S
-HO 0 1 -1
+270414 0 0 0 73732 28 0 0 -750 S
+HO 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -1297,8 +1297,8 @@ gargoyle listening~
 &+ylistens, more than happy to sit listening for plots of rebellion against its&n
 &+ymaster, the &+Llord&+y of the &+bkeep.&n
 ~
-2500686 0 0 454633476 262172 131072 1048576 -1000 S
-H 0 64 4
+2500686 0 0 0 454633476 262172 131072 1048576 -1000 S
+H 0 64 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1314,8 +1314,8 @@ mino minotaur bellowing~
 &+ylaughing, it would be unwise to disturb her, as she would not hesitate to jump&n
 &+yup and fight.&n
 ~
-270414 0 0 73728 28 0 0 0 S
-MT 0 1 -1
+270414 0 0 0 73728 28 0 0 0 S
+MT 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1333,8 +1333,8 @@ troll frowning tavernkeep~
 &+yattached to the other end of that &+Ychain.&+y  Instead, they seem to be trying not&n
 &+yto catch the attention of the tavernkeep at all.&n
 ~
-1074014286 0 0 268509220 28 0 1048576 -1000 S
-PT 0 64 5
+1074014286 0 0 0 268509220 28 0 1048576 -1000 S
+PT 0 64 0 5
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1350,8 +1350,8 @@ man silent~
 &+ynot even making a single sound even while working.  He is a silent person, and&n
 &+ydoes not appreciate having his solitude broken by anyone.&n
 ~
-403534 0 0 436281348 28 0 1048576 -1000 S
-UV 0 8192 -1
+403534 0 0 0 436281348 28 0 1048576 -1000 S
+UV 0 8192 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1367,8 +1367,8 @@ maljer small~
 &+ybreast, just waiting for the chance to rob or even kill those who do not see&n
 &+yit lurking in the shadows.&n
 ~
-270414 0 0 1646592 28 0 0 -1000 S
-H 0 4096 1
+270414 0 0 0 1646592 28 0 0 -1000 S
+H 0 4096 0 1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1385,8 +1385,8 @@ maljer sneaky~
 &+yinnocence, only an idiot would believe that this evil little creature has ever&n
 &+yhad a single innocent thought.&n
 ~
-272460 0 0 1646592 28 0 0 -1000 S
-H 0 4096 1
+272460 0 0 0 1646592 28 0 0 -1000 S
+H 0 4096 0 1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1400,8 +1400,8 @@ rat skeletal~
 &+ydashes about the room, but apparently it has forgotten what it is that it has&n
 &+ybeen looking for.&n
 ~
-1074012232 0 0 33628160 28 0 0 -500 S
-U 0 0 1
+1074012232 0 0 0 33628160 28 0 0 -500 S
+U 0 0 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1415,8 +1415,8 @@ zombie shambling~
 &+yof intelligence or reason in its dark eyes as it stumbles around, bouncing off&n
 &+yof the walls from time to time.&n
 ~
-270408 0 0 65538 28 0 0 -500 S
-U 0 0 3
+270408 0 0 0 65538 28 0 0 -500 S
+U 0 0 0 3
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1431,8 +1431,8 @@ vampire sneering~
 &+Rglow&+y as he walks forward, sure that he can take anyone who even dares to try&n
 &+ystand against him.&n
 ~
-1074145354 0 0 167845888 28 0 0 -1000 S
-UV 0 0 4
+1074145354 0 0 0 167845888 28 0 0 -1000 S
+UV 0 0 0 4
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1448,8 +1448,8 @@ ogre inquisitive~
 &+bogre&+y would rather have the thrill of the chase and a battle but hunting any&n
 &+yintelligent life is forbidden inside the city.&n
 ~
-270414 0 0 4 28 0 0 -1000 S
-PO 0 0 -1
+270414 0 0 0 4 28 0 0 -1000 S
+PO 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1465,8 +1465,8 @@ troll nose picking~
 &+ysuccessful in his search, the &+gtroll&+y will pay attention to what his friend does&n
 &+yonce more and just slurp down his &+gs&+wn&+go&+wt b&+gall&+y instead of examining it.&n
 ~
-270414 0 0 73728 28 0 0 -1000 S
-PT 0 0 -1
+270414 0 0 0 73728 28 0 0 -1000 S
+PT 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1482,8 +1482,8 @@ apprentice patient human shoppie woman~
 &+cand places the heavy hammer and tongs beside the anvil, where they will sit&n
 &+cuntil she is ready to resume her work.&n
 ~
-272458 0 0 302063628 28 192 2148532224 360 S
-PH 0 256 -1
+272458 0 0 0 302063628 28 192 2148532224 360 S
+PH 0 256 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1497,8 +1497,8 @@ apprentice young~
 &+yhe is sleeping until he is called to continue his learning.  While he is very&n
 &+ygrateful for the opportunity to learn a really good craft, he is exhausted.&n
 ~
-270410 0 0 33628160 28 0 0 0 S
-H 0 0 3
+270410 0 0 0 33628160 28 0 0 0 S
+H 0 0 0 3
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -1512,8 +1512,8 @@ apprentice older~
 &+yof the players is using any hard earned coins, but rather favors or food has&n
 &+ybeen placed on the table for wagers.&n
 ~
-270414 0 0 33628160 28 0 0 0 S
-H 0 1 3
+270414 0 0 0 33628160 28 0 0 0 S
+H 0 1 0 3
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1528,8 +1528,8 @@ giant giantess smiling~
 &+yhow to fight even at a young age in order to survive.  When one is hurt she&n
 &+yjust tends the wound and sends them back into the fray.&n
 ~
-272462 0 0 65538 28 0 1048576 0 S
-G 0 16384 -1
+272462 0 0 0 65538 28 0 1048576 0 S
+G 0 16384 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1543,8 +1543,8 @@ child giant active~
 &+ysomething hurts to bad to continue to fight, a quick trip to mama is in order&n
 &+yfor a little first aid before rushing back in to defeat the others.&n
 ~
-270410 0 0 73728 28 0 0 0 S
-G 0 0 4
+270410 0 0 0 73728 28 0 0 0 S
+G 0 0 0 4
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1560,8 +1560,8 @@ apprentice questioning barb barbarian shoppie~
 &+cwith a questioning look, waiting for anyone who is interested to buy what they&n
 &+cwant before he returns to his work at the forge.&n
 ~
-272458 0 0 302063656 28 192 2148532224 0 S
-PB 0 1 -1
+272458 0 0 0 302063656 28 192 2148532224 0 S
+PB 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1576,8 +1576,8 @@ elf half-elf shoppie man~
 &+yan interest in buying his wares, and he is more than happy to show the buyer&n
 &+yhow they are best used.&n
 ~
-272458 0 0 268509212 92 2097344 2148540416 0 S
-P2 0 1 -1
+272458 0 0 0 268509212 92 2097344 2148540416 0 S
+P2 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1593,8 +1593,8 @@ drow elf shoppie temper tempermental~
 &+yare responsible to see that the clothing is made to very exact specifications,&n
 &+yand that it meets his standards, or they will face the &+mdark elf's&+y wrath.&n
 ~
-272458 0 0 268509224 92 16777408 2182094848 -1000 S
-PL 0 1 -1
+272458 0 0 0 268509224 92 16777408 2182094848 -1000 S
+PL 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1609,8 +1609,8 @@ troll menacing~
 &+yanything fun going on because everyone fears to incur the wrath of the &+blord&n
 &+yof the &+Ldark keep.&n
 ~
-1074014286 0 0 268509184 28 0 2147483648 -1000 S
-PT 0 16384 -1
+1074014286 0 0 0 268509184 28 0 2147483648 -1000 S
+PT 0 16384 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1626,8 +1626,8 @@ elf half-elf sturdy wife woman~
 &+cshe stirs, content to be here despite the threat of the dark keep looming over&n
 &+cher small family.&n
 ~
-272462 0 0 73728 28 0 0 0 S
-P2 0 1 -1
+272462 0 0 0 73728 28 0 0 0 S
+P2 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1642,8 +1642,8 @@ child giggling~
 &+cthe stew into the pot so that they can go out into the town to visit a friend&n
 &+cwhile her father is working upstairs.&n
 ~
-270414 0 0 73728 28 0 0 0 S
-P2 0 0 2
+270414 0 0 0 73728 28 0 0 0 S
+P2 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1659,8 +1659,8 @@ muscular elf half-elf teacher warrior vitrius~
 &+Bthem.  But usually he can be found pounding away at the forge, creating metal&n
 &+Bweapons that an apprentice across the room sells.&n
 ~
-305226 0 0 805380252 274652 16777408 2182094848 0 S
-P2 0 1 -1
+305226 0 0 0 805380252 274652 16777408 2182094848 0 S
+P2 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1676,8 +1676,8 @@ guard ogre~
 &+ranyone that he is not supposed to attack while he waits for a summons from the&n
 &+wc&+Lou&+wrtr&+Loo&+wm&+r to handle a prisoner.&n
 ~
-1074012238 0 0 73728 28 0 1048576 -1000 S
-PO 0 1 -1
+1074012238 0 0 0 73728 28 0 1048576 -1000 S
+PO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1693,8 +1693,8 @@ guard troll~
 &+rother guards around seem too stupid to bother talking to, not that he thinks&n
 &+rany of them would have anything worth talking about anyway.&n
 ~
-1074014286 0 0 65538 28 0 1048576 -1000 S
-PT 0 16384 -1
+1074014286 0 0 0 65538 28 0 1048576 -1000 S
+PT 0 16384 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1708,8 +1708,8 @@ guard storm giant~
 &+rhe works with but the &+gtrolls&+r are starting to get on his nerves.  Occasionally
 &+rhe shifts his stance, setting his &+cchain mail&+r to making soft jingling sounds.&n
 ~
-272462 0 0 268509216 28 0 1048576 0 S
-G 0 1 -1
+272462 0 0 0 268509216 28 0 1048576 0 S
+G 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1725,8 +1725,8 @@ judge measuring drow~
 &+mcomes before any considerations about the individuals.  She is wearing pure&n
 &+mblack clothing that is so dark it is hard to tell its exact outlines.&n
 ~
-272458 0 0 268509228 28 0 1048576 -1000 S
-PL 0 16 -1
+272458 0 0 0 268509228 28 0 1048576 -1000 S
+PL 0 16 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1743,8 +1743,8 @@ giant honor guard~
 &+ypeople are called stone giants.  Their skin resembles the stones of the hills&n
 &+ythey have claimed as their own.&n
 ~
-1074014282 0 0 302063620 28 0 2148532224 0 S
-G 0 16385 -1
+1074014282 0 0 0 302063620 28 0 2148532224 0 S
+G 0 16385 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1758,8 +1758,8 @@ small slimy thing~
 &+ghard to imagine what has driven the prisoners to eat such a disgusting blob&n
 &+gof a creature.&n
 ~
-270408 0 0 33554468 28 0 0 0 S
-A 0 0 2
+270408 0 0 0 33554468 28 0 0 0 S
+A 0 0 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1773,8 +1773,8 @@ medium slimy thing~
 &+wgray&+g dot its back, rippling as it moves along.  When it is sitting still it&n
 &+galmost looks like just another rock on the wall of this dank hallway.&n
 ~
-1074012232 0 0 33554468 28 0 0 0 S
-A 0 0 2
+1074012232 0 0 0 33554468 28 0 0 0 S
+A 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1789,8 +1789,8 @@ large slimy thing~
 &+gacross the wall.  Why the prisoners would want to try to eat something that&n
 &+gcould hurt them is beyond comprehension.&n
 ~
-270408 0 0 33554468 28 0 0 0 S
-A 0 1 2
+270408 0 0 0 33554468 28 0 0 0 S
+A 0 1 0 2
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1809,8 +1809,8 @@ paladin imprisoned teacher sir gamadir~
 &+chim out so that he may teach them. It helps him to not hear, at least for a&n
 &+cshort time, his wife in the cell with the &+Ggoblins.&n
 ~
-305226 0 0 302063676 28 0 2148532224 1000 S
-PH 0 8 -1
+305226 0 0 0 302063676 28 0 2148532224 1000 S
+PH 0 8 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1825,8 +1825,8 @@ woman stoic lady lysaly human~
 &+cspends her waking hours trying to come up with another way to get out of her&n
 &+cchains so that she may try again to free &+WSir Gamadir.&n
 ~
-272458 0 0 302063652 0 0 2148532224 750 S
-PH 0 16384 -1
+272458 0 0 0 302063652 0 0 2148532224 750 S
+PH 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1847,8 +1847,8 @@ grinning goblin prisoner~
 &+Gto see one of the little &+gsl&+wi&+gmy th&+wi&+gngs&+G before the others do, he usually manages&n
 &+Gto catch a little bit of protein as a reward.&n
 ~
-272458 0 0 268509220 28 0 0 -1000 S
-HG 0 1 -1
+272458 0 0 0 268509220 28 0 0 -1000 S
+HG 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1865,8 +1865,8 @@ withered bird~
 &+rare rumored to be the eyes of the &+blord&+r of the &+Lkeep,&+r and those who live in the&n
 &+rtown usually give them a wide berth.&n
 ~
-1074143434 0 0 167772164 28 0 0 -1000 S
-U 0 0 1
+1074143434 0 0 0 167772164 28 0 0 -1000 S
+U 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1881,8 +1881,8 @@ sal big halfling shoppie~
 &+ythe jovial halflings found almost everywhere.  Even the children who live here&n
 &+yleave Big Sal alone, and they don't seem to fear much of anything.&n
 ~
-272458 0 0 268509340 12508 16777408 2182094848 0 S
-PF 0 4 -1
+272458 0 0 0 268509340 12508 16777408 2182094848 0 S
+PF 0 4 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1897,8 +1897,8 @@ gnome shoppie krest krestlegigglymank~
 &+rbooks that he has for sale.  His shop is immaculate and he works hard to keep&n
 &+rthe sand out on the walkway, away from his wares.&n
 ~
-292938 0 0 402726972 12380 16777408 2182094848 0 S
-PG 0 64 -1
+292938 0 0 0 402726972 12380 16777408 2182094848 0 S
+PG 0 64 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1915,8 +1915,8 @@ halfling harried shoppie~
 &+rWhile he is proud of his work with gems and fine metals, he is still worried&n
 &+rthat the buyer will find his jewelry undesirable.&n
 ~
-272458 0 0 402726972 14556 16777216 2182094848 0 S
-PF 0 4 -1
+272458 0 0 0 402726972 14556 16777216 2182094848 0 S
+PF 0 4 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1931,8 +1931,8 @@ gruug ogre shoppie stonemason~
 &+rweapons that almost look like works of art rather than weapons.  But as those&n
 &+rwho use them can tell you, they are very good weapons indeed.&n
 ~
-272458 0 0 939598012 220 16777408 2182094848 -1000 S
-PO 0 1 -1
+272458 0 0 0 939598012 220 16777408 2182094848 -1000 S
+PO 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1949,8 +1949,8 @@ troll teacher meditating grn shaman~
 &+rof being upset when disturbed, he looks up, hoping that someone worthy to be&n
 &+rtaught the arts of the &+Cshaman&+r has come.&n
 ~
-305226 0 0 268509244 12416 16777216 2181046272 -1000 S
-PT 0 256 -1
+305226 0 0 0 268509244 12416 16777216 2181046272 -1000 S
+PT 0 256 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1970,8 +1970,8 @@ troll apprentice shoppie~
 &+yis good enough at it that he has been chosen to be the one to sell the things&n
 &+ythat have been created when customers enter the shop.&n
 ~
-272458 0 0 268509196 28 0 0 -1000 S
-PT 0 1 -1
+272458 0 0 0 268509196 28 0 0 -1000 S
+PT 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1986,8 +1986,8 @@ busy orc woodworker~
 &+youtside of his work on the wood, and has a look of happy concentration as he&n
 &+ywatches what is being created by his hands.&n
 ~
-272458 0 0 268509184 28 0 1048576 -1000 S
-HO 0 16 -1
+272458 0 0 0 268509184 28 0 1048576 -1000 S
+HO 0 16 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2004,8 +2004,8 @@ drow teacher bard concertina~
 &+mconsiders fair game.  As she thinks of how the hunts help her make her songs&n
 &+mwork better, a malevolent smile spreads across her face.&n
 ~
-305226 0 0 268509184 0 0 2148532224 -1000 S
-PL 0 32768 -1
+305226 0 0 0 268509184 0 0 2148532224 -1000 S
+PL 0 32768 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2026,8 +2026,8 @@ tracker human ranger teacher~
 &+rto think twice about accepting the offer of the lord of the keep, who uses his&n
 &+rskills to hunt down his enemies.&n
 ~
-305226 0 0 269033472 28 0 2148532224 0 S
-PH 0 2 -1
+305226 0 0 0 269033472 28 0 2148532224 0 S
+PH 0 2 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2043,8 +2043,8 @@ rhaggent goblin alchemist teacher alc~
 &+cbit easier, and he enjoys the company but he would rather have students than&n
 &+ccustomers or people just stopping by to chat.&n
 ~
-272458 0 0 268509192 28 0 0 -1000 S
-HG 0 1048576 -1
+272458 0 0 0 268509192 28 0 0 -1000 S
+HG 0 1048576 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2060,8 +2060,8 @@ merding githyanki sorcerer teacher gith sorc~
 &+yher robes move.  She looks up when her robes wrap around her legs, studying a&n
 &+ynewcomer to assess their level of intelligence.&n
 ~
-436298 0 0 402726920 28 0 2148532224 -1000 S
-GI 0 512 -1
+436298 0 0 0 402726920 28 0 2148532224 -1000 S
+GI 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2080,8 +2080,8 @@ gith githyanki child~
 &+rthe walkway when he sees a stranger, and just stares at them with an unnerving&n
 &+rintensity, usually making the one stared at uneasy or even aggressive.&n
 ~
-270412 16777216 0 73728 28 0 0 -1000 S
-GI 0 0 -1
+270412 16777216 0 0 73728 28 0 0 -1000 S
+GI 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2098,8 +2098,8 @@ gith githyanki female~
 &+rthem, showing that she is alive and not just an undead creature wandering on&n
 &+rthe walkway.&n
 ~
-270412 0 0 73728 28 0 0 -1000 S
-GI 0 1 -1
+270412 0 0 0 73728 28 0 0 -1000 S
+GI 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2117,8 +2117,8 @@ gith githyanki male~
 &+rthe &+Llord&+r of the &+bdark keep&+r could use his body to serve him.  So, he bides his&n
 &+rtime, waiting for the time when he can free himself from this place.&n
 ~
-270412 0 0 33628160 28 0 0 -1000 S
-GI 0 1 -1
+270412 0 0 0 33628160 28 0 0 -1000 S
+GI 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2134,8 +2134,8 @@ gnome teacher terria conj conjurer~
 &+yarea of magics, she sets aside her research work and gladly teaches those that&n
 &+ywish to know more.&n
 ~
-305226 0 0 805380096 12480 16777216 2182094848 0 S
-PG 0 2048 -1
+305226 0 0 0 805380096 12480 16777216 2182094848 0 S
+PG 0 2048 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2150,8 +2150,8 @@ maljer tiny~
 &+yto hide is so that it can leap out on unsuspecting victims.  It is fast, and&n
 &+yit will not hesitate to jump on anyone that it thinks it can take.&n
 ~
-270408 0 0 33628160 28 0 0 -1000 S
-H 0 1 1
+270408 0 0 0 33628160 28 0 0 -1000 S
+H 0 1 0 1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2167,8 +2167,8 @@ ogre tavernkeep bartender~
 &+rwith each other, he will not tolerate brawls that would bring the guards in to&n
 &+rtake not only the patrons to jail, but him too.&n
 ~
-272458 0 0 939598012 270556 16777408 2182094848 -1000 S
-PO 0 1 -1
+272458 0 0 0 939598012 270556 16777408 2182094848 -1000 S
+PO 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2183,8 +2183,8 @@ Nishagron~
 &+cany enter who are interested in learning how to be a great &+Lanti-paladin,&+c and&n
 &+cif he deems them worthy, he not only notices them, but he welcomes them.&n
 ~
-305226 0 0 805306396 12480 16777408 2148540416 -1000 S
-HO 0 16 -1
+305226 0 0 0 805306396 12480 16777408 2148540416 -1000 S
+HO 0 16 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2198,8 +2198,8 @@ unicrit duergar assassin teacher~
 &+rand is ready to teach others who have the knack for killing people how to do&n
 &+rit without attracting much attention at all.&n
 ~
-1074014282 0 0 805380124 12508 16777408 2182094848 -1000 S
-PD 0 8192 -1
+1074014282 0 0 0 805380124 12508 16777408 2182094848 -1000 S
+PD 0 8192 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2216,8 +2216,8 @@ harnd orc teacher berserker~
 &+rhe has been in, offering to teach others how to be as good at BeR&+RSeR&+rKeR as he&n
 &+rhimself is.&n
 ~
-305226 0 0 805380124 12508 16777408 2182094848 -1000 S
-HO 0 1 -1
+305226 0 0 0 805380124 12508 16777408 2182094848 -1000 S
+HO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2237,8 +2237,8 @@ bernice dwarf teacher cleric~
 &+ronly believes in combat but encourages its followers to fight fiercely, with a&n
 &+rgleeful abandon that is unusual in priests.&n
 ~
-305226 0 0 402726940 0 16777408 2182094848 1000 S
-PM 0 32 -1
+305226 0 0 0 402726940 0 16777408 2182094848 1000 S
+PM 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2252,8 +2252,8 @@ grey elf blossum teacher druid~
 &+gshe can take him out to teach him how to be a &+Gdruid.&+g  She welcomes anyone who&n
 &+gis interested in learning how to be a &+Gdruid&+g with a warm smile.&n
 ~
-305226 0 0 939597852 12508 16777408 2182094848 0 S
-PE 0 128 -1
+305226 0 0 0 939597852 12508 16777408 2182094848 0 S
+PE 0 128 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2270,8 +2270,8 @@ fered monk human teacher~
 &+rto arrive, then he and the new learner will head out to learn the lessons that&n
 &+rcan only be taught in the field.&n
 ~
-305226 0 0 973152316 12508 16777408 2182094848 0 S
-PH 0 64 -1
+305226 0 0 0 973152316 12508 16777408 2182094848 0 S
+PH 0 64 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2289,8 +2289,8 @@ zarix gith githyanki teacher psi psionicist~
 &+cfingers along the gems inset on his fine leather armor, knowing that soon he&n
 &+cwill be adding more of the sparkling baubles to his finery.&n
 ~
-305226 0 0 939597884 12508 16777408 2182094848 -1000 S
-GI 0 4 -1
+305226 0 0 0 939597884 12508 16777408 2182094848 -1000 S
+GI 0 4 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2305,8 +2305,8 @@ salashin drow reaver teacher elf~
 &+yart of being a &+Lre&+Wav&+Ler,&+y as apparently this young woman is not.  He looks at all&n
 &+ywo are in the tavern, seeking a likely candidate.&n
 ~
-305226 0 0 939597884 12508 16777408 2182094848 -1000 S
-PL 0 2097152 -1
+305226 0 0 0 939597884 12508 16777408 2182094848 -1000 S
+PL 0 2097152 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2324,8 +2324,8 @@ butterfoot halfling thief teacher~
 &+yhe is watching all who pass, trying to find which one is the person he agreed&n
 &+yto teach the skills of thievery.&n
 ~
-1074047050 0 0 940122172 12508 16777408 2182094848 0 S
-PF 0 65536 -1
+1074047050 0 0 0 940122172 12508 16777408 2182094848 0 S
+PF 0 65536 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2342,8 +2342,8 @@ gronmor warlock vampire teacher~
 &+ma powerful &+Bwar&+Llock.&+m  But while he waits, he is curious to see how some of his&n
 &+mother associates were created.&n
 ~
-305226 0 0 939597884 12508 16777408 2182094848 -1000 S
-UV 0 131072 -1
+305226 0 0 0 939597884 12508 16777408 2182094848 -1000 S
+UV 0 131072 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2357,8 +2357,8 @@ feralis goblin teacher illusionist~
 &+rcolor, she watches as people enter, anxious for her new pupil to arrive to&n
 &+rlearn how to be an illusionist.&n
 ~
-305226 0 0 939597884 12508 16777408 2182094848 -1000 S
-HG 0 4194304 -1
+305226 0 0 0 939597884 12508 16777408 2182094848 -1000 S
+HG 0 4194304 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2376,8 +2376,8 @@ beth human necro necromancer teacher~
 &+mthat he is tolerated in the city.  She, too, is awaiting a student.  Hopefully&n
 &+mwhen this one arrives, he will have a stronger stomach than the last.&n
 ~
-305226 0 0 939597884 12508 16777408 2182094848 -1000 S
-PH 0 1024 -1
+305226 0 0 0 939597884 12508 16777408 2182094848 -1000 S
+PH 0 1024 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2394,8 +2394,8 @@ hand~
 &+woff when it does that.  Those who enter the room need to make sure they stay&n
 &+wout of its path, or it will attack them and try to eat their living flesh.&n
 ~
-270410 0 0 73728 28 0 0 -500 S
-AC 0 0 -1
+270410 0 0 0 73728 28 0 0 -500 S
+AC 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2411,8 +2411,8 @@ ogre guard posted~
 &+ror his &+Llord.&+r  He is fast to react when a threat does appear making him a very&n
 &+rvaluable guard indeed.&n
 ~
-272458 0 0 268509184 28 0 1048576 -1000 S
-PO 0 16 5
+272458 0 0 0 268509184 28 0 1048576 -1000 S
+PO 0 16 0 5
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2429,8 +2429,8 @@ drow guard posted~
 &+rwhich bears the symbol of the &+blord&+r which is &+ya crossed &+Wbone&+y and &+Csword,&+y with a&n
 &+Lraven head&+y above and a single &+bdark eye&+y below.&n
 ~
-272458 0 0 268509184 28 0 1048576 -1000 S
-PL 0 512 -1
+272458 0 0 0 268509184 28 0 1048576 -1000 S
+PL 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2445,8 +2445,8 @@ gnome guard posted~
 &+ra &+ytabard&+r with the symbol of the &+blord&+r of the &+Lkeep&+r which is &+ya crossed &+Wbone&+y and&n
 &+Csword &+ywith a &+Lraven head &+yabove and a single &+bdark eye&+y below.&n
 ~
-272458 0 0 268509212 28 0 1048576 0 S
-PG 0 2048 1
+272458 0 0 0 268509212 28 0 1048576 0 S
+PG 0 2048 0 1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2463,8 +2463,8 @@ halfling guard posted~
 &+rover which is a &+ytabard&+r with the symbol of the lord which is &+ya crossed &+Wbone&+y and&n
 &+Csword,&+y with a &+Lraven head &+yabove and a single &+bdark eye &+ybelow.&n
 ~
-272458 0 0 268509184 28 0 2148532224 0 S
-PF 0 288 2
+272458 0 0 0 268509184 28 0 2148532224 0 S
+PF 0 288 0 2
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2482,8 +2482,8 @@ troll guard patrolling~
 &+rin place of the &+gtroll&+r nose and a huge pincer on the end of the left arm which&n
 &+rthe &+gtroll&+r has learned how to use with great force.&n
 ~
-1074014280 0 0 268509184 0 0 1048576 -1000 S
-PT 0 1 -1
+1074014280 0 0 0 268509184 0 0 1048576 -1000 S
+PT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2499,8 +2499,8 @@ thri thri-kreen guard patrolling~
 &+rtwo arms end in &+yf&+ra&+yl&+rcon c&+yl&+raws, which do a great deal of damage to those stupid&n
 &+renough to attack this patrolling guard.&n
 ~
-1074014280 0 0 268509184 28 0 1048576 0 S
-TK 0 1 -1
+1074014280 0 0 0 268509184 28 0 1048576 0 S
+TK 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2517,8 +2517,8 @@ barb barbarian guard patrolling~
 &+rfoe apart with the sharp canine teeth and she replaced the ends of his fingers&n
 &+rwith eagle talons, so that he was never without any weapons.&n
 ~
-1074014280 0 0 268509184 28 0 1048576 0 S
-PB 0 1 -1
+1074014280 0 0 0 268509184 28 0 1048576 0 S
+PB 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2536,8 +2536,8 @@ mino minotaur guard patrolling~
 &+rthick &+Mt&+men&+Mt&+mac&+Ml&+me&+r has been attached that he uses to knock down opponents and then&n
 &+rwhip them as they try to stand.&n
 ~
-1074014280 0 0 268509184 28 0 1048576 0 S
-MT 0 1 -1
+1074014280 0 0 0 268509184 28 0 1048576 0 S
+MT 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2554,8 +2554,8 @@ human cook~
 &+rthe kitchen she seems to have entered her own private world, concentrating on&n
 &+rthe food she is working on and nothing else.&n
 ~
-270410 0 0 33628160 28 0 0 0 S
-PH 0 1 -1
+270410 0 0 0 33628160 28 0 0 0 S
+PH 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2571,8 +2571,8 @@ drudge half-elf elf~
 &+rnone of the guests have ever seemed to have noticed the extra flavoring added&n
 &+rwhen he cuts himself and bleeds all over the food.&n
 ~
-270410 0 0 73728 28 0 0 0 S
-P2 0 1 -1
+270410 0 0 0 73728 28 0 0 0 S
+P2 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2587,8 +2587,8 @@ drudge thri thri-kreen bug~
 &+rthat no one will notice.  It hacks the meat apart in short order, but then, it
 &+rhas a lot of meat that is has to take care of for the cooks.&n
 ~
-270410 0 0 73728 28 0 0 0 S
-TK 0 1 -1
+270410 0 0 0 73728 28 0 0 0 S
+TK 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2609,8 +2609,8 @@ hammerhead ogre vampire master lord~
 &+rmalevolent smile spreads across his face as he thinks of all that he plans to&n
 &+rdo to this world before he is done.&n
 ~
-1141254216 0 0 940124348 12508 524480 2182094848 -1000 S
-UV 0 2052 5
+1141254216 0 0 0 940124348 12508 524480 2182094848 -1000 S
+UV 0 2052 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2627,8 +2627,8 @@ daisy barbarian consort barb~
 &+rconcubines that the lord of the keep keeps.  While she does not dislike any of&n
 &+rthem, neither does she feel any friendship toward them.&n
 ~
-1074145354 0 0 436281388 28 0 2147483648 0 S
-PB 0 384 4
+1074145354 0 0 0 436281388 28 0 2147483648 0 S
+PB 0 384 0 4
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2644,8 +2644,8 @@ snerga troll concubine~
 &+rmatching leather vest as she was preparing to go out into the town after the&n
 &+rtalk with &+BDaisy.&n
 ~
-1141123150 0 0 268509184 28 0 2148532224 -1000 S
-PT 0 1 -1
+1141123150 0 0 0 268509184 28 0 2148532224 -1000 S
+PT 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2663,8 +2663,8 @@ phillia centaur concubine~
 &+rnot last long, and she is able to just ignore their irritating manners for the&n
 &+rshort time that they are there.&n
 ~
-272458 0 0 268509184 28 0 2182086656 0 S
-CT 0 1 -1
+272458 0 0 0 268509184 28 0 2182086656 0 S
+CT 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2680,8 +2680,8 @@ harakar orc concubine~
 &+rto use her spells on her wounds.  Unfortunately for her, the only lesson that&n
 &+rshe has learned from this it to make her trouble outside of the keep.&n
 ~
-67381322 0 0 268509184 28 0 2148532224 -1000 S
-HO 0 32 -1
+67381322 0 0 0 268509184 28 0 2148532224 -1000 S
+HO 0 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2697,8 +2697,8 @@ human ellie concubine~
 &+rposition.  Right now, she has almost all of the priviledges but none of those&n
 &+rresponsibilities, and she is happy with the way it is.&n
 ~
-272458 0 0 268509184 28 0 2148532224 0 S
-PH 0 512 -1
+272458 0 0 0 268509184 28 0 2148532224 0 S
+PH 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2715,8 +2715,8 @@ gnome chained snack~
 &+rand he fought back but they overpowered him and gave him to one that he fears&n
 &+ris an enemy to all who do not already serve him.&n
 ~
-272458 0 3 268509184 28 0 2148532224 500 S
-PG 0 1 -1
+272458 0 3 0 268509184 28 0 2148532224 500 S
+PG 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2731,8 +2731,8 @@ goblin bound snack~
 &+rto be eaten, it's just a question of when and by what.  He is not surprised to&n
 &+rfind himself in this predicament, but he has not given up all hope of escape.&n
 ~
-272458 0 0 268509184 28 0 2148532224 -1000 S
-HG 0 1 -1
+272458 0 0 0 268509184 28 0 2148532224 -1000 S
+HG 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2748,8 +2748,8 @@ defiant halfling snack~
 &+rto devour his essence, and he wants to make sure they can hear how to get to&n
 &+rthis cell in a hurry.&n
 ~
-272458 0 0 268509184 28 0 2148532224 0 S
-PF 0 1 -1
+272458 0 0 0 268509184 28 0 2148532224 0 S
+PF 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2764,8 +2764,8 @@ troll janitor~
 &+renjoys chatting with anyone who is interested in the &+blord&+r or the &+Lkeep&+r that he&n
 &+rserves.  He is never seen without his mop, which is his pride and joy.&n
 ~
-272460 0 0 335618048 28 0 2148532224 -1000 S
-PT 0 1 -1
+272460 0 0 0 335618048 28 0 2148532224 -1000 S
+PT 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2781,8 +2781,8 @@ centaur visitor~
 &+rif that rumor is true.  He asks all who enter about information they may have&n
 &+rconcerning his quest for specific knowledge of the master of this keep.&n
 ~
-272458 0 0 268509184 28 0 2148532224 600 S
-CT 0 2 -1
+272458 0 0 0 268509184 28 0 2148532224 600 S
+CT 0 2 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2799,8 +2799,8 @@ elf half-elf child~
 &+reither has to leave here, either to a new home here in town or out to another&n
 &+rtown to look for another home there.&n
 ~
-270410 65536 0 0 28 0 0 0 S
-P2 0 0 2
+270410 65536 0 0 0 28 0 0 0 S
+P2 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2817,8 +2817,8 @@ elf half-elf woman~
 &+rknows that whatever the final decision, she will stand by him.  So she sits in&n
 &+rthis room, her eyes on their child, but her mind elsewhere.&n
 ~
-270414 0 0 268509184 28 0 0 0 S
-P2 0 1 -1
+270414 0 0 0 268509184 28 0 0 0 S
+P2 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2837,8 +2837,8 @@ elf half-elf man~
 &+ralready too late to leave, and is determined to make the best of the life he&n
 &+rhas been offered here.&n
 ~
-272462 0 0 268509184 28 0 0 0 S
-P2 0 1 -1
+272462 0 0 0 268509184 28 0 0 0 S
+P2 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2853,8 +2853,8 @@ court guard thri thri-kreen~
 &+rnot care whether the people are here by invitation, or not.  Its only concern&n
 &+ris to keep the &+blord&+r of the &+Lkeep&+r safe.&n
 ~
-272462 0 0 2147557376 28 0 2148532224 0 S
-TK 0 1 -1
+272462 0 0 0 2147557376 28 0 2148532224 0 S
+TK 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2870,8 +2870,8 @@ court guard ogre~
 &+runwise idea to embarrass him, but he does not want to pay the penalty for the&n
 &+rbeating he would give her.&n
 ~
-272462 0 0 268509184 28 0 2148532224 -1000 S
-PO 0 1 -1
+272462 0 0 0 268509184 28 0 2148532224 -1000 S
+PO 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2886,8 +2886,8 @@ court guard barbarian barb~
 &+rwelcome change from the tribe she grew up in.  Though life here is easier some&n
 &+rof the time, there are different challenges to be met while serving the &+blord.&n
 ~
-272462 0 0 302063616 28 0 2148532224 0 S
-PB 0 16384 -1
+272462 0 0 0 302063616 28 0 2148532224 0 S
+PB 0 16384 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2903,8 +2903,8 @@ gnome court clerk~
 &+rneed is determined by who has paid the highest bribe but since &+bHammerhead&+r gets&n
 &+ra split of this money, nothing is done to stop the bribing.&n
 ~
-272526 0 0 268509184 28 0 2148532224 0 S
-PG 0 1 -1
+272526 0 0 0 268509184 28 0 2148532224 0 S
+PG 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -2919,8 +2919,8 @@ trash rat~
 &+rcontinues nosing among the heaps of &+ggarbage,&+r looking for anything that other&n
 &+wra&+Lt&+ws&+r missed.&n
 ~
-270408 0 0 34078720 28 0 0 0 S
-AC 0 0 1
+270408 0 0 0 34078720 28 0 0 0 S
+AC 0 0 0 1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2935,8 +2935,8 @@ trash rat~
 &+rto run out when anything is dropped in hopes of snatching it before the others&n
 &+rso that it has the meal this time instead of them.&n
 ~
-270408 0 0 34078720 28 0 0 0 S
-AC 0 0 1
+270408 0 0 0 34078720 28 0 0 0 S
+AC 0 0 0 1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2951,8 +2951,8 @@ trash rat~
 &+rstuff that was unwanted in the kitchen, but also to be afraid of the &+Gbrambles&n
 &+rthat grow around the trash heaps.&n
 ~
-270408 0 0 34078720 28 0 0 0 S
-AC 0 0 1
+270408 0 0 0 34078720 28 0 0 0 S
+AC 0 0 0 1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2967,8 +2967,8 @@ gith githyanki servant~
 &+rdone.  If he sees anyone being hostile, it is his job to get one of the many&n
 &+rguards to come handle the trouble right away.&n
 ~
-272460 0 0 268509184 28 0 2148532224 -1000 S
-GI 0 1 -1
+272460 0 0 0 268509184 28 0 2148532224 -1000 S
+GI 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2985,8 +2985,8 @@ orc servant~
 &+rdifferent work, because she hopes to catch the eyes of &+bHammerhead,&+r and become&n
 &+rone of his concubines.&n
 ~
-272460 0 0 268509184 28 0 2148532224 -1000 S
-HO 0 1 -1
+272460 0 0 0 268509184 28 0 2148532224 -1000 S
+HO 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -3002,8 +3002,8 @@ troll servant~
 &+rone of the other servants is deliberately setting small creatures loose in an&n
 &+rattempt to get him thrown out of the keep.&n
 ~
-1074014284 0 0 268509184 28 0 2148532224 -1000 S
-PT 0 1 -1
+1074014284 0 0 0 268509184 28 0 2148532224 -1000 S
+PT 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3020,8 +3020,8 @@ barb barbarian servant~
 &+rjob as she struts around the keep, but she really is here as a spy, trying to&n
 &+rfind out information that might help those who oppose &+bHammerhead.&n
 ~
-272460 0 0 302063616 28 0 2148532224 0 S
-PB 0 1 -1
+272460 0 0 0 302063616 28 0 2148532224 0 S
+PB 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -3043,8 +3043,8 @@ tentacler~
 &+rfrom breathing as it kills the poor dragon from inside.  Those who enter would&n
 &+rbe well advised to have already written out their will.&n
 ~
-10909774 1 0 2583767224 28 67895488 2182086656 0 S
-DK 0 80 6
+10909774 1 0 0 2583767224 28 67895488 2182086656 0 S
+DK 0 80 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3062,8 +3062,8 @@ mummified mummy male ogre~
 &+rstates that he once was &+bHammerhead's&+r brother and that he is here as a warning&n
 &+rto those who think to betray the &+blord&+r of this &+Ldark keep.&n
 ~
-276558 0 0 285286400 28 0 2182086656 -1000 S
-PO 0 1 -1
+276558 0 0 0 285286400 28 0 2182086656 -1000 S
+PO 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3079,8 +3079,8 @@ ogress ogre mummy mummified female~
 &+rwill be there forever, or until she has been destroyed.  She is wearing a nice&n
 &+rleather dress and matching boots, with a small &+wsign&+r attached to the dress.&n
 ~
-276558 0 0 268509184 28 0 2148532224 -1000 S
-PO 0 1 -1
+276558 0 0 0 268509184 28 0 2148532224 -1000 S
+PO 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -3099,8 +3099,8 @@ human mummy mummified~
 &+rstep close enough to read this &+Wnote&+r will see that every single bone has been&n
 &+rbroken in both hands of this &+ymummy.&n
 ~
-276558 0 0 268509184 28 0 2148532224 -1000 S
-PH 0 1 -1
+276558 0 0 0 268509184 28 0 2148532224 -1000 S
+PH 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3115,8 +3115,8 @@ nosy neighbor human~
 &+rto just see who is being brought in on what charges, and what penalties they&n
 &+rreceive as he is a very nosy busybody indeed.&n
 ~
-270414 0 0 268509184 28 0 2147483648 0 S
-PH 0 1 -1
+270414 0 0 0 268509184 28 0 2147483648 0 S
+PH 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3134,8 +3134,8 @@ goblin betting~
 &+rhe still wins, as he wins some coins.  This is a game that he enjoys playing,&n
 &+rand he is here almost every day to play it.&n
 ~
-272462 0 0 536944640 28 0 2147483648 -1000 S
-HG 0 1 -1
+272462 0 0 0 536944640 28 0 2147483648 -1000 S
+HG 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3151,8 +3151,8 @@ gith githyanki annoying~
 &+rHe does not come in here often, as he knows he will be challenged to a game,&n
 &+rone that might get him killed if the &+mjudge&+r hears him taunting others.&n
 ~
-272462 0 0 268509184 28 0 2147483648 -1000 S
-GI 0 1 -1
+272462 0 0 0 268509184 28 0 2147483648 -1000 S
+GI 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3169,8 +3169,8 @@ centaur curious~
 &+rthe town's justice system in action is the best way to see if the town is good&n
 &+rfor raising a family.&n
 ~
-272462 0 0 268509184 28 0 2147483648 0 S
-CT 0 1 -1
+272462 0 0 0 268509184 28 0 2147483648 0 S
+CT 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3185,8 +3185,8 @@ thri thri-kreen hungry~
 &+rhe still comes to see if there is any chance for fresh meat daily.  It ignores&n
 &+rthe &+Ggith&+Wyanki&+r that is trying to aggravate people.&n
 ~
-272462 0 0 268509184 28 0 2147483648 0 S
-TK 0 1 -1
+272462 0 0 0 268509184 28 0 2147483648 0 S
+TK 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3202,8 +3202,8 @@ mino minotaur watching~
 &+rcourt one day.  Until that day comes, she is content to watch a master &+mjudge,&n
 &+rand learn from her how to be effective at what she does.&n
 ~
-272462 0 0 268509184 28 0 2147483648 0 S
-MT 0 1 -1
+272462 0 0 0 268509184 28 0 2147483648 0 S
+MT 0 1 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -3219,8 +3219,8 @@ hooded nuisance figure humanoid~
 &+rthat show beneath the long cloak catch their attention, making it harder to be&n
 &+rindifferent to what the hooded figure is saying.&n
 ~
-272462 0 0 302063616 28 0 2147483648 0 S
-H 0 1 3
+272462 0 0 0 302063616 28 0 2147483648 0 S
+H 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3240,8 +3240,8 @@ young observer~
 &+rsame lengths.  Its dark grey skin and light gray tufts of hair do not match&n
 &+rthe description of any race that has ever been heard of, either.&n
 ~
-272462 0 0 570499072 28 0 2147483648 0 S
-H 0 1 3
+272462 0 0 0 570499072 28 0 2147483648 0 S
+H 0 1 0 3
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3262,8 +3262,8 @@ bewildered bystander humanoid~
 &+rperson, asking why there are people on the stocks, demanding to know why such&n
 &+ra barbaric practice is allowed to continue.&n
 ~
-270414 0 0 268509184 28 0 2147483648 500 S
-H 0 1 3
+270414 0 0 0 268509184 28 0 2147483648 500 S
+H 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -3279,8 +3279,8 @@ man stammering human~
 &+rclearly no longer listening to his stammered defense, which is just making him&n
 &+rlook worse.&n
 ~
-272458 0 0 268509184 28 0 2147483648 0 S
-PH 0 1 -1
+272458 0 0 0 268509184 28 0 2147483648 0 S
+PH 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3298,8 +3298,8 @@ giant ambassador visitor~
 &+rtown, and has decided that it would be for the best if an alliance is made as&n
 &+rsoon as possible.&n
 ~
-272462 0 0 302063616 28 0 2148532224 0 S
-G 0 1 -1
+272462 0 0 0 302063616 28 0 2148532224 0 S
+G 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3314,8 +3314,8 @@ do good do-gooder annoying~
 &+ra smile on her face as her bright eyes search the walkway she is striding down&n
 &+rin hopes of joining a fight in progress.&n
 ~
-67379276 0 0 73732 28 0 0 0 S
-H 0 0 1
+67379276 0 0 0 73732 28 0 0 0 S
+H 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -3330,8 +3330,8 @@ do good do-gooder aggravating~
 &+rsearches for trouble that he can try to solve.  It is quite clear that he has&n
 &+ran ego that is far bigger than his small little body should contain.&n
 ~
-67379276 0 0 73732 28 0 0 0 S
-H 0 0 2
+67379276 0 0 0 73732 28 0 0 0 S
+H 0 0 0 2
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3344,8 +3344,8 @@ human guard~
 &+rHe watches the room taking careful note of those coming and going, his eyes&n
 &+rnot seeming to miss anything that is going on.&n
 ~
-67373128 0 0 33554720 30 0 1048576 0 S
-PH 0 68 3
+67373128 0 0 0 33554720 30 0 1048576 0 S
+PH 0 68 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3360,8 +3360,8 @@ wary mino minotaur~
 &+rthe chain pieces is &+ydark&+r, most of it covered with mystic runes that&n
 &+rglint with an occasional dark light.&n
 ~
-67373128 0 0 33554704 30 0 0 0 S
-mt 0 256 -1
+67373128 0 0 0 33554704 30 0 0 0 S
+mt 0 256 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -3376,8 +3376,8 @@ scarred leer dwarf~
 &+ris going on in the room at all, but at the least bit of movement, it is&n
 &+rclear that she is very well aware of everything happening in here.&n
 ~
-67373128 0 0 33554704 30 0 0 0 S
-pm 0 32 -1
+67373128 0 0 0 33554704 30 0 0 0 S
+pm 0 32 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

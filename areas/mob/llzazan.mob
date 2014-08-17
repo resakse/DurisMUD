@@ -7,8 +7,8 @@ This ancient drow has spent a lifetime reading books of great lore. He looks
 as knowledgable as he is frail, and an inner power burns in his red eyes.
 His hair is yellowing with age and his black skin is deeply wrinkled.
 ~
-34827 64 0 33554432 2 0 0 -1000 S
-PL 3 512 -1
+34827 64 0 0 33554432 2 0 0 -1000 S
+PL 3 512 0 -1
 31 11 26 23d32+184 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -21,8 +21,8 @@ This drow is covered in blood and reeks fully of death. Pieces of flesh
 cling to his garb and his hands are somewhat bleached from years of using
 embalming fluids. His trade seems incredibly gruesome, yet fascinating.
 ~
-34827 64 0 33554432 2 0 0 -1000 S
-PL 3 1024 -1
+34827 64 0 0 33554432 2 0 0 -1000 S
+PL 3 1024 0 -1
 31 11 26 23d32+184 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -36,8 +36,8 @@ the city of arachdrathos he has made himself one of the richest merchants
 in the Arachdrathos areas. He has chosen to set up shop here in the ghetto
 to exploit the local labor force.
 ~
-2059 64 0 33554432 2 0 0 -1000 S
-PL 3 8192 -1
+2059 64 0 0 33554432 2 0 0 -1000 S
+PL 3 8192 0 -1
 23 0 -50 1d1+1 1d1+1
 5.1.6.0 0
 8 8 1
@@ -51,8 +51,8 @@ She is very beautiful in an icy way, as she meets your gaze with a cold
 stare as if wondering why you innterupt her rituals. She wears a rich robe
 made of spider silk.
 ~
-2059 64 0 33554432 2 0 0 -1000 S
-PL 3 32 -1
+2059 64 0 0 33554432 2 0 0 -1000 S
+PL 3 32 0 -1
 23 11 26 23d44+207 3d5+3
 5.1.6.0 20493
 8 8 2
@@ -66,8 +66,8 @@ high priestess through exceptional skill with arms. None in the ghetto
 choose to oppose him directly in combat as he is known to wield any
 weapon with the skill of a master.
 ~
-34827 64 0 33554432 2 0 0 -1000 S
-PL 3 1 -1
+34827 64 0 0 33554432 2 0 0 -1000 S
+PL 3 1 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -82,8 +82,8 @@ on ever corner of the city. She is a constant menace to the houses of
 Arachdrathos, and her head would make a great prize for any drow bounty
 hunter.
 ~
-34822 64 0 33554432 2 0 0 -1000 S
-PL 3 8192 -1
+34822 64 0 0 33554432 2 0 0 -1000 S
+PL 3 8192 0 -1
 23 11 26 23d40+184 3d5+3
 5.1.6.0 20493
 8 8 2
@@ -97,8 +97,8 @@ only professional bounty hunter who knows the entire Llzazan cavern system.
 Her fame is legendary, having flushed out many a wanted drow for the great
 houses of Arachdrathos.
 ~
-2059 64 0 33554432 2 0 0 -1000 S
-PL 3 16384 -1
+2059 64 0 0 33554432 2 0 0 -1000 S
+PL 3 16384 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 2
@@ -111,8 +111,8 @@ The proprietor of the Inn of the Decapitated Dwarves stares at you blankly.
 She wonders if you want a room or just want to gawk at her. She taps her
 foot impatiently as she waits for you to make up your mind.
 ~
-11 0 0 33554432 2 0 0 -1000 S
-PL 3 0 -1
+11 0 0 0 33554432 2 0 0 -1000 S
+PL 3 0 0 -1
 59 -7 -128 59d120+6077 7d6+35
 4.5.9.6 238950
 8 8 2
@@ -127,8 +127,8 @@ massive arms with two massive fists attached to them. It also has two
 very large legs with even larger feet. Its head bears no face and it has
 two pools of blackness for eyes.
 ~
-2058 64 0 33554488 2 0 0 0 S
-EE 3 1 -1
+2058 64 0 0 33554488 2 0 0 0 S
+EE 3 1 0 -1
 40 -5 -121 55d131+4675 7d6+30
 0.0.0.0 222750
 8 8 0
@@ -143,8 +143,8 @@ massive arms with two massive fists attached to them. It also has two
 very large legs with even larger feet. Its head bears no face and it has
 two pools of blackness for eyes.
 ~
-2058 64 0 33554488 2 0 0 0 S
-OG 3 1 -1
+2058 64 0 0 33554488 2 0 0 0 S
+OG 3 1 0 -1
 45 -7 -125 58d143+6090 7d6+35
 3.4.8.6 234900
 8 8 0
@@ -158,8 +158,8 @@ parts, many of them very crudely fashioned, others somewhat fine but all
 made of rothe. Recently however, he started selling snacks for his
 customers to eat while picking through his wares.
 ~
-10 0 0 33554488 2 0 0 -1000 S
-PL 3 0 -1
+10 0 0 0 33554488 2 0 0 -1000 S
+PL 3 0 0 -1
 55 -5 -111 55d110+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -173,8 +173,8 @@ takes raw silk and makes garments for rich and poor drow alike. Her
 efficent hands fly over her mushroom timber loom as she produces yet
 another masterfully crafted garment.
 ~
-2058 0 0 33554432 2 0 0 -1000 S
-PL 3 32 -1
+2058 0 0 0 33554432 2 0 0 -1000 S
+PL 3 32 0 -1
 51 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 2
@@ -188,8 +188,8 @@ has decided to visit the prime material plane. She is absolutely beautiful,
 with honey blonde hair and porcelain-white skin. She swims with effortless
 grace through the cold water of the Llzazan Lake.
 ~
-264335 0 0 33554432 2 0 0 -333 S
-EW 0 32768 -1
+264335 0 0 0 33554432 2 0 0 -333 S
+EW 0 32768 0 -1
 27 8 3 27d60+324 3d6+4
 0.0.0.0 24057
 8 8 2
@@ -203,8 +203,8 @@ their masters and weren't killed outright. He seems to be very creative in
 his methods of execution, and takes great joy and pride in slaying each
 svirfneblin he sees.
 ~
-1073743882 64 0 33554480 2 0 0 -1000 S
-PL 3 1 -1
+1073743882 64 0 0 33554480 2 0 0 -1000 S
+PL 3 1 0 -1
 32 6 -2 32d83+544 4d6+7
 6.8.0.2 41472
 8 8 1
@@ -217,8 +217,8 @@ This lean drow woman eyes you coldly as you look at her. She seems very
 disinterested in you, as she assumes you are a bad prospect for a sale.
 She has very long silver hair, reaching almost to the back of her knees.
 ~
-2058 0 0 33554432 2 0 0 -1000 S
-PL 3 32 -1
+2058 0 0 0 33554432 2 0 0 -1000 S
+PL 3 32 0 -1
 23 11 26 23d44+207 3d5+3
 5.1.6.0 20493
 8 8 2
@@ -231,8 +231,8 @@ This drow is employed by the slave clearing house to ensure that no
 slaves escape before they are sold. He is very alert and obviously quite
 good at his job. He is also quite large for a drow.
 ~
-2062 0 0 33554432 2 0 0 -1000 S
-PL 3 1 -1
+2062 0 0 0 33554432 2 0 0 -1000 S
+PL 3 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -245,8 +245,8 @@ This creature leads a desparate life, as he has to take a crap under your
 gaze. He looks really pathetic. He glares at you feeblely trying to get you
 to leave him alone.
 ~
-2186 0 0 33554432 2 0 0 200 S
-PG 3 1 -1
+2186 0 0 0 33554432 2 0 0 200 S
+PG 3 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 6 6 1
@@ -261,8 +261,8 @@ silk across the caverns of Arachdrathos. After these strands are secured
 the drow can construct their webwalk skyways between the towers of the
 many houses of Arachdrathos.
 ~
-2186 0 0 33554464 2 0 0 0 S
-I 3 0 -1
+2186 0 0 0 33554464 2 0 0 0 S
+I 3 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 0
@@ -275,8 +275,8 @@ This drow hates his job, but the nobles of House Zarbonosti could care less,
 it is his duty to ensure that the svrifneblin are incedibly productive and
 equally unhappy.
 ~
-1174407308 1 0 100663312 2 0 0 -1000 S
-PL 3 1 -1
+1174407308 1 0 0 100663312 2 0 0 -1000 S
+PL 3 1 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 0
@@ -289,8 +289,8 @@ This impressive drow woman is dressed in adamantine armor finished with
 magenta trim. She looks stern about her duties and is dedicated to the
 protection of the armory.
 ~
-67110936 0 0 33554480 2 0 0 -1000 S
-PL 3 2 -1
+67110936 0 0 0 33554480 2 0 0 -1000 S
+PL 3 2 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -302,8 +302,8 @@ armory master llyvach~
 This powerful looking drow has a stony face set in a stern grimace. He seems
 far from happy and all too eager to slaughter everyone he meets.
 ~
-1140852750 1 0 100663344 2 0 0 -1000 S
-PL 3 1 -1
+1140852750 1 0 0 100663344 2 0 0 -1000 S
+PL 3 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -316,8 +316,8 @@ This wretched Llzazan commoner has found an abandoned house wherein to
 reside. He sleeps in a bundle of smelly rotheskin on the ground and looks
 like he has not taken a bath in months.
 ~
-2188 1 0 33554432 2 0 0 -1000 S
-PL 3 8192 -1
+2188 1 0 0 33554432 2 0 0 -1000 S
+PL 3 8192 0 -1
 16 13 48 16d30+80 3d4+2
 8.6.2.0 7776
 4 4 1
@@ -330,8 +330,8 @@ This wretched Llzazan commoner has found an abandoned house wherein to
 reside. She sleeps in a bundle of smelly rotheskin on the ground and looks
 like she has not taken a bath in months.
 ~
-2188 0 0 33554432 2 0 0 -1000 S
-PL 3 8192 -1
+2188 0 0 0 33554432 2 0 0 -1000 S
+PL 3 8192 0 -1
 19 13 39 19d30+95 3d4+2
 9.7.3.0 9234
 4 8 2
@@ -344,8 +344,8 @@ Dressed in rich red robes and a black hood this acolyte keeps vigil over
 the Llzazan temple. She is very beautiful, possibly through more than
 mundane treatments of her visage.
 ~
-1140852874 24 0 67633184 2 0 0 -1000 S
-PL 3 32 -1
+1140852874 24 0 0 67633184 2 0 0 -1000 S
+PL 3 32 0 -1
 25 11 19 25d44+225 3d5+3
 6.2.6.1 22275
 8 8 2
@@ -359,8 +359,8 @@ its head. It is very fishlike and about eighteen feet in length. In the
 middle of the four tentacles it displays three large wide eye slits stacked
 on top of each other.
 ~
-1074006030 0 0 33554464 2 0 0 -1000 S
-X 0 256 -1
+1074006030 0 0 0 33554464 2 0 0 -1000 S
+X 0 256 0 -1
 55 -5 -126 55d121+5005 7d6+30
 0.2.0.9 334125
 8 8 1
@@ -373,8 +373,8 @@ This large black worm is totally eyeless, but has a large mouth surrounded
 by sharp hooks for burrowing through the rock walls of this tunnel. It is
 about two feet in diameter and thirsty feet long.
 ~
-1073744012 1 0 33554592 2 0 0 0 S
-RS 0 0 -1
+1073744012 1 0 0 33554592 2 0 0 0 S
+RS 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -387,8 +387,8 @@ This poor commoner is shoveling down his daily ration of a strange broth. It
 does not look very nourishing, but it must be doing something to keep this
 poor soul alive.
 ~
-140 0 0 33554432 2 0 0 333 S
-PG 0 2048 -1
+140 0 0 0 33554432 2 0 0 333 S
+PG 0 2048 0 -1
 7 18 77 7d14+24 2d3+1
 3.2.0.0 907
 6 6 1
@@ -401,8 +401,8 @@ This duergar is a slave of the drow, much like the svirfneblin, however
 through years of dedicated service he has found himself promoted to the
 status of cook for this slave camp.
 ~
-67109002 0 0 33554432 2 0 0 -1000 S
-PD 3 1 -1
+67109002 0 0 0 33554432 2 0 0 -1000 S
+PD 3 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -415,8 +415,8 @@ This tired slave is resting on a spidersilk hammock, enjoying its rare repose
 from the soul numbing work of harvesting mushrooms from the fields. He looks
 malnourished and broken.
 ~
-2188 0 0 33554464 2 0 0 333 S
-PG 0 2048 -1
+2188 0 0 0 33554464 2 0 0 333 S
+PG 0 2048 0 -1
 12 15 61 12d18+48 2d5+2
 6.4.2.0 5832
 4 4 1
@@ -429,8 +429,8 @@ This tired slave is resting on a spidersilk hammock, enjoying its rare repose
 from the soul numbing work of harvesting mushrooms from the fields. He looks
 malnourished and broken.
 ~
-2188 0 0 33554464 2 0 0 333 S
-PG 0 2048 -1
+2188 0 0 0 33554464 2 0 0 333 S
+PG 0 2048 0 -1
 14 15 55 14d18+56 2d5+2
 7.5.2.0 6804
 4 4 1
@@ -443,8 +443,8 @@ This tired slave is resting on a spidersilk hammock, enjoying its rare repose
 from the soul numbing work of harvesting mushrooms from the fields. He looks
 malnourished and broken.
 ~
-2188 0 0 33554464 2 0 0 333 S
-PG 0 2048 -1
+2188 0 0 0 33554464 2 0 0 333 S
+PG 0 2048 0 -1
 16 13 48 16d24+80 3d4+2
 8.6.2.0 7776
 4 4 1
@@ -457,8 +457,8 @@ This tired slave is resting on a spidersilk hammock, enjoying its rare repose
 from the soul numbing work of harvesting mushrooms from the fields. He looks
 malnourished and broken.
 ~
-2188 0 0 33554464 2 0 0 0 S
-PG 0 2048 -1
+2188 0 0 0 33554464 2 0 0 0 S
+PG 0 2048 0 -1
 20 13 35 20d24+100 3d4+2
 0.9.3.0 9720
 4 4 1
@@ -470,8 +470,8 @@ a shackled svrifneblin~
 This svirfneblin was recently taken form his home. He awaits purcahse by a
 drow master to begin the rest of his life in thankless servitude.
 ~
-138 0 0 33554464 2 0 0 333 S
-PG 0 2048 -1
+138 0 0 0 33554464 2 0 0 333 S
+PG 0 2048 0 -1
 10 18 67 10d14+35 2d3+1
 5.3.0.0 1296
 6 6 1
@@ -484,8 +484,8 @@ This privileged slave has been given the job of pulling timbers from the
 trough of treatment fluid. He is quite strong from pulling the hardened
 mushroom stalks day after day.
 ~
-138 0 0 33554480 2 0 0 -1000 S
-PD 3 1 -1
+138 0 0 0 33554480 2 0 0 -1000 S
+PD 3 1 0 -1
 48 -3 -78 48d119+2640 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -498,8 +498,8 @@ This privileged slave has been given the job of splitting and dropping
 timbers into the trough of treatment fluid. He is quite strong from
 dropping the giant mushroom stalks day after day.
 ~
-138 0 0 33554480 2 0 0 -1000 S
-PD 3 1 -1
+138 0 0 0 33554480 2 0 0 -1000 S
+PD 3 1 0 -1
 48 -3 -78 48d119+2640 6d6+25
 8.1.0.5 116640
 8 8 1
@@ -512,8 +512,8 @@ This powerful drow skillfully swings a giant hammer, smashing rothe skulls
 hundreds of times per day. He looks very skilled with his hammer and is
 obviously quite accustomed to killing.
 ~
-1073743882 64 0 33554480 2 0 0 -1000 S
-PL 3 1 -1
+1073743882 64 0 0 33554480 2 0 0 -1000 S
+PL 3 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -526,8 +526,8 @@ This powerful drow takes a wicked dagger and skillfully bleeds and guts rothe
 carcasses. After letting the intestines roll out and the stomachs splat on
 the ground, he takes great joy in throwing kidneys at his colleagues.
 ~
-1073743882 64 0 33554480 2 0 0 -1000 S
-PL 3 8192 -1
+1073743882 64 0 0 33554480 2 0 0 -1000 S
+PL 3 8192 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -540,8 +540,8 @@ The skinner is responisble for removing the hides from the rothe. She does
 this with no tools save her bare hands. She is very strong looking and not
 at all afraid to get messy.
 ~
-1073743882 64 0 33554480 2 0 0 -1000 S
-PL 3 32 -1
+1073743882 64 0 0 33554480 2 0 0 -1000 S
+PL 3 32 0 -1
 40 2 -28 40d88+880 4d7+10
 3.3.3.3 51840
 8 8 2
@@ -554,8 +554,8 @@ This powerful drow uses a hook and knife to skillfully quarter and slice
 rothe pieces with lightning speed. These pieces are then tossed into large
 tubs for export to Aracdrathos.
 ~
-1073743882 64 0 33554480 2 0 0 -1000 S
-PL 3 8192 -1
+1073743882 64 0 0 33554480 2 0 0 -1000 S
+PL 3 8192 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -569,8 +569,8 @@ parts, many of them very crudely fashioned, others somewhat fine but all
 made of rothe. Recently however, he started selling snacks for his
 customers to eat while picking through his wares.
 ~
-10 0 0 33554480 2 0 0 -1000 S
-PL 3 0 -1
+10 0 0 0 33554480 2 0 0 -1000 S
+PL 3 0 0 -1
 55 -5 -111 55d110+4565 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -584,8 +584,8 @@ station of the Llzazan Ghetto. For the most part, his wares are exported
 to the city of Arachdrathos, but on occasion he does sell to inhabitants
 of the ghetto.
 ~
-2058 0 0 33554488 0 0 0 -1000 S
-PL 3 1 -1
+2058 0 0 0 33554488 0 0 0 -1000 S
+PL 3 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 6 6 1
@@ -599,8 +599,8 @@ its head. It is very fishlike and about eighteen feet in length. In the
 middle of the four tentacles it displays three large wide eye slits stacked
 on top of each other.
 ~
-1074006030 0 0 33554464 2 0 0 -1000 S
-X 0 1 -1
+1074006030 0 0 0 33554464 2 0 0 -1000 S
+X 0 1 0 -1
 40 2 -43 40d95+1200 4d7+10
 3.3.4.4 77760
 8 8 1
@@ -612,8 +612,8 @@ elf grey pale~
 This pale faced elf is obviously from the surface. He is disgustingly good
 looking and should be killed immmediately.
 ~
-2062 128 0 303562812 12 0 0 1000 S
-PE 4 32768 -1
+2062 128 0 0 303562812 12 0 0 1000 S
+PE 4 32768 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -628,8 +628,8 @@ massive arms with two massive fists attached to them. It also has two
 very large legs with even larger feet. Its head bears no face and it has
 two pools of blackness for eyes.
 ~
-1073743882 64 0 33554616 2050 0 0 0 S
-OG 3 1 -1
+1073743882 64 0 0 33554616 2050 0 0 0 S
+OG 3 1 0 -1
 55 -7 -125 58d143+6090 7d6+35
 3.4.8.6 234900
 8 8 0
@@ -643,8 +643,8 @@ drow innkeeper~
 &+rthere appears to be more to this creature than one would initially
 &+rthink.&n
 ~
-67139594 64 0 939597884 268437726 131072 84947456 -1000 S
-PL 3 8193 -1
+67139594 64 0 0 939597884 268437726 131072 84947456 -1000 S
+PL 3 8193 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

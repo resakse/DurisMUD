@@ -12,8 +12,8 @@ and keenly sought after.  It is said amoungst the
 seedier circles in town, that to kill a thief and damage
 his armor is a crime unto itself.
 ~
-1073743946 0 0 33554488 0 0 0 -1 S
-PH 0 4096 -1
+1073743946 0 0 0 33554488 0 0 0 -1 S
+PH 0 4096 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -29,8 +29,8 @@ honed to perfection.  Pure blue eyes gaze upon you,
 through a tight fitting black hood, sizing up your
 worth, and whether you are worthy of his time.
 ~
-1073743882 0 0 33554616 0 0 0 -1 S
-PH 0 4096 -1
+1073743882 0 0 0 33554616 0 0 0 -1 S
+PH 0 4096 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -46,8 +46,8 @@ honed to perfection.  Pure blue eyes gaze upon you,
 through a tight fitting black hood, sizing up your
 worth, and whether you are worthy of his time.
 ~
-1073743882 0 0 33554616 0 0 0 -1 S
-PH 0 4096 -1
+1073743882 0 0 0 33554616 0 0 0 -1 S
+PH 0 4096 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -63,8 +63,8 @@ and small creases are begining to form around his
 eyes.  A worried frown crosses his brow, and he
 looks up with annoyance at your disturbance.
 ~
-1140852746 0 0 33554616 2048 67108864 0 1000 S
-PH 0 8 -1
+1140852746 0 0 0 33554616 2048 67108864 0 1000 S
+PH 0 8 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -80,8 +80,8 @@ intricate braid, only just starting to show the first
 signs of grey.  A worried look crosses her face as she
 reguards her husband with concern.
 ~
-1140852746 0 0 33554616 2048 0 0 -1 S
-PH 0 512 -1
+1140852746 0 0 0 33554616 2048 0 0 -1 S
+PH 0 512 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -97,8 +97,8 @@ with the knowledge of how to use it, and his black eyes
 glare at you, not quite as imposing as he would like it
 to be.
 ~
-1140852808 0 0 33554472 0 0 0 -1 S
-PH 0 1 -1
+1140852808 0 0 0 33554472 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -116,8 +116,8 @@ races that once plagued to land.  His service now
 honored in serving as a bodyguard to the rulers of the
 town.
 ~
-1140852746 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -133,8 +133,8 @@ honed to perfection.  Pure blue eyes gaze upon you,
 through a tight fitting black hood, sizing up your
 worth, and whether you are worthy of his time.
 ~
-1073743882 0 0 33554616 0 0 0 -1 S
-PH 0 4096 -1
+1073743882 0 0 0 33554616 0 0 0 -1 S
+PH 0 4096 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -150,8 +150,8 @@ honed to perfection.  Pure blue eyes gaze upon you,
 through a tight fitting black hood, sizing up your
 worth, and whether you are worthy of his time.
 ~
-1073743882 0 0 33554616 0 0 0 -1 S
-PH 0 4096 -1
+1073743882 0 0 0 33554616 0 0 0 -1 S
+PH 0 4096 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ to here.  A small smile can been seen edging across his
 face as his audience cheers him on through song after
 song.
 ~
-1073744010 1 0 33554488 0 0 0 -1 S
-PH 0 32768 -1
+1073744010 1 0 0 33554488 0 0 0 -1 S
+PH 0 32768 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ surrounds a bald patch on his head.  Looking up from
 his work he frown in annoyance, before returning to his
 sorcery.
 ~
-1073743882 1 0 33554600 2048 0 0 -1 S
-PG 0 512 -1
+1073743882 1 0 0 33554600 2048 0 0 -1 S
+PG 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -203,8 +203,8 @@ a rather imposing sight.  Deep scars line his body,
 reminders to a time when the land was plagued with evil
 races, intent on destruction.
 ~
-67139658 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+67139658 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -220,8 +220,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -237,8 +237,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -254,8 +254,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -271,8 +271,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -288,8 +288,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -305,8 +305,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -322,8 +322,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -339,8 +339,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -356,8 +356,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -373,8 +373,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -390,8 +390,8 @@ Clothed in black silks, his movements fall silent to all
 but the most observant of watchers, as he slips from
 shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -407,8 +407,8 @@ Clothed in black silks, his movements fall silent to all
 but the most observant of watchers, as he slips from
 shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -424,8 +424,8 @@ Clothed in black silks, his movements fall silent to all
 but the most observant of watchers, as he slips from
 shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -441,8 +441,8 @@ Clothed in black silks, his movements fall silent to all
 but the most observant of watchers, as he slips from
 shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -458,8 +458,8 @@ Clothed in black silks, his movements fall silent to all
 but the most observant of watchers, as he slips from
 shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -475,8 +475,8 @@ Clothed in black silks, his movements fall silent to all
 but the most observant of watchers, as he slips from
 shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -492,8 +492,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -509,8 +509,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -526,8 +526,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -543,8 +543,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -560,8 +560,8 @@ victim.  Clothed in black silks, his movements fall
 silent to all but the most observant of watchers, as
 he slips from shadow to shadow.
 ~
-1073743880 1 0 35127352 0 0 0 -1 S
-PH 0 4096 -1
+1073743880 1 0 0 35127352 0 0 0 -1 S
+PH 0 4096 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -578,8 +578,8 @@ keeps his hair from across his eyes.  Charcole stains
 his hands and arms, and a thin film of sweat covers his
 brow.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PM 0 1 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PM 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -596,8 +596,8 @@ take on a darker color.  His eyes dart in between the
 shop front, and back to the forge, where he yearns to
 sculpt the metals.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PM 0 1 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PM 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -614,8 +614,8 @@ to touch some of the more expensive material on sale.
 Her dark brown hair is tied back with a small piece of
 silk, an off cut to small to be used for anything else.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -630,8 +630,8 @@ the material with a pair of cutters.  Her dress is made
 of a fine silk, and is very light weight, affording her
 freedom of movement whilst she labors over her work.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -647,8 +647,8 @@ anything to earn money to provide for his loved ones.
 His clothing is kept neat, although showing the signs
 of wear.
 ~
-1073743880 0 0 33554432 0 0 0 -1 S
-PH 0 1 -1
+1073743880 0 0 0 33554432 0 0 0 -1 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -664,8 +664,8 @@ seen.  Well aware of the hardships life can dish out,
 she struggles to keep her family fed and tries to
 provide the best care she can for her children.
 ~
-1073743880 0 0 33554432 0 0 0 0 S
-PH 0 0 -1
+1073743880 0 0 0 33554432 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -682,8 +682,8 @@ mock battles obviously fighting some great beast of
 his creation.  Luckily for the boy he is still
 unaware of the hardships life can dish out.
 ~
-8 0 0 33554432 0 0 0 -1 S
-PH 0 1 -1
+8 0 0 0 33554432 0 0 0 -1 S
+PH 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -699,8 +699,8 @@ Ocassionally stopping to giggle at something she finds
 amussing, this young girl is carefree and enjoying
 herself is her number one priority.
 ~
-8 0 0 33554432 0 0 0 -1 S
-PH 0 1 -1
+8 0 0 0 33554432 0 0 0 -1 S
+PH 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -717,8 +717,8 @@ dyes during his days work.  Looking up from a large
 barrel, he warmly smiles before continuing to mix the
 colored dye.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -734,8 +734,8 @@ Sizing all who enter his shop, he quickly relaxes,
 removing his hand from his shop, but never dropping his
 guard.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -751,8 +751,8 @@ harshest of blows.  Now forced to live in little more
 than a run down shack, he appears to have given up on
 life, not caring what happens to himself.
 ~
-2060 0 0 33554472 0 0 0 -1 S
-PH 0 1 -1
+2060 0 0 0 33554472 0 0 0 -1 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -767,8 +767,8 @@ toned muscles of a true warrior.  His clothing is made
 from the finest silks, and his clear eyes are constantly
 searching for a way to increase his fortune.
 ~
-1073743880 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1073743880 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -785,8 +785,8 @@ scattered through her hair.  On her hands and around
 her necklace sit expensive jewlery, ideally placed so
 that all can see.
 ~
-1073743880 0 0 33554456 0 0 0 -1 S
-PH 0 1 -1
+1073743880 0 0 0 33554456 0 0 0 -1 S
+PH 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -802,8 +802,8 @@ enforces a smile from the passersby.  Staring off into
 the distance, she dreams of a day when she will have
 her own family and children of her own.
 ~
-2056 0 0 33554432 0 0 0 -1 S
-PH 0 1 -1
+2056 0 0 0 33554432 0 0 0 -1 S
+PH 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -819,8 +819,8 @@ for any sign of his parents he takes up a small stick
 and starts an epic battle, most likely battling the
 evil races that once plagued the realm.
 ~
-2056 0 0 33554432 0 0 0 -1 S
-PH 0 1 -1
+2056 0 0 0 33554432 0 0 0 -1 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -837,8 +837,8 @@ is in order.  A small gold pin on the front of her
 dress identifies her position, and allows her to make
 the purchases needed for the manor.
 ~
-67110920 1 0 34078760 0 0 0 -1 S
-PH 0 1 -1
+67110920 1 0 0 34078760 0 0 0 -1 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -854,8 +854,8 @@ eyes eagerly devoure the information on offer.  Wearing
 a simple brown robe, he show no sign of vanity, his
 quest for knowledge his main concern.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 512 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -871,8 +871,8 @@ this robust guard, is seasoned in combat, and knows
 his weapons.  His crystal blue eyes reguard all with
 a total lack of emotion, his mission his only priority.
 ~
-1140852810 0 0 33554616 0 0 0 -1 S
-PH 0 2 -1
+1140852810 0 0 0 33554616 0 0 0 -1 S
+PH 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -888,8 +888,8 @@ to everything.  Clothed in a plain woolen garb, her
 clothes are practical rather than fancy, also a sign
 of her apparent lack of wealth.
 ~
-2058 0 0 33554488 0 0 0 -1 S
-PH 0 256 -1
+2058 0 0 0 33554488 0 0 0 -1 S
+PH 0 256 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -905,8 +905,8 @@ groomed recently, and the drab clothing appears to have
 been slept in.  Stains mare the front of a once white
 shirt, rendering it a dirty grey.
 ~
-1073743882 0 0 33554432 0 0 0 -10 S
-PH 0 1 -1
+1073743882 0 0 0 33554432 0 0 0 -10 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -923,8 +923,8 @@ Her deep red hair sways enticingly further enhancing
 her lack of clothing, as it barely covers what is
 revealed.
 ~
-1073743882 0 0 33554432 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554432 0 0 0 -1 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -940,8 +940,8 @@ or need, is unclear.  His short cropped hair frames his
 dirty face, further reducing the appeal of contact with
 him.
 ~
-1073743882 0 0 33554456 0 0 0 -1 S
-PH 0 4096 -1
+1073743882 0 0 0 33554456 0 0 0 -1 S
+PH 0 4096 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -958,8 +958,8 @@ traveller no doubt has set out to see some of the world
 and what it has to offer, and ultimately to try and make
 a name for himself.
 ~
-1073743882 0 0 33554456 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554456 0 0 0 -1 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -974,8 +974,8 @@ Her deep brown hair is starting to show signs of grey, and
 a few wrinkles across her face, dictate the stress her job
 sometimes creates.
 ~
-2058 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -992,8 +992,8 @@ in the permanent ledger.  Barely looking up from his work
 he casually gestures people to what they are after, all
 the while managing to keep a somber face.
 ~
-1140852746 0 0 33554488 2048 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 33554488 2048 0 0 -1 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1009,8 +1009,8 @@ speaks, something that he tries to hide with his hands,
 such self worried behavior in so large a man, almost a
 comical sight.
 ~
-2058 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1025,8 +1025,8 @@ greets his customers, oblivious to his appearance.  His
 sandy brown hair is kept short, whilst a long beard dangles
 perilously close to the ovens and the uncooked dough.
 ~
-2058 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1042,8 +1042,8 @@ anything that offends her, as if the very things did not
 exist at all.  A small smile briefly crosses her lips as
 she nears her destination.
 ~
-2058 0 0 33554472 0 0 0 -1 S
-PH 0 512 -1
+2058 0 0 0 33554472 0 0 0 -1 S
+PH 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1058,8 +1058,8 @@ that sits in the small of her back.  Standing just shy
 of 6 feet, she is a tall woman, and her warm smile,
 indicates her happiness in life.
 ~
-2058 0 0 33554488 0 0 0 -1 S
-PH 0 512 -1
+2058 0 0 0 33554488 0 0 0 -1 S
+PH 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1076,8 +1076,8 @@ beard covers much of his face.  A look of effort crosses
 his face as he saws through a piece of bone, while
 talking to a customer.
 ~
-10 0 0 33554488 0 0 0 -1 S
-PB 0 1 -1
+10 0 0 0 33554488 0 0 0 -1 S
+PB 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1094,8 +1094,8 @@ A sense of unpredictability can be felt from the man,
 as he desperately tries to empart his worth to all who
 will listen.
 ~
-1140852746 0 0 33554472 0 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 33554472 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1112,8 +1112,8 @@ A sense of unpredictability can be felt from the man,
 as he desperately tries to empart his worth to all who
 will listen.
 ~
-1140852746 0 0 33554472 0 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 33554472 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1130,8 +1130,8 @@ motions for them to be removed.  A constant dry washing
 of his hands could depict nervousness, but more likely
 the expectation of a large take for the night.
 ~
-2062 0 0 33554552 0 0 0 -1 S
-PH 0 1 -1
+2062 0 0 0 33554552 0 0 0 -1 S
+PH 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1148,8 +1148,8 @@ to spend.  Clear blue eyes seems to watch everything,
 and massive arms tense when a patron scans to see if he
 is being observed.
 ~
-1140852746 0 0 33554616 0 0 0 -1 S
-PB 0 1 -1
+1140852746 0 0 0 33554616 0 0 0 -1 S
+PB 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1166,8 +1166,8 @@ is filthy, covered with food and drink, and will be
 covered with blood if he is unable to make a room for
 the night.
 ~
-1073743882 0 0 33554448 2048 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554448 2048 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1183,8 +1183,8 @@ stiching on his lapel, no doubt done by his wife.  Heavy
 soled boots cover his feet, as he moves purposely to his
 destination.
 ~
-1073743882 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1200,8 +1200,8 @@ hands carefully pick up a wine glass, which quickly
 disappears into the depths of her hood.  Slender of
 frame, a slight air of menace surrounds her.
 ~
-1073743882 0 0 67109048 2048 0 0 -1 S
-L 0 1024 -1
+1073743882 0 0 0 67109048 2048 0 0 -1 S
+L 0 1024 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1217,8 +1217,8 @@ drinks.  Her persona does not seem to be affected by
 worries that affect the normal person, and her warm smile
 seems to lessen those that have them.
 ~
-67110922 0 0 33554464 0 0 0 1000 S
-PH 0 32 -1
+67110922 0 0 0 33554464 0 0 0 1000 S
+PH 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1234,8 +1234,8 @@ of emotion this well build man, seems to have seen the
 horrors of what life has to offer, and that anything
 else is a reprieve.
 ~
-1140852746 0 0 67108920 0 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 67108920 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1250,8 +1250,8 @@ his eyes wander across the surrounds with no more than
 a casual disinterest.  Slouched up against the wall of
 a nearby building, he appears to be half-asleep.
 ~
-67110922 1 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+67110922 1 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1267,8 +1267,8 @@ her up.  A moment of clarity crosses her face, as she
 pauses to work out when her shift finishes and she can get
 some much needed rest.
 ~
-1140852746 0 0 33554464 0 0 0 1000 S
-PH 0 32 -1
+1140852746 0 0 0 33554464 0 0 0 1000 S
+PH 0 32 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1284,8 +1284,8 @@ work.  As he glances around he passes a toothless grin at
 people, who in turn look away.  Undeterred this old man is
 content to keep to himself, enjoying his final years.
 ~
-2058 128 0 33554488 0 0 0 -1 S
-PH 0 64 -1
+2058 128 0 0 33554488 0 0 0 -1 S
+PH 0 64 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1299,8 +1299,8 @@ eye carefully surveys the surrounds.  Set to guard his
 employer's interests, he clearly has other things on his
 mind, as his eyes glance over potential danger areas.
 ~
-1140852746 0 0 33554616 0 0 0 -360 S
-PH 0 1 -1
+1140852746 0 0 0 33554616 0 0 0 -360 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1315,8 +1315,8 @@ of wear.  Clearly she has fallen on hard times, at
 the sight of a large purse she makes it clear that
 her service will be one worth paying for.
 ~
-1073743882 0 0 33554464 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554464 0 0 0 -1 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1332,8 +1332,8 @@ patrons with a warm and open smile, inviting them to stay
 and sample his business.  Careful to avoid any displeasure,
 the innkeeper himself, offers to show the patrons to a table.
 ~
-1140852746 0 0 0 0 0 0 -1 S
-PH 0 512 -1
+1140852746 0 0 0 0 0 0 0 -1 S
+PH 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1349,8 +1349,8 @@ he seems able to blend into the shadows at a moments
 notice.  His nimble hands twitch about his body, no
 doubt checking for weapons hidden there.
 ~
-1140852746 0 0 33554488 0 0 0 -1 S
-PH 0 4096 -1
+1140852746 0 0 0 33554488 0 0 0 -1 S
+PH 0 4096 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1365,8 +1365,8 @@ for the patrons.  Hir large girth manuovers about the
 kitchen as she stirs and checks various foods as the
 cook.
 ~
-67110922 0 0 33554616 0 0 0 -1 S
-PE 0 128 -1
+67110922 0 0 0 33554616 0 0 0 -1 S
+PE 0 128 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1380,8 +1380,8 @@ performs his task.  Serving drink and meals, with a dance
 like grace.  His thin frame moves easily, as he wanders
 about the room taking orders and money alike.
 ~
-1073743882 0 0 16 0 0 0 -1 S
-PH 0 64 -1
+1073743882 0 0 0 16 0 0 0 -1 S
+PH 0 64 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1397,8 +1397,8 @@ partener, whilst at the same time holding his attentions
 on the rest of the room.  A large ring adorns his right
 index finger, and is the only sign of jewellery he wears.
 ~
-2058 0 0 40 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 40 0 0 0 -1 S
+PH 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1414,8 +1414,8 @@ has used her wealth to try and detract from her less than
 perfect picture, opting instead to dazzle people with her
 wealth, rather than her beauty.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 512 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 512 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1433,8 +1433,8 @@ not choosen to give up his trade in his age, but seems to
 be enjoying every minute of life, that his wealth allows
 him to achieve.
 ~
-1140852746 0 0 33554488 0 0 0 -1 S
-P2 0 2 -1
+1140852746 0 0 0 33554488 0 0 0 -1 S
+P2 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1450,8 +1450,8 @@ come to do his business trade.  A bald patch slowly creeps
 across his grey hairline further detracting for his
 appearance.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 64 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 64 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1467,8 +1467,8 @@ hardy comment.  Bodyguard to the inn, he ensures that any
 trouble is dealt with quickly and that those who offend
 will think twice before causing trouble again.
 ~
-1140852746 128 0 33554616 0 0 0 -1000 S
-PO 0 256 -1
+1140852746 128 0 0 33554616 0 0 0 -1000 S
+PO 0 256 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1485,8 +1485,8 @@ demonstrate some battle in which he triumphed.  In this
 state it is clear that he is unaware that no one is really
 listening or interested.
 ~
-2058 1 0 33554488 0 0 0 -1 S
-PH 0 2 -1
+2058 1 0 0 33554488 0 0 0 -1 S
+PH 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1503,8 +1503,8 @@ Careful to make sure all who seem interested remain so,
 even if it means embelishing the stories to a certain
 degree.
 ~
-1140852746 0 0 33554448 0 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 33554448 0 0 0 -1 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1521,8 +1521,8 @@ reflect the light.  Wearing a simple woolen gown and
 apron, she works hard, at the same time relishing in
 the undivided attention of the patrons.
 ~
-1073743882 0 0 8 0 0 0 1000 S
-PE 0 32 -1
+1073743882 0 0 0 8 0 0 0 1000 S
+PE 0 32 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1538,8 +1538,8 @@ of appreciation for his work.  Garbed in a bright green
 outfit, the man weaves in between the crowd seeking to
 do a small trick for a coin or two.
 ~
-2058 0 0 16 0 0 0 -1 S
-PH 0 32768 -1
+2058 0 0 0 16 0 0 0 -1 S
+PH 0 32768 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1555,8 +1555,8 @@ manages to manouver between groping hands.  A small band
 holds back her dark hair, and a small bit of makeup,
 applied vainly, helps highlight her eyes.
 ~
-2058 0 0 56 0 0 0 1000 S
-PH 0 32 -1
+2058 0 0 0 56 0 0 0 1000 S
+PH 0 32 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1573,8 +1573,8 @@ candles creating shadows for people to meld into.  A long
 white scar criss-crosses his face, pinching the skin when
 he speaks.
 ~
-1073743882 0 0 56 0 0 0 -1000 S
-PH 0 8192 -1
+1073743882 0 0 0 56 0 0 0 -1000 S
+PH 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1589,8 +1589,8 @@ long shoulder length black hair, that surrounds a
 palish green skin, with his beady black eyes reguarding
 all.
 ~
-1140852746 0 0 33554488 0 0 0 -1 S
-PT 0 1 -1
+1140852746 0 0 0 33554488 0 0 0 -1 S
+PT 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1607,8 +1607,8 @@ eyes reguard the surrounds with a casual interest,
 though if details are registered, their effects are not
 shown.
 ~
-1140852778 0 0 33554616 0 0 0 -1000 S
-OG 0 1 -1
+1140852778 0 0 0 33554616 0 0 0 -1000 S
+OG 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1623,8 +1623,8 @@ environment.  Two long white scars mare his face,
 creating a fiercesome look, and a nible looking body
 make this person one to be wary of.
 ~
-1140852746 0 0 33554432 0 0 0 -1 S
-EA 0 512 -1
+1140852746 0 0 0 33554432 0 0 0 -1 S
+EA 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1639,8 +1639,8 @@ moves effortlessly through her duties, stopping now
 and again the brush aside her shoulder length brown
 hair.
 ~
-2058 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1655,8 +1655,8 @@ comfortable man, with him hair neatly combed.  Swaying
 slighty, he is careful to keep his eyes down and keep
 quietly to himself.
 ~
-1140852746 0 0 33554488 1 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 33554488 1 0 0 -1 S
+PH 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1671,8 +1671,8 @@ covered with fine rings, and around her wrists are pale
 golden bands.  A small woven silver circlet covers her
 forehead, and holds back her long black hair.
 ~
-2058 0 0 56 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 56 0 0 0 -1 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1688,8 +1688,8 @@ possible arrangement.  Little emotion shows on his
 face as he carefully places flowers in a boquet, all
 the while checking for its overall asthetic value.
 ~
-2058 0 0 56 2048 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 56 2048 0 0 -1 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1706,8 +1706,8 @@ all the items in his store.  In some cases it appears that
 he is the oldest antique in this shop, out-living some of
 the old items here.
 ~
-2058 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+2058 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1723,8 +1723,8 @@ into repair, with a softness belied by his roughness.  A
 long brown beard is held back over his shoulder, removing
 any interferance in ihs work.
 ~
-2058 0 0 56 0 0 0 -1 S
-PM 0 1 -1
+2058 0 0 0 56 0 0 0 -1 S
+PM 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1740,8 +1740,8 @@ on the trip home.  Careful to keep his eyes to himself
 he is clearly looking for no trouble and minds his own
 business.
 ~
-1073743882 0 0 33554448 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 33554448 0 0 0 -1 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1758,8 +1758,8 @@ shelf.  A pretty young woman, she can be often seen
 staring at the people as they walk by, longing for a more
 adventerous life.
 ~
-1073743882 0 0 33554488 0 0 0 -1 S
-PH 0 32 -1
+1073743882 0 0 0 33554488 0 0 0 -1 S
+PH 0 32 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1775,8 +1775,8 @@ as he wanders around the inn making sure all is as it
 should be.  Stopping to inquire with the few patrons,
 he checks to make sure all is as it should be.
 ~
-1107298314 0 0 56 0 0 0 -1 S
-PH 0 1 -1
+1107298314 0 0 0 56 0 0 0 -1 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1793,8 +1793,8 @@ though little was distrubed by the guest upon entering
 the room, and judging by his dressed state, sleep was
 the main priority.
 ~
-1073743882 0 0 16 0 0 0 -1 S
-PH 0 1 -1
+1073743882 0 0 0 16 0 0 0 -1 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -1810,8 +1810,8 @@ and at the sheer size of the place, he has lost track of
 what he was looking for, and is content to take in the
 sights.
 ~
-1073743880 0 0 0 0 0 0 -1 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1829,8 +1829,8 @@ races that once plagued to land.  His service now
 honored in serving as a bodyguard to the rulers of the
 town.
 ~
-1140852810 0 0 33554488 0 0 0 -1 S
-PH 0 1 -1
+1140852810 0 0 0 33554488 0 0 0 -1 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1848,8 +1848,8 @@ a life of campaigning for the city.  A particularly
 jagged scar crosses his face, no doubt the inflictor is
 long dead by now.
 ~
-1140852746 0 0 301990072 2048 0 0 -1 S
-PH 0 1 -1
+1140852746 0 0 0 301990072 2048 0 0 -1 S
+PH 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1864,8 +1864,8 @@ life as a constant battle of survival.  Quick to bare
 its teeth in defence, it is even quicker to run away
 should its aggressor show no fear.
 ~
-2184 0 0 0 0 0 0 -1 S
-AC 0 1 -1
+2184 0 0 0 0 0 0 0 -1 S
+AC 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1878,8 +1878,8 @@ guard ceothian ceothia vault~
 frame bearing the signs of many a battle.  His service
 is now honored in keeping intruders out of the vault.
 ~
-1073772616 1 0 939597884 14556 0 0 1000 S
-HO 0 1 -1
+1073772616 1 0 0 939597884 14556 0 0 1000 S
+HO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

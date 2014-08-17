@@ -7,8 +7,8 @@ This large apeman shaman has been appointed armorer of &+GTikitzopl&N. His eyes
 are filled with concentration as he works on crafting a new piece of armor.
 He looks up from his work and stares straight at you with cautious eyes.
 ~
-67110922 0 0 301990076 3 0 0 -750 S
-PT 0 256 -1
+67110922 0 0 0 301990076 3 0 0 -750 S
+PT 0 256 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -20,8 +20,8 @@ apeman guardian ape guard~
 This &+capeman&N has but one purpose in life: to guard this room's treasure. His
 evil eyes glow with madness as he spots you entering his domain.
 ~
-67110922 1 0 268435608 262144 0 0 -1000 S
-AA 0 16 -1
+67110922 1 0 0 268435608 262144 0 0 -1000 S
+AA 0 16 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -36,8 +36,8 @@ suitable to his surroundings. Standing about 6 feet tall, with arms hanging
 down to his knees, this apeman looks to be a fierce opponent. He regards you
 with solemn eyes.
 ~
-1174669388 0 0 301989912 2 0 0 -750 S
-AA 0 1 -1
+1174669388 0 0 0 301989912 2 0 0 -750 S
+AA 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -52,8 +52,8 @@ show an apeman who has been in (and obviously survived) many battles. A sheathe
 is attached to his back, and the handle of a fine sword can be seen sticking
 out. He doesnt even notice as you walk in.
 ~
-67110922 0 0 268435644 2 0 0 -1000 S
-PT 0 1 -1
+67110922 0 0 0 268435644 2 0 0 -1000 S
+PT 0 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -67,8 +67,8 @@ to his infinite wisdom. Shorter than most of his race, but no less strong, he
 tends to his shop catering to the needs of all. Through thick glasses,he stares
 at you with cautious eyes.
 ~
-67110922 0 0 268435644 2 0 0 0 S
-PT 0 128 -1
+67110922 0 0 0 268435644 2 0 0 0 S
+PT 0 128 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -82,8 +82,8 @@ toll on his stomach. The constant stuffing of his mouth with the many goods he
 bakes has made him quite fat. His arms, legs, and the rest of his body are also
 quite big, though what you think is fat could very easily be muscle...
 ~
-67110922 0 0 301990076 130 0 0 -1000 S
-PT 0 32 -1
+67110922 0 0 0 301990076 130 0 0 -1000 S
+PT 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -98,8 +98,8 @@ many gems and jewels. Glittering jewelry covers his body, from rings with&+R rub
 &+Rinsets&N, to necklaces of the finest &+Wdiamonds&N. A very rich and powerful apeman,
 he never goes anywhere without his bodyguards.
 ~
-67110922 0 0 301990076 2 0 0 -1000 S
-PT 0 64 -1
+67110922 0 0 0 301990076 2 0 0 -1000 S
+PT 0 64 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -113,8 +113,8 @@ About 6 feet tall, with keen eyes and a very sharp instinct, this apeman could
 very easily rip apart almost any foe. He stands attentively in the corner,
 watching over his master.
 ~
-67110922 0 0 34078876 2 0 0 -750 S
-AA 0 16384 -1
+67110922 0 0 0 34078876 2 0 0 -750 S
+AA 0 16384 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -128,8 +128,8 @@ About 6 feet tall, with keen eyes and a very sharp instinct, this apeman could
 very easily rip apart almost any foe. He stands attentively in the corner,
 watching over his master.
 ~
-1140852746 0 0 33554588 2 0 0 -750 S
-AA 0 512 -1
+1140852746 0 0 0 33554588 2 0 0 -750 S
+AA 0 512 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -143,8 +143,8 @@ About 6 feet tall, with keen eyes and a very sharp instinct, this apeman could
 very easily rip apart almost any foe. He stands attentively in the corner,
 watching over his master.
 ~
-67110922 0 0 33554588 2 0 0 -750 S
-AA 0 32 -1
+67110922 0 0 0 33554588 2 0 0 -750 S
+AA 0 32 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ city. He spends almost all his time at the altar, praying before an idol of
 some sort of gorilla-god. He has a peaceful aura around him, and magic in his
 eyes.
 ~
-1141245962 0 0 168296460 2 0 0 0 S
-AA 0 2 -1
+1141245962 0 0 0 168296460 2 0 0 0 S
+AA 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -174,8 +174,8 @@ rooms. A kind and peaceful ape, &+LKherinan&N has very little tolerance for any
 violence in his part of the inn, and he looks like he can enforce any rules
 he has with ease. His kind eyes stare at you from across the room.
 ~
-2058 0 0 33554620 2 0 0 -1000 S
-AA 0 64 -1
+2058 0 0 0 33554620 2 0 0 -1000 S
+AA 0 64 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -189,8 +189,8 @@ He spends most of his time behind the bar, listening to his drunken customers
 and serving them alcohol. The rest of the time he uses to study his magic,
 and learn new spells.
 ~
-1073743946 0 0 34078876 2 0 0 -1000 S
-AA 0 4 -1
+1073743946 0 0 0 34078876 2 0 0 -1000 S
+AA 0 4 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -203,8 +203,8 @@ This apeman is slurring his speech, wobbling all over the place, and looking
 blankly into space as he chugs down another one of the house specials, before
 yelling at the bartender for another round.
 ~
-1140852808 0 0 34078728 2 0 0 -750 S
-AA 0 16384 -1
+1140852808 0 0 0 34078728 2 0 0 -750 S
+AA 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -218,8 +218,8 @@ enough coordination to get her drink to her mouth, but she somehow manages.
 She spends most of her time talking to the other drunken apewomen and apemen
 that frequent the bar.
 ~
-1073743880 0 0 33554440 2 0 0 -750 S
-AA 0 512 -1
+1073743880 0 0 0 33554440 2 0 0 -750 S
+AA 0 512 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -235,8 +235,8 @@ His eyes glow with a constant fury, and he seems determined to chop up the
 corpse to the best of his ability. A wide grin passes over his face as blood
 squirts up from the body he is working on.
 ~
-67110922 0 0 838860988 66 0 0 -1000 S
-PT 0 1 -1
+67110922 0 0 0 838860988 66 0 0 -1000 S
+PT 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -250,8 +250,8 @@ hunting for food in the forest. Then he goes home to his family. His suspicious
 eyes glare at you with contempt. He looks very strong and adept at fighting.
 He sneers as you walk by.
 ~
-1140852750 0 0 34078720 2 0 0 -500 S
-AA 0 1 -1
+1140852750 0 0 0 34078720 2 0 0 -500 S
+AA 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -265,8 +265,8 @@ takes care of her children and the house. Her family is the most important
 thing to her, and she would do anything to protect them. Being beaten by her
 husband has taught her how to fight, and she does not look like an easy kill.
 ~
-1140852750 0 0 33554432 2 0 0 -500 S
-AA 0 512 -1
+1140852750 0 0 0 33554432 2 0 0 -500 S
+AA 0 512 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -279,8 +279,8 @@ This apeman child listens to everything his parents tell him. Fear of a large
 beating by his father has taught him to obey their every command. He walks
 along behind them, not making a sound.
 ~
-2062 0 0 33554432 2 0 0 -1000 S
-AA 0 32 -1
+2062 0 0 0 33554432 2 0 0 -1000 S
+AA 0 32 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -294,8 +294,8 @@ richer and more powerful than the other citizens. An aura of arrogance
 surrounds him, as he orders one of his servants around. He looks at you and
 wonders why you arent working for him.
 ~
-1140852744 0 0 34078732 2 0 0 -750 S
-AA 0 128 -1
+1140852744 0 0 0 34078732 2 0 0 -750 S
+AA 0 128 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -310,8 +310,8 @@ like creature would most likely not even be missed if he ran off, though lack
 of somewhere to go and something to do prevents him from doing so. It quickly
 glances at you before returning to its work.
 ~
-1140852750 0 0 33554440 2 0 0 0 S
-AA 0 2 -1
+1140852750 0 0 0 33554440 2 0 0 0 S
+AA 0 2 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -326,8 +326,8 @@ like creature would most likely not even be missed if he ran off, though lack
 of somewhere to go and something to do prevents him from doing so. It quickly
 glances at you before returning to its work.
 ~
-1140852750 0 0 33554432 2 0 0 -750 S
-AA 0 1 -1
+1140852750 0 0 0 33554432 2 0 0 -750 S
+AA 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -341,8 +341,8 @@ race. Almost every incantation has been uttered from his mouth. Standing about
 6 feet tall, and wearing some &+Rbright red robes&N, this magician looks quite
 frightening. He takes his eyes off a book and fixes them on you.
 ~
-67110922 0 0 301990076 262146 0 0 -1000 S
-AA 0 512 -1
+67110922 0 0 0 301990076 262146 0 0 -1000 S
+AA 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -361,8 +361,8 @@ information and ideas, and then he makes the final decisions on what to do.
 The responsibilty is huge, and for this, he has earned the respect of the
 citizens of &+GTikitzopl.
 ~
-67110922 1 0 33554588 2 0 0 -1000 S
-AA 0 4 -1
+67110922 1 0 0 33554588 2 0 0 -1000 S
+AA 0 4 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -382,8 +382,8 @@ or city to slaughter, his &+bsa&+Bv&+bage&N band of followers would gladly die f
 the city well defended at all times, while satisfying the &+Rblood&+rthirsty&N needs
 of his troops by constantly killing other species.
 ~
-67110922 1 0 33554460 2 0 0 -1000 S
-AA 0 1 -1
+67110922 1 0 0 33554460 2 0 0 -1000 S
+AA 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -403,8 +403,8 @@ they feel about the way the city is being run, then he consults with the &+rHig&
 is well liked by the inhabitants of &+GTikitzopl&N, as he is the one who tries to
 make their lives better.
 ~
-1140852746 0 0 524296 2 0 0 -1000 S
-AA 0 32 -1
+1140852746 0 0 0 524296 2 0 0 -1000 S
+AA 0 32 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -424,8 +424,8 @@ help the &+Rco&+Yunc&+Ri&+rl&N decide where to attack next, and also help warn o
 attacks by an enemy. His amazing agility and dexterity makes him a great scout,
 and he almost seems to melt into the shadows before you...
 ~
-1140983946 1 0 840433820 2 0 0 -1000 S
-AA 0 8192 -1
+1140983946 1 0 0 840433820 2 0 0 -1000 S
+AA 0 8192 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -443,8 +443,8 @@ The &+bGuardian's&N job is to protect all members of the &+Rco&+Yunc&+Ri&+rl&N f
 might come their way. He would gladly sacrifice his life for that of his
 masters.
 ~
-67110922 1 0 33554460 2 0 0 -1000 S
-AA 0 16 -1
+67110922 1 0 0 33554460 2 0 0 -1000 S
+AA 0 16 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -461,8 +461,8 @@ hearing and seeing their kin's death. His eyes fill with hatred as you intrude
 into his domain, and interrupt his fun. You have more flesh to burn than that
 of a little cat, so his attention is temporarily drawn to you...
 ~
-1140852746 1 0 33554444 2 0 0 -1000 S
-AA 0 2048 -1
+1140852746 1 0 0 33554444 2 0 0 -1000 S
+AA 0 2048 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -476,8 +476,8 @@ city, looking for signs of trouble. With a sword in one hand, and a shield in
 the other, intruders can expect to get pummeled if they are not wanted. Anger
 covers his face as he sees you and screams, &+L'DIE INVADING SCUM!!!'
 ~
-1140852748 1 0 33554456 2 0 0 -500 S
-AA 0 1 -1
+1140852748 1 0 0 33554456 2 0 0 -500 S
+AA 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -490,8 +490,8 @@ This merchant wanders the streets of Tikitzopl looking to sell or trade goods.
 His shifty eyes cautious demeanor make him appear quite untrustworthy, though
 judging by the jewelry he wears, he somehow makes a decent living...
 ~
-1073743884 0 0 34078728 2 0 0 -500 S
-AA 0 4096 -1
+1073743884 0 0 0 34078728 2 0 0 -500 S
+AA 0 4096 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -505,8 +505,8 @@ golem lifelessly guards the gates to the city beyond. His job is to let no one
 unwanted past, and he does his job quite well. His eyes glow red like rubies
 as he senses you near.
 ~
-67110922 0 0 33554584 2 0 0 0 S
-OG 0 1 -1
+67110922 0 0 0 33554584 2 0 0 0 S
+OG 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -520,8 +520,8 @@ His gift for fixing things is unparalleled around here, so he has no
 competition. His workload is always humungous, thus &+WGraxtl&N is always behind on
 his work. He ignores you as you walk in, and continues with his work.
 ~
-67110922 0 0 33554588 2 0 0 0 S
-PT 0 2 -1
+67110922 0 0 0 33554588 2 0 0 0 S
+PT 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -534,8 +534,8 @@ This huge serpent has survived many years and many battles. His large fangs
 could easily rip almost any animal apart, and his deadly venom strong enough
 to kill even the mightiest beast.
 ~
-1073743944 1 0 34078728 2 0 0 0 S
-RS 0 1 -1
+1073743944 1 0 0 34078728 2 0 0 0 S
+RS 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -547,8 +547,8 @@ snake large~
 Deep red eyes stare at you out of the dark, as this large snake eyes you for
 dinner. Deadly poison laces his sharp fangs as he snaps to attack...
 ~
-1140852744 1 0 34078720 2 0 0 0 S
-RS 0 1 -1
+1140852744 1 0 0 34078720 2 0 0 0 S
+RS 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -560,8 +560,8 @@ snake green~
 Although still young and small, this snake is a dangerous hunter. His fangs
 can do quite a bit of damage, especially combined with his maturing venom.
 ~
-1073743880 1 0 33554432 0 0 0 0 S
-RS 0 0 -1
+1073743880 1 0 0 33554432 0 0 0 0 S
+RS 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -575,8 +575,8 @@ him a nice living, along with a couple nice weapons. His skill at hiding is
 almost unbelievable, as his form seems to become part of the shadows from which
 he emerged.
 ~
-1073744074 1 0 35127304 2 0 0 0 S
-AA 0 8192 -1
+1073744074 1 0 0 35127304 2 0 0 0 S
+AA 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -590,8 +590,8 @@ richer and more powerful than the other citizens. An aura of arrogance
 surrounds him, as he orders one of his servants around. He looks at you and
 wonders why you arent working for him.
 ~
-1140852744 0 0 34078728 2 0 0 -750 S
-AA 0 4 -1
+1140852744 0 0 0 34078728 2 0 0 -750 S
+AA 0 4 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -605,8 +605,8 @@ richer and more powerful than the other citizens. An aura of arrogance
 surrounds him, as he orders one of his servants around. He looks at you and
 wonders why you arent working for him.
 ~
-1140852744 0 0 34078728 2 0 0 -750 S
-AA 0 512 -1
+1140852744 0 0 0 34078728 2 0 0 -750 S
+AA 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -620,8 +620,8 @@ richer and more powerful than the other citizens. An aura of arrogance
 surrounds him, as he orders one of his servants around. He looks at you and
 wonders why you arent working for him.
 ~
-1140852744 0 0 34078728 2 0 0 -750 S
-AA 0 256 -1
+1140852744 0 0 0 34078728 2 0 0 -750 S
+AA 0 256 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -639,8 +639,8 @@ The &+bguardian's&N job is to protect all members of the &+Rco&+Yunc&+Ri&+rl&N f
 might come their way. He would gladly sacrifice his life for that of his
 masters.
 ~
-67110922 1 0 33554588 2 0 0 -1000 S
-AA 0 1 -1
+67110922 1 0 0 33554588 2 0 0 -1000 S
+AA 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -655,8 +655,8 @@ carefree life. Apparantly this civilization of faeries has yet to be discovered
 by the brutal Apemen, or any other civilization for that matter. He looks at
 you with caring eyes, and sprinkles some dust over your head.
 ~
-395340 0 0 167772168 2 0 0 750 S
-HF 0 512 -1
+395340 0 0 0 167772168 2 0 0 750 S
+HF 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -671,8 +671,8 @@ carefree life. Apparantly this civilization of faeries has yet to be discovered
 by the brutal Apemen, or any other civilization for that matter. He looks at
 you with caring eyes, and sprinkles some dust over your head.
 ~
-395340 0 0 167772168 2 0 0 750 S
-HF 0 128 -1
+395340 0 0 0 167772168 2 0 0 750 S
+HF 0 128 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -687,8 +687,8 @@ carefree life. Apparantly this civilization of faeries has yet to be discovered
 by the brutal Apemen, or any other civilization for that matter. He looks at
 you with caring eyes, and sprinkles some dust over your head.
 ~
-395340 0 0 167772168 2 0 0 750 S
-HF 0 32 -1
+395340 0 0 0 167772168 2 0 0 750 S
+HF 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -703,8 +703,8 @@ carefree life. Apparantly this civilization of faeries has yet to be discovered
 by the brutal Apemen, or any other civilization for that matter. He looks at
 you with caring eyes, and sprinkles some dust over your head.
 ~
-395340 0 0 167772168 2 0 0 750 S
-HF 0 32768 -1
+395340 0 0 0 167772168 2 0 0 750 S
+HF 0 32768 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -719,8 +719,8 @@ carefree life. Apparantly this civilization of faeries has yet to be discovered
 by the brutal Apemen, or any other civilization for that matter. He looks at
 you with caring eyes, and sprinkles some dust over your head.
 ~
-395340 0 0 167772168 2 0 0 750 S
-HF 0 2048 -1
+395340 0 0 0 167772168 2 0 0 750 S
+HF 0 2048 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -735,8 +735,8 @@ carefree life. Apparantly this civilization of faeries has yet to be discovered
 by the brutal Apemen, or any other civilization for that matter. He looks at
 you with caring eyes, and sprinkles some dust over your head.
 ~
-395340 0 0 167772168 2 0 0 750 S
-HF 0 4 -1
+395340 0 0 0 167772168 2 0 0 750 S
+HF 0 4 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -751,8 +751,8 @@ carefree life. Apparantly this civilization of faeries has yet to be discovered
 by the brutal Apemen, or any other civilization for that matter. He looks at
 you with caring eyes, and sprinkles some dust over your head.
 ~
-395340 0 0 167772168 2 0 0 750 S
-HF 0 256 -1
+395340 0 0 0 167772168 2 0 0 750 S
+HF 0 256 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -766,8 +766,8 @@ city, looking for signs of trouble. With a sword in one hand, and a shield in
 the other, intruders can expect to get pummeled if they are not wanted. Anger
 covers his face as he sees you and screams, &+L'DIE INVADING SCUM!!!'
 ~
-1140860942 1 0 33554456 2 0 0 -500 S
-AA 0 1 -1
+1140860942 1 0 0 33554456 2 0 0 -500 S
+AA 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -781,8 +781,8 @@ city, looking for signs of trouble. With a sword in one hand, and a shield in
 the other, intruders can expect to get pummeled if they are not wanted. Anger
 covers his face as he sees you and screams, &+L'DIE INVADING SCUM!!!'
 ~
-67110926 0 0 33554456 2 0 0 -500 S
-AA 0 1 -1
+67110926 0 0 0 33554456 2 0 0 -500 S
+AA 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -797,8 +797,8 @@ animals to him for very little money. He can then torture all the animals he
 wishes without having to go out looking for them himself. In order to make a
 profit, unfortunately, he does have to keep a few pets alive to sell.
 ~
-2122 0 0 8 2 0 0 -500 S
-PH 0 2 -1
+2122 0 0 0 8 2 0 0 -500 S
+PH 0 2 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -810,8 +810,8 @@ buff deer~
 This deer looks strong and hardy. His antlers could probably gouge your eyes
 out.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -823,8 +823,8 @@ buff deer~
 This deer looks strong and hardy. His antlers could probably gouge your eyes
 out.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 16384 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 16384 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -836,8 +836,8 @@ buff deer~
 This deer looks strong and hardy. His antlers could probably gouge your eyes
 out.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -849,8 +849,8 @@ stag~
 This large male stag nourishes himself with the food the forest provides for
 him. Large antlers jut from his head, forming quite a deadly weapon.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -862,8 +862,8 @@ stag~
 This large male stag nourishes himself with the food the forest provides for
 him. Large antlers jut from his head, forming quite a deadly weapon.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -875,8 +875,8 @@ stag~
 This large male stag nourishes himself with the food the forest provides for
 him. Large antlers jut from his head, forming quite a deadly weapon.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -888,8 +888,8 @@ doe deer female~
 &+yThis is by all means a normal appearing female deer.  There is nothing special
 &+yto remark about the creature at all.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 16384 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 16384 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -901,8 +901,8 @@ doe deer female~
 &+yThis is by all means a normal appearing female deer.  There is nothing special
 &+yto remark about the creature at all.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 16384 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 16384 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -914,8 +914,8 @@ doe deer female~
 &+yThis is by all means a normal appearing female deer.  There is nothing special
 &+yto remark about the creature at all.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 16384 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 16384 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -930,8 +930,8 @@ suitable to his surroundings. Standing about 6 feet tall, with arms hanging
 down to his knees, this apeman looks to be a fierce opponent. He regards you
 with solemn eyes.
 ~
-1107560524 0 0 301989912 2 0 0 -750 S
-AA 0 1 -1
+1107560524 0 0 0 301989912 2 0 0 -750 S
+AA 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -946,8 +946,8 @@ suitable to his surroundings. Standing about 6 feet tall, with arms hanging
 down to his knees, this apeman looks to be a fierce opponent. He regards you
 with solemn eyes.
 ~
-1107560524 0 0 301989912 2 0 0 -750 S
-AA 0 1 -1
+1107560524 0 0 0 301989912 2 0 0 -750 S
+AA 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -958,8 +958,8 @@ spider small~
 ~
 Dont let this spiders size fool you, as it is still quite deadly.
 ~
-1073743882 1 0 0 0 0 0 0 S
-AS 0 0 -1
+1073743882 1 0 0 0 0 0 0 0 S
+AS 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -972,8 +972,8 @@ This apeman was chosen to be the Sacrificial Leader. He is in charge of
 sacrificing all animals that are given to him. He must also make sure that no
 one is allowed into the temple without first giving a proper sacrifice.
 ~
-2058 0 0 0 0 0 0 -1000 S
-AA 0 4 -1
+2058 0 0 0 0 0 0 0 -1000 S
+AA 0 4 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -987,8 +987,8 @@ city. He spends almost all his time at the altar, praying before an idol of
 some sort of gorilla-god. He has a peaceful aura around him, and magic in his
 eyes.
 ~
-1141245962 0 0 168296460 2 0 0 0 S
-AA 0 1 -1
+1141245962 0 0 0 168296460 2 0 0 0 S
+AA 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1002,8 +1002,8 @@ city. He spends almost all his time at the altar, praying before an idol of
 some sort of gorilla-god. He has a peaceful aura around him, and magic in his
 eyes.
 ~
-1141245962 0 0 168296460 2 0 0 0 S
-AA 0 16384 -1
+1141245962 0 0 0 168296460 2 0 0 0 S
+AA 0 16384 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1017,8 +1017,8 @@ city. He spends almost all his time at the altar, praying before an idol of
 some sort of gorilla-god. He has a peaceful aura around him, and magic in his
 eyes.
 ~
-1141245962 0 0 168296460 2 0 0 0 S
-AA 0 16 -1
+1141245962 0 0 0 168296460 2 0 0 0 S
+AA 0 16 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1032,8 +1032,8 @@ city. He spends almost all his time at the altar, praying before an idol of
 some sort of gorilla-god. He has a peaceful aura around him, and magic in his
 eyes.
 ~
-1141245962 0 0 168296460 2 0 0 0 S
-AA 0 64 -1
+1141245962 0 0 0 168296460 2 0 0 0 S
+AA 0 64 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1046,8 +1046,8 @@ This huge serpent has survived many years and many battles. His large fangs
 could easily rip almost any animal apart, and his deadly venom strong enough
 to kill even the mightiest beast.
 ~
-1073760328 1 0 34078728 2 0 0 0 S
-RS 0 1 -1
+1073760328 1 0 0 34078728 2 0 0 0 S
+RS 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1060,8 +1060,8 @@ This huge serpent has survived many years and many battles. His large fangs
 could easily rip almost any animal apart, and his deadly venom strong enough
 to kill even the mightiest beast.
 ~
-1073760328 1 0 34078728 2 0 0 0 S
-RS 0 1 -1
+1073760328 1 0 0 34078728 2 0 0 0 S
+RS 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1074,8 +1074,8 @@ This huge serpent has survived many years and many battles. His large fangs
 could easily rip almost any animal apart, and his deadly venom strong enough
 to kill even the mightiest beast.
 ~
-1073760328 1 0 34078728 2 0 0 0 S
-RS 0 1 -1
+1073760328 1 0 0 34078728 2 0 0 0 S
+RS 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

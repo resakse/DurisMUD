@@ -10,8 +10,8 @@ goblin slave~
 &+rno doubt wind up as a morsel for some bored illithid in the
 &+rfuture.
 ~
-12 0 0 0 2 0 0 -1000 S
-HG 0 1 -1
+12 0 0 0 0 2 0 0 -1000 S
+HG 0 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 1
@@ -26,8 +26,8 @@ kobold slave~
 &+gillithids.  He has been set to watch over the vast herds of
 &+grothes that serve as a food supply to the city of Ixarkon.
 ~
-12 0 0 0 2 0 0 -1000 S
-H 0 1 -1
+12 0 0 0 0 2 0 0 -1000 S
+H 0 1 0 -1
 3 20 90 3d17+17 1d5+0
 2.1.0.0 388
 8 8 1
@@ -42,8 +42,8 @@ duergar slave~
 &+Lat his present situation; slave to the illithids, watching over
 &+Ltheir herds.
 ~
-12 64 0 0 2 0 0 -1000 S
-PD 0 1 -1
+12 64 0 0 0 2 0 0 -1000 S
+PD 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -58,8 +58,8 @@ illithid mindflayer overseer~
 &+Msupervise the slaves of Herd Island, and to shepherd them back
 &+Mand forth between the herdlands and the slave holding pens.
 ~
-2060 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2060 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 18 13 42 18d33+108 3d4+2
 9.7.3.0 8748
 8 8 0
@@ -75,8 +75,8 @@ illithid mindflayer overseer axonokar~
 &+MIsland.  Rumors in the city place say he deals in weapons on the
 &+Msly, but he denies such rumors.
 ~
-2062 64 0 56 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 56 2 0 0 -1000 S
+MF 0 4 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -91,8 +91,8 @@ goblin slave~
 &+routside watching the herds, the goblin is tossed into these dank
 &+rslave pens.
 ~
-14 0 0 0 2 0 0 -1000 S
-HG 0 1 -1
+14 0 0 0 0 2 0 0 -1000 S
+HG 0 1 0 -1
 4 20 87 4d17+22 1d5+0
 2.1.0.0 518
 8 8 1
@@ -108,8 +108,8 @@ kobold slave~
 &+gfood supply, he sits in this dank slave pen waiting for his next
 &+gmeal.
 ~
-14 0 0 0 2 0 0 -1000 S
-H 0 1 -1
+14 0 0 0 0 2 0 0 -1000 S
+H 0 1 0 -1
 2 20 93 2d17+11 1d5+0
 1.0.0.0 259
 8 8 1
@@ -125,8 +125,8 @@ duergar slave~
 &+Ltheir herds.  The duergar is tossed into the slave pens whenever
 &+Lhe's not outside doing his programmed duty.
 ~
-14 0 0 0 2 0 0 -1000 S
-PD 0 1 -1
+14 0 0 0 0 2 0 0 -1000 S
+PD 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 3.2.0.0 907
 8 8 1
@@ -139,8 +139,8 @@ goblin slave~
 &+rfrom his body although he seems to have been cleaned up a little
 &+rin order to fetch a good price at the slave markets.
 ~
-14 0 0 0 2 0 0 -1000 S
-HG 0 1 -1
+14 0 0 0 0 2 0 0 -1000 S
+HG 0 1 0 -1
 6 18 80 6d21+33 2d3+1
 3.2.0.0 777
 8 8 1
@@ -156,8 +156,8 @@ kobold slave~
 &+gto mask his grime; no doubt some ploy to fetch a higher price in
 &+gthe slave markets.
 ~
-14 0 0 0 2 0 0 -1000 S
-H 0 1 -1
+14 0 0 0 0 2 0 0 -1000 S
+H 0 1 0 -1
 4 20 87 4d17+22 1d5+0
 2.1.0.0 518
 8 8 1
@@ -173,8 +173,8 @@ duergar slave~
 &+Lmarkets for another menial position, or worse, for some rich
 &+Lillithid's buffet.
 ~
-14 0 0 0 2 0 0 -1000 S
-PD 0 1 -1
+14 0 0 0 0 2 0 0 -1000 S
+PD 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 8 8 1
@@ -190,8 +190,8 @@ human slave~
 &+Cperform more complicated tasks for their masters, but they also
 &+Cmust be watched more closely for any sign of resistance.
 ~
-14 0 0 0 0 0 0 200 S
-PH 0 1 -1
+14 0 0 0 0 0 0 0 200 S
+PH 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -208,8 +208,8 @@ drow slave~
 &+ma drow requires vigilant work by the illithid; only the Elder
 &+mBrain is able to control them with ease.
 ~
-14 0 0 0 2 0 0 -1000 S
-PL 0 1024 -1
+14 0 0 0 0 2 0 0 -1000 S
+PL 0 1024 0 -1
 15 15 51 15d18+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -224,8 +224,8 @@ illithid merchant mindflayer~
 &+Mmerchant leads his slaves from the holding pens on Herd Island to
 &+Mthe auction blocks for sale.
 ~
-2062 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 18 13 42 18d33+108 3d4+2
 9.7.3.0 8748
 8 8 0
@@ -241,8 +241,8 @@ brain golem~
 &+Moversee the caverns of Ixarkon, making sure that nothing attempts
 &+Mto harm the illithid or their property.
 ~
-1073743880 64 0 40 2 0 0 -1000 S
-OG 0 4 -1
+1073743880 64 0 0 40 2 0 0 -1000 S
+OG 0 4 0 -1
 55 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 0
@@ -257,8 +257,8 @@ fish glowing~
 &+Wthe dark, watery cavern.  Stalks a few inches in length end in
 &+Wlarge watery orbs; apparently the fish's eyes.
 ~
-8 0 0 2048 0 0 0 0 S
-F 0 0 -1
+8 0 0 0 2048 0 0 0 0 S
+F 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -273,8 +273,8 @@ critter bug insect centipede crawling~
 &+gappears to be a scavenger, looking for dead bits of matter to
 &+gfeed on.
 ~
-8 0 0 0 2 0 0 0 S
-I 0 0 -1
+8 0 0 0 0 2 0 0 0 S
+I 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -290,8 +290,8 @@ young pech~
 &+cthem.  This pech appears to be a younger member of their
 &+ccommunity.
 ~
-140 0 0 524328 2 0 0 300 S
-H 0 0 -1
+140 0 0 0 524328 2 0 0 300 S
+H 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -307,8 +307,8 @@ elder pech~
 &+cstone around them. This pech has a wizened air about him; he
 &+cseems to be an elder of their community.
 ~
-140 0 0 524328 2 0 0 300 S
-H 0 0 -1
+140 0 0 0 524328 2 0 0 300 S
+H 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -324,8 +324,8 @@ tentacles.  He has spent a lifetime collecting knowledge on all
 matters arcane; for a price he may be willing to part with some
 of his vast knowledge.
 ~
-2062 64 0 56 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 56 2 0 0 -1000 S
+MF 0 4 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -341,8 +341,8 @@ tentacles.  He is the most knowledgeable inhabitant of Ixarkon
 when it comes to matters of the outside world; he spends many an
 hour staring at his vast array  of scrying devices.
 ~
-2062 192 0 56 2 0 0 -1000 S
-MF 0 4 -1
+2062 192 0 0 56 2 0 0 -1000 S
+MF 0 4 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -358,8 +358,8 @@ brain golem guard justice~
 &+Moversee the caverns of Ixarkon, making sure that nothing attempts
 &+Mto harm the illithid or their property.
 ~
-1140852746 64 0 40 2 0 0 -1000 S
-OG 0 4 -1
+1140852746 64 0 0 40 2 0 0 -1000 S
+OG 0 4 0 -1
 55 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 0
@@ -374,8 +374,8 @@ elder illithid mindflayer~
 &+Bwears.  One of the elders of the city, it has come to the
 &+BRockspire to set the policy for Ixarkon.
 ~
-1073743886 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 0
@@ -391,8 +391,8 @@ elder illithid mindflayer pacer~
 &+BRockspire to set the policy for Ixarkon.  It seems quite
 &+Bagitated about some issue before the council.
 ~
-1073743886 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 32 6 -2 32d77+512 4d6+7
 6.8.0.2 41472
 8 8 0
@@ -407,8 +407,8 @@ drow slave attendant~
 &+mAlthough quite intelligent, no drow is able to resist the force
 &+mof the Elder Brain.
 ~
-76 0 0 56 2 0 0 -900 S
-PL 0 1 -1
+76 0 0 0 56 2 0 0 -900 S
+PL 0 1 0 -1
 13 15 58 13d27+78 2d5+2
 6.5.2.0 6318
 8 8 1
@@ -422,8 +422,8 @@ illithid attendant mindflayer~
 &+ythe faithful in Ixarkon come to observe these rituals, but the
 &+yfew who do are known for their learning and sagacity.
 ~
-1073743886 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 17 13 45 17d33+102 3d4+2
 8.6.2.0 8262
 8 8 0
@@ -438,8 +438,8 @@ illithid petitioner mindflayer&n~
 &+ybeing enacted seem to have something to do with the slave raids
 &+ythe city has recently made.
 ~
-1073743886 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 15 15 51 15d25+75 2d5+2
 7.6.2.0 7290
 8 8 0
@@ -453,8 +453,8 @@ illithid mindflayer priest~
 &+Mone of the devout faithul of his good.  A wise, learned air
 &+Msurrounds this illithid.
 ~
-1073743886 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 41 -1 -56 41d99+1804 6d6+12
 1.7.6.3 99630
 8 8 0
@@ -468,8 +468,8 @@ illithid mindflayer priest~
 &+Rignored by his deity, it has decided to serve him nonetheless,
 &+Rand eagerly urges on the many slaving raids the city undertakes.
 ~
-1073743886 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 41 -1 -56 41d99+1804 6d6+12
 1.7.6.3 99630
 8 8 0
@@ -484,8 +484,8 @@ illithid receptionist mindflayer~
 &+yother illithid cities spread throughout the Underdark. For a
 &+ymodest price it will provide sleeping quarters for a night.
 ~
-1073743886 192 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 192 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -499,8 +499,8 @@ ogre slave~
 &+bstrength the ogres are primarily the miners of the city.  They
 &+bare working here to expand the caverns of the city.
 ~
-14 0 0 33554432 0 0 0 -800 S
-PO 0 1 -1
+14 0 0 0 33554432 0 0 0 -800 S
+PO 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -513,8 +513,8 @@ Wearing expensive clothing, this commoner travels around the
 city of Ixarkon running errands, shopping at the markets, and
 doing who knows else what.
 ~
-1073743948 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743948 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 16 13 48 16d33+96 3d4+2
 8.6.2.0 7776
 8 8 0
@@ -527,8 +527,8 @@ A poorly-dressed &+millithid&N commoner travels the city.
 &+Lmake a fortune for himself by participating in the slaving raids
 &+Lof the city or setting up a successful business.
 ~
-1073743948 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+1073743948 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 14 15 55 14d25+70 2d5+2
 7.5.2.0 6804
 8 8 0
@@ -542,8 +542,8 @@ fight fighting slave~
 &+rsurrounding illithids.  The slave seems to be of some humanoid
 &+rrace, but it isnt readily apparent which.
 ~
-14 64 0 33554432 0 0 0 -500 S
-H 0 0 -1
+14 64 0 0 33554432 0 0 0 -500 S
+H 0 0 0 -1
 22 11 29 22d40+176 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -557,8 +557,8 @@ illithid mindflayer auctioneer~
 &+Bslave markets.  He silently takes any bids from the illithids in
 &+Battendance.
 ~
-1073743886 64 0 56 2 0 0 -1000 S
-MF 0 4 -1
+1073743886 64 0 0 56 2 0 0 -1000 S
+MF 0 4 0 -1
 28 8 10 28d60+336 3d6+4
 8.3.7.1 24948
 8 8 0
@@ -572,8 +572,8 @@ illithid merchant mindflayer~
 &+Mmarkets looking for things to purchase or possibly hoping to set
 &+Mup a business for itself.
 ~
-2062 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 17 13 45 17d33+102 3d4+2
 8.6.2.0 8262
 8 8 0
@@ -588,8 +588,8 @@ drow banker~
 &+mas banker for the town.  He is only allowed his freedom as long
 &+mas he is useful in this regard.
 ~
-14 0 0 40 2 0 0 -1000 S
-PL 0 1 -1
+14 0 0 0 40 2 0 0 -1000 S
+PL 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -603,8 +603,8 @@ merchant illithid mindflayer food-merchant~
 &+Ythe city.  His small fair include the stupid cattle-like rothe,
 &+Yand a few scrawny looking goblins.
 ~
-2062 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 40 2 -28 40d88+880 4d7+10
 3.3.3.3 51840
 8 8 0
@@ -618,8 +618,8 @@ merchant illithid mindflayer provisions-merchant~
 &+Lbrave the wilds of the Underdark or participate in one of the
 &+Lslaving raids.
 ~
-2062 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 40 2 -28 40d88+880 4d7+10
 3.3.3.3 51840
 8 8 0
@@ -633,8 +633,8 @@ illithid poor fringe mindflayer~
 &+Care ones too injured to be slavers or are otherwise
 &+Cincapacitated.  They are  quite pathetic.
 ~
-2062 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 10 18 67 10d19+45 2d3+1
 5.3.0.0 1296
 8 8 0
@@ -648,8 +648,8 @@ illithid merchant mindflayer~
 &+Mmarkets looking for things to purchase or possibly hoping to set
 &+Mup a business for itself.
 ~
-2062 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 17 13 45 17d33+102 3d4+2
 8.6.2.0 8262
 8 8 0
@@ -665,8 +665,8 @@ illithid mindflayer merchant xelrelinak~
 &+ccourse it protests such pretensions, insisting to merely be a
 &+cclothier for the city.
 ~
-2062 64 0 56 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 56 2 0 0 -1000 S
+MF 0 4 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -680,8 +680,8 @@ attends to the palatial mansions located in the eastern parts
 of the city.  He seems to be in relatively well condition, though
 some have been known to be dinner guests for the illithids.
 ~
-2062 64 0 0 2 0 0 -500 S
-H 0 0 -1
+2062 64 0 0 0 2 0 0 -500 S
+H 0 0 0 -1
 13 15 58 13d23+52 2d5+2
 6.5.2.0 6318
 8 8 2
@@ -694,8 +694,8 @@ A small grub inches through the great mushroom forest.
 &+Wthe great forest of mushrooms feasting on detritus and anything
 &+Welse it can get its tiny grasping mouthparts on.
 ~
-8 0 0 0 0 0 0 0 S
-I 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -709,8 +709,8 @@ myconid mushroom creature~
 &+Gfeels at home in this great forest, which provides just the right
 &+Gnutrients for the myconid's to flourish.
 ~
-2056 0 0 1572904 2 0 0 450 S
-h 0 0 -1
+2056 0 0 0 1572904 2 0 0 450 S
+h 0 0 0 -1
 16 13 48 16d30+240 3d4+2
 0.0.0.0 7776
 8 8 0
@@ -723,8 +723,8 @@ scrawny goblin~
 &+rproper food.  The scrawny goblin will no doubt end up as food at
 &+rthe end of the grasping tendrils of one of the illithids.
 ~
-14 0 0 0 2 0 0 -1000 S
-HG 0 0 -1
+14 0 0 0 0 2 0 0 -1000 S
+HG 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 8 8 2
@@ -738,8 +738,8 @@ analagous to the cattle of the world above.  The rothe requires
 just something to graze on for it to be content, a quite stupid
 beast all things considered.
 ~
-8 0 0 33554432 0 0 0 0 S
-AH 0 0 -1
+8 0 0 0 33554432 0 0 0 0 S
+AH 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -752,8 +752,8 @@ This duergar has been pressed into service as a gardener for some of the
 nobles of the city, and his dirty exterior shows he has recently been
 active at work in the gardens.
 ~
-12 0 0 0 2 0 0 -1000 S
-PD 0 0 -1
+12 0 0 0 0 2 0 0 -1000 S
+PD 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -767,8 +767,8 @@ illithid merchant mindflayer~
 &+Mclothing and finery on display in the few cases of clothing that it
 &+Mcarries around with him.  They look quite expensive.
 ~
-2062 64 0 40 2 0 0 -1000 S
-MF 0 4 -1
+2062 64 0 0 40 2 0 0 -1000 S
+MF 0 4 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -784,8 +784,8 @@ brain golem guard justice _ignore_~
 &+Moversee the caverns of Ixarkon, making sure that nothing attempts
 &+Mto harm the illithid or their property.
 ~
-1140852746 64 0 40 2 0 0 -1000 S
-OG 0 4 -1
+1140852746 64 0 0 40 2 0 0 -1000 S
+OG 0 4 0 -1
 60 -5 -10 550d4+8000 12d6+30
 0.2.7.60 1837219
 8 8 0
@@ -801,8 +801,8 @@ xiixeaxzzixi illithid arch-mage slender teacher _no_move_~
 &+Lthis illithid projects seems to cover the spectrum of many disciplines
 &+Lincluding numerous &+yspellbook &+Lbound arts!&n
 ~
-63562 0 0 402653208 2048 16777216 4096 -1000 S
-PI 0 37751301 -1
+63562 0 0 0 402653208 2048 16777216 4096 -1000 S
+PI 0 37751301 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

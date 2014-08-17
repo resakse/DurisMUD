@@ -14,8 +14,8 @@ phonar gnome scalped bumbling~
     &+C"How are you today, what may I do for you? My wares are the finest in the
     &+Crealms, that I guarantee you," as he winks at you.
 ~
-178250 0 0 33554468 12480 0 0 -100 S
-PG 8 2048 2
+178250 0 0 0 33554468 12480 0 0 -100 S
+PG 8 2048 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -35,8 +35,8 @@ aidon heartseeker dwarf heart seeker~
     &+C"Welcome to my abode, how may I serve you today? Don't believe a word that
       &+Cdamnable &+Rgnome &+Csays about me, my wares are top of the line."
 ~
-157770 0 0 0 0 0 0 100 S
-PM 5 32 3
+157770 0 0 0 0 0 0 0 100 S
+PM 5 32 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -56,8 +56,8 @@ beowulf barbarian north barbie barb warrior large~
        &+C"How are you today? The &+YThunder &+CGod has blessed us with another day of
        &+CStorms and Rejoicement."
 ~
-141386 0 0 0 0 0 0 0 S
-PB 11 257 4
+141386 0 0 0 0 0 0 0 0 S
+PB 11 257 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -81,8 +81,8 @@ striker moonflower elf mage~
        &+cthrone of Evermeet, son of Queen Amlaruil, ruler of the Elven Nations.
        &+cWhat may I do for you?"&n
 ~
-194570 0 0 402653184 0 128 8192 100 S
-PE 4 2593 -1
+194570 0 0 0 402653184 0 128 8192 100 S
+PE 4 2593 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -99,8 +99,8 @@ drow nasty looking xaves~
 &+maround through any terrain. The symbol itself glows as well and gives off
 &+ma slight hum.
 ~
-174298 0 0 0 0 0 0 -1000 S
-PL 3 4097 3
+174298 0 0 0 0 0 0 0 -1000 S
+PL 3 4097 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -118,8 +118,8 @@ ogre umpf ugly~
 &+breaches down and grabs a small cavern snake and bites its head off and starts
 &+bto eat as even as it squirms and writhes as its life fades.
 ~
-10314 0 0 0 0 0 0 -1000 S
-PO 9 1 4
+10314 0 0 0 0 0 0 0 -1000 S
+PO 9 1 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -136,8 +136,8 @@ duergar scarred mogoe~
 &+rhammer rests in the corner of the room on a weapons rack along side a nasty
 &+rlooking morningstar.
 ~
-2250 0 0 56 0 0 0 -1000 S
-PD 6 32 2
+2250 0 0 0 56 0 0 0 -1000 S
+PD 6 32 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -156,8 +156,8 @@ treant old ancient~
 
     &+gThe treant says to you "get out of my trees!"
 ~
-10312 0 0 33554480 12288 0 0 -100 S
-H 0 1 4
+10312 0 0 0 33554480 12288 0 0 -100 S
+H 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -171,8 +171,8 @@ deer ten point buck~
 &+yand looks around as it smells the scent of humanoids but then continues to
 &+yeat slowly.
 ~
-134219848 0 0 0 0 0 0 -100 S
-AE 0 1 3
+134219848 0 0 0 0 0 0 0 -100 S
+AE 0 1 0 3
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -185,8 +185,8 @@ elk large slow~
 &+yscanvanged around from the surrounding areas. It doesn't appear to be bothered
 &+ythe presence of any outside creatures.
 ~
-1073743944 0 0 56 0 0 0 -100 S
-AE 0 1 3
+1073743944 0 0 0 56 0 0 0 -100 S
+AE 0 1 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -199,8 +199,8 @@ doe tired~
 &+yit doesn't seemed bothered by the presence of others in the area, it seems
 &+ytired and appears to try to rest a bit along the ground.
 ~
-2120 0 0 0 0 0 0 -100 S
-AE 0 1 3
+2120 0 0 0 0 0 0 0 -100 S
+AE 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -217,8 +217,8 @@ cave fisher caves creature cavefisher~
 &+Lwalls, and its front legs are equipped with powerful pincers, which are used
 &+Lfor killing and dismembering prey.
 ~
-2122 1 0 256 12288 0 0 -1000 S
-AC 0 1 3
+2122 1 0 0 256 12288 0 0 -1000 S
+AC 0 1 0 3
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -234,8 +234,8 @@ carrion crawler~
 &+Lcarrion crawler may well be the result of genetic experimentation by a mad
 &+Levil mage.
 ~
-4170 1 0 8448 12290 0 0 -100 S
-I 0 1 3
+4170 1 0 0 8448 12290 0 0 -100 S
+I 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -249,8 +249,8 @@ hook horror insect large~
 &+Labout nine feet tall and weighs almost 350 pounds, it has a tough, mottled
 &+Lgrey exoskeleton, like that of an insect.
 ~
-14410 1 0 34078720 12300 0 0 -1000 S
-H 0 1 4
+14410 1 0 0 34078720 12300 0 0 -1000 S
+H 0 1 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -263,8 +263,8 @@ dryad small~
 &+gare alluring, however, and dryads are rarely seen unless taken by surprise,
 &+gor they wish to be spotted.
 ~
-137290 0 0 35127296 0 0 0 -100 S
-HF 0 1 2
+137290 0 0 0 35127296 0 0 0 -100 S
+HF 0 1 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -278,8 +278,8 @@ nymph small~
 &+bbeyond words, and ever-young woman with sleek figure and long, thick hair,
 &+bradiant skin and perfect teeth, full lips and gentle eyes.
 ~
-2120 0 0 35127552 12288 0 0 -100 S
-HF 0 1 3
+2120 0 0 0 35127552 12288 0 0 -100 S
+HF 0 1 0 3
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -292,8 +292,8 @@ mimic chest small~
 &+rcompletely of gold and silver. It appears to be a small treasure chest
 &+Yresting here along the ground.
 ~
-1073764426 0 0 0 0 0 0 -100 S
-CN 0 1 2
+1073764426 0 0 0 0 0 0 0 -100 S
+CN 0 1 0 2
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -308,8 +308,8 @@ lich elven ancient~
 &+rthier own. Though this elven lich seems to be guarding and standing here
 &+rwaiting for those to enter into his area of protection.
 ~
-178250 0 0 0 0 0 0 -100 S
-PE 4 512 3
+178250 0 0 0 0 0 0 0 -100 S
+PE 4 512 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -322,8 +322,8 @@ raven~
 &+Lpresence, it is a strange bird that just appears to be watching very
 &+Lcarefully though doesn't mind that there are others around it.
 ~
-133192 0 0 0 0 0 0 -1000 S
-B 0 1 1
+133192 0 0 0 0 0 0 0 -1000 S
+B 0 1 0 1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -338,8 +338,8 @@ wild kirre~
 &+gthe differences quickly become clear. The kirre is 8 feet in length and has
 &+geight legs, each ending in paws which sport very sharp claws.
 ~
-2120 0 0 34078980 12288 0 0 -100 S
-A 0 1 2
+2120 0 0 0 34078980 12288 0 0 -100 S
+A 0 1 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -353,8 +353,8 @@ faerie dragon~
 &+Rdragons resemble miniature dragons with thin bodies, long, prehensile tails,
 &+ygossamer butterfly wings, and huge smiles.
 ~
-133208 0 0 34078980 0 0 0 -100 S
-DK 0 128 -1
+133208 0 0 0 34078980 0 0 0 -100 S
+DK 0 128 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -367,8 +367,8 @@ dove small~
 &+Wand nothing else seem to bother it a bit. Its wings seem to glow in an eerie
 &+Wmagical light though, other then that it appears to just be a common dove.
 ~
-143432 0 0 33554720 0 0 0 -100 S
-B 0 1 2
+143432 0 0 0 33554720 0 0 0 -100 S
+B 0 1 0 2
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -383,8 +383,8 @@ aerial servant~
 &+Whumaniods of sparkling blue smoke, with empty eyes, a slash for a mouth,
 &+Band long, four-fingered hands.
 ~
-133450 0 0 167772218 0 0 0 -100 S
-EA 0 64 3
+133450 0 0 0 167772218 0 0 0 -100 S
+EA 0 64 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -401,8 +401,8 @@ pech small~
 &+ybrown hair, its flesh is nearly as hard as granite and eyes are large and
 &+yhave no pupils.
 ~
-15434 0 0 34078880 12318 0 0 -100 S
-EE 0 33 2
+15434 0 0 0 34078880 12318 0 0 -100 S
+EE 0 33 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -416,8 +416,8 @@ sand worm sandling~
 &+yin with their backgrounds. Sandlings have the same temperature as their
 &+ysurroundings, and are immune to many mind attacking spells or attacks.
 ~
-15434 0 0 34152864 0 16777216 0 -100 S
-EE 0 1 4
+15434 0 0 0 34152864 0 16777216 0 -100 S
+EE 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -432,8 +432,8 @@ salamander fire~
 &+Rand has a human-like appearance, the lower part of it is that of a large
 &+rsnake with an orange coloring shading to dull red at the tail end.
 ~
-2122 0 0 33554688 8195 0 0 -1000 S
-EF 0 33 3
+2122 0 0 0 33554688 8195 0 0 -1000 S
+EF 0 33 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -448,8 +448,8 @@ nereid water~
 &+bdoom. Upon contact with air, nerieds assume human form, usually as voluptuous
 &+bfemales with long, golden hair, pearly white skin, and sparkling green eyes.
 ~
-2122 0 0 100665640 4160 17825792 1048584 -100 S
-EW 0 33 3
+2122 0 0 0 100665640 4160 17825792 1048584 -100 S
+EW 0 33 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -463,8 +463,8 @@ tempest~
 &+wroiling vapors of the tempest. Silver veins extend across the creature and
 &+rcarry the electrical impulses that maintain the storm's energy.
 ~
-137546 0 0 33587496 8284 0 33554432 -1000 S
-EA 0 1 5
+137546 0 0 0 33587496 8284 0 33554432 -1000 S
+EA 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -477,8 +477,8 @@ spider cavern _nobite_~
 &+La bit when it notices your presence. It appears to be drawing closer to you
 &+Lthough it readies itself for battle.
 ~
-8 0 0 101187872 0 0 0 -1000 S
-AS 0 1 2
+8 0 0 0 101187872 0 0 0 -1000 S
+AS 0 1 0 2
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -493,8 +493,8 @@ roc bird~
 &+yfrom head to tail, these giant birds are 60 feet long from beak to tail
 &+ywith a wingspan as wide as 120 feet.
 ~
-145482 1 0 167772448 12288 0 0 -1000 S
-B 0 1 6
+145482 1 0 0 167772448 12288 0 0 -1000 S
+B 0 1 0 6
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -507,8 +507,8 @@ black panther~
 &+Lis a very sleek black, it will attack anything it perceives as a threat, though
 &+Lit relies on stealth to close with its prey, often pouncing from above.
 ~
-1074006088 0 0 303563040 0 0 0 -100 S
-A 0 1 3
+1074006088 0 0 0 303563040 0 0 0 -100 S
+A 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -521,8 +521,8 @@ hawk soaring~
 &+ycare about anything else at the moment, its eyes are fixed on a small field
 &+ymouse that scurrys around the ground.
 ~
-2056 0 0 167772416 2 0 0 -100 S
-B 0 1 2
+2056 0 0 0 167772416 2 0 0 -100 S
+B 0 1 0 2
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -533,8 +533,8 @@ swallow small~
 ~
 &+LThis small bird flys through the air looking for food for its family.
 ~
-133320 0 0 134217728 0 0 0 -100 S
-B 0 1 1
+133320 0 0 0 134217728 0 0 0 -100 S
+B 0 1 0 1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -546,8 +546,8 @@ mouse field~
 &+yThis little mouse runs from hiding place to hiding place tryin to stay out
 &+yof sight of the predators that would have it for dinner.
 ~
-8 0 0 35127296 0 0 0 -100 S
-A 0 1 1
+8 0 0 0 35127296 0 0 0 -100 S
+A 0 1 0 1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -560,8 +560,8 @@ large caterwaul~
 &+Yeyes and a long, prehensile tail, its face has an almost elven look, with
 &+Yits delicately pointed ears and almond-shaped eyes.
 ~
-268360 1 0 50331952 12318 0 0 -100 S
-AC 0 129 3
+268360 1 0 0 50331952 12318 0 0 -100 S
+AC 0 129 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -574,8 +574,8 @@ centaur weak old~
 &+gblend in almost completely, it appears that he is very tired from a hard
 &+gdays work and doesn't appear to notice you enter into the room.
 ~
-1073752138 0 0 33554568 0 0 0 -100 S
-CT 15 130 4
+1073752138 0 0 0 33554568 0 0 0 -100 S
+CT 15 130 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -589,8 +589,8 @@ duergar miner~
 &+rcomplexions and hair range from medium to dark gray. They prefer drab clothing
 &+rdesigned to blend into their environment.
 ~
-141384 0 0 169345418 0 17825792 0 -1000 S
-PD 6 1 2
+141384 0 0 0 169345418 0 17825792 0 -1000 S
+PD 6 1 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -602,8 +602,8 @@ earth worm earthworm~
 &+yThis somewhat small worm here appears to be coming to the surface for a
 &+yminute then starts to redirect itself back down into the earth.
 ~
-2056 0 0 0 0 0 0 -100 S
-I 0 1 1
+2056 0 0 0 0 0 0 0 -100 S
+I 0 1 0 1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -617,8 +617,8 @@ gnome valin~
 &+mstand about 3 feet tall and wears a long flowing robe with many items
 &+mdangling off, he carries a small bag that radiates at his hip.
 ~
-133320 0 0 35127552 0 0 0 100 S
-PG 8 2560 1
+133320 0 0 0 35127552 0 0 0 100 S
+PG 8 2560 0 1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -636,8 +636,8 @@ deep dragon~
 &+mhave mastered both of their other forms a giant winged worm or snake and a
 &+mhuman or drow form.
 ~
-133226 1 0 167845928 12418 0 0 -500 S
-D 0 1 6
+133226 1 0 0 167845928 12418 0 0 -500 S
+D 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -649,8 +649,8 @@ worm earth~
 &+yThis strange worm slithers along the ground trying to find a soft spot in
 &+ythe earth.
 ~
-2056 0 0 1572864 0 0 0 -100 S
-TK 0 1 1
+2056 0 0 0 1572864 0 0 0 -100 S
+TK 0 1 0 1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

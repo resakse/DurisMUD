@@ -812,7 +812,6 @@ void list_artifacts(P_char ch, char *arg, int type)
       minutes = blood_time / 60;
 
       sprintf(blooddate, "%d:%02d:%02d ", days, hours, minutes);
-// PENIS: HERE IS WHERE IT"S BUGGY
       if( t_uo == -1 )
       {
         sprintf(strn, "%s\n%28s   %-30s%s (#%d)%s\r\n",
@@ -2183,25 +2182,16 @@ void dropped_arti_hunt()
   P_obj obj;
   const int timelimit = time(NULL) - 2 * SECS_PER_REAL_DAY;
 
-int count = 0;
-logit(LOG_DEBUG, "dropped_arti_hunt: Initiated." );
-
   for( obj = object_list; obj; obj = obj->next )
   {
-count++;
     if( IS_ARTIFACT(obj) || CAN_WEAR(obj, ITEM_WEAR_IOUN) )
     {
-logit(LOG_DEBUG,  "dropped_arti_hunt: found arti '%s' %d.", obj->short_description, obj_index[obj->R_num].virtual_number );
-
       // If arti is on ground with less than 2 days on it.. then it's been dropped.
       // is_tracked: -1 means untracked arti, 0 means not an arti, and > 0 means tracked.
       // Note: is_tracked won't return > 0 if a God drops arti.. must be owned/dropped by a mort.
-// PENIS: Need to test this: Is obj->time[3] > timelimit or < timelimit right? What about is_tracked?
-      if( OBJ_ROOM(obj) && obj->loc.room && obj->timer[3] <= timelimit )//&& (is_tracked(obj) > 0) )
+      if( OBJ_ROOM(obj) && obj->loc.room && obj->timer[3] <= timelimit )
       {
         vnum = obj_index[obj->R_num].virtual_number;
-logit(LOG_DEBUG,  "dropped_arti_hunt: ON GROUND found arti '%s' %d on ground with timer.", obj->short_description, obj_index[obj->R_num].virtual_number );
-
         sprintf(fname, ARTIFACT_DIR "%d", vnum);
         f = fopen(fname, "wt");
 
@@ -2211,12 +2201,10 @@ logit(LOG_DEBUG,  "dropped_arti_hunt: ON GROUND found arti '%s' %d on ground wit
           logit(LOG_DEBUG,  "dropped_arti_hunt: could not open arti file '%s' for writing", fname);
           continue;
         }
-// PENIS: This will currently corrupt the arti system: need a way in each file call to verify this 'non-owner & no pop' state.
         // Put Room's name, rooms vnum, time -1(!), obj timer.
         fprintf(f, "%s~\n %d %lu -1 %lu", world[obj->loc.room].name, world[obj->loc.room].number, time(NULL), obj->timer[3]);
         fclose(f);
       }
     }
   }
-logit(LOG_DEBUG, "dropped_arti_hunt: Completed, count == %d.", count );
 }

@@ -5,8 +5,8 @@ N
 347
 53
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -40,8 +40,8 @@ N
 6008
 9225
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -54,7 +54,7 @@ Thank you, %s, that will be %s.~
 0
 100015
 0
-105301
+105302
 0
 28
 0

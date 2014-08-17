@@ -8,8 +8,8 @@ woman barbarian female~
 &+yNoticing you eyeing her, she looks over and grins a partially
 &+ytoothless smile.
 ~
-2124 0 0 0 0 0 0 400 S
-PB 2 0 -1
+2124 0 0 0 0 0 0 0 400 S
+PB 2 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -23,8 +23,8 @@ barbarian man male brawny~
 &+ycombat, though they probably haven't done much for his keen knowledge
 &+yof the world outside the tundra.
 ~
-2124 640 0 0 0 0 0 392 S
-PB 2 1 -1
+2124 640 0 0 0 0 0 0 392 S
+PB 2 1 0 -1
 24 11 23 24d47+240 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -37,8 +37,8 @@ child barbarian short stubby~
 &+yhate.  Peering up at you, he scratches himself, then stumbles off looking
 &+yfor something to play with.
 ~
-2252 0 0 0 0 0 0 210 S
-PB 2 0 -1
+2252 0 0 0 0 0 0 0 210 S
+PB 2 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -52,8 +52,8 @@ barbarian warrior guard justice~
 &+yyou glance at him, he looks you over, then continues his task of
 &+ystanding there.
 ~
-100665420 640 0 33554472 0 0 0 391 S
-PB 2 1 -1
+100665420 640 0 0 33554472 0 0 0 391 S
+PB 2 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -66,8 +66,8 @@ barbarian guard large warrior muscled justice~
 &+yhe could deal out a severe beating.  Hand on his sword, he glances over
 &+yat you, looks you over, then goes back to looking for trouble.
 ~
-100665420 640 0 33554472 0 0 0 541 S
-PB 2 16384 -1
+100665420 640 0 0 33554472 0 0 0 541 S
+PB 2 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -81,8 +81,8 @@ barbarian warrior guard large towering justice~
 &+yready for battle, no matter what the circumstances.  Why, he's so
 &+yconfident, he doesn't even flinch as you continue to stare him.
 ~
-100665420 640 0 33587240 0 0 0 219 S
-PB 2 16384 -1
+100665420 640 0 0 33587240 0 0 0 219 S
+PB 2 16384 0 -1
 52 -5 -101 52d131+4420 7d6+30
 7.9.5.6 210600
 8 8 1
@@ -96,8 +96,8 @@ barbarian shaman~
 &+mstrung around his neck, further attesting to his prowess and
 &+mexperience.
 ~
-2124 0 0 0 0 0 0 102 S
-PB 2 256 -1
+2124 0 0 0 0 0 0 0 102 S
+PB 2 256 0 -1
 23 11 26 23d44+207 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -111,8 +111,8 @@ barbarian woman~
 &+ycuring.  She glances up at you for a moment, then resumes scraping at
 &+ythe inside of the hide.
 ~
-2126 0 0 0 0 0 0 491 S
-PB 2 0 -1
+2126 0 0 0 0 0 0 0 491 S
+PB 2 0 0 -1
 23 11 26 23d40+184 3d5+3
 5.1.6.0 20493
 6 6 2
@@ -124,8 +124,8 @@ barbarian child small~
 &+ySitting on the ground, this small child seems quite content in picking
 &+yup bits of rock and bone and chewing on them.
 ~
-2254 0 0 0 0 0 0 931 S
-PB 2 0 -1
+2254 0 0 0 0 0 0 0 931 S
+PB 2 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 6 6 1
@@ -137,8 +137,8 @@ barbarian chubby shopkeeper food~
 &+yLeading a simple life of preparing food and selling it, this man has
 &+ygained a bit of a belly.  He looks up at you happily.
 ~
-2126 0 0 0 0 0 0 983 S
-PB 2 1 -1
+2126 0 0 0 0 0 0 0 983 S
+PB 2 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 6 6 1
@@ -150,8 +150,8 @@ barbarian shopkeeper muscled armory muscular~
 &+yLooking unduly suspicious, this bear of a man stands here, selling
 &+ybits and pieces of battle equipment.
 ~
-2126 0 0 0 0 0 0 983 S
-PB 2 1 -1
+2126 0 0 0 0 0 0 0 983 S
+PB 2 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -164,8 +164,8 @@ barbarian shopkeeper lithe woman tool~
 &+ySelling tools all day must be hard work for her to keep such a
 &+yslim physique.
 ~
-2126 0 0 0 0 0 0 983 S
-PB 2 1 -1
+2126 0 0 0 0 0 0 0 983 S
+PB 2 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 8 8 2
@@ -178,8 +178,8 @@ barbarian burly guard~
 &+yin stature as well as musculature.  Grinning at you, he points his spear
 &+yin your general direction and mutters something snide to his comrades.
 ~
-100665422 640 0 302031096 0 67108864 0 492 S
-PB 2 16384 -1
+100665422 640 0 0 302031096 0 67108864 0 492 S
+PB 2 16384 0 -1
 58 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -192,8 +192,8 @@ barbarian warrior~
 &+ybattle experience under his belt.  Looking you over, you can tell
 &+yhe's itching to practice just a little bit more..
 ~
-2124 0 0 0 0 0 0 493 S
-PB 2 1 -1
+2124 0 0 0 0 0 0 0 493 S
+PB 2 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 6 6 1
@@ -207,8 +207,8 @@ barbarian conjurer master~
 &+gfat knows that barbarians are morons, so this simply cannot
 &+gbe the case.  You have to admire the man for trying, though.
 ~
-34894 0 0 33554504 0 0 0 731 S
-PB 2 2048 -1
+34894 0 0 0 33554504 0 0 0 731 S
+PB 2 2048 0 -1
 35 6 -12 35d56+525 4d6+7
 9.9.1.2 45360
 6 6 1
@@ -221,8 +221,8 @@ barbarian guard large warrior~
 &+ylike he could deal out a severe beating.  Hand on his sword, he glances
 &+yover at you, looks you over, then goes back to looking for trouble.
 ~
-100665422 640 0 33554472 0 0 0 541 S
-PB 2 1 -1
+100665422 640 0 0 33554472 0 0 0 541 S
+PB 2 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -235,8 +235,8 @@ barbarian bored~
 &+ypicking at a cold piece of meat.  Looks like this fella just needs a
 &+ylittle something to do.
 ~
-2126 0 0 0 0 0 0 594 S
-PB 2 1 -1
+2126 0 0 0 0 0 0 0 594 S
+PB 2 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 6 6 1
@@ -250,8 +250,8 @@ shaman barbarian elderly~
 &+mstrung around his neck, further attesting to his prowess and
 &+mexperience.
 ~
-2126 0 0 33554536 0 0 0 102 S
-PB 2 256 -1
+2126 0 0 0 33554536 0 0 0 102 S
+PB 2 256 0 -1
 49 -3 -81 49d110+2646 6d6+25
 9.2.0.5 119070
 6 6 1
@@ -264,8 +264,8 @@ barbarian guard member~
 &+ylike he could deal out a severe beating.  Hand on his sword, he glances
 &+yover at you, looks you over, then goes back to looking for trouble.
 ~
-100665422 640 0 33554472 0 0 0 541 S
-PB 2 1 -1
+100665422 640 0 0 33554472 0 0 0 541 S
+PB 2 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -279,8 +279,8 @@ atgu leader barbarian king~
 &+yto believe him.  Despite being of barbarian heritage, this man appears
 &+yto be intelligent, moreso than the common barbarian, at any rate.
 ~
-67110986 672 0 33554552 0 0 0 493 S
-PB 11 16384 -1
+67110986 672 0 0 33554552 0 0 0 493 S
+PB 11 16384 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 6 6 1
@@ -293,8 +293,8 @@ barbarian guard weary~
 &+ylike he could deal out a severe beating.  Hand on his sword, he glances
 &+yover at you, looks you over, then goes back to looking for trouble.
 ~
-100665422 640 0 33554472 0 0 0 541 S
-PB 2 1 -1
+100665422 640 0 0 33554472 0 0 0 541 S
+PB 2 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -307,8 +307,8 @@ barbarian clothes clothing gaunt~
 &+yborn.  Continually shivering, he may not have even been warm since
 &+yhe was born.  Poor bastard.
 ~
-2122 0 0 0 0 0 0 499 S
-PB 2 1 -1
+2122 0 0 0 0 0 0 0 499 S
+PB 2 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 6 6 1
@@ -320,8 +320,8 @@ barbarian short stubby cont container~
 &+yBelow-average height, even for a barbarian, and a thick, round chest make
 &+ythis man look almost like a pickel barrel.  Go on, find the pickel!
 ~
-2126 0 0 0 0 0 0 473 S
-PB 2 1 -1
+2126 0 0 0 0 0 0 0 473 S
+PB 2 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -333,8 +333,8 @@ barbarian pot bellied boat~
 &+yThis man looks altogether average, except for a large pot belly that
 &+ydisappears as soon as it pops up.  In fact, he looks pregnant.  Scary.
 ~
-2126 0 0 0 0 0 0 499 S
-PB 2 1 -1
+2126 0 0 0 0 0 0 0 499 S
+PB 2 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 6 6 1
@@ -346,8 +346,8 @@ barbarian bridge guard~
 &+yObviously proficient in the ways of fighting, this battle-hardened
 &+yman looks as though he knows what he's doing.
 ~
-67110990 640 0 33554472 0 0 0 841 S
-PB 2 1 -1
+67110990 640 0 0 33554472 0 0 0 841 S
+PB 2 1 0 -1
 37 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -358,8 +358,8 @@ barbarian sleeping~
 ~
 &+ySleeping blissfully, this man looks as peaceful as a pussycat.
 ~
-2122 0 0 0 0 0 0 943 S
-PB 2 1 -1
+2122 0 0 0 0 0 0 0 943 S
+PB 2 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 4 4 1
@@ -372,8 +372,8 @@ barbarian gaudily gaudy attired~
 &+yclearly richer than his fellow barbarians.  He smiles happily at
 &+yyou, apparently waiting for you to request something of him.
 ~
-2122 0 0 0 0 0 0 499 S
-PB 2 1 -1
+2122 0 0 0 0 0 0 0 499 S
+PB 2 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 6 6 1
@@ -386,8 +386,8 @@ barbarian guard large warrior muscled jail~
 &+yhe could deal out a severe beating.  Hand on his sword, he glances over
 &+yat you, looks you over, then goes back to looking for trouble.
 ~
-100665422 640 0 33554472 0 0 0 541 S
-PB 2 16384 -1
+100665422 640 0 0 33554472 0 0 0 541 S
+PB 2 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -399,8 +399,8 @@ barbarian warrior~
 &+yClearly very strong, this barbarian apparently is scarred on every
 &+ysquare inch of his body.  Hopefully, he knows of what he teaches.
 ~
-34894 0 0 33554504 0 0 0 731 S
-PB 11 1 -1
+34894 0 0 0 33554504 0 0 0 731 S
+PB 11 1 0 -1
 35 6 -12 35d56+525 4d6+7
 9.9.1.2 45360
 6 6 1
@@ -412,8 +412,8 @@ barbarian bridge guard~
 &+yObviously proficient in the ways of fighting, this battle-hardened
 &+yman looks as though he knows what he's doing.
 ~
-67110990 640 0 301990072 268468224 67108864 0 841 S
-PB 2 1 -1
+67110990 640 0 0 301990072 268468224 67108864 0 841 S
+PB 2 1 0 -1
 58 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -428,8 +428,8 @@ imposing guardian barbarian~
 &+ywaiting patiently for the gates to Ugta to once again
 &+ybe opened.&n
 ~
-2122 0 0 152 2048 32768 4608 0 S
-pb 0 16385 -1
+2122 0 0 0 152 2048 32768 4608 0 S
+pb 0 16385 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

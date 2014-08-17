@@ -9,8 +9,8 @@ A stern looking &+Wpaladin&N stands in full battle armor before the gates.
 &+Whelm with facemask. He stands here arms-crossed admitting only the
 &+Wpeople of true faith past the golden gates.
 ~
-67110986 0 0 0 0 0 0 1000 S
-H 0 128 -1
+67110986 0 0 0 0 0 0 0 1000 S
+H 0 128 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ of dyed white leather. He stands here working on his sword-handling skills
 and practicing his tacticts for a fight. One day he hopes to be in a real
 battle where he can harness his skills for the better.
 ~
-1073743944 0 0 0 0 0 0 1000 S
-H 0 1 -1
+1073743944 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -39,8 +39,8 @@ of dyed white leather. He stands here working on his sword-handling skills
 and practicing his tacticts for a fight. One day he hopes to be in a real
 battle where he can harness his skills for the better.
 ~
-1073743944 0 0 0 0 0 0 1000 S
-H 0 1 -1
+1073743944 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -54,8 +54,8 @@ of dyed white leather. He stands here working on his sword-handling skills
 and practicing his tacticts for a fight. One day he hopes to be in a real
 battle where he can harness his skills for the better.
 ~
-1073743944 0 0 0 0 0 0 1000 S
-H 0 1 -1
+1073743944 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ master knight teacher valiant~
 &+cmore with grace, and spends his life teaching his years of experience to
 &+chis students.
 ~
-2120 0 0 0 0 0 0 1000 S
-H 0 1 -1
+2120 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ wearing baggy, brilliant robes that puff out between thick plates of their
 mailed suits. A small golden insignia sits on the breast of his plated armor,
 symbolizing his devotion to the protection of the golden hall.
 ~
-1140852808 128 0 0 0 0 0 1000 S
-H 0 1 -1
+1140852808 128 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -103,8 +103,8 @@ very maliable by the way the captain is able to move in it. Wisps of white
 hair bundle out of his barret helmet as he walks back and forth within his
 chamber pondering of a hall watch patrol team he plans to form.
 ~
-67110984 0 0 0 0 0 0 1000 S
-H 0 1 -1
+67110984 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -123,8 +123,8 @@ hazk~
 &+yhere in this fortress serving hommage to the leader by preparing the
 &+ykeep with enchanted potions and useful relics, so it seems.
 ~
-1073743948 0 0 268435456 0 0 0 -390 S
-H 0 256 -1
+1073743948 0 0 0 268435456 0 0 0 -390 S
+H 0 256 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -138,8 +138,8 @@ wearing baggy, brilliant robes that puff out between thick plates of their
 mailed suits. A small golden insignia sits on the breast of his plated armor,
 symbolizing his devotion to the protection of the golden hall.
 ~
-1140852808 128 0 0 0 0 0 1000 S
-H 0 1 -1
+1140852808 128 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -157,8 +157,8 @@ juggling thri-kreen~
 &+ghe stands in the far northeast corner of the room for all to see when they
 &+genter the Inn of Golden Faith.
 ~
-2250 0 0 16 0 0 0 767 S
-TK 0 1 -1
+2250 0 0 0 16 0 0 0 767 S
+TK 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -172,8 +172,8 @@ inn bartender bar woman~
 &+ysmile on her face. Over all of the years mixing drinks and serving people
 &+yin this bar, she must have developed some muscle.
 ~
-2122 0 0 268435456 0 0 0 900 S
-H 0 1 -1
+2122 0 0 0 268435456 0 0 0 900 S
+H 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -189,8 +189,8 @@ A &+crelaxing traveller&N sits at a table enjoying a drink.
 &+cand enjoying the atmosphere. His face seems fairly unshaved, but he doesn't
 &+chave a beard.
 ~
-2126 0 0 0 0 0 0 400 S
-H 1 1 -1
+2126 0 0 0 0 0 0 0 400 S
+H 1 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -204,8 +204,8 @@ gnome tired~
 &+Rwhite night cap. This small man only takes up about one third of the bed,
 &+Rbut he tosses and tumbles moreso then any others of the inn in his sleep.
 ~
-2126 0 0 0 0 0 0 700 S
-PG 8 1 -1
+2126 0 0 0 0 0 0 0 700 S
+PG 8 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -220,8 +220,8 @@ exhausted barbarian~
 &+Btravelling equipment, including a thick suit of banded hide armor, and
 &+Ba pair of furred white boots.
 ~
-2126 0 0 0 0 0 0 -1000 S
-PB 0 1 -1
+2126 0 0 0 0 0 0 0 -1000 S
+PB 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -235,8 +235,8 @@ elf grey worn-out~
 &+chad probably been travelling for days and is finally getting some well-
 &+cdeserved rest at this holy inn.
 ~
-2126 0 0 0 0 0 0 1000 S
-PE 4 1 -1
+2126 0 0 0 0 0 0 0 1000 S
+PE 4 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 2
@@ -252,8 +252,8 @@ The &+Wowner &+yof the &+Binn&N sits by a large desk here.
 &+Mof support are are from his thick belt with many buckles. A man of his
 &+Mclass would deem a fair fight.
 ~
-1073743944 0 0 24 0 0 0 1000 S
-H 0 1 -1
+1073743944 0 0 0 24 0 0 0 1000 S
+H 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -268,8 +268,8 @@ child girl~
 &+Wall the way down to her waist. Seven deep red bows are tied onto her long
 &+Wpontytail on her back in perfect spacing.
 ~
-2184 0 0 16 0 0 0 1000 S
-H 1 64 -1
+2184 0 0 0 16 0 0 0 1000 S
+H 1 64 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 2
@@ -290,8 +290,8 @@ prince wasephius~
 &+Wdefinately fair competition, judging by the sword in his hands that stands
 &+Wtaller then him.
 ~
-67139596 0 0 268435512 0 0 0 1000 S
-H 0 128 -1
+67139596 0 0 0 268435512 0 0 0 1000 S
+H 0 128 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -308,8 +308,8 @@ attendant~
 &+Lwith the seal of an eagle with a sword running down its chest, symbolizing
 &+Lthe Circle of Knights.&N
 ~
-1140852746 0 0 0 0 0 0 1000 S
-H 1 512 -1
+1140852746 0 0 0 0 0 0 0 1000 S
+H 1 512 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -324,8 +324,8 @@ personal bodyguard~
 &+rtwo stern glowing blue eyes on the top of it act like blades, for when
 &+rfighting a larger opponent.
 ~
-1140852746 0 0 0 0 0 0 1000 S
-H 0 1 -1
+1140852746 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -341,8 +341,8 @@ priestess cleric~
 &+Wher wooden moccasins, which would seem to make a sound on the tiled floor,
 &+Ware strangely silent as she walks about.
 ~
-2248 0 0 0 0 0 0 1000 S
-H 1 2147483648 -1
+2248 0 0 0 0 0 0 0 1000 S
+H 1 2147483648 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -358,8 +358,8 @@ priestess cleric~
 &+Wher wooden moccasins, which would seem to make a sound on the tiled floor,
 &+Ware strangely silent as she walks about.
 ~
-2248 0 0 0 0 0 0 1000 S
-H 1 2147483648 -1
+2248 0 0 0 0 0 0 0 1000 S
+H 1 2147483648 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -375,8 +375,8 @@ priestess cleric~
 &+Wher wooden moccasins, which would seem to make a sound on the tiled floor,
 &+Ware strangely silent as she walks about.
 ~
-2248 0 0 0 0 0 0 1000 S
-H 1 32 -1
+2248 0 0 0 0 0 0 0 1000 S
+H 1 32 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -392,8 +392,8 @@ master priestess teacher~
 &+Ware carried without hesitation. She has obviously earned her position as
 &+Wthe clerical teacher, due to her fine skills at educating her students.
 ~
-2250 0 0 0 0 0 0 1000 S
-H 0 32 -1
+2250 0 0 0 0 0 0 0 1000 S
+H 0 32 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -408,8 +408,8 @@ Unlike the other guards, this particular one doesn't carry a sword. But he
 weary's two large, tight black gloves with wide iron bands arching across
 the knuckles. He stands protecting his prince's chamber with pure honor.
 ~
-1140852746 0 0 0 0 0 0 1000 S
-H 1 1 -1
+1140852746 0 0 0 0 0 0 0 1000 S
+H 1 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -422,8 +422,8 @@ A representative from &+CIce &+WCrag&N stands here in full uniform.
 perhaps a strip of rank. Blue and white banded mail covers his body, spiked at
 the shoulders. He also wear's a visored helm bearing the symbol of Auril.
 ~
-1073743946 0 0 0 0 0 0 100 S
-H 0 1 -1
+1073743946 0 0 0 0 0 0 0 100 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -437,8 +437,8 @@ also sergeant's stripes on his right wrist. This respected spokesman from
 lord Du'Maathe waits for Prince Wasephius to discuss city matters and to
 perhaps form a trade route.
 ~
-1073743946 0 0 0 0 0 0 1000 S
-H 0 1 -1
+1073743946 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -452,8 +452,8 @@ seems much more frail, nonetheless a strong fight due to his rank. He wear's
 on his body some red chainmail, with black chainmail sleeves-all connected.
 He waits for the Prince to discuss matters between his baron, and the prince.
 ~
-1073743946 0 0 0 0 0 0 -1000 S
-H 0 1024 -1
+1073743946 0 0 0 0 0 0 0 -1000 S
+H 0 1024 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -467,8 +467,8 @@ golem plant strange~
 &+Gartificial life in one room of Hazk's chamber, and sells wares to
 &+GHazk's 'perferred customers'.
 ~
-1073743882 0 0 48 0 0 0 0 S
-MT 0 4 -1
+1073743882 0 0 0 48 0 0 0 0 S
+MT 0 4 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -483,8 +483,8 @@ pegasus magnificent~
 &+Wthought of as only a legend, until someone actually found and tamed them,
 &+Wand brought them to serve as arial mounts.
 ~
-134219912 0 0 134217728 0 0 0 1000 S
-AE 0 1 -1
+134219912 0 0 0 134217728 0 0 0 1000 S
+AE 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -499,8 +499,8 @@ stable hand~
 &+cin the golden hall with total care and respect. As a guardian and keeper
 &+cof the legendary pegasi, he carries out his job with honor.
 ~
-8 0 0 0 0 0 0 1000 S
-H 0 1 -1
+8 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -514,8 +514,8 @@ member maintenance crew~
 &+ycould commonly need repairs. He is just over five feet in height, and he
 &+yworks hard for his prince.
 ~
-1073744072 0 0 0 0 0 0 1000 S
-PH 1 1 -1
+1073744072 0 0 0 0 0 0 0 1000 S
+PH 1 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -529,8 +529,8 @@ member maintenance crew~
 &+ycould commonly need repairs. He is just over five feet in height, and he
 &+yworks hard for his prince.
 ~
-2248 0 0 0 0 0 0 1000 S
-PH 1 1 -1
+2248 0 0 0 0 0 0 0 1000 S
+PH 1 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -545,8 +545,8 @@ far dwarven chef dwarf cook~
 &+Yhands regardless the weight he carries with him, and serves his prince
 &+Ywith dignity spending his life cooking for the patrons of the hall.
 ~
-2058 0 0 0 0 0 0 1000 S
-PM 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+PM 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -562,8 +562,8 @@ A &+chungry patron&N rests at a bench awaiting his meal.
 &+cand enjoying the atmosphere. His face seems fairly unshaved, but he doesn't
 &+chave a beard.
 ~
-2126 0 0 0 0 0 0 400 S
-H 1 1 -1
+2126 0 0 0 0 0 0 0 400 S
+H 1 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -577,8 +577,8 @@ wearing baggy, brilliant robes that puff out between thick plates of their
 mailed suits. A small golden insignia sits on the breast of his plated armor,
 symbolizing his devotion to the protection of the golden hall.
 ~
-1073743944 0 0 0 0 0 0 1000 S
-H 0 1 -1
+1073743944 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -591,8 +591,8 @@ piranha bloodthirsty~
 &+CIts silverish scales glimmer as the muscles in its body flex while it
 &+Cswims, creating small prizims of glowing light.
 ~
-1073743882 1 0 2048 0 0 0 -100 S
-F 0 0 -1
+1073743882 1 0 0 2048 0 0 0 -100 S
+F 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -605,8 +605,8 @@ goblin scout~
 &+gthe caves very effectively.  He has deep green skin, which is totally
 &+guncovered except by his loin cloth, and piercing red eyes.
 ~
-1073743880 1 0 256 0 0 0 -1000 S
-hg 0 2097152 -1
+1073743880 1 0 0 256 0 0 0 -1000 S
+hg 0 2097152 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -621,8 +621,8 @@ kuo-toa kuo toa hunter~
 &+Gswam to this alcove from one of the rapid water tunnels in the depths
 &+Gof the pool.
 ~
-1073744010 1 0 1050624 0 0 0 -950 S
-MT 0 16384 -1
+1073744010 1 0 0 1050624 0 0 0 -950 S
+MT 0 16384 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -635,8 +635,8 @@ kuo-toa kuo toa fisherman~
 &+gand gutted fish skins, this kuo-toa rests here within the cavern in an
 &+gattempt to catch his food in order to survive.
 ~
-10 0 0 2048 0 0 0 50 S
-MT 0 0 -1
+10 0 0 0 2048 0 0 0 50 S
+MT 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -649,8 +649,8 @@ kuo toa guardsman guard kuo-toa~
 &+gany movement prepared to fight off any non-kuo toans. Protecting its tribe
 &+gseems to be its main priority due to the passion it holds in its job.
 ~
-2058 1 0 2048 0 0 0 0 S
-MT 0 1 -1
+2058 1 0 0 2048 0 0 0 0 S
+MT 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -664,8 +664,8 @@ cavern shark~
 &+bunderground sea fish is very large, and swims very fast; stopping at nothing
 &+bto feast upon its prey.
 ~
-1073743882 1 0 2048 0 0 0 0 S
-F 0 1 -1
+1073743882 1 0 0 2048 0 0 0 0 S
+F 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -678,8 +678,8 @@ kuo toa guard kuo-toa~
 &+gany movement prepared to fight off any non-kuo toans. Protecting its tribe
 &+gseems to be its main priority due to the passion it holds in its job.
 ~
-1073743880 1 0 2048 0 0 0 0 S
-MT 0 1 -1
+1073743880 1 0 0 2048 0 0 0 0 S
+MT 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -693,8 +693,8 @@ kuo toa kuo-toan priestess kuo-toa~
 &+GBlipoodipoo to have been able to succeed over this entire settlement of
 &+Gkuo-toans.
 ~
-2058 1 0 134219776 0 0 0 -400 S
-MT 0 2147483648 -1
+2058 1 0 0 134219776 0 0 0 -400 S
+MT 0 2147483648 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -707,8 +707,8 @@ kuo toa guard kuo-toa altar~
 &+gany movement prepared to fight off any non-kuo toans. Protecting its tribe
 &+gseems to be its main priority due to the passion it holds in its job.
 ~
-1140852746 0 0 2048 0 0 0 0 S
-MT 0 1 -1
+1140852746 0 0 0 2048 0 0 0 0 S
+MT 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -722,8 +722,8 @@ visiting sahaugin visitor~
 &+Bloin cloth.  Ripples of hard muscles outline his hairless body. Whatever
 &+Bcity this sahaugin came from, he must have carried some weight in.
 ~
-2058 0 0 2048 0 0 0 -1000 S
-H 0 1 -1
+2058 0 0 0 2048 0 0 0 -1000 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -736,8 +736,8 @@ kuo-toa tired kuo toa~
 &+gand lies in a deep slumber here within his a small pool comfortably in
 &+ghis chamber.  This kuo-toa also seems stronger then the average kuo-toan.
 ~
-2058 0 0 2048 0 0 0 50 S
-MT 0 0 -1
+2058 0 0 0 2048 0 0 0 50 S
+MT 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -750,8 +750,8 @@ kuo-toa sleepy kuo toa~
 &+gpool within his chamber eyes shut, but still not asleep yet.  He seems
 &+gvery upset about getting some rest before his next shift.
 ~
-2058 0 0 2048 0 0 0 50 S
-MT 0 0 -1
+2058 0 0 0 2048 0 0 0 50 S
+MT 0 0 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -765,8 +765,8 @@ tired yuan-ti yuan ti~
 &+rin a corner of the slimy adobe it doesn't seem to mind.  Such a vicious
 &+rlooking thing would definately be a mistake to wake up.
 ~
-1073743882 1 0 2048 0 0 0 -1000 S
-rs 0 1 4
+1073743882 1 0 0 2048 0 0 0 -1000 S
+rs 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -780,8 +780,8 @@ drow cleric disgusted~
 &+Mgathering her things.  She levitates here, trying to not get any of the
 &+Mslime in this adobe on her.
 ~
-2058 0 0 2048 0 0 0 -1000 S
-PL 0 32 -1
+2058 0 0 0 2048 0 0 0 -1000 S
+PL 0 32 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 10 10 2
@@ -796,8 +796,8 @@ troll gilled scrag~
 &+ghave only been out of water for a little while, judging by the glistening
 &+gwet olive skin on its body.
 ~
-1073743882 0 0 2048 0 0 0 -800 S
-PT 0 1 -1
+1073743882 0 0 0 2048 0 0 0 -800 S
+PT 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -812,8 +812,8 @@ locathah visitor~
 &+Lto always look in the same direction.  This locathah wears fine coral
 &+Ljewelry which would arouse a fair price if valued at any treasure store.
 ~
-2058 0 0 2048 0 0 0 400 S
-H 0 1 -1
+2058 0 0 0 2048 0 0 0 400 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -827,8 +827,8 @@ bullywug shaman~
 &+yneck on thin cords and rests.  This shaman must have travelled a long way
 &+yfrom the nearest bullywug settlement to bask in the kuo-toa's presence.
 ~
-2058 0 0 2048 0 0 0 -490 S
-H 0 256 -1
+2058 0 0 0 2048 0 0 0 -490 S
+H 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -842,8 +842,8 @@ lizardman~
 &+gto tell weather he approves or disapproves of the conditions judging by
 &+gthe always-grim look on his narrow scaled face.
 ~
-1073743882 0 0 2048 0 0 0 -800 S
-H 0 1 -1
+1073743882 0 0 0 2048 0 0 0 -800 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -857,8 +857,8 @@ duergar annoyed~
 &+rrag from all of the slime in this dwelling.  He avoids the pool completely
 &+rand seems eager to leave this slippery domicile as quickly as he came.
 ~
-1073743882 0 0 2048 0 0 0 -1000 S
-PD 0 16384 -1
+1073743882 0 0 0 2048 0 0 0 -1000 S
+PD 0 16384 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -875,8 +875,8 @@ windrusher pegasus~
 &+Wthe sky, rather then by foot like the soldiers he looks down upon from
 &+Wabove when commanding his army.
 ~
-30858 0 0 134217752 0 0 0 1000 S
-AE 0 160 -1
+30858 0 0 0 134217752 0 0 0 1000 S
+AE 0 160 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 1
@@ -890,8 +890,8 @@ goblin guard stair~
 &+Lgoblin doesn't deem much of a fight alone, but many of these creatures
 &+Lseems a very vicious threat.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -905,8 +905,8 @@ goblin guard stair~
 &+Lgoblin doesn't deem much of a fight alone, but many of these creatures
 &+Lseems a very vicious threat.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -923,8 +923,8 @@ galban~
 &+Ga small humanoid creature, years of battle have left his body hardened
 &+Gand pose a great challenge.
 ~
-2058 1 0 268435472 0 0 0 -1000 S
-hg 0 16384 -1
+2058 1 0 0 268435472 0 0 0 -1000 S
+hg 0 16384 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -938,8 +938,8 @@ naked half-elf~
 &+CGalban who gets pleasure out of watching her naked body squirm as he
 &+Cwhips her in his quarters.
 ~
-10 0 0 0 0 0 0 1000 S
-H 0 0 -1
+10 0 0 0 0 0 0 0 1000 S
+H 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -956,8 +956,8 @@ naked grey elf~
 &+cgoblin master's bidding. A small ear in the corner signals her losing
 &+chope.
 ~
-10 0 0 0 0 0 0 1000 S
-PE 4 1 -1
+10 0 0 0 0 0 0 0 1000 S
+PE 4 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -971,8 +971,8 @@ goblin guard sentinel~
 &+Lgoblin doesn't deem much of a fight alone, but many of these creatures
 &+Lseems a very vicious threat.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -987,8 +987,8 @@ flakun~
 &+Gtrying to make his goblin's counterparts live's even more of a daze and
 &+Gmake a profeit out of it too.
 ~
-2058 0 0 8 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 8 0 0 0 -1000 S
+hg 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1004,8 +1004,8 @@ glakkabb goblin shaman~
 &+Cgreen skin, and his body is covered in dangling white robes as he rests
 &+Cin his chamber in deep meditation, not noticing you.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-hg 0 256 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+hg 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1018,8 +1018,8 @@ glakkabb's assistant goblin~
 &+ghim at all times a goblin long sword. He is obviously not a student
 &+gof Glakkabb's, mearly an assistant.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1032,8 +1032,8 @@ tired goblin~
 &+Gmatt within the domicile sleeping.  He snores loudly as he awaits his next
 &+Gshift.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -1048,8 +1048,8 @@ goblin bartender~
 &+LHe seems to make a tremendous profeit due to the amount of service he
 &+Lgets during any time of day.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1063,8 +1063,8 @@ laughing goblin~
 &+Gguard enjoying himself, or an on-duty guard breaking the rules. Nevertheless
 &+Ghe relaxes in the tavern not caring about the outside world.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1078,8 +1078,8 @@ drunk goblin~
 &+Gto steady himself and sit down on his chair but he keeps falling down,
 &+Gknocking tables and drinks over, making a mess.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1094,8 +1094,8 @@ hobgoblin visitor~
 &+Larmor which appears to have strange hide's sewn about them,
 &+Lunprofessionally.  His eye's glow a golden-red as he awaits the leader.
 ~
-2058 0 0 0 0 0 0 -900 S
-H2 0 1 -1
+2058 0 0 0 0 0 0 0 -900 S
+H2 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1111,8 +1111,8 @@ spriggan ambassador~
 &+mheight as the goblins in the Gruneegth settlement, but much stronger
 &+mthen most of them.
 ~
-2060 0 0 0 0 0 0 -1000 S
-PG 0 2147483648 -1
+2060 0 0 0 0 0 0 0 -1000 S
+PG 0 2147483648 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1125,8 +1125,8 @@ goblin acolyte~
 &+Lpower.  Being weaker and more frail then the other goblins does not
 &+Lstop him from his determination to rule over all of them someday.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 2147483648 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 2147483648 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1140,8 +1140,8 @@ goblin guard wandering~
 &+Lgoblin doesn't deem much of a fight alone, but many of these creatures
 &+Lseems a very vicious threat.
 ~
-1140852744 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1140852744 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1155,8 +1155,8 @@ goblin guard prison~
 &+Lgoblin doesn't deem much of a fight alone, but many of these creatures
 &+Lseems a very vicious threat.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1170,8 +1170,8 @@ captive human~
 &+Lprisoner would have rather died then to be captured and put through
 &+Lsuch torment by the goblins.
 ~
-10 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+10 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -1185,8 +1185,8 @@ captive gnome~
 &+Lprisoner would have rather died then to be captured and put through
 &+Lsuch torment by the goblins.
 ~
-10 0 0 0 0 0 0 1000 S
-PG 0 1 -1
+10 0 0 0 0 0 0 0 1000 S
+PG 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -1200,8 +1200,8 @@ grey elf prisoner~
 &+Lprisoner would have rather died then to be captured and put through
 &+Lsuch torment by the goblins.
 ~
-10 0 0 0 0 0 0 1000 S
-PE 0 1 -1
+10 0 0 0 0 0 0 0 1000 S
+PE 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1215,8 +1215,8 @@ beaten kenku prisoner~
 &+Lhis infected wounds, bandaged up to try and stop the bleeding.  He looks
 &+Lup only to see if he should prepare for another thrashing.
 ~
-10 0 0 0 0 0 0 1000 S
-H 0 1 -1
+10 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1230,8 +1230,8 @@ goblin guard prison patrolling~
 &+Lgoblin doesn't deem much of a fight alone, but many of these creatures
 &+Lseems a very vicious threat.
 ~
-1140852744 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+1140852744 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1245,8 +1245,8 @@ rokag goblin torturer~
 &+Gtendencies towards all life hint either an insane blood flowing through
 &+Ghis veins, or an element of &+rBloodLust&+G in his mind.
 ~
-2058 1 0 16 0 0 0 -1000 S
-hg 0 1 -1
+2058 1 0 0 16 0 0 0 -1000 S
+hg 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1259,8 +1259,8 @@ training goblin~
 &+Lthis goblin stumbles about, spear in hand, trying to master certain
 &+Lbattle techniques.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1273,8 +1273,8 @@ exhausted goblin~
 &+Lskills, this goblin lays here regaining his strength and awaits
 &+Lanother hard day.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -1288,8 +1288,8 @@ tield teacher trainer~
 &+Lseen many battles.  As lightly armored as this individual is, he fights
 &+Lwith a certain elegance that nobody could describe with words.
 ~
-34826 0 0 16 0 0 0 -1000 S
-hg 0 1 -1
+34826 0 0 0 16 0 0 0 -1000 S
+hg 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1301,8 +1301,8 @@ goblin judge~
    This particular goblin wear's strange black and white robes.  He holds
 a judge's hammer, smashing the stone podeium with insanity.
 ~
-2058 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1316,8 +1316,8 @@ rocks into the personal confinement chamber in between the gates east of
 here.  This goblin is relatively average in size, as far as goblins are
 concerned but has a brutal way dealing with things.
 ~
-67110922 0 0 0 0 0 0 -1000 S
-hg 0 1 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+hg 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1332,8 +1332,8 @@ sulfious centaur~
 &+Lvery muscular and tanned by the sun.  This strong centaur must have
 &+Lposed a serious fight against the goblin's before being captured.
 ~
-2058 0 0 16 0 0 0 1000 S
-CT 0 128 -1
+2058 0 0 0 16 0 0 0 1000 S
+CT 0 128 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1347,8 +1347,8 @@ ferocious lion~
 &+Ystomach, ripping and chewing at the corpse of one of the goblin
 &+Ycage cleaners, who must have woken the lion while doing his work.
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -1361,8 +1361,8 @@ huge olyx ox~
 &Nin one of the filthy Gruneegth cages where it has been staying since.
 &NIts tired, hungry body rests for now until it is fed again.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -1375,8 +1375,8 @@ brown bear~
 &+yimprisoned in one of the Gruneegth cages.  Its tired body now sleeps,
 &+yawaiting its next feeding session.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -1389,8 +1389,8 @@ peryton~
 &+gtwo strange, jet black antlers pertruding from the front of its goat-like
 &+gface.  This strange creature was captured from a far off city, &+rBloodstone&+L.
 ~
-8 0 0 134217728 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 134217728 0 0 0 0 S
+A 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -1407,8 +1407,8 @@ very large gorilla~
 &+Lentire cage to rock slowly back and forth, as it dangles from the
 &+Lcavern ceiling.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1

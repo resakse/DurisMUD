@@ -300,7 +300,6 @@ E 1 25108 17 18 100 0 0 0          *   a wand of flames
 M 0 25218 1 25242 100 0 0 0        * Caltoon the efreeti magi master
 E 1 25113 1 7 100 0 0 0            *   some leggings of red flames
 E 1 25111 1 15 100 0 0 0           *   a bracelet of blue flames
-*G 1 67244 1 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 25112 1 0 100 0 0 0            *    the flaming head of Caltoon
 M 0 25190 57 25243 100 0 0 0       * an efreeti commoner
 M 0 25205 47 25244 100 0 0 0       * an efreeti commoner

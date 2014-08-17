@@ -9,8 +9,8 @@ make her living through being a prostitute.  Fortunately enough, at
 least she has the protection of a city, and the utilities of a working
 in a whore house.
 ~
-2058 0 0 152 0 0 0 -1000 S
-PL 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -24,8 +24,8 @@ whore who works at this bordello, however, she is still very low
 on the chain of society among the drow elves, she is not quite
 a pure slut, but close.
 ~
-2058 0 0 152 0 0 0 -1000 S
-PL 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -38,8 +38,8 @@ ogre traveller burly~
 days being hired to take out different persons, and at night he comes
 here to the community whore house where is commonly known.
 ~
-1073743880 0 0 152 0 0 0 -1000 S
-PO 0 16384 -1
+1073743880 0 0 0 152 0 0 0 -1000 S
+PO 0 16384 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -53,8 +53,8 @@ He doesn't wear the average scarab of ghore, but rather the stylistic
 colors of BogenTok.  He appears to be one of the average off-duty guards
 at a closer glance.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PT 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -66,8 +66,8 @@ orc tired~
    This orc obviously knows where to go to have a good time in BogenTok,
 and seems to be waiting to go at it again as he catches his breath.
 ~
-2058 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -81,8 +81,8 @@ and is wearing, accordingly, a very nice dress adorned with beautiful
 jewelry made in Aracdrathos.  She sits behind the desk, counting the
 platinum coins she has gotten today.
 ~
-1073743946 0 0 152 0 0 0 -1000 S
-PL 0 1 -1
+1073743946 0 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -96,8 +96,8 @@ gotten stained on the floor where paladin's have been hung.  He wears
 nothing except the normal Shady Grove set of clothes that most orcs
 wear, and a little pin marking him as a janitor.
 ~
-2058 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -112,8 +112,8 @@ else just hunt and live on a small farm of their own.  However, this
 bugbear seems a tad smarter than the average one and has managed to
 maintain a small buisness here in BogenTok.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -127,8 +127,8 @@ drunk orc~
 &+Las he can barely speak, or lift his head.  He is wearing nothing
 &+Lbut the standard set of orc garments one purchaces in Shady Grove.
 ~
-2186 0 0 152 0 0 0 0 S
-PH 0 0 -1
+2186 0 0 0 152 0 0 0 0 S
+PH 0 0 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -144,8 +144,8 @@ seems quite skilled at keeping down any riots that break out
 at her reception desk.  She is wearing a fairly loose set of
 leather armor, and carries a small dagger at her side.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PL 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -159,8 +159,8 @@ Eye by the insignia of his broach, sits at a table, drinking a whiskey
 and conversing with the locals.  What he wears is very hard to determine,
 as he covers himself almost completely with his cloak.
 ~
-1073743946 0 0 152 0 0 0 -1000 S
-PD 0 8192 -1
+1073743946 0 0 0 152 0 0 0 -1000 S
+PD 0 8192 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -175,8 +175,8 @@ flind anti-paladin anti paladin~
 &+ybought within the city.  His sword and armor show signs of wear and
 &+ytear, and he has a scar running from his lower lip down his neck.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-HO 0 16 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+HO 0 16 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ this goblin warrior maintains his rough appearance and emerges as
 a decent warrior in the city.  He is wearing a small gnome-sized set
 of black leather armor, and wieldling a small shortsword.
 ~
-1073743882 0 0 152 2 0 0 -1000 S
-HG 0 1 -1
+1073743882 0 0 0 152 2 0 0 -1000 S
+HG 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -209,8 +209,8 @@ practices, cutting off segements of the victim and forming necklaces
 out of their body parts.  In addition, he wields a huge black axe
 and wears a complete suit of black clothing.
 ~
-1090521098 0 0 152 0 0 0 -1000 S
-PO 0 1 -1
+1090521098 0 0 0 152 0 0 0 -1000 S
+PO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -224,8 +224,8 @@ in the mud and watches the executioner sharpen his axe.  The only
 thing he wears is a series of rags, barely holding together.  He
 carries with him a small sack, which holds anything he can find.
 ~
-2058 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ come daily to trade their warez for his goods.  Almost anything
 can be found in here as he buys almost everything.  He wears a simple
 green beret with a feather in it.
 ~
-2058 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -255,8 +255,8 @@ average noble garb, which consists of mainly robes and armor, each
 studded with some sort of gem.  He holds a small sword by his side
 in the case must defend himself.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -269,8 +269,8 @@ A small child skips about the area, watching people go by.
 friends, playing with roam steeders and cave bears, and generally living
 the good life until he comes of age to goto the training camps.
 ~
-136 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+136 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ steeder~
 owner having left it here.  It is a fairly fearsome creature, being
 imported from Khildarak, along with the adamantite shipments.
 ~
-134219784 0 0 152 0 0 0 -1000 S
-AE 0 1 -1
+134219784 0 0 0 152 0 0 0 -1000 S
+AE 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ A steeder sits at the stables.
 owner having left it here.  It is a fairly fearsome creature, being
 imported from Khildarak, along with the adamantite shipments.
 ~
-134219786 0 0 152 0 0 0 -1000 S
-AE 0 1 -1
+134219786 0 0 0 152 0 0 0 -1000 S
+AE 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -312,8 +312,8 @@ the gates of BogenTok, wearing a combination of bloodmail and
 adamantite armor.  He is fairly strong, and hearty.  He seems to
 notice no one as they past, being on constant look out for raiders.
 ~
-67110922 0 0 268435608 0 0 0 -1000 S
-PD 0 1 -1
+67110922 0 0 0 268435608 0 0 0 -1000 S
+PD 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -327,8 +327,8 @@ the city.  Although most gnolls like to live in the hills, this one has
 taken to city life where he seems to make a small living, probably
 as a mercenary or else employed in one of the armies.
 ~
-2056 1 0 152 0 0 0 -1000 S
-HO 0 1 -1
+2056 1 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -343,8 +343,8 @@ a pair of stained gloves, and carries a small broom with him.  He doesn't
 appear to distressed about his job, at least it brings in the gold, and
 he doesn't have to run the risk of joining the army.
 ~
-2058 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+2058 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -362,8 +362,8 @@ is made purly out of durithalite that has been carved and shipped from
 Arachdrathos, and the beds were obviously made in Khildarak from the
 find adamantite craftsmanship shown by the duergar there.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-H 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+H 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -381,8 +381,8 @@ is made purly out of durithalite that has been carved and shipped from
 Arachdrathos, and the beds were obviously made in Khildarak from the
 find adamantite craftsmanship shown by the duergar there.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-H 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+H 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -397,8 +397,8 @@ closet, while he sleeps on his small bed.  The bed is relatively small,
 even for a drow, but of great craftsmanship.  The drow is obviously
 a male since most of the drow women are clerics.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PL 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -413,8 +413,8 @@ closet, while he sleeps on his small bed.  The bed is relatively small,
 even for a drow, but of great craftsmanship.  The drow is obviously
 a male since most of the drow women are clerics.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PL 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -428,8 +428,8 @@ nothing more than a huge pile of straws, and hides, being so large,
 the army couldn't afford to give all of their ogres a full sived bed
 built on a drow-made framework.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PO 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PO 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -443,8 +443,8 @@ nothing more than a huge pile of straws, and hides, being so large,
 the army couldn't afford to give all of their ogres a full sived bed
 built on a drow-made framework.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PO 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PO 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -459,8 +459,8 @@ along with many other of his kind in a barracks.  Unlike the more
 experienced warriors, he doesn't get his own bloodmail, but is forced
 to wear a suit of studded leather.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -475,8 +475,8 @@ along with many other of his kind in a barracks.  Unlike the more
 experienced warriors, he doesn't get his own bloodmail, but is forced
 to wear a suit of studded leather.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -490,8 +490,8 @@ the army, and sleep accordingly on a low-quality bed and wears only
 alligator-skin armor.  He appears content in this life, although
 many aren't.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PT 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -505,8 +505,8 @@ the army, and sleep accordingly on a low-quality bed and wears only
 alligator-skin armor.  He appears content in this life, although
 many aren't.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PT 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -520,8 +520,8 @@ which is slightly above the status of the average warrior in any other
 army.  He wears a full suit of bloodmail and has the strength of at
 least ten humans.  He sleeps comfortably after a hard day of training.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -535,8 +535,8 @@ which is slightly above the status of the average warrior in any other
 army.  He wears a full suit of bloodmail and has the strength of at
 least ten humans.  He sleeps comfortably after a hard day of training.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -551,8 +551,8 @@ quarters, polishing his armor, waiting for the next drill session time.
 He has obviously been through the boot camp himself as he wears a tattoo
 of the insignia of the troll division.
 ~
-1073743882 0 0 152 2048 0 0 -1000 S
-PT 0 1 -1
+1073743882 0 0 0 152 2048 0 0 -1000 S
+PT 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -567,8 +567,8 @@ battle he has one, which includes several weapons and scalps.  He
 appears fairly large for a duergar, keeping himself medium sized
 most of the time.
 ~
-1073743882 0 0 152 2048 0 0 -1000 S
-PD 0 1 -1
+1073743882 0 0 0 152 2048 0 0 -1000 S
+PD 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -582,8 +582,8 @@ wears a full suit of bloodmail and carrise with him the trophies of
 battle he has one, which includes several weapons and scalps.  He
 appears fairly large for a normal orc.
 ~
-1073743882 0 0 152 2048 0 0 -1000 S
-HO 0 1 -1
+1073743882 0 0 0 152 2048 0 0 -1000 S
+HO 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -597,8 +597,8 @@ wears a full suit of bloodmail and carrise with him the trophies of
 battle he has one, which includes several weapons and scalps.  He
 appears fairly large for a normal ogre.
 ~
-1073743882 0 0 152 2048 0 0 -1000 S
-PO 0 1 -1
+1073743882 0 0 0 152 2048 0 0 -1000 S
+PO 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -612,8 +612,8 @@ wears a full suit of bloodmail and carrise with him the trophies of
 battle he has one, which includes several weapons and scalps.  He
 appears fairly large for a normal flind.
 ~
-1073743882 1 0 152 2048 0 0 -1000 S
-H2 0 1 -1
+1073743882 1 0 0 152 2048 0 0 -1000 S
+H2 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -627,8 +627,8 @@ wears a full suit of bloodmail and carrise with him the trophies of
 battle he has one, which includes several weapons and scalps.  He
 appears fairly large for a normal drow.
 ~
-1073743882 0 0 152 2048 0 0 -1000 S
-PL 0 1 -1
+1073743882 0 0 0 152 2048 0 0 -1000 S
+PL 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -642,8 +642,8 @@ out of small wooden chips.  This goblin seems to have just joined the
 army, and therefor doesn't even have studded leather armor, but just
 a rusty old sword.
 ~
-1073743882 1 0 152 2 0 0 -1000 S
-HG 0 1 -1
+1073743882 1 0 0 152 2 0 0 -1000 S
+HG 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -657,8 +657,8 @@ out of small wooden chips.  This goblin seems to have just joined the
 army, and therefor doesn't even have studded leather armor, but just
 a rusty old sword.
 ~
-1073743882 1 0 152 2 0 0 -1000 S
-HG 0 1 -1
+1073743882 1 0 0 152 2 0 0 -1000 S
+HG 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -672,8 +672,8 @@ wears a full suit of bloodmail and carrise with him the trophies of
 battle he has one, which includes several weapons and scalps.  He
 appears fairly large for a normal goblin.
 ~
-1073743882 0 0 152 2050 0 0 -1000 S
-HG 0 1 -1
+1073743882 0 0 0 152 2050 0 0 -1000 S
+HG 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -687,8 +687,8 @@ barracks was splendidly suited for the rakshasa by the sergeant, who
 longed for his home.  The walls are painted just above the small bed
 that this rakshasa sleeps in.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-RA 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+RA 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -702,8 +702,8 @@ barracks was splendidly suited for the rakshasa by the sergeant, who
 longed for his home.  The walls are painted just above the small bed
 that this rakshasa sleeps in.
 ~
-1073743882 1 0 152 0 0 0 -1000 S
-RA 0 1 -1
+1073743882 1 0 0 152 0 0 0 -1000 S
+RA 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -717,8 +717,8 @@ wears a full suit of bloodmail and carrise with him the trophies of
 battle he has one, which includes several weapons and scalps.  He
 appears fairly large for a normal Rakshasa.
 ~
-1073743882 1 0 152 2048 0 0 -1000 S
-RA 0 1 -1
+1073743882 1 0 0 152 2048 0 0 -1000 S
+RA 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -730,8 +730,8 @@ duergar stout~
     This stout duergar is covered in bloodmail, and sits behind a
 display case, waiting to take orders for individuals, or the army.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -744,8 +744,8 @@ duergar brewer~
 factory.  He wears a huge apron that itself is made out of adamantite,
 and works constantly sturing the molten adamantite so it doesn't harden.
 ~
-1140852746 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1140852746 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -758,8 +758,8 @@ caretaker drow~
 the blood in the large vials.  He wears a simple set of garbs for working
 with blood, including an apron and some gloves made out of illithid-skin.
 ~
-1140983818 0 0 152 0 0 0 -1000 S
-PL 0 1 -1
+1140983818 0 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -773,8 +773,8 @@ barking down orders of when to pour the molten adamantite into the
 molds.  He wears a standard suit of bloodmail and a huge apron.
 He seems very old and wise, yet very powerful.
 ~
-2058 1 0 152 0 0 0 -1000 S
-PD 0 1 -1
+2058 1 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -789,8 +789,8 @@ quite old, but for a drow, amazingly attractive.  She wears the standard
 broach of Lloth on yer right shoulder, and on the left, a symbol of
 the factory staff.
 ~
-67594 1 0 152 0 0 0 -1000 S
-PL 0 32 -1
+67594 1 0 0 152 0 0 0 -1000 S
+PL 0 32 0 -1
 60 130 -100 10d5+25000 4d6+50
 0.0.0.35 150000
 8 8 2
@@ -805,8 +805,8 @@ and strong, and isn't as scrawny as the average drow.  Unlike the female
 clerics, this male drow has taken to the liking of the warrior, being
 quick and responsive.
 ~
-1140852744 0 0 152 0 0 0 -1000 S
-PL 0 1 -1
+1140852744 0 0 0 152 0 0 0 -1000 S
+PL 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -820,8 +820,8 @@ with the trainees.  He is tall and muscle band, weighing probably 600
 pounds.  He is almost seven feet tall and could probably take out half
 of this army itself.
 ~
-1140852746 0 0 152 0 0 0 -1000 S
-PO 0 1 -1
+1140852746 0 0 0 152 0 0 0 -1000 S
+PO 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -835,8 +835,8 @@ and has thusly been given a full suit of bloodmail.  He walks around
 the area, going from one training section to the next, bloodlust
 in his eyes, and the scalp of a paladin in his hand.
 ~
-1073743880 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743880 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -849,8 +849,8 @@ troll warrior~
 the army.  Having fragged over 200 good races himself, he has brought
 about more victory than they could give him awards for.
 ~
-1140852746 0 0 152 0 0 0 -1000 S
-PT 0 1 -1
+1140852746 0 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -864,8 +864,8 @@ has been ordered to instruct the new warriors on how to sword fight
 properly.  Using a magnicifent sword himself, he shows them each
 in a series of 1 on 1 fighting drills.
 ~
-1140852746 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1140852746 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -879,8 +879,8 @@ warriors the sneaky tricks of war.  He shows them how to sneak in
 the underdark, leap off boulders, and a minor version of backstabbing.
 He seems to be a leader of the duergar war clans.
 ~
-1140852746 0 0 152 0 0 0 -1000 S
-PD 0 1 -1
+1140852746 0 0 0 152 0 0 0 -1000 S
+PD 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -895,8 +895,8 @@ average noble garb, which consists of mainly robes and armor, each
 studded with some sort of gem.  He holds a small sword by his side
 in the case must defend himself.
 ~
-1073743882 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743882 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -910,8 +910,8 @@ getting hired by the scum of the back allies.  He carries with him
 everything a mercenary would need, a sword, a rope, and a nice head
 plate.
 ~
-1073743880 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743880 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -925,8 +925,8 @@ getting hired by the scum of the back allies.  He carries with him
 everything a mercenary would need, a sword, a rope, and a nice head
 plate.
 ~
-1073743880 0 0 152 0 0 0 -1000 S
-HO 0 1 -1
+1073743880 0 0 0 152 0 0 0 -1000 S
+HO 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -940,8 +940,8 @@ getting hired by the scum of the back allies.  He carries with him
 everything a mercenary would need, a sword, a rope, and a nice head
 plate.
 ~
-1073743946 0 0 152 0 0 0 -1000 S
-PO 0 1 -1
+1073743946 0 0 0 152 0 0 0 -1000 S
+PO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -955,8 +955,8 @@ getting hired by the scum of the back allies.  He carries with him
 everything a mercenary would need, a sword, a rope, and a nice head
 plate.
 ~
-1073743880 0 0 152 2 0 0 -1000 S
-HG 0 1 -1
+1073743880 0 0 0 152 2 0 0 -1000 S
+HG 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -971,8 +971,8 @@ to him over the years, he seems to be able to really push that enlarge
 innate ability of duergar, or have had something done to him.  In
 either case, this guy could soak up a pounding, and dish out a lot also.
 ~
-1073743882 1 0 152 2051 0 0 -1000 S
-G 0 1 -1
+1073743882 1 0 0 152 2051 0 0 -1000 S
+G 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -986,8 +986,8 @@ long time, probably since he started this army.  She keeps him fully
 healed and awared at just about all hours of the night incase of
 a suprise raid, these two make quite a team.
 ~
-67110922 1 0 152 0 0 0 -1000 S
-PL 0 32 -1
+67110922 1 0 0 152 0 0 0 -1000 S
+PL 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1001,8 +1001,8 @@ which is slightly above the status of the average warrior in any other
 army.  He wears a full suit of bloodmail and has the strength of at
 least ten humans.  He appears to be quite insane.
 ~
-1073743880 1 0 24 0 0 0 -1000 S
-PD 0 1 -1
+1073743880 1 0 0 24 0 0 0 -1000 S
+PD 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

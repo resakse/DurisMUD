@@ -7,8 +7,8 @@ mindless wight gate operator~
 &+LHe sits in front of a huge crank with two ropes fastened to it, ready
 &+Lto open the gate on the command of his masters.
 ~
-2058 0 0 0 0 0 0 -1000 S
-UW 0 1 5
+2058 0 0 0 0 0 0 0 -1000 S
+UW 0 1 0 5
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -21,8 +21,8 @@ mindless storm giant gate operator zombie~
 &+LHe sits in front of a huge crank with two ropes fastened to it, ready
 &+Lto open the gate on the command of his masters.
 ~
-2058 0 0 0 0 0 0 -1000 S
-SG 0 1 5
+2058 0 0 0 0 0 0 0 -1000 S
+SG 0 1 0 5
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -35,8 +35,8 @@ undead behemoth~
 &+Lmaster who raised it.  It is saddled up and ready to ride by the undead
 &+Lhordes.
 ~
-1207961672 0 0 0 0 0 0 -1000 S
-u 0 1 5
+1207961672 0 0 0 0 0 0 0 -1000 S
+u 0 1 0 5
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -49,8 +49,8 @@ skeletal rider~
 &+Lmust of been a humanoid race at some point because he is not that large.
 &+LHe reeks of death and has eyes of fire.
 ~
-2056 0 0 8 0 0 0 -1000 S
-U 0 1 -1
+2056 0 0 0 8 0 0 0 -1000 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -63,8 +63,8 @@ thirsty vampire~
 &+Lblood from the rocks.  Somewhat of a lesser vampire, as it has a look
 &+Lof fear in his eyes from his masters.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-UV 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+UV 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 8 1
@@ -77,8 +77,8 @@ tarantula spider~
 &+Lshiny black fangs and venom dripping forth.  It crawls about looking for
 &+Llive flesh on which to feed.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-AS 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+AS 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -89,8 +89,8 @@ larger tarantula~
 ~
    x
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-AS 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+AS 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -103,8 +103,8 @@ rock lizard~
 &+Ltall.  It has beedy red eyes and a tough scale covering.  From its size
 &+Land speed it looks old and experienced.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-R 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+R 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -115,8 +115,8 @@ blood worm~
 ~
    &+rA small blood worm wriggles around here feasting on the blood.
 ~
-10 0 0 0 0 0 0 -1000 S
-R 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+R 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -127,8 +127,8 @@ blood worm~
 ~
    &+rA small blood worm wriggles around here feasting on the blood.
 ~
-10 0 0 0 0 0 0 -1000 S
-R 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+R 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -139,8 +139,8 @@ blood worm~
 ~
    &+rA small blood worm wriggles around here feasting on the blood.
 ~
-10 0 0 0 0 0 0 -1000 S
-R 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+R 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -151,8 +151,8 @@ blood worm~
 ~
    &+rA small blood worm wriggles around here feasting on the blood.
 ~
-10 0 0 0 0 0 0 -1000 S
-R 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+R 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -163,8 +163,8 @@ large blood worm~
 ~
    &+rA small blood worm wriggles around here feasting on the blood.
 ~
-10 0 0 0 0 0 0 -1000 S
-R 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+R 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -177,8 +177,8 @@ dark green snake~
 &+Lrocks.  It looks quite old due to its size and missing number of scales,
 &+Lbut posesses a powerful hiss and a very strong body.
 ~
-1073743880 0 0 0 0 0 0 0 S
-RS 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+RS 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -191,8 +191,8 @@ wight~
 &+Lto move along and continue wherever they may be going.  He stands
 &+Lprotectively nearby and taps his foot impatiently.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-U 0 1 5
+1140852746 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 5
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -205,8 +205,8 @@ short necromancer~
 &+Lincantations causing different pieces of bone to move and take shape.
 &+LHe radiates a feeling of true evil as he chants away.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1024 2
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1024 0 2
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -219,8 +219,8 @@ deformed skeleton~
 &+Wcreatures fused together in a very lopsided looking skeleton, bound
 &+Wonly by the magic of a weak necromancer.
 ~
-10 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+10 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -234,8 +234,8 @@ tiny winged lizard dragonkin familiar~
 &+L&+rred scaled &+Lface.  Its forked tongue randomly lashes in and out
 &+Lof its mouth.
 ~
-2058 0 0 134217728 0 0 0 -1000 S
-DK 0 1 1
+2058 0 0 0 134217728 0 0 0 -1000 S
+DK 0 1 0 1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -247,8 +247,8 @@ skeleton hand~
    &+WThis hand of a skeleton is very old and brittle looking.  The nails
 &+Wgrow out of the bony fingers extra long and look very sharp.
 ~
-1073743882 1 0 0 0 0 0 -1000 S
-U 0 1 1
+1073743882 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -264,8 +264,8 @@ flaming skeleton highlord~
 &+Rstanding near this flaming undead is uncomfortable without the proper
 &+Rprotection spell, just because of the amount of heat it gives off.
 ~
-1140852746 0 0 0 1 0 0 -1000 S
-EF 0 1 -1
+1140852746 0 0 0 0 1 0 0 -1000 S
+EF 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -280,8 +280,8 @@ zugle wight warlord~
 &+LZugle has command many undead armies on his behemoth steed for hundreds of
 &+Lyears.
 ~
-1140852746 0 0 128 0 0 0 -1000 S
-U 0 1 5
+1140852746 0 0 0 128 0 0 0 -1000 S
+U 0 1 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -296,8 +296,8 @@ lich dark wizard~
 &+LThe lich must have just traveled down here with Zugle from the surface,
 &+Lseeing as how the human he takes with him seems like some sort of prize.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-UL 0 512 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+UL 0 512 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -311,8 +311,8 @@ brutalized gnome~
 &+Lbruised and bloody as he has been beaten within inches of its pathetic
 &+Lweak life.
 ~
-2186 0 0 0 0 0 0 1000 S
-PG 0 1 -1
+2186 0 0 0 0 0 0 0 1000 S
+PG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -325,8 +325,8 @@ ancient vampiric behemoth steed~
 &+LIt has been the overpowering mount of Zugle for quite a few years and
 &+Lthe wounds and exposed bones on its undead body is proof of that.
 ~
-2056 0 0 0 0 0 0 -1000 S
-u 0 1 5
+2056 0 0 0 0 0 0 0 -1000 S
+u 0 1 0 5
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -339,8 +339,8 @@ huge poisonous snail~
 &+Ljagged rock within the cave.  It seems to blend into its surroundings
 &+Las it travels across the ground feeling on the blood drips.
 ~
-8 0 0 0 0 0 0 0 S
-I 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+I 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -353,8 +353,8 @@ long black viper snake~
 &+LIts body is black, but its head is &+Mbright purple&+L, making it
 &+Lsomewhat easy to see.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-RS 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+RS 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -367,8 +367,8 @@ vampire~
 &+LThe vampire must of easily traveled here from his home, but how the
 &+Lgithzerai got here is a completely different story.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -381,8 +381,8 @@ githzerai body~
 &+Lare drained from his wrist by a vampire.  The githzerai still twitches
 &+Lhowever as his body pales over, filling with everlasting &+revil&N.
 ~
-2058 0 0 0 0 0 0 -1000 S
-GZ 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+GZ 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -395,8 +395,8 @@ huge maggot~
 &+Lorgans on its wrinkly white body.  It has two sharp teeth in the front
 &+Lthat simply force chunks of flesh into down into its body.
 ~
-10 0 0 0 0 0 0 -1000 S
-AP 0 1 1
+10 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -409,8 +409,8 @@ huge maggot~
 &+Lorgans on its wrinkly white body.  It has two sharp teeth in the front
 &+Lthat simply force chunks of flesh into down into its body.
 ~
-10 0 0 0 0 0 0 -1000 S
-AP 0 1 1
+10 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -423,8 +423,8 @@ maggot~
 &+Lorgans on its wrinkly white body.  It has two sharp teeth in the front
 &+Lthat simply force chunks of flesh into down into its body.
 ~
-10 0 0 0 0 0 0 -1000 S
-AP 0 1 1
+10 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -437,8 +437,8 @@ maggot~
 &+Lorgans on its wrinkly white body.  It has two sharp teeth in the front
 &+Lthat simply force chunks of flesh into down into its body.
 ~
-10 0 0 0 0 0 0 -1000 S
-AP 0 1 1
+10 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -452,8 +452,8 @@ putrid fomorian giant~
 &+Land fowl creatures ever to be reanimated, simply from the evil magic
 &+Lradiating from the environment.
 ~
-2058 0 0 0 0 0 0 -1000 S
-G 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -466,8 +466,8 @@ tall death knight~
 &+Land a full suit of armor.  He walks triumphantly and confidently through
 &+Lthese vile tunnels.
 ~
-1073743880 0 0 0 1 0 0 -1000 S
-UK 0 1 -1
+1073743880 0 0 0 0 1 0 0 -1000 S
+UK 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -480,8 +480,8 @@ shadowbeast shadow beast~
 &+Lon his hind legs.  It is completely black and seems to mold into the dark
 &+Lshadows, making him very hard to see.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-US 0 8192 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+US 0 8192 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -494,8 +494,8 @@ carnivorous fungus~
 &+Lfallen onto the cavern floor.  It doesn't seem to be bothering anybody
 &+Las it acts like somewhat of a twisted street cleaner.
 ~
-8 0 0 0 0 0 0 0 S
-AP 0 1 0
+8 0 0 0 0 0 0 0 0 S
+AP 0 1 0 0
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -508,8 +508,8 @@ black widow spider~
 &+Lbeady little eyes and huge shiny black fangs.  It creeps along a web it
 &+Lrecently made.
 ~
-1073743880 0 0 0 0 0 0 0 S
-AS 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+AS 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -523,8 +523,8 @@ barbarian slave~
 &+Lhe forces huge lengths of bone into the proper positions to reinforce
 &+Lthis damaged portion of the shaft.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PB 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PB 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -539,8 +539,8 @@ minotaur slave~
 &+Ldrops of BloodLust as he carries the bones for the barbarian slave to
 &+Lput into position.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-MT 0 1 4
+1073743882 0 0 0 0 0 0 0 1000 S
+MT 0 1 0 4
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -554,8 +554,8 @@ rider enforcer~
 &+Lthem to work harder on the structure of the shaft.  This undead rides
 &+Lhis behemoth while still acting as a slavemaster perfectly.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -568,8 +568,8 @@ argle shade bonesmith~
 with &+Blightning&N fast speed using powerful &+Mmagic&N to fuse together
 &+Wbone fragments&N and &+Wbone pieces&N into useful pieces of equipment.
 ~
-2058 0 0 8 0 0 0 -1000 S
-U 0 1 2
+2058 0 0 0 8 0 0 0 -1000 S
+U 0 1 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -582,8 +582,8 @@ diabolic skeleton~
 &+Ltwisted looking look of satisfaction as he forces the drow's
 &+Lhead into the water.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -598,8 +598,8 @@ struggling drow elf~
 &+Lhave decided to deal with him? Either way, he is facing a brutal and
 &+Lhorrifying execution.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-PL 0 33 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+PL 0 33 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -613,8 +613,8 @@ boa constrictor snake~
 &+Lthis was its home - perhaps it is.  The snake has a red fire to its
 &+Leyes, and a black venom from its fang.
 ~
-1073743880 0 0 0 0 0 0 0 S
-RS 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+RS 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -632,8 +632,8 @@ undead pirate~
 &+Lprominent undead fleet vessels, like the Black P&Ne&+Wa&Nr&+Ll or perhaps even
 &+Lthe &+BS&+be&+Ba&+GDoo&+L.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -647,8 +647,8 @@ revenant~
 &+Lamong the undead when revenants are around, and this one is no
 &+Lexception.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1 4
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 4
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -662,8 +662,8 @@ massive wight barkeep~
 &+Lhanging off its body and insects crawling in and out of open wounds
 &+Land torn flesh.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1 5
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -677,8 +677,8 @@ vampire patron~
 &+Lhe, perhaps, once lived in Verspin or Valoisian Castle ---But now,
 &+Lhowever, he lives within these undead crypts.
 ~
-2058 0 0 0 0 0 0 -1000 S
-UM 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+UM 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -692,8 +692,8 @@ shopkeeper~
 &+Land barely does or says anything other then run this shop, as so speaks
 &+Lhis purpose.
 ~
-2058 0 0 8 0 0 0 -1000 S
-U 0 1 -1
+2058 0 0 0 8 0 0 0 -1000 S
+U 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -707,8 +707,8 @@ gargoyle lookout~
 &+Lof intrusion.  Whatever is below must be very important for him to
 &+Lprotect at all costs.
 ~
-1073743882 0 0 0 0 2097152 0 -1000 S
-H 0 1 -1
+1073743882 0 0 0 0 0 2097152 0 -1000 S
+H 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -722,8 +722,8 @@ gargoyle frost magus~
 &+Lin unbelievable pain, but can do nothing but become forced deeper into
 &+Lthe tunnels, breathing deadly fire the entire way.
 ~
-1073743882 0 0 0 0 2097152 0 -1000 S
-H 0 1 -1
+1073743882 0 0 0 0 0 2097152 0 -1000 S
+H 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -733,8 +733,8 @@ spider cannibilistic~
 &+LA tiny canniblistic spider sits on the corpse, feeding on pieces of flesh.
 ~
 ~
-2058 0 0 0 0 0 0 -1000 S
-AC 0 1 0
+2058 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 0
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -748,8 +748,8 @@ gargoyle windtalker~
 &+Lin unbelievable pain, but can do nothing but become forced deeper into
 &+Lthe tunnels, breathing deadly fire the entire way.
 ~
-1073743882 0 0 0 0 2097152 0 -1000 S
-H 0 1 -1
+1073743882 0 0 0 0 0 2097152 0 -1000 S
+H 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -765,8 +765,8 @@ pyrobeast beast~
 &+Lethermancers go unpermenant as it is currently pushed and aggrevated into
 &+Ltorching the cavern wall, digging a tunnel deep into this place.
 ~
-1073743914 0 0 0 1 262144 0 0 S
-A 0 16384 4
+1073743914 0 0 0 0 1 262144 0 0 S
+A 0 16384 0 4
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -780,8 +780,8 @@ vampire bat~
 &+Lmoves extremely fast in between the shadows, fangs exposed and
 &+Lready to bite the living.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-B 0 1 1
+1073743880 0 0 0 0 0 0 0 -1000 S
+B 0 1 0 1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -795,8 +795,8 @@ rider watcher~
 &+Lthe blade into his free hand.  He forsees the progress of the
 &+Lherders.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1 3
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -811,8 +811,8 @@ viscerith behemoth mount br_a~
  &+Lwild staring eyes and a strong urge to fight.  Dried blood cakes
  &+Lhis bony mouth as he snarls and growls.
 ~
-1073743882 1 0 152 276672 67108928 263168 -1000 S
-A 0 16385 4
+1073743882 1 0 0 152 276672 67108928 263168 -1000 S
+A 0 16385 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -824,8 +824,8 @@ fearsome undead behemoth~
    &+LThis behemoth has been reanimated and brought to life by the undead
 &+Lto do bidding by their masters.
 ~
-1073743882 1 0 33554712 2 0 0 -1000 S
-u 0 1 5
+1073743882 1 0 0 33554712 2 0 0 -1000 S
+u 0 1 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -838,8 +838,8 @@ ferocious undead behemoth~
 &+Lattack anything and everything.  It is completely unaltered by
 &+Lthe powerful undead magics and ferociously fights on its own.
 ~
-1073743882 1 0 280 2 0 0 -1000 S
-u 0 1 5
+1073743882 1 0 0 280 2 0 0 -1000 S
+u 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -854,8 +854,8 @@ bone golem~
 &+WIt has been raised by powerful magic and will protect these cages
 &+Wfor as long as the magic holds strong.
 ~
-67110922 0 0 0 0 0 0 -1000 S
-OG 0 1 5
+67110922 0 0 0 0 0 0 0 -1000 S
+OG 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -869,8 +869,8 @@ lich warlock~
 &+Land chants ancient dark incantations at Viscerith, but has no
 &+Lsuccess as BloodLust has overcome the behemoth's body.
 ~
-2058 0 0 8 0 0 0 -1000 S
-UL 0 131072 -1
+2058 0 0 0 8 0 0 0 -1000 S
+UL 0 131072 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -884,8 +884,8 @@ rider watcher~
 &+Lthe blade into his free hand.  He forsees the progress of the
 &+Lherders.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1 3
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 3
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -899,8 +899,8 @@ elite wight guardian~
 &+Leither seen many battles, or the pieces of flesh used to animate him
 &+Lhas seen many battles.  Either way this guardian is a formidable opponent.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-U 0 1 5
+1140852746 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 5
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -914,8 +914,8 @@ undead herder~
 &+La stasis while the warlocks attempt to subdue them under the command of
 &+Lthe undead.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 3
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -930,8 +930,8 @@ archazel vampire dreadlord guard head~
 &+Lpossible suicide or torture as cause of death in a past life.  He guards
 &+Lthe choke commanding his minions to follow his will.
 ~
-1073743882 0 0 24 0 0 0 -1000 S
-X 0 1 4
+1073743882 0 0 0 24 0 0 0 -1000 S
+X 0 1 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -945,8 +945,8 @@ minion~
 &+Lunplausible.  The minion has black pools for eyes and spectral mist
 &+Lfloats off in a trail wherever he moves.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-AC 0 1 2
+1073743882 0 0 0 0 0 0 0 -1000 S
+AC 0 1 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -961,8 +961,8 @@ twin phantom farseer~
 &+Lsubdued by a warlock and brought back to be used as a steed for the
 &+Lundead horde.
 ~
-2058 192 0 0 0 0 0 -1000 S
-H 0 4 -1
+2058 192 0 0 0 0 0 0 -1000 S
+H 0 4 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -976,8 +976,8 @@ devious shade~
 &+Lslaves with negative energy as they continue to work harder and faster
 &+Lfor him.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-H 0 131072 2
+1073743882 0 0 0 0 0 0 0 -1000 S
+H 0 131072 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -990,8 +990,8 @@ shadow beast shadowbeast~
 &+Land seems to mold with the shadows.  The shadowbeast has glowing
 &+Lred eyes and snarls at you.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-US 0 8192 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+US 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1006,8 +1006,8 @@ shadowbeast shadow beast mercenary~
 &+Lthe devious shade, protecting him as he carelessly taunts his captive
 &+Lslaves.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-US 0 16384 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+US 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1019,8 +1019,8 @@ skeletal skeleton herder~
    &+LThis skeleton is dressed like a warrior and has been summoned to
 &+Lhelp herd the subdued undead behemoths for use of the undead legions.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-U 0 1 2
+1073743882 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1033,8 +1033,8 @@ captured undead behemoth~
 &+Lunknowingly follows every command given to it.  Somewhat of
 &+La pet now, but a noble steed soon for an undead warrior.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-u 0 1 5
+1073743882 0 0 0 0 0 0 0 -1000 S
+u 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1048,8 +1048,8 @@ phantom reaver keymaster~
 &+Linvisible to the unaided eye as behemoths wandering into this area
 &+Lsimply disregard him.
 ~
-2058 0 0 10 0 67371008 0 -1000 S
-U 0 2097664 -1
+2058 0 0 0 10 0 67371008 0 -1000 S
+U 0 2097664 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1064,8 +1064,8 @@ fat halfling slave~
 &+Lstare as he works completely silently without any thought or emotion in
 &+Lhis little mind.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PF 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PF 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1079,8 +1079,8 @@ young halfling slave~
 &+Lbeen captured at quite a young age as his clothing also suggests many
 &+Ldays down in this awful cavern as the fat halfling.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PF 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PF 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1095,8 +1095,8 @@ shade nereid spectral~
 &+Lwater and seems to have some sort of purpose as it is waiting for
 &+Lsomething.
 ~
-2058 0 0 0 0 0 0 -1000 S
-H 0 512 2
+2058 0 0 0 0 0 0 0 -1000 S
+H 0 512 0 2
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1117,8 +1117,8 @@ drakasyth lich alchemist battle forger~
 &+Las somewhat of a b&+ge&+Lh&+go&+Lld&+ge&+Lr slayer, as he still wears strange bands
 &+Land necklaces of beholder parts.
 ~
-2058 0 0 8 0 0 0 -1000 S
-UL 0 1 2
+2058 0 0 0 8 0 0 0 -1000 S
+UL 0 1 0 2
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1132,8 +1132,8 @@ dark naga two~
 &+Lwith a red like blood or fire.  The naga hisses and slighters
 &+Lviolnelty.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-RS 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+RS 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1148,8 +1148,8 @@ revenant~
 &+Lover his body body and hunts as cold breath spews from his dead
 &+Lmouth.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-H 0 1 4
+1073743880 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 4
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1162,8 +1162,8 @@ war pig~
 &+Lhis master ready to attack.  Much like the acclaimed Interceptor, this
 &+Lwar pig will charge the victim prior to the Revenant's deathening blow.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-A 0 1 2
+1073743880 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 2
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1177,8 +1177,8 @@ undead herder~
 &+Lthe saddling area within the Barracks.  Pondering about the behemoths
 &+Lthrough the cage bars, this undead paces around here.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 2
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 2
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1192,8 +1192,8 @@ rider enforcer~
 &+Lrebellious.  Also he makes sure that none of their friends attempt
 &+Lto break their bonds and free them from captivity.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1207,8 +1207,8 @@ thri thri-kreen prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 1000 S
-TK 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+TK 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1222,8 +1222,8 @@ weakened harpy prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 1000 S
-B 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+B 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1237,8 +1237,8 @@ sahaugin prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 1000 S
-H 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1252,8 +1252,8 @@ beaten goblin prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1267,8 +1267,8 @@ bloody ogre prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 -1000 S
-PO 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+PO 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1282,8 +1282,8 @@ scared human prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1297,8 +1297,8 @@ scrawny gnome prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2058 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1312,8 +1312,8 @@ cloud giant prisoner~
 &+Lprisoners body and a look of utter sorrow and defeat disrupts
 &+Lhis glazed over eyes.
 ~
-2058 0 0 0 0 0 0 1000 S
-G 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1327,8 +1327,8 @@ panicked dwarf prisoner~
 &+Lby the mighty foot of an undead hordesman.  This dwarf is panicking
 &+Lcurrently, a look of total fear in his eyes.
 ~
-2058 0 0 0 0 0 0 1000 S
-PM 0 1 2
+2058 0 0 0 0 0 0 0 1000 S
+PM 0 1 0 2
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1343,8 +1343,8 @@ huge wight taskmaster~
 &+Rmind-control treatment.  This wight has a set of armor and
 &+Rwields a brutal black axe.
 ~
-1073743882 192 0 8 0 0 0 -1000 S
-U 0 1 5
+1073743882 192 0 0 8 0 0 0 -1000 S
+U 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1359,8 +1359,8 @@ shackled kenku~
 &+Llooks to of once been a prominent adventurer on Duris but has now
 &+Lgiven up all hope and submits to the undead rule.
 ~
-10 0 0 0 0 0 0 1000 S
-H 0 8192 -1
+10 0 0 0 0 0 0 0 1000 S
+H 0 8192 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1376,8 +1376,8 @@ carnivos warlock maker~
 &+Ldevilish grin reaches across his bony pale face.  Carnivos reprograms
 &+Lthe prisones into slaves of the undead.
 ~
-2058 0 0 8 0 2097152 0 -1000 S
-U 0 131072 3
+2058 0 0 0 8 0 2097152 0 -1000 S
+U 0 131072 0 3
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1392,8 +1392,8 @@ undead block guard~
 &+Lwith its "life", its single purpose is to protect the surrounding
 &+Lprisoner area from any sort of break-in, or escape.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1408,8 +1408,8 @@ pale-eyed pale minotaur slave~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-1073743880 0 0 0 0 0 0 0 S
-MT 0 1 5
+1073743880 0 0 0 0 0 0 0 0 S
+MT 0 1 0 5
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1424,8 +1424,8 @@ pale-eyed pale wild elf slave~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-1073743880 0 0 0 0 0 0 1000 S
-H 0 1 -1
+1073743880 0 0 0 0 0 0 0 1000 S
+H 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1440,8 +1440,8 @@ pale-eyed pale human slave~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-1073743880 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1456,8 +1456,8 @@ pale-eyed pale duergar slave~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-PD 0 8192 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+PD 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1472,8 +1472,8 @@ pale-eyed pale orc slave~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-HO 0 8192 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+HO 0 8192 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1488,8 +1488,8 @@ thirsty pale-eyed pale half-elf half slave~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-P2 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+P2 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1504,8 +1504,8 @@ huge ogre slave fighter~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-10 0 0 0 0 0 0 -1000 S
-PO 0 1 -1
+10 0 0 0 0 0 0 0 -1000 S
+PO 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1520,8 +1520,8 @@ barbarian slave fighter~
 &+LHuge strands of drool hang like shoelaces down the sides of
 &+Lhis mouth.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PB 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PB 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1537,8 +1537,8 @@ flaming skeleton highlord~
 &+Rstanding near this flaming undead is uncomfortable without the proper
 &+Rprotection spell, just because of the amount of heat it gives off.
 ~
-1073743882 0 0 0 1 0 0 -1000 S
-EF 0 1 -1
+1073743882 0 0 0 0 1 0 0 -1000 S
+EF 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1551,8 +1551,8 @@ flaming skeleton warrior~
 &+Rhere protecting the highlord, his comrade from a distant
 &+Rburning city of flameborne undead.
 ~
-1140852746 0 0 0 1 0 0 -1000 S
-EF 0 1 -1
+1140852746 0 0 0 0 1 0 0 -1000 S
+EF 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1565,8 +1565,8 @@ lich air magus~
 &+Lup and he sits with his arms crossed, eyeing the fearsome battle
 &+Lbetween the ogre and the barbarian slave fighters.
 ~
-2058 0 0 0 0 0 0 -1000 S
-UL 0 2048 3
+2058 0 0 0 0 0 0 0 -1000 S
+UL 0 2048 0 3
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1579,8 +1579,8 @@ vaporous sylph servant~
 &+Wcompletely of the elements of air.  Her faces constantly changes
 &+Wbetween that of a beautiful maiden, and that of a fearsome undead.
 ~
-2056 0 0 0 0 0 0 0 S
-EA 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+EA 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1594,8 +1594,8 @@ sinister death knight~
 &+Lof a lich, except he is much larger and stronger, equipped in
 &+Lbattle armor.
 ~
-1073743882 0 0 0 1 0 0 -1000 S
-UK 0 16 4
+1073743882 0 0 0 0 1 0 0 -1000 S
+UK 0 16 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1609,8 +1609,8 @@ winged hellhound hound~
 &+Lrider.  The beast has eyes of fire, glowing red, and a
 &+Lferocious snarl to it.
 ~
-1073743882 0 0 0 1 0 0 -1000 S
-A 0 0 2
+1073743882 0 0 0 0 1 0 0 -1000 S
+A 0 0 0 2
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1624,8 +1624,8 @@ cloaked squire~
 &+Lupon instant demand.  The squire's entire body is shrouded by a
 &+Lblack cloak.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-U 0 512 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+U 0 512 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1640,8 +1640,8 @@ bloodthirsty viewer~
 &+Ldead flesh that drops as this viewer gets very excited about the
 &+Lbloodshed.
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-U 0 1 2
+1073743882 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1656,8 +1656,8 @@ guardian hellbeast hell beast br_f~
 &+Lstriking fear into any of those who dare attempt to trespass into
 &+Lthe slave master's inner sanctum.
 ~
-2058 0 0 0 0 0 0 -1000 S
-A 0 1 4
+2058 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1673,8 +1673,8 @@ persevesk master~
 &+Lstained &+rred&+L from the blood of his victim's.  This revenant
 &+Lis in charge of the undead slave collection.
 ~
-1073743882 0 0 16 0 0 0 -1000 S
-RE 0 1 4
+1073743882 0 0 0 16 0 0 0 -1000 S
+RE 0 1 0 4
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1688,8 +1688,8 @@ bound gagged grey elf prisoner~
 &+Lcrying so much.  She is currently being tormented by the maniacal
 &+Lundead tyrant and slave master, Persevesk.
 ~
-2058 0 0 0 0 0 0 1000 S
-PE 0 1 3
+2058 0 0 0 0 0 0 0 1000 S
+PE 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 2
@@ -1708,8 +1708,8 @@ zombie slave tosser~
 &+Lslaves into the well where they shall meet their
 &+Ldoom.
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 1 5
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1723,8 +1723,8 @@ plague rat~
 &+Lwhatsoever.  It moves incredibly fast and flows with many other
 &+Lvermin over whatever bodies are tossed into this place.
 ~
-2058 1 0 0 0 0 0 -1000 S
-AP 0 0 1
+2058 1 0 0 0 0 0 0 -1000 S
+AP 0 0 0 1
 32 0 0 1d1+1 3d2+2
 0.0.0.0 0
 8 8 0
@@ -1738,8 +1738,8 @@ filthy undead rat~
 &+Lwhatsoever.  It moves incredibly fast and flows with many other
 &+Lvermin over whatever bodies are tossed into this place.
 ~
-2058 1 0 0 0 0 0 -1000 S
-AP 0 0 1
+2058 1 0 0 0 0 0 0 -1000 S
+AP 0 0 0 1
 30 0 0 1d1+1 2d2+1
 0.0.0.0 0
 8 8 0
@@ -1752,8 +1752,8 @@ massive pit fiend~
 &+Lthe pit here.  Eyes glowing red with hunger, this pit fiend feasts
 &+Lon the flesh of discarded prisoners.
 ~
-2058 1 0 8 0 0 0 -1000 S
-X 0 1 -1
+2058 1 0 0 8 0 0 0 -1000 S
+X 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1768,8 +1768,8 @@ phasing spectre form shadows~
 &+Litself at all times, phasing through the dark corners of this
 &+Lshadowy stronghold.
 ~
-1073743880 1 0 56 0 0 0 -1000 S
-UG 0 8192 -1
+1073743880 1 0 0 56 0 0 0 -1000 S
+UG 0 8192 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1783,8 +1783,8 @@ hulking behemoth~
 &+Lpieces of decaying flesh hanging off.  No heat emanates from
 &+Lhim, however, just death and decay.
 ~
-1073743880 1 0 24 0 0 0 -1000 S
-AC 0 16384 5
+1073743880 1 0 0 24 0 0 0 -1000 S
+AC 0 16384 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1798,8 +1798,8 @@ repulsive grell~
 &+Lpink brain sits atop a mass of swirling tentacles.  The grell shrieks
 &+Lout of a black, razor-sharp beak and attacks with no hesitation.
 ~
-1073743880 1 0 134217728 1 0 0 -1000 S
-TK 0 1 4
+1073743880 1 0 0 134217728 1 0 0 -1000 S
+TK 0 1 0 4
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1813,8 +1813,8 @@ wild vicious hellbeast hell beast~
 &+Lis covered in flames.  The hellbeast has huge teeth and a lashing
 &+Lfiery tongue.
 ~
-2088 1 0 0 1 0 0 0 S
-AC 0 0 -1
+2088 1 0 0 0 1 0 0 0 S
+AC 0 0 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1828,8 +1828,8 @@ pale eyed bound human slave~
 &+Lserves as bait to lure an undead behemoth in so that the Phantom Farseers
 &+Lmay focus their will from afar and lure the behemoths back.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -1843,8 +1843,8 @@ large undead roper~
 &+Lin a mindless rage and will to destroy.  The roper has many tentacles
 &+Land pieces of its once slick body now fall off in putrid chunks.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 4
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 4
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1858,8 +1858,8 @@ undead roper~
 &+Lin a mindless rage and will to destroy.  The roper has many tentacles
 &+Land pieces of its once slick body now fall off in putrid chunks.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-U 0 1 4
+1073743880 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 4
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1874,8 +1874,8 @@ moaning zombie~
 &+Lany thought as it simply wanders through the cavern
 &+Lendlessly.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1890,8 +1890,8 @@ moaning zombie~
 &+Lany thought as it simply wanders through the cavern
 &+Lendlessly.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1906,8 +1906,8 @@ pale ghoul~
 &+Lthe undead.  The ghoul has very &+Wpale&+L skin and a curiously
 &+Lstrong body.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1923,8 +1923,8 @@ undead herder~
 &+Lstaring with eyes of fire out of a crack in the trapdoor
 &+Lof this trench, waiting for a behemoth to take the bait.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1941,8 +1941,8 @@ tall vampire warlock~
 &+Rfangs.  He waits here patiently with the herders for a behemoth to take
 &+Rthe human bait so that he may subdue the beast.
 ~
-2058 0 0 0 0 0 0 -1000 S
-UV 0 131072 4
+2058 0 0 0 0 0 0 0 -1000 S
+UV 0 131072 0 4
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1958,8 +1958,8 @@ revenant bodyguard~
 &+Lstern look and aggressive tendancies of this revenant make out to
 &+Lbe a formidable opponent and an excellent bodyguard to the warlock.
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-U 0 1 4
+1140852746 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1973,8 +1973,8 @@ bone abomination~
 &+Wis golem-like but far too crude and shapeless to be considered one.
 &+WIt stands here within the cave of the bonesmith blocking passage westward.
 ~
-2058 0 0 0 0 0 0 0 S
-AC 0 1 2
+2058 0 0 0 0 0 0 0 0 S
+AC 0 1 0 2
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1990,8 +1990,8 @@ huge diorite golem~
 &+Lhumanoid but is incredibly wide and bulky, definately
 &+Limmovable.
 ~
-1073743882 1 0 8 0 0 0 0 S
-OG 0 1 5
+1073743882 1 0 0 8 0 0 0 0 S
+OG 0 1 0 5
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2007,8 +2007,8 @@ black diorite serpent~
 &+Lit is completely smooth and moves and acts much like a
 &+Lregular serpent or wyrm would be expected to.
 ~
-2058 1 0 24 0 0 0 0 S
-RS 0 1 4
+2058 1 0 0 24 0 0 0 0 S
+RS 0 1 0 4
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2024,8 +2024,8 @@ time now and has developed quite a strong surface to its
 belly.  The wyrm has no eyes and resembles a much larger
 cousin of an acrola.
 ~
-8 0 0 0 0 0 0 0 S
-AP 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+AP 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2039,8 +2039,8 @@ feeding behemoth~
 &+Lpieces of decaying flesh hanging off.  No heat emanates from
 &+Lhim, however, just death and decay.
 ~
-1073743882 1 0 24 0 0 0 -1000 S
-AC 0 1 5
+1073743882 1 0 0 24 0 0 0 -1000 S
+AC 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2059,8 +2059,8 @@ dragon ancient two-headed black br_a~
 &+Ldeaths.  One is only so fortunate to stumble upon this beast, however,
 &+Lin its current lulled state.
 ~
-1073743882 1 0 24 0 0 0 -1000 S
-D 0 513 -1
+1073743882 1 0 0 24 0 0 0 -1000 S
+D 0 513 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -2076,8 +2076,8 @@ time now and has developed quite a strong surface to its
 belly.  The wyrm has no eyes and resembles a much larger
 cousin of an acrola.
 ~
-8 0 0 0 0 0 0 0 S
-AP 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2091,8 +2091,8 @@ elite undead rider~
 &+Lbeen raised and positioned onto a behemoth where it shall protect
 &+Lits masters until its undying breath.
 ~
-2058 1 0 0 0 0 0 -1000 S
-U 16 1 -1
+2058 1 0 0 0 0 0 0 -1000 S
+U 16 1 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2108,8 +2108,8 @@ vampire scarb torntooth~
 &+Lplated armor, possibly the same thing he died in.  Eyes glowing &+Rred&+L,
 &+Lhe walks through the hallway protecting it for his new masters.
 ~
-1073743880 1 0 8 0 0 0 -1000 S
-UV 16 1 -1
+1073743880 1 0 0 8 0 0 0 -1000 S
+UV 16 1 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2123,8 +2123,8 @@ imprisoned gnome stone carver~
 &+Lliving out his last days as a stone carver by intricately working
 &+La massive block of diorite into the form of a skeletal warlord.
 ~
-2058 0 0 0 0 0 0 1000 S
-PG 7 1 2
+2058 0 0 0 0 0 0 0 1000 S
+PG 7 1 0 2
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -2139,8 +2139,8 @@ vampiric diorite golem black creature~
 &+Lwith evil life-draining magic.  The golem stands here protecting the
 &+Ldoor to the stronghold corridor.
 ~
-2058 1 0 152 262144 0 0 -1000 S
-OG 0 64 6
+2058 1 0 0 152 262144 0 0 -1000 S
+OG 0 64 0 6
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2155,8 +2155,8 @@ undead beholder~
 &+Lthe great necromancers of this stronghold.  It serves to protect the
 &+Lmasters of this stronghold.
 ~
-1073743880 1 0 8 0 0 0 -1000 S
-BH 0 512 4
+1073743880 1 0 0 8 0 0 0 -1000 S
+BH 0 512 0 4
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -2171,8 +2171,8 @@ hulking bone dracolich dragon~
 &+Wbeast.  An evil magical glow surrounds the dracolich, hinting that
 &+Wit was created by a powerful magic.
 ~
-1034 1 0 536871096 39105 128 574619648 -1000 S
-D 0 1 -1
+1034 1 0 0 536871096 39105 128 574619648 -1000 S
+D 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

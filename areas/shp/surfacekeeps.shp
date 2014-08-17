@@ -4,8 +4,8 @@ N
 96907
 96906
 0
-1.00
-1.00
+0.80
+1.10
 8
 34
 32
@@ -14,10 +14,6 @@ N
 37
 36
 31
-19
-15
-17
-12
 10
 0
 I'm not selling that, %s!~
@@ -55,8 +51,8 @@ N
 821
 835
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -94,8 +90,8 @@ N
 99415
 120005
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -133,7 +129,7 @@ N
 189
 0
 0.80
-1.00
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -168,8 +164,8 @@ N
 336
 5735
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -204,7 +200,7 @@ N
 2657
 22017
 0
-1.00
+0.80
 2.34
 0
 I'm not selling that, %s!~
@@ -245,8 +241,8 @@ N
 97917
 2012
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -287,8 +283,8 @@ N
 6508
 55141
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -323,8 +319,8 @@ N
 120015
 120016
 0
-1.00
-1.00
+0.80
+1.10
 9
 8
 10
@@ -367,8 +363,8 @@ N
 83293
 367
 0
-1.00
-1.00
+0.80
+1.10
 5
 9
 37

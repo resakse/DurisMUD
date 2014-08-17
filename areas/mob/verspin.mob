@@ -7,8 +7,8 @@ high guard verspin~
 &+CHe seems unafaid at guarding his post, and perhaps that comes from knowing
 &+Cthat he can indeed protect it.
 ~
-67110986 384 0 176 0 0 0 1000 S
-PH 0 1 -1
+67110986 384 0 0 176 0 0 0 1000 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -20,8 +20,8 @@ A&+L mime&n walks around here, looking foolish.
 This guy seems to have a job of walking around and imitating things without
 talking. It's kind of annoying, but he has to eat.
 ~
-2252 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2252 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -32,8 +32,8 @@ chicken~
 ~
 &+W It's a chicken, and It's pecking. *PECK*
 ~
-2124 0 0 0 0 0 0 0 S
-A 0 0 -1
+2124 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -45,8 +45,8 @@ cleric tharnadia~
 This cleric looks to have traveled from thairnadia, from his clothing and
 look. He peers up and down the market, looking for something.
 ~
-2124 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+2124 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -58,8 +58,8 @@ shaman travelling gnomish~
 &+m  This gnome looks to be versed in the arts of a shaman, and he appears
 &+mto be purcashing things for that profession.
 ~
-1073744076 0 0 0 0 0 0 -1000 S
-PG 0 256 -1
+1073744076 0 0 0 0 0 0 0 -1000 S
+PG 0 256 0 -1
 36 0 0 2d150+150 2d3+2
 0.0.3.2 0
 8 8 1
@@ -71,8 +71,8 @@ halfling thief sneak sneaky~
 &+y This little guy looks very much like a thief, so you better watch your
 &+ypockets.
 ~
-2252 0 0 0 0 0 0 -500 S
-PF 0 4096 -1
+2252 0 0 0 0 0 0 0 -500 S
+PF 0 4096 0 -1
 37 1 9 3d50+100 1d5+5
 0.0.12.1 0
 8 8 1
@@ -84,8 +84,8 @@ drunk drunken elf~
 &+b  This elf looks to have had one to many drinks at the Verspin bar, and
 &+bunsteady walks to and fro.
 ~
-2124 0 0 0 0 0 0 1000 S
-PE 0 1 -1
+2124 0 0 0 0 0 0 0 1000 S
+PE 0 1 0 -1
 37 0 0 2d100+75 1d4+3
 0.0.11.0 0
 8 8 1
@@ -98,8 +98,8 @@ flame eater~
 &+Wmust be. Still, you must give him credit for doing this job to feed
 &+Whimself.
 ~
-2124 0 0 0 0 0 0 500 S
-PH 0 0 -1
+2124 0 0 0 0 0 0 0 500 S
+PH 0 0 0 -1
 34 1 -1 1d200+100 1d3+3
 0.2.4.0 0
 8 8 1
@@ -111,8 +111,8 @@ noble verspin~
 &+c  One of the new nobles of Verspin, this proud man seems to not be worried
 &+cby anything, and struts around, not paying much regard to you.
 ~
-1073743948 0 0 8 0 0 0 1000 S
-PB 0 1 -1
+1073743948 0 0 0 8 0 0 0 1000 S
+PB 0 1 0 -1
 40 3 -5 2d500+600 3d8+4
 0.0.3.5 0
 8 8 1
@@ -125,8 +125,8 @@ glad gladiator flex flexes muscles~
 &+LHe wears standard gladiator apparel, including studded leather vestments
 &+Land shin protectors.
 ~
-1073744076 0 0 0 0 0 0 500 S
-PB 0 1 -1
+1073744076 0 0 0 0 0 0 0 500 S
+PB 0 1 0 -1
 46 0 -5 1d800+200 1d5+6
 0.0.0.0 0
 8 8 1
@@ -138,8 +138,8 @@ dwarfven dwarf peddler~
 &+y  This stout dwarf looks upon you with a hearty smile, and shows you
 &+ythe goods he sells.
 ~
-1073744074 0 0 0 0 0 0 1000 S
-PM 0 1 -1
+1073744074 0 0 0 0 0 0 0 1000 S
+PM 0 1 0 -1
 60 0 -10 3d1000+1000 1d15+10
 0.0.35.15 0
 8 8 1
@@ -151,8 +151,8 @@ paladin in train training~
 &+W This knight of the holy order is being trained, and is age shows it,
 &+Wthis young knight seems only 16 or 17 years of age.
 ~
-1073744078 384 0 0 0 0 0 1000 S
-PH 0 8 -1
+1073744078 384 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 40 0 2 3d100+100 2d3+3
 0.0.14.2 0
 8 8 1
@@ -164,8 +164,8 @@ junior member bloodhawks~
 &+b  This ugly little kid is trying to get into the Bloodhawks, and you might
 &+bbe his first attempt.
 ~
-2122 0 0 0 0 0 0 -1000 S
-PF 0 4096 -1
+2122 0 0 0 0 0 0 0 -1000 S
+PF 0 4096 0 -1
 37 0 0 1d50+10 1d3+2
 3.2.0.0 0
 8 8 2
@@ -177,8 +177,8 @@ leader lead gang~
 &+L This old man seems to be a big criminal, and walks about proud of his
 &+Lskills.
 ~
-2252 0 0 0 0 0 0 -1000 S
-PH 0 16384 -1
+2252 0 0 0 0 0 0 0 -1000 S
+PH 0 16384 0 -1
 44 2 4 2d300+700 2d5+5
 0.0.14.3 0
 8 8 1
@@ -190,8 +190,8 @@ smuggler gang bloodhawk member~
 &+b This smuggler looks to be good at what he does, and he has somewhat
 &+bof a high position in the Bloodhawk gang.
 ~
-1073743946 0 0 0 0 0 0 -1000 S
-PH 0 16385 -1
+1073743946 0 0 0 0 0 0 0 -1000 S
+PH 0 16385 0 -1
 40 2 3 3d300+100 2d5+2
 0.0.0.0 0
 8 8 2
@@ -203,8 +203,8 @@ midget~
  This small human seems to be making his money by dancing about, showing people
  his smallness.
 ~
-2252 0 0 0 0 0 0 500 S
-PH 0 0 -1
+2252 0 0 0 0 0 0 0 500 S
+PH 0 0 0 -1
 34 0 0 2d50+60 2d4+2
 0.7.1.0 0
 8 8 1
@@ -217,8 +217,8 @@ tottan leader circus~
 money. Is burly arms are covered with tattos of strange things, and his
 face shows experince from years of being a circus leader.
 ~
-67110986 0 0 0 0 0 0 -50 S
-PM 0 1 -1
+67110986 0 0 0 0 0 0 0 -50 S
+PM 0 1 0 -1
 53 1 -2 2d500+300 2d7+4
 0.0.5.2 0
 8 8 1
@@ -230,8 +230,8 @@ goofy clown~
    This clown is a very stupid one from the vacent expression on his painted
 face, but he is good for entertainment value.
 ~
-1073743948 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743948 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 36 0 0 2d75+50 1d5+3
 0.4.1.0 0
 8 8 1
@@ -243,8 +243,8 @@ goofy clown~
    This clown is a very stupid one from the vacent expression on his painted
 face, but he is good for entertainment value.
 ~
-1073743948 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743948 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 37 0 0 2d75+50 1d5+3
 0.4.1.0 0
 8 8 1
@@ -256,8 +256,8 @@ goofy clown~
    This clown is a very stupid one from the vacent expression on his painted
 face, but he is good for entertainment value.
 ~
-1073743948 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+1073743948 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 34 0 0 2d75+50 1d5+3
 0.4.1.0 0
 8 8 1
@@ -268,8 +268,8 @@ verspin woman~
 ~
   This ordinary woman is here, looking for a bargain.
 ~
-2252 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2252 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 32 2 0 3d60+60 2d5+3
 0.3.3.0 0
 8 8 2
@@ -280,8 +280,8 @@ verspin commoner~
 ~
   This ordinary commoner is here, looking for a bargain.
 ~
-2252 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2252 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 34 2 0 3d60+60 2d5+3
 0.3.3.0 0
 8 8 1
@@ -292,8 +292,8 @@ verspin woman~
 ~
   This ordinary woman is here, looking for a bargain.
 ~
-2252 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+2252 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 20 2 0 3d60+60 2d5+3
 0.3.3.0 0
 8 8 2
@@ -304,8 +304,8 @@ rammzi mage~
 ~
      This old mage seems to know quite a bit, and looks quite powerful.
 ~
-2250 0 0 72 0 0 0 1000 S
-PE 0 512 -1
+2250 0 0 0 72 0 0 0 1000 S
+PE 0 512 0 -1
 55 1 3 2d500+200 1d5+1
 34.0.23.12 0
 8 8 1
@@ -316,8 +316,8 @@ puppy dog~
 ~
    It's a puppy dog! *Bark*
 ~
-2124 0 0 0 0 0 0 0 S
-A 0 0 -1
+2124 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 7 0 0 2d50+10 1d5+2
 0.0.0.0 0
 8 8 1
@@ -329,8 +329,8 @@ crier verspin~
      This fat human looks to be quite a fool, has he stands on his soapbox
 and yells over the loud crouds.
 ~
-2250 0 0 0 0 0 0 700 S
-PH 0 0 -1
+2250 0 0 0 0 0 0 0 700 S
+PH 0 0 0 -1
 30 4 0 4d50+50 4d4+2
 0.3.3.0 0
 8 8 1
@@ -346,8 +346,8 @@ crown, made of emeralds and gold that glitter in the magic light of this tower.
 He leans over to you and says :
 &+W  All I really want is an apple.. Sigh, I won't get one 'til after work.
 ~
-67110986 384 0 152 1 0 0 1000 S
-PH 0 2 -1
+67110986 384 0 0 152 1 0 0 1000 S
+PH 0 2 0 -1
 55 2 -2 3d500+450 2d4+2
 0.0.5.3 0
 8 8 1
@@ -360,8 +360,8 @@ royal advisor~
 gold insignia of Verspin embordered into the back of it. His face shows signs
 of worry, and he and his comrades ponder about some way to fix it.
 ~
-67110986 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+67110986 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 36 3 -1 2d200+200 5d2+2
 0.0.3.2 0
 8 8 1
@@ -373,8 +373,8 @@ lion gold golden~
    This huge lion sits here with a mean look on its face, and its presistant
   growling shows that is most displeased to be here.
 ~
-1140852746 0 0 8 0 0 0 0 S
-A 0 1 -1
+1140852746 0 0 0 8 0 0 0 0 S
+A 0 1 0 -1
 51 4 -5 2d1000+700 5d3+6
 0.0.0.0 0
 8 8 2
@@ -386,8 +386,8 @@ servant clean cleaning verspin~
    This small gnome is occupied only with cleaning around here, but his fine
 clothes and good apperance show that he receives desent pay for his work.
 ~
-2124 0 0 0 0 0 0 600 S
-PG 0 2048 -1
+2124 0 0 0 0 0 0 0 600 S
+PG 0 2048 0 -1
 15 0 0 2d70+70 2d3+3
 0.0.0.0 0
 8 8 1
@@ -399,8 +399,8 @@ inventor verspin~
    This small gnome is occupied only with inventing around here, but his fine
 clothes and good apperance show that he receives decent pay for his work.
 ~
-2124 0 0 0 0 0 0 600 S
-PG 0 2048 -1
+2124 0 0 0 0 0 0 0 600 S
+PG 0 2048 0 -1
 15 0 0 2d70+70 2d3+3
 0.0.0.0 0
 8 8 1
@@ -413,8 +413,8 @@ soldier verspin~
 and a stern look show that he has worked hard for his position. He now marches,
 looking to protect the town from evil.
 ~
-67110988 384 0 0 0 0 0 500 S
-PH 0 1 -1
+67110988 384 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 36 1 5 1d100+30 2d4+2
 0.4.1.0 0
 8 8 1
@@ -427,8 +427,8 @@ A&+G captain of the guard is here,&+b keeping peace.&n
 and a stern look show that he has worked hard for his position. He now marches,
 looking to protect the town from evil.
 ~
-1140852812 384 0 0 0 0 0 500 S
-PH 0 1 -1
+1140852812 384 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 49 1 0 2d150+70 2d4+2
 0.4.1.0 0
 8 8 1
@@ -441,8 +441,8 @@ soldier verspin~
 and a stern look show that he has worked hard for his position. He now marches,
 looking to protect the town from evil.
 ~
-2124 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2124 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 10 1 5 1d100+30 2d4+2
 0.4.1.0 0
 8 8 1
@@ -455,8 +455,8 @@ brial~
 seems to reveal his jolly self. His worn and tired hands show that he is
 no stranger to hard work on the forge, and his products show it.
 ~
-2056 0 0 8 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 8 0 0 0 0 S
+PH 0 0 0 -1
 60 0 -5 3d3000+1000 3d5+5
 0.0.3.5 0
 8 8 1
@@ -468,8 +468,8 @@ loud shopper~
    This man is angry with everything, and stomps around here and yells about
 it.
 ~
-2124 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2124 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 36 0 9 3d40+60 1d5+4
 0.2.5.0 0
 8 8 1
@@ -483,8 +483,8 @@ has is his size. His large set seems to be a factor that he is a shopkeeper
 and unafaid of much. From his pockets can be seen various potions, and other
 tools in the black arts.
 ~
-2250 0 0 8 0 0 0 0 S
-PH 0 0 -1
+2250 0 0 0 8 0 0 0 0 S
+PH 0 0 0 -1
 55 0 6 2d1000+1000 1d10+5
 0.0.3.5 0
 8 8 1
@@ -496,8 +496,8 @@ snobby shopper~
    This man is angry with everything, and stomps around here and yells about
 it.
 ~
-2124 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2124 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 34 0 0 4d40+50 2d3+3
 0.2.5.0 0
 8 8 2
@@ -509,8 +509,8 @@ loud shopper~
    This man is angry with everything, and stomps around here and yells about
 it.
 ~
-2124 0 0 0 0 0 0 -1000 S
-PG 0 1 -1
+2124 0 0 0 0 0 0 0 -1000 S
+PG 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -523,8 +523,8 @@ human peddler~
 the smile on his face is coming the from the coppers and keep making his purse
 fatter and fatter.
 ~
-2122 0 0 8 0 0 0 0 S
-PH 0 0 -1
+2122 0 0 0 8 0 0 0 0 S
+PH 0 0 0 -1
 55 0 0 3d3000+1000 3d3+3
 0.0.0.0 0
 8 8 1
@@ -537,8 +537,8 @@ ogre bound gagged~
 Freakshow. The look on its face shows its sorry and pity for itself.
 You almost feal sorry for it, then you remember it's an ogre.
 ~
-2122 0 0 8 2 0 0 -1000 S
-PO 0 1 -1
+2122 0 0 0 8 2 0 0 -1000 S
+PO 0 1 0 -1
 31 3 -3 2d300+100 2d5+4
 0.0.3.3 0
 8 8 1
@@ -550,8 +550,8 @@ squirmy fish~
 &+m   This pretty fish is to busy darting around looking for food to notice
 &+myou, but he is a hard one to keep track of.
 ~
-2250 0 0 0 0 0 0 0 S
-A 0 0 -1
+2250 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 10 0 10 3d20+20 1d4+1
 0.0.0.0 0
 8 8 1
@@ -563,8 +563,8 @@ mean angry goldfish~
 &+R      This mean looking fish is very small and looks like it could hurt
 &+Rnothing, but his glarring razzor sharp teeth seem to show otherwise...
 ~
-2250 1 0 0 0 0 0 0 S
-A 0 0 -1
+2250 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 2 0 0 2d10+10 1d3+2
 0.0.0.0 0
 8 8 1
@@ -577,8 +577,8 @@ boatman boat man~
 up people wanting to be on the other side. He angrily smacks all the biting
 fish away, steering a clear path.
 ~
-2250 0 0 8 0 0 0 500 S
-PH 0 1 -1
+2250 0 0 0 8 0 0 0 500 S
+PH 0 1 0 -1
 34 3 -1 2d250+150 2d4+3
 0.0.3.4 0
 8 8 1
@@ -594,8 +594,8 @@ lozin trade master~
 &+Wsays :
 &n  Read the &+WSign&n for what is for trade today!
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 55 0 0 2d500+500 1d10+10
 0.0.0.0 0
 8 8 1
@@ -608,8 +608,8 @@ vulm gem master~
 He seems happy enough, and from the look of this place he is not doing bad
 work, or getting bad pay.
 ~
-2058 0 0 8 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -622,8 +622,8 @@ mage train training in~
 forgetting them in the long run. He seems like a hopless case, but time
 does have its effect on students.
 ~
-2254 0 0 8 0 0 0 0 S
-PH 0 512 -1
+2254 0 0 0 8 0 0 0 0 S
+PH 0 512 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -635,8 +635,8 @@ holy man holyman~
    This clown is a very stupid one from the vacent expression on his painted
 face, but he is good for entertainment value.
 ~
-2186 0 0 120 0 0 0 1000 S
-PM 0 32 -1
+2186 0 0 0 120 0 0 0 1000 S
+PM 0 32 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -649,8 +649,8 @@ warrior in train training~
 He seems to be somewhat proficent in the art, but not altogether great at
 being a warrior.
 ~
-1073744078 0 0 0 0 0 0 500 S
-PH 0 1 -1
+1073744078 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -663,8 +663,8 @@ wander wandering cleric~
 kind smile shows he is a man of mercy and goodness. He looks to be of an old
 age, but he shows a great amount of energy.
 ~
-1073743880 0 0 40 4 0 0 1000 S
-PM 0 32 -1
+1073743880 0 0 0 40 4 0 0 1000 S
+PM 0 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -677,8 +677,8 @@ dark colored woman~
 is a very dark brown. She peeks at you with her dark brown eyes, and turns
 away to another customoner.
 ~
-2188 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2188 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -691,8 +691,8 @@ large blond woman~
 stares at you at says:
        &+W Well?
 ~
-1073743948 0 0 0 0 0 0 0 S
-PH 0 0 -1
+1073743948 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -703,8 +703,8 @@ liya master brothel~
 ~
     This very sexy woman has one intent in mind, that of spanking people.
 ~
-2058 0 0 33554440 0 0 0 -1000 S
-PH 0 0 -1
+2058 0 0 0 33554440 0 0 0 -1000 S
+PH 0 0 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -717,8 +717,8 @@ vespus sorceress teacher~
 &+Msilken embroidery.  Vespus currently teaches the fine art of magic
 &+Mto the students here at Verspin, city of humans.
 ~
-34826 0 0 0 0 0 0 0 S
-PH 0 4194816 -1
+34826 0 0 0 0 0 0 0 0 S
+PH 0 4194816 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -733,8 +733,8 @@ brachik teacher~
 &+Ya moderate build.  Although getting old in his years, he is still
 &+Yvery quick on his feet.
 ~
-34826 0 0 0 0 0 0 0 S
-PH 0 16385 -1
+34826 0 0 0 0 0 0 0 0 S
+PH 0 16385 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -748,8 +748,8 @@ transo bartender~
 &+Lgraces his otherwise charming face as he eyes customers up and down,
 &+Lvery comfortable with his work here in the Gladiator Pit of Verspin.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 16385 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 16385 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -762,8 +762,8 @@ relaxed captain guard~
 &+LVerspin, relaxes at the Swinging Star tavern, enjoying a beverage in
 &+Lbetween patrol shifts.
 ~
-1073743946 128 0 24 0 0 0 0 S
-PH 0 1 -1
+1073743946 128 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -776,8 +776,8 @@ flamboyant patron~
 &+LSwinging Star Tavern of the Gladiator Pit of Verspin.  This young man
 &+Lwears standard leather and cloth garments and seems slightly overweight.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -791,8 +791,8 @@ verspin showgoer~
 &+Lenjoyment graces the face of this showgoer, watching onward as
 &+Lthe fight continues.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -806,8 +806,8 @@ seasoned verspin showgoer~
 &+Lenjoyment graces the face of this showgoer, watching onward as
 &+Lthe fight continues.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -821,8 +821,8 @@ young showgoer~
 &+Lenjoyment graces the face of this showgoer, watching onward as
 &+Lthe fight continues.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -836,8 +836,8 @@ security guard~
 &+Lalmost overbearing amount of muscles covers this guards body, as he takes
 &+Lgreat pride in his job.
 ~
-1140852746 0 0 24 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -855,8 +855,8 @@ to defeat your opponent as it is to die in combat.
 &+Wstatue&n, touching the foreheads of passing gladiators, blessing them
 dilligently.
 ~
-2058 0 0 24 0 0 0 1000 S
-PH 0 40 -1
+2058 0 0 0 24 0 0 0 1000 S
+PH 0 40 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -869,8 +869,8 @@ gladiator battle-scarred~
 &+LHe wears standard gladiator apparel, including studded leather vestments
 &+Land shin protectors.
 ~
-1073744076 0 0 0 0 0 0 500 S
-PB 0 1 -1
+1073744076 0 0 0 0 0 0 0 500 S
+PB 0 1 0 -1
 48 0 -5 1d800+200 1d5+6
 0.0.0.0 0
 8 8 1
@@ -883,8 +883,8 @@ gladiator well-trained trained well~
 &+LHe wears standard gladiator apparel, including studded leather vestments
 &+Land shin protectors.
 ~
-1073744076 0 0 0 0 0 0 500 S
-PB 0 1 -1
+1073744076 0 0 0 0 0 0 0 500 S
+PB 0 1 0 -1
 47 0 -5 1d800+200 1d5+6
 0.0.0.0 0
 8 8 1
@@ -897,8 +897,8 @@ relaxing gladiator~
 &+Lseries of brutal fights.  A pile of equipment rests just beside him
 &+Las he rests his body.
 ~
-2058 0 0 0 0 0 0 -250 S
-PM 0 1 -1
+2058 0 0 0 0 0 0 0 -250 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -911,8 +911,8 @@ relaxing barbarian gladiator~
 &+Lwith the others.  Althoguh a grim look bestows his face, you know he
 &+Lis happy to be alive.
 ~
-2058 0 0 0 0 0 0 -250 S
-PB 0 1 -1
+2058 0 0 0 0 0 0 0 -250 S
+PB 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -926,8 +926,8 @@ relaxing gladiator~
 &+Lholy candles.  Preparing for a large fight, this gladiator becomes
 &+Lready to face his destiny, or deliver the destiny to another.
 ~
-2058 0 0 0 0 0 0 -250 S
-PM 0 1 -1
+2058 0 0 0 0 0 0 0 -250 S
+PM 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -941,8 +941,8 @@ maintenance worker~
 &+Lwounded gladiators, picking up dropped equipment, and trying
 &+Lto keep order in an otherwise chaotic environment.
 ~
-2060 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2060 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -956,8 +956,8 @@ muscular gladiator~
 &+Land determined look graces his aging brow.  Muscules bulge from his
 &+Lgarments and armor.
 ~
-2058 0 0 0 0 0 0 -250 S
-PM 0 1 -1
+2058 0 0 0 0 0 0 0 -250 S
+PM 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -972,8 +972,8 @@ bloodied determined gladiator~
 &+Lgrave look of intense &+Wdetermination&+L fills the eyes of this
 &+Ldaft, humanoid warrior - battling on to gain the honor of his people.
 ~
-2122 0 0 24 0 0 0 -300 S
-PM 0 16385 4
+2122 0 0 0 24 0 0 0 -300 S
+PM 0 16385 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -987,8 +987,8 @@ security guard~
 &+Lalmost overbearing amount of muscles covers this guards body, as he takes
 &+Lgreat pride in his job.
 ~
-1140852746 0 0 24 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1000,8 +1000,8 @@ bloodhawk spy~
    &+LWearing all black, this deviously-clever member of the &+rBloodhawk
 &+Lgang creeps about here, dagger in hand and ready to thrust.
 ~
-1073744074 1 0 404226328 0 0 0 -1000 S
-PH 0 8192 -1
+1073744074 1 0 0 404226328 0 0 0 -1000 S
+PH 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1014,8 +1014,8 @@ monk~
 &+Win search of pupils who seek to reach enlightenment.  A
 &+Wpleasant smile graces his elderly face.
 ~
-2058 0 0 24 0 0 0 1000 S
-PH 0 65 -1
+2058 0 0 0 24 0 0 0 1000 S
+PH 0 65 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1031,8 +1031,8 @@ shinjin grand master~
 &+WMaster, of which there may only be one of in the realm of Duris at a time.
 &+Whis outstretched hands beckon adventurers to come and reach &+Yenlightenment&+W.
 ~
-16812106 0 0 939524248 272385 67633152 13239296 1000 S
-PH 0 45 -1
+16812106 0 0 0 939524248 272385 67633152 13239296 1000 S
+PH 0 45 0 -1
 61 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1047,8 +1047,8 @@ eager adventurer~
 &+cawaiting the service of the great grand master Shinjin in search of
 &+cenlightenment.
 ~
-2058 0 0 0 0 0 0 -100 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 -100 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1062,8 +1062,8 @@ exhausted patron~
 &+Win the luxury accomdations of this illustrious Verspin suite
 &+Wat the Inn of the Noble Heart.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1077,8 +1077,8 @@ exhausted patron~
 &+Win the luxury accomdations of this illustrious Verspin suite
 &+Wat the Inn of the Noble Heart.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1092,8 +1092,8 @@ innkeeper~
 &+Wshaven face.  He politely directs customers of this fine and
 &+Waccomodating inn to their rooms.
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

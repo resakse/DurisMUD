@@ -6,8 +6,8 @@ chanting rakshasa robed~
 &+wThis &+Yrak&+Rshasa&+w walks around the &+WCircle of &+CStars&+w, chanting with a low,
 &+weven voice, in an attempt to communicate with the cosmic powers.&n
 ~
-1140852748 0 0 0 0 0 0 0 S
-RA 0 64 -1
+1140852748 0 0 0 0 0 0 0 0 S
+RA 0 64 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -20,8 +20,8 @@ robed white flind~
 &+WHe wanders the city streets with his fellow worshippers while chanting.
 &+Wsomberly.&n
 ~
-8 0 0 0 0 0 0 0 S
-H 0 32 -1
+8 0 0 0 0 0 0 0 0 S
+H 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -33,8 +33,8 @@ flind monk~
 &+wThis monk has come to the city for meditition and enlightenment. He
 &+wand his travelling companions wander about, chanting hymns.
 ~
-67108874 0 0 0 0 0 0 0 S
-L 0 64 -1
+67108874 0 0 0 0 0 0 0 0 S
+L 0 64 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -47,8 +47,8 @@ moonstone knight~
 &+Wthe city vigilantly, always wary of the unwelcome, and those attempting
 &+Wto sneak into town without proper authorization.&n
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 33554433 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 33554433 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -61,8 +61,8 @@ cosmomancer potentate old~
 &+Wand has become one of the wisest in the city of Ultarium. He stands
 &+Where constantly watching the skies above.
 ~
-1073741834 0 0 0 0 0 0 1000 S
-GZ 0 33554432 -1
+1073741834 0 0 0 0 0 0 0 1000 S
+GZ 0 33554432 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -76,8 +76,8 @@ sunstone knight elite~
 &+ybooming voice declares:&n
 &+W        "Visitors are unwelcome!"
 ~
-67110922 0 0 0 0 0 0 -1000 S
-PH 0 33554433 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+PH 0 33554433 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -91,8 +91,8 @@ moonstone knight~
 &+Wfortress' sunstone knights.  This man sternly protects the
 &+Wcity streets from any wrong-doings he happens across.&n
 ~
-1140852744 0 0 0 0 0 0 0 S
-PH 0 33554433 -1
+1140852744 0 0 0 0 0 0 0 0 S
+PH 0 33554433 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -106,8 +106,8 @@ deathium ethermancer _spec3_~
 &+yNot just devoted to one sec of the ethermancers, he is a
 &+ya master of all.
 ~
-3288369160 0 0 0 0 0 0 0 S
-MH 0 33554432 -1
+3288369160 0 0 0 0 0 0 0 0 S
+MH 0 33554432 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -121,8 +121,8 @@ rakshasa cosmic templar~
 &+wthe powers of both dedicated classes that takes a normal
 &+wperson a lifetime to master just one.
 ~
-1140852744 0 0 0 0 0 0 0 S
-RA 0 33554440 -1
+1140852744 0 0 0 0 0 0 0 0 S
+RA 0 33554440 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -136,8 +136,8 @@ local smith smithworker~
 &+wsunstone, metal is still vital for use in the shipyards, as well as all
 &+wthe regular needs of a large city.&n
 ~
-2058 0 0 0 0 0 0 0 S
-G 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -149,8 +149,8 @@ local resident~
 &+WOne of the many residents of the city, she appears to have just
 &+Wfinished her daily duties and is attempting to relax.&n
 ~
-2058 0 0 0 0 0 0 0 S
-MH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -162,8 +162,8 @@ local resident~
 &+WAnother resident of Ultarium, this man sits in his home after a day
 &+Wof working in the city, about to get some sleep.&n
 ~
-2058 0 0 0 0 0 0 0 S
-MH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -183,8 +183,8 @@ extremely
 &+W        give you a good deal, no problem."&n
 &+W        "I also provide a special &+Lservice&+W, if you've got the money..."
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 512 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -198,8 +198,8 @@ tether worker~
 &+ytightly to the tethers, ensuring it doesn't fall of drift off while
 &+ydocked.&n
 ~
-67110920 0 0 8 0 0 0 0 S
-PH 0 1 -1
+67110920 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -212,8 +212,8 @@ customs officer~
 &+Wproper identification and parcels that enter the city. He wears a short
 &+Wsword on his belt and is decorated with several medals.&n
 ~
-1140852746 0 0 8 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -225,8 +225,8 @@ customs clerk~
 &+WThis clerk busily writes in his ledger while always keeping one eye
 &+Won the archway looking out to see if new arrivals are on their way.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ moonstone knight~
 &+Wthe city vigilantly, always wary of the unwelcome, and those attempting
 &+Wto sneak into town without proper authorization.&n
 ~
-67110922 0 0 8 0 0 0 0 S
-PH 0 33554433 -1
+67110922 0 0 0 8 0 0 0 0 S
+PH 0 33554433 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -254,8 +254,8 @@ mountain giant worker labourer~
 &+ywith the people of the city, and have no qualms about lending a helping
 &+yhand in exchange for supplies.&n
 ~
-8 0 0 0 0 0 0 0 S
-G 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -271,8 +271,8 @@ engineer gnome~
 &+W        is going to need to know about this and I
 &+W        don't know where he is..."&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PG 0 32768 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PG 0 32768 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -286,8 +286,8 @@ tinkerer gnome~
 &+ytinkerers are quite important as well, to make sure all the working
 &+yparts are working the way they are intended.&n
 ~
-1073743880 0 0 8 0 0 0 0 S
-PG 0 1 -1
+1073743880 0 0 0 8 0 0 0 0 S
+PG 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -300,8 +300,8 @@ tamed griffon~
 &+yThey are quite accustom to the locals here, and are quite tame,
 &+yletting some even ride them.&n
 ~
-1207961608 0 0 0 0 0 0 0 S
-B 0 2 3
+1207961608 0 0 0 0 0 0 0 0 S
+B 0 2 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -316,8 +316,8 @@ anaeus handler~
 &+yloan some of the best trained out, for those wishing
 &+ytransportation.
 ~
-1073742858 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073742858 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -329,8 +329,8 @@ travelling scholar~
 &+yOne of the many &+Wscholars&+y that has come to the city of &+WUltarium
 &+yin hopes &+yof mastering the legendary magic of the &+Yco&+Wsm&+Yos&+y.&n
 ~
-8 0 0 0 0 0 0 0 S
-H 0 256 -1
+8 0 0 0 0 0 0 0 0 S
+H 0 256 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -342,8 +342,8 @@ student~
 &+wThis student has travelled from distant and far off lands to come and
 &+wstudy here in the city in the clouds.&n
 ~
-2058 0 0 0 0 0 0 0 S
-H 0 33554432 -1
+2058 0 0 0 0 0 0 0 0 S
+H 0 33554432 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -356,8 +356,8 @@ member~
 &+Lindicate this man is a member of the moonshade convenant,
 &+La sect of underdark cosmomancers and spiritualists.&n
 ~
-1140852744 0 0 0 0 0 0 -1000 S
-PL 0 256 -1
+1140852744 0 0 0 0 0 0 0 -1000 S
+PL 0 256 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -372,8 +372,8 @@ ambassador~
 &+W	They won't budge an inch on their policies, I
 &+W	need to get this message back to Selaraim"
 ~
-1073743884 0 0 0 0 0 0 -1000 S
-PL 0 32 -1
+1073743884 0 0 0 0 0 0 0 -1000 S
+PL 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -391,8 +391,8 @@ selaraim director~
 &+W        need to be sealed...somehow. Though I would cherish
 &+W	   proof of them dead as well."
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-PL 0 33554432 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+PL 0 33554432 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -406,8 +406,8 @@ harpy ethermancer~
 &+yflying about the city, sometimes helping to tutor the less fortunate races
 &+yabout their rare magical powers.&n
 ~
-8 0 0 0 0 0 0 0 S
-MH 0 33554432 -1
+8 0 0 0 0 0 0 0 0 S
+MH 0 33554432 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -426,8 +426,8 @@ rigid~
 &+W	and if it was to be shown to the council, they could
 &+W	abuse it horribly."
 ~
-1073743882 0 0 24 0 0 0 1000 S
-G 0 33554432 -1
+1073743882 0 0 0 24 0 0 0 1000 S
+G 0 33554432 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -441,8 +441,8 @@ smuggler~
 &+Land jacked full of adrenaline, he also knows several secret tunnels that
 &+Lgives him a heads-up on the local city security.&n
 ~
-1073743880 0 0 8 0 0 0 -600 S
-PH 0 65536 -1
+1073743880 0 0 0 8 0 0 0 -600 S
+PH 0 65536 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -454,8 +454,8 @@ astronomer local~
 &+WOne of the permanent residents of the city, this astronomer studies
 &+Wthe skies year round, in an attempt to unlock their mysteries.&n
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -469,8 +469,8 @@ resident astrologist~
 &+Wis a foolish notion, he spends nearly all his time in the tower
 &+Where busily reading the stars.&n
 ~
-67110922 0 0 0 0 0 0 0 S
-H 0 4194304 -1
+67110922 0 0 0 0 0 0 0 0 S
+H 0 4194304 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -482,8 +482,8 @@ cave spider~
 &+LA spider that looks like just about any other, except the cave spiders
 &+Lfound here are nearly the size of a goat.&n
 ~
-8 1 0 0 0 0 0 -700 S
-AS 0 1 -1
+8 1 0 0 0 0 0 0 -700 S
+AS 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -495,8 +495,8 @@ cave lizard~
 &+gA typical cave lizard, grown at least four sizes larger than those
 &+gone would more commonly find around the woods.
 ~
-8 1 0 0 0 0 0 -700 S
-R 0 1 -1
+8 1 0 0 0 0 0 0 -700 S
+R 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -510,8 +510,8 @@ mountain cat~
 &+ythe city as it chases away some of the more annoying critters, like
 &+ythe nasty rock spiders.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 2
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 2
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -523,8 +523,8 @@ foreman fore man~
 &+yThe contruction foreman appears to be quite busy fixing some strange
 &+ymechanics in the windtower. He barely notices anything else around him.&n
 ~
-2058 0 0 8 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -538,8 +538,8 @@ librarian~
 &+ywho make too much noise in an attempt to silence
 &+ythem.
 ~
-1073743880 0 0 8 0 0 0 0 S
-PH 0 1 -1
+1073743880 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -549,8 +549,8 @@ zeenium templar~
 &+YZeenium, &+Ldark templar&+Y of the high council stands here.&n
 ~
 ~
-1073741832 1 0 24 0 0 524288 -1000 S
-DK 0 65552 -1
+1073741832 1 0 0 24 0 0 524288 -1000 S
+DK 0 65552 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -563,8 +563,8 @@ madam hetolly~
 &+mShe looks up when she sees she has customers.
 &+W        "Sorry, we are closed. Come back another time."
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -577,8 +577,8 @@ local minstrel~
 &+ymelodious tune, yet always watchful and aware of what is
 &+yhappening around here.&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 32768 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 32768 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -590,8 +590,8 @@ storm druid~
 &+cThis druid has come to Ultarium with his mentor in hopes of
 &+cbetter communion with the spirits of the skies.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PE 0 128 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PE 0 128 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -604,8 +604,8 @@ adaruen archdruid druid~
 &+cpath of the storms, this man is extremely respected and
 &+clooked up to, and is here in Ultarium on a pilgrimage.
 ~
-3288336394 0 0 0 0 0 0 0 S
-PH 0 128 -1
+3288336394 0 0 0 0 0 0 0 0 S
+PH 0 128 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -618,8 +618,8 @@ water wisp~
 &+Bthan the size of a fist. It radiates with the natural power
 &+Bof the water.&n
 ~
-2058 0 0 1048578 0 0 0 0 S
-EW 0 4194816 1
+2058 0 0 0 1048578 0 0 0 0 S
+EW 0 4194816 0 1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -633,8 +633,8 @@ rock cruncher~
 &+wthey aren't actually aggressive, they have a difficult time telling
 &+wfood apart from what is not food.&n
 ~
-8 1 0 136 0 0 0 -700 S
-R 0 1 5
+8 1 0 0 136 0 0 0 -700 S
+R 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -646,8 +646,8 @@ mountain slink~
 &+yThis strange mammal is hardly noticeable as it scurries beneath the
 &+ymountain rocks. Rumor has it thier fur is quite valuable to some.&n
 ~
-2056 0 0 68681728 0 0 0 0 S
-A 0 1 1
+2056 0 0 0 68681728 0 0 0 0 S
+A 0 1 0 1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -659,8 +659,8 @@ travelling scholar~
 &+yThis scholar has travelled from a distant land to do research
 &+yhere in the city's vast libraries.&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 32 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 32 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -672,8 +672,8 @@ pandoras box~
 &+cA floating box, here in this strange immaterial cage, it glows with
 &+ca deep blue mystical power, beckoning those to open.
 ~
-268437514 0 0 0 0 0 0 0 S
-AN 0 37748736 -1
+268437514 0 0 0 0 0 0 0 0 S
+AN 0 37748736 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -686,8 +686,8 @@ imprisoned smuggler~
 &+W	"Get me outta these chains! Please!"
 &+LHe begs.
 ~
-8 0 0 0 0 0 0 -500 S
-PH 0 65536 -1
+8 0 0 0 0 0 0 0 -500 S
+PH 0 65536 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -702,8 +702,8 @@ elderly engineer gnome~
 &+W        golem, a marvel of workmanship, years ahead of its time."
 &+yHe looks downward, lost in thought.
 ~
-8 0 0 0 0 0 0 0 S
-PG 0 32768 -1
+8 0 0 0 0 0 0 0 0 S
+PG 0 32768 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -713,8 +713,8 @@ strata cosmo cosmolord~
 &+YStrata, co&+Wsm&+Yol&+Word&+Y of the high council stands here.
 ~
 ~
-8 1 0 0 0 2097152 0 -1000 S
-DK 0 33554944 -1
+8 1 0 0 0 0 2097152 0 -1000 S
+DK 0 33554944 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -727,8 +727,8 @@ sentinel sunstone~
 &+yhis only purpose being to guard and protect key locations
 &+yin the fortress.&n
 ~
-10 1 0 24 0 0 0 -1000 S
-G 0 16385 -1
+10 1 0 0 24 0 0 0 -1000 S
+G 0 16385 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -738,8 +738,8 @@ omoona black robe~
 &+LOmoona&+Y, &+Lblack robe&+Y of the high council stands here.&n
 ~
 ~
-8 1 0 8 1 0 0 -1000 S
-DK 0 320 -1
+8 1 0 0 8 1 0 0 -1000 S
+DK 0 320 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -753,8 +753,8 @@ blaze cometstrike comet strike~
 &+Yanyone else in history, to this, the most trusted of
 &+Ypositions, the final guardian of the high council itself.
 ~
-268437518 1 0 2415919256 2049 0 0 -333 S
-G 0 1048577 -1
+268437518 1 0 0 2415919256 2049 0 0 -333 S
+G 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -766,8 +766,8 @@ windwalker wind walker~
 &+cThis strange, ethereal being seems lost as he wanders
 &+cthrough the city, seemingly looking for something.
 ~
-1342179336 0 0 524290 0 0 4096 0 S
-UG 0 33554432 -1
+1342179336 0 0 0 524290 0 0 4096 0 S
+UG 0 33554432 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -777,8 +777,8 @@ mighty basilisk~
 &+wA mighty basilisk is caged here.&n
 ~
 ~
-1074268168 1 0 0 0 0 0 -1000 S
-DK 0 64 -1
+1074268168 1 0 0 0 0 0 0 -1000 S
+DK 0 64 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -792,8 +792,8 @@ crewman crew black talon~
 &+yextra gear in the city proper. The crew members are usually
 &+yonly in the city for a couple days, so most of it spent resting.&n
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -807,8 +807,8 @@ blacktalon black talon captain~
 &+ytheir time resting here while they wait for their ship to
 &+yfinish repairs and re-supply.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -818,8 +818,8 @@ ignor~
 &+LIgnor, &+Wmind&+Lbreaker of the &+Yhigh council&+L stands here.&n
 ~
 ~
-12 1 0 8 0 0 536870912 -1000 S
-DK 0 5 -1
+12 1 0 0 8 0 0 536870912 -1000 S
+DK 0 5 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -832,8 +832,8 @@ port master portmaster~
 &+yat the tethering station. He oversees the mooring of
 &+ythe many airships that come to call here yearly.&n
 ~
-10 0 0 8 0 0 0 0 S
-PH 0 16384 -1
+10 0 0 0 8 0 0 0 0 S
+PH 0 16384 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -845,8 +845,8 @@ sailor~
 &+yHe appears quite comfortable in the chilly mountain air.&n
 &+W	"Ah R'n'R, nothing like shore leave..."
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -860,8 +860,8 @@ visitor~
 &+W	"I've never seen so many towers. And the mountains..
 &+W	Its amazing."
 ~
-1073743882 0 0 0 0 0 0 0 S
-H 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+H 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -874,8 +874,8 @@ sunstone knight elite~
 &+yglows with brilliance due to his sunstone armor as he
 &+ysearches the halls for invaders.
 ~
-67110920 1 0 24 0 0 0 -1000 S
-G 0 16385 -1
+67110920 1 0 0 24 0 0 0 -1000 S
+G 0 16385 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -888,8 +888,8 @@ attendant~
 &+Ythe high council about, granting whatever they wish as
 &+Ysoon as possible, and avoid incurring their wrath.
 ~
-8 1 0 0 0 0 0 -1000 S
-L 0 32 -1
+8 1 0 0 0 0 0 0 -1000 S
+L 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -901,8 +901,8 @@ juggler~
 &+WThis happy little fellow spends his days performing in the
 &+Wcold mountain air for the scholars and tourists of the city.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 65536 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 65536 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -915,8 +915,8 @@ plume meteorhand siege master~
 &+Yincluding the massive and devestating trebuchets.  He is a crafty
 &+Yand large man, and a worthy fighter.
 ~
-2058 1 0 0 0 0 0 -333 S
-G 0 524288 -1
+2058 1 0 0 0 0 0 0 -333 S
+G 0 524288 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -929,8 +929,8 @@ member~
 &+Lindicate this man is a member of the moonshade convenant,
 &+La sect of underdark cosmomancers and spiritualists.&n
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-PL 0 256 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+PL 0 256 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -944,8 +944,8 @@ young student astrologist~
 &+Wis a foolish notion, he spends nearly all his time in the tower
 &+Where busily reading the stars.&n
 ~
-67110922 0 0 0 0 0 0 0 S
-H 0 4194304 -1
+67110922 0 0 0 0 0 0 0 0 S
+H 0 4194304 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -958,8 +958,8 @@ psyche soldier~
 &+wHe has no control over himself as he defends the fortress
 &+wwith his life.
 ~
-1073743880 1 0 0 0 0 0 -333 S
-GZ 0 5 -1
+1073743880 1 0 0 0 0 0 0 -333 S
+GZ 0 5 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -972,8 +972,8 @@ guard dog~
 &+yor anyone other the fortress regulars. It is vicious,
 &+ydeadly, and extremely fast.
 ~
-1073741832 1 0 24 0 67108864 0 -1000 S
-AC 0 1 2
+1073741832 1 0 0 24 0 67108864 0 -1000 S
+AC 0 1 0 2
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -983,8 +983,8 @@ cosmic doomguard doom guard~
 &+LA fearsome &+Yco&+Wsm&+Yic&+L doomguard patrols the halls.&n
 ~
 ~
-1073741864 1 0 8 1 0 0 -1000 S
-G 0 33554432 -1
+1073741864 1 0 0 8 1 0 0 -1000 S
+G 0 33554432 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -994,8 +994,8 @@ lieutenant sunstone~
 &+YA lieutenant of the fortress' s&+yu&+Ynst&+yon&+Ye knights is here on watch.&n
 ~
 ~
-67108874 1 0 152 0 0 0 -1000 S
-G 0 17 -1
+67108874 1 0 0 152 0 0 0 -1000 S
+G 0 17 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1005,8 +1005,8 @@ high warden~
 &+YThe high &+Lwarden&+Y of the fortress watches the &+Lprisoners&+Y.&n
 ~
 ~
-8 1 0 0 0 0 0 -1000 S
-G 0 139264 -1
+8 1 0 0 0 0 0 0 -1000 S
+G 0 139264 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1016,8 +1016,8 @@ mighty chimaera~
 &+mA mighty chim&+bae&+mra has been locked up here.&n
 ~
 ~
-1073744136 1 0 8 0 0 0 1000 S
-D 0 4194304 -1
+1073744136 1 0 0 8 0 0 0 1000 S
+D 0 4194304 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1031,8 +1031,8 @@ unicorn~
 &+cto see such a magical and majestic creature locked up like
 &+cthis.
 ~
-1073743882 0 0 0 0 0 0 1000 S
-AE 0 2 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+AE 0 2 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1042,8 +1042,8 @@ windwalker wind walker~
 &+cA windwalker has gone mad from imprisoniment.&n
 ~
 ~
-1342179338 1 0 524418 0 0 2048 0 S
-UG 0 33554432 -1
+1342179338 1 0 0 524418 0 0 2048 0 S
+UG 0 33554432 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1053,8 +1053,8 @@ local resident~
 &+WA resident of the city travels through the city.&n
 ~
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1067,8 +1067,8 @@ massive guard dog~
 &+yor anyone other the fortress regulars. It is vicious,
 &+ydeadly, and extremely fast.
 ~
-1073741832 1 0 24 0 67108864 0 -1000 S
-AC 0 1 4
+1073741832 1 0 0 24 0 67108864 0 -1000 S
+AC 0 1 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1080,8 +1080,8 @@ cockatrice~
 &+LA cockatrice is a strange creature, a mix between a small dragon
 &+Land a rooster, usually quite nasty, albiet small.&n
 ~
-1032 1 0 24 0 0 0 0 S
-DK 0 1 2
+1032 1 0 0 24 0 0 0 0 S
+DK 0 1 0 2
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1094,8 +1094,8 @@ tamed griffon~
 &+yThey are quite accustom to the locals here, and are quite tame,
 &+yletting some even ride them.&n
 ~
-1207961608 0 0 0 0 0 0 0 S
-B 0 2 3
+1207961608 0 0 0 0 0 0 0 0 S
+B 0 2 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1107,8 +1107,8 @@ dwarven trapper dwarf~
 &+yThis gruff looking dwarf eyes you curiously and asks:&n
 &+W	"You gots any furs or stuff fer me?"
 ~
-1073760266 0 0 8 0 0 0 0 S
-PM 0 16385 -1
+1073760266 0 0 0 8 0 0 0 0 S
+PM 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1121,8 +1121,8 @@ dwarven craftsman dwarf~
 &+ynotice you.
 &+W	"Find anything for me, yet?"&+y He asks briskly.&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PM 0 16385 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PM 0 16385 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1134,8 +1134,8 @@ dwarf local~
 &+yA regular female dwarf of the mountain camp, spending her
 &+ydays doing chores and working around the area.
 ~
-1073743880 0 0 0 0 0 0 500 S
-PM 0 1 -1
+1073743880 0 0 0 0 0 0 0 500 S
+PM 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

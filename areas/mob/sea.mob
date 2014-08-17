@@ -7,8 +7,8 @@ Gills move rhymically, half hidden by the flowing emerald green hair.
 Yellow eyes glisten with youth and superiority. Her small, slender
 body moves lazily in the brackish waters of her office.
 ~
-1107560478 1 0 3803160 0 0 0 0 S
-PE 0 8192 -1
+1107560478 1 0 0 3803160 0 0 0 0 S
+PE 0 8192 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 12 12 2
@@ -19,8 +19,8 @@ A &+Rprimsk&N loves lazily through the waters.
 ~
 A little shrimp swims lazily, waiting for another individual to annoy.
 ~
-1074003980 1 0 2064 0 0 0 0 S
-I 0 0 -1
+1074003980 1 0 0 2064 0 0 0 0 S
+I 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 12 12 0
@@ -33,8 +33,8 @@ Irridescent green scales glitter in the dim light as it moves its
 body rhymically with the intake of air through the fluttering gills.
 The foot-long body is slick to the touch.
 ~
-262152 0 0 2048 0 0 0 500 S
-F 0 0 -1
+262152 0 0 0 2048 0 0 0 500 S
+F 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 12 12 0
@@ -47,8 +47,8 @@ Two eyes on one side, the pjworn quickly swims in search of a new
 hiding place in the ocean's sands. Its light body blends in perfectly
 with the floor's shadows.
 ~
-1074006024 0 0 2048 0 0 0 750 S
-F 0 1 -1
+1074006024 0 0 0 2048 0 0 0 750 S
+F 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 0.0.0.0 1296
 12 12 0
@@ -64,8 +64,8 @@ of the sleek silver creature, a stripe of deep indigo appears almost
 like a royal robe. The small teeth glisten harmlessly in a round mouth,
 though they offer an effective defense against numerous fisherman.
 ~
-1074006024 0 0 2048 0 0 0 750 S
-F 0 1 -1
+1074006024 0 0 0 2048 0 0 0 750 S
+F 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 12 12 0
@@ -78,8 +78,8 @@ A silver torpedo, this fish is very rarely found alone. It prefers to
 swim in the companionship of others of its kind. The small, retractable
 jaw twitches slightly as it searches for its next meal.
 ~
-1074006024 0 0 2048 0 0 0 500 S
-F 0 1 -1
+1074006024 0 0 0 2048 0 0 0 500 S
+F 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 12 12 0
@@ -92,8 +92,8 @@ About eight feet long, the grey sleek body reflects the light that
 filters from the sky far above. The dolphin chitters quickly, as
 though trying to communicate with those around him.
 ~
-1275332744 0 0 2048 0 0 0 1000 S
-F 0 1 -1
+1275332744 0 0 0 2048 0 0 0 1000 S
+F 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.0.0.0 26730
 12 12 1
@@ -107,8 +107,8 @@ eyes hunting greedily about it. The triangluar snout houses rows
 upon rows of dirk-sharp teeth, ready to rip into the quivering flesh
 of anything that it can find.
 ~
-1107560456 1 0 2048 0 0 0 -1000 S
-F 0 1 -1
+1107560456 1 0 0 2048 0 0 0 -1000 S
+F 0 1 0 -1
 40 2 -28 40d95+920 4d7+10
 0.0.0.0 51840
 12 12 0
@@ -121,8 +121,8 @@ Shaped a bit like an eighty-degree triangle with a whip-like tail
 erupting from the hypotenus, the two fifty-degree angles act like
 wings, propelling the stingray through the water gracefully.
 ~
-1074006024 0 0 2048 0 0 0 -500 S
-F 0 1 -1
+1074006024 0 0 0 2048 0 0 0 -500 S
+F 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 0.0.0.0 19602
 12 12 0
@@ -137,8 +137,8 @@ including some incredibly rare shades. Though it looks
 as delicate as rare bone china, its thin dancing tentacles
 can paralyze even the most vicious of attackers.
 ~
-1107560456 0 0 2064 0 0 0 0 S
-F 0 1 -1
+1107560456 0 0 0 2064 0 0 0 0 S
+F 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 0.0.0.0 7290
 12 12 0
@@ -151,8 +151,8 @@ A five-pronged creaure shaped much like a star, the mouth is hidden on
 the underside of its body. Small suckers line the edges of the five
 arms. The coarse body is yellowish-brown.
 ~
-1074006024 0 0 2064 0 0 0 0 S
-TK 0 1 -1
+1074006024 0 0 0 2064 0 0 0 0 S
+TK 0 1 0 -1
 9 18 71 9d21+49 2d3+1
 4.3.0.0 1166
 12 12 0
@@ -165,8 +165,8 @@ Two concave ovals flattened at one end, the shells come together at
 the juxtaposition of flatness. The grey shell blends in with the
 various surroundings.
 ~
-264200 0 0 2048 0 0 0 500 S
-F 0 0 -1
+264200 0 0 0 2048 0 0 0 500 S
+F 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 12 12 0
@@ -181,8 +181,8 @@ taste, but for the beautiful pearls they produce. The sea elves harvest
 these pearls routinely to create beautiful jewelry, but poachers from
 the surface have been lowering the number of these creatures in the waters.
 ~
-264328 32 0 2048 0 0 0 350 S
-F 0 1 -1
+264328 32 0 0 2048 0 0 0 350 S
+F 0 1 0 -1
 13 15 58 13d27+78 2d5+2
 0.0.0.0 6318
 12 12 0
@@ -196,8 +196,8 @@ the beady black eyes about as the braef skitters along on six segmented
 legs. Two large claws lead the way, the right one more developed than
 its counterpart.
 ~
-1275070472 0 0 2048 0 0 0 700 S
-TK 0 1 -1
+1275070472 0 0 0 2048 0 0 0 700 S
+TK 0 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 12 12 0
@@ -210,8 +210,8 @@ A long, armored, segmented tale ends in a flaring fin. The body too is
 armored in a bluish exoskeleton. Eyestalks protrude from the tiny face
 while two claws flex repeatedly in anticipation.
 ~
-1275332616 0 0 2048 0 0 0 600 S
-F 0 1 -1
+1275332616 0 0 0 2048 0 0 0 600 S
+F 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 12 12 0
@@ -225,8 +225,8 @@ snapper open and closes in tempo with the filtering gills. The three
 foot long fish is nearly as wide as it is long, and seems more scared
 of its surroundings than they are of him.
 ~
-262280 0 0 2048 0 0 0 1000 S
-F 0 0 -1
+262280 0 0 0 2048 0 0 0 1000 S
+F 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 12 12 0
@@ -241,8 +241,8 @@ ocean waters. The shart, pointy snout has small teeth lining the mouth.
 With these teeth the whale preys on its most favorite victim, the
 penguin.
 ~
-1308887048 0 0 2048 0 0 0 500 S
-F 0 1 -1
+1308887048 0 0 0 2048 0 0 0 500 S
+F 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 0.0.0.0 109350
 12 12 0
@@ -259,8 +259,8 @@ body. Underneath the transparent skin can be seen all the workings of
 the creature, from the beating heart to the blood coursing through in
 an semi-open vascular system.
 ~
-1308887244 0 0 2048 0 0 0 1000 S
-X 0 1 -1
+1308887244 0 0 0 2048 0 0 0 1000 S
+X 0 1 0 -1
 35 6 -27 35d83+840 4d6+7
 9.9.1.3 68040
 12 12 0
@@ -275,8 +275,8 @@ the torso and arms of a sea elf, dlapins are bred for their superior
 fighting ability. The thick light aqua scales blend across the torso,
 not leaving any spot vulnerable to attack.
 ~
-1174673420 640 0 2230424 0 0 0 1000 S
-EW 0 8 -1
+1174673420 640 0 0 2230424 0 0 0 1000 S
+EW 0 8 0 -1
 40 -10 -142 60d143+6300 7d6+35
 0.0.0.0 243000
 12 12 1
@@ -290,8 +290,8 @@ sculpted face. The features are precise, though her deep aqua eyes
 radiate with the wisdom of uncountable age. The gills at her neck move
 imperceptably as she cautiously mixes her potions.
 ~
-33556494 0 0 133120 0 0 0 1000 S
-PE 0 32 -1
+33556494 0 0 0 133120 0 0 0 1000 S
+PE 0 32 0 -1
 47 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 12 12 2
@@ -304,8 +304,8 @@ Long emerald green hair, the same hue as the dark eyes, swirls about the
 plump form of an elderly sea elf. The wrinkled features bespeak of a
 long lifespan. No doubt he will be choosing his heir soon.
 ~
-33851406 0 0 2230280 0 0 0 1000 S
-PE 0 1024 -1
+33851406 0 0 0 2230280 0 0 0 1000 S
+PE 0 1024 0 -1
 47 -3 -75 47d80+2491 6d6+25
 7.0.0.5 114210
 12 12 1
@@ -319,8 +319,8 @@ He dances quickly through the water, as though dodging the attacks
 of an imaginary foe. The short-cropped, light-green hair stands on
 end and a look of concentration covers his boyish face.
 ~
-67405838 0 0 133128 0 0 0 1000 S
-PE 0 2048 -1
+67405838 0 0 0 133128 0 0 0 1000 S
+PE 0 2048 0 -1
 46 -3 -72 46d80+2438 6d6+25
 6.0.9.4 111780
 12 12 1
@@ -335,8 +335,8 @@ with seaweed of various colors. The tiny gills on the slender neck move
 quickly with the exertion. Though the aquatic elves are a peaceful race, they
 are known for their bravery and fearlessness in battle.
 ~
-1141114894 512 0 2048 0 0 0 0 S
-PE 0 1 -1
+1141114894 512 0 0 2048 0 0 0 0 S
+PE 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 12 12 2
@@ -350,8 +350,8 @@ mechanically through colorful glass tankards by a plump, golden-green
 haired bartender. The short-cropped hair is plastard against the rouge
 face, scars of ancient battles creating a spiderlike latticework.
 ~
-2058 0 0 0 0 0 0 0 S
-PE 0 8 -1
+2058 0 0 0 0 0 0 0 0 S
+PE 0 8 0 -1
 41 -1 -56 41d107+1845 6d6+12
 1.7.6.3 99630
 12 12 1
@@ -365,8 +365,8 @@ unkept. His trembling webbed hand holds a light blue glass tankard, into
 which he peers, as though somewhere in its murky depth it holds the
 answer to life.
 ~
-262280 0 0 2048 0 0 0 500 S
-PE 0 1 -1
+262280 0 0 0 2048 0 0 0 500 S
+PE 0 1 0 -1
 34 6 -8 34d83+578 4d6+7
 8.9.0.2 44064
 12 12 1
@@ -382,8 +382,8 @@ Of course, the blossoms have a mind of their own and don't always do their
 duty. The patrons don't seems to mind too much though. Matching blossoms
 create the thong underwear that do not leave much to the imagination.
 ~
-1074006156 0 0 2048 0 0 0 0 S
-PE 0 256 -1
+1074006156 0 0 0 2048 0 0 0 0 S
+PE 0 256 0 -1
 42 -1 -59 42d99+1848 6d6+12
 2.8.7.3 102060
 12 12 2
@@ -398,8 +398,8 @@ cropped short and twined into tiny braids that stand on end. The face
 is tough but friendly, though the eyes hide a fierceness that cannot be
 denied.
 ~
-1141114890 0 0 2048 0 0 0 750 S
-PE 0 16384 -1
+1141114890 0 0 0 2048 0 0 0 750 S
+PE 0 16384 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 12 12 1
@@ -412,8 +412,8 @@ Heavily scarred all over his taunt, muscular body, Plarstin practices
 ceaselessly. His precise movements become a blur, and it is easy to
 see how he got his reputation as the most feared warrior of his race.
 ~
-1074006026 0 0 19007504 0 0 0 0 S
-TK 0 1 -1
+1074006026 0 0 0 19007504 0 0 0 0 S
+TK 0 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 12 12 1
@@ -427,8 +427,8 @@ Her long, muscular form swims effortlessly along. Deep green eyes scan
 the path as she dodges fish. Small gills in her neck move hypnotically,
 in rhythm with the movement of her webbed feet and hands.
 ~
-264332 0 0 2048 0 0 0 1000 S
-PE 0 0 -1
+264332 0 0 0 2048 0 0 0 1000 S
+PE 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 6.2.6.1 22275
 12 12 2
@@ -443,8 +443,8 @@ short emphasizes the sapphire eyes of this male aquatic commoner. He seems
 to turn the eyes of any female aquatic he passes, no matter what their age
 or stature.
 ~
-1073744012 0 0 2048 0 0 0 750 S
-PE 0 1 -1
+1073744012 0 0 0 2048 0 0 0 750 S
+PE 0 1 0 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 12 12 1
@@ -458,8 +458,8 @@ doesn't even notice that no adult is around to keep an eye on her.
 Obviously she must have wandered off as little children are known
 to do.
 ~
-264332 0 0 2048 0 0 0 0 S
-PE 0 0 -1
+264332 0 0 0 2048 0 0 0 0 S
+PE 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 12 12 2
@@ -472,8 +472,8 @@ Emerald eyes search the dark waters as webbed hands clutch
 spasmadically. Obviously this mother is in distress as she
 searches for her young child.
 ~
-264332 0 0 2048 0 0 0 500 S
-PE 0 512 -1
+264332 0 0 0 2048 0 0 0 500 S
+PE 0 512 0 -1
 26 8 16 26d44+286 3d6+4
 7.2.6.1 23166
 12 12 2
@@ -487,8 +487,8 @@ swims about lathargically. Her barrel-shaped body and heart-shaped
 face indicate that she doesn't leave the house much. Light violet
 eyes gaze unseeing.
 ~
-264202 0 0 2048 0 0 0 100 S
-PE 0 2048 -1
+264202 0 0 0 2048 0 0 0 100 S
+PE 0 2048 0 -1
 32 6 -2 32d56+480 4d6+7
 6.8.0.2 41472
 12 12 2
@@ -504,8 +504,8 @@ serene and her face is flushed with exhersion and knowledge that
 she is getting away with screwing her boyfriend without her mother
 knowing.
 ~
-264330 0 0 2048 0 0 0 -100 S
-PE 0 2048 -1
+264330 0 0 0 2048 0 0 0 -100 S
+PE 0 2048 0 -1
 18 13 42 18d24+90 3d4+2
 9.7.3.0 8748
 12 12 2
@@ -520,8 +520,8 @@ pleasure, it seems to be rather inadvertant that he is satisfying
 the girl. Fingernail scratches marr his light green back, and a few
 trickles of blood float in the air.
 ~
-264206 0 0 2048 0 0 0 0 S
-PE 0 1024 -1
+264206 0 0 0 2048 0 0 0 0 S
+PE 0 1024 0 -1
 21 11 32 21d32+168 3d5+3
 4.0.5.0 18711
 12 12 1
@@ -535,8 +535,8 @@ he cooks, Bjdwen doesn't even seem to mind the heat. The boiling water
 is kept slightly separate my a magical cylindrical barrier. His gills
 labor to keep his thick body cool, both inside and out.
 ~
-1073743950 0 0 2048 0 0 0 0 S
-PE 0 1024 -1
+1073743950 0 0 0 2048 0 0 0 0 S
+PE 0 1024 0 -1
 48 -3 -78 48d80+2544 6d6+25
 8.1.0.5 116640
 12 12 1
@@ -549,8 +549,8 @@ Dressed in a gown of dark blue the same hue as her sparkling, almond
 shaped eyes, Praelie's gills on her anorexic neck barely move. Her
 bone thin body looks as though it could be easily snapped in two.
 ~
-1174669518 0 0 2056 0 0 0 -500 S
-PE 0 2048 -1
+1174669518 0 0 0 2056 0 0 0 -500 S
+PE 0 2048 0 -1
 51 -5 -98 51d88+4233 7d6+30
 6.9.4.6 206550
 12 12 2
@@ -565,8 +565,8 @@ Occasionally she shouts towards the door to her right to 'hurry up with
 the orders, customers are waiting'. Every once is a while her webbed hands
 brush unrully mint green hair from her slanting old eyes.
 ~
-8 0 0 0 0 0 0 0 S
-PE 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PE 0 0 0 -1
 40 20 96 1d15+4 1d5+0
 1.0.0.0 129
 12 12 0
@@ -579,8 +579,8 @@ Working with various hides, he rubs each against the other, checking
 the tensile strength of each. With his awl he sticks the pieces together.
 Obviously this is an order job, as it is a patchwork of numerous animals.
 ~
-2186 0 0 2048 0 0 0 37 S
-PE 0 2 -1
+2186 0 0 0 2048 0 0 0 37 S
+PE 0 2 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 12 12 1
@@ -594,8 +594,8 @@ same consistancy as the vegetation she loves so much. Nibble webbed
 fingers harvest the translucent leaves of numerous plants. Clear blue
 eyes focus only on the task at hand.
 ~
-264266 0 0 2048 0 0 0 200 S
-PE 0 128 -1
+264266 0 0 0 2048 0 0 0 200 S
+PE 0 128 0 -1
 47 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 12 12 2
@@ -613,8 +613,8 @@ He looks around suddenly and exclaims:
 
 &+w'And where is my BEER?'
 ~
-33818830 0 0 2048 0 0 0 0 S
-PE 0 32 -1
+33818830 0 0 0 2048 0 0 0 0 S
+PE 0 32 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 12 12 1
@@ -628,8 +628,8 @@ considering that the young man is playing a game of schahi against himself.
 Muttering something under his breeath about that 'damned white moving to
 Garlan's 6' makes no sense to anyone other than himself.
 ~
-262286 0 0 2048 0 0 0 0 S
-PE 0 0 -1
+262286 0 0 0 2048 0 0 0 0 S
+PE 0 0 0 -1
 22 11 29 22d40+176 3d5+3
 4.0.5.0 19602
 12 12 1
@@ -642,8 +642,8 @@ A &+cschoolboy&n munches away on his order.
 Crumbs drift down slowly, and the young boy wafts them off the ink-stained
 pages. Deep blue hair lies lifelessly against his protruding brow.
 ~
-1074006154 0 0 2048 0 0 0 1000 S
-PE 0 0 -1
+1074006154 0 0 0 2048 0 0 0 1000 S
+PE 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 12 12 1
@@ -657,8 +657,8 @@ Yellow-green eyes study the other patrons of the restaurant. She nibbles at
 the kelp unconciously, and it is evident she visits here often considering
 her unusually plump body.
 ~
-1074006154 0 0 2048 0 0 0 0 S
-PE 0 1 -1
+1074006154 0 0 0 2048 0 0 0 0 S
+PE 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 12 12 2
@@ -672,8 +672,8 @@ time to talk to her young patrons. Always ready with a smile, she seems to
 be a surrogate mother to many of the youngsters in the town. Long mist green
 hair has been wrapped into a smart bun, decorated with a nautalis hair pin.
 ~
-100927498 0 0 2048 0 0 0 800 S
-PE 0 512 -1
+100927498 0 0 0 2048 0 0 0 800 S
+PE 0 512 0 -1
 41 -1 -56 41d72+1763 6d6+12
 1.7.6.3 99630
 12 12 2
@@ -686,8 +686,8 @@ A &+Ccomm&+Goner&N floats here, asleep.
 hair is knotted up beyond untangling. Light green skin is pocked with
 bright red blemishes.
 ~
-1073744012 0 0 2048 0 0 0 -300 S
-PE 0 4096 -1
+1073744012 0 0 0 2048 0 0 0 -300 S
+PE 0 4096 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 12 12 1
@@ -700,8 +700,8 @@ Covered in dirt, a young girl swims sulkily.
 blue eyes peer at the world around her unseeing. Silvery-green hair clumps
 in short knots upon her teardrop face.
 ~
-262344 0 0 2048 0 0 0 500 S
-PE 0 0 -1
+262344 0 0 0 2048 0 0 0 500 S
+PE 0 0 0 -1
 11 15 64 11d23+44 2d5+2
 5.4.1.0 5346
 12 12 2
@@ -717,8 +717,8 @@ his meager pride and asks,
 &+w'Know of any jobs available? I gotta feed my family you see, and I'll do
 &+wanything to help them.'&n
 ~
-264332 0 0 2048 0 0 0 0 S
-PE 0 1 -1
+264332 0 0 0 2048 0 0 0 0 S
+PE 0 1 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 12 12 1
@@ -731,8 +731,8 @@ A &+Lnewlywed&N spends time with his bride.
 same color as his long eyelashes, spikes about his almond-shaped head. The
 gills at his neck move at a slow rate.
 ~
-1141114890 0 0 2048 0 0 0 800 S
-PH 0 1 -1
+1141114890 0 0 0 2048 0 0 0 800 S
+PH 0 1 0 -1
 29 8 7 29d65+377 3d6+4
 9.4.7.1 25839
 12 12 1
@@ -745,8 +745,8 @@ A &+Wbride&N lies in her husband's arms.
 in the world. Her long sage hair constantly gets in her husband's face,
 tickling his nose and gills.
 ~
-67373070 0 0 2048 0 0 0 600 S
-PE 0 32 -1
+67373070 0 0 0 2048 0 0 0 600 S
+PE 0 32 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 12 12 2
@@ -760,8 +760,8 @@ wrinkled face uncommon among the aquatics. Evidently this man is ancient
 een when the longevity of elves is considered. His cool blue eyes peer
 through you.
 ~
-297160 0 0 2048 0 0 0 0 S
-PE 0 256 -1
+297160 0 0 0 2048 0 0 0 0 S
+PE 0 256 0 -1
 53 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 12 12 1
@@ -773,8 +773,8 @@ gvalldrianis aquatic~
      Mint green hair ropped short and an enormous smile across his
 triangular face, Gval, as he is known, enthusiastically markets his wares.
 ~
-1141114894 640 0 33556480 0 0 0 1000 S
-PE 0 1 -1
+1141114894 640 0 0 33556480 0 0 0 1000 S
+PE 0 1 0 -1
 40 20 96 1d17+6 1d5+0
 1.0.0.0 129
 12 12 1
@@ -786,8 +786,8 @@ A &+yseahorse&n swims here.
 Just the right size for an aquatic elf, a seahorse swims around playfully,
 though somewhat skittish of this it doesn't recognize.
 ~
-262280 0 0 2048 0 0 0 0 S
-F 0 0 -1
+262280 0 0 0 2048 0 0 0 0 S
+F 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 12 12 0
@@ -799,8 +799,8 @@ A &+Bhippocampus&N floats leisurely.
 The front portion of a horse, with fins for feet and a fish-like tail, a
 hippocampus is known for its endurance and loyalty.
 ~
-262152 0 0 2048 64 0 0 0 S
-F 0 1 -1
+262152 0 0 0 2048 64 0 0 0 S
+F 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 12 12 0
@@ -814,8 +814,8 @@ excavated stone boulder. Two slots exist upon its surface. One reads
 'Deposits' and the other 'Withdrawls'.
 &+l
 ~
-167778378 0 0 133248 0 0 0 0 S
-X 0 1 -1
+167778378 0 0 0 133248 0 0 0 0 S
+X 0 1 0 -1
 50 -3 -110 50d119+3100 6d6+25
 0.3.9.6 182250
 8 8 0

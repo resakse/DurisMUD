@@ -2212,6 +2212,7 @@ M 0 17257 34 17021 100 0 0 0       * a clansdwarf
 R 1 17142 16 17021 100 0 0 0       * a large steeder (being ridden)
 M 0 17261 23 17021 100 0 0 0       * a cavern snake
 M 0 17144 4 17021 100 0 0 0        * a duergar inquisitor
+M 0 401080 1 17021 100 0 0 0       * (mob type not in this .mob file)
 M 0 17261 23 17025 100 0 0 0       * a cavern snake
 M 0 17261 23 17025 100 0 0 0       * a cavern snake
 M 0 17176 3 17027 100 0 0 0        * a clansdwarf
@@ -3212,6 +3213,5 @@ G 1 400224 999 0 100 0 0 0         *    (object type not in this .obj file)
 M 0 400000 1 17748 100 0 0 0       * (mob type not in this .mob file)
 M 0 17265 1 17749 100 0 0 0        * Zurg
 M 0 400001 1 17750 100 0 0 0       * (mob type not in this .mob file)
-M 0 401080 1 17021 100 0 0 0       * the Khildarak Quartermaster
 *
 S

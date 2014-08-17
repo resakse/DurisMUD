@@ -253,6 +253,7 @@ M 0 15232 6 15254 100 0 0 0        * a tribal guard
 M 0 15206 3 15256 100 0 0 0        * a water snake
 M 0 15206 3 15258 100 0 0 0        * a water snake
 M 0 15206 3 15258 100 0 0 0        * a water snake
+M 0 401050 1 15263 100 0 0 0       * (mob type not in this .mob file)
 M 0 15230 1 15264 100 0 0 0        * a foul-breathed ogre
 M 0 15232 6 15264 100 0 0 0        * a tribal guard
 M 0 15232 6 15264 100 0 0 0        * a tribal guard
@@ -665,6 +666,5 @@ M 0 15554 2 15797 100 0 0 0        * a small male ogre
 M 0 15554 2 15797 100 0 0 0        * a small male ogre
 M 0 15551 5 15800 100 0 0 0        * a young female ogre
 M 0 15522 1 15802 100 0 0 0        * a cave trapper
-M 0 401050 1 15263 100 0 0 0       * the Faang Quartermaster
 *
 S

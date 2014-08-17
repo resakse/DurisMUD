@@ -1,8 +1,13 @@
 #23408~
 N
 0
-1.00
-1.00
+0.80
+1.10
+5
+6
+7
+9
+11
 0
 %s I'm not selling that, $N!~
 %s You don't seem to have that item, $N.~
@@ -35,8 +40,8 @@ X
 N
 23435
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -85,8 +90,8 @@ N
 23402
 23401
 0
-1.00
-1.00
+0.80
+1.10
 4
 5
 6

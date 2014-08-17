@@ -7,8 +7,8 @@ A tiny &+Wbony&N &+ych&+wipmu&+ynk&N darts around with tail aflicker.&N
 &+ytwitching as he checks out the smells and sounds still lingering in his
 &+ymemory.
 ~
-72 0 0 0 0 0 0 -1000 S
-A 0 1 0
+72 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 0
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -22,8 +22,8 @@ squirrel zombie~
 &+yeyes are dull, fur matted and stinking, death has not been kind to this
 &+ycreature.
 ~
-72 0 0 524288 0 0 0 -1000 S
-A 0 0 1
+72 0 0 0 524288 0 0 0 -1000 S
+A 0 0 0 1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -36,8 +36,8 @@ fox zombie~
 &+Wwhite&N tip of his tail floating behind him.  His fur is matted and reeks
 of death, small bits of flesh falling from his body with each movement.
 ~
-72 0 0 524288 0 0 0 -1000 S
-A 0 1 2
+72 0 0 0 524288 0 0 0 -1000 S
+A 0 1 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -49,8 +49,8 @@ white owl bird~
    &+cThis oddly colored owl, his feathers shining &+Wwhite&N &+cin the
 &+clight, floats over the trail in search of food.
 ~
-133192 0 0 402653184 2 0 0 -1000 S
-B 0 1 2
+133192 0 0 0 402653184 2 0 0 -1000 S
+B 0 1 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -62,8 +62,8 @@ raven black bird~
    &+LThe raven looks at you from overhead, his beady eye peering
 &+Ldown quizzically.
 ~
-133128 0 0 134217760 0 0 0 -1000 S
-B 0 1 2
+133128 0 0 0 134217760 0 0 0 -1000 S
+B 0 1 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -75,8 +75,8 @@ hawk bird skeleton~
    &+yThe&N &+Wskeleton&N &+yof a&N &+rred&+y-tailed hawk soars leisurely overhead,
    &+ysomehow staying aloft while looking for rodents to feed her young.
 ~
-133192 0 0 134217760 0 0 0 -1000 S
-B 0 1 1
+133192 0 0 0 134217760 0 0 0 -1000 S
+B 0 1 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 2
@@ -88,8 +88,8 @@ black bird falcon~
    &+CThe &+Lblack&+C-winged falcon dives in to catch a scurrying mouse,
 &+Chis bony wings folded in close to its body as it nears the ground.
 ~
-133192 0 0 134217760 0 0 0 -1000 S
-B 0 1 2
+133192 0 0 0 134217760 0 0 0 -1000 S
+B 0 1 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 1
@@ -102,8 +102,8 @@ dog cur bitch~
 &+ybirth to young pups.  You can see where her fur has worn thin, her
 &+yeyes glowing viciously at you as she prepares to protect her young.
 ~
-67109066 1 0 1048576 0 0 0 0 S
-A 0 1 -1
+67109066 1 0 0 1048576 0 0 0 0 S
+A 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -116,8 +116,8 @@ puppy dog young~
 &+Yits round little tummy bulges out, testifying to its mother's good
 &+Ycare.
 ~
-72 0 0 0 0 0 0 1000 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 1000 S
+A 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 0
@@ -130,8 +130,8 @@ small mouse zombie~
 &+wwell!  Living?  Looking closer, you notice that the mouse is nothing but
 &+wrotting flesh, reeking fluids seeping from small wounds.
 ~
-202 0 0 0 0 0 0 -1000 S
-A 0 0 0
+202 0 0 0 0 0 0 0 -1000 S
+A 0 0 0 0
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -143,8 +143,8 @@ sparrow bird skeleton~
    &+YThis little bird is happily nesting in the attic here despite its
 &+Yrather decrepit condition.
 ~
-131274 0 0 134217728 0 0 0 -1000 S
-B 0 0 0
+131274 0 0 0 134217728 0 0 0 -1000 S
+B 0 0 0 0
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -156,8 +156,8 @@ ghost spirit moaning~
    &+WThis spirit looks sadly at you, its soft moans sounding pitiful
 &+Wto your ears.  It seems to stay hovering by a raised patch on the wall.
 ~
-131146 1 0 40 0 0 0 -1000 S
-U 0 32 -1
+131146 1 0 0 40 0 0 0 -1000 S
+U 0 32 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -172,8 +172,8 @@ wraith~
 &+LTale!!"  With those words, the wraith moves in your direction with
 &+Larms outstretched and &+Rred&N &+Leyes blazing.
 ~
-1073891404 1 0 68157480 2 0 0 -1000 S
-UG 0 1 -1
+1073891404 1 0 0 68157480 2 0 0 -1000 S
+UG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -185,8 +185,8 @@ spider large black~
    &+LThis large black spider has bright &+Rred&N &+Leyes and its fangs
 &+Lgleam brightly in the dull light of the shack.
 ~
-6155 1 0 32 0 0 0 -500 S
-AS 0 1 -1
+6155 1 0 0 32 0 0 0 -500 S
+AS 0 1 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -198,8 +198,8 @@ little black spider~
    &+wThis little &+Lblack&N &+wspider seems to dance over its web as
 &+wit weaves even more tangles onto the mass.
 ~
-75 0 0 0 0 0 0 -250 S
-AS 0 1 -1
+75 0 0 0 0 0 0 0 -250 S
+AS 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -217,8 +217,8 @@ shopkeeper anguinel~
 &+gof every land hiding in his hair, in his clothes, floating to the
 &+gfloor...
 ~
-33953994 0 0 302063804 1 192 1048576 1000 S
-PH 0 256 3
+33953994 0 0 0 302063804 1 192 1048576 1000 S
+PH 0 256 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -231,8 +231,8 @@ ghost spirit moaning~
 &+Wmemories of the terrible&N &+Ltragedy&N &+Wthat befell both herself
 &+Wand her village.
 ~
-133194 0 0 68681764 32770 0 0 1000 S
-PH 0 32 -1
+133194 0 0 0 68681764 32770 0 0 1000 S
+PH 0 32 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -246,8 +246,8 @@ large black bat~
 &+Lwindow-pane when night falls.  It does not look happy to have
 &+Lbeen disturbed!
 ~
-131080 0 0 134250796 2 0 0 -750 S
-A 0 1 -1
+131080 0 0 0 134250796 2 0 0 -750 S
+A 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 11 11 0
@@ -259,8 +259,8 @@ small brown bat~
    &+LThis little&N &+ybrown&N &+Lbat hangs upside down from the
 &+Lrafters, sound asleep.
 ~
-74 0 0 402653184 0 0 0 0 S
-A 0 1 -1
+74 0 0 0 402653184 0 0 0 0 S
+A 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -272,8 +272,8 @@ rat squeaking~
    &+yThis rat is plump and well-fed, so obviously there is plenty for
 &+yit to eat.
 ~
-2058 0 0 268435488 2 0 0 -250 S
-AP 0 1 -1
+2058 0 0 0 268435488 2 0 0 -250 S
+AP 0 1 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -284,8 +284,8 @@ blue snake~
 ~
    &+bThis snake's scales glitter with a brilliant&N &+Bblue&N &+bsheen.&N
 ~
-2121 0 0 524320 0 0 2 0 S
-RS 0 1 1
+2121 0 0 0 524320 0 0 2 0 S
+RS 0 1 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -297,8 +297,8 @@ rat hiding~
    &+LThis rat twitches its whiskers and zips over to hide under the
 &+Lthe rubble again.
 ~
-74 0 0 1048576 0 0 0 0 S
-AP 0 1 -1
+74 0 0 0 1048576 0 0 0 0 S
+AP 0 1 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -310,8 +310,8 @@ spider~
    &+LThis spider looks at you with bright&N &+Rred&N &+Leyes before it
 &+Lruns back to its web in the rubble.
 ~
-4298 0 0 1572896 0 0 0 -500 S
-AS 0 1 -1
+4298 0 0 0 1572896 0 0 0 -500 S
+AS 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -325,8 +325,8 @@ man survivor desperate~
 &+Mto believe that anyone else could have survived the trauma, even
 &+Mwhen you offer proof of the shopkeeper's existence.
 ~
-2254 704 0 269484064 0 0 0 0 S
-PH 0 16385 3
+2254 704 0 0 269484064 0 0 0 0 S
+PH 0 16385 0 3
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -340,8 +340,8 @@ old man farmer~
 &+Llived a hard life, but at the same time you can see a gentle cast
 &+Lto his face.  Perhaps he may be a good source of information...
 ~
-1073744078 0 0 268959780 2050 0 0 1000 S
-PH 0 513 3
+1073744078 0 0 0 268959780 2050 0 0 1000 S
+PH 0 513 0 3
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -354,8 +354,8 @@ wife grey female woman~
 &+Lof her village around her.  Yet, she has managed to keep going,
 &+Lhelping her husband with what she can to keep the farm running somehow.
 ~
-2250 0 0 301989920 32770 0 0 1000 S
-PH 0 32 3
+2250 0 0 0 301989920 32770 0 0 1000 S
+PH 0 32 0 3
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -367,8 +367,8 @@ little brown mouse~
    &+yThis little skeletal mouse scurries past you clutching a tiny grain
 &+yof dessicated wheat in its mouth.
 ~
-202 0 0 0 0 0 0 -1000 S
-A 0 1 1
+202 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -381,8 +381,8 @@ cow zombie~
 &+Lcontentedly on who knows what, since all know that zombies do not eat!
 &+LAll the while, she keeps a watchful eye on her young&N &+Ldead&N &+Wc&+La&+Wl&+Lf.&N
 ~
-2250 0 0 268435488 0 0 0 -1000 S
-A 0 1 4
+2250 0 0 0 268435488 0 0 0 -1000 S
+A 0 1 0 4
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -396,8 +396,8 @@ little calf dead~
 &+Labout taking any steps.  He must have been newly born upon his sudden
 &+Ltransformation into this undead creature.
 ~
-202 0 0 0 0 0 0 -1000 S
-A 0 1 2
+202 0 0 0 0 0 0 0 -1000 S
+A 0 1 0 2
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -410,8 +410,8 @@ banty rooster skeletal~
 &+Rfollowed by his harem of &+Lzombie&N &+wsp&+Lec&+wkl&+Led&N &+Rhens.
 &+RHe runs this roost and he knows it!
 ~
-67111114 0 0 134217728 0 0 0 -1000 S
-B 0 1 1
+67111114 0 0 0 134217728 0 0 0 -1000 S
+B 0 1 0 1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -423,8 +423,8 @@ speckled hen~
    &+LThis silly little hen follows the&N &+Rrooster&N &+Las tho enslaved by him..
 &+Lthen again she probably is... CLUCK!
 ~
-202 0 0 0 0 0 0 -1000 S
-B 0 1 1
+202 0 0 0 0 0 0 0 -1000 S
+B 0 1 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -437,8 +437,8 @@ pig~
 &+MHe has a pile of dessicated shucked corn and berries in front of him,
 &+Ma nice bone dry wallow behind him and somehow he is squeaky clean.
 ~
-2250 0 0 0 0 0 0 -1000 S
-U 0 1 2
+2250 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 2
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -453,8 +453,8 @@ horse draft-horse skeletal skeleton~
 &+yremains glossy, yet he is clearly quite dead, the sharp angles of bone
 &+yand rib protruding thru the thin covering.
 ~
-2250 0 0 268435456 0 536870912 0 -1000 S
-AE 0 1 4
+2250 0 0 0 268435456 0 536870912 0 -1000 S
+AE 0 1 0 4
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -466,8 +466,8 @@ green snake~
    &+GA little green snake slithers through the fields.  A large bulge in
 &+Gthe center of the creature gives proof of a nice mouse freshly eaten.
 ~
-202 0 0 0 0 0 0 0 S
-RS 0 1 -1
+202 0 0 0 0 0 0 0 0 S
+RS 0 1 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -481,8 +481,8 @@ ettin warrior male~
 &+ycovered in patchy fur-like fuzz, with warts and odd protrusions all over
 &+yhis disgustingly smelly body.
 ~
-1073743950 1 0 2097440 2 0 0 -1000 S
-PO 0 1 6
+1073743950 1 0 0 2097440 2 0 0 -1000 S
+PO 0 1 0 6
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -496,8 +496,8 @@ ettin female~
 &+Ware long and powerful-looking, yet her gentleness as she takes care of
 &+Wher&N &+Ycubs&N &+Wis evident.
 ~
-67110990 0 0 268435744 45250 0 0 -1000 S
-PO 0 32 6
+67110990 0 0 0 268435744 45250 0 0 -1000 S
+PO 0 32 0 6
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -512,8 +512,8 @@ little ettin cub~
 &+Ywell-rounded indicating good feeding on fresh meat.  He's already grown
 &+Yin a large number of white pointy teeth so I'd take care around him!
 ~
-2254 0 0 268435712 2 0 0 -1000 S
-PO 0 1 4
+2254 0 0 0 268435712 2 0 0 -1000 S
+PO 0 1 0 4
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -528,8 +528,8 @@ large beholder~
 &+bnumber, each topped with a wide glaring eyeball.  His body is large and
 &+brounded, no other appendages are visible.
 ~
-133198 1 0 40 2 0 0 -1000 S
-BH 0 2048 6
+133198 1 0 0 40 2 0 0 -1000 S
+BH 0 2048 0 6
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 10 10 0
@@ -544,8 +544,8 @@ pitiful human prisoner~
 &+Clike toys before being devoured, the women being tormented by cruel and
 &+Cdevious means before their deaths.
 ~
-202 0 0 16384 0 0 0 1000 S
-PH 0 1 3
+202 0 0 0 16384 0 0 0 1000 S
+PH 0 1 0 3
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -559,8 +559,8 @@ ettin warrior male~
 &+ycovered in patchy fur-like fuzz, with warts and odd protrusions all over
 &+yhis disgustingly smelly body.
 ~
-1073743950 1 0 524552 2 0 0 -1000 S
-PO 0 1 6
+1073743950 1 0 0 524552 2 0 0 -1000 S
+PO 0 1 0 6
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -575,8 +575,8 @@ horse~
 &+Rblaze&N &+Lin his eyes, just what type of creature this horse may be, for it
 &+Lsuddenly seems quite dangerous.
 ~
-1208223754 0 0 268435456 0 0 0 -1000 S
-A 0 1 -1
+1208223754 0 0 0 268435456 0 0 0 -1000 S
+A 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -591,8 +591,8 @@ little ettin cub~
 &+Ywell-rounded indicating good feeding on fresh meat.  He's already grown
 &+Yin a large number of white pointy teeth so I'd take care around him!
 ~
-2254 0 0 268435712 2 0 0 -1000 S
-PO 0 1 4
+2254 0 0 0 268435712 2 0 0 -1000 S
+PO 0 1 0 4
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -607,8 +607,8 @@ bored adolescent ettin~
 &+Ywait for the day he's allowed to go on a raiding trip, to possibly
 &+Ycapture one of those wonderful food sources on his own!
 ~
-67111118 0 0 268435712 2 0 0 -1000 S
-PO 0 1 4
+67111118 0 0 0 268435712 2 0 0 -1000 S
+PO 0 1 0 4
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -622,8 +622,8 @@ ettin scout male~
 &+ycovered in patchy fur-like fuzz, with warts and odd protrusions all over
 &+yhis disgustingly smelly body.
 ~
-2124 1 0 524552 2 0 0 -1000 S
-PO 0 1 6
+2124 1 0 0 524552 2 0 0 -1000 S
+PO 0 1 0 6
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

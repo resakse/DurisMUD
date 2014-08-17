@@ -7,8 +7,8 @@ The kobold shaman looks at you with disgust in his eye.  His gaze
 seems to penetrate through your innermost being.  He is wearing a
 greenish cloak and holding a blackened staff.
 ~
-33556554 0 0 8 0 0 0 -1000 S
-H 0 256 -1
+33556554 0 0 0 8 0 0 0 -1000 S
+H 0 256 0 -1
 23 11 26 23d44+207 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -21,8 +21,8 @@ Gwark looks more than a bit startled to see you in his pantry.  He's
 not wearing more than his skivies.  By his rapidly darkening eyes and
 his icy glare, you think it's best to beat it before he beats you.
 ~
-33556554 24 0 65736 0 0 0 -1000 S
-H 0 32 -1
+33556554 24 0 0 65736 0 0 0 -1000 S
+H 0 32 0 -1
 39 2 -24 39d88+858 4d7+10
 2.2.3.2 50544
 8 8 1
@@ -34,8 +34,8 @@ A kobold fisherman is casting his line into the murky waters of the pond.
 The kobold looks eager to score a catfish among the murky waters of
 the pond.  He stands here patiently waiting to catch "the big one".
 ~
-2122 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+2122 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 3.2.0.0 907
 5 5 1
@@ -48,8 +48,8 @@ The baby kobold is dressed in nothing but his birthday suit.  He
 crawls about for he hasn't learned to walk yet.  He drools non-stop
 and doesn't quite look house trained.
 ~
-222 0 0 0 0 0 0 -900 S
-H 0 0 -1
+222 0 0 0 0 0 0 0 -900 S
+H 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 1.0.0.0 259
 6 6 1
@@ -62,8 +62,8 @@ The wet nurse looks rather tired and worn out.  Taking care of so many
 babies for too long has evidently taken its toll.  She looks to you and
 in her eyes you can see her longing for a better life.
 ~
-2122 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+2122 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
@@ -76,8 +76,8 @@ The cow looks like it hasn't been milked in quite some time.  Although
 she is past her prime, you see that she still has a lot of years left,
 and that if provoked, her rear kick can be quite deadly.
 ~
-74 0 0 0 0 0 0 0 S
-A 0 1 -1
+74 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 4 20 87 4d17+22 1d5+0
 0.0.0.0 518
 5 5 0
@@ -90,8 +90,8 @@ The pig appears quite happy to be a pig.  He is oblivious to your
 presence and cares only for the care-free life that he leads.  It is
 enormously fat and consequently cannot move around very quickly.
 ~
-74 0 0 0 0 0 0 0 S
-A 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 5 5 0
@@ -104,8 +104,8 @@ The chicken is bright and healthy.  She has no weapons but her beak.
 Any loser and his grandma can beat up a chicken, why not go pick on
 someone your own size.
 ~
-75 0 0 0 0 0 0 0 S
-A 0 0 -1
+75 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 6 6 2
@@ -119,8 +119,8 @@ to be reckoned with.  With his horns and his hooves he can attack just
 about anything.  With his nasty temper you better get out of his sight
 before he decides to test your mettle with his horns.
 ~
-74 1 0 0 0 0 0 -800 S
-A 0 1 -1
+74 1 0 0 0 0 0 0 -800 S
+A 0 1 0 -1
 6 18 80 6d21+33 2d3+1
 0.0.0.0 777
 8 8 1
@@ -132,8 +132,8 @@ A donkey becomes frightened by your presence.
 The donkey looks at you and turns away.  It lets out a brash 'eeee aahh!'
 and moves about restlessly, fearful of your presence.
 ~
-74 0 0 0 0 0 0 0 S
-A 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -148,8 +148,8 @@ like you.  In his belt is a thin dagger, and on his body he wears a
 suit of leather armor.  This is one kobold you don't want to mess
 with.
 ~
-2122 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+2122 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -164,8 +164,8 @@ like you.  In his belt is a thin dagger, and on his body he wears a
 suit of leather armor.  This is one kobold you don't want to mess
 with.
 ~
-67111112 64 0 0 0 0 0 -1000 S
-H 0 1 -1
+67111112 64 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 8 8 1
@@ -179,8 +179,8 @@ his power from being a wimp of any sorts.  The fact that you are
 invading his office does not put you on good grounds with him; he says,
 'ja~uu  xroo3< !!' as he sees you, and attacks.
 ~
-2122 1 0 0 0 0 0 -1000 S
-H 0 1 -1
+2122 1 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -192,8 +192,8 @@ A kobold maid is here offering refreshments to those assembled here.
 She is none too pretty to look at, and she's not about to offer her
 refreshments for free!
 ~
-2123 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+2123 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 2
@@ -206,8 +206,8 @@ The kobold looks burly and tough; hardened over the years of being
 hunted by the elves, while trying to provide a little meat for his
 clan at the same time.
 ~
-200 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+200 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -221,8 +221,8 @@ stomach.  He holds a battered tin pan and an greedy grin, hoping to
 strike it rich finding precious metals among the bed of the murky
 stream.
 ~
-2122 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+2122 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -234,8 +234,8 @@ A powerful kobold warrior is here looking at you suspiciously.
 This kobold seems to be far better trained in battle then most others
 you have seen to date.
 ~
-2120 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+2120 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 17 13 45 17d35+119 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -250,8 +250,8 @@ frenzied spree of sex with the kobold clan leader.  She looks up at
 you and you wonder if she is sizing you up.  You get a gross feeling
 in your stomach and decide it would be best to flee from the situation.
 ~
-2122 0 0 0 0 0 0 -1000 S
-H 0 32 -1
+2122 0 0 0 0 0 0 0 -1000 S
+H 0 32 0 -1
 19 13 39 19d33+114 3d4+2
 9.7.3.0 9234
 6 6 2
@@ -264,8 +264,8 @@ stronad golem~
 &+LStr&+ro&+Ln&+ra&+Ld, brought to life by a magical force, living only to protect
 &+Lthe rocks from that which it came.
 ~
-67110984 0 0 152 0 0 0 0 S
-og 0 1 5
+67110984 0 0 0 152 0 0 0 0 S
+og 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -279,8 +279,8 @@ life off adventuring to unknown places.  Now he has retired among from the
 roving kobold clans and has settled here in Gwark's settlement to bake
 bread and live out the rest of his life in peace.
 ~
-11 0 0 128 0 0 0 -1000 S
-H 0 1 -1
+11 0 0 0 128 0 0 0 -1000 S
+H 0 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -295,8 +295,8 @@ many years of working the hammer and forge of his blacksmithy.  He snarls
 as you look him up and down, flexing his bulging biscep in a typical
 male display of power.
 ~
-2059 0 0 144 0 0 0 -1000 S
-H 0 1 -1
+2059 0 0 0 144 0 0 0 -1000 S
+H 0 1 0 -1
 43 -1 -62 43d107+1935 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -311,8 +311,8 @@ old age, he looks like he's been kicked one too many times in the
 face.  Survival does have its weak points.  Pretty he is not, but he looks
 as tough as the nefarious dwarf-eating ogre, Al Gitout.
 ~
-33556554 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+33556554 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -324,8 +324,8 @@ A kobold youth stands here, waiting for nothing in particular.
 The kobold youth is not yet quite in the prime of his youth.  He's knee
 high and you get the sudden urge to step on him.
 ~
-204 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+204 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 2.1.0.0 388
 8 8 1
@@ -339,8 +339,8 @@ tell what is flesh and what is scar when looking at his mangled face.
 Although he is past his prime, he still looks like he could put up
 more than his share of a good fight.
 ~
-2122 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+2122 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 8 18 74 8d21+44 2d3+1
 4.2.0.0 1036
 6 6 1
@@ -354,8 +354,8 @@ drink.  '^ziz  a~x  t'a~q!uu ?' he asks you in a friendly manner.  His
 breath is the stuff of unholy legends and his visage reminds you of
 that unknown piece of sticky stuff stuck to your boot.
 ~
-202 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+202 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 8 8 1
@@ -369,8 +369,8 @@ a hard days work taking care of the settlements collective farm.  When
 he finishes his internship on the farm he hopes to join the roving bands
 of kobolds among the woods to get his food the real way: by the hunt.
 ~
-74 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+74 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 6 6 1
@@ -383,8 +383,8 @@ The trainee smiles smugly, aware of your interest in him.  He's a little
 fresh, but his enthusiasm and desire to please more than make up for what
 he lacks in skill.
 ~
-10 64 0 0 0 0 0 -1000 S
-H 0 1 -1
+10 64 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 5 20 83 5d17+27 1d5+0
 3.1.0.0 648
 8 8 1
@@ -397,8 +397,8 @@ The ferret is a sly looking animal, trying to seek a way into the
 chicken yard of the kobolds' farm.  Although he has to eternally keep
 watch that he doesn't get caught...
 ~
-72 0 0 32 0 0 0 -800 S
-A 0 4096 -1
+72 0 0 0 32 0 0 0 -800 S
+A 0 4096 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 1
@@ -412,8 +412,8 @@ of the settlement lie on him and his hands to get the food to the people
 and he won't be letting them down.  He growls at you in a menacing manner
 as you look him up and down.
 ~
-33556554 64 0 8 0 0 0 -1000 S
-H 0 1 -1
+33556554 64 0 0 8 0 0 0 -1000 S
+H 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -426,8 +426,8 @@ The kobold is standing here on the waters of the pond with a calm expression
 on his face.  Obviously he has mastered some trick the other kobolds
 have yet to discover.
 ~
-2122 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+2122 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 6.4.2.0 5832
 8 8 1
@@ -440,8 +440,8 @@ Grumbiter is a burly looking kobold, and doesn't take any nonsense.  If
 any fighting goes on in his inn, he'll gladly make sure the cause of
 the problem gets hurt.
 ~
-67110987 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+67110987 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -455,8 +455,8 @@ Flies buzz lazily around her.  She grins a toothless grin at you, and you
 wonder why she's so happy to see you.  The drool coming down her chin
 gives her motives away a bit much.  You think it might be time to leave now.
 ~
-202 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+202 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 2.1.0.0 518
 6 6 2
@@ -471,8 +471,8 @@ to create little canyons of dirt running up and down his body.  A little
 bit of slobber can be seen edging its way out of his mouth as he snores
 loudly.  You've seen enough; time to kill him.
 ~
-202 0 0 0 0 0 0 -1000 S
-H 0 0 -1
+202 0 0 0 0 0 0 0 -1000 S
+H 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 3.2.0.0 777
 4 4 1
@@ -487,8 +487,8 @@ imobile granite of the statue becomes vague, almost blurry.  The only thing
 about the statue which stands out are the jeweled eyes; red and fiery, they
 seem to shine with an inner light.
 ~
-41943051 0 0 33554624 0 0 0 -1000 S
-X 0 32 -1
+41943051 0 0 0 33554624 0 0 0 -1000 S
+X 0 32 0 -1
 32 6 -17 32d77+736 4d6+7
 6.8.9.2 62208
 8 8 0
@@ -502,8 +502,8 @@ taller than the kobold guards you have seen at the posts, and looks quite
 a bit tougher.  He wears a roughly made jerkin and wields a short, nasty
 looking knife of bone.
 ~
-2122 1 0 33554440 0 0 0 -1000 S
-H 0 1 -1
+2122 1 0 0 33554440 0 0 0 -1000 S
+H 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -520,8 +520,8 @@ knotted tree branches, covered with muscles.  The guard snarls at you and
 you see a short, tiny black teeth, slick with salivia, and ready to rip
 out the nearest piece of flesh on your body.
 ~
-2120 1 0 33554472 0 0 0 -1000 S
-H 0 16384 -1
+2120 1 0 0 33554472 0 0 0 -1000 S
+H 0 16384 0 -1
 31 6 0 31d83+527 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -538,8 +538,8 @@ as rewards for the hapless souls the priest offers in sacrifice.  The
 creature makes an awful screeching sound, perhaps laughter, and then
 attacks you with a powerful force.
 ~
-2059 1 0 34668792 0 0 0 -1000 S
-X 0 256 -1
+2059 1 0 0 34668792 0 0 0 -1000 S
+X 0 256 0 -1
 59 -7 -143 59d132+6549 7d6+35
 4.5.4.9 358425
 8 8 1
@@ -557,8 +557,8 @@ let some offhand adventurer destroy the temple and power he has acquired
 through the years... you shiver in fear as you wonder what fate he is
 pondering for you.
 ~
-100665419 1 0 33620204 0 0 0 -1000 S
-H 0 32 -1
+100665419 1 0 0 33620204 0 0 0 -1000 S
+H 0 32 0 -1
 42 -1 -59 42d99+1848 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -571,8 +571,8 @@ The golem stands nearly twenty feet tall and looks to be made of dark granite.
 The soul purpose of the golems creation was to make sure that none leave
 the tomb of Tyxru if they are so unlucky to find it...
 ~
-8390667 1 0 33554616 0 0 0 -1000 S
-OG 0 1 -1
+8390667 1 0 0 33554616 0 0 0 -1000 S
+OG 0 1 0 -1
 48 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 0
@@ -589,8 +589,8 @@ knotted tree branches, covered with muscles.  The guard snarls at you and
 you see a short, tiny black teeth, slick with salivia, and ready to rip
 out the nearest piece of flesh on your body.
 ~
-67110986 1 0 33554456 0 0 0 -1000 S
-H 0 16384 -1
+67110986 1 0 0 33554456 0 0 0 -1000 S
+H 0 16384 0 -1
 37 2 -18 37d95+851 4d7+10
 0.1.2.2 47952
 8 8 1
@@ -606,8 +606,8 @@ aloft on.  He is armed with a small, but nasty looking pitchfork.  He
 cackles manicly as he flies around your head and attacks you
 repeatedly.
 ~
-67239946 1 0 167837800 0 0 0 -1000 S
-X 0 512 -1
+67239946 1 0 0 167837800 0 0 0 -1000 S
+X 0 512 0 -1
 31 6 -15 31d56+682 4d6+7
 5.7.7.2 60264
 11 11 1
@@ -622,8 +622,8 @@ little kobold has become a mining machine, with powerful arms and a
 weary face to show for it.  Sweat shines dully from the light of the
 tunnel off his ugly hide as he continues to pound away.
 ~
-2122 0 0 33554432 0 0 0 -1000 S
-H 0 1 -1
+2122 0 0 0 33554432 0 0 0 -1000 S
+H 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 7.5.2.0 6804
 8 8 1
@@ -637,8 +637,8 @@ through the countless hours of toil in the mines.  Right now though he
 seems to be more intent on slipping away from the notice of his mine
 leader than on trying to get work done.
 ~
-72 0 0 34078720 0 0 0 -1000 S
-H 0 1 -1
+72 0 0 0 34078720 0 0 0 -1000 S
+H 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -652,8 +652,8 @@ been conditioned to long and strenuous labor in the tunnels of the
 settlement.  He holds his pick axe in his hand threateningly as you
 look him up and down.
 ~
-100665418 64 0 33554432 0 0 0 -1000 S
-H 0 16384 -1
+100665418 64 0 0 33554432 0 0 0 -1000 S
+H 0 16384 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -666,8 +666,8 @@ The kobold miner is a stout looking fellow, well built after many years
 working in the mines.  Right now though he's taking a rest from the
 backbreaking work of the mines.
 ~
-202 0 0 33554432 0 0 0 -1000 S
-H 0 1 -1
+202 0 0 0 33554432 0 0 0 -1000 S
+H 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 6 6 1
@@ -682,8 +682,8 @@ some religious fervor.  Froth lines his mouth as he stares at you with
 an evil gleam in his eyes.  Perhaps it would be best to leave the kobold
 to his cult.
 ~
-67110986 1 0 33554432 0 0 0 -1000 S
-H 0 32 -1
+67110986 1 0 0 33554432 0 0 0 -1000 S
+H 0 32 0 -1
 24 11 23 24d44+216 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -696,8 +696,8 @@ kobold miner~
 &+ycurrently shirtless.  He works dilligently, mining away with a greedy glare
 &+Lin his eyes.
 ~
-2120 0 0 0 0 0 0 -700 S
-h 0 1 2
+2120 0 0 0 0 0 0 0 -700 S
+h 0 1 0 2
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -710,8 +710,8 @@ experienced kobold surveyor~
 &+ycurrently shirtless.  He works dilligently, mining away with a greedy glare
 &+Lin his eyes.
 ~
-2120 0 0 0 0 0 0 -700 S
-h 0 1 2
+2120 0 0 0 0 0 0 0 -700 S
+h 0 1 0 2
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -725,8 +725,8 @@ huge piercer~
 &+Lbelow.  When examined closely, the p&+yie&+Lrc&+ye&+Lr has beedy eyes that peak
 &+Lout from small slits on the side of it.
 ~
-74 1 0 0 0 0 0 0 S
-ee 0 8192 5
+74 1 0 0 0 0 0 0 0 S
+ee 0 8192 0 5
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -740,8 +740,8 @@ piercer~
 &+Lbelow.  When examined closely, the p&+yie&+Lrc&+ye&+Lr has beedy eyes that peak
 &+Lout from small slits on the side of it.
 ~
-74 1 0 0 0 0 0 0 S
-ee 0 8192 3
+74 1 0 0 0 0 0 0 0 S
+ee 0 8192 0 3
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -755,8 +755,8 @@ piercer~
 &+Lbelow.  When examined closely, the p&+yie&+Lrc&+ye&+Lr has beedy eyes that peak
 &+Lout from small slits on the side of it.
 ~
-74 1 0 0 0 0 0 0 S
-ee 0 8192 5
+74 1 0 0 0 0 0 0 0 S
+ee 0 8192 0 5
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -769,8 +769,8 @@ kobold miner~
 &+ycurrently shirtless.  He works dilligently, mining away with a greedy glare
 &+Lin his eyes.
 ~
-2120 0 0 0 0 0 0 -700 S
-h 0 1 2
+2120 0 0 0 0 0 0 0 -700 S
+h 0 1 0 2
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -785,8 +785,8 @@ drider scout~
 &+Lsignifigance if a powerful drider, such as this one, is taking the time
 &+Lto scout it.
 ~
-72 1 0 16 0 0 0 -1000 S
-dr 0 16777216 4
+72 1 0 0 16 0 0 0 -1000 S
+dr 0 16777216 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -798,8 +798,8 @@ blood mist~
    &+rThis apparition, native to the underdark, haunts and drains life slowly
 &+rand quietly from its victims.
 ~
-1073741896 1 0 24 0 0 0 -1000 S
-ug 0 16777216 -1
+1073741896 1 0 0 24 0 0 0 -1000 S
+ug 0 16777216 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -812,8 +812,8 @@ drider~
 &+mcapture some prey that venture off.  This drider is huge in size, it has
 &+mvicious fangs and an unsavory appetite for flesh.
 ~
-1073743944 1 0 0 0 0 0 -1000 S
-dr 0 1 5
+1073743944 1 0 0 0 0 0 0 -1000 S
+dr 0 1 0 5
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -826,8 +826,8 @@ miner~
 &+ycurrently shirtless.  He works dilligently, mining away with a greedy glare
 &+Lin his eyes.
 ~
-2120 0 0 0 0 0 0 -700 S
-h 0 1 2
+2120 0 0 0 0 0 0 0 -700 S
+h 0 1 0 2
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -840,8 +840,8 @@ strong miner~
 &+ycurrently shirtless.  He works dilligently, mining away with a greedy glare
 &+Lin his eyes.
 ~
-2120 0 0 0 0 0 0 -700 S
-h 0 1 2
+2120 0 0 0 0 0 0 0 -700 S
+h 0 1 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -858,8 +858,8 @@ knotted tree branches, covered with muscles.  The guard snarls at you and
 you see a short, tiny black teeth, slick with salivia, and ready to rip
 out the nearest piece of flesh on your body.
 ~
-2122 1 0 33554472 0 0 0 -1000 S
-H 0 20480 -1
+2122 1 0 0 33554472 0 0 0 -1000 S
+H 0 20480 0 -1
 41 6 0 31d83+527 4d6+7
 5.7.9.1 40176
 8 8 1

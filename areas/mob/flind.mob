@@ -8,8 +8,8 @@ a crucified human~
 &+yand his entire body is covered with scars from an edged weapon. It seems
 &+yDeath would be a gift to this captive.
 ~
-10 0 0 16384 0 0 0 700 S
-PH 1 0 -1
+10 0 0 0 16384 0 0 0 700 S
+PH 1 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ A &+yflind cleric &nstands here, healing the mortally wounded.
 &+yany recent signs of battle as his fur is unblemished.  He is unarmed and
 &+ytakes little notice of anything but the condition of the wounded.
 ~
-67108872 64 0 0 0 0 0 -1000 S
-H 0 32 -1
+67108872 64 0 0 0 0 0 0 -1000 S
+H 0 32 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ a bound troll~
 &+gPale and sickly, the troll looks as though it has survived years of blood
 &+gletting, kept healthy enough only to produce blood for the flind.
 ~
-8 0 0 16384 0 0 0 0 S
-PT 10 0 -1
+8 0 0 0 16384 0 0 0 0 S
+PT 10 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 2
@@ -56,8 +56,8 @@ chained human frail~
 &+Win a collection basin below the prisoner. The man manages a few weak sobs,
 &+Wand doesn't seem to be capable of much more.
 ~
-2058 0 0 16384 0 0 0 0 S
-PH 1 1 -1
+2058 0 0 0 16384 0 0 0 0 S
+PH 1 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -74,8 +74,8 @@ legs have been removed at the knee, and blood drains into a deep collection
 basin below him.  The ogre occasionally flails about, sending streams of
 blood through the air.
 ~
-8 0 0 16384 0 0 0 -1000 S
-PT 10 0 -1
+8 0 0 0 16384 0 0 0 -1000 S
+PT 10 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -89,8 +89,8 @@ dwarf restrained burned smoldering~
 &+Ldwarf acts as though he can't see, probably losing his eye sight from a direct
 &+Wlightning strike.
 ~
-8 0 0 16384 0 0 0 679 S
-PM 0 32 -1
+8 0 0 0 16384 0 0 0 679 S
+PM 0 32 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -106,8 +106,8 @@ butcher drow smelly filthy shopkeeper~
 &+mblood.  It is evident this captive loves his job, he delights in the
 &+mdismemberment and mutilation of bodies.
 ~
-2058 0 0 0 8 0 0 -1000 S
-H 0 8192 -1
+2058 0 0 0 0 8 0 0 -1000 S
+H 0 8192 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -122,8 +122,8 @@ mouther gibbering pile flesh slimy~
 &+Yor alive.  While active, the eyes constantly scan the room and the mouths
 &+Ychomp their teeth continously, creating afrightening sound.
 ~
-12 0 0 0 0 0 0 300 S
-A 0 0 -1
+12 0 0 0 0 0 0 0 300 S
+A 0 0 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -139,8 +139,8 @@ qullan humanoid bright savage~
 &+ma sword, their quick and brutal attacks have been known to slaughter entire
 &+cgroups of adventurers.
 ~
-1073741832 1 0 16 0 0 0 -900 S
-H 0 1 -1
+1073741832 1 0 0 16 0 0 0 -900 S
+H 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -154,8 +154,8 @@ rat grinning~
 &+ropen wound &+Lor a &+rbloody carcass.  &+LLong sharp teeth jut out from every
 &+Linch of his mouth, and beady red eyes watch you closely.
 ~
-10 0 0 0 0 0 0 0 S
-A 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ receive anything remotely resembling food.  The cook's grease covered fur
 is full of large dark grey spots and a few scars are noticeable, probably
 inflicted by uncooperative food.
 ~
-1073741832 0 0 33554432 0 0 0 -950 S
-H 0 0 -1
+1073741832 0 0 0 33554432 0 0 0 -950 S
+H 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -183,8 +183,8 @@ cook obese flind fat~
 &+ywears thick leather gloves and an apron to protect himself from the heat, and
 &+yseems to be have burnt the hair off the remainder of his body.
 ~
-67110922 0 0 33554432 0 0 0 -900 S
-H 0 1 -1
+67110922 0 0 0 33554432 0 0 0 -900 S
+H 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -197,8 +197,8 @@ A &+Ygigantic flind &nruns about, beating the youngsters.
 &+Ybulge across his entire body, his arms the size of most flind's legs.
 &+YHis fists are enormous and are raised in front of him in a menacing nature.
 ~
-2056 0 0 144 0 0 0 -900 S
-H 0 16384 -1
+2056 0 0 0 144 0 0 0 -900 S
+H 0 16384 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -212,8 +212,8 @@ cleric flind robed cook~
 &+Yout, so the cleric must be capable of serious healing and good judgment.
 &+YHis &+Lblack eyes &+Yscan back and forth, from the room to his assignment.
 ~
-67110920 64 0 0 0 0 0 -800 S
-H 0 32 -1
+67110920 64 0 0 0 0 0 0 -800 S
+H 0 32 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -227,8 +227,8 @@ cleaner animal strange~
 &+mmouth that sprays its meal with a strong acid which turns the body into a
 &+msoft pulp.  No eyes are dissernable behind its oversized facial scales.
 ~
-138 0 0 0 8192 0 0 0 S
-A 0 0 -1
+138 0 0 0 0 8192 0 0 0 S
+A 0 0 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -241,8 +241,8 @@ glider cavern animal winged~
 as it darts about.  It has large clear eyes and needle like fangs protrude
 from its mouth. Its bony claws end in sharp nails and are used for protection.
 ~
-1073873032 0 0 0 0 0 0 500 S
-A 0 0 -1
+1073873032 0 0 0 0 0 0 0 500 S
+A 0 0 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -257,8 +257,8 @@ gurgling sound when the skewer is rotated for even cooking.  The charred
 skin has begun to smolder, but the meal isnt ready until the insides boil
 and the eyes completely fall from the head.
 ~
-10 0 0 16384 0 0 0 700 S
-PF 0 4096 -1
+10 0 0 0 16384 0 0 0 700 S
+PF 0 4096 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -272,8 +272,8 @@ A &+Lflind cub &nplays here, kicking his brethren in the head.
 &+Lwhich provide camoflage.  Their coloring will not lighten to the normal
 &+Lyellowish color unless they live to be older.
 ~
-136 0 0 0 0 0 0 -600 S
-H 0 1 -1
+136 0 0 0 0 0 0 0 -600 S
+H 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -287,8 +287,8 @@ a dirty cook~
 &+ycovered fur is full of large dark grey spots and a few scars can be
 &+ynoticed, probably inflicted by uncooperative food.
 ~
-2056 0 0 0 0 0 0 -800 S
-H 0 16384 -1
+2056 0 0 0 0 0 0 0 -800 S
+H 0 16384 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -303,8 +303,8 @@ innards entrails living pile bloody~
 &+yover each other as they slither across the ground, and its heart still pumps
 &+yblood through this mess, each beat causing the pile to twitch.
 ~
-136 0 0 0 0 0 0 550 S
-AP 0 0 -1
+136 0 0 0 0 0 0 0 550 S
+AP 0 0 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -319,8 +319,8 @@ demon minor winged~
 &+ran extremely muscular build and sports &+csilver metallic spikes &+rfrom its
 &+rshoulders, elbows and wingtips.
 ~
-1073872904 1 0 65536 1 0 0 -1000 S
-X 0 1 -1
+1073872904 1 0 0 65536 1 0 0 -1000 S
+X 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -334,8 +334,8 @@ garlyf animal reptilian~
 &+ghas &+Ldark black fur &+gunderneath.  The face is a combination of scales and
 &+Lfur,&+g while its large reptilian tail ends in sharp spikes.
 ~
-8 72 0 0 0 0 0 -400 S
-A 0 0 -1
+8 72 0 0 0 0 0 0 -400 S
+A 0 0 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -349,8 +349,8 @@ goat evil~
 &+Land large &+rdemonic symbols &+Lhave been branded into its hide.  The goats &+Yyellow
 &+Yreptilean eyes &+Lhint of an inner wisdom and powers unseen.
 ~
-1073743882 1 0 0 0 0 0 -1000 S
-A 0 1 -1
+1073743882 1 0 0 0 0 0 0 -1000 S
+A 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -363,8 +363,8 @@ vigilante column fire demon~
 &+rin attle.  No features or limbs exist, but parts of the fire form into
 &+rhuge arms and legs for striking.
 ~
-1073743882 1 0 805306408 1 0 0 -1000 S
-EF 0 1 -1
+1073743882 1 0 0 805306408 1 0 0 -1000 S
+EF 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -378,8 +378,8 @@ A humanoid resembling an upright &+yhyena&n paces about.
 &+ypowerful body which is covered in dark orange fur and its movements indicate
 &+ya good deal of agility.
 ~
-67110922 1 0 16 0 0 0 -900 S
-H 0 1 -1
+67110922 1 0 0 16 0 0 0 -900 S
+H 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -393,8 +393,8 @@ A &+rflind magi&n stares into space, apparently in a trance.
 &+ras big as other flind, barely standing over six feet tall.  His fur and mane
 &+rare bright red and his &+Lblack eyes &+rshine from power within.
 ~
-10 1 0 134217736 128 0 0 -900 S
-H 0 512 -1
+10 1 0 0 134217736 128 0 0 -900 S
+H 0 512 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -407,8 +407,8 @@ dog skinned~
 &+Rskin is bright pink and &+rblood &+Rruns from a few spots where the skin was
 &+Rpunctured.  The exposed body is muscular and the dog looks very dangerous.
 ~
-1073744008 64 0 0 0 0 0 450 S
-A 0 0 -1
+1073744008 64 0 0 0 0 0 0 450 S
+A 0 0 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -423,8 +423,8 @@ demon serrated~
 &+rbelow its shoulders.  The body is difficult to see through the flames and its
 &+rmonstrous arms end in metal shafts, narrowing to lethal points.              &N
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-Y 0 16 -1
+1073743880 1 0 0 0 0 0 0 -1000 S
+Y 0 16 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -442,8 +442,8 @@ sentinel orb guard armored~
 &+Gthe creature jut mid-center from its body and are capable of delivering
 &+Gquick and brutal attacks.
 ~
-133130 1 0 268435512 0 0 0 100 S
-EE 0 1 -1
+133130 1 0 0 268435512 0 0 0 100 S
+EE 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -458,8 +458,8 @@ necromancer necro mage body flind~
 &+Lunnatural powers.  Its face has deteriorated badly, several open areas reveal
 &+Wbarren skull&+L, and its claws have been reduced to &+Wskeletal hands.
 ~
-2058 64 0 64 262144 0 0 -900 S
-UV 0 1024 -1
+2058 64 0 0 64 262144 0 0 -900 S
+UV 0 1024 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -474,8 +474,8 @@ minion demon evil creature~
 &+rburn across its body.  The minion is equiped with an extra set of arms,
 &+rallowing it to manipulate bodies and increments of torture efficiently.
 ~
-1073874952 1 0 536870952 1 0 0 -1000 S
-X 0 2048 -1
+1073874952 1 0 0 536870952 1 0 0 -1000 S
+X 0 2048 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -493,8 +493,8 @@ sentinel orb guard armored~
 &+mthe creature jut mid-center from its body and are capable of delivering
 &+mquick and brutal attacks.
 ~
-133130 1 0 268435512 0 0 0 100 S
-OG 0 16 -1
+133130 1 0 0 268435512 0 0 0 100 S
+OG 0 16 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -509,8 +509,8 @@ A &+ylarge flind &nstands here, swinging away with a club.
 &+ylight in his hands.  His fur and mane are dark orange and a large scar runs
 &+ydown his forehead and across his left eye, which is missing.
 ~
-2058 64 0 16 0 0 0 -900 S
-H 0 16384 -1
+2058 64 0 0 16 0 0 0 -900 S
+H 0 16384 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -524,8 +524,8 @@ lesser minion creature stocky short~
 &+rThe surface of the lesser minion resembles a fire elemental and follows its
 &+rmaster about the room closely, guarding against any intruders.
 ~
-67110922 1 0 65576 1 0 0 -900 S
-EF 0 1 -1
+67110922 1 0 0 65576 1 0 0 -900 S
+EF 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

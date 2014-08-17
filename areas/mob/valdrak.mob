@@ -6,8 +6,8 @@ violet fungus~
 &+m   This simple plan lacks any true stems, roots or, leaves.  This being is a&N
 &+mdeep magenta color, and must live off small &+Linsects &+mthat dwell in the &+ccavern&+m.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 0
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 0
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -20,8 +20,8 @@ shrieker~
 &+ma call from the grave.  This plant lacks chlorophyll, true stems, roots and&N
 &+mleaves.&N
 ~
-33558600 1 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 1 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -33,8 +33,8 @@ milk phycomid~
 &+w   This algae-like creature closely resembles a fibrous blob of decomposing,&N
 &+Wmilk&+w-colored matter and has capped fungi growing out of it.&N
 ~
-33558602 1 0 0 0 0 0 0 S
-AP 0 0 -1
+33558602 1 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -46,8 +46,8 @@ ascomoid ball~
 &+c   This huge, puffball-like fungi rolls along the cavern floor here.  The skin&N
 &+cof this creature appears to be leathery and very thick.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -60,8 +60,8 @@ gas spore~
 &+cresemble the eye stalks of a beholder.  At a distance this creature no doubt&N
 &+ccould be mistaken for being an actual beholder.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -75,8 +75,8 @@ tiny fungus man myconid~
 &+mwide feet with vestigial toes.  The monster's hands are pudgy and have two&N
 &+mstubby fingers and a thumb on either side.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 256 0 0 0 0 S
+AP 0 0 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -90,8 +90,8 @@ walking toadstool myconid~
 &+mfeet are wide and have vestigial toes.  The monster's hands are pudgy and&N
 &+mconsist of two stubby fingers and a thumb on either side.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AH 0 0 -1
+33558600 0 0 0 256 0 0 0 0 S
+AH 0 0 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -105,8 +105,8 @@ small fungus man myconid~
 &+mhas wide feet with vestigial toes.  Its skin is bloated and spongy and is a mix&N
 &+mof gray and purple shades.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AH 0 0 2
+33558600 0 0 0 256 0 0 0 0 S
+AH 0 0 0 2
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -121,8 +121,8 @@ elder fungus man myconid~
 &+mon either side.  The monster has wide feet that have vestigial toes.  The eyes&N
 &+mof this monster are dialated, it seems as if he is not all here.&N
 ~
-33560648 0 0 256 0 0 0 0 S
-AH 0 0 3
+33560648 0 0 0 256 0 0 0 0 S
+AH 0 0 0 3
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -137,8 +137,8 @@ elder fungus man myconid~
 &+mfeet that have vestigial toes.  The monster's pudgy hands have two stubby&N
 &+mfingers and a thumb on either side.&N
 ~
-33560648 0 0 256 0 0 0 0 S
-AH 0 0 3
+33560648 0 0 0 256 0 0 0 0 S
+AH 0 0 0 3
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -153,8 +153,8 @@ xolot myconid king~
 &+Larts of raising the dead and brining mortals unholy dread.  As you gaze into&N
 &+Lhis evil eyes the words Death To Peace seem to invade your mind.&N
 ~
-33568842 0 0 65792 0 0 0 -1000 S
-H 0 1024 3
+33568842 0 0 0 65792 0 0 0 -1000 S
+H 0 1024 0 3
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -167,8 +167,8 @@ brown mold~
 &+yaround in the sludge and dreary &+gmuck&+y, what spawned life into this being&N
 &+yyou can only hazard to guess.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -181,8 +181,8 @@ blue ooze~
 &+Bmove along in a manner resembling a &+Lslug&+B.  This creature most likely lives off&N
 &+Bthe insects which inhabit this damp passage.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -196,8 +196,8 @@ bat glowing night hunter~
 &+Lits body.  This monster seems like it is in search of food, perhaps it has a&N
 &+Llair nearby.&N
 ~
-33691720 1 0 256 0 0 0 -1000 S
-A 0 0 -1
+33691720 1 0 0 256 0 0 0 -1000 S
+A 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -211,8 +211,8 @@ brown ooze~
 &+LHow this monster was granted its odd life you can only wonder, it seems to&N
 &+Llive on insects that occupy this cave.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -226,8 +226,8 @@ green mold~
 &+gHow this monster was granted its odd life you can only wonder, it seems to&N
 &+glive on the insects that inhabit this &+Ldismal cave&+g.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -241,8 +241,8 @@ green slime~
 &+gexactly you can only wonder.  This being does not seem to even notice&N
 &+gthat you are near.&N
 ~
-33558600 1 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 1 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -255,8 +255,8 @@ cave cricket~
 &+Lthat dwells within this room.  The creature is not much more then an inch high,&N
 &+Lyet the noise it makes is almost deafining.&N
 ~
-33558538 0 0 33554432 0 0 0 -1000 S
-I 0 0 -1
+33558538 0 0 0 33554432 0 0 0 -1000 S
+I 0 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -270,8 +270,8 @@ large bat~
 &+Lbringer of death.  &+RBlood &+Llays dotted upon the &+rfangs &+Lof this vile eerie beast.&N
 &+LIts &+Bcold &+Lstare shows its true hunger for the feast.&N
 ~
-33689672 1 0 33554432 0 0 0 0 S
-AC 0 0 -1
+33689672 1 0 0 33554432 0 0 0 0 S
+AC 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -285,8 +285,8 @@ hairy spider~
 &+Lbulbous abdomen.  This creature seems like it is in search for something to&N
 &+Leat.&N
 ~
-1107302472 1 0 33554432 0 0 0 -1000 S
-AS 0 0 -1
+1107302472 1 0 0 33554432 0 0 0 -1000 S
+AS 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -299,8 +299,8 @@ hairy spider~
 &+Lseeking to kill any who may loom.  Skeletal legs and a &+Bcold &+Lcalculating heart&N
 &+Lcreates this abysmal beast.&N
 ~
-1107302472 1 0 33554432 0 0 0 0 S
-AS 0 0 -1
+1107302472 1 0 0 33554432 0 0 0 0 S
+AS 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -315,8 +315,8 @@ huge spider~
 &+Lwith eerie fright.  It only lives to end the plight of those who are not of the&N
 &+Lunlight.&N
 ~
-1107302474 1 0 33554432 0 0 0 0 S
-AS 0 0 -1
+1107302474 1 0 0 33554432 0 0 0 0 S
+AS 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -330,8 +330,8 @@ dravlast huge spider~
 &+Ld&+barkne&+Lss, and a heart blacker then the blackest night.  Lethal legs extend from&N
 &+Lout of this being's abysmal exoskeleton.&N
 ~
-1107302474 1 0 33554432 0 0 0 -1000 S
-AS 0 1 2
+1107302474 1 0 0 33554432 0 0 0 -1000 S
+AS 0 1 0 2
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -345,8 +345,8 @@ sword spider~
 &+Lliving d&+barkne&+Lss.  A creature of the night that &+rburns &+Lthe soul with infernal&N
 &+Lhatred and disdain.&N
 ~
-1107302474 1 0 34603016 0 0 0 -1000 S
-AS 0 1 3
+1107302474 1 0 0 34603016 0 0 0 -1000 S
+AS 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -360,8 +360,8 @@ whisper spider~
 &+Lgloom seeking to bring impending doom.  Lethal legs extend form this beast's&N
 &+Linhuman exoskeleton.  This creature no doubt lives on the flesh of mortals.&N
 ~
-1107302474 1 0 34603016 0 0 0 -1000 S
-AS 0 1 3
+1107302474 1 0 0 34603016 0 0 0 -1000 S
+AS 0 1 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -374,8 +374,8 @@ creature legged giant centipede~
 &+Lprotrude many tiny feet.  The body is plated with a chitinous shell and it&N
 &+Lmoves with a slight undulating motion.&N
 ~
-33558536 1 0 0 0 0 0 0 S
-I 0 0 -1
+33558536 1 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -388,8 +388,8 @@ huge centipede~
 &+Lsegments from which protrude many tiny feet.  The body is plated with a hard&N
 &+Lchitinous shell and it moves with a slight undulating motion.&N
 ~
-33558536 1 0 0 0 0 0 0 S
-I 0 0 -1
+33558536 1 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -402,8 +402,8 @@ man sized megalo centipede~
 &+Lmany segments from which protrude tiny feet.  The body is plated by a chitinous&N
 &+Lshell and it moves with a slight undulating motion.&N
 ~
-33558536 1 0 33554432 0 0 0 0 S
-AC 0 0 -1
+33558536 1 0 0 33554432 0 0 0 0 S
+AC 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -416,8 +416,8 @@ tunnel worm~
 &+Lsegments from which protrude many tiny feet.  The body of this being is plated&N
 &+Lwith a chitinous shell and it moves with a slight undulating motion.&N
 ~
-33558538 1 0 34603008 0 0 0 0 S
-I 0 0 -1
+33558538 1 0 0 34603008 0 0 0 0 S
+I 0 0 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -430,8 +430,8 @@ zombie guardian~
 &+LA gruesome glare tempting any to dare.  Black raven darkness for hair, flowed&N
 &+Ldownward in unkempt care.&N
 ~
-100667466 0 0 256 262144 0 0 -1000 S
-U 0 1 -1
+100667466 0 0 0 256 262144 0 0 -1000 S
+U 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -444,8 +444,8 @@ muscaria myconid~
 &nhue scattered randomly about his flesh.  His head flares out with the pride
 &nof youth, and his soft bloated eyes register apprehension and curiosity.
 ~
-33558600 0 0 256 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 256 0 0 0 0 S
+AP 0 0 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -460,8 +460,8 @@ valdrak large whisper spider~
 &+Ldrops of dried &+rcrimson&+L.  This bringer of &+wwhispering &+Ldeath truly is one of those&N
 &+Lwho are of the unlight.&N
 ~
-1107703882 1 0 35192856 0 0 0 -1000 S
-AS 0 1 5
+1107703882 1 0 0 35192856 0 0 0 -1000 S
+AS 0 1 0 5
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -476,8 +476,8 @@ gravf sword spider black~
 &+Lbrutal fate.  This creature feasts upon the &+rflesh &+Lof those that dare to travel&N
 &+Lwhere they do not belong.&N
 ~
-1107302474 1 0 34603016 0 0 0 -1000 S
-AS 0 1 -1
+1107302474 1 0 0 34603016 0 0 0 -1000 S
+AS 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -491,8 +491,8 @@ nrotereb myconid~
 &Ncreeps down along the rivers of the moon.  A creature of shrooms with a look of&N
 &Napathy.&N
 ~
-33558600 0 0 256 0 0 0 -1000 S
-AP 0 16 3
+33558600 0 0 0 256 0 0 0 -1000 S
+AP 0 16 0 3
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -507,8 +507,8 @@ acopiltaczet enormous bringer spider~
 &+Lextend outward in an evil manner.  A beast of dread, that consumes the flesh&N
 &+Lof deceased mortals.&N
 ~
-1107302474 1 0 570490888 8192 0 0 -1000 S
-AS 0 1 3
+1107302474 1 0 0 570490888 8192 0 0 -1000 S
+AS 0 1 0 3
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -522,8 +522,8 @@ tiny fungus man myconid~
 &+mw&+Mi&+md&+Me &+mf&+Mee&+mt w&+Mi&+mth v&+Me&+mst&+Mi&+mg&+Mia&+ml t&+Moe&+ms.  Th&+Me &+mm&+Mo&+mnst&+Me&+mr's h&+Ma&+mnds &+Ma&+mr&+Me &+mp&+Mu&+mdgy &+Ma&+mnd h&+Ma&+mv&+Me &+mtw&+Mo&N
 &+mst&+Mu&+mbby f&+Mi&+mng&+Me&+mrs &+Ma&+mnd &+Ma &+mth&+Mu&+mmb &+Mo&+mn &+Mei&+mth&+Me&+mr s&+Mi&+md&+Me&+m.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 256 0 0 0 0 S
+AP 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -537,8 +537,8 @@ walking toadstool myconid~
 &+mf&+wee&+mt &+wa&+mr&+we &+mw&+wi&+md&+we a&+mnd h&+wa&+mv&+we &+mv&+we&+mst&+wi&+mg&+wia&+ml t&+woe&+ms.  Th&+we &+mm&+wo&+mnst&+we&+mr's h&+wa&+mnds &+wa&+mr&+we &+mp&+wu&+mdgy &+wa&+mnd&N
 &+mc&+wo&+mns&+wi&+mst &+wo&+mf tw&+wo &+mst&+wu&+mbby f&+wi&+mng&+we&+mrs &+wa&+mnd &+wa &+mth&+wu&+mmb &+wo&+mn &+wei&+mth&+we&+mr s&+wi&+md&+we&+m.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AH 0 0 -1
+33558600 0 0 0 256 0 0 0 0 S
+AH 0 0 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -552,8 +552,8 @@ small fungus man myconid~
 &+mh&+wa&+ms w&+wi&+md&+we &+mf&+wee&+mt w&+wi&+mth v&+we&+mst&+wi&+mg&+wia&+ml t&+woe&+ms.  &+wI&+mts sk&+wi&+mn &+wi&+ms bl&+woa&+mt&+we&+md &+wa&+mnd sp&+wo&+mngy &+wa&+mnd &+wi&+ms &+wa &+mm&+wi&+mx&N
 &+wo&+mf gr&+wa&+my &+wa&+mnd p&+wu&+mrpl&+we &+msh&+wa&+md&+we&+ms.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AH 0 0 2
+33558600 0 0 0 256 0 0 0 0 S
+AH 0 0 0 2
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -568,8 +568,8 @@ elder fungus man myconid~
 &+wo&+mn &+wei&+mth&+we&+mr s&+wi&+md&+we&+m.  Th&+we &+mm&+wo&+mnst&+we&+mr h&+wa&+ms w&+wi&+md&+we &+mf&+wee&+mt th&+wa&+mt h&+wa&+mv&+we &+mv&+we&+mst&+wi&+mg&+wia&+ml t&+woe&+ms.  Th&+we e&+my&+we&+ms&N
 &+wo&+mf th&+wi&+ms m&+wo&+mnst&+we&+mr &+wa&+mr&+we &+md&+wia&+ml&+wa&+mt&+we&+md, &+wi&+mt s&+wee&+mms &+wa&+ms &+wi&+mf h&+we i&+ms n&+wo&+mt &+wa&+mll h&+we&+mr&+we&+m.&N
 ~
-33560648 0 0 256 0 0 0 0 S
-AH 0 0 3
+33560648 0 0 0 256 0 0 0 0 S
+AH 0 0 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -584,8 +584,8 @@ elder fungus man myconid~
 &+mf&+Mee&+mt th&+Mat &+mh&+Ma&+mv&+Me &+mv&+Me&+mst&+Mi&+mg&+Mia&+ml t&+Moe&+ms.  Th&+Me &+mm&+Mo&+mnst&+Me&+mr's p&+Mu&+mdgy h&+Ma&+mnds h&+Ma&+mv&+Me &+mtw&+Mo &+mst&+Mu&+mbby&N
 &+mf&+Mi&+mng&+Me&+mrs &+Ma&+mnd &+Ma &+mth&+Mu&+mmb &+Mo&+mn &+Mei&+mth&+Me&+mr s&+Mi&+md&+Me&+m.&N
 ~
-33560650 0 0 256 0 0 0 0 S
-AH 0 0 3
+33560650 0 0 0 256 0 0 0 0 S
+AH 0 0 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -597,8 +597,8 @@ violet fungus~
 &+m   This simple plan lacks any true stems, roots or, leaves.  This being is a&N
 &+mdeep magenta color, and must live off small &+Linsects &+mthat dwell in the &+mg&+Ma&+mrd&+Me&+mn&+m.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -611,8 +611,8 @@ shrieker~
 &+ma call from the grave.  This plant lacks chlorophyll, true stems, roots and&N
 &+mleaves.&N
 ~
-33558600 1 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 1 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -625,8 +625,8 @@ crystal ooze~
 &+cmove along in a manner resembling a &+Lslug&+c.  This creature most likely lives off&N
 &+cthe insects which inhabit this &+Cphan&+ctas&+Cmago&+cric &+ccavern.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -640,8 +640,8 @@ crystal mold~
 &+cHow this monster was granted its odd life you can only wonder, it seems to&N
 &+clive on the insects that inhabit this &+Cphan&+ctas&+Cmago&+cric cavern&+c.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -655,8 +655,8 @@ crystal slime~
 &+cHow this monster was granted its odd life you can only wonder, it seems to&N
 &+clive on the insects that inhabit this &+Cphan&+ctas&+Cmago&+cric cavern&+c.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -670,8 +670,8 @@ tiny fungus man myconid~
 &+mwide feet with vestigial toes.  The monster's hands are pudgy and have two&N
 &+mstubby fingers and a thumb on either side.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 256 0 0 0 0 S
+AP 0 0 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -685,8 +685,8 @@ tiny fungus man myconid~
 &+mw&+Mi&+md&+Me &+mf&+Mee&+mt w&+Mi&+mth v&+Me&+mst&+Mi&+mg&+Mia&+ml t&+Moe&+ms.  Th&+Me &+mm&+Mo&+mnst&+Me&+mr's h&+Ma&+mnds &+Ma&+mr&+Me &+mp&+Mu&+mdgy &+Ma&+mnd h&+Ma&+mv&+Me &+mtw&+Mo&N
 &+mst&+Mu&+mbby f&+Mi&+mng&+Me&+mrs &+Ma&+mnd &+Ma &+mth&+Mu&+mmb &+Mo&+mn &+Mei&+mth&+Me&+mr s&+Mi&+md&+Me&+m.&N
 ~
-33558600 0 0 256 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 256 0 0 0 0 S
+AP 0 0 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -698,8 +698,8 @@ ascomoid ball~
 &+c   This huge, puffball-like fungi rolls along the cavern floor here.  The skin&N
 &+cof this creature appears to be leathery and very thick.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -712,8 +712,8 @@ gas spore~
 &+cresemble the eye stalks of a beholder.  At a distance this creature no doubt&N
 &+ccould be mistaken for being an actual beholder.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -726,8 +726,8 @@ blue mold~
 &+Bmove along in a manner resembling a &+Lslug&+B.  This creature most likely lives off&N
 &+Bthe insects which inhabit this damp passage.&N
 ~
-33558600 0 0 0 0 0 0 0 S
-AP 0 0 -1
+33558600 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -741,8 +741,8 @@ bat large~
 &+Lbringer of death.  &+RBlood &+Llays dotted upon the &+rfangs &+Lof this vile eerie beast.&N
 &+LIts &+Bcold &+Lstare shows its true hunger for the feast.&N
 ~
-33689672 0 0 33554432 0 0 0 0 S
-AC 0 0 -1
+33689672 0 0 0 33554432 0 0 0 0 S
+AC 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -755,8 +755,8 @@ creature legged giant centipede~
 &+Lprotrude many tiny feet.  The body is plated with a chitinous shell and it&N
 &+Lmoves with a slight undulating motion.&N
 ~
-33558536 0 0 0 0 0 0 0 S
-I 0 0 -1
+33558536 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -769,8 +769,8 @@ man sized megalo centipede~
 &+Lmany segments from which protrude tiny feet.  The body is plated by a chitinous&N
 &+Lshell and it moves with a slight undulating motion.&N
 ~
-33558536 1 0 33554432 0 0 0 0 S
-AC 0 0 3
+33558536 1 0 0 33554432 0 0 0 0 S
+AC 0 0 0 3
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -783,8 +783,8 @@ tunnel worm~
 &+Lsegments from which protrude many tiny feet.  The body of this being is plated&N
 &+Lwith a chitinous shell and it moves with a slight undulating motion.&N
 ~
-33558538 1 0 34603008 0 0 0 0 S
-I 0 0 -1
+33558538 1 0 0 34603008 0 0 0 0 S
+I 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -799,8 +799,8 @@ ancient fungus man myconid~
 &+mon either side.  The monster has wide feet that have vestigial toes.  The eyes&N
 &+mof this monster have a crazed look, it seems like he is on a bad trip.&N
 ~
-33962056 1 0 622848 0 16777216 0 0 S
-AH 0 1 3
+33962056 1 0 0 622848 0 16777216 0 0 S
+AH 0 1 0 3
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -815,8 +815,8 @@ paranoid fungus man myconid~
 &+mof gray and purple shades.  A crazed paranoid stare radiates from this entity's&N
 &+mdialated eyes.&N
 ~
-33558600 1 0 256 0 0 0 0 S
-AP 0 1 3
+33558600 1 0 0 256 0 0 0 0 S
+AP 0 1 0 3
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -831,8 +831,8 @@ wejtew wisp merchant wej~
 &+bn&+co&+bt&+ci&+bc&+cea&+bbl&+ce &+bi&+cn th&+bi&+cs &+bm&+cy&+bst&+ce&+br&+ciou&+bs &+ce&+bnt&+ci&+bty&+c.  &+LDecomposed &+bhands &+Bg&+blo&+Bw&+bin&+Bg &+bw&+ci&+bth &+cdr&+bea&+cdf&+bu&+cl&N
 &+cd&+be&+cl&+bi&+cght &+ba&+cr&+be &+ca&+btt&+ca&+bch&+ce&+bd &+bt&+co m&+ba&+css&+bi&+cv&+be &+cd&+be&+cf&+bo&+crm&+be&+cd &+ba&+crms&+b.&N
 ~
-33976394 0 0 1116168 274634 16777216 0 -666 S
-PT 0 16 3
+33976394 0 0 0 1116168 274634 16777216 0 -666 S
+PT 0 16 0 3
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

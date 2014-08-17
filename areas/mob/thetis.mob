@@ -8,8 +8,8 @@ ocean floor.  Its five spiny looking arms search
 around for food. It's a quiet creature, but will
 fight back if provoked.
 ~
-264265 0 0 2112 0 0 0 0 S
-F 0 1 -1
+264265 0 0 0 2112 0 0 0 0 S
+F 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -23,8 +23,8 @@ ocean floor. Its five spiny looking arms search
 around for food. It's a quiet creature, but will
 fight back if provoked.
 ~
-264265 1 0 2112 0 0 0 0 S
-F 0 128 -1
+264265 1 0 0 2112 0 0 0 0 S
+F 0 128 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -38,8 +38,8 @@ on the bottom of the ocean floor. Its five spiny looking
 arms search around for food. It's a quiet creature, but
 will fight back if provoked
 ~
-264265 0 0 2112 0 0 0 0 S
-F 0 2 -1
+264265 0 0 0 2112 0 0 0 0 S
+F 0 2 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -53,8 +53,8 @@ of the ocean floor. Its five spiny looking arms search
 search around for food. It's a timid quiet creature,
 but will fight if provoked.
 ~
-264265 0 0 0 0 0 0 0 S
-F 0 1 -1
+264265 0 0 0 0 0 0 0 0 S
+F 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 8 0
@@ -68,8 +68,8 @@ of the ocean floor. Its five spiny looking arms search
 around for food. It's a quiet creature, but will fight
 back if provoked.
 ~
-264265 0 0 2112 0 0 0 0 S
-F 0 32 3
+264265 0 0 0 2112 0 0 0 0 S
+F 0 32 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -83,8 +83,8 @@ out food to eat as it goes. It is not the brightest of the sea
 creatures, but knows when to fight or when to flee from a fight.
 Its eight arms grasp those that swim by thinking it food.
 ~
-264266 1 0 2112 0 0 0 -1000 S
-F 0 2 3
+264266 1 0 0 2112 0 0 0 -1000 S
+F 0 2 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -98,8 +98,8 @@ at food as it swims by. His eyes seem to &+Yglow &+Was
 he looks at you. There is a large treasure chest that
 he is sitting on. Do you dare to try to get to it?
 ~
-264202 1 0 1050688 0 0 0 0 S
-F 0 32 -1
+264202 1 0 0 1050688 0 0 0 0 S
+F 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -113,8 +113,8 @@ They are of various shapes, sizes, and &+Rc&+Yo&+Wl&+Go&+Cr&+Ws.
 Some are timid and shy while others seem to be
 more aggresive.
 ~
-264267 0 0 2048 0 0 0 -1000 S
-F 0 0 -1
+264267 0 0 0 2048 0 0 0 -1000 S
+F 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -130,8 +130,8 @@ Their sole duty is to keep all visitors out of the kingdom.
 They attack swift and fast as any warrior would do to protect
 their king.
 ~
-1141115080 56 0 2056 0 0 0 -1000 S
-F 0 1 -1
+1141115080 56 0 0 2056 0 0 0 -1000 S
+F 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -146,8 +146,8 @@ This squid is another creature sworn to
 protect this kingdom of all who enter the
 realm.
 ~
-264267 1 0 537954312 0 0 0 -1000 S
-F 0 32768 -1
+264267 1 0 0 537954312 0 0 0 -1000 S
+F 0 32768 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -161,8 +161,8 @@ for its prey. Its long snake like body wraps around its
 prey. It does not care if you are friend or foe, he is
 hungry and will eat anything.
 ~
-272458 1 0 2048 0 0 0 -1000 S
-F 0 32768 -1
+272458 1 0 0 2048 0 0 0 -1000 S
+F 0 32768 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 1
@@ -176,8 +176,8 @@ in the ocean. It has no special abilities, or so it seems.
 It glides thru the water keeping its distance from the other
 &+Csea &+Wcreatures.
 ~
-264264 0 0 34880 0 0 0 -1000 S
-UV 0 0 -1
+264264 0 0 0 34880 0 0 0 -1000 S
+UV 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -192,8 +192,8 @@ ranks to become the advisor to the king and won't let anyone get in his
 way. His cunning and speed has helped him as well. He has a scars all
 over from many battles.
 ~
-67381323 1 0 2048 0 0 0 -1000 S
-F 0 512 -1
+67381323 1 0 0 2048 0 0 0 -1000 S
+F 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -209,8 +209,8 @@ had made the king angry and was put here to rot in this cell.
 He wears a mask over his face to prevent him from yelling to loudly.
 He will do anything to get out of his terrible fate.
 ~
-272458 0 0 75792 0 0 0 0 S
-PH 0 512 -1
+272458 0 0 0 75792 0 0 0 0 S
+PH 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -224,8 +224,8 @@ inside the &+Rcoral &+Wcorral. He is saddled and ready
 to ride at a moments notice. His battle skills
 like all his compainions are top notch.
 ~
-264266 0 0 2048 0 0 0 1000 S
-F 0 0 -1
+264266 0 0 0 2048 0 0 0 1000 S
+F 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -240,8 +240,8 @@ He carries a &+ysack &+Wover his new found &+Csea&+Rs&+Yh&+Be&+Wl&+Gl &+Whome.
 He reaches in the &+ysack &+Wready to give you a gift if
 you have the pretty &+Cblue &+wstones he seeks.
 ~
-264266 0 0 2112 0 0 0 1000 S
-F 0 1 -1
+264266 0 0 0 2112 0 0 0 1000 S
+F 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -257,8 +257,8 @@ enbedded in it. His upper torso is of a human, but the bottom part is
 of a fish. He holds a &+rtrident &+Win his hand ready to fight for
 his kingdom.
 ~
-67385418 0 0 536873104 0 0 0 -1000 S
-H 0 1 -1
+67385418 0 0 0 536873104 0 0 0 -1000 S
+H 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -272,8 +272,8 @@ It loves to show off its &+Rc&+Yo&+Bl&+ro&+Gr&+Wf&+Ru&+Gl &+Cshell. &+WIt also
 loves to cause trouble wherever it goes. Be warned
 to stay clear of these or you could have a big surprize.
 ~
-1074006089 0 0 2128 0 0 0 1000 S
-F 0 128 -1
+1074006089 0 0 0 2128 0 0 0 1000 S
+F 0 128 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -289,8 +289,8 @@ humaniod. His &+Yyellow piercing eyes &+Wlook at you with
 &+rbl&+Roo&+rd lust. &nHis razor sharp teeth show as he snarls
 at you.
 ~
-67373130 1 0 2104 0 0 0 -1000 S
-H 0 1 -1
+67373130 1 0 0 2104 0 0 0 -1000 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -304,8 +304,8 @@ A &+csh&+Car&+ckman captain&n shouts orders out to his troops.
 &+csh&+Car&+ck &nand his lower torso is of a humaniod. His razor sharp teeth show as
 he snarls orders to his troops.
 ~
-1141127242 0 0 2200 0 0 0 -1000 S
-F 0 1 -1
+1141127242 0 0 0 2200 0 0 0 -1000 S
+F 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -319,8 +319,8 @@ in this realm. Her long &+Ygolden hair &+wflows around her. Her &+gemerald &+Ggr
 &+wlook at you as she smiles sweetly. She motions for you to come closer if
 you dare.
 ~
-67373066 0 0 2136 0 0 0 1000 S
-H 0 128 -1
+67373066 0 0 0 2136 0 0 0 1000 S
+H 0 128 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 2
@@ -334,8 +334,8 @@ long flowing silver hair and &+Cicy blue eyes. &+wShe looks at you as you
 enter her domain and smiles widely. She motions you to come closer if
 you dare.
 ~
-67373131 0 0 2120 0 0 0 -1000 S
-UV 0 0 -1
+67373131 0 0 0 2120 0 0 0 -1000 S
+UV 0 0 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -348,8 +348,8 @@ A &+Bhu&+bma&+Bn slave &nstares blankly ahead.
 His long black hair is pulled back. He looks to be a warrior from
 a long time past. His armor is rusted from the &+Csea water.
 ~
-67381322 0 0 2064 0 0 0 0 S
-PH 0 1 -1
+67381322 0 0 0 2064 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -364,8 +364,8 @@ a shocking experience. He is a outcast to this realm
 but stays here in hopes to be invited back into the
 Kingdom someday.
 ~
-1074006089 0 0 1050624 0 0 0 -1000 S
-F 0 2 -1
+1074006089 0 0 0 1050624 0 0 0 -1000 S
+F 0 2 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -379,8 +379,8 @@ A timid creature that lurks in the darker places of
 the realm. He only comes out to feed and annoy the
 other &+Csea &+Wcreatures.
 ~
-262216 0 0 2112 0 0 0 1000 S
-F 0 0 -1
+262216 0 0 0 2112 0 0 0 1000 S
+F 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -395,8 +395,8 @@ Perhaps if you help her find it she will give you a gift
 in return. She looks just like her older sisters but the
 prettist one of all.
 ~
-10314 0 0 2112 0 0 0 1000 S
-H 0 0 -1
+10314 0 0 0 2112 0 0 0 1000 S
+H 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 2
@@ -410,8 +410,8 @@ and searches for food. He loves to play tag with the
 other &+Csea creatures &+where. He is friends with all
 and gives rides to those in need.
 ~
-201328712 0 0 2112 0 0 0 1000 S
-R 0 0 -1
+201328712 0 0 0 2112 0 0 0 1000 S
+R 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -424,8 +424,8 @@ A &+RSmall Clam &+wlays here.
 bothered by anyone. It sits on the &+CSea &+wfloor
 not doing much of anything but resting and sleeping.
 ~
-264266 0 0 2048 0 0 0 -1000 S
-F 0 0 -1
+264266 0 0 0 2048 0 0 0 -1000 S
+F 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 0
@@ -438,8 +438,8 @@ A &+cme&+Cdium-&+csized clam&N clam rests here.
 to do is eat and sleep. Its shell is hard but inside
 it has become very flabby from lack of excerise.
 ~
-264266 1 0 2048 0 0 0 -1000 S
-F 0 256 3
+264266 1 0 0 2048 0 0 0 -1000 S
+F 0 256 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -452,8 +452,8 @@ A &+YLarge Clam &+wsleeps here.
 to do is sleep. Its shell is hard but inside is very
 soft and flabby.
 ~
-264266 0 0 2048 0 0 0 -1000 S
-PH 0 0 -1
+264266 0 0 0 2048 0 0 0 -1000 S
+PH 0 0 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -467,8 +467,8 @@ playing and practicing. Its dream is to someday
 join its brothers and sisters in the royal corral
 and serve the &+YKing&N as they do.
 ~
-10314 0 0 2048 0 0 0 1000 S
-F 0 0 -1
+10314 0 0 0 2048 0 0 0 1000 S
+F 0 0 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 12 12 0
@@ -484,8 +484,8 @@ tucked tightly to him. His crested head tilts up as he opens
 his mouth revealing long sharp pointed teeth and roars
 loudly at you.
 ~
-10314 1 0 2072 0 0 0 -1000 S
-D 0 1 -1
+10314 1 0 0 2072 0 0 0 -1000 S
+D 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -498,8 +498,8 @@ A teacher is standing here scolding her students for not doing their lessens.
 refuse to learn. She wonders why she even bothers since
 they are outcasts.
 ~
-67373130 0 0 2056 0 0 0 0 S
-F 0 0 -1
+67373130 0 0 0 2056 0 0 0 0 S
+F 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -514,8 +514,8 @@ He trys to help all that are in need of his goods. With
 a friendly smile he shows you his items for sale, but
 always keeps a close eye out for the kings guards.
 ~
-67401802 0 0 2200 0 0 0 0 S
-F 0 1 -1
+67401802 0 0 0 2200 0 0 0 0 S
+F 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -528,8 +528,8 @@ A &+Ylarge clam&N sits among the rubble here.
 to do is sleep. Its shell is hard but inside is very
 soft and flabby.
 ~
-67373130 1 0 2048 0 0 0 -1000 S
-H 0 1 -1
+67373130 1 0 0 2048 0 0 0 -1000 S
+H 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -542,8 +542,8 @@ A &+Rlarge clam&N sits among the rubble here.
 to do is sleep. Its shell is hard but inside is very
 soft and flabby.
 ~
-67373130 1 0 2048 0 0 0 -1000 S
-H 0 32768 -1
+67373130 1 0 0 2048 0 0 0 -1000 S
+H 0 32768 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -559,8 +559,8 @@ humaniod. His &+Yyellow piercing eyes &+Wlook at you with
 &+rbl&+Roo&+rd lust. &nHis razor sharp teeth show as he snarls
 at you.
 ~
-264266 0 0 2104 0 0 0 -1000 S
-H 0 1 -1
+264266 0 0 0 2104 0 0 0 -1000 S
+H 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -576,8 +576,8 @@ burgadan blue merman~
 &+bone from the surface needs his uncanny ability of deep sea diving
 &+bhe is quick to assist.
 ~
-1074022408 0 0 524296 0 0 0 500 S
-EW 0 1 3
+1074022408 0 0 0 524296 0 0 0 500 S
+EW 0 1 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

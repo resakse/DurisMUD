@@ -4,8 +4,8 @@ N
 80114
 80115
 0
-1.00
-1.00
+0.80
+1.10
 19
 15
 17
@@ -78,7 +78,7 @@ N
 80191
 80192
 0
-0.90
+0.80
 1.50
 5
 6
@@ -132,8 +132,6 @@ N
 11
 15
 17
-19
-30
 37
 0
 Well, %s, I am afraid I am low on supplies and don't have that.~
@@ -169,8 +167,8 @@ N
 80183
 80184
 0
-1.00
-1.00
+0.80
+1.10
 0
 This is a restaurant, %s, order from the menu.~
 Can't you see this is a restaurant, %s?~
@@ -205,8 +203,8 @@ N
 341
 342
 0
-1.00
-1.00
+0.80
+1.10
 0
 C'mon, %s, order something I actually have.~
 %s, this is a bar, talk to Brokenmoon if you are selling.~

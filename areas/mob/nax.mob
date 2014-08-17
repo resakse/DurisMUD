@@ -8,8 +8,8 @@ years as a mercenary have taught him much int he ways of mending and forging
 weapons.  Using what he has learned from the many campaigns he's championed,
 he makes his fortune.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ authority.  The loin cloth he wears around his waist fits loosely covering
 the tender areas.  His massive broad chest expands outwards exponentially,
 attesting to his massive strength.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -38,8 +38,8 @@ This sentry hasn't any responsibilities while down here so he takes a nap.  If
 he should awaken however, he would become alert to any activity and become a
 guard once again.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -52,8 +52,8 @@ This soldier must have had a difficult sparring time, for fresh scars are
 plainly visible about his person. His build is that of a hardened warrior
 however, and the numerous number of other scars attest to this.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -66,8 +66,8 @@ This chef is off-duty, for lunch isn't until many hours from now. He sits
 resting upon a stool silently planning his day. Just what could be running
 through his head is a mystery.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -79,8 +79,8 @@ crapping soldier~
 This soldier must be suffering from constipation because he hollers and curses
 over it. He squars readily, however, his bowels aren't cooperating.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -93,8 +93,8 @@ This cow keeps silently to himself at all hours of the day. He's the only fat
 cow that resides within this town, and he in himself is a disgrace to all of
 the known cows of Duris, for he is too fat!
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -107,8 +107,8 @@ This minotaur for some reason or another has decides to get filthy drunk.
 There is little doubt that something must be on his mind, however, just what
 that something could be would be impossible to discern.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -122,8 +122,8 @@ he hacks meat and sales it to unwitting fools. Over the years his position
 within this community has risen dramatically, for he is in effect one of the
 few places the cows can turn to for ready meat.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -136,8 +136,8 @@ This large minotaur has many battlescars along his arms and face. His forearms
 are incredibly massive, for he works in the forge all day creating his
 masterpieces that sale for a great deal of money.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -150,8 +150,8 @@ The general has much on his mind, for he notices nothing else happening within
 the room. He wears a horned helm with many dents upon it, one would note that
 he has been in many battles because of the scars he bears.
 ~
-8 0 0 0 0 0 0 0 S
-MT 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -164,8 +164,8 @@ This minotaur is obviously pissed about something, it would be wise to stay
 out of his way. He wears nothing but a loin cloth around his waist, keeping
 his genitals warm.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -178,8 +178,8 @@ This minotaur is obviously pissed about something, it would be wise to stay
 out of his way. He wears nothing but a loin cloth around his waist, keeping
 his genitals warm.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ This minotaur is obviously pissed about something, it would be wise to stay
 out of his way. He wears nothing but a loin cloth around his waist, keeping
 his genitals warm.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -206,8 +206,8 @@ This fierce mercenary fears nothing and noone. To catch her eyes is to catch
 sight of something insensitive to the world around her. She seems as tho she'd
 slit her own mother's throat.
 ~
-32778 0 0 0 0 0 0 0 S
-MT 0 1 -1
+32778 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -220,8 +220,8 @@ This minotaur for some reason or another has decides to get filthy drunk.
 There is little doubt that something must be on his mind, however, just what
 that something could be would be impossible to discern.
 ~
-2056 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -233,8 +233,8 @@ A &+Chuman&+L slave&n works the plow.
 This unfortunate soul was taken prisoner some time ago. The scars upon his back
 are too numerous to count.
 ~
-2056 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -246,8 +246,8 @@ A &+Rgnome&+L slave&n works plants the seeds.
 This unfortunate soul was taken prisoner some time ago. The scars upon his back
 are too numerous to count.
 ~
-2056 0 0 0 0 0 0 500 S
-PG 0 1 -1
+2056 0 0 0 0 0 0 0 500 S
+PG 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -259,8 +259,8 @@ A &+yhalfling&+L slave&n waters the seeds.
 This unfortunate soul was taken prisoner some time ago. The scars upon his back
 are too numerous to count.
 ~
-2056 0 0 0 0 0 0 500 S
-PG 0 1 -1
+2056 0 0 0 0 0 0 0 500 S
+PG 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -272,8 +272,8 @@ A &+Chuman&+L slave&n works the plow.
 This unfortunate soul was taken prisoner some time ago. The scars upon his back
 are too numerous to count.
 ~
-2056 0 0 0 0 0 0 500 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 500 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -285,8 +285,8 @@ A hearty mule plows the field.
 This mule is a rather large beast. It has the strength of six men. The four
 legs this massive beast has could crack a man's skull in half if it chose to.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 4
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -298,8 +298,8 @@ task taskmaster master~
 This large minotaur loves to crack his whip. No hardback is spared from this
 minotaur's cruelty.
 ~
-8 0 0 0 0 0 0 0 S
-MT 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -312,8 +312,8 @@ This monk has it in his head to convert the minotaurs of a nearby town into
 devout worshippers of god. He wears a long flowing robe that fits losely over
 his body.
 ~
-1073743882 0 0 0 0 0 0 500 S
-PH 0 64 -1
+1073743882 0 0 0 0 0 0 0 500 S
+PH 0 64 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -326,8 +326,8 @@ This mercenary silently and collectively poslishes his dagger in the far corner
 of the room. He's the calm collective type, appreciating the usefullness of
 studying an opponent before confrontation.
 ~
-35018 0 0 0 0 0 0 0 S
-MT 0 16384 -1
+35018 0 0 0 0 0 0 0 0 S
+MT 0 16384 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -340,8 +340,8 @@ This merchant sells the most deadly weapons within the city. Small, concealable
 weapons that are used by the crafty and stealthy. From the looks of this
 minotaur, he is just that.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 16384 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 16384 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -353,8 +353,8 @@ task taskmaster master head~
 This taskmaster silently cleans the blood from his whip. This whip must have
 cracked many a back in its day, for this taskmaster is incredibly old.
 ~
-8 0 0 0 0 0 0 0 S
-MT 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -367,8 +367,8 @@ Micheral is a strong warrior. Many years upon the battlefield have hardened him
 and taught him the ways of a mender. Over the years he has perfected his art
 of repairation earning respect and cash along the way.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 0 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -381,8 +381,8 @@ This large beast of a minotaur has seen many battles. One of his horns has
 been broken off, scars are are visible along his person, and this warrior's
 broad back all attest to his vigil in battle.
 ~
-32778 0 0 0 0 0 0 0 S
-MT 0 1 -1
+32778 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -394,8 +394,8 @@ A training warrior practices in mock combat.
 This is a hardened warrior of the art. He examines a sword, searching for the
 right one to spar with.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -408,8 +408,8 @@ This warrior battles another student of the art in mock combat. Although the
 weapons cannot slice or impale an opponent, they sure can bludgeon them very
 badly.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -422,8 +422,8 @@ This warrior battles another student of the art in mock combat. Although the
 weapons cannot slice or impale an opponent, they sure can bludgeon them very
 badly.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -437,8 +437,8 @@ to grow old and die in the world of these beasts, however, it isn't taken in so
 well either. Older minotaurs often seclude themselves from there younger
 counterparts, for various reasons.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -451,8 +451,8 @@ This intelligent minotaur works deligently upon some master scheme for the
 chief minotaur himself, Brakx. He studies his charts and scribbles something in
 illegible handwriting.
 ~
-8 0 0 0 0 0 0 0 S
-MT 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -465,8 +465,8 @@ This minotaur is obviously pissed about something, it would be wise to stay
 out of his way. He wears nothing but a loin cloth around his waist, keeping
 his genitals warm.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -479,8 +479,8 @@ This reptile is covered in muck and slime for it has dwelled within this swamp
 for its entire life. Although this snake is not venomous, it sure can inflict
 alot of pain.
 ~
-8 0 0 0 0 0 0 0 S
-rs 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+rs 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -494,8 +494,8 @@ through the years he has fallen from grace from his own kin which inturn lead
 him to drink heavily. His once bulky physique has succumbed to inactivity and
 now he's nothing but a waste of space.
 ~
-8 0 0 0 0 0 0 0 S
-MT 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -508,8 +508,8 @@ Going about his business walking down the cobblestoned road this minotaur looks
 distraught about something. His agitation shows visibly upon his face, let's
 just hope he doesn't just decide to break someone's neck.
 ~
-1073743880 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -522,8 +522,8 @@ Bunnies are often hunted and eaten by minotaurs, for they taste great. When
 cooked medium rare they taste just like chicken. Perhaps they might even cut
 off their little feet and keep them for good luck.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -536,8 +536,8 @@ This minotaur for some reason or another has decides to get filthy drunk.
 There is little doubt that something must be on his mind, however, just what
 that something could be would be impossible to discern.
 ~
-2056 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -550,8 +550,8 @@ This cow has found an idle spot to catch some sleep. He would neither be
 bothered by his kin when he's up here nor would he have to experience the
 unfortunate experience of being the recipient of a prank while he sleeops.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -564,8 +564,8 @@ This slimy little lizard is but a foot long. The only dangeruos attribute this
 lizard has is its jaws and fangs. Neither are exactly lethal, however, they
 could post serious injury to the unwitty traveller.
 ~
-8 0 0 0 0 0 0 0 S
-R 0 0 1
+8 0 0 0 0 0 0 0 0 S
+R 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -577,8 +577,8 @@ A &+Lcavern spider&n wanders the caverns.
 This many legged creature nests within these caverns. This dark abode is home
 to many of its kind. Its fangs drip venom, possibly poisonous to some.
 ~
-8 0 0 0 0 0 0 0 S
-AS 0 0 1
+8 0 0 0 0 0 0 0 0 S
+AS 0 0 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -590,8 +590,8 @@ A &+mcavern spider&n wanders the caverns.
 This many legged creature nests within these caverns. This dark abode is home
 to many of its kind. Its fangs drip venom, possibly poisonous to some.
 ~
-8 0 0 0 0 0 0 0 S
-AS 0 0 1
+8 0 0 0 0 0 0 0 0 S
+AS 0 0 0 1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -603,8 +603,8 @@ A &+rcavern spider&n wanders the caverns.
 This many legged creature nests within these caverns. This dark abode is home
 to many of its kind. Its fangs drip venom, possibly poisonous to some.
 ~
-8 0 0 0 0 0 0 0 S
-AS 0 0 1
+8 0 0 0 0 0 0 0 0 S
+AS 0 0 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -617,8 +617,8 @@ This tiny creature burrows through the caverns. Its species has be known to
 cause collapses because of their activity. These little beasts are considered
 a nuisance to the outside world, which is why they're being hunted.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -631,8 +631,8 @@ This tiny creature burrows through the caverns. Its species has be known to
 cause collapses because of their activity. These little beasts are considered
 a nuisance to the outside world, which is why they're being hunted.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -645,8 +645,8 @@ This tiny creature burrows through the caverns. Its species has be known to
 cause collapses because of their activity. These little beasts are considered
 a nuisance to the outside world, which is why they're being hunted.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -658,8 +658,8 @@ plant carnivorous plant~
 This flesh eatting plant eats flesh. Its enormous strength could capture even
 the strongest minotaur and devour him within moments.
 ~
-2058 1 0 0 0 0 0 -500 S
-AC 0 0 4
+2058 1 0 0 0 0 0 0 -500 S
+AC 0 0 0 4
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -672,8 +672,8 @@ horse~
 &+yvehicles of war. These are not war horses, but rather hardened horses of
 &+ylabor.
 ~
-10 0 0 0 0 0 0 0 S
-MT 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -686,8 +686,8 @@ This minotaur has lived within the labrynth for his entire life. He knows not
 what the outside world has to offer, he only knows that whatever it is would
 change his world forever, and he's not prepared for that.
 ~
-1073743882 1 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 1 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -699,8 +699,8 @@ baby crocodile~
 &+gThis scaly beast is only a baby, yet it could still inflict serious wounds if
 &+git feels threatened.
 ~
-8 0 0 0 0 0 0 0 S
-R 0 0 2
+8 0 0 0 0 0 0 0 0 S
+R 0 0 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -713,8 +713,8 @@ This minotaur has been around. He realizes there's nothing more a cow would
 love to get ahold of is money. Money for this money for that, but overall
 money to buy brew. This is the reason he scrutinizes all those who enter.
 ~
-1073742026 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073742026 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -726,8 +726,8 @@ carniverous shark~
 &+bThis shark is huge. It rivals the size of a great white. Its fin sticks out
 &+babove the water as it spirals around awaiting dinner.
 ~
-2058 1 0 0 0 0 0 0 S
-F 0 0 4
+2058 1 0 0 0 0 0 0 0 S
+F 0 0 0 4
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -740,8 +740,8 @@ Going about his business walking down the cobblestoned road this minotaur looks
 distraught about something. His agitation shows visibly upon his face, let's
 just hope he doesn't just decide to break someone's neck.
 ~
-1073743880 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -754,8 +754,8 @@ He stands over six feet tall and wears a black garb. Nothing penetrates the
 veil of darkness that covers his face. A strong magical aura covers this power
 minotaur.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 512 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -768,8 +768,8 @@ This bulky cow once served under general Brakx in his younger days. Now he
 enjoys the fruits of his labors by earning a great deal of money buying used
 armor and mending it to sell it for a great deal of profit.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -783,8 +783,8 @@ bulky mino minotaur guard taur~
 &+Lplace their themselves within his line of sight he would eviscerate them within
 &+Lbefore they knew what them.
 ~
-74 0 0 24 0 0 0 0 S
-MT 0 1 -1
+74 0 0 0 24 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -796,8 +796,8 @@ A commoner walks toward his destination.
 He stands well over six feet tall and his strides are quite extraordinary. He
 could outrun most other minotaurs and not even break a sweat.
 ~
-1073743882 0 0 0 0 0 0 0 S
-MT 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -809,8 +809,8 @@ small rat~
 Its fur is rugged and very dirty. Its saliva must be the beholder of many a
 harmful bacteria and disease. One bite from its jaws could me poison.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -823,8 +823,8 @@ doe young~
 &+yforest and the nearbye land, the proximity to the cow's settlement effects it
 &+yvery little.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 3
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -837,8 +837,8 @@ stout duergar merchant~
 &+rthis duergar works his husky voice in futile attempts to have this witty
 &+rconsumer buy his item at his price.
 ~
-2058 0 0 0 0 0 0 0 S
-PD 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PD 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -850,8 +850,8 @@ minotaur large~
 &+LThis minotaur is a little steamed at a duergar merchant, whom tries to sell
 &+Lhis worthless items at extraordinary prices.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -864,8 +864,8 @@ reeling minotaur shaman mino~
 &+cby his bloodshot eyes and sappy grin.  Nonetheless, he looks willing and
 &+cable to drive a hard bargain for his wares.
 ~
-33581130 0 0 0 0 0 0 0 S
-MT 0 256 -1
+33581130 0 0 0 0 0 0 0 0 S
+MT 0 256 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -879,8 +879,8 @@ meditating shaman minotaur mino~
 &+cHe almost seems to glow with the knowledge gained on his travels, and
 &+cas you approach him, he looks up, eager to pass on his knowledge.
 ~
-34890 0 0 44 12480 192 0 0 S
-MT 0 256 -1
+34890 0 0 0 44 12480 192 0 0 S
+MT 0 256 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -893,8 +893,8 @@ Syrm, is meticulous and energetic.  He attends to each patron as if they were
 royalty, and such treatment has earned him the respect of most citizens of the
 city.  His food and drink are rumored to be the best to be had anywhere.
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -911,8 +911,8 @@ asterion minotaur archmage~
 &+Lsurvive the great cataclysm, and he will surely survive you if you are so
 &+Lfoolish.
 ~
-1073776650 0 0 402653336 34816 0 0 -1000 S
-mt 14 512 -1
+1073776650 0 0 0 402653336 34816 0 0 -1000 S
+mt 14 512 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -8,8 +8,8 @@ A &+ghungry troll &+yscours&n the area for food.
 &+gworld around him. He searches for food, any sort of food. Its green skin
 &+gis very &+mvulnerable&+g to &+Ysun&+g and &+Rfire&n.
 ~
-1073743946 0 0 0 0 0 0 -999 S
-PT 0 1 -1
+1073743946 0 0 0 0 0 0 0 -999 S
+PT 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -22,8 +22,8 @@ A mutated &+ydeer&n is here.
 &+ylength of the mountain and its barren lands. It grazes without fear of being
 &+yhunted because this forest and the surrounding lands is not populated.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 4
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 4
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ A mutated &+Lgrizzly bear&n claws a tree.
 &+Laggressive and its fur grows inward in some areas creating large bulky humps
 &+Lon its body, aggrevating it to no end.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 5
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 5
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -53,8 +53,8 @@ when it is in flight and has a sense that somehow that its something more,
 deep within its eyes it feels as if its soulful, and not souless somehow,
 which is reminiscent of wise old monks.
 ~
-2058 0 0 0 0 0 0 555 S
-B 0 544 -1
+2058 0 0 0 0 0 0 0 555 S
+B 0 544 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -68,8 +68,8 @@ tiny earth worm earthworm~
 &+ya man's foot. Tough rawhide covers its skin because it has strangely deformed
 &+yover the years from some unnatural incantations cursing these mountains.
 ~
-8 0 0 0 0 0 0 -555 S
-A 0 0 1
+8 0 0 0 0 0 0 0 -555 S
+A 0 0 0 1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -81,8 +81,8 @@ A &+mpoisonous fungi&n sits upon a stone.
 &+mThis fungi covers a stone next to a spring. It doesn't do much else but glow
 &+ma little, perhaps it is magical in nature.
 ~
-8 0 0 0 0 0 0 -555 S
-SL 0 0 0
+8 0 0 0 0 0 0 0 -555 S
+SL 0 0 0 0
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -95,8 +95,8 @@ A &+mglowing fungi&n covers a stone.
 &+ma little, perhaps it is magical in nature but it radiates some soft sounds
 &+mand gives off a soft purple hued aura.
 ~
-8 0 0 0 0 0 0 -555 S
-SL 0 0 0
+8 0 0 0 0 0 0 0 -555 S
+SL 0 0 0 0
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -108,8 +108,8 @@ A &+Wp&+gh&+Gy&+Mc&+mo&+Wm&+Ri&+Rd&n sits beside a spring.
 &+WThis phycomid rests easily beside a spring. It grows some fungus on its side
 &+Wand doesn't appear disturbed.
 ~
-8 0 0 134217728 0 0 0 -555 S
-SL 0 0 1
+8 0 0 0 134217728 0 0 0 -555 S
+SL 0 0 0 1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -122,8 +122,8 @@ A &+rduergar &+ymercenary&n hides in the shadows.
 &+rtype not to take chances with those who look dangerous or forbearing. Its
 &+rpresence can go unnoticed when he wants.
 ~
-1073743882 256 0 1048584 0 0 0 -555 S
-PD 0 16384 -1
+1073743882 256 0 0 1048584 0 0 0 -555 S
+PD 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -136,8 +136,8 @@ A &+Ldark shadow&n haunts the undermountain.
 &+LIt will never grow old and it will never grow tired. It will haunt this
 &+Lundermountain until the end of time.
 ~
-8 1 0 0 0 0 0 -555 S
-UG 0 512 -1
+8 1 0 0 0 0 0 0 -555 S
+UG 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -149,8 +149,8 @@ A &+rfire ant&n is here.
 &+rThis fire ant has made the volcano its home. Its naturally aggressive and
 &+reats flesh. It is enfulged in flames.
 ~
-10 1 0 1048576 1 0 0 -555 S
-A 0 0 0
+10 1 0 0 1048576 1 0 0 -555 S
+A 0 0 0 0
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -163,8 +163,8 @@ An &+Lorc &ninspects the ruins.
 &+Lcarries a bag over his shoulder. He stands well over seven feet tall and
 &+Lsmells horrible.
 ~
-1073743882 256 0 8 0 0 0 -555 S
-HO 0 1 -1
+1073743882 256 0 0 8 0 0 0 -555 S
+HO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -178,8 +178,8 @@ A &+Lorcish&+y captain &nscans the area.
 &+Lhim, he will slaughter any threat that presents the fellow orc clans that
 &+Lhe protects in shady.
 ~
-1073743880 256 0 8 0 0 0 -999 S
-HO 0 1 -1
+1073743880 256 0 0 8 0 0 0 -999 S
+HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ A &+Lorc warrior&n prepares for conflict.
 &+Lpossing a threat to his fellow orcish clans that reside in his land. He
 &+Lis a talented killer and is ready to commence a slicing and dicing.
 ~
-1073743880 320 0 8 0 0 0 0 S
-HO 0 0 -1
+1073743880 320 0 0 8 0 0 0 0 S
+HO 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -206,8 +206,8 @@ A &+Wspectre &nof a &+ylogger&n shimmers in and out of reality.
 &+Wdead. He has no home and now haunts the land of the living and terrorizes
 &+Wall who come within contact of it.
 ~
-10 1 0 1048576 0 0 0 -999 S
-UG 0 8192 -1
+10 1 0 0 1048576 0 0 0 -999 S
+UG 0 8192 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -220,8 +220,8 @@ An undead &+Lzombie&n wanders the cemetery.
 &+Lundead that plague this cemetery. The curse that has haunted this logging
 &+Lvillage may some day end and this zombie and be laid to rest.
 ~
-8 64 0 0 0 0 0 -999 S
-U 0 0 -1
+8 64 0 0 0 0 0 0 -999 S
+U 0 0 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -234,8 +234,8 @@ This zombie was once apart of the land of the living and now he's one of the
 undead that plague this cemetery. The curse that has haunted this logging
 village may some day end and this zombie and be laid to rest.
 ~
-8 64 0 0 0 0 0 -999 S
-U 0 0 -1
+8 64 0 0 0 0 0 0 -999 S
+U 0 0 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -247,8 +247,8 @@ A &+Wghost &nhaunts the cemetery.&n
 &+WThis ghost haunts the cemetery. He was once apart of the land of the living
 &+Wand now it no longer apart of it. It haunts the logging village.
 ~
-8 64 0 0 0 0 0 -999 S
-UG 0 0 -1
+8 64 0 0 0 0 0 0 -999 S
+UG 0 0 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -260,8 +260,8 @@ An undead &+rvampire&n savagely devours a squirrel.
 &+rThis undead vampire feasts upon the warm blooded in that wander into this
 &+rcemetery. It is hungry for fresh meat and welcomes warm blood.
 ~
-8 64 0 8 0 0 0 -999 S
-UV 0 1 -1
+8 64 0 0 8 0 0 0 -999 S
+UV 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -274,8 +274,8 @@ A &+Ll&+mic&+Lh &nis here, preparing to recite some ritual.
 &+Lcorpses up from the grave and gives them no other purpose than to attack
 &+Lany living being foolish enough to enter here.
 ~
-8 64 0 0 0 0 0 -999 S
-UL 0 1024 -1
+8 64 0 0 0 0 0 0 -999 S
+UL 0 1024 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -287,8 +287,8 @@ A terrifying &+gghoul &nshrieks horribly!
 &+gThis ghoul plagues this tomb and defouls the existance of the elder's remains.
 &+gIt is ghastly and should be banished from existance.
 ~
-8 1 0 0 1 0 0 -999 S
-wr 0 1 -1
+8 1 0 0 0 1 0 0 -999 S
+wr 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -300,8 +300,8 @@ A &+Wshrieker&n fills the catacombs with shrieks.
 &+WThis shrieker was once a living being. It died centuries ago and now haunts
 &+Wthe catacombs and fills it with shrieks.
 ~
-8 0 0 0 0 0 0 -999 S
-sp 0 0 -1
+8 0 0 0 0 0 0 0 -999 S
+sp 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -316,8 +316,8 @@ A &+Wterrifying ghost&n haunts the tower.
 &+Wfor all eternity, such as the fate of many who suffer death from such
 &+Wcataclysmic events.
 ~
-10 0 0 0 0 0 0 -999 S
-UG 0 512 -1
+10 0 0 0 0 0 0 0 -999 S
+UG 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -330,8 +330,8 @@ A wild &+ybobcat&n prowls the mountain tracks.
 &+ythat intrudes onto its turf, it is ferocious for such a small animal but the
 &+yjaws and teeth clamps down and chews, tears, and crunches flesh easily.
 ~
-10 1 0 0 0 0 0 0 S
-A 0 0 2
+10 1 0 0 0 0 0 0 0 S
+A 0 0 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -343,8 +343,8 @@ A &+ywild bear&n roams the mountain top.
 &+yThis wild bear roams the mountains. It is its home and it'll defend it
 &+yfiercely. It searches for food now and prepares to munch on something.
 ~
-8 1 0 0 0 0 0 -555 S
-A 0 0 4
+8 1 0 0 0 0 0 0 -555 S
+A 0 0 0 4
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -358,8 +358,8 @@ a &+ymountain man&n~
 &+ystronger will. His garb is normal and lose, but warm. His hair is unkept and
 &+yhe needs a shave.
 ~
-8 0 0 0 0 0 0 0 S
-PH 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -372,8 +372,8 @@ A &+ycugar&n approaches silently.
 &+yit enjoys the taste of flesh and will take down anything, no matter the size
 &+yin order to enjoy the taste of blood.
 ~
-8 1 0 0 0 0 0 -555 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 -555 S
+A 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -386,8 +386,8 @@ A &+yrabid dog &nsearches for something to eat.
 &+yAmongst the mountains with no one to care for it, survival means hunting
 &+yand killing for food.
 ~
-8 1 0 0 0 0 0 -555 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 -555 S
+A 0 0 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -400,8 +400,8 @@ A tall &+ymonk&n has untold knowledge in his eyes about the mountain.
 &+yhim. He is solemn and possesses a dignity no one can penetrate. It is unclear
 &+ywhy he chose these mountains to make his home, he must have a lot to think on.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 64 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 64 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -413,8 +413,8 @@ A &+Wp&+gh&+Gy&+Mc&+mo&+Wm&+Ri&+Rd&n sits beside a spring.
 &+WThis phycomid rests easily beside a spring. It grows some fungus on its side
 &+Wand doesn't appear disturbed.
 ~
-8 0 0 0 0 0 0 -555 S
-SL 0 0 1
+8 0 0 0 0 0 0 0 -555 S
+SL 0 0 0 1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -426,8 +426,8 @@ A shimmering ghost fades in and out of this realm.
 &+WThis ghost haunts the cemetery. He was once apart of the land of the living
 &+Wand now it no longer apart of it. It haunts the logging village.
 ~
-8 0 0 0 0 0 0 -999 S
-UG 0 0 -1
+8 0 0 0 0 0 0 0 -999 S
+UG 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -439,8 +439,8 @@ A &+ggheist&n wanders the catacombs.
 &+gThis gheist was once a living being. It died centuries ago and now haunts
 &+gthe catacombs and fills it with terror.
 ~
-8 0 0 0 0 0 0 -999 S
-wr 0 0 -1
+8 0 0 0 0 0 0 0 -999 S
+wr 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -452,8 +452,8 @@ A &+Wghost&n shimmers from dimension to dimension.
 &+WThis ghost haunts the cemetery. He was once apart of the land of the living
 &+Wand now it no longer apart of it. It haunts the logging village.
 ~
-8 64 0 0 0 0 0 -999 S
-UG 0 0 -1
+8 64 0 0 0 0 0 0 -999 S
+UG 0 0 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -466,8 +466,8 @@ A &+ystag&n grazes here.&n
 &+yand could kick a small tree over. Its powerful legs could send an opponent
 &+yreeling. Sometimes he calls out for a mate.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 4
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -480,8 +480,8 @@ A &+ystag&n sends out a mating call.
 &+yand could kick a small tree over. Its powerful legs could send an opponent
 &+yreeling. Sometimes he calls out for a mate.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 4
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -494,8 +494,8 @@ A large &+Lbear&n searches for something to eat.
 &+Lblack fur. His claws could rip open a man's gut or claw off the thickest
 &+Lbark of a tree.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 4
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -508,8 +508,8 @@ A large &+ybear&n hugs a tree.
 &+yblack fur. His claws could rip open a man's gut or claw off the thickest
 &+ybark of a tree.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 4
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -522,8 +522,8 @@ A &+rfox&n hunts rodents.
 &+rclever. He is smart enought to elude attackers, he is smart enough to survive.
 &+rHealmost always catches his prey and always eludes his predators.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -536,8 +536,8 @@ A large &+yrodent&n hunts a fox.&n
 &+ycousins. It must weigh a hundred pounds and looks ready to munch on anything,
 &+yeven if it is not a fox.
 ~
-8 1 0 0 0 0 0 -999 S
-A 0 0 4
+8 1 0 0 0 0 0 0 -999 S
+A 0 0 0 4
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -551,8 +551,8 @@ A &+Wghastly ghoul&n prepares to recite some ritual.
 &+Wprepares to cast some dark spell to further the darkness surrounding the
 &+Wlands. It is ugly and ghastly.
 ~
-74 0 0 0 0 0 0 -999 S
-UG 0 2097152 -1
+74 0 0 0 0 0 0 0 -999 S
+UG 0 2097152 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -565,8 +565,8 @@ An &+Lugly &+gghoul &nhaunts the plane of the living.
 &+Lart, the forbidden art, the dark art of necromancy. It is frightening and
 &+Lis magical in nature. It seeks all blood in all forms.
 ~
-2122 192 0 0 0 0 0 -999 S
-U 0 1 -1
+2122 192 0 0 0 0 0 0 -999 S
+U 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -579,8 +579,8 @@ An &+Lugly &+gghoul &nhaunts the plane of the living.
 &+Lart, the forbidden art, the dark art of necromancy. It is frightening and
 &+Lis magical in nature. It seeks all blood in all forms.
 ~
-2122 192 0 0 0 0 0 -999 S
-U 0 1 -1
+2122 192 0 0 0 0 0 0 -999 S
+U 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -596,8 +596,8 @@ An &+Lugly &+gghoul &nhaunts the plane of the living.
 &+Lonce beautiful but now transformed into the living dead because of their
 &+Lhubris, and were defeated by some montrous dark art years ago.
 ~
-2122 192 0 0 0 0 0 -999 S
-U 0 1 -1
+2122 192 0 0 0 0 0 0 -999 S
+U 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -610,8 +610,8 @@ An &+Lugly &+gghoul &nhaunts the plane of the living.
 &+Lart, the forbidden art, the dark art of necromancy. It is frightening and
 &+Lis magical in nature. It seeks all blood in all forms.
 ~
-2122 192 0 0 0 0 0 -999 S
-U 0 1 -1
+2122 192 0 0 0 0 0 0 -999 S
+U 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -624,8 +624,8 @@ A &+Lshadow&+r beast&n hides in the shadow.
 &+Lalive, it doesn't make much difference to this being, it is out to kill and
 &+Lwon't accept anything else than death of its chosen victims.
 ~
-2058 1 0 1048576 0 0 0 -999 S
-US 0 8192 -1
+2058 1 0 0 1048576 0 0 0 -999 S
+US 0 8192 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -638,8 +638,8 @@ A &+ycougar&n approaches silently.&n
 &+yit enjoys the taste of flesh and will take down anything, no matter the size
 &+yin order to enjoy the taste of blood.
 ~
-8 1 0 524288 0 0 0 -555 S
-A 0 0 -1
+8 1 0 0 524288 0 0 0 -555 S
+A 0 0 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -653,8 +653,8 @@ wealth and a large populous to draw from. Under the command of the great baron
 himself, he sees to the order of the outkirts. The control of the baron soon
 diminishes outside the mountain peaks.
 ~
-1073743880 256 0 8 0 0 0 -999 S
-mt 0 1 -1
+1073743880 256 0 0 8 0 0 0 -999 S
+mt 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -667,8 +667,8 @@ A &+ymountain lion&n is on the prowl.
 &+ybe enormous. It is doubtful that one kill will satisfy this great beast. It
 &+yhas fangs larger and stronger than most animals with powerful jaws.
 ~
-8 1 0 0 0 0 0 0 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -681,8 +681,8 @@ A &+Mcrazy tinker&n laughs heartily and enjoys a good celebration.
 &+Mfills the air. He must be under the influence of something aside form the
 &+Malcohol he so readily drinks.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 513 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 513 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -695,8 +695,8 @@ A &+ywolf&n launches itself to attack.
 &+yappetite for anything walking or breathing. It protects its turf with all
 &+yferocity expected.
 ~
-1073743882 1 0 0 0 0 0 -555 S
-A 0 0 -1
+1073743882 1 0 0 0 0 0 0 -555 S
+A 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -709,8 +709,8 @@ An &+Lugly &+gghoul &nhaunts the plane of the living.
 &+Lart, the forbidden art, the dark art of necromancy. It is frightening and
 &+Lis magical in nature. It seeks all blood in all forms.
 ~
-2122 192 0 0 0 0 0 -999 S
-U 0 1 -1
+2122 192 0 0 0 0 0 0 -999 S
+U 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -723,8 +723,8 @@ A frightening &+Wapparition&n screams horribly!
 &+Wthe end of time do to some ungodly curse. This poor soul will seek the blood
 &+Wof anything it comes in contact with.
 ~
-10 1 0 0 0 0 0 -999 S
-UP 0 512 -1
+10 1 0 0 0 0 0 0 -999 S
+UP 0 512 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -736,8 +736,8 @@ A small &+gsnake&n rattles its tail.
 &+gThis small snake rattles its tail and prepares to strike. It protects its
 &+gterritory with all viscosity.
 ~
-10 1 0 0 0 0 0 -999 S
-RS 0 1 2
+10 1 0 0 0 0 0 0 -999 S
+RS 0 1 0 2
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -750,8 +750,8 @@ An undead &+Lzombie&n wanders the cemetery.
 &+Lundead that plague this cemetery. The curse that has haunted this logging
 &+Lvillage may some day end and this zombie and be laid to rest.
 ~
-8 64 0 0 0 0 0 -999 S
-U 0 0 -1
+8 64 0 0 0 0 0 0 -999 S
+U 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -763,8 +763,8 @@ A shimmering ghost fades in and out of this realm.
 &+WThis ghost haunts the cemetery. He was once apart of the land of the living
 &+Wand now it no longer apart of it. It haunts the logging village.
 ~
-8 64 0 0 0 0 0 -999 S
-UG 0 0 -1
+8 64 0 0 0 0 0 0 -999 S
+UG 0 0 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -777,8 +777,8 @@ This zombie was once apart of the land of the living and now he's one of the
 undead that plague this cemetery. The curse that has haunted this logging
 village may some day end and this zombie and be laid to rest.
 ~
-8 192 0 0 0 0 0 -999 S
-U 0 0 -1
+8 192 0 0 0 0 0 0 -999 S
+U 0 0 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -790,8 +790,8 @@ A small &+ychipmunk &nclimbs a branch.
 &+yThis small chipmunk climbs a branch. It hops from tree to tree and has furry
 &+ylittle nostrils.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -803,8 +803,8 @@ A small &+ysquirrel&n grabs a nut.
 &+yThis small squirrel searches for nuts to crunch. It hops from tree to tree
 &+yand has furry &+ylittle nostrils.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -816,8 +816,8 @@ flailing vine~
 &+gThis vine thrashes about the forest violently. It has a strange green slime
 &+gon it, perhaps its poisonous.
 ~
-10 1 0 1048576 0 0 0 -999 S
-SL 0 0 -1
+10 1 0 0 1048576 0 0 0 -999 S
+SL 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -829,8 +829,8 @@ A &+yhairy spider&n scurries along a rock.
 &+yThis spider is small. Like most spiders it is probably poisonous and has a
 &+yterribly painful bite. It searches for something to eat.
 ~
-8 1 0 0 0 0 0 -999 S
-AS 0 0 -1
+8 1 0 0 0 0 0 0 -999 S
+AS 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -844,8 +844,8 @@ A &+Lwolf&n is preying for some meat.
 &+Lferocity expected,  and its black fur makes it easier for him to prey during
 &+Lthe night.
 ~
-1073743946 1 0 0 0 0 0 -555 S
-A 0 0 -1
+1073743946 1 0 0 0 0 0 0 -555 S
+A 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -857,8 +857,8 @@ A &+Wroc&n dives.
 &+WThis roc dives to defend its territory. Its white feathers and amazing wingspan
 &+Wis illustrious.
 ~
-8 1 0 0 0 0 0 -999 S
-B 0 1 2
+8 1 0 0 0 0 0 0 -999 S
+B 0 1 0 2
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -870,8 +870,8 @@ A &+ywild bear&n approaches in the form of a bear hug.
 &+yThis wild bear must weigh a ton. It has brown fur and razor sharp claws. Its
 &+ymouth could crunch a log and its massive strength could tear down a tree.
 ~
-8 1 0 0 0 0 0 -444 S
-A 0 0 4
+8 1 0 0 0 0 0 0 -444 S
+A 0 0 0 4
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -883,8 +883,8 @@ A grey &+yape&n beasts its chest and charges.
 &+yThis ape beats its chest and charges. It must weigh tons and have the strength
 &+yof ten men.
 ~
-8 1 0 0 0 0 0 -999 S
-A 0 1 -1
+8 1 0 0 0 0 0 0 -999 S
+A 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -897,8 +897,8 @@ A large &+ybear&n hugs a tree.
 &+yblack fur. His claws could rip open a man's gut or claw off the thickest
 &+ybark of a tree.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 4
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -911,8 +911,8 @@ A &+rfox&n hunts some rodents.
 &+rclever. He is smart enought to elude attackers, he is smart enough to survive.
 &+rHealmost always catches his prey and always eludes his predators.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -925,8 +925,8 @@ A &+ystag&n grazes here.&n
 &+yand could kick a small tree over. Its powerful legs could send an opponent
 &+yreeling. Sometimes he calls out for a mate.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 4
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 4
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -938,8 +938,8 @@ A &+mglowing &+mfungi &ncovers a stone.
 &+mThis fungi covers a stone next to a spring. It doesn't do much else but glow
 &+ma little, perhaps it is magical in nature.
 ~
-10 0 0 0 0 0 0 -555 S
-SL 0 0 0
+10 0 0 0 0 0 0 0 -555 S
+SL 0 0 0 0
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -950,8 +950,8 @@ A &+Wroc&n dives.
 ~
 &+WThis roc is diving to defend its territory. It knows no friends only foe.
 ~
-8 1 0 0 0 0 0 -999 S
-B 0 0 -1
+8 1 0 0 0 0 0 0 -999 S
+B 0 0 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -964,8 +964,8 @@ A large &+ymountain lion&n prepares to feast on flesh.
 &+ywarm blooded animal to kill and eat. Its roar is deafening and claws razor
 &+ysharp. It could frighten the wits out of most.
 ~
-8 1 0 0 0 0 0 -999 S
-A 0 1 4
+8 1 0 0 0 0 0 0 -999 S
+A 0 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -980,8 +980,8 @@ A mutated &+ymonkey&n hops among the trees.
 &+ythis deer still resembles something of its old nature, just horribly scarred
 &+ythrough dark sorcery.
 ~
-8 0 0 0 0 0 0 -999 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 -999 S
+A 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -993,8 +993,8 @@ An &+rangry &+ysquirrel &nscrambles for nuts.
 &+yThis small squirrel searches for nuts to crunch. It hops from tree to tree
 &+yand has furry &+ylittle nostrils.
 ~
-8 1 0 0 0 0 0 -999 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 -999 S
+A 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1008,8 +1008,8 @@ riffle raffle riffleraffle gnome~
 &+Runorthodox ways and now he travels the world in search of merchandise to sell
 &+Rto support himself. He mutters something uncomprehensable.
 ~
-10 0 0 0 0 0 0 0 S
-PG 0 512 -1
+10 0 0 0 0 0 0 0 0 S
+PG 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1021,8 +1021,8 @@ A &+rfire ant&n is engulfed in flames.
 &+rThis fire ant has made the volcano its home. Its naturally aggressive and
 &+reats flesh. It is enfulged in flames.
 ~
-8 1 0 0 1 0 0 -555 S
-A 0 0 0
+8 1 0 0 0 1 0 0 -555 S
+A 0 0 0 0
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1035,8 +1035,8 @@ A brown &+ybobcat&n is stalking.
 &+ysomething to eat. It is large and has powerful jaws and strong legs to hunt
 &+ydown most anything and to crunch down and eat.
 ~
-8 1 0 0 0 0 0 -999 S
-A 0 0 -1
+8 1 0 0 0 0 0 0 -999 S
+A 0 0 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1049,8 +1049,8 @@ A &+Lancient twisted &+Wskeleton&n is here.
 &+Wbeen hacked and torn apart and there are remnants of flesh hanging from its
 &+Wbody. It stands over seven feet tall and cackles insanely.
 ~
-8 1 0 0 0 0 0 -999 S
-U 0 1 4
+8 1 0 0 0 0 0 0 -999 S
+U 0 1 0 4
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1065,8 +1065,8 @@ A &+Ldark noble &+rvampire&n forms from a dark sphere into the shadows.
 &+Lrefuge into this desolate forsaken land because it is such a perfect nesting
 &+Lspace for its type.
 ~
-8 1 0 0 0 0 0 -999 S
-UM 0 1 -1
+8 1 0 0 0 0 0 0 -999 S
+UM 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1078,8 +1078,8 @@ shrieking ghost~
 &+WThe shrieks from this ghost frighten the soul. Is has long since passed into
 &+Wfrom this world into the next. It is now caught between two worlds.
 ~
-10 1 0 1572912 0 0 0 -999 S
-UG 0 1 -1
+10 1 0 0 1572912 0 0 0 -999 S
+UG 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1092,8 +1092,8 @@ An &+GENORMOUS&+g green dragon&n rests comfortably.
 &+gmore years longer than any race. All dragons possess great magical abilities,
 &+gand green are the strong powerful ones.
 ~
-3147786 1 0 24 4096 0 0 -999 S
-D 0 1 -1
+3147786 1 0 0 24 4096 0 0 -999 S
+D 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1105,8 +1105,8 @@ A &+rbloodthirsty vampire&n searches for something to feed upon.
 &+rThis vampire searches the catacombs for anything warm blooded. It has powerful
 &+rmagic and incredible strength. It stands well over six feet tall.
 ~
-10 1 0 24 0 0 0 -999 S
-UM 0 1 -1
+10 1 0 0 24 0 0 0 -999 S
+UM 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1118,8 +1118,8 @@ A &+gsnake &nis hiding under the brush.
 &+gThis is a treacherous snake. It hides under the brush and attacks without
 &+gwarning.
 ~
-10 1 0 1048576 0 0 0 -999 S
-RS 0 0 -1
+10 1 0 0 1048576 0 0 0 -999 S
+RS 0 0 0 -1
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1134,8 +1134,8 @@ on him, as it would any orc. It is an old hat and has seen better days, just
 like its bearer. The half-orc mage may posess great power,
 it seems to radiate around him strangely.
 ~
-2058 0 0 0 0 0 0 -999 S
-HO 0 513 -1
+2058 0 0 0 0 0 0 0 -999 S
+HO 0 513 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1152,8 +1152,8 @@ trong dish tronglodish~
 &+Lpreparing to decimation for all those who oppose him. He reciting incantions
 &+Lfor mixtures of potions and preparing inceneration from bottles.
 ~
-1073743882 1 0 134217728 0 0 0 -999 S
-HO 0 524288 -1
+1073743882 1 0 0 134217728 0 0 0 -999 S
+HO 0 524288 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1168,8 +1168,8 @@ elementalist futni~
 &+mpower of it flows from his fingertips. He is very talented at blending and
 &+mcreating potions.
 ~
-2058 0 0 0 0 0 0 -999 S
-PL 0 256 -1
+2058 0 0 0 0 0 0 0 -999 S
+PL 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1185,8 +1185,8 @@ bumble explorer~
 &+yBumble. He stands less than five feet tall and is quick on his feet, like
 &+ymost halflings.
 ~
-2058 0 0 24 0 0 0 0 S
-PF 0 0 -1
+2058 0 0 0 24 0 0 0 0 S
+PF 0 0 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1199,8 +1199,8 @@ A &+yhalfling &ncelebrates and enjoys the ale.
 &+ythe half naked women here. He is sitting down, smoking his pipe. He stands
 &+yless than five feet tall and looks like he's having a good time.
 ~
-2058 0 0 0 0 0 0 0 S
-PF 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PF 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1213,8 +1213,8 @@ A &+Ctinker&n enjoys the celebration.
 &+Canything and everything. There isn't much that he won't celebrate if it means
 &+Che can get high and drunk.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1227,8 +1227,8 @@ hunglish hung lish~
 &+yeverone just calls him hunglish. He frequents every party that avails him
 &+yand always hits on the women. He is a healthy young man who enjoys life.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1241,8 +1241,8 @@ A young &+Rparty animal&n has an ale in one hand and the pipe in the other.
 &+Rlike a fish. He loves the women as well, his eyes run over every woman he
 &+Rsees and doesn't hesitate to show them his intentions.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1255,8 +1255,8 @@ A &+cyoung tinker&n is here, listening to music and drinking.
 &+cand jams to the beat. He stands less than six feet tall and is fond of the
 &+cwomen the celebration brings.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1270,8 +1270,8 @@ putsie wizard~
 &+YHe is a very powerful wizard as well, messing with him with no good cause
 &+Yis a bad idea.
 ~
-2058 0 0 24 0 0 0 0 S
-PF 0 0 -1
+2058 0 0 0 24 0 0 0 0 S
+PF 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1284,8 +1284,8 @@ A &+ml&+Lic&+mh&n of a &+yfarmer &nhowls.
 &+LIt must have died a gruesome death if it has been inflicted with this
 &+Lcurse.
 ~
-2058 1 0 24 0 0 0 -999 S
-VL 0 512 -1
+2058 1 0 0 24 0 0 0 -999 S
+VL 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1298,8 +1298,8 @@ An old &+yfarmer&n grumbles as he works the mules.
 &+ya rooster at the crack of dawn. He loves the smell of the countryside. He
 &+yhas been a farmer for his entire life.
 ~
-2058 0 0 24 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1312,8 +1312,8 @@ This is a big powerful mule. He plows the fields at the direction of one of
 the hired hands the old farmer employs. It is a large beast that could trample
 a man very easily.
 ~
-10 0 0 0 0 0 0 0 S
-A 0 0 5
+10 0 0 0 0 0 0 0 0 S
+A 0 0 0 5
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1325,8 +1325,8 @@ great stag~
 This stag lives in the mountain forest. It is a great stag and would feed a
 family of five for a month. Its powerful legs could crush a man's skull.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1336,8 +1336,8 @@ vicious zombie~
 &+LA &+rvicious &+Gzo&+gmbie &+Lstands here, clawing at a pile of &+wrubble&+L.&n
 ~
 ~
-2122 1 0 8 0 0 0 0 S
-zo 0 1 -1
+2122 1 0 0 8 0 0 0 0 S
+zo 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1347,8 +1347,8 @@ skeleton wandering~
 &+LA &+wskeleton &+Lwanders around this tunnel.&n
 ~
 ~
-1073743944 1 0 134217728 0 0 0 0 S
-sk 0 1 -1
+1073743944 1 0 0 134217728 0 0 0 0 S
+sk 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1358,8 +1358,8 @@ shadow living~
 &+LA living shadow moves around the room silently.&n
 ~
 ~
-1073875016 0 0 524288 0 0 0 0 S
-sw 0 1 -1
+1073875016 0 0 0 524288 0 0 0 0 S
+sw 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

@@ -8,8 +8,8 @@ khan aspuru~
 &+Lthat such a wise and benelovent ruler could be turned into a being of
 &+Lsuch evil and hatred through the dark unholy powers of undeath.
 ~
-16394 1 0 335618204 0 0 536872960 -1000 S
-UL 0 131584 -1
+16394 1 0 0 335618204 0 0 536872960 -1000 S
+UL 0 131584 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -23,8 +23,8 @@ torbalan snatcher~
 &+Lknows. He carries with him a giant bag to fit his captives in while
 &+Lhumming a melody that sounds almost soothing.
 ~
-1073743884 0 0 404226072 0 0 0 -1000 S
-PH 0 8454144 -1
+1073743884 0 0 0 404226072 0 0 0 -1000 S
+PH 0 8454144 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -38,8 +38,8 @@ khan kaloian~
 &+yfit on most as a belt. Long furs and skins protect him from the harsh
 &+yenviroment of the trakkian mountains.
 ~
-3288377352 0 0 268435480 0 0 0 0 S
-SG 0 16385 -1
+3288377352 0 0 0 268435480 0 0 0 0 S
+SG 0 16385 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -61,8 +61,8 @@ saint gauce~
 &+W        side my missionary soldiers can assist you, for a small
 &+W        donation to the church of course."
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PH 0 96 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PH 0 96 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -75,8 +75,8 @@ acolyte~
 &+W	"Beneath here lies the great monestary catacombs. Take heed
 &+W	when travelling them, evil lurks there."
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 0 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -90,8 +90,8 @@ trakkian tribesman man~
 &+yanimal loincloth, and the sunbaked lands of trakkia have bronzed his
 &+yskin.
 ~
-1140852744 0 0 8 0 0 0 0 S
-PB 0 1 -1
+1140852744 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -103,8 +103,8 @@ trakkian woman tribeswoman~
 &+yOne of the elders of the trakkian tribe, this woman looks very old,
 &+yher face withered and wrinkled by decades of the trakkia sun.
 ~
-1073743882 0 0 0 0 0 0 0 S
-PB 0 128 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PB 0 128 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 2
@@ -119,8 +119,8 @@ tribal witch young woman~
 &+ya mix of fear and awe, no trakkian would ever dare offend her as all
 &+yknow just how important and life-saving her potions can be.
 ~
-18442 0 0 0 0 0 0 0 S
-PB 0 512 -1
+18442 0 0 0 0 0 0 0 0 S
+PB 0 512 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -135,8 +135,8 @@ mesa cobra snake~
 &+ydaimond when it is riled up or ready to sink its venomous fangs into
 &+yprey.
 ~
-8 1 0 524288 0 0 0 -1000 S
-RS 0 1 2
+8 1 0 0 524288 0 0 0 -1000 S
+RS 0 1 0 2
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -151,8 +151,8 @@ hill giant young~
 &+ycrevices and overhangs. This giant seems to be an adsolecent, though
 &+ystill quite dangerous.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-G 0 1 -1
+1073743880 1 0 0 0 0 0 0 -1000 S
+G 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -165,8 +165,8 @@ rock drake~
 &+yDrakes can be found in numerous types of terrain, but this one, the
 &+yrock drake, can usually be the most dangerous and deadly.
 ~
-1073743880 1 0 134217740 0 0 0 -1000 S
-DK 0 1 -1
+1073743880 1 0 0 134217740 0 0 0 -1000 S
+DK 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -180,8 +180,8 @@ wild man wildman~
 &+yhis waist and its quite clear from the smell he hasn't had a shower or
 &+ywashed in a decade.
 ~
-1073743880 1 0 24 0 0 0 -1000 S
-PH 0 1048576 -1
+1073743880 1 0 0 24 0 0 0 -1000 S
+PH 0 1048576 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -195,8 +195,8 @@ mountain lion~
 &+ychase and prey on smaller wildlife, though can be quite dangerous if
 &+ybacked into a corner.
 ~
-1073743880 0 0 0 0 0 0 0 S
-AC 0 1 3
+1073743880 0 0 0 0 0 0 0 0 S
+AC 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -210,8 +210,8 @@ large leucrotta~
 &+yanything. It cares very little what size its victims are, focused only
 &+yon one thing - food.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-A 0 1 3
+1073743880 1 0 0 0 0 0 0 -1000 S
+A 0 1 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -226,8 +226,8 @@ hulking ettin mountain~
 &+ysince main distinguising factor between the two spieces is a second head
 &+yon the ettin.
 ~
-1073743880 1 0 8 0 0 0 -1000 S
-PO 0 1 -1
+1073743880 1 0 0 8 0 0 0 -1000 S
+PO 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -241,8 +241,8 @@ trak trakkian goatherder herder~
 &+gtation&+y, making sure to not run into any of the dangerous creatures that
 &+yshare the region.
 ~
-2060 0 0 8 0 0 0 0 S
-PB 0 1 -1
+2060 0 0 0 8 0 0 0 0 S
+PB 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -255,8 +255,8 @@ goat stupid~
 &+Wfollows its herder blankly, occasionally nibbling at something on
 &+Wthe ground.
 ~
-10 0 0 0 0 0 0 0 S
-A 0 1 3
+10 0 0 0 0 0 0 0 0 S
+A 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -271,8 +271,8 @@ mountain hydra~
 &+yheads are constantly scanning the area in search of prey to be quickly
 &+ydevoured.
 ~
-3848 1 0 134217736 268435464 0 0 -1000 S
-D 0 1 -1
+3848 1 0 0 134217736 268435464 0 0 -1000 S
+D 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -285,8 +285,8 @@ wild rockboar boar~
 &+ynot usually found in terrain like this, wild boars can survive almost
 &+yeverywhere scavenging or hunting for food.
 ~
-8 1 0 0 0 0 0 -1000 S
-AC 0 1 -1
+8 1 0 0 0 0 0 0 -1000 S
+AC 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -301,8 +301,8 @@ trakkian tribesman~
 &+ythe trakkian tribesfolk survive on the sparse vegetation and goat meat,
 &+ywhich they raise themselves, so hunting isn't really a nessicity.
 ~
-1140852744 0 0 0 8 0 0 0 S
-PB 0 1 -1
+1140852744 0 0 0 0 8 0 0 0 S
+PB 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -317,8 +317,8 @@ antlion ant lion~
 &+yanything if hungry enough of cornered. Mostly found around desert and
 &+yarid regions, they usually burrow themselves deep underground to nest.
 ~
-2056 1 0 0 0 0 0 -1000 S
-AP 0 4 3
+2056 1 0 0 0 0 0 0 -1000 S
+AP 0 4 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -331,8 +331,8 @@ goat mountain~
 &+Wthis mountain goat wanders about rather aimlessly, muching on the clumps
 &+Wof grass that sprout from between the rocks.
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 1 3
+2056 0 0 0 0 0 0 0 0 S
+A 0 1 0 3
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -346,8 +346,8 @@ giant massive cyclops~
 &+bbetween the two is the cyclops on&+Lly has one, though, very large
 &+beye directly in the center of i&+Lts face.
 ~
-8 1 0 268435852 0 0 0 -1000 S
-PO 0 1 -1
+8 1 0 0 268435852 0 0 0 -1000 S
+PO 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -362,8 +362,8 @@ nasty satyr little~
 &+Lis size, they can be extremely deadly to those unaware of their horrid
 &+Lbackground.
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-L 0 32768 2
+1073743880 1 0 0 0 0 0 0 -1000 S
+L 0 32768 0 2
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -377,8 +377,8 @@ greater zombie~
 &+Lthat are here, but now, in its state of undeath, it seeks only to
 &+Ldestroy and devour all that it once stood for.
 ~
-8 1 0 12 0 0 0 -1000 S
-U 0 16777216 -1
+8 1 0 0 12 0 0 0 -1000 S
+U 0 16777216 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -391,8 +391,8 @@ missionary aging~
 &+Win thus-so-far feeble attempts to convert the 'heathen' tribes. He
 &+Wlooks old and very tired of it all but still holds fast to his beliefs.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 64 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 64 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -405,8 +405,8 @@ gully dwarf~
 &+yHe is smaller that an average dwarf or gnome and completely filthy
 &+yand stinky from head to toe.
 ~
-2060 0 0 524296 0 0 0 0 S
-PM 0 4096 -1
+2060 0 0 0 524296 0 0 0 0 S
+PM 0 4096 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -419,8 +419,8 @@ cliff hopper beast~
 &+yhide is exceptionally thick and it hunts the mountain areas and caverns
 &+ywith a long sticky tongue that pull hapless prey into a fanged maw.
 ~
-1073743880 1 0 524424 0 0 0 -1000 S
-AS 0 16384 3
+1073743880 1 0 0 524424 0 0 0 -1000 S
+AS 0 16384 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -434,8 +434,8 @@ basilisk scaly~
 &+wlong, sticky tongue instead of attacking its prey. If cornered or
 &+wassaulted, however, the basilisk can turn from timid to extremely deadly.
 ~
-1142949896 0 0 140 0 0 0 -1000 S
-DK 0 1 -1
+1142949896 0 0 0 140 0 0 0 -1000 S
+DK 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -449,8 +449,8 @@ mountain troll~
 &+yaround these parts. He stands ju&+gst over seven feet in hieght with
 &+yhands the size of a human's he&+gad.
 ~
-1140852744 0 0 0 0 0 0 -1000 S
-PT 0 256 -1
+1140852744 0 0 0 0 0 0 0 -1000 S
+PT 0 256 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -466,8 +466,8 @@ rock maw pit hole~
 &+yhungrily to snatch up anything unlucky enough to get too close and
 &+ytoss it into the maw to be devoured.
 ~
-16394 1 0 0 0 0 0 -1000 S
-VT 0 1 5
+16394 1 0 0 0 0 0 0 -1000 S
+VT 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -481,8 +481,8 @@ stone imp~
 &+yand mischief, as most imps will do, and is best dealt with very
 &+ycarefully.
 ~
-1073874952 1 0 0 0 0 0 -1000 S
-Y 0 131072 1
+1073874952 1 0 0 0 0 0 0 -1000 S
+Y 0 131072 0 1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -496,8 +496,8 @@ massive carrion crawler~
 &+Lis unusually aggressive, attacking and attempting to devour almost any-
 &+Lthing it encounters.
 ~
-8 1 0 0 0 0 0 -1000 S
-AP 0 1 4
+8 1 0 0 0 0 0 0 -1000 S
+AP 0 1 0 4
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -510,8 +510,8 @@ falconer tribesman man~
 &+ywears a thick and heavy leather glove on his hand that his pet
 &+yfalcon stands on vigilantly awaiting a command.
 ~
-2058 0 0 156 0 0 0 0 S
-PB 0 16385 -1
+2058 0 0 0 156 0 0 0 0 S
+PB 0 16385 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -525,8 +525,8 @@ boring beetle~
 &+Lvery often. It can become a dangerous encounter if one isn't careful,
 &+Las the beetle's pincers are used to ripping through solid rock and stone.
 ~
-1073741832 1 0 1572880 0 0 0 -1000 S
-I 0 1 3
+1073741832 1 0 0 1572880 0 0 0 -1000 S
+I 0 1 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -540,8 +540,8 @@ hairy sasquatch mountain~
 &+yusually timid and wary if provoked the mountain sasquatch can be
 &+ya horribly fearsome opponent.
 ~
-1073743880 0 0 268959752 0 0 0 -500 S
-H 0 1048576 4
+1073743880 0 0 0 268959752 0 0 0 -500 S
+H 0 1048576 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -555,8 +555,8 @@ you he speaks quickly and full of emotion.
 &+W        "I have lost my flock! I have no idea what could
 &+W        have happened to them..."
 ~
-2056 0 0 0 0 0 0 400 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 400 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -570,8 +570,8 @@ templar knight~
 &+Wwhoever pays his salary, knowing the money he raises will go towards
 &+Wthe betterment of his faith.
 ~
-2056 0 0 268435608 0 0 0 1000 S
-PH 0 67108864 -1
+2056 0 0 0 268435608 0 0 0 1000 S
+PH 0 67108864 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 2500
 8 8 1
@@ -586,8 +586,8 @@ righteous crusader~
 &+Whires out his services to foriegn travellers who he is sure will help
 &+Whim on his quest.
 ~
-2056 0 0 152 0 0 0 1000 S
-PH 0 8 -1
+2056 0 0 0 152 0 0 0 1000 S
+PH 0 8 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 2500
 8 8 1
@@ -601,8 +601,8 @@ captured wildman man lunatic~
 &+yin relative peace. He is filthy, smelly, completely insane and will
 &+ymost likely live out his last crazy days in this pit.
 ~
-10 1 0 24 0 0 0 -1000 S
-PH 0 1048576 -1
+10 1 0 0 24 0 0 0 -1000 S
+PH 0 1048576 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -615,8 +615,8 @@ hunting falcon~
 &+yand is extremely effective at attacking and disposing of prey with its
 &+ylarge claws and razor sharp beak.
 ~
-133130 0 0 24 0 0 0 0 S
-B 0 1 -1
+133130 0 0 0 24 0 0 0 0 S
+B 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -629,8 +629,8 @@ creature golem metorite~
 &+rvaguely humanoid with limbs the size of tree trunks but it head has
 &+rno features whatsoever.
 ~
-1073760298 1 0 0 0 0 0 -1000 S
-EF 0 1 5
+1073760298 1 0 0 0 0 0 0 -1000 S
+EF 0 1 0 5
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -643,8 +643,8 @@ magma golem creature~
 &+rit is enough to singe hair and make one's eyes water. With arms like
 &+rgreat burning clubs this creature will make a fearsome opponent.
 ~
-1073760266 1 0 24 1 0 0 -1000 S
-OG 0 16384 5
+1073760266 1 0 0 24 1 0 0 -1000 S
+OG 0 16384 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -654,8 +654,8 @@ phantom kiri ivinof~
 &+LThe menacing &+Wpha&+Lntom of Ki&+yri Iv&+Linof floats here.&n
 ~
 ~
-1073743882 1 0 335544344 0 0 0 -1000 S
-UP 0 4 -1
+1073743882 1 0 0 335544344 0 0 0 -1000 S
+UP 0 4 0 -1
 57 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -668,8 +668,8 @@ wailing apparition ghost~
 &+wfloats eerily throughout the catacombs, wailing hideously from its
 &+wundead torment.
 ~
-8 1 0 0 0 0 0 -1000 S
-UG 0 32 -1
+8 1 0 0 0 0 0 0 -1000 S
+UG 0 32 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -682,8 +682,8 @@ magma imp~
 &+Lcunning, treacherous and deadly. It hops about with small blood-red
 &+Lwings, eager to wreck havoc on the unsuspecting.
 ~
-1073741832 1 0 136 0 0 0 -1000 S
-Y 0 1 2
+1073741832 1 0 0 136 0 0 0 -1000 S
+Y 0 1 0 2
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -697,8 +697,8 @@ crab spider~
 &+Land pointed feelers and has two pincers before its head that are at least
 &+Lsix inches in length.
 ~
-8 1 0 264 0 0 0 -1000 S
-TK 0 1 2
+8 1 0 0 264 0 0 0 -1000 S
+TK 0 1 0 2
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -712,8 +712,8 @@ lava spawn creature monster~
 &+rthe molten rock it could be too late as this fiery and sentient being
 &+rwished only to consume and ignite anything it can.
 ~
-8 1 0 73736 1 0 0 -1000 S
-EF 0 64 2
+8 1 0 0 73736 1 0 0 -1000 S
+EF 0 64 0 2
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -728,8 +728,8 @@ huge carrion crawler~
 &+Lthing it may encounter, including even its kin, which, still large,
 &+Lcan't be compared to this hideous parasite.
 ~
-10 1 0 269484056 0 0 0 -1000 S
-AP 0 1 5
+10 1 0 0 269484056 0 0 0 -1000 S
+AP 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -744,8 +744,8 @@ medusa woman~
 &+Lfigure remained nearly intact other than said snakes and of unearthly
 &+Lpaleness to her skin.
 ~
-1073743880 1 0 67109004 0 0 0 -1000 S
-UM 0 4194304 -1
+1073743880 1 0 0 67109004 0 0 0 -1000 S
+UM 0 4194304 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -755,8 +755,8 @@ chrome dragon huge large~
 &+wA very large dragon with &+cchrome&+w scales nests here.&n
 ~
 ~
-1050634 1 0 140 0 0 0 -1000 S
-D 0 131073 -1
+1050634 1 0 0 140 0 0 0 -1000 S
+D 0 131073 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -769,8 +769,8 @@ baby hatchling chrome dragon~
 &+wpony, it is still extremely dangerous. Like the rest of its kin its
 &+wscales have a dazzling chrome sheen.
 ~
-10 1 0 0 0 0 0 -1000 S
-D 0 1 2
+10 1 0 0 0 0 0 0 -1000 S
+D 0 1 0 2
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -783,8 +783,8 @@ mature chrome dragon~
 &+wsilvery wings span the width of three humans and great jaws contain
 &+wrows and rows of razor sharp teeth that appear like polished steel.
 ~
-1073743880 1 0 136 0 0 0 -1000 S
-D 0 1 4
+1073743880 1 0 0 136 0 0 0 -1000 S
+D 0 1 0 4
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -798,8 +798,8 @@ magma drake~
 &+rif approached too closely and its great wings seem to be just giant spans
 &+rof burning fire.
 ~
-2090 0 0 0 1 0 0 -1000 S
-D 0 50331648 -1
+2090 0 0 0 0 1 0 0 -1000 S
+D 0 50331648 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -811,8 +811,8 @@ mountain pony~
 &+yThis pony is accustomed to trotting about hillsides and mountain slopes,
 &+ymaking it an excellent mount for those travelling across rugged terrain.
 ~
-134219786 0 0 0 0 0 0 0 S
-AE 0 1 3
+134219786 0 0 0 0 0 0 0 0 S
+AE 0 1 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -826,8 +826,8 @@ haunt haunting~
 &+Lon the living, and the wails of its shimmering form can be heard
 &+Lechoing throughout the entirety of the tombs.
 ~
-10 1 0 1573080 0 0 0 -1000 S
-SH 0 2097152 -1
+10 1 0 0 1573080 0 0 0 -1000 S
+SH 0 2097152 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -840,8 +840,8 @@ mantis guard~
 &+gof arms. Its head is buglike, and it comminucates with chitters and clacks.
 &+gIt stands on guard here, protecting the great hive from intruders.
 ~
-1073743882 1 0 268435480 0 0 0 -1000 S
-TK 0 1 -1
+1073743882 1 0 0 268435480 0 0 0 -1000 S
+TK 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -853,8 +853,8 @@ young mantis hungry~
 &+gThis young mantis is agitated and hungry. It clicks nastily as globs
 &+gof venom drip from its maw.
 ~
-8 1 0 24 0 0 0 -1000 S
-TK 0 1 -1
+8 1 0 0 24 0 0 0 -1000 S
+TK 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -871,8 +871,8 @@ trakkian tribesman man~
 &+W        our sick shall soon perish."
 &+yHe shakes his head sadly.
 ~
-1073743882 0 0 24 0 0 0 0 S
-PB 0 1 -1
+1073743882 0 0 0 24 0 0 0 0 S
+PB 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -885,8 +885,8 @@ mantis soldier~
 &+gthe hive or other nearby colonies. It is stronger and taller than most
 &+gall the other mantis-creatures around the network and a fearsome opponent.
 ~
-8 1 0 268435480 0 0 0 -1000 S
-TK 0 1 -1
+8 1 0 0 268435480 0 0 0 -1000 S
+TK 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -901,8 +901,8 @@ mountain hydra~
 &+yheads are constantly scanning the area in search of prey to be quickly
 &+ydevoured.
 ~
-1073745674 1 0 134217736 268435464 0 0 -1000 S
-D 0 1 -1
+1073745674 1 0 0 134217736 268435464 0 0 -1000 S
+D 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -912,8 +912,8 @@ queen mantis~
 &+LThe massive &+Gqueen &+gmantis&+L lairs here.&n
 ~
 ~
-10 1 0 268435608 8384 0 0 -1000 S
-TK 0 5 5
+10 1 0 0 268435608 8384 0 0 -1000 S
+TK 0 5 0 5
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -926,8 +926,8 @@ mantis hatchling~
 &+gdeadly. Though it is only the size of a human child, its long pincers
 &+gare razor sharp and worst of all, its very hungry.
 ~
-10 1 0 0 0 0 0 -900 S
-TK 0 1 -1
+10 1 0 0 0 0 0 0 -900 S
+TK 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

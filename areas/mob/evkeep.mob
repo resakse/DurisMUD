@@ -10,8 +10,8 @@ to &+cMasters&N of &+LEvil World&N. He is wearing a loin-cloth, but his big musc
 speaking well for his deadly strength.This guard is little more than a modified
 &+bogre&N with limited intelligence.
 ~
-67110922 0 0 67174400 0 0 0 -1000 S
-PO 0 1 -1
+67110922 0 0 0 67174400 0 0 0 -1000 S
+PO 0 1 0 -1
 53 0 0 22000d1+17 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ thieves and assassins. His huge silhouette stirs up terror and fear in every
 opponent. He has a &+rstitched&N mouth so he won't be able to raise the invasion
 alert, but in case of a threat he will fight to his death.
 ~
-1140852808 33554752 0 67207184 0 64 1048576 -1000 S
-HO 0 1 -1
+1140852808 33554752 0 0 67207184 0 64 1048576 -1000 S
+HO 0 1 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -38,8 +38,8 @@ an &+Leyeless &+Chuman&N prisoner~
    &+yThis poor &+Chuman &+ywas tortured for a month or more. He has no eyes and
 &+ycan't stand up because his leg-bones are broken.
 ~
-90 0 0 32768 1026 0 8 0 S
-PH 0 0 -1
+90 0 0 0 32768 1026 0 8 0 S
+PH 0 0 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 550000
 6 6 1
@@ -53,8 +53,8 @@ The &+bsoldier&N from the &+CSabre&+LTooth Grin Clan&N is standing here at atten
 &+rmake him a dangerous killing machine. The soldier will protect his &+LLords at all
 &+rcosts; even death cannot scare him.
 ~
-1073743944 0 0 134324248 0 0 1048576 -1000 S
-PO 0 1 -1
+1073743944 0 0 0 134324248 0 0 1048576 -1000 S
+PO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -67,8 +67,8 @@ The poor &+Rprisoner&N is resting here, crying hysterically.
 imprisoned and when he will be to free. Seems like the &+LTower &+LPr&+gis&+Lon&N to
 happened as his home, where he will die.
 ~
-2120 0 0 32800 1024 0 0 0 S
-PG 0 65536 -1
+2120 0 0 0 32800 1024 0 0 0 S
+PG 0 65536 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -83,8 +83,8 @@ The &+ccaptain&N representative &+CSabre&+LTooth Grin Clan&N gives an order here
 &+cweapons skill. He is very quick and smart, his well-aimed hits make him
 &+cdeadly opponent.
 ~
-1140852812 0 0 402726968 2048 64 1049600 -1000 S
-PD 0 1 2
+1140852812 0 0 0 402726968 2048 64 1049600 -1000 S
+PD 0 1 0 2
 55 0 0 27000d1+16 1d1+1
 0.0.0.0 930000
 8 8 1
@@ -99,8 +99,8 @@ This is happy-looking slave, he is always sated, he is dressed with modern
 clothes, because he has a honourable work - to serve the &+GGeneral&N. Also this
 slave is a well trained personal &+GGeneral's&N bodyguard.
 ~
-1073743950 0 0 67108984 2 2097280 1048576 0 S
-PH 0 1 -1
+1073743950 0 0 0 67108984 2 2097280 1048576 0 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -114,8 +114,8 @@ her master. She wears no clothes and her body is covered with a strange,
 incomprehensible &+gt&+ma&+ctt&+mo&+go&N. A concubine's life is depended entirely on &+GGeneral's
 caprice.
 ~
-1073743950 0 0 67215480 8192 2097152 1048576 0 S
-PH 0 0 2
+1073743950 0 0 0 67215480 8192 2097152 1048576 0 S
+PH 0 0 0 2
 51 0 0 1d1+1 1d1+1
 0.0.0.0 889000
 9 9 2
@@ -132,8 +132,8 @@ to do &+Rexecution&N a few garrison soldiers for drinking whisky on duty.
 He &+Rhates gnomes&N, thats why every &+Rgnomish&N village or city must be &+rraze&N to
 the ground and the entire population to be extermine.
 ~
-2122 2097152 0 3087083580 14556 2097216 1056768 -1000 S
-PL 0 1048576 -1
+2122 2097152 0 0 3087083580 14556 2097216 1056768 -1000 S
+PL 0 1048576 0 -1
 60 0 0 25000d1+19 1d1+1
 0.0.0.0 1300000
 8 8 1
@@ -147,8 +147,8 @@ dog bloodthirsty bandog~
 &+ythat's why it is hungry and aggressive. This dog has a foul smell and pieces
 &+yof &+Grotted &+rmeat &+yhanging around its teeth. It looks very dangerous.
 ~
-1073743944 0 0 84443168 2 0 1048576 0 S
-A 0 1 2
+1073743944 0 0 0 84443168 2 0 1048576 0 S
+A 0 1 0 2
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -161,8 +161,8 @@ The poor &+yprisoner&N is kneeling here, crying hysterically.
 imprisoned and when he will be to free. Seems like the &+LTower &+gPrison&N to
 happened as his home, where he will die.
 ~
-2120 0 0 32800 1024 0 0 0 S
-PF 0 4096 -1
+2120 0 0 0 32800 1024 0 0 0 S
+PF 0 4096 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 9 9 1
@@ -175,8 +175,8 @@ The poor &+Gpris&+Yoner&N is sleeping here.
 imprisoned and when he will be to free. Seems like the &+LTower Pr&+gis&+Lon&N to
 happened as his home, where he will die.
 ~
-2120 0 0 32800 1024 0 0 -250 S
-TK 0 16384 -1
+2120 0 0 0 32800 1024 0 0 -250 S
+TK 0 16384 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -189,8 +189,8 @@ The poor &+Gpris&+yoner&N is sitting here, crying hysterically.
 imprisoned and when he will be to free. Seems like the &+LTower Pr&+gis&+Lon&N to
 happened as his home, where he will die.
 ~
-2124 0 0 67141664 1024 0 0 -450 S
-GZ 0 8192 -1
+2124 0 0 0 67141664 1024 0 0 -450 S
+GZ 0 8192 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -204,8 +204,8 @@ imprisoned and when he will be to free. He looks familiar, and upon further
 examination, you see that this &+Cprisoner&N used to be a citizen of &+WTharnadia&N!
 He asks pitifully for you to help his escape.
 ~
-2120 0 0 32800 2 64 0 0 S
-PH 0 2 -1
+2120 0 0 0 32800 2 64 0 0 S
+PH 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -223,8 +223,8 @@ the nose of the hapless guardians of this &+LTower&N. Normally he would be on du
 but he is just on-call now, because &+LTower &+COwners&N don't trust him at all,
 they keeping him in active service considering his &+Rbrute&N strength.
 ~
-1140852808 33554752 0 134250576 0 1048576 135266304 -1000 S
-GI 0 16 -1
+1140852808 33554752 0 0 134250576 0 1048576 135266304 -1000 S
+GI 0 16 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -237,8 +237,8 @@ The &+Lprison&N o&+Cve&Nrs&+Cee&Nr is here, distrustfully looking at everyone.
 muscles. He has acquired this station, not by brains or charm, but by &+Rbrute
 strength.
 ~
-1073743950 14336 0 402653244 0 2097152 1048576 -1000 S
-PT 0 1 -1
+1073743950 14336 0 0 402653244 0 2097152 1048576 -1000 S
+PT 0 1 0 -1
 52 0 0 19000d1+12 1d1+1
 0.0.0.0 920000
 8 8 1
@@ -255,8 +255,8 @@ morning to find out how to &+Yenhance&N armors and swords &+mdurability&N. Throu
 his wrinkled face though you can see his proud dignity and begin to sense that
 he was once a warrior.
 ~
-2126 0 0 268435516 32768 0 8192 -1000 S
-TK 0 4 -1
+2126 0 0 0 268435516 32768 0 8192 -1000 S
+TK 0 4 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 1100000
 8 8 1
@@ -270,8 +270,8 @@ The &+minstructor&N is standing here ready to give a course of &+rbattle&N tacti
 &+mto passes his knowledge and experience on to those who wish to follow
 &+mthe way of &+rwar&+m.
 ~
-34894 0 0 268468360 34816 1048704 1048576 -1000 S
-MT 0 2 -1
+34894 0 0 0 268468360 34816 1048704 1048576 -1000 S
+MT 0 2 0 -1
 58 0 0 1d1+1 1d1+1
 0.0.0.0 1200000
 8 8 1
@@ -287,8 +287,8 @@ strong. His &+Mknowledge&N of weapons and armor would certainly help him in any
 fight against anthropoidals. But for now, long hours at his duty has driven
 the squire &+Rmad&N.
 ~
-1073744072 0 0 67207172 8 64 34603008 -550 S
-HG 0 16384 -1
+1073744072 0 0 0 67207172 8 64 34603008 -550 S
+HG 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -301,8 +301,8 @@ A huge &+Lelephant&N is standing here.
 &+La strong, fearless fighter, nothing to be reckoned with. With its &+Wtusks &+Land
 &+Lmassive body it can attack just about anything.
 ~
-134236168 0 0 134217912 8192 1048576 1056768 0 S
-A 0 1 5
+134236168 0 0 0 134217912 8192 1048576 1056768 0 S
+A 0 1 0 5
 46 0 0 1d1+1 1d1+1
 0.0.0.0 830000
 8 8 0
@@ -315,8 +315,8 @@ A heavy war&+Whorse&N is standing here.
 threatening, it seems as though it would be dangerous if provoked. It has
 been trained for &+Ghunting&N game.
 ~
-134217736 0 0 134217736 0 0 2147483648 0 S
-AE 0 1 -1
+134217736 0 0 0 134217736 0 0 2147483648 0 S
+AE 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -330,8 +330,8 @@ A strange &+Chumanoid &+Wsilhouette&N is almost undetectable here.
 &+WBut now all you can make out is the &+rflames of hell&+W consuming it and the smell
 &+Wof &+Rburning flesh&+W. It screams out in a pain and terror.
 ~
-1140852808 1024 0 805339196 29 1048576 34603008 0 S
-EA 0 0 2
+1140852808 1024 0 0 805339196 29 1048576 34603008 0 S
+EA 0 0 0 2
 59 0 0 1d1+1 1d1+1
 0.0.0.0 1500000
 8 8 0
@@ -345,8 +345,8 @@ a &+ctangible wave&N of &+Levil presence~
 &+rthe hissing of its breath! You feel your heart tremble and your throat begins
 &+rto tighten.
 ~
-1140852840 1 0 939524156 31 1048640 2182087680 -1000 S
-UG 0 1 0
+1140852840 1 0 0 939524156 31 1048640 2182087680 -1000 S
+UG 0 1 0 0
 59 0 0 1d1+1 1d1+1
 0.0.0.0 1500000
 8 8 0
@@ -363,8 +363,8 @@ lord nymav enchanter~
 &+LLord's &+Ggreen &+Land &+rred &+Lblotched skin gives him a diseased and decaying look.
 &+LCompared to him even a satanic &+mde&+Lm&+mon &+Lwould be of extreme good alignment.
 ~
-1073743962 0 0 2952898596 307395 72351872 2719227912 -1000 S
-Y 0 33280 6
+1073743962 0 0 0 2952898596 307395 72351872 2719227912 -1000 S
+Y 0 33280 0 6
 59 0 0 1d1+1 1d1+1
 0.0.0.0 1990000
 6 6 1
@@ -378,8 +378,8 @@ The &+Lsoldier&N from the &+CSabre&+LTooth Grin Clan&N is standing here at atten
 &+rmaking him a dangerous killing machine. The soldier will protect his &+LLords
 &+rat all cost even death he do not fear.
 ~
-1073743944 0 0 134324248 0 0 1048576 -1000 S
-HO 0 1 -1
+1073743944 0 0 0 134324248 0 0 1048576 -1000 S
+HO 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -393,8 +393,8 @@ The &+msoldier&N from the &+CSabre&+LTooth Grin Clan&N is standing here at atten
 &+rmaking him a dangerous killing machine. The soldier will protect his &+LLords
 &+rat all cost even death he do not fear.
 ~
-1073743944 0 0 134324248 0 0 1048576 -1000 S
-PL 0 1 -1
+1073743944 0 0 0 134324248 0 0 1048576 -1000 S
+PL 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -408,8 +408,8 @@ The &+gsoldier&N from the &+CSabre&+LTooth Grin Clan&N is standing here at atten
 &+rmaking him a dangerous killing machine. The soldier will protect his &+LLords
 &+rat all cost even death he do not fear.
 ~
-1073743944 0 0 134324248 0 0 1048576 -1000 S
-PT 0 1 -1
+1073743944 0 0 0 134324248 0 0 1048576 -1000 S
+PT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -428,8 +428,8 @@ shopkeeper alchemist alch~
 &+LHe is bored now, but is not so bored that he really wants to talk to you.
 &+LSo are you going to&N buy &+Lsomething or what???
 ~
-30798 0 0 402653224 30 128 0 -1000 S
-HO 0 0 -1
+30798 0 0 0 402653224 30 128 0 -1000 S
+HO 0 0 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -442,8 +442,8 @@ holy slayer~
 &+Wa knight. He murmurs &+Rsomething of making &+Wa big mistake and
 &+Rnow having to roam the &+Wlands without peace.
 ~
-74 1 0 134226040 30 64 1048576 1000 S
-UG 0 8 2
+74 1 0 0 134226040 30 64 1048576 1000 S
+UG 0 8 0 2
 59 0 0 1d1+1 1d1+1
 0.0.0.0 1000000
 8 8 1
@@ -456,8 +456,8 @@ dragon turtle~
 &+gdr&+Gag&+gon though. Its &+bblue&+w-&+Ggreen &+gscales glisten with moisture.
 &+gSteam jets  from its nostrils.
 ~
-1098 1 0 134252600 8220 64 1048576 0 S
-D 0 1 6
+1098 1 0 0 134252600 8220 64 1048576 0 S
+D 0 1 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -470,8 +470,8 @@ the &+Gliving &+ww&+yal&Nl~
 &+Lhands, broken &+Wbones&+L, feet, and toes jutting from the surface.
 &+LLow moans of horror, &+Mpain&+L, and sorrow issuing from the &+ww&+yal&+wls&+L.
 ~
-1098 1 0 536871080 8194 524288 0 -1000 S
-EE 0 0 5
+1098 1 0 0 536871080 8194 524288 0 -1000 S
+EE 0 0 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -487,8 +487,8 @@ the &+mnasty&N-looking &+rflesh &+beater~
 &+bgrimace lead to believe that he knew that someone was
 &+bcoming.
 ~
-1073743948 1 0 536936488 1025 128 33554432 -1000 S
-PO 0 4 -1
+1073743948 1 0 0 536936488 1025 128 33554432 -1000 S
+PO 0 4 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -501,8 +501,8 @@ ogre guard patrolling patrol~
 &+gHe sneers at intruders as he approaches and raises two
 &+Lblack &+gtaloned claws to strike them.
 ~
-1140852808 1 0 536879160 29 524416 0 -1000 S
-PO 0 16 5
+1140852808 1 0 0 536879160 29 524416 0 -1000 S
+PO 0 16 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -517,8 +517,8 @@ efreeti mage~
 &+Rthe finest ghostly silks and headdress with an elaborate
 &+Rbrooch.
 ~
-110 1 0 536936480 32771 524288 0 -1000 S
-E 0 512 4
+110 1 0 0 536936480 32771 524288 0 -1000 S
+E 0 512 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -535,8 +535,8 @@ grand knight~
 &+gcouple of minutes he takes time out to break and
 &+gapendage off of a nearby soul and beat soul with it.
 ~
-1149335628 1 0 3087116472 47326 84934720 168828928 -1000 S
-Y 0 1 -1
+1149335628 1 0 0 3087116472 47326 84934720 168828928 -1000 S
+Y 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1600000
 8 8 1
@@ -552,8 +552,8 @@ the &+mnasty&N-looking &+rflesh &+Meater~
 &+Mgrimace lead to believe that he knew that someone was
 &+Mcoming.
 ~
-1073743948 1 0 32768 33792 0 0 -1000 S
-MF 0 512 3
+1073743948 1 0 0 32768 33792 0 0 -1000 S
+MF 0 512 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -566,8 +566,8 @@ dracolich huge~
 &+gand one of a dr&+Gag&+gon. This monster is waiting to rip the head off of its
 &+glatest victim to add to its collection. Watch out for that breath attack.
 ~
-1074267470 1 0 939524152 14528 0 8192 0 S
-UD 0 1 -1
+1074267470 1 0 0 939524152 14528 0 8192 0 S
+UD 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -581,8 +581,8 @@ An &+Millithid&N is here, keeps an eye on things here.
 &+Mwas going to attack you any moment now. In the middle of its
 &+Mhead are four tentacles with sharp points.
 ~
-1140852812 0 0 671162424 12508 22020096 0 -750 S
-MF 0 1 3
+1140852812 0 0 0 671162424 12508 22020096 0 -750 S
+MF 0 1 0 3
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -594,8 +594,8 @@ golem lesser~
    &+yThe golem appears to be made of some kind of clay,
 &+yenchanted to come to life!
 ~
-74 1 0 83886136 30 0 1048576 0 S
-OG 0 1 4
+74 1 0 0 83886136 30 0 1048576 0 S
+OG 0 1 0 4
 55 0 0 1d1+1 1d1+1
 0.0.0.500 990000
 8 8 0
@@ -609,8 +609,8 @@ the &+mbe&+ch&+mol&+cd&+mer &+Cshaman~
 &+Gcharm &+cto &+Ydisintegrate &+cintruders. Beholders are not know for
 &+ctheir personality.
 ~
-78 1 0 134291640 12418 0 0 -1000 S
-BH 0 256 5
+78 1 0 0 134291640 12418 0 0 -1000 S
+BH 0 256 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -625,8 +625,8 @@ a &+ygreater &+Rfire &+mde&+Lm&+mon~
 &+rHis black taloned nails rip slowly through their flesh, as he cackles
 &+rwith glee at the sounds of their unending pain...
 ~
-1073756268 1 0 134217896 1053 64 0 -1000 S
-X 0 64 5
+1073756268 1 0 0 134217896 1053 64 0 -1000 S
+X 0 64 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -642,8 +642,8 @@ fosedi healer druid old librarian~
  "With the power I am gathering I shall destroy all humanoids upon this
   continent!!!"
 ~
-1073743948 0 0 134217760 14 64 0 -1000 S
-P2 0 128 3
+1073743948 0 0 0 134217760 14 64 0 -1000 S
+P2 0 128 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1150000
 8 8 1
@@ -658,8 +658,8 @@ A &+Cpalace&N guard is standing here, looking for &+Yintruders&N.
 &+gThe guard stands  motionless  before you,  its rough &+Lgrey
 &+gskin looks impervious to normal weapons.
 ~
-1140852812 1 0 134217832 8220 0 135266304 -1000 S
-h 0 16384 4
+1140852812 1 0 0 134217832 8220 0 135266304 -1000 S
+h 0 16384 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -674,8 +674,8 @@ The &+Levil &+ml&+Lic&+mh&+L-queen&N of the &+Ggith&+Wyanki&N is here conducting
 &+Bmagic &+Gand  the unknown powers.  The &+Bcold &+Gglare of her
 &+Ghollow eyes sends you into paroxysms of fright.
 ~
-1073743948 1 0 671162400 12492 64 33554432 -1000 S
-U 0 2048 3
+1073743948 1 0 0 671162400 12492 64 33554432 -1000 S
+U 0 2048 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -691,8 +691,8 @@ rotidev shadow lord~
 &+Ldestroying humanity. His singular purpose leaves him very
 &+Lpredictable, but also very, very powerful.
 ~
-1074792524 33554624 0 134285360 15 0 570425344 -1000 S
-SW 0 163840 0
+1074792524 33554624 0 0 134285360 15 0 570425344 -1000 S
+SW 0 163840 0 0
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1250000
 8 8 1
@@ -706,8 +706,8 @@ dehattf emissary~
 &+ris wreathed in &+Rfire&+r, his left in &+Ldarkness&+r, and he looks
 &+rvery displeased to see you.
 ~
-1073743948 1 0 671088680 1027 64 134217728 -1000 S
-EF 0 4 4
+1073743948 1 0 0 671088680 1027 64 134217728 -1000 S
+EF 0 4 0 4
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1250000
 8 8 1
@@ -721,8 +721,8 @@ lizardman prince lizard man~
 &+yleathery  &+gwings,  and a &+Lbat&N-&+glike mouth,  with teeth
 &+Wgleaming &+Yyellow&+g.
 ~
-1073743948 1 0 134250680 2078 0 1056768 -900 S
-H 0 65536 4
+1073743948 1 0 0 134250680 2078 0 1056768 -900 S
+H 0 65536 0 4
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -737,8 +737,8 @@ master mage seysar librarian~
 &+Bpowerful to have been accepted by the &+WMasters &+Bof
 &+Bthe &+CPalace&+B.
 ~
-1073743948 33554752 0 402653224 14 64 134217728 0 S
-PH 0 512 3
+1073743948 33554752 0 0 402653224 14 64 134217728 0 S
+PH 0 512 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1250000
 8 8 1
@@ -753,8 +753,8 @@ nakzor hunter~
 &+Gattached to their shoulder&+Ys. Nakzor has a small tattoo
 &+Gon his left forearm. It si&+Ymply says, "GOOD will triumph".
 ~
-1073743948 33554816 0 402653368 2077 64 1048576 750 S
-TK 0 1 3
+1073743948 33554816 0 0 402653368 2077 64 1048576 750 S
+TK 0 1 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1250000
 8 8 1
@@ -771,8 +771,8 @@ aleena bard~
 &+WWithout a doubt, &+YA&+Wleen&+Ya &+Wis the most beautiful woman you have ever seen.
 &+WToo bad she crackles with &+Bmagical &+Wenergies.
 ~
-30794 0 0 939630780 47326 85459072 5242880 1000 S
-PE 0 32800 3
+30794 0 0 0 939630780 47326 85459072 5242880 1000 S
+PE 0 32800 0 3
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1600000
 8 8 2
@@ -785,8 +785,8 @@ raxamus king~
 &+Ca single blow. Yet looks like he is controlling
 &+Ca &+Bgreat power&+C. He does not like to be interrupted.
 ~
-2634 1 0 671195196 47326 0 571482112 -1000 S
-G 0 1 6
+2634 1 0 0 671195196 47326 0 571482112 -1000 S
+G 0 1 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 1800000
 8 8 1
@@ -801,8 +801,8 @@ the &+Renslaved &+rred &+gdr&+Gag&+gon~
 &+rlenght with  an even  more  massive wingspan.  He watches
 &+ryou, &+Lsmoke &+rdrifting from his open mouth.
 ~
-2152 1 0 0 0 0 0 -1000 S
-D 0 1 -1
+2152 1 0 0 0 0 0 0 -1000 S
+D 0 1 0 -1
 59 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 0
@@ -818,8 +818,8 @@ the &+Cpalace &+mnecromancer~
 &+mHe shrieks  some obscenities  and orders  his minions
 &+mto attack.
 ~
-30794 1 0 671162528 14558 0 167780352 -1000 S
-PH 0 1024 3
+30794 1 0 0 671162528 14558 0 167780352 -1000 S
+PH 0 1024 0 3
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -836,8 +836,8 @@ a &+Wso&Nul&+Lless shadowy &+rassassin~
 &+Land smiles not at all because it had no face, only a suggestive
 &+Lblackness where a face ought to be...
 ~
-1075841096 1 0 940048440 28 67371008 135266304 -1000 S
-SW 0 8192 0
+1075841096 1 0 0 940048440 28 67371008 135266304 -1000 S
+SW 0 8192 0 0
 52 0 0 1d1+1 1d1+1
 0.0.0.0 1050000
 8 8 1
@@ -851,8 +851,8 @@ basilisk scaled~
 &+gsemi-intelligent creature who attacks anyone it encounters with nails and
 &+gteeth. It's eyes are &+Gglowing &+gpale green.
 ~
-1073743946 1 0 135301304 30 2097280 269492224 -1000 S
-R 0 1 2
+1073743946 1 0 0 135301304 30 2097280 269492224 -1000 S
+R 0 1 0 2
 60 0 0 18000d3+18 1d1+1
 0.0.0.0 0
 8 8 0
@@ -863,8 +863,8 @@ granite golem~
 ~
    &+LI&+wt &+Ll&+wo&+Lo&+wk&+Ls &+wl&+Li&+wk&+Le &+wa &+Ls&+wt&+La&+wt&+Lu&+we&+L, &+wu&+Ln&+wt&+Li&+wl &+Li&+wt &+Ls&+wh&+La&+wm&+Lb&+wl&+Le &+wt&+Lo&+ww&+La&+wr&+Ld&+ws &+Li&Nn&+Lt&Nr&+Lu&Nd&+Le&Nr&+Ls&N.
 ~
-74 1 0 67109048 2 0 1048576 0 S
-OG 0 1 5
+74 1 0 0 67109048 2 0 1048576 0 S
+OG 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.400 910000
 8 8 0
@@ -881,8 +881,8 @@ dog battle demon~
 &+yunwary adventurers like yourself. This beast has a foul smell and pieces of
 &+yrotted &+cmeat &+yhanging around its teeth. It looks very dangerous.
 ~
-1073743944 0 0 84443168 262147 128 1056768 -1000 S
-A 0 1 5
+1073743944 0 0 0 84443168 262147 128 1056768 -1000 S
+A 0 1 0 5
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -899,8 +899,8 @@ the library, searching the ground for something.
 The &+Laged&N librarian looks up at you and says "I'm looking for this important
 &+Ygolden &+ydesk key&N. If you find it, please return it to me."
 ~
-2120 0 0 973152300 14556 0 1048576 -900 S
-PL 0 1024 -1
+2120 0 0 0 973152300 14556 0 1048576 -900 S
+PL 0 1024 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 1004040
 8 8 1
@@ -912,8 +912,8 @@ golem adamantite~
    &+mIt seems to be forged of &+Ldark &+mmetal. It looks strong,
 &+mdurable and very dangerous, but somewhat un-intelligent.
 ~
-74 1 0 67109048 2 0 1048576 0 S
-OG 0 1 5
+74 1 0 0 67109048 2 0 1048576 0 S
+OG 0 1 0 5
 55 0 0 1d1+1 1d1+1
 0.0.0.400 910000
 8 8 0

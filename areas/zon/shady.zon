@@ -730,6 +730,7 @@ M 0 97560 23 97628 100 0 0 0       * an orcish guard
 M 0 97560 23 97628 100 0 0 0       * an orcish guard
 M 0 97560 23 97628 100 0 0 0       * an orcish guard
 M 0 97560 23 97628 100 0 0 0       * an orcish guard
+M 0 401090 1 97628 100 0 0 0       * (mob type not in this .mob file)
 M 0 97528 7 97630 100 0 0 0        * an orcish street sweeper
 M 0 97514 14 97630 100 0 0 0       * a wandering soul
 M 0 97537 17 97630 100 0 0 0       * an old orcish woman
@@ -1106,6 +1107,5 @@ M 0 97594 1 97758 100 0 0 0        * a wood golem
 M 0 97595 1 97758 100 0 0 0        * a deep gnome slave
 M 0 97596 1 97758 100 0 0 0        * a rakshasa slave
 M 0 97597 1 97758 100 0 0 0        * an ettin warrior
-M 0 401090 1 97628 100 0 0 0       * the Shady Quartermaster
 *
 S

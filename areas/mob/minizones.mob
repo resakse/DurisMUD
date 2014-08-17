@@ -8,8 +8,8 @@ somewhat akin to an elf maiden. She has high cheek bones and violet
 eyes, with golden-red hair that seems to almost sparkle. Her light-tan
 skin is dotted with a greenish tint.
 ~
-205 0 0 32 0 0 0 0 S
-H 0 0 -1
+205 0 0 0 32 0 0 0 0 S
+H 0 0 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -23,8 +23,8 @@ eyes and hair that is the color of pure gold. Her skin is light brown, with
 an occasional hint of green, and she resembles an elf maiden in many
 respects. There is something powerfully charismatic about her..
 ~
-11 1 0 33554640 0 0 0 0 S
-H 0 32 -1
+11 1 0 0 33554640 0 0 0 0 S
+H 0 32 0 -1
 55 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 2
@@ -38,8 +38,8 @@ merchant, but is now little more than a slave. He has a blank look in his
 eye, and is most likely under one of the powerful dryad charms. He looks
 about aimlessly and does not seem to notice you.
 ~
-72 0 0 0 0 0 0 0 S
-H 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -53,8 +53,8 @@ merchant, but is now little more than a slave. He has a blank look in his
 eye, and is most likely under one of the powerful dryad charms. He looks
 about aimlessly and does not seem to notice you.
 ~
-74 0 0 0 0 0 0 0 S
-H 0 0 -1
+74 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 1
@@ -66,8 +66,8 @@ squirrel~
 It is about a foot long from head to tail, is has brown fur and small brown
 eyes. It looks back at you with a harmless but curious expression.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -80,8 +80,8 @@ It stands about four feet high and has brown colored fur and black eyes.
 Its small tail is extended upwards, revealing white feathers beneath, and
 it studies your every move, ready to bolt if danger is perceived.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -94,8 +94,8 @@ It is about four feet long and has brownish-grey scales. It large head and
 huge fangs, which are quite evident in its gaping maw, promise death
 to whoever tries its temper.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -107,8 +107,8 @@ furry rabbit~
 It is small and very cute, both as an animal and a potential meal. It has
 light brown fur and small black eyes.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 0
@@ -121,8 +121,8 @@ It is long and lean, with fur that is a dull-reddish color. Its long snout
 looking exceptionally good at sniffing out its prey, and its pointed
 ears make it look like a distant cousin of felines..
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 20 87 4d15+14 1d5+0
 0.0.0.0 518
 8 8 0
@@ -135,8 +135,8 @@ It stands no taller than two feet in height, and looks extremely nimble.
 They resemble small elves with brown hair and bright blue eyes, which
 twinkle with mischief.
 ~
-205 0 0 524304 0 0 0 900 S
-H 0 0 -1
+205 0 0 0 524304 0 0 0 900 S
+H 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 0
@@ -149,8 +149,8 @@ It stands about a foot high and is extremely agile. Its long brown hair
 and flashing blue eyes are filled with fun and trouble. It laughs and
 plays and dances about the area with not a care in the world..
 ~
-205 0 0 524304 0 0 0 1000 S
-H 0 0 -1
+205 0 0 0 524304 0 0 0 1000 S
+H 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 0
@@ -163,8 +163,8 @@ His features and dress are indicative of authority and importance amongst
 the brownie community, and streaks of grey line his deep brown hair. He
 has stunningly blue eyes that are filled with both intelligence and mischief.
 ~
-131276 0 0 532568 0 0 0 900 S
-H 0 2048 -1
+131276 0 0 0 532568 0 0 0 900 S
+H 0 2048 0 -1
 30 8 3 30d44+330 3d6+4
 0.5.7.1 26730
 8 8 0
@@ -178,8 +178,8 @@ brown hair and deep blue eyes that hold an ancient wisdom. His size and
 age make him look extremely fragile. Even though he is old, he still looks
 extremely quick and agile.
 ~
-143 0 0 1573082 0 0 0 1000 S
-H 0 32 -1
+143 0 0 0 1573082 0 0 0 1000 S
+H 0 32 0 -1
 55 -5 -111 55d121+4620 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -192,8 +192,8 @@ He is dressed in travelling clothes and high-soft boots, which are worn
 and muddied from the long roads. He hums a chipper tune as he passes
 by, and eyes you with some caution.
 ~
-204 0 0 0 0 0 0 500 S
-H 0 1 -1
+204 0 0 0 0 0 0 0 500 S
+H 0 1 0 -1
 51 -5 -98 51d131+4335 7d6+30
 6.9.4.6 206550
 8 8 1
@@ -207,8 +207,8 @@ half-elf in appearance. He has blackish hair and striking violet eyes, and
 stands about six feet tall. From his appearance, this rangers definitely
 knows his way about these forests.
 ~
-264268 0 0 148 0 0 0 1000 S
-H 0 2 -1
+264268 0 0 0 148 0 0 0 1000 S
+H 0 2 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -223,8 +223,8 @@ that could melt the resolve of many men. She is dressed partially in
 leather armor, with a thin chain coat visible beneath. From her appearance,
 this one can defend herself well.
 ~
-2063 0 0 8408 0 0 0 965 S
-PH 0 32 -1
+2063 0 0 0 8408 0 0 0 965 S
+PH 0 32 0 -1
 48 -3 -78 48d110+2592 6d6+25
 8.1.0.5 116640
 8 8 2
@@ -237,8 +237,8 @@ This young wrangler looks to be about twenty years of age, and is dressed
 in dirty clothing and a straw hat. He is very strong and muscular, probably
 built up over years of hard work for Jenna.
 ~
-2124 0 0 0 0 0 0 250 S
-H 1 1 -1
+2124 0 0 0 0 0 0 0 250 S
+H 1 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -251,8 +251,8 @@ Its a medium sized draft horse looks appears to have been well cared
 for and exercised. Its brown fur and black mane make it look very
 regal and beautiful.
 ~
-154 0 0 16 0 0 0 0 S
-A 0 0 -1
+154 0 0 0 16 0 0 0 0 S
+A 0 0 0 -1
 10 18 67 10d18+35 2d3+1
 0.0.0.0 1296
 8 8 0
@@ -265,8 +265,8 @@ He is a human in his mid thirties with blonde hair and blue eyes. From
 his garb, he looks like a trader or mercenary, and appears to be extremely
 tired. His clothes are somewhat dirtied from the road as well.
 ~
-2062 0 0 0 0 0 0 250 S
-H 1 1 -1
+2062 0 0 0 0 0 0 0 250 S
+H 1 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -280,8 +280,8 @@ brown hair. He shows all the classic signs of an alcoholic, and has the odor
 to prove it. It doesn't appear that he has many duties here, and is probably
 someone's uncle or cousin.
 ~
-2062 0 0 0 0 0 0 250 S
-H 1 1 -1
+2062 0 0 0 0 0 0 0 250 S
+H 1 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -294,8 +294,8 @@ He is dressed in a white cooks uniform and looks to be about thirty years
 of age. His plump belly and jolly features of very stereotypical of a man
 in his station.
 ~
-143 0 0 0 0 0 0 750 S
-H 0 2 -1
+143 0 0 0 0 0 0 0 750 S
+H 0 2 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -308,8 +308,8 @@ This fellow is definitely a tough character, with several scars and a foul
 demeanor to match. His black hair is cut short and well kept, making
 him look like an arrogant fellow.
 ~
-2062 0 0 32 0 0 0 0 S
-H 0 4096 -1
+2062 0 0 0 32 0 0 0 0 S
+H 0 4096 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -322,8 +322,8 @@ She is dressed in leather armor that looks both worn-in and well made,
 along with high-boots and a small cap. Her brown hair and steel-grey
 eyes give her a tough appearance that's quite stunning.
 ~
-2190 0 0 24 0 0 0 800 S
-H 0 2 -1
+2190 0 0 0 24 0 0 0 800 S
+H 0 2 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
 8 8 2
@@ -336,8 +336,8 @@ He is a human male of about twenty, and looks extremely adept at what
 he does, playing cards. His face is almost devoid of emotion, which reveals
 very little about what he has up his sleeve.
 ~
-2063 0 0 0 0 0 0 0 S
-H 0 0 -1
+2063 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -351,8 +351,8 @@ around his shoulders. His skin has a brownish tint to it, making him look
 like a plains native. His facial features are devoid of emotion, locked
 somewhere between a frown and an open scowl.
 ~
-2063 0 0 0 0 0 0 0 S
-H 0 0 -1
+2063 0 0 0 0 0 0 0 0 S
+H 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -365,8 +365,8 @@ He is dressed in fine leather armor that is as dark as his skin, and looks
 well cared for and fitted for the road. His warm facial features and smile
 are very inviting, and show both his gentleness and wisdom.
 ~
-10 0 0 8192 0 0 0 1000 S
-H 0 2 -1
+10 0 0 0 8192 0 0 0 1000 S
+H 0 2 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -379,8 +379,8 @@ He is well within his last quarter of life, and looks both old and happy.
 His tail wags almost constantly, and he looks about at everyone
 inquisitively.
 ~
-203 0 0 0 0 0 0 -200 S
-A 0 0 -1
+203 0 0 0 0 0 0 0 -200 S
+A 0 0 0 -1
 1 20 96 1d15+4 1d5+0
 0.0.0.0 129
 8 8 1
@@ -393,8 +393,8 @@ He is dressed in leather armor and is apparently well armed. His many
 scars and wicked expression indicate that this one has definitely seen
 many a battle and will probably know many more.
 ~
-2062 0 0 16 0 0 0 -500 S
-H 0 16384 -1
+2062 0 0 0 16 0 0 0 -500 S
+H 0 16384 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -407,8 +407,8 @@ The minotaur historian seems to be oblivious to your presence as he starts to
 scratch the wall. Muttering away, you see a drawing beginning to form on the
 wall.
 ~
-2120 0 0 268435488 12480 0 0 -1000 S
-MT 0 0 -1
+2120 0 0 0 268435488 12480 0 0 -1000 S
+MT 0 0 0 -1
 25 18 67 10d18+35 2d3+1
 5.3.0.0 1296
 6 6 1
@@ -421,8 +421,8 @@ The female minotaur glances in your direction before going back to her
 monotonous work of cleaning this room. She mutters a few words to herself
 and keeps wiping her sweat, obviously having exerted herself.
 ~
-2120 0 0 0 0 0 0 -1000 S
-MT 0 0 -1
+2120 0 0 0 0 0 0 0 -1000 S
+MT 0 0 0 -1
 15 20 83 5d15+17 1d5+0
 3.1.0.0 648
 8 8 2
@@ -433,8 +433,8 @@ minotaur worshipper~
 ~
    A young minotaur crouches here, worshipping his god, hoping to be one someday.
 ~
-2122 0 0 0 0 0 0 -800 S
-MT 0 1 -1
+2122 0 0 0 0 0 0 0 -800 S
+MT 0 1 0 -1
 18 18 80 6d21+33 2d3+1
 3.2.0.0 777
 6 6 1
@@ -445,8 +445,8 @@ guardian minotaur~
 ~
    A huge minotaur lingers here. His body is filled with old scars and a particularly nasty one goes across his left eye.
 ~
-14344 0 0 65544 264192 0 0 -1000 S
-MT 0 1 -1
+14344 0 0 0 65544 264192 0 0 -1000 S
+MT 0 1 0 -1
 28 -1 -69 45d99+1980 6d6+12
 5.9.8.4 109350
 11 11 1
@@ -458,8 +458,8 @@ spider~
    A huge spider scuttles along a ceiling, checking its webs for any trapped
 food.
 ~
-2120 1 0 1048576 1026 0 0 -400 S
-AS 0 0 -1
+2120 1 0 0 1048576 1026 0 0 -400 S
+AS 0 0 0 -1
 6 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -470,8 +470,8 @@ minotaur child young~
 ~
    A child, judging by the length of his horns, sits here trying to kill a few bugs.
 ~
-2056 0 0 0 0 0 0 0 S
-MT 0 0 -1
+2056 0 0 0 0 0 0 0 0 S
+MT 0 0 0 -1
 11 20 87 4d15+14 1d5+0
 2.1.0.0 518
 6 6 1
@@ -482,8 +482,8 @@ guard minotaur~
 ~
    The guards patrols the area, ensuring that no invaders are allowed in.
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-MT 0 2 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+MT 0 2 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -494,8 +494,8 @@ skeleton~
 ~
    A skeleton looks closely for his missing bones.
 ~
-72 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+72 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 20 8 16 26d65+338 3d6+4
 0.0.0.0 23166
 8 8 0
@@ -506,8 +506,8 @@ zombie~
 ~
    A zombie wanders the passageway, hoping that some purpose will hit him soon.
 ~
-2120 0 0 24 274434 0 0 -1000 S
-U 0 1 -1
+2120 0 0 0 24 274434 0 0 -1000 S
+U 0 1 0 -1
 22 8 3 30d65+390 3d6+4
 0.0.0.0 26730
 8 8 0
@@ -518,8 +518,8 @@ undead minotaur treasure guardian~
 ~
    The huge minotaur isn't happy about being brought back to life. But something even mightier has bound this vampire to guard this room.
 ~
-2122 1 0 687939994 2 0 0 -700 S
-UV 0 1 -1
+2122 1 0 0 687939994 2 0 0 -700 S
+UV 0 1 0 -1
 25 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 8 8 0
@@ -530,8 +530,8 @@ squirrel~
 ~
 &+y Small and scruffy looking, this squirrel forages the ground for food.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 6 18 80 6d18+21 2d3+1
 0.0.0.0 777
 8 8 0
@@ -542,8 +542,8 @@ insects swarm~
 ~
 &+L Like a cloud of black dust, this swarm of insects flies about the pond.
 ~
-8 1 0 0 0 0 0 0 S
-I 0 0 -1
+8 1 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 0
@@ -556,8 +556,8 @@ fisherman~
 his living, and enjoying the peacefulness of this place.  He wears a large
 vest, and a small cap.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 16 13 48 16d35+112 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -568,8 +568,8 @@ bird~
 ~
 &+r This small red bird flies about the forest, chirping.&n
 ~
-8 0 0 0 0 0 0 0 S
-B 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 2 20 93 2d15+7 1d5+0
 0.0.0.0 259
 8 8 0
@@ -581,8 +581,8 @@ fish~
 &+W  This fish sweems to dwell on the bottom of this small pond, it has
 &+Wlarge white eyes, and glistening white scales.
 ~
-8 0 0 0 0 0 0 0 S
-F 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+F 0 0 0 -1
 7 18 77 7d18+24 2d3+1
 0.0.0.0 907
 8 8 0
@@ -596,8 +596,8 @@ her many children. Becouse this worm is really old, some of her offsprings
 are already twice as big as she is. Still, she attacks first no matter what
 creaure enters the hole.
 ~
-67113038 1 0 302022680 0 0 0 0 S
-AP 0 0 -1
+67113038 1 0 0 302022680 0 0 0 0 S
+AP 0 0 0 -1
 30 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 2
@@ -610,8 +610,8 @@ worm mass black~
 eat everything on their path, they even eat each other. Blind as a bat, they
 sense their target by simply sensing its heat. Nothing can stop them.
 ~
-4174 1 0 302022696 0 0 0 0 S
-AP 0 0 -1
+4174 1 0 0 302022696 0 0 0 0 S
+AP 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -624,8 +624,8 @@ worm young~
 He is ten feet long and approximately four feet wide all along his oblong
 body. Becouse he's still growing, he's always hungry. Can devour everything.
 ~
-4300 0 0 33587200 0 0 0 0 S
-AP 0 0 -1
+4300 0 0 0 33587200 0 0 0 0 S
+AP 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -638,8 +638,8 @@ the adult worm~
 fight with thirty feet long "beetle" weighting over five tons.
 Funny, you also havn't herd any tale of anyone battling such creature...
 ~
-4172 0 0 33587200 0 0 0 0 S
-AP 0 1 -1
+4172 0 0 0 33587200 0 0 0 0 S
+AP 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 1
@@ -652,8 +652,8 @@ the adult worm~
 fight with thirty feet long "beetle" weighting over five tons.
 Funny, you also havn't herd any tale of anyone battling such creature...
 ~
-4172 1 0 32768 0 0 0 0 S
-AP 0 1 -1
+4172 1 0 0 32768 0 0 0 0 S
+AP 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 2
@@ -668,8 +668,8 @@ drunk filthy~
 &+mbrows appear to been shaved off.  His pockets have been turned out, looks&n
 &+mlike the last person through here decided to liberate him of any money he had.&n
 ~
-138 0 0 0 0 0 0 -200 S
-PH 1 0 -1
+138 0 0 0 0 0 0 0 -200 S
+PH 1 0 0 -1
 8 18 74 8d18+28 2d3+1
 4.2.0.0 1036
 4 4 1
@@ -684,8 +684,8 @@ the &+gthri-&+Ykreen&n chef~
 &+btorso.  He seems in perfect harmony with his kitchen, knowing where every&n
 &+bitem is stored, never wasting a second of time.&n
 ~
-10 0 0 0 0 0 0 450 S
-TK 12 1 -1
+10 0 0 0 0 0 0 0 450 S
+TK 12 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -700,8 +700,8 @@ an over-worked dishwasher~
 &+BHe mutters under his breath about the waittress, obviously quite upset about&n
 &+Bsomething&n
 ~
-2186 0 0 16 0 0 0 200 S
-PH 1 1 -1
+2186 0 0 0 16 0 0 0 200 S
+PH 1 1 0 -1
 15 15 51 15d27+90 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -716,8 +716,8 @@ bartender elderly man tending bar~
 &+beyes are also hard and betray a keen intelligence.  He laughs at one of the&n
 &+bpatrons senseless jokes, no doubt hoping to get a decent-sized tip.&n
 ~
-2058 0 0 0 0 0 0 200 S
-PH 1 256 -1
+2058 0 0 0 0 0 0 0 200 S
+PH 1 256 0 -1
 32 6 -2 32d77+512 4d6+7
 6.8.0.2 41472
 8 8 1
@@ -733,8 +733,8 @@ half-orc half orc drunken~
 &+bquite stupid.  it is only his human side that prevents the tavern patrons from&N
 &+bdragging him outside and lynching him.                                        &N
 ~
-2188 0 0 0 0 0 0 -800 S
-H2 13 0 -1
+2188 0 0 0 0 0 0 0 -800 S
+H2 13 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 1
@@ -748,8 +748,8 @@ fallen paladin~
 &+bconsidereing his alcoholic behavior.  He shakes his head and mutters under &n
 &+bhis breath, obviously deeply disturbed by whatever crisis has befallen him.&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -764,8 +764,8 @@ prostitute sleazy hooker aging~
 &+band nimble and her lips are caked with a thick red paint that only serves to&n
 &+baccent her age.  &n
 ~
-2188 0 0 0 0 0 0 0 S
-PH 1 4096 -1
+2188 0 0 0 0 0 0 0 0 S
+PH 1 4096 0 -1
 20 13 35 20d30+100 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -780,8 +780,8 @@ miner burly potash~
 &+yforced to breathe in his work.  His arms are thick and well-muscled from his&n
 &+ygrueling work beneath the surface of the land.&n
 ~
-2058 0 0 0 0 0 0 200 S
-PB 11 1 -1
+2058 0 0 0 0 0 0 0 200 S
+PB 11 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -796,8 +796,8 @@ ranger elven pompous~
 &+bHis face is set in a frown and he glowers about the room looking for the &n
 &+bwaittress.&n
 ~
-2058 0 0 0 0 0 0 600 S
-PE 4 2 -1
+2058 0 0 0 0 0 0 0 600 S
+PE 4 2 0 -1
 26 8 16 26d65+338 3d6+4
 7.2.6.1 23166
 6 6 1
@@ -812,8 +812,8 @@ bard gaudily dressed~
 &+bsong and the tavern erupts in cheers.  He beams at the attention and breaks  &n
 &+binto song.&n
 ~
-2060 0 0 0 0 0 0 400 S
-P2 1 32768 -1
+2060 0 0 0 0 0 0 0 400 S
+P2 1 32768 0 -1
 24 11 23 24d44+216 3d5+3
 6.1.6.0 21384
 8 8 1
@@ -828,8 +828,8 @@ rogue drunken~
 &+bthat one in his field of work must possess.  His face is pale and quivers&n
 &+bslightly, probably a good thing he is close to the bathrooms.&n
 ~
-2186 0 0 524288 0 0 0 -300 S
-PH 1 4096 -1
+2186 0 0 0 524288 0 0 0 -300 S
+PH 1 4096 0 -1
 22 11 29 22d40+176 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -844,8 +844,8 @@ waittress young~
 &+blooks quickly about the room trying to see where she should go to next, always&n
 &+btrying to stay one step ahead&n
 ~
-2056 0 0 0 0 0 0 200 S
-PH 1 1 -1
+2056 0 0 0 0 0 0 0 200 S
+PH 1 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -859,8 +859,8 @@ bouncer centaur upset~
 &+bpossible of trampling or kicking you, and he wields a mean-looking sword at his&n
 &+bside.  His face is set in a a scowl, as if waiting for an excuse to attack.&n
 ~
-2058 128 0 0 0 0 0 400 S
-CT 0 2 -1
+2058 128 0 0 0 0 0 0 400 S
+CT 0 2 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -874,8 +874,8 @@ assassin cutpurse guild~
 &+ba trait that can mean the difference between life and death in her line of    &n
 &+bwork.  A black 'X' has been stitched branded into the back of one hand.       &n
 ~
-1073744014 0 0 0 0 0 0 -600 S
-PH 0 8192 -1
+1073744014 0 0 0 0 0 0 0 -600 S
+PH 0 8192 0 -1
 34 6 -8 34d70+510 4d6+7
 8.9.0.2 44064
 8 8 2
@@ -890,8 +890,8 @@ halfling mean looking mean-looking~
 &+bmissing the little fingers, a sign he was caught and convicted of being a thief&n
 &+bat one point in his life.&n
 ~
-2186 0 0 0 0 0 0 -450 S
-PF 7 4096 -1
+2186 0 0 0 0 0 0 0 -450 S
+PF 7 4096 0 -1
 18 13 42 18d30+90 3d4+2
 9.7.3.0 8748
 8 8 1
@@ -906,8 +906,8 @@ madam brothel~
 &+bgirls.  She has not turned to flab with age, and looks like she knows how to&n
 &+bhandle herself.&n
 ~
-2186 0 0 0 0 0 0 -300 S
-PH 1 32 -1
+2186 0 0 0 0 0 0 0 -300 S
+PH 1 32 0 -1
 35 6 -12 35d77+560 4d6+7
 9.9.1.2 45360
 8 8 2
@@ -922,8 +922,8 @@ guard hired~
 &+bbefore he will attack someone.  His demeanor seems quite happy otherwise,&n
 &+bas it is quite proobable the Madam pays him with something other than gold...&n
 ~
-1140852746 0 0 0 0 0 0 -200 S
-PH 1 16384 -1
+1140852746 0 0 0 0 0 0 0 -200 S
+PH 1 16384 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -937,8 +937,8 @@ woman deeply tanned~
 &+bno effort to conceal any part of her body.  Shoulder-length hair frames her&n
 &+bface, and deep blue eyes peer out confidently.&n
 ~
-2058 0 0 0 0 0 0 -200 S
-PH 1 1 -1
+2058 0 0 0 0 0 0 0 -200 S
+PH 1 1 0 -1
 18 13 42 18d35+126 3d4+2
 9.7.3.0 8748
 5 5 2
@@ -953,8 +953,8 @@ topless half elf half-elf~
 &+bher foot.  A tattoo of a dolphin decorates her shoulder and a flower has&n
 &+bbeen placed above her right ear.&n
 ~
-2186 0 0 0 0 0 0 -200 S
-P2 1 0 -1
+2186 0 0 0 0 0 0 0 -200 S
+P2 1 0 0 -1
 15 15 51 15d23+60 2d5+2
 7.6.2.0 7290
 8 8 2
@@ -969,8 +969,8 @@ woman barbarian brawny~
 &+bacross her chest and veins pop out from her arms.  She is definitely not for&n
 &+bthe weak of heart.&n
 ~
-1073744010 0 0 0 0 0 0 -400 S
-PB 11 1 -1
+1073744010 0 0 0 0 0 0 0 -400 S
+PB 11 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 2
@@ -984,8 +984,8 @@ prostitute sweaty half orc half-orc~
 &+bshe appears not to have bathed in several months.  Her leathery hide is&n
 &+bsplotched and sticky and her face is locked in a perpetual scowl.&n
 ~
-2186 0 0 0 0 0 0 -600 S
-H2 13 1 -1
+2186 0 0 0 0 0 0 0 -600 S
+H2 13 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 2
@@ -998,8 +998,8 @@ janitor tavern~
 &+cseems to have driven all sign of enjoyment of life from him, and he stoops&n
 &+chere slowly sweeping the room.&n
 ~
-2188 0 0 0 0 0 0 0 S
-PH 1 0 -1
+2188 0 0 0 0 0 0 0 0 S
+PH 1 0 0 -1
 13 15 58 13d23+52 2d5+2
 6.5.2.0 6318
 8 8 1
@@ -1013,8 +1013,8 @@ stubborn barbarian~
 &+cquite confident in his ability to win the match.  A dark tattoo of a sabertooth&n
 &+ctiger lines his broad back.&n
 ~
-2058 0 0 0 0 0 0 200 S
-PB 11 1 -1
+2058 0 0 0 0 0 0 0 200 S
+PB 11 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -1028,8 +1028,8 @@ grimy half orc half-orc~
 &+cA deep scar runs down the side of his face, and he is blind in one eye.  His&n
 &+cremaining eye glares across the room in annoyance.&n
 ~
-2190 0 0 0 0 0 0 -600 S
-H2 13 1 -1
+2190 0 0 0 0 0 0 0 -600 S
+H2 13 1 0 -1
 28 8 10 28d65+364 3d6+4
 8.3.7.1 24948
 8 8 1
@@ -1043,8 +1043,8 @@ gnome beady eyed beady-eyed~
 &+ccontest, and the loser is sure to blame him.  His eyebrows furrow as he looks&n
 &+chopelessly about the room.&n
 ~
-2190 0 0 0 0 0 0 600 S
-PG 8 2048 -1
+2190 0 0 0 0 0 0 0 600 S
+PG 8 2048 0 -1
 26 8 16 26d44+286 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -1059,8 +1059,8 @@ salesman traveling paint~
 &+cpaint around before he became a successful merchant.  His hair is cropped&n
 &+cclose to his head and his ears are small.&n
 ~
-2186 1 0 0 0 0 0 0 S
-PH 1 64 -1
+2186 1 0 0 0 0 0 0 0 S
+PH 1 64 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 4 8 1
@@ -1074,8 +1074,8 @@ assistant~
 &+Cdecisions.  He is getting larger and more muscled every day from all the&n
 &+Cphysical activity he has to do.&n
 ~
-2186 0 0 0 0 0 0 0 S
-PH 1 1 -1
+2186 0 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 4 4 1
@@ -1089,8 +1089,8 @@ mage dark robed dark-robed~
 &+bperhaps that is a result of some arcane spell he has cast.  His fingers drum&n
 &+bslowly upon the table, as if preparing for some incantation.&n
 ~
-2190 0 0 8 0 0 0 -400 S
-PH 1 512 -1
+2190 0 0 0 8 0 0 0 -400 S
+PH 1 512 0 -1
 45 -1 -69 45d72+1935 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -1105,8 +1105,8 @@ dwarf stocky~
 &+bscar across the bridge of his nose makes his scowl seem even fiercer, as the&n
 &+bdim light casts a long shadow across his face.&n
 ~
-2190 0 0 0 0 0 0 -300 S
-PM 6 16384 -1
+2190 0 0 0 0 0 0 0 -300 S
+PM 6 16384 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1121,8 +1121,8 @@ halfling silver haired silver-haired~
 &+bgaudy and bright as if to attract attention.  He looks up momentarily from&n
 &+bthe game before returning his full concentration to the table.&n
 ~
-2190 0 0 0 0 0 0 250 S
-PF 7 32 -1
+2190 0 0 0 0 0 0 0 250 S
+PF 7 32 0 -1
 40 2 -28 40d88+880 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1136,8 +1136,8 @@ thug cutpurse guild~
 &+bHe may not have the finesse and agility that some of the other members do, but&n
 &+bhe certainly has lots of strength and mean-ness.&n
 ~
-2060 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2060 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -1152,8 +1152,8 @@ burglar cutpurse guild~
 &+bhard eyes betray the fact that he can probably handle himself fairly well in &n
 &+ba fight.&n
 ~
-2188 0 0 0 0 0 0 -400 S
-PH 1 4096 -1
+2188 0 0 0 0 0 0 0 -400 S
+PH 1 4096 0 -1
 36 2 -15 36d80+756 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -1169,8 +1169,8 @@ leader cutpurse guild~
 &+btraining from years and years of theft before being raised to leader of the&n
 &+bguild - a position he acquired by murder of the previous leader.  &n
 ~
-1073744010 0 0 16 0 0 0 -900 S
-PB 11 16 -1
+1073744010 0 0 0 16 0 0 0 -900 S
+PB 11 16 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1184,8 +1184,8 @@ fence human slender~
 &+bbuy a stolen item, at a fraction of its actual value of course.  He asks no&n
 &+bquestions of the people who sell him the items and he never betrays them.&n
 ~
-2058 0 0 0 0 0 0 -500 S
-PH 1 1 -1
+2058 0 0 0 0 0 0 0 -500 S
+PH 1 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1199,8 +1199,8 @@ arlik~
 &+moccupation.  He was once a great mercenary, who put Jaer to shame.
 &+mNow he leads a life of the merchant.&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 6 6 1
@@ -1214,8 +1214,8 @@ A tired mage rests here, dozing off&n.
 &+che has been in many battles, and won.  He is half-elf, his parents
 &+ccrossbreeding to create him.&n
 ~
-133194 0 0 0 0 0 0 350 S
-P2 0 512 -1
+133194 0 0 0 0 0 0 0 350 S
+P2 0 512 0 -1
 41 -1 -56 41d72+1763 6d6+12
 1.7.6.3 99630
 4 4 2
@@ -1229,8 +1229,8 @@ A lonely traveller~
 &+wworn and rugged, his legs scarred and scratched, his arms
 &+wpowerful and strong.&n
 ~
-1073743946 0 0 16 0 0 0 -203 S
-PB 0 1 -1
+1073743946 0 0 0 16 0 0 0 -203 S
+PB 0 1 0 -1
 1 20 96 1d17+6 1d5+0
 1.0.0.0 129
 4 4 1
@@ -1244,8 +1244,8 @@ thri-kreen thri kreen warrior~
 &+Yvery a very powerful warrior, however a single mage, or shaman could
 &+Yquickly reduce him to scraps.&n
 ~
-2122 0 0 0 2 0 0 150 S
-TK 0 1 -1
+2122 0 0 0 0 2 0 0 150 S
+TK 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1259,8 +1259,8 @@ A &+BBarbarian &+wtraveller is here, waiting for morning&n.
 &+wthey tell you, she could quickly reduce you to nothing with a simple
 &+wincantation.&n
 ~
-2122 0 0 0 0 0 0 950 S
-PB 0 256 -1
+2122 0 0 0 0 0 0 0 950 S
+PB 0 256 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 2
@@ -1274,8 +1274,8 @@ elven elf man mage sorc sorcerer~
 &+crather frail, but something tells you, looking at his muscles is
 &+ca mistake, and you should watch out for his sorcery.&n
 ~
-2250 0 0 0 0 0 0 -229 S
-PE 0 512 -1
+2250 0 0 0 0 0 0 0 -229 S
+PE 0 512 0 -1
 40 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 6 6 1
@@ -1288,8 +1288,8 @@ halfling bard small~
 &+ysongs.  Although he looks rather weak, he is very influencial, for
 &+ya bard.
 ~
-2122 0 0 0 0 0 0 1000 S
-PF 0 32768 -1
+2122 0 0 0 0 0 0 0 1000 S
+PF 0 32768 0 -1
 38 2 -21 38d88+836 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -1304,8 +1304,8 @@ duergar assassin evil~
 &+rand his eyes tell of a great fear, for he cannot leave the room, or
 &+rrisk being hunted by a party of humans.&n
 ~
-1073743946 72 0 270008320 131074 0 0 -1000 S
-PD 0 8192 -1
+1073743946 72 0 0 270008320 131074 0 0 -1000 S
+PD 0 8192 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1319,8 +1319,8 @@ troll lost evil~
 &+glarge.  He could easily deter many attackers, but he may never
 &+gfind his way back to the underdark.&n
 ~
-2122 1 0 0 0 0 0 -1000 S
-PT 0 1 -1
+2122 1 0 0 0 0 0 0 -1000 S
+PT 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 6 6 1
@@ -1333,8 +1333,8 @@ woman patron~
 &+mhaving fun laughing and joking with the other patrons.
 &+mShe appears to be a local to the bar, and is moves about freely.&n
 ~
-2120 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+2120 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 2
@@ -1348,8 +1348,8 @@ man young drunk~
 &+Wwatching this great act.  However he looks rather irritated and
 &+Wwill probably fight if made fun of.&n
 ~
-2120 0 0 0 0 0 0 -1000 S
-PH 0 16 -1
+2120 0 0 0 0 0 0 0 -1000 S
+PH 0 16 0 -1
 29 8 7 29d65+377 3d6+4
 9.4.7.1 25839
 8 8 1
@@ -1363,8 +1363,8 @@ drunk anti paladin anti-paladin antipaladin~
 &+gto make his way home.  He was exiled from &+RTharnadia &+glong ago
 &+gfor battling with a commoner.&n
 ~
-2120 0 0 0 0 0 0 -1000 S
-PH 0 16 -1
+2120 0 0 0 0 0 0 0 -1000 S
+PH 0 16 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -1377,8 +1377,8 @@ receptionist~
 &+Mwith blue eyes and brown hair.  She smiles at you and asks if you have
 &+Mpaid for your room.&n
 ~
-2122 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+2122 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 51 -5 -98 51d121+4284 7d6+30
 6.9.4.6 206550
 8 8 2
@@ -1392,8 +1392,8 @@ A young warrior~
 &+whe may become quite knowledgable, but now he looks weak and foolish.
 &+wHe is a very clean cut human, not looking a thing like a warrior.&n
 ~
-2120 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -1407,8 +1407,8 @@ barbarian traveler shaman~
 &+Bshows much cleverness and skill with what she doess.
 &+BShe also appears to have had some experience in this field before.&n
 ~
-2120 0 0 0 0 0 0 1000 S
-PB 0 256 -1
+2120 0 0 0 0 0 0 0 1000 S
+PB 0 256 0 -1
 26 8 16 26d60+312 3d6+4
 7.2.6.1 23166
 8 8 2
@@ -1424,8 +1424,8 @@ life. It flashes a hostile look in your direction and screams...
 &+WThe spirit groans, 'It wasn't our fault! He got us all killed, that
 &+Wbastard!'&N
 ~
-33687754 0 0 134217738 194 0 0 -1000 S
-UG 0 1024 -1
+33687754 0 0 0 134217738 194 0 0 -1000 S
+UG 0 1024 0 -1
 30 2 -38 40d64+840 4d7+10
 0.0.0.0 51840
 11 11 2
@@ -1439,8 +1439,8 @@ humanoid skulk figure~
 &+Lbut you can't be sure. Upon noticing it, it quickly juts for a new hiding
 &+Lplace.
 ~
-1073744073 0 0 1572904 2 0 0 -1000 S
-H 0 8192 -1
+1073744073 0 0 0 1572904 2 0 0 -1000 S
+H 0 8192 0 -1
 25 -1 -69 45d90+1935 6d6+12
 5.9.8.4 109350
 8 8 0
@@ -1453,8 +1453,8 @@ unseen servant form~
 &+wconstructed of pure magical energy. It pays little attention to your
 &+wpresense busying itself with keeping this little shop clean and proper.
 ~
-67242058 0 0 436207642 2050 0 0 0 S
-EA 0 1 -1
+67242058 0 0 0 436207642 2050 0 0 0 S
+EA 0 1 0 -1
 25 -3 -105 50d119+2750 6d6+25
 0.0.0.0 121500
 11 11 0
@@ -1471,8 +1471,8 @@ than two bright points of &+mpurple&N light staring right through you.
 
 &+Wan undead knight tells you, 'None may pass! Begone!'
 ~
-2058 0 0 369098792 294914 0 0 -1000 S
-U 0 16 -1
+2058 0 0 0 369098792 294914 0 0 -1000 S
+U 0 16 0 -1
 45 -5 -111 55d131+4675 7d6+30
 0.0.0.0 222750
 8 8 1
@@ -1487,8 +1487,8 @@ he turns with a warm smile.
 &+WA wise old man tells you, 'Welcome! I haven't seen a living face around
 &+Where in ages! What can I do for you?'
 ~
-2250 0 0 0 2 0 0 0 S
-P2 0 128 -1
+2250 0 0 0 0 2 0 0 0 S
+P2 0 128 0 -1
 40 2 -28 40d88+880 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1502,8 +1502,8 @@ presense. The muscular form has no hair and its head is oddly distorted.
 Its &+Wmilky-white&N oval eyes peer into your soul as it attempts to
 destroy you.
 ~
-1115686924 1 0 33554696 2 0 0 -1000 S
-X 0 1 -1
+1115686924 1 0 0 33554696 2 0 0 -1000 S
+X 0 1 0 -1
 35 -3 -110 50d119+3100 6d6+25
 0.3.9.6 182250
 8 8 0
@@ -1517,8 +1517,8 @@ eyes. What he is looking for cannot be known. Upon closer inspection,
 you begin to feel the unmistakeable aura of tragic danger, sadness, and
 determination.
 ~
-1107298314 0 0 437780522 2050 0 0 0 S
-U 0 512 -1
+1107298314 0 0 0 437780522 2050 0 0 0 S
+U 0 512 0 -1
 35 -5 -111 55d88+4565 7d6+30
 0.0.0.0 222750
 11 11 1
@@ -1531,8 +1531,8 @@ This large &+Glight-green&N climbing plant has &+gdark green buds&N, and flowers
 like those of an orchid, &+Ybright yellow&N in color with splashes of &+Mpurple&N.
 It takes up about 20 feet of the city wall.
 ~
-2063 0 0 301989936 0 0 0 0 S
-VT 0 0 -1
+2063 0 0 0 301989936 0 0 0 0 S
+VT 0 0 0 -1
 30 -3 -95 50d100+3150 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -1546,8 +1546,8 @@ a once proud warrior. Now all that is left is a mindless shell of
 a person, searching for intruders who would seek to harm the force
 that guides this wretched being.
 ~
-1140850766 1 0 32 0 0 0 0 S
-H 0 1 -1
+1140850766 1 0 0 32 0 0 0 0 S
+H 0 1 0 -1
 20 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1561,8 +1561,8 @@ a once proud warrior. Now all that is left is a mindless shell of
 a person, searching for intruders who would seek to harm the force
 that guides this wretched being.
 ~
-1140850766 1 0 32 0 0 0 0 S
-H 0 512 -1
+1140850766 1 0 0 32 0 0 0 0 S
+H 0 512 0 -1
 20 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -1575,8 +1575,8 @@ The sheer SIZE of this plant is breathtaking! Each of its gargantuan
 tentacles has a very dry texture. As you near the plant, it begins to
 emit a faint odor unlike anything you have ever smelled before.
 ~
-33554442 1 0 33554456 262144 0 0 0 S
-VT 0 1 -1
+33554442 1 0 0 33554456 262144 0 0 0 S
+VT 0 1 0 -1
 25 -1 -69 45d107+2475 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -1589,8 +1589,8 @@ This small plant appears to be carrying itself about with the use of
 its stubby green stalks. It does have roots, although they do not
 penetrate the ground as they should.
 ~
-1073743944 1 0 16 0 0 0 0 S
-AP 0 0 -1
+1073743944 1 0 0 16 0 0 0 0 S
+AP 0 0 0 -1
 20 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -1604,8 +1604,8 @@ large whipweed plant~
 &+gbefore you appeared has slipped its mind, as you have become its
 &+gprimary focus.
 ~
-1174407241 1 0 301989912 0 0 0 0 S
-VT 0 1 -1
+1174407241 1 0 0 301989912 0 0 0 0 S
+VT 0 1 0 -1
 25 -1 -69 45d107+2475 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -1618,8 +1618,8 @@ huge giant worm~
 &+gdark, slimy, brown underbelly.  A huge gaping mouth opens at one end, big
 &+genough to swallow a grown man whole.
 ~
-1073743882 1 0 33554464 0 0 0 0 S
-G 0 1 -1
+1073743882 1 0 0 33554464 0 0 0 0 S
+G 0 1 0 -1
 45 -1 -59 45d107+2250 6d6+12
 5.9.8.4 109350
 8 8 0
@@ -1632,8 +1632,8 @@ zombie torturer~
 &+grotting wounds.  A glassy-eyed expression covers the face of this
 &+gextra large zombie torturer.
 ~
-2122 1 0 0 0 0 0 -1000 S
-zo 0 1 4
+2122 1 0 0 0 0 0 0 -1000 S
+zo 0 1 0 4
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1647,8 +1647,8 @@ ghost quartermaster~
 &+Wthis quartermaster lives as an apparition now, forever existing
 &+Wonly to haunt this dreary, decimated place.
 ~
-2058 0 0 8 0 0 0 -400 S
-ug 0 1 3
+2058 0 0 0 8 0 0 0 -400 S
+ug 0 1 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1666,8 +1666,8 @@ thrulmar undead minotaur~
 &+Rresides in his former office, hunched over the once-great planning
 &+Rchamber in a spectral, undead purgatory.
 ~
-2122 0 0 24 0 0 0 -1000 S
-u 0 1 5
+2122 0 0 0 24 0 0 0 -1000 S
+u 0 1 0 5
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1680,8 +1680,8 @@ zombie soldier~
 &+Rexposed bones.  Rotting flesh and pale skin reeks of undeath as this
 &+Rsouless fallen soldier has reanimated.
 ~
-1073741898 1 0 0 0 0 0 -1000 S
-zo 0 1 -1
+1073741898 1 0 0 0 0 0 0 -1000 S
+zo 0 1 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1694,8 +1694,8 @@ skeleton~
 &+Wof this ancient outpost.  This fearsome undead beast has eyes of fire
 &+Wand moves quickly and viciously.
 ~
-1073743946 1 0 16 0 0 0 -1000 S
-sk 0 1 -1
+1073743946 1 0 0 16 0 0 0 -1000 S
+sk 0 1 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1709,8 +1709,8 @@ zombie captain~
 &+ghanging by paper-thin wisps of decayed flesh and fragments of tattered,
 &+gfilthy clothing.
 ~
-1073743946 1 0 24 0 0 0 -1000 S
-zo 0 1 -1
+1073743946 1 0 0 24 0 0 0 -1000 S
+zo 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1725,8 +1725,8 @@ flesh golem~
 &+Mwithin these Black Mountains.  It has numerous appendages and swings
 &+Mforth with gutteral shrieks.
 ~
-74 1 0 16 0 0 0 -1000 S
-og 0 1 5
+74 1 0 0 16 0 0 0 -1000 S
+og 0 1 0 5
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1739,8 +1739,8 @@ ancient skeleton~
 &+Wof this ancient outpost.  This fearsome undead beast has eyes of fire
 &+Wand moves quickly and viciously.
 ~
-2120 1 0 16 0 0 0 -1000 S
-sk 0 1 -1
+2120 1 0 0 16 0 0 0 -1000 S
+sk 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1753,8 +1753,8 @@ skeleton~
 &+Wof this ancient outpost.  This fearsome undead beast has eyes of fire
 &+Wand moves quickly and viciously.
 ~
-2120 1 0 16 0 0 0 -1000 S
-sk 0 1 -1
+2120 1 0 0 16 0 0 0 -1000 S
+sk 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1767,8 +1767,8 @@ zombie~
 &+Rexposed bones.  Rotting flesh and pale skin reeks of undeath as this
 &+Rsouless fallen soldier has reanimated.
 ~
-72 1 0 0 0 0 0 -1000 S
-zo 0 1 -1
+72 1 0 0 0 0 0 0 -1000 S
+zo 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1781,8 +1781,8 @@ small dire maggot~
 &Nand disgusting.  It has two massive black shiny eyes that poke out of
 &Na fat, nearly translucent jelly-filled sac-like body.
 ~
-74 1 0 0 0 0 0 -400 S
-ap 0 1 2
+74 1 0 0 0 0 0 0 -400 S
+ap 0 1 0 2
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1795,8 +1795,8 @@ dungeon rat~
 &+yA great amount of time spent in this dark cavern has caused the eyes
 &+yof this rat, and others like it, to pale with its infravision.
 ~
-2248 1 0 24 0 0 0 -666 S
-a 0 1 1
+2248 1 0 0 24 0 0 0 -666 S
+a 0 1 0 1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1808,8 +1808,8 @@ tortured spirit~
    &+WThis celestial spirit twists and writhes as it cannot bare this
 &+Wexistence any longer.
 ~
-2122 1 0 0 0 0 0 -1000 S
-u 0 1 3
+2122 1 0 0 0 0 0 0 -1000 S
+u 0 1 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1823,8 +1823,8 @@ enraged zombie ogress~
 &+Lchunks of flesh expose the rotten flesh and bare bones beneath the
 &+Lsurface of this horrible abomination.
 ~
-1073743944 1 0 16 0 0 0 -1000 S
-zo 0 1048577 5
+1073743944 1 0 0 16 0 0 0 -1000 S
+zo 0 1048577 0 5
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

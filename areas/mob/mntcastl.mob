@@ -16,8 +16,8 @@ Looking up from his revere Du'Maathe says "Ah my friend,
 you are either a very brave hero or a fool.  Which are
 thee?".
 ~
-1140852746 0 0 184 2049 0 0 1000 S
-PH 1 1 -1
+1140852746 0 0 0 184 2049 0 0 1000 S
+PH 1 1 0 -1
 60 -10 -132 60d143+6300 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -35,8 +35,8 @@ filled with jagged, yellowed teeth opens slowly and a long tounge
 flickers in annoyance.  Large black eyes stare downward filled with
 unchallengable destruction and chaos.
 ~
-1074006606 1 0 34605064 0 0 0 -600 S
-D 0 2 -1
+1074006606 1 0 0 34605064 0 0 0 -600 S
+D 0 2 0 -1
 56 -7 -134 56d96+6328 7d6+35
 1.3.6.19 453600
 8 8 0
@@ -52,8 +52,8 @@ of hair.  His dark eyes however betray his age, gleaming
 with power and knowledge, he apears more than able to defend
 himself.
 ~
-2122 0 0 8 0 0 0 0 S
-PH 1 12 -1
+2122 0 0 0 8 0 0 0 0 S
+PH 1 12 0 -1
 59 -7 -128 59d96+6077 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -68,8 +68,8 @@ tall, his well proportioned frame is heavily muscled.  Carrying a
 small sword and the knowhow to use it, it would be wise not to cross
 him.
 ~
-1140852812 0 0 8 0 0 0 1000 S
-PH 1 1 -1
+1140852812 0 0 0 8 0 0 0 1000 S
+PH 1 1 0 -1
 40 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -83,8 +83,8 @@ Baring many a scar from battles fought over the years, he is more
 than capable of defending himself.  Constantly fingering the hilt of
 his weapon, his gaze searching out any possbile threat.
 ~
-67110984 0 0 136 0 0 0 1000 S
-PH 1 1 -1
+67110984 0 0 0 136 0 0 0 1000 S
+PH 1 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -99,8 +99,8 @@ magics of life and now with the power of undeath, his malice for
 the living, makes him a dangerous foe.  With the skin of his body
 now taunt across his body, he has the appearance of a dried out husk.
 ~
-1073760264 1 0 134217770 12480 0 0 -1000 S
-X 0 512 -1
+1073760264 1 0 0 134217770 12480 0 0 -1000 S
+X 0 512 0 -1
 60 -10 -147 60d96+6600 7d6+35
 6.6.4.10 364500
 8 8 0
@@ -115,8 +115,8 @@ not tolerate any indisgression.  With weapon drawn, and the
 willingness to use it, he regards all with disdain.  His well toned
 figure shows he has the power to enforce his orders.
 ~
-67110922 1 0 72 0 0 0 1000 S
-PH 1 1 -1
+67110922 1 0 0 72 0 0 0 1000 S
+PH 1 1 0 -1
 57 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -130,8 +130,8 @@ The spectre has been forced to give up enternal life, and continue a life of
 undeath.  Created to guard the very catacombs in which he was laid to rest in,
 the spectre of a lord strikes at intruders with avengence.
 ~
-1073743880 1 0 33554586 2048 0 0 -1000 S
-U 0 1 -1
+1073743880 1 0 0 33554586 2048 0 0 -1000 S
+U 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.0.0.0 121500
 8 8 0
@@ -148,8 +148,8 @@ life, and without guideance, this formiddible foe is free
 to sate its needs.  A bright red glow in its eyesockets,
 its only indication of emotion.
 ~
-2058 1 0 34603182 14530 0 0 -1000 S
-UV 0 1 -1
+2058 1 0 0 34603182 14530 0 0 -1000 S
+UV 0 1 0 -1
 60 -10 -132 60d143+6300 7d6+35
 6.6.9.7 243000
 8 8 0
@@ -165,8 +165,8 @@ this crab wields two massive claws.  The claws of the crab are
 armed with rows of sharp horns, designed to inflict maximum
 damage, so that a victim will be incapacitated quickly.
 ~
-2122 1 0 34603008 0 0 0 0 S
-AC 0 1 -1
+2122 1 0 0 34603008 0 0 0 0 S
+AC 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.0.0.0 9720
 8 8 0
@@ -182,8 +182,8 @@ the beast is unmarred, apart from a scars, inflicted during a battle
 for territory.  Lifting its head as you approach, its dark eyes look
 upon you more as an equal than as a threat.
 ~
-1073743944 0 0 33554432 0 0 0 0 S
-AE 0 1 -1
+1073743944 0 0 0 33554432 0 0 0 0 S
+AE 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -199,8 +199,8 @@ fire and battle and is made quite distinctive when viewing the various
 knots and twists in the bark.  The ground beneath the tree ripples as
 the roots of the tree manouver through the earth.
 ~
-1073743944 0 0 33554464 0 0 0 0 S
-VT 0 1 -1
+1073743944 0 0 0 33554464 0 0 0 0 S
+VT 0 1 0 -1
 35 6 -12 35d83+945 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -215,8 +215,8 @@ His piercing blue eyes flash in annoyance at being disturbed.
 Standing nearly six feet in height, his finely toned frame
 seems perfectly suited to his home in this area.
 ~
-1073743944 0 0 16777248 0 0 0 1000 S
-P2 0 2 -1
+1073743944 0 0 0 16777248 0 0 0 1000 S
+P2 0 2 0 -1
 32 6 -2 32d83+544 4d6+7
 6.8.0.2 41472
 8 8 0
@@ -231,8 +231,8 @@ dangerous, his cunning can be seen from a glance.  Whilst he may be
 imprisoned his power has been left with him, from fear of invocation
 their gods misfortune.  A fear the shaman is only to happy to promote.
 ~
-2058 1 0 8 0 0 0 -1000 S
-G 0 256 -1
+2058 1 0 0 8 0 0 0 -1000 S
+G 0 256 0 -1
 60 -10 -122 60d132+6540 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -246,8 +246,8 @@ to live.  One look at his eyes however displays a cunning and power,
 that would explain why he has survived so long.  Chanting softly to
 himself, he can be seen testing the wards imprisoning him.
 ~
-2058 1 0 8 0 0 0 -1000 S
-G 0 512 -1
+2058 1 0 0 8 0 0 0 -1000 S
+G 0 512 0 -1
 55 -7 -104 56d96+6048 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -262,8 +262,8 @@ is far from defeated.  Constantly searching for a means to escape, he
 takes in all the details of the surrounds.  A well muscled body and the
 grim determination on his face, make him a foe worthy of respect.
 ~
-2058 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+2058 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 59 -5 -97 54d131+4860 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -277,8 +277,8 @@ so that it may feed.  Darting away at a disturbance, it is quite a
 timid creature.  Living in small holes in the ground, it only has to
 fear the farmers who chase them away from their prize.
 ~
-200 0 0 0 0 0 0 1000 S
-A 0 1 -1
+200 0 0 0 0 0 0 0 1000 S
+A 0 1 0 -1
 2 20 93 2d17+11 1d5+0
 0.0.0.0 259
 8 8 0
@@ -293,8 +293,8 @@ A lithe frame that is finly toned helps him to carry out his day to
 day tasks.  This middle aged man is hard working and enjoys to rewards
 at the end of it.
 ~
-2120 0 0 0 0 0 0 1000 S
-PH 1 1 -1
+2120 0 0 0 0 0 0 0 1000 S
+PH 1 1 0 -1
 17 13 45 17d35+119 3d4+2
 8.6.2.0 8262
 8 8 1
@@ -308,8 +308,8 @@ covered with tough armor plated skin.  Atop the sphere are ten
 small eyes on stalks.  A large central eye is in the front of
 the body, with a mouth of sharp teeth located below it.
 ~
-1073743880 1 0 167772186 1 0 0 -1000 S
-BH 0 514 -1
+1073743880 1 0 0 167772186 1 0 0 -1000 S
+BH 0 514 0 -1
 56 -1 -62 43d72+1849 6d6+12
 3.8.7.3 104490
 8 8 0
@@ -325,8 +325,8 @@ skin matches that of the surrounding stone and is likely as
 strong.  Dull red eyes regard the area with a protective glance,
 and flash in anger at anything out of the ordinary.
 ~
-1074268232 1 0 167772312 2048 0 0 -1000 S
-OG 0 1 -1
+1074268232 1 0 0 167772312 2048 0 0 -1000 S
+OG 0 1 0 -1
 56 -1 -65 44d107+1980 6d6+12
 4.9.8.3 106920
 8 8 0
@@ -342,8 +342,8 @@ restraint.  Its thick arms and legs give an accurate indication of
 its power, and small emotionless eyes indicate that it wont hesitate
 to use it.
 ~
-67131466 1 0 33554584 0 0 0 0 S
-OG 1 1 -1
+67131466 1 0 0 33554584 0 0 0 0 S
+OG 1 1 0 -1
 56 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 0
@@ -358,8 +358,8 @@ of the servants uniform emites a subtle hum, this coupled with a
 slight color change, alerts the servant to what task and area he is
 required to perform.
 ~
-2120 0 0 524288 0 0 0 1000 S
-PH 0 1 -1
+2120 0 0 0 524288 0 0 0 1000 S
+PH 0 1 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -375,8 +375,8 @@ signs of grey can be seen coming through her hair.  Stout arms show
 that she is no stranger to hard work, and that she can more than pull
 her weight when required.
 ~
-2122 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 17 13 45 17d33+102 3d4+2
 8.6.2.0 8262
 8 8 2
@@ -391,8 +391,8 @@ with.  A curly mop of brown hair adorns his head and tumbles into his
 eyes, diverting his attentions mementarily.  Wearing a simple woolen
 pullover for warmth, he is unaware of the trouble his exploits cause.
 ~
-136 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+136 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 6 18 80 6d21+33 2d3+1
 3.2.0.0 777
 8 8 1
@@ -407,8 +407,8 @@ simple leather breaches and a warm woolen pullover, this youth seems
 more content to stare skyward than to be tending to the herds as they
 graze.
 ~
-2056 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 11 15 64 11d27+66 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -423,8 +423,8 @@ just starting to take hold.  His warm smile helps to relieve tension
 and put the nerves at ease.  Wearing a well used apron, stained with
 ale and cider, he offers to pour a drink.
 ~
-2058 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -439,8 +439,8 @@ hard to provide a decent meal for the patrons.  Well known for her breads
 and spicey meals, it is rumored that she passed up the postion of cook,
 in the castle in the mountains.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 2 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 26 8 16 26d60+312 3d6+4
 7.2.6.1 23166
 8 8 2
@@ -455,8 +455,8 @@ apron, she tends to the needs of the patrons, and keeps the bar and
 the tabes of the common room clean.  Working fairly long hours, she
 is usually rewarded with generous tips, and in some cases flowers.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 22 11 29 22d47+220 3d5+3
 4.0.5.0 19602
 8 8 2
@@ -471,8 +471,8 @@ wares, and to repair almost anything.  Busy as he may be, he always
 seems to have time to stop and entertain the children that pull on
 his coat for a story.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 10 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 10 0 -1
 26 8 16 26d44+286 3d6+4
 7.2.6.1 23166
 8 8 1
@@ -486,8 +486,8 @@ mulled wine to enjoy the fire and the company of the other villagers.
 Letting out a small sigh of relief that the days work was completed
 successfully, he sits back in the chair and talks quitely.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 2 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 23 11 26 23d47+230 3d5+3
 5.1.6.0 20493
 8 8 1
@@ -502,8 +502,8 @@ wool for the village to make new clothes for the coming year.  The
 sheep has been bred for its thick wool, which makes lasting and warm
 clothing.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 8 18 74 8d18+28 2d3+1
 0.0.0.0 1036
 8 8 0
@@ -517,8 +517,8 @@ carts and to help in the sowing of the fields come harvest.  Reknown
 for it lack will it makes a very good beast of burdon, and is bred by
 the villagers for that very trait.
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 14 15 55 14d23+56 2d5+2
 0.0.0.0 6804
 8 8 0
@@ -536,8 +536,8 @@ with jagged, yellowed teeth opens slowly, and a long tounge flickers in
 annoyance.  Large black eyes stare downwards filled with unchallengable
 destruction and chaos.
 ~
-1073744136 1 0 8 0 0 0 -1000 S
-D 0 1 -1
+1073744136 1 0 0 8 0 0 0 -1000 S
+D 0 1 0 -1
 57 -7 -137 57d132+6498 7d6+35
 2.4.6.19 461700
 8 8 0
@@ -555,8 +555,8 @@ with jagged, yellowed teeth opens slowly, and a long tounge flickers in
 annoyance.  Large black eyes stare downwards filled with unchallengable
 destruction and chaos.
 ~
-1073744904 1 0 8 0 0 0 -1000 S
-D 0 1 -1
+1073744904 1 0 0 8 0 0 0 -1000 S
+D 0 1 0 -1
 57 -7 -137 57d143+6555 7d6+35
 2.4.6.19 461700
 8 8 0
@@ -574,8 +574,8 @@ with jagged, yellowed teeth opens slowly, and a long tounge flickers in
 annoyance.  Large black eyes stare downwards filled with unchallengable
 destruction and chaos.
 ~
-1073744392 1 0 8 0 0 0 -1000 S
-D 0 2 -1
+1073744392 1 0 0 8 0 0 0 -1000 S
+D 0 2 0 -1
 57 -7 -137 57d132+6498 7d6+35
 2.4.6.19 461700
 8 8 0
@@ -590,8 +590,8 @@ mouth filled with sharp teeth, the coppery stains of dried blood can be
 seen.  Swiftly moving across the caverous floor, it displays suprising
 agility and power.
 ~
-1073743880 1 0 152 0 0 0 0 S
-AC 0 1 -1
+1073743880 1 0 0 152 0 0 0 0 S
+AC 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 0.0.0.0 109350
 8 8 0
@@ -608,8 +608,8 @@ powerful arms and legs are all armed with claws.  Four round eyes are
 postioned evenly across the forehead of the creature, each one centered
 on its prey.
 ~
-1073743880 1 0 8 0 0 0 -1000 S
-G 0 1 -1
+1073743880 1 0 0 8 0 0 0 -1000 S
+G 0 1 0 -1
 48 -3 -68 48d119+2880 6d6+25
 8.1.0.5 116640
 8 8 0
@@ -625,8 +625,8 @@ creature far than makes up for it with an extreme cunning and sheer
 power.  With four legs, each armed with deadly claws, the sheer size
 and strength of the creature is enough to subdue most foes.
 ~
-1073743880 1 0 1048728 0 0 0 -1000 S
-G 0 1 -1
+1073743880 1 0 0 1048728 0 0 0 -1000 S
+G 0 1 0 -1
 48 -3 -68 48d119+2880 6d6+25
 8.1.0.5 116640
 8 8 0
@@ -642,8 +642,8 @@ sixteen years old.  Carrying a small basket on her arm, to carry
 the various bits and pieces for her mother, she pauses to admire
 the cloud patern in the sky.
 ~
-8 0 0 0 0 0 0 1000 S
-PH 0 0 -1
+8 0 0 0 0 0 0 0 1000 S
+PH 0 0 0 -1
 14 15 55 14d18+56 2d5+2
 7.5.2.0 6804
 8 8 2
@@ -657,8 +657,8 @@ appearance.  The horse seems to have a good temprament however and is
 quite content to nuzzle into the stable hand for and extra piece of
 food.
 ~
-134217738 0 0 0 0 0 0 0 S
-AE 0 0 -1
+134217738 0 0 0 0 0 0 0 0 S
+AE 0 0 0 -1
 12 15 61 12d23+48 2d5+2
 0.0.0.0 5832
 8 8 0
@@ -672,8 +672,8 @@ be feeding or reshoeing the beasts.  Wearing a simple leather garb,
 the man is starting to show signs of age, both in the greying hair
 on his head and the slight limp from aching bones.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 0 2 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 16 13 48 16d35+112 3d4+2
 8.6.2.0 7776
 8 8 1
@@ -688,8 +688,8 @@ thin man he is obviously more adept to that of the night, and hence his
 hiding place seems to suit.  Wearing a dark leather garb he has set up
 for a long wait.
 ~
-1073743880 1 0 34603016 0 0 0 -1000 S
-PH 0 4096 -1
+1073743880 1 0 0 34603016 0 0 0 -1000 S
+PH 0 4096 0 -1
 40 2 -28 40d80+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -703,8 +703,8 @@ out of place in this freshwater environment.  Like his saltwater kin
 he has a large mouth filled with rows of sharp teeth, and at the smell
 of blood is sent into a frenzy.
 ~
-264200 1 0 33556488 0 0 0 0 S
-F 0 1 -1
+264200 1 0 0 33556488 0 0 0 0 S
+F 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -719,8 +719,8 @@ inscribed with wards of power, he is more than happy to stare down any
 guest of the lord who dares challenge him. Standing just behind the
 throne he is able to defend is lord should an attack come.
 ~
-67110926 0 0 33554442 0 0 0 1000 S
-PH 1 512 -1
+67110926 0 0 0 33554442 0 0 0 1000 S
+PH 1 512 0 -1
 56 -7 -104 56d96+6048 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -734,8 +734,8 @@ this vendor spends his days selling the village produce to the occupants
 of the castle.  Quite out of place in his plain woolen jumper and leather
 breaches, he is non the less smiled at and greeted often.
 ~
-2058 0 0 33554440 0 0 0 0 S
-PH 1 1 -1
+2058 0 0 0 33554440 0 0 0 0 S
+PH 1 1 0 -1
 38 2 -21 38d95+874 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -749,8 +749,8 @@ often consulted for his advice on protocols between the castle and the
 longer living races.  More than content with his anvil and furnace he
 is happy to mend and make the equipment needed by the castle guard.
 ~
-2058 0 0 8 0 0 0 1000 S
-PM 0 1 -1
+2058 0 0 0 8 0 0 0 1000 S
+PM 0 1 0 -1
 42 -1 -59 42d107+1890 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -765,8 +765,8 @@ goodwill and seeking to illistrate his tribes intentions in the area,
 so that no conflict will arise from misunderstanding. Standing nearly
 thirty feet in height he is forced to sit stooped on his bed.
 ~
-1140865034 0 0 67109016 2048 0 0 1000 S
-G 1 1 -1
+1140865034 0 0 0 67109016 2048 0 0 1000 S
+G 1 1 0 -1
 60 -7 -118 59d143+6490 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -781,8 +781,8 @@ friendship between the grey elves and the castle occupants.  Dressed
 in a light brown and green attire, the elf meditates for rest before
 his sheduled meeting with the lord.
 ~
-2058 0 0 24 0 0 0 1000 S
-PE 1 512 -1
+2058 0 0 0 24 0 0 0 1000 S
+PE 1 512 0 -1
 59 -7 -128 59d96+6077 7d6+35
 4.5.9.6 238950
 8 8 2
@@ -796,8 +796,8 @@ monk looks up irritably at some noise from within the castle.  The table
 he is sitting at is piled with books and scrolls, and as he finishs with
 a tome he replaces it methodically upon the shelf it belongs.
 ~
-67110920 1 0 144 0 0 0 0 S
-PH 1 1 -1
+67110920 1 0 0 144 0 0 0 0 S
+PH 1 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -812,8 +812,8 @@ tombs of knowledge, the monk carefully inspects the existing books for
 wear and tear.  Wearing a simple robe and practical sandals, the monks
 moves quietly and with familiarity around the library.
 ~
-67110920 1 0 24 0 0 0 0 S
-PH 1 1 -1
+67110920 1 0 0 24 0 0 0 0 S
+PH 1 1 0 -1
 60 -10 -132 60d143+6300 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -827,8 +827,8 @@ quite happy to spend the days staring out over the spectacualr views
 afforded from the castle spire.  From a family of obvious wealth, the
 guest is dressed in fine silks and jewellery adorns his neck and hands.
 ~
-1073874954 0 0 24 0 0 0 0 S
-X 1 256 -1
+1073874954 0 0 0 24 0 0 0 0 S
+X 1 256 0 -1
 57 -7 -132 57d132+6327 7d6+35
 2.4.2.9 346275
 8 8 2
@@ -842,8 +842,8 @@ castle lord.  Hoping to gain permission to mine the area for ore and
 other minerals.  Fairly sure of the permisson his bag contains the
 necessary mining tools, including picks and shovels.
 ~
-2058 0 0 168 2049 0 0 1000 S
-PM 1 1 -1
+2058 0 0 0 168 2049 0 0 1000 S
+PM 1 1 0 -1
 59 -7 -128 59d143+6195 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -857,8 +857,8 @@ more than happy to taste everything to ensure it is just right.  Wearing
 a white uniform with an apron stained from use, the cook pulls tray of
 meat from the oven and bastes it with the delicate juices from the pan.
 ~
-2058 0 0 8 0 0 0 1000 S
-PH 1 0 -1
+2058 0 0 0 8 0 0 0 1000 S
+PH 1 0 0 -1
 44 -1 -65 44d99+1936 6d6+12
 4.9.8.3 106920
 8 8 2
@@ -872,8 +872,8 @@ relaxes and chats with friends over a mug of ale.  Laughing at
 some unheard joke he gets up and approaches the barmaid for
 another ale.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -888,8 +888,8 @@ lord, he rests up, in order to be fresh for the request.  Wearing a
 travelling garb, and with a small bag open at the end of the bed
 containing better clothes, he practices his speach for the lord.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 1 8 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 1 8 0 -1
 47 -3 -75 47d110+2538 6d6+25
 7.0.0.5 114210
 8 8 1
@@ -904,8 +904,8 @@ arch-mage exudes.  Destined to now protect the lich rather than the
 castle, he has been formed into a life of servitude and to give his
 life at the lich's will.
 ~
-67110926 1 0 33554442 0 0 0 -1000 S
-X 1 512 -1
+67110926 1 0 0 33554442 0 0 0 -1000 S
+X 1 512 0 -1
 51 -7 -129 56d96+6160 7d6+35
 1.3.2.9 340200
 8 8 2
@@ -919,8 +919,8 @@ ranking he chose to stay in the castle he had defended for so many years.
 Well known and well liked, he has a disarming smile and is more than
 happy to serve and ensure that his patrons are happy with their stay.
 ~
-67110922 0 0 33554440 0 0 0 0 S
-PH 1 2 -1
+67110922 0 0 0 33554440 0 0 0 0 S
+PH 1 2 0 -1
 46 -3 -72 46d119+2530 6d6+25
 6.0.9.4 111780
 8 8 1
@@ -935,8 +935,8 @@ a lesser priority than sleep, so far as rest is concerned.  Laying on
 a simple cot of a cloth and hay mattress he recounts the days events,
 and slowly drifts off to sleep.
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 5 5 1
@@ -951,8 +951,8 @@ outside world, she one who knows her produce and their value.  Dressed
 in a fairly formal attire, if of a lesser value than some clothes she
 sells, she has had many a marrige proposal laid before her.
 ~
-67110922 0 0 144 2049 0 0 0 S
-PH 1 1 -1
+67110922 0 0 0 144 2049 0 0 0 S
+PH 1 1 0 -1
 52 -5 -101 52d131+4420 7d6+30
 7.9.5.6 210600
 8 8 2
@@ -967,8 +967,8 @@ hand the views he has heard about.  Wearing only a simple garb he is
 awaiting an audience with the castle lord so that he may gain the
 necessary permission.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 1 10 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 1 10 0 -1
 43 -1 -62 43d72+1849 6d6+12
 3.8.7.3 104490
 8 8 1
@@ -982,8 +982,8 @@ barmaid dodges skilly fully between patrons tables and their often
 straying hands.  Not over pretty and proud of her job, she is very
 appreciated by both the innkeep and the regular patrons of the inn.
 ~
-2058 0 0 0 0 0 0 1000 S
-PH 1 0 -1
+2058 0 0 0 0 0 0 0 1000 S
+PH 1 0 0 -1
 42 -1 -59 42d99+1848 6d6+12
 2.8.7.3 102060
 8 8 2
@@ -998,8 +998,8 @@ for the beast left to his care, and it is not uncommon to see him
 checking on the horses late at night.  Keeping a clean stable and
 looking after the horses well, he is often rewarded by grateful owners.
 ~
-67110922 0 0 8 0 0 0 0 S
-PH 1 1 -1
+67110922 0 0 0 8 0 0 0 0 S
+PH 1 1 0 -1
 39 2 -24 39d95+897 4d7+10
 2.2.3.2 50544
 8 8 1
@@ -1015,8 +1015,8 @@ this man is well trained in tactics and is far from a novice to battle.
 This man is used to being obeyed without question, and is quick to anger
 should his orders be disobeyed.
 ~
-1140852744 128 0 33554616 2048 0 0 1000 S
-PH 1 8 -1
+1140852744 128 0 0 33554616 2048 0 0 1000 S
+PH 1 8 0 -1
 60 -10 -132 60d143+6300 7d6+35
 6.6.9.7 243000
 8 8 1
@@ -1032,8 +1032,8 @@ man is well known for his unforgiving strictness and the code of honor
 he follows.  A master of the sword, he is well able to defend himself
 from a vengful comrade.
 ~
-1140852744 0 0 33554616 2048 0 0 1000 S
-PH 1 2 -1
+1140852744 0 0 0 33554616 2048 0 0 1000 S
+PH 1 2 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -1048,8 +1048,8 @@ tall, his well proportioned frame is heavily muscled.  Carrying a
 small sword and the knowhow to use it, it would be wise not to cross
 him.
 ~
-67110988 0 0 33554472 0 0 0 1000 S
-PH 1 1 -1
+67110988 0 0 0 33554472 0 0 0 1000 S
+PH 1 1 0 -1
 45 -1 -69 45d107+2025 6d6+12
 5.9.8.4 109350
 8 8 1
@@ -1064,8 +1064,8 @@ only the castle walls but the spire as well.  His purpose still unknown
 he is being held until trial.  A desperate look in his eyes shows that
 he is far from giving up hope on escape.
 ~
-1107318794 1 0 51904696 34817 0 0 -1000 S
-X 0 8192 -1
+1107318794 1 0 0 51904696 34817 0 0 -1000 S
+X 0 8192 0 -1
 60 -10 -147 60d120+6600 7d6+35
 6.6.4.10 364500
 8 8 1
@@ -1080,8 +1080,8 @@ disdainfully at almost everything and quite happy to point out any
 faults in tings as minor as a small chip in workmanship to cracks in
 the paving on the road.
 ~
-1073743880 0 0 8 0 0 0 0 S
-PH 1 512 -1
+1073743880 0 0 0 8 0 0 0 0 S
+PH 1 512 0 -1
 50 -3 -95 50d80+2650 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1096,8 +1096,8 @@ it growls defensively at any intrusion into its territory.  Most
 likely preying on the habitants of the plateau below, this cat
 seems more the suited to its chosen environment.
 ~
-1073743880 1 0 0 0 0 0 0 S
-AC 0 1 -1
+1073743880 1 0 0 0 0 0 0 0 S
+AC 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 2
@@ -1111,8 +1111,8 @@ food for the local villagers, its life is a constant struggle for
 survival.  Swimming against the current of the river, it searchs
 for food on the bottom and in the water of the river.
 ~
-262152 0 0 0 0 0 0 0 S
-F 0 1 -1
+262152 0 0 0 0 0 0 0 0 S
+F 0 1 0 -1
 14 15 55 14d27+84 2d5+2
 0.0.0.0 6804
 8 8 0
@@ -1127,8 +1127,8 @@ ground for food.  Powerful legs support the bird, and are capable
 of great speed if the bird feels threatened.  Large eyes constantly
 scan the area for danger, in between foraging for food in the ground.
 ~
-131144 0 0 0 0 0 0 0 S
-B 0 1 -1
+131144 0 0 0 0 0 0 0 0 S
+B 0 1 0 -1
 29 8 7 29d65+377 3d6+4
 0.0.0.0 25839
 8 8 1
@@ -1143,8 +1143,8 @@ a possible meal when brushed.  About six feet in length, with a
 dark colored skin, it is almost imperceptable against the dark
 bottom of the lake.
 ~
-264202 1 0 101711904 0 0 0 1 S
-AP 1 1 -1
+264202 1 0 0 101711904 0 0 0 1 S
+AP 1 1 0 -1
 25 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -1159,8 +1159,8 @@ top of the head to its mouth, the squids waits patiently for its
 tentacles to provide it with food.  A dark stain can be seen
 emiting from the squid aiding it to stay hidden.
 ~
-264266 1 0 34603016 0 0 0 0 S
-AC 1 1 -1
+264266 1 0 0 34603016 0 0 0 0 S
+AC 1 1 0 -1
 35 6 -12 35d83+595 4d6+7
 0.0.0.0 45360
 8 8 0
@@ -1175,8 +1175,8 @@ blends in with the shadows cast by the trees, and makes it almost
 impossible to pick out.  Making a small squeeking noise it alerts
 its kin, to the possiblity of food.
 ~
-72 0 0 33554432 0 0 0 0 S
-A 0 1 -1
+72 0 0 0 33554432 0 0 0 0 S
+A 0 1 0 -1
 2 20 93 2d17+11 1d5+0
 0.0.0.0 259
 8 8 0
@@ -1193,8 +1193,8 @@ land.  His eyes constantly dart around in the meantime
 searching for a way the he can escape, possibly at the
 expense of his comrades.
 ~
-1174419466 1 0 33554616 2049 0 8192 -400 S
-PH 0 1 -1
+1174419466 1 0 0 33554616 2049 0 8192 -400 S
+PH 0 1 0 -1
 55 -7 -128 59d143+6195 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -1211,8 +1211,8 @@ young man, his well built body baring the scars of a life
 on the run, like his leader however he is fairly well
 dressed, and is able to speak with a note of finesse.
 ~
-67110922 1 0 33554488 2048 0 8192 -400 S
-PH 0 1 -1
+67110922 1 0 0 33554488 2048 0 8192 -400 S
+PH 0 1 0 -1
 53 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -1230,8 +1230,8 @@ her before now.  Unlike her calmer comrades, this middle
 aged woman is far from calm, and snaps at the slightest
 infraction towards her.
 ~
-67123210 1 0 33554472 1 0 8192 -400 S
-PH 0 512 -1
+67123210 1 0 0 33554472 1 0 8192 -400 S
+PH 0 512 0 -1
 53 -7 -114 56d96+5768 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -1246,8 +1246,8 @@ arch-mage exudes.  Destined to now protect the lich rather than the
 castle, he has been formed into a life of servitude and to give his
 life at the lich's will.
 ~
-67110926 1 0 33554442 0 0 0 -1000 S
-MF 0 3 -1
+67110926 1 0 0 33554442 0 0 0 -1000 S
+MF 0 3 0 -1
 50 -3 -95 50d110+2700 6d6+25
 0.3.1.5 121500
 8 8 2
@@ -1265,8 +1265,8 @@ with jagged, yellowed teeth opens slowly, and a long tounge flickers in
 annoyance.  Large black eyes stare downwards filled with unchallengable
 destruction and chaos.
 ~
-2154 1 0 570425528 2049 0 0 -1000 S
-D 0 1 -1
+2154 1 0 0 570425528 2049 0 0 -1000 S
+D 0 1 0 -1
 60 -7 -137 57d143+6555 7d6+35
 2.4.6.19 461700
 8 8 1
@@ -1281,8 +1281,8 @@ arch-mage exudes.  Destined to now protect the lich rather than the
 castle, he has been formed into a life of servitude and to give his
 life at the lich's will.
 ~
-67110926 1 0 33554442 0 0 0 -1000 S
-X 1 512 -1
+67110926 1 0 0 33554442 0 0 0 -1000 S
+X 1 512 0 -1
 51 -7 -129 56d132+6216 7d6+35
 1.3.2.9 340200
 8 8 2
@@ -1298,8 +1298,8 @@ flows in colors of green and brown.  A massive central maw,
 filled with razor sharp teeth, is fed by its powerful
 tentacles, the can crush the most powerful of beings.
 ~
-2058 1 0 33554472 2049 0 0 -1000 S
-X 0 512 -1
+2058 1 0 0 33554472 2049 0 0 -1000 S
+X 0 512 0 -1
 56 -7 -129 56d96+6160 7d6+35
 1.3.2.9 340200
 8 8 2
@@ -1316,8 +1316,8 @@ powerful magics bestowed by her chaotic god, this
 priestess searches for not for an escape but a way to
 conquer.
 ~
-2058 1 0 33554472 2050 0 0 -1000 S
-PL 0 32 -1
+2058 1 0 0 33554472 2050 0 0 -1000 S
+PL 0 32 0 -1
 60 -7 -128 59d132+6136 7d6+35
 4.5.9.6 238950
 8 8 2
@@ -1333,8 +1333,8 @@ he searches not for a way out but for a oath towards
 revenge.  Unused to such capture and torment, his hands
 constantly flash with ideas on escape.
 ~
-2058 1 0 33554472 2050 0 0 -1000 S
-PL 0 1 -1
+2058 1 0 0 33554472 2050 0 0 -1000 S
+PL 0 1 0 -1
 55 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -1348,8 +1348,8 @@ Baring many a scar from battles fought over the years, he is more
 than capable of defending himself.  Constantly fingering the hilt of
 his weapon, his gaze searching out any possbile threat.
 ~
-67110986 0 0 33554600 2048 0 0 1000 S
-PH 1 1 -1
+67110986 0 0 0 33554600 2048 0 0 1000 S
+PH 1 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -1364,8 +1364,8 @@ radiates power and strength, and his eyes glimmer with a
 bloodlust for his captures.  His black eyes scream with
 anger, and his pacing of the cell is almost a scarey sight.
 ~
-100677642 1 0 33554600 2050 0 8192 -1000 S
-MT 0 1 -1
+100677642 1 0 0 33554600 2050 0 8192 -1000 S
+MT 0 1 0 -1
 59 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
 8 8 1
@@ -1380,8 +1380,8 @@ enough to subdue her anger, somewhat.  Falling within her
 magic, she tests the wards of the cell, looking to break
 through, to seek revenge and restore her honor.
 ~
-100694026 1 0 67109032 2051 0 8192 -1000 S
-MT 0 512 -1
+100694026 1 0 0 67109032 2051 0 8192 -1000 S
+MT 0 512 0 -1
 60 -5 -111 55d88+4565 7d6+30
 0.2.7.6 222750
 8 8 2
@@ -1396,8 +1396,8 @@ enough to subdue her anger, somewhat.  Falling into her
 magic, she tests the wards of the cell, looking to break
 through to seek revenge, and restore her honor.
 ~
-1174435850 1 0 33554600 2051 0 8192 -1000 S
-MT 0 512 -1
+1174435850 1 0 0 33554600 2051 0 8192 -1000 S
+MT 0 512 0 -1
 58 -7 -128 59d96+6077 7d6+35
 4.5.9.6 238950
 8 8 2
@@ -1413,8 +1413,8 @@ bloodlust for his captures.  His black eyes sceam with
 anger, and his pacing of the cell is and almost scarey
 sight.
 ~
-100677642 1 0 33554600 2050 0 8192 -1000 S
-MT 0 1 -1
+100677642 1 0 0 33554600 2050 0 8192 -1000 S
+MT 0 1 0 -1
 60 -7 -128 59d143+6195 7d6+35
 4.5.9.6 238950
 8 8 1
@@ -1430,8 +1430,8 @@ the impression he is no stranger to battle, and his eyes
 betray his age with a fevor for life and adventure to
 come.
 ~
-2058 0 0 33554488 2048 0 0 -1 S
-PH 1 2 -1
+2058 0 0 0 33554488 2048 0 0 -1 S
+PH 1 2 0 -1
 57 -7 -117 57d143+5985 7d6+35
 2.4.8.6 230850
 8 8 1
@@ -1450,8 +1450,8 @@ power and warding, and his black eyes are devoid of
 emotion.  Looking around he reguards the surrounds, seeing
 how the chaos strives to create could best be suited here.
 ~
-2058 0 0 33554600 2049 0 0 -1000 S
-X 1 32 -1
+2058 0 0 0 33554600 2049 0 0 -1000 S
+X 1 32 0 -1
 60 -7 -143 59d132+6549 7d6+35
 4.5.4.9 358425
 8 8 1
@@ -1468,8 +1468,8 @@ tangled white beard skips along the floors surface,
 threatening to tangle the pacing gnome.  Almost comical
 to an observer, this gnome seems intent on his mission.
 ~
-2062 0 0 33554600 2048 0 0 -1 S
-PG 1 512 -1
+2062 0 0 0 33554600 2048 0 0 -1 S
+PG 1 512 0 -1
 56 -7 -114 56d96+5768 7d6+35
 1.3.8.6 226800
 8 8 2
@@ -1483,8 +1483,8 @@ Baring many a scar from battles fought over the years, he is more
 than capable of defending himself.  Constantly fingering the hilt of
 his weapon, his gaze searching out any possbile threat.
 ~
-67110986 0 0 136 0 0 0 1000 S
-PH 1 1 -1
+67110986 0 0 0 136 0 0 0 1000 S
+PH 1 1 0 -1
 55 -5 -111 55d131+4675 7d6+30
 0.2.7.6 222750
 8 8 1
@@ -1500,8 +1500,8 @@ jewel thief man~
 &+Mpeople, and especially not those of &+rDu'Maathe&+M castle.  Perhaps
 &+Mthis particular outlaw is from another neighboring city.
 ~
-2250 0 0 1572888 0 0 0 -1000 S
-PH 0 8192 -1
+2250 0 0 0 1572888 0 0 0 -1000 S
+PH 0 8192 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

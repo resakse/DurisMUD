@@ -7,8 +7,8 @@ crypt keeper cryptkeeper~
 &+Lsystem. He has one sole purpose and that is to maintain and look over
 &+Lthe living dead while they sleep and keep the caskets ready for use.&n
 ~
-2060 0 0 0 0 0 0 -1000 S
-U 0 0 -1
+2060 0 0 0 0 0 0 0 -1000 S
+U 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -21,8 +21,8 @@ skeletal skeleton lancer~
 &+Wthe crypt. With burning red sockets for eyes he watches the area closely
 &+Wfor intruders, a long lance of bone gripped tightly in his skeletal fingers.
 ~
-18442 33554432 0 24 0 0 0 -1000 S
-U 0 1 -1
+18442 33554432 0 0 24 0 0 0 -1000 S
+U 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -36,8 +36,8 @@ rat zombie~
 &+Wraised as a skeleton of its former self, most likely from the multiple
 &+Wdark and unholy magics that radiate from this place.&n
 ~
-2056 0 0 0 0 0 0 -1000 S
-U 0 0 1
+2056 0 0 0 0 0 0 0 -1000 S
+U 0 0 0 1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -50,8 +50,8 @@ blood golem~
 &+rtunnels, this mighty blood golem stands as still as a rock, as his only
 &+raction is to fight against those his master deemed to be slain.&n
 ~
-67110922 0 0 0 0 0 0 -1000 S
-OG 0 1 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+OG 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -65,8 +65,8 @@ carrion crawler~
 &+Loff bones quickly and can pick them dry, which in turn gives the undeads
 &+La skeleton ready for raising.&n
 ~
-8 1 0 0 0 0 0 0 S
-AC 0 1 2
+8 1 0 0 0 0 0 0 0 S
+AC 0 1 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -76,8 +76,8 @@ master piper~
 &+LThe master &+gpiper&+L of the crypts, wails here.&n
 ~
 ~
-3288336456 8 0 0 0 0 0 -1000 S
-UL 0 8421376 -1
+3288336456 8 0 0 0 0 0 0 -1000 S
+UL 0 8421376 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -87,8 +87,8 @@ ghastly illusionist~
 &+LA ghastly &+Wil&+Clu&+csio&+Cni&+Wst&+L stands guard over the crypts.&n
 ~
 ~
-2058 33554432 0 0 0 0 0 -1000 S
-U 0 4194304 -1
+2058 33554432 0 0 0 0 0 0 -1000 S
+U 0 4194304 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -98,8 +98,8 @@ merchant gravedigger~
 &+LA &+cmerchant&+L stands here, selling stuff he has dug up from the graves.&n
 ~
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -112,8 +112,8 @@ newborn gargoyle young~
 &+Lundeath. It is much smaller than the majority of gargoyles and is quite
 &+Linexperienced.&n
 ~
-2058 0 0 0 0 0 0 -1000 S
-U 0 32768 -1
+2058 0 0 0 0 0 0 0 -1000 S
+U 0 32768 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -123,8 +123,8 @@ gargoyle mature~
 &+LAn older, mature gargoyle sits here, in a tupor.&n
 ~
 ~
-2058 0 0 1048584 0 0 0 -1000 S
-U 0 33554432 -1
+2058 0 0 0 1048584 0 0 0 -1000 S
+U 0 33554432 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -134,8 +134,8 @@ dwarven dwarf battlerager battle rager~
 &+LA &+Ydwarven &+rbattlerager &+Lprowls the caves in a &+rberzerk&+L fury.&n
 ~
 ~
-72 1 0 24 0 0 0 0 S
-PM 0 1 -1
+72 1 0 0 24 0 0 0 0 S
+PM 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -145,8 +145,8 @@ vampire battle forger~
 &+rA sinister vampire &+Cbat&+ctle-fo&+Crger&+r looks through his inventory.&n
 ~
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-UV 0 524288 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+UV 0 524288 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -159,8 +159,8 @@ skeletal guard~
 &+WRuins and below here in the crypts, this skeleton is quite effective
 &+Wat watching over the area, and keeping those who are unwanted out.&n
 ~
-1140852744 0 0 0 0 0 0 -1000 S
-U 0 0 -1
+1140852744 0 0 0 0 0 0 0 -1000 S
+U 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -173,8 +173,8 @@ crypt keeper cryptkeeper~
 &+Lmany of the more experienced undead soldiers use. He gazes over the
 &+Lroom, keeping the caskets maintained.&n
 ~
-2062 0 0 0 0 0 0 -1000 S
-U 0 0 -1
+2062 0 0 0 0 0 0 0 -1000 S
+U 0 0 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -188,8 +188,8 @@ vampire bat~
 &+Lpurpose down in the undead tunnels, but it must be something as very few
 &+Lliving creatures are allowed or tolerated in this place.&n
 ~
-2058 0 0 0 0 0 0 -1000 S
-AP 0 1 2
+2058 0 0 0 0 0 0 0 -1000 S
+AP 0 1 0 2
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -202,8 +202,8 @@ wraith~
 &+wpowerful necromancer.  It floats eerily above the tunnel floor,
 &+win its eerie unblinking undead state.&n
 ~
-67110922 0 0 0 0 0 0 -1000 S
-U 0 512 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+U 0 512 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -213,8 +213,8 @@ zombie miner~
 &+LA &+yzombie&+L tirelessly digs through the &+yearth&+L here.&n
 ~
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -224,8 +224,8 @@ worker ghoul~
 &+LA worker &+gghoul&+L helps out here with menial labour.&n
 ~
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -238,8 +238,8 @@ worker ghoul~
 &+Lthroughout the tunnel system carrying caskets and equipment from one
 &+Lplace to enough, constantly fufilling its masters chores.&n
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -249,8 +249,8 @@ skeletal skeleton lancer~
 &+WA skeletal &+wlancer&+W guards the &+cvault&+W here mutely.&n
 ~
 ~
-18442 0 0 24 0 0 0 -1000 S
-U 0 1 -1
+18442 0 0 0 24 0 0 0 -1000 S
+U 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -262,8 +262,8 @@ zombie labourer~
 &+LOne of the lowest caste members of the strange undead caste system,
 &+Lthis &+yzombie&+L carries out its menial labour endlessly and tirelessly.&n
 ~
-1073743880 0 0 0 0 0 0 -1000 S
-U 0 1 -1
+1073743880 0 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -273,8 +273,8 @@ dwarven dwarf berzerker~
 &+LA &+Ydwarven &+rberzerker &+Lprowls the caves in a &+rrage.&n
 ~
 ~
-72 1 0 8 0 0 0 0 S
-PM 0 1048576 -1
+72 1 0 0 8 0 0 0 0 S
+PM 0 1048576 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -284,8 +284,8 @@ shadow beast thief~
 &+LA thieving shadow &+rbeast &+Llurks through the crypt.&n
 ~
 ~
-1073743884 8 0 1572866 0 0 0 -1000 S
-US 0 65536 -1
+1073743884 8 0 0 1572866 0 0 0 -1000 S
+US 0 65536 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -295,8 +295,8 @@ undead behemoth~
 &+LA fearsome undead behemoth sleeps here, in a state of hibernation.&n
 ~
 ~
-1073743882 1 0 24 0 0 0 -1000 S
-AC 0 1 -1
+1073743882 1 0 0 24 0 0 0 -1000 S
+AC 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -306,8 +306,8 @@ wight weaponsmith smith~
 &+LA grisly &+rw&+Ri&+rg&+Rh&+rt&+L weaponsmith works here.&n
 ~
 ~
-1073743882 0 0 8 0 0 0 -1000 S
-PH 0 0 -1
+1073743882 0 0 0 8 0 0 0 -1000 S
+PH 0 0 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -321,8 +321,8 @@ carrion crawler giant~
 &+Loff bones quickly and can pick them dry, which in turn gives the undeads
 &+La skeleton ready for raising.&n
 ~
-8 1 0 24 0 0 0 0 S
-AC 0 1 2
+8 1 0 0 24 0 0 0 0 S
+AC 0 1 0 2
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -336,8 +336,8 @@ carrion crawler~
 &+Loff bones quickly and can pick them dry, which in turn gives the undeads
 &+La skeleton ready for raising.&n
 ~
-8 1 0 0 0 0 0 0 S
-AC 0 1 2
+8 1 0 0 0 0 0 0 0 S
+AC 0 1 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -352,8 +352,8 @@ dreadlord~
 &+wbody seem devoid of movement. Not even the faintest ripple can be seen as
 &+whe moves about.
 ~
-3221391436 0 0 671088680 64 0 0 -1000 S
-UL 17 16777216 3
+3221391436 0 0 0 671088680 64 0 0 -1000 S
+UL 17 16777216 0 3
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -366,8 +366,8 @@ nyroclex lich banker~
 &+Wgaunt figure quickly fiddles coins between its bony fingers.  His eyes are
 &+Wblue flames that swirl and twist in mirth-like circles as he amuses himself.&n
 ~
-30794 0 0 0 0 0 0 -1000 S
-UL 17 131072 -1
+30794 0 0 0 0 0 0 0 -1000 S
+UL 17 131072 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -1,19 +1,19 @@
 #1000
 &+RRandomness~
-109999 1 0 25 35 0
+109999 1 0 25 35 1
 *
-* Zone edited with dikuEdit v2.97f
+* Zone edited with durisEdit v2.99de
 *
 *
 *
 *
 M 0 100013 1 105301 100 0 0 0      * a human merchant
-G 1 384 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 364 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 347 999 0 100 0 0 0            *    (object not in this .OBJ file)
-G 1 53 999 0 100 0 0 0             *    (object not in this .OBJ file)
-M 0 100015 1 105301 100 0 0 0      * A merchant from another town
-G 1 6008 999 0 100 0 0 0           *    (object not in this .OBJ file)
-G 1 9225 999 0 100 0 0 0           *    (object not in this .OBJ file)
+G 1 384 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 364 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 347 999 0 100 0 0 0            *    (object type not in this .obj file)
+G 1 53 999 0 100 0 0 0             *    (object type not in this .obj file)
+M 0 100015 1 105302 100 0 0 0      * A merchant from another town
+G 1 6008 999 0 100 0 0 0           *    (object type not in this .obj file)
+G 1 9225 999 0 100 0 0 0           *    (object type not in this .obj file)
 *
 S

@@ -4,8 +4,8 @@ golem dark _nobutt_ assoc1_n_0 br_c~
 &+LA dark golem stands guard.&n
 ~
 ~
-104954443 0 0 301990188 30 0 0 0 S
-OG 0 512 6
+104954443 0 0 0 301990188 30 0 0 0 S
+OG 0 512 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0
@@ -16,8 +16,8 @@ drugdealer thug~
 ~
 &+W   This guy looks wasted.
 ~
-30794 0 0 301990204 30 0 0 0 S
-PH 0 0 6
+30794 0 0 0 301990204 30 0 0 0 S
+PH 0 0 0 6
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -46,8 +46,8 @@ pillar gore golem br_c _nobutt_ assoc1_n_0~
 &+r        ∞∞∞∞±±±€€€€±±&+R∞&+r∞€±€±±€€
 &+r     ±±±±±&+R±±&+r∞∞∞∞∞±±±&+R€&+r±±∞∞∞∞€±±±±
 ~
-104954443 0 0 301990188 30 0 0 0 S
-OG 0 512 6
+104954443 0 0 0 301990188 30 0 0 0 S
+OG 0 512 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0
@@ -63,8 +63,8 @@ evil presence golem br_c assoc1_n_0 _nobutt_~
 &+Lbeing a wuss.  This demon will kill you five times before you hit the
 &+Lfloor, if it was so inclined.
 ~
-104954443 0 0 301990188 30 0 0 0 S
-OG 0 512 6
+104954443 0 0 0 301990188 30 0 0 0 S
+OG 0 512 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0

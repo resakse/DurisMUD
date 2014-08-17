@@ -10,8 +10,8 @@ He raises his head and acknowledges your presence as you approach
 his desk.  His face is marred with many signs of scars from recent
 wars with a band of ogres.
 ~
-2250 0 0 2097152 0 0 0 1000 S
-CT 0 128 -1
+2250 0 0 0 2097152 0 0 0 1000 S
+CT 0 128 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ preparing his next baked bread dish.  He moves with great speed
 through his establishment collecting items and mixing them into
 a thick batter.  He smiles as you approach him.
 ~
-2250 0 0 0 0 0 0 1000 S
-CT 0 1 -1
+2250 0 0 0 0 0 0 0 1000 S
+CT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -39,8 +39,8 @@ worm small~
 quickly wriggles about trying to manage a way to get deeper below
 the earth's surface.
 ~
-2186 0 0 0 0 0 0 0 S
-I 0 0 -1
+2186 0 0 0 0 0 0 0 0 S
+I 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -54,8 +54,8 @@ elite stands ready to protect the lawful abiding citizens of the
 area.  This experienced centaur keeps a constant eye for unwanted
 visitors who dare to enter the city.
 ~
-67110986 33554848 0 287449128 14528 0 0 1000 S
-CT 0 1 -1
+67110986 33554848 0 0 287449128 14528 0 0 1000 S
+CT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -68,8 +68,8 @@ A &+bdrunken centaur&N is here babbling about some problem.
 wandering the forest of Marigot babbling to himself on some topic.
 He notes your presence and continues along his way.
 ~
-2254 0 0 0 0 0 0 0 S
-CT 0 1 -1
+2254 0 0 0 0 0 0 0 0 S
+CT 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -84,8 +84,8 @@ leather leggings and sleeves with a cloth shirt.  Her shirt
 is stained with blood.  She notes your presence and
 continues to drink her troubles.
 ~
-2254 0 0 0 0 0 0 0 S
-PE 0 512 -1
+2254 0 0 0 0 0 0 0 0 S
+PE 0 512 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -98,8 +98,8 @@ serving wench~
 stands ready to serve you.  She is a native of the forest of Marigot.
 She smiles as you approach and patiently waits for your decision.
 ~
-2250 0 0 268566588 0 0 0 -500 S
-CT 0 256 -1
+2250 0 0 0 268566588 0 0 0 -500 S
+CT 0 256 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -114,8 +114,8 @@ old age as he works within his shop.  He polishes a head piece as
 you approach his bench.  He glances up and acknowledges your
 presence with a smile.
 ~
-2058 0 0 2097160 0 0 0 0 S
-CT 0 2 -1
+2058 0 0 0 2097160 0 0 0 0 S
+CT 0 2 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -130,8 +130,8 @@ trained in the ways of the holy army of Marigot.  He carefully
 examines his set of instructions which has been ordered by General
 Kamesh.
 ~
-67110986 0 0 16785464 0 0 0 1000 S
-CT 0 1 -1
+67110986 0 0 0 16785464 0 0 0 1000 S
+CT 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -146,8 +146,8 @@ explains the many ideals.  Occasionally, he can be seen demonstrating
 the many special techniques that are special only to rangers.  Pretik
 notices your presence and exchanges a warm glance with you.
 ~
-35018 0 0 287318040 14528 0 0 1000 S
-CT 0 2 -1
+35018 0 0 0 287318040 14528 0 0 1000 S
+CT 0 2 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -162,8 +162,8 @@ tome contains a spell which she has forgot.  Franticly, she runs about
 her quarters sifting through piles of paperwork.  Semira is a trained
 shaman who has played a part in many succesful battles.
 ~
-35018 0 0 2301960 14528 0 0 0 S
-CT 0 256 -1
+35018 0 0 0 2301960 14528 0 0 0 S
+CT 0 256 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -178,8 +178,8 @@ trained in the ways of the holy army of Marigot.  He carefully
 examines his set of instructions which has been ordered by General
 Kamesh.
 ~
-67110986 0 0 16785464 0 0 0 1000 S
-CT 0 1 -1
+67110986 0 0 0 16785464 0 0 0 1000 S
+CT 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ An &+mapprentice&N ranger recites a spell from memory.
 stands here practicing a memorized spell.  He is armored very
 lightly and tries to ignore your presence within the guild.
 ~
-2250 0 0 16777260 0 0 0 1000 S
-CT 0 2 -1
+2250 0 0 0 16777260 0 0 0 1000 S
+CT 0 2 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -206,8 +206,8 @@ tiny carpenter ant~
 of food she can gets her hands on.  This small carpenter ant scurries
 about at your feet trying to run about unnoticed.
 ~
-2188 0 0 0 0 0 0 0 S
-I 0 1 -1
+2188 0 0 0 0 0 0 0 0 S
+I 0 1 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -223,8 +223,8 @@ trapped down below Fort Marigot since doing battle with the
 citizens of Fort Marigot.  Instead of killing the poor beast,
 the citizens took pity and have entrapped Mullet here.
 ~
-2122 56 0 807544860 14528 0 0 0 S
-R 0 256 7
+2122 56 0 0 807544860 14528 0 0 0 S
+R 0 256 0 7
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ high shaman, Semira, this young apprentice is trying his newly
 acquired skills.  He is armored very lightly and tries to ignore
 your presence within the guild.
 ~
-2250 0 0 16777260 0 0 0 1000 S
-CT 0 256 -1
+2250 0 0 0 16777260 0 0 0 1000 S
+CT 0 256 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -254,8 +254,8 @@ Yelling loudly to his friend down the street, he runs about trying
 to attract the attention of someone else.  He is dressed in soiled
 clothes.
 ~
-8 0 0 8 0 0 0 1000 S
-CT 0 1 -1
+8 0 0 0 8 0 0 0 1000 S
+CT 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -269,8 +269,8 @@ eldest druid in Fort Marigot.  He has trained many of the
 young centaurs in their new ways.  He looks up from his
 prayer and acknowledges your presence as you approach.
 ~
-35018 0 0 857874492 12480 0 0 1000 S
-CT 0 128 -1
+35018 0 0 0 857874492 12480 0 0 1000 S
+CT 0 128 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -285,8 +285,8 @@ his ways by the high elder druid, Kerbien, this young apprentice
 is deep in thought.  He is armored very lightly and tries to ignore
 your presence as you approach.
 ~
-2250 0 0 16777260 12288 0 0 1000 S
-CT 0 128 -1
+2250 0 0 0 16777260 12288 0 0 1000 S
+CT 0 128 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -299,8 +299,8 @@ A &+Ys&+Wt&+Rr&+Yi&+Wp&+Re&+Yd &+Yfish &Nswims in a circle just below the surfac
 shapes and sizes.  Its fins are also multicolored.  This fish
 comes up to the surface for a breath of air.
 ~
-264394 0 0 2056 0 0 0 0 S
-F 0 1 -1
+264394 0 0 0 2056 0 0 0 0 S
+F 0 1 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -313,8 +313,8 @@ A &+Ygold fish&N swims deeper below the surface of the lake.
 Its fins are almost orange in color.  This fish comes up to the
 surface for a breath of air.
 ~
-264394 0 0 2056 0 0 0 0 S
-F 0 1 -1
+264394 0 0 0 2056 0 0 0 0 S
+F 0 1 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -328,8 +328,8 @@ He stands ready with a quiver in one hand and a bow ready in the
 other.  With a sole job of to shoot down those who are unwanted,
 this archer scans the surrounding area infront of Fort Marigot.
 ~
-67111114 0 0 56 14338 0 0 1000 S
-CT 0 2 -1
+67111114 0 0 0 56 14338 0 0 1000 S
+CT 0 2 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -343,8 +343,8 @@ ensuring the lake dragon does not escape, this golem examines the
 area carefully and is constantly on alert.  The golem marks your
 presence as you approach his room.
 ~
-67111114 56 0 270739480 276672 0 0 -1000 S
-OG 0 512 -1
+67111114 56 0 0 270739480 276672 0 0 -1000 S
+OG 0 512 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -359,8 +359,8 @@ peers around searching and waiting for his next meal to pass
 on by.  Upon noticing your presence, this crustacean dashes
 toward you.
 ~
-264394 56 0 2230702 14528 0 0 0 S
-AC 0 2048 -1
+264394 56 0 0 2230702 14528 0 0 0 S
+AC 0 2048 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -376,8 +376,8 @@ who has been in many battles of the Holy Amry of Fort Marigot.
 Zarmo has a touch of white in the hair of his head.  He smiles and
 acknowledges your presence as you approach.
 ~
-2250 0 0 124 14528 0 0 1000 S
-CT 0 1 -1
+2250 0 0 0 124 14528 0 0 1000 S
+CT 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -392,8 +392,8 @@ of potions in which many citizens of the Fort have come to use.
 She empties a jar onto the table in the preparation of another
 concoction.
 ~
-2250 0 0 40 12480 0 0 0 S
-CT 0 2 -1
+2250 0 0 0 40 12480 0 0 0 S
+CT 0 2 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -407,8 +407,8 @@ here looking bored.  Trying to find a little amusement, this
 centaur is looking desparately for a good laugh.  He looks your
 way as you approach and giggles at how you look.
 ~
-2250 0 0 0 0 0 0 1000 S
-CT 0 1 -1
+2250 0 0 0 0 0 0 0 1000 S
+CT 0 1 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -424,8 +424,8 @@ the home of the centaurs.  She is currently polishing another
 barrel to be sold.  She smiles at you when you enter her
 establishment.
 ~
-2250 0 0 0 0 0 0 1000 S
-CT 0 2 -1
+2250 0 0 0 0 0 0 0 1000 S
+CT 0 2 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -440,8 +440,8 @@ instruments.  Ismira is a young and well shaped female centaur.  Her
 eyes sparkle in the light of the room.  She smiles at you as you
 approach.
 ~
-2058 0 0 0 0 0 0 1000 S
-CT 0 32768 -1
+2058 0 0 0 0 0 0 0 1000 S
+CT 0 32768 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -456,8 +456,8 @@ this class.  Krishna is dressed in a leather suit and wears a
 golden tail piece.  He smiles at you as you watch him play
 another song.
 ~
-35018 0 0 270532796 14528 0 0 1000 S
-CT 0 32768 -1
+35018 0 0 0 270532796 14528 0 0 1000 S
+CT 0 32768 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -472,8 +472,8 @@ walls of Fort Marigot, he sings the story of the great war with
 the minotaurs.  Trained in his ways by the great bard instructor,
 Krishna, this young apprentice has a rich voice filled with emotion.
 ~
-2250 0 0 524348 14528 0 0 1000 S
-CT 0 32768 -1
+2250 0 0 0 524348 14528 0 0 1000 S
+CT 0 32768 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -487,8 +487,8 @@ song of prayer as she works here within her shop.  She is currently
 arranging items which fell over with previous wind gust which rattled
 through the forest.  She smiles as you enter her shop.
 ~
-2250 0 0 16777320 0 0 0 1000 S
-CT 0 128 -1
+2250 0 0 0 16777320 0 0 0 1000 S
+CT 0 128 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -502,8 +502,8 @@ song of prayer as she works here within her shop.  She is currently
 arranging items and dusting them from the grime which has collected
 since the last cleaning.  She smiles as you enter her shop.
 ~
-2250 0 0 16777320 0 0 0 1000 S
-CT 0 256 -1
+2250 0 0 0 16777320 0 0 0 1000 S
+CT 0 256 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -516,8 +516,8 @@ This &+mranger&N shopkeeper is polishing another suit of mail.
 centaur is here polishing another suit of mail available for
 purchase.  She smiles as you enter her shop.
 ~
-2250 0 0 16777320 0 0 0 1000 S
-CT 0 2 -1
+2250 0 0 0 16777320 0 0 0 1000 S
+CT 0 2 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -531,8 +531,8 @@ for this companion who seems to have wandered off.  He calls
 her name repeatedly and gets no response.  A saddened look
 comes over his face as he walks on calling her name.
 ~
-2252 0 0 16777256 0 0 0 0 S
-CT 0 128 -1
+2252 0 0 0 16777256 0 0 0 0 S
+CT 0 128 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -547,8 +547,8 @@ tears of sorrow as she exchanges glances with you.  With a small
 medallion in her hand, she grasps it tightly and looks again at
 portrait of her love.
 ~
-2250 0 0 73836 192 0 0 0 S
-CT 0 32768 -1
+2250 0 0 0 73836 192 0 0 0 S
+CT 0 32768 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -563,8 +563,8 @@ filled with tears of sorrow as she exchanges glances with you.  With
 a small medallion in her hand, she grasps it tightly and looks
 again at burial site of her love.
 ~
-2250 0 0 73836 192 0 0 0 S
-CT 0 256 -1
+2250 0 0 0 73836 192 0 0 0 S
+CT 0 256 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -578,8 +578,8 @@ within the church taking care of daily chores.  He is a young
 centaur who seeks to help the church of his hometown.  He smiles
 at you as he makes his way.
 ~
-2250 0 0 73772 12480 0 0 1000 S
-CT 0 256 -1
+2250 0 0 0 73772 12480 0 0 1000 S
+CT 0 256 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -594,8 +594,8 @@ old centaur who has seen many battles in his time.  Jebin , like
 Semira, has trained many centaurs in the ways of the centaur shaman.
 He acknowledges your presence as he continues with his ritual.
 ~
-35018 0 0 19079228 14528 0 0 0 S
-CT 0 256 -1
+35018 0 0 0 19079228 14528 0 0 0 S
+CT 0 256 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -609,8 +609,8 @@ sneaks through the Fort.  He is searching for a wanted halfling
 who is thought to be hiding within the walls of this city of centaurs.
 He quietly prowls into the next room.
 ~
-2252 0 0 2695272 0 0 0 1000 S
-PE 0 8192 -1
+2252 0 0 0 2695272 0 0 0 1000 S
+PE 0 8192 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -624,8 +624,8 @@ elite stands ready to protect the lawful abiding citizens of the
 area.  This experienced centaur keeps a constant eye for unwanted
 visitors who dare to enter the city.
 ~
-67110986 0 0 287449128 14528 0 0 1000 S
-CT 0 1 -1
+67110986 0 0 0 287449128 14528 0 0 1000 S
+CT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -640,8 +640,8 @@ buying different items here in Fort Marigot, this female is taking
 some time out for herself.  She smiles warmly at you as you approach
 her.
 ~
-2250 0 0 16777288 192 0 0 1000 S
-CT 0 128 -1
+2250 0 0 0 16777288 192 0 0 1000 S
+CT 0 128 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -655,8 +655,8 @@ within the church praying.  Her eyes are closed as she concentrates
 deeply in the meaning of the words she prays.  She tightly grasps
 s a small rosary in one hand.
 ~
-2250 0 0 16777288 192 0 0 1000 S
-CT 0 256 -1
+2250 0 0 0 16777288 192 0 0 1000 S
+CT 0 256 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -670,8 +670,8 @@ sobs to himself as he prays before the grave of his love. With
 his eyes closed, he focuses and says the words of his prayer
 aloud.  He doesn't acknowledge your presense as you approach.
 ~
-2250 0 0 73836 192 0 0 1000 S
-CT 0 2 -1
+2250 0 0 0 73836 192 0 0 1000 S
+CT 0 2 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -684,8 +684,8 @@ A &+Mcentaur street sweeper&N is clearing debris from the street.
 this street of Fort Marigot from debris.  He hums a merry song as
 he continues to pick up trash.
 ~
-2250 0 0 0 0 0 0 1000 S
-CT 0 2 -1
+2250 0 0 0 0 0 0 0 1000 S
+CT 0 2 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -699,8 +699,8 @@ elite stands ready to protect the lawful abiding citizens of the
 area.  This experienced centaur keeps a constant eye for unwanted
 visitors who dare to enter the city.
 ~
-67110986 33554848 0 287449128 14528 0 0 1000 S
-CT 0 1 -1
+67110986 33554848 0 0 287449128 14528 0 0 1000 S
+CT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -714,8 +714,8 @@ elite stands ready to protect the lawful abiding citizens of the
 area.  This experienced centaur keeps a constant eye for unwanted
 visitors who dare to enter the city.
 ~
-67110986 33554848 0 287449128 14528 0 0 1000 S
-CT 0 1 -1
+67110986 33554848 0 0 287449128 14528 0 0 1000 S
+CT 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -730,8 +730,8 @@ talish~
 &+Wbrew is not the only world Talish has entered, for he also
 &+Wserves the harsher, importanted dwarven lager as well.
 ~
-2122 0 0 24 0 0 0 450 S
-CT 0 1 -1
+2122 0 0 0 24 0 0 0 450 S
+CT 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

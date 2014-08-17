@@ -8,8 +8,8 @@ The dark black eyes set deep beneath its large skull show much more
 intelligence than its kind is normally known for.  More surprising, and
 perhaps more frightening, it wears the badge of a Darvanu mercenary.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-PT 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+PT 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -24,8 +24,8 @@ oceans.  His knuckles look worn and swollen, but his craftsmanship is
 still highly desired.  He clearly has no qualms about dealing with anyone
 who has the money to purchase one of his boats.
 ~
-2126 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2126 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ of boats and ships that occur here, acting as a go-between for the ships
 that are for sale.  Many of the ships that he sells are old ships, claimed
 or stolen by pirates, but all these things are legal in this port.
 ~
-14414 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+14414 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -54,8 +54,8 @@ His gait is sort of rolling and side to side, as if he expects the very
 land itself to suddenly dip and and move.  It is clear that most of his
 time is spent on the sea, and that he is unused to even walking on land.
 ~
-1073743948 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743948 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -69,8 +69,8 @@ normal.  Her eyes bear a certain powerful hunger, a rage that goes with
 her garb and demeanor.  Her clothing marks her as a pirate, and one proud
 of her work.  A thin rapier hangs by her side, ready for instant use.
 ~
-1073743948 0 0 0 0 0 0 -1000 S
-RA 0 1 -1
+1073743948 0 0 0 0 0 0 0 -1000 S
+RA 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -84,8 +84,8 @@ his duty to the Darvanu keeps him faithful to his job.  He bears the badge
 of the ancient, outcast clan that has become the most powerful mercenary
 house in the world.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -101,8 +101,8 @@ almost any race who are loyal and faithful to their cause, wealth.  Her
 white hair has been cropped close to her skull, and her magenta eyes have
 a hardness to them that speaks of years of experience.
 ~
-1073743948 0 0 0 0 0 0 -1000 S
-PL 0 1 -1
+1073743948 0 0 0 0 0 0 0 -1000 S
+PL 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -117,8 +117,8 @@ punished.  Her head  has been completely shaven to further her marking as
 a slave, and her fangs have been filed down to make her appear less
 frightening.
 ~
-2126 0 0 0 0 0 0 -1000 S
-PO 0 1 -1
+2126 0 0 0 0 0 0 0 -1000 S
+PO 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -132,8 +132,8 @@ members of the mercenary house.  His clothing and stature indicate a
 higher degree of wealth.  His dark eyes and silent nature combined with
 his age suggest he is a formidable foe.
 ~
-1073743950 0 0 268435456 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 0 0 0 268435456 0 0 0 -1000 S
+PD 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -147,8 +147,8 @@ her face and neck.  Oddly enough, the missing eye is on the opposite side
 of her face from the scars.  She acts almost as tired and drugged as her
 customers.
 ~
-2126 0 0 0 0 0 0 -1000 S
-RA 0 1 -1
+2126 0 0 0 0 0 0 0 -1000 S
+RA 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -163,8 +163,8 @@ and powerful, his arms and legs seem thing and frail in comparison,
 perhaps it is the deep red robes he wears making his shoulders look
 broader than they really are.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -179,8 +179,8 @@ Darvanu mercenary house, and that alone hints at how dangerous a foe he
 could be.  The great space around him hints at how the Darvanu are feared
 and respected in this small port town.
 ~
-1073743950 0 0 24 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 0 0 0 24 0 0 0 -1000 S
+PD 0 1 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -194,8 +194,8 @@ present.  Deep green eyes mark him as some sort of strange mix-breed orc,
 tainted withthe blood of another race.  His smile shows a set of white
 teeth capped in gold.
 ~
-2126 0 0 0 0 0 0 -1000 S
-HO 0 512 -1
+2126 0 0 0 0 0 0 0 -1000 S
+HO 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -208,8 +208,8 @@ Her features and body seem delicate, almost breakable, but her eyes are
 coal black and have the coldness of death and murder about them.  She can
 be trusted to do her job, but it would be wise to avoid angering her.
 ~
-14414 0 0 0 0 0 0 -1000 S
-PL 0 10 -1
+14414 0 0 0 0 0 0 0 -1000 S
+PL 0 10 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -224,8 +224,8 @@ a thin leather cord around his neck because he has no other armor to
 attach it to.  Thick green skin is heavy enough armor that he only bothers
 to wear a loincloth and a harness on which to hang his weapons.
 ~
-1073743950 0 0 268435480 0 0 0 -1000 S
-PT 0 1 -1
+1073743950 0 0 0 268435480 0 0 0 -1000 S
+PT 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ than solid ground.  Icy blue eyes take in every detail of every person and
 thing that he walks by.  Though his face is that of a young orc, his gait
 and demeanor or those of an experienced pirate and sailor.
 ~
-1073743948 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743948 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -255,8 +255,8 @@ welcome in Quietus Quay, fights and deaths are common.  This man seems
 well enough aquainted with the ways of Quietus Quay to be able to surive
 its heartless streets, but even he must be careful here.
 ~
-1073743948 0 0 0 0 0 0 -800 S
-PH 0 1 -1
+1073743948 0 0 0 0 0 0 0 -800 S
+PH 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -271,8 +271,8 @@ of one who has given up all but whatever drug satisfies their desires.
 Few drow women would ever sell themselves as this one does, but then, few
 drow would ever fall into the addiction that this one has.
 ~
-2252 0 0 0 0 0 0 -1000 S
-PL 0 1 -1
+2252 0 0 0 0 0 0 0 -1000 S
+PL 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -287,8 +287,8 @@ this powerful orc.  A tattoo along his forearm hints that he may once have
 been a slave, but he no longer wears any slave collar, nor does he have
 any other markings of one that is presently owned by another.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -302,8 +302,8 @@ the bank.  He wears the badge of the Darvanu, and has the demeanor of one
 who is used to be listend to and heeded.  In addition to his badge, teh
 symbol of the Darvanu has been tattooed onto his shaven skull.
 ~
-2126 0 0 268435496 0 0 0 -1000 S
-PD 0 1 -1
+2126 0 0 0 268435496 0 0 0 -1000 S
+PD 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -317,8 +317,8 @@ protecting the bank from theft or attack.  The scars that mark his body,
 along with the many tattoos, suggest he has seen many battles, and, so
 far, survived all of them.
 ~
-1140852814 0 0 28 0 0 0 -1000 S
-PD 0 1 -1
+1140852814 0 0 0 28 0 0 0 -1000 S
+PD 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -333,8 +333,8 @@ battles, and the clan tattoo he once wore has been over-stamped with the
 tattoo of the Darvanu mercenary house, making it clear that he is now
 outcast from the Duergar clan he once belonged to.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -349,8 +349,8 @@ clearly content with the life he has.  Fighting has clearly been this
 duergar's life, and will be his future, and likely will be the only thing
 he does until he dies.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -365,8 +365,8 @@ comparison.  Everything he does seems to be done with only his left hand,
 while his right arm hangs limp.  Despite his obvious infirmity, everyone
 around seems to give him a wide berth.
 ~
-1073743950 0 0 0 0 0 262144 -1000 S
-HO 0 1 -1
+1073743950 0 0 0 0 0 0 262144 -1000 S
+HO 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -379,8 +379,8 @@ This sturdy orc sleeps the slumber of one who has spent many hours doing
 manual labor along the docks.  He has the muscles of an individual who has
 spent a great deal of time lifting and moving heavy items.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -394,8 +394,8 @@ and his wealth indicates he is able to use it quite effectively.  His left
 arm bears a tattoo of an anchor and a ship showing that he is a sailor of
 some sort, or was one once in the past.
 ~
-1073743948 0 0 12 0 0 0 -1000 S
-MT 0 1 -1
+1073743948 0 0 0 12 0 0 0 -1000 S
+MT 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -410,8 +410,8 @@ clings to her clothing while her rheumy eyes focus on the potions she is
 preparing.  Her age alone is a suggestion of her power.  It is rumored
 that she was living in this cavern before Quietus Quay was ever built.
 ~
-2126 0 0 0 0 0 0 -1000 S
-PT 0 1 -1
+2126 0 0 0 0 0 0 0 -1000 S
+PT 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -424,8 +424,8 @@ This small dark green lizard has rough ridges along its body that look
 almost like small pebbles or the side of a rough piece of rock when it
 holds itself perfectly motionless.
 ~
-2122 0 0 0 0 0 0 0 S
-R 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+R 0 1 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -440,8 +440,8 @@ purely on power and skill.  His dark brooding eyes study everything before
 him before making any decisions.  Though he is clearly a warrior that has
 fought many battles, he has a surprising lack of scars.
 ~
-1073743950 0 0 24 0 0 0 -1000 S
-PD 0 1 -1
+1073743950 0 0 0 24 0 0 0 -1000 S
+PD 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -457,8 +457,8 @@ Darvanu, most likely due to his peaceful 'merging' into their
 organization.  His youth is undoubtedly maintained through some sort of
 dark magic.
 ~
-1107298382 0 0 587276348 274654 0 0 -1000 S
-ho 0 1 -1
+1107298382 0 0 0 587276348 274654 0 0 -1000 S
+ho 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -473,8 +473,8 @@ one can only find terrifying.  Despite his clear strength, and the fact
 that he has fought many battles, not one single scar mars his body.  A
 strange aura of darkness seems to surround him.
 ~
-1140852814 0 0 587276344 45278 192 0 -1000 S
-PT 0 1 -1
+1140852814 0 0 0 587276344 45278 192 0 -1000 S
+PT 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -489,8 +489,8 @@ long.  Her hair has been allowed to drape down to her shoulders, framing a
 delicate, rosy cheeked face.  A smile from this woman could get any male
 of any race ready to serve her every whim.
 ~
-2126 0 0 73772 274652 0 0 -1000 S
-UV 0 1 -1
+2126 0 0 0 73772 274652 0 0 -1000 S
+UV 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -506,8 +506,8 @@ very successful in a business that is very harsh to any but the best,
 suggesting that her skills as a sailor, merchant, and pirate are worthy of
 respect.
 ~
-1073743950 0 0 16 0 0 0 -1000 S
-RA 0 1 -1
+1073743950 0 0 0 16 0 0 0 -1000 S
+RA 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -521,8 +521,8 @@ beatings are no longer necessary.  Though not held in one place by chains,
 her beaten expression shows that no chains are needed to force her to
 serve.
 ~
-2126 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+2126 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -540,8 +540,8 @@ characteristic white hair of the drow conceal her age well, but she walks
 with the air of someone who has lived a long life in a very dangerous
 world.
 ~
-1073743948 0 0 65596 0 0 0 -1000 S
-PL 0 1 -1
+1073743948 0 0 0 65596 0 0 0 -1000 S
+PL 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -556,8 +556,8 @@ Tattoos run up and down the sides of his neck and face, and several
 additional markings can be seen on his hands.  It would appear that he is
 one of the feared 'war mages' employed by the Darvanu.
 ~
-1073743950 0 0 536936492 12508 0 0 -1000 S
-HO 0 1 -1
+1073743950 0 0 0 536936492 12508 0 0 -1000 S
+HO 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -572,8 +572,8 @@ his rank as a lieutenant show that this sturdy warrior is not to be taken
 lightly.  A series of 7 thin scars lines his left cheek, but any other
 scars he bears are covered by his armor.
 ~
-1073743948 0 0 60 0 0 0 -1000 S
-PD 0 1 -1
+1073743948 0 0 0 60 0 0 0 -1000 S
+PD 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -587,8 +587,8 @@ to drink that all agility is gone.  Rather than having a dark, feline
 beauty, her scarred face has a droopy look to it, the look of someone who
 has succumbed to despair.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-RA 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+RA 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -603,8 +603,8 @@ orc.  Though clearly older than one would like to think about, he stands
 straight and tall, and humbly serves his customers with the speed and
 grace of many years of practice.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -618,8 +618,8 @@ concealed disdain, or lust depending on the person.  Though quite young,
 her high place in drow society must have been earned by power as well as
 birth and few dare to interfere with her.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-PL 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+PL 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -633,8 +633,8 @@ on the losing end of the ongoing dice game.  His dark eyes search his
 opponents for signs of trickery or cheating, looking for an excuse to
 start a fight.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-HO 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+HO 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -648,8 +648,8 @@ appears to be losing as much, or more, than her companions.  Her eyes
 flash with anger when jokes about her small size, or strange tattoos are
 made, but she makes no actions against the speakers.
 ~
-1073743950 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+1073743950 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -663,8 +663,8 @@ an almost mystic speed and form.  Her beauty and grace have kept her
 companions from attacking her, but even great skills as a warrior will not
 save her if her uncanny winning streak continues.
 ~
-1073743950 0 0 0 0 0 0 0 S
-pl 0 0 -1
+1073743950 0 0 0 0 0 0 0 0 S
+pl 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -679,8 +679,8 @@ clearly bored, and tired, and not paying attention to what he is playing
 and still playing with exceptional skill, shows that he must be a very
 fine bard indeed.
 ~
-1073743950 0 0 65592 0 0 0 -1000 S
-PL 0 16 -1
+1073743950 0 0 0 65592 0 0 0 -1000 S
+PL 0 16 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -696,8 +696,8 @@ On any person less handsome the hair style would look foolish, on him it
 looks distinquished and fitting.  His clothing is of the highest style and
 quality, matching the fine instruments he sells.
 ~
-1073784910 0 0 56 0 0 0 -1000 S
-PL 0 35328 -1
+1073784910 0 0 0 56 0 0 0 -1000 S
+PL 0 35328 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -710,8 +710,8 @@ This tiny, furry creature looks quite cute when one ignores its tiny
 razor-sharp teeth.  A bat of this size poses no real danger to anyone,
 though it could be quite an annoyance if it tried to be.
 ~
-131146 0 0 167772416 2 0 0 0 S
-A 0 0 -1
+131146 0 0 0 167772416 2 0 0 0 S
+A 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -725,8 +725,8 @@ confines of the cave that even a drow could admire.  It would appear that
 this bat is getting older, as pale gray stripes are forming along its
 abdomen.
 ~
-133194 0 0 150995200 2 0 0 0 S
-A 0 0 -1
+133194 0 0 0 150995200 2 0 0 0 S
+A 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -739,8 +739,8 @@ This bat is clearly an adult, though small it has fully formed gray
 stripes along its abdomen and it flies with a speed and grace that could
 only come with a bit of experience.
 ~
-1073874986 0 0 167772416 2 0 0 0 S
-A 0 0 -1
+1073874986 0 0 0 167772416 2 0 0 0 S
+A 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -754,8 +754,8 @@ and seems to have a great deal of intelligence behind its nearly blind
 eyes.  Something about its movements and actions hints at a power that
 goes beyond what any normal creature should possess.
 ~
-1073743944 0 0 973078840 12510 0 0 0 S
-A 0 1 -1
+1073743944 0 0 0 973078840 12510 0 0 0 S
+A 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -771,8 +771,8 @@ tenaciousness to him that can be felt rather than seen.  This is not
 someone to be crossed, he has the air of command, and the attitude of a
 highly skilled warrior.
 ~
-1073743948 0 0 805306424 8412 67108864 0 -1000 S
-PD 0 1 -1
+1073743948 0 0 0 805306424 8412 67108864 0 -1000 S
+PD 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -788,8 +788,8 @@ being.  His gray-green eyes bear a hint of madness along with a great deal
 of intelligence and wisdom, this flind earned his wealth, he did not
 inherit it.
 ~
-1073743948 0 0 33620008 12508 0 0 -1000 S
-HO 0 1 -1
+1073743948 0 0 0 33620008 12508 0 0 -1000 S
+HO 0 1 0 -1
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -804,8 +804,8 @@ with a speed and dexterity that few could match.  A tattoo of an 'A' with
 a ship passing through it is on his left cheek, marking him as the pirate
 captain Aresliean.
 ~
-1073743884 0 0 524344 0 0 0 -1000 S
-RA 0 1 -1
+1073743884 0 0 0 524344 0 0 0 -1000 S
+RA 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -815,8 +815,8 @@ experienced canoneer~
 &+LAn &+cexperienced &+rcanoneer &+Lstands towards the back of the room, drinking ale.&n
 ~
 ~
-2058 0 0 0 0 0 0 0 S
-ho 0 16384 -1
+2058 0 0 0 0 0 0 0 0 S
+ho 0 16384 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -826,8 +826,8 @@ old quartermaster~
 &+LAn &+yold &+gq&nu&+ga&nr&+gt&ne&+gr&nmaster &+Lis busy chatting with one of the &+rbarmaids&+L.&n
 ~
 ~
-2058 0 0 0 0 0 0 0 S
-ho 0 16384 -1
+2058 0 0 0 0 0 0 0 0 S
+ho 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

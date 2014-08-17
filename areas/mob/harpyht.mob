@@ -7,8 +7,8 @@ hooded merchant~
 &+Lgrin and asks.
 &+W        'Need anything before you set off?'
 ~
-10 0 0 8 0 0 0 0 S
-PH 0 512 -1
+10 0 0 0 8 0 0 0 0 S
+PH 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ mountain goat~
 &+Wrun-of-the-mill mountain goat. Like others it appears unkempt and
 &+Wshaggy and like those of other locations, extremely dimwitted.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -35,8 +35,8 @@ mountain marmot~
 &+ythat enjoys nothing more than chasing and eating bugs and sleeping
 &+ythe long mountain days away between the rocks.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -49,8 +49,8 @@ minotaur moneylender merv~
 &+W        'Watch your step.'&+L He warns.&n
 &+W        'Wan't me to hold your money for you?'&n
 ~
-2058 0 0 0 0 0 0 0 S
-MT 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+MT 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -65,8 +65,8 @@ harpy guard~
 &+ywhereas even the slightest disrespect would cause one of the guards to
 &+yunleash her whip and punish the wrongdoer severely.&n
 ~
-1140852744 0 0 0 0 0 0 0 S
-MH 0 1 -1
+1140852744 0 0 0 0 0 0 0 0 S
+MH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -82,8 +82,8 @@ baby roc~
 &+ysurvival while they are small, against the numerous other predators
 &+ythat would like nothing more than to make a meal of it.&n
 ~
-2058 0 0 0 0 0 0 0 S
-B 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 8 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -96,8 +96,8 @@ gargoyle~
 &+Lto live again in undeath. It still mantains much of its former physical
 &+Lform and abilities, but is slightly more frail.&n
 ~
-2058 0 0 1048576 0 0 0 -1000 S
-MG 0 0 -1
+2058 0 0 0 1048576 0 0 0 -1000 S
+MG 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -110,8 +110,8 @@ harpy ethermancer guard~
 &+ycontrol the powers of wind and ice.  Most all harpies are adept at
 &+ysome sort of magic, though ethermancy is usually their most skilled.
 ~
-67108874 0 0 0 0 0 0 1000 S
-MH 0 33554432 -1
+67108874 0 0 0 0 0 0 0 1000 S
+MH 0 33554432 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -128,8 +128,8 @@ enormous gargoyle~
 &+W        power of undeath.  If you wish this path, ask me
 &+W           for unlife.'&n
 ~
-1140852746 0 0 0 0 0 0 -1000 S
-MG 0 512 -1
+1140852746 0 0 0 0 0 0 0 -1000 S
+MG 0 512 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -147,8 +147,8 @@ harpy queen~
 &+W        one good deed and I will enable you to walk the path of
 &+W        purity.'&n
 ~
-67110923 0 0 0 0 0 0 1000 S
-MH 0 33554432 -1
+67110923 0 0 0 0 0 0 0 1000 S
+MH 0 33554432 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -161,8 +161,8 @@ mountain lion~
 &+yknown throughout the world, they all share one common similarity,
 &+ythey are all large cats. Usually with large teeth.&n
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -175,8 +175,8 @@ commoner harpy~
 &+ythe rocky cliffs of the mountain summit here, where he can hunt the ample
 &+ysupply of food for his family under the protection of the Queen.&n
 ~
-2058 0 0 0 0 0 0 1000 S
-MH 0 8192 -1
+2058 0 0 0 0 0 0 0 1000 S
+MH 0 8192 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -188,8 +188,8 @@ elder female harpy~
 &+yOne of the local inhabitants of the harpy settlement. She is quite old
 &+yand frail and needs to be cared for by her kin.&n
 ~
-2058 0 0 0 0 0 0 1000 S
-MH 0 512 -1
+2058 0 0 0 0 0 0 0 1000 S
+MH 0 512 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -202,8 +202,8 @@ hideous harpy large~
 &+ythe shadows of the mountainside. He has a nasty smirk on his face,
 &+ylike he is ready to turn around and stab anyone in the back.&n
 ~
-1140852746 1 0 0 0 0 0 -1000 S
-MH 0 0 -1
+1140852746 1 0 0 0 0 0 0 -1000 S
+MH 0 0 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -215,8 +215,8 @@ mountain hare~
 &+yJust a regular looking rabbit that inhabits the mountain instead of
 &+ythe forest.  His fur is speckled with brown.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -230,8 +230,8 @@ mother roc~
 &+yspieces. When it shrieks the echo can be heard from miles and miles
 &+yaround.  Now it is concerned for caring for its young.&n
 ~
-67110922 0 0 0 0 0 0 0 S
-B 0 1 4
+67110922 0 0 0 0 0 0 0 0 S
+B 0 1 0 4
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -243,8 +243,8 @@ devious harpy~
 &+yThis harpy has a perpetual grimmance on his face, which gives his appearence as someone
 &+yquite angry and mean.  He slinks through the settlement, obviously up to no good.&n
 ~
-67110924 0 0 1048576 0 0 0 -1000 S
-MH 0 65536 -1
+67110924 0 0 0 1048576 0 0 0 -1000 S
+MH 0 65536 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -257,8 +257,8 @@ bald eagle~
 &+yarea letting out an omnious shriek before swooping down and snatching
 &+yup the next small critter that will become its dinner.&n
 ~
-133128 0 0 0 0 0 0 0 S
-B 0 0 2
+133128 0 0 0 0 0 0 0 0 S
+B 0 0 0 2
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -273,8 +273,8 @@ chained shackled dwarf~
 &+Lany indication-eating stuff larger than goats and marmots, and it seems
 &+Lthis poor &+Ydwarf&+L is next. His eyes seem to plead &+W'Let me free!'&n
 ~
-14 0 0 0 0 0 0 1000 S
-PM 0 0 -1
+14 0 0 0 0 0 0 0 1000 S
+PM 0 0 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -287,8 +287,8 @@ orc hiker~
 &+Ladvantage of the lookout point to grab some much needed sleep on
 &+Lalmost comfortable terrain.&n
 ~
-67110922 0 0 0 0 0 0 -1000 S
-HO 0 0 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+HO 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -301,8 +301,8 @@ harpy commoner~
 &+yarea performing his daily tasks.  Despite a lack in power compared to
 &+yhis female counterparts, he still appears rugged and experienced.&n
 ~
-1073743880 0 0 0 0 0 0 500 S
-MH 0 1 -1
+1073743880 0 0 0 0 0 0 0 500 S
+MH 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -315,8 +315,8 @@ mountain lion~
 &+ycat, with large teeth, and the ability to bounce across the rocky
 &+yterrain of the mountain side like a olympic athlete.&n
 ~
-2056 0 0 524288 0 0 0 0 S
-A 0 1 -1
+2056 0 0 0 524288 0 0 0 0 S
+A 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -329,8 +329,8 @@ adolescent harpy~
 &+ysize for their kind. He has yet to learn the ways of magic, and
 &+yspends most of his days hunting for food throughout the mountainside.
 ~
-2056 0 0 0 0 0 0 500 S
-MH 0 1 -1
+2056 0 0 0 0 0 0 0 500 S
+MH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -343,8 +343,8 @@ rock lizard~
 &+ylash out at almost anything that crosses it path.  Unfortuately for it,
 &+yit is so small, one could almost step on it.&n
 ~
-8 1 0 1048576 0 0 0 0 S
-R 0 0 1
+8 1 0 0 1048576 0 0 0 0 S
+R 0 0 0 1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -358,8 +358,8 @@ harpy khan~
 &+W	The Queen treasures the local storm crow as her
 &+W	favorite pet, kill me one, and prove yourself.&n
 ~
-1073743882 0 0 0 0 0 0 -1000 S
-MH 0 16384 -1
+1073743882 0 0 0 0 0 0 0 -1000 S
+MH 0 16384 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -374,8 +374,8 @@ mountain vulture~
 &+yand animals that live around here.  However, it is no means above
 &+yscavenging either.&n
 ~
-2060 0 0 0 0 0 0 0 S
-B 0 0 -1
+2060 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -389,8 +389,8 @@ adult wyvern mature~
 &+ythis one appears quite docile. Despite that fact, it is probably for the best, since it does
 &+yappear still strong enough to rip a man or harpy to shreds.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-DK 0 1 3
+1140852746 0 0 0 0 0 0 0 0 S
+DK 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -400,8 +400,8 @@ young wyvern~
 &+yA young wyvern sleeps in its nest here.&n
 ~
 ~
-1073743882 0 0 0 0 0 0 0 S
-DK 0 0 2
+1073743882 0 0 0 0 0 0 0 0 S
+DK 0 0 0 2
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -417,8 +417,8 @@ wizened ethermancer harpy ancient~
 &+yfurther than his body, as his knowledge of the ethermancer arts extends
 &+yeven beyond that of the queen herself.
 ~
-1140885514 0 0 0 0 0 0 1000 S
-MH 0 33554432 -1
+1140885514 0 0 0 0 0 0 0 1000 S
+MH 0 33554432 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -430,8 +430,8 @@ mountain ocelot~
 &+yThis cat-like creature keeps its large ears up and listening for danger
 &+yas it watches the area for prey.&N
 ~
-2058 0 0 0 0 0 0 0 S
-B 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 4 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -445,8 +445,8 @@ rock toad~
 &+ysun, and has no problems with jumping in the stream to clean off now
 &+yand again.&n
 ~
-2184 0 0 0 0 0 0 0 S
-R 0 0 1
+2184 0 0 0 0 0 0 0 0 S
+R 0 0 0 1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -456,8 +456,8 @@ thunder lizard~
 &+yAn enor&+wmous thun&+yder liza&+wrd lumb&+wers thro&+yugh the val&+wley.&n
 ~
 ~
-2056 0 0 0 0 0 0 0 S
-R 0 0 5
+2056 0 0 0 0 0 0 0 0 S
+R 0 0 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -467,8 +467,8 @@ orc hiker~
 &+LAn Orc hiker tries to get some sleep after an exhusting trek.&n
 ~
 ~
-67110922 0 0 0 0 0 0 -1000 S
-HO 0 0 -1
+67110922 0 0 0 0 0 0 0 -1000 S
+HO 0 0 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -483,8 +483,8 @@ harpy guard~
 &+ywhereas even the slightest disrespect would cause one of the guards to
 &+yunleash her whip and punish the wrongdoer severely.&n
 ~
-67110922 0 0 0 0 0 0 0 S
-MH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+MH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -494,8 +494,8 @@ salamander hatchling young~
 &+yA young &+wsalamander&+y wanders through the valley.&n
 ~
 ~
-2058 0 0 0 0 0 0 0 S
-R 0 0 2
+2058 0 0 0 0 0 0 0 0 S
+R 0 0 0 2
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -505,8 +505,8 @@ massive salamander~
 &+yA massive &+wsalamander&+y tramples through the valley.&n
 ~
 ~
-2088 0 0 0 0 0 0 0 S
-R 0 0 4
+2088 0 0 0 0 0 0 0 0 S
+R 0 0 0 4
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -516,8 +516,8 @@ hulking gigasaur~
 &+yA hul&+gking gig&+yasaur wan&+gders the va&+ylley&n
 ~
 ~
-1073743880 0 0 0 0 0 0 0 S
-R 0 1 4
+1073743880 0 0 0 0 0 0 0 0 S
+R 0 1 0 4
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -527,8 +527,8 @@ gargoyle~
 &+LA vicious gargoyle guards the mineshaft.&n
 ~
 ~
-2058 1 0 1048576 0 0 0 -1000 S
-MG 0 32768 -1
+2058 1 0 0 1048576 0 0 0 -1000 S
+MG 0 32768 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -538,8 +538,8 @@ insidious lich~
 &+LAn insidious l&+mic&+Lh has taken up residence in the shaft.&n
 ~
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-UL 0 1024 -1
+1073743880 1 0 0 0 0 0 0 -1000 S
+UL 0 1024 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -553,8 +553,8 @@ crab spider~
 &+Lthe area it clacks its pincers together to emit a very loud, and very
 &+Lonimous sound.&n
 ~
-1073743880 1 0 0 0 0 0 0 S
-TK 0 1 2
+1073743880 1 0 0 0 0 0 0 0 S
+TK 0 1 0 2
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -564,8 +564,8 @@ storm crow~
 &+cA storm &+Lcrow&+c sits perched here.&n
 ~
 ~
-1073743882 0 0 0 0 0 0 0 S
-B 0 128 -1
+1073743882 0 0 0 0 0 0 0 0 S
+B 0 128 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -577,8 +577,8 @@ angry sleeping griffon~
 &+yThis griffon appears quite angry at being woken up during its nap,
 &+yit lets out an annoyed shriek and viciously swipes at the air.&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-B 0 128 4
+1073743882 0 0 0 0 0 0 0 0 S
+B 0 128 0 4
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 0
@@ -593,8 +593,8 @@ crab spider monsterous~
 &+Lof the poor beings that managed to get trapped down here in his den,
 &+Land devoured.
 ~
-1073743882 1 0 0 0 0 0 -1000 S
-TK 0 1 3
+1073743882 1 0 0 0 0 0 0 -1000 S
+TK 0 1 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -606,8 +606,8 @@ devious harpy~
 &+yThis harpy has a perpetual grimmance on his face, which gives his appearence as someone
 &+yquite angry and mean.  He slinks through the settlement, obviously up to no good.&n
 ~
-2058 1 0 24 0 0 0 -1000 S
-MH 0 65536 -1
+2058 1 0 0 24 0 0 0 -1000 S
+MH 0 65536 0 -1
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

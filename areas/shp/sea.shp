@@ -82,8 +82,8 @@ N
 67353
 67354
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -239,8 +239,8 @@ N
 67342
 67343
 0
-1.00
-1.00
+0.80
+1.10
 9
 0
 %s I'm not selling that.~
@@ -278,7 +278,7 @@ N
 67345
 67352
 0
-1.00
+0.80
 1.20
 19
 0
@@ -313,8 +313,8 @@ X
 N
 67363
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -350,8 +350,8 @@ N
 67352
 67354
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~

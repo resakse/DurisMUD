@@ -10,8 +10,8 @@ The &+mticket&+M mas&+mte&+Mr&n of&+M J&+Gi&+rn&+Ld&+Bo&+bn&+Yi&+cu&+Cm &nwelcom
 &+Mpink trousers with a straw woven hat upon his head.  His two horns look to
 &+Mhave ripped through the hat, with obvious intent of not being constrained.
 ~
-30794 0 0 56 0 0 0 0 S
-MT 0 1 -1
+30794 0 0 0 56 0 0 0 0 S
+MT 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -24,8 +24,8 @@ clown halfling~
 &+Msmile on his face that makes you want to kick his ass.  He runs up to
 &+Myou grabs your cheeks and laughs in your face.
 ~
-2120 0 0 0 0 0 0 1000 S
-PF 0 16384 -1
+2120 0 0 0 0 0 0 0 1000 S
+PF 0 16384 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -38,8 +38,8 @@ uggie willy uggiewilly bullywug~
 &+Lthan the other one and his nose is almost turned sideways.  He greets potential
 &+Lcustomers with a warm smile though.
 ~
-2122 0 0 33554432 2 0 0 -500 S
-H 0 1 -1
+2122 0 0 0 33554432 2 0 0 -500 S
+H 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -52,8 +52,8 @@ The &+mheadless drow&n stand here waiting for your business.
 &+mIt's a marvel at his existance alone.  It's possible to see a ghostly figure
 &+mof a head flicker then fade away.
 ~
-2122 0 0 33554440 0 0 0 -500 S
-PL 0 1 -1
+2122 0 0 0 33554440 0 0 0 -500 S
+PL 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -66,8 +66,8 @@ The &+Ybartender&n &+WLou&+Ldog&n stands here ready to take your order.
 &+Yyou with a huge grin.  "Come, sit down, have a drink my friend." he says
 &+Yto you kindly.
 ~
-2122 0 0 536944672 45248 0 0 500 S
-PM 0 1 -1
+2122 0 0 0 536944672 45248 0 0 500 S
+PM 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -81,8 +81,8 @@ jaskin~
 &+Mand is fairly handsome for a weirdo, but there is something frightening
 &+Mabout his grin.
 ~
-133194 0 0 134217728 0 0 0 -750 S
-H 0 1 -1
+133194 0 0 0 134217728 0 0 0 -750 S
+H 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -95,8 +95,8 @@ faggle ogre~
 &+Lget the feeling that if he really wanted them he could take them.  His
 &+Lstrength is unparalled and swordsmanship is unmatched.
 ~
-2122 0 0 33554432 0 0 0 -750 S
-PO 0 1 -1
+2122 0 0 0 33554432 0 0 0 -750 S
+PO 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -110,8 +110,8 @@ A &+YThri-&+GKreen&n stands here looking sad.
 &+Yis missing are the top left and the bott&+Gom right.  Upon closer inspection,
 &+Yit's easier to notice he as a nametag wit&+Gh the name Sirax printed on it.
 ~
-2122 0 0 0 0 0 0 -200 S
-TK 0 1 -1
+2122 0 0 0 0 0 0 0 -200 S
+TK 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -125,8 +125,8 @@ gyrkx troll~
 &+greach beyond the troll's jaw.  The rest of his physique is rather
 &+ghairy, he would be considered rather handsome to his own race.
 ~
-2058 0 0 0 0 0 0 -999 S
-PT 0 1 -1
+2058 0 0 0 0 0 0 0 -999 S
+PT 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -141,8 +141,8 @@ dazzled traveller~
 &+Lreturn to this carnival.  Meanwhile, he spends his money playing many of the
 &+Lrigged games in this square.
 ~
-2120 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -155,8 +155,8 @@ barbarian~
 &+Bbut instead found himself victim to the disease 'gambling' and has since lost
 &+Ball of his money.
 ~
-2120 0 0 0 0 0 0 200 S
-PB 0 1 -1
+2120 0 0 0 0 0 0 0 200 S
+PB 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.3.0 0
 8 8 0
@@ -169,8 +169,8 @@ onlooker dusty~
 &+Lcomes to the sideshow often and has become quite adept at avoiding thieves.
 &+LThe grin placed upon his face is knows no equal.
 ~
-2120 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.9.0 0
 8 8 1
@@ -182,8 +182,8 @@ dog small~
 &+yHe seems to be sniffing the ground.  His hair is rugged and it needs a good
 &+ywashing.  There seems to be no identification on its person, like a collar.
 ~
-72 0 0 0 0 0 0 0 S
-A 0 1 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -197,8 +197,8 @@ bearded lady~
 &+Lchosen this lifestyle fits her &+mquite wel&+Ll, for she blends in nicely with her
 &+Lfello carnivinians.
 ~
-2120 0 0 0 0 0 0 -200 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 -200 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.2 0
 8 8 2
@@ -211,8 +211,8 @@ fire eater~
 &+rin brown trousers and wear's a dark cloak around his body.  Many people are
 &+rapplauding his act, for it is one of a kind.
 ~
-2120 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.9.0 0
 8 8 1
@@ -225,8 +225,8 @@ This hairy halfling has been banned from his hometown, so he decided to join
 this carnival.  He fits in quite nicely here and performs some very agil stunts
 much to the approval of his viewers.
 ~
-2120 0 0 0 0 0 0 0 S
-PF 0 16384 -1
+2120 0 0 0 0 0 0 0 0 S
+PF 0 16384 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -241,8 +241,8 @@ thri thri-kreen kreen juggler~
 &+Lreason, they can butcher meat with unparalled speed and handle swords with
 &+Lincredible accuracy.
 ~
-2120 0 0 0 0 0 0 0 S
-TK 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+TK 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.2 0
 8 8 1
@@ -256,8 +256,8 @@ organ grinder~
 &+gannouces his poverty stricken status to the world.  Out of pity for him and his
 &+gpet, they are charitable.
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.2 0
 8 8 1
@@ -271,8 +271,8 @@ onlooker~
 &+mThe grub and beer in either of his hand seem to find their way to his mouth
 &+mwith remarkable accuracy.
 ~
-2122 0 0 0 0 0 0 -200 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 -200 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.4.0.0 0
 8 8 1
@@ -286,8 +286,8 @@ large onlooker~
 &+gheartedly as he watches the spectacle in the center of the arena.  Joining
 &+ghis peers, he laughs out loud.&n
 ~
-2122 0 0 0 0 0 0 -200 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 -200 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.1 0
 8 8 1
@@ -301,8 +301,8 @@ elephant large~
 &+carena if it weren't for the trainer.  His whip cackles through the air,
 &+cintimidating the great beast.
 ~
-2122 0 0 0 0 0 0 0 S
-A 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -315,8 +315,8 @@ bird large~
 &+gbird is domesticated, it has learned to live by the hand that feeds it and
 &+gthus, it does not leave.
 ~
-2122 0 0 0 0 0 0 0 S
-B 0 0 -1
+2122 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -330,8 +330,8 @@ lion verocious~
 &+rabout approaching it, however, since the chains around its neck forbid it
 &+rfrom retaliating, the trainer whips much to the joy of the crowd.
 ~
-2122 0 0 0 0 0 0 0 S
-A 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -344,8 +344,8 @@ donkey~
 &+ygroans that come from his person, are miserble and softens the heart.  Many
 &+ytake pity upon this calamity of nature and pet the donkey softly.
 ~
-2186 0 0 0 0 0 0 0 S
-A 0 0 -1
+2186 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -358,8 +358,8 @@ reptilian scaly~
 &+gcan not be called humanoid because of its scales, and well, it can't possibly
 &+gbe categorized.
 ~
-2186 0 0 0 0 0 0 0 S
-D 0 1 -1
+2186 0 0 0 0 0 0 0 0 S
+D 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -372,8 +372,8 @@ heidie~
 &+Lhard for this woman, however, she earns no respect and compassion simply because
 &+Lof the show she runs.
 ~
-2122 0 0 0 0 0 0 -200 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 -200 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.23.2 0
 8 8 2
@@ -385,8 +385,8 @@ illithid githyanki~
 &+LThis strange creature seems to be fighting itself.  Its limbs resemble that
 &+Lof an illithid and a githyanki.
 ~
-2122 0 0 0 0 0 0 0 S
-MF 0 4 -1
+2122 0 0 0 0 0 0 0 0 S
+MF 0 4 0 -1
 36 0 0 1d1+1 1d1+1
 1.0.0.0 0
 8 8 1
@@ -399,8 +399,8 @@ crow scarecrow scare strange~
 &+Lflesh looks to be umm, hey.  Hey hangs from where its hands should belong, as
 &+Lwell as the legs.&n
 ~
-2058 1 0 0 0 0 0 0 S
-H 0 1 -1
+2058 1 0 0 0 0 0 0 0 S
+H 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -413,8 +413,8 @@ vernan griller~
 &+Lgrill the most heart stopping (literally) burgers the world has ever seen.  He
 &+Ldoes great business, for he is the only griller of his caliber within the area.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -427,8 +427,8 @@ finler mime~
 &+Lbrutal attacks by passerbyers.  He wears black clothing with white makeup on&n
 &+Lhis entire face.&n
 ~
-2122 0 0 0 0 0 0 0 S
-PE 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PE 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.2 0
 8 8 1
@@ -441,8 +441,8 @@ commoner~
 &+Lragged attire, this young man doesn't mind the poverty status that they tell
 &+Lthe world with which he must live in.
 ~
-2120 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -456,8 +456,8 @@ lion ferocious~
 &+yknows nothing of pain or fear, however, the lust for blood it knows all too
 &+ywell.
 ~
-72 1 0 0 0 0 0 0 S
-A 0 0 -1
+72 1 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -470,8 +470,8 @@ doe~
 &+ycares nothing for the outside world and only wishes to graze, despite the
 &+yclose proximity of the carnival.
 ~
-2120 0 0 0 0 0 0 400 S
-A 0 0 -1
+2120 0 0 0 0 0 0 0 400 S
+A 0 0 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -487,8 +487,8 @@ troll~
 &+Lrags around his groin and an eyepatch around his eyes are the only things he
 &+Lwears.
 ~
-1073743880 1 0 0 0 0 0 0 S
-PT 0 256 -1
+1073743880 1 0 0 0 0 0 0 0 S
+PT 0 256 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -501,8 +501,8 @@ large stag~
 &+ymany animals in this forest is however.  This stag would make a great steak if
 &+yever found.
 ~
-8 0 0 0 0 0 0 400 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 400 S
+A 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -515,8 +515,8 @@ ocul animal trainer~
 &+che has become emotionally attached to his animals.  It is rumored that he is
 &+cable to converse with the animals through some supernatural means.
 ~
-2058 0 0 0 0 0 0 400 S
-H 0 1 -1
+2058 0 0 0 0 0 0 0 400 S
+H 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -531,8 +531,8 @@ giant two-headed cyclops~
 &+Lthe exit to the cave hoping to catch its meal and delivering the deathblow&N
 &+Land then helping himself to a grand feast.&N
 ~
-18442 1 0 56 0 0 0 -1000 S
-G 0 1 5
+18442 1 0 0 56 0 0 0 -1000 S
+G 0 1 0 5
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -548,8 +548,8 @@ kneeling priest~
 &+Lguess is that this priest uses them for sacrificial purposes or perhaps&N
 &+Lself defense.&N
 ~
-2250 128 0 56 0 0 0 1000 S
-PH 0 32 -1
+2250 128 0 0 56 0 0 0 1000 S
+PH 0 32 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -564,8 +564,8 @@ headless ogre~
 &+Land attacks. He has hardly any type of armor on and has blood dripping&N
 &+Lfrom his neck where his head should be and he swings at anything that moves.&N
 ~
-2186 64 0 0 0 0 0 -500 S
-PO 0 1 4
+2186 64 0 0 0 0 0 0 -500 S
+PO 0 1 0 4
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -580,8 +580,8 @@ headless thri-kreen~
 &+Las if he hopes to make some kind of head shot on something and he skulks&n
 &+Lacross the floor as he tries to find some type of head to put on his body.&N
 ~
-67111050 0 0 56 0 262144 0 500 S
-TK 0 16384 3
+67111050 0 0 0 56 0 262144 0 500 S
+TK 0 16384 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -596,8 +596,8 @@ headless centaur~
 &+Lfor something and it probably could be a dangerous foe if he only had&N
 &+La good head on its shoulders and it scans the room for any type of head.&N
 ~
-2250 128 0 40 0 0 0 1000 S
-CT 0 8 4
+2250 128 0 0 40 0 0 0 1000 S
+CT 0 8 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -612,8 +612,8 @@ trophy hunter~
 &+LHe stares at the trophies at the wall and sharpens his daggers as if he is&N
 &+Lwaiting for the next trophy to walk in.&N
 ~
-67111114 0 0 1572864 0 0 0 -1000 S
-PH 0 4096 4
+67111114 0 0 0 1572864 0 0 0 -1000 S
+PH 0 4096 0 4
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -627,8 +627,8 @@ large skeleton~
 &+Whis bones rattle as he runs and in its hands is a cracked bone staff.&n
 &+WThe skeletons eyes glows with a inner fire that keeps it angry all the time.&N
 ~
-2186 1 0 56 0 0 0 -1000 S
-U 0 1 3
+2186 1 0 0 56 0 0 0 -1000 S
+U 0 1 0 3
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -643,8 +643,8 @@ wraith old man ghost~
 &+Lloss for most of the undead either but it serves its own purpose and&n
 &+Lkills everything that moves in its path.&n
 ~
-2250 0 0 0 0 0 0 -1000 S
-UG 0 1024 3
+2250 0 0 0 0 0 0 0 -1000 S
+UG 0 1024 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -659,8 +659,8 @@ two-headed dragon~
 &+LHe is wearing some kind of gloves and wielding some kind of weapon that&N
 &+Llooks very deadly and it scans the room with both heads.&N
 ~
-395402 1 0 73916 0 262144 0 -1000 S
-D 0 512 -1
+395402 1 0 0 73916 0 262144 0 -1000 S
+D 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -675,8 +675,8 @@ yuan-ti warrior~
 &+Lto strike a nearby branch with it to try and free himself from the deadly
 &+Lwhirlpool. He hisses in anger as he fails to wrap the whip around the branch.&N
 ~
-2186 0 0 0 0 0 0 -500 S
-H 0 1 3
+2186 0 0 0 0 0 0 0 -500 S
+H 0 1 0 3
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -691,8 +691,8 @@ large rat~
 &+ymove around as he glances the room for something else to chew on&N
 &+yHe smells pretty bad and lashes out at anything that moves.&N
 ~
-2186 1 0 0 0 0 0 -1000 S
-A 0 0 2
+2186 1 0 0 0 0 0 0 -1000 S
+A 0 0 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -708,8 +708,8 @@ smelly troll~
 &+gand he smells of rotted fish or something. He grunts in satisfaction&N
 &+gwhen his toll is paid and throws people off who dont pay.&N
 ~
-2186 0 0 0 0 0 8192 -1000 S
-PT 10 1 4
+2186 0 0 0 0 0 0 8192 -1000 S
+PT 10 1 0 4
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

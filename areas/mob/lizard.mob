@@ -8,8 +8,8 @@ a &+Lli&+wz&+La&+wrd&+Lman&+R guard&n~
 &+LHis job appears rather boring, with only the people, that occasionally stumble
 &+Lupon his post, to entertain him.&n
 ~
-1073741898 0 0 0 4098 0 0 -1000 S
-H 0 1 -1
+1073741898 0 0 0 0 4098 0 0 -1000 S
+H 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -23,8 +23,8 @@ a &+ymember&+L of the &+rRoyal&+R Guard&n~
 &+Lfew &+rs&+Rc&+rar&+Rs&+L from previous engagements, and his corded muscles shift beneath his
 &+Lskin as he shifts from foot to foot.&n
 ~
-74 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+74 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -37,8 +37,8 @@ a gigantic &+mtako&+L demon&n~
 &+Lthe li&+wz&+La&+wrd&+Lmen, just lives here, or else is under some kind of charm imposed by
 &+Lsomeone unknown.  He swirls around this &+cpo&+Co&+cl&+L looking for something to consume.&n
 ~
-1074145354 1 0 301992204 2048 0 0 -1000 S
-X 0 1 -1
+1074145354 1 0 0 301992204 2048 0 0 -1000 S
+X 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -52,8 +52,8 @@ sslith lizard king lizardman~
 &+Lkith.  He grunts, waiting for a &+Chuman&+L or some other fresh &+rm&+Re&+ra&+Rt&+L to be brought
 &+Lto him so that he might eat.&n
 ~
-33556558 0 0 33587492 4098 0 262144 -1000 S
-H 0 256 -1
+33556558 0 0 0 33587492 4098 0 262144 -1000 S
+H 0 256 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -66,8 +66,8 @@ seht cloaked guard lizard~
 &+Lover the form of the &+cking&+L, his master.  He stands some two feet over the heads
 &+Lof his kin, his rippling form that of an animal trained to hunt and kill.&n
 ~
-2122 0 0 302022912 4098 0 0 -1000 S
-G 0 1 -1
+2122 0 0 0 302022912 4098 0 0 -1000 S
+G 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -81,8 +81,8 @@ a&+L li&+wz&+La&+wrd&+Lman &+ytribesman&n~
 &+Wteeth&+L rests upon a string about its neck.  As a rite of passage, adults are
 &+Lmade to raid outlying settlements to bring back food for the tribe.&n
 ~
-1073743948 0 0 33587456 4098 0 0 -1000 S
-H 0 1 -1
+1073743948 0 0 0 33587456 4098 0 0 -1000 S
+H 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -95,8 +95,8 @@ a conclave of &+Lshadows&n~
 &+Lor mage, but instead seems to be self-sustaining.  You're not sure, but you
 &+Lthink the shadows are growing in size as time passes.&n
 ~
-1074137096 0 0 302022964 4162 0 262144 -1000 S
-sw 0 1 -1
+1074137096 0 0 0 302022964 4162 0 262144 -1000 S
+sw 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -109,8 +109,8 @@ a huge &+Wskeleton&n~
 &+Rco&+rr&+Rp&+rse&+Rs&+L about the area.  It roams through the &+gs&+cw&+ga&+Gm&+gp&+L now, seeking out refuge
 &+Lfrom its cursed existance.&n
 ~
-1073743944 0 0 33554688 66 0 0 -1000 S
-sk 0 1 -1
+1073743944 0 0 0 33554688 66 0 0 -1000 S
+sk 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -124,8 +124,8 @@ an &+Lorc anti-paladin~
 &+Lthis orc appears to be delighted with the lack of direct &+Ysunlight&+L, and his new
 &+Lfound freedom from its pain.&n
 ~
-1073743948 0 0 33554688 2 0 0 -1000 S
-HO 0 16 -1
+1073743948 0 0 0 33554688 2 0 0 -1000 S
+HO 0 16 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -138,8 +138,8 @@ a battle-scarred&+g troll&n~
 &+Lthe wide bredth of his face.  He seems to be smashing anything that suits his
 &+Lfancy, howling in ecstacy whenever the mood hits him.&n
 ~
-1073743948 0 0 33554688 2 0 0 -1000 S
-PT 0 1 -1
+1073743948 0 0 0 33554688 2 0 0 -1000 S
+PT 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -152,8 +152,8 @@ a &+Wzombie&n~
 &+Lrather clueless, even for a zombie.  It fills with &+Rrage&+L during the night, when
 &+Lthe powers of darkness fill its rotted &+rheart&+L.&n
 ~
-1073743944 0 0 0 4160 0 0 -1000 S
-zo 0 1 -1
+1073743944 0 0 0 0 4160 0 0 -1000 S
+zo 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -167,8 +167,8 @@ the &+gs&+cw&+ga&+Gm&+gp &+wwight&+L of the &+GCl&+ga&+Gv&+gik&+Go&+grd&n~
 &+Lcloser inspection, however, it appears to have dark &+wgrey&+L fur, bleached &+Wskin&+L,
 &+Land the rancor of rotting &+rfl&+Re&+rsh&+L.&n
 ~
-1073756168 0 0 302031140 4162 0 0 -1000 S
-uw 0 1 -1
+1073756168 0 0 0 302031140 4162 0 0 -1000 S
+uw 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -182,8 +182,8 @@ a &+Lferal &+Rd&+rir&+Re &+Lwolf&n~
 &+rred&+L in coloration, and his long fur is a deep black with a diamond-shaped shock
 &+Lof white &+Wfur&+L upon its breast.&n
 ~
-1207961672 1 0 33554688 2 0 0 -1000 S
-AC 0 1 -1
+1207961672 1 0 0 33554688 2 0 0 -1000 S
+AC 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -198,8 +198,8 @@ bemon crusader human~
 &+La Holy Knight.  The determined set of his chin is a clear indication that this
 &+Lonce-knight will not quickly quit his &+Rcharge&+L at redemption.&n
 ~
-1073752136 0 0 0 0 0 0 723 S
-PH 0 1 -1
+1073752136 0 0 0 0 0 0 0 723 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -213,8 +213,8 @@ vornin drow dark elf~
 &+Lhand.  He appears to be hunting someone, constantly muttering the word '&+WBemon&+L'
 &+Las he searches for signs of whomever or whatever he is after.&n
 ~
-1073743944 0 0 33554688 2 0 0 -1000 S
-PL 0 1 -1
+1073743944 0 0 0 33554688 2 0 0 -1000 S
+PL 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -229,8 +229,8 @@ mukrok troll guardian sentinel~
 &+Lover the heads of even &+bogres&+L.  None can bargain with such a giant colossus, no
 &+Lmatter how articulate or rich they may be.&n
 ~
-2122 0 0 268501272 12482 0 8192 -1000 S
-G 0 1 -1
+2122 0 0 0 268501272 12482 0 8192 -1000 S
+G 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -243,8 +243,8 @@ a&+L li&+wz&+La&+wrd&+Lman &+ytribeswoman&n~
 &+Ltaunt with the impressive air of a combat seasoned veteran.  Her breasts are
 &+Lbare, each pierced by a &+wshard&+L of &+Wbone&+L from a small &+Bbird&+L of some kind.&n
 ~
-1073743948 0 0 33587456 4098 0 0 -1000 S
-H 0 1 -1
+1073743948 0 0 0 33587456 4098 0 0 -1000 S
+H 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -258,8 +258,8 @@ lizardman lizard man worshipper~
 &+Wteeth&+L rests upon a string about its neck.  As a rite of passage, adults are
 &+Lmade to raid outlying settlements to bring back food for the tribe.&n
 ~
-1073743950 0 0 33587456 4098 0 0 -1000 S
-H 0 1 -1
+1073743950 0 0 0 33587456 4098 0 0 -1000 S
+H 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -273,8 +273,8 @@ lizardman lizard man worshipper~
 &+Wteeth&+L rests upon a string about its neck.  As a rite of passage, adults are
 &+Lmade to raid outlying settlements to bring back food for the tribe.&n
 ~
-1073743950 0 0 33587456 4098 0 0 -1000 S
-H 0 1 -1
+1073743950 0 0 0 33587456 4098 0 0 -1000 S
+H 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -289,8 +289,8 @@ zekeshka ze witchdoctor doctor witch~
 &+Gclearly gained the prestige from the males as she surrounds herself
 &+Gwith loyal servants.
 ~
-2122 0 0 24 0 0 0 -1000 S
-h 0 256 4
+2122 0 0 0 24 0 0 0 -1000 S
+h 0 256 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -305,8 +305,8 @@ slimy lizardman~
 &+Gthis one is a strong man, having traveled here to protect his witchdoctor
 &+Gand bask in her magic.
 ~
-1073743946 0 0 0 0 0 0 -1000 S
-h 0 1 4
+1073743946 0 0 0 0 0 0 0 -1000 S
+h 0 1 0 4
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -321,8 +321,8 @@ lizardman worshipper~
 &+Gthis one is a strong man, having traveled here to protect his witchdoctor
 &+Gand bask in her magic.
 ~
-1073743944 0 0 0 0 0 0 -1000 S
-h 0 1 4
+1073743944 0 0 0 0 0 0 0 -1000 S
+h 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -337,8 +337,8 @@ young lizardman~
 &+Gthis one is a strong man, having traveled here to protect his witchdoctor
 &+Gand bask in her magic.
 ~
-1073743944 0 0 0 0 0 0 -1000 S
-h 0 1 4
+1073743944 0 0 0 0 0 0 0 -1000 S
+h 0 1 0 4
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -353,8 +353,8 @@ lizardman~
 &+Gthis one is a strong man, having traveled here to protect his witchdoctor
 &+Gand bask in her magic.
 ~
-1073743944 0 0 0 0 0 0 -1000 S
-h 0 1 4
+1073743944 0 0 0 0 0 0 0 -1000 S
+h 0 1 0 4
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

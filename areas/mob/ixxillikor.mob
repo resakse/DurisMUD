@@ -9,8 +9,8 @@ golem flesh~
 &+Mbrain atop their rounded shoulders. A single eyeball in the center of the
 &+Mbrain allows the elder brain to see all that the golems view.&n
 ~
-637565514 536870976 0 152 0 0 0 0 S
-OG 0 1 -1
+637565514 536870976 0 0 152 0 0 0 0 S
+OG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -25,8 +25,8 @@ golem flesh~
 &+Mbrain atop their rounded shoulders. A single eyeball in the center of the
 &+Mbrain allows the elder brain to see all that the golems view.&n
 ~
-100694088 64 0 24 0 0 0 0 S
-OG 0 1 5
+100694088 64 0 0 24 0 0 0 0 S
+OG 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -40,8 +40,8 @@ duergar slave~
 &+ghangs in straps on his body. Barely visible on his chest is the warriors crest
 &+gof Gloomhaven.&n
 ~
-74 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+74 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -57,8 +57,8 @@ illithid ezallixxel~
 &+mthat he is a very powerful being, having lived eternity and traveled through
 &+mmany realms furthering the expansion of illithid might.&n
 ~
-33568842 0 0 24 0 0 0 -1000 S
-MF 0 262144 -1
+33568842 0 0 0 24 0 0 0 -1000 S
+MF 0 262144 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -74,8 +74,8 @@ illithid shopkeeper~
 &+gThe caps able to puncture bone and cartilage as the tentacles burrough
 &+gtoward the brain cavity of the intended prey.&n
 ~
-33585226 0 0 24 0 0 0 -1000 S
-MF 0 262144 -1
+33585226 0 0 0 24 0 0 0 -1000 S
+MF 0 262144 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -90,8 +90,8 @@ drow banker~
 &+mparty, his trust is unquestioned. Ever so often his eyes glaze over as
 &+mthe elder prain probes his thoughts.&n
 ~
-100694090 0 0 152 0 0 0 -1000 S
-PL 0 32 -1
+100694090 0 0 0 152 0 0 0 -1000 S
+PL 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -104,8 +104,8 @@ illithid receptionist~
 &+mkey to a spare room. His muave colored skin accented by large white eyes. Its
 &+mfour tentacles like small appendages waving slowly through the air.&n
 ~
-100694088 3972530240 1 156 0 0 0 -1000 S
-MF 0 262144 -1
+100694088 3972530240 1 0 156 0 0 0 -1000 S
+MF 0 262144 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -118,8 +118,8 @@ drow slave~
 &+mintrusions have overwhelmed its senses. A cloth rag is secured around its
 &+mmidsection. The rag soaked in a pinkish liquid that drips to the ground.&n
 ~
-100692042 0 0 0 0 0 0 0 S
-PL 0 16 -1
+100692042 0 0 0 0 0 0 0 0 S
+PL 0 16 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -137,8 +137,8 @@ brain elder~
 &+Mrelayed by other illithid and the protective flesh golems The crackling
 lights of magical energy swirl about the mass, a result of planar travel.&n
 ~
-100694092 0 1 152 0 0 0 0 S
-MF 0 262148 6
+100694092 0 1 0 152 0 0 0 0 S
+MF 0 262148 0 6
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -152,8 +152,8 @@ duergar slave~
 &+rthere is no more resistance left in his body. His zombie like movements an
 &+rindication that he is under total control of the illithid.&n
 ~
-1174415432 0 0 0 0 0 0 0 S
-PD 0 1 -1
+1174415432 0 0 0 0 0 0 0 0 S
+PD 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -167,8 +167,8 @@ rothe~
 &+yable to grind thick roots into pulp in a matter of seconds. LArge black eyes
 &+ypeer back from their soft leather. The eyes void of any intelligence.&n
 ~
-72 0 0 268435488 0 0 0 0 S
-AH 0 0 -1
+72 0 0 0 268435488 0 0 0 0 S
+AH 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -182,8 +182,8 @@ goblin scrawny~
 &+gpsionic impulses from the elder brain. Its sole purpose to ensure no harm
 &+gbefalls the herd.&n
 ~
-72 0 0 0 0 0 0 0 S
-HG 0 1 -1
+72 0 0 0 0 0 0 0 0 S
+HG 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -198,8 +198,8 @@ duergar metalsmith~
 &+gillithid in his metalwork would result in his immediate enslavement. For now
 &+ghe stands free, and earns a small profit to boot.&n
 ~
-33581130 0 0 24 0 0 0 -1000 S
-PD 0 1 -1
+33581130 0 0 0 24 0 0 0 -1000 S
+PD 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -216,8 +216,8 @@ queen neogi~
 &+ra large drider, the black hair blending naturally into the black stone
 &+rof the chamber. The large reptilian neck and head, venomous fangs protruding.&n
 ~
-100694090 0 0 0 0 0 0 -1000 S
-H 0 67108868 -1
+100694090 0 0 0 0 0 0 0 -1000 S
+H 0 67108868 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -231,8 +231,8 @@ neogi young~
 &+yin the tower until his strength and psionic ability are powerful enough
 &+yto be a dominating force in the lands of Duris.&n
 ~
-74 0 0 24 0 0 0 0 S
-H 0 1 -1
+74 0 0 0 24 0 0 0 0 S
+H 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -245,8 +245,8 @@ neogi guard~
 &+rguard stands here protecting the tower. Its intent gaze quickly surveying
 &+rthe darkness to ensure no threats come to its queen.&n
 ~
-2122 0 0 24 0 0 0 -1000 S
-H 0 1 -1
+2122 0 0 0 24 0 0 0 -1000 S
+H 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -261,8 +261,8 @@ drow slave~
 &+mwrapped around his midsection. His hesitant steps indicating that he
 &+mattempts to resist the will of the elder brain.&n
 ~
-72 0 0 8 0 0 0 -1000 S
-PL 0 1 -1
+72 0 0 0 8 0 0 0 -1000 S
+PL 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -277,8 +277,8 @@ illithid~
 &+meyes, a milky white, contrast sharply with its muave colored skin. A
 &+mthin layer of slime coats its body dripping onto the fine robe.&n
 ~
-33554504 64 0 0 0 0 0 0 S
-MF 0 262144 -1
+33554504 64 0 0 0 0 0 0 0 S
+MF 0 262144 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -294,8 +294,8 @@ umber hulk umber-hulk~
 &+Lhair. A massive pair of mandibles and rows of triangular teeth dominate the
 &+Llow, rounded head.&n
 ~
-20552 0 0 8 0 0 0 -1000 S
-OG 0 1 5
+20552 0 0 0 8 0 0 0 -1000 S
+OG 0 1 0 5
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -311,8 +311,8 @@ illithid overseer~
 &+Lillithid masters, the overseer will subdue them and feast on their soft
 &+Lbrain matter.&n
 ~
-33562696 536870912 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+33562696 536870912 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -327,8 +327,8 @@ kobold scrawny~
 &+gthe illithid. Often barring his yellow teeth and growling, one realizes
 &+gthat it is nothing more than a reflexive instinct toward the herd.&n
 ~
-67108936 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+67108936 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -343,8 +343,8 @@ troll ancient slave~
 &+Gdominated by the illithid. A prized possession for their strength, this
 &+Gspecific troll would appear to have outlived his use in the arena.&n
 ~
-8 0 0 152 0 0 0 -1000 S
-PT 0 1 -1
+8 0 0 0 152 0 0 0 -1000 S
+PT 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -358,8 +358,8 @@ elder illithid~
 &+mmanipulations of the elder brain are received. His flowing robes indicating
 &+mthat he is one of the more wealthy illithid that reside in the city.&n
 ~
-1174415432 3972530240 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+1174415432 3972530240 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -374,8 +374,8 @@ illithid shopper~
 &+ytrinket of some rarity goes a long way to increasing the status of wealthy
 &+yillithid.&n
 ~
-33554440 64 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+33554440 64 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -390,8 +390,8 @@ illithid auctioneer~
 &+mrather large illithid, roughly grabs the chain around the slaves neck
 &+mthrusting him out to the crowd.&n
 ~
-100694090 0 0 152 0 0 0 0 S
-MF 0 262144 -1
+100694090 0 0 0 152 0 0 0 0 S
+MF 0 262144 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -404,8 +404,8 @@ illithid bystander~
 &+mtentacles swaying wildly as his face contorts as he sends a psionic message
 &+mto his champion urging him to fight harder.&n
 ~
-1107298314 545325120 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+1107298314 545325120 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -419,8 +419,8 @@ neogi bystander~
 &+mfanged teeth. Its spider like body climbing up the cavern walls in order
 &+mto get a better look as the illithid crowd its small body from the view.&n
 ~
-33556554 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+33556554 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -435,8 +435,8 @@ rothe white~
 &+wuse slaves whose minds have completely broken down under the illithids
 &+wmental assaults to shepherd the herd.&n
 ~
-72 0 0 0 0 0 0 0 S
-AH 0 1 -1
+72 0 0 0 0 0 0 0 0 S
+AH 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -449,8 +449,8 @@ myconid adult~
 &+yis a myconid, a caretaker of the forest. He moves slowly about the fungi
 &+yplacing his hands on the stalks before gently caressing their limbs.&n
 ~
-8264 0 0 8 0 0 0 200 S
-H 0 1 3
+8264 0 0 0 8 0 0 0 200 S
+H 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -464,8 +464,8 @@ young myconid~
 &+ythe forest carressing the fungi. His telepathic communication allowing
 &+yhim to tend to the eeds of all plant life within the cavern.&n
 ~
-10316 0 0 8 0 0 0 0 S
-H 0 1 -1
+10316 0 0 0 8 0 0 0 0 S
+H 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -479,8 +479,8 @@ gas spore~
 &+Yeach flake are small barbs tha if gotten into the eyes would blind the
 &+Yunfortunate victim.&n
 ~
-2120 0 0 0 0 0 0 0 S
-AP 0 1 -1
+2120 0 0 0 0 0 0 0 0 S
+AP 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -493,8 +493,8 @@ neogi guard~
 &+yrace within the tower. He patrols the inner sections ensuring that no
 &+yintruders gain access to the queen nor the young that were recently hatched.&n
 ~
-67111496 0 0 0 0 0 0 -1000 S
-H 0 1 -1
+67111496 0 0 0 0 0 0 0 -1000 S
+H 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -508,8 +508,8 @@ sickly dwarf~
 &+ythan a dwarf. His eyes are void of any intellect as he is under the total
 &+ycontrol of the elder brain.&n
 ~
-74 0 0 0 0 0 0 1000 S
-PM 0 1 -1
+74 0 0 0 0 0 0 0 1000 S
+PM 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -524,8 +524,8 @@ halfling slave~
 &+ysoft glaze as the powerful control of the elder brain has deteriorated
 &+yall will to resist.&n
 ~
-67119176 0 0 0 0 0 0 1000 S
-PF 0 32 -1
+67119176 0 0 0 0 0 0 0 1000 S
+PF 0 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -541,8 +541,8 @@ umber-hulk umber hulk guard~
 &+Lhair. A massive pair of mandibles and rows of triangular teeth dominate the
 &+Llow, rounded head.&n
 ~
-33585226 0 0 0 0 0 0 -1000 S
-OG 0 1 -1
+33585226 0 0 0 0 0 0 0 -1000 S
+OG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -558,8 +558,8 @@ umber-hulk umber hulk fierce~
 &+Loften a disadvantage as the slaves captured in raids are usually eaten by the
 &+Lumber-hulks before they can be sold at the auction block.&n
 ~
-67123272 0 0 24 0 0 0 -1000 S
-OG 0 1 -1
+67123272 0 0 0 24 0 0 0 -1000 S
+OG 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -573,8 +573,8 @@ umber-hulk umber hulk young~
 &+Lcausing all in the area to stop and stare at the beast. Its large clawed
 &+Lappendages wave wildly about, snapping here and there at unseen foes.&n
 ~
-72 0 0 0 0 0 0 -1000 S
-OG 0 1 -1
+72 0 0 0 0 0 0 0 -1000 S
+OG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -588,8 +588,8 @@ illithid slaver~
 &+gmaster before they are displayed, he hopes to save a few coin by not risking
 &+gopen competition with the other illithid.&n
 ~
-100673608 4236771392 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+100673608 4236771392 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -603,8 +603,8 @@ illithid commoner~
 &+Ldid not go as planned. A small tear is barely noticeable on the sleeves of his
 &+Lrobe. The tear a result of melee combat with those it attempted to enslave.&n
 ~
-33554440 0 0 0 0 0 0 -1000 S
-MF 0 3 -1
+33554440 0 0 0 0 0 0 0 -1000 S
+MF 0 3 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -620,8 +620,8 @@ dwarf slave~
 &+yhis right breast indicate that he is from "Sworn Vengeance", a
 &+ysurface guild of warriors.&n
 ~
-72 0 0 0 0 0 0 1000 S
-PM 0 1 -1
+72 0 0 0 0 0 0 0 1000 S
+PM 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -636,8 +636,8 @@ human slave~
 &+cmanipulations of the illithid have driven his body beyond their normal
 &+climits.&n
 ~
-2120 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+2120 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -651,8 +651,8 @@ illithid citizen~
 &+Lto his household. Its head darts to and fro as though he it is
 &+Lacutely aware of your presence.&n
 ~
-33556680 0 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+33556680 0 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -666,8 +666,8 @@ illithid member~
 &+Lbulbous white eyes stare into themselves as wave after wave of thought
 &+Lfrom the elder brain washes over his body.&n
 ~
-100673608 0 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+100673608 0 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -681,8 +681,8 @@ duergar escaped~
 &+rlips as his illithid pursers blast him with psionic energy in an
 &+rattempt to thwart his escape.&n
 ~
-72 0 0 0 0 0 0 -1000 S
-PD 0 1 -1
+72 0 0 0 0 0 0 0 -1000 S
+PD 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -695,8 +695,8 @@ illithid~
 &+mfull height. Its glaring eyes bore down on you for entering its home
 &+muninvited. Its tentacles sway in your direction, eagerly seeking brain matter.&n
 ~
-1174411338 0 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+1174411338 0 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -709,8 +709,8 @@ drow scrawny~
 &+chis neck, a small chain dangles to mid chest. The broken links of the chain
 &+cindicating that he escaped from whatever held him captive.&n
 ~
-2120 322355200 0 8 0 0 0 -1000 S
-PL 0 1 -1
+2120 322355200 0 0 8 0 0 0 -1000 S
+PL 0 1 0 -1
 16 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -723,8 +723,8 @@ goblin short~
 &+gallows is master to position the short beast wherever he needs. Yellow
 &+gteeth protrude from his thin lips.&n
 ~
-8 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+8 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -737,8 +737,8 @@ dwarf enslaved~
 &+yhas been subdued by mental means. The glazed eyes indicating that there is
 &+yno longer a sense of defiance left in his body.&n
 ~
-8 0 0 8 0 0 0 100 S
-PM 0 6 -1
+8 0 0 0 8 0 0 0 100 S
+PM 0 6 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -752,8 +752,8 @@ spider~
 &+Llook as though a saddle. Thick poisonous fangs protrude from its upper
 &+Lmandible. A slimy poison dripping to the ground.&n
 ~
-134234120 0 0 0 0 0 0 -1000 S
-AS 0 1 -1
+134234120 0 0 0 0 0 0 0 -1000 S
+AS 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -768,8 +768,8 @@ bat large~
 &+Lby the bat echoes of the cavern walls and is sure to attract other underdark
 &+Lpredators.&n
 ~
-157768 1 0 8 0 0 0 0 S
-A 0 1 2
+157768 1 0 0 8 0 0 0 0 S
+A 0 1 0 2
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -782,8 +782,8 @@ illithid~
 &+mfull height. Its glaring eyes bore down on you for entering its home
 &+muninvited. Its tentacles sway in your direction, eagerly seeking brain matter.&n
 ~
-1174411338 536870912 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+1174411338 536870912 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -798,8 +798,8 @@ golem flesh~
 &+Mbrain atop their rounded shoulders. A single eyeball in the center of the
 &+Mbrain allows the elder brain to see all that the golems view.&n
 ~
-100694090 1 0 24 0 0 0 0 S
-OG 0 1 5
+100694090 1 0 0 24 0 0 0 0 S
+OG 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -814,8 +814,8 @@ golem flesh~
 &+Mbrain atop their rounded shoulders. A single eyeball in the center of the
 &+Mbrain allows the elder brain to see all that the golems view.&n
 ~
-1174435912 1 0 24 0 0 0 0 S
-OG 0 1 5
+1174435912 1 0 0 24 0 0 0 0 S
+OG 0 1 0 5
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -831,8 +831,8 @@ illithid overseer~
 &+Lillithid masters, the overseer will subdue them and feast on their soft
 &+Lbrain matter.&n
 ~
-33562696 64 0 0 0 0 0 -1000 S
-MF 0 262144 -1
+33562696 64 0 0 0 0 0 0 -1000 S
+MF 0 262144 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -846,8 +846,8 @@ dwarf slave~
 &+ycontrol with no chance to escape. Gazing at this creature it is
 &+yobvious that to be devoured by it smaster would be a better fate.&n
 ~
-67108938 0 0 0 0 0 0 1000 S
-PM 0 32 -1
+67108938 0 0 0 0 0 0 0 1000 S
+PM 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -862,8 +862,8 @@ rogue flesh golem~
 &+Mbrain atop their rounded shoulders. A single eyeball in the center of the
 &+Mbrain allows the elder brain to see all that the golems view.&n
 ~
-67139656 1 0 0 0 0 0 0 S
-OG 0 1 5
+67139656 1 0 0 0 0 0 0 0 S
+OG 0 1 0 5
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -877,8 +877,8 @@ neogi young~
 &+yin the tower until his strength and psionic ability are powerful enough
 &+yto be a dominating force in the lands of Duris.&n
 ~
-74 0 0 24 0 0 0 0 S
-H 0 1 -1
+74 0 0 0 24 0 0 0 0 S
+H 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -893,8 +893,8 @@ golem flesh~
 &+Mbrain atop their rounded shoulders. A single eyeball in the center of the
 &+Mbrain allows the elder brain to see all that the golems view.&n
 ~
-67139658 64 0 0 0 0 0 0 S
-OG 0 1 5
+67139658 64 0 0 0 0 0 0 0 S
+OG 0 1 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -907,8 +907,8 @@ myconid adult~
 &+yis a myconid, a caretaker of the forest. He moves slowly about the fungi
 &+yplacing his hands on the stalks before gently caressing their limbs.&n
 ~
-1073752136 0 0 8 0 0 0 200 S
-H 0 1 3
+1073752136 0 0 0 8 0 0 0 200 S
+H 0 1 0 3
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -922,8 +922,8 @@ vine strangle~
 &+gfoliage will attempt to wrap itself around the unfortunate victims
 &+gneck.&n
 ~
-74 1 0 1048576 0 0 0 0 S
-AC 0 1 -1
+74 1 0 0 1048576 0 0 0 0 S
+AC 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -936,8 +936,8 @@ slave dominated~
 &+yarea picking up debris. Under total control of the elder brain, this
 &+yslave ensures that the city maintains a majestic appearance.&n
 ~
-67108936 0 0 0 0 0 0 0 S
-H 0 1 3
+67108936 0 0 0 0 0 0 0 0 S
+H 0 1 0 3
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -949,8 +949,8 @@ carniverous moss plant~
    &+gThe immense moss build-up has given life to a repulsive
 &+gcreature made of the thick, pungeant growth.
 ~
-10 1 0 8 0 0 0 0 S
-VT 0 1 2
+10 1 0 0 8 0 0 0 0 S
+VT 0 1 0 2
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -964,8 +964,8 @@ huge mossling~
 &+gThese enzymes released in these spores are how these mosslings reproduce, eventually
 &+gif left unchecked to grow into large shambling mounds.
 ~
-2120 0 0 0 0 0 0 0 S
-ap 0 1 1
+2120 0 0 0 0 0 0 0 0 S
+ap 0 1 0 1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -979,8 +979,8 @@ mossling~
 &+gThese enzymes released in these spores are how these mosslings reproduce, eventually
 &+gif left unchecked to grow into large shambling mounds.
 ~
-2120 0 0 0 0 0 0 0 S
-ap 0 1 1
+2120 0 0 0 0 0 0 0 0 S
+ap 0 1 0 1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -991,8 +991,8 @@ spore~
 ~
    &+YThis tiny spore floats through the air in a translucent sac.
 ~
-72 0 0 0 0 0 0 0 S
-ah 0 1 1
+72 0 0 0 0 0 0 0 0 S
+ah 0 1 0 1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1005,8 +1005,8 @@ shambling mound~
 &+gfor hundreds of years, growing forth from many and many spores and bits of moss
 &+gthat have grown together.
 ~
-2120 1 0 0 0 0 0 0 S
-vt 0 1 5
+2120 1 0 0 0 0 0 0 0 S
+vt 0 1 0 5
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1019,8 +1019,8 @@ large shambling mound~
 &+gfor hundreds of years, growing forth from many and many spores and bits of moss
 &+gthat have grown together.
 ~
-2120 1 0 0 0 0 0 0 S
-vt 0 1 5
+2120 1 0 0 0 0 0 0 0 S
+vt 0 1 0 5
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1034,8 +1034,8 @@ huge mossling~
 &+gThese enzymes released in these spores are how these mosslings reproduce, eventually
 &+gif left unchecked to grow into large shambling mounds.
 ~
-2120 0 0 0 0 0 0 0 S
-ap 0 1 1
+2120 0 0 0 0 0 0 0 0 S
+ap 0 1 0 1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -1048,8 +1048,8 @@ shambling mound~
 &+gfor hundreds of years, growing forth from many and many spores and bits of moss
 &+gthat have grown together.
 ~
-2120 1 0 0 0 0 0 0 S
-vt 0 1 5
+2120 1 0 0 0 0 0 0 0 S
+vt 0 1 0 5
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

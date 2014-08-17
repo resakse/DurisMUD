@@ -124,7 +124,7 @@
 #define MAX_NUM_SHIPS        600    /* maximum number of ships in game */
 #define MAX_OBJ_AFFECT         4    /* silly, but I haven't gotten around to fixing it */
 #define MAX_PLAYERS_BEFORE_LOCK 100 /* for running with hard limit on number of players */
-#define MAX_PROD              20    /* shops, max number of differnt items a shop can produce */
+#define MAX_PROD              25    /* shops, max number of differnt items a shop can produce */
 #define MAX_QUESTS          2000    /* max allowable quests */
 #define MAX_QUEUE_LENGTH    4800    /* 60 80 character lines */
 #define MAX_SEASONS            4    /* maximum number of seasons in a zone */

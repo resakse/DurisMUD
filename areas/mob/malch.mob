@@ -9,8 +9,8 @@ his teeth are covered with filth.  His arms and legs are very thick with
 corded muscle.  His finger and toe nails are long and jagged.  This &+ggoblins&N
 job is to protect his underground lair from unwanted invasion.&N
 ~
-67110986 0 0 302055720 0 0 0 -900 S
-HG 0 1 -1
+67110986 0 0 0 302055720 0 0 0 -900 S
+HG 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -27,8 +27,8 @@ jaga gook jaga'gook shop shopkeeper~
 &+Ldifferent things from the &+ggoblins&+L that live here.  He is a packrat and will buy
 &+Lalmost anything.&N
 ~
-33585226 0 0 0 0 0 0 -800 S
-HG 0 1 -1
+33585226 0 0 0 0 0 0 0 -800 S
+HG 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -40,8 +40,8 @@ stone guardian statue~
 &+L   This stone statue rests unblinkingly upon a stone slab.  It stands at over
 &+Ltwenty feet high and rests here for as long as the &+ggoblins&+L will maintain it.&N
 ~
-67139658 0 0 0 0 0 0 -1000 S
-OG 0 1 -1
+67139658 0 0 0 0 0 0 0 -1000 S
+OG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -54,8 +54,8 @@ bat~
 &+LIts rat like face utters a very high pitched screach whenever it feels the need
 &+Lto.  This animal thrives in the darkness of the underdark.&N
 ~
-2184 1 0 134217728 0 0 0 -1000 S
-B 0 1 -1
+2184 1 0 0 134217728 0 0 0 -1000 S
+B 0 1 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 0
@@ -68,8 +68,8 @@ maggot~
 &+Ltiny body.  One can not discern what kind of creature this will turn into once
 &+Lit fully grows but the fact remains that this is a disgusting organism.&N
 ~
-2248 0 0 0 0 0 0 0 S
-AP 0 0 -1
+2248 0 0 0 0 0 0 0 0 S
+AP 0 0 0 -1
 2 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -82,8 +82,8 @@ black spider~
 &+Lcovered with thousands of small black hairs even though it is only the size of
 &+La &+ggoblin&+L foot.&
 ~
-2248 1 0 0 0 0 0 -1000 S
-AS 0 1 -1
+2248 1 0 0 0 0 0 0 -1000 S
+AS 0 1 0 -1
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -96,8 +96,8 @@ goblin commoner worker~
 &+Lover three feet tall and has very light &+ggreen&+L skin.  His thick arms and legs
 &+Lhave been well developed through hard work in the making of tunnels.&N
 ~
-2252 0 0 0 0 0 0 -468 S
-HG 0 1 -1
+2252 0 0 0 0 0 0 0 -468 S
+HG 0 1 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -110,8 +110,8 @@ goblin patrol guard~
 &+LHis slimy skin is covered with a large amount of unmentionable filth and grime.
 &+LHe smells very bad and is quite angry at any fights in his city.&N
 ~
-1140852936 0 0 256 0 0 0 -700 S
-HG 0 1 -1
+1140852936 0 0 0 256 0 0 0 -700 S
+HG 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -125,8 +125,8 @@ gobo teacher shopkeeper goblin shaman~
 &+Lin it.  His job as the head teacher of the school of shamans is highly
 &+Limportant to the city of &+gMalch'hor Ganl&+L.&N
 ~
-100710474 0 0 805306776 0 0 0 -800 S
-HG 0 256 -1
+100710474 0 0 0 805306776 0 0 0 -800 S
+HG 0 256 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -140,8 +140,8 @@ goblin child~
 &+Lwallowing in.  She stands at barely over two feet tall as she still has quite
 &+La lot of growing to do.&N
 ~
-2252 0 0 0 0 0 0 -400 S
-HG 0 0 -1
+2252 0 0 0 0 0 0 0 -400 S
+HG 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -155,8 +155,8 @@ goblin cook chef~
 &+Lare constantly bandaged.  He is currently making some food.  Perhaps you can
 &+Lbuy some.&N
 ~
-2058 0 0 0 0 0 0 -900 S
-HG 0 1 -1
+2058 0 0 0 0 0 0 0 -900 S
+HG 0 1 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -170,8 +170,8 @@ A &+ggoblin&+L student walks around the school here.&N
 &+Lstudent is nearing the age when it is allowed to leave the school to find glory
 &+Lof its own.&N
 ~
-2252 0 0 0 0 0 0 -500 S
-HG 0 1 -1
+2252 0 0 0 0 0 0 0 -500 S
+HG 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -184,8 +184,8 @@ goblin thief~
 &+Lhas a hard time stealing.  He stands at four feet tall and smells very bad.  A
 &+Lsmall tuft of hair grows from his head.&N
 ~
-2268 0 0 0 0 0 0 -999 S
-HG 0 65536 -1
+2268 0 0 0 0 0 0 0 -999 S
+HG 0 65536 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -200,8 +200,8 @@ goblin head thief guildmaster teacher faceless~
 &+Lagility.  He is truly a master of his art and a good teacher for the younger
 &+Lstudents.&N
 ~
-10460 0 0 268960144 0 0 0 -304 S
-HG 0 1 -1
+10460 0 0 0 268960144 0 0 0 -304 S
+HG 0 1 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -215,8 +215,8 @@ sulog goblin warrior teacher~
 &+Lsize of a regular &+ggoblins'&+L torso.  &+gSulog&+L is well known in the vile Underdark
 &+Lfor his prowess in battle.  He is the teacher of all &+ggoblin&+L warriors.&N
 ~
-67152072 0 0 268435864 0 0 0 -800 S
-HG 0 1 -1
+67152072 0 0 0 268435864 0 0 0 -800 S
+HG 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -230,8 +230,8 @@ goblin warrior~
 &+Lconstant training he received here.  He wears a light tunic and some leather
 &+Larmor.&N
 ~
-2252 0 0 0 0 0 0 -789 S
-HG 0 1 -1
+2252 0 0 0 0 0 0 0 -789 S
+HG 0 1 0 -1
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -244,8 +244,8 @@ cleric goblin apprentice~
 &+Llife so far has been in devotion to her diety.  She has long and black hair
 &+Lwhich hangs below her waist.  She is an apprentice cleric.&N
 ~
-2248 0 0 0 0 0 0 -399 S
-HG 0 32 -1
+2248 0 0 0 0 0 0 0 -399 S
+HG 0 32 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -259,8 +259,8 @@ maglo cleric teacher goblin~
 &+Lmakes him seem much larger.  He is a cleric teacher and is willing to teach all
 &+Lthose who are willing to learn.&N
 ~
-2058 0 0 400 0 0 0 -788 S
-HG 0 32 -1
+2058 0 0 0 400 0 0 0 -788 S
+HG 0 32 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -273,8 +273,8 @@ goblin woman~
 &+Land wears little in the way of clothing.  She is missing most of her teeth
 &+Lbut cares little for natural beauty.&N
 ~
-2252 0 0 0 0 0 0 -589 S
-HG 0 1 -1
+2252 0 0 0 0 0 0 0 -589 S
+HG 0 1 0 -1
 15 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -287,8 +287,8 @@ malchhor ganl outcast~
 &+rplotting about revenge from his outcasters.  He brandishes
 &+rtwin blades and moves with great stealth.
 ~
-1073744072 1 0 24 0 0 0 -1000 S
-HG 0 8192 -1
+1073744072 1 0 0 24 0 0 0 -1000 S
+HG 0 8192 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -302,8 +302,8 @@ pirate~
 &+Bsmirk and brandishes his blade well with gentle balance and
 &+Bdeadly accuracy.
 ~
-67111112 1 0 0 0 0 0 -1000 S
-H2 0 1 -1
+67111112 1 0 0 0 0 0 0 -1000 S
+H2 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -317,8 +317,8 @@ goblin pirate~
 &+Bsmirk and brandishes his blade well with gentle balance and
 &+Bdeadly accuracy.
 ~
-67111112 1 0 0 0 0 0 -1000 S
-HG 0 1 -1
+67111112 1 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -332,8 +332,8 @@ threzik one-eye one pirate~
 &+ra thick eyepatch marked with a bloodstone that gives off a
 &+rslight glow.  He is very strong and posesses a dark magic.
 ~
-1073743946 1 0 0 0 0 0 -1000 S
-HG 0 512 -1
+1073743946 1 0 0 0 0 0 0 -1000 S
+HG 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -348,8 +348,8 @@ snarg skagtooth~
 &+Wknown to be anything other then a gladiator, he does play a fine
 &+Whand against his opponents at cards.
 ~
-1073743946 0 0 0 0 0 0 -1000 S
-HO 0 16385 -1
+1073743946 0 0 0 0 0 0 0 -1000 S
+HO 0 16385 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -365,8 +365,8 @@ gisdan flegidigo~
 &+Gthat opens up to a plane of dragons, a pit where they live
 &+Gand swirl in this extradimensional existence.
 ~
-2122 0 0 24 0 0 0 -1000 S
-HG 0 256 -1
+2122 0 0 0 24 0 0 0 -1000 S
+HG 0 256 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -379,8 +379,8 @@ goblin pirate~
 &+gtable, losing his money to the big-name guys.  A dark
 &+gsneer exposes this goblin's wicked teeth.
 ~
-2122 0 0 0 0 0 0 -1000 S
-HG 0 1 -1
+2122 0 0 0 0 0 0 0 -1000 S
+HG 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -393,8 +393,8 @@ shablem high priest~
 &+Gholy symbols hang from his scrawny neck.  He walks through
 &+GMalch'hor Ganl with a grin on his face and a plot in his mind.
 ~
-1073743944 0 0 24 0 0 0 -1000 S
-HG 0 32 -1
+1073743944 0 0 0 24 0 0 0 -1000 S
+HG 0 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

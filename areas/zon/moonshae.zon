@@ -145,16 +145,16 @@ G 1 26234 18 0 100 0 0 0           *    a slender longsword
 M 0 26205 6 26219 100 0 0 0        * a noble lord
 M 0 26202 8 26221 100 0 0 0        * a Corwell guard
 G 1 26234 18 0 100 0 0 0           *    a slender longsword
-M 0 26206 5 26221 100 0 0 0        * a Corwell Maid
-M 0 26206 5 26222 100 0 0 0        * a Corwell Maid
+M 0 26206 5 26221 100 0 0 0        * a Corwell maid
+M 0 26206 5 26222 100 0 0 0        * a Corwell maid
 M 0 26202 8 26226 100 0 0 0        * a Corwell guard
 G 1 26234 18 0 100 0 0 0           *    a slender longsword
-M 0 26206 5 26226 100 0 0 0        * a Corwell Maid
+M 0 26206 5 26226 100 0 0 0        * a Corwell maid
 M 0 26205 6 26229 100 0 0 0        * a noble lord
-M 0 26206 5 26229 100 0 0 0        * a Corwell Maid
+M 0 26206 5 26229 100 0 0 0        * a Corwell maid
 M 0 26205 6 26231 100 0 0 0        * a noble lord
 M 0 26205 6 26231 100 0 0 0        * a noble lord
-M 0 26206 5 26240 100 0 0 0        * a Corwell Maid
+M 0 26206 5 26240 100 0 0 0        * a Corwell maid
 M 0 26208 1 26244 100 0 0 0        * Tristan Kendrick
 E 1 26225 1 13 100 0 0 0           *   a white belt lined with silver
 M 0 26221 1 26244 100 0 0 0        * Brigit, the sister knight of synnoria

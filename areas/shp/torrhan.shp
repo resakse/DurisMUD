@@ -4,8 +4,8 @@ N
 66602
 66604
 0
-1.00
-1.00
+0.80
+1.10
 0
 I don't sell those silly things, %s.~
 You don't seem to have that item, %s.~
@@ -39,8 +39,8 @@ N
 66605
 66601
 0
-1.00
-1.00
+0.80
+1.10
 15
 0
 Does it look like I'm selling that, %s?~
@@ -77,8 +77,8 @@ N
 368
 369
 0
-1.00
-1.00
+0.80
+1.10
 9
 0
 Sorry, maybe we'll have some of those tomrrow, %s!~
@@ -116,7 +116,7 @@ N
 6087
 384
 0
-1.00
+0.80
 1.50
 1
 15
@@ -156,8 +156,8 @@ N
 66694
 66695
 0
-1.00
-1.00
+0.80
+1.10
 19
 0
 I'm not selling that, %s!~
@@ -195,7 +195,7 @@ N
 66723
 41
 0
-1.00
+0.80
 1.50
 0
 I'm not selling that, %s!~

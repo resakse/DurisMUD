@@ -7,8 +7,8 @@ traveller bloodstone~
 &+Lfrom &+rBloodstone&+L.  It is unclear just how far they have travelled
 &+Ltoday, but he looks quite tired and is eager to get some sleep.&n
 ~
-2058 0 0 8 0 0 0 -500 S
-PH 12 1 -1
+2058 0 0 0 8 0 0 0 -500 S
+PH 12 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -23,8 +23,8 @@ adventurer tharnadia~
 &+Lis clear by the look on his face he is not too impressed with the
 &+Lnoise the other &+Ycampers&+L are making.&n
 ~
-2058 0 0 8 0 0 0 0 S
-PH 1 16384 -1
+2058 0 0 0 8 0 0 0 0 S
+PH 1 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -37,8 +37,8 @@ thri kreen traveller~
         &+W'I'm used to the desert.'  &+LHe chitters.&n
         &+W'Not some cold forest surrounded by rude campers.'&n
 ~
-2058 0 0 8 0 0 0 0 S
-TK 0 1 -1
+2058 0 0 0 8 0 0 0 0 S
+TK 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -52,8 +52,8 @@ patrol leader~
      &+WBeregan knows magic can cause problems, so we
      &+Whave to keep it out.'&n
 ~
-67110922 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+67110922 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -66,8 +66,8 @@ patrol guard~
 &+cwell trained guard whose duties involve &+Wpatrolling&+c the &+Lroad&+c and
 &+ckeeping it clear of any evil trespassers.&n
 ~
-67110922 32 0 0 0 0 0 1000 S
-PH 0 1 -1
+67110922 32 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -80,8 +80,8 @@ myrabolan traveller~
         &+W'He won't let me in with my spellbook!
         &+WBut I'm a ranger, I need my book with me.'&n
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 2 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -94,8 +94,8 @@ patrol leader~
 &+cfrom the village.  He appears quite imposing and seems to know
 &+ccombat from the looks of the scars across his hands and face.&n
 ~
-67110920 32 0 8 0 0 0 1000 S
-PH 0 1 -1
+67110920 32 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -107,8 +107,8 @@ elf camper grey~
 &+cThis elf appears to have a headache.  He rubs his fingers on his
 &+ctemples and mutters something under his breath about rude &+Ycampers&+c.&n
 ~
-67110922 0 0 0 0 0 0 1000 S
-PE 0 128 -1
+67110922 0 0 0 0 0 0 0 1000 S
+PE 0 128 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -121,8 +121,8 @@ elf tired~
 &+cprobably won't be happening soon.&n
         &+W'Will someone please shut those idiots up?'&n
 ~
-67110922 0 0 0 0 0 0 1000 S
-PE 0 2 -1
+67110922 0 0 0 0 0 0 0 1000 S
+PE 0 2 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -137,8 +137,8 @@ garth~
 &+ydecided &+WBeregan&+y should run the village itself, while the two of
 &+ythem handled all matters military.&n
 ~
-67110920 0 0 134217736 0 0 0 1000 S
-PH 0 1 -1
+67110920 0 0 0 134217736 0 0 0 1000 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -153,8 +153,8 @@ beal~
 &+cstern look on his face and handles his locally made long sword
 &+cwith confidence.&n
 ~
-67110920 0 0 134217736 0 0 0 1000 S
-PH 0 1 -1
+67110920 0 0 0 134217736 0 0 0 1000 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ orc loud~
 &+Land shouts at his companions across the fire to bring him more
 &+yale&+L.&n
 ~
-1140852746 0 0 8 0 0 0 -1000 S
-HO 0 64 -1
+1140852746 0 0 0 8 0 0 0 -1000 S
+HO 0 64 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -184,8 +184,8 @@ goblin annoying~
 &+gtoo many as his singing of some old goblin folk-song is becoming
 &+gincreasingly worse on the ears.&n
 ~
-2058 0 0 0 0 0 0 -1000 S
-HG 0 65536 -1
+2058 0 0 0 0 0 0 0 -1000 S
+HG 0 65536 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -199,8 +199,8 @@ drunk orc~
         &+WWe be shavin them headssss. Bwahahahah.
         &+WEr. Sssssh. Don't tells them.'&n
 ~
-1073743882 0 0 8 0 0 0 -1000 S
-HO 13 1 -1
+1073743882 0 0 0 8 0 0 0 -1000 S
+HO 13 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -214,8 +214,8 @@ squire~
 &+yappears fairly young, though he is trained well enough to be hold his
 &+yown in a fight.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -230,8 +230,8 @@ squire black~
 &+yserving the &+LBlack Knight&+y at the competition loyally will earn him
 &+yhis own knighthood.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -245,8 +245,8 @@ squire blue~
 &+yenough to be hold his &+yown in a fight.  He patiently waits for his
 &+ymentor to ask something from him so he can carry out his tasks.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -260,8 +260,8 @@ blue knight~
 &+bhe has attracted many fans, and some believe he has a good chance at
 &+bbeating &+bthe champion, the &+LBlack Knight.&n
 ~
-67110922 0 0 8 0 0 0 1000 S
-PH 0 8 -1
+67110922 0 0 0 8 0 0 0 1000 S
+PH 0 8 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -278,8 +278,8 @@ black knight~
 &+LThough it is hard to see past the full helmet he wears on his
 &+Lface, it is certain he displays a look of utter confidence.&n
 ~
-2058 0 0 8 0 0 0 -1000 S
-PH 0 16 -1
+2058 0 0 0 8 0 0 0 -1000 S
+PH 0 16 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -297,8 +297,8 @@ figure cloaked jandar~
 &+yJandar, the great sage, to lay his bless&+Ling of infinite wisdom upon
 &+ythem.&n
 ~
-1073776650 0 0 152 2048 0 8192 1000 S
-PH 0 512 -1
+1073776650 0 0 0 152 2048 0 8192 1000 S
+PH 0 512 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -313,8 +313,8 @@ obese gambler~
         &+W'You wanna place a bet eh, I'll give you 5:1 on the Blue
         &+WKnight. Feeling lucky boy...? Gwahahaha.'&n
 ~
-18442 0 0 8 0 0 0 -500 S
-PH 0 1 4
+18442 0 0 0 8 0 0 0 -500 S
+PH 0 1 0 4
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -326,8 +326,8 @@ pretty woman~
 &+mThis woman has travelled all the way from &+MMyrabolus&+m to watch
 &+mthe match.  She seems quite taken with the regal &+bBlue Knight&+m.&n
 ~
-1073743880 0 0 0 0 0 0 1000 S
-PH 0 32768 -1
+1073743880 0 0 0 0 0 0 0 1000 S
+PH 0 32768 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -341,8 +341,8 @@ camp warden~
         &+WPeople are so messy.
         &+WThose orcs and that goblin are giving me a headache too.'&n
 ~
-1140852744 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1140852744 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -356,8 +356,8 @@ teka spectator~
 &+cof the other fans.  He is torn between glaring in anger at the rude
 &+LOrc&+c wandering the row and actually watching the knights prepare.
 ~
-1073743880 0 0 0 0 0 0 1000 S
-PH 0 8 -1
+1073743880 0 0 0 0 0 0 0 1000 S
+PH 0 8 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -374,8 +374,8 @@ logger old~
         &+Wchopping trees...'
 &+yHe continues to ramble on, unimportantly.&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -390,8 +390,8 @@ tired halfling~
          &+W'Walking up this hill really tired me out, and made me quite
          &+Wthirsty.'&n
 ~
-2058 0 0 8 0 0 0 1000 S
-PF 7 32 -1
+2058 0 0 0 8 0 0 0 1000 S
+PF 7 32 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -406,8 +406,8 @@ orc loud~
 &+Ldistract the &+bBlue Knight&+L enough so the Black Knight would be sure
 &+Lto win.&n
 ~
-1073743880 0 0 8 0 0 0 -1000 S
-HO 0 64 -1
+1073743880 0 0 0 8 0 0 0 -1000 S
+HO 0 64 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -421,8 +421,8 @@ minotaur large~
         &+Wfavorite chain.  He's gonna kill me if I don't find
         &+Wit.  He's the biggest Minotaur in my village!'&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-MT 0 16384 -1
+1073743882 0 0 0 8 0 0 0 0 S
+MT 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -434,8 +434,8 @@ fan black knight~
 &+cThe fan hops up and down in excitement.&n
         &+W'The Black Knight is gonna whop some ass!'&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -447,8 +447,8 @@ fan blue knight~
 &+cThe fan shouts out encouragement to the Blue Knight.&n
         &+W'You can do it! Kick his ass!'&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -461,8 +461,8 @@ carrion crawler~
 &+Lfor anything edible.  If it doesn't find anything close by, it
 &+Lhas no problems in killing for its meals.&n
 ~
-2056 1 0 1048584 0 0 0 -1000 S
-AP 0 1 2
+2056 1 0 0 1048584 0 0 0 -1000 S
+AP 0 1 0 2
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -476,8 +476,8 @@ soldier fortune~
 &+Lguilds, he finds watching the &+cjousting&+L match considerably more
 &+Lentertaining.&n
 ~
-1073743880 0 0 8 0 0 0 0 S
-PH 0 16384 -1
+1073743880 0 0 0 8 0 0 0 0 S
+PH 0 16384 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -494,8 +494,8 @@ wild card mercenary~
 &+rred&+L-tinted sunglasses&+y protecting his eyes from the glare of the
 &+Ysun&+y.&n
 ~
-1140852746 0 0 8 0 0 0 0 S
-PH 0 16384 -1
+1140852746 0 0 0 8 0 0 0 0 S
+PH 0 16384 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -510,8 +510,8 @@ soldier fortune mercenary~
 &+Labout important issues to the worlds mercenary guilds, he seems
 &+Lto be in the middle of telling a crude joke.&n
 ~
-1140852746 0 0 8 0 0 0 0 S
-PH 0 16384 -1
+1140852746 0 0 0 8 0 0 0 0 S
+PH 0 16384 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -525,8 +525,8 @@ eclipse mercenary~
 &+Las the others, just drinks from his tankard and occasionally mutters
 &+Lsomething about how expensive a keg of &+yale&+L has become lately.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PB 0 16384 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PB 0 16384 0 -1
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -542,8 +542,8 @@ wild card mercenary bored~
 &+ybattling with the &+Larmy of &+rarmageddon&+y than standing around in
 &+ythe forest chatting.&n
 ~
-1140852746 0 0 8 0 0 0 0 S
-PH 0 16384 -1
+1140852746 0 0 0 8 0 0 0 0 S
+PH 0 16384 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -561,8 +561,8 @@ empyrean dawn mercenary~
 &+ybe somewhat lost as he wanders the road with a puzzled look on his
 &+yface.&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-P2 0 16384 -1
+1073743882 0 0 0 8 0 0 0 0 S
+P2 0 16384 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -576,8 +576,8 @@ wood nymph~
 &+yshe is beside a &+gtall tree&+y or in &+Lheavy shadows&+y.  Once one sees her,
 &+yhowever, it is hard to take one's eyes off such great beauty.&n
 ~
-1073743882 0 0 1048584 0 0 0 0 S
-HF 0 128 2
+1073743882 0 0 0 1048584 0 0 0 0 S
+HF 0 128 0 2
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -592,8 +592,8 @@ monkey man~
         &+W'Oh where did my monkey go?'&n
 &n
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 32768 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 32768 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -608,8 +608,8 @@ orc scout~
 &+LArmy of &+rArmageddon&+L is quite a ways a way, s&+wcou&+Lts are always being
 &+Lsent out to find suitable locations for first strike offensives.&n
 ~
-1073743880 0 0 1572874 0 0 0 -1000 S
-HO 0 8192 -1
+1073743880 0 0 0 1572874 0 0 0 -1000 S
+HO 0 8192 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -621,8 +621,8 @@ wolf~
 &+wThis large mother wolf is obviously startled by the intrusion on
 &+wher den. She fights to protect her cubs viciously.&n
 ~
-67110922 1 0 8 0 0 0 0 S
-A 0 1 2
+67110922 1 0 0 8 0 0 0 0 S
+A 0 1 0 2
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -635,8 +635,8 @@ wolf cub~
 &+wespecially when it is cornered, like it is now.  Its gray fur is
 &+wstanding up on its back in fright.&n
 ~
-67111050 0 0 1048584 0 0 0 0 S
-A 0 0 2
+67111050 0 0 0 1048584 0 0 0 0 S
+A 0 0 0 2
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -650,8 +650,8 @@ unicorn noble~
 &+Wthis majestic creature must have befriended it at a very young
 &+Wage to have gained its trust so completely over the years.&n
 ~
-134219786 0 0 8 0 0 0 1000 S
-AE 0 1 -1
+134219786 0 0 0 8 0 0 0 1000 S
+AE 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -664,8 +664,8 @@ nightmare~
 &+Lthe anti-paladins use.  Its eyes seem to glow with heat, and mist
 &+Lor smoke errupts when it stamps its feet upon the earth.&n
 ~
-134219786 0 0 8 0 0 0 -1000 S
-AE 0 1 -1
+134219786 0 0 0 8 0 0 0 -1000 S
+AE 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -679,8 +679,8 @@ young lumberjack~
          &+W Ah, there is no need to head north of here, nothing
          &+W up there but a creepy old man in a tent.' &n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -693,8 +693,8 @@ willow tree~
 &+yof the &+gforest&+y enough to cast shadows over the gravel road when the
 &+Ysun&+y is right.&n
 ~
-10 0 0 0 0 0 0 0 S
-VT 0 1 -1
+10 0 0 0 0 0 0 0 0 S
+VT 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -709,8 +709,8 @@ draft horse~
 &+ywander too far too off.  Indeed, the horse just remains in a single
 &+yspot, chewing at the &+Ggrass&+y along the edge of the &+Lroad&+y.&n
 ~
-2058 0 0 0 0 0 0 0 S
-AE 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+AE 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -724,8 +724,8 @@ draft horse~
 &+yitself seems to be quite a strong animal and able to pull alot
 &+yof wieght, though not that bright at all.&n
 ~
-134219786 0 0 0 0 0 0 0 S
-AE 0 1 -1
+134219786 0 0 0 0 0 0 0 0 S
+AE 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -740,8 +740,8 @@ wagon driver~
 &+Lcorner on the way to &+cDesolate&+L, the &+ywagon&+L must have hit a large
 &+Lrock, resulting in a missing &+ywheel&+L and a broken &+ywagon&+L.&n
 ~
-67110922 0 0 0 0 0 0 1000 S
-PH 0 32768 -1
+67110922 0 0 0 0 0 0 0 1000 S
+PH 0 32768 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -755,8 +755,8 @@ patrol guard off~
 &+cseems to be nearly half-asleep, which is quite a feat considering
 &+cthe ammount of noise around him.&n
 ~
-1140852746 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1140852746 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -772,8 +772,8 @@ beregan mayor~
         &+Wfor this paperwork, I need to solve my main problems
         &+Wfirst..'&n
 ~
-1140852746 0 0 8 0 0 0 1000 S
-PH 0 64 -1
+1140852746 0 0 0 8 0 0 0 1000 S
+PH 0 64 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -787,8 +787,8 @@ gate guard~
 &+ythe village.   He is equipped in standard &+cDesolate&+y equipment.  The
 &+Lgate&+y guards reports directly to Garth in case of emergency.&n
 ~
-67110922 32 0 8 0 0 0 1000 S
-PH 0 1 -1
+67110922 32 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -802,8 +802,8 @@ archer bowmaster elite~
 &+ythe mayor of village insists that everyone be on guard, problems can
 &+yarise in moments and its a dangerous world out there.&n
 ~
-1140852746 0 0 0 0 0 0 1000 S
-PH 0 2 -1
+1140852746 0 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -817,8 +817,8 @@ archer captain bowmaster~
 &+yand quite adept at his job.  In emergencies he will seek out Garth
 &+yand &+cBeal&+y.&n
 ~
-1140852746 0 0 8 0 0 0 1000 S
-PH 0 2 -1
+1140852746 0 0 0 8 0 0 0 1000 S
+PH 0 2 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -831,8 +831,8 @@ ethereal knight~
 &+WEndurance&+w, he shimmers in and out of existence and accepts the
 &+wchallenge of any who approach him.&n
 ~
-16394 1 0 73864 47296 1048704 8192 1000 S
-G 0 8 3
+16394 1 0 0 73864 47296 1048704 8192 1000 S
+G 0 8 0 3
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -845,8 +845,8 @@ ethereal rogue~
 &+Lquality.  Unfortuately, even when this being is phased out, it still
 &+Lhurts.  It is one of the &+WTests of Speed&+L.&n
 ~
-1073743880 1 0 1572872 0 0 0 -1000 S
-U 0 8192 3
+1073743880 1 0 0 1572872 0 0 0 -1000 S
+U 0 8192 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -859,8 +859,8 @@ robin~
 &+ytake back to her nest.  Though she does most of her hunting on the
 &+yground, she flutters off quickly whenever anyone comes to close.&n
 ~
-200 0 0 0 0 0 0 0 S
-B 0 0 -1
+200 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 12 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -873,8 +873,8 @@ rabbit bunny~
 &+Wafter field mice.  It's so cute you just wanna pick it up and squeeze
 &+Wit.&n
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 2
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -887,8 +887,8 @@ squirrel~
 &+ynuts and berries to take back to his nest.  He has a big bushy tail
 &+yand moves extremely quickly.&n
 ~
-200 0 0 0 0 0 0 0 S
-A 0 0 2
+200 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 11 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -902,8 +902,8 @@ delegate ice crag~
         &+Wwarm.  I hope that Beregan hurries up, I wanna get this
         &+Wover with and head home.'&n
 ~
-1073743882 0 0 8 0 0 0 -1000 S
-PH 0 1 -1
+1073743882 0 0 0 8 0 0 0 -1000 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -916,8 +916,8 @@ werrun delegate~
         &+W'What I purpose is a trade route between our city and
         &+Wyours...'&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -930,8 +930,8 @@ delegate verspin~
 &+cthe great city of Verspin.  He eagerly awaits to speak to the &+Wmayor&n
 &+cof a proposed cargo route between the two towns.&n
 ~
-1073743880 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1073743880 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -944,8 +944,8 @@ city guard~
 &+yis in charge of keeping the streets clear of problems and keeping
 &+ymagic out of the city.&n
 ~
-1140852744 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1140852744 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -958,8 +958,8 @@ city guard~
 &+yis in charge of keeping the streets clear of problems and keeping
 &+ymagic out of the city.&n
 ~
-1140852744 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1140852744 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -972,8 +972,8 @@ city guard~
 &+yis in charge of keeping the streets clear of problems and keeping
 &+ymagic out of the city.&n
 ~
-1140852744 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1140852744 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -986,8 +986,8 @@ city guard~
 &+yis in charge of keeping the streets clear of problems and keeping
 &+ymagic out of the city.&n
 ~
-1140852744 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1140852744 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1004,8 +1004,8 @@ delegate myrabolus~
            &+WOh if only there was a way to prove it to him the threat
            &+Wis for real.' &n
 ~
-1073743880 0 0 8 0 0 0 1000 S
-PH 0 2 -1
+1073743880 0 0 0 8 0 0 0 1000 S
+PH 0 2 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1019,8 +1019,8 @@ grizzly bear~
 &+ynot only can it slash and bite with its sharp teeth and claws, but
 &+yhas enough wieght to crush a man with its mass.&n
 ~
-2058 1 0 0 0 0 0 -1000 S
-AC 0 1 4
+2058 1 0 0 0 0 0 0 -1000 S
+AC 0 1 0 4
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1035,8 +1035,8 @@ patron bar~
 &+yhappy though as he waves his tankard of &+Yale&+y through the air in time
 &+ywith the drinking song he sings.&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1053,8 +1053,8 @@ scotson blacksmith~
 &+yand capable metalworker specializing in &+Csteel&+y, but he doesn't work
 &+yfor free.&n
 ~
-2058 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+2058 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1068,8 +1068,8 @@ halfling observer~
 &+whas come to the &+cDesolate&+w forest in search of new techniques for
 &+wcutting lumber.&n
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PF 0 1 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PF 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1083,8 +1083,8 @@ logger pinehollow~
 &+wwood cutting skills.  The &+ylogger&+w from &+yPinehollow&+w also seems quite
 &+winterested in the types of &+gtrees&+w that grow here.
 ~
-67110922 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1099,8 +1099,8 @@ tired high elf~
 &+yarrogant, believing themselves to be the higher evolved of the elven
 &+yspieces.  At the moment he rests in the shade under a large tree.&n
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PE 0 512 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PE 0 512 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -1114,8 +1114,8 @@ retired soldier~
 &+yto do for the elderly, he now spends most his time in the Lustful
 &+yLogger pub.&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1129,8 +1129,8 @@ waitress~
 &+yShe can't help but smile at him while she continues to take drink
 &+yorders.&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 2 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 2 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1146,8 +1146,8 @@ flagar~
 &+cranger and can cross a long distance in a short period of time,
 &+cprobably even faster than you.&n
 ~
-67110922 0 0 8 0 0 0 0 S
-PE 0 2 -1
+67110922 0 0 0 8 0 0 0 0 S
+PE 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1162,8 +1162,8 @@ ethereal behemoth~
 &+wthe hearts of all, it makes a suitable challenge for the &+WTest
 &+Wof Courage.&n
 ~
-10 1 0 8 0 0 0 -1000 S
-DK 0 512 5
+10 1 0 0 8 0 0 0 -1000 S
+DK 0 512 0 5
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1177,8 +1177,8 @@ celestial dragon~
 &+Wcosmic entity acts as the final stage between the the challengers
 &+Wand the reward.&n
 ~
-1048586 1 0 136 0 0 0 1000 S
-D 0 32 -1
+1048586 1 0 0 136 0 0 0 1000 S
+D 0 32 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1192,8 +1192,8 @@ porcupine~
 &+yof needles.  Unfortuately, the only way to deal with this poor
 &+ycritter is to kill it.  Have mercy.&n
 ~
-2184 1 0 0 0 0 0 -1000 S
-A 0 1 2
+2184 1 0 0 0 0 0 0 -1000 S
+A 0 1 0 2
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1208,8 +1208,8 @@ hungry wolf~
 &+warea to attack anyone for they are known to be on the most part
 &+wquite tame.&n
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-A 0 1 3
+1073743880 1 0 0 0 0 0 0 -1000 S
+A 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1223,8 +1223,8 @@ lynx~
 &+yfood in the forests.  They are actually quite aggressive animals
 &+yand should be avoided.&n
 ~
-1073743880 1 0 0 0 0 0 -1000 S
-A 0 1 3
+1073743880 1 0 0 0 0 0 0 -1000 S
+A 0 1 0 3
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1237,8 +1237,8 @@ receptionist woman~
 &+ypolitely: &n
         &+W'How long will you be checking in for?'&n
 ~
-1073743882 0 0 0 0 0 0 1000 S
-PH 0 2 -1
+1073743882 0 0 0 0 0 0 0 1000 S
+PH 0 2 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1252,8 +1252,8 @@ travelling merchant~
         &+WI go any lower?  If I went any lower I would
         &+Wbe giving it away!'&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 32768 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 32768 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1267,8 +1267,8 @@ citizen~
         &+W'I will pay 5 platium for that, no more.
         &+WNo, no, no, I think thats plenty.'&n
 ~
-67110922 0 0 0 0 0 0 0 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1282,8 +1282,8 @@ commoner~
 &+yisn't wasting his time and money in the local pub, he is working or,
 &+ylike now, just wandering about.&n
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1296,8 +1296,8 @@ shaggy dog~
 &+ylike he hasn't been washed or fed in awhile.  The look in his eyes
 &+ysuggest he isn't the brightest animal either.&n
 ~
-2056 0 0 0 0 0 0 0 S
-A 0 1 2
+2056 0 0 0 0 0 0 0 0 S
+A 0 1 0 2
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1311,8 +1311,8 @@ citizen~
 &+yworks around the village, and is taking some time off from his
 &+yjob.&n
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1325,8 +1325,8 @@ monk quiet~
 &+wHe is dressed in the usual simple leather robes that is common to
 &+whis profession.&n
 ~
-1140852744 0 0 0 0 0 0 1000 S
-PH 0 64 -1
+1140852744 0 0 0 0 0 0 0 1000 S
+PH 0 64 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -1340,8 +1340,8 @@ thoughtful cleric~
 &+cOnce he is done his prayers for the day he will return to his home
 &+cin the village.&n
 ~
-1140852744 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+1140852744 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 1
@@ -1354,8 +1354,8 @@ spectral titan~
 &+Lhe seems to shimmer in an out of existence, and his giant size is
 &+Limposing enough to strike fear into the heartiest of warriors.&n
 ~
-2058 1 0 24 2049 0 524288 0 S
-G 0 1 -1
+2058 1 0 0 24 2049 0 524288 0 S
+G 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1369,8 +1369,8 @@ trinket vendor~
 &+yappears to be quite desperate and it is obvious he isn't making
 &+yas much money as the others vendors in the market.&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 32 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1383,8 +1383,8 @@ commoner sleeping~
 &+ylong, hard day, most likely cutting lumber, as their isn't much
 &+yelse to do here in the village.&n
 ~
-1073743880 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743880 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -1398,8 +1398,8 @@ vendor myrabolan~
 &+cwhat won't sell back home, may sell on the road, and for higher
 &+cprices.&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1412,8 +1412,8 @@ alley cat~
 &+Lthe locals for attention.  It looks kind of neglected, but other
 &+Lwise just another cute little kitty.&n
 ~
-136 0 0 0 0 0 0 0 S
-A 0 0 2
+136 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1433,8 +1433,8 @@ seraphim angel~
 &+W        perhaps, seek it out with the help of the Hunters of
 &+W        Myrabolus, for surely they will know.'&n
 ~
-1073874954 0 0 1048650 0 0 0 1000 S
-H 0 1 -1
+1073874954 0 0 0 1048650 0 0 0 1000 S
+H 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 2
@@ -1450,8 +1450,8 @@ old soldier~
         &+Wbeams of light from the tip... quite a weapon.. but then
         &+Wagain I was quite a soldier...'&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1467,8 +1467,8 @@ criminal outcast~
 &+Lfrom their latest heist.  He wears the best &+Cequipment&+L he could
 &+Lsteal from the armory of &+cDesolate&+L.&n
 ~
-1140852746 0 0 24 2048 0 0 -1000 S
-PH 0 1 -1
+1140852746 0 0 0 24 2048 0 0 -1000 S
+PH 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1482,8 +1482,8 @@ banker~
 &+ySince he is the only moneylender in the town, he is responsible for
 &+yevery local's finacial security.&n
 ~
-1140852746 0 0 0 0 0 0 0 S
-PH 0 0 -1
+1140852746 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1497,8 +1497,8 @@ sharyn wife artist~
 &+ythe village and many of her paintings can be seen in many of the
 &+ylocal shops.&n
 ~
-8 0 0 0 0 0 0 1000 S
-PH 0 32 -1
+8 0 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1513,8 +1513,8 @@ orc beach guard~
 &+Lfrom the capital city itself, the guard will allow a select
 &+Lfew to pass unhindered.&n
 ~
-67110922 8 0 0 0 0 0 -500 S
-HO 0 1 -1
+67110922 8 0 0 0 0 0 0 -500 S
+HO 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1528,8 +1528,8 @@ lady shopper~
 &+yenjoy spending most her time browsing through the &+Yvendors&+y in the
 &+ymarket.&n
 ~
-2184 0 0 0 0 0 0 250 S
-PH 0 0 -1
+2184 0 0 0 0 0 0 0 250 S
+PH 0 0 0 -1
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -1542,8 +1542,8 @@ local vendor~
 &+yof anything worthwhile to anyone other than those interested in
 &+ybuying a bunch of useless ornaments.&n
 ~
-1073743882 0 0 8 0 0 0 0 S
-PH 0 32 -1
+1073743882 0 0 0 8 0 0 0 0 S
+PH 0 32 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1557,8 +1557,8 @@ citizen~
         &+W'Why is everyone trying to rip me off. I live here, they
         &+Wshould be ripping off the tourists!'&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1573,8 +1573,8 @@ orc lieutenant~
 &+Lfrom the Army of &+rArmageddon&+L and Shady &+gGrove&+L.  The &+Ylieutenant&+L here
 &+Lis both a cunning tactician and sturdy warrior.&n
 ~
-1140852746 0 0 0 0 0 0 -500 S
-HO 0 1 -1
+1140852746 0 0 0 0 0 0 0 -500 S
+HO 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1589,8 +1589,8 @@ patrol leader~
         &+WThe worst part is there isn't a damned thing we can
         &+Wdo about them.'&n
 ~
-67110922 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+67110922 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1604,8 +1604,8 @@ patrol guard~
 &+cfrustrated by what he is seeing.  He turns to offer travellers a
 &+cwarning not to proceed any further whenever he can.&n
 ~
-1140852746 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1140852746 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1621,8 +1621,8 @@ orc captain~
 &+Laction.  He wields a mighty sword as a testament to his high rank
 &+Lin the reknowned navy.&n
 ~
-1140852746 0 0 8 0 0 0 -500 S
-HO 0 16 -1
+1140852746 0 0 0 8 0 0 0 -500 S
+HO 0 16 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1636,8 +1636,8 @@ bodyguard guard~
 &+Lconfidence and watches anyone around with suspicious eyes. Where
 &+Lthe &+Wcaptain&+L goes, so does the bodyguard.&n
 ~
-1140852746 0 0 8 0 0 0 -500 S
-HO 0 1 -1
+1140852746 0 0 0 8 0 0 0 -500 S
+HO 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1650,8 +1650,8 @@ orc soldier~
 &+Lonly in conquest.  At the moment he patrols the &+Ybeach&+L head and
 &+Lprotects the ships coming in and out of the small harbour.&n
 ~
-67110920 8 0 8 0 0 0 -500 S
-HO 0 1 -1
+67110920 8 0 0 8 0 0 0 -500 S
+HO 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1665,8 +1665,8 @@ orc soldier~
 &+Land Sailors extremely hard, so when they actually get the chance
 &+Lto rest, they deserve it.&n
 ~
-1140852746 0 0 8 0 0 0 -500 S
-HO 0 1 -1
+1140852746 0 0 0 8 0 0 0 -500 S
+HO 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -1680,8 +1680,8 @@ orc sailor~
 &+WStorm &+CPo&+crt&+L are those that tried out for the navy and didn't get
 &+Lin or those still waiting to be recruited.&n
 ~
-1073743884 0 0 0 0 0 0 -500 S
-HO 0 1 -1
+1073743884 0 0 0 0 0 0 0 -500 S
+HO 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1695,8 +1695,8 @@ nomadic merchant~
 &+yin the village.  Unfortuately, anyone who isn't either a woman or
 &+ystupid would spend money on what he has to offer.&n
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -1709,8 +1709,8 @@ patrol guard off~
 &+chis waking hours he spends his time patrolling the road to Desolate.
 &+cNow, all he is interested in is snoozing.&n
 ~
-1140852746 0 0 8 0 0 0 1000 S
-PH 0 1 -1
+1140852746 0 0 0 8 0 0 0 1000 S
+PH 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -1724,8 +1724,8 @@ hunter guard~
 &+cthe &+LOrcs&+c of &+WStorm &+CPo&+crt are to be considered.  Once he gathers enough
 &+cinformation he will return home and report to the &+RT&+Yr&+Gi&+L-Lords&+c.&n
 ~
-1073743880 0 0 524296 0 0 0 0 S
-PH 0 2 -1
+1073743880 0 0 0 524296 0 0 0 0 S
+PH 0 2 0 -1
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

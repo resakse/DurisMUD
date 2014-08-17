@@ -9,8 +9,8 @@ voice inner~
 &+Ydemise.  Although, sometimes aggressive, its overall objective is to reform
 &+Ythose that seeks its guidance.&n
 ~
-1174537226 1 0 134250552 0 0 0 -1000 S
-D 0 6 7
+1174537226 1 0 0 134250552 0 0 0 -1000 S
+D 0 6 0 7
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -23,8 +23,8 @@ angel~
 &+Wfragile womans holy presence wards off evil.  Her face is hidden behind her
 &+Wblonde flowing hair.&n
 ~
-100811018 0 0 41016 34816 0 0 1000 S
-P2 0 8 1
+100811018 0 0 0 41016 34816 0 0 1000 S
+P2 0 8 0 1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 2
@@ -38,8 +38,8 @@ prophet mighty~
 &+wblessed weapon, nothing can stop him from succeeding.  Quietly he evaluates
 &+wyour dedication.&n
 ~
-1174405130 32 0 8336 0 0 0 1000 S
-OG 0 8 6
+1174405130 32 0 0 8336 0 0 0 1000 S
+OG 0 8 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -52,8 +52,8 @@ devil~
 &+rSmall in stature, but strong in power, this tiny devil is a force to be
 &+rreckoned.  His touch alone drains the life-force of a mere man.&n
 ~
-100798506 0 0 65688 0 0 0 -1000 S
-UV 0 8192 1
+100798506 0 0 0 65688 0 0 0 -1000 S
+UV 0 8192 0 1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 6 0
@@ -67,8 +67,8 @@ demon huge~
 &+rdemonic weapon, nothing can stop it from concurring.  Raising his eye and
 &+rsnarling, the beast sizes up your affiliation.&n
 ~
-1174536202 8 0 65560 1 0 0 -1000 S
-X 0 16 6
+1174536202 8 0 0 65560 1 0 0 -1000 S
+X 0 16 0 6
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -81,8 +81,8 @@ devin mercenary~
 &+Ytrail of intimidation.  All his time is consumed by surviving and plotting
 &+Yrevenge.  This solitary man has become accustom to living off the land.&n
 ~
-1174405134 1 0 268435512 0 0 0 -1000 S
-PF 0 16384 -1
+1174405134 1 0 0 268435512 0 0 0 -1000 S
+PF 0 16384 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -96,8 +96,8 @@ milrd cleric~
 &+yMilrd.  While this mans appearance seems weak, his link with god keeps him
 &+ystrong.&n
 ~
-67108872 0 0 24 0 0 8192 500 S
-PG 0 32 -1
+67108872 0 0 0 24 0 0 8192 500 S
+PG 0 32 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -110,8 +110,8 @@ buraon shaman~
 &+mforest.  His dominating stature exudes confidence and reflexes leadership.
 &+mA potent odor and greasy skin repels noble types.&n
 ~
-1174931466 0 0 285212696 4096 0 0 -1000 S
-PT 0 256 -1
+1174931466 0 0 0 285212696 4096 0 0 -1000 S
+PT 0 256 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -124,8 +124,8 @@ necromancer lazy~
 &+Ltwitches without control.  His time is spent examining the leftover corpses
 &+Lnearby.  He ignores the living and seems to prefer the company of the dead.&n
 ~
-1175453706 1 0 8 0 0 0 -1000 S
-GI 0 1024 -1
+1175453706 1 0 0 8 0 0 0 -1000 S
+GI 0 1024 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -138,8 +138,8 @@ monk patient~
 &+Wsimple robe&+w and &+yleather sandals&+w, he is obviously a modest man.  Such a
 &+wcomfortable state must be a result of his vast knowledge of the martial arts.
 ~
-1174405130 384 0 32776 32768 128 0 500 S
-PH 0 64 -1
+1174405130 384 0 0 32776 32768 128 0 500 S
+PH 0 64 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -153,8 +153,8 @@ enchantress evoking~
 &+Cturquoise dress adorns her heavenly body.  With a hand gesture, she beckons
 &+Cyou closer.&n
 ~
-1176502282 8 0 40 262144 0 0 -1000 S
-HF 0 32768 -1
+1176502282 8 0 0 40 262144 0 0 -1000 S
+HF 0 32768 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -167,8 +167,8 @@ illusionist master~
 &+Wthe face of your reflection.  It smiles and stares at you calmly.
 &+WThe Il&+Clu&+csi&+Con&+Wist asks&+w, "How can I help you?"&n
 ~
-1174405130 0 0 16 0 0 0 -1000 S
-HG 0 4194304 -1
+1174405130 0 0 0 16 0 0 0 -1000 S
+HG 0 4194304 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -182,8 +182,8 @@ princess lonely~
 &+Munexpectedly her face shows a sense of disappointment.  What could she be
 &+Mmissing in her life?&n
 ~
-1174405514 0 0 268959752 0 0 0 500 S
-PE 0 512 -1
+1174405514 0 0 0 268959752 0 0 0 500 S
+PE 0 512 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -197,8 +197,8 @@ harlot young~
 &+Myou notice how she has aged before her time.  This mess of a women must have
 &+Msome personal demons.&n
 ~
-1073741834 1 0 0 0 0 0 -1000 S
-PL 0 512 -1
+1073741834 1 0 0 0 0 0 0 -1000 S
+PL 0 512 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -212,8 +212,8 @@ bodyguard guard burly~
 &+Lbattlefield.  The man holds out his hand, asking for your invitation to the
 &+Lparty.&n
 ~
-1140850702 0 0 0 0 0 0 0 S
-PM 0 1 -1
+1140850702 0 0 0 0 0 0 0 0 S
+PM 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -225,8 +225,8 @@ nightmare sinister~
 &+L   The three-headed monster feeds on fear and regret.  Twisting and turning,
 &+Lit lets out a frightning shriek as it tries to poison your mind.&n
 ~
-131080 1 0 134742024 0 0 0 -1000 S
-RS 0 1 6
+131080 1 0 0 134742024 0 0 0 -1000 S
+RS 0 1 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -239,8 +239,8 @@ reflection raging~
 &+cregret.  Nightmares of this kind torture the unholy.  The shadowed monster
 &+cmust be dispelled to control the visions.&n
 ~
-100663306 32 0 135266312 0 0 0 -1000 S
-UG 0 1 6
+100663306 32 0 0 135266312 0 0 0 -1000 S
+UG 0 1 0 6
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -253,8 +253,8 @@ minion enslaved slave~
 &+ron guard from his natural aggression.  The minion is only aware of his
 &+rpurpose to protect his master at all costs.&n
 ~
-67109896 0 0 16 0 0 0 -1000 S
-U 0 1 -1
+67109896 0 0 0 16 0 0 0 -1000 S
+U 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -267,8 +267,8 @@ guardian holy guard~
 &+Wwill donate his life for the greater good.  This type of dedication means
 &+Wevil should beware.&n
 ~
-67109128 0 0 16 0 0 0 500 S
-PH 0 1 -1
+67109128 0 0 0 16 0 0 0 500 S
+PH 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

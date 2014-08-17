@@ -4,8 +4,8 @@ N
 3002
 3100
 0
-1.00
-1.00
+0.80
+1.10
 0
 %s Say what?~
 %s Say what?~
@@ -31,15 +31,15 @@ The shop is now closed!~
 0
 0
 N
-0
+1
 I don't sell to your kind!~
 X
 #1419~
 N
 1403
 0
-1.00
-1.00
+0.80
+1.10
 0
 %s You must be having a bad day.~
 %s I've never heard of that.  Tell me more about it.~
@@ -65,7 +65,7 @@ The shop is now closed!~
 0
 0
 N
-0
+1
 I don't sell to your kind!~
 X
 #1430~
@@ -77,8 +77,8 @@ N
 368
 369
 0
-1.00
-1.00
+0.80
+1.10
 0
 %s Speak halfling, I can't understand you.~
 %s Speak halfling, I can't understand you.~

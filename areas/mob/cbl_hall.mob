@@ -4,8 +4,8 @@ a golem~
 a &+Lstone golem&n denies access to the unworthy
 ~
 ~
-71400011 0 0 301990188 30 0 0 0 S
-OG 0 512 6
+71400011 0 0 0 301990188 30 0 0 0 S
+OG 0 512 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0
@@ -15,8 +15,8 @@ a stoned merchant~
 &+gThis merchant has taken one too many hits off the &+mpurple bong&+g.&n.
 ~
 ~
-30794 0 0 301990204 30 0 0 0 S
-PH 0 0 -1
+30794 0 0 0 301990204 30 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -26,8 +26,8 @@ a golem~
 a &+Lstone golem&n denies access to the unworthy
 ~
 ~
-71400011 0 0 301990188 30 0 0 -1000 S
-OG 0 32 6
+71400011 0 0 0 301990188 30 0 0 -1000 S
+OG 0 32 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ a stoned merchant~
 &+gThis merchant has taken one too many hits off the &+mpurple bong&+g.&n.
 ~
 ~
-30794 0 0 301990204 30 0 0 0 S
-PH 0 0 -1
+30794 0 0 0 301990204 30 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ massive undead ghoul golem assoc5_n_0 _nobutt_ br_c~
 &+rred&+L.  He peers out into the darkness, just waiting for unwanted
 &+Lguests to arrive.&n
 ~
-113277515 0 0 939598012 14556 0 0 0 S
-OG 0 512 6
+113277515 0 0 0 939598012 14556 0 0 0 S
+OG 0 512 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -72,8 +72,8 @@ decaying flesh golem assoc5_n_0 _nobutt_ br_c~
 &+Lanything other than battle in the immediate area.  It's hulking form requires
 &+Lone to think twice about doing anything drastic nearby.&n
 ~
-113277515 0 0 939598012 47324 0 0 0 S
-OG 0 32 6
+113277515 0 0 0 939598012 47324 0 0 0 S
+OG 0 32 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -92,8 +92,8 @@ putride ape zombie golem assoc5_n_0 _nobutt_ br_c~
 &+Lits own, unlike most other&n &+yun&+gd&+mea&+gd &+Lcreatures you have encountered.  The
 &+Lsheer &+Lh&+ro&+Rrr&+ro&+Lr of its appearance makes you cower.&n
 ~
-113277515 0 0 939598012 14556 0 0 0 S
-OG 0 512 6
+113277515 0 0 0 939598012 14556 0 0 0 S
+OG 0 512 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -109,8 +109,8 @@ furious lich golem assoc5_n_0 _nobutt_ br_c~
 &+Lwafts from his devilish &+Ge&+Ly&+Ge &+Lsockets, suggesting possesion of extremely
 &+Lpowerful m&+ma&+bg&+mi&+Lc.  You hesitate at the thought of crossing his path.
 ~
-113277515 0 0 939598012 14556 0 0 0 S
-OG 0 512 6
+113277515 0 0 0 939598012 14556 0 0 0 S
+OG 0 512 0 6
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

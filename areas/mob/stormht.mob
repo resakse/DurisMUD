@@ -6,8 +6,8 @@ storm giant guard~
 &+wStanding fully erect with a gazing stare, this guard stands ready to slay any
 &+wwho should try to gain unlawful access to the valley.&n
 ~
-1073748042 0 0 335544328 0 0 0 1000 S
-G 0 1 6
+1073748042 0 0 0 335544328 0 0 0 1000 S
+G 0 1 0 6
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -20,8 +20,8 @@ captain guard storm giant~
 &+Ltroops posted outside the valley. He often grumbles his discontent at the
 &+Lsecurity breaches he identifies.&n
 ~
-67135562 0 0 0 0 0 0 1000 S
-G 0 1 6
+67135562 0 0 0 0 0 0 0 1000 S
+G 0 1 0 6
 41 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -33,8 +33,8 @@ sentry storm~
 &+gWearing a thin suit of armor, this sentry is responsible for sounding the
 &+galert should any raiders be spotted approaching the valley.&n
 ~
-26698 0 0 0 0 0 0 1000 S
-G 0 1 -1
+26698 0 0 0 0 0 0 0 1000 S
+G 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -49,8 +49,8 @@ storm sentry~
 &+yStorm Giants, have joined the side of good in order to stop the hoardes of
 &+yunderdark denizens that plague the lands.&n
 ~
-1140852746 0 4194304 0 0 0 0 0 S
-G 0 1 -1
+1140852746 0 4194304 0 0 0 0 0 0 S
+G 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -63,8 +63,8 @@ storm sentry~
 &+Lcombat is his only means of existance. His piercing eyes survey any who enter
 &+Lthe room as though he is looking for a specific person.&n
 ~
-1073768458 0 4194304 0 0 0 0 0 S
-G 0 1 -1
+1073768458 0 4194304 0 0 0 0 0 0 S
+G 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -77,8 +77,8 @@ storm giant mother~
 &+Lmother moves about the cavern straighteneing things up. She often goes over
 &+Lto the pot of food simmering by the fire and takes sips to test its flavor.&n
 ~
-26702 0 4194304 0 0 0 0 0 S
-G 0 1 -1
+26702 0 4194304 0 0 0 0 0 0 S
+G 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -91,8 +91,8 @@ toddler storm giant~
 &+gbegun learning to walk. It moves about in staggered steps often falling to
 &+gthe ground.&n
 ~
-78 0 0 0 0 0 0 0 S
-G 0 0 -1
+78 0 0 0 0 0 0 0 0 S
+G 0 0 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -105,8 +105,8 @@ storm giant~
 &+Lbone knife is tucked neatly into the belt around his waste. A large scar runs
 &+Ldown the side of his left cheek.&n
 ~
-1073752138 0 0 0 0 0 0 0 S
-G 0 1 -1
+1073752138 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -119,8 +119,8 @@ krag butcher storm giant~
 &+Lmeats one desires. His apron is stained with blood from the numerous animals
 &+Lkept in his shop.&n
 ~
-10314 0 0 0 0 0 0 0 S
-G 0 1 -1
+10314 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -132,8 +132,8 @@ hired guard~
 &+LWearing a shiny suit of platemail, this paladin coldly eyes any who approach
 &+Lthe dwelling. His shield and sword ready to defend the tharnadian emmissary.&n
 ~
-67119118 0 4194304 0 12 0 0 1000 S
-PH 0 1 -1
+67119118 0 4194304 0 0 12 0 0 1000 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -145,8 +145,8 @@ eel black~
 &+yLong and thin this eel resembles a narrow snake. Its small dorsal fins
 &+yrunning the length of its back.&n
 ~
-72 0 0 0 0 0 0 0 S
-RS 0 0 1
+72 0 0 0 0 0 0 0 0 S
+RS 0 0 0 1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -159,8 +159,8 @@ storm giant innkeeper~
 &+ylarge scar running down the left side of his face, across the eye, has left
 &+yhim partially blind.&n
 ~
-8270 0 0 0 196 0 0 0 S
-G 0 1 -1
+8270 0 0 0 0 196 0 0 0 S
+G 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -174,8 +174,8 @@ guard royal~
 &+Yrests on his weapon at all times as he is prepared to lay down his life for
 &+Yany member of the council.&n
 ~
-1140865034 0 0 268443672 0 0 0 0 S
-G 0 1 -1
+1140865034 0 0 0 268443672 0 0 0 0 S
+G 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -188,8 +188,8 @@ elite guardian storm giant~
 &+Cof King Straag. His demeanor indicating that he is an experienced warrior
 &+Chaving trained at the academy.&n
 ~
-1140865034 0 0 8192 0 0 0 0 S
-G 0 1 -1
+1140865034 0 0 0 8192 0 0 0 0 S
+G 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -201,8 +201,8 @@ storm giant councilman~
 &+yWearing a thick garment of deer and rabbit furs, this councilman stands here
 &+yreading a leather pearchment.&n
 ~
-67108938 0 0 8 0 0 0 0 S
-G 0 1 -1
+67108938 0 0 0 8 0 0 0 0 S
+G 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -214,8 +214,8 @@ guard storm giant~
 &+LWearing a thick suit of animal furs, this storm giant guard ensures that the
 &+Lcouncil members gathering here remain peaceful during the meeting.&n
 ~
-1140861002 0 0 0 0 0 0 0 S
-G 0 1 -1
+1140861002 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -227,8 +227,8 @@ elder councilman~
 &+YThis elder storm giant appears to be a senior member of the high council as
 &+Yindicated by the quiver strapped across his chest.&n
 ~
-67108938 0 0 0 0 0 0 0 S
-G 0 1 -1
+67108938 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -240,8 +240,8 @@ large goat~
 &+gCovered in thick strands of white hair, this goat constantly nibbles at the
 &+ggrass taking no notice of anyone that enters the area.&n
 ~
-72 0 0 0 0 0 0 0 S
-AH 0 0 3
+72 0 0 0 0 0 0 0 0 S
+AH 0 0 0 3
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -253,8 +253,8 @@ baby goat~
 &+gThis small goat appears as though it has been separated from its mother. The
 &+gconstant whining only stopped as the goat pulls some grass from the ground.&n
 ~
-72 0 0 0 0 0 0 0 S
-AH 0 0 2
+72 0 0 0 0 0 0 0 0 S
+AH 0 0 0 2
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -266,8 +266,8 @@ wooly ram~
 &+yCovered in a thick white wool, this ram has a pair of thick yellow horns
 &+yabout its head. The horns loop back past its ears.&n
 ~
-8 0 0 0 0 0 0 0 S
-AH 0 0 3
+8 0 0 0 0 0 0 0 0 S
+AH 0 0 0 3
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -280,8 +280,8 @@ warrior storm giant guard~
 &+rensuring that only those new recruits and those few that are worthy enter the
 &+racademy.&n
 ~
-75511818 0 0 8 0 0 0 0 S
-G 0 1 -1
+75511818 0 0 0 8 0 0 0 0 S
+G 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -294,8 +294,8 @@ warrior shopkeeper~
 &+Lleft arm in battle, now attends the shop equiping all graduates with the
 &+Lbasic necessities.&n
 ~
-74 0 0 0 0 0 0 0 S
-G 0 1 -1
+74 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -307,8 +307,8 @@ young warrior~
 &+wWearing a plain suit of animal furs, this storm giant warrior seeks to
 &+wpractice his skills.&n
 ~
-8390730 0 0 0 0 0 0 0 S
-G 0 1 -1
+8390730 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -320,8 +320,8 @@ new recruit~
 &+LWearing a simple garment of leather and fur, this warrior practices his
 &+Lrecently learned skills.&n
 ~
-1073748042 0 0 0 0 0 0 0 S
-G 0 1 -1
+1073748042 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -333,8 +333,8 @@ warrior instructor storm giant~
 &+LWearing a heavy garment of parched furs and leather, this instructor moves
 &+Lswiftly about the chamber correcting improper stances and technique.&n
 ~
-34890 0 0 0 0 0 0 0 S
-G 0 1 -1
+34890 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -346,8 +346,8 @@ warrior guard storm giant~
 &+wWearing a suit of leather armor, this guard simply patrols the grounds making
 &+wsure nothing gets out of hand.&n
 ~
-1140865032 0 0 0 0 0 0 0 S
-G 0 1 -1
+1140865032 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -359,8 +359,8 @@ assistant human~
 &+LWearing a flowing silk robe, this man is the official assistant to the
 &+Ltharnadian emmissary.&n
 ~
-1140852810 0 0 0 0 0 0 0 S
-PH 0 512 -1
+1140852810 0 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -372,8 +372,8 @@ patrol patrolman storm giant~
 &+yClad in thick animal furs, this patrolman ensures the safety of those
 &+ycitizens living within the protective walls of Stragthor.&n
 ~
-1140861004 0 0 0 0 0 0 0 S
-G 0 1 -1
+1140861004 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -385,8 +385,8 @@ storm giant stormgiant~
 &+wWearing a light garment of cured animal furs, this storm giant watches his
 &+wgoat slowly cook over the fireplace.&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-G 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -398,8 +398,8 @@ barbarian merchant~
 &+LWearing thick furs about its body, this merchant carries bundles of goods
 &+Lwrapped in thick leathers.&n
 ~
-1073743884 0 0 0 0 0 0 0 S
-PB 11 1 -1
+1073743884 0 0 0 0 0 0 0 0 S
+PB 11 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -410,8 +410,8 @@ winterhaven merchant~
 ~
 &+WDressed in a long flowing robe, this merchant aggressively hawks his wares.&n
 ~
-14 0 0 0 0 0 0 0 S
-PH 1 1 -1
+14 0 0 0 0 0 0 0 0 S
+PH 1 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -423,8 +423,8 @@ bartender storm giant stormgiant~
 &+yWearing a large leather apron, this storm giant owns and operates the bar. He
 &+yquickly serves drinks to each new customer that approaches the bar.&n
 ~
-8526 0 0 0 0 0 0 0 S
-G 0 1 -1
+8526 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -437,8 +437,8 @@ drunken drunk giant~
 &+Lale to drink. His bloodshot eyes scanning the room looking for the next
 &+Lpasserby in which he can verbally harass.&n
 ~
-1073743886 0 0 0 0 0 0 0 S
-G 0 1 -1
+1073743886 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -451,8 +451,8 @@ patron storm giant stormgiant~
 &+Ldrinking ale. Something is on his mind as he often looks up with a resigned
 &+Lsigh as though thinking of a trouble to come.&n
 ~
-1073743882 0 0 0 0 0 0 0 S
-G 0 1 -1
+1073743882 0 0 0 0 0 0 0 0 S
+G 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -465,8 +465,8 @@ guard dog~
 &+yenter the hallway. Its long chain mounted to the side wall but allowing the
 &+ybeast plenty of room in which to move.&n
 ~
-8 1 0 0 0 0 0 0 S
-AC 0 0 3
+8 1 0 0 0 0 0 0 0 S
+AC 0 0 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -480,8 +480,8 @@ captain elite~
 &+yso. He stands with a determined look, as both his reputation and his life are
 &+yat stake if he fails.&n
 ~
-67110986 0 0 24 0 0 0 0 S
-G 0 1 5
+67110986 0 0 0 24 0 0 0 0 S
+G 0 1 0 5
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -493,8 +493,8 @@ white hare~
 &+yThis large hare moves quickly about the area. Having been startled from its
 &+yfeasting spot, it attempts to run toward safety.&n
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 2
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 2
 14 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -507,8 +507,8 @@ young mercenary~
 &+yslowly sharpens his blade while keeping a watchful eye on all who enter
 &+ythe area.
 ~
-1073752138 0 0 0 0 0 0 0 S
-G 0 16384 5
+1073752138 0 0 0 0 0 0 0 0 S
+G 0 16384 0 5
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -520,8 +520,8 @@ stealthy mercenary stormgiant storm giant~
 &+LWearing a light suit of leather armor, this mercenary attempts his skill of
 &+Lblending into the shadows.&n
 ~
-1073752140 0 0 0 0 0 0 0 S
-G 0 16384 5
+1073752140 0 0 0 0 0 0 0 0 S
+G 0 16384 0 5
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -534,8 +534,8 @@ senior mercenary guard storm giant stormgiant~
 &+ymercenary guild stands guard to ensure that no unauthorized persons enter the
 &+yguild. His muscular hand resting on a large dirk tucked into this belt.&n
 ~
-1073756234 0 0 0 0 0 0 0 S
-G 0 16384 5
+1073756234 0 0 0 0 0 0 0 0 S
+G 0 16384 0 5
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -547,8 +547,8 @@ storm giant toddler~
 &+LWearing a large leather and fur covering, this storm giant toddler lies
 &+Lrestfully on a thick bundle of dried hay.&n
 ~
-2122 0 0 0 0 0 0 0 S
-G 0 1 4
+2122 0 0 0 0 0 0 0 0 S
+G 0 1 0 4
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 8 1
@@ -561,8 +561,8 @@ farmer storm giant stormgiant~
 &+Lthe fields all day. A thick covering of mud and dirt can be seen on hisneck
 &+Land face.&n
 ~
-2120 0 0 0 0 0 0 0 S
-G 0 1 5
+2120 0 0 0 0 0 0 0 0 S
+G 0 1 0 5
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -575,8 +575,8 @@ storm giant warrior stormgiant~
 &+wto tharnadia to join the human forces in their attempt to repel the
 &+wunderdark invasion.&n
 ~
-10250 0 0 0 0 0 0 0 S
-G 0 1 5
+10250 0 0 0 0 0 0 0 0 S
+G 0 1 0 5
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -588,8 +588,8 @@ snake charmer~
 &+yWearing a bright turban on his head, this thin man sits here playing a large
 &+yflute. His head weaves back and forth as though in a trance.&n
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 32 3
+2122 0 0 0 0 0 0 0 0 S
+PH 0 32 0 3
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -602,8 +602,8 @@ merchant travelling~
 &+gspecific item. His leather armor and other articles of clothing indicate that
 &+ghe is from Tharnadia and is perhaps looking for some recruits.&n
 ~
-8 0 0 0 0 0 0 500 S
-PH 0 2 3
+8 0 0 0 0 0 0 0 500 S
+PH 0 2 0 3
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -615,8 +615,8 @@ shopper female~
 &+gDressed in tattered rags, this woman moves about the stalls looking for a good
 &+gdeal.&n
 ~
-2120 0 0 0 0 0 0 1000 S
-PH 0 1 3
+2120 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -629,8 +629,8 @@ mercenary veteran storm giant~
 &+yto have been away from combat too long. His aggressive demeanor indicating
 &+ythat he is looking for any excuse in which to seek combat.&n
 ~
-41032 0 0 8 0 0 0 500 S
-G 0 16384 5
+41032 0 0 0 8 0 0 0 500 S
+G 0 16384 0 5
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -643,8 +643,8 @@ war wizard human~
 &+rthis war wizard from Cormyr has come her to accompany the next regiment of
 &+rStorm Giants on their way to the battle front.&n
 ~
-1082271816 0 0 24 0 0 0 1000 S
-PH 0 544 -1
+1082271816 0 0 0 24 0 0 0 1000 S
+PH 0 544 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -656,8 +656,8 @@ storm giant scout~
 &+yWearing a light armor of stetched furs, this storm giant scout patrols the
 &+yentrance for intruders.&n
 ~
-1073883212 0 0 436207644 0 0 0 1000 S
-G 0 1 5
+1073883212 0 0 0 436207644 0 0 0 1000 S
+G 0 1 0 5
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -671,8 +671,8 @@ halfling councilman~
 &+wsummons requesting a contingent of storm giant patrols to take residence in
 &+wthe great halfling city.&n
 ~
-2056 0 0 8 0 0 0 1000 S
-PF 0 1 -1
+2056 0 0 0 8 0 0 0 1000 S
+PF 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -687,8 +687,8 @@ storm giant councilman stormgiant~
 &+yred glob of wax. Upon closer inspection one notices the broken seal of
 &+yTharnadia.&n
 ~
-1073752138 0 0 0 0 0 0 1000 S
-G 0 33 -1
+1073752138 0 0 0 0 0 0 0 1000 S
+G 0 33 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -701,8 +701,8 @@ assistant human~
 &+yquill quickly writing the names of all visitors so as to have an official
 &+yrecord for King Straag.&n
 ~
-74 0 0 0 0 0 0 1000 S
-PH 0 1 -1
+74 0 0 0 0 0 0 0 1000 S
+PH 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -717,8 +717,8 @@ courier~
 &+gparchment attached to his sash will be guarded with his life as it contains
 &+gthe positions of the combined army.&n
 ~
-2120 0 0 8 0 0 0 500 S
-PH 0 1 -1
+2120 0 0 0 8 0 0 0 500 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -733,8 +733,8 @@ kings guard~
 &+Lgiving indication that he is no stranger to melee combat and stands ready to
 &+Llay down his life in service of the king.&n
 ~
-1140861002 0 0 80 0 0 0 0 S
-G 0 1 5
+1140861002 0 0 0 80 0 0 0 0 S
+G 0 1 0 5
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -747,8 +747,8 @@ scribe~
 &+ywhich to study. A large hat atop his head, its wide brim covering a majority
 &+yof its facial features, pulsates with a magical energy.&n
 ~
-1073752138 0 0 134217728 0 0 0 500 S
-PH 0 512 -1
+1073752138 0 0 0 134217728 0 0 0 500 S
+PH 0 512 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -761,8 +761,8 @@ concubine stormgiant storm giant~
 &+cweight is slightly shifted to one foot, her breasts hanging low between the
 &+cseam in the gown.&n
 ~
-2122 0 0 0 0 0 0 0 S
-G 0 1 5
+2122 0 0 0 0 0 0 0 0 S
+G 0 1 0 5
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -775,8 +775,8 @@ mercenary thug~
 &+yAlthough he stands tall and bulky, he moves with the stealth and agility of a
 &+ylion.&n
 ~
-67110986 0 0 1048584 0 0 0 0 S
-G 0 16384 5
+67110986 0 0 0 1048584 0 0 0 0 S
+G 0 16384 0 5
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -789,8 +789,8 @@ sentry storm giant stormgiant~
 &+ywho are not of the storm giant race asking questions as to their purpose
 &+ywithin the valley of Stragthor.&n
 ~
-2124 0 0 0 0 0 0 0 S
-G 0 1 5
+2124 0 0 0 0 0 0 0 0 S
+G 0 1 0 5
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -802,8 +802,8 @@ dwarf dwarven craftsman~
 &+YCarrying a large bag of goods, this dwarven craftsman has come to Stragthor
 &+Yto market his wares.&n
 ~
-1073743944 0 0 0 0 0 0 0 S
-PM 0 1 -1
+1073743944 0 0 0 0 0 0 0 0 S
+PM 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -816,8 +816,8 @@ storm giant warrior stormgiant~
 &+gfront lines. Having been recruited by the warriors of tharnadia, he marches
 &+goff to join his brethren already fighting for the forces of good.&n
 ~
-2120 0 0 0 0 0 0 0 S
-G 0 1 5
+2120 0 0 0 0 0 0 0 0 S
+G 0 1 0 5
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -828,8 +828,8 @@ red fish~
 ~
 &n  A small &+rred &nfish.&n
 ~
-8 0 0 0 0 0 0 0 S
-f 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+f 0 0 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -841,8 +841,8 @@ sea hand seahand~
 &+yWearing a tattered cloth encrusted with seaweed and other offal, this
 &+ysea hand was left here to make preparations for an upcoming raid.&n
 ~
-1073743946 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073743946 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -854,8 +854,8 @@ seagull~
 &+WLarger than most of the common birds, this large seagull gazes intently out
 &+Winto the ocean looking for its prey.&n
 ~
-72 0 0 0 0 0 0 0 S
-B 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 9 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -866,8 +866,8 @@ youth haggard pickpocket~
 ~
 &+gShantily clad in a woolen tunic, this pickpocket searches for an easy coin.&n
 ~
-2124 0 0 0 0 0 0 0 S
-PH 0 65536 -1
+2124 0 0 0 0 0 0 0 0 S
+PH 0 65536 0 -1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -878,8 +878,8 @@ hawk~
 ~
 &+yKeen eyes gaze out over the valley as this hawk searches for its meal.&n
 ~
-72 0 0 0 0 0 0 0 S
-B 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+B 0 0 0 -1
 5 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -892,8 +892,8 @@ armorer~
 &+cholding pieces to his armor. Occaisionally he picks up a mallet and hammers
 &+cthe metal that forms one of his pieces of armor.&n
 ~
-10314 0 0 0 0 0 0 0 S
-PB 0 1 -1
+10314 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -906,8 +906,8 @@ sheep big horn bighorn~
 &+ythe top of its head and curl forward behind its ears. The massive horns
 &+yfacing one like a shielded warrior, ready to bash.&n
 ~
-72 0 0 0 0 0 0 0 S
-A 0 0 -1
+72 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -920,8 +920,8 @@ baby bighorn~
 &+gbarely protruding from the top of its head. The horns clearly visible as the
 &+gbeast bends its head to graze on the grass.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 -1
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 19 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -933,8 +933,8 @@ halfling bard minstrel~
 &+gThis halfling is dressed in bright colors. He carries a musical instrument to
 &+ghis mouth and blows a sweet melody that fills the air.&n
 ~
-2124 0 0 26 0 0 0 1000 S
-PF 0 32768 -1
+2124 0 0 0 26 0 0 0 1000 S
+PF 0 32768 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -946,8 +946,8 @@ pirate burly~
 &+yWearing a weathered suit of chainmail, this burly pirate screams furiously
 &+yat the fact that someone has discovered his hiding spot.&n
 ~
-8 0 0 24 0 0 0 0 S
-PH 0 16384 -1
+8 0 0 0 24 0 0 0 0 S
+PH 0 16384 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -960,8 +960,8 @@ mate first~
 &+yhis mighty halberd. His matted red beard flying wildly with each great arc
 &+yof the sword.&n
 ~
-72 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+72 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -977,8 +977,8 @@ king straag giant~
 &+Where pondering the onslaught of the evil races to the northlands of
 &+WDuris.  A grimmance scorns his stern, mighty face.
 ~
-2122 0 0 134217752 0 0 4194304 1000 S
-G 0 1 -1
+2122 0 0 0 134217752 0 0 4194304 1000 S
+G 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -991,8 +991,8 @@ high elven emissary~
 &+gHe has &+Csilver &+ghair and &Ngrey &+geyes.  Although quite young for an elf,
 &+git is no doubt that this man's age is in the thousands.
 ~
-2058 0 0 0 0 0 0 400 S
-pe 0 2 3
+2058 0 0 0 0 0 0 0 400 S
+pe 0 2 0 3
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

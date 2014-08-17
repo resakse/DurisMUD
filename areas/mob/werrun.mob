@@ -10,8 +10,8 @@ other inhabitant.  He wears a large brown coat, filled with
 pockets containing small bottles of spice and oils he plans
 on selling.
 ~
-1073744076 0 0 0 0 0 0 0 S
-PH 0 1 -1
+1073744076 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -26,8 +26,8 @@ on his large beard.  the head on his hair is almost all dark
 gray.  A stern and tired look is on his face as he rests with
 his chamber, book in hand.
 ~
-2122 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2122 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -41,8 +41,8 @@ The stable owner of &+yWerrun&N sits behind the counter.
 &+ybody is very thin, with a fair build.  A stern expression stares
 &+yforth from his pale blue eyes.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 0 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -55,8 +55,8 @@ musuclar horse~
 &+yside of his muscular body.  A thick black haired mane is on his
 &+yhead, ending at the arch of his back.
 ~
-134219784 0 0 0 0 0 0 0 S
-AE 0 1 -1
+134219784 0 0 0 0 0 0 0 0 S
+AE 0 1 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -69,8 +69,8 @@ The horse trainer stands here observing the steeds.
 drip from his dirty head as he constantly helps train the horses of
 Werrun to be at their peak performance.
 ~
-2056 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -83,8 +83,8 @@ mage shopkeeper~
 &+ma sorrowful and pitiful expression is evident on his aging face.
 &+mHe lets out a loud sigh and continues to work.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 512 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -98,8 +98,8 @@ rings as well as other jewelry decorate his thin body.  A wide
 smile covers most of his face at all times as he carefully eyes
 everybody he encounters.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -112,8 +112,8 @@ peaceful bridge guard~
 looks to be in his early years, but still quite experienced.  He
 is not holding his sword with him at the moment.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -128,8 +128,8 @@ dark brown robes.  A single beard covers most of his face, and dangles
 down in front of him.  He has a tattoo of a setting sun drawn on his
 forehead just over his right eye.
 ~
-2124 0 0 0 0 0 0 400 S
-GI 0 4 -1
+2124 0 0 0 0 0 0 0 400 S
+GI 0 4 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -143,8 +143,8 @@ amounts of curly body hair cover his strong body.  He is obviously in his
 later years, due to the large bald spot on his head and gray hair within
 his beard.
 ~
-2058 0 0 0 0 0 0 0 S
-PB 0 1 -1
+2058 0 0 0 0 0 0 0 0 S
+PB 0 1 0 -1
 44 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -158,8 +158,8 @@ He eyes the people walking by with respect, casually greeting each of them
 He wields no real weapons, and his only armor is some simple banded leather
 armor.
 ~
-1140852744 0 0 0 0 0 0 600 S
-PH 0 1 -1
+1140852744 0 0 0 0 0 0 0 600 S
+PH 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -173,8 +173,8 @@ walk about Werrun sniffing the ground and looking at everything in
 sight.  A small hankerchief tied around its neck reveals that it does
 indeed belong to somebody.
 ~
-134219784 0 0 0 0 0 0 0 S
-A 0 1 -1
+134219784 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -188,8 +188,8 @@ civilians in Werrun.  Although, it is, however, just simple cloth
 clothing.  This noble in other places would be considered middle
 class, while here he is respectedly a rich member of the community.
 ~
-2056 0 0 0 0 0 0 700 S
-PH 0 1 -1
+2056 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 4 4 1
@@ -203,8 +203,8 @@ skeletal bridge guard~
 &+Lhuman.  A look of pure hatred and deceit stares from the fiery fissures
 &+Lin his eyes.
 ~
-67110922 1 0 0 0 0 0 -1000 S
-U 0 1 -1
+67110922 1 0 0 0 0 0 0 -1000 S
+U 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -218,8 +218,8 @@ hell hound~
 &+rteeth fill its wide mouth.  Its eyes are a blood-red as it growls
 &+rand snarls continuously, giving off a dead heat.
 ~
-1073743880 1 0 8 1 0 0 0 S
-A 0 1 -1
+1073743880 1 0 0 8 1 0 0 0 S
+A 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -232,8 +232,8 @@ blood knight~
 &+Levil and hatred.  He moves with a quickness known only to the arcane.
 &+LA vicious looking sword occupies both of his bony hands.
 ~
-1140852744 0 0 24 0 0 0 -1000 S
-UV 0 16 -1
+1140852744 0 0 0 24 0 0 0 -1000 S
+UV 0 16 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -247,8 +247,8 @@ head hunter~
 &+Lupper folds of his cloak.  He dashes about with stealth
 &+Las he hunts the living.
 ~
-1073744076 1 0 24 0 0 0 0 S
-PH 0 1 -1
+1073744076 1 0 0 24 0 0 0 0 S
+PH 0 1 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -263,8 +263,8 @@ lady death~
 &+La spider-shaped hair braid.  Her eyes are a dark green.  She hisses
 &+Lviolently and prepares to kill you.
 ~
-526346 1 0 152 2049 0 0 -1000 S
-X 0 512 -1
+526346 1 0 0 152 2049 0 0 -1000 S
+X 0 512 0 -1
 55 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -278,8 +278,8 @@ mixing various poisons and death potions.  An evil red flare
 glows from his deep-set eyes.  His figure is very bony and
 pale.  A black robe covers most of his body.
 ~
-2058 1 0 152 264193 0 0 -1000 S
-UV 0 512 -1
+2058 1 0 0 152 264193 0 0 -1000 S
+UV 0 512 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -292,8 +292,8 @@ barbaric werrun official~
 &+Lhead, there is nothing.  Large skeletal hands reach out from within
 &+Lthe folds of his cloak as it senses life drawing near.
 ~
-2058 1 0 24 0 0 0 -1000 S
-U 0 1 -1
+2058 1 0 0 24 0 0 0 -1000 S
+U 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -307,8 +307,8 @@ evil nightmare~
 &+LIt snorts fire from its red nostrils, and its eyes glow
 &+Lwith an intense otherworldly evil.
 ~
-1073743880 1 0 24 0 0 0 -1000 S
-AE 0 1 -1
+1073743880 1 0 0 24 0 0 0 -1000 S
+AE 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -323,8 +323,8 @@ werrun beastmaster~
 &+rand frightening pleasure in the anguish of these living, but
 &+requally demonic creatures.
 ~
-1073743880 1 0 24 0 0 0 -1000 S
-UG 0 2 -1
+1073743880 1 0 0 24 0 0 0 -1000 S
+UG 0 2 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -338,8 +338,8 @@ enormous barkeep~
 &+La loop attached, dangles from his belt.  He stands here serving
 &+Lthe patrons of the city.
 ~
-2056 1 0 24 0 0 0 -1000 S
-G 0 1 -1
+2056 1 0 0 24 0 0 0 -1000 S
+G 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -353,8 +353,8 @@ satanic warlord~
 &+Lof his bony hands.  His eyes are completely vacant, deep red flames
 &+Lfill the voids in his head.
 ~
-2058 1 0 24 0 0 0 -1000 S
-UV 0 1 -1
+2058 1 0 0 24 0 0 0 -1000 S
+UV 0 1 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -369,8 +369,8 @@ demon bodyguard guard~
 &+Land lower lips.  Several large black horns extend from his
 &+Lround head.
 ~
-1073743882 1 0 152 2049 0 0 -1000 S
-X 0 1 -1
+1073743882 1 0 0 152 2049 0 0 -1000 S
+X 0 1 0 -1
 53 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -384,8 +384,8 @@ blood knight~
 &+La magical nature because his thin, bony body holds up heavy red armor
 &+Land still moves about with extreme dexterity.
 ~
-1073743882 1 0 24 0 0 0 -1000 S
-UV 0 16 -1
+1073743882 1 0 0 24 0 0 0 -1000 S
+UV 0 16 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

@@ -8,8 +8,8 @@ those evils who illegally enter this settlement.  He stands over six
 feet tall and has a firm build.  He stands on duty scanning the
 environment every few minutes.
 ~
-33556686 0 0 33554472 12480 0 0 500 S
-PH 0 1 -1
+33556686 0 0 0 33554472 12480 0 0 500 S
+PH 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 6.2.6.1 22275
 8 8 1
@@ -22,8 +22,8 @@ A bound &+Gtroll&N fidgets with his bonds trying to break free.
 desperately tries to break free.  He grunts and continues to play
 with lock.
 ~
-2122 0 0 40 0 0 0 -1000 S
-PT 0 256 -1
+2122 0 0 0 40 0 0 0 -1000 S
+PT 0 256 0 -1
 36 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -37,8 +37,8 @@ warrior wishes he didn't wander from the Grove.  Dressed in civilian
 uniform, he sits quietly in the corner of the room here.  He has a
 troubled look on his face.
 ~
-33556554 0 0 40 12480 0 0 -1000 S
-HO 0 1 -1
+33556554 0 0 0 40 12480 0 0 -1000 S
+HO 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 6 6 1
@@ -51,8 +51,8 @@ An &+Wogre&N warrior is here roaring and trying to break free.
 he tries to break his bonds.  He appears to have a strong build.
 Under his right eye, a large wound slowly bleeds.
 ~
-33556554 0 0 40 0 0 0 -1000 S
-PO 0 1 -1
+33556554 0 0 0 40 0 0 0 -1000 S
+PO 0 1 0 -1
 31 6 0 31d83+527 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -67,8 +67,8 @@ circle of elders of the &+MTeka&N.  He has assisted in many invasions
 and has assisted in leading many wars.  Kazim is the most experienced
 mage of the settlement.
 ~
-33556682 0 0 134217852 12480 0 0 500 S
-PH 0 2048 -1
+33556682 0 0 0 134217852 12480 0 0 500 S
+PH 0 2048 0 -1
 36 2 -15 36d64+756 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -81,8 +81,8 @@ A young &+Bboy&N is here practicing a new skill.
 a newly learned spell on an unsuspecting victim.  He is very puny
 in size and appears to be very young in age.
 ~
-1107298380 160 0 44 128 0 0 1000 S
-PH 0 128 -1
+1107298380 160 0 0 44 128 0 0 1000 S
+PH 0 128 0 -1
 11 15 64 11d25+55 2d5+2
 5.4.1.0 5346
 8 8 1
@@ -95,8 +95,8 @@ demon red~
 apparently disturbed from something.  It appears to wear pulse
 with red energy.
 ~
-33556682 0 0 67108920 12480 0 0 -1000 S
-X 0 512 -1
+33556682 0 0 0 67108920 12480 0 0 -1000 S
+X 0 512 0 -1
 41 8 -12 30d44+540 3d6+4
 0.5.3.2 40095
 10 10 0
@@ -108,8 +108,8 @@ A small spider is spinning its web here, hoping to trap its meal.
   This small insect looks rather helpless and hungry.  Its silk
 appears to be very sticky and strong.
 ~
-2252 248 0 0 0 0 0 -1000 S
-I 0 0 -1
+2252 248 0 0 0 0 0 0 -1000 S
+I 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 0
@@ -122,8 +122,8 @@ skeleton~
 rattles as it circles the room.  There are not many special features
 in this skeleton.
 ~
-2250 1 0 40 12480 0 0 -1000 S
-SK 0 1 -1
+2250 1 0 0 40 12480 0 0 -1000 S
+SK 0 1 0 -1
 33 6 -5 33d83+561 4d6+7
 0.0.0.0 42768
 8 8 0
@@ -139,8 +139,8 @@ evil aligned warriors. They fought Maur in an attempt to kill him.
 He stands here fidgeting with his bond.  He roars in anger failing
 to break his bonds.
 ~
-33556554 0 0 188 12480 0 0 -1000 S
-D 0 512 -1
+33556554 0 0 0 188 12480 0 0 -1000 S
+D 0 512 0 -1
 59 2 -35 36d64+1116 4d7+10
 0.1.2.6 93312
 8 8 1
@@ -152,8 +152,8 @@ green plant~
     This green plant strangely grows in the dark.  It has broad
 leafs which are covered in spots.
 ~
-2122 0 0 0 8320 0 0 100 S
-AH 0 1 -1
+2122 0 0 0 0 8320 0 0 100 S
+AH 0 1 0 -1
 25 11 19 25d47+250 3d5+3
 0.0.0.0 22275
 8 8 0
@@ -167,8 +167,8 @@ chamber for the next meeting to begin.  He stands under six feet
 and has a medium build.  He waits with the patience he has learned
 as a shaman.
 ~
-33556682 0 0 33554472 12480 0 0 1000 S
-PH 0 256 -1
+33556682 0 0 0 33554472 12480 0 0 1000 S
+PH 0 256 0 -1
 22 11 29 22d44+198 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -182,8 +182,8 @@ selling a variety of different items.  He stands over six feet
 tall and has a medium build.  Bron has black hair and dark brown
 eyes. He looks to do business with you, his next customer.
 ~
-33556684 0 0 33554472 12480 0 0 0 S
-PH 0 1 -1
+33556684 0 0 0 33554472 12480 0 0 0 S
+PH 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -197,8 +197,8 @@ young apprentices, who flock to him for his lessons.  He is a
 large human towering over six feet with a muscular build. Farzam
 has a black moustache and beard.
 ~
-33556682 0 0 33554556 12480 0 0 1000 S
-PH 0 1 -1
+33556682 0 0 0 33554556 12480 0 0 1000 S
+PH 0 1 0 -1
 35 6 -12 35d83+595 4d6+7
 9.9.1.2 45360
 8 8 1
@@ -212,8 +212,8 @@ ready to assist him as he wishes.  She has long flowing brown
 hair and hazel eyes.  She studies an old tome as she awaits
 Farzam's next request.
 ~
-33556682 0 0 33554492 12480 0 0 500 S
-PH 0 512 -1
+33556682 0 0 0 33554492 12480 0 0 500 S
+PH 0 512 0 -1
 31 6 0 31d56+465 4d6+7
 5.7.9.1 40176
 8 8 2
@@ -226,8 +226,8 @@ A training &+MTekan&N apprentice practices a new skill here.
 a new skill learned today.  He continues on his way hardly paying
 any attention to you.
 ~
-2252 0 0 33554476 0 0 0 500 S
-PH 0 2 -1
+2252 0 0 0 33554476 0 0 0 500 S
+PH 0 2 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -241,8 +241,8 @@ flowing black hair and brown eyes.  This young druid trains a new
 skill learned earlier today.  She continues on his way hardly paying
 any attention to you.
 ~
-2252 0 0 50331692 0 0 0 500 S
-PH 0 128 -1
+2252 0 0 0 50331692 0 0 0 500 S
+PH 0 128 0 -1
 31 6 0 31d77+496 4d6+7
 5.7.9.1 40176
 8 8 2
@@ -255,8 +255,8 @@ serpent green~
 with thick green scales.  It hisses loudly as it notices its next
 victim.
 ~
-33556554 56 0 0 0 0 0 0 S
-A 0 1 -1
+33556554 56 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 16 13 48 16d35+112 3d4+2
 0.0.0.0 7776
 8 8 0
@@ -269,8 +269,8 @@ A &+Wnanny of &+MTeka&N is here caring for many young ones.
 settlement.  She is an old woman with white hair.  Dressed in
 an apron, she keeps a keen eye on the children beneath her care.
 ~
-100665546 0 0 33554472 8192 0 0 0 S
-PH 0 32 -1
+100665546 0 0 0 33554472 8192 0 0 0 S
+PH 0 32 0 -1
 29 8 7 29d60+348 3d6+4
 9.4.7.1 25839
 8 8 2
@@ -283,8 +283,8 @@ child young~
 He sucks his thumb bored by the lack of amusement of the cottage.
 He peers the room in search of a new diversion.
 ~
-2250 0 0 0 0 0 0 0 S
-PH 0 1 -1
+2250 0 0 0 0 0 0 0 0 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 6 6 1
@@ -298,8 +298,8 @@ room for items of value. He sneaks quickly through room acting on
 task he has set at hand.  He has short brown hair and wields a
 bloodstained dagger.
 ~
-33556682 0 0 33554472 8192 0 0 -1000 S
-PH 0 4096 -1
+33556682 0 0 0 33554472 8192 0 0 -1000 S
+PH 0 4096 0 -1
 27 8 13 27d55+297 3d6+4
 8.3.7.1 24057
 8 8 1
@@ -314,8 +314,8 @@ powerful build.  He has a large scar across his fore head.  G'mar
 is dressed in battle uniform.  He continues work on an invasion
 as you enter his study.
 ~
-33556682 0 0 33554472 12480 0 0 -500 S
-PH 0 1 -1
+33556682 0 0 0 33554472 12480 0 0 -500 S
+PH 0 1 0 -1
 38 2 -21 38d95+874 4d7+10
 1.2.2.2 49248
 8 8 1
@@ -329,8 +329,8 @@ getting some rest from his shift on patrolling the settlement.
 He is lightly dressed.  He tosses and turns in his cot apparently
 disturbed by something.
 ~
-2250 0 0 33554440 8192 0 0 -100 S
-PH 0 1 -1
+2250 0 0 0 33554440 8192 0 0 -100 S
+PH 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 4 4 1
@@ -344,8 +344,8 @@ the elves.  This scribe is fluent in many different languages. He is
 able to understand many tongues.  He is very knowledgable on many
 subjects.  He continues reading as you enter the library.
 ~
-33556682 0 0 73772 12288 0 0 -666 S
-PH 0 32 -1
+33556682 0 0 0 73772 12288 0 0 -666 S
+PH 0 32 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -360,8 +360,8 @@ to be placed in the stew pot.  She is a plump female who has gained
 weight with her age.  She has long black hair that has been tied up
 and placed in a silver hair piece.
 ~
-33556682 0 0 16785452 12480 0 0 0 S
-PH 0 128 -1
+33556682 0 0 0 16785452 12480 0 0 0 S
+PH 0 128 0 -1
 30 8 3 30d60+360 3d6+4
 0.5.7.1 26730
 8 8 2
@@ -375,8 +375,8 @@ The statue depicts the leader in a victory pose after the war which
 claimed the lands which this settlement resides on today.  The statue
 is almost life-size and appears to pulse in a magical aura.
 ~
-33556682 0 0 236 0 0 0 -1000 S
-OG 0 1 -1
+33556682 0 0 0 236 0 0 0 -1000 S
+OG 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 0
@@ -390,8 +390,8 @@ pedestal.  It has its fangs beared with its jaws widely opened. The
 artist of the statue caught the serpent in a pose just before it was
 about to strike its prey.
 ~
-33556682 0 0 252 8192 0 0 -1000 S
-OG 0 1 -1
+33556682 0 0 0 252 8192 0 0 -1000 S
+OG 0 1 0 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 0
@@ -407,8 +407,8 @@ many invasions against all.  Yezen is the master mage of the &+MTekan&N
 settlement. He has seen all and is greatly experienced.  With a head
 of white hair, he still appears to have a strong build.
 ~
-100665546 0 0 73852 12480 0 0 -500 S
-PH 0 2048 -1
+100665546 0 0 0 73852 12480 0 0 -500 S
+PH 0 2048 0 -1
 40 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 6 6 1
@@ -421,8 +421,8 @@ assistant~
 assisting Yezen.  The assistant stands under six feet tall and
 has a slender build.
 ~
-100665546 0 0 108 12480 0 0 0 S
-PH 0 1 -1
+100665546 0 0 0 108 12480 0 0 0 S
+PH 0 1 0 -1
 27 8 13 27d65+351 3d6+4
 8.3.7.1 24057
 8 8 1
@@ -435,8 +435,8 @@ horse large~
 strong build.  She has a coat of brown fur and a long mane of
 golden brown hair.
 ~
-134219976 0 0 0 0 0 0 -100 S
-AE 0 0 -1
+134219976 0 0 0 0 0 0 0 -100 S
+AE 0 0 0 -1
 24 11 23 24d40+192 3d5+3
 0.0.0.0 21384
 8 8 2
@@ -450,8 +450,8 @@ all the hardships of life as he cleans the floor here.  He is a
 young boy who has not experienced life yet.  His high pitched
 voice is annoying.
 ~
-33556682 248 0 33554476 8192 0 0 -1000 S
-PH 0 1 -1
+33556682 248 0 0 33554476 8192 0 0 -1000 S
+PH 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -466,8 +466,8 @@ is a short ranger with short brown hair.  He has a powerful build and
 wields an old dagger.  As he turns around, he eyes you and continues
 on his patrol.
 ~
-33556682 0 0 16851068 8192 0 0 1000 S
-PH 0 2 -1
+33556682 0 0 0 16851068 8192 0 0 1000 S
+PH 0 2 0 -1
 36 2 -15 36d95+828 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -479,8 +479,8 @@ lizard large~
    This large lizard is covered in green scales.  He stops every now and
 then to eat bugs he has found from within the settlement.
 ~
-33556684 0 0 598120 12288 0 0 0 S
-R 0 0 -1
+33556684 0 0 0 598120 12288 0 0 0 S
+R 0 0 0 -1
 30 8 3 30d55+330 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -493,8 +493,8 @@ flame red dancing~
 the surrounding area. She consumes and devours organic matter with
 in the blink of an eye.
 ~
-2250 0 0 73788 12289 0 0 1000 S
-EF 0 1 -1
+2250 0 0 0 73788 12289 0 0 1000 S
+EF 0 1 0 -1
 34 6 -18 34d83+578 4d6+7
 0.0.0.0 44064
 8 8 2
@@ -508,8 +508,8 @@ the surrounding area. She consumes and devours organic matter with
 in the blink of an eye.  She continues to circle the red flame in a
 long dance.
 ~
-2250 0 0 73788 12288 0 0 1000 S
-EF 0 4 -1
+2250 0 0 0 73788 12288 0 0 1000 S
+EF 0 4 0 -1
 34 6 -18 34d77+544 4d6+7
 0.0.0.0 44064
 8 8 2
@@ -522,8 +522,8 @@ holy ghost~
 doesn't appear to be wearing any clothing.  It flies in circles about
 this room screaming loudly.
 ~
-33556682 0 0 150995004 12288 0 0 1000 S
-UG 0 32 -1
+33556682 0 0 0 150995004 12288 0 0 1000 S
+UG 0 32 0 -1
 36 2 -25 36d88+792 4d7+10
 0.0.0.0 46656
 11 11 0
@@ -537,8 +537,8 @@ a keen eye.  This gargoyle responds to any threat with the force of
 an army.  Its' cold eyes constantly scan the area of the cathedral
 and settlement for any danger.
 ~
-33556682 0 0 252 12480 0 0 -1000 S
-G 0 4 -1
+33556682 0 0 0 252 12480 0 0 -1000 S
+G 0 4 0 -1
 35 2 -15 36d88+792 4d7+10
 0.1.2.2 46656
 8 8 1
@@ -552,8 +552,8 @@ within this establishment. With his raised mug in one hand, he offers
 a toast before beginning his next drink.  He appears to be in a joyful
 mood.
 ~
-2254 0 0 0 0 0 0 -500 S
-PB 0 1 -1
+2254 0 0 0 0 0 0 0 -500 S
+PB 0 1 0 -1
 7 18 77 7d21+38 2d3+1
 3.2.0.0 907
 8 8 1
@@ -567,8 +567,8 @@ to cast many spells in attempts to warm herself.  She consistantly
 mumbles with each failure.  She exchanges cold glances with you as
 you approach.
 ~
-133326 0 0 40 0 0 0 -500 S
-PB 0 2048 -1
+133326 0 0 0 40 0 0 0 -500 S
+PB 0 2048 0 -1
 25 11 19 25d32+200 3d5+3
 6.2.6.1 22275
 8 8 2
@@ -581,8 +581,8 @@ A &+Clost human&N attempts to enjoy the activities of the tavern.
 of this establishment.  Many nights of travelling has broght this human
 here.  He looks homesick and wishes to return home.
 ~
-2254 0 0 16777216 12288 0 0 1000 S
-PH 0 128 -1
+2254 0 0 0 16777216 12288 0 0 1000 S
+PH 0 128 0 -1
 22 11 29 22d44+198 3d5+3
 4.0.5.0 19602
 8 8 1
@@ -595,8 +595,8 @@ Prowling quietly through the area, this &+Wsnow fox&N silently hunts his prey.
 the snow covered area hunting and foraging for food.  With out a
 sound, he continues along his way.
 ~
-2252 0 0 524320 0 0 0 0 S
-A 0 0 -1
+2252 0 0 0 524320 0 0 0 0 S
+A 0 0 0 -1
 5 20 83 5d15+17 1d5+0
 0.0.0.0 648
 8 8 1
@@ -609,8 +609,8 @@ melbh~
 many needed goods for purchase.  Melbh is strong barbarian with a
 large build.  He offers you one of his many items as you approach.
 ~
-33556682 0 0 44 12480 0 0 250 S
-PB 0 2048 -1
+33556682 0 0 0 44 12480 0 0 250 S
+PB 0 2048 0 -1
 40 2 -28 40d64+840 4d7+10
 3.3.3.3 51840
 8 8 1
@@ -624,8 +624,8 @@ roams the lake here.  He has been sentenced to roam the lake searching
 for a item he lost many years ago.  He has appears to be a barbarian
 spirit. His body pulses in a red aura.
 ~
-33949900 0 0 134217772 12480 0 0 -1000 S
-UG 0 2048 -1
+33949900 0 0 0 134217772 12480 0 0 -1000 S
+UG 0 2048 0 -1
 37 2 -28 37d64+777 4d7+10
 0.0.0.0 47952
 4 4 1
@@ -638,8 +638,8 @@ A &+Ysmall beaver&N swims through the water in search of food.
 both sides of his face.  His small body looks quite frail due to the lack
 of food. His hunger has lead his to search desperately for food.
 ~
-264396 0 0 0 0 0 0 0 S
-A 0 1 -1
+264396 0 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 0.0.0.0 1296
 12 12 1
@@ -653,8 +653,8 @@ powers to do as he pleases.  He has a slender build and stands just
 over six feet. Deep in thought, nothing seems to interrupt this
 shaman.
 ~
-33556682 0 0 44 12480 0 0 -1000 S
-PH 0 256 -1
+33556682 0 0 0 44 12480 0 0 -1000 S
+PH 0 256 0 -1
 31 6 0 31d77+496 4d6+7
 5.7.9.1 40176
 8 8 1
@@ -669,8 +669,8 @@ build.  He has a large scar over is left brow.  Asmar has only
 a partial say on a decision.  Asmar and Aswadi must agree for a
 decision to occur.
 ~
-33556682 0 0 536944684 12480 0 0 -750 S
-PB 0 1 -1
+33556682 0 0 0 536944684 12480 0 0 -750 S
+PB 0 1 0 -1
 38 2 -21 38d95+874 4d7+10
 1.2.2.2 49248
 6 6 1
@@ -684,8 +684,8 @@ helps in making decisions regarding the many issues of the tribe.  She
 wears an elaborate satin robe.  She currently sits on the throne beside
 her husband and is constantly by his side assisting.
 ~
-33556682 0 0 16777260 12480 0 0 350 S
-PH 0 128 -1
+33556682 0 0 0 16777260 12480 0 0 350 S
+PH 0 128 0 -1
 38 2 -21 38d88+836 4d7+10
 1.2.2.2 49248
 6 6 2
@@ -699,8 +699,8 @@ skills in preparation for the next invasion. He moves with great
 agility and speed.  This warrior has a slender build and stands
 just under six feet.
 ~
-33556684 0 0 40 12480 0 0 550 S
-PM 0 1 -1
+33556684 0 0 0 40 12480 0 0 550 S
+PM 0 1 0 -1
 20 13 35 20d35+140 3d4+2
 0.9.3.0 9720
 8 8 1
@@ -714,8 +714,8 @@ before the gates.  He stands here keeping out all from this
 settlement. He appears to be over six feet tall and has a
 strong build.  He eyes the surrounding areas of the settlement.
 ~
-100665546 0 0 56 12480 0 0 500 S
-PB 0 1 -1
+100665546 0 0 0 56 12480 0 0 500 S
+PB 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.5.7.1 26730
 8 8 1
@@ -729,8 +729,8 @@ the lake for food to consume.  She hangs her line into the lake holding
 very still. Syria watches all around and hums a melody to herself as
 she works.
 ~
-33556682 0 0 16777260 12480 0 0 100 S
-PB 0 256 -1
+33556682 0 0 0 16777260 12480 0 0 100 S
+PB 0 256 0 -1
 33 6 -5 33d77+528 4d6+7
 7.8.0.2 42768
 6 6 2
@@ -744,8 +744,8 @@ business transaction.  He wears a warm fur animal fur about his
 body.  This barbarian has a strong build.  He hardly notices
 your presence as he continues working.
 ~
-2250 0 0 40 0 0 0 0 S
-PB 0 16384 -1
+2250 0 0 0 40 0 0 0 0 S
+PB 0 16384 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -759,8 +759,8 @@ all with his complaints.  This barbarian child mumbles about
 everything. He complains about the cold, the snow, the pier,
 and your presence.
 ~
-2250 0 0 40 0 0 0 0 S
-PB 0 1 -1
+2250 0 0 0 40 0 0 0 0 S
+PB 0 1 0 -1
 10 18 67 10d21+55 2d3+1
 5.3.0.0 1296
 8 8 1
@@ -772,8 +772,8 @@ A &+Wwhite&N rabbit hops through the snow here.
 This small rabbit hops the the snow.  She nibbles on frozen
 plant life always keeping an eye out for predators.
 ~
-140 0 0 0 0 0 0 0 S
-A 0 0 -1
+140 0 0 0 0 0 0 0 0 S
+A 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 8 8 2
@@ -786,8 +786,8 @@ A &+Ysnow leopard&N quietly hunts his prey here.
 upon his prey as he prepares to attack.  This leopard has a
 long furry tail.
 ~
-134219788 0 0 532480 0 0 0 0 S
-A 0 0 -1
+134219788 0 0 0 532480 0 0 0 0 S
+A 0 0 0 -1
 15 15 51 15d23+60 2d5+2
 0.0.0.0 7290
 8 8 1
@@ -801,8 +801,8 @@ protecting his bridge.  Artek stands just over six feet tall and
 has a large scar on the right side of his cheek.  His cold eyes
 stare deep into your soul as he exchanges glances with you.
 ~
-33556682 0 0 16853116 12480 0 0 1000 S
-PH 0 128 -1
+33556682 0 0 0 16853116 12480 0 0 1000 S
+PH 0 128 0 -1
 41 -1 -56 41d99+1804 6d6+12
 1.7.6.3 99630
 8 8 1
@@ -817,8 +817,8 @@ covered in dark green scales which glisten in the light.  He
 valiantly flaps his wings failing to reach flight.  He frowns in
 disappointment as he exchanges a weary glance with you.
 ~
-33556682 0 0 16779372 12288 0 0 -500 S
-D 0 4 -1
+33556682 0 0 0 16779372 12288 0 0 -500 S
+D 0 4 0 -1
 31 6 -20 31d77+806 4d6+7
 5.7.5.5 80352
 8 8 1
@@ -832,8 +832,8 @@ cave.  His body is covered in dark green scales which appear
 to have tough texture. He snores loudly as he lays on his bed
 of skeletons.  It continues to sleep hardly noticing you.
 ~
-33556682 0 0 16777324 12288 0 0 -500 S
-D 0 4 -1
+33556682 0 0 0 16777324 12288 0 0 -500 S
+D 0 4 0 -1
 20 13 15 20d33+320 3d4+2
 0.9.9.0 19440
 4 4 1
@@ -847,8 +847,8 @@ leaves little footsteps behind her as she sings loudly.  Her
 footprints form an intricate pattern in the snow.  She continues
 on her way hardly noticing you.
 ~
-2252 0 0 524332 0 0 0 1000 S
-HF 0 32 -1
+2252 0 0 0 524332 0 0 0 1000 S
+HF 0 32 0 -1
 13 15 58 13d25+65 2d5+2
 6.5.2.0 6318
 8 8 2
@@ -861,8 +861,8 @@ This fish is covered in golden scales that reflect the surrounding
 light into the nearby area.  This fish swims through the lake here
 not paying particular attention to anything.
 ~
-204 0 0 0 0 0 0 1000 S
-F 0 0 -1
+204 0 0 0 0 0 0 0 1000 S
+F 0 0 0 -1
 3 20 90 3d15+11 1d5+0
 0.0.0.0 388
 12 12 0
@@ -877,8 +877,8 @@ eyeing surrounding territory from wrong doing.  He nods at you
 as you question his name. With a bulging ego, he continues at
 his work.
 ~
-1107298506 0 0 50331772 12480 0 0 0 S
-PB 0 1 -1
+1107298506 0 0 0 50331772 12480 0 0 0 S
+PB 0 1 0 -1
 50 -3 -95 50d119+2750 6d6+25
 0.3.1.5 121500
 8 8 1
@@ -893,8 +893,8 @@ is dressed in a leather outfit.  She has her long brown hair tied
 up in a golden hair piece.  She continues pacing the room as you
 enter.
 ~
-33556682 0 0 16777276 12480 0 0 1000 S
-PH 0 128 -1
+33556682 0 0 0 16777276 12480 0 0 1000 S
+PH 0 128 0 -1
 41 -1 -56 41d99+1804 6d6+12
 1.7.6.3 99630
 8 8 2
@@ -908,8 +908,8 @@ that her delivery reach her promptly.  She is dressed in long white
 satin robes.  She wears a small figurine about her neck.  Aerin
 appears deep in thought.
 ~
-33556682 0 0 60 12480 0 0 -1000 S
-PB 0 256 -1
+33556682 0 0 0 60 12480 0 0 -1000 S
+PB 0 256 0 -1
 42 -1 -59 42d99+1848 6d6+12
 2.8.7.3 102060
 8 8 1
@@ -920,8 +920,8 @@ rat small~
 ~
 A rat.
 ~
-2120 1 0 0 0 0 0 0 S
-A 0 1 -1
+2120 1 0 0 0 0 0 0 0 S
+A 0 1 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

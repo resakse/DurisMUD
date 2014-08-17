@@ -319,35 +319,34 @@ P_obj get_hash_obj_vis(P_char ch, char *name, P_obj list)
   return (0);
 }
 
-P_obj
-get_purchase_obj(P_char ch, char *arg, P_char keeper, int shop_nr, int msg)
+P_obj get_purchase_obj(P_char ch, char *arg, P_char keeper, int shop_nr, int msg)
 {
-  char     buf[MAX_STRING_LENGTH], name[MAX_INPUT_LENGTH];
-  P_obj    obj;
+  char  buf[MAX_STRING_LENGTH], name[MAX_INPUT_LENGTH];
+  P_obj obj;
 
   one_argument(arg, name);
   do
   {
-    if (*name == '#')
+    if( *name == '#' )
       obj = get_hash_obj_vis(ch, name, keeper->carrying);
     else
       obj = get_slide_obj_vis(ch, name, keeper->carrying);
-    if (!obj)
+    if( !obj )
     {
       if (msg)
       {
         sprintf(buf, shop_index[shop_nr].no_such_item1, GET_NAME(ch));
       }
-      return (0);
+      return NULL;
     }
-    if (obj->cost <= 0)
+    if( obj->cost <= 0 )
     {
       extract_obj(obj, TRUE);
       obj = 0;
     }
   }
-  while (!obj);
-  return (obj);
+  while( !obj );
+  return obj;
 }
 
 int trade_with(P_obj item, int shop_nr, char repairing)
@@ -1427,45 +1426,63 @@ int end_read_list(struct shop_buy_data *list, int len, int error)
   BUY_TYPE(list[len++]) = NOTHING;
   return (len);
 }
+
 int read_type_list(FILE * shop_f, struct shop_buy_data *list, int max)
 {
-  int      i, num, len = 0, error = 0;
-  char    *ptr, buf[MAX_STRING_LENGTH];
+  int   i, num, len = 0, error = 0;
+  char *ptr, buf[MAX_STRING_LENGTH];
 
   bzero(buf, MAX_STRING_LENGTH);
   do
   {
-    fgets(buf, MAX_STRING_LENGTH - 1, shop_f);
-    if ((ptr = strchr(buf, ';')) != NULL)
+    fgets( buf, MAX_STRING_LENGTH - 1, shop_f );
+    if( (ptr = strchr(buf, ';')) != NULL )
+    {
       *ptr = 0;
+    }
     else
+    {
       *(END_OF(buf) - 1) = 0;
-    for (i = 0, num = NOTHING; *item_types[i] != '\n'; i++)
-      if (!strn_cmp(item_types[i], buf, strlen(item_types[i])))
+    }
+
+    for( i = 0, num = NOTHING; *item_types[i] != '\n'; i++ )
+    {
+      if( !strn_cmp(item_types[i], buf, strlen(item_types[i])) )
       {
         num = i;
         strcpy(buf, buf + strlen(item_types[i]));
         break;
       }
+    }
     ptr = buf;
-    if (num == NOTHING)
+    if( num == NOTHING )
     {
       sscanf(buf, "%d", &num);
       while (!isdigit(*ptr))
+      {
         ptr++;
+      }
       while (isdigit(*ptr))
+      {
         ptr++;
+      }
     }
     while (isspace(*ptr))
+    {
       ptr++;
+    }
     while (isspace(*(END_OF(ptr) - 1)))
+    {
       *(END_OF(ptr) - 1) = 0;
+    }
     error += add_to_list(list, LIST_TRADE, &len, &num);
     if (*ptr)
+    {
       BUY_WORD(list[len - 1]) = str_dup(ptr);
+    }
   }
-  while (num > 0);
-  return (end_read_list(list, len, error));
+  while( num > 0 );
+  return end_read_list(list, len, error);
 }
 
 /*
@@ -1483,7 +1500,7 @@ void boot_the_shops(void)
 
   if (!(shop_f = fopen(SHOP_FILE, "r")))
   {
-    perror("Error in boot shop - Could not open world.shp!\n");
+    perror("boot_the_shops: Error in boot shop - Could not open world.shp!\n");
     raise(SIGSEGV);
   }
   number_of_shops = 0;
@@ -1494,11 +1511,12 @@ void boot_the_shops(void)
 
     if (*buf == '#')
     {                           /* a new shop */
-      /*      fprintf(stderr, "SHOP: %s\r\n", buf);   */
+//      fprintf(stderr, "boot_the_shops: Booting shop: '%s'.\r\n", buf);
       shop_end = FALSE;
 
+      // first shop
       if (number_of_shops == 0)
-      {                         /* first shop */
+      {
         CREATE(shop_index, shop_data, 1, MEM_TAG_SHOPDAT);
       }
       else
@@ -1508,15 +1526,14 @@ void boot_the_shops(void)
       }
 
       fscanf(shop_f, "%c \n", &tbuf);
-      /*
-       * Determine weather this shop is in the NEW or OLD format
-       */
+      // Determine weather this shop is in the NEW or OLD format
       if (tbuf == 'N')
       {
         shop_index[number_of_shops].shop_new_options = 1;
       }
       else
       {
+        fprintf(stderr, "boot_the_shops: Old shop: '%s'!\r\n", buf);
         perror("Old shop exists!");
         raise(SIGSEGV);
       }
@@ -1536,10 +1553,16 @@ void boot_the_shops(void)
       }
 
       /* Load in the percentages that the shop will use to make a profit. */
-      if (fscanf(shop_f, "%f \n", &t_buy) != 1)
+      if( fscanf(shop_f, "%f \n", &t_buy) != 1 )
+      {
+        fprintf(stderr, "boot_the_shops: '%s' has bad t_buy!\r\n", buf);
         raise(SIGSEGV);
-      if (fscanf(shop_f, "%f \n", &t_sell) != 1)
+      }
+      if( fscanf(shop_f, "%f \n", &t_sell) != 1 )
+      {
+        fprintf(stderr, "boot_the_shops: '%s' has bad t_sell!\r\n", buf);
         raise(SIGSEGV);
+      }
 
       shop_index[number_of_shops].sell_percent = t_sell;
       shop_index[number_of_shops].buy_percent = t_buy;
@@ -1548,7 +1571,6 @@ void boot_the_shops(void)
        * boundary conditions, shops will buy for < 80%, and sell for < 1000%
        * and sell % must be higher than buy % -JAB
        */
-
       if (shop_index[number_of_shops].sell_percent > 10.0)
         shop_index[number_of_shops].sell_percent = 10.0;
       if (shop_index[number_of_shops].sell_percent < 1.0)
@@ -1560,7 +1582,6 @@ void boot_the_shops(void)
        * places you can do it are in the same city, and the shops CAN'T go out
        * of business, it's called a bug). JAB
        */
-
       if (shop_index[number_of_shops].buy_percent > 0.8)
         shop_index[number_of_shops].buy_percent = .8;
       if (shop_index[number_of_shops].buy_percent < 0.05)
@@ -1580,19 +1601,21 @@ void boot_the_shops(void)
        * now, the reason for t_buy and t_sell, if we had to 'adjust' the
        * buy/sell %, then we yell about it
        */
-#if 0
+// PENIS: This is a lotta crap heheh.. needs fixing.
       if ((shop_index[number_of_shops].sell_percent != t_sell) ||
           (shop_index[number_of_shops].buy_percent != t_buy))
-        logit(LOG_DEBUG, "Shop %s: Old buy/sell: %f/%f, New: %f/%f", buf,
+      {
+        logit(LOG_DEBUG, "Shop %s: Old buy/sell: %f/%f, New: %f/%f.", buf,
               t_buy, t_sell, shop_index[number_of_shops].buy_percent,
               shop_index[number_of_shops].sell_percent);
-#endif
+      }
       /*
        * Load in the types that this shop trades in
        */
+// PENIS: Something funky here..
       temp = read_type_list(shop_f, list, MAX_TRADE);
       CREATE(shop_index[number_of_shops].type, shop_buy_data, (unsigned) temp, MEM_TAG_SHOPBUY);
-      for (count = 0; count < temp; count++)
+      for( count = 0; count < temp; count++ )
       {
         SHOP_BUYTYPE(number_of_shops, count) = (byte) BUY_TYPE(list[count]);
         SHOP_BUYWORD(number_of_shops, count) = BUY_WORD(list[count]);

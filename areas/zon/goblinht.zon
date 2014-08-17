@@ -126,20 +126,20 @@ D 0 70178 3 1 100 0 0 0
 *     "Behind the Altar" - closed
 *
 D 0 70179 0 0 100 0 0 0
-*     north exit from "Amoungst Rows of Seats" to
+*     north exit from "Amongst Rows of Seats" to
 *     "Within a Confessional" - open
 *
 D 0 70181 2 0 100 0 0 0
 *     south exit from "Within a Confessional" to
-*     "Amoungst Rows of Seats" - open
+*     "Amongst Rows of Seats" - open
 *
 D 0 70179 2 0 100 0 0 0
-*     south exit from "Amoungst Rows of Seats" to
+*     south exit from "Amongst Rows of Seats" to
 *     "Within a Confessional" - open
 *
 D 0 70180 0 0 100 0 0 0
 *     north exit from "Within a Confessional" to
-*     "Amoungst Rows of Seats" - open
+*     "Amongst Rows of Seats" - open
 *
 D 0 70182 1 1 100 0 0 0
 *     east exit from "Within the Church Vestibule" to
@@ -718,6 +718,7 @@ M 0 70044 8 70296 100 0 0 0        * an elite goblin guard
 F 1 70107 11 70296 100 0 0 0       * a huge warg (following)
 M 0 70044 8 70296 100 0 0 0        * an elite goblin guard
 F 1 70107 11 70296 100 0 0 0       * a huge warg (following)
+M 0 401070 1 70296 100 0 0 0       * (mob type not in this .mob file)
 M 0 70055 8 70297 100 0 0 0        * an elite goblin guard
 M 0 70087 10 70297 100 0 0 0       * a scarab beetle
 M 0 70086 10 70298 100 0 0 0       * a grub
@@ -838,6 +839,5 @@ E 1 70092 1 7 100 0 0 0            *   some pants woven from flax
 M 0 70105 2 70351 100 0 0 0        * an illusionist apprentice
 M 0 70105 2 70351 100 0 0 0        * an illusionist apprentice
 M 0 70104 1 70352 100 0 0 0        * Gorblog
-M 0 401070 1 70296 100 0 0 0       * the Moregeeth Quartermaster
 *
 S

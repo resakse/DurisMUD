@@ -10,8 +10,8 @@ orog ragelord~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-67241994 72 0 8 0 0 0 0 S
-or 0 1048576 -1
+67241994 72 0 0 8 0 0 0 0 S
+or 0 1048576 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -27,8 +27,8 @@ orog spearmaster _spec1_~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-67241994 72 0 8 0 0 0 0 S
-or 0 1 -1
+67241994 72 0 0 8 0 0 0 0 S
+or 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -44,8 +44,8 @@ orog priest _spec1_~
 &+Lable to channel the power of her deity upon those
 &+Lwho stand against her in &+rb&+Ra&+rttl&+Re&+L.&n
 ~
-67241994 72 0 8 0 0 0 0 S
-or 0 32 -1
+67241994 72 0 0 8 0 0 0 0 S
+or 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -61,8 +61,8 @@ orog soldier~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2056 64 0 0 0 0 0 0 S
-or 0 1 -1
+2056 64 0 0 0 0 0 0 0 S
+or 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -78,8 +78,8 @@ orog soldier~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2056 64 0 0 0 0 0 0 S
-or 0 1 -1
+2056 64 0 0 0 0 0 0 0 S
+or 0 1 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -95,8 +95,8 @@ orog adolescent~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2056 64 0 0 0 0 0 0 S
-or 0 1 -1
+2056 64 0 0 0 0 0 0 0 S
+or 0 1 0 -1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -109,8 +109,8 @@ strider six legged~
 &+Lfinding occassional meals from the many types of vermin
 &+Lthat also make this village their home.&n
 ~
-8 1 0 1048576 0 0 0 0 S
-ac 0 0 -1
+8 1 0 0 1048576 0 0 0 0 S
+ac 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -123,8 +123,8 @@ hairy cave rat large~
 &+Lfinding occassional meals from the many types of vermin
 &+Lthat also make this village their home.&n
 ~
-8 0 0 0 0 0 0 0 S
-a 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+a 0 0 0 -1
 3 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -139,8 +139,8 @@ cave viper~
 &+Lof pure darkness. It also has a vicious bite and
 &+Lis an animal that has very few enemies.&n
 ~
-8 1 0 524288 0 0 0 0 S
-rs 0 0 -1
+8 1 0 0 524288 0 0 0 0 S
+rs 0 0 0 -1
 10 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -154,8 +154,8 @@ wolf spider~
 &+ybecause of the thick hair on its abdomen that resembles
 &+ythe thick fur of a &+Lwolf&+y.&n
 ~
-8 0 0 524288 0 0 0 0 S
-as 0 0 -1
+8 0 0 0 524288 0 0 0 0 S
+as 0 0 0 -1
 18 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -170,8 +170,8 @@ whip tail scorpion~
 &+Lstunning the victim while this creature grabs a hold
 &+Lof the meal with its large and very sharp claws.&n
 ~
-8 0 0 0 0 0 0 0 S
-ac 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+ac 0 0 0 -1
 13 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -186,8 +186,8 @@ vampyr~
 &+Ldefined sense of smell that is able to pick up the
 &+Lslightest hint of fresh &+rbl&+Roo&+rd&+L.&n
 ~
-8 0 0 0 0 0 0 0 S
-ac 0 0 -1
+8 0 0 0 0 0 0 0 0 S
+ac 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -200,8 +200,8 @@ ogre worker~
 &+LIts only purpose in this community is to haul heavy
 &+Lsupplies around.&n
 ~
-2056 0 0 0 0 0 0 0 S
-po 0 1 -1
+2056 0 0 0 0 0 0 0 0 S
+po 0 1 0 -1
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -217,8 +217,8 @@ orog commander~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-1073743880 64 0 0 0 0 0 0 S
-or 0 1048576 -1
+1073743880 64 0 0 0 0 0 0 0 S
+or 0 1048576 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -234,8 +234,8 @@ orog legionnaire~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2056 64 0 0 0 0 0 0 S
-or 0 1 -1
+2056 64 0 0 0 0 0 0 0 S
+or 0 1 0 -1
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -251,8 +251,8 @@ orog shadowpriest~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2056 64 0 8 0 0 0 0 S
-or 0 33 -1
+2056 64 0 0 8 0 0 0 0 S
+or 0 33 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -268,8 +268,8 @@ orog doomguard~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-67110920 64 0 8 0 0 0 0 S
-or 0 1 -1
+67110920 64 0 0 8 0 0 0 0 S
+or 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -283,8 +283,8 @@ blacksmith~
 &+Lhave become very well worn after the thousands of hours
 &+Llaboring over the large furnace.&n
 ~
-2058 64 0 0 0 0 0 0 S
-ho 0 1 -1
+2058 64 0 0 0 0 0 0 0 S
+ho 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -300,8 +300,8 @@ orog witchdoctor~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2058 64 0 0 0 0 0 0 S
-or 0 288 -1
+2058 64 0 0 0 0 0 0 0 S
+or 0 288 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -311,8 +311,8 @@ shadow howler shadowhowler~
 &+LA shadow&+Mhowler &+Lwanders around the room, looking for its master.&n
 ~
 ~
-134219784 64 0 0 0 0 0 0 S
-a 0 0 3
+134219784 64 0 0 0 0 0 0 0 S
+a 0 0 0 3
 20 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -327,8 +327,8 @@ orog bladesman ancient~
 &+Ldaggers that mark his profession.  His calm grey eyes seem to look into your
 &+Lsoul as he looks upon you, perhaps gauging your worth.
 ~
-32778 0 0 0 0 0 0 -1000 S
-OR 0 1048577 -1
+32778 0 0 0 0 0 0 0 -1000 S
+OR 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -343,8 +343,8 @@ orog priest ancient~
 &+Lserious as they could possibly come. His calm grey eyes seem to look into
 &+Lyour soul as he looks upon you, perhaps gauging your worth.
 ~
-32778 0 0 0 0 0 0 -1000 S
-OR 0 32 -1
+32778 0 0 0 0 0 0 0 -1000 S
+OR 0 32 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -354,8 +354,8 @@ orog chieftain~
 &+LThe Orog &+ychieftain &+Lrelaxes here.&N
 ~
 ~
-2122 0 0 0 0 0 0 -1000 S
-OR 0 1048577 -1
+2122 0 0 0 0 0 0 0 -1000 S
+OR 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -371,8 +371,8 @@ orog doomguard elite~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2058 64 0 0 0 0 0 -1000 S
-or 0 1048577 -1
+2058 64 0 0 0 0 0 0 -1000 S
+or 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -388,8 +388,8 @@ orog doomguard elite~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2058 64 0 0 0 0 0 -1000 S
-or 0 1048577 -1
+2058 64 0 0 0 0 0 0 -1000 S
+or 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -405,8 +405,8 @@ orog doomguard~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2058 64 0 0 0 0 0 -1000 S
-or 0 1048577 -1
+2058 64 0 0 0 0 0 0 -1000 S
+or 0 1048577 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -422,8 +422,8 @@ orog archer patrol~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-2120 64 0 0 0 0 0 -1000 S
-or 0 0 -1
+2120 64 0 0 0 0 0 0 -1000 S
+or 0 0 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -436,8 +436,8 @@ large rat cave vicious~
 &+Lfinding occassional meals from the many types of vermin
 &+Lthat also make this village their home.&n
 ~
-1073743944 1 0 0 0 0 0 0 S
-ac 0 0 -1
+1073743944 1 0 0 0 0 0 0 0 S
+ac 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -451,8 +451,8 @@ carrion crawler worm tentacles~
 &+rthat also make this village their home. Its segmented
 &+rbody and tentacles are covered in a thin layer of slime.&n
 ~
-2056 1 0 0 0 0 0 0 S
-AC 0 0 2
+2056 1 0 0 0 0 0 0 0 S
+AC 0 0 0 2
 7 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -467,8 +467,8 @@ orog freakish large nasty~
 &+Liron-wrought armor and keeps one hand on a whisper thin sword of mithril
 &+Lthat rests upon his counter.&n
 ~
-67131466 64 0 268435480 0 0 0 -1000 S
-OR 0 1064961 4
+67131466 64 0 0 268435480 0 0 0 -1000 S
+OR 0 1064961 0 4
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -485,8 +485,8 @@ orog short innkeep innkeeper~
 &+Lthat gets too close to the spines.  He growls in greeting to anyone that enters
 &+Lthe inn.&N
 ~
-67131466 64 0 268435480 0 0 0 -1000 S
-OR 0 1048577 2
+67131466 64 0 0 268435480 0 0 0 -1000 S
+OR 0 1048577 0 2
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -502,8 +502,8 @@ orog beastmaster animals tender~
 &+Lin the low light.  His muscles are well-toned from hours of working with the
 &+Lanimals, and tending to their care.&n
 ~
-67110986 64 0 268435480 0 0 0 -1000 S
-OR 0 1064960 3
+67110986 64 0 0 268435480 0 0 0 -1000 S
+OR 0 1064960 0 3
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -518,8 +518,8 @@ drow elf merchant enterprising~
 &+mfind their ways into the hands of the Orog tribe.  He wears an elaborate frock
 &+mthat is brimming with religious symbols.&n
 ~
-67131466 64 0 268435480 0 0 0 -1000 S
-PL 0 544 2
+67131466 64 0 0 268435480 0 0 0 -1000 S
+PL 0 544 0 2
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -534,8 +534,8 @@ skaven moneylender banker~
 &+rof the Orog's funds.  His twitchy movements and squinty eyes can only be the
 &+rsigns of someone with something to hide.&n
 ~
-1073743946 64 0 268435480 0 0 0 -1000 S
-H 0 8192 2
+1073743946 64 0 0 268435480 0 0 0 -1000 S
+H 0 8192 0 2
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -551,8 +551,8 @@ orog ragelord~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-67241994 72 0 8 0 0 0 0 S
-or 0 1048576 -1
+67241994 72 0 0 8 0 0 0 0 S
+or 0 1048576 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -568,8 +568,8 @@ orog spearmaster _spec1_~
 &+Lpulse underneath his skin, a sign that he is more than
 &+Lready to engage in a &+rbl&+Roo&+rd&+Ry &+Lfight at a moments notice.&n
 ~
-67241994 72 0 8 0 0 0 0 S
-or 0 1 -1
+67241994 72 0 0 8 0 0 0 0 S
+or 0 1 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -585,8 +585,8 @@ orog priest _spec1_~
 &+Lable to channel the power of her deity upon those
 &+Lwho stand against her in &+rb&+Ra&+rttl&+Re&+L.&n
 ~
-67241994 72 0 8 0 0 0 0 S
-or 0 32 -1
+67241994 72 0 0 8 0 0 0 0 S
+or 0 32 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2

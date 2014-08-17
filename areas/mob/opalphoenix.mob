@@ -12,8 +12,8 @@ alazia~
 &+Yhelp the next generation of heroes. She seems slightly preoccupied with
 &+Ysomething and keeps muttering about sand.&n
 ~
-2122 0 0 8 28 0 0 1000 S
-PE 0 2048 3
+2122 0 0 0 8 28 0 0 1000 S
+PE 0 2048 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -28,8 +28,8 @@ student~
 &+csorry for him. He scratches his head in confusion and looks around
 &+cas tho he's lost something.&n
 ~
-2186 128 0 0 0 0 0 1000 S
-PE 0 1 3
+2186 128 0 0 0 0 0 0 1000 S
+PE 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -43,8 +43,8 @@ student~
 &+csleep, and his face is taught from stress and worry. You almost feel
 &+csorry for him.
 ~
-2186 128 0 0 0 0 0 1000 S
-PG 0 1 3
+2186 128 0 0 0 0 0 0 1000 S
+PG 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -58,8 +58,8 @@ student~
 &+csleep, and his face is taught from stress and worry. You almost feel
 &+csorry for him.
 ~
-2186 128 0 0 0 0 0 1000 S
-P2 0 1 3
+2186 128 0 0 0 0 0 0 1000 S
+P2 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -74,8 +74,8 @@ lahoneth archmage~
 &+cparchment. Listening close, it seems that he is dictating to himself the
 &+cnext lesson he plans to teach his students.&n
 ~
-1073743882 128 0 0 0 0 0 1000 S
-PE 0 2560 3
+1073743882 128 0 0 0 0 0 0 1000 S
+PE 0 2560 0 3
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -89,8 +89,8 @@ azalea high druid~
 &+gher students in the art of forest lore, herbal healing, and the importance of obtaining
 &+gBalance with nature.
 ~
-2058 128 0 0 0 0 0 0 S
-PE 0 128 3
+2058 128 0 0 0 0 0 0 0 S
+PE 0 128 0 3
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -104,8 +104,8 @@ the enclave hoping to receive knowledge from the revered Druid Azalea.
 Eagerly preparing herself for the next lesson, this student is pounding a herbal
 concoction into a fine power using a marble mortar and pestle.
 ~
-2058 128 0 0 0 0 0 0 S
-PE 0 1 3
+2058 128 0 0 0 0 0 0 0 S
+PE 0 1 0 3
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -123,8 +123,8 @@ ranger breandan~
 &+bPrefering the solitude and simplicity of the wild forests, he never stays
 &+bin one place for long and can be gone without a trace in a moments notice.
 ~
-1073743946 128 0 0 0 0 0 1000 S
-PE 0 2 3
+1073743946 128 0 0 0 0 0 0 1000 S
+PE 0 2 0 3
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -137,8 +137,8 @@ student~
 &+Bstudents. Training with weapons being demanding and dangerous, he is
 &+Bcovered in sweat and has quite a few light bruises and some smal nicks.
 ~
-2058 128 0 0 0 0 0 1000 S
-PE 0 1 3
+2058 128 0 0 0 0 0 0 1000 S
+PE 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -151,8 +151,8 @@ student~
 &+Bstudents. Training with weapons being demanding and dangerous, he is
 &+Bcovered in sweat and has quite a few light bruises and some smal nicks.
 ~
-2058 128 0 0 0 0 0 1000 S
-PE 0 1 3
+2058 128 0 0 0 0 0 0 1000 S
+PE 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ ionathe grandmaster~
 &+wLahoneth, she takes great pride in her chosen profession and is eager
 &+wto share her knowledge, though only with those who are found worthy.
 ~
-1073743946 128 0 16 0 0 0 1000 S
-PE 0 64 3
+1073743946 128 0 0 16 0 0 0 1000 S
+PE 0 64 0 3
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -184,8 +184,8 @@ acolyte~
 &+Wflow through her limbs, turning her entire being into a weapon as strong
 &+Was any steel ever forged.
 ~
-2058 128 0 0 0 0 0 1000 S
-PE 0 1 3
+2058 128 0 0 0 0 0 0 1000 S
+PE 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 6 2
@@ -198,8 +198,8 @@ stoic guard~
 &+gand skys beyond for any sign of attack from the many evils that prowl the
 &+gland of Duris in these turbulent times.
 ~
-67110986 128 0 0 0 0 0 1000 S
-PE 0 1 3
+67110986 128 0 0 0 0 0 0 1000 S
+PE 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -212,8 +212,8 @@ guard member~
 &+ga watchful eye out for anything amiss. Vigilance is a necessity in these
 &+guncertain times, while those of evil origins stalk the lands of Duris.&n
 ~
-67110984 128 0 0 0 0 0 100 S
-PE 0 1 3
+67110984 128 0 0 0 0 0 0 100 S
+PE 0 1 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -230,8 +230,8 @@ old woman wizened~
         &+W find it repulsive. But I say, if the magic works
         &+W then it's good enough."
 ~
-2059 0 0 8 0 0 0 -1000 S
-PH 0 1024 3
+2059 0 0 0 8 0 0 0 -1000 S
+PH 0 1024 0 3
 47 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -243,8 +243,8 @@ bear black~
    &+LThis black bear seems perfectly content to ignore you while
 &+Lhe continues his search for tasty berries.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 3
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -257,8 +257,8 @@ doe~
 &+ythough has become somewhat accustomed to having humanoids
 &+yabout around the enclave.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 3
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -270,8 +270,8 @@ bear black~
    &+LThis black bear seems perfectly happy ignoring you on
 &+Lhis search for more tasty berries.&n
 ~
-8 0 0 0 0 0 0 0 S
-A 0 1 3
+8 0 0 0 0 0 0 0 0 S
+A 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

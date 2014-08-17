@@ -10,8 +10,8 @@ normally never be tolerated by Tharnadian soldiers, no doubt Lord Kaynor
 hired him because of his great fighting abilities which will defend this
 stronghold incredibly well as long as the price remains high.
 ~
-1073743950 128 0 16 0 0 0 0 S
-PH 0 16384 -1
+1073743950 128 0 0 16 0 0 0 0 S
+PH 0 16384 0 -1
 52 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -26,8 +26,8 @@ stronger than it appears. He wears a plain white robe and carries a book
 in his hand. Numerous reagent pouches can be seen attached to his belt.
 Currently he is standing here with the guard watching for intruders.
 ~
-1107298378 384 0 8 0 0 0 600 S
-PH 0 512 -1
+1107298378 384 0 0 8 0 0 0 600 S
+PH 0 512 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -41,8 +41,8 @@ robes, although platemail is visible underneath. He stands here watching
 the entrance closely for intruders. No doubt this man will do anything
 possible to destroy evil.
 ~
-1073743946 384 0 0 0 0 0 1000 S
-PH 0 32 -1
+1073743946 384 0 0 0 0 0 0 1000 S
+PH 0 32 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -56,8 +56,8 @@ massive sword in one hand that would take most people two hands to even
 lift. His face is all business, and he would no doubt be able to crush
 most intruders with ease.
 ~
-1073743882 384 0 16 0 0 0 700 S
-PB 0 1 -1
+1073743882 384 0 0 16 0 0 0 700 S
+PB 0 1 0 -1
 50 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -71,8 +71,8 @@ casually patrols the front guard walk. Considering the muscles that can
 be seen rippling through his body, he would no doubt be a vicious opponent
 in battle.
 ~
-1073743946 384 0 0 0 0 0 300 S
-PH 0 1 -1
+1073743946 384 0 0 0 0 0 0 300 S
+PH 0 1 0 -1
 34 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -86,8 +86,8 @@ barracks. While inexperienced compared to many of the soldiers in the
 outpost, he is definitely no easy opponent to fight. He bears the
 Tharnadian crest on his shoulder.
 ~
-67110924 0 0 0 0 0 0 800 S
-PH 0 1 -1
+67110924 0 0 0 0 0 0 0 800 S
+PH 0 1 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -101,8 +101,8 @@ spread throughout his body leaving him fatigued and weak. While he may have
 been an excellent guard at one time, it looks as though there is little
 fight left in him. He lies here desparately trying to get some rest.
 ~
-2058 0 0 0 0 0 0 799 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 799 S
+PH 0 1 0 -1
 17 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -116,8 +116,8 @@ He is still wearing a partial set of armor, and has his weapon nearby in
 case of any surprises. He looks very tough and would be a vicious opponent
 in battle.
 ~
-2058 0 0 0 0 0 0 700 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -131,8 +131,8 @@ He is still wearing a partial set of armor, and has his weapon nearby in
 case of any surprises. He looks very tough and would be a vicious opponent
 in battle.
 ~
-2058 0 0 0 0 0 0 700 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -146,8 +146,8 @@ a brilliant strategist and tactician. Considering how strong he looks for
 a human, he can probably fight hand to hand as good as he can command
 military groups. He is standing here examining the many maps in the room.
 ~
-1073743946 0 0 0 0 0 0 700 S
-PH 0 1 -1
+1073743946 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -162,8 +162,8 @@ a human, he can probably fight hand to hand as good as he can command
 military groups. He is sitting here discussing battle plans for attacks in
 the Underdark.
 ~
-1140852810 0 0 0 0 0 0 700 S
-PH 0 1 -1
+1140852810 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 6 8 1
@@ -177,8 +177,8 @@ barracks. While inexperienced compared to many of the soldiers in the
 outpost, he is definitely no easy opponent to fight. He bears the
 Tharnadian crest on his shoulder.
 ~
-2060 0 0 0 0 0 0 800 S
-PH 0 1 -1
+2060 0 0 0 0 0 0 0 800 S
+PH 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -193,8 +193,8 @@ bare hands. Currently he is lobbing darts into a dart board with surprising
 accuracy considering the amount of alcohol in him. He is dressed in a
 partial set of chain armor and has a sword on his belt.
 ~
-1073743882 0 0 0 0 0 0 700 S
-PH 0 1 -1
+1073743882 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 46 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -208,8 +208,8 @@ dressed for battle with full armor and a sword on his belt, and he is
 probably going for guard duty soon. His face is very grim, he is probably
 eager for a fight to happen.
 ~
-2058 0 0 0 0 0 0 700 S
-PH 0 1 -1
+2058 0 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -223,8 +223,8 @@ speeds. He has probably been training for years, and is more than a match
 for most fighters. He would probably hurt his opponents badly even in
 a sparring situation.
 ~
-1073743946 0 0 0 0 0 0 700 S
-PH 0 16384 -1
+1073743946 0 0 0 0 0 0 0 700 S
+PH 0 16384 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -239,8 +239,8 @@ as he probably has a great amount of dexterity and agility. It is quite
 impossible to beat this man in a fair fight, and it would take a group to
 take down his inhuman skill.
 ~
-1073743946 0 0 0 0 0 0 700 S
-PH 0 16384 -1
+1073743946 0 0 0 0 0 0 0 700 S
+PH 0 16384 0 -1
 54 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -253,8 +253,8 @@ goblin prisoner~
 the outpost guards. He is in great pain, and is in no condition to fight.
 Shackles hold him down to the chair while pain is administered to him.
 ~
-2058 0 0 0 0 0 0 -1000 S
-HG 0 0 -1
+2058 0 0 0 0 0 0 0 -1000 S
+HG 0 0 0 -1
 6 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -268,8 +268,8 @@ covered as to hide his identify, and to intimidate the prisoners. He
 occasionally punctuates his questions with pain from a torture implement.
 No doubt his cruel skills can gleam information from just about anything.
 ~
-2058 0 0 0 0 0 0 0 S
-PH 0 16384 -1
+2058 0 0 0 0 0 0 0 0 S
+PH 0 16384 0 -1
 43 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -285,8 +285,8 @@ most men mad, however this warrior appears to have adapted to the darkness.
 A man with steeled nerves, and weapon skills that great would be a deadly
 opponent in battle.
 ~
-1073743946 384 0 0 0 0 0 150 S
-PH 0 1 -1
+1073743946 384 0 0 0 0 0 0 150 S
+PH 0 1 0 -1
 48 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -300,8 +300,8 @@ Accustomed to the stale air of this outpost, he appears relaxed and nods
 in and out of sleep occasionally. Considering the high quality weaponry
 he uses, his job is probably extremely important to the stronghold.
 ~
-2058 384 0 0 0 0 0 700 S
-PH 0 1 -1
+2058 384 0 0 0 0 0 0 700 S
+PH 0 1 0 -1
 39 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -315,8 +315,8 @@ been given the job of commanding this outpost. A brilliant tactician and
 excellent warrior, he has done his job well for many years. He is currently
 talking with his fellow officers and discussing upcoming raids.
 ~
-1157646410 0 0 8 0 0 0 1000 S
-PH 0 8 -1
+1157646410 0 0 0 8 0 0 0 1000 S
+PH 0 8 0 -1
 49 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -331,8 +331,8 @@ some people are willing to travel a great distance to get the extremely
 high quality weaponry found here. This man is also a supplier of magical
 items found on raids against evil races.
 ~
-2058 0 0 8 0 0 0 700 S
-PH 0 512 -1
+2058 0 0 0 8 0 0 0 700 S
+PH 0 512 0 -1
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

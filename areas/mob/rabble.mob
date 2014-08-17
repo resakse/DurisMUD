@@ -17,8 +17,8 @@ golem demon obsidian _nomoney_ _guildgolem_~
 &+Lto the  nine  planes of hel&+rl&+R. &+L\\nnn// &+RT&+rh&+Lis Demon in particular, grins at you
 &+Las if expecting you to do      &+L\___/ &+Rs&+ro&+Lmething foolish, like attack it.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 10 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 10 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -29,8 +29,8 @@ Frothe &+YBrewmeister&+L of &Nt&+Lh&+ye R&+La&Nbb&+Ll&+ye &N(&+YDwarf&N) stands 
 ~
 Me Dorf, Me frothe, no picture yet.
 ~
-10 0 0 0 0 0 0 0 S
-PH 0 0 -1
+10 0 0 0 0 0 0 0 0 S
+PH 0 0 0 -1
 1 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0

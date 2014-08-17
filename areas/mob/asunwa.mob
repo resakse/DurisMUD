@@ -8,8 +8,8 @@ everyone and everything that goes by, and seems to miss nothing. There is a
 curious dignity surrounding this guard, as if what he is doing is something he
 chose to do himself, for the good of his family and friends.
 ~
-67123274 0 0 134225920 8388 0 0 1000 S
-A 0 1 4
+67123274 0 0 0 134225920 8388 0 0 1000 S
+A 0 1 0 4
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -21,8 +21,8 @@ red flower flowered liana vine~
 &nA &+rred &nflowered &+Gliana vine &nslithers along the floor in a snake like manner,
 trailing bits of leaves and petals in its haste.&n
 ~
-74 2 0 8 0 0 0 0 S
-VT 0 64 1
+74 2 0 0 8 0 0 0 0 S
+VT 0 64 0 1
 21 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -34,8 +34,8 @@ white flowered liana vine~
 &nA &+Wwhite &nflowered &+Gliana vine &nis enthusiastically disobeying the laws of
 gravity, creeping up the wall in an odd manner.&n
 ~
-74 4 0 8 0 0 0 0 S
-VT 0 64 1
+74 4 0 0 8 0 0 0 0 S
+VT 0 64 0 1
 23 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -48,8 +48,8 @@ yellow flowered liana vine~
 rock. It seems to be glaring at something, or at least darting one of its
 yellow blossoms around fiercely.&n
 ~
-74 2464 0 40 0 0 0 750 S
-VT 0 64 1
+74 2464 0 0 40 0 0 0 750 S
+VT 0 64 0 1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -61,8 +61,8 @@ bristling snow leopard crouches~
 &nA bristling &+Ws&+Lno&+Ww &+Wl&+Le&+Wo&+Lp&+Wa&+Lr&+Wd &ncrouches in the corner. Its beautiful coat looks
 out of place here. Perhaps that is why it is so out of sorts.&n
 ~
-2120 0 0 0 0 0 2 -550 S
-A 0 1 3
+2120 0 0 0 0 0 0 2 -550 S
+A 0 1 0 3
 25 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -74,8 +74,8 @@ young jaguar proud~
 &nThis young &+Lj&+Ga&+Lgu&+Ga&+Lr &nseems to be on top of the world today. He stalks along
 proudly, as if all he sees is his own, and no one can do him any harm.&n
 ~
-2124 0 0 8 0 0 0 0 S
-A 0 1 3
+2124 0 0 0 8 0 0 0 0 S
+A 0 1 0 3
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -87,8 +87,8 @@ speckled ocelot~
 &nA &+ys&+Lp&+ye&+Lck&+yl&+Le&+yd o&+Lc&+yel&+Lo&+yt &nbats at something you cannot see, playing happily. It
 seems that this small cat could amuse itself for hours on end.&n
 ~
-8 0 0 32 0 0 0 250 S
-A 0 1 2
+8 0 0 0 32 0 0 0 250 S
+A 0 1 0 2
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -103,8 +103,8 @@ the light, and her dress is made of some type of dark green material, spun
 very finely. Her &+Ycats &nseem to love her greatly, as they purr and rub up
 against her whenever she nears.&n
 ~
-6154 0 0 16777224 4 0 0 850 S
-PH 0 129 3
+6154 0 0 0 16777224 4 0 0 850 S
+PH 0 129 0 3
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -118,8 +118,8 @@ hands with her head bent over the table. Her dress is in tatters, and her hair
 is limp and dirty. Her &+ycats &nseem to feel sorry for her, putting their heads
 on her lap and trying to cheer her up.&n
 ~
-10250 0 0 8 0 0 0 -320 S
-PH 0 129 3
+10250 0 0 0 8 0 0 0 -320 S
+PH 0 129 0 3
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -132,8 +132,8 @@ river nymph~
 form. It is a &+bdeep blue &nin color, with flowing hair and garments. The &+Bri&+bv&+Ber
 &+bny&+Bm&+bph &nalmost seems transparent, but it skitters about too quickly to be sure.&n
 ~
-67385418 0 0 134217760 0 0 0 0 S
-HF 0 1 2
+67385418 0 0 0 134217760 0 0 0 0 S
+HF 0 1 0 2
 28 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -147,8 +147,8 @@ flowing robes are decorated with bits of s&+Wh&+ri&+Wn&ny crystal in a multitude
 colors. Though created from water, he seems relatively intelligent and
 extremely solid.&n
 ~
-403468 0 0 0 0 0 0 0 S
-HF 0 1 5
+403468 0 0 0 0 0 0 0 0 S
+HF 0 1 0 5
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -162,8 +162,8 @@ her domain a few moments before moving on. She is a creature of flowing water
 made solid. Her garments appear to be crystalized water with bits of seashell
 and shiny stones caught within.&n
 ~
-2126 0 0 134226008 1 0 131080 0 S
-HF 0 2560 4
+2126 0 0 0 134226008 1 0 131080 0 S
+HF 0 2560 0 4
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -177,8 +177,8 @@ Its ears are also far bigger than normal, and its teeth perhaps a little
 bit longer. It is hard to get a very good look at it, as the bat is very
 suited to its surroundings and seems to blur slightly into the wall.&n
 ~
-24586 1 0 0 0 0 0 0 S
-A 0 0 3
+24586 1 0 0 0 0 0 0 0 S
+A 0 0 0 3
 30 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -192,8 +192,8 @@ cyan scales, and her hair is the same color. This mermaid doesn't seem to
 have a care in the world, as she floats by humming to herself and playing with
 her tail fins.&n
 ~
-276554 33565056 0 134219808 0 0 0 1000 S
-H 0 1 3
+276554 33565056 0 0 134219808 0 0 0 1000 S
+H 0 1 0 3
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -207,8 +207,8 @@ ease, but still looking around cautiosly, as if expecting someone to disturb
 his tranquil pond. The merman has long flowing &+ccyan &nhair, as well as the same
 color scales on his tail.&n
 ~
-272458 0 0 134227968 0 0 0 800 S
-H 0 1 4
+272458 0 0 0 134227968 0 0 0 800 S
+H 0 1 0 4
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -221,8 +221,8 @@ gray gorilla~
 here. He just seems to be intent on filling his belly at the moment, and
 nothing else appears to interest him.&n
 ~
-10312 0 0 0 0 0 0 0 S
-AA 0 1 4
+10312 0 0 0 0 0 0 0 0 S
+AA 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -236,8 +236,8 @@ space. He's bouncing around in a very aggitated way, letting invaders know
 that they certainly aren't welcome in his bamboo feeding grounds, and that
 he is prepared to dispatch you if he must.&n
 ~
-14414 1 0 32 0 0 0 0 S
-AH 0 1 3
+14414 1 0 0 32 0 0 0 0 S
+AH 0 1 0 3
 36 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -249,8 +249,8 @@ A &+Lmonkey &nswings aimlessly among the &+yb&+Ya&+ymb&+Yo&+yo &nstalks.
 &nThis monkey is swinging about in the bamboo without a second thought. He
 seems to be enjoying his play, and isn't paying attention to anything else.&n
 ~
-8268 0 0 0 0 0 0 0 S
-AA 0 64 2
+8268 0 0 0 0 0 0 0 0 S
+AA 0 64 0 2
 33 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -264,8 +264,8 @@ thrusts and parrys with a non-existant partner. He occasionally looks up
 to take note of what's going on around him, but his manner indicates that
 he isn't expecting much trouble to pop up.&n
 ~
-14414 0 0 8224 0 0 0 0 S
-H 0 1 4
+14414 0 0 0 8224 0 0 0 0 S
+H 0 1 0 4
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -278,8 +278,8 @@ An old druid named &+mBalgar &nrelaxes here.&n
 attitude and demeanor put you instantly at ease. He smiles to himself as he
 looks around the forest, as if he is pleased with what he's seeing.&n
 ~
-14410 0 0 8 0 0 0 0 S
-PH 0 128 3
+14410 0 0 0 8 0 0 0 0 S
+PH 0 128 0 3
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -292,8 +292,8 @@ The shopkeeper &+MAnan &nsmiles warmly, waiting to serve.&n
 hums to herself as she putters around her little hut, tending to her flowers
 and organizing her goods for sale.&n
 ~
-30794 0 0 0 0 0 0 0 S
-PH 0 0 3
+30794 0 0 0 0 0 0 0 0 S
+PH 0 0 0 3
 56 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -307,8 +307,8 @@ ripple beneath a glossy coat. His paws are enormous and have extremely sharp
 claws which glint as he walks along. His long tail swishes back and forth
 behind him, adding an aura of menace to his already intimidating figure.&n
 ~
-10314 1 0 16777320 0 0 0 0 S
-A 0 1 4
+10314 1 0 0 16777320 0 0 0 0 S
+A 0 1 0 4
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 5 5 1
@@ -322,8 +322,8 @@ be the captain of the guard, &+GI&+gro&+Gm&n. He stalks back and forth between t
 two thrones in the room, apparently occupied with his thoughts. He looks to
 be an extremely formidable opponent.&n
 ~
-10318 0 0 8 0 0 0 0 S
-A 0 3 4
+10318 0 0 0 8 0 0 0 0 S
+A 0 3 0 4
 42 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -337,8 +337,8 @@ picture of elegance and beauty. Well muscled and lithe, her coat gleaming in
 the light that streams in from above. She daintily handles her young when they
 get out of hand by giving them a gentle tap to put them back in line.&n
 ~
-67121226 0 0 40 0 0 0 0 S
-A 0 513 4
+67121226 0 0 0 40 0 0 0 0 S
+A 0 513 0 4
 45 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -353,8 +353,8 @@ cat still respects its mother's rules, as every time she reprimands he falls
 back into line. It's obvious that the queen's children would do anything for
 her.&n
 ~
-67123210 0 0 64 0 0 0 0 S
-A 0 1 3
+67123210 0 0 0 64 0 0 0 0 S
+A 0 1 0 3
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1

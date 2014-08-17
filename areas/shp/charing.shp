@@ -14,8 +14,8 @@ N
 3044
 3043
 0
-1.00
-1.00
+0.80
+1.10
 9
 11
 30
@@ -56,8 +56,8 @@ N
 3023
 3021
 0
-1.00
-1.00
+0.80
+1.10
 5
 0
 I'm not selling that, %s!~
@@ -100,8 +100,8 @@ N
 368
 369
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -137,8 +137,8 @@ N
 3003
 3004
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -174,8 +174,8 @@ N
 3003
 3004
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -214,8 +214,8 @@ N
 45021
 45012
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -255,8 +255,8 @@ N
 3902
 54
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -292,8 +292,8 @@ N
 3003
 3004
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -329,8 +329,8 @@ N
 3003
 3004
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -369,8 +369,8 @@ N
 12581
 3054
 0
-1.00
-1.00
+0.80
+1.10
 10
 0
 I'm not selling that, %s!~
@@ -410,8 +410,8 @@ N
 3085
 2020
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -444,8 +444,8 @@ X
 N
 45034
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
@@ -484,8 +484,8 @@ N
 45039
 45040
 0
-1.00
-1.00
+0.80
+1.10
 32
 0
 I'm not selling that, %s!~
@@ -522,8 +522,8 @@ N
 45044
 45045
 0
-1.00
-1.00
+0.80
+1.10
 0
 I'm not selling that, %s!~
 You don't seem to have that item, %s.~
