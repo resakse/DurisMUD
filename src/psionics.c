@@ -258,13 +258,11 @@ void do_absorbe(P_char ch, char *arg, int cmd)
 
   if (victim == ch)
   {
-    send_to_char
-      ("You send a tentacle into your brain..  R.I.P. you are dead!  go away..\r\n",
-       ch);
+    send_to_char("You send a tentacle into your brain..  R.I.P. you are dead!  go away..\r\n", ch);
     return;
   }
 
-  if ((GET_STAT(victim) >= STAT_SLEEPING))
+  if( (GET_STAT(victim) >= STAT_SLEEPING) )
   {
     send_to_char("Your victim must be held in place first.\r\n", ch);
     return;
@@ -272,14 +270,11 @@ void do_absorbe(P_char ch, char *arg, int cmd)
 
   add_event(event_illithid_feeding2, GET_LEVEL(victim) >> 1, ch, victim, 0, 0, 0, 0);
 
-  act
-    ("&+GYou grip your victim's head in your tentacles, sending one deep into $S brain.  The feeding begins!",
+  act("&+GYou grip your victim's head in your tentacles, sending one deep into $S brain.  The feeding begins!",
      FALSE, ch, 0, victim, TO_CHAR);
-  act
-    ("&+G$n grips $N&+G's head in $s tentacles, sending one deep into $S brain.",
+  act("&+G$n grips $N&+G's head in $s tentacles, sending one deep into $S brain.",
      TRUE, ch, 0, victim, TO_NOTVICT);
-  act
-    ("&+RA wave of pain grips your brain, as $N begins to slowly suck it out through your ear.",
+  act("&+RA wave of pain grips your brain, as $N begins to slowly suck it out through your ear.",
      FALSE, ch, 0, victim, TO_VICT);
 }
 
@@ -318,9 +313,7 @@ void spell_molecular_control(int level, P_char ch, char *arg, int type,
   return;
 }
 
-void
-spell_molecular_agitation(int level, P_char ch, char *arg, int type,
-                          P_char victim, P_obj obj)
+void spell_molecular_agitation(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
 
   int      dam_each[61] = {
@@ -376,9 +369,7 @@ void spell_adrenaline_control(int level, P_char ch, char *arg, int type,
   return;
 }
 
-void
-spell_aura_sight(int level, P_char ch, char *arg, int type, P_char victim,
-                 P_obj obj)
+void spell_aura_sight(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct affected_type af;
 
