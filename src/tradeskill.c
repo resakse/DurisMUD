@@ -2033,21 +2033,19 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   bool craft = FALSE;
   P_char temp_ch;
 
-  if(!ch)
+  // If not reciting, bad char, or char doesn't have obj.
+  if( cmd != CMD_RECITE || !IS_ALIVE(ch) || !(OBJ_WORN_BY(obj, ch) || OBJ_CARRIED_BY(obj, ch)) || !arg )
+  {
     return FALSE;
+  }
 
-  if(cmd != CMD_RECITE)
+  // Trying to recite a different object.
+  if( obj != get_obj_in_list_vis(ch, skip_spaces(arg), ch->carrying) && obj != get_object_in_equip_vis(ch, arg, &recnum) )
+  {
     return FALSE;
+  }
 
-  temp_ch = obj->loc.wearing;
-
-  if(!temp_ch)
-    return FALSE;
-
-  if(ch != temp_ch)
-    return FALSE;
-
-  if (recipenumber == 0)
+  if( recipenumber == 0 )
   {
     send_to_char("This item is useless!\r\n", ch);
     return TRUE;
@@ -2148,11 +2146,11 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   recipefile = fopen(Gbuf1, "a");
   fprintf(recipefile, "%d\n", recipenumber);
   act("$n opens their &+Ltome &+yof &+Ycraf&+ytsman&+Lship&n and begins scribing the &+yrecipe&n...\n"
-  "As they finish the last entry of the &+yrecipe&n, a &+Mbri&+mgh&+Wt &nflash of &+Clight&n appears,\n"
-  "quickly consuming $p, which vanishes from sight.\r\n", FALSE, ch, obj, 0, TO_ROOM);
+    "As they finish the last entry of the &+yrecipe&n, a &+Mbri&+mgh&+Wt &nflash of &+Clight&n appears,\n"
+    "quickly consuming $p, which vanishes from sight.\r\n", FALSE, ch, obj, 0, TO_ROOM);
   act("You open your &+Ltome &+yof &+Ycraf&+ytsman&+Lship&n and begin scribing the recipe...\n"
-  "As you finish the last entry of the &+yrecipe&n, a &+Mbri&+mgh&+Wt &nflash of &+Clight&n appears,\n"
-  "quickly consuming $p, which vanishes from sight.\r\n", FALSE, ch, obj, 0, TO_CHAR);   
+    "As you finish the last entry of the &+yrecipe&n, a &+Mbri&+mgh&+Wt &nflash of &+Clight&n appears,\n"
+    "quickly consuming $p, which vanishes from sight.\r\n", FALSE, ch, obj, 0, TO_CHAR);   
   fclose(recipefile);
 
   extract_obj(obj, !IS_TRUSTED(ch));
