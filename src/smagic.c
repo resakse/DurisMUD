@@ -2449,28 +2449,31 @@ void spell_bearstrength(int level, P_char ch, char *arg, int type,
 {
   struct affected_type af;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-        return;
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
 
   do_point(ch, victim);
 
-  if(SHAMAN_STR_SPELL(victim))
+  if( SHAMAN_STR_SPELL(victim) )
   {
     send_to_char("Nothing new seems to happen.\n", ch);
     return;
   }
-  
+
   if(IS_ANIMALIST(ch))
     level = level + 20;
-  
-  if(ch != victim)
+
+  if( ch != victim )
   {
-    if(NewSaves(victim, SAVING_SPELL, 0) &&
-        !is_linked_to(ch, victim, LNK_CONSENT))
+    // Allow if consented, or if victim is master, or victim is consented to master.
+    if( NewSaves(victim, SAVING_SPELL, 0) &&
+      !(is_linked_to(ch, victim, LNK_CONSENT) || (IS_PC_PET(ch) && GET_MASTER(ch) == victim)
+      || (IS_PC_PET(ch) && is_linked_to(GET_MASTER(ch), victim, LNK_CONSENT) )) )
+    {
       return;
+    }
   }
   else
     act("&+WSuddenly, you feel stronger!&n", TRUE, ch, 0, victim, TO_VICT);
@@ -2527,11 +2530,10 @@ void spell_elephantstrength(int level, P_char ch, char *arg, int type,
 {
   struct affected_type af;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-        return;
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
 
   if(SHAMAN_STR_SPELL(victim))
   {
@@ -2541,9 +2543,13 @@ void spell_elephantstrength(int level, P_char ch, char *arg, int type,
 
   if(ch != victim)
   {
-    if(NewSaves(victim, SAVING_SPELL, 0) &&
-       !is_linked_to(ch, victim, LNK_CONSENT))
+    // Allow if consented, or if victim is master, or victim is consented to master.
+    if( NewSaves(victim, SAVING_SPELL, 0) &&
+      !(is_linked_to(ch, victim, LNK_CONSENT) || (IS_PC_PET(ch) && GET_MASTER(ch) == victim)
+      || (IS_PC_PET(ch) && is_linked_to(GET_MASTER(ch), victim, LNK_CONSENT) )) )
+    {
       return;
+    }
   }
   
   do_point(ch, victim);
@@ -2756,26 +2762,28 @@ void spell_lionrage(int level, P_char ch, char *arg, int type, P_char victim,
   struct affected_type af;
   int duration;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-        return;
-  
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
   do_point(ch, victim);
-  
-  if((affected_by_spell(victim, SPELL_LIONRAGE)) ||
-    (affected_by_spell(victim, SPELL_SHREWTAMENESS)))
+
+  if( (affected_by_spell(victim, SPELL_LIONRAGE))
+    || (affected_by_spell(victim, SPELL_SHREWTAMENESS)) )
   {
     send_to_char("Nothing new seems to happen.\n", ch);
     return;
   }
-  
+
   if(ch != victim)
   {
-      if(NewSaves(victim, SAVING_SPELL, 0) &&
-        !is_linked_to(ch, victim, LNK_CONSENT))
+    // Allow if consented, or if victim is master, or victim is consented to master.
+    if( NewSaves(victim, SAVING_SPELL, 0) &&
+      !(is_linked_to(ch, victim, LNK_CONSENT) || (IS_PC_PET(ch) && GET_MASTER(ch) == victim)
+      || (IS_PC_PET(ch) && is_linked_to(GET_MASTER(ch), victim, LNK_CONSENT) )) )
+    {
       return;
+    }
   }
   
   if(ch == victim)
