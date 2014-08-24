@@ -2719,6 +2719,11 @@ void add_bloodlust(P_char ch, P_char victim)
         findaf->modifier = (findaf->modifier < (100 - 2*GET_LEVEL(ch))) ? findaf->modifier+1 : (100 - 2*GET_LEVEL(ch));
         findaf->duration = dur;
       }
+      // We are at maxxed bloodlust, so just reset timer.
+      else if( findaf && findaf->type == TAG_BLOODLUST )
+      {
+        findaf->duration = dur;
+      }
     }
 
   }
