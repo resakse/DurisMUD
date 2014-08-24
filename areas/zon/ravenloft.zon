@@ -49,9 +49,9 @@ D 0 58316 3 2 100 0 0 0
 *     west exit from "Northern End of the Carpeted Hallway" to
 *     "The Channeling Room" - closed/locked
 *
-D 0 58368 1 1 100 0 0 0
+D 0 58368 1 2 100 0 0 0
 *     east exit from "The Channeling Room" to
-*     "Northern End of the Carpeted Hallway" - closed
+*     "Northern End of the Carpeted Hallway" - closed/locked
 *
 D 0 58317 1 1 100 0 0 0
 *     east exit from "The Ravenloft Chapel" to
