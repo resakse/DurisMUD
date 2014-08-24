@@ -2706,14 +2706,13 @@ void add_bloodlust(P_char ch, P_char victim)
     {
       next_af = findaf->next;
       // Lvls 1-40 get 200% bloodlust
-      if((findaf && findaf->type == TAG_BLOODLUST)
-        && findaf->modifier < 20 && GET_LEVEL(ch) <= 40)
+      if( findaf && findaf->type == TAG_BLOODLUST && findaf->modifier < 20 && GET_LEVEL(ch) <= 40 )
       {
         findaf->modifier += 1;
         findaf->duration = dur;
       }
       // We are guarenteed here that level is between 41 and 49.
-      else if(findaf && findaf->type == TAG_BLOODLUST)
+      else if(findaf && findaf->type == TAG_BLOODLUST && GET_LEVEL(ch) > 40 )
       {
         // Lose 20% for ever level over 40.
         // 20 == max_modifier @ 40, 18 = max_modifier @ 41, ... 2 = max_modifier @ 49.
