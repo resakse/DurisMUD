@@ -2166,13 +2166,14 @@ void display_room_auras(P_char ch, int room_no)
   }
 }
 
+// Where's the desc for this AWFUL function?!?
 void new_look(P_char ch, char *argument, int cmd, int room_no)
 {
   char     buffer[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
   char     arg1[MAX_STRING_LENGTH], arg2[MAX_STRING_LENGTH];
   char     Gbuf5[MAX_STRING_LENGTH];
-  int      keyword_no, brief_mode, j, bits, temp, vis_mode = 0;
-  bool     found;
+  int      keyword_no, j, bits, temp, vis_mode = 0;
+  bool     found, brief_mode;
   P_obj    tmp_object, found_object;
   P_char   tmp_char;
   char    *tmp_desc;
@@ -2200,23 +2201,24 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     "\n"
   };
 
-  if (!ch->desc || (room_no == NOWHERE))
+  if( !ch->desc || (room_no == NOWHERE) || GET_STAT(ch) < STAT_SLEEPING )
+  {
     return;
-
-  if (GET_STAT(ch) < STAT_SLEEPING)
-    return;
-  else if (GET_STAT(ch) == STAT_SLEEPING)
+  }
+  if( GET_STAT(ch) == STAT_SLEEPING )
   {
     send_to_char("Try opening your eyes first.\n", ch);
     return;
   }
-  if (IS_AFFECTED(ch, AFF_KNOCKED_OUT))
-    return;
 /* dont need a message, since being ko'd refuses commands already.
  * We simply need to make sure that being drug or some such doesn't
  * attempt to override command_interp
  */
-  if (IS_AFFECTED(ch, AFF_BLIND))
+  if( IS_AFFECTED(ch, AFF_KNOCKED_OUT) )
+  {
+    return;
+  }
+  if( IS_AFFECTED(ch, AFF_BLIND) )
   {
     send_to_char("You can't see a damn thing, you're blinded!\n", ch);
     return;
@@ -2231,7 +2233,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
   */
 
   vis_mode = get_vis_mode(ch, room_no);
-  if (vis_mode == 0)
+  if( vis_mode == 0 )
   {
     send_to_char("&+LIt is pitch black...\n", ch);
     return;
@@ -2239,27 +2241,33 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
 
   brief_mode = IS_SET(GET_PLYR(ch)->specials.act, PLR_BRIEF);
 
-  if (argument)
+  if( argument )
+  {
     argument_split_2(argument, arg1, arg2);
+  }
   else
   {
     *arg1 = '\0';
     *arg2 = '\0';
   }
-  keyword_no = search_block(arg1, keywords, FALSE);     /* Partial Match */
+  /* Partial Match */
+  keyword_no = search_block(arg1, keywords, FALSE);
 
-  if ((keyword_no == -1) && *arg1)
+  /* Let arg2 become the target object (arg1) */
+  if( (keyword_no == -1) && *arg1 )
   {
     keyword_no = 7;
-    strcpy(arg2, arg1);         /* Let arg2 become the target object (arg1) */
+    strcpy(arg2, arg1);
   }
   found = FALSE;
-  tmp_object = 0;
-  tmp_char = 0;
-  tmp_desc = 0;
+  tmp_object = NULL;
+  tmp_char = NULL;
+  tmp_desc = NULL;
 
-  if ((keyword_no == 8) && (cmd != CMD_LOOK))
+  if( (keyword_no == 8) && (cmd != CMD_LOOK) )
+  {
     keyword_no = 20;
+  }
 
   switch (keyword_no)
   {
@@ -2292,24 +2300,23 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
     else if (keyword_no >= 10)
       keyword_no -= 4;
 
-    if (!EXIT(ch, keyword_no) ||
-        IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ILLUSION))
+    if( !IS_TRUSTED(ch) && (!EXIT(ch, keyword_no) || IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ILLUSION)) )
     {
       /* not a valid exit there */
       send_to_char("You see nothing special...\n", ch);
       return;
     }
-    if (check_castle_walls(ch->in_room, EXIT(ch, keyword_no)->to_room))
+    if( !IS_TRUSTED(ch) && check_castle_walls(ch->in_room, EXIT(ch, keyword_no)->to_room) )
     {
       send_to_char("You cannot see over the castle walls.\r\n", ch);
       return;
     }
     /* there IS an exit in that direction */
-    if ((vis_mode == 3) &&
+    if( (vis_mode == 3) &&
         (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED) ||
          IS_SET(EXIT(ch, keyword_no)->exit_info, EX_SECRET) ||
          IS_SET(EXIT(ch, keyword_no)->exit_info, EX_ILLUSION) ||
-         IS_SET(EXIT(ch, keyword_no)->exit_info, EX_BLOCKED)))
+         IS_SET(EXIT(ch, keyword_no)->exit_info, EX_BLOCKED)) )
     {
       /* but infra-only can't detect it */
       send_to_char("You see nothing special...\n", ch);
@@ -2368,12 +2375,12 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
         }
       }
 
-      if (IS_AFFECTED(ch, AFF_FARSEE))
+      if( IS_AFFECTED(ch, AFF_FARSEE) )
       {
-        if (IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED))
+        if( !IS_TRUSTED(ch) && IS_SET(EXIT(ch, keyword_no)->exit_info, EX_CLOSED) )
         {
           sprintf(buffer, "The closed %s blocks your farsight.\n",
-                  FirstWord(EXIT(ch, keyword_no)->keyword));
+            FirstWord(EXIT(ch, keyword_no)->keyword));
           send_to_char(buffer, ch);
           return;
         }
@@ -2381,12 +2388,15 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
       else
       {
         if (!IS_TRUSTED(ch))
+        {
           return;
+        }
       }
     }
+    /* non-door exit */
     else
-    {                           /* non-door exit */
-      if (EXIT(ch, keyword_no)->general_description)
+    {
+      if( EXIT(ch, keyword_no)->general_description )
       {
         send_to_char(EXIT(ch, keyword_no)->general_description, ch);
       }
@@ -2394,8 +2404,10 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
       {
         send_to_char("Looks like an exit.\n", ch);
       }
-      if (!IS_TRUSTED(ch) && !IS_AFFECTED(ch, AFF_FARSEE))
+      if( !IS_TRUSTED(ch) && !IS_AFFECTED(ch, AFF_FARSEE) )
+      {
         return;
+      }
     }
 
     /*
@@ -2421,48 +2433,40 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
         send_to_char("Swirling mists block your sight.\n", ch);
       return;
     }
-    if ((vis_mode == 1) && IS_AFFECTED(ch, AFF_FARSEE))
+    if( (vis_mode == 1) && IS_AFFECTED(ch, AFF_FARSEE) )
+    {
       vis_mode = 2;
+    }
 
     /*
      * if return direction doesn't exist (one-way) or is not the
      * reverse direction, normal farsee will be blocked.  vis_mode 1
      * sees all.
      */
-
-    if ((!world[temp].dir_option[rev_dir[keyword_no]] ||
-         (world[temp].dir_option[rev_dir[keyword_no]]->to_room != room_no))
-        && (vis_mode > 1) && !IS_TRUSTED(ch) && !IS_SET(world[ch->in_room].room_flags, GUILD_ROOM) )
+    if( (!world[temp].dir_option[rev_dir[keyword_no]]
+      || (world[temp].dir_option[rev_dir[keyword_no]]->to_room != room_no))
+      && (vis_mode > 1) && !IS_TRUSTED(ch) && !IS_SET(world[ch->in_room].room_flags, GUILD_ROOM) )
     {
       /* sight blocked */
-      send_to_char("Something seems to be blocking your line of sight.\n",
-                   ch);
+      send_to_char("Something seems to be blocking your line of sight.\n", ch);
       return;
     }
 
-    if(IS_SET(world[ch->in_room].room_flags, BLOCKS_SIGHT) &&
-       !IS_TRUSTED(ch))
+    if( IS_SET(world[ch->in_room].room_flags, BLOCKS_SIGHT) && !IS_TRUSTED(ch) )
     {
-      send_to_char
-        ("It's too difficult to see what lies in that direction.\n", ch);
+      send_to_char("It's too difficult to see what lies in that direction.\n", ch);
       return;
     }
 
-    if(IS_SET(world[temp].room_flags, BLOCKS_SIGHT) &&
-      !IS_TRUSTED(ch))
+    if( IS_SET(world[temp].room_flags, BLOCKS_SIGHT) && !IS_TRUSTED(ch) )
     {
-      send_to_char("It's too difficult to see anything in that direction.\n",
-                   ch);
+      send_to_char("It's too difficult to see anything in that direction.\n", ch);
       return;
     }
 
-    if(!IS_TRUSTED(ch) &&
-       !has_innate(ch, INNATE_EYELESS))
+    if( !IS_TRUSTED(ch) && !has_innate(ch, INNATE_EYELESS) )
     {
-    
-      if(has_innate(ch, INNATE_DAYBLIND) &&
-         IS_SUNLIT(temp) &&
-         !IS_TWILIGHT_ROOM(temp))
+      if( has_innate(ch, INNATE_DAYBLIND) && IS_SUNLIT(temp) && !IS_TWILIGHT_ROOM(temp) )
       {
         send_to_char("&+YThe sunlight! &+WIt's too bright to see!&n\n", ch);
         return;
@@ -2480,18 +2484,13 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
         send_to_char("&+WThe brightness there hurts your head!\n", ch);
         return;
       }
-      else if((IS_MAGIC_DARK(temp) &&
-               !OLD_RACE_NEUTRAL(GET_RACE(ch))) &&
-               OLD_RACE_GOOD(GET_RACE(ch), GET_ALIGNMENT(ch)) &&
-               !IS_HARPY(ch) &&
-               !IS_HALFORC(ch) &&
-               !IS_REVENANT(ch) &&
-               !IS_DRAGONKIN(ch))
+      else if( (IS_MAGIC_DARK(temp) && !OLD_RACE_NEUTRAL(GET_RACE(ch)))
+        && OLD_RACE_GOOD(GET_RACE(ch), GET_ALIGNMENT(ch)) && !IS_HARPY(ch)
+        && !IS_HALFORC(ch) && !IS_REVENANT(ch) && !IS_DRAGONKIN(ch) )
       {
         send_to_char("&+LIt's much too dark there for you to see!\n", ch);
         return;
       }
-
     }
 
     new_look(ch, NULL, -4, temp);
@@ -2499,23 +2498,20 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
 
   case 6:
     /* look 'in' */
-    if (vis_mode == 3)
+    if( vis_mode == 3 )
     {
-      send_to_char
-        ("You can't make out much detail in the dark with just infravision..\n",
-         ch);
+      send_to_char("You can't make out much detail in the dark with just infravision..\n", ch);
       break;
     }
-    if (*arg2)
+    if( *arg2 )
     {
       /* Item carried */
-      bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM |
-                          FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
-      if (bits)
+      bits = generic_find(arg2, FIND_OBJ_INV | FIND_OBJ_ROOM | FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
+      if( bits )
       {                         /* Found something */
         if (GET_ITEM_TYPE(tmp_object) == ITEM_DRINKCON)
         {
-          if (tmp_object->value[1] == 0)
+          if( tmp_object->value[1] == 0 )
           {
             act("It is empty.", FALSE, ch, 0, 0, TO_CHAR);
           }
@@ -2691,6 +2687,7 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
   case 8:                      /* look COMMAND, with NULL args, brief is forced */
   case 9:                      /* look 'room', brief is overridden */
   case 20:                     /* look called with cmd -4, brief mode is honored */
+
   case 18:                     // looking 'inside' something - so we can show a room w/o the map
 
     switch (keyword_no)
@@ -2699,12 +2696,12 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
         if (IS_MAP_ROOM(ch->in_room) || ch->specials.z_cord < 0 ||
             (IS_MAP_ROOM(room_no) && cmd == -5))
           map_look_room(ch, room_no, FALSE);
-        brief_mode = 1;
+        brief_mode = TRUE;
         break;
       case 9:                    /* look 'room', brief is overridden */
         if (IS_MAP_ROOM(ch->in_room) || ch->specials.z_cord < 0)
           map_look(ch, TRUE);
-        brief_mode = 0;
+        brief_mode = FALSE;
         break;
       case 20:
         if (IS_MAP_ROOM(room_no) && cmd == -5)
@@ -2751,45 +2748,37 @@ void new_look(P_char ch, char *argument, int cmd, int room_no)
           send_to_char(world[room_no].description, ch);
 
         display_room_auras(ch, room_no);
-      } 
-
+      }
     }
 
     show_exits_to_char(ch, room_no, 1);
-
-    if (get_spell_from_room(&world[ch->in_room], SPELL_WANDERING_WOODS))
+    if (get_spell_from_room(&world[room_no], SPELL_WANDERING_WOODS))
     {
-      sprintf(Gbuf5,
-              "&+GAn air of bewildering enchantment lies heavy here.&n\n");
+      sprintf(Gbuf5, "&+GAn air of bewildering enchantment lies heavy here.&n\n");
       send_to_char(Gbuf5, ch);
     }
-    if (get_spell_from_room(&world[ch->in_room], SPELL_CONSECRATE_LAND))
+    if (get_spell_from_room(&world[room_no], SPELL_CONSECRATE_LAND))
     {
-      sprintf(Gbuf5,
-              "&+CA series of magical runes are dispersed about this area.&n\n");
+      sprintf(Gbuf5, "&+CA series of magical runes are dispersed about this area.&n\n");
       send_to_char(Gbuf5, ch);
     }
-    if (get_spell_from_room(&world[ch->in_room], SPELL_DESECRATE_LAND))
+    if (get_spell_from_room(&world[room_no], SPELL_DESECRATE_LAND))
     {
-      sprintf(Gbuf5,
-              "&+LA series of &+Revil&+L runes are dispersed about this area.&n\n");
+      sprintf(Gbuf5, "&+LA series of &+Revil&+L runes are dispersed about this area.&n\n");
       send_to_char(Gbuf5, ch);
     }
-    if (get_spell_from_room(&world[ch->in_room], SPELL_FORBIDDANCE))
+    if (get_spell_from_room(&world[room_no], SPELL_FORBIDDANCE))
     {
-      sprintf(Gbuf5,
-              "&+LA strange unwelcoming energy flows through the area.&n\n");
+      sprintf(Gbuf5, "&+LA strange unwelcoming energy flows through the area.&n\n");
       send_to_char(Gbuf5, ch);
     }
-		if (get_spell_from_room(&world[ch->in_room], SPELL_BINDING_WIND)) 
+		if (get_spell_from_room(&world[room_no], SPELL_BINDING_WIND)) 
 		{
-			sprintf(Gbuf5,
-							"&+CThe wind has picked up so that it is hard to move!&n\n");
+			sprintf(Gbuf5, "&+CThe wind has picked up so that it is hard to move!&n\n");
 			send_to_char(Gbuf5, ch);
 		}
-		if (get_spell_from_room(&world[ch->in_room], SPELL_WIND_TUNNEL)) {
-			sprintf(Gbuf5, 
-							"&+cThe wind has picked up so that is easier to move!&n\n");
+		if (get_spell_from_room(&world[room_no], SPELL_WIND_TUNNEL)) {
+			sprintf(Gbuf5, "&+cThe wind has picked up so that is easier to move!&n\n");
 			send_to_char(Gbuf5, ch);
 		}
 /*    if(world[room_no].troop_info)
