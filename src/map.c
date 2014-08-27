@@ -643,9 +643,36 @@ void display_map_room(P_char ch, int from_room, int n, int show_map_regardless)
       {
         strcat(buf, " ");
       }
+      /* you */
       else if (x == 0 && y == 0)
-      {                         /* you */
-        strcat(buf, "&+W@&n");
+      {
+        P_ship ship;
+        // If we're on an undocked ship..
+        if( (ship = get_ship_from_char(ch)) && !SHIP_DOCKED(ship) && ship->location == from_room )
+        {
+          float heading = ship->heading;
+          // Use an arrow in the direction of the ship.
+          if( heading > 315 || heading <= 45 )
+          {
+            strcat(buf, "&+W^&n");
+          }
+          else if( heading > 45 && heading <= 135 )
+          {
+            strcat(buf, "&+W>&n");
+          }
+          else if( heading > 135 && heading <= 225 )
+          {
+            strcat(buf, "&+Wv&n");
+          }
+          else
+          {
+            strcat(buf, "&+W<&n");
+          }
+        }
+        else
+        {
+          strcat(buf, "&+W@&n");
+        }
       }
       else if (whats_in == CONTAINS_MAGIC_DARK)
       {

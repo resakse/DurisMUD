@@ -2167,6 +2167,7 @@ void display_room_auras(P_char ch, int room_no)
 }
 
 // Where's the desc for this AWFUL function?!?
+// new_look(ch, 0, -5, ship->location) == 'look out' while on ship.
 void new_look(P_char ch, char *argument, int cmd, int room_no)
 {
   char     buffer[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
