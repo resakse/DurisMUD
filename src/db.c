@@ -2984,7 +2984,10 @@ P_obj read_object(int nr, int type)
       SET_BIT(obj->extra_flags, ITEM_CAN_THROW2);
       SET_BIT(obj->extra_flags, ITEM_RETURNING);
     }
-
+    if( obj->value[0] == WEAPON_2HANDSWORD )
+    {
+      SET_BIT(obj->extra_flags, ITEM_TWOHANDS);
+    }
   }
 
   if (obj_index[nr].func.obj)

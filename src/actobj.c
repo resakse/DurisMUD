@@ -68,11 +68,16 @@ bool is_stat_max(sbyte location)
 
 int wield_item_size(P_char ch, P_obj obj)
 {
-  if (!IS_SET(obj->extra_flags, ITEM_TWOHANDS) ||
-      (IS_GIANT(ch) && obj->type == ITEM_WEAPON))
+  if( !(IS_SET(obj->extra_flags, ITEM_TWOHANDS)
+    || (obj->type == ITEM_WEAPON && obj->value[0] == WEAPON_2HANDSWORD))
+    || (IS_GIANT(ch) && obj->type == ITEM_WEAPON) )
+  {
     return 1;
+  }
   else
+  {
     return 2;
+  }
 }
 /*
  * procedures related to get
@@ -4098,7 +4103,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
       break;
     }
 
-    hands_needed = IS_SET(obj_object->extra_flags, ITEM_TWOHANDS) ? 2 : 1;
+    hands_needed = (IS_SET(obj_object->extra_flags, ITEM_TWOHANDS) || obj_object->value[0] == WEAPON_2HANDSWORD) ? 2 : 1;
 
     if (hands_needed == 2 && free_hands < 2)
     {
@@ -4122,19 +4127,25 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     {
       if (hands_needed == 1)
       {
-        if (!ch->equipment[PRIMARY_WEAPON])
+        if( !ch->equipment[PRIMARY_WEAPON] )
+        {
           wield_to_where = PRIMARY_WEAPON;
-        else if (!ch->equipment[SECONDARY_WEAPON] &&
-                 (!ch->equipment[PRIMARY_WEAPON] ||
-                  !IS_SET(ch->equipment[PRIMARY_WEAPON]->extra_flags,
-                          ITEM_TWOHANDS) || IS_TRUSTED(ch)))
+        }
+        else if( !ch->equipment[SECONDARY_WEAPON]
+          && (!ch->equipment[PRIMARY_WEAPON] || !(IS_SET(ch->equipment[PRIMARY_WEAPON]->extra_flags, ITEM_TWOHANDS)
+          || ch->equipment[PRIMARY_WEAPON]->value[0] == WEAPON_2HANDSWORD) || IS_TRUSTED(ch)))
+        {
           wield_to_where = SECONDARY_WEAPON;
-        else if (!ch->equipment[THIRD_WEAPON])
+        }
+        else if( !ch->equipment[THIRD_WEAPON] )
+        {
           wield_to_where = THIRD_WEAPON;
-        else
-          if (!IS_SET(ch->equipment[THIRD_WEAPON]->extra_flags, ITEM_TWOHANDS)
-              || IS_TRUSTED(ch))
+        }
+        else if( !(IS_SET(ch->equipment[THIRD_WEAPON]->extra_flags, ITEM_TWOHANDS) || ch->equipment[THIRD_WEAPON]->value[0] == WEAPON_2HANDSWORD)
+              || IS_TRUSTED(ch) )
+        {
           wield_to_where = FOURTH_WEAPON;
+        }
       }
       // Let's assume everything takes one or two hands, so here we are doing
       // the case where the weapon takes two hands
@@ -4171,15 +4182,18 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
     else
     {
       if (ch->equipment[PRIMARY_WEAPON])
+      {
         wield_to_where = SECONDARY_WEAPON;
+      }
       else
+      {
         wield_to_where = PRIMARY_WEAPON;
-
+      }
       if (wield_to_where == SECONDARY_WEAPON)
       {
-        if ((IS_PC(ch) && !GET_CHAR_SKILL(ch, SKILL_DUAL_WIELD)) ||
+        if( (IS_PC(ch) && !GET_CHAR_SKILL(ch, SKILL_DUAL_WIELD)) ||
             (IS_NPC(ch) && (!IS_WARRIOR(ch) || (GET_LEVEL(ch) < 15)) &&
-             (!IS_THIEF(ch) || (GET_LEVEL(ch) < 20))))
+             (!IS_THIEF(ch) || (GET_LEVEL(ch) < 20))) )
         {
           if (showit)
             send_to_char("You lack the training to use two weapons.\r\n", ch);
@@ -4188,9 +4202,8 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
       }
 
 
-      if ((wield_to_where == SECONDARY_WEAPON) &&
-          (IS_REACH_WEAPON(obj_object) ||
-           (!GET_CLASS(ch, CLASS_RANGER) &&
+      if( (wield_to_where == SECONDARY_WEAPON) && (IS_REACH_WEAPON(obj_object)
+        || (!GET_CLASS(ch, CLASS_RANGER) &&
             (GET_OBJ_WEIGHT(obj_object) * ((IS_OGRE(ch) || IS_SNOWOGRE(ch)) ? 2 : 3) >
              (str_app[STAT_INDEX(GET_C_STR(ch))].wield_w)))))
       {
@@ -4228,7 +4241,9 @@ int wear(P_char ch, P_obj obj_object, int keyword, int showit)
         send_to_char("Your hands are full.\r\n", ch);
       break;
     }
-    if (IS_SET(obj_object->extra_flags, ITEM_TWOHANDS) && (free_hands < 2)) {
+    if( (IS_SET(obj_object->extra_flags, ITEM_TWOHANDS) || (obj_object->type == ITEM_WEAPON && obj_object->value[0] == WEAPON_2HANDSWORD))
+      && (free_hands < 2) )
+    {
       if (showit)
         send_to_char("You need two free hands to hold that.\r\n", ch);
       break;
