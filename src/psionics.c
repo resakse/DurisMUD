@@ -2955,9 +2955,8 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
   {
     send_to_char("&+CThat being is too weak for you to find in the ether!\r\n", ch);
     send_to_char("&+MThe Elder Brain is displeased and you feel numbness engulf you.&n\r\n", ch);
-    wizlog(57,
-           "%s attmpted to wormhole %s, and made the &+MElder Brain&n displeased.",
-           GET_NAME(ch), GET_NAME(victim));
+    wizlog(57, "%s attmpted to wormhole %s, and made the &+MElder Brain&n displeased.",
+      GET_NAME(ch), GET_NAME(victim));
     CharWait(ch, (int)(PULSE_SPELLCAST * 10));
     return;
   }
@@ -3196,7 +3195,7 @@ void spell_wormhole(int level, P_char ch, char *arg, int type, P_char victim, P_
        to_room = victim->in_room;
 
      from_room = ch->in_room;
-    
+
      if(IS_NPC(victim))
      {
        if(!has_innate(ch, INNATE_IMPROVED_WORMHOLE) ||

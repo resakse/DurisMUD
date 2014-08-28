@@ -3484,19 +3484,20 @@ int can_char_use_item(P_char ch, P_obj obj)
     return (FALSE);
   }
 
-  if (IS_NPC(ch) && (GET_RNUM(ch) == real_mobile(250)))
+  // Images can't wear eq.
+  if( IS_NPC(ch) && (GET_RNUM(ch) == real_mobile(250)) )
   {
     return FALSE;
   }
 
-  if (IS_ILLITHID(ch))
+  if( IS_ILLITHID(ch) || GET_PRIME_CLASS(ch, CLASS_MINDFLAYER) )
   {
     return TRUE;
   }
 
-  if (!IS_SET(obj->extra_flags, ITEM_ALLOWED_RACES))
+  if( !IS_SET(obj->extra_flags, ITEM_ALLOWED_RACES) )
   {
-    if (GET_RACE(ch) <= RACE_PLAYER_MAX && IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)))
+    if( GET_RACE(ch) <= RACE_PLAYER_MAX && IS_SET(obj->anti2_flags, 1 << (GET_RACE(ch) - 1)) )
     {
       return FALSE;
     }
@@ -3565,6 +3566,7 @@ int can_char_use_item(P_char ch, P_obj obj)
   }
   return TRUE;
 }
+
 // Added this function so we can check on certain items if only the prime class is allowed to use it
 int can_prime_class_use_item(P_char ch, P_obj obj)
 {
