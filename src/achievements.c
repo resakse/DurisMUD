@@ -163,6 +163,7 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
   struct affected_type af;
   struct affected_type *paf;
   int required = 1;
+  P_obj gift;
 
   /* Achievement int ach list:
      1 - may i heals you
@@ -237,7 +238,12 @@ void update_achievements(P_char ch, P_char victim, int cmd, int ach)
     {
       send_to_char("&+rCon&+Rgra&+Wtula&+Rtio&+rns! You have completed the &+RThe Journey Begins&+r achievement!&n\r\n", ch);
       send_to_char("&+yThis &+Yachievement&+y rewards an &+Yitem&+y! Check your &+Winventory &+yby typing &+Wi&+y!&n\r\n", ch);
-      obj_to_char(read_object(400222, VIRTUAL), ch);
+      gift = read_object(400222, VIRTUAL);
+      if( RACE_EVIL(ch) && gift )
+      {
+        REMOVE_BIT(gift->extra_flags, ITEM_LIT);
+      }
+      obj_to_char( gift, ch);
       if( !paf )
       {
         paf = apply_achievement(ch, ACH_LEVELACHIEVEMENT);
