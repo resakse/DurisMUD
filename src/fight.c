@@ -7269,8 +7269,8 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 
   if( sic == -1 && GET_CHAR_SKILL(ch, SKILL_DEVASTATING_CRITICAL) > devcrit )
   {
-    // Caps at 67% more damage
-    dam = (int) (dam * (3 + GET_CHAR_SKILL(ch, SKILL_DEVASTATING_CRITICAL)) / 1.5 );
+    // Caps at 200% - 267% more damage
+    dam = (int) (dam * (300 + GET_CHAR_SKILL(ch, SKILL_DEVASTATING_CRITICAL)) / 150 );
   }
   else if( sic == -1 )
   {
