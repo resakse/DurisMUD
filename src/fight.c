@@ -7552,12 +7552,11 @@ bool weapon_proc(P_obj obj, P_char ch, P_char victim)
   int      room;
   int      count;
 
-  if (!obj->value[5] || obj->value[7] <= 0)
+  if( !obj->value[5] || obj->value[7] <= 0 )
   {
     if (obj_index[obj->R_num].func.obj != NULL)
     {
-      return (*obj_index[obj->R_num].func.obj) (obj, ch, CMD_MELEE_HIT,
-          (char *) victim);
+      return (*obj_index[obj->R_num].func.obj) (obj, ch, CMD_MELEE_HIT, (char *) victim);
     }
     else
     {
@@ -7565,57 +7564,81 @@ bool weapon_proc(P_obj obj, P_char ch, P_char victim)
     }
   }
 
-  if (number(0, obj->value[7] - 1))
+  //int test = number(0, obj->value[7] - 1);
+  //debug( "Val7: %d, Val7-1: %d, Test: %d", obj->value[7], obj->value[7]-1, test );
+  if( number(0, obj->value[7] - 1) )
+  {
     return FALSE;
+  }
 
-  for (ex = obj->ex_description; ex; ex = ex->next)
+  for( ex = obj->ex_description; ex; ex = ex->next )
   {
     if (isname("_char_msg", ex->keyword))
+    {
       act(ex->description, FALSE, ch, obj, victim, TO_CHAR | ACT_NOEOL);
+    }
     else if (isname("_victim_msg", ex->keyword))
+    {
       act(ex->description, FALSE, ch, obj, victim, TO_VICT | ACT_NOEOL);
+    }
     else if (isname("_room_msg", ex->keyword))
+    {
       act(ex->description, FALSE, ch, obj, victim, TO_NOTVICT | ACT_NOEOL);
+    }
   }
 
   count = 0;
   room = ch->in_room;
   if (spells[0] = obj->value[5] % 1000)
+  {
     count++;
+  }
   if (spells[1] = obj->value[5] % 1000000 / 1000)
+  {
     count++;
+  }
   if (spells[2] = obj->value[5] % 1000000000 / 1000000)
+  {
     count++;
+  }
 
-  if (!count)
+  if( !count )
+  {
     return FALSE;
+  }
 
-  if (obj->value[5] > 999999999)
+  if( obj->value[5] > 999999999 )
   {
     count = number(0, count - 1);
-    if (skills[spells[count]].spell_pointer)
-      if (IS_AGG_SPELL(spells[count]))
-        ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0,
-          SPELL_TYPE_SPELL, victim,
-          obj));
-      else if (!affected_by_spell(ch, spells[count]))
-        ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0,
-          SPELL_TYPE_SPELL, ch,
-          obj));
+    if( skills[spells[count]].spell_pointer )
+    {
+      if( IS_AGG_SPELL(spells[count]) )
+      {
+        ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0, SPELL_TYPE_SPELL, victim, obj));
+      }
+      else if( !affected_by_spell(ch, spells[count]) )
+      {
+        ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0, SPELL_TYPE_SPELL, ch, obj));
+      }
+    }
   }
   else
-    while (count-- && is_char_in_room(ch, room) &&
-        is_char_in_room(victim, room))
-      if (skills[spells[count]].spell_pointer)
-        if (IS_AGG_SPELL(spells[count]))
-          ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0,
-            SPELL_TYPE_SPELL, victim,
-            obj));
-        else if (!affected_by_spell(ch, spells[count]))
-          ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0,
-            SPELL_TYPE_SPELL, ch,
-            obj));
-
+  {
+    while( count-- && is_char_in_room(ch, room) && is_char_in_room(victim, room) )
+    {
+      if( skills[spells[count]].spell_pointer )
+      {
+        if( IS_AGG_SPELL(spells[count]) )
+        {
+          ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0, SPELL_TYPE_SPELL, victim, obj));
+        }
+        else if( !affected_by_spell(ch, spells[count]) )
+        {
+          ((*skills[spells[count]].spell_pointer) ((int) obj->value[6], ch, 0, SPELL_TYPE_SPELL, ch, obj));
+        }
+      }
+    }
+  }
   return TRUE;
 }
 
