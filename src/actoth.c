@@ -5770,6 +5770,13 @@ void do_suicide(P_char ch, char *argument, int cmd)
     return;
   }
 
+  // No suiciding to escape being fragged.
+  if( affected_by_spell(ch, TAG_PVPDELAY) )
+  {
+    send_to_char("There is too much adrenaline pumping through your body right now.\r\n", ch);
+    return;
+  }
+
   if (!command_confirm)
   {
     if (ch->desc)
