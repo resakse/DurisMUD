@@ -619,8 +619,9 @@ bool holy_weapon_proc(P_char ch, P_char victim)
     spell_full_heal     // 10
   };
 
+  // Ok, 4.5 hits/round for lvl 56 -> proc every 2.5 rounds or so
   if( !IS_ALIVE(ch) || !IS_FIGHTING(ch) || !(victim = ch->specials.fighting)
-    || !IS_ALIVE(victim) || !(room = ch->in_room) || number(0, 14)) // 6.67%
+    || !IS_ALIVE(victim) || !(room = ch->in_room) || number(0, 12)) // 7.69%
   {
     return FALSE;
   }
