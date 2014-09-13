@@ -2363,8 +2363,6 @@ G 1 442 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 447 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 726 999 0 100 0 0 0            *    (object type not in this .obj file)
 G 1 727 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 433 999 0 100 0 0 0            *    (object type not in this .obj file)
-G 1 434 999 0 100 0 0 0            *    (object type not in this .obj file)
 M 0 17042 68 17123 100 0 0 0       * a clansdwarf
 M 0 17042 68 17123 100 0 0 0       * a clansdwarf
 M 0 17042 68 17123 100 0 0 0       * a clansdwarf
