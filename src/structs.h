@@ -2086,7 +2086,7 @@ struct mcname {
 #define LUNAR_DRUID 3
 
 // Ethermancer Specs
-#define SPEC_WINDTALKER 1
+#define SPEC_TEMPESTMAGUS 1
 #define SPEC_FROSTMAGUS 2
 #define SPEC_STARMAGUS 3
 

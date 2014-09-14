@@ -520,7 +520,7 @@ void spell_windwalk(int level, P_char ch, char *arg, int type, P_char victim,
   }
   
   distance = (int)(level * 1.35);
-  if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_WINDTALKER))
+  if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_TEMPESTMAGUS))
     distance += 15;
 
   if (!IS_TRUSTED(ch) &&
@@ -826,7 +826,7 @@ void spell_conjure_air(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if (number(0, 100) < 15 || GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_WINDTALKER))
+  if (number(0, 100) < 15 || GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_TEMPESTMAGUS))
     sum = 1;
   else
     sum = 0;
@@ -851,12 +851,12 @@ void spell_conjure_air(int level, P_char ch, char *arg, int type,
   mlvl = (level / 5) * 2;
   lvl = number(mlvl, mlvl * 3);
 
-  if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_WINDTALKER))
+  if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_TEMPESTMAGUS))
           mob->player.level = BOUNDED(10, level, 51);
   else
       mob->player.level = BOUNDED(10, lvl, 45);
 
-  if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_WINDTALKER))
+  if (GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_TEMPESTMAGUS))
   {
      GET_MAX_HIT(mob) = GET_HIT(mob) = mob->points.base_hit = 
      ch->points.base_hit + (GET_LEVEL(ch) * 2) + charisma;
