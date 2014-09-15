@@ -2151,9 +2151,9 @@ int slot_machine(P_obj obj, P_char ch, int cmd, char *arg)
       if (type == 3)
       {
         coins = 50000 * coinamt;
-        act("&+wYou recieve &+Ba restring coupon&N.&N", FALSE, ch, 0, 0,
+        act("&+wYou receive &+Ba restring coupon&N.&N", FALSE, ch, 0, 0,
             TO_CHAR);
-        act("&+wYou recieve &+Ra restring coupon&N.&N", FALSE, ch, 0, 0,
+        act("&+wYou receive &+Ra restring coupon&N.&N", FALSE, ch, 0, 0,
             TO_CHAR);
         obj_to_char(read_object(44, VIRTUAL), ch);
         obj_to_char(read_object(43, VIRTUAL), ch);

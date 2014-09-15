@@ -240,7 +240,7 @@ void confirm_account(P_desc d, char *arg)
 {
   if (!arg)
   {
-    SEND_TO_Q("Please enter the confirmation code recieved in your email:  ",
+    SEND_TO_Q("Please enter the confirmation code received in your email:  ",
               d);
     return;
   }
@@ -447,7 +447,7 @@ void verify_new_account_information(P_desc d, char *arg)
   if ((arg[0] == 'y') || (arg[0] == 'Y'))
   {
     SEND_TO_Q
-      ("You will recieve a confimation code in your email.\r\nYou must confirm your account before using it.\r\n",
+      ("You will receive a confimation code in your email.\r\nYou must confirm your account before using it.\r\n",
        d);
     generate_account_confirmation_code(d, NULL);
     write_account(d->account);

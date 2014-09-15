@@ -2,7 +2,7 @@
 //
 // created by: Venthix 9-11-11
 //
-// Selectable bonuses granted based on epics recieved within the last week.
+// Selectable bonuses granted based on epics received within the last week.
 // Choosing a new bonus will reset your counter, you can only accumulate epics towards
 // the bonus chosen, if a new bonus is chosen your accumulated epics will be reset to
 // the date and time you chose.

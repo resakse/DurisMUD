@@ -300,7 +300,7 @@ void auction_update(void)
                     ((auction[i].going == 1) ? "once" : "twice"),
                     coin_stringv(auction[i].bet));
           else
-            sprintf(buf, "%s: going %s with no bids yet recieved.",
+            sprintf(buf, "%s: going %s with no bids yet received.",
                     auction[i].item->short_description,
                     ((auction[i].going == 1) ? "once" : "twice"));
           mobsay(auctioneer, buf);
