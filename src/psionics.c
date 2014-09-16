@@ -2571,28 +2571,30 @@ void spell_mind_blank(int level, P_char ch, char *arg, int type, P_char victim, 
   return;
 }
 
-void spell_cannibalize(int level, P_char ch, char *arg, int type, P_char victim,
-                 P_obj obj)
+void spell_cannibalize(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct affected_type af;
 
-
-  if (!(victim && ch))
+  if( !(victim && ch) )
   {
     logit(LOG_EXIT, "assert: bogus params in cannibalize");
     raise(SIGSEGV);
   }
-  if (affected_by_spell(ch, SPELL_CANNIBALIZE))
+
+  if( affected_by_spell(ch, SPELL_CANNIBALIZE) )
   {
     struct affected_type *af1;
 
     for (af1 = victim->affected; af1; af1 = af1->next)
+    {
       if (af1->type == SPELL_CANNIBALIZE)
       {
-        af1->duration = level / 3;
+        af1->duration = 2 * level / 3;
       }
+    }
     return;
   }
+
   bzero(&af, sizeof(af));
   af.type = SPELL_CANNIBALIZE;
 /*
@@ -2603,10 +2605,7 @@ void spell_cannibalize(int level, P_char ch, char *arg, int type, P_char victim,
   af.bitvector3 = AFF3_CANNIBALIZE;
   affect_to_char(ch, &af);
 
-  act("&+YYou will now drain power from your victim!", FALSE, ch, 0, 0,
-      TO_CHAR);
-
-  return;
+  act("&+YYou will now drain power from your victim!", FALSE, ch, 0, 0, TO_CHAR);
 }
 
 void

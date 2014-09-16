@@ -5261,30 +5261,28 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
   }
 
   // Allowing cannibalize through all weapons.
-
   if( IS_AFFECTED3(ch, AFF3_CANNIBALIZE) && dam > 2 )
   {
     can_mana = MAX(10, dam);
+    can_mana = BOUNDED(0, can_mana, 100);
     can_mana *= GET_LEVEL(ch) / 30;
     can_mana = BOUNDED(0, GET_MANA(victim), can_mana);
 
     GET_MANA(ch) += can_mana;
-
-    if(GET_MANA(ch) > GET_MAX_MANA(ch))
+    if( GET_MANA(ch) > GET_MAX_MANA(ch) )
     {
       GET_MANA(ch) = GET_MAX_MANA(ch);
     }
 
-    if (GET_MANA(ch) < GET_MAX_MANA(ch))
+    if( GET_MANA(ch) < GET_MAX_MANA(ch) )
     {
       StartRegen(ch, EVENT_MANA_REGEN);
     }
 
-    can_mana = BOUNDED(0, can_mana, 100);
+    GET_MANA(victim) -= can_mana;
+    // BOUNDED(0, number(1, can_mana), GET_MANA(victim));
 
-    GET_MANA(victim) -= BOUNDED(0, number(1, can_mana), GET_MANA(victim));
-
-    if (GET_MANA(victim) < GET_MAX_MANA(victim))
+    if( GET_MANA(victim) < GET_MAX_MANA(victim) )
     {
       StartRegen(victim, EVENT_MANA_REGEN);
     }
