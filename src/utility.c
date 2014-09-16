@@ -140,20 +140,27 @@ int god_check(char *name)
 
 int can_exec_cmd(P_char ch, int cmd)
 {
-  int      i;
-
-
-  if (IS_PC(ch))
-    for (i = 0; i < ch->only.pc->numb_gcmd; i++)
-      if ((ch->only.pc->gcmd_arr[i] == cmd) && IS_TRUSTED(ch))
+  if( IS_PC(ch) )
+  {
+    for( int i = 0; i < ch->only.pc->numb_gcmd; i++ )
+    {
+      if( (ch->only.pc->gcmd_arr[i] == cmd) && IS_TRUSTED(ch) )
+      {
         return TRUE;
+      }
+    }
+  }
 
   // NPCs do NOT execute God commands.
-  if (cmd_info[cmd].minimum_level > 56 && IS_NPC(ch))
+  if( cmd_info[cmd].minimum_level > MAXLVLMORTAL && IS_NPC(ch) )
+  {
     return FALSE;
+  }
 
-  if (cmd_info[cmd].minimum_level <= GET_LEVEL(ch))
+  if( cmd_info[cmd].minimum_level <= GET_LEVEL(ch) )
+  {
     return TRUE;
+  }
 
   return FALSE;
 }

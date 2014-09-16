@@ -5778,40 +5778,64 @@ void do_help(P_char ch, char *argument, int cmd)
 void do_wizhelp(P_char ch, char *argument, int cmd)
 {
   char     buf[MAX_STRING_LENGTH];
-  int      no, i, found;
+  int      no, i;
+  bool     found;
+  P_char   target = NULL;
 
-  if (IS_NPC(ch))
+  if( IS_NPC(ch) )
+  {
     return;
+  }
 
-  send_to_char("The following privileged commands are available to you:\n\n",
-               ch);
+  // Argument should be a valid char name.
+  if( argument && *argument && (target = get_char_vis(ch, argument)) == NULL )
+  {
+    send_to_char("No one by that name here..\n", ch);
+    return;
+  }
+  if( target && target != ch && GET_LEVEL(target) >= GET_LEVEL(ch) )
+  {
+    act("$N is not smaller than you, you can not look at their commands.", FALSE, ch, 0, target, TO_CHAR);
+    return;
+  }
 
+  sprintf(buf, "The following privileged commands are available to %s:\n\n", target ? J_NAME(target) : "you");
+  send_to_char( buf, ch );
+
+  if( !target )
+  {
+    target = ch;
+  }
   *buf = '\0';
 
-  for (no = 0, i = 1; *command[i - 1] != '\n'; i++)
+  for( no = 0, i = 1; *command[i - 1] != '\n'; i++ )
   {
-    found = 0;
+    found = FALSE;
     if( cmd_info[i].minimum_level > MAXLVLMORTAL )
     {
-      if (can_exec_cmd(ch, i))
+      if (can_exec_cmd(target, i))
       {
 /*(cmd_info[i].minimum_level <= GET_LEVEL(ch)) || is_cmd_granted(ch, i)) {*/
         sprintf(buf + strlen(buf), "[&+y%2d&n] &+c%-14s&n",
                 cmd_info[i].minimum_level, command[i - 1]);
         no++;
-        found = 1;
+        found = TRUE;
       }
     }
-    if (found && !(no % 4))
+    if( found && !(no % 4) )
+    {
       strcat(buf, "\n");
+    }
   }
-  if (*buf)
+  if( *buf )
   {
     strcat(buf, "\n");
     page_string(ch->desc, buf, 1);
   }
   else
+  {
     send_to_char("None, go away.\n", ch);
+  }
 }
 
 const char *get_multiclass_name(P_char ch)
@@ -7666,14 +7690,14 @@ void do_ignore(P_char ch, char *argument, int cmd)
     ch->only.pc->ignored = NULL;
     return;
   }
-  if (target == ch)
-  {
-    send_to_char("You ignore your own attempt to ignore yourself.\n", ch);
-    return;
-  }
   if ((target = get_char_vis(ch, arg)) == NULL)
   {
     send_to_char("No one by that name here..\n", ch);
+    return;
+  }
+  if (target == ch)
+  {
+    send_to_char("You ignore your own attempt to ignore yourself.\n", ch);
     return;
   }
   if ((GET_LEVEL(target) > 56) || racewar(ch, target))

@@ -2544,7 +2544,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
     memset(&af, 0, sizeof(af));
     af.type = SKILL_SPELLWEAVE;
     af.modifier = arg->spell;
-    af.duration = 2;
+    af.duration = GET_LEVEL(ch)/10; // 3 mins at 30, 5 mins max at lvl 50+
     affect_to_char(ch, &af);
     send_to_char("You finish weaving a spell.\n", ch);
     return;

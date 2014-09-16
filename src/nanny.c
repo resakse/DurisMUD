@@ -4270,7 +4270,7 @@ void select_pwd(P_desc d, char *arg)
 
 	// send to "are you a newbie on duris?" question
 	SEND_TO_Q("\r\nAnswer the following question honestly, as you will either get help, or not.", d);
-	SEND_TO_Q("\r\nAre you NEW to the World of Duris, or a veteran player? (y/n) ", d);
+	SEND_TO_Q("\r\nAre you NEW to the World of Duris? (y/n) ", d);
 	STATE(d) = CON_NEWBIE;
 /*    SEND_TO_Q(racetable, d);
     STATE(d) = CON_QRACE;*/
