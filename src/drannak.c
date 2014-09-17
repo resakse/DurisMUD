@@ -1290,27 +1290,28 @@ void do_conjure(P_char ch, char *argument, int cmd)
   int choice = 0;
 
   if( !IS_ALIVE(ch) || IS_NPC(ch) )
-    return;
-
-  // If not spec'd.
-  if (!GET_SPEC(ch, CLASS_SUMMONER, SPEC_CONTROLLER) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_MENTALIST) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_NATURALIST))
   {
-    act("&+YConjuring advanced beings &nis a &+Mmagic &nbeyond your abilities&n.",
-        FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
 
-  /* if(!IS_TRUSTED(ch))
-     {
-     send_to_char("Coming soon...\r\n", ch);
-     return;
-     }*/
-
-  if(GET_LEVEL(ch) < 30)
+  if( GET_LEVEL(ch) < 21 )
   {
     send_to_char("You are not high enough level to conjure beings...\r\n", ch);
     return;
   }
+  if( !GET_CLASS(ch, CLASS_SUMMONER) )
+  {
+    act("&+YConjuring advanced beings &nis a &+Mmagic &nbeyond your abilities&n.", FALSE, ch, 0, 0, TO_CHAR);
+    return;
+  }
+/* Commenting this out atm; going to allow lvl 21 + to conjure the basic mob prototype thingy.
+  // If not spec'd.
+  if( !GET_SPEC(ch, CLASS_SUMMONER, SPEC_CONTROLLER) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_MENTALIST) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_NATURALIST) )
+  {
+    act("&+YConjuring advanced beings &nis a &+Mmagic &nbeyond your abilities&n.", FALSE, ch, 0, 0, TO_CHAR);
+    return;
+  }
+*/
 
   if(CHAR_IN_SAFE_ZONE(ch))
   {
@@ -1339,7 +1340,9 @@ void do_conjure(P_char ch, char *argument, int cmd)
   strcpy(buf, GET_NAME(ch));
   buff = buf;
   for (; *buff; buff++)
+  {
     *buff = LOWER(*buff);
+  }
   //buf[0] snags first character of name
   sprintf(Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
   recipelist = fopen(Gbuf1, "r");
@@ -1359,7 +1362,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
   choice2 = atoi(second);
 
 
-  if (!*argument)
+  if( !*argument )
   {
     send_to_char("&+WThese are the &+mmys&+Mtic&+Wal commands for &+Yconjuring&+W:\n&n", ch);
     send_to_char("&+W(&+wconjure stat <number> &+m- &+mreveal statistical properties about this &+Mminion&n.)\n&n", ch);
@@ -1367,9 +1370,9 @@ void do_conjure(P_char ch, char *argument, int cmd)
     send_to_char("&+MYou have learned the following &+mMobs&+M:\n&n", ch);
     send_to_char("----------------------------------------------------------------------------\n", ch);
     send_to_char("&+M Mob Number		          &+mMob Name		&n\n\r", ch);
-    
-    while((fscanf(recipelist, "%ld", &recnum)) != EOF )
-    {  
+
+    while( (fscanf(recipelist, "%ld", &recnum)) != EOF )
+    {
       if(recnum == choice2)
       {
         selected = choice2;
@@ -1393,17 +1396,19 @@ void do_conjure(P_char ch, char *argument, int cmd)
     return;
   }
 
-  while((fscanf(recipelist, "%ld", &recnum)) != EOF )
+  while( (fscanf(recipelist, "%ld", &recnum)) != EOF )
   {
-    if(recnum == choice2)
+    if( recnum == choice2 )
+    {
       selected = choice2;
+    }
 
     sprintf(rbuf, "%ld\n", recnum);
   }
   fclose(recipelist);
 
 
-  if (is_abbrev(first, "stat"))
+  if( is_abbrev(first, "stat") )
   {
     if(choice2 == 0)
     {
@@ -1427,7 +1432,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
   else if (is_abbrev(first, "summon"))
   {
 
-    if(selected == 0)
+    if( selected == 0 )
     {
       send_to_char("&+mIt appears you have not yet &+Mlearned&+m how to conjure that &+Mminion&+m.&n\n", ch);
       return;
@@ -1435,27 +1440,27 @@ void do_conjure(P_char ch, char *argument, int cmd)
 
     tobj = read_mobile(selected, VIRTUAL);
 
-    if(!valid_conjure(ch, tobj) && !IS_TRUSTED(ch))
+    if( !valid_conjure(ch, tobj) && !IS_TRUSTED(ch) )
     {
       send_to_char("Your character does not have &+Ldominion&n over this race of &+Lmonster&n, either because its level is too high, or it is not a valid race for you to summon.\r\n", ch);
       extract_char(tobj);
       return;
     }
 
-    if(!new_summon_check(ch, tobj) && !IS_TRUSTED(ch))
+    if( !new_summon_check(ch, tobj) && !IS_TRUSTED(ch) )
     {
       extract_char(tobj);
       return;
     }
 
-    if(affected_by_spell(ch, SPELL_CONJURE_ELEMENTAL) && !IS_TRUSTED(ch))
+    if( affected_by_spell(ch, SPELL_CONJURE_ELEMENTAL) && !IS_TRUSTED(ch) )
     {
       send_to_char("You must wait a short time before calling another &+Yminion&n into existence.\r\n", ch);
       extract_char(tobj);
       return;
     }
 
-    if(GET_C_CHA(ch) < number(1, 130))
+    if( GET_C_CHA(ch) < number(1, 130) )
     {
       if(!IS_TRUSTED(ch))
       {
@@ -1470,7 +1475,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
     }
 
 
-    if((GET_LEVEL(tobj) > 51) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch))
+    if( (GET_LEVEL(tobj) > 51) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch) )
     {
       send_to_char("You must have a &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+mM&+Ma&+Wg&+Mi&+mc&n in your &+Winventory&n in order to &+Ysummon&n a being of such &+Mgreat&+M power&n.\r\n", ch);
       extract_char(tobj);
@@ -1532,9 +1537,6 @@ void do_conjure(P_char ch, char *argument, int cmd)
     REMOVE_BIT(tobj->specials.act, ACT_BREAK_CHARM);
     // Stop mobs from randomly sitting all the time.
     tobj->only.npc->default_pos = POS_STANDING + STAT_NORMAL;
-
-
-
 
     if(GET_LEVEL(tobj) > 56 && !IS_TRUSTED(ch))
     {
@@ -1619,6 +1621,8 @@ int count_classes( P_char mob )
 
 bool valid_conjure(P_char ch, P_char victim)
 {
+  int maxclasses = IS_MULTICLASS_PC(ch) ? 1 : 3;
+
   if( !victim || !ch )
     return FALSE;
 
@@ -1652,7 +1656,7 @@ bool valid_conjure(P_char ch, P_char victim)
       return FALSE;
 
     // New change: Pets can have at most 3 classes.
-    if( count_classes(victim) > 3 )
+    if( count_classes(victim) > maxclasses )
     {
       return FALSE;
     }
@@ -1672,10 +1676,11 @@ bool new_summon_check(P_char ch, P_char selected)
 
   if( desired - GET_LEVEL(ch) > 5 )
   {
+    send_to_char("That monster is too powerful for you to summon yet.\r\n", ch);
     return FALSE;
   }
 
-  for (k = ch->followers, i = 0, j = 0; k; k = k->next)
+  for( k = ch->followers, i = 0, j = 0; k; k = k->next )
   {
     victim = k->follower;
 
