@@ -25,11 +25,11 @@ const char *specdata[][MAX_SPEC] = {
   {"&+LDark Knight", "&+LDem&+ronic Ri&+Lder", "&+LVi&+ro&+Llat&+ror&n", ""},                     //Anti-Paladin
   {"&+YZealot&n", "&+WHealer&n", "&+cHoly&+Wman&n", ""},                                          //Cleric
   {"&+rRe&+Rd Dra&+rgon", "&+gElap&+Ghi&+gdist", "", ""},                                         //Monk
-  {"&+gFo&+Gre&+gst Druid", "&+cStorm &+CDruid", "", ""},                                         //Druid
-  {"&+rEl&+Rem&+Lenta&+Rli&n&+rst", "&+WSpir&+Citua&+Wlist", "&+yAni&+Ymal&n&+yist", ""},         /* CLASS_SHAMAN */
+  {"&+gFo&+Gre&+gst Druid", "&+cStorm &+CDruid", "", ""},                                         // Druid
+  {"&+rEl&+Rem&+Lenta&+Rli&n&+rst", "&+WSpir&+Citua&+Wlist", "&+yAni&+Ymal&n&+yist", ""},         // Shaman
   {"&+MWild&+mmage", "&+LWizard", "&+LShadow&+wmage", ""},                                        /* CLASS_SORCERER */
   {"&+mDia&+rbolis", "&+mNe&+Lcro&+mlyte", "&+LReap&+wer", ""},                                   /* CLASS_NECROMANCER */
-  {"&+CAir Magus&n", "&+BWater Magus&n", "&+rFire Magus&n", "&+yEarth Magus&n"},                  /* CLASS_CONJURER */
+  {"&+CAir Magus&n", "&+BWater Magus&n", "&+rFire Magus&n", "&+yEarth Magus&n"},                  // Conjurer
   {"&+rAssassin&n", "&+LThief&n","Not Used" , "&+LSh&+wa&+Ldow &+BArc&+bher&n"},                  /* CLASS_ROGUE */
   {"", "", "", ""},                                                                               /* CLASS_ASSASSIN was replaced by CLASS_ROGUE, SPEC_ASSASSIN */
   {"&+yBr&+Lig&+yand", "&+yBounty &+LHunter", "", ""},                                            /* Mercenary */

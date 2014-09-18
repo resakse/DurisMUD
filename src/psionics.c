@@ -1225,7 +1225,8 @@ void spell_detonate(int level, P_char ch, char *arg, int type, P_char victim, P_
     "$N &+Ydetonates&n, pieces of flesh splatter across the room."
   };
 
-  dam = dice(MIN(level, 40) * 2, 8);
+  // avg: 40 * 2 + 60 = 80d8 + 60-> 640/2+60 = 380/4 = 95
+  dam = dice(MIN(level, 40) * 2, 8) + 60;
   dam += 2 * GET_DAMROLL(ch);
 
 // +2 damage per level?  Hell no! Not for a Lich. That's +102 damage at 56!!!
