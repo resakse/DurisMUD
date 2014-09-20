@@ -245,8 +245,9 @@ int get_spell_circle(P_char ch, int spl)
     // If the player has it as a secondary class spell.
     if( ch->player.secondary_class )
     {
-      // If the secondary class has the spell and its circle is less than the current lowest.
-      if( (SKILL_DATA2(ch, spl).rlevel[0] > 0) && SKILL_DATA2(ch, spl).rlevel[0] + 1 < lowest )
+      // If the secondary class has the spell (not including MAX_CIRCLE) and the primary doesn't.
+      if( (SKILL_DATA2(ch, spl).rlevel[0] > 0) && lowest == MAX_CIRCLE + 1
+        && SKILL_DATA2(ch, spl).rlevel[0] + 1 < lowest )
       {
         return SKILL_DATA2(ch, spl).rlevel[0] + 1;
       }
