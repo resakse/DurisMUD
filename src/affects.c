@@ -2086,28 +2086,34 @@ void event_room_affect(P_char ch, P_char victim, P_obj obj, void *data)
   struct room_affect *af;
   int room = event_data->room;
 
-  for (af = world[room].affected; af; af = af->next)
-    if (af == event_data->af)
-      break;
-
-  if (af == NULL)
-    return;
-
-  if (af->ch == NULL || !is_char_in_room(af->ch, room))
+  for( af = world[room].affected; af; af = af->next )
   {
-    if (skills[af->type].wear_off_room[0])
+    if( af == event_data->af )
+    {
+      break;
+    }
+  }
+
+  if( af == NULL )
+  {
+    return;
+  }
+
+  if( af->ch == NULL || !is_char_in_room(af->ch, room) )
+  {
+    if( skills[af->type].wear_off_room[0] )
     {
       send_to_room(skills[af->type].wear_off_room[0], room);
       send_to_room("\n", room);
     }
   }
-  else if (skills[af->type].wear_off_room[0])
+  else if( skills[af->type].wear_off_room[0] )
   {
-    act(skills[af->type].wear_off_room[0], FALSE, af->ch, 0, 0,
-        TO_ROOM);
-    if (skills[af->type].wear_off_char[0])
-      act(skills[af->type].wear_off_char[0], FALSE, af->ch, 0, 0,
-          TO_CHAR);
+    act(skills[af->type].wear_off_room[0], FALSE, af->ch, 0, 0, TO_ROOM);
+    if( skills[af->type].wear_off_char[0] )
+    {
+      act(skills[af->type].wear_off_char[0], FALSE, af->ch, 0, 0, TO_CHAR);
+    }
   }
   affect_room_remove(room, af);
 }
@@ -2125,13 +2131,16 @@ void affect_to_room(int room, struct room_affect *af)
   struct room_affect *affected_alloc;
   struct event_room_affect_data data;
 
-  if (af->duration <= 0)
+  if( af->duration <= 0 )
+  {
     return;
+  }
 
-  if (!dead_room_affect_pool)
-    dead_room_affect_pool =
-      mm_create("ROOM_AFFECTS", sizeof(struct room_affect),
-                offsetof(struct room_affect, next), 10);
+  if( !dead_room_affect_pool )
+  {
+    dead_room_affect_pool = mm_create("ROOM_AFFECTS", sizeof(struct room_affect),
+      offsetof(struct room_affect, next), 10);
+  }
 
   affected_alloc = (struct room_affect *) mm_get(dead_room_affect_pool);
 
@@ -2139,7 +2148,10 @@ void affect_to_room(int room, struct room_affect *af)
   affected_alloc->next = world[room].affected;
   world[room].affected = affected_alloc;
 
-  world[room].room_flags |= af->room_flags;
+  // This line guarentees taht af->room_flags don't include any flags already set.
+  //   This is important for when the affect wears off.
+  affected_alloc->room_flags = affected_alloc->room_flags & ~(world[room].room_flags);
+  world[room].room_flags |= affected_alloc->room_flags;
 
   data.room = room;
   data.af = affected_alloc;
@@ -2152,16 +2164,22 @@ void affect_room_remove(int room, struct room_affect *af)
 {
   struct room_affect *hjp;
 
-  if (world[room].affected == af)
+  // For this to work right, we need to be sure that af.room_flags doesn't conatin
+  //   any flags that world[room] had originally.  This is done in affect_to_room
+  world[room].room_flags -= af->room_flags;
+
+  if( world[room].affected == af )
   {
     world[room].affected = af->next;
   }
   else
   {
-    for (hjp = world[room].affected; (hjp->next) && (hjp->next != af);
-         hjp = hjp->next) ;
+    for( hjp = world[room].affected; (hjp->next) && (hjp->next != af); hjp = hjp->next )
+    {
+      ;
+    }
 
-    if (hjp->next != af)
+    if( hjp->next != af )
     {
       return;
     }
