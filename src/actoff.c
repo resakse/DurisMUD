@@ -4766,18 +4766,19 @@ bool single_stab(P_char ch, P_char victim, P_obj weapon)
   dam = (int) dam * final_mult;
 
 
-  if(IS_AFFECTED(victim, AFF_AWARE) && IS_PC(victim) && ((GET_RACE(ch) != RACE_MOUNTAIN) && (GET_RACE(ch) != RACE_DUERGAR)))
+  if((IS_AFFECTED(victim, AFF_AWARE) && IS_PC(victim) && ((GET_RACE(ch) != RACE_MOUNTAIN) && (GET_RACE(ch) != RACE_DUERGAR)))
+    || affected_by_spell(victim, SKILL_BACKSTAB) )
   {
     int chance = GET_C_INT(victim);
     int opportunity = number(1, (GET_C_AGI(ch) + GET_CHAR_SKILL(ch, SKILL_BACKSTAB)));
-    if(chance < opportunity)
+    if(chance < opportunity || affected_by_spell(victim, SKILL_BACKSTAB) )
     {
       send_to_char("&+LSince your victim is &+raware&+L of your presence, you are unable to take full advantage of them...\r\n", ch);
-      dam *= .6;
+      dam *= affected_by_spell(victim, SKILL_BACKSTAB) ? .25 : .6;
     }
   }
 
-  if(IS_IMMOBILE(victim) || GET_STAT(victim) <= STAT_SLEEPING)
+  if( IS_IMMOBILE(victim) || GET_STAT(victim) <= STAT_SLEEPING )
     dam = MAX(80, dam);
 
   spinal_tap = get_property("backstab.SpinalTap", 0.150);
@@ -5102,15 +5103,15 @@ bool backstab(P_char ch, P_char victim)
     percent_chance = 101;
   }
 
-  CharWait(ch, WAIT_SEC);
+  CharWait(ch, (3 * WAIT_SEC) / 2);
 
-  if(IS_PC(ch) && (!on_front_line(ch) || !on_front_line(victim)))
+  if( IS_PC(ch) && (!on_front_line(ch) || !on_front_line(victim)) )
   {
     send_to_char("You can't seem to break the ranks!\n", ch);
     return FALSE;
   }
 
-  if(IS_AFFECTED2(victim, AFF2_AIR_AURA))
+  if( IS_AFFECTED2(victim, AFF2_AIR_AURA) )
   {
     if(number(1, 20) < 7)
     {
@@ -5125,20 +5126,19 @@ bool backstab(P_char ch, P_char victim)
     }
   }
 
-  if(affected_by_spell(victim, SPELL_GUARDIAN_SPIRITS))
+  if( affected_by_spell(victim, SPELL_GUARDIAN_SPIRITS) )
   {
     guardian_spirits_messages(ch, victim);
     percent_chance = MAX(0, percent_chance - GET_LEVEL(victim));
   }
 
-  if(first_w && IS_BACKSTABBER(first_w))
+  if( first_w && IS_BACKSTABBER(first_w) )
   {
     stabbed = TRUE;
-    if(notch_skill(ch, SKILL_BACKSTAB, get_property("skill.notch.offensive", 7))
-      || percent_chance > number(0, 100)
-      || GET_STAT(victim) <= STAT_SLEEPING )
+    if( notch_skill(ch, SKILL_BACKSTAB, get_property("skill.notch.offensive", 7))
+      || percent_chance > number(0, 100) || GET_STAT(victim) <= STAT_SLEEPING )
     {
-      if(single_stab(ch, victim, first_w))
+      if( single_stab(ch, victim, first_w) )
       {
         return TRUE;
       }
@@ -5149,25 +5149,23 @@ bool backstab(P_char ch, P_char victim)
     }
   }
 
-  if(!char_in_list(victim) || (!IS_ALIVE(victim))
-    || (ch->in_room != victim->in_room))
+  if( !char_in_list(victim) || (!IS_ALIVE(victim)) || (ch->in_room != victim->in_room) )
   {
     return TRUE;
   }
 
-  if((!stabbed || GET_CLASS(ch, CLASS_ASSASSIN) || GET_SPEC(ch, CLASS_ROGUE, SPEC_ASSASSIN))
-    && second_w && IS_BACKSTABBER(second_w))
+  if( (!stabbed || GET_CLASS(ch, CLASS_ASSASSIN) || GET_SPEC(ch, CLASS_ROGUE, SPEC_ASSASSIN))
+    && second_w && IS_BACKSTABBER(second_w) )
   {
-    if(percent_chance > number(0, 100) ||
-       GET_STAT(victim) <= STAT_SLEEPING)
+    if( percent_chance > number(0, 100) || GET_STAT(victim) <= STAT_SLEEPING )
     {
-      if(stabbed)
+      if( stabbed )
       {
-        if(IS_FIGHTING(victim))
+        if( IS_FIGHTING(victim) )
         {
           stop_fighting(victim);
         }
-        if(IS_DESTROYING(victim))
+        if( IS_DESTROYING(victim) )
         {
           stop_destroying(victim);
         }
@@ -5185,13 +5183,16 @@ bool backstab(P_char ch, P_char victim)
     }
   }
 
-  if(victim && IS_ALIVE(victim) && !affected_by_spell(victim, SKILL_AWARENESS))
+  if( victim && IS_ALIVE(victim) && !affected_by_spell(victim, SKILL_AWARENESS) )
   {
+    set_short_affected_by(victim, SKILL_BACKSTAB, PULSE_VIOLENCE );
+/* Making this a short duration instead of PULSE_VIOLENCE ticks (like 20 min).
     bzero(&af, sizeof(af));
-    af.type = SKILL_AWARENESS;
+    af.type = SKILL_BACKSTAB;
     af.duration = PULSE_VIOLENCE;
     af.bitvector = AFF_AWARE;
     affect_to_char(victim, &af);
+*/
   }
 
   return TRUE;
@@ -5222,9 +5223,7 @@ void attack(P_char ch, P_char victim)
   struct affected_type *af;
   int      skl;
 
-  if( !ch || !victim
-    || !CanDoFightMove(ch, victim)
-    || IS_IMMOBILE(ch)
+  if( !ch || !victim || !CanDoFightMove(ch, victim) || IS_IMMOBILE(ch)
     // If victim & ch are at different heights, we don't attack.
     || victim->specials.z_cord != ch->specials.z_cord )
   {
@@ -5249,46 +5248,40 @@ void attack(P_char ch, P_char victim)
 
     act("$n suddenly attacks $N!", FALSE, ch, 0, victim, TO_NOTVICT);
     act("$n suddenly attacks YOU!", FALSE, ch, 0, victim, TO_VICT);
-    
+
     victim = guard_check(ch, victim);
 
     mobact_rescueHandle(victim, ch);
-    
+
     ch->specials.combat_tics = ch->specials.base_combat_round;
-    
-    if(!IS_FIGHTING(victim))
+
+    if( !IS_FIGHTING(victim) )
     {
       victim->specials.combat_tics = victim->specials.base_combat_round;
     }
-    
+
 #ifndef NEW_COMBAT
-    if(IS_ALIVE(victim) &&
-       !surprise(ch, victim))
+    if( IS_ALIVE(victim) && !surprise(ch, victim) )
     {
       hit(ch, victim, ch->equipment[PRIMARY_WEAPON]);
     }
 #else
-    hit(ch, victim, ch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(ch),
-        TRUE, FALSE);
+    hit(ch, victim, ch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(ch), TRUE, FALSE);
 #endif
-    if(char_in_list(ch) &&
-      (IS_PC(ch) ||
-      (ch->following &&
-      IS_PC(ch->following))))
+    if( char_in_list(ch) && (IS_PC(ch) || (ch->following && IS_PC(ch->following))) )
     {
       CharWait(ch, PULSE_VIOLENCE + 2);
     }
   }
-  else if(victim == ch->specials.fighting)
+  else if( victim == ch->specials.fighting )
   {
     send_to_char("C'mon, you are doing it all the time!\n", ch);
     return;
   }
   else
   {
-    if(!CanDoFightMove(ch->specials.fighting, ch) ||
-      IS_IMMOBILE(ch) ||
-      GET_STAT(ch->specials.fighting) <= STAT_SLEEPING)
+    if( !CanDoFightMove(ch->specials.fighting, ch) || IS_IMMOBILE(ch)
+      || GET_STAT(ch->specials.fighting) <= STAT_SLEEPING )
     {
       stop_fighting(ch);
       act("$n turns to focus $s attack on $N!", FALSE, ch, 0, victim, TO_ROOM);
@@ -5298,41 +5291,37 @@ void attack(P_char ch, P_char victim)
       return;
     }
 
-    if(!CAN_ACT(victim) ||
-      (GET_POS(victim) != POS_STANDING))
+    if( !CAN_ACT(victim) || (GET_POS(victim) != POS_STANDING) )
     {
       skl += GET_LEVEL(ch);
     }
 
-    if(has_innate(victim, INNATE_CALMING) && 
-        (number(0, 120) <= GET_LEVEL(victim) * 2))
+    if( has_innate(victim, INNATE_CALMING) && (number(0, 120) <= GET_LEVEL(victim) * 2) )
+    {
       skl -= (110 - GET_CHAR_SKILL(ch, SKILL_SWITCH_OPPONENTS));
+    }
 
-    if(notch_skill(ch, SKILL_SWITCH_OPPONENTS, get_property("skill.notch.switch", 10))
-      || skl >= number(1, 101))
+    if( notch_skill(ch, SKILL_SWITCH_OPPONENTS, get_property("skill.notch.switch", 10))
+      || skl >= number(1, 101) )
     {
       stop_fighting(ch);
-      act("$n turns to focus $s attack on $N!",
-        FALSE, ch, 0, victim, TO_ROOM);
+      act("$n turns to focus $s attack on $N!", FALSE, ch, 0, victim, TO_ROOM);
       victim = guard_check(ch, victim);
       set_fighting(ch, victim);
       send_to_char("You switch opponents!\n", ch);
-      
-      if(IS_PC(ch) ||
-        (ch->following && IS_PC(ch->following)))
+
+      if( IS_PC(ch) || (ch->following && IS_PC(ch->following)) )
       {
         CharWait(ch, PULSE_VIOLENCE + 2);
       }
     }
     else
     {
-      send_to_char("You try to switch opponents, but you become confused!\n",
-                   ch);
+      send_to_char("You try to switch opponents, but you become confused!\n", ch);
       stop_fighting(ch);
-      if(IS_PC(ch) ||
-        (ch->following && IS_PC(ch->following)))
+      if( IS_PC(ch) || (ch->following && IS_PC(ch->following)) )
       {
-        CharWait(ch, PULSE_VIOLENCE * 2);
+        CharWait(ch, PULSE_VIOLENCE + 2);
       }
     }
   }
@@ -10142,24 +10131,26 @@ void do_garrote(P_char ch, char *argument, int cmd)
 {
   P_char   victim = NULL;
 
-  if(!(ch) || !IS_ALIVE(ch))
+  if( !(ch) || !IS_ALIVE(ch) )
+  {
     return;
-  
-  if(affected_by_spell(ch, SKILL_GARROTE))
+  }
+
+  if( affected_by_spell(ch, SKILL_GARROTE) )
   {
     send_to_char("You must wait before attempting to &+rgarrote&n again.\r\n", ch);
     return;
   }
 
-  victim = ParseTarget(ch, argument);
-  
-  if (GET_CHAR_SKILL(ch, SKILL_GARROTE) < 1)
+  if( GET_CHAR_SKILL(ch, SKILL_GARROTE) < 1 )
   {
     send_to_char("Sure! You'll probably cut yourself trying!&n\r\n", ch);
     return;
   }
-  
-  if(!(victim) || !IS_ALIVE(victim))
+
+  victim = ParseTarget(ch, argument);
+
+  if( !IS_ALIVE(victim) )
   {
     //CharWait(ch, (int)(0.5 * PULSE_VIOLENCE));
     send_to_char("Who's throat would you like to &+rcut&n?\n", ch);
@@ -10174,33 +10165,38 @@ void do_garrote(P_char ch, char *argument, int cmd)
 
   int success = GET_CHAR_SKILL(ch, SKILL_GARROTE);
   notch_skill(ch, SKILL_GARROTE, 6.67);
-  if(number(1, 105) > success)
+  if( number(1, 105) > success )
   {
     act("&+LYou try to slip behind &n$N&+L, but they notice the attempt and block your advance!",
-    FALSE, ch, 0, victim, TO_CHAR); 
+    FALSE, ch, 0, victim, TO_CHAR);
     act("&+LYou notice &n$n &+Lattempting to sneak behind you, but quickly block their advance!",
     FALSE, ch, 0, victim, TO_VICT);
     act("$N &+Ladeptly notices &n$n's attempt to &+rgarrote&+L them and blocks the attempt!",
     FALSE, ch, 0, victim, TO_NOTVICT);
-    set_short_affected_by(ch, SKILL_GARROTE, (int) (2.8 * PULSE_VIOLENCE));
-    CharWait(ch, (int)(0.5 * PULSE_VIOLENCE));
+    set_short_affected_by(ch, SKILL_GARROTE, PULSE_VIOLENCE);
+    CharWait(ch, WAIT_SEC * 2);
     return;
   }
-  
+
   act("&+LYou skillfully slip behind&n $N &+Land &+rslit &+Ltheir &+rth&+Rro&+rat&+L resulting in a &+Rmist &+Lof &+rblood&+L!&n",
-    FALSE, ch, 0, victim, TO_CHAR); 
+    FALSE, ch, 0, victim, TO_CHAR);
 	act("&+rOUCH! &n$n &+Lsuddenly appears behind you and makes a &+rslashing &+Lmotion at your &+rth&+Rro&+rat&+L!",
     FALSE, ch, 0, victim, TO_VICT);
   act("$N &+Lsuddenly stumbles, grasping at their &+rneck&+L as &n$n &+Lstands behind them grinning!",
     FALSE, ch, 0, victim, TO_NOTVICT);
-  set_short_affected_by(ch, SKILL_GARROTE, (int) (2.8 * PULSE_VIOLENCE));
+  if( IS_CASTING(victim) )
+  {
+    StopCasting(victim);
+  }
+  set_short_affected_by(ch, SKILL_GARROTE, PULSE_VIOLENCE);
 	int	numb = number(5, 8);
-  CharWait(ch, (int)(0.5 * PULSE_VIOLENCE));
-  if (!IS_FIGHTING(ch))
+  CharWait(ch, WAIT_SEC);
+  if( !IS_FIGHTING(ch) )
+  {
     set_fighting(ch, victim);
+  }
 
 	add_event(event_garroteproc, PULSE_VIOLENCE, victim, 0, 0, 0, &numb, sizeof(numb));
-
 }
 
 void do_legsweep(P_char ch, char *arg, int cmd)
