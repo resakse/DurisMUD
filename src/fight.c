@@ -3996,7 +3996,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags,
             TRUE, ch, 0, victim, TO_NOTVICT);
         act("$N raises hands performing an &+Marcane gesture&n and some of your &+mspell's energy&n is dispersed.",
             TRUE, ch, 0, victim, TO_CHAR);
-        act("You perform an &+Marcane gesture&n dispersing some of $n's &+mmspell energy.&n",
+        act("You perform an &+Marcane gesture&n dispersing some of $n's &+mspell energy.&n",
             TRUE, ch, 0, victim, TO_VICT);
         dam = dam - number(1, (get_property("skill.arcane.block.dam.reduction", .004) * GET_CHAR_SKILL(victim, SKILL_ARCANE_BLOCK) * dam));
       }
