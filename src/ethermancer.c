@@ -635,8 +635,7 @@ void spell_vapor_strike(int level, P_char ch, char *arg, int type,
   }
 }
 
-void spell_forked_lightning(int level, P_char ch, char *arg, int type,
-                            P_char victim, P_obj tar_obj)
+void spell_forked_lightning(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
 {
   int      dam;
   int num_missiles = 3;
@@ -650,18 +649,24 @@ void spell_forked_lightning(int level, P_char ch, char *arg, int type,
       0
   };
 
-  if (GET_LEVEL(ch) >= 53)
-          num_missiles ++;
-  dam = 5 * MIN(level, 56) + number(1, 25);
+  if( GET_LEVEL(ch) >= 53 )
+  {
+    num_missiles ++;
+  }
 
-  if (saves_spell(victim, SAVING_SPELL))
-    dam >>= 1;
+  // dam should total: 9 * level +/- 25 .. but 3 forks -> 3 * level +/- 8..
+  //   Making it vary a little more and do a little less..
+  dam = 3 * level + number(-20, 4);
 
-//  gain_exp(ch, victim, 0, EXP_DAMAGE); removed, changed to normal damage exp -Odorf
+  if( NewSaves(victim, SAVING_SPELL, 0) )
+  {
+    dam = (dam * 2) / 3;
+  }
 
-  while (num_missiles-- &&
-      spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, 0,
-                   &messages) == DAM_NONEDEAD);
+  while( num_missiles-- && spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, 0, &messages) == DAM_NONEDEAD)
+  {
+    ;
+  }
 }
 
 struct frost_data
@@ -1502,8 +1507,7 @@ void spell_ethereal_alliance(int level, P_char ch, char *arg, int type,
 
 // Cosmomancer spec
 
-void spell_comet(int level, P_char ch, char *arg, int type,
-                      P_char victim, P_obj tar_obj)
+void spell_comet(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
 {
   int    temp, dam;
   struct damage_messages messages = {
@@ -1519,11 +1523,13 @@ void spell_comet(int level, P_char ch, char *arg, int type,
   if( !GET_SPEC(ch, CLASS_ETHERMANCER, SPEC_STARMAGUS) )
   {
     temp = MIN(50, (level + 1));
-    dam = dice(((int)(level/3) + 5), 6) * 3; // A little less than fireball.
+    // Fireball damage.
+    dam = dice(((int)(level/3) + 5), 6) * 4;
   }
   else
   {
-    dam = dice(((int)(level/3) + 5), 6) * 4; // Fireball damage.
+    // A little more than fireball damage.
+    dam = dice(((int)(level/3) + 5), 8) * 4 + 20;
   }
 
   if( !StatSave(victim, APPLY_POW, 0) )
