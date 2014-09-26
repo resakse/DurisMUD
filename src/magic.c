@@ -12169,8 +12169,7 @@ void spell_greater_heal_undead(int level, P_char ch, char *arg, int type,
   update_pos(victim);
 }
 
-void spell_prot_undead(int level, P_char ch, char *arg, int type,
-                       P_char victim, P_obj obj)
+void spell_prot_undead(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct affected_type af;
 
@@ -12187,9 +12186,9 @@ void spell_prot_undead(int level, P_char ch, char *arg, int type,
   }
 
   // Prot undeads no longer stack on Aktosh.  This is cheesy for MindFlayer.
-  if( has_skin_spell(victim) && isname( GET_NAME(ch), "Aktosh") )
+  if( has_skin_spell(victim) && isname( GET_NAME(victim), "Aktosh") )
   {
-    act("$N's skin seems to be already altered.", FALSE, ch, 0, victim, TO_CHAR);
+    act("$N seems to be already protected.", FALSE, ch, 0, victim, TO_CHAR);
     return;
   }
   /*
