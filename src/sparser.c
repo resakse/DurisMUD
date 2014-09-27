@@ -1263,7 +1263,7 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data, char *arg
   data->t_char = vict = 0;
   data->t_obj = obj = 0;
 
-  if (!IS_SET(skills[spl].targets, TAR_IGNORE))
+  if( !IS_SET(skills[spl].targets, TAR_IGNORE) && !IS_SET(skills[spl].targets, TAR_OFFAREA) )
   {
     argument = one_argument(argument, Gbuf1);
 
@@ -1473,7 +1473,7 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data, char *arg
     }
     else
     {                           /* Nothing was given as argument  */
-      if (skills[spl].targets < TAR_OBJ_INV)
+      if( !IS_SET(skills[spl].targets, TAR_OBJ_INV) )
         send_to_char("&+WWho should the spell be cast upon?  You must specify a target!\n", ch);
       else
         send_to_char("&+WWhat should the spell be cast upon?  You must specify a target!\n", ch);
@@ -1708,124 +1708,136 @@ bool parse_spell(P_char ch, char *argument,  struct spell_target_data* target_da
   return parse_spell(ch, argument, target_data, CMD_CAST);
 }
 
+// Returns TRUE if ch is killed, FALSE otherwise.
 bool check_mob_retaliate(P_char ch, P_char tar_char, int spl)
 {
   P_char tch, tch2;
 
-  if (IS_SET(skills[spl].targets, TAR_IGNORE) ||
-      IS_SET(skills[spl].targets, TAR_AREA))
+  // This should never be the case, but just to be careful..
+  if( !IS_SET(skills[spl].targets, TAR_AGGRO) || !IS_ALIVE(ch) )
   {
-    /*
-       this is real wicked case, like a fellow casting a 'swarm or somesuch
-       other aggro kick-ass spell. all unoccupied mobsters which would get
-       hit by spl do automagical tackle at fellow! - they better be occupied,
+    debug( "check_mob_retaliate: Non-aggro (%s) or dead/missing ch: %s is %s.",
+      IS_SET(skills[spl].targets, TAR_AGGRO) ? "NO" : "YES",
+      !ch ? "NULL" : J_NAME(ch), IS_ALIVE(ch) ? "ALIVE" : "DEAD" );
+    return TRUE;
+  }
 
-       OR...
-     */
-    if (IS_AFFECTED(ch, AFF_INVISIBLE))
+  // If TAR_IGNORE: Unknown target type(?), but aggro, ie area-only aggro like earthquake/nova/etc.
+  //   TAR_OFFAREA: A correctly identified area offensive spell.
+  //      TAR_AREA: +AGGRO +no target -> targettable to non-area spell (ie doom/acid rain), but aggro area otherwise.
+  if( IS_SET(skills[spl].targets, TAR_IGNORE) || IS_SET(skills[spl].targets, TAR_OFFAREA)
+    || (IS_SET(skills[spl].targets, TAR_AREA) && !tar_char) )
+  {
+    if( IS_AFFECTED(ch, AFF_INVISIBLE) )
+    {
       appear(ch);
+    }
 
-    for (tch = world[ch->in_room].people; tch; tch = tch2)
+    /* This is real wicked case, like a fellow casting a 'swarm or some such
+     *  other aggro kick-ass spell. all unoccupied mobsters which would get hit
+     *  by spl do automagical tackle at fellow! - they better be occupied, OR...
+     */
+    for( tch = world[ch->in_room].people; tch; tch = tch2 )
     {
       tch2 = tch->next_in_room;
-      if (tch == ch)
+
+      if( tch == ch )
+      {
         continue;
-      if (IS_AFFECTED2(tch, AFF2_MINOR_PARALYSIS) ||
-          IS_AFFECTED2(tch, AFF2_MAJOR_PARALYSIS))
+      }
+      if( IS_AFFECTED2(tch, AFF2_MINOR_PARALYSIS) || IS_AFFECTED2(tch, AFF2_MAJOR_PARALYSIS) )
+      {
         continue;
-      if (!CAN_SEE(tch, ch) || IS_FIGHTING(tch) || !CAN_ACT(tch))
+      }
+      if( !CAN_SEE(tch, ch) || IS_FIGHTING(tch) || !CAN_ACT(tch) || GET_POS(tch) < POS_STANDING )
+      {
         continue;
-      if (!should_area_hit(ch, tch))
+      }
+      if( !should_area_hit(ch, tch) || (IS_PC(tch) && IS_PC(ch)) )
         continue;
-      if (IS_PC(tch) && IS_PC(ch))
+
+      // If the below conditional is true, then ITS NOT AN AGGRO SPELL!
+      if( ((spl == SPELL_HOLY_WORD) && !IS_EVIL(tch))
+        || ((spl == SPELL_UNHOLY_WORD) && !IS_GOOD(tch))
+        || ((spl == SPELL_VOICE_OF_CREATION)) && !IS_EVIL(tch) )
+      {
         continue;
-      if (GET_POS(tch) < POS_STANDING)
+      }
+
+      // Chance not to notice.
+      if( number(1, 150) > (GET_LEVEL(tch) + STAT_INDEX(GET_C_INT(tch))) )
+      {
         continue;
-      /*
-         if the below conditional is true, then ITS NOT AN AGGRO SPELL!
+      }
+
+      /* Justice hook:
+       *  Okay.. at this point, the victim knows that he's about to get hit by an aggro
+       *  area spell.  If he doesn't know it, he'll know when the spell goes off.
+       *  If he's already fighting the caster , there is no reason to call this.
+       *  The only problem with this code, is that someone else in the room might
+       *  (or might not) notice the aggression.
+       *  This code, unfortunatly, limits everyones knowledge to basically the same as
+       *  the victims. :(
        */
-      if (((spl == SPELL_HOLY_WORD) && !IS_EVIL(tch)) ||
-          ((spl == SPELL_UNHOLY_WORD) && !IS_GOOD(tch)) ||
-	  ((spl == SPELL_VOICE_OF_CREATION)) && !IS_EVIL(tch))
-        continue;
-
-      if (number(1, 150) > (GET_LEVEL(tch) + STAT_INDEX(GET_C_INT(tch))))
-        continue;
-
-      // if doom is being targeted, no need to have everyone retaliate in room
-      if (spl == SPELL_CDOOM && tar_char && tar_char != tch)
-	continue;
-      /*
-         justice hook:
-
-         okay.. at this point, the victim knows that he's about to get hit by
-
-         an aggro area spell.  If he doesn't know it, he'll know when the
-         spell goes off. If he's already fighting the caster , there is no
-         reason to call this. The only problem with this code, is that
-         someone else in the room might (or might not) notice the aggression.
-
-         This code, unfortunatly, limits everyones knowledge to basically the
-
-         same as the victims. :(
-       */
-
       justice_witness(ch, tch, CRIME_ATT_MURDER);
 
-      if (IS_NPC(tch))
+      if( IS_NPC(tch) )
+      {
         MobStartFight(tch, ch);
+      }
       else
+      {
 #ifndef NEW_COMBAT
         hit(tch, ch, tch->equipment[PRIMARY_WEAPON]);
 #else
-      hit(tch, ch, tch->equipment[WIELD], TYPE_UNDEFINED,
-          getBodyTarget(tch), TRUE, FALSE);
+        hit(tch, ch, tch->equipment[WIELD], TYPE_UNDEFINED, getBodyTarget(tch), TRUE, FALSE);
 #endif
-
-      if (!char_in_list(ch))
+      }
+      if( !IS_ALIVE(ch) || !char_in_list(ch) )
+      {
         return TRUE;
+      }
     }
   }
-  else if (IS_SET(skills[spl].targets, TAR_CHAR_RANGE))
+  else if( IS_SET(skills[spl].targets, TAR_CHAR_RANGE) )
   {
-    if (tar_char && (tar_char != ch))
+    if( tar_char && (tar_char != ch) )
     {
-      if (IS_AFFECTED(ch, AFF_INVISIBLE))
+      if( IS_AFFECTED(ch, AFF_INVISIBLE) )
+      {
         appear(ch);
+      }
       justice_witness(ch, tar_char, CRIME_ATT_MURDER);
     }
   }
   else
   {
-    if (tar_char && (tar_char != ch))
+    if( tar_char && (tar_char != ch) )
     {
-      if (IS_AFFECTED(ch, AFF_INVISIBLE))
-        appear(ch);
-
-      /*
-         ok, code to do some quick 'n' dirty hostility checks
-       */
-      if (IS_NPC(tar_char) && !IS_FIGHTING(tar_char) &&
-          CAN_SEE(tar_char, ch) && (GET_POS(ch) == POS_STANDING))
+      if( IS_AFFECTED(ch, AFF_INVISIBLE) )
       {
-        /*
-           if a mobster, automagically attacks fellow trying to cast
-           offensive spell at someone in room if able to.
-         */
-        if (number(1, 150) <=
-            (GET_LEVEL(tar_char) + STAT_INDEX(GET_C_INT(tar_char))))
-        {
+        appear(ch);
+      }
 
-          /*
-             justice hook: read comments above
-           */
+      // A quick 'n dirty hostility check
+      // If mob, automagically attacks fellow trying to cast offensive spell at them if able.
+      if( IS_NPC(tar_char) && !IS_FIGHTING(tar_char)
+        && CAN_SEE(tar_char, ch) && (GET_POS(ch) == POS_STANDING) )
+      {
+        if( number(1, 150) <= (GET_LEVEL(tar_char) + STAT_INDEX(GET_C_INT(tar_char))) )
+        {
+          // Justice hook: read notes above
           justice_witness(ch, tar_char, CRIME_ATT_MURDER);
           if( IS_DESTROYING(tar_char) )
+          {
             stop_destroying(tar_char);
+          }
           MobStartFight(tar_char, ch);
 
-          if (!char_in_list(ch))
+          if( !IS_ALIVE(ch) || !char_in_list(ch) )
+          {
             return TRUE;
+          }
         }
       }
     }
@@ -2566,8 +2578,8 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
    * bitwise masking operations proceed into a boolean not. - SKB 12 Apr 1995
    */
 
-  if (!IS_SET(skills[arg->spell].targets, TAR_IGNORE)
-    && !IS_SET(skills[arg->spell].targets, TAR_AREA)
+  if( !IS_SET(skills[arg->spell].targets, TAR_IGNORE)
+    && !IS_SET(skills[arg->spell].targets, TAR_AREA) && !IS_SET(skills[arg->spell].targets, TAR_OFFAREA)
     && !IS_SET(skills[arg->spell].targets, (TAR_OBJ_INV | TAR_OBJ_ROOM | TAR_OBJ_WORLD | TAR_OBJ_EQUIP)) )
   {
     if( (!tar_char && !IS_SET(skills[arg->spell].targets, TAR_CHAR_WORLD))

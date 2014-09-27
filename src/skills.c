@@ -595,7 +595,7 @@ void initialize_skills()
   SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 10, SPEC_DARK_DREAMER);
 
   SPELL_CREATE("shadow spawn", SPELL_SHADOW_SPAWN, PULSE_SPELLCAST * 3,
-                TAR_IGNORE | TAR_AGGRO, spell_shadow_burst);
+                TAR_OFFAREA | TAR_AGGRO, spell_shadow_burst);
   SPEC_SPELL_ADD(CLASS_ILLUSIONIST, 9, SPEC_DARK_DREAMER);
 
   SPELL_CREATE("mirage", SPELL_MIRAGE, PULSE_SPELLCAST * 8,
@@ -1206,7 +1206,7 @@ void initialize_skills()
 
 
   SPELL_CREATE("entropy storm", SPELL_ENTROPY_STORM, PULSE_SPELLCAST * 2,
-                TAR_IGNORE | TAR_AGGRO, spell_entropy_storm);
+                TAR_OFFAREA | TAR_AGGRO, spell_entropy_storm);
   SPELL_ADD(CLASS_WARLOCK, 11);
 
   SPELL_CREATE("chain lightning", SPELL_CHAIN_LIGHTNING, PULSE_SPELLCAST * 2,
@@ -1306,7 +1306,7 @@ void initialize_skills()
   SPELL_ADD(CLASS_BLIGHTER, 4);
 
   SPELL_CREATE("earthquake", SPELL_EARTHQUAKE, PULSE_SPELLCAST * 2,
-                TAR_IGNORE | TAR_AGGRO, spell_earthquake);
+                TAR_OFFAREA | TAR_AGGRO, spell_earthquake);
   SPELL_ADD(CLASS_CLERIC, 3);
   SPELL_ADD(CLASS_DRUID, 5);
   SPELL_ADD(CLASS_BLIGHTER, 5);
@@ -1469,15 +1469,15 @@ void initialize_skills()
   SPEC_SPELL_ADD(CLASS_RANGER, 10, SPEC_MARSHALL);
 
   SPELL_CREATE("nova", SPELL_NOVA, PULSE_SPELLCAST * 3,
-                TAR_IGNORE | TAR_AGGRO, spell_nova);
+                TAR_OFFAREA | TAR_AGGRO, spell_nova);
   SPELL_ADD(CLASS_DRUID, 12);
 
   SPELL_CREATE("sandstorm", SPELL_SANDSTORM, PULSE_SPELLCAST * 3,
-                TAR_IGNORE | TAR_AGGRO, spell_sandstorm);
+                TAR_OFFAREA | TAR_AGGRO, spell_sandstorm);
   SPELL_ADD(CLASS_BLIGHTER, 12);
 
   SPELL_CREATE("spore burst", SPELL_SPORE_BURST, PULSE_SPELLCAST * 3,
-                TAR_IGNORE | TAR_AGGRO, spell_spore_burst);
+                TAR_OFFAREA | TAR_AGGRO, spell_spore_burst);
   SPEC_SPELL_ADD(CLASS_DRUID, 11, SPEC_WOODLAND);
   
   SPELL_CREATE("spore cloud", SPELL_SPORE_CLOUD, PULSE_SPELLCAST * 2,
@@ -2199,7 +2199,7 @@ SPELL_CREATE("vigorize light", SPELL_VIGORIZE_LIGHT, PULSE_SPELLCAST * 2,
   SPELL_ADD(CLASS_CONJURER, 12);
 
   SPELL_CREATE("cloak of fear", SPELL_CLOAK_OF_FEAR, PULSE_SPELLCAST,
-                TAR_IGNORE | TAR_AGGRO, spell_cloak_of_fear);
+                TAR_OFFAREA | TAR_AGGRO, spell_cloak_of_fear);
   SPELL_ADD(CLASS_NECROMANCER, 10);
   SPELL_ADD(CLASS_THEURGIST, 10);
 
@@ -3523,7 +3523,7 @@ SPELL_ADD(CLASS_SUMMONER, 11);
 
   // Frost Magus Spec
   SPELL_CREATE("squall", SPELL_TEMPEST, PULSE_SPELLCAST * 4,
-                TAR_IGNORE | TAR_AGGRO, spell_tempest);
+                TAR_OFFAREA | TAR_AGGRO, spell_tempest);
   SPEC_SPELL_ADD(CLASS_ETHERMANCER, 11, SPEC_FROSTMAGUS);
   SPEC_SPELL_ADD(CLASS_BLIGHTER, 10, SPEC_STORMBRINGER);
 
@@ -3534,7 +3534,7 @@ SPELL_ADD(CLASS_SUMMONER, 11);
   SPEC_SPELL_ADD(CLASS_ETHERMANCER, 10, SPEC_TEMPESTMAGUS);
   
   SPELL_CREATE("polar vortex", SPELL_POLAR_VORTEX, PULSE_SPELLCAST * 4,
-	            TAR_IGNORE | TAR_AGGRO, spell_polar_vortex);
+	            TAR_OFFAREA | TAR_AGGRO, spell_polar_vortex);
   SPEC_SPELL_ADD(CLASS_ETHERMANCER, 12, SPEC_FROSTMAGUS);
 
   // Windtalker Spec
