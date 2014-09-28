@@ -5183,7 +5183,7 @@ bool backstab(P_char ch, P_char victim)
     }
   }
 
-  if( victim && IS_ALIVE(victim) && !affected_by_spell(victim, SKILL_AWARENESS) )
+  if( victim && IS_ALIVE(victim) && IS_PC(victim) && !affected_by_spell(victim, SKILL_BACKSTAB) )
   {
     set_short_affected_by(victim, SKILL_BACKSTAB, 2*WAIT_SEC );
 /* Making this a short duration instead of PULSE_VIOLENCE ticks (like 20 min).
