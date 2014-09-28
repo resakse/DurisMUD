@@ -1884,6 +1884,9 @@ void do_will(P_char ch, char *argument, int cmd)
   send_to_char("&+mYou begin to focus your will...\n", ch);
   dura = (SpellCastTime(ch, spl));
 
+  // Handle for not having quick chant.. they're all fast-thinkers.
+  dura >>= 1;
+
   if ((GET_CHAR_SKILL(ch, SKILL_SPATIAL_FOCUS) > 0) &&
       (5 + GET_CHAR_SKILL(ch, SKILL_SPATIAL_FOCUS) / 10 > number(0,100)))
   {
@@ -1908,7 +1911,9 @@ void do_will(P_char ch, char *argument, int cmd)
       }
   }
   else
-      CharWait(ch, dura);
+  {
+    CharWait(ch, dura);
+  }
 
   splnum = spl;
   SpellCastShow(ch, spl);
@@ -2322,10 +2327,6 @@ void do_cast(P_char ch, char *argument, int cmd)
   {
     dura >>= 1;
   }
-  else if( USES_MANA(ch) )
-  {
-    dura >>= 1;
-  }
 
   tmp_spl.timeleft = dura;
 // if( IS_PC(ch) ) debug( "Final cast time: %d.", tmp_spl.timeleft );
@@ -2512,7 +2513,7 @@ void event_spellcast(P_char ch, P_char victim, P_obj obj, void *data)
         skl = SKILL_SPELL_KNOWLEDGE_MAGICAL;
       }
       //if (GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID | CLASS_ETHERMANCER) ||
-      if( GET_CLASS(ch, CLASS_PSIONICIST | CLASS_DRUID | CLASS_BLIGHTER) ||
+      if( GET_CLASS(ch, CLASS_PSIONICIST | CLASS_MINDFLAYER | CLASS_DRUID | CLASS_BLIGHTER) ||
 	      number(1, 100) <= GET_CHAR_SKILL(ch, skl) )
       {
         sprintf(buf, "Casting: %s ", skills[arg->spell].name);
