@@ -1986,14 +1986,16 @@ void spell_conjour_elemental(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  if(!can_conjure_lesser_elem(ch, level))
+  if( !can_conjure_lesser_elem(ch, level) )
   {
     send_to_char("You cannot control any more elementals!\n", ch);
     return;
   }
 
-  if(GET_RACE(ch) == RACE_PLICH)
-  return;
+  if( GET_RACE(ch) == RACE_PLICH )
+  {
+    return;
+  }
 
   if(IS_SPECIALIZED(ch))
   {
@@ -2012,6 +2014,8 @@ void spell_conjour_elemental(int level, P_char ch, char *arg, int type,
       sum = 1;
       break;
     default:
+      debug( "Invalid spec (%d) on char '%s'.", ch->player.spec, J_NAME(ch) );
+      return;
       break;
     }
   }
@@ -2028,7 +2032,7 @@ void spell_conjour_elemental(int level, P_char ch, char *arg, int type,
 
   mob = read_mobile(real_mobile(summons[sum].mob_number), REAL);
 
-  if(!mob)
+  if( !mob )
   {
     logit( LOG_DEBUG, "spell_conjure_elemental(): mob %d not loadable", summons[sum].mob_number );
     send_to_char( "Bug in conjure elemental.  Tell a god!\n", ch );
