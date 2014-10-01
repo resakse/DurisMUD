@@ -429,7 +429,6 @@ int room_light(int room_nr, int flag)
   {
     if( t_ch->light > 0 )
     {
-if( rroom == 59 ) debug( "t_ch: %s, light %d", J_NAME(t_ch), t_ch->light );
       amt += t_ch->light;
     }
     if( t_ch == t_ch->next_in_room )
