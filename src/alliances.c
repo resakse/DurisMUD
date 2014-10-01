@@ -452,7 +452,10 @@ void do_acc(P_char ch, char *argument, int cmd)
         
     for (i = descriptor_list; i; i = i->next)
     {
-
+      if( !i->character )
+      {
+        continue;
+      }
       if ((i->character != ch) && 
           (i->connected == CON_PLYNG ) &&
           !is_silent(i->character, FALSE) &&

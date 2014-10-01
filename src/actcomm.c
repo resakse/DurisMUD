@@ -124,8 +124,11 @@ bool is_overload(P_char ch)
 
 bool is_silent(P_char ch, bool showit)
 {
-  if(!ch)
-    return (FALSE);
+  // Makes more sense for a non-existant char to not be able to speak/hear.
+  if( !ch )
+  {
+    return TRUE;
+  }
 
   if( ch->in_room != NOWHERE
     && ((IS_SET(zone_table[world[ch->in_room].zone].flags, ZONE_SILENT)
@@ -539,7 +542,8 @@ void do_gcc(P_char ch, char *argument, int cmd)
     }
     for (i = descriptor_list; i; i = i->next)
     {
-
+      if( !i->character )
+        continue;
       if( (i->character != ch) && !is_silent(i->character, FALSE)
         && (i->connected == CON_PLYNG ) && IS_SET(i->character->specials.act, PLR_GCC)
         && IS_MEMBER(GET_A_BITS(i->character)) && (GET_A_NUM(i->character) == GET_A_NUM(ch))
