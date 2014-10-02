@@ -355,7 +355,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
   }
 
 
-  if( IS_AFFECTED4(ch, AFF4_EPIC_INCREASE) )
+  if( IS_AFFECTED4(ch, AFF4_EPIC_INCREASE) && type != EPIC_BOTTLE )
   {
     send_to_char("You feel the &+cblessing&n of the &+WGods&n wash over you.\n", ch);
     amount = (int) (amount * get_property("epic.witch.multiplier", 1.5));
@@ -371,17 +371,20 @@ void gain_epic(P_char ch, int type, int data, int amount)
     amount = MAX(1, (int) (amount * get_property("epic.errand.penaltyMod", 0.25)));
   }
 
-  // For marduk nexus stone... to change rate use property nexusStones.bonus.epics
-  amount = check_nexus_bonus(ch, amount, NEXUS_BONUS_EPICS);
-  amount = amount + (int)((float)amount * get_epic_bonus(ch, EPIC_BONUS_EPIC_POINT));
+  if( type != EPIC_BOTTLE )
+  {
+    // For marduk nexus stone... to change rate use property nexusStones.bonus.epics
+    amount = check_nexus_bonus(ch, amount, NEXUS_BONUS_EPICS);
+    amount = amount + (int)((float)amount * get_epic_bonus(ch, EPIC_BONUS_EPIC_POINT));
 
-  if(GET_RACEWAR(ch) == RACEWAR_GOOD)
-  {
-    amount = amount * (float)get_property("epic.gain.modifier.good", 1.000);
-  }
-  if(GET_RACEWAR(ch) == RACEWAR_EVIL)
-  {
-    amount = amount * (float)get_property("epic.gain.modifier.evil", 1.000);
+    if(GET_RACEWAR(ch) == RACEWAR_GOOD)
+    {
+      amount = amount * (float)get_property("epic.gain.modifier.good", 1.000);
+    }
+    if(GET_RACEWAR(ch) == RACEWAR_EVIL)
+    {
+      amount = amount * (float)get_property("epic.gain.modifier.evil", 1.000);
+    }
   }
 
   // add guild prestige
@@ -435,6 +438,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
   }
 
   statuslog(GREATER_G, "%s received %d epic points (%s)", ch->player.name, amount, type_str);
+  logit(LOG_EPIC, "%s received %d epic points (%s)", ch->player.name, amount, type_str);
 
   /*
     exp.maxExpLevel means the highest level you can reach with just experience (i.e., without epics)
@@ -450,7 +454,10 @@ void gain_epic(P_char ch, int type, int data, int amount)
   }
 
   // feed artifacts
-  epic_feed_artifacts(ch, amount, type);
+  if( type != EPIC_BOTTLE )
+  {
+    epic_feed_artifacts(ch, amount, type);
+  }
 
   // Handle the total number of epics ch has gained.
   if( afp = get_spell_from_char(ch, TAG_EPICS_GAINED) )
