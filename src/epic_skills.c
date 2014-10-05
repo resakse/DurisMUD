@@ -170,7 +170,7 @@ epic_teacher_skill epic_teachers[] = {
   {78006, SKILL_ENCHANT, 0, 100, 0, SKILL_SPELLBIND, 0}, //Bargor in Oasis
   {94017, SKILL_SPELLBIND, 0, 100, 0, SKILL_ENCHANT, 0}, //Kalroh in Maze of Undead Army
   {37145, SKILL_SMELT, 0, 100, 0, 0, 0}, //Carmotee in Dumaathe
-  {21618, SKILL_FORGE, 0, 100, 0, 0, 0}, //Tenkuss in Aravne
+//  {21618, SKILL_FORGE, 0, 100, 0, 0, 0}, //Tenkuss in Aravne
   {49162, SKILL_TOTEMIC_MASTERY, 0, 100, 0, 0, 0},
   {76008, SKILL_INFUSE_MAGICAL_DEVICE, 0, 100, 0, 0, 0},  //Deathium in Ultarium
   {28975, SKILL_INDOMITABLE_RAGE, 0, 100, 0, 0, 0},
@@ -195,7 +195,7 @@ void create_epic_skills()
 {
   SKILL_CREATE("mine", SKILL_MINE, TAR_EPIC);
   SKILL_CREATE("craft", SKILL_CRAFT, TAR_EPIC);
-  SKILL_CREATE("forge", SKILL_FORGE, TAR_EPIC);
+  SKILL_CREATE("forge", SKILL_FORGE, TAR_MENTAL | TAR_EPIC);
   SKILL_CREATE("spell mastery", SKILL_SPELL_MASTERY, TAR_MENTAL | TAR_EPIC);
   SKILL_CREATE("chant mastery", SKILL_CHANT_MASTERY, TAR_MENTAL | TAR_EPIC);
   SKILL_CREATE("anatomy", SKILL_ANATOMY, TAR_MENTAL | TAR_EPIC);
@@ -230,7 +230,6 @@ void create_epic_skills()
   SKILL_CREATE("enchant", SKILL_ENCHANT, TAR_PHYS | TAR_EPIC);
   SKILL_CREATE("spellbind", SKILL_SPELLBIND, TAR_PHYS | TAR_EPIC);
   SKILL_CREATE("smelt", SKILL_SMELT, TAR_PHYS | TAR_EPIC);
-  SKILL_CREATE("forge", SKILL_FORGE, TAR_MENTAL | TAR_EPIC);
   SKILL_CREATE("totemic mastery", SKILL_TOTEMIC_MASTERY, TAR_MENTAL | TAR_EPIC);
   SKILL_CREATE("natures sanctity", SKILL_NATURES_SANCTITY, TAR_MENTAL | TAR_EPIC);
   SKILL_CREATE("expert parry", SKILL_EXPERT_PARRY, TAR_MENTAL | TAR_EPIC);
