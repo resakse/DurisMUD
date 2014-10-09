@@ -4160,6 +4160,8 @@ SPELL_ADD(CLASS_SUMMONER, 11);
   SKILL_ADD(CLASS_REAVER, 1, 75);
   //SKILL_ADD(CLASS_BERSERKER, 1, 100);
   SKILL_ADD(CLASS_PSIONICIST, 21, 70);
+  // Bards get 1h slash for rapier and dirk innate.
+  SKILL_ADD(CLASS_BARD, 1, 70);
   // Thieves get 1h slash skill for shortswords only.  Hardcoded in fight.c
   SPEC_SKILL_ADD(CLASS_ROGUE, 30, 70, SPEC_THIEF);
   SPEC_SKILL_ADD(CLASS_NECROMANCER, 30, 90, SPEC_REAPER);
