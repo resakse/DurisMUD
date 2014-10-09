@@ -389,50 +389,47 @@ void do_acc(P_char ch, char *argument, int cmd)
 {
   P_desc   i;
   char     Gbuf1[MAX_STRING_LENGTH];
-  
-  if (IS_NPC(ch) && !GET_A_NUM(ch))
+
+  if( IS_NPC(ch) && !GET_A_NUM(ch) )
   {
     return;
   }
-  else if (!GET_A_NUM(ch) || !IS_MEMBER(GET_A_BITS(ch)))
+  else if( !GET_A_NUM(ch) || !IS_MEMBER(GET_A_BITS(ch)) )
   {
     send_to_char("You are not a member of any associations.\r\n", ch);
     return;
   }
-  else if (IS_SET(ch->specials.act, PLR_SILENCE) ||
-           IS_AFFECTED2(ch, AFF2_SILENCED) ||
-           affected_by_spell(ch, SPELL_SUPPRESSION) || 
-           !IS_SET(ch->specials.act2, PLR2_ACC) || 
-           is_silent(ch, TRUE))
+  else if( IS_SET(ch->specials.act, PLR_SILENCE) || IS_AFFECTED2(ch, AFF2_SILENCED)
+    || affected_by_spell(ch, SPELL_SUPPRESSION) || !IS_SET(ch->specials.act2, PLR2_ACC) || is_silent(ch, TRUE) )
   {
     send_to_char("You can't use the ACC channel!\r\n", ch);
     return;
   }
-   
+
   struct alliance_data *alliance = get_alliance(GET_A_NUM(ch));
-  
+
   if( !alliance )
   {
     send_to_char("Your association is not in an alliance!\n", ch);
     return;
   }
-  
+
   if (IS_AFFECTED(ch, AFF_WRAITHFORM))
   {
     send_to_char("You can't speak in this form!\r\n", ch);
     return;
   }
-  
-  while (*argument == ' ' && *argument != '\0')
+
+  while( *argument == ' ' && *argument != '\0')
   {
     argument++;
   }
-  
-  if (!*argument)
+
+  if( !*argument )
   {
     send_to_char("ACC? Yes! Fine! Chat we must, but WHAT??\r\n", ch);
   }
-  else if ((IS_NPC(ch) || can_talk(ch)))
+  else if( (IS_NPC(ch) || can_talk(ch)) )
   {
     if (ch->desc)
     {
@@ -446,29 +443,31 @@ void do_acc(P_char ch, char *argument, int cmd)
         send_to_char("&+bOk.\r\n", ch);
       }
     }
-      
-    if (get_property("logs.chat.status", 0.000) && IS_PC(ch))
+
+    if( get_property("logs.chat.status", 0.000) && IS_PC(ch) )
+    {
       logit(LOG_CHAT, "%s acc's '%s'", GET_NAME(ch), argument);
-        
-    for (i = descriptor_list; i; i = i->next)
+    }
+    for( i = descriptor_list; i; i = i->next )
     {
       if( !i->character )
       {
         continue;
       }
-      if ((i->character != ch) && 
-          (i->connected == CON_PLYNG ) &&
-          !is_silent(i->character, FALSE) &&
-          IS_SET(i->character->specials.act2, PLR2_ACC) &&
-          IS_MEMBER(GET_A_BITS(i->character)) &&
-          ( GET_A_NUM(i->character) == alliance->forging_assoc_id ||
-            GET_A_NUM(i->character) == alliance->joining_assoc_id ) &&
-          (!(IS_AFFECTED4(i->character, AFF4_DEAF))) &&
-          (GT_PAROLE(GET_A_BITS(i->character))) || (IS_TRUSTED(i->character) && IS_SET(i->character->specials.act, PLR2_ACC)))
+      if( IS_NPC(i->character) )
       {
-        sprintf(Gbuf1, "&+y%s&+y tells your alliance '&+Y%s&+y'\r\n",
-                PERS(ch, i->character, FALSE),
-                language_CRYPT(ch, i->character, argument));
+        logit( LOG_DEBUG, "do_acc: Character (%s) is on descriptor_list but is a NPC!", J_NAME(i->character) );
+        continue;
+      }
+      if( (i->character != ch) && (i->connected == CON_PLYNG) && !is_silent(i->character, FALSE)
+        && ( PLR2_FLAGGED(i->character, PLR2_ACC) || IS_TRUSTED(i->character) )
+        && IS_MEMBER(GET_A_BITS(i->character)) && ( GT_PAROLE(GET_A_BITS(i->character)) )
+        && ( GET_A_NUM(i->character) == alliance->forging_assoc_id || GET_A_NUM(i->character) == alliance->joining_assoc_id )
+        && ( !IS_AFFECTED4(i->character, AFF4_DEAF) )
+        && ( i->character->only.pc->ignored != ch ) )
+      {
+        sprintf(Gbuf1, "&+y%s&+y tells your alliance '&+Y%s&+y'\r\n", PERS(ch, i->character, FALSE),
+          language_CRYPT(ch, i->character, argument));
         send_to_char(Gbuf1, i->character, LOG_PRIVATE);
       }
     }
