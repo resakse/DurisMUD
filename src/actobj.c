@@ -693,9 +693,7 @@ void do_get(P_char ch, char *argument, int cmd)
           corpse_flag = 0;
         if (corpse_flag && fight_in_room(ch) && !on_front_line(ch))
         {
-          send_to_char
-            ("There's too much &+Rb&+rl&+Ro&+ro&+Rd flying around for you to do that!\r\n",
-             ch);
+          send_to_char("There's too much &+Rb&+rl&+Ro&+ro&+Rd&n flying around for you to do that!\r\n", ch);
           return;
         }
 
