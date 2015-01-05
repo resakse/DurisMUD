@@ -150,10 +150,10 @@ int mines_properties(int map)
     return (int)get_property("mines.maxTharnRift", 50);
     break;
   case MINES_GEM_SURFACE:
-    return (int)get_property("mines.maxGemSurface", 2);
+    return (int)get_property("mines.maxGemSurface", 6);
     break;
   case MINES_GEM_UD:
-    return (int)get_property("mines.maxGemUD", 6);
+    return (int)get_property("mines.maxGemUD", 2);
     break;
   default:
     logit(LOG_DEBUG, "mines_properties(): passing invalid map to function, using default 50 mines");

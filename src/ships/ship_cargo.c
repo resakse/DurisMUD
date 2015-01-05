@@ -28,6 +28,16 @@ float ship_contra_market_mod[NUM_PORTS][NUM_PORTS];
 // type of contraband
 const CargoData cargo_location_data[NUM_PORTS] = {
 //  Base cargo cost, Base contra cost, Required frags for contraband
+  { 42,    192,    150},
+  { 46,    202,    150},
+  { 40,    176,    100},
+  { 56,    196,    150},
+  { 36,    214,    200},
+  { 44,    183,    100},
+  { 38,    220,    200},
+  { 52,    204,    150},
+  { 48,    190,    150},
+/* Old prices: changed to accomodate gem mines causing inflation. 01/04/2015
   { 21,    142,    150},
   { 23,    152,    150},
   { 20,    126,    100},
@@ -37,6 +47,7 @@ const CargoData cargo_location_data[NUM_PORTS] = {
   { 19,    170,    200},
   { 26,    154,    150},
   { 24,    140,    150},
+*/
 };
 
 // This is the matrix that shows each port's preference for the other ports' cargo. Number is percentage.
@@ -466,13 +477,14 @@ int cargo_buy_price(int location, int type, bool delayed)
 {
   if (location == type)
     return cargo_sell_price(location, delayed) * 0.5;
+  // Adding a 1.5 multiplier for cargo being sold to account for gem mines. 01/04/2015
   if( delayed )
   {
-    return (int) (1000 * cargo_location_data[type].base_cost_cargo * (cargo_location_mod[location][type] / 100.0) * ship_cargo_market_mod_delayed[location][type]);
+    return (int) (1500 * cargo_location_data[type].base_cost_cargo * (cargo_location_mod[location][type] / 100.0) * ship_cargo_market_mod_delayed[location][type]);
   }
   else
   {
-    return (int) (1000 * cargo_location_data[type].base_cost_cargo * (cargo_location_mod[location][type] / 100.0) * ship_cargo_market_mod[location][type]);
+    return (int) (1500 * cargo_location_data[type].base_cost_cargo * (cargo_location_mod[location][type] / 100.0) * ship_cargo_market_mod[location][type]);
   }
 }
 
@@ -489,7 +501,8 @@ int contra_buy_price(int location, int type)
   if (location == type)
     return contra_sell_price(location) * 0.5;
   else
-    return (int) (1000 * cargo_location_data[type].base_cost_contra * (cargo_location_mod[location][type] / 100.0) * ship_contra_market_mod[location][type]);
+    // Adding a 1.5 multiplier for cargo being sold to account for gem mines. 01/04/2015
+    return (int) (1500 * cargo_location_data[type].base_cost_contra * (cargo_location_mod[location][type] / 100.0) * ship_contra_market_mod[location][type]);
 }
 
 void adjust_ship_market(int transaction, int location, int type, int volume)
