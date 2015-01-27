@@ -353,12 +353,21 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
         else
         {
           P_ship temp = shipObjHash.find(obj);
-          if( temp && (SHIP_DOCKED(temp) || temp->race == NPCSHIP) )
+          if( temp )
+          {
+            if( SHIP_DOCKED(temp) || temp->race == NPCSHIP )
+            {
               val = MIN(val, CONTAINS_SHIP);
-          else if (temp->race == GOODIESHIP)
+            }
+            else if( temp->race == GOODIESHIP )
+            {
               val = MIN(val, CONTAINS_GOOD_SHIP);
-          else if (temp->race == EVILSHIP)
+            }
+            else if( temp->race == EVILSHIP )
+            {
               val = MIN(val, CONTAINS_EVIL_SHIP);
+            }
+          }
         }
       }
       else if (obj->type == ITEM_CORPSE)
