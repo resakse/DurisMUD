@@ -713,7 +713,8 @@ void setHeavenTime(P_char victim)
   if(victim)
   {
     //time_in_heaven = ((GET_LEVEL(victim) - 1) / 10 + 1) * 60;
-    time_in_heaven = 15;
+    // New value: level+20 seconds in heaven.
+    time_in_heaven = GET_LEVEL(victim)+20;
     victim->only.pc->pc_timer[PC_TIMER_HEAVEN] = time(NULL) + time_in_heaven;
   }
 }

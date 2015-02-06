@@ -391,7 +391,7 @@ O 0 76614 1 76799 100 0 0 0        * a black storage bin
 P 1 76615 1 76614 100 0 0 0        *   an armageddon signet ring
 P 1 76647 1 76614 100 0 0 0        *   a blood-stained booklet
 O 0 76645 1 76799 100 0 0 0        * a scrying mirror
-O 0 6081 1 76800 100 0 0 0         * (object type not in this .obj file)
+O 0 132581 1 76800 100 0 0 0       * (object type not in this .obj file)
 O 0 76632 1 76823 100 0 0 0        * a pile of bones
 P 1 76654 1 76632 100 0 0 0        *   a family heirloom
 O 0 76622 1 76844 100 0 0 0        * a series of metal shelves

@@ -608,7 +608,7 @@ int get_current_artifact_info( int rnum, int vnum, char *pname, int *id,
   else
   {
     // Try to hunt for obj in room save.
-    if( (f = fopen(fname, "rt")) )
+    if( freopen(fname, "rt", f) )
     {
       sprintf( name, "%s", fread_string(f) );
       fscanf(f, " %d %lu %d %lu\n", &t_id, &t_last_time, &t_tu, &t_blood);
