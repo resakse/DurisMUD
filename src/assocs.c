@@ -4314,25 +4314,30 @@ string get_assoc_name(int assoc_id)
 
 void check_assoc_prestige_epics(P_char ch, int epics, int epic_type)
 {
-  if( !IS_PC(ch) || !GET_A_NUM(ch) || !ch->group || (epics < (int) get_property("prestige.epicsMinimum", 4.000)) )
-    return;
-
   int assoc_members = 1;
+  int room = ch->in_room;
+
+  if( !IS_PC(ch) || !GET_A_NUM(ch) || (epics < (int) get_property("prestige.epicsMinimum", 4.000)) )
+  {
+    return;
+  }
 
   // Count group members in same guild
   for( struct group_list *gl = ch->group; gl; gl = gl->next )
   {
-    if( ch != gl->ch && IS_PC(gl->ch) && ch->in_room == gl->ch->in_room)
+    // Don't count ch twice, don't count NPCs, and don't count ppl not in room.
+    if( ch != gl->ch && IS_PC(gl->ch) && room == gl->ch->in_room )
     {
-      if (GET_A_NUM(gl->ch) == GET_A_NUM(ch))
+      // If they're in the same guild, count them.
+      if( GET_A_NUM(gl->ch) == GET_A_NUM(ch) )
       {
         assoc_members++;
       }
     }
   }
-  
+
   debug("check_assoc_prestige_epics(): assoc_members: %d, epics: %d, epic_type: %d", assoc_members, epics, epic_type);
-  
+
   // If members in group are above 3...
   if( assoc_members >= (int) get_property("prestige.guildedInGroupMinimum", 3.000) )
   {
@@ -4351,14 +4356,14 @@ void check_assoc_prestige_epics(P_char ch, int epics, int epic_type)
       case EPIC_NEXUS_STONE:
       default:
         prestige = (int) get_property("prestige.gain.default", 10);
-    }    
-    
+    }
+
     prestige = check_nexus_bonus(ch, prestige, NEXUS_BONUS_PRESTIGE);
 
     debug("check_assoc_prestige_epics(): gain: %d", prestige);
 
     send_to_char("&+bYour guild gained prestige!\r\n", ch);
-    add_assoc_prestige( GET_A_NUM(ch), prestige);
+    add_assoc_prestige( GET_A_NUM(ch), prestige );
   }
 }
 //
