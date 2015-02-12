@@ -631,7 +631,7 @@ P_obj create_stones(P_char ch)
 }
 
 
-int check_random_drop(P_char ch, P_char mob, int piece)
+bool check_random_drop(P_char ch, P_char mob, int piece)
 {
   int      dropprocent = 0;
   int      x, i = 0;
@@ -639,31 +639,40 @@ int check_random_drop(P_char ch, P_char mob, int piece)
   struct trophy_data *tr;
 
 
-  if (!ch || !mob)
-    return 0;
-  
+  if( !ch || !mob )
+  {
+    return FALSE;
+  }
+
+  if( !GET_EXP(mob) || IS_SHOPKEEPER(mob) )
+  {
+    return FALSE;
+  }
+
+  if( IS_SET(world[ch->in_room].room_flags, GUILD_ROOM) )
+  {
+    return FALSE;
+  }
+
   char_lvl = GET_LEVEL(ch);
   mob_lvl = GET_LEVEL(mob);
 
-  if (!GET_EXP(mob))
-    return 0;
+  if( CHAR_IN_TOWN(ch) && (mob_lvl > 25) )
+  {
+    return FALSE;
+  }
 
-  if (IS_SET(world[ch->in_room].room_flags, GUILD_ROOM))
-    return 0;
-
-  if (CHAR_IN_TOWN(ch) && (mob_lvl > 25))
-    return 0;
-
-  if ((char_lvl - mob_lvl) > 10)
-    return 0;
-
+  if( (char_lvl - mob_lvl) > 10 )
+  {
+    return FALSE;
+  }
 /*  while (i < 15)
   {
     if (highdrop_mobs[i] == GET_VNUM(mob))
     {
       if (!number(0, 5))
       {
-        return 1;
+        return TRUE;
       }
     }
     i++;
@@ -694,7 +703,7 @@ int check_random_drop(P_char ch, P_char mob, int piece)
   if (chance > 175.0)
     chance = 175.0;
    */
-  
+
     chance = (int) ((luck / get_property("random.drop.luck.divisor", 10)) * charmobdiv);
     chance += number(0, 20);
     if(char_lvl < get_property("random.drop.increase.for.below.lvl", 20))
@@ -711,9 +720,9 @@ int check_random_drop(P_char ch, P_char mob, int piece)
     chance = chance * (get_property("random.drop.modifier.hardcore", 150.0f) / 100.0);
 
   if (chance > number(0, 100 + (trophy_mod * 2)))
-    return 1;
+    return TRUE;
 
-  return 0;
+  return FALSE;
 }
 
 P_obj create_random_eq_new(P_char killer, P_char mob, int object_type, int material_type)
