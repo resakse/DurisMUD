@@ -586,7 +586,7 @@ int get_current_artifact_info( int rnum, int vnum, char *pname, int *id,
   }
   owner->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
-  if( restoreCharOnly(owner, pname) >= 0 )
+  if( restoreCharOnly(owner, name) >= 0 )
   {
     fclose(f);
     if( RACE_GOOD(owner) )
@@ -609,7 +609,7 @@ int get_current_artifact_info( int rnum, int vnum, char *pname, int *id,
   }
   else
   {
-
+    logit(LOG_DEBUG, "Failed char load, checking room load: pname: '%s', name: '%s'.", pname ? pname : "NULL", name );
     // Try to hunt for obj in room save.
     if( (fseek(f, 0L, SEEK_SET) != -1) )
     {
