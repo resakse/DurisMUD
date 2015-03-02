@@ -474,87 +474,126 @@ CAN_GCC(P_char ch)
 void do_gcc(P_char ch, char *argument, int cmd)
 {
   P_desc   i;
+  P_char   to_ch;
+  ush_int  from_guild, to_guild;
   char     Gbuf1[MAX_STRING_LENGTH];
 
-  if (IS_NPC(ch))
+  from_guild = GET_A_NUM(ch);
+
+  if( IS_NPC(ch) )
   {
-    if (!GET_A_NUM(ch))
+    // Unguilded NPCs can't gcc (Golems/Magic Mouths can)..
+    if( !from_guild )
     {
-      send_to_char("You can't use the GCC channel!\r\n", ch);
+      send_to_char("Your a dumb unguilded mob, wth?!\r\n", ch);
       return;
     }
   }
-  else if (IS_SET(ch->specials.act, PLR_SILENCE) ||
-           affected_by_spell(ch, SPELL_SUPPRESSION) || 
-           !IS_SET(ch->specials.act, PLR_GCC) || is_silent(ch, TRUE))
+  // The specials.act flags are different for NPCs thus the need for the else
+  else if( IS_SET(ch->specials.act, PLR_SILENCE) || !IS_SET(ch->specials.act, PLR_GCC) )
   {
     send_to_char("You can't use the GCC channel!\r\n", ch);
     return;
   }
 
-  // multi chars' primary level stays the same, allow multis to gcc at secondary levels 1-24..
-
-  if (ch->player.level < 25)
+  if( affected_by_spell(ch, SPELL_SUPPRESSION) || is_silent(ch, TRUE) )
   {
-    send_to_char
-      ("You cannot join a guild until level 25, thus you cannot GCC until level 25.\r\n",
-       ch);
+    send_to_char("If you can't 'say', 'shout', or 'emote', what makes you think you can 'gcc'?\r\n", ch);
     return;
   }
 
-  if (IS_AFFECTED(ch, AFF_WRAITHFORM))
+  // This is pretty old, but ok (still works)..
+  // Multi chars' primary level stays the same, allow multis to gcc at secondary levels 1-24..
+  if( ch->player.level < 25 )
+  {
+    send_to_char("You cannot join a guild until level 25, thus you cannot GCC until level 25.\r\n", ch);
+    return;
+  }
+
+  if( IS_AFFECTED(ch, AFF_WRAITHFORM) )
   {
     send_to_char("You can't speak in this form!\r\n", ch);
     return;
   }
-  if (!GET_A_NUM(ch) || !IS_MEMBER(GET_A_BITS(ch)) ||
-      (IS_PC(ch) && !GT_PAROLE(GET_A_BITS(ch))))
+  // If not guilded, not a member, or a PC who's not above parole rank.
+  if( !from_guild || !IS_MEMBER(GET_A_BITS(ch)) || ( IS_PC(ch) && !GT_PAROLE(GET_A_BITS(ch)) ) )
   {
     send_to_char("Try becoming part of a guild first!  DUH!\r\n", ch);
     return;
   }
-  if (IS_AFFECTED2(ch, AFF2_SILENCED))
-  {
-    send_to_char
-      ("If you can't 'say', 'shout', or 'emote', what makes you think you can 'gcc'?\r\n",
-       ch);
-    return;
-  }
-  while (*argument == ' ' && *argument != '\0')
-    argument++;
 
-  if (!*argument)
-    send_to_char("GCC? Yes! Fine! Chat we must, but WHAT??\r\n", ch);
-  else if (!is_silent(ch, TRUE) && (IS_NPC(ch) || can_talk(ch)))
+  // Skip leading spaces..
+  while( *argument == ' ' )
   {
-    if (ch->desc)
+    argument++;
+  }
+  // If they gcc'd without content..
+  if( !*argument )
+  {
+    send_to_char("GCC? Yes! Fine! Chat we must, but WHAT??\r\n", ch);
+  }
+  // All guilded NPCs can talk, can_talk() checks race (shapechanged into an animal -> no speaking).
+  else if( IS_NPC(ch) || can_talk(ch) )
+  {
+    // Include shapechanged, switched, etc.
+    if( ch->desc )
     {
-      if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
+      // NPCs always see their guild chatter (in case of switch, etc).
+      if( IS_NPC(ch) || IS_SET(ch->specials.act, PLR_ECHO) )
       {
         sprintf(Gbuf1, "&+cYou tell your guild '&+C%s&n&+c'\r\n", argument);
         send_to_char(Gbuf1, ch, LOG_PRIVATE);
       }
       else
-        send_to_char("Ok.\r\n", ch);
-  
-      if (get_property("logs.chat.status", 0.000) && IS_PC(ch))
-        logit(LOG_CHAT, "%s gcc's '%s'", GET_NAME(ch), argument);
-    }
-    for (i = descriptor_list; i; i = i->next)
-    {
-      if( !i->character )
-        continue;
-      if( (i->character != ch) && !is_silent(i->character, FALSE)
-        && (i->connected == CON_PLYNG ) && IS_SET(i->character->specials.act, PLR_GCC)
-        && IS_MEMBER(GET_A_BITS(i->character)) && (GET_A_NUM(i->character) == GET_A_NUM(ch))
-        && (!(IS_AFFECTED4(i->character, AFF4_DEAF))) && (GT_PAROLE(GET_A_BITS(i->character)))
-        || (IS_TRUSTED(i->character) && IS_SET(i->character->specials.act, PLR_GCC)
-        && (i->character != ch) && i->connected == CON_PLYNG) )
       {
-        sprintf(Gbuf1, "&+c%s&n&+c tells your guild '&+C%s&n&+c'\r\n", PERS(ch, i->character, FALSE),
-          language_CRYPT(ch, i->character, argument));
-        send_to_char(Gbuf1, i->character, LOG_PRIVATE);
+        send_to_char("Ok.\r\n", ch);
       }
+
+      if( get_property("logs.chat.status", 0.000) && IS_PC(ch) )
+      {
+        logit(LOG_CHAT, "%s gcc's '%s'", GET_NAME(ch), argument);
+      }
+    }
+    for( i = descriptor_list; i; i = i->next )
+    {
+      if( !(to_ch = i->character) )
+      {
+        continue;
+      }
+      if( IS_NPC(to_ch) )
+      {
+        logit( LOG_DEBUG, "do_gcc: Character (%s) is on descriptor_list but is a NPC!", J_NAME(to_ch) );
+        continue;
+      }
+
+      // Skip ch, ppl at menu/char creation/etc, and deaf ppl.
+      if( to_ch == ch || i->connected != CON_PLYNG || is_silent( to_ch, FALSE )
+        || IS_AFFECTED4(i->character, AFF4_DEAF) )
+      {
+        continue;
+      }
+
+      // Dereference once for ease and speed.
+      to_guild = GET_A_NUM(to_ch);
+      if( IS_TRUSTED(to_ch) )
+      {
+        // If they'r governing a diff't association or they have GCC toggled off
+        if( (to_guild && to_guild != from_guild) || !PLR_FLAGGED(to_ch, PLR_GCC) )
+        {
+          continue;
+        }
+      }
+      // Mortals need GCC on, and must be a guilded in the same guild, must be a member, not on parole.
+      //   And can't be ignoring ch.
+      else if( !PLR_FLAGGED(to_ch, PLR_GCC) || to_guild != from_guild
+        || !IS_MEMBER(GET_A_BITS(i->character)) || !GT_PAROLE(GET_A_BITS(to_ch))
+        || to_ch->only.pc->ignored == ch )
+      {
+        continue;
+      }
+      sprintf(Gbuf1, "&+c%s&n&+c tells your guild '&+C%s&n&+c'\r\n", PERS(ch, to_ch, FALSE),
+        language_CRYPT(ch, to_ch, argument));
+      send_to_char(Gbuf1, to_ch, LOG_PRIVATE);
     }
   }
 }

@@ -388,17 +388,22 @@ void send_to_alliance(char *str, int assoc_id)
 void do_acc(P_char ch, char *argument, int cmd)
 {
   P_desc   i;
+  P_char   to_ch;
+  ush_int  to_guild;
   char     Gbuf1[MAX_STRING_LENGTH];
 
+  // Golems/Magic Mouth
   if( IS_NPC(ch) && !GET_A_NUM(ch) )
   {
     return;
   }
+  // Must be a Member of the guild (not banned/applicant)
   else if( !GET_A_NUM(ch) || !IS_MEMBER(GET_A_BITS(ch)) )
   {
     send_to_char("You are not a member of any associations.\r\n", ch);
     return;
   }
+  // Can't speak.
   else if( IS_SET(ch->specials.act, PLR_SILENCE) || IS_AFFECTED2(ch, AFF2_SILENCED)
     || affected_by_spell(ch, SPELL_SUPPRESSION) || !IS_SET(ch->specials.act2, PLR2_ACC) || is_silent(ch, TRUE) )
   {
@@ -414,7 +419,7 @@ void do_acc(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (IS_AFFECTED(ch, AFF_WRAITHFORM))
+  if( IS_AFFECTED(ch, AFF_WRAITHFORM) )
   {
     send_to_char("You can't speak in this form!\r\n", ch);
     return;
@@ -431,9 +436,9 @@ void do_acc(P_char ch, char *argument, int cmd)
   }
   else if( (IS_NPC(ch) || can_talk(ch)) )
   {
-    if (ch->desc)
+    if( ch->desc )
     {
-      if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
+      if( IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch) )
       {
         sprintf(Gbuf1, "&+yYou tell your alliance '&+Y%s&+y'\r\n", argument);
         send_to_char(Gbuf1, ch, LOG_PRIVATE);
@@ -450,26 +455,47 @@ void do_acc(P_char ch, char *argument, int cmd)
     }
     for( i = descriptor_list; i; i = i->next )
     {
-      if( !i->character )
+      if( !(to_ch = i->character) )
       {
         continue;
       }
-      if( IS_NPC(i->character) )
+      if( IS_NPC(to_ch) )
       {
-        logit( LOG_DEBUG, "do_acc: Character (%s) is on descriptor_list but is a NPC!", J_NAME(i->character) );
+        logit( LOG_DEBUG, "do_acc: Character (%s) is on descriptor_list but is a NPC!", J_NAME(to_ch) );
         continue;
       }
-      if( (i->character != ch) && (i->connected == CON_PLYNG) && !is_silent(i->character, FALSE)
-        && ( PLR2_FLAGGED(i->character, PLR2_ACC) || IS_TRUSTED(i->character) )
-        && IS_MEMBER(GET_A_BITS(i->character)) && ( GT_PAROLE(GET_A_BITS(i->character)) )
-        && ( GET_A_NUM(i->character) == alliance->forging_assoc_id || GET_A_NUM(i->character) == alliance->joining_assoc_id )
-        && ( !IS_AFFECTED4(i->character, AFF4_DEAF) )
-        && ( i->character->only.pc->ignored != ch ) )
+
+      // Skip ch, ppl at menu/char creation/etc, and deaf ppl.
+      if( to_ch == ch || i->connected != CON_PLYNG || is_silent( to_ch, FALSE )
+        || IS_AFFECTED4(i->character, AFF4_DEAF) )
       {
-        sprintf(Gbuf1, "&+y%s&+y tells your alliance '&+Y%s&+y'\r\n", PERS(ch, i->character, FALSE),
-          language_CRYPT(ch, i->character, argument));
-        send_to_char(Gbuf1, i->character, LOG_PRIVATE);
+        continue;
       }
+
+      // Dereference once for ease and speed.
+      to_guild = GET_A_NUM(to_ch);
+
+      // Immortals follow different acc rules:
+      if( IS_TRUSTED(to_ch) )
+      {
+        // If they'r governing a diff't association (or ally) or they have ACC toggled off
+        if( (to_guild && to_guild != alliance->forging_assoc_id && to_guild != alliance->joining_assoc_id)
+          || !PLR2_FLAGGED(to_ch, PLR2_ACC) )
+        {
+          continue;
+        }
+      }
+      // Mortals need ACC on, and must be a guilded in the same guild/ally, must be a member, not on parole.
+      //   And can't be ignoring ch.
+      else if( !PLR2_FLAGGED(to_ch, PLR2_ACC) || !to_guild
+        || !(to_guild == alliance->forging_assoc_id || to_guild == alliance->joining_assoc_id)
+        || !IS_MEMBER(GET_A_BITS(to_ch)) || !GT_PAROLE(GET_A_BITS(to_ch)) || to_ch->only.pc->ignored == ch )
+      {
+        continue;
+      }
+      sprintf(Gbuf1, "&+y%s&+y tells your alliance '&+Y%s&+y'\r\n", PERS(ch, to_ch, FALSE),
+        language_CRYPT(ch, to_ch, argument));
+      send_to_char(Gbuf1, to_ch, LOG_PRIVATE);
     }
   }
 }
