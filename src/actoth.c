@@ -1403,6 +1403,15 @@ void do_quit(P_char ch, char *argument, int cmd)
 
 void event_autosave(P_char ch, P_char victim, P_obj obj, void *data)
 {
+  // Not sure how this is happening, but it'll stop crashes.
+  if( !IS_ALIVE(ch) )
+  {
+    debug( "event_autosave: DEAD/NONEXISTANT char %s '%s'.", (ch==NULL) ? "!" : IS_NPC(ch) ? "NPC" : "PC",
+      (ch==NULL) ? "NULL" : J_NAME(ch) );
+    logit( LOG_DEBUG, "event_autosave: DEAD/NONEXISTANT char %s '%s'.", (ch==NULL) ? "!" : IS_NPC(ch) ? "NPC" : "PC",
+      (ch==NULL) ? "NULL" : J_NAME(ch) );
+    return;
+  }
   do_save_silent(ch, 1);
   add_event(event_autosave, 1200, ch, 0, 0, 0, 0, 0);
 }

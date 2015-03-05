@@ -3009,6 +3009,16 @@ int alt_hometown_check(P_char ch, int room, int count)
 
 void schedule_pc_events(P_char ch)
 {
+  // Not sure if this is happening...
+  if( !IS_ALIVE(ch) )
+  {
+    debug( "schedule_pc_events: DEAD/NONEXISTANT char %s '%s'.", (ch==NULL) ? "!" : IS_NPC(ch) ? "NPC" : "PC",
+      (ch==NULL) ? "NULL" : J_NAME(ch) );
+    logit( LOG_DEBUG, "schedule_pc_events: DEAD/NONEXISTANT char %s '%s'.",
+      (ch==NULL) ? "!" : IS_NPC(ch) ? "NPC" : "PC", (ch==NULL) ? "NULL" : J_NAME(ch) );
+    return;
+  }
+
   add_event(event_autosave, 1200, ch, 0, 0, 0, 0, 0);
   if (has_innate(ch, INNATE_HATRED))
     add_event(event_hatred_check,
