@@ -390,6 +390,7 @@ P 1 69010 1 69009 100 0 0 0        *   the longsword of Halp
 O 0 69036 1 69096 100 0 0 0        * a simple fountain
 O 0 69013 1 69121 100 0 0 0        * the long bar
 O 0 69035 1 69136 100 0 0 0        * a bookcase
+O 0 3097 1 69149 100 0 0 0         * (object type not in this .obj file)
 O 0 69025 1 69195 100 0 0 0        * a wooden desk
 P 1 69022 1 69025 100 0 0 0        *   a order form
 P 1 69040 1 69025 100 0 0 0        *   a simple key
