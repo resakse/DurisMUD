@@ -76,7 +76,8 @@
 #define SPLDAM_PSI       9
 #define SPLDAM_SPIRIT   10
 #define SPLDAM_SOUND    11
-#define LAST_SPLDAM_TYPE 11
+#define SPLDAM_EARTH    12
+#define LAST_SPLDAM_TYPE 12
 
 #define ELEMENTAL_DAM(type) (type >= SPLDAM_FIRE && type <= SPLDAM_ACID)
 

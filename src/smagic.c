@@ -404,94 +404,84 @@ void event_elemental_fury(P_char ch, P_char victim, P_obj obj, void *data)
 
   fdata = (struct fury_data *) data;
 
-  if(ch->in_room != fdata->room)
+  if( ch->in_room != fdata->room )
   {
     send_to_char("&+GYour elemental fury is distrupted!\r\n", ch);
     return;
   }
 
-  switch (fdata->round)
+  switch( fdata->round )
   {
   case 0:
   {
-    act
-      ("&+cA soft breeze begins tugging at your clothes, quickly gaining strength.",
-       FALSE, ch, 0, 0, TO_ROOM);
-    act
-      ("&+WYou feel the elements heeding your call and command them to strike your foes with &+Cwind&+W, &n&+yearth&+W, &n&+rheat&+W, and &+Bcold&+W!",
-       FALSE, ch, 0, 0, TO_CHAR);
+    act("&+cA soft breeze begins tugging at your clothes, quickly gaining strength.", FALSE, ch, 0, 0, TO_ROOM);
+    act("&+WYou feel the elements heeding your call and command them to strike your foes with &+Cwind&+W, &n&+yearth&+W, &n&+rheat&+W, and &+Bcold&+W!",
+      FALSE, ch, 0, 0, TO_CHAR);
     break;
   }
   case 1:
   {
     if(IS_WATER_ROOM(ch->in_room))
     {
-      act("&+BA massive amount of water ciculates and tosses everything about!&n",
-        FALSE, ch, 0, 0, TO_ROOM);
+      act("&+BA massive amount of water ciculates and tosses everything about!&n", FALSE, ch, 0, 0, TO_ROOM);
       act("&+BYou summon forth a massive wave of water ciculates and tosses everything about!&n",
         FALSE, ch, 0, 0, TO_CHAR);
-      
       for (t = world[ch->in_room].people; t; t = t_next)
       {
         t_next = t->next_in_room;
-        
-        if(!should_area_hit(ch, t))
-          continue;
-        
-        if(GET_RACE(t) == RACE_W_ELEMENTAL ||
-           IS_TRUSTED(t) ||
-           IS_IMMATERIAL(t) ||
-           IS_ELITE(t))
-              continue;
-        
-        if(!StatSave(t, APPLY_AGI, -4))
+
+        if( !should_area_hit(ch, t) )
         {
-          act("&+BA wall of water &=Cslams&n into you making you fall!&n",
-            FALSE, ch, 0, t, TO_VICT);
-          act("&+BA wall of water &=Cslams&n into $n making $m fall!&n",
-            FALSE, ch, 0, t, TO_ROOM);
-          
+          continue;
+        }
+
+        if( GET_RACE(t) == RACE_W_ELEMENTAL || IS_TRUSTED(t) || IS_IMMATERIAL(t) || IS_ELITE(t) )
+        {
+          continue;
+        }
+
+        if( !StatSave(t, APPLY_AGI, -4) )
+        {
+          act("&+BA wall of water &=Cslams&n into you making you fall!&n", FALSE, ch, 0, t, TO_VICT);
+          act("&+BA wall of water &=Cslams&n into $n making $m fall!&n", FALSE, ch, 0, t, TO_ROOM);
+
           SET_POS(t, number(0, 2) + GET_STAT(t));
-          
-          if(GET_POS(t) == POS_PRONE)
+          if( GET_POS(t) == POS_PRONE )
+          {
             CharWait(t, PULSE_VIOLENCE);
-         
-          if(make_wet(t, 3))
+          }
+
+          if( make_wet(t, 3) )
+          {
             Stun(t, ch,  PULSE_VIOLENCE, TRUE);
+          }
         }
       }
     }
-    else if(OUTSIDE(ch))
+    else if( OUTSIDE(ch) )
     {
-      act("&+yA deadly hail of stones sweeps through the room!&n",
-        FALSE, ch, 0, 0, TO_ROOM);
-      act("&+yA deadly hail of stones sweeps through the room!&n",
-        FALSE, ch, 0, 0, TO_CHAR);
-      
-      spell_earthen_rain(GET_LEVEL(ch), ch, NULL, SPLDAM_GENERIC, NULL, NULL);
+      act("&+yA deadly hail of stones sweeps through the room!&n", FALSE, ch, 0, 0, TO_ROOM);
+      act("&+yA deadly hail of stones sweeps through the room!&n", FALSE, ch, 0, 0, TO_CHAR);
+
+      spell_earthen_rain( GET_LEVEL(ch) - 10, ch, NULL, SPLDAM_EARTH, NULL, NULL);
     }
     else
-      spell_greater_earthen_grasp(GET_LEVEL(ch), ch, NULL, SPLDAM_GENERIC, NULL, NULL);
-    
+    {
+      spell_greater_earthen_grasp(GET_LEVEL(ch), ch, NULL, SPLDAM_EARTH, NULL, NULL);
+    }
     break;
   }
   case 2:
-    act("&+rWithout warning the fierce winds explode with heat!&n",
-      FALSE, ch, 0, 0, TO_ROOM);
-    act("&+rWithout warning the fierce winds explode with heat!&n",
-      FALSE, ch, 0, 0, TO_CHAR);
-    
-    spell_scathing_wind(GET_LEVEL(ch), ch, NULL, SPLDAM_FIRE, NULL, NULL);
-    
+    act("&+rWithout warning the fierce winds explode with heat!&n", FALSE, ch, 0, 0, TO_ROOM);
+    act("&+rWithout warning the fierce winds explode with heat!&n", FALSE, ch, 0, 0, TO_CHAR);
+    spell_scathing_wind( GET_LEVEL(ch) - 10, ch, NULL, SPLDAM_FIRE, NULL, NULL);
     break;
   case 3:
     act("&+CThe winds abruptly drop below freezing, blowing in the icy chill of the north!&n",
-       FALSE, ch, 0, 0, TO_ROOM);
+      FALSE, ch, 0, 0, TO_ROOM);
     act("&+CThe winds abruptly drop below freezing, blowing in the icy chill of the north!&n",
-       FALSE, ch, 0, 0, TO_CHAR);
-    
-    spell_tempest(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, NULL, NULL);
-      
+      FALSE, ch, 0, 0, TO_CHAR);
+    spell_tempest( GET_LEVEL(ch) - 10, ch, NULL, SPELL_TYPE_SPELL, NULL, NULL);
     break;
   default:
     return;
@@ -499,37 +489,33 @@ void event_elemental_fury(P_char ch, P_char victim, P_obj obj, void *data)
 
   fdata->round++;
 
-  add_event(event_elemental_fury, PULSE_VIOLENCE, ch, 0, NULL, 0, fdata,
-            sizeof(struct fury_data));
+  add_event(event_elemental_fury, PULSE_VIOLENCE, ch, 0, NULL, 0, fdata, sizeof(struct fury_data));
 }
 
-void spell_elemental_fury(int level, P_char ch, char *arg, int type,
-                          P_char victim, P_obj tar_obj)
+void spell_elemental_fury(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
 {
   struct fury_data fdata;
-  int room = ch->in_room;
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(room))
-      return;
-  
-  if(victim)
-    do_point(ch, victim);
+  int room;
 
-  act("&+CReaching upwards, $n calls upon the &+Wfury&+C of the elements!",
-      FALSE, ch, 0, 0, TO_ROOM);
-  act("&+CReaching upwards, you call upon the &+Wfury&+C of the elements!",
-      FALSE, ch, 0, 0, TO_CHAR);
+  if( !IS_ALIVE(ch) || !(room = ch->in_room) )
+  {
+    return;
+  }
+
+  if( victim )
+  {
+    do_point(ch, victim);
+  }
+
+  act("&+CReaching upwards, $n calls upon the &+Wfury&+C of the elements!", FALSE, ch, 0, 0, TO_ROOM);
+  act("&+CReaching upwards, you call upon the &+Wfury&+C of the elements!", FALSE, ch, 0, 0, TO_CHAR);
 
   fdata.round = 0;
   fdata.room = room;
-  add_event(event_elemental_fury, PULSE_VIOLENCE, ch, 0, NULL, 0, &fdata,
-            sizeof(fdata));
+  add_event( event_elemental_fury, PULSE_VIOLENCE, ch, 0, NULL, 0, &fdata, sizeof(fdata) );
 }
 
-void spell_ice_missile(int level, P_char ch, char *arg, int type,
-                       P_char victim, P_obj obj)
+void spell_ice_missile(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int      temp;
   int      dam;
@@ -1237,8 +1223,7 @@ void spell_scathing_wind(int level, P_char ch, char *arg, int type,
     }
 }
 
-void spell_single_earthen_rain(int level, P_char ch, char *arg, int type,
-                               P_char victim, P_obj obj)
+void spell_single_earthen_rain(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int      dam;
   struct damage_messages messages = {
@@ -1249,90 +1234,86 @@ void spell_single_earthen_rain(int level, P_char ch, char *arg, int type,
     "&+yA hail of earth and stone crushes you to death.",
     "&+yA hail of earth and stone crushes &n$N&n&+y into a bloody pulp."
   };
-  
-  if(!(ch) ||
-     !(victim) ||
-     !IS_ALIVE(ch) ||
-     !IS_ALIVE(victim))
-      return;
-  
-  if(!OUTSIDE(ch) &&
-     !IS_UNDERWORLD(ch->in_room) &&
-     world[ch->in_room].sector_type != SECT_EARTH_PLANE)
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
+
+  if( !OUTSIDE(ch) && !IS_UNDERWORLD(ch->in_room) && world[ch->in_room].sector_type != SECT_EARTH_PLANE )
   {
     send_to_char("You must be outside to cast this spell.\n", ch);
     return;
   }
-  
-  if(IS_OCEAN_ROOM(ch->in_room))
+
+  if( IS_OCEAN_ROOM(ch->in_room) )
   {
     send_to_char("&+yThere is not a piece of earth in sight.\n", ch);
     return;
   }
 
-  dam = dice(level, 5) * 3; 
-  
-  if(NewSaves(victim, SAVING_BREATH, 2))
-    dam = (int) (dam * 0.66);
-    
-  if(number(0, 1) &&
-     resists_spell(ch, victim))
-      return;
+  dam = dice(level, 5) * 3;
 
-  // Spell does generic damage which is not receive the elementalist bonus.
-  if( has_innate(ch, INNATE_ELEMENTAL_POWER) )
+  if(NewSaves(victim, SAVING_BREATH, 2))
   {
-     dam = dam * 2.5;
+    dam = (int) (dam * 0.66);
   }
 
-  if (IS_PC(ch) && IS_PC(victim))
+  if( number(0, 1) && resists_spell(ch, victim) )
+  {
+      return;
+  }
+
+  // Spell does SPLDAM_EARTH now.
+  if( has_innate(ch, INNATE_ELEMENTAL_POWER) )
+  {
+     dam = (int) (dam * get_property("damage.increase.elementalist", 1.150));
+  }
+
+  if( IS_PC(ch) && IS_PC(victim) )
+  {
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
-  
+  }
+
   dam = dam * get_property("spell.area.damage.factor.earthenRain", 1.000);
 
-  spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_NOSHRUG, &messages);
+  spell_damage(ch, victim, dam, SPLDAM_EARTH, SPLDAM_NOSHRUG, &messages);
 }
 
-void spell_earthen_rain(int level, P_char ch, char *arg, int type,
-                        P_char victim, P_obj obj)
+void spell_earthen_rain(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
 
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-      return;
-  
-  if(!OUTSIDE(ch) &&
-     !IS_UNDERWORLD(ch->in_room) &&
-     world[ch->in_room].sector_type != SECT_EARTH_PLANE)
+  if( !IS_ALIVE(ch) )
+  {
+    return;
+  }
+
+  if( !OUTSIDE(ch) && !IS_UNDERWORLD(ch->in_room) && world[ch->in_room].sector_type != SECT_EARTH_PLANE )
   {
     send_to_char("You must be outside to cast this spell.\n", ch);
     return;
   }
-  
-  if(IS_OCEAN_ROOM(ch->in_room))
+
+  if( IS_OCEAN_ROOM(ch->in_room) )
   {
     send_to_char("&+yThere is not a piece of earth in sight.\n", ch);
     return;
   }
 
   send_to_char("&+yA &+Ldeadly rain&n &+yof rocks and &+Yearth &+yfalls from above!&n\n", ch);
-  act("&+yA &+Ldeadly rain&n &+yof rocks and &+Yearth &+yfalls from above!",
-    FALSE, ch, 0, 0, TO_ROOM);
+  act("&+yA &+Ldeadly rain&n &+yof rocks and &+Yearth &+yfalls from above!", FALSE, ch, 0, 0, TO_ROOM);
 
-  zone_spellmessage(ch->in_room,
-                       "&+ySmall bits of &+Yearth &+yand rock rain from above!\n",
-                       "&+ySmall bits of &+Yearth &+yand rock rain from %sern sky!\n");
+  zone_spellmessage(ch->in_room, "&+ySmall bits of &+Yearth &+yand rock rain from above!\n",
+    "&+ySmall bits of &+Yearth &+yand rock rain from %sern sky!\n");
 
   cast_as_damage_area(ch, spell_single_earthen_rain, level, victim,
-                      get_property("spell.area.minChance.earthenRain", 0),
-                      get_property("spell.area.chanceStep.earthenRain", 10));
-  
-  if(IS_ALIVE(ch))
+    get_property("spell.area.minChance.earthenRain", 0), get_property("spell.area.chanceStep.earthenRain", 10));
+
+  if( IS_ALIVE(ch) )
   {
     if(GET_SPEC(ch, CLASS_CONJURER, SPEC_EARTH))
       level = (int) (level * 1.25);
-      
-    spell_earthquake(level, ch, NULL, SPELL_TYPE_SPELL, 0, 0);
+    spell_earthquake(0-level, ch, NULL, SPELL_TYPE_SPELL, 0, 0);
   }
 }
 
@@ -1406,12 +1387,10 @@ void earthen_grasp(int level, P_char ch, P_char victim,
 
     if(!NewSaves(victim, SAVING_SPELL, 0))
       dam_result =
-        spell_damage(ch, victim, dice(level, 12), SPLDAM_GENERIC,
-          SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, messages);
+        spell_damage(ch, victim, dice(level, 12), SPLDAM_EARTH, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, messages);
     else
       dam_result =
-        spell_damage(ch, victim, dice(level, 7), SPLDAM_GENERIC,
-          SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, messages);
+        spell_damage(ch, victim, dice(level, 7), SPLDAM_EARTH, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, messages);
 
     if(dam_result == DAM_NONEDEAD)
     {
@@ -1536,8 +1515,7 @@ void spell_pythonsting(int level, P_char ch, char *arg, int type,
   if (IS_PC(ch) && IS_PC(victim))
     dam = dam * get_property("spell.area.damage.to.pc", 0.5);
   
-  if(spell_damage(ch, victim, dam, SPLDAM_GENERIC,
-    SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages) != DAM_NONEDEAD)
+  if( spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages) != DAM_NONEDEAD )
     return;
 
   if(!IS_DRAGON(victim) &&

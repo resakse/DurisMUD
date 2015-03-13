@@ -108,8 +108,8 @@ P_char   destroying_list = 0;   /* head of l-list of destroying chars  */
 P_char   combat_next_ch = 0;    /* Next in combat global trick    */
 int      damage_dealt;          /* needed by shield spells until I find a better solution */
 float    dam_factor[LAST_DF + 1];
-float    racial_spldam_offensive_factor[LAST_RACE + 1][LAST_SPLDAM_TYPE + 1];
-float    racial_spldam_defensive_factor[LAST_RACE + 1][LAST_SPLDAM_TYPE + 1];
+float    racial_spldam_offensive_factor[LAST_RACE + 1][LAST_SPLDAM_TYPE];
+float    racial_spldam_defensive_factor[LAST_RACE + 1][LAST_SPLDAM_TYPE];
 
 #define SOUL_TRAP_SINGLE 0
 #define SOUL_TRAP_GROUP 1
@@ -272,8 +272,8 @@ int      proccing_slots[] = {
 
 int      on_front_line(P_char);
 
-const char *spldam_types[] = {
-  "",
+// LAST_SPLDAM_TYPE == number of types, range 0 .. LAST_SPLDAM_TYPE-1
+const char *spldam_types[LAST_SPLDAM_TYPE] = {
   "generic",
   "fire",
   "cold",
@@ -284,16 +284,19 @@ const char *spldam_types[] = {
   "holy",
   "psionic",
   "spiritual",
-  "sound"
+  "sound",
+  "earth"
 };
 
 void update_racial_dam_factors()
 {
   char buf[256];
+  int race, type;
 
-  for (int race = 1; race <= LAST_RACE; race++)
+  // Skip RACE_NONE.
+  for( race = 1; race <= LAST_RACE; race++ )
   {
-    for (int type = 1; type <= LAST_SPLDAM_TYPE; type++)
+    for( type = 0; type < LAST_SPLDAM_TYPE; type++ )
     {
       sprintf(buf, "damage.spellTypeMod.offensive.racial.%s.%s", race_names_table[race].no_spaces, spldam_types[type]);
       racial_spldam_offensive_factor[race][type] = get_property(buf, 1.00);
@@ -4536,15 +4539,12 @@ if(affected_by_spell(victim, SKILL_SPELL_PENETRATION))
 }
 
 // racial spell damage modifiers
-if(GET_RACE(ch) > RACE_NONE &&
-    GET_RACE(ch) <= LAST_RACE &&
-    type > 0 &&
-    type <= LAST_SPLDAM_TYPE )
+if( GET_RACE(ch) > RACE_NONE && GET_RACE(ch) <= LAST_RACE && type >= 0 && type < LAST_SPLDAM_TYPE )
 {
   dam *= racial_spldam_offensive_factor[GET_RACE(ch)][type];
 }
 
-if(GET_RACE(victim) > RACE_NONE && GET_RACE(victim) <= LAST_RACE && type > 0 && type <= LAST_SPLDAM_TYPE )
+if( GET_RACE(victim) > RACE_NONE && GET_RACE(victim) <= LAST_RACE && type >= 0 && type < LAST_SPLDAM_TYPE )
 {
   dam *= racial_spldam_defensive_factor[GET_RACE(victim)][type];
 }

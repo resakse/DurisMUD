@@ -1409,39 +1409,41 @@ void stat_dam(P_char ch, char *arg)
 
 void stat_spldam(P_char ch, char *arg)
 {
-  char     line[1024], buf[512];
+  char     line[MAX_STRING_LENGTH], buf[512];
+  int      type, race;
+  float    val;
+
+  line[0] = '\0';
 
   send_to_char("Spell Type Mods (offensive / defensive)\n", ch);
-  send_to_char("Race            Genrc Fire  Cold  Light Gas   Acid  Neg   Holy  Psi   Spirt Sound \n", ch);
-  send_to_char("----------------------------------------------------------------------------------\n", ch);
-  for (int race = 1; race <= LAST_RACE; race++)
+  send_to_char("Race            Genrc Fire  Cold  Light Gas   Acid  Neg   Holy  Psi   Spirt Sound Earth\n", ch);
+  send_to_char("---------------------------------------------------------------------------------------\n", ch);
+  // Skip RACE_NONE.
+  for( race = 1; race <= LAST_RACE; race++ )
   {
+    // Start with racename.
     strcpy(line, pad_ansi(race_names_table[race].ansi, 16).c_str());
 
-    for (int type = 1; type <= LAST_SPLDAM_TYPE; type++)
+    // List modifier for each type of spell damage.
+    for( type = 0; type < LAST_SPLDAM_TYPE; type++ )
     {
       sprintf(buf, "damage.spellTypeMod.offensive.racial.%s.%s",
-              race_names_table[race].no_spaces,
-              spldam_types[type]);
+        race_names_table[race].no_spaces, spldam_types[type]);
 
-      float val = get_property(buf, 1.00);
+      val = get_property(buf, 1.00);
 
       sprintf(buf, "%1.3f ", val);
       strcat(line, buf);
     }
 
-    strcat(line, "\n");
-    send_to_char(line, ch);
+    strcat(line, "\n                ");
 
-    sprintf(line, "                ");
-
-    for (int type = 1; type <= LAST_SPLDAM_TYPE; type++)
+    for( type = 0; type < LAST_SPLDAM_TYPE; type++ )
     {
       sprintf(buf, "damage.spellTypeMod.defensive.racial.%s.%s",
-              race_names_table[race].no_spaces,
-              spldam_types[type]);
+        race_names_table[race].no_spaces, spldam_types[type]);
 
-      float val = get_property(buf, 1.00);
+      val = get_property(buf, 1.00);
 
       sprintf(buf, "%1.3f ", val);
       strcat(line, buf);
@@ -1450,7 +1452,6 @@ void stat_spldam(P_char ch, char *arg)
     strcat(line, "\n\n");
     send_to_char(line, ch);
   }
-
 }
 
 void stat_game(P_char ch)

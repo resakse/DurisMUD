@@ -3566,8 +3566,7 @@ void spell_entropy_storm(int level, P_char ch, char *arg, int type,
 
 }
 
-void spell_earthquake(int level, P_char ch, char *arg, int type,
-                      P_char victim, P_obj obj)
+void spell_earthquake(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int save, dam_flag = 0, dam;
   P_char   tch, next;
@@ -3578,13 +3577,12 @@ void spell_earthquake(int level, P_char ch, char *arg, int type,
    * only! (In other words, extremely dangerous to cast when not
    * outside).
    */
-  
-  if(!ch)
+  if( !ch )
   {
     logit(LOG_EXIT, "spell_earthquake called in magic.c with no ch");
     raise(SIGSEGV);
   }
-  if(ch) // Just making sure.
+  if( ch->in_room > 0 )
   {
     switch (world[ch->in_room].sector_type)
     {
@@ -3627,16 +3625,15 @@ void spell_earthquake(int level, P_char ch, char *arg, int type,
         break;
     }
 
-    if((dam_flag == 1) &&
-       !OUTSIDE(ch))
+    if( (dam_flag == 1) && !OUTSIDE(ch) )
     {
       dam_flag = 3;
     }
-    if(ch->specials.z_cord != 0)
+    if( ch->specials.z_cord != 0 )
     {
-    dam_flag = 0;
+      dam_flag = 0;
     }
-    switch (dam_flag)
+    switch( dam_flag )
     {
       case 0:
         send_to_char("No earth to quake here, try a different spell.\n", ch);
@@ -3648,42 +3645,34 @@ void spell_earthquake(int level, P_char ch, char *arg, int type,
         break;
       case 2:
         send_to_char("&+yYou cause the earth to shake, crack and buckle!\n", ch);
-        send_to_char
-          ("&+yThe unstable nature of your surroundings, causes extreme amounts of extra debris!\n",
-           ch);
+        send_to_char("&+yThe unstable nature of your surroundings, causes extreme amounts of extra debris!\n", ch);
         act("$n causes an &=LyEARTHQUAKE!", FALSE, ch, 0, 0, TO_ROOM);
         break;
       case 3:
         send_to_char("&+yYou cause the earth to shake, crack and buckle!\n", ch);
-        send_to_char
-          ("&+yAs the ceiling begins to cave in on you, you realize this may not have been a good idea!\n",
-           ch);
+        send_to_char("&+yAs the ceiling begins to cave in on you, you realize this may not have been a good idea!\n", ch);
         act("$n causes an &=LyEARTHQUAKE!", FALSE, ch, 0, 0, TO_ROOM);
         break;
       default:
-        send_to_char
-          ("As you are about to utter the last syllable, you choke it off,\nrealizing you could well bury yourself alive!\n",
-           ch);
+        send_to_char("As you are about to utter the last syllable, you choke it off,\nrealizing you could well bury yourself alive!\n", ch);
         return;
         break;
     }
 
-    for (tch = world[ch->in_room].people; tch; tch = next)
+    for( tch = world[ch->in_room].people; tch; tch = next )
     {
       next = tch->next_in_room;
 
-      if(tch == ch || 
-        IS_TRUSTED(tch))
+      if( tch == ch || IS_TRUSTED(tch) )
       {
         continue;
       }
-      if(!IS_ALIVE(tch) ||
-        !IS_ALIVE(ch))
+      if( !IS_ALIVE(tch) || !IS_ALIVE(ch) )
       {
         continue;
       }
-      
-      if(IS_GREATER_RACE(tch))
+
+      if( IS_GREATER_RACE(tch) )
       {
         save = 0;
       }
@@ -3691,36 +3680,29 @@ void spell_earthquake(int level, P_char ch, char *arg, int type,
       {
         save = 4;
       }
-      
-// Expanded the immune races. Oct08 -Lucrot 
-      if(GET_RACE(tch) == RACE_FLYING_ANIMAL ||
-        GET_RACE(tch) == RACE_FAERIE ||
-        LEGLESS(tch) ||
-        IS_IMMATERIAL(tch))
+
+      // Expanded the immune races. Oct08 -Lucrot
+      if( GET_RACE(tch) == RACE_FLYING_ANIMAL || GET_RACE(tch) == RACE_FAERIE || LEGLESS(tch) || IS_IMMATERIAL(tch) )
       {
-        act("The ground rumbles beneath you, but affects you not at all.",
-            FALSE, ch, 0, tch, TO_VICT);
+        act("The ground rumbles beneath you, but affects you not at all.", FALSE, ch, 0, tch, TO_VICT);
         act("$n seems unaffected by the quake.", TRUE, tch, 0, 0, TO_ROOM);
         continue;
       }
-      if(!should_area_hit(ch, tch))
+      if( !should_area_hit(ch, tch) )
       {
-        if(GET_POS(tch) < POS_STANDING)
+        if( GET_POS(tch) < POS_STANDING )
         {
           continue;
         }
 
-        if(StatSave(tch, APPLY_AGI, save))
-        {    
-          act("&+LYou stagger, but manage to keep your balance!&n", FALSE, ch, 0,
-            tch, TO_VICT);
-          act("$n&n &+wstaggers slightly but manages to keep $s balance.&n", TRUE, tch,
-            0, 0, TO_ROOM);
+        if( StatSave(tch, APPLY_AGI, save) )
+        {
+          act("&+LYou stagger, but manage to keep your balance!&n", FALSE, ch, 0, tch, TO_VICT);
+          act("$n&n &+wstaggers slightly but manages to keep $s balance.&n", TRUE, tch, 0, 0, TO_ROOM);
         }
         else
         {
-          act("&+mYou stagger and fall to your knees!&n", FALSE, ch, 0, tch,
-            TO_VICT);
+          act("&+mYou stagger and fall to your knees!&n", FALSE, ch, 0, tch, TO_VICT);
           act("$n&n &+mstaggers and falls to $s knees!&n", TRUE, tch, 0, 0, TO_ROOM);
           SET_POS(tch, POS_KNEELING + GET_STAT(tch));
           CharWait(tch, PULSE_VIOLENCE * 1);
@@ -3733,29 +3715,38 @@ void spell_earthquake(int level, P_char ch, char *arg, int type,
           continue;
         }
 
-        if(tch &&
-          !StatSave(tch, APPLY_AGI, save))
+        if(tch && !StatSave(tch, APPLY_AGI, save))
         {
-          if(IS_PC(tch) &&
-            GET_CHAR_SKILL(tch, SKILL_SAFE_FALL) >= number(1, 101))
+          if(IS_PC(tch) && GET_CHAR_SKILL(tch, SKILL_SAFE_FALL) >= number(1, 101))
           {
-            act("$n&n &+Gdoes a &+ydouble sommersault &+Gand lands on $s feet!&n", TRUE, tch,
-                0, 0, TO_ROOM);
-            act("&+GYou do a &+Ydouble sommersault &+Gand land on your feet!", TRUE, tch,
-                0, 0, TO_CHAR);
+            act("$n&n &+Gdoes a &+ydouble sommersault &+Gand lands on $s feet!&n", TRUE, tch, 0, 0, TO_ROOM);
+            act("&+GYou do a &+Ydouble sommersault &+Gand land on your feet!", TRUE, tch, 0, 0, TO_CHAR);
             notch_skill(tch, SKILL_SAFE_FALL, 3);
           }
           else
           {
             act("&+WYou fall and injure yourself!&n", FALSE, ch, 0, tch, TO_VICT);
             act("$n&n &+Wcrashes to the ground!&n", TRUE, tch, 0, 0, TO_ROOM);
-            dam = (int) (dice(1, 30) + level);
-            if( GET_SPEC(ch, CLASS_CLERIC, SPEC_ZEALOT) )
+            if( level >= 0 )
             {
-              dam = (int) (dam * 1.25);
-            }
+              dam = (int) (dice(1, 30) + level);
+              if( GET_SPEC(ch, CLASS_CLERIC, SPEC_ZEALOT) )
+              {
+                dam = (int) (dam * 1.25);
+              }
 
-            if(spell_damage(ch, tch, dam, SPLDAM_GENERIC, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, 0) == DAM_NONEDEAD);
+              if(spell_damage(ch, tch, dam, SPLDAM_GENERIC, SPLDAM_NOSHRUG | SPLDAM_NODEFLECT, 0) == DAM_NONEDEAD);
+              {
+                SET_POS(tch, number(0, 2) + GET_STAT(tch));
+                if(GET_POS(tch) == POS_PRONE && !number(0, 1))
+                {
+                  Stun(tch, ch, PULSE_VIOLENCE * 1, FALSE);
+                  CharWait(tch, PULSE_VIOLENCE);
+                }
+              }
+            }
+            // Lvl < 0 -> from earthen rain so we do takedown only no damage.
+            else
             {
               SET_POS(tch, number(0, 2) + GET_STAT(tch));
               if(GET_POS(tch) == POS_PRONE && !number(0, 1))
@@ -3766,16 +3757,14 @@ void spell_earthquake(int level, P_char ch, char *arg, int type,
             }
           }
         }
-        else if(tch &&
-          ch->specials.z_cord == tch->specials.z_cord)
+        else if(tch && ch->specials.z_cord == tch->specials.z_cord )
         {
-          act("&+LYou stagger and almost break your leg!&n", FALSE, ch, 0, tch,
-              TO_VICT);
+          act("&+LYou stagger and almost break your leg!&n", FALSE, ch, 0, tch, TO_VICT);
           act("$n&n &+Lstaggers and almost falls!&n", TRUE, tch, 0, 0, TO_ROOM);
           dam = (int) (dice(1, 4) + dam_flag * level / 2);
-          if(spell_damage(ch, tch, dam, SPLDAM_GENERIC,
-              SPLDAM_NOSHRUG | SPLDAM_BREATH |
-              SPLDAM_NODEFLECT, 0) != DAM_NONEDEAD)
+          // lvl < 0 -> don't damage them as this is from earthen rain -> fall only.
+          if( (level >= 0) && spell_damage(ch, tch, dam, SPLDAM_EARTH,
+            SPLDAM_NOSHRUG | SPLDAM_BREATH | SPLDAM_NODEFLECT, 0) != DAM_NONEDEAD )
           {
             return;
           }
