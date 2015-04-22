@@ -2991,7 +2991,7 @@ void do_barrage(P_char ch, char *argument, int cmd)
     return;
 
 
-  if(!GET_CHAR_SKILL(ch, SKILL_BLADE_BARRAGE) || !GET_CLASS(ch, CLASS_RANGER))
+  if(!GET_CHAR_SKILL(ch, SKILL_BLADE_BARRAGE))
   {
     send_to_char("You would probably hurt yourself trying.\n", ch);
     return;
