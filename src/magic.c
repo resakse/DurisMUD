@@ -9345,8 +9345,9 @@ void spell_vitalize_undead(int level, P_char ch, char *arg, int type,
   struct affected_type af;
   int healpoints = 2 * level;
 
-  if( !IS_UNDEADRACE(victim) && !IS_NECRO_GOLEM(victim)
-    && !(IS_ANGEL(victim) && GET_CLASS(ch, CLASS_THEURGIST)) )
+// Modied 02/05/15 - was returning false positives. 
+   if( !IS_UNDEADRACE(victim) && !IS_ANGEL(victim)
+    && GET_RACE(victim) != RACE_GOLEM && !GET_CLASS(victim, CLASS_NECROMANCER)) 
   {
     send_to_char("Nothing seems to happen.\n", ch);
     return;

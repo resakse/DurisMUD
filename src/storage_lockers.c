@@ -536,7 +536,16 @@ bool StorageLocker::MakeChests(P_char ch, const char *args)
 
       IF_ISLOCKERTYPE("prot_undead", "that provide you with protection from undead") p =
         AddLockerChest(new EqAffectChest(AFF5_PROT_UNDEAD, 5, chestKeyword, chestDesc));
-      
+     // New locker sorts added by Gellz 29/04/15
+      IF_ISLOCKERTYPE("vamp", "that provide you with vampiric touch") p =
+        AddLockerChest(new EqAffectChest(AFF2_VAMPIRIC_TOUCH, 2, chestKeyword, chestDesc));
+      IF_ISLOCKERTYPE("toiw", "that provide you with tower of iron will") p =
+        AddLockerChest(new EqAffectChest(AFF3_TOWER_IRON_WILL, 3, chestKeyword, chestDesc));
+      IF_ISLOCKERTYPE("dark", "that provide you with globe of darkness") p =
+        AddLockerChest(new EqAffectChest(AFF4_GLOBE_OF_DARKNESS, 4, chestKeyword, chestDesc));
+      IF_ISLOCKERTYPE("pwt", "that provide you with pass without trace") p =
+        AddLockerChest(new EqAffectChest(AFF3_PASS_WITHOUT_TRACE, 3, chestKeyword, chestDesc));
+// New locker sorts added by Gellz 29/04/15 
         
         
       // ignore 'unsorted' (or none), but give error if not found, not in

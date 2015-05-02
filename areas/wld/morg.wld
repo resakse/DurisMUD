@@ -7,7 +7,7 @@
 &+yThe doors are mounted with full-length, black iron hinges that are bolted
 &+ydirectly into the rock walls.&N
 ~
-878 32780 0
+886 32780 0
 D0
 ~
 ~
@@ -25,7 +25,7 @@ S
 &+Yscattered throughout the room, presumably for patrons to better enjoy
 &+Ythe entertainment and atmosphere this shady tavern has to offer.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -54,7 +54,7 @@ S
 &+ywell as the bartender.  A single massive brazier with dozens of candles,
 &+yhangs from a short, but very thick chain near the center of the room.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -87,7 +87,7 @@ S
 &+ywell as the bartender.  A single massive brazier with dozens of candles,
 &+yhangs from a short, but very thick chain near the center of the room.&N
 ~
-878 33587208 0
+886 33587208 0
 D1
 ~
 door~
@@ -116,7 +116,7 @@ S
 &+ywell as the bartender.  A single massive brazier with dozens of candles,
 &+yhangs from a short, but very thick chain near the center of the room.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -149,7 +149,7 @@ S
 &+ywell as the bartender.  A single massive brazier with dozens of candles,
 &+yhangs from a short, but very thick chain near the center of the room.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -176,7 +176,7 @@ S
 &+yinebriated ways.  Dark stains from spilled mugs mottle the stone floor of the
 &+ycavern and help to keep the everpresent rats from going hungry.
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -205,7 +205,7 @@ S
 &+ywell as the bartender.  A single massive brazier with dozens of candles,
 &+yhangs from a short, but very thick chain near the center of the room.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -230,7 +230,7 @@ S
 &+ywell as the bartender.  A single massive brazier with dozens of candles,
 &+yhangs from a short, but very thick chain near the center of the room.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -263,7 +263,7 @@ S
 &+ywell as the bartender.  A single massive brazier with dozens of candles,
 &+yhangs from a short, but very thick chain near the center of the room.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -289,7 +289,7 @@ S
 &+btowards the north, though there are various bends and curves in the carved
 &+bpassageway.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -307,7 +307,7 @@ S
 &+btowards the north, though there are various bends and curves in the carved
 &+bpassageway.&N
 ~
-878 33587208 0
+886 33587208 0
 D1
 ~
 ~
@@ -325,7 +325,7 @@ S
 &+btowards the north, though there are various bends and curves in the carved
 &+bpassageway.&N
 ~
-878 33587208 0
+886 33587208 0
 D1
 ~
 ~
@@ -345,7 +345,7 @@ S
 &+ypermeate the surface of everything within this dark, forgotten room.  Marks
 &+yupon the floor seem to indicate something hidden beneath the table.
 ~
-878 33587208 0
+886 33587208 0
 D3
 ~
 ~
@@ -365,7 +365,7 @@ S
 &+yfiltering in from above in a circular pattern, suggesting some sort of
 &+Gescape hatch perhaps.&N
 ~
-878 33587208 0
+886 33587208 0
 D3
 ~
 ~
@@ -384,7 +384,7 @@ S
 &+yare prevalent everywhere.  There is a strange smell of wet straw in the air
 &+yas well.
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -407,7 +407,7 @@ S
 &+yindicating a lack of stock rotation or that the various containers aren't
 &+yfilled with the most popular of libations.&N
 ~
-878 32781 0
+886 32781 0
 D2
 ~
 ~
@@ -426,7 +426,7 @@ S
 &+yindicating a lack of stock rotation or that the various containers aren't
 &+yfilled with the most popular of libations.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~
@@ -441,7 +441,7 @@ S
 &+Labout in the piles of debris come from everywhere.  Obviously this is the
 &+Lnesting area of something, though what exactly lives here is a mystery.&N
 ~
-878 32777 0
+886 32777 0
 D0
 ~
 ~
@@ -464,7 +464,7 @@ S
 &+Labout in the piles of debris come from everywhere.  Obviously this is the
 &+Lnesting area of something, though what exactly lives here is a mystery.&N
 ~
-878 32777 0
+886 32777 0
 D2
 ~
 ~
@@ -483,7 +483,7 @@ S
 &+Labout in the piles of debris come from everywhere.  Obviously this is the
 &+Lnesting area of something, though what exactly lives here is a mystery.&N
 ~
-878 32777 0
+886 32777 0
 D0
 ~
 ~
@@ -506,7 +506,7 @@ S
 &+Labout in the piles of debris come from everywhere.  Obviously this is the
 &+Lnesting area of something, though what exactly lives here is a mystery.&N
 ~
-878 32777 0
+886 32777 0
 D2
 ~
 ~
@@ -521,7 +521,7 @@ S
 &+Labout in the piles of debris come from everywhere.  Obviously this is the
 &+Lnesting area of something, though what exactly lives here is a mystery.&N
 ~
-878 32777 0
+886 32777 0
 D0
 ~
 ~
@@ -540,7 +540,7 @@ S
 &+rsurface of the desk than anywhere else.  There are no real adornments
 &+ranywhere else that are noteworthy.&N
 ~
-878 4751368 0
+886 557064 0
 D2
 ~
 ~
@@ -556,7 +556,7 @@ S
 &+rduskwood table and chairs, along with three wooden benches along the
 &+rwalls provide adequate seating for a group wishing to convene in private.&N
 ~
-878 33587208 0
+886 33587208 0
 D3
 ~
 door~
@@ -572,7 +572,7 @@ S
 &+rduskwood table and chairs, along with three wooden benches along the
 &+rwalls provide adequate seating for a group wishing to convene in private.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 door~
@@ -588,7 +588,7 @@ S
 &+rduskwood table and chairs, along with three wooden benches along the
 &+rwalls provide adequate seating for a group wishing to convene in private.&N
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 door~
@@ -605,7 +605,7 @@ S
 &+bdepression.  Only a few of the many candles in the brazier are actually
 &+blit.&N
 ~
-878 4227084 0
+886 4227084 0
 D0
 ~
 ~
@@ -628,7 +628,7 @@ S
 &+brests upon the top of the dresser, closed and latched with a pair of steel
 &+blocks.  The only entrance or exit lies upon the southern wall.&N
 ~
-878 4227080 0
+886 4227080 0
 D2
 ~
 ~
@@ -641,7 +641,7 @@ guest bedroom looks to be as much as store room for junk as it does a
 living area.  A small bed sits against one stone wall, and a tiny desk is
 cramped into the far corner.
 ~
-878 33587208 0
+886 33587208 0
 D0
 ~
 ~

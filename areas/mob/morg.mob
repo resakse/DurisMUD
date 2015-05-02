@@ -10,8 +10,8 @@ troll bouncer~
 &+Gunceremonious plop below him.  The puddle where the drool has collected is
 &+Gbecoming quite large.
 ~
-6218 0 0 536944656 14558 0 13312 -1000 S
-PT 0 1048577 -1
+6218 0 0 0 536944656 14558 0 13312 -1000 S
+PT 0 1048577 0 -1
 60 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -25,8 +25,8 @@ An &+bogre&N bouncer wanders here, eyeing you carefully.
 &+bThough he wears little more than a strap of cloth from shoulder to groin, he
 &+bhas nary a visible scar on any part of his unclothed skin.
 ~
-67108936 0 0 0 2 0 0 -1000 S
-PO 0 1 -1
+67108936 0 0 0 0 2 0 0 -1000 S
+PO 0 1 0 -1
 38 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -41,8 +41,8 @@ A &+gtroll&N sits here, eyeing his drink.
 &+ghis own troubles.  The sewn shut cavity where his other eye was has developed
 &+ga rather nasty infection and oozes a greenish-yellow pus.
 ~
-72 0 0 256 0 0 0 -1000 S
-PT 0 1 -1
+72 0 0 0 256 0 0 0 -1000 S
+PT 0 1 0 -1
 26 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -59,8 +59,8 @@ The ogre lord of the tavern, &+bMorg&N rests in his chambers here.&N
 &+bwheezing sound which comes from his direction can only be the labored breathing
 &+bof a creature not long for this world.
 ~
-67111114 0 0 0 1026 0 0 -1000 S
-PO 0 0 -1
+67111114 0 0 0 0 1026 0 0 -1000 S
+PO 0 0 0 -1
 40 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -75,8 +75,8 @@ mate ogre female mate~
 &+rsupple and taught, indicating she isn't much more than an adolescent.  How or
 &+rwhy she stays with Morg is a mystery that will probably never be solved.
 ~
-2122 0 0 0 2 0 0 -1000 S
-PO 0 0 -1
+2122 0 0 0 0 2 0 0 -1000 S
+PO 0 0 0 -1
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -91,8 +91,8 @@ angry derro~
 &+Lfrom Morg's potent brews.  The scowl upon the creature's face indicates it is
 &+Lnot only upset at your intrusion, but that it means to do something about it.
 ~
-2122 0 0 0 2 0 0 -1000 S
-pd 0 1 -1
+2122 0 0 0 0 2 0 0 -1000 S
+pd 0 1 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -106,8 +106,8 @@ wererat~
 &+ylarge for its body, but seem to work well enough.  A set of what looks to be
 &+yrazor-sharp teeth await anyone foolish enough to pass out near this foul thing.
 ~
-72 0 0 0 0 0 0 -1000 S
-l 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+l 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -123,8 +123,8 @@ an &+Bogress&N serving wench~
 &+Battempts to grab at her modest garb, and seems more than willing to fight
 &+Banyone daring enough.
 ~
-2120 0 0 0 2 0 0 -1000 S
-PO 0 16384 -1
+2120 0 0 0 0 2 0 0 -1000 S
+PO 0 16384 0 -1
 29 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -138,8 +138,8 @@ An &+bogre&N sits here, staring drunkenly at nothing.&N
 &+bever passed through his mind.  He swings a hand at the handle of his mug and
 &+bmisses completely.
 ~
-72 0 0 0 2 0 0 -1000 S
-PO 0 0 -1
+72 0 0 0 0 2 0 0 -1000 S
+PO 0 0 0 -1
 31 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -154,8 +154,8 @@ A &+rduergar&N lurks in the shadows here.
 &+rpockets at his sides, perhaps fingering a pair of daggers meant for anyone that
 &+rgives him trouble.
 ~
-8266 0 0 268435456 2 0 0 -1000 S
-PD 0 4096 -1
+8266 0 0 0 268435456 2 0 0 -1000 S
+PD 0 4096 0 -1
 27 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -169,8 +169,8 @@ An &+bogre&N guard stands here, watching for trespassers.
 &+Ltaking in the sights and sounds of the tavern.  More often than not, his gaze
 &+Ltracks back to a serving wench, whom he stares at openly.
 ~
-67110986 0 0 0 1026 0 4096 -1000 S
-PO 0 1 -1
+67110986 0 0 0 0 1026 0 4096 -1000 S
+PO 0 1 0 -1
 32 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -186,8 +186,8 @@ problems.  He only grunts in acknowledgement of drink orders and when he slams
 the drinks down in front of customers, more liquid seems to splash out of the
 cup than remains within for the patron.
 ~
-74 0 0 0 2 0 4096 -1000 S
-PO 0 1048576 -1
+74 0 0 0 0 2 0 4096 -1000 S
+PO 0 1048576 0 -1
 51 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 1
@@ -202,8 +202,8 @@ drow teacher~
 &+Cblood-red wine sits in front of her, nearly drained.  Her elegant clothing
 &+Csuggests she might come from a noble background.
 ~
-2122 0 0 134250796 30 0 131072 -1000 S
-PL 0 512 -1
+2122 0 0 0 134250796 30 0 131072 -1000 S
+PL 0 512 0 -1
 35 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 2
@@ -219,8 +219,8 @@ wererat leader~
 &+yThe bloated body of the thing makes it seem much larger than it is, though
 &+ythere is little doubt it thinks it is large.
 ~
-1073743946 1 0 256 1024 0 0 -1000 S
-l 0 0 2
+1073743946 1 0 0 256 1024 0 0 -1000 S
+l 0 0 0 2
 37 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -235,8 +235,8 @@ wererat smelly~
 &+yrazor-sharp teeth await anyone foolish enough to pass out near this foul thing.
 &+yThe stench coming from this creature is awful.
 ~
-72 0 0 0 0 0 0 -1000 S
-L 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+L 0 0 0 -1
 24 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -250,8 +250,8 @@ wererat~
 &+ylarge for its body, but seem to work well enough.  A set of what looks to be
 &+yrazor-sharp teeth await anyone foolish enough to pass out near this foul thing.
 ~
-72 0 0 0 0 0 0 -1000 S
-l 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+l 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -265,8 +265,8 @@ wererat~
 &+ylarge for its body, but seem to work well enough.  A set of what looks to be
 &+yrazor-sharp teeth await anyone foolish enough to pass out near this foul thing.
 ~
-72 0 0 0 0 0 0 -1000 S
-l 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+l 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -280,8 +280,8 @@ wererat~
 &+ylarge for its body, but seem to work well enough.  A set of what looks to be
 &+yrazor-sharp teeth await anyone foolish enough to pass out near this foul thing.
 ~
-72 0 0 0 0 0 0 -1000 S
-l 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+l 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
@@ -295,8 +295,8 @@ wererat~
 &+ylarge for its body, but seem to work well enough.  A set of what looks to be
 &+yrazor-sharp teeth await anyone foolish enough to pass out near this foul thing.
 ~
-72 0 0 0 0 0 0 -1000 S
-l 0 0 -1
+72 0 0 0 0 0 0 0 -1000 S
+l 0 0 0 -1
 22 0 0 1d1+1 1d1+1
 0.0.0.0 0
 8 8 0
