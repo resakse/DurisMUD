@@ -11032,7 +11032,7 @@ int proc_whirlwinds(P_obj obj, P_char ch, int cmd, char *arg)
 }
 
 int glowing_necklace(P_obj obj, P_char ch, int cmd, char *arg)
-{ // changed mob from 1103 to 15116 - it seems they are ONLY pets tobe generated lately mob 1103 could bash on water. thats a no-no- Gellz 02/05/2015
+{
   int      curr_time;
   P_char   watermental;
   int      i, j, sum, elesize;
@@ -11129,7 +11129,7 @@ int glowing_necklace(P_obj obj, P_char ch, int cmd, char *arg)
             act("&+bAs $n rub $s $q&+b, &+Bwater &+bbeings to &+Bflow &+bout of $s $q&+b.  As the\n"
               "&+Bwaters &+bsubside, the form of &+Ba water elemental&+b is left before you.\n"
               "&+bA water elemental says &N'How may I serve you'", FALSE, ch, obj, obj, TO_ROOM);
-            watermental = read_mobile(15116, VIRTUAL); //changed from mob 1103
+            watermental = read_mobile(1103, VIRTUAL);
           }
         }
         if (!watermental)

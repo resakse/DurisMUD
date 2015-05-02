@@ -1131,6 +1131,7 @@ IS_GIANT(ch) || IS_PC_PET(ch) || IS_PC(ch) || IS_UNDEAD(ch) || IS_EFREET(ch)) &&
    as SECT_UNDERWATER. -DR */
 #define HAS_FOOTING(ch) \
  ((world[(ch)->in_room].sector_type != SECT_WATER_NOSWIM) && \
+  (world[(ch)->in_room].sector_type != SECT_WATER_SWIM) && \
   (world[(ch)->in_room].sector_type != SECT_NO_GROUND) && \
   (world[(ch)->in_room].sector_type != SECT_UNDERWATER) && \
   (world[(ch)->in_room].sector_type != SECT_FIREPLANE) && \
