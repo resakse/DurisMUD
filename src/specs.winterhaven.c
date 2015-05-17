@@ -3488,7 +3488,27 @@ int earring_powers(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if( cmd != CMD_PERIODIC || !IS_ALIVE(ch) || IS_NPC(ch) || !OBJ_WORN_BY(obj, ch) )
+  // The earring prevents all encrusting since encrust can be used to cheese the proc.
+  //   If you're feeling like limiting to when encrust target is the earring, fine.  However,
+  //   this was easy and I'm lazy. :)
+  //   Also, might want to check to see if it stops someone else in room from encrusting...
+  if( cmd == CMD_ENCRUST )
+  {
+    // This should always be true, but just in case..
+    if( IS_ALIVE(ch) )
+    {
+      act("&nYour $q prevents encrust magic from working.&n", TRUE, ch, obj, NULL, TO_CHAR);
+    }
+    return TRUE;
+  }
+
+  if( cmd != CMD_PERIODIC || !OBJ_WORN(obj) )
+  {
+    return FALSE;
+  }
+  ch = obj->loc.wearing;
+
+  if( !IS_ALIVE(ch) || IS_NPC(ch) )
   {
     return FALSE;
   }
