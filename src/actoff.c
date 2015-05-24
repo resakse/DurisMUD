@@ -869,6 +869,12 @@ void lance_charge(P_char ch, char *argument)
     return;
   }
 
+  if(IS_WATER_ROOM(ch->in_room))
+  {
+    send_to_char("&+YYour mounts feet would slip in the wet ground to much to do that!!!\r\n", ch);
+    return;
+  }
+
   if(affected_by_spell(ch, SKILL_LANCE_CHARGE))
   {
     send_to_char("You haven't reoriented the mount yet enough for another charge!\n", ch);
@@ -886,7 +892,7 @@ void lance_charge(P_char ch, char *argument)
   if(*arg2)
   {
     dir = dir_from_keyword(arg2);
-    if(dir == -1 || dir == UP || dir == DOWN)
+    if(dir == -1)
     {
       send_to_char("You have to specify a direction as one of north, east, west, east, NW, NE, SW, SE\n", ch);
       return;

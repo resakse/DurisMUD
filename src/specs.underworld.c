@@ -2939,25 +2939,25 @@ int barb( P_obj obj, P_char ch, int cmd, char *arg )
         str_free( obj->short_description );
       }
       obj->str_mask |= STRUNG_DESC2;
-      obj->short_description = str_dup( "&+bthe mighty warhammer of the ogre chiefs" );
+      obj->short_description = str_dup( "&+bthe mighty warhammer of the ogre chiefs&n" );
     }
     else if( GET_RACE(ch) == RACE_BARBARIAN )
     {
       obj->short_description = NULL;
       obj->str_mask |= STRUNG_DESC2;
-      obj->short_description = str_dup( "&+ythe mystical warhammer of the barbarian kings" );
+      obj->short_description = str_dup( "&+ythe mystical warhammer of the barbarian kings&n" );
     }
     else if( GET_RACE(ch) == RACE_MOUNTAIN || GET_RACE(ch) == RACE_DUERGAR )
     {
       obj->short_description = NULL;
       obj->str_mask |= STRUNG_DESC2;
-      obj->short_description = str_dup( "&+Lthe warhammer of the &+yancient dwarven &+Rb&+ra&+Ltt&+Rl&+re&+Lr&+ra&+Rge&+Lr&+rs" );
+      obj->short_description = str_dup( "&+Lthe warhammer of the &+yancient dwarven &+Rb&+ra&+Ltt&+Rl&+re&+Lr&+ra&+Rge&+Lr&+rs&n" );
     }
     else if( GET_CLASS(ch, CLASS_BERSERKER) )
     {
       obj->short_description = NULL;
       obj->str_mask |= STRUNG_DESC2;
-      obj->short_description = str_dup( "&+rthe great warhammer of the &+RRa&+rGe&+Rlo&+rRd" );
+      obj->short_description = str_dup( "&+rthe great warhammer of the &+RRa&+rGe&+Rlo&+rRd&n" );
     }
   }
 
