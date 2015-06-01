@@ -1055,6 +1055,9 @@
 #define SONG_SNATCHING               (FIRST_SONG+18)
 #define SONG_DISSONANCE              (FIRST_SONG+19)
 #define SONG_DRIFTING                (FIRST_SONG+20)
+// Currently 19 instead of 21 (first+20 more), because SNATCHING and MINDSHIELD ?!?
+//   These two songs are not included in the songs[] array in bard.c, nor do they seem implemented.
+#define NUM_SONGS                    19
 #define LAST_SONG                    (SONG_DRIFTING)
 
 #define FIRST_POISON                 (LAST_SONG+1)

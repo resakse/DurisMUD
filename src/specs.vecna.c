@@ -757,9 +757,12 @@ int vecna_krindor_main(P_obj obj, P_char ch, int cmd, char *arg)
 
   if( owner )
   {
-    if( obj->timer[0] != owner->player.m_class )
+    // We need to reset when the device is not set to the player's main class,
+    //   and it's not already at its default form.
+    if( obj->timer[0] != owner->player.m_class && obj->timer[0] != 0 )
     {
       reset_krindor(obj);
+      return FALSE;
     }
 
     if( cmd == CMD_GOTHIT && GET_CLASS(ch, CLASS_ILLUSIONIST)
@@ -826,8 +829,9 @@ int vecna_krindor_main(P_obj obj, P_char ch, int cmd, char *arg)
           SET_BIT(obj->bitvector4, AFF4_DETECT_ILLUSION);
           SET_BIT(obj->bitvector, AFF_SNEAK);
           obj->value[0] = 1000;
-          obj->value[1] = 56;
-          obj->value[3] = 1000;
+          obj->value[1] = MAXLVL;
+          // Min level to use it.. rofl.. 1000 is not a good setting.
+          obj->value[3] = 51;
           obj->timer[0] = owner->player.m_class;
           return FALSE;
         }
@@ -970,8 +974,10 @@ void reset_krindor(P_obj obj)
   P_obj tobj;
   int i;
 
-  if (!obj)
+  if( !obj )
+  {
     return;
+  }
 
   act("$p&n &+Lwrithes and warps as it reforms to it's original form.&n", TRUE, 0, obj, 0, TO_ROOM);
   act("$p&n &+Lwrithes and warps as it reforms to it's original form.&n", TRUE, 0, obj, 0, TO_CHAR);

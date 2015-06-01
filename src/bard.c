@@ -74,6 +74,10 @@ void     bard_harmony(int, P_char, P_char, int);
 void     bard_drifting(int, P_char, P_char, int);
 void     bard_dissonance(int, P_char, P_char, int);
 
+/* These two songs are missing from the list of songs and I have no idea what they do:
+ *   SONG_MINDSHIELD
+ *   SONG_SNATCHING
+ */
 struct song_description
 {
   char    *name;
@@ -81,51 +85,48 @@ struct song_description
   int      instrument;
   int      song;
   int      flags;
-} songs[] =
+} songs[NUM_SONGS+1] =
+// We use NUM_SONGS + 1 because of the {0} at the end.
 {
   {
-  "harmony", bard_harmony, INSTRUMENT_FLUTE, SONG_HARMONY, 0},
+  "calming",        bard_calm,          INSTRUMENT_HARP,      SONG_CALMING,       0},
   {
-  "discord", bard_discord, INSTRUMENT_FLUTE, SONG_DISCORD, 0},
+  "charming",       bard_charm,         INSTRUMENT_FLUTE,     SONG_CHARMING,      SONG_AGGRESSIVE},
   {
-  "sleep", bard_sleep, INSTRUMENT_FLUTE, SONG_SLEEP, SONG_AGGRESSIVE},
+  "chaos",          bard_chaos,         INSTRUMENT_DRUMS,     SONG_CHAOS,         SONG_AGGRESSIVE},
   {
-  "charming", bard_charm, INSTRUMENT_FLUTE, SONG_CHARMING, SONG_AGGRESSIVE},
+  "cowardice",      bard_cowardice,     INSTRUMENT_DRUMS,     SONG_COWARDICE,     SONG_AGGRESSIVE},
   {
-  "harming", bard_harming, INSTRUMENT_LYRE, SONG_HARMING, SONG_AGGRESSIVE},
+  "discord",        bard_discord,       INSTRUMENT_FLUTE,     SONG_DISCORD,       0},
   {
-  "healing", bard_healing, INSTRUMENT_LYRE, SONG_HEALING, SONG_ALLIES},
+  "dissonance",     bard_dissonance,    INSTRUMENT_HORN,      SONG_DISSONANCE,    0},
   {
-  "revelation", bard_revelation, INSTRUMENT_MANDOLIN, SONG_REVELATION, SONG_ALLIES},
+  "dragons",        bard_dragons,       INSTRUMENT_HORN,      SONG_DRAGONS,       SONG_ALLIES},
   {
-  "forgetfulness", bard_forgetfulness, INSTRUMENT_MANDOLIN,
-      SONG_FORGETFULNESS, 0},
+  "drifting",       bard_drifting,      INSTRUMENT_DRUMS,     SONG_DRIFTING,      SONG_ALLIES},
   {
-  "peace", bard_peace, INSTRUMENT_HARP, SONG_PEACE, 0},
+  "flight",         bard_flight,        INSTRUMENT_HORN,      SONG_FLIGHT,        0},
   {
-  "calming", bard_calm, INSTRUMENT_HARP, SONG_CALMING, 0},
+  "forgetfulness",  bard_forgetfulness, INSTRUMENT_MANDOLIN,  SONG_FORGETFULNESS, 0},
   {
-  "heroism", bard_heroism, INSTRUMENT_DRUMS, SONG_HEROISM, SONG_ALLIES},
+  "harming",        bard_harming,       INSTRUMENT_LYRE,      SONG_HARMING,       SONG_AGGRESSIVE},
   {
-  "cowardice", bard_cowardice, INSTRUMENT_DRUMS, SONG_COWARDICE,
-      SONG_AGGRESSIVE},
+  "harmony",        bard_harmony,       INSTRUMENT_FLUTE,     SONG_HARMONY,       0},
   {
-  "chaos", bard_chaos, INSTRUMENT_DRUMS, SONG_CHAOS, SONG_AGGRESSIVE},
+  "healing",        bard_healing,       INSTRUMENT_LYRE,      SONG_HEALING,       SONG_ALLIES},
   {
-  "storms", bard_storms, INSTRUMENT_DRUMS, SONG_STORMS, SONG_AGGRESSIVE},
+  "heroism",        bard_heroism,       INSTRUMENT_DRUMS,     SONG_HEROISM,       SONG_ALLIES},
   {
-  "protection", bard_protection, INSTRUMENT_HORN, SONG_PROTECTION,
-      SONG_ALLIES},
+  "peace",          bard_peace,         INSTRUMENT_HARP,      SONG_PEACE,         0},
   {
-  "flight", bard_flight, INSTRUMENT_HORN, SONG_FLIGHT, 0},
+  "protection",     bard_protection,    INSTRUMENT_HORN,      SONG_PROTECTION,    SONG_ALLIES},
   {
-  "dragons", bard_dragons, INSTRUMENT_HORN, SONG_DRAGONS, SONG_ALLIES},
+  "revelation",     bard_revelation,    INSTRUMENT_MANDOLIN,  SONG_REVELATION,    SONG_ALLIES},
   {
-  "drifting", bard_drifting, INSTRUMENT_DRUMS, SONG_DRIFTING, SONG_ALLIES},
+  "sleep",          bard_sleep,         INSTRUMENT_FLUTE,     SONG_SLEEP,         SONG_AGGRESSIVE},
   {
-  "dissonance", bard_dissonance, INSTRUMENT_HORN, SONG_DISSONANCE, 0},
-  {
-  0}
+  "storms",         bard_storms,        INSTRUMENT_DRUMS,     SONG_STORMS,        SONG_AGGRESSIVE},
+  {0}
 };
 
 struct echo_details
@@ -134,32 +135,32 @@ struct echo_details
   int      room;
 };
 
-int SINGING(P_char ch)
+/* Turned this into a macro for now.  Will be faster.
+// Returns TRUE iff ch is alive and singing.
+bool SINGING(P_char ch)
 {
-  /*if(IS_NPC(ch))
-    return 0;*/
-  if(!(ch) ||
-     !IS_ALIVE(ch))
+
+  if( !IS_ALIVE(ch) )
   {
-    return 0;
+    return FALSE;
   }
 
-  if(!IS_AFFECTED3(ch, AFF3_SINGING))
+  if( !IS_AFFECTED3(ch, AFF3_SINGING) )
   {
-    return 0;
+    return FALSE;
   }
-  return 1;
+  return TRUE;
 }
+*/
 
 void stop_singing(P_char ch)
 {
   struct affected_type *af, *next_af;
   P_char   tch;
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch))
+
+  if( !IS_ALIVE(ch) )
   {
-    logit(LOG_EXIT, "stop_singing in bard.c called without ch");
+    logit(LOG_EXIT, "stop_singing in bard.c called without a living ch (%s)", (ch==NULL) ? "NULL" : J_NAME(ch) );
     raise(SIGSEGV);
   }
 
@@ -272,89 +273,112 @@ int bard_get_type(int skill)
   return 0;
 }
 
+// Chance of not messing up a song.
+// retval: 0 -> always messes up, 101 -> never messes up.
+//   inbetween -> linear % of not messing up (higher is better for the Bard).
 int bard_calc_chance(P_char ch, int song)
 {
   P_obj    instrument;
-  int      c;
+  int      chance, weight, instrument_skill;
 
   /*if(IS_NPC(ch))
     return 0;*/
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch))
-        return 0;
-  
-  if(IS_TRUSTED(ch) ||
-    IS_NPC(ch))
-  {
-    return 101;
-  }
-  
-  if(!CAN_SING(ch))
+
+  if( !IS_ALIVE(ch) )
   {
     return 0;
   }
 
-  c = GET_CHAR_SKILL(ch, song);
-  instrument = has_instrument(ch);
-  if(!instrument)
+  // Gods and NPCs never fail? .. umm ok.
+  if( IS_TRUSTED(ch) || IS_NPC(ch) )
+  {
+    return 100;
+  }
+
+  if( !CAN_SING(ch) )
   {
     return 0;
   }
-  else if(IS_ARTIFACT(instrument))
+
+  chance = GET_CHAR_SKILL(ch, song);
+  instrument = has_instrument(ch);
+
+  // No instrument -> no chance.
+  if( !instrument )
   {
-    c = 101;
+    return 0;
   }
-  else if(bard_get_type(song) == instrument->value[0] + INSTRUMENT_OFFSET)
+  // Artifacts don't mess up, ever.
+  else if( IS_ARTIFACT(instrument) )
   {
-    c = MAX(c * 3 / 2,
-            ((bard_get_type(song) == instrument->value[0] + INSTRUMENT_OFFSET)
-             && (GET_LEVEL(ch) >=
-                 instrument->value[3])) ? c * GET_CHAR_SKILL(ch,
-                                                             instrument->
-                                                             value[0] +
-                                                             INSTRUMENT_OFFSET)
-            / 2 : 0);
+    return 100;
   }
+  // Playing the right instrument and can play said instrument...
+  else if( bard_get_type(song) == instrument->value[0] + INSTRUMENT_OFFSET && GET_LEVEL(ch) >= instrument->value[3] )
+  {
+    // chance = knowledge of song * % knowledge of instrument.
+    // c = (c * GET_CHAR_SKILL(ch,instrument->value[0] + INSTRUMENT_OFFSET)) / 100;
+    // Weighting this via a property so we can adjust as necessary (weight is a %):
+    weight = get_property("bard.instrumentFailWeight", 25);
+    instrument_skill = GET_CHAR_SKILL(ch, instrument->value[0] + INSTRUMENT_OFFSET);
+    // The higher weight is, the more instrument skill matters.
+    chance = ( chance * ((100-weight) * 100 + weight * instrument_skill) ) / (100*100);
+  }
+  // Playing the wrong instrument -> always mess up the song.
   else
   {
     return 0;
   }
+
   // level out the chance to between 80 and 110% (extra 10 for +max stat)
-  c = BOUNDED(80, c, 110);
+  /* Commenting this out as stats don't affect chance atm and it's already upper bound by 100.
+  chance = BOUNDED(80, chance, 110);
+  */
 
   // modify chance by other 'distractions' the bard might be experiencing
-  if(IS_CASTING(ch))
+  // 15% chance reduction for casting
+  if( IS_CASTING(ch) )
   {
-    c = c * 85 / 100;           // 15% chance reduction for casting
+    chance = chance * 85 / 100;
   }
+  // 7% chance reduction while fighting (and not casting)...
   else if( IS_FIGHTING(ch) || IS_DESTROYING(ch) )
   {
-    c = c * 93 / 100;           // 7% chance reduction while fighting...
+    chance = chance * 93 / 100;
   }
 
-  if(GET_LEVEL(ch) > 46)
+  // High levels get a 20% bonus... ok, but why?
+  if( GET_LEVEL(ch) > 46 )
   {
-    c = (int) (c * 1.2);
+    chance = (int) (chance * 1.2);
   }
-  if(GET_C_AGI(ch) > number(0, 70))
+  // 70 Agi to get a guaranteed 30% bonus?  Absurd.. changed to 125.
+  if( GET_C_AGI(ch) > number(0, 125) )
   {
-    c = (int) (c * 1.3);
+    chance = (int) (chance * 1.3);
   }
-  if(GET_C_DEX(ch) > number(0, 85))
+  // 85 Dex to get a guaranteed 30% bonus?  Absurd.. changed to 140.
+  if(GET_C_DEX(ch) > number(0, 140))
   {
-    c = (int) (c * 1.3);
+    chance = (int) (chance * 1.3);
   }
-  if(GET_C_LUK(ch) > number(0, 100))
+  // 100 Luck to get a 10% bonus?  blech.. changing to 110.
+  if(GET_C_LUK(ch) > number(0, 110))
   {
-    c = (int) (c * 1.1);
+    chance = (int) (chance * 1.1);
   }
-  return IS_ARTIFACT(instrument) ? 101 : BOUNDED(80, c, 99);
 
-  return 0;
+  // Compared to number(1,90) and number(1,100) via >=
+  // A minimum of 80% chance for a newbie?  Heck no.. try 25%.
+  // And a maximum of 99% chance to complete ok.. hmm, always a 1% chance to fail? naah.. raised to 100.
+  chance = BOUNDED(25, chance, 100);
+  // Note: This debug won't show for artis and such that have auto 100 or auto 0 chance.
+  debug( "bard_calc_chance: '%s' has final % of %d.", J_NAME(ch), chance );
+  return chance;
 }
 
 // This should represent the level with song and level with instrument.
+// The variable song should be between 0 and the number of bardsongs - 1 (18 - 1 = 17 on 5/31/2015).
 // Returns a value between 1 and 56.
 int bard_song_level(P_char ch, int song)
 {
@@ -362,14 +386,17 @@ int bard_song_level(P_char ch, int song)
   double level, instrument_level;
   double i_factor;
 
+  // Phantom singers crash the mud.
   if( !ch )
   {
     logit(LOG_EXIT, "bard_song_level in bard.c called without ch");
     raise(SIGSEGV);
   }
 
-  if( !SINGING(ch) || !IS_ALIVE(ch) )
+  // If we aren't alive and singing (SINGING checks IS_ALIVE) a valid song, return minimum.
+  if( !SINGING(ch) || song < FIRST_SONG || song > LAST_SONG )
   {
+    debug( "bard_song_level: Bogus Params - SINGING(ch): %s, song: %d.", SINGING(ch) ? "YES" : "NO", song );
     return 1;
   }
 
@@ -393,7 +420,8 @@ int bard_song_level(P_char ch, int song)
   else
   {
     // Has instrument factor to reduce level.
-    level *= (1. - get_property("bard.instrumentFactor", 0.35));
+    i_factor = get_property("bard.instrumentFactor", 0.25);
+    level *= (1. - i_factor);
 
     // If using the wrong instrument.
     if( bard_get_type(song) != instrument->value[0] + INSTRUMENT_OFFSET
@@ -414,12 +442,18 @@ int bard_song_level(P_char ch, int song)
         : ((GET_CHAR_SKILL(ch, instrument->value[0] + INSTRUMENT_OFFSET) / 2 + 50.0) * instrument->value[1]);
       instrument_level /= 100;
     }
-    level = (level + instrument_level) / 2;
+    level += instrument_level * i_factor;
   }
   if( level < 1 )
     level = 1;
-  if( level > 56 )
-    level = 56;
+  if( level > MAXLVL )
+    level = MAXLVL;
+/* This is really just for testing.
+  // Note: This will only show for PCs, as NPCs automatically sing at their level (regardless of instrument, etc).
+  debug( "bard_song_level: '%s' has final level of %d {instrument: %s (%d), %s (%d)}.", J_NAME(ch), (int)level,
+    instrument ? instrument->short_description : "None", instrument ? instrument->value[0] + INSTRUMENT_OFFSET : -1,
+    skills[song].name, bard_get_type(song) );
+*/
   return (int) level;
 }
 
@@ -858,23 +892,28 @@ void bard_calm(int l, P_char ch, P_char victim, int song)
   }
 }
 
-void bard_revelation(int l, P_char ch, P_char victim, int song)
+void bard_revelation(int level, P_char ch, P_char victim, int song)
 {
   bool flag = FALSE;
   struct affected_type af;
   int x = GET_LEVEL(ch);
   int empower = GET_CHAR_SKILL(ch, SKILL_EMPOWER_SONG);
 
-  if(IS_NPC(ch))
-    empower += 100;
+  // NPCs gradually empower to 100 skill at max level.
+  if( IS_NPC(ch) )
+  {
+    empower = (100 * GET_LEVEL(ch)) / MAXLVL;
+  }
+
+  // Add 4 levels for maxxed skill
+  level += (empower / 25);
 
 //  if(affected_by_spell(victim, song))
 //    return;
   /*
    * assuming song at 20th, min l is 6, max is 25 + instrument (at 50th)
    */
-  if((l > 7) &&
-    !IS_AFFECTED2(victim, AFF2_DETECT_MAGIC))
+  if( (level > 7) && !IS_AFFECTED2(victim, AFF2_DETECT_MAGIC) )
   {
     bzero(&af, sizeof(af));
     af.type = song;
@@ -884,8 +923,8 @@ void bard_revelation(int l, P_char ch, P_char victim, int song)
     flag = TRUE;
     act("&+mMagical energies are now visible.", FALSE, victim, 0, 0, TO_CHAR);
   }
-  if(l > 13)
-  {  
+  if( level > 13 )
+  {
     if(!IS_AFFECTED2(victim, AFF2_DETECT_GOOD))
     {
       bzero(&af, sizeof(af));
@@ -894,6 +933,7 @@ void bard_revelation(int l, P_char ch, P_char victim, int song)
       af.bitvector2 = AFF2_DETECT_GOOD;
       affect_to_char(victim, &af);
       flag = TRUE;
+      act("&+YYour eyes tingle.&n", FALSE, victim, 0, 0, TO_CHAR);
     }
     if(!IS_AFFECTED2(victim, AFF2_DETECT_EVIL))
     {
@@ -903,10 +943,11 @@ void bard_revelation(int l, P_char ch, P_char victim, int song)
       af.bitvector2 = AFF2_DETECT_EVIL;
       affect_to_char(victim, &af);
       flag = TRUE;
+      act("&+rYour eyes tingle.&n", FALSE, victim, 0, 0, TO_CHAR);
     }
   }
-  if((l > 30) &&
-  !IS_AFFECTED(victim, AFF_DETECT_INVISIBLE))
+  // DI on a 50% chance.
+  if( (level > 30) && !IS_AFFECTED(victim, AFF_DETECT_INVISIBLE) && !number(0, 1) )
   {
     bzero(&af, sizeof(af));
     af.type = song;
@@ -916,8 +957,7 @@ void bard_revelation(int l, P_char ch, P_char victim, int song)
     flag = TRUE;
     act("&+cYour eyes start to tingle.", FALSE, victim, 0, 0, TO_CHAR);
   }
-  if((l > 30) &&
-    !IS_AFFECTED(victim, AFF_SENSE_LIFE))
+  if( (level > 30) && !IS_AFFECTED(victim, AFF_SENSE_LIFE) )
   {
     bzero(&af, sizeof(af));
     af.type = song;
@@ -925,10 +965,10 @@ void bard_revelation(int l, P_char ch, P_char victim, int song)
     af.bitvector = AFF_SENSE_LIFE;
     affect_to_char(victim, &af);
     flag = TRUE;
+    act("&+LYour eyes start to tingle.", FALSE, victim, 0, 0, TO_CHAR);
   }
-  if((l > 21) &&
-    !IS_AFFECTED(victim, AFF_FARSEE) &&
-    number(0, 2))
+  // Farsee on a 33% chance.
+  if( (level > 21) && !IS_AFFECTED(victim, AFF_FARSEE) && !number(0, 2) )
   {
     bzero(&af, sizeof(af));
     af.type = song;
@@ -1716,7 +1756,7 @@ void event_bardsong(P_char ch, P_char victim, P_obj obj, void *data)
     stop_singing(ch);
     return;
   }
-  if( number(1, 90) > bard_calc_chance(ch, song) )
+  if( number(1, 90) >= bard_calc_chance(ch, song) )
   {
     act("Uh oh.. how did the song go, anyway?", FALSE, ch, 0, 0, TO_CHAR);
     act("$n stutters in $s song, and falls silent.", FALSE, ch, 0, 0, TO_ROOM);
@@ -1755,7 +1795,8 @@ void event_bardsong(P_char ch, P_char victim, P_obj obj, void *data)
   {
     next = tch->next_in_room;
 
-    if( IS_TRUSTED(tch) )
+    // Modified this so we can test.. heh.
+    if( IS_TRUSTED(tch) && (ch != tch) )
     {
       continue;
     }
@@ -1955,7 +1996,7 @@ void do_play(P_char ch, char *arg, int cmd)
 //        play_sound(SOUND_HARP, NULL, ch->in_room, TO_ROOM);
     }
   }
-  if(number(1, 101) > bard_calc_chance(ch, s))
+  if(number(1, 100) >= bard_calc_chance(ch, s))
   {
     act("Uh oh.. how did the song go, anyway?",
       FALSE, ch, 0, 0, TO_CHAR);
