@@ -1580,7 +1580,7 @@ struct descriptor_data {
   char *storage;                /* file editor holding        */
   int max_str;                  /* -                          */
   char *name;                   /* name for mail system       */
-  byte prompt_mode;             /* control of prompt-printing */
+  bool prompt_mode;             /* control of prompt-printing */
   char buf[MAX_QUEUE_LENGTH];   /* buffer for raw input       */
   char last_input[MAX_INPUT_LENGTH];    /* the last input         */
   struct txt_q output;          /* q of strings to send       */

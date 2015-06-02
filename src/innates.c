@@ -4229,10 +4229,10 @@ void event_lifedrain(P_char ch, P_char victim, P_obj obj, void *data)
 
   GET_HIT(victim) -= 5;
   if (victim->desc)
-    victim->desc->prompt_mode = 1;
+    victim->desc->prompt_mode = TRUE;
   GET_HIT(ch) += 5;
   if (ch->desc)
-    ch->desc->prompt_mode = 1;
+    ch->desc->prompt_mode = TRUE;
   gain -= 5;
 
   add_event(event_lifedrain, WAIT_SEC, ch, victim, 0, 0, &gain, sizeof(gain));

@@ -5610,7 +5610,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
   struct affected_type *af, *next_af;
   struct group_list *gl;
   char     buffer[MAX_STRING_LENGTH];
-  P_char   tch;
+  P_char   tch, orig;
   int i, nr, max_hit, diff, room, new_stat, act_flag, soulWasTrapped = 0;
   int group_size = num_group_members_in_room(victim);
   double   loss;
@@ -5882,8 +5882,18 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
       && (IS_SET(victim->specials.act, PLR_SMARTPROMPT)
       || IS_SET(victim->specials.act, PLR_OLDSMARTP)) )
     {
-      victim->desc->prompt_mode = 1;
+      victim->desc->prompt_mode = TRUE;
     }
+    // Switched monster for example
+    else if( victim->desc && (orig = victim->desc->original) != NULL )
+    {
+      if( IS_SET(orig->specials.act, PLR_SMARTPROMPT)
+        || IS_SET(orig->specials.act, PLR_OLDSMARTP) )
+      {
+        orig->desc->prompt_mode = TRUE;
+      }
+    }
+
 
     // Exps for damage
     // only getting damage exp once from the same mob, to prevent cheese

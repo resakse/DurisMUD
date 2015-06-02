@@ -4408,7 +4408,7 @@ void select_main_menu(P_desc d, char *arg)
       
     enter_game(d);
     STATE(d) = CON_PLYNG;
-    d->prompt_mode = 1;
+    d->prompt_mode = TRUE;
     break;
   case '2':                    /* read background story */
     SEND_TO_Q(BACKGR_STORY, d);

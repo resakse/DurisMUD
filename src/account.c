@@ -581,7 +581,7 @@ void account_select_char(P_desc d, char *arg)
   STATE(d) = CON_PLYNG;
   d->character = ch;
   enter_game(d);
-  d->prompt_mode = 1;
+  d->prompt_mode = TRUE;
 
   return;
 

@@ -80,8 +80,9 @@ void event_firesector(P_char ch, P_char victim, P_obj obj, void *data)
   {
     GET_HIT(ch) -= 3;
     StartRegen(ch, EVENT_HIT_REGEN);
-    if (IS_PC(ch) && ch->desc)
-      ch->desc->prompt_mode = 1;
+    // Doesn't matter if PC, if they have a descriptor, show the burn!
+    if( ch->desc )
+      ch->desc->prompt_mode = TRUE;
   }
 
   add_event(event_firesector, 3, ch, 0, 0, 0, 0, 0);
@@ -128,8 +129,8 @@ void event_underwatersector(P_char ch, P_char victim, P_obj obj, void *data)
       StartRegen(ch, EVENT_HIT_REGEN);
     }
 
-    if (IS_PC(ch) && ch->desc)
-      ch->desc->prompt_mode = 1;
+    if( ch->desc )
+      ch->desc->prompt_mode = TRUE;
   }
   else if (IS_AFFECTED2(ch, AFF2_HOLDING_BREATH))
   {
@@ -197,8 +198,8 @@ void swimming_char(P_char ch)
       } else {
 	GET_VITALITY(ch) -= (4 - (BOUNDED(0, (GET_CHAR_SKILL(ch, SKILL_SWIM) / 25), 4)));
       }
-      if (IS_PC(ch) && ch->desc)
-	ch->desc->prompt_mode = 1;
+      if( ch->desc )
+	ch->desc->prompt_mode = TRUE;
 
       StartRegen(ch, EVENT_MOVE_REGEN);
   } else {
@@ -541,8 +542,8 @@ void event_negsector(P_char ch, P_char victim, P_obj obj, void *data)
   {
     GET_HIT(ch) -= 3;
     StartRegen(ch, EVENT_HIT_REGEN);
-    if (IS_PC(ch) && ch->desc)
-      ch->desc->prompt_mode = 1;
+    if( ch->desc )
+      ch->desc->prompt_mode = TRUE;
   }
 
   add_event(event_negsector, 3, ch, 0, 0, 0, 0, 0);

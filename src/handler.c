@@ -203,23 +203,21 @@ void sun_damage_check(P_char ch)
 
 void event_sundamage(P_char ch, P_char victim, P_obj obj, void *data)
 {
-  if( !ch )
-    return;
 
-  if( IS_NPC(ch) || IS_TRUSTED(ch) )
+  if( !IS_ALIVE(ch) || IS_NPC(ch) || IS_TRUSTED(ch) )
     return;
 
   if( !IS_SUNLIT(ch->in_room) || IS_TWILIGHT_ROOM(ch->in_room) )
     return;
-  
+
   if( !has_innate(ch, INNATE_VULN_SUN) || IS_AFFECTED4(ch, AFF4_GLOBE_OF_DARKNESS) )
     return;
- 
-  if (GET_HIT(ch) < 1)
+
+  if( GET_HIT(ch) < 2 )
     return;
 
   int dam = number(1, 8);
-  
+
   switch( GET_RACE(ch) )
   {
     case RACE_TROLL:
@@ -238,9 +236,12 @@ void event_sundamage(P_char ch, P_char victim, P_obj obj, void *data)
 
   GET_HIT(ch) = MAX(1, GET_HIT(ch) - dam);
 
-  if (IS_PC(ch) && ch->desc)
-    ch->desc->prompt_mode = 1;
-    
+  if( IS_PC(ch) && ch->desc )
+    ch->desc->prompt_mode = TRUE;
+  P_char orig = ch->desc ? ch->desc->original : NULL;
+  if( orig )
+    orig->desc->prompt_mode = TRUE;
+
   if( GET_HIT(ch) > 1 )
     add_event(event_sundamage, 5, ch, 0, 0, 0, 0, 0);
 }

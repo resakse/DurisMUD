@@ -750,14 +750,15 @@ void game_loop(int s)
 
       /* check for hella long wait time here..  bandaid solution but it should (sort of) work */
 
-      if ((!t_ch || (t_ch && (CAN_ACT(t_ch) && !IS_SET(t_ch->specials.affected_by,
-                                      AFF_CHARM)))) &&
-          get_from_q(&point->input, comm))
+      if( (!t_ch || (t_ch && (CAN_ACT(t_ch) && !IS_SET(t_ch->specials.affected_by, AFF_CHARM))))
+        && get_from_q(&point->input, comm) )
       {
 
-        if (t_ch)
+        if( t_ch )
+        {
           t_ch->specials.timer = 0;
-        point->prompt_mode = 1;
+        }
+        point->prompt_mode = TRUE;
 
 /*        if (point->olc)
           olc_string_add(point->olc, comm);
@@ -798,14 +799,15 @@ void game_loop(int s)
         if (point->character &&
               (IS_PC(point->character) || IS_MORPH(point->character)))
         {
-          if (IS_SET(GET_PLYR(point->character)->specials.act,
-                     PLR_OLDSMARTP) && !point->showstr_count && !point->str &&
-              !point->olc && !IS_FIGHTING(GET_PLYR(point->character)))
-            point->prompt_mode = 0;
-          else
-            if (!IS_SET(GET_PLYR(point->character)->specials.act,
-                        PLR_SMARTPROMPT))
-            point->prompt_mode = 1;
+          if( IS_SET(GET_PLYR(point->character)->specials.act, PLR_OLDSMARTP)
+            && !point->showstr_count && !point->str && !point->olc && !IS_FIGHTING(GET_PLYR(point->character)))
+          {
+            point->prompt_mode = FALSE;
+          }
+          else if( !IS_SET(GET_PLYR(point->character)->specials.act, PLR_SMARTPROMPT) )
+          {
+            point->prompt_mode = TRUE;
+          }
         }
 /*
               !IS_SET(GET_PLYR(point->character)->specials.act,
@@ -814,7 +816,7 @@ void game_loop(int s)
                       PLR_OLDSMARTP))
 */
 #endif
-//        point->prompt_mode = 1;
+//        point->prompt_mode = TRUE;
     }
 
     /* give the people some prompts */
@@ -1763,7 +1765,7 @@ int new_descriptor(int s)
           strip_ansi(newd->host).c_str(), desc);
   system(Gbuf1);
   *newd->host2 = '\0';
-  newd->prompt_mode = 0;
+  newd->prompt_mode = FALSE;
   *newd->buf = '\0';
   newd->str = 0;
   newd->showstr_head = 0;
@@ -2454,7 +2456,7 @@ int process_input(P_desc t)
 
 #ifdef SMART_PROMPT
   if (t->character && IS_SET(t->character->specials.act, PLR_SMARTPROMPT))
-    t->prompt_mode = 1;
+    t->prompt_mode = TRUE;
 #endif
 
   /*

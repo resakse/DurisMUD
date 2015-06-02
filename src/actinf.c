@@ -8033,7 +8033,16 @@ void do_report(P_char ch, char *argument, int cmd)
 
 void do_display(P_char ch, char *argument, int cmd)
 {
-  char     buf[MAX_STRING_LENGTH];
+  char buf[MAX_STRING_LENGTH];
+  P_char to_ch = ch;
+  bool switched = FALSE;
+
+  // If an Imm is switched, we want to toggle the Imm's char's pcact not the mobs npcact
+  if( ch->desc && ch->desc->original )
+  {
+    ch = ch->desc->original;
+    switched = TRUE;
+  }
 
   if (IS_NPC(ch))
     return;
@@ -8042,18 +8051,17 @@ void do_display(P_char ch, char *argument, int cmd)
 
   if (*buf)
   {
-
     if (!str_cmp("twoline", buf))
     {
       if (IS_SET(ch->only.pc->prompt, PROMPT_TWOLINE))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_TWOLINE);
-        send_to_char("Twoline display turned &+rOFF&N.\n", ch);
+        send_to_char("Twoline display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_TWOLINE);
-        send_to_char("Twoline display turned &+gON&N.\n", ch);
+        send_to_char("Twoline display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("screen", buf))
@@ -8066,12 +8074,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_HIT))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_HIT);
-        send_to_char("Hits display turned &+rOFF&N.\n", ch);
+        send_to_char("Hits display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_HIT);
-        send_to_char("Hits display turned &+gON&N.\n", ch);
+        send_to_char("Hits display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("maxhits", buf))
@@ -8079,12 +8087,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_MAX_HIT))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_MAX_HIT);
-        send_to_char("Maxhits display turned &+rOFF&N.\n", ch);
+        send_to_char("Maxhits display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_MAX_HIT);
-        send_to_char("Maxhits display turned &+gON&N.\n", ch);
+        send_to_char("Maxhits display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("mana", buf))
@@ -8092,12 +8100,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_MANA))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_MANA);
-        send_to_char("Mana display turned &+rOFF&N.\n", ch);
+        send_to_char("Mana display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_MANA);
-        send_to_char("Mana display turned &+gON&N.\n", ch);
+        send_to_char("Mana display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("maxmana", buf))
@@ -8105,12 +8113,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_MAX_MANA))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_MAX_MANA);
-        send_to_char("Max Mana display turned &+rOFF&N.\n", ch);
+        send_to_char("Max Mana display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_MAX_MANA);
-        send_to_char("Max Mana display turned &+gON&N.\n", ch);
+        send_to_char("Max Mana display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("moves", buf))
@@ -8118,12 +8126,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_MOVE))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_MOVE);
-        send_to_char("Moves display turned &+rOFF&N.\n", ch);
+        send_to_char("Moves display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_MOVE);
-        send_to_char("Moves display turned &+gON&N.\n", ch);
+        send_to_char("Moves display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("maxmoves", buf))
@@ -8131,12 +8139,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_MAX_MOVE))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_MAX_MOVE);
-        send_to_char("Maxmoves display turned &+rOFF&N.\n", ch);
+        send_to_char("Maxmoves display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_MAX_MOVE);
-        send_to_char("Maxmoves display turned &+gON&N.\n", ch);
+        send_to_char("Maxmoves display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("tankname", buf))
@@ -8144,12 +8152,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_TANK_NAME))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_TANK_NAME);
-        send_to_char("Tank name display turned &+rOFF&N.\n", ch);
+        send_to_char("Tank name display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_TANK_NAME);
-        send_to_char("Tank name display turned &+gON&N.\n", ch);
+        send_to_char("Tank name display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("tankcond", buf))
@@ -8157,12 +8165,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_TANK_COND))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_TANK_COND);
-        send_to_char("Tank condition display turned &+rOFF&N.\n", ch);
+        send_to_char("Tank condition display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_TANK_COND);
-        send_to_char("Tank condition display turned &+gON&N.\n", ch);
+        send_to_char("Tank condition display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("enemy", buf))
@@ -8170,12 +8178,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_ENEMY))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_ENEMY);
-        send_to_char("Enemy display turned &+rOFF&N.\n", ch);
+        send_to_char("Enemy display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_ENEMY);
-        send_to_char("Enemy display turned &+gON&N.\n", ch);
+        send_to_char("Enemy display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("status", buf))
@@ -8183,12 +8191,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_STATUS))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_STATUS);
-        send_to_char("Status display turned &+rOFF&N.\n", ch);
+        send_to_char("Status display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_STATUS);
-        send_to_char("Status display turned &+gON&N.\n", ch);
+        send_to_char("Status display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("enemycond", buf))
@@ -8196,12 +8204,12 @@ void do_display(P_char ch, char *argument, int cmd)
       if (IS_SET(ch->only.pc->prompt, PROMPT_ENEMY_COND))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_ENEMY_COND);
-        send_to_char("Enemy condition display turned &+rOFF&N.\n", ch);
+        send_to_char("Enemy condition display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_ENEMY_COND);
-        send_to_char("Enemy condition display turned &+gON&N.\n", ch);
+        send_to_char("Enemy condition display turned &+gON&N.\n", to_ch);
       }
     }
     /*
@@ -8209,15 +8217,21 @@ void do_display(P_char ch, char *argument, int cmd)
      */
     else if( (!str_cmp("vis", buf)) && IS_TRUSTED(ch) )
     {
+      if( switched )
+      {
+        send_to_char("You shall remain invisible while switched.\n\r", to_ch );
+        return;
+      }
+
       if (IS_SET(ch->only.pc->prompt, PROMPT_VIS))
       {
         REMOVE_BIT(ch->only.pc->prompt, PROMPT_VIS);
-        send_to_char("Visibility display turned &+rOFF&N.\n", ch);
+        send_to_char("Visibility display turned &+rOFF&N.\n", to_ch);
       }
       else
       {
         SET_BIT(ch->only.pc->prompt, PROMPT_VIS);
-        send_to_char("Visibility display turned &+gON&N.\n", ch);
+        send_to_char("Visibility display turned &+gON&N.\n", to_ch);
       }
     }
     else if (!str_cmp("all", buf))
@@ -8234,18 +8248,20 @@ void do_display(P_char ch, char *argument, int cmd)
     else if (!str_cmp("off", buf))
     {
       if (ch->only.pc->prompt)
-        send_to_char("Turning off display.\n", ch);
+        send_to_char("Turning off display.\n", to_ch);
       else
-        send_to_char("But you aren't displaying anything!\n", ch);
+        send_to_char("But you aren't displaying anything!\n", to_ch);
       ch->only.pc->prompt = 0;
     }
+    else
+      send_to_char("Bad argument for display.\n\r", to_ch );
     return;
   }
   else
     send_to_char("Syntax: display <option>\n"
                  "Note: You must type the full name of the option listed below.\n"
                  "Options:all|off|hits|maxhits|slots|maxslots|moves|maxmoves|\n"
-                 "        tankname|tankcond|enemy|enemycond|twoline\n", ch);
+                 "        tankname|tankcond|enemy|enemycond|twoline\n", to_ch);
   return;
 }
 

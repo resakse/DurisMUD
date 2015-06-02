@@ -292,7 +292,7 @@ void event_blood_alliance(P_char ch, P_char victim, P_obj obj, void *data)
   if (sdam > number(0,40)) {
     act("You share some of your blood with $N.", FALSE, linked, 0, ch, TO_CHAR);
     if (linked->desc)
-      linked->desc->prompt_mode = 1;
+      linked->desc->prompt_mode = TRUE;
   }
 
   affect_remove(ch, af);

@@ -1518,6 +1518,11 @@ void command_interpreter(P_char ch, char *argument)
     }
     else
     {
+      // Always allow Imms to return to their own body.
+      if( cmd == CMD_RETURN && ch->desc && ch->desc->original && IS_TRUSTED(ch->desc->original) )
+      {
+        do_return( ch, 0, CMD_RETURN );
+      }
       if ((IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) ||
            IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS)) &&
           !CAN_CMD_PARALYSIS(cmd) && !IS_TRUSTED(ch))
@@ -1546,8 +1551,7 @@ void command_interpreter(P_char ch, char *argument)
           (cmd != CMD_PETITION && cmd != CMD_TELL && cmd != CMD_MOVE &&
            cmd != CMD_LOOK && cmd != CMD_WHISPER))
       {
-        send_to_char("You're busy scribing a spell into your spellbook!\r\n",
-                     ch);
+        send_to_char("You're busy scribing a spell into your spellbook!\r\n", ch);
         return;
       }
       if (affected_by_spell(ch, SKILL_WHIRLWIND)) {
@@ -1560,7 +1564,7 @@ void command_interpreter(P_char ch, char *argument)
          (IS_PC(ch) || !IS_SET(ch->only.npc->aggro_flags, AGGR_ALL)))
       {
         i = number(1, 101);
-        
+
         if(IS_UNDEADRACE(ch) &&
           !IS_PC(ch))
         {
