@@ -3783,11 +3783,13 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
   }
 
   /* Pets take double damage from PC spells */
-  if(get_linked_char(victim, LNK_PET) &&
-      IS_PC(ch))
+  if( get_linked_char(victim, LNK_PET) && IS_PC(ch) )
   {
     dam = (int) (dam * get_property("damage.pcs.vs.pets", 2.000));
   }
+
+  // This is for Lich spell damage vamping.
+  flags |= SPLDAM_SPELL;
 
   /* Being berserked incurs more damage from spells. Ouch. */
   if(affected_by_spell(victim, SKILL_BERSERK))
@@ -3817,8 +3819,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
     dam *= dam_factor[DF_ELEMENTALIST];
   }
 
-  if(ELEMENTAL_DAM(type) &&
-      affected_by_spell(victim, SPELL_ENERGY_CONTAINMENT))
+  if( ELEMENTAL_DAM(type) && affected_by_spell(victim, SPELL_ENERGY_CONTAINMENT) )
     dam *= dam_factor[DF_ENERGY_CONTAINMENT];
 
   // Lom: honestly I would like put globe/sphere/deflect/etc checks first,
@@ -3858,18 +3859,15 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
   // Lom: I think should set memory here, before messages
   // Lom: also might put globe check prior damage messages
 
-  // victim remembers attacker 
+  // victim remembers attacker
   remember(victim, ch);
 
-  if (IS_PC_PET(ch) &&
-      GET_MASTER(ch)->in_room == ch->in_room &&
-      CAN_SEE(victim, GET_MASTER(ch)))
+  if( IS_PC_PET(ch) && GET_MASTER(ch)->in_room == ch->in_room && CAN_SEE(victim, GET_MASTER(ch)) )
   {
     remember(victim, GET_MASTER(ch));
   }
 
-  if (has_innate(victim, INNATE_EVASION) &&
-      GET_SPEC(victim, CLASS_MONK, SPEC_WAYOFDRAGON))
+  if( has_innate(victim, INNATE_EVASION) && GET_SPEC(victim, CLASS_MONK, SPEC_WAYOFDRAGON) )
   {
     if ((((int) get_property("innate.evasion.removechance", 15.000))) > number(1,100))
     {
@@ -3877,14 +3875,12 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
       act ("$n twists out of the way avoiding the harmful magic!", FALSE, victim, 0, ch, TO_ROOM);
       return DAM_NONEDEAD;
     }
-  }    
+  }
   // globes check
-  if (ch != victim)
+  if( ch != victim )
   {
-    if((IS_AFFECTED3(victim, AFF3_SPIRIT_WARD) &&
-          (flags & SPLDAM_SPIRITWARD)) ||
-        (IS_AFFECTED3(victim, AFF3_GR_SPIRIT_WARD) &&
-         (flags & SPLDAM_GRSPIRIT)))
+    if( (IS_AFFECTED3(victim, AFF3_SPIRIT_WARD) && (flags & SPLDAM_SPIRITWARD))
+      || (IS_AFFECTED3(victim, AFF3_GR_SPIRIT_WARD) && (flags & SPLDAM_GRSPIRIT)) )
     {
       act("&+WThe globe around your body flares as it bears the brunt of&n $n&+W's assault!",
           FALSE, ch, 0, victim, TO_VICT | ACT_NOTTERSE);
@@ -3909,12 +3905,10 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
   // end of globes check
 
   /* check for deflectable spells - basically all but shields damage and already deflected spells */
-  if((ch != victim) &&
-      !IS_SET(flags, SPLDAM_NODEFLECT))
+  if( (ch != victim) && !IS_SET(flags, SPLDAM_NODEFLECT) )
   {
     /* deflection */
-    if(IS_AFFECTED4(victim, AFF4_DEFLECT) &&
-        IS_ALIVE(ch))
+    if( IS_AFFECTED4(victim, AFF4_DEFLECT) && IS_ALIVE(ch) )
     {
       act("&+cA &+Ctranslucent&n&+c field &+Wflashes&n&+c around your body upon contact with&n $n&n&+c's assault, deflecting it back at $m!",
           FALSE, ch, 0, victim, TO_VICT);
@@ -3924,9 +3918,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
           FALSE, ch, 0, victim, TO_CHAR);
 
       affect_from_char(victim, SPELL_DEFLECT);
-      result =
-        spell_damage(ch, ch, dam * 0.7, type, flags | SPLDAM_NODEFLECT,
-            messages);
+      result = spell_damage(ch, ch, dam * 0.7, type, flags | SPLDAM_NODEFLECT, messages);
 
       if (result == DAM_NONEDEAD)
       {
@@ -3940,7 +3932,12 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
     }
 
     if(!IS_ALIVE(victim))
-      return DAM_VICTDEAD;
+    {
+      if(IS_ALIVE(ch))
+        return DAM_VICTDEAD;
+      else
+        return DAM_BOTHDEAD;
+    }
     else if(!IS_ALIVE(ch))
       return DAM_CHARDEAD;
 
@@ -3956,8 +3953,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
         data.attacktype = type;
         data.flags = flags;
         data.messages = messages;
-        if ((*obj_index[item->R_num].func.obj) (item, victim, CMD_GOTNUKED,
-              (char *) &data))
+        if ((*obj_index[item->R_num].func.obj) (item, victim, CMD_GOTNUKED, (char *) &data))
         {
           if (GET_STAT(victim) == STAT_DEAD)
             return DAM_VICTDEAD;
@@ -3970,10 +3966,8 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
     }
 
     /* defensive spell hook for mob proc - Torgal */
-    if(victim &&
-        IS_NPC(victim) &&
-        mob_index[GET_RNUM(victim)].func.mob &&
-        !affected_by_spell(victim, TAG_CONJURED_PET))
+    if( victim && IS_NPC(victim) && mob_index[GET_RNUM(victim)].func.mob
+      && !affected_by_spell(victim, TAG_CONJURED_PET) )
     {
       data.victim = ch;
       data.dam = (int) dam;
@@ -3981,8 +3975,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
       data.flags = flags;
       data.messages = messages;
 
-      if ((*mob_index[GET_RNUM(victim)].func.mob) (victim, ch, CMD_GOTNUKED,
-            (char *) &data))
+      if( (*mob_index[GET_RNUM(victim)].func.mob) (victim, ch, CMD_GOTNUKED, (char *) &data) )
       {
         if (GET_STAT(victim) == STAT_DEAD)
           return DAM_VICTDEAD;
@@ -4007,15 +4000,13 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
       {
         affect_from_char(victim, SPELL_STORNOGS_SPHERES);
         REMOVE_BIT(victim->specials.affected_by4, AFF4_STORNOGS_SPHERES);
-        send_to_char("The last sphere protecting you disappears.\r\n",
-            victim);
+        send_to_char("The last sphere protecting you disappears.\r\n", victim);
       }
       attack_back(ch, victim, FALSE);
       return DAM_NONEDEAD;
     }
 
-    if(GET_CHAR_SKILL(victim, SKILL_ARCANE_RIPOSTE) > 0 &&
-        !IS_TRUSTED(victim))
+    if(GET_CHAR_SKILL(victim, SKILL_ARCANE_RIPOSTE) > 0 && !IS_TRUSTED(victim))
     {
       int skill_lvl = GET_CHAR_SKILL(victim, SKILL_ARCANE_RIPOSTE);
 
@@ -4179,7 +4170,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
   }
 
   // apply damage modifiers
-  switch (type)
+  switch( type )
   {
     case SPLDAM_GENERIC:
       if (has_innate(victim, MAGICAL_REDUCTION))
@@ -4545,42 +4536,42 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
     }
   }
 
-if (parse_chaos_shield(ch, victim))
-{
-  dam *= dam_factor[DF_CHAOSSHIELD];
-}
-
-if(affected_by_spell(victim, SKILL_SPELL_PENETRATION))
-{
-  int damageReductionMod = number(20, 70);
-  dam *= (double) damageReductionMod / 100.0;
-  // Use this properties file to make fine adjustments to this from now on.
-  dam *= (double) get_property("skill.spellPenetration.damageReductionMod", 1.00);
-  affect_from_char(victim, SKILL_SPELL_PENETRATION);
-}
-
-// racial spell damage modifiers
-if( GET_RACE(ch) > RACE_NONE && GET_RACE(ch) <= LAST_RACE && type >= 0 && type < LAST_SPLDAM_TYPE )
-{
-  dam *= racial_spldam_offensive_factor[GET_RACE(ch)][type];
-}
-
-if( GET_RACE(victim) > RACE_NONE && GET_RACE(victim) <= LAST_RACE && type >= 0 && type < LAST_SPLDAM_TYPE )
-{
-  dam *= racial_spldam_defensive_factor[GET_RACE(victim)][type];
-}
-
-// adjust damage based on zone difficulty
-if( IS_NPC(ch) && !affected_by_spell(ch, TAG_CONJURED_PET) )
-{
-  int zone_difficulty = BOUNDED(1, zone_table[world[real_room0(GET_BIRTHPLACE(ch))].zone].difficulty, 10);
-
-  if( zone_difficulty > 1 )
+  if (parse_chaos_shield(ch, victim))
   {
-    float dam_mod = 1.0 + ((float) get_property("damage.zoneDifficulty.spells.factor", 0.200) * zone_difficulty);
-    dam = (float) ( dam * dam_mod );
+    dam *= dam_factor[DF_CHAOSSHIELD];
   }
-}
+
+  if(affected_by_spell(victim, SKILL_SPELL_PENETRATION))
+  {
+    int damageReductionMod = number(20, 70);
+    dam *= (double) damageReductionMod / 100.0;
+    // Use this properties file to make fine adjustments to this from now on.
+    dam *= (double) get_property("skill.spellPenetration.damageReductionMod", 1.00);
+    affect_from_char(victim, SKILL_SPELL_PENETRATION);
+  }
+
+  // racial spell damage modifiers
+  if( GET_RACE(ch) > RACE_NONE && GET_RACE(ch) <= LAST_RACE && type >= 0 && type < LAST_SPLDAM_TYPE )
+  {
+    dam *= racial_spldam_offensive_factor[GET_RACE(ch)][type];
+  }
+
+  if( GET_RACE(victim) > RACE_NONE && GET_RACE(victim) <= LAST_RACE && type >= 0 && type < LAST_SPLDAM_TYPE )
+  {
+    dam *= racial_spldam_defensive_factor[GET_RACE(victim)][type];
+  }
+
+  // adjust damage based on zone difficulty
+  if( IS_NPC(ch) && !affected_by_spell(ch, TAG_CONJURED_PET) )
+  {
+    int zone_difficulty = BOUNDED(1, zone_table[world[real_room0(GET_BIRTHPLACE(ch))].zone].difficulty, 10);
+
+    if( zone_difficulty > 1 )
+    {
+      float dam_mod = 1.0 + ((float) get_property("damage.zoneDifficulty.spells.factor", 0.200) * zone_difficulty);
+      dam = (float) ( dam * dam_mod );
+    }
+  }
 
 int necropets[] = {3, 4, 5, 6, 7, 8, 9, 10, 78, 79, 80, 81, 82, 83, 84, 85};
 if (IS_NPC(ch) && IS_PC(victim))
@@ -5542,10 +5533,14 @@ void check_vamp(P_char ch, P_char victim, double fdam, uint flags)
       fhits = dam * dam_factor[DF_NPCVAMP];
       vamped = vamp(ch, fhits, GET_MAX_HIT(ch) * VAMPPERCENT(ch) );
     }
-    else if( dam >= 25 && IS_PC(ch) )
+    // 10 dam * .3 = 3 points of vamp minimum. 'cause I said so.
+    else if( dam >= 12 && IS_PC(ch) )
     {
       fhits = dam * dam_factor[DF_UNDEADVAMP];
       fcap = GET_MAX_HIT(ch);
+      // Liches vamp from spells.
+      if( flags & SPLDAM_SPELL && GET_RACE(ch) == RACE_PLICH )
+        fcap *= VAMPPERCENT(ch);
       vamped = vamp(ch, fhits, fcap);
     }
   }
@@ -5665,8 +5660,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
         return DAM_NONEDEAD;
       }
 
-      if(IS_TRUSTED(victim) &&
-          IS_SET(victim->specials.act, PLR_AGGIMMUNE))
+      if( IS_TRUSTED(victim) && IS_SET(victim->specials.act, PLR_AGGIMMUNE) )
       {
         return DAM_NONEDEAD;
       }
@@ -5898,10 +5892,9 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
       }
     }
 
-
     // Exps for damage
     // only getting damage exp once from the same mob, to prevent cheese
-    if (IS_NPC(victim) && GET_HIT(victim) < GET_LOWEST_HIT(victim))
+    if( IS_NPC(victim) && GET_HIT(victim) < GET_LOWEST_HIT(victim) )
     {
       if(!(flags & RAWDAM_NOEXP))
       {

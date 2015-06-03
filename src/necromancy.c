@@ -2565,8 +2565,7 @@ void event_corpseform_wearoff(P_char ch, P_char victim, P_obj obj, void *data)
   }
 }
 
-void spell_slashing_darkness(int level, P_char ch, char *arg, int type,
-                             P_char victim, P_obj obj)
+void spell_slashing_darkness(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct damage_messages messages = {
     "&+LThe shadowy hand slashes $N &+Lviciously.",
@@ -2581,9 +2580,8 @@ void spell_slashing_darkness(int level, P_char ch, char *arg, int type,
     return;
 
   int dam;
-
   int num_missiles = BOUNDED(1, (level / 3), 5);
-  
+
   dam = (dice(1, 4) * 4 + number(1, level))*num_missiles;
 
   act("&+LYou utter a word of dark speech and a shadowy hand coalesces near $N!&n", FALSE, ch, 0, victim, TO_CHAR);
@@ -2591,7 +2589,7 @@ void spell_slashing_darkness(int level, P_char ch, char *arg, int type,
   act("&+L$n utters a word of dark speech, and a shadowy hand coalesces near YOU!&n", FALSE, ch, 0, victim, TO_VICT);
 
   spell_damage(ch, victim, (dam/2), SPLDAM_GENERIC, SPLDAM_ALLGLOBES | RAWDAM_NOKILL | SPLDAM_NOSHRUG, 0);
-  
+
   if (IS_ALIVE(ch) && IS_ALIVE(victim))
     spell_damage(ch, victim, (dam/2), SPLDAM_NEGATIVE, SPLDAM_ALLGLOBES | SPLDAM_NOSHRUG, &messages);
 
