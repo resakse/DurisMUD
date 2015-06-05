@@ -129,18 +129,18 @@ void spell_phantom_armor(int level, P_char ch, char *arg, int type,
   }
 }
 
-void spell_shadow_monster(int level, P_char ch, char *arg, int type,
-                          P_char victim, P_obj obj)
+void spell_shadow_monster(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   P_char   mob;
   int      summoned = 0;
   struct char_link_data *cld;
 
-  if(!ch ||
-     !victim)
-      return;
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+  {
+    return;
+  }
 
-  if(CHAR_IN_SAFE_ZONE(ch))
+  if( CHAR_IN_SAFE_ZONE(ch) )
   {
     send_to_char("A mysterious force blocks your conjuring!\r\n", ch);
     return;
@@ -156,8 +156,8 @@ void spell_shadow_monster(int level, P_char ch, char *arg, int type,
     }
   }
 
-  if(summoned >= MAX(1, GET_LEVEL(ch) / 14) ||
-    !GET_CLASS(ch, CLASS_ILLUSIONIST))
+  // So, no shadow monster potions or scrolls then (save ones used by illusionists)?
+  if(summoned >= MAX(1, GET_LEVEL(ch) / 14) || !GET_CLASS(ch, CLASS_ILLUSIONIST))
   {
     send_to_char("You cannot summon any more shadows!\r\n", ch);
     return;

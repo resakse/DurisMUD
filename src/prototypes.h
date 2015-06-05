@@ -1155,7 +1155,7 @@ int add_racial_stat_bonus(P_char, struct hold_data *);
 void apply_affs(P_char, int);
 void balance_affects(P_char);
 void char_from_room(P_char);
-int char_to_room(P_char, int, int);
+bool char_to_room(P_char, int, int);
 void equip_char(P_char, P_obj, int, int);
 void extract_char(P_char);
 void extract_obj(P_obj, int);

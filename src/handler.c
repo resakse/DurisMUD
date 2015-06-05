@@ -869,8 +869,8 @@ void char_from_room(P_char ch)
 /*
  * place a character in a room.
  */
-
-int char_to_room(P_char ch, int room, int dir)
+// Returns TRUE iff char made it into the room.
+bool char_to_room(P_char ch, int room, int dir)
 {
   P_char   t_ch, k, who;
   P_desc   d;
@@ -884,22 +884,22 @@ int char_to_room(P_char ch, int room, int dir)
   int      x_distance = 0;
   int      y_distance = 0;
 
-  if (!ch)
+  if( !IS_ALIVE(ch) )
     return FALSE;
 
   if (room < 0)
   {
-    if (IS_NPC(ch))
+    if( IS_NPC(ch) )
     {
+      logit(LOG_DEBUG, "char_to_room: trying to move %s (%d) to room %d.", J_NAME(ch), GET_VNUM(ch), room );
       extract_char(ch);
       ch = NULL;
-      return TRUE;
+      return FALSE;
     }
+    // Move them to Limbo!
     room = 0;
-    logit(LOG_DEBUG, "char_to_room: trying to move %s to room < 0",
-          GET_NAME(ch));
-    wizlog(AVATAR, "char_to_room: trying to move %s to room < 0",
-           GET_NAME(ch));
+    logit(LOG_DEBUG, "char_to_room: trying to move %s to room < 0", GET_NAME(ch));
+    wizlog(AVATAR, "char_to_room: trying to move %s to room < 0", GET_NAME(ch));
   }
 
   /* this is a serious error, but let's just try and live with it */
@@ -1078,7 +1078,9 @@ int char_to_room(P_char ch, int room, int dir)
     do_look(ch, 0, -4);
 
   if (dir < 0)                  /* flag value, skip aggro checks */
-    return FALSE;
+  {
+    return TRUE;
+  }
 
   /*
    * new, room specials get checked when chars enter, ignores return,
@@ -1086,41 +1088,58 @@ int char_to_room(P_char ch, int room, int dir)
    */
 
   if (GET_STAT(ch) == STAT_DEAD)
-    return FALSE;
+    return TRUE;
 
+  // Room procs.
   if (world[ch->in_room].funct)
   {
     (*world[ch->in_room].funct) (ch->in_room, ch, (-50 + dir), NULL);
-    if (!char_in_list(ch) || (room != ch->in_room) ||
-        (GET_STAT(ch) == STAT_DEAD))
-      return TRUE;
+    // Room proc killed them.
+    if( !char_in_list(ch) || (room != ch->in_room) || (GET_STAT(ch) == STAT_DEAD) )
+      return FALSE;
   }
   if( (world[room].sector_type == SECT_FIREPLANE)
     || (world[room].sector_type == SECT_LAVA)
     || (world[room].sector_type == SECT_UNDRWLD_LIQMITH) )
   {
     firesector(ch);
+    if( !IS_ALIVE(ch) )
+    {
+      return FALSE;
+    }
   }
   if ((world[room].sector_type == SECT_NEG_PLANE))
   {
     negsector(ch);
+    if( !IS_ALIVE(ch) )
+    {
+      return FALSE;
+    }
   }
 
   /* underwater stuff */
-  if (IS_SET(world[ch->in_room].room_flags, UNDERWATER) ||
-      ch->specials.z_cord < 0)
-    underwatersector(ch);
-
-  if (!IS_SET(world[ch->in_room].room_flags, UNDERWATER) && IS_AFFECTED2(ch, AFF2_HOLDING_BREATH))
-    REMOVE_BIT(ch->specials.affected_by2, AFF2_HOLDING_BREATH);
-
-  if ((world[(ch)->in_room].sector_type == SECT_NO_GROUND) ||
-      (world[(ch)->in_room].sector_type == SECT_UNDRWLD_NOGROUND) ||
-      (ch->specials.z_cord > 0))
+  if( IS_SET(world[ch->in_room].room_flags, UNDERWATER) || ch->specials.z_cord < 0 )
   {
-    if (char_falling(ch))
+    underwatersector(ch);
+    if( !IS_ALIVE(ch) )
     {
-      if (falling_char(ch, FALSE, false))
+      return FALSE;
+    }
+  }
+
+  if( !IS_SET(world[ch->in_room].room_flags, UNDERWATER) && IS_AFFECTED2(ch, AFF2_HOLDING_BREATH) )
+  {
+    REMOVE_BIT(ch->specials.affected_by2, AFF2_HOLDING_BREATH);
+  }
+
+  if( (world[(ch)->in_room].sector_type == SECT_NO_GROUND) ||
+      (world[(ch)->in_room].sector_type == SECT_UNDRWLD_NOGROUND) ||
+      (ch->specials.z_cord > 0) )
+  {
+    if( char_falling(ch) )
+    {
+      // FALSE -> can't kill char, FALSE -> This is not an event.
+      if( falling_char(ch, FALSE, FALSE) )
         return FALSE;
     }
   }
@@ -1147,8 +1166,13 @@ int char_to_room(P_char ch, int room, int dir)
   }
   if (IS_SET(ch->specials.affected_by3, AFF3_SWIMMING) &&
       ch->specials.z_cord < 1 && IS_WATER_ROOM(ch->in_room))
+  {
     swimming_char(ch);
-
+    if( !IS_ALIVE(ch) )
+    {
+      return FALSE;
+    }
+  }
 /*
   if (!IS_SET(ch->specials.affected_by3, AFF3_SWIMMING) && dir > -1 &&
         ch->specials.z_cord < 1 && IS_WATER_ROOM(ch->in_room) && !IS_WATER_ROOM(was_in))
@@ -1166,11 +1190,14 @@ int char_to_room(P_char ch, int room, int dir)
           {
             send_to_char("The current sweeps you away!\r\n", ch);
             do_move(ch, 0, exitnumb_to_cmd(current));
+            if( !IS_ALIVE(ch) )
+            {
+              return FALSE;
+            }
           }
       }
   /* too much money in your hands? Didn't have it in a bag? shame...  */
-  total_coins =
-    GET_COPPER(ch) + GET_SILVER(ch) + GET_GOLD(ch) + GET_PLATINUM(ch);
+  total_coins = GET_COPPER(ch) + GET_SILVER(ch) + GET_GOLD(ch) + GET_PLATINUM(ch);
   if (total_coins > 200 && !IS_TRUSTED(ch))
   {
     do
@@ -1189,50 +1216,61 @@ int char_to_room(P_char ch, int room, int dir)
    * justice hook
    */
   if (IS_INVADER(ch) || IS_OUTCAST(ch))
-    justice_action_invader(ch);
-
-  if ((room == NOWHERE) || IS_SET(world[room].room_flags, SAFE_ZONE))
   {
-    if (IS_NPC(ch))
+    justice_action_invader(ch);
+    if( !IS_ALIVE(ch) )
+    {
+      return FALSE;
+    }
+  }
+
+  // Purge NPCs from safe rooms? ok...
+  if( IS_SET(world[room].room_flags, SAFE_ZONE) )
+  {
+    if( IS_NPC(ch) )
     {
       extract_char(ch);
       ch = NULL;
-      return TRUE;
+      return FALSE;
     }
-    return FALSE;
+    return TRUE;
   }
-  if (IS_MAP_ROOM(ch->in_room) && IS_PC(ch) && !IS_TRUSTED(ch))
+  if( IS_MAP_ROOM(ch->in_room) && IS_PC(ch) && !IS_TRUSTED(ch) )
   {
     /*random_encounters(ch);
        check_for_kingdom_trespassing(ch); */
   }
 
-  if (ALONE(ch))
+  if( ALONE(ch) )
     return FALSE;
 
-  // If you comment out the return, you need to change this loop to handle deaths.
-  for( k = world[room].people; k; k = k->next_in_room )
+  // This check is important because we want to make sure ch isn't a newly created mob.
+  if( was_in > 0 )
   {
-    // Skip PCs and NPCs with no proc
-    if( !IS_NPC(k) || mob_index[GET_RNUM(k)].func.mob == NULL )
+    // If you comment out the return, you need to change this loop to handle deaths.
+    for( k = world[room].people; k; k = k->next_in_room )
     {
-      continue;
-    }
-    if( (*mob_index[GET_RNUM(k)].func.mob) (k, ch, CMD_TOROOM, NULL) )
-    {
-      // Can comment out this return if we want to allow multiple procs upon entering room.
-      //   If you do this, make sure IS_ALIVE(ch) and k and such...
-      return TRUE;
+      // Skip PCs and NPCs with no proc
+      if( !IS_NPC(k) || mob_index[GET_RNUM(k)].func.mob == NULL )
+      {
+        continue;
+      }
+      if( (*mob_index[GET_RNUM(k)].func.mob) (k, ch, CMD_TOROOM, NULL) )
+      {
+        // Can comment out this return if we want to allow multiple procs upon entering room.
+        //   If you do this, make sure IS_ALIVE(ch) and k and such...
+        if( IS_ALIVE(ch) && ch->in_room == room )
+          return TRUE;
+        else
+          return FALSE;
+      }
     }
   }
 
   /*
    * check char entering room for an agg (auto) attack on occupants.
    */
-
   t_ch = PickTarget(ch);
-  
-
 
   /*
    * delay is 0 to 7, 0 to 5 for avg. dex, 0 to 4 for 18, 0 to 1 for
@@ -1255,23 +1293,31 @@ int char_to_room(P_char ch, int room, int dir)
   if( t_ch && is_aggr_to(ch, t_ch) )
   {
     add_event(event_agg_attack, number(0, MAX(0, (11 - dex_app[STAT_INDEX(GET_C_DEX(ch))].reaction) / 2)) + calming,
-     ch, t_ch, 0, 0, 0, 0);
+      ch, t_ch, 0, 0, 0, 0);
+    if( !IS_ALIVE(ch) )
+    {
+      return FALSE;
+    }
   }
 
   for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next_in_room)
   {
-    if(!IS_ALIVE(t_ch) ||
-       !IS_ALIVE(ch))
+    // Probably won't die from a social, but you never know.
+    if( !IS_ALIVE(ch) )
     {
-      continue;
+      return FALSE;
     }
-    
+    if( !IS_ALIVE(t_ch) )
+    {
+      break;
+    }
+
     if(t_ch == ch)
       continue;
 
     if(IS_PC(t_ch))
       continue;
-      
+
     if(GET_LEVEL(ch) >= 56 &&
       !is_aggr_to(ch, t_ch) &&
       CAN_SEE(t_ch, ch) &&
@@ -1309,7 +1355,7 @@ int char_to_room(P_char ch, int room, int dir)
         default:
           break;
         }
-        
+
         if(GET_SEX(t_ch) != GET_SEX(ch))
           if(!number(0, 250)){
             do_action(t_ch, GET_NAME(ch), CMD_BLUSH);
@@ -1317,12 +1363,11 @@ int char_to_room(P_char ch, int room, int dir)
             obj_to_char(flow, t_ch);
             char     text[MAX_STRING_LENGTH];
             sprintf(text, "rose %s", GET_NAME(ch) );
-            do_give(t_ch, text, CMD_GIVE);	
+            do_give(t_ch, text, CMD_GIVE);
           }
       }
     }
-  }  
-  
+  }
   return FALSE;
 }
 

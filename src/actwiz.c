@@ -1384,9 +1384,10 @@ void do_deathobj(P_char ch, char *argument, int cmd)
 
 void stat_dam(P_char ch, char *arg)
 {
-  char    *race_name, tmplate[512], buf[512], prop_name[512];
-  float    pulse, multiplier, mult_mod, melee_factor, damcap;
-  int      race;
+  const char *race_name;
+  char        tmplate[512], buf[512], prop_name[512];
+  float       pulse, multiplier, mult_mod, melee_factor, damcap;
+  int         race;
 
   send_to_char("Race          &+WPulse&n  Mult  (&+WProp&n) DamCap\n", ch);
   send_to_char("-------------------------------------------\n", ch);
