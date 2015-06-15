@@ -66,6 +66,7 @@ extern const struct race_names race_names_table[];
 extern void set_long_description(P_obj t_obj, const char *newDescription);
 extern void set_short_description(P_obj t_obj, const char *newDescription);
 extern void event_wait(P_char ch, P_char victim, P_obj obj, void *data);
+void release_mob_mem(P_char ch, P_char victim, P_obj obj, void *data);
 
 //extern const int material_absorbtion[][];
 extern const struct stat_data stat_factor[];
@@ -2267,7 +2268,16 @@ void die(P_char ch, P_char killer)
   /* make mirror images disappear */
   if(IS_ALIVE(ch) && IS_NPC(ch) && GET_VNUM(ch) == 250)
   {
-    act("Upon being struck, $n disappears into thin air.", TRUE, ch, 0, 0, TO_ROOM);
+    if( ch == killer )
+    {
+      act("&+LYou disappear into thin air.&n", TRUE, ch, 0, 0, TO_CHAR);
+      act("&+L$n&+L disappears into thin air.&n", TRUE, ch, 0, 0, TO_ROOM);
+    }
+    else
+    {
+      act("Upon being struck, you disappear into thin air.", TRUE, ch, 0, 0, TO_CHAR);
+      act("Upon being struck, $n disappears into thin air.", TRUE, ch, 0, 0, TO_ROOM);
+    }
     extract_char(ch);
     return;
   }
@@ -2609,6 +2619,9 @@ void die(P_char ch, P_char killer)
       else
       {
         (*mob_index[GET_RNUM(ch)].func.mob) (ch, killer, CMD_DEATH, 0);
+        // If this mob has been extracted and been given a release mem event.
+        if( ch->nevents && ch->nevents->func == release_mob_mem )
+          return;
       }
     }
     else
@@ -2616,7 +2629,7 @@ void die(P_char ch, P_char killer)
       corpse = make_corpse(ch, loss);
     }
 
-    if(corpse && killer != ch && ( has_innate(killer, INNATE_MUMMIFY) || has_innate(killer, INNATE_REQUIEM)))
+    if( corpse && killer != ch && ( has_innate(killer, INNATE_MUMMIFY) || has_innate(killer, INNATE_REQUIEM)))
     {
       mummify(killer, ch, corpse);
     }

@@ -618,17 +618,35 @@ void stop_all_followers(P_char ch)
 // We want ch's followers to die.
 void die_follower(P_char ch)
 {
-  /*while( ch->followers )
-  {
-    if( ch->followers->follower && IS_ALIVE(ch->followers->follower) )
-    {
-      die( ch->followers->follower, ch->followers->follower);
-    }
-  }*/
+  struct follow_type *j, *k;
+
   if( ch->following )
     stop_follower(ch);
 
-  stop_all_followers(ch);
+  // Kill/stop all their followers!  Rawr!
+  j = ch->followers;
+  while( j )
+  {
+    k = j->next;
+
+    // If their follower is a pet... (we don't kill the soldiers following a commander).
+    if( IS_ALIVE(j->follower) )
+    {
+      // If they're a pet, kill them!
+      if( GET_MASTER(j->follower) == ch )
+      {
+        die( j->follower, j->follower);
+      }
+      // Otherwise, just stop following.
+      else
+      {
+        stop_follower(j->follower);
+      }
+    }
+
+    j = k;
+  }
+
 }
 
 #if 0

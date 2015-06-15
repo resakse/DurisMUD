@@ -12188,8 +12188,7 @@ int shadow_monster(P_char ch, P_char pl, int cmd, char *arg)
   if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !ch->specials.fighting)) )
   {
     act("$n &+Lquickly fades into the thin air!", TRUE, ch, 0, 0, TO_ROOM);
-    act("$n &+rdisappears as &+Lquickly&+r as it came!", TRUE, ch, 0, 0,
-        TO_ROOM);
+    act("$n &+rdisappears as &+Lquickly&+r as it came!", TRUE, ch, 0, 0, TO_ROOM);
     extract_char(ch);
     return TRUE;
   }
@@ -12214,7 +12213,6 @@ int insects(P_char ch, P_char pl, int cmd, char *arg)
   {
     act("$n &+Lquickly fades into the thin air!", TRUE, ch, 0, 0, TO_ROOM);
     act("$n &+rdisappears as &+Lquickly&+r as it came!", TRUE, ch, 0, 0, TO_ROOM);
-//    if( cmd != CMD_DEATH )
     {
       extract_char(ch);
     }
@@ -12222,7 +12220,7 @@ int insects(P_char ch, P_char pl, int cmd, char *arg)
   }
 
   // Let's junk it on anything if not fighting!
-  if( !ch->specials.fighting )
+  if( !ch->specials.fighting || cmd != CMD_PERIODIC )
   {
     return FALSE;
   }
@@ -12312,6 +12310,7 @@ int imageproc(P_char ch, P_char pl, int cmd, char *arg)
 
   if (!affected_by_spell(ch, SPELL_CHARM_PERSON))
   {
+    act("&+L$n&+L quickly fades into the thin air!", TRUE, ch, 0, 0, TO_ROOM);
     char_from_room(ch);
     extract_char(ch);
     return TRUE;
