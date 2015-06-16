@@ -1994,6 +1994,7 @@ void do_play(P_char ch, char *arg, int cmd)
           GET_NAME(ch), arg, world[ch->in_room].number);
   }
 
+  arg = skip_spaces(arg);
   if(!arg || !*arg)
   {
     if(IS_AFFECTED3(ch, AFF3_SINGING))
@@ -2001,14 +2002,12 @@ void do_play(P_char ch, char *arg, int cmd)
       send_to_char("You stop your song.\r\n", ch);
       act("$n stops singing abruptly.", FALSE, ch, 0, 0, TO_ROOM);
       stop_singing(ch);
-      CharWait(ch, PULSE_VIOLENCE);
-      return;
+      set_short_affected_by(ch, FIRST_INSTRUMENT, 2 * WAIT_SEC );
     }
-  }
-  arg = skip_spaces(arg);
-  if( !arg || !*arg )
-  {
-    send_to_char("Sing/play what song?\r\n", ch);
+    else
+    {
+      send_to_char("Sing/play what song?\r\n", ch);
+    }
     return;
   }
 
