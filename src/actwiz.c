@@ -2027,10 +2027,13 @@ void do_stat(P_char ch, char *argument, int cmd)
         logit(LOG_DEBUG, "do_stat(): obj %d [%d] not loadable", i,
               obj_index[i].virtual_number);
         return;
-      }                         /*else
-                                   obj_to_room(t_obj, 0); */
-      if(t_obj->name)
-        strcpy(arg2, t_obj->name);
+      }
+      // If there's more than one in the game, pull t_obj.
+      if( obj_index[t_obj->R_num].number > 1 )
+      {
+        extract_obj(t_obj, TRUE);
+        t_obj = NULL;
+      }
     }
 /*
     if(cmd == 555) //special code for web eq stats
@@ -2048,16 +2051,17 @@ void do_stat(P_char ch, char *argument, int cmd)
 
     }
     else
-*/ if(!(j = get_obj_vis(ch, arg2)))
+*/
+    if( !(j = get_obj_vis(ch, arg2)) )
     {
-        send_to_char("No such object.\n", ch);
-      if(t_obj)
+      send_to_char("No such object.\n", ch);
+      if( t_obj )
       {
-        extract_obj(t_obj, FALSE);
-        t_obj = NULL;
+        extract_obj(t_obj, TRUE);
       }
       return;
     }
+
     m_virtual = (j->R_num >= 0) ? obj_index[j->R_num].virtual_number : 0;
 
     sprinttype(GET_ITEM_TYPE(j), item_types, buf2);
@@ -2424,15 +2428,13 @@ void do_stat(P_char ch, char *argument, int cmd)
       }
       strcat(o_buf, "\n");
     }
-    
+
     /* Since quality of an item can have some meaning now, let's add it to stat command -Alver */
-    { 
+    {
         int craft = j->craftsmanship;
-        
         sprintf(buf, "\n&+YQuality:&N ");
-        
-      if(craft < OBJCRAFT_LOWEST ||
-          craft > OBJCRAFT_HIGHEST)
+
+      if( craft < OBJCRAFT_LOWEST || craft > OBJCRAFT_HIGHEST )
       {
         strcat(buf, "BUGGY!\n");
       }
@@ -2460,10 +2462,12 @@ void do_stat(P_char ch, char *argument, int cmd)
        } */
 
    //Insert item into db
-    if(cmd == 555){
+    if(cmd == 555)
+    {
       sql_insert_item(ch, j, o_buf);
     }
-    else {
+    else
+    {
        if(j->contains)
         strcat(o_buf, "\n&+YContains:\n");
 
@@ -2475,11 +2479,10 @@ void do_stat(P_char ch, char *argument, int cmd)
 
     if(t_obj)
     {
-      extract_obj(t_obj, FALSE);
+      extract_obj(t_obj, TRUE);
       t_obj = NULL;
     }
     return;
-
   }
   else if((*arg1 == 'c') || (*arg1 == 'C') || (*arg1 == 'm') ||
            (*arg1 == 'M'))

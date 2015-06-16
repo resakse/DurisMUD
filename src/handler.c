@@ -3247,80 +3247,124 @@ P_obj get_obj_in_list_vis(P_char ch, char *name, P_obj list)
 P_obj get_obj_vis(P_char ch, char *name, int zrange )
 {
   P_obj    t_obj;
-  int      i, j, k;
+  int      i, j, k, vnum = 0;
   char     tmpname[MAX_STRING_LENGTH];
   char    *tmp;
 
-  if (!name || !*name)
-    return (0);
+  // Without an argument, no idea what to look for.
+  if( !name || !*name )
+    return NULL;
 
   strcpy(tmpname, name);
   tmp = tmpname;
-  if (!(k = get_number(&tmp)))
-    return (0);
 
-  /*
-   * check equipment first, this was ancient glitch
-   */
+  // If we have just a vnum hunted for by an Imm
+  if( is_number(name) && IS_TRUSTED(ch) )
+  {
+    vnum = atoi(name);
+    k = 1;
+  }
+  // In format xxx.yyy, k = atoi(xxx) & tmp = yyy.
+  else if( !(k = get_number(&tmp)) )
+  {
+    return NULL;
+  }
+  // If we have xxx.yyy where xxx is quantity, and yyy is vnum
+  if( !vnum && is_number(tmp) && IS_TRUSTED(ch) )
+  {
+    vnum = atoi(tmp);
+  }
+
+  // Check equipment first, this was ancient glitch
   for (i = 0, j = 0; (i < MAX_WEAR) && (j <= k); i++)
-    if ((t_obj = ch->equipment[i]))
-      if (isname(tmp, t_obj->name))
+  {
+    if( (t_obj = ch->equipment[i]) )
+    {
+      if( (vnum && vnum == GET_OBJ_VNUM(t_obj)) || isname(tmp, t_obj->name) )
+      {
         if (CAN_SEE_OBJ(ch, t_obj) || IS_NOSHOW(t_obj))
         {
-          if (j == k)
-            return (t_obj);
-          j++;
+          if( ++j == k )
+          {
+            return t_obj;
+          }
         }
-  /*
-   * scan items carried
-   */
-  if ((t_obj = get_obj_in_list_vis(ch, tmp, ch->carrying)))
-    return (t_obj);
+      }
+    }
+  }
 
-  /*
-   * scan room
-   */
-  if ((t_obj = get_obj_in_list_vis(ch, tmp, world[ch->in_room].contents)))
-    return (t_obj);
+  // Scan items carried
+  t_obj = ch->carrying;
+  while( t_obj )
+  {
+    if( (vnum && vnum == GET_OBJ_VNUM(t_obj)) || isname(tmp, t_obj->name) )
+    {
+      if (CAN_SEE_OBJ(ch, t_obj) || IS_NOSHOW(t_obj))
+      {
+        if( ++j == k )
+        {
+          return t_obj;
+        }
+      }
+    }
+    t_obj = t_obj->next_content;
+  }
 
-  /*
-   * ok.. no luck yet. scan the entire obj list
-   */
+  // Scan room
+  t_obj = world[ch->in_room].contents;
+  while( t_obj )
+  {
+    if( (vnum && vnum == GET_OBJ_VNUM(t_obj)) || isname(tmp, t_obj->name) )
+    {
+      if (CAN_SEE_OBJ(ch, t_obj) || IS_NOSHOW(t_obj))
+      {
+        if( ++j == k )
+        {
+          return t_obj;
+        }
+      }
+    }
+    t_obj = t_obj->next_content;
+  }
+
+  // Ok.. no luck yet. scan the entire obj list (restart counter).
   if( zrange <= 0 )
   {
-    for( t_obj = object_list, j = 1; t_obj && (j <= k); t_obj = t_obj->next )
+    for( t_obj = object_list, j = 0; t_obj && (j < k); t_obj = t_obj->next )
     {
-      if (isname(tmp, t_obj->name))
+      if( (vnum && vnum == GET_OBJ_VNUM(t_obj)) || isname(tmp, t_obj->name) )
       {
         // If you can see it, or it's flagged noshow... then you can see it?
         //   Yes, the NOSHOW flag means you can't see it when you look in room,
         //   but it shows when you try to interact with it (ie push button / touch flowers / l <extra desc> etc).
         if (CAN_SEE_OBJ(ch, t_obj) || IS_NOSHOW(t_obj))
         {
-          if (j == k)
-            return (t_obj);
-          j++;
+          if( ++j == k )
+          {
+            return t_obj;
+          }
         }
       }
     }
   }
   else
   {
-    for( t_obj = object_list, j = 1; t_obj && (j <= k); t_obj = t_obj->next )
+    for( t_obj = object_list, j = 0; t_obj && (j <= k); t_obj = t_obj->next )
     {
-      if (isname(tmp, t_obj->name))
+      if( (vnum && vnum == GET_OBJ_VNUM(t_obj)) || isname(tmp, t_obj->name) )
       {
         if( CAN_SEE_OBJZ(ch, t_obj, zrange) || IS_NOSHOW(t_obj) )
         {
-          if (j == k)
-            return (t_obj);
-          j++;
+          if( ++j == k )
+          {
+            return t_obj;
+          }
         }
       }
     }
   }
 
-  return (0);
+  return NULL;
 }
 
 void add_coins(P_obj pile, int copper, int silver, int gold, int platinum)
