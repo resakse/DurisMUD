@@ -6117,7 +6117,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
 
       if( dam > GET_HIT(victim) && ch != victim )
       {
-        act("&-L&+CYIKES!&n  Another hit like that, and you've had it!!", FALSE, victim, 0, 0, TO_CHAR);
+        act("&=LCYIKES!&n&-L  Another hit like that, and you've had it!!", FALSE, victim, 0, 0, TO_CHAR);
       }
       else if( dam > (max_hit / 10) && ch != victim )
       {
