@@ -3642,233 +3642,114 @@ void do_drag(P_char ch, char *argument, int cmd)
 
 void do_stand(P_char ch, char *argument, int cmd)
 {
-  int  dura, skl;
-  P_char   kala, kala2;
-  struct affected_type af;
-  
+
   if(!ch)
   {
     logit(LOG_EXIT, "do_stand called in actmove.c with no ch");
     raise(SIGSEGV);
   }
-  if(ch) // Just making sure.
+
+  if( !IS_ALIVE(ch) )
   {
-    if(!IS_ALIVE(ch))
+    send_to_char("&+rYou attempt to stand, but you are dead so your body doesn't respond.\n\r", ch);
+    return;
+  }
+
+  if( GET_POS(ch) == POS_STANDING )
+  {
+    act("You are already standing.", FALSE, ch, 0, 0, TO_CHAR);
+    return;
+  }
+
+  // Why is this here? - We might want to call do_stand from say, the monk auto-stand skill while they're bashed.
+  if( !CAN_ACT(ch) )
+  {
+    return;
+  }
+
+  switch( GET_STAT(ch) )
+  {
+    case STAT_DEAD:
+    case STAT_DYING:
+    case STAT_INCAP:
     {
+      send_to_char("Posture would seem to be far down on your list of problems right now!\n", ch);
       return;
     }
-    if(GET_POS(ch) == POS_STANDING)
+    case STAT_SLEEPING:
     {
-      act("You are already standing.", FALSE, ch, 0, 0, TO_CHAR);
+      send_to_char("You dream of sleepwalking.\n", ch);
       return;
     }
-    if(!CAN_ACT(ch))
-    {
-      return;
-    }
-    switch (GET_STAT(ch))
-    {
-      case STAT_DEAD:
-      case STAT_DYING:
-      case STAT_INCAP:
+    case STAT_RESTING:
+    case STAT_NORMAL:
+      if(IS_AFFECTED(ch, AFF_KNOCKED_OUT))
       {
-        send_to_char
-          ("Posture would seem to be far down on your list of problems right now!\n", ch);
+        send_to_char("You should probably worry more about becoming conscious again.\n", ch);
         return;
       }
-      case STAT_SLEEPING:
+      if(IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) || IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS))
       {
-        send_to_char("You dream of sleepwalking.\n", ch);
+        send_to_char("You can't even twitch, much less stand up!\n", ch);
         return;
       }
-      case STAT_RESTING:
-      case STAT_NORMAL:
-        if(IS_AFFECTED(ch, AFF_KNOCKED_OUT))
+      if(IS_AFFECTED(ch, AFF_BOUND))
+      {
+        send_to_char("Try to unbind yourself first!\n", ch);
+        return;
+      }
+      if( IS_AFFECTED2(ch, AFF2_STUNNED) )
+      {
+        // Maaaybeee
+        if(number(1, (GET_C_AGI(ch) + GET_C_DEX(ch))) < number(70, 140))
         {
-          send_to_char
-            ("You should probably worry more about becoming conscious again.\n", ch);
+          send_to_char("You stagger about, then fall to your knees!\n", ch);
+          SET_POS(ch, GET_STAT(ch) + POS_PRONE);
           return;
         }
-        if(IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) ||
-          IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS))
+        else if(number(1, (GET_C_AGI(ch) + GET_C_DEX(ch))) < number(70, 201))
         {
-          send_to_char("You can't even twitch, much less stand up!\n", ch);
+          send_to_char("You stagger about, then fall to your knees!\n", ch);
+          SET_POS(ch, GET_STAT(ch) + POS_KNEELING);
           return;
-        }
-        if(IS_AFFECTED(ch, AFF_BOUND))
-        {
-          send_to_char("Try to unbind yourself first!\n", ch);
-          return;
-        }
-        if(IS_AFFECTED2(ch, AFF2_STUNNED) ||
-          IS_AFFECTED(ch, AFF_BOUND))
-        {
-          /*
-           * maaaybeee
-           */
-          if(number(1, (GET_C_AGI(ch) + GET_C_DEX(ch))) < number(70, 140))
-          {
-            send_to_char("You stagger about, then fall to your knees!\n", ch);
-            SET_POS(ch, GET_STAT(ch) + POS_PRONE);
-            return;
-          }
-          else if(number(1, (GET_C_AGI(ch) + GET_C_DEX(ch))) < number(70, 201))
-          {
-            send_to_char("You stagger about, then fall to your knees!\n", ch);
-            SET_POS(ch, GET_STAT(ch) + POS_KNEELING);
-            return;
-          }
-          else
-          {
-            send_to_char("You manage to unsteadily get to your feet.\n", ch);
-            act("$n staggers about, but manages to get to $s feet.", TRUE, ch, 0,
-                0, TO_ROOM);
-          }
         }
         else
         {
-          switch (GET_POS(ch))
-          {
-            case POS_PRONE:
-              act("You clamber to your feet.", FALSE, ch, 0, 0, TO_CHAR);
-              act("$n clambers to $s feet.", TRUE, ch, 0, 0, TO_ROOM);
-              break;
-            case POS_KNEELING:
-              act("You rise to your feet.", FALSE, ch, 0, 0, TO_CHAR);
-              act("$n rises to $s feet.", TRUE, ch, 0, 0, TO_ROOM);
-              break;
-            case POS_SITTING:
-              act("You clamber to your feet.", FALSE, ch, 0, 0, TO_CHAR);
-              act("$n clambers to $s feet.", TRUE, ch, 0, 0, TO_ROOM);
-              break;
-            case POS_STANDING:
-              act("You are already standing.", FALSE, ch, 0, 0, TO_CHAR);
-              return;
-          }
-          break;
-        }
-        break;
-    }
-    /*  check for crippling strike */
-    if(IS_FIGHTING(ch))
-    {
-      for (kala = world[ch->in_room].people; kala; kala = kala2)
-      {
-        kala2 = kala->next_in_room;
-        
-        if( kala == ch)
-        {
-          continue;
-        }
-        
-        if(GET_POS(kala) != POS_STANDING)
-        {
-          continue;
-        }
-// We want to have crippling strike activate when the merc is not fighting
-// tanking the victim. It's more logical this way.                
-        if(ch->specials.fighting == kala)
-        {
-          continue;
-        }
-        
-        if(kala->specials.fighting != ch)
-        {
-          continue;
-        }
-        
-        if(IS_IMMOBILE(kala) ||
-           !AWAKE(kala) ||
-           IS_STUNNED(kala) ||
-           !IS_HUMANOID(ch) ||
-           IS_ELITE(ch))
-        {
-          continue;
-        }
-        
-        skl = GET_CHAR_SKILL(kala, SKILL_CRIPPLING_STRIKE);
-        int      success = 0;
-
-        success = skl - number(0, 170);
-
-        if(skl &&
-           success > 0)
-        {
-          notch_skill(kala, SKILL_CRIPPLING_STRIKE, 15);
-          if( success > 85)
-          {
-            act("You spin on your heel, slamming your elbow into $N's ear.",
-                FALSE, kala, 0, ch, TO_CHAR);
-            act("$n spins around, slamming $s elbow into your ear. \nYour vision blurs and your ears start ringing!",
-               FALSE, kala, 0, ch, TO_VICT);
-            act("$n spins around, slamming $s elbow into $N's ear.", FALSE,
-                kala, 0, ch, TO_NOTVICT);
-
-            bzero(&af, sizeof(af));
-            af.type = SKILL_CRIPPLING_STRIKE;
-            af.bitvector4 = AFF4_DEAF;
-            af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL;
-            af.duration = number(25, 50) * PULSE_VIOLENCE;
-            send_to_char("&+WDoh! You can't hear a thing!&n", ch);
-
-            affect_to_char_with_messages(ch, &af,
-                "&+WOooh, is that bird song you hear? How lovely.&n",
-                "$n seems to be listening to the birds singing.");
-
-            damage(kala, ch, 4 * (40 + (dice(2, 20))), SKILL_CRIPPLING_STRIKE);
-          }
-
-          else if(success > 65)
-          {
-            act("You stomp down hard on $N's knee, twisting it.", FALSE, kala,
-                0, ch, TO_CHAR);
-            act("$n stomps down hard on your knee, twisting it painfully.",
-                FALSE, kala, 0, ch, TO_VICT);
-            act("$n stomps on $N's knee, twisting it.", FALSE, kala, 0, ch,
-                TO_NOTVICT);
-            GET_VITALITY(ch) -= number(5, 25);
-            damage(kala, ch, 4 * (30 + (dice(2, 20))), SKILL_CRIPPLING_STRIKE);
-          }
-          else if(success > 45)
-          {
-            act("You grab $N by the head and slam your knee in his face.",
-                FALSE, kala, 0, ch, TO_CHAR);
-            act
-              ("Blinding pain rushes over you as $n crushes your nose with his knee.",
-               FALSE, kala, 0, ch, TO_VICT);
-            act("$n slams his knee into $N's face.", FALSE, kala, 0, ch,
-                TO_NOTVICT);
-            damage(kala, ch, 4 * (30 + (dice(1, 20))), SKILL_CRIPPLING_STRIKE);
-          }
-          else if(success > 25)
-          {
-            act
-              ("As $N stands, you leap forward and slam the hilt of your weapon into $s back.",
-               FALSE, kala, 0, ch, TO_CHAR);
-            act
-              ("$n leaps forward and slams the hilt of his weapon into your back, oof!!",
-               FALSE, kala, 0, ch, TO_VICT);
-            act
-              ("As $N stands, $n leaps forward and slams the hilt of his weapon into $s back.",
-               FALSE, kala, 0, ch, TO_NOTVICT);
-            damage(kala, ch, 4 * (10 + (dice(1, 20))), SKILL_CRIPPLING_STRIKE);
-          }
-          else
-          {
-            act("You charge $N, but $e rolls nimbly out of the way.", FALSE,
-                kala, 0, ch, TO_CHAR);
-            act("$n lunges forward, but you roll out of the way", FALSE, kala,
-                0, ch, TO_VICT);
-            act("$n lunges forward, but $N rolls out of the way.", FALSE, kala,
-                0, ch, TO_NOTVICT);
-          }
+          send_to_char("You manage to unsteadily get to your feet.\n", ch);
+          act("$n staggers about, but manages to get to $s feet.", TRUE, ch, 0, 0, TO_ROOM);
         }
       }
-    }                             // END SPEC SKILL CHECK
-
-    SET_POS(ch, POS_STANDING + STAT_NORMAL);
-    stop_memorizing(ch);
+      else
+      {
+        switch( GET_POS(ch) )
+        {
+          case POS_PRONE:
+            act("You clamber to your feet.", FALSE, ch, 0, 0, TO_CHAR);
+            act("$n clambers to $s feet.", TRUE, ch, 0, 0, TO_ROOM);
+            break;
+          case POS_KNEELING:
+            act("You rise to your feet.", FALSE, ch, 0, 0, TO_CHAR);
+            act("$n rises to $s feet.", TRUE, ch, 0, 0, TO_ROOM);
+            break;
+          case POS_SITTING:
+            act("You clamber to your feet.", FALSE, ch, 0, 0, TO_CHAR);
+            act("$n clambers to $s feet.", TRUE, ch, 0, 0, TO_ROOM);
+            break;
+          case POS_STANDING:
+            act("You are already standing.", FALSE, ch, 0, 0, TO_CHAR);
+            return;
+        }
+        break;
+      }
+      break;
   }
+
+  // Returns TRUE if ch dies in the process.
+  if( check_crippling_strike( ch ) )
+    return;
+
+  SET_POS(ch, POS_STANDING + STAT_NORMAL);
+  stop_memorizing(ch);
 }
 
 // end do_stand

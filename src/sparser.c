@@ -2074,7 +2074,7 @@ bool check_disruptive_blow(P_char ch)
   int success;
   P_char tch;
 
-  if( !(ch) || !ch->specials.fighting || IS_IMMOBILE(ch)
+  if( !IS_ALIVE(ch) || !ch->specials.fighting || IS_IMMOBILE(ch)
     || !AWAKE(ch) || IS_STUNNED(ch) || !IS_HUMANOID(ch))
     return FALSE;
 
@@ -2099,7 +2099,8 @@ bool check_disruptive_blow(P_char ch)
 
     if (skl && success)
     {
-      notch_skill(ch, SKILL_DISRUPTIVE_BLOW, 17);
+      if( notch_skill(ch, SKILL_DISRUPTIVE_BLOW, 17) )
+        success = 100;
 
       if (success > 75)
       {

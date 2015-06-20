@@ -2328,13 +2328,17 @@ void do_flee(P_char ch, char *argument, int cmd)
         FALSE, ch, 0, 0, TO_CHAR);
   }
 
-  if(!MIN_POS(ch, POS_STANDING + STAT_RESTING))
+  // Not standing, flee fails, but they stand (if they can)
+  if( !MIN_POS(ch, POS_STANDING + STAT_RESTING) )
   {
-    /* not standing, flee fails, but they stand (if they can) */
-    SET_POS(ch, POS_STANDING + GET_STAT(ch));
-    act("Looking panicked, $n scrambles madly to $s feet!",
-      TRUE, ch, 0, 0, TO_ROOM);
+    act("Looking panicked, $n scrambles madly to $s feet!", TRUE, ch, 0, 0, TO_ROOM);
     send_to_char("You scramble madly to your feet!\n", ch);
+
+    // Returns TRUE if ch dies in the process.
+    if( check_crippling_strike( ch ) )
+      return;
+
+    SET_POS(ch, POS_STANDING + GET_STAT(ch));
     return;
   }
 
@@ -10453,3 +10457,131 @@ void do_legsweep(P_char ch, char *arg, int cmd)
   return;
 }
 
+// Check for crippling strike skill
+// Returns TRUE if ch is DEAD.
+bool check_crippling_strike( P_char ch )
+{
+  P_char kala, kala2;
+  int skl, success;
+  struct affected_type af;
+
+  if( IS_FIGHTING(ch) )
+  {
+    for( kala = world[ch->in_room].people; kala; kala = kala2 )
+    {
+      kala2 = kala->next_in_room;
+
+      if( kala == ch)
+      {
+        continue;
+      }
+
+      if( GET_POS(kala) != POS_STANDING )
+      {
+        continue;
+      }
+
+      // We want to have crippling strike activate when the merc is not fighting
+      // tanking the victim. It's more logical this way.
+      if( ch->specials.fighting == kala )
+      {
+        continue;
+      }
+
+      if(kala->specials.fighting != ch)
+      {
+        continue;
+      }
+
+      if( IS_IMMOBILE(kala) || !AWAKE(kala) || IS_STUNNED(kala)
+        || !IS_HUMANOID(ch) || IS_ELITE(ch))
+      {
+        continue;
+      }
+
+      skl = GET_CHAR_SKILL(kala, SKILL_CRIPPLING_STRIKE);
+      success = skl - number(0, 170);
+
+      if( skl && success > 0 )
+      {
+        notch_skill(kala, SKILL_CRIPPLING_STRIKE, 15);
+        if( success > 85 )
+        {
+          act("You spin on your heel, slamming your elbow into $N's ear.",
+            FALSE, kala, 0, ch, TO_CHAR);
+          act("$n spins around, slamming $s elbow into your ear. \nYour vision blurs and your ears start ringing!",
+            FALSE, kala, 0, ch, TO_VICT);
+          act("$n spins around, slamming $s elbow into $N's ear.", FALSE,
+            kala, 0, ch, TO_NOTVICT);
+
+          bzero(&af, sizeof(af));
+          af.type = SKILL_CRIPPLING_STRIKE;
+          af.bitvector4 = AFF4_DEAF;
+          af.flags = AFFTYPE_SHORT | AFFTYPE_NODISPEL;
+          af.duration = number(25, 50) * WAIT_SEC;
+          send_to_char("&+WDoh! You can't hear a thing!&n", ch);
+
+          affect_to_char_with_messages(ch, &af,
+            "&+WOooh, is that bird song you hear? How lovely.&n",
+            "$n&n seems to be listening to the birds singing.");
+
+          GET_VITALITY(ch) -= number(10, 25);
+          damage(kala, ch, 4 * (40 + (dice(2, 20))), SKILL_CRIPPLING_STRIKE);
+          if( !IS_ALIVE(kala) )
+          {
+            return TRUE;
+          }
+        }
+        else if( success > 65 )
+        {
+          act("You stomp down hard on $N's knee, twisting it.", FALSE, kala,
+            0, ch, TO_CHAR);
+          act("$n stomps down hard on your knee, twisting it painfully.",
+            FALSE, kala, 0, ch, TO_VICT);
+          act("$n stomps on $N's knee, twisting it.", FALSE, kala, 0, ch,
+            TO_NOTVICT);
+          GET_VITALITY(ch) -= number(5, 25);
+          damage(kala, ch, 4 * (30 + (dice(2, 20))), SKILL_CRIPPLING_STRIKE);
+          if( !IS_ALIVE(kala) )
+          {
+            return TRUE;
+          }
+        }
+        else if( success > 45 )
+        {
+          act("You grab $N by the head and slam your knee in his face.",
+            FALSE, kala, 0, ch, TO_CHAR);
+          act("Blinding pain rushes over you as $n crushes your nose with his knee.",
+            FALSE, kala, 0, ch, TO_VICT);
+          act("$n slams his knee into $N's face.", FALSE, kala, 0, ch, TO_NOTVICT);
+          damage(kala, ch, 4 * (30 + (dice(1, 20))), SKILL_CRIPPLING_STRIKE);
+          if( !IS_ALIVE(kala) )
+          {
+            return TRUE;
+          }
+        }
+        else if( success > 25 )
+        {
+          act("As $N stands, you leap forward and slam the hilt of your weapon into $s back.",
+            FALSE, kala, 0, ch, TO_CHAR);
+          act("$n leaps forward and slams the hilt of his weapon into your back, oof!!",
+            FALSE, kala, 0, ch, TO_VICT);
+          act("As $N stands, $n leaps forward and slams the hilt of his weapon into $s back.",
+            FALSE, kala, 0, ch, TO_NOTVICT);
+          damage(kala, ch, 4 * (10 + (dice(1, 20))), SKILL_CRIPPLING_STRIKE);
+          if( !IS_ALIVE(kala) )
+          {
+            return TRUE;
+          }
+        }
+        else
+        {
+          act("You charge $N, but $e rolls nimbly out of the way.", FALSE, kala, 0, ch, TO_CHAR);
+          act("$n lunges forward, but you roll out of the way", FALSE, kala, 0, ch, TO_VICT);
+          act("$n lunges forward, but $N rolls out of the way.", FALSE, kala, 0, ch, TO_NOTVICT);
+        }
+      }
+    }
+  }
+  return FALSE;
+}

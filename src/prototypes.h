@@ -429,6 +429,7 @@ bool isSweepable(P_char, P_char);
 bool isKickable(P_char, P_char);
 bool isMaulable(P_char, P_char);
 double orc_horde_dam_modifier(P_char, double, int);
+bool check_crippling_strike( P_char ch );
 
 /* actoth.c */
 
