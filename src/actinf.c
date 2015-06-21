@@ -7494,9 +7494,10 @@ void do_where(P_char ch, char *argument, int cmd)
     argument++;
   }
 
-  if( !*argument || !strcmp( argument, "?" ) )
+  if( argument && !strcmp( argument, "?" ) )
   {
     send_to_char( "&+YValid arguments: &+Wevils, goods, undeads, neutrals, <vnum>, zone, trap, stat.\n\r", ch );
+    return;
   }
 
   if( !*argument )
@@ -7533,6 +7534,7 @@ void do_where(P_char ch, char *argument, int cmd)
     page_string(ch->desc, buf, 1);
     return;
   }
+
   if( isname(argument, "evils") || isname(argument,"goods") || isname(argument,"undeads")
     || isname(argument,"neutrals") )
   {
