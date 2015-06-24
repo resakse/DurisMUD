@@ -49,6 +49,7 @@ while [[ $RESULT != 0 && $RESULT != 55 ]]; do
 		53) STOP_REASON="copyover reboot";;
 		54) STOP_REASON="auto reboot";;
 		55) STOP_REASON="pwipe shutdown";;
+		56) STOP_REASON="mud hung reboot";;
 		*) STOP_REASON="unknown";;
 	esac
 

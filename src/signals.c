@@ -22,6 +22,7 @@ extern void exit(int);
  */
 
 extern int tics;
+extern bool game_booted;
 extern int shutdownflag;
 
 //extern pid_t lookup_host_process;
@@ -56,33 +57,46 @@ void signal_setup(void)
   signal(SIGCHLD, reap);
 
   /*
-     set up the deadlock-protection 
+     set up the deadlock-protection
    */
 
-  interval.tv_sec = 900;        /*
-                                   15 minutes 
-                                 */
+  // Start timer 900 sec after boot starts (15 min).
+  interval.tv_sec = 900;
   interval.tv_usec = 0;
-  itime.it_interval = interval;
   itime.it_value = interval;
+  // And have timer check every 15 minutes.
+  itime.it_interval = interval;
+  // Changing this to 5 min since we don't need to hang for 15 min to know we're stuck.
+  itime.it_interval.tv_sec = 300;
   setitimer(ITIMER_VIRTUAL, &itime, 0);
   signal(SIGVTALRM, checkpointing);
 }
 
+// This handles a nothing-happens over a period of time.
 void checkpointing(int signum)
 {
 
-  if (!tics)
+  if( !tics )
   {
     logit(LOG_EXIT, "CHECKPOINT shutdown: tics not updated");
-    exit(-1);
+    // The reason for this, is that we don't want to reboot into a hung-during-boot situation.
+    // In other words, if the mud hangs during a boot, we just want to die completely until it's fixed.
+    if( game_booted )
+    {
+      exit( 56 );
+    }
+    else
+    {
+      exit( -1 );
+    }
   }
   else
+  {
     tics = 0;
-  signal(SIGVTALRM, checkpointing);     /*
-                                           Add this linefor signal 26
-                                           -DCL 
-                                         */
+  }
+
+  // Add this linefor signal 26 -DCL
+  signal(SIGVTALRM, checkpointing);
 }
 
 void shutdown_notice(int signum)

@@ -74,6 +74,7 @@ extern const char *shutdown_message;
 
 long     sentbytes = 0;
 long     recivedbytes = 0;
+bool     game_booted = FALSE;
 
 extern void ne_events();
 
@@ -422,6 +423,8 @@ void run_the_game(int port)
           (int) ((time_after - time_before) * 1E3 / CLOCKS_PER_SEC));
   logit(LOG_STATUS, "Boot completed in:%d milliseconds\n",
         (int) ((time_after - time_before) * 1E3 / CLOCKS_PER_SEC));
+
+  game_booted = TRUE;
 
   fprintf(stderr, "Entering game loop.\n\r");
   logit(LOG_STATUS, "Entering game loop.");
@@ -911,7 +914,13 @@ void game_loop(int s)
     PROFILE_END(combat);
 
     PROFILE_START(pulse_reset);
-    tics++;                     /* tics since last checkpoint signal */
+    // tics since last checkpoint signal
+    if( ++tics > BIT_30 )
+    {
+      tics = 1;
+      debug( "Huge value for tics, resetting to 1." );
+      logit(LOG_SYS, "Huge value for tics, resetting to 1.");
+    }
     pulse++;
     after_events_call = FALSE;
     if (pulse >= PULSES_IN_TICK)
