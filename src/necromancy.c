@@ -1149,6 +1149,8 @@ void spell_call_titan(int level, P_char ch, char *arg, int type, P_char victim, 
     act("$N is NOT pleased at being returned to life!", TRUE, ch, 0, mob,
         TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else
@@ -1442,6 +1444,8 @@ void spell_create_dracolich(int level, P_char ch, char *arg, int type, P_char vi
   {
     act("$N is NOT pleased at being returned to life!", TRUE, ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else
@@ -1924,6 +1928,8 @@ void spell_call_avatar(int level, P_char ch, char *arg, int type,
     act("$N is NOT pleased at being returned to life!", TRUE, ch, 0, mob,
         TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else
@@ -1942,8 +1948,7 @@ void spell_call_avatar(int level, P_char ch, char *arg, int type,
   }
 }
 
-void spell_create_greater_dracolich(int level, P_char ch, char *arg, int type,
-                                    P_char victim, P_obj obj)
+void spell_create_greater_dracolich(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   P_char   mob;
   bool     corpselog;
@@ -2147,10 +2152,12 @@ void spell_create_greater_dracolich(int level, P_char ch, char *arg, int type,
   /* all dracoliches are around level 52, and PCs must be at least level 51 to cast
      this spell, so I'm just gonna make it a straight random chance */
   // (GET_LEVEL(mob) > number((level - i * 2) * 2, level * 3))
-  if( IS_PC(ch) && !number(0, 12) )
+  if( IS_PC(ch) && !number(0, 1) )
   {
     act("$N is NOT pleased at being returned to life!", TRUE, ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else

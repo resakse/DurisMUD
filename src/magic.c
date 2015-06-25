@@ -1922,6 +1922,8 @@ void spell_elemental_swarm(int level, P_char ch, char *arg, int type, P_char vic
       TRUE, ch, 0, mob, TO_ROOM);
     act("$N &+Lis NOT pleased with you summon $S with this many &+Celementals&+L in the room!",
       TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
     return;
   }
@@ -2117,6 +2119,8 @@ void spell_conjour_elemental(int level, P_char ch, char *arg, int type,
     act("$N is NOT pleased at being suddenly summoned against $S will!",
         TRUE, ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else
@@ -2191,12 +2195,12 @@ void spell_living_stone(int level, P_char ch, char *arg, int type,
 
   if(!can_conjure_lesser_elem(ch, level))
   {
-    act
-      ("$N &+Lis NOT pleased at being suddenly summoned with this many &+Rstones&+L in the room!&n",
+    act("$N &+Lis NOT pleased at being suddenly summoned with this many &+Rstones&+L in the room!&n",
        TRUE, ch, 0, mob, TO_ROOM);
-    act
-      ("$N &+Lis NOT pleased with you summon $S with this many &+Rstone&+L in the room!",
+    act("$N &+Lis NOT pleased with you summon $S with this many &+Rstone&+L in the room!",
        TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
     return;
   }
@@ -2660,6 +2664,8 @@ void conjure_specialized(P_char ch, int level)
     act("$N is NOT pleased at being suddenly summoned against $S will!", TRUE,
         ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else
@@ -2791,6 +2797,8 @@ void spell_conjour_greater_elemental(int level, P_char ch, char *arg, int type, 
     act("$N is NOT pleased at being suddenly summoned against $S will!",
       TRUE, ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else
@@ -2884,6 +2892,8 @@ void spell_summon_greater_demon(int level, P_char ch, P_char victim,
     act("$N is NOT pleased at being suddenly summoned against $S will!", TRUE,
         ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
   }
   else
@@ -17281,8 +17291,7 @@ void spell_oldjudgement(int level, P_char ch, P_char victim, P_obj obj)
   {
     if(GET_ALIGNMENT(ch) < 900)
     {
-      send_to_char
-        ("Your god is not pleased with you, and reacts accordingly.", ch);
+      send_to_char("Your god is not pleased with you, and reacts accordingly.", ch);
       die(ch, ch);
       return;
     }
@@ -17714,12 +17723,9 @@ void spell_judgement(int level, P_char ch, char *arg, int type, P_char vict, P_o
   {
     if(GET_ALIGNMENT(ch) < 900)
     {
-    
       act("A &+Rblood red&n ray from the &+Wheavens&n strikes $N!!!&n", 
           TRUE, ch, 0, 0, TO_ROOM);
-      send_to_char
-        ("Your god is not pleased with you, and reacts accordingly.", ch);
-      
+      send_to_char("Your god is not pleased with you, and reacts accordingly.", ch);
       die(ch, ch);
       return;
     }

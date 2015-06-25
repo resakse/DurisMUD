@@ -885,6 +885,8 @@ void spell_conjure_air(int level, P_char ch, char *arg, int type,
     act("$N is NOT pleased at being suddenly summoned against $S will!", TRUE,
         ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
 
   }
@@ -2479,6 +2481,8 @@ void spell_conjure_void_elemental(int level, P_char ch, char *arg, int type, P_c
     act("$N is NOT pleased at being suddenly summoned against $S will!", TRUE,
         ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
 
   }
@@ -2582,6 +2586,8 @@ void spell_conjure_ice_elemental(int level, P_char ch, char *arg, int type, P_ch
     act("$N is NOT pleased at being suddenly summoned against $S will!", TRUE,
         ch, 0, mob, TO_ROOM);
     act("$N is NOT pleased with you at all!", TRUE, ch, 0, mob, TO_CHAR);
+    // Poof in 5-10 sec.
+    add_event(event_pet_death, (4 + number(1,6)) * WAIT_SEC, mob, NULL, NULL, 0, NULL, 0);
     MobStartFight(mob, ch);
 
   }
