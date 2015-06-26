@@ -1298,14 +1298,22 @@ P_obj random_zone_item(P_char ch)
   return reward;
 }
 
+#define CONJURE_SYNTAX "&+WThese are the &+mmys&+Mtic&+Wal commands for &+Yconjuring&+W:\n&n" \
+  "&+W(&+wconjure stat <number> &+m- &+mreveal statistical properties about this &+Mminion&n.)\n&n" \
+  "&+W(&+wconjure summon <number> &+m- &+mcall the &+Mminion&+m into existence&n.)\n&n" \
+  "&+W(&+wconjure remove <number> &+m- &+Mpermanently&+m remove the &+Mminion&+m from your book&n.)\n&n"
+
 void do_conjure(P_char ch, char *argument, int cmd)
 {
-  char     buf1[MAX_STRING_LENGTH];
-  char     first[MAX_INPUT_LENGTH];
-  char     second[MAX_INPUT_LENGTH];
-  char     rest[MAX_INPUT_LENGTH];
-  int i = 0, room = ch->in_room;
-  int choice = 0;
+  char     Gbuf1[MAX_STRING_LENGTH];
+  char     arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], rest[MAX_INPUT_LENGTH];
+  char     filename[256], *buff, short_buf[256];
+  P_char   t_ch;
+  FILE    *f;
+  FILE    *recipefile;
+  int      duration, choice2, chance, counter;
+  long     selected = 0, recnum;
+  struct affected_type af;
 
   if( !IS_ALIVE(ch) || IS_NPC(ch) )
   {
@@ -1322,6 +1330,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
     act("&+YConjuring advanced beings &nis a &+Mmagic &nbeyond your abilities&n.", FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
+
 /* Commenting this out atm; going to allow lvl 21 + to conjure the basic mob prototype thingy.
   // If not spec'd.
   if( !GET_SPEC(ch, CLASS_SUMMONER, SPEC_CONTROLLER) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_MENTALIST) && !GET_SPEC(ch, CLASS_SUMMONER, SPEC_NATURALIST) )
@@ -1331,123 +1340,89 @@ void do_conjure(P_char ch, char *argument, int cmd)
   }
 */
 
-  if(CHAR_IN_SAFE_ZONE(ch))
+  if( CHAR_IN_SAFE_ZONE(ch) )
   {
     send_to_char("A mysterious force blocks your conjuring!\n", ch);
     return;
   }
 
 
-  /***DISPLAYSPELLBOOK STUFF***/
-
-  char     buf[256], *buff, buf2[256], rbuf[MAX_STRING_LENGTH], cinfo[MAX_STRING_LENGTH], cinfo2[MAX_STRING_LENGTH];
-  char     Gbuf1[MAX_STRING_LENGTH], selectedrecipe[MAX_STRING_LENGTH];
-  char buffer[256];
-  FILE    *f;
-  FILE    *recipelist;
-  int line, recfind;
-  int duration;
-  unsigned long	linenum = 0;
-  struct affected_type af;
-  long recnum, choice2;
-  long selected = 0;
-  P_char tobj;
-
-
-  //Create buffers for name
-  strcpy(buf, GET_NAME(ch));
-  buff = buf;
-  for (; *buff; buff++)
+  // Create filename w/path and load file.
+  strcpy(Gbuf1, GET_NAME(ch));
+  for( buff = Gbuf1; *buff; buff++ )
   {
     *buff = LOWER(*buff);
   }
-  //buf[0] snags first character of name
-  sprintf(Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
-  recipelist = fopen(Gbuf1, "r");
-  if( !recipelist )
+  sprintf(filename, "%s/%c/%s.spellbook", SAVE_DIR, Gbuf1[0], Gbuf1);
+  recipefile = fopen(filename, "r");
+  if( !recipefile )
   {
     create_spellbook_file(ch);
-    recipelist = fopen(Gbuf1, "r");
+    recipefile = fopen(filename, "r");
 
-    if(!recipelist)
+    if(!recipefile)
     {
       send_to_char("Fatal error opening spellbook, notify a god.\r\n", ch);
       return;
     }
   }
-  half_chop(argument, first, rest);
-  half_chop(rest, second, rest);
-  choice2 = atoi(second);
-
 
   if( !*argument )
   {
-    send_to_char("&+WThese are the &+mmys&+Mtic&+Wal commands for &+Yconjuring&+W:\n&n", ch);
-    send_to_char("&+W(&+wconjure stat <number> &+m- &+mreveal statistical properties about this &+Mminion&n.)\n&n", ch);
-    send_to_char("&+W(&+wconjure summon <number> &+m- &+mcall the &+Mminion&+m into existence&n.)\n&n", ch);
+    send_to_char( CONJURE_SYNTAX, ch );
     send_to_char("&+MYou have learned the following &+mMobs&+M:\n&n", ch);
     send_to_char("----------------------------------------------------------------------------\n", ch);
     send_to_char("&+M Mob Number		          &+mMob Name		&n\n\r", ch);
 
-    while( (fscanf(recipelist, "%ld", &recnum)) != EOF )
+    while( (fscanf(recipefile, "%ld", &recnum)) != EOF )
     {
-      if(recnum == choice2)
+      if( (t_ch = read_mobile(recnum, VIRTUAL)) != NULL )
       {
-        selected = choice2;
-      }
-
-      tobj = read_mobile(recnum, VIRTUAL);
-
-      if(tobj)
-      {
-        sprintf(rbuf, "%ld\n", recnum);
-        sprintf(buffer, "   &+W%-22ld&n%-41s&n\n", recnum, tobj->player.short_descr);
-        //stores the actual vnum written in file into rbuf 
-        page_string(ch->desc, buffer, 1);
+        sprintf(Gbuf1, "   &+W%-22ld&n%-41s&n\n", recnum, t_ch->player.short_descr);
+        page_string(ch->desc, Gbuf1, 1);
         send_to_char("----------------------------------------------------------------------------\n", ch);
-        extract_char(tobj);
+        extract_char(t_ch);
       }
     }
-    fclose(recipelist);
-    /***ENDDISPLAYRECIPES***/
-
+    fclose(recipefile);
     return;
   }
 
-  while( (fscanf(recipelist, "%ld", &recnum)) != EOF )
+  half_chop(argument, arg1, rest);
+  half_chop(rest, arg2, rest);
+  choice2 = atoi(arg2);
+
+  while( (fscanf(recipefile, "%ld", &recnum)) != EOF )
   {
     if( recnum == choice2 )
     {
       selected = choice2;
     }
-
-    sprintf(rbuf, "%ld\n", recnum);
   }
-  fclose(recipelist);
+  fclose(recipefile);
 
-
-  if( is_abbrev(first, "stat") )
+  if( is_abbrev(arg1, "stat") )
   {
-    if(choice2 == 0)
+    if( choice2 == 0 )
     {
       send_to_char("&+mWhich &+Mminion&n would you like &+Wstatistics&+m about?\n", ch);
       return;
     }
-    if(selected == 0)
+    if( selected == 0 )
     {
       send_to_char("&+mIt appears you have not yet &+Mlearned&+m how to conjure that &+Mminion&+m.&n\n", ch);
       return;
     }
-    tobj = read_mobile(selected, VIRTUAL);
+    t_ch = read_mobile(selected, VIRTUAL);
     send_to_char("&+rYou open your &+RSummoners &+Lt&+mo&+Mm&+We &+rwhich &+Rreveals&+r the following information...&n.\n", ch);
-    get_class_string(tobj, cinfo2);
-    sprintf(cinfo, "You glean they are: \r\n&+YLevel &+W%d \r\n&+YClass:&n %s \r\n&+YBase Hitpoints:&n %d\r\n", GET_LEVEL(tobj), get_class_string(tobj, buf2), GET_MAX_HIT(tobj));
-    send_to_char(cinfo, ch);
-    extract_char(tobj);
+    // Initialize bufer.
+    short_buf[0] = '\0';
+    sprintf(Gbuf1, "You glean they are: \r\n&+YLevel &+W%d \r\n&+YClass:&n %s \r\n&+YBase Hitpoints:&n %d\r\n", GET_LEVEL(t_ch), get_class_string(t_ch, short_buf), GET_MAX_HIT(t_ch));
+    send_to_char(Gbuf1, ch);
+    extract_char(t_ch);
     return;
   }
-
-  else if (is_abbrev(first, "summon"))
+  else if( is_abbrev(arg1, "summon") )
   {
 
     if( selected == 0 )
@@ -1456,14 +1431,14 @@ void do_conjure(P_char ch, char *argument, int cmd)
       return;
     }
 
-    tobj = read_mobile(selected, VIRTUAL);
+    t_ch = read_mobile(selected, VIRTUAL);
 
-    if( !valid_conjure(ch, tobj) && !IS_TRUSTED(ch) )
+    if( !valid_conjure(ch, t_ch) && !IS_TRUSTED(ch) )
     {
-      if( tobj )
+      if( t_ch )
       {
         send_to_char("Your character does not have &+Ldominion&n over this race of &+Lmonster&n, either because its level is too high, or it is not a valid race for you to summon.\r\n", ch);
-        extract_char(tobj);
+        extract_char(t_ch);
       }
       else
       {
@@ -1473,16 +1448,16 @@ void do_conjure(P_char ch, char *argument, int cmd)
       return;
     }
 
-    if( !new_summon_check(ch, tobj) && !IS_TRUSTED(ch) )
+    if( !new_summon_check(ch, t_ch) && !IS_TRUSTED(ch) )
     {
-      extract_char(tobj);
+      extract_char(t_ch);
       return;
     }
 
     if( affected_by_spell(ch, SPELL_CONJURE_ELEMENTAL) && !IS_TRUSTED(ch) )
     {
       send_to_char("You must wait a short time before calling another &+Yminion&n into existence.\r\n", ch);
-      extract_char(tobj);
+      extract_char(t_ch);
       return;
     }
 
@@ -1495,102 +1470,97 @@ void do_conjure(P_char ch, char *argument, int cmd)
         af.duration = 2;
         affect_to_char(ch, &af);
       }
-      extract_char(tobj);
+      extract_char(t_ch);
       send_to_char("You feel a brief &+mtinge&n of &+Mmagical power&n engulf you as you &+rfail&n to call forth your &+Lminion&n.\r\n", ch);
       return;
     }
 
 
-    if( (GET_LEVEL(tobj) > 51) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch) )
+    if( (GET_LEVEL(t_ch) > 51) && !vnum_in_inv(ch, 400231) && !IS_TRUSTED(ch) )
     {
       send_to_char("You must have a &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+mM&+Ma&+Wg&+Mi&+mc&n in your &+Winventory&n in order to &+Ysummon&n a being of such &+Mgreat&+M power&n.\r\n", ch);
-      extract_char(tobj);
+      extract_char(t_ch);
       return;
     }
 
-    struct affected_type af;
-
-#define TARGET_CONJ_MOB = tobj;
-
-    //set up stats
-    int chance = number(1, GET_C_CHA(ch));
+    // Set up stats - chance reflects how good the minion is. 100 cha -> avg 50 chance.
+    chance = number(2, GET_C_CHA(ch)/2);
 //    debug("Conjure chance %d", chance);
 
-    if(chance > 70)
+    if( chance > 70 )
     {
-      act("$n's &+mcha&+Mris&+Mma&n &+Cradiates&n as they call forth their minion!", TRUE, ch, 0,
-          tobj, TO_ROOM);
-      act("Your &+mcha&+Mris&+Mma&n &+Cradiates&n as you call forth your minion!", TRUE, ch, 0,
-          tobj, TO_CHAR);
-      GET_MAX_HIT(tobj) = GET_HIT(tobj) =  tobj->points.base_hit = (tobj->points.base_hit * (1 + (number(1, 4) * .1)));
+      act("$n's &+mcha&+Mris&+Mma&n &+Cradiates&n as they call forth their minion!", TRUE, ch, 0, t_ch, TO_ROOM);
+      act("Your &+mcha&+Mris&+Mma&n &+Cradiates&n as you call forth your minion!", TRUE, ch, 0, t_ch, TO_CHAR);
+      GET_MAX_HIT(t_ch) = GET_HIT(t_ch) =  t_ch->points.base_hit = (t_ch->points.base_hit * (1 + (number(1, 4) * .1)));
+    }
+    else if( chance < 30 )
+    {
+      act("An &+Lug&+yli&+Ler &nside of $n seems to eminate as they call forth their minion.", TRUE, ch, 0, t_ch, TO_ROOM);
+      act("Your &+Lug&+yli&+Ler &nside seems to eminate as you call forth your minion.", TRUE, ch, 0, t_ch, TO_CHAR);
+      GET_MAX_HIT(t_ch) = GET_HIT(t_ch) = t_ch->points.base_hit = (t_ch->points.base_hit * (number(6, 9) * .1));
     }
 
-    if(chance < 30)
-    {
-      act("An &+Lug&+yli&+Ler &nside of $n seems to eminate as they call forth their minion.", TRUE, ch, 0,
-          tobj, TO_ROOM);
-      act("Your &+Lug&+yli&+Ler &nside seems to eminate as you call forth your minion.", TRUE, ch, 0,
-          tobj, TO_CHAR);
-      GET_MAX_HIT(tobj) = GET_HIT(tobj) = tobj->points.base_hit = (tobj->points.base_hit * (number(6, 9) * .1));
-    }
     // 20% bonus hps for max skill, 2% for each skill notch.
     if( GET_CHAR_SKILL(ch, SKILL_INFUSE_LIFE) )
     {
-      act("You channel extra &+Wlifeforce&n as you call forth your minion.", TRUE, ch, 0, tobj, TO_CHAR);
-      GET_MAX_HIT(tobj) = GET_HIT(tobj) = tobj->points.base_hit = GET_HIT(tobj) * ((500.0 + GET_CHAR_SKILL(ch, SKILL_INFUSE_LIFE)) / 500.0);
+      act("You channel extra &+Wlifeforce&n as you call forth your minion.", TRUE, ch, 0, t_ch, TO_CHAR);
+      GET_MAX_HIT(t_ch) = GET_HIT(t_ch) = t_ch->points.base_hit = GET_HIT(t_ch) * ((500.0 + GET_CHAR_SKILL(ch, SKILL_INFUSE_LIFE)) / 500.0);
     }
 
-    //Set up NPCACT etc.
-    if(tobj->points.base_hit > 8000)
-      GET_MAX_HIT(tobj) = GET_HIT(tobj) = tobj->points.base_hit = 8000;
+    // Max hps for any minion is 8k.
+    if( t_ch->points.base_hit > 8000 )
+    {
+      GET_MAX_HIT(t_ch) = GET_HIT(t_ch) = t_ch->points.base_hit = 8000;
+    }
 
-    //REMOVE_BIT(tobj->specials.act, ACT_SENTINEL); Needed for mob to follow.
+    // Set up NPCACT etc.
+    //REMOVE_BIT(t_ch->specials.act, ACT_SENTINEL); Needed for mob to follow.
 
-    REMOVE_BIT(tobj->specials.affected_by, AFF_SLEEP);
-    REMOVE_BIT(tobj->specials.act, ACT_ELITE);
-    REMOVE_BIT(tobj->specials.act, ACT_HUNTER);
-    REMOVE_BIT(tobj->specials.act, ACT_PROTECTOR);
-    GET_EXP(tobj) = 0;
-    apply_achievement(tobj, TAG_CONJURED_PET);
-    SET_BIT(tobj->specials.affected_by, AFF_INFRAVISION);
-    REMOVE_BIT(tobj->specials.affected_by4, AFF4_DEFLECT);
-    REMOVE_BIT(tobj->specials.act, ACT_SCAVENGER);
-    REMOVE_BIT(tobj->specials.act, ACT_PATROL);
-    REMOVE_BIT(tobj->specials.act, ACT_SPEC);
+    REMOVE_BIT(t_ch->specials.affected_by, AFF_SLEEP);
+    REMOVE_BIT(t_ch->specials.act, ACT_ELITE);
+    REMOVE_BIT(t_ch->specials.act, ACT_HUNTER);
+    REMOVE_BIT(t_ch->specials.act, ACT_PROTECTOR);
+    GET_EXP(t_ch) = 0;
+    apply_achievement(t_ch, TAG_CONJURED_PET);
+    SET_BIT(t_ch->specials.affected_by, AFF_INFRAVISION);
+    REMOVE_BIT(t_ch->specials.affected_by4, AFF4_DEFLECT);
+    REMOVE_BIT(t_ch->specials.act, ACT_SCAVENGER);
+    REMOVE_BIT(t_ch->specials.act, ACT_PATROL);
+    REMOVE_BIT(t_ch->specials.act, ACT_SPEC);
     if( number(1,100) > 50 )
     {
-      tobj->player.spec = 0;
+      t_ch->player.spec = 0;
     }
-    REMOVE_BIT(tobj->specials.act, ACT_BREAK_CHARM);
+    REMOVE_BIT(t_ch->specials.act, ACT_BREAK_CHARM);
     // Stop mobs from randomly sitting all the time.
-    tobj->only.npc->default_pos = POS_STANDING + STAT_NORMAL;
+    t_ch->only.npc->default_pos = POS_STANDING + STAT_NORMAL;
 
-    if(GET_LEVEL(tobj) > 56 && !IS_TRUSTED(ch))
+    if(GET_LEVEL(t_ch) > 56 && !IS_TRUSTED(ch))
     {
       vnum_from_inv(ch, 400231, 1);
       act("$n &+Ltosses their &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+mM&+Ma&+Wg&+Mi&+mc&n &+Linto the &+Cair&+L, which quickly forms an &+Rextra-dimensional &+Lpocket&n!", TRUE, ch, 0,
-          tobj, TO_ROOM);
+          t_ch, TO_ROOM);
       act("You &+Ltoss your &+Ya &+Mgreater&+Y o&+Mr&+Bb &+Yof &+mM&+Ma&+Wg&+Mi&+mc&n &+Linto the &+Cair&+L, which quickly forms an &+Rextra-dimensional &+Lpocket&n!", TRUE, ch, 0,
-          tobj, TO_CHAR);
+          t_ch, TO_CHAR);
     }
 
-    tobj->only.npc->aggro_flags = 0;
+    t_ch->only.npc->aggro_flags = 0;
     act("$n utters a quick &+mincantation&n, calling forth $N who softly says 'Your wish is my command, $n!'", TRUE, ch, 0,
-        tobj, TO_ROOM);
+        t_ch, TO_ROOM);
     act("You utter a quick &+mincantation&n, calling forth $N who softly says 'Your wish is my command, master!'", TRUE, ch, 0,
-        tobj, TO_CHAR);
+        t_ch, TO_CHAR);
 
-    duration = setup_pet(tobj, ch, 400 / STAT_INDEX(GET_C_INT(tobj)), PET_NOCASH);
-    char_to_room(tobj, room, 0);
-    SET_POS(tobj, POS_STANDING + STAT_NORMAL);
-    add_follower(tobj, ch);
+    duration = setup_pet(t_ch, ch, 400 / STAT_INDEX(GET_C_INT(t_ch)), PET_NOCASH);
+    char_to_room(t_ch, ch->in_room, 0);
+    SET_POS(t_ch, POS_STANDING + STAT_NORMAL);
+    add_follower(t_ch, ch);
     if(duration >= 0)
     {
       duration += number(1,10);
-      add_event(event_pet_death, (duration+1) * 60 * 4, tobj, NULL, NULL, 0, NULL, 0);
+      add_event(event_pet_death, (duration+1) * 60 * 4, t_ch, NULL, NULL, 0, NULL, 0);
     }
 
-    if(!IS_TRUSTED(ch))
+    if( !IS_TRUSTED(ch) )
     {
       memset(&af, 0, sizeof(af));
       af.type = SPELL_CONJURE_ELEMENTAL;
@@ -1599,6 +1569,58 @@ void do_conjure(P_char ch, char *argument, int cmd)
       affect_to_char(ch, &af);
     }
   }
+  else if (is_abbrev(arg1, "remove"))
+  {
+    if( choice2 == 0 )
+    {
+      send_to_char("&+mWhich &+Mminion&+m would you like to &+Mpermanently&+m remove from your list?&n\n", ch);
+      return;
+    }
+    if( selected == 0 )
+    {
+      send_to_char("&+mIt appears you have not yet &+Mlearned&+m how to conjure that &+Mminion&+m.&n\n", ch);
+      return;
+    }
+    if( selected == 400003 )
+    {
+      send_to_char("&+mYou can &+Mnot&+m remove that &+Mminion&+m from your list.&n\n", ch);
+      return;
+    }
+    recipefile = fopen(filename, "rt");
+    if( !recipefile )
+    {
+      send_to_char("Fatal error opening spellbook, notify a god.\r\n", ch);
+      return;
+    }
+    counter = 0;
+    Gbuf1[0] = '\0';
+    // Read all the recipes into Gbuf1.
+    while( (fscanf(recipefile, "%ld", &recnum)) != EOF )
+    {
+      // Except the one we want to remove.
+      if( recnum == selected )
+      {
+        continue;
+      }
+      sprintf( Gbuf1 + counter, "%ld ", recnum );
+      counter += strlen(Gbuf1 + counter);
+    }
+    fclose(recipefile);
+
+    recipefile = fopen(filename, "wt");
+    if( !recipefile )
+    {
+      send_to_char("Fatal error opening spellbook for writing, notify a god.\r\n", ch);
+      return;
+    }
+    fprintf( recipefile, "%s", Gbuf1 );
+    fclose(recipefile);
+
+    sprintf( Gbuf1, "&+mRemoved &+Mminion&+m vnum &+M%ld&+m from your spellbook.&n\n\r", selected );
+    send_to_char( Gbuf1, ch );
+  }
+  else
+    send_to_char( CONJURE_SYNTAX, ch );
 }
 
 void create_spellbook_file(P_char ch)
@@ -1616,7 +1638,7 @@ void create_spellbook_file(P_char ch)
   f = fopen(Gbuf1, "w");
   fclose(f);
   f = fopen(Gbuf1, "a");
-  fprintf(f, "%d\n", defrec);
+  fprintf(f, "%d ", defrec);
   fclose(f);
 }
 
@@ -1840,7 +1862,7 @@ void learn_conjure_recipe(P_char ch, P_char victim)
   }
   fclose(recipelist);
   recipelist = fopen(Gbuf1, "a");
-  fprintf(recipelist, "%d\n", recipenumber);
+  fprintf(recipelist, "%d ", recipenumber);
   act("$n &+gsuddenly &+Greaches &+gout and makes a &+Mmagical &+mgesture &+gabout &n$N&+g...\n"
       "&+gsh&+Gar&+Wds&+g of &+mcry&+Mstallized &+Wmagic&+g begin to form a square dome around &n$N&+g.\n"
       "&+gWith a &+Gfinal&+g &+mgesture&+g, &n$n &+gpoints at &n$N &+gwho is &+Gconsumed&+g by the &+mmagical &+Mdome&+g, and disappears from sight.\r\n", FALSE, ch, 0, victim, TO_ROOM);
