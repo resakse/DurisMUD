@@ -1667,6 +1667,7 @@ void arti_files_to_sql( P_char ch, char *arg )
     }
     fclose(f);
 
+    timer += ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
     sprintf( buf, "  Char '%s' %d, has arti %d (%s) with timer %s", pname, pid, vnum,
       (temp == 0) ? "on char" : ((temp == 1) ? "on corpse" : "unknown location"), ctime(&timer) );
     send_to_char( buf, ch );
