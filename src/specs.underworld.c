@@ -581,7 +581,7 @@ int orb_of_the_sea(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if( !ch && cmd == CMD_PERIODIC)
+  if( !ch && cmd == CMD_PERIODIC )
   {
     hummer(obj);
     return TRUE;
@@ -598,10 +598,21 @@ int orb_of_the_sea(P_obj obj, P_char ch, int cmd, char *arg)
     return (FALSE);
 */
   // If we can't find the victim
-  if( (cmd == CMD_GOTHIT && !(data = (struct proc_data *) arg) && !(victim = data->victim))
-    || (cmd == CMD_MELEE_HIT && !(victim = (P_char) arg)) )
+  if( cmd == CMD_GOTHIT )
   {
-    return FALSE;
+    if( !((data = (struct proc_data *) arg) && (victim = data->victim)) )
+    {
+      debug("orb_of_the_sea: CMD_GOTHIT: no attacker.");
+      return FALSE;
+    }
+  }
+  else
+  {
+    if( !(victim = (P_char) arg) )
+    {
+      debug("orb_of_the_sea: CMD_MELEE_HIT: no victim.");
+      return FALSE;
+    }
   }
 
   if( OBJ_WORN_BY(obj, ch) && IS_ALIVE(victim) && !IS_SET(world[ch->in_room].room_flags, NO_TELEPORT)
