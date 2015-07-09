@@ -2292,9 +2292,9 @@ void event_artifact_wars_sql(P_char ch, P_char vict, P_obj obj, void *arg)
       while( node )
       {
         arti = read_object( node->vnum, VIRTUAL );
-        debug( "fight: '%s&n' (%6d) is upset (%d/%d) with %s.",
+        debug( "fight: '%s&n'%6d upset (%d/%d =%3d:%02d) with %s.",
           pad_ansi(arti->short_description, 35, TRUE).c_str(), node->vnum,
-          punish_level, count[0], get_player_name_from_pid(node->location) );
+          punish_level, count[0], punishment/60, punishment%60, get_player_name_from_pid(node->location) );
         if( node->locType == ARTIFACT_ON_PC
           && (owner = get_player_from_name( get_player_name_from_pid(node->location) )) )
         {
