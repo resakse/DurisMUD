@@ -5852,7 +5852,7 @@ bool has_touch_stone( P_char ch )
   // First check inventory.
   for( obj = ch->carrying; obj; obj = obj->next_content )
   {
-    if( obj_index[GET_OBJ_VNUM(obj)].func.obj == epic_stone )
+    if( obj_index[obj->R_num].func.obj == epic_stone )
     {
       return TRUE;
     }
@@ -5862,7 +5862,7 @@ bool has_touch_stone( P_char ch )
   {
     if( (obj = ch->equipment[i]) != NULL )
     {
-      if( obj_index[GET_OBJ_VNUM(obj)].func.obj == epic_stone )
+      if( obj_index[obj->R_num].func.obj == epic_stone )
       {
         return TRUE;
       }

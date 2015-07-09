@@ -618,19 +618,22 @@ int orb_of_the_sea(P_obj obj, P_char ch, int cmd, char *arg)
   if( OBJ_WORN_BY(obj, ch) && IS_ALIVE(victim) && !IS_SET(world[ch->in_room].room_flags, NO_TELEPORT)
     && !IS_GH_GOLEM(victim) && GET_RACE(victim) != RACE_CONSTRUCT && !(strstr(victim->player.name, "_no_move_")) )
   {
-    // We don't poof the stone carriers to the WP 'cause we don't want them to drop to ground
-    //   and not be retrievable when the carrier dies.
-    if( IS_NPC(victim) && has_touch_stone(victim) )
-    {
-      return FALSE;
-    }
-
     // 1/30 chance.
     if( !number(0, 29) )
     {
       act("Your $q lets out a banshee wail at $N!", FALSE, obj->loc.wearing, obj, victim, TO_CHAR);
       act("$n's $q lets out a banshee wail at you!", FALSE, obj->loc.wearing, obj, victim, TO_VICT);
       act("$n's $q lets out a banshee wail at $N!", FALSE, obj->loc.wearing, obj, victim, TO_NOTVICT);
+
+      // We don't poof the stone carriers to the WP 'cause we don't want them to drop to ground
+      //   and not be retrievable when the carrier dies.
+      if( IS_NPC(victim) && has_touch_stone(victim) )
+      {
+        act("&+r$N&+r grins evilly.&n", FALSE, obj->loc.wearing, obj, victim, TO_CHAR);
+        act("&+rYou grin evilly.&n", FALSE, obj->loc.wearing, obj, victim, TO_VICT);
+        act("&+r$N&+r grins evilly.&n", FALSE, obj->loc.wearing, obj, victim, TO_NOTVICT);
+        return FALSE;
+      }
 
       // 1/30 * 1/3 == 1/90 chance.
       if( !number(0, 2) )
