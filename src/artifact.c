@@ -3285,6 +3285,7 @@ void arti_fixit_sql( P_char ch )
       send_to_char_f( ch, "%3d) '%s&n'%6d - timer reset and now owned by '%s' %d.\n\r",
         ++counter, pad_ansi( arti ? OBJ_SHORT(arti) : "NULL", 35, TRUE).c_str(), vnum, get_player_name_from_pid(location), location );
     }
+    extract_obj(arti);
   }
   mysql_free_result(res);
   if( counter == 0 )
