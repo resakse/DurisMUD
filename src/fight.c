@@ -3104,15 +3104,12 @@ void dam_message(double fdam, P_char ch, P_char victim, struct damage_messages *
     "hit $w"
   };
 
-  if(!(ch) ||
-      !IS_ALIVE(ch) ||
-      !(victim) ||
-      !IS_ALIVE(victim))
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
   {
     return;
   }
 
-  if(ch->equipment[WIELD])
+  if( ch->equipment[WIELD] )
   {
     wield = ch->equipment[WIELD];
     max_dam = ch->equipment[WIELD]->value[1] * ch->equipment[WIELD]->value[2];
@@ -3144,9 +3141,10 @@ void dam_message(double fdam, P_char ch, P_char victim, struct damage_messages *
   if (!number(0, 3))
     w_loop = 0;
 
+/* 
   char showdam[MAX_STRING_LENGTH];
   sprintf(showdam, " [&+wDamage: %d&n] ", dam);
-
+*/
   if (msg_flags & DAMMSG_HIT_EFFECT)
   {
     sprintf(buf_char, messages->attacker, weapon_damage[w_loop],
@@ -5900,7 +5898,13 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
 
     for (tch = world[victim->in_room].people; tch; tch = tch->next_in_room)
     {
-      if (IS_TRUSTED(tch) && IS_SET(tch->specials.act2, PLR2_DAMAGE) )
+      if( IS_TRUSTED(tch) && IS_SET(tch->specials.act2, PLR2_DAMAGE) )
+      {
+        send_to_char(buffer, tch);
+      }
+      // If it's a charmie, charmed by a PC with PET_DAMAGE toggled on.
+      else if( IS_AFFECTED(ch, AFF_CHARM) && IS_PC(tch) && IS_SET(tch->specials.act3, PLR3_PET_DAMAGE)
+        && tch == GET_MASTER(ch) )
       {
         send_to_char(buffer, tch);
       }
@@ -5914,10 +5918,10 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
     {
       act_flag = 0;
     }
-
+/*
     char showdam[MAX_STRING_LENGTH];
     sprintf(showdam, " [&+wDamage: %d&n] ", (int) dam);
-
+*/
     new_stat = calculate_ch_state(victim);
 
     if(new_stat == STAT_DEAD)

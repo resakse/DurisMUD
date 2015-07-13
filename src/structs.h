@@ -951,6 +951,7 @@ struct room_data {
 #define PLR3_NOLEVEL       BIT_19
 #define PLR3_EPICWATCH     BIT_20 /* For Immortals: displays calls to epiclog */
 #define PLR3_SURDEATHSDOOR BIT_21
+#define PLR3_PET_DAMAGE    BIT_22
 
 /* For players : Prompt flags (16 bits max) */
 #define PROMPT_NONE        BIT_1

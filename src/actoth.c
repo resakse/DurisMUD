@@ -3837,6 +3837,9 @@ void show_toggles(P_char ch)
           "&+r   Surname     :&+g %-3s    &+y|"
           "&+r     Damage      :&+g %-3s    &+y|&n"
           "&+r     No Level    :&+g %-3s    &+y|&n\r\n"
+          "&+r   PetDamage   :&+g %-3s    &+y|"
+          "&+r                          &+y|"
+          "&+r                          &+y|&n\r\n"
           "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
           "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n",
           ONOFF(!PLR_FLAGGED(ch, PLR_NOTELL)),
@@ -3877,7 +3880,8 @@ void show_toggles(P_char ch)
           ONOFF(PLR3_FLAGGED(ch, PLR3_UNDERLINE)),
           ONOFF(PLR3_FLAGGED(ch, PLR3_NOSUR)),
           ONOFF(PLR2_FLAGGED(ch, PLR2_DAMAGE)),
-          ONOFF(PLR3_FLAGGED(ch, PLR3_NOLEVEL)) );
+          ONOFF(PLR3_FLAGGED(ch, PLR3_NOLEVEL)),
+          ONOFF(PLR3_FLAGGED(ch, PLR3_PET_DAMAGE)) );
   send_to_char(Gbuf1, send_ch);
 
   if (GET_LEVEL(ch) >= AVATAR)
@@ -4028,6 +4032,7 @@ static const char *toggles_list[] = {
   "surname",                    /* 60 */
   "nolevel",
   "epic",
+  "petdamage",
   "\n"
 };
 
@@ -4147,7 +4152,9 @@ static const char *tog_messages[][2] = {
   {"You will level at an epic stone.\r\n",
    "You will not level at an epic stone.\r\n"},
   {"You turn off the &+WEpic&N messages.\r\n",
-   "You tune into the &+WEpic&N messages.\r\n"}
+   "You tune into the &+WEpic&N messages.\r\n"},
+  {"You turn off the display of pet damage.\r\n",
+   "You turn on the display of pet damage.\r\n"}
 };
 
 void do_more(P_char ch, char *arg, int cmd)
@@ -4692,6 +4699,9 @@ void do_toggle(P_char ch, char *arg, int cmd)
       send_to_char("Humf?!\r\n", send_ch);
       return;
     }
+    break;
+  case 63:
+    result = PLR3_TOG_CHK(ch, PLR3_PET_DAMAGE);
     break;
   default:
     break;
