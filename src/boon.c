@@ -2988,8 +2988,7 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
     {
       case BTYPE_EXPM:
         //boon_notify(id, BN_NOTCH);
-        // If we make this work only for kill exp and not all exp gains, we could notify
-        // otherwise it's just too spammy to be practical.
+        // This should only be called on kills now (since it's limited to type mob or race).
         gain_exp(ch, victim, (int)(data * bdata.bonus), EXP_BOON);
         break;
       case BTYPE_EXP:

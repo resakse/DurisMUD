@@ -1076,13 +1076,9 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   int evilcap = get_property("exp.level.cap.evil", 15);
   bool pvp = FALSE;
   float XP = MAX(1, value);
+  P_char master;
 
-  if( !ch )
-  {
-    return 0;
-  }
-
-  if(ch && IS_PC(ch))
+  if( ch && IS_PC(ch) )
   {
     ch = GET_PLYR(ch);
   }
@@ -1108,19 +1104,17 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 
   if(ch && victim && IS_PC(ch) && IS_PC(victim))
   {
-    if((RACE_EVIL(ch) && RACE_GOOD(victim)) ||
-       (RACE_GOOD(ch) && RACE_EVIL(victim)))
+    if( opposite_racewar(ch, victim) )
     {
       pvp = TRUE;
     }
 
-    if(GET_MASTER(ch) &&
-      ((RACE_EVIL(GET_MASTER(ch)) && RACE_GOOD(victim)) ||
-      (RACE_GOOD(GET_MASTER(ch)) && RACE_EVIL(victim))))
+    if( (master = GET_MASTER(ch)) && opposite_racewar(master, victim) )
     {
       pvp = TRUE;
     }
   }
+
   if( type == EXP_RESURRECT )
   {
     ;
@@ -1133,7 +1127,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   {
     XP *= 1.5;
   }
-// debug("check 2 xp (%d)", (int)XP);  
+
   if(type == EXP_RESURRECT)
   {
     ;
@@ -1391,6 +1385,8 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
       XP = XP * get_property("gain.exp.mod.pvp", 1.000);
 // debug("kill 8 exp gain (%d)", (int)XP);
     }
+    check_boon_completion(ch, victim, XP, BOPT_MOB);
+    check_boon_completion(ch, victim, XP, BOPT_RACE);
   }
   else if(type == EXP_WORLD_QUEST)
   {
