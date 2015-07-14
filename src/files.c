@@ -1684,18 +1684,6 @@ int writeCharacter(P_char ch, int type, int room)
     room = (*world[ch->in_room].funct) (ch->in_room, ch, (-80), NULL);
   }
 
-  // Remove race change if applicable.
-  if( (af = get_spell_from_char(ch, TAG_RACE_CHANGE)) )
-  {
-    ch->player.race = af->modifier;
-    ch->player.time.birth = time(NULL) - (racial_data[GET_RACE(ch)].base_age) * 2;
-    // Set birthdate + base_age + 5 years.
-    ch->player.time.birth = time(NULL);
-    // Add base_age to birthdate + base_age + 5 years.
-    ch->player.time.birth -= (racial_data[GET_RACE(ch)].base_age) * SECS_PER_MUD_YEAR;
-    affect_remove(ch, af);
-  }
-
   writeShapechangeData(ch);
   room = calculate_save_room(ch, type, room);
 
@@ -1805,8 +1793,15 @@ int writeCharacter(P_char ch, int type, int room)
 
     if ((af = get_spell_from_char(ch, TAG_RACE_CHANGE)) != NULL)
     {
-       ch->player.race = af->modifier;
-       affect_remove(ch, af);
+      ch->player.race = af->modifier;
+
+      ch->player.time.birth = time(NULL) - (racial_data[GET_RACE(ch)].base_age) * 2;
+      // Set birthdate + base_age + 5 years.
+      ch->player.time.birth = time(NULL);
+      // Add base_age to birthdate + base_age + 5 years.
+      ch->player.time.birth -= (racial_data[GET_RACE(ch)].base_age) * SECS_PER_MUD_YEAR;
+
+      affect_remove(ch, af);
     }
     /*
      * if not, nuke the equip and inven (it has already been saved)
