@@ -65,7 +65,7 @@ void spell_thornskin(int level, P_char ch, char *arg, int type, P_char victim, P
       return;
     }
   }
-  if( !IS_AFFECTED(ch, AFF_ARMOR) )
+  if( !IS_AFFECTED(victim, AFF_ARMOR) )
   {
     bzero(&af1, sizeof(af1));
     af1.type = SPELL_THORNSKIN;

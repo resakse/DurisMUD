@@ -102,7 +102,7 @@ void spell_phantom_armor(int level, P_char ch, char *arg, int type, P_char victi
     raise(SIGSEGV);
   }
 
-  if( !IS_AFFECTED(ch, AFF_ARMOR) )
+  if( !IS_AFFECTED(victim, AFF_ARMOR) )
   {
     bzero(&af, sizeof(af));
     af.type = SPELL_PHANTOM_ARMOR;

@@ -4609,7 +4609,7 @@ void spell_armor(int level, P_char ch, char *arg, int type, P_char victim, P_obj
     mod = 1;
   }
 
-  if( !IS_AFFECTED(ch, AFF_ARMOR) )
+  if( !IS_AFFECTED(victim, AFF_ARMOR) )
   {
     bzero(&af, sizeof(af));
     af.type = SPELL_ARMOR;
@@ -7937,31 +7937,25 @@ void spell_stone_skin(int level, P_char ch, char *arg, int type, P_char victim, 
 void spell_ironwood(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   struct affected_type af;
-  int      absorb = (level / 5) + number(1, 4);
+  int absorb = (level / 5) + number(1, 4);
 
-
-  if(!affected_by_spell(victim, SPELL_BARKSKIN))
+  if( !IS_AFFECTED(ch, AFF_BARKSKIN) )
   {
     send_to_char("They're not even made of wood! How can you begin to make it resemble iron!\n", ch);
     return;
   }
-  if(!has_skin_spell(victim))
-  {
-
-     // absorb = (int) (absorb * 2);
-      act("&+y$n's &+ybarkskin seems to take on the texture of &+Liron.",
-        TRUE, victim, 0, 0, TO_ROOM);
-      act("&+yYou feel your barkskin harden to &+Liron.",
-        TRUE, victim, 0, 0, TO_CHAR);
-  }
-  else
+  if( has_skin_spell(victim) )
   {
     send_to_char("Their skin is already hard as a rock!\n", ch);
     return;
   }
 
-  if(GET_OPPONENT(victim))
-    gain_exp(ch, victim, 50 + GET_LEVEL(ch) * 2, EXP_HEALING); // stoning the tank equals to heal in exp -Odorf
+  act("&+y$n's &+ybarkskin seems to take on the texture of &+Liron.", TRUE, victim, 0, 0, TO_ROOM);
+  act("&+yYou feel your barkskin harden to &+Liron.", TRUE, victim, 0, 0, TO_CHAR);
+
+  // Stoning the tank equals to heal in exp -Odorf
+  if( GET_OPPONENT(victim) )
+    gain_exp(ch, victim, absorb, EXP_HEALING);
 
   bzero(&af, sizeof(af));
   af.type = SPELL_IRONWOOD;
@@ -11736,7 +11730,7 @@ void spell_barkskin(int level, P_char ch, char *arg, int type, P_char victim, P_
   {
     mod = 1;
   }
-  if( !IS_AFFECTED(ch, AFF_ARMOR) )
+  if( !IS_AFFECTED(victim, AFF_ARMOR) )
   {
     bzero(&af1, sizeof(af1));
     af1.type = SPELL_BARKSKIN;
@@ -11750,6 +11744,17 @@ void spell_barkskin(int level, P_char ch, char *arg, int type, P_char victim, P_
       victim, 0, 0, TO_ROOM);
     act("Your skin gains the texture and toughness of &+ybark.&n", FALSE,
       victim, 0, 0, TO_CHAR);
+  }
+  else if( !IS_AFFECTED(ch, AFF_BARKSKIN) )
+  {
+    bzero(&af1, sizeof(af1));
+    af1.type = SPELL_BARKSKIN;
+    af1.duration =  25;
+    af1.bitvector = AFF_BARKSKIN;
+
+    affect_to_char(victim, &af1);
+    act("$n's skin gains the texture of &+ybark.&n", FALSE, victim, 0, 0, TO_ROOM);
+    act("Your skin gains the texture of &+ybark.&n", FALSE, victim, 0, 0, TO_CHAR);
   }
   else
   {

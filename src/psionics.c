@@ -1801,7 +1801,7 @@ void spell_flesh_armor(int level, P_char ch, char *arg, int type, P_char victim,
     return;
   }
 
-  if( IS_AFFECTED(ch, AFF_ARMOR) )
+  if( IS_AFFECTED(victim, AFF_ARMOR) )
   {
     struct affected_type *af1;
     shown = FALSE;

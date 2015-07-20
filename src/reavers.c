@@ -67,7 +67,7 @@ void spell_baladors_protection(int level, P_char ch, char *arg, int type, P_char
     affect_to_char(victim, &af);
   }
 
-  if( GET_LEVEL(ch) > 4 && !IS_AFFECTED(ch, AFF_ARMOR) )
+  if( GET_LEVEL(ch) > 4 && !IS_AFFECTED(victim, AFF_ARMOR) )
   {
     af.type = SPELL_BALADORS_PROTECTION;
     af.duration = 32;
