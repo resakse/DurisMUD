@@ -21,7 +21,7 @@
 #include "justice.h"
 #include "mm.h"
 #include "weather.h"
-
+#include "objmisc.h"
 
 extern P_char character_list;
 extern P_desc descriptor_list;
@@ -36,24 +36,9 @@ extern struct time_info_data time_info;
 extern Skill skills[];
 extern const char *spells[];
 
-
-/*
-   hey, this is a great place to define these - used in val0 of items of type
-   ITEM_TOTEM - specifies what sphere shaman can cast with the totem
- */
-
-#define TOTEM_LESS_ANIM   1     /* lesser animal */
-#define TOTEM_GR_ANIM     2     /* greater animal */
-#define TOTEM_LESS_ELEM   4     /* elemental */
-#define TOTEM_GR_ELEM     8
-#define TOTEM_LESS_SPIR  16     /* spirit */
-#define TOTEM_GR_SPIR    32
-
-
 /*
    returns TRUE if object passed allows whoever to cast spell specified by spl
  */
-
 bool checkTotem(P_char ch, P_obj obj, int skill)
 {
   char     strn[MAX_STRING_LENGTH];

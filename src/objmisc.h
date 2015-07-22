@@ -6,6 +6,14 @@
 #include "structs.h"
 #endif
 
+// Used in val0 of items of type ITEM_TOTEM - specifies what sphere shaman can cast with the totem
+#define TOTEM_LESS_ANIM   1     // Lesser Animal
+#define TOTEM_GR_ANIM     2     // Greater Animal
+#define TOTEM_LESS_ELEM   4     // Elemental
+#define TOTEM_GR_ELEM     8
+#define TOTEM_LESS_SPIR  16     // Spirit
+#define TOTEM_GR_SPIR    32
+
  /* obj->material */
 
 #define MAT_UNDEFINED  0  /* lazy builders, no bonuses */

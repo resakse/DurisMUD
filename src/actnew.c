@@ -2880,6 +2880,53 @@ void lore_item( P_char ch, P_obj obj )
   }
   if( found )
     send_to_char( ".\n\r", ch );
+
+  if( GET_ITEM_TYPE(obj) == ITEM_TOTEM )
+  {
+    send_to_char( "This totem grants:", ch );
+    int val0 = obj->value[0];
+    bool bFound = FALSE;
+
+    if( IS_SET(val0, TOTEM_LESS_ANIM) )
+    {
+      send_to_char_f(ch, "%s&+yLesser Animal&n", bFound ? ", " : " " );
+      bFound = TRUE;
+    }
+    if( IS_SET(val0, TOTEM_GR_ANIM) )
+    {
+      send_to_char_f(ch, "%s&+yGreater Animal&n", bFound ? ", " : " " );
+      bFound = TRUE;
+    }
+    if( IS_SET(val0, TOTEM_LESS_ELEM) )
+    {
+      send_to_char_f(ch, "%s&+rLesser Elemental&n", bFound ? ", " : " " );
+      bFound = TRUE;
+    }
+    if( IS_SET(val0, TOTEM_GR_ELEM) )
+    {
+      send_to_char_f(ch, "%s&+rGreater Elemental&n", bFound ? ", " : " " );
+      bFound = TRUE;
+    }
+    if( IS_SET(val0, TOTEM_LESS_SPIR) )
+    {
+      send_to_char_f(ch, "%s&+WLesser Spiritual&n", bFound ? ", " : " " );
+      bFound = TRUE;
+    }
+    if( IS_SET(val0, TOTEM_GR_SPIR) )
+    {
+      send_to_char_f(ch, "%s&+WGreater Spiritual&n", bFound ? ", " : " " );
+      bFound = TRUE;
+    }
+    if( bFound )
+    {
+      send_to_char( ".\n", ch );
+    }
+    else
+    {
+      send_to_char( " No spheres?!\n", ch );
+    }
+  }
+
   sprintf(Gbuf2, "$p &nhas an item value of &+W%d&n.", itemvalue(ch, obj));
   act(Gbuf2, FALSE, ch, obj, 0, TO_CHAR);
 }
