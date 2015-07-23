@@ -42,6 +42,7 @@ extern P_char character_list;
 extern P_desc descriptor_list;
 extern P_obj object_list;
 extern P_room world;
+extern const int top_of_world;
 extern const struct stat_data stat_factor[];
 extern const struct max_stat max_stats[];
 extern const struct racial_data_type racial_data[];
@@ -790,7 +791,7 @@ void display_gain(P_char ch, int gain)
   P_char   tch;
 
   // only display PC's
-  if (IS_NPC(ch))
+  if( IS_NPC(ch) || ch->in_room < 0 || ch->in_room > top_of_world )
     return;
 
   sprintf(buffer, "&+yExperience&n: %s by %d.\n", GET_NAME(ch), gain);
