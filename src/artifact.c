@@ -1965,7 +1965,7 @@ void event_artifact_check_poof_sql( P_char ch, P_char vict, P_obj obj, void * ar
             logit( LOG_ARTIFACT, "event_artifact_check_poof_sql: Could not find artifact vnum %d on pfile of '%s' %d.",
               vnum, get_player_name_from_pid( location ), location );
           }
-          extract_char( owner, FALSE );
+          extract_char( owner );
         }
         // PC online.
         else
