@@ -199,6 +199,7 @@ M 0 99716 4 99723 100 0 0 0        * a sinister vampire
 M 0 99712 4 99723 100 0 0 0        * a black crow
 M 0 99716 4 99723 100 0 0 0        * a sinister vampire
 M 0 99715 5 99724 100 0 0 0        * a drunk flind
+O 0 3097 1 99725 100 0 0 0         * (object type not in this .obj file)
 M 0 99711 1 99725 100 0 0 0        * Fonlak, the honest banker
 M 0 99707 4 99725 100 0 0 0        * a deadly bat
 M 0 99712 4 99726 100 0 0 0        * a black crow
