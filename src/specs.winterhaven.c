@@ -500,30 +500,30 @@ int volo_longsword(P_obj obj, P_char ch, int cmd, char *arg)
         // 10 min timer.
         if( obj->timer[0] + 600 <= curr_time )
         {
-          act("&+WYou say '&+cI s&+Lummon &+ct&+Lhe &+cT&+Lraveler!&+W'&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("&+cY&+Lou &+Lthrust $q &+Linto $n&+L's &+rfl&+Re&+rsh &+Land send a &+ct&+Lor&+cr&+Len&+ct &+Lof dark &+cp&+Llanar &+ce&+Lnergy into their &+cs&+Lou&+cl&+L!&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler reaches from beyond the &+cP&+Llanar &+cR&+Lealms and grabs a hold of $n&+L's soul!&n", TRUE, ch, obj, NULL, TO_CHAR);
+          act("&+WYou say '&+cI s&+Lummon &+ct&+Lhe &+cT&+Lraveler!&+W'&n", TRUE, ch, obj, vict, TO_CHAR);
+          act("&+cY&+Lou &+Lthrust $q &+Linto $N&+L's &+rfl&+Re&+rsh &+Land send a &+ct&+Lor&+cr&+Len&+ct &+Lof dark &+cp&+Llanar &+ce&+Lnergy into $S &+cs&+Lou&+cl&+L!&n", TRUE, ch, obj, vict, TO_CHAR);
+          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler reaches from beyond the &+cP&+Llanar &+cR&+Lealms and grabs a hold of $N&+L's soul!&n", TRUE, ch, obj, vict, TO_CHAR);
 
-          act("$n says '&+cI s&+Lummon &+ct&+Lhe &+cT&+Lraveler!&+W'&n", TRUE, ch, obj, NULL, TO_NOTVICT);
-          act("$n &+Lthrusts $q &+Linto $n&+L's &+rfl&+Re&+rsh &+Land send a &+ct&+Lor&+cr&+Len&+ct &+Lof dark &+cp&+Llanar &+ce&+Lnergy into their &+cs&+Lou&+cl&+L!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
-          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler reaches from beyond the &+cP&+Llanar &+cR&+Lealms and grabs a hold of $n&+L's soul!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
+          act("$n says '&+cI s&+Lummon &+ct&+Lhe &+cT&+Lraveler!&+W'&n", TRUE, ch, obj, vict, TO_NOTVICT);
+          act("$n &+Lthrusts $q &+Linto $N&+L's &+rfl&+Re&+rsh &+Land send a &+ct&+Lor&+cr&+Len&+ct &+Lof dark &+cp&+Llanar &+ce&+Lnergy into $S &+cs&+Lou&+cl&+L!&n", TRUE, ch, obj, vict, TO_NOTVICT);
+          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler reaches from beyond the &+cP&+Llanar &+cR&+Lealms and grabs a hold of $N&+L's soul!&n", TRUE, ch, obj, vict, TO_NOTVICT);
 
-          act("$n says '&+cI s&+Lummon &+ct&+Lhe &+cT&+Lraveler!&+W'&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("$n &+Lthrust $q &+Linto your &+rfl&+Re&+rsh &+Land send a &+ct&+Lor&+cr&+Len&+ct &+Lof dark &+cp&+Llanar &+ce&+Lnergy into your &+cs&+Lou&+cl&+L!&n", TRUE, ch, obj, NULL, TO_VICT);
-          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler reaches from beyond the &+cP&+Llanar &+cR&+Lealms and grabs a hold of YOUR soul!&n", TRUE, ch, obj, NULL, TO_VICT);
+          act("$n says '&+cI s&+Lummon &+ct&+Lhe &+cT&+Lraveler!&+W'&n", TRUE, ch, obj, vict, TO_VICT);
+          act("$n &+Lthrust $q &+Linto your &+rfl&+Re&+rsh &+Land send a &+ct&+Lor&+cr&+Len&+ct &+Lof dark &+cp&+Llanar &+ce&+Lnergy into your &+cs&+Lou&+cl&+L!&n", TRUE, ch, obj, vict, TO_VICT);
+          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler reaches from beyond the &+cP&+Llanar &+cR&+Lealms and grabs a hold of YOUR soul!&n", TRUE, ch, obj, vict, TO_VICT);
 
           spell_teleport(50, ch, 0, 0, vict, 0);
 
-          act("$n slowly fades out of existence.&n", TRUE, ch, obj, NULL, TO_ROOM);
+          act("$n slowly fades out of existence.&n", TRUE, ch, obj, vict, TO_ROOM);
 
           char_from_room(ch);
           char_to_room(ch, vict->in_room, -1);
+          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler grins wickedly as he throws you back into combat!&n", TRUE, ch, obj, vict, TO_CHAR);
+          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler grins wickedly as he throws you back into combat!&n", TRUE, ch, obj, vict, TO_VICT);
           attack(ch, vict);
           CharWait(ch,PULSE_VIOLENCE * 2);
           CharWait(vict,PULSE_VIOLENCE * 2);
 
-          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler grins wickedly as he throws you back into combat!&n", TRUE, ch, obj, NULL, TO_CHAR);
-          act("&+cV&+Lo&+cl&+Lo &+ct&+Lhe &+cT&+Lraveler grins wickedly as he throws you back into combat!&n", TRUE, ch, obj, NULL, TO_VICT);
 
           obj->timer[0] = curr_time;
           return TRUE;
