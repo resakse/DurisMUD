@@ -19,7 +19,7 @@ gateguard guard warrior gnome~
 ~
 This largish gnome looks well able to handle his job.
 ~
-67110922 128 0 0 33554472 0 0 0 1 S
+67110922 384 0 0 33554472 0 0 0 1 S
 PG 8 1 0 -1
 52 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
@@ -31,7 +31,7 @@ mineguard justice guard patrol~
 ~
 A happy looking gnome, he patrols the shafts and tunnels with a broad smile.
 ~
-67110924 128 0 0 33554472 0 0 0 1 S
+67110924 384 0 0 33554472 0 0 0 1 S
 PG 8 1 0 -1
 12 15 61 12d27+72 2d5+2
 6.4.2.0 5832
@@ -298,7 +298,7 @@ scars all over his face and body shows that he is a very powerful warrior. He
 wears armor that seems to be a bit too tight for him, but once probably did
 fit well. His dark brown eyes seem to almost invite you to attack.
 ~
-2059 0 0 0 216 0 0 0 0 S
+2059 384 0 0 216 0 0 0 0 S
 PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
@@ -313,7 +313,7 @@ wears this black leather outfit that covers his whole body and even his face,
 all that can be seen are a pair of small dark brown eyes. He is much skinner
 than the other gnomes in the village.
 ~
-2059 0 0 0 216 0 0 0 0 S
+2059 384 0 0 216 0 0 0 0 S
 PG 8 4096 0 -1
 54 -5 -107 54d110+4482 7d6+30
 9.1.7.6 218700
@@ -328,7 +328,7 @@ thinning white hair. He wears a long cotton robe with some small runes on it.
 His sky blue eyes seem to be trying to recall something, maybe a spell from
 his spellbook.
 ~
-2059 0 0 0 216 0 0 0 0 S
+2059 384 0 0 216 0 0 0 0 S
 PG 8 256 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
@@ -342,7 +342,7 @@ This is a small gnome with a long thick white beard but he has no hair on his
 head. He wears a long blue robe of the gnome mages of his guild. Long eyebrows
 hang down from deep green eyes that show a life of hardship.
 ~
-2059 0 0 0 216 0 0 0 0 S
+2059 384 0 0 216 0 0 0 0 S
 PG 8 1 0 -1
 54 -5 -107 54d131+4590 7d6+30
 9.1.7.6 218700
@@ -357,7 +357,7 @@ here, he's much rather be in the temple praying to his patron god. He wears
 the traditional robe of all Garl's cleric and wears a symbol on his neck of
 his god.
 ~
-2059 0 0 0 216 0 0 0 0 S
+2059 384 0 0 216 0 0 0 0 S
 PG 8 32 0 -1
 54 -5 -107 54d121+4536 7d6+30
 9.1.7.6 218700
@@ -545,7 +545,7 @@ The jailkeeper is a very large gnome, about four feet tall. He has long white
 hair and a long white beard and a very nice deep tan. He has deep blue eyes
 and has many scars on his face from many outlaws trying to escape.
 ~
-67110923 0 0 0 216 0 0 0 0 S
+67110923 384 0 0 216 0 0 0 0 S
 PG 8 512 0 -1
 54 -5 -107 54d88+4482 7d6+30
 9.1.7.6 218700
@@ -704,7 +704,7 @@ gateguard guard~
 ~
 This largish gnome looks well able to handle his job.
 ~
-67110922 128 0 0 33554472 0 0 0 1 S
+67110922 384 0 0 33554472 0 0 0 1 S
 PG 8 1 0 -1
 52 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
@@ -716,7 +716,7 @@ gateguard guard~
 ~
 This largish gnome looks well able to handle his job.
 ~
-67110922 128 0 0 33554472 0 0 0 1 S
+67110922 384 0 0 33554472 0 0 0 1 S
 PG 8 1 0 -1
 52 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
