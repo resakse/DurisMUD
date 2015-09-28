@@ -90,10 +90,10 @@
 /* flags for hometowns */
 #define JUSTICE_EVILHOME       BIT_1 /* aggro to good races */
 #define JUSTICE_GOODHOME       BIT_2 /* aggro to evil races */
-#define JUSTICE_LEVEL_HARSH    BIT_3 /* no concept of "wanted" just
-                                        kill them */
-#define JUSTICE_LEVEL_CHAOS    BIT_4 /* no "justice" at all.  just use
-                                        invador code */
+#define JUSTICE_LEVEL_HARSH    BIT_3 /* no concept of "wanted" just kill them */
+#define JUSTICE_LEVEL_CHAOS    BIT_4 /* no "justice" at all.  just use invador code */
+#define JUSTICE_UNDEADHOME     BIT_5
+#define JUSTICE_NEUTRALHOME    BIT_6
 
 /* for law_flags on PC's.  */
 #define JUSTICE_IS_CITIZEN 0
@@ -284,13 +284,13 @@ extern const char *justice_flag_names[];
                                   JUSTICE_EVILHOME)) || \
 */
 
-#define PC_NOTWELCOME(a, b) (IS_PC(a) && !TRUSTED_NPC(a) && \
-                             ((IS_SET(hometowns[b - 1].flags, \
-                                  EVIL_RACE(a) ? JUSTICE_GOODHOME : \
-                                  JUSTICE_EVILHOME)) || \
-                             (!IS_ELFIE(a) && ((b) == HOME_CHARIN)) || \
-                             (!IS_CENTAURIE(a) && ((b) == HOME_MARIGOT))))
-
+#define PC_NOTWELCOME(a, b) ( IS_PC(a) && !TRUSTED_NPC(a) \
+                            && ( (IS_SET(hometowns[b - 1].flags, JUSTICE_GOODHOME) && !RACE_GOOD(a)) \
+                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_EVILHOME) && !RACE_EVIL(a)) \
+                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_UNDEADHOME) && !RACE_PUNDEAD(a)) \
+                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_NEUTRALHOME) && !RACE_NEUTRAL(a)) ) \
+                            && !( (IS_ELFIE(a) && ((b) == HOME_CHARIN)) || \
+                             (IS_CENTAURIE(a) && ((b) == HOME_MARIGOT)) ) )
 
 #define PC_INVADER(a,b) (IS_PC(a) && !TRUSTED_NPC(a) && !IS_DISGUISE(a) \
   && ((IS_SET(hometowns[b - 1].flags, JUSTICE_GOODHOME) && (!GOOD_RACE(a))) \

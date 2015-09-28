@@ -154,6 +154,7 @@ O 0 96400 1 96423 100 0 0 0        * a large iron lever
 O 0 96401 1 96428 100 0 0 0        * a large iron lever
 O 0 90 100 96455 100 0 0 0         * (object type not in this .obj file)
 O 0 96402 1 96524 100 0 0 0        * a shimmering veil of colors
+O 0 3097 100 96524 100 0 0 0       * (object type not in this .obj file)
 O 0 3097 100 96584 100 0 0 0       * (object type not in this .obj file)
 *
 M 0 96400 7 96400 100 0 0 0        * a goblin slave

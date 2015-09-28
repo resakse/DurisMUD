@@ -109,7 +109,7 @@ struct hometown_data hometowns[LAST_HOME] = {
    {6, 11, 16, 21, 26, 9999}},
 
   /* 2. iliithid  town */
-  {JUSTICE_EVILHOME, 0,
+  {JUSTICE_NEUTRALHOME, 0,
    {96421, 0, 0, 0, 0}, 96421, 0, NULL,
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -279,6 +279,8 @@ const char *justice_flags[] = {
   "Good",                       /* JUSTICE_GOODHOME */
   "Harsh",                      /* JUSTICE_LEVEL_HARSH */
   "Chaotic",                    /* JUSTICE_LEVEL_CHAOS */
+  "Undead",
+  "Neutral",
   "\n"
 };
 

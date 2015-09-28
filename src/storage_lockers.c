@@ -1011,8 +1011,10 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
     return (FALSE);
 
   // not a god and not in a town?  then there's no locker here
-  if (!CHAR_IN_TOWN(ch) && (!IS_TRUSTED(ch) && (GET_RACE(ch) != RACE_PLICH)))
+  else if( !CHAR_IN_TOWN(ch) && (!IS_TRUSTED(ch) && (GET_RACE(ch) != RACE_PLICH) && !IS_ILLITHID(ch)) )
+  {
     return FALSE;
+  }
 
   if (IS_NPC(ch) || IS_MORPH(ch))
     return (FALSE);
@@ -1025,25 +1027,19 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
   if (IS_TRUSTED(ch) && GET_LEVEL(ch) < OVERLORD)
     return FALSE;
 
-  if (IS_IMMOBILE(ch) ||
-      IS_STUNNED(ch) ||
-      GET_STAT(ch) == STAT_SLEEPING)
+  if( IS_IMMOBILE(ch) || IS_STUNNED(ch) || GET_STAT(ch) == STAT_SLEEPING )
   {
     send_to_char("You're not in much of a condition for that!\r\n", ch);
     return TRUE;
   }
-  if (affected_by_spell(ch, TAG_PVPDELAY))
+  if( affected_by_spell(ch, TAG_PVPDELAY) )
   {
-    send_to_char
-      ("There is too much adrenaline pumping through your body right now.\r\n",
-       ch);
+    send_to_char("There is too much adrenaline pumping through your body right now.\r\n", ch);
     return TRUE;
   }
-  if (IS_RIDING(ch))
+  if( IS_RIDING(ch) )
   {
-    send_to_char
-      ("If you really want your mount in your locker, you'll have to kill it first.\r\n",
-       ch);
+    send_to_char("If you really want your mount in your locker, you'll have to kill it first.\r\n", ch);
     return TRUE;
   }
   if (get_linking_char(ch, LNK_RIDING))
