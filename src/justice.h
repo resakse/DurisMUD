@@ -288,7 +288,7 @@ extern const char *justice_flag_names[];
                             && ( (IS_SET(hometowns[b - 1].flags, JUSTICE_GOODHOME) && !RACE_GOOD(a)) \
                             || (IS_SET(hometowns[b - 1].flags, JUSTICE_EVILHOME) && !RACE_EVIL(a)) \
                             || (IS_SET(hometowns[b - 1].flags, JUSTICE_UNDEADHOME) && !RACE_PUNDEAD(a)) \
-                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_NEUTRALHOME) && !RACE_NEUTRAL(a)) ) \
+/*                            || (IS_SET(hometowns[b - 1].flags, JUSTICE_NEUTRALHOME) && !RACE_NEUTRAL(a)) */ ) \
                             && !( (IS_ELFIE(a) && ((b) == HOME_CHARIN)) || \
                              (IS_CENTAURIE(a) && ((b) == HOME_MARIGOT)) ) )
 
