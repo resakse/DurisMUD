@@ -6093,84 +6093,86 @@ void spell_rejuvenate_minor(int level, P_char ch, char *arg, int type,
   affect_to_char_with_messages(victim, &af, "You feel older again.", "$n suddenly looks a little older than a moment before.");
 }
 
-void spell_ray_of_enfeeblement(int level, P_char ch, char *arg, int type,
-                               P_char victim, P_obj obj)
+void spell_ray_of_enfeeblement( int level, P_char ch, char *arg, int type, P_char victim, P_obj obj )
 {
   struct affected_type af;
   int base_str = victim->base_stats.Str;
   int curr_str = GET_C_STR(victim);
   int mod = level;
-  
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-      return;
-      
-  if(victim == ch)
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+    return;
+
+  if( victim == ch )
   {
     send_to_char("You may not enfeeble yourself.", ch);
     return;
   }
 
-  if(resists_spell(ch, victim))
+  if( resists_spell(ch, victim) )
     return;
-      
-  if(IS_ELITE(victim) ||
-     IS_GREATER_RACE(victim))
-        return;
 
-  if(affected_by_spell(victim, SPELL_RAY_OF_ENFEEBLEMENT))
+  if( IS_ELITE(victim) || IS_GREATER_RACE(victim) )
+    return;
+
+  if( affected_by_spell(victim, SPELL_RAY_OF_ENFEEBLEMENT) )
   {
     act("$E is already pretty feeble.", TRUE, ch, 0, victim, TO_CHAR);
     act("&+LYou cannot possible get more feeble!&n", TRUE, ch, 0, victim, TO_VICT);
     return;
   }
-  
-  if(affected_by_spell(victim, SPELL_WITHER))
+
+  if( affected_by_spell(victim, SPELL_WITHER) )
   {
     act("$E is withered and unaffected by enfeeblment.", TRUE, ch, 0, victim, TO_CHAR);
     return;
   }
 
-
-  if(mod > base_str)
+  if( mod > base_str )
     mod = base_str;
-  
-  if(mod > curr_str)
-    mod = curr_str;
-    
-  mod = (int)(mod * 0.50);
-  
-  int success_chance =
-    BOUNDED(50, 70 + GET_LEVEL(ch) - GET_LEVEL(victim), 80);
 
-  if(success_chance > number(1, 100))
+  if( mod > curr_str )
+    mod = curr_str;
+
+  if( level < 1 )
+    level = 1;
+
+  mod = (int)(mod * 0.50);
+
+  int success_chance = BOUNDED(50, 70 + GET_LEVEL(ch) - GET_LEVEL(victim), 80);
+
+  if( success_chance > number(1, 100) )
   {
     send_to_char("A wave of weakness sweeps over you!\n", victim);
     act("$n pales, and seems to sag.", TRUE, victim, 0, 0, TO_ROOM);
 
     bzero(&af, sizeof(af));
     af.type = SPELL_RAY_OF_ENFEEBLEMENT;
-      
+
     if(!NewSaves(victim, SAVING_PARA, 0))
     {
       af.duration = 2;
       af.modifier = -(mod);
       af.location = APPLY_STR;
       affect_to_char(victim, &af);
-      
-      af.modifier = MIN(-1, (int)(-1 * level / 10 - number(0, 5)));
+
+      af.modifier = -1 * level / 10 - number(1, 6);
+      // Don't go below 0 or it'll jump up to 255 'cause damroll is an unsigned byte.
+      if( af.modifier < 0 - victim->points.damroll )
+        af.modifier = 0 - victim->points.damroll;
       af.location = APPLY_DAMROLL;
       affect_to_char(victim, &af);
     }
     else
     {
       af.duration = 1;
-      af.modifier = MIN(-1, (-1 * mod + number(0, 5)));
+      af.modifier = -1 * mod / 10 - number(1, 6);
+      // Don't go below 0 or it'll jump up to 255 'cause damroll is an unsigned byte.
+      if( af.modifier < 0 - victim->points.damroll )
+        af.modifier = 0 - victim->points.damroll;
       af.location = APPLY_STR;
       affect_to_char(victim, &af);
-      
+
       af.modifier = MIN(-1, (int)(-1 * level / 10 - number(0, 5)));
       af.location = APPLY_DAMROLL;
       affect_to_char(victim, &af);
