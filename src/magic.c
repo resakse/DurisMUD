@@ -6614,8 +6614,8 @@ void spell_enchant_weapon(int level, P_char ch, char *arg, int type, P_char vict
       {
         if( obj->affected[i].modifier == 0 )
         {
-          obj->affected[0].location = APPLY_HITROLL;
-          obj->affected[0].modifier = 1 + (level / 31);
+          obj->affected[i].location = APPLY_HITROLL;
+          obj->affected[i].modifier = 1 + (level / 31);
           break;
         }
       }
