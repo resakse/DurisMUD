@@ -3516,7 +3516,7 @@ int itemvalue( P_obj obj )
 
   workingvalue *= multiplier;
 
-  if( obj->type == ITEM_KEY || obj->type == ITEM_SWITCH || obj->type == ITEM_TELEPORT
+  if( (!CAN_WEAR(obj, ITEM_TAKE) && obj->type == ITEM_TELEPORT) || obj->type == ITEM_KEY || obj->type == ITEM_SWITCH
     || obj->type == ITEM_VEHICLE || obj->type == ITEM_SHIP || obj->type == ITEM_STORAGE )
   {
     if( workingvalue != 1 )
