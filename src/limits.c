@@ -794,7 +794,10 @@ void display_gain(P_char ch, int gain)
   if( IS_NPC(ch) || ch->in_room < 0 || ch->in_room > top_of_world )
     return;
 
-  sprintf(buffer, "&+yExperience&n: %s by %d.\n", GET_NAME(ch), gain);
+  if( GET_LEVEL(ch) >= MINLVLIMMORTAL )
+    sprintf(buffer, "&+yExperience&n: %s would have gained %d.\n", GET_NAME(ch), gain);
+  else
+    sprintf(buffer, "&+yExperience&n: %s by %d.\n", GET_NAME(ch), gain);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
@@ -1088,11 +1091,11 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   }
 
 // debug("check 1 exp (%d:%d).", type, value);
-  if( GET_LEVEL(ch) >= MINLVLIMMORTAL || CHAR_IN_ARENA(ch)
-    || IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE) )
+  if( CHAR_IN_ARENA(ch) || IS_SET(world[ch->in_room].room_flags, GUILD_ROOM | SAFE_ZONE) )
   {
     return 0;
   }
+
   if( victim && type != EXP_RESURRECT )
   {
     if( IS_PC_PET(victim) || IS_SHOPKEEPER(victim)
@@ -1416,12 +1419,16 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     // send_to_char("&+LYour exps are capped and you must gain a level to accumulate more exps.\r\n", ch);
   // }
 
-  // increase exp only to some limit (cumulative exp till 61)
-  if( XP_final < 0 || GET_EXP(ch) < global_exp_limit )
+  // increase exp only to some limit (cumulative exp for mortals)
+  if( GET_LEVEL(ch) < MINLVLIMMORTAL && (XP_final < 0 || GET_EXP(ch) < global_exp_limit) )
   {
     GET_EXP(ch) += (int)XP_final;
   }
   display_gain(ch, (int)XP_final);
+  if( GET_LEVEL(ch) >= MINLVLIMMORTAL )
+  {
+    return 0;
+  }
 
   if (XP_final > 0)
   {

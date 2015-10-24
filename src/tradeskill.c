@@ -1285,136 +1285,137 @@ P_obj get_pole(P_char ch)
 
 void do_fish(P_char ch, char*, int cmd)
 {
-  if( cmd == CMD_SET_PERIODIC )
-    return;
-  
-  if( cmd == CMD_FISH )
+  P_obj pole;
+  struct fishing_data data;
+
+  if( !IS_ALIVE(ch) )
   {
-  if( !ch || !IS_PC(ch) )
-      return;
-    
-    if( GET_CHAR_SKILL(ch, SKILL_FISHING) == 0 )
-    {
-      send_to_char("You don't know how to fish.\n", ch);
-      return;      
-    }
-    
-    if( get_scheduled(ch, event_fish_check) )
-    {
-      send_to_char("You're already fishing!\n", ch);
-      return;
-    }
-    
-    if (!MIN_POS(ch, POS_STANDING + STAT_NORMAL))
-    {
-      send_to_char("You're too relaxed to fish.\n", ch);
-      return;
-    }
-	
-	  if(!IS_WATER_ROOM(ch->in_room))
+    return;
+  }
+
+  if( IS_NPC(ch) || GET_CHAR_SKILL(ch, SKILL_FISHING) == 0 )
+  {
+    send_to_char("You don't know how to fish.\n", ch);
+    return;
+  }
+
+  if( get_scheduled(ch, event_fish_check) )
+  {
+    send_to_char("You're already fishing!\n", ch);
+    return;
+  }
+
+  if( !MIN_POS(ch, POS_STANDING + STAT_NORMAL) )
+  {
+    send_to_char("You're too relaxed to fish.\n", ch);
+    return;
+  }
+
+  if( !(pole = get_pole(ch)) )
+  {
+    send_to_char("How are you supposed to fish when you don't have anything ready to fish with?\n", ch);
+    return;
+  }
+
+  if( !IS_WATER_ROOM(ch->in_room) )
   {
     send_to_char("Well you DO have a fishing pole, but where do you plan to fish???\n", ch);
     return;
-  } 
+  }
 
-  P_obj pole = get_pole(ch);
-
-   if (IS_DISGUISE(ch))
+  if( IS_DISGUISE(ch) )
   {
     send_to_char("Fishing will ruin your disguise!\r\n", ch);
     return;
   }
 
+  // Start fishing
+  send_to_char("You cast your pole and start waiting...\n", ch);
 
-  if(!pole)
-  {
-    send_to_char("How are you supposed to fish when you don't have anything ready to fish with?\n", ch);
-    return;
-  }
-      // start fishing
-    send_to_char("You cast your pole and start waiting...\n", ch);
+  data.room = ch->in_room;
+  // Two ticks for Immortals.. for testing
+  data.counter = IS_TRUSTED(ch) ? 2 : (140 - GET_CHAR_SKILL(ch, SKILL_FISHING)) / 4;
 
-   struct fishing_data data;
-    data.room = ch->in_room;
-    data.counter = (140 - GET_CHAR_SKILL(ch, SKILL_FISHING)) / 4;
-	
-   add_event( event_fish_check, PULSE_VIOLENCE, ch, 0, 0, 0, &data, sizeof(struct fishing_data));
-    return;
-  }
-return;
+  add_event( event_fish_check, PULSE_VIOLENCE, ch, 0, 0, 0, &data, sizeof(struct fishing_data));
 }
 
 void event_fish_check(P_char ch, P_char victim, P_obj, void *data)
 {
   struct fishing_data *fdata = (struct fishing_data*)data;
-  P_obj ore, pole;
+  P_obj pole, fish;
   char  buf[MAX_STRING_LENGTH], dbug[MAX_STRING_LENGTH];
   const int fishes[12] = {293 , 294 , 295 , 318 , 319 , 330 , 332 , 333 , 334 , 335, 355, 356};
   int random = number(0,11);
   pole = get_pole(ch);
+  struct affected_type *afp, af;
 
-  if (!ch->desc ||
-      IS_FIGHTING(ch) ||
-      IS_DESTROYING(ch) ||
-      (ch->in_room != fdata->room) ||            
-      !MIN_POS(ch, POS_STANDING + STAT_NORMAL) ||                    
-      IS_SET(ch->specials.affected_by, AFF_HIDE) ||
-      IS_IMMOBILE(ch) ||
-      !AWAKE(ch) ||
-      IS_STUNNED(ch) ||
-      IS_CASTING(ch) ||
-      IS_AFFECTED2(ch, AFF2_CASTING))
-  {
-    send_to_char("You stop fishing.\n", ch);
-    return;  
-  }
-
-  if(!IS_WATER_ROOM(ch->in_room))
+  if( !ch->desc || IS_FIGHTING(ch) || IS_DESTROYING(ch) || (ch->in_room != fdata->room)
+    || !MIN_POS(ch, POS_STANDING + STAT_NORMAL) || IS_SET(ch->specials.affected_by, AFF_HIDE)
+    || IS_IMMOBILE(ch) || !AWAKE(ch) || IS_STUNNED(ch) || IS_CASTING(ch) )
   {
     send_to_char("You stop fishing.\n", ch);
     return;
-  } 
+  }
 
-  if (IS_DISGUISE(ch))
+  if( !IS_WATER_ROOM(ch->in_room) )
+  {
+    send_to_char("You stop fishing.\n", ch);
+    return;
+  }
+
+  if( IS_DISGUISE(ch) )
   {
     send_to_char("Fishing will ruin your disguise!\r\n", ch);
     return;
   }
 
-
-  if(!pole)
+  if( !pole )
   {
     send_to_char("How are you supposed to fish when you don't have anything ready to fish with?\n", ch);
     return;
   }
-  
-  if(fdata->counter == 0 )
+
+  if( fdata->counter == 0 )
   {
 
-   if (GET_CHAR_SKILL(ch, SKILL_FISHING) < number(1,125) )
-  {
-    send_to_char("You didn't catch a thing..\n", ch);
-    return;
-  }
+    if( GET_CHAR_SKILL(ch, SKILL_FISHING) < number(1,125) )
+    {
+      send_to_char("You didn't catch a thing..\n", ch);
+      return;
+    }
 
-  P_obj fish = read_object(fishes[random], VIRTUAL);
-
-  if(!fish)
+  if( !(fish = read_object(fishes[random], VIRTUAL)) )
   {
     wizlog(56, "Bug with fishing no fish with vnum %d", fishes[random]);
     return;
   }
 
-  if(!number(0,2))
-    DamageOneItem(ch, 9, pole, FALSE); 
+  if( !number(0,2) )
+  {
+    DamageOneItem(ch, 9, pole, FALSE);
+  }
 
-  act("You reel in $p on your fishing pole!", FALSE,
-      ch, fish, NULL, TO_CHAR);
+  act("You reel in $p on your fishing pole!", FALSE, ch, fish, NULL, TO_CHAR);
+  act("$n reels in $p on $s fishing pole", FALSE, ch, fish, NULL, TO_ROOM);
 
-  gain_exp(ch, NULL, (GET_CHAR_SKILL(ch, SKILL_FISHING) * 5), EXP_BOON);
+  // Diminishing returns to stop afk bot-fishing for exp, clears after 10 ticks of not catching anything.
+  if( !(afp = get_spell_from_char(ch, SKILL_FISHING)) )
+  {
+    bzero(&af, sizeof(af));
+    af.type = SKILL_FISHING;
+    af.modifier = 500;
+    af.duration = 10;
+    af.flags = AFFTYPE_NOSHOW | AFFTYPE_NODISPEL | AFFTYPE_NOMSG | AFFTYPE_OFFLINE;
+    afp = affect_to_char(ch, &af);
+  }
+  else
+  {
+    afp->modifier -= 10;
+    afp->modifier = MAX( afp->modifier, 20 );
+    afp->duration = 10;
+  }
 
-  act("$n reels in $p on $s fishing pole", FALSE,
-      ch, fish, NULL, TO_ROOM);
+  gain_exp(ch, NULL, (GET_CHAR_SKILL(ch, SKILL_FISHING) * afp->modifier)/100, EXP_BOON);
 
   //fish->timer[0] = time(NULL); Fish no longer decay - drannak 5/13/13
   obj_to_char(fish, ch);
