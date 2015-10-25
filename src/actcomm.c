@@ -755,7 +755,7 @@ void do_project(P_char ch, char *argument, int cmd)
       logit(LOG_CHAT, "%s projects '%s'", GET_NAME(ch), argument);
   }
 
-  sprintf(Gbuf1, "&+m%s&+m projects '&+M%s&n&+m' accross the ether.&n\n", GET_NAME(ch), argument);
+  sprintf(Gbuf1, "&+m%s&+m projects '&+M%s&n&+m' across the ether.&n\n", GET_NAME(ch), argument);
   for( desc = descriptor_list; desc; desc = desc->next )
   {
     if( (desc->character != ch) && !desc->connected
