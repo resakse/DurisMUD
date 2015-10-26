@@ -4119,7 +4119,6 @@ void do_craft(P_char ch, char *argument, int cmd)
     gain_exp(ch, NULL, iVal*1000, EXP_BOON);
     extract_obj(matLowest);
     extract_obj(matHighest);
-    gain_exp(ch, NULL, iVal*10000, EXP_QUEST);
     // Save the character! 1 -> in game.
     do_save_silent(ch, 1);
   }

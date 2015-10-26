@@ -1292,17 +1292,11 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
       return 0;
     }
 
-// Hard coding goodie anti-griefing code for hometowns. Oct09 -Lucrot
-// This is a pure pvp mud.  Learn to intergrate into the pbase.
-/*
-       if(IS_PC(ch) &&
-       IS_PC(victim) &&
-       CHAR_IN_TOWN(ch) &&
-       GOOD_RACE(ch) &&
-       GOOD_RACE(victim) &&
-       GET_LEVEL(victim) >= (int)(get_property("pvp.good.level.grief.victim", 20)) &&
-       GET_LEVEL(ch) >= (int)(get_property("pvp.good.level.grief.ch", 20)) ||
-       IS_PC_PET(ch))
+    /* This is a pure pvp mud.  Learn to intergrate into the pbase.
+    // Hard coding goodie anti-griefing code for hometowns. Oct09 -Lucrot
+    if( IS_PC(ch) && IS_PC(victim) && CHAR_IN_TOWN(ch) && GOOD_RACE(ch) && GOOD_RACE(victim)
+      && GET_LEVEL(victim) >= (int)(get_property("pvp.good.level.grief.victim", 20))
+      && GET_LEVEL(ch) >= (int)(get_property("pvp.good.level.grief.ch", 20)) || IS_PC_PET(ch) )
     {
       XP = -1 * (new_exp_table[GET_LEVEL(ch) + 1] >> 4);
       send_to_char("&+WThe divine forces of &+RDuris &+Wfrowns upon you...\r\n", ch);
@@ -1336,26 +1330,29 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
     else
     {
     */
-      if (!IS_PC(victim))
-      {
-        XP *= exp_mods[EXPMOD_KILL];
+    if( IS_NPC(victim) )
+    {
+      XP *= exp_mods[EXPMOD_KILL];
 // debug("kill 1 exp gain (%d)", (int)XP);
-        XP = gain_global_exp_modifiers(ch, XP);
+      XP = gain_global_exp_modifiers(ch, XP);
 // debug("kill 2 exp gain (%d)", (int)XP);
-        XP *= exp_mod(ch, victim) / 100;
+      XP *= exp_mod(ch, victim) / 100;
 // debug("kill 3 exp gain (%d)", (int)XP);
-        XP = modify_exp_by_zone_trophy(ch, type, XP);
+      XP = modify_exp_by_zone_trophy(ch, type, XP);
 // debug("kill 4 exp gain (%d)", (int)XP);
-        XP = gain_exp_modifiers(ch, victim, XP);
+      XP = gain_exp_modifiers(ch, victim, XP);
 // debug("kill 5 exp gain (%d)", (int)XP);
-        XP = gain_exp_modifiers_race_only(ch, victim, XP);
+      XP = gain_exp_modifiers_race_only(ch, victim, XP);
 // debug("kill 6 exp gain (%d)", (int)XP);
-        XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
+      XP = check_nexus_bonus(ch, (int)XP, NEXUS_BONUS_EXP); 
 // debug("kill 7 exp gain (%d)", (int)XP);
-      }
+    }
+    // Don't log what an Immortal would've gotten.
+    if( GET_LEVEL(ch) < MINLVLIMMORTAL )
+    {
       logit(LOG_EXP, "KILL EXP: %s (%d) killed by %s (%d): old exp: %d, new exp: %d, +exp: %d",
         GET_NAME(victim), GET_LEVEL(victim), GET_NAME(ch), GET_LEVEL(ch), GET_EXP(ch), GET_EXP(ch) + (int)XP, (int)XP);
-    //}
+    }
 
     if( pvp )
     {
@@ -1368,11 +1365,21 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
   else if(type == EXP_WORLD_QUEST)
   {
     XP = gain_exp_modifiers_race_only(ch, NULL, XP);
+    if( GET_LEVEL(ch) < MINLVLIMMORTAL )
+    {
+      logit(LOG_EXP, "W-QUEST EXP: %s - level %d: old exp: %d, new exp: %d, +exp: %d",
+        GET_NAME(ch), GET_LEVEL(ch), GET_EXP(ch), GET_EXP(ch) + (int)XP, (int)XP);
+    }
 // debug("world quest 1 (%d)", (int)XP);
   }
   else if(type == EXP_QUEST)
   {
     XP = gain_exp_modifiers_race_only(ch, NULL, XP);
+    if( GET_LEVEL(ch) < MINLVLIMMORTAL )
+    {
+      logit(LOG_EXP, "QUEST EXP: %s - level %d: old exp: %d, new exp: %d, +exp: %d",
+        GET_NAME(ch), GET_LEVEL(ch), GET_EXP(ch), GET_EXP(ch) + (int)XP, (int)XP);
+    }
 // debug("quest 1 (%d)", (int)XP);
   }
 

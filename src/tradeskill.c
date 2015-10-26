@@ -681,7 +681,6 @@ void do_forge(P_char ch, char *argument, int cmd)
       FALSE, ch, obj, 0, TO_CHAR);
 
     gain_exp(ch, NULL, (iVal * 1000), EXP_BOON);
-    gain_exp(ch, NULL, (iVal * 10000), EXP_QUEST);
   }
   else
   {
