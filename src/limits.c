@@ -1135,7 +1135,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // debug("damage 1 exp gain (%d)", (int)XP);
     XP = gain_global_exp_modifiers(ch, XP);
 // debug("damage 2 exp gain (%d)", (int)XP);
-    XP *= exp_mod(ch, victim) / 100;
+    XP *= exp_mod(ch, victim) / 100.;
 // debug("damage 3 exp gain (%d)", (int)XP);
     XP = modify_exp_by_zone_trophy(ch, type, XP);
 // debug("damage 4 exp gain (%d)", (int)XP);
