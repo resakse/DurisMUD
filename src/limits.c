@@ -1186,7 +1186,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // debug("healing 3 (%d)", (int)XP);
     XP = gain_global_exp_modifiers(ch, XP);
 // debug("healing 4 (%d)", (int)XP);
-    XP *= exp_mod(ch, attacker) / 100;
+    XP *= exp_mod(ch, attacker) / 100.;
 // debug("healing 5 (%d)", (int)XP);
     XP = modify_exp_by_zone_trophy(ch, type, XP);
 // debug("healing 6 (%d)", (int)XP);
@@ -1220,7 +1220,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // debug("tanking 1 (%d)", (int)XP);
     XP = gain_global_exp_modifiers(ch, XP);
 // debug("tanking 2 (%d)", (int)XP);
-    XP *= exp_mod(ch, victim) / 100;
+    XP *= exp_mod(ch, victim) / 100.;
 // debug("tanking 3 (%d)", (int)XP);
     XP = modify_exp_by_zone_trophy(ch, type, XP);
 // debug("tanking 4 (%d)", (int)XP);
@@ -1251,7 +1251,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // debug("melee 2 exp gain (%d)", (int)XP);
     XP = gain_global_exp_modifiers(ch, XP);
 // debug("melee 3 exp gain (%d)", (int)XP);
-    XP *= exp_mod(ch, victim) / 100;
+    XP *= exp_mod(ch, victim) / 100.;
 // debug("melee 4 exp gain (%d)", (int)XP);
     XP = modify_exp_by_zone_trophy(ch, type, XP);
 // debug("melee 5 exp gain (%d)", (int)XP);
@@ -1336,7 +1336,7 @@ int gain_exp(P_char ch, P_char victim, const int value, int type)
 // debug("kill 1 exp gain (%d)", (int)XP);
       XP = gain_global_exp_modifiers(ch, XP);
 // debug("kill 2 exp gain (%d)", (int)XP);
-      XP *= exp_mod(ch, victim) / 100;
+      XP *= exp_mod(ch, victim) / 100.;
 // debug("kill 3 exp gain (%d)", (int)XP);
       XP = modify_exp_by_zone_trophy(ch, type, XP);
 // debug("kill 4 exp gain (%d)", (int)XP);
