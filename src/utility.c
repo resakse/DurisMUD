@@ -1317,155 +1317,144 @@ bool ac_can_see(P_char sub, P_char obj, bool check_z)
   // First, we need to see if the subject can see anything or is dayblind / nightblind in the room their in.
   dayblind = has_innate(sub, INNATE_DAYBLIND);
   sroom = sub->in_room;
-  // Check for dayblind: Light room with dayblind subject.
-  if( dayblind && !CAN_NIGHTPEOPLE_SEE(sroom) )
+  if( !IS_MAP_ROOM(sroom) )
   {
-    globe = FALSE;
-    // Anyone with globe of dark overrides room to twilight.
-    for( tmp_char = world[sroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
+    // Check for dayblind: Light room with dayblind subject.
+    if( dayblind && !CAN_NIGHTPEOPLE_SEE(sroom) )
     {
-      if( IS_AFFECTED4(tmp_char, AFF4_GLOBE_OF_DARKNESS) )
+      globe = FALSE;
+      // Anyone with globe of dark overrides room to twilight.
+      for( tmp_char = world[sroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
       {
-        globe = TRUE;
-        break;
+        if( IS_AFFECTED4(tmp_char, AFF4_GLOBE_OF_DARKNESS) )
+        {
+          globe = TRUE;
+          break;
+        }
       }
-    }
-    // If no globe of darkness in room, they are dayblind.
-    if( !globe )
-    {
-      // Here we check sub's infra vs obj's race (some races are invis to infravision).
-      if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+      // If no globe of darkness in room, they are dayblind.
+      if( !globe )
       {
-        // We use GET_RACE2 becaue of shape shifters.
-        race = GET_RACE2(obj);
-        if( INFRA_INVIS_RACE(race) )
+        // Here we check sub's infra vs obj's race (some races are invis to infravision).
+        if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+        {
+          // We use GET_RACE2 becaue of shape shifters.
+          race = GET_RACE2(obj);
+          if( INFRA_INVIS_RACE(race) )
+          {
+            return FALSE;
+          }
+        }
+        else
         {
           return FALSE;
         }
       }
-      else
-      {
-        return FALSE;
-      }
     }
-  }
-  // Else check for nightblind: Dark room with no ultra subject.
-  else if( !IS_AFFECTED2(sub, AFF2_ULTRAVISION) && !CAN_DAYPEOPLE_SEE(sroom) )
-  {
-    flame = FALSE;
-    // Anyone with mage flame overrides room to twilight.
-    for( tmp_char = world[sroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
+    // Else check for nightblind: Dark room with no ultra subject.
+    else if( !IS_AFFECTED2(sub, AFF2_ULTRAVISION) && !CAN_DAYPEOPLE_SEE(sroom) )
     {
-      if( IS_AFFECTED4(tmp_char, AFF4_MAGE_FLAME) )
+      flame = FALSE;
+      // Anyone with mage flame overrides room to twilight.
+      for( tmp_char = world[sroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
       {
-        flame = TRUE;
-        break;
+        if( IS_AFFECTED4(tmp_char, AFF4_MAGE_FLAME) )
+        {
+          flame = TRUE;
+          break;
+        }
       }
-    }
-    // If no mage flame in room, they are night blind.
-    if( !flame )
-    {
-      // Here we check sub's infra vs obj's race (some races are invis to infravision).
-      if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+      // If no mage flame in room, they are night blind.
+      if( !flame )
       {
-        // We use GET_RACE2 becaue of shape shifters.
-        race = GET_RACE2(obj);
-        if( INFRA_INVIS_RACE(race) )
+        // Here we check sub's infra vs obj's race (some races are invis to infravision).
+        if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+        {
+          // We use GET_RACE2 becaue of shape shifters.
+          race = GET_RACE2(obj);
+          if( INFRA_INVIS_RACE(race) )
+          {
+            return FALSE;
+          }
+        }
+        else
         {
           return FALSE;
         }
-      }
-      else
-      {
-        return FALSE;
       }
     }
   }
 
   // Now, we need to look at the room obj is in too see if sub can see anything in it.
   oroom = obj->in_room;
-  // Check for dayblind: Light room with dayblind subject.
-  if( dayblind && !CAN_NIGHTPEOPLE_SEE(oroom) )
+  if( !IS_MAP_ROOM(oroom) )
   {
-    globe = FALSE;
-    // Anyone with globe of dark overrides room to twilight.
-    for( tmp_char = world[oroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
+    // Check for dayblind: Light room with dayblind subject.
+    if( dayblind && !CAN_NIGHTPEOPLE_SEE(oroom) )
     {
-      if( IS_AFFECTED4(tmp_char, AFF4_GLOBE_OF_DARKNESS) )
+      globe = FALSE;
+      // Anyone with globe of dark overrides room to twilight.
+      for( tmp_char = world[oroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
       {
-        globe = TRUE;
-        break;
+        if( IS_AFFECTED4(tmp_char, AFF4_GLOBE_OF_DARKNESS) )
+        {
+          globe = TRUE;
+          break;
+        }
       }
-    }
-    // If no globe of darkness in room, then sub can not see in obj's room.
-    if( !globe )
-    {
-      if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+      // If no globe of darkness in room, then sub can not see in obj's room.
+      if( !globe )
       {
-        // We use GET_RACE2 becaue of shape shifters.
-        race = GET_RACE2(obj);
-        if( INFRA_INVIS_RACE(race) )
+        if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+        {
+          // We use GET_RACE2 becaue of shape shifters.
+          race = GET_RACE2(obj);
+          if( INFRA_INVIS_RACE(race) )
+          {
+            return FALSE;
+          }
+        }
+        else
         {
           return FALSE;
         }
       }
-      else
-      {
-        return FALSE;
-      }
     }
-  }
-  // Else check for nightblind: Dark room with no infra/ultra subject.
-  else if( !IS_AFFECTED(sub, AFF_INFRAVISION) && !IS_AFFECTED2(sub, AFF2_ULTRAVISION) && !CAN_DAYPEOPLE_SEE(oroom) )
-  {
-    flame = FALSE;
-    // Anyone with mage flame overrides room to twilight.
-    for( tmp_char = world[sroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
+    // Else check for nightblind: Dark room with no infra/ultra subject.
+    else if( !IS_AFFECTED(sub, AFF_INFRAVISION) && !IS_AFFECTED2(sub, AFF2_ULTRAVISION) && !CAN_DAYPEOPLE_SEE(oroom) )
     {
-      if( IS_AFFECTED4(tmp_char, AFF4_MAGE_FLAME) )
+      flame = FALSE;
+      // Anyone with mage flame overrides room to twilight.
+      for( tmp_char = world[sroom].people; tmp_char; tmp_char = tmp_char->next_in_room )
       {
-        flame = TRUE;
-        break;
+        if( IS_AFFECTED4(tmp_char, AFF4_MAGE_FLAME) )
+        {
+          flame = TRUE;
+          break;
+        }
       }
-    }
-    // If no mage flame in room, then sub can not see in obj's room.
-    if( !flame )
-    {
-      if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+      // If no mage flame in room, then sub can not see in obj's room.
+      if( !flame )
       {
-        // We use GET_RACE2 becaue of shape shifters.
-        race = GET_RACE2(obj);
-        if( INFRA_INVIS_RACE(race) )
+        if( IS_AFFECTED(sub, AFF_INFRAVISION) )
+        {
+          // We use GET_RACE2 becaue of shape shifters.
+          race = GET_RACE2(obj);
+          if( INFRA_INVIS_RACE(race) )
+          {
+            return FALSE;
+          }
+        }
+        else
         {
           return FALSE;
         }
-      }
-      else
-      {
-        return FALSE;
       }
     }
   }
 
   return TRUE;
 
-/* This is no longer necessary I don't think.
-  if( IS_SURFACE_MAP(obj->in_room) || IS_UD_MAP(obj->in_room) )
-  {
-    return TRUE;
-  }
-
-  if( IS_UNDERWORLD(obj->in_room) )
-  {
-    return TRUE;
-  }
-
-  // Barring all the above checks, allow pets to see their owners
-  if( GET_MASTER(sub) == obj )
-  {
-    return TRUE;
-  }
- */
 }
 
 /*

@@ -29,6 +29,7 @@ using namespace std;
 #include "ships/ships.h"
 #include "guildhall.h"
 #include "ctf.h"
+#include "vnum.mob.h"
 #include "vnum.obj.h"
 
 struct continent
@@ -83,38 +84,43 @@ int      map_dayblind_modifier;
 void     add_quest_data(char *map);
 
 /* map specific defines */
-#define CONTAINS_GOOD_SHIP    1
-#define CONTAINS_EVIL_SHIP    2
-#define CONTAINS_UNDEAD_SHIP  3
-#define CONTAINS_NEUTRAL_SHIP 4
-#define CONTAINS_UNKNOWN_SHIP 5
-#define CONTAINS_SHIP         6
-#define CONTAINS_GOOD_PC      7
-#define CONTAINS_EVIL_PC      8
-#define CONTAINS_PC           9
-#define CONTAINS_DRAGON      10
-#define CONTAINS_MOB         11
-#define CONTAINS_CORPSE      12
-#define CONTAINS_PORTAL      13
-#define CONTAINS_BLOOD       14
-#define CONTAINS_OLD_BLOOD   15
-#define CONTAINS_TRACK       16
-#define CONTAINS_MINE        17
-#define CONTAINS_FERRY       18
-#define CONTAINS_MAGIC_DARK  19
-#define CONTAINS_MAGIC_LIGHT 20
-#define CONTAINS_BUILDING    21
-#define CONTAINS_GROUP       22
-#define CONTAINS_WITCH       23
-#define CONTAINS_GUILDHALL   24
-#define CONTAINS_CARGO       25
-#define CONTAINS_CTF_FLAG    26
+// Category 1: Stuff that overrides everything:
+#define CONTAINS_NOTHING      0
+#define CONTAINS_CH           1
+#define CONTAINS_CTF_FLAG     2
+// Category 2: Stuff that's really big:
+#define CONTAINS_GOOD_SHIP    3
+#define CONTAINS_EVIL_SHIP    4
+#define CONTAINS_UNDEAD_SHIP  5
+#define CONTAINS_NEUTRAL_SHIP 6
+#define CONTAINS_UNKNOWN_SHIP 7
+#define CONTAINS_SHIP         8
+#define CONTAINS_FERRY        9
+// Category 3: Light/Dark:
+#define CONTAINS_MAGIC_DARK  10
+#define CONTAINS_MAGIC_LIGHT 11
+// Category 4: Lifeforms:
+#define CONTAINS_WITCH       12
+#define CONTAINS_DRAGON      13
+#define CONTAINS_BUILDING    14
+#define CONTAINS_GOOD_PC     15
+#define CONTAINS_EVIL_PC     16
+#define CONTAINS_GROUP       17
+#define CONTAINS_PC          18
+#define CONTAINS_MOB         19
+// Category 5: Objects:
+#define CONTAINS_PORTAL      20
+#define CONTAINS_GUILDHALL   21
+#define CONTAINS_CORPSE      22
+#define CONTAINS_TRACK       23
+#define CONTAINS_BLOOD       24
+#define CONTAINS_OLD_BLOOD   25
+#define CONTAINS_MINE        26
 #define CONTAINS_GEMMINE     27
-#define CONTAINS_CH          28
+#define CONTAINS_CARGO       28
+#define CONTAINS_MAX         28
 
 #define HIDDEN_BY_FOREST(from_room,to_room) ( world[to_room].sector_type == SECT_FOREST && world[from_room].sector_type != SECT_FOREST )
-
-#define VNUM_WITCH 15
 
 const char *sector_symbol[NUM_SECT_TYPES] = {
   "^",                          /* * larger towns */
@@ -272,89 +278,53 @@ int calculate_map_distance(int room1, int room2)
 
 int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
 {
-  P_obj    obj, next_obj;
-  P_char   who, who_next;
-  int z, zw, portal = FALSE, val = 100;
-  int skill, chance, level; // for  seeing tracks
-  int skl_lvl, ch_lvl, percent_chance; // for whether a thief is a P
-  int percentroll = number(1, 100);
-  /*  int room; */
+  P_obj    obj; // For looping through objs in a room.
+  P_char   who; // For looping through chars in a room.
+  int z, zw, portal = FALSE, val = CONTAINS_MAX+1;
+  int from_room = ch->in_room;
 
-  if( !IS_ALIVE(ch) )
+  if( !IS_ALIVE(ch) || room <= 0 )
   {
-    return 0;
+    return CONTAINS_NOTHING;
   }
 
-  if( room == ch->in_room )
+  // Category 1: Stuff that overrides everything:
+  if( room == from_room )
   {
     return CONTAINS_CH;
   }
 
 #if defined(CTF_MUD) && (CTF_MUD == 1)
-  if (world[room].people)
+  // If nobody in room, the for loop won't iterate: no reason to check to see if there's anyone in there.
+  for( who = world[room].people; who; who = who->next_in_room )
   {
-    for (who = world[room].people; who; who = who_next)
-    {
-      who_next = who->next_in_room;
-      if (!IS_ALIVE(who))
-	  continue;
-      if (ch == who || IS_TRUSTED(who))
-	continue;
-      if (ctf_carrying_flag(who) == CTF_PRIMARY)
-	return CONTAINS_CTF_FLAG;
-    }
+    // Since room != ch->in_room (see CONTAINS_CH above), we don't need to check ch == who.
+    if( !IS_ALIVE(who) || IS_TRUSTED(who) )
+      continue;
+    if( ctf_carrying_flag(who) == CTF_PRIMARY )
+      return CONTAINS_CTF_FLAG;
   }
 #endif
 
-  if(ch->specials.z_cord < 0)
+  // Underwater / sight blocked / 999 ??
+  if( ch->specials.z_cord < 0 || IS_SET(world[room].room_flags, BLOCKS_SIGHT) || show_regardless == 999 )
   {
-    return 0;
+    return CONTAINS_NOTHING;
   }
 
-  if( room <= 0 )
+  if( (world[room].sector_type == SECT_CASTLE || world[room].sector_type == SECT_CASTLE_WALL
+    || world[room].sector_type == SECT_CASTLE_GATE)
+    && (world[from_room].sector_type != SECT_CASTLE && world[from_room].sector_type != SECT_CASTLE_WALL) )
   {
-    return 0;
+    return CONTAINS_NOTHING;
   }
 
-  if(IS_SET(world[room].room_flags, BLOCKS_SIGHT))
+  // Look through objects...
+  if( world[room].contents )
   {
-    return 0;
-  }
-  
-  if(show_regardless == 999)
-  {
-    return 0;
-  }
-
-  int from_room = ch->in_room;
-  
-  if((world[room].sector_type == SECT_CASTLE ||
-      world[room].sector_type == SECT_CASTLE_WALL ||
-      world[room].sector_type == SECT_CASTLE_GATE) &&
-     (world[from_room].sector_type != SECT_CASTLE &&
-      world[from_room].sector_type != SECT_CASTLE_WALL))
-  {
-    return 0;
-  }
-
-  if(IS_SET(world[room].room_flags, MAGIC_DARK) &&
-    !IS_SET(world[room].room_flags, MAGIC_LIGHT))
-  {
-    return CONTAINS_MAGIC_DARK;
-  }
-  
-  if(IS_SET(world[room].room_flags, MAGIC_LIGHT) &&
-    !IS_SET(world[room].room_flags, MAGIC_DARK))
-  {
-    return CONTAINS_MAGIC_LIGHT;
-  }
-  
-  if (world[room].contents)
-  {
-    for (obj = world[room].contents; obj; obj = next_obj)
+    for( obj = world[room].contents; obj; obj = obj->next_content )
     {
-      next_obj = obj->next_content;
-      if (obj->type == ITEM_SHIP)
+      if( obj->type == ITEM_SHIP )
       {
         if( isname("__ferry__", obj->name) )
         {
@@ -396,7 +366,7 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
           }
         }
       }
-      else if (obj->type == ITEM_CORPSE)
+      else if( obj->type == ITEM_CORPSE )
       {
         if( !str_cmp(ch->player.name, obj->action_description)
           || IS_TRUSTED(ch) || has_innate(ch, INNATE_VISION_OF_THE_DEAD) )
@@ -415,183 +385,190 @@ int whats_in_maproom(P_char ch, int room, int distance, int show_regardless)
         val = MIN(val, CONTAINS_MINE);
       }
       // Using track scan ?
-      else if ((obj_index[obj->R_num].virtual_number == VNUM_TRACKS) &&
-        ((distance <= (GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK)/20)) ||
-         IS_TRUSTED(ch)) ) 
+      else if( (GET_OBJ_VNUM(obj) == VNUM_TRACKS) && (( distance <= (GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK) / 20) )
+        || IS_TRUSTED(ch)) )
       {
         val = MIN(val, CONTAINS_TRACK);
       }
-      else if ((obj_index[obj->R_num].virtual_number == 4) &&
-              ((distance <= (GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK)/20)) ||
-               IS_TRUSTED(ch)) )
+      else if( (GET_OBJ_VNUM(obj) == VOBJ_BLOOD) && (( distance <= (GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK) / 20) )
+        || IS_TRUSTED(ch)) )
       {
-        if ((obj->value[1] == BLOOD_FRESH) &&
-            (GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK) > number(50, 80)))
+        if( (obj->value[1] == BLOOD_FRESH) && (GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK) > number(50, 80)) )
         {
           val = MIN(val, CONTAINS_BLOOD);
         }
-        else if (GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK) >= number(80, 100))
+        else if( GET_CHAR_SKILL(ch, SKILL_IMPROVED_TRACK) >= number(80, 100) )
         {
           val = MIN(val, CONTAINS_OLD_BLOOD);
         }
       }
-      else if (obj->type == ITEM_TELEPORT &&
-            obj_index[obj->R_num].virtual_number >= 99800 &&
-            obj_index[obj->R_num].virtual_number <= 99899)
+      else if( obj->type == ITEM_TELEPORT && GET_OBJ_VNUM(obj) >= 99800 && GET_OBJ_VNUM(obj) <= 99899 )
       {
         val = MIN(val, CONTAINS_PORTAL);
       }
-      else if(obj_index[obj->R_num].virtual_number == GH_DOOR_VNUM)
+      else if( GET_OBJ_VNUM(obj) == GH_DOOR_VNUM )
       {
         val = MIN(val, CONTAINS_GUILDHALL);
       }
-      else if(obj_index[obj->R_num].virtual_number == CARGO_CRATE_VNUM && 
-          (world[room].sector_type == SECT_WATER_NOSWIM || 
-           world[room].sector_type == SECT_OCEAN || 
-           world[room].sector_type == SECT_UNDRWLD_NOSWIM))
+      else if( GET_OBJ_VNUM(obj) == CARGO_CRATE_VNUM && (world[room].sector_type == SECT_WATER_NOSWIM
+        || world[room].sector_type == SECT_OCEAN || world[room].sector_type == SECT_UNDRWLD_NOSWIM) )
       {
         val = MIN(val, CONTAINS_CARGO);
       }
     }
   }
-  
-  if (world[room].people)
+
+  // Category 2: Stuff that's really big - If we found something really big in the above search.
+  if( val < CONTAINS_MAGIC_DARK )
   {
-    for (who = world[room].people; who; who = who_next)
+    return val;
+  }
+
+  // Category 3: Light/Dark:
+  if( IS_SET(world[room].room_flags, MAGIC_DARK) && !IS_SET(world[room].room_flags, MAGIC_LIGHT) )
+  {
+    return CONTAINS_MAGIC_DARK;
+  }
+
+  if( IS_SET(world[room].room_flags, MAGIC_LIGHT) && !IS_SET(world[room].room_flags, MAGIC_DARK) )
+  {
+    return CONTAINS_MAGIC_LIGHT;
+  }
+  // Forest covers up Lifeforms and Objects.
+  if( HIDDEN_BY_FOREST(from_room, room) )
+  {
+    return CONTAINS_NOTHING;
+  }
+
+  // Category 4: Lifeforms:
+  if( world[room].people )
+  {
+    for( who = world[room].people; who; who = who->next_in_room )
     {
-      who_next = who->next_in_room;
-
-      if(who == ch)
-        continue;
-      
-      if(IS_TRUSTED(who))
+      if( who == ch )
         continue;
 
-      if(IS_PC_PET(ch))
+      if( IS_TRUSTED(who) )
         continue;
-      
-      if(!CAN_SEE_Z_CORD(ch, who))
+
+      if( IS_PC_PET(ch) )
         continue;
-      
-      if(affected_by_spell(who, TAG_BUILDING))
+
+      if( !CAN_SEE_Z_CORD(ch, who) )
+        continue;
+
+      if( affected_by_spell(who, TAG_BUILDING) )
       {
         val = CONTAINS_BUILDING;
-        break;
+        continue;
       }
-      
+
       zw = who->specials.z_cord;
       z = ch->specials.z_cord;
-	  
-     // if(GET_ALT_SIZE(who) <= SIZE_MEDIUM)
-     // {
-        if(!IS_TRUSTED(ch) && IS_AFFECTED3(who, AFF3_PASS_WITHOUT_TRACE) && SECTOR_TYPE(who->in_room) == SECT_FOREST)
-          continue;
-        
-        if(!IS_TRUSTED(ch) && affected_by_spell(who, SKILL_EXPEDITIOUS_RETREAT))
-          continue;
-     
-        if(!IS_TRUSTED(ch) && has_innate(who, INNATE_SWAMP_SNEAK) && SWAMP_SNEAK_TERRAIN(who))
-	  continue;
-      // }
-      
-      if(GET_SPEC(who, CLASS_ROGUE, SPEC_THIEF) &&
-        IS_AFFECTED(who, AFF_SNEAK) &&
-        !IS_TRUSTED(ch)) 
+
+      if( !IS_TRUSTED(ch) )
       {
-        skl_lvl = GET_CHAR_SKILL(who, SKILL_SNEAK);
-        ch_lvl = GET_LEVEL(who);
-        percent_chance = (skl_lvl * .46);
-        if(GET_LEVEL(who) >= 30)
-          percent_chance += (GET_LEVEL(who) - 29 * 2);
-        if (percent_chance > percentroll)
-        {
+        if( IS_AFFECTED3(who, AFF3_PASS_WITHOUT_TRACE) && SECTOR_TYPE(who->in_room) == SECT_FOREST )
           continue;
+
+        if( affected_by_spell(who, SKILL_EXPEDITIOUS_RETREAT) )
+          continue;
+
+        if( has_innate(who, INNATE_SWAMP_SNEAK) && SWAMP_SNEAK_TERRAIN(who) )
+          continue;
+
+        if( GET_SPEC(who, CLASS_ROGUE, SPEC_THIEF) && IS_AFFECTED(who, AFF_SNEAK) )
+        {
+          if( (( GET_CHAR_SKILL(who, SKILL_SNEAK) * .46 ) + (GET_LEVEL(who) >= 30) ? (GET_LEVEL(who) * 2 - 58) : 0 )
+            >= number(1, 100) )
+          {
+            continue;
+          }
         }
       }
-      
-      if(IS_NPC(who) && (GET_VNUM(who) == VNUM_WITCH))
+
+      if( IS_NPC(who) && (GET_VNUM(who) == VMOB_WITCH) )
       {
-        val = CONTAINS_WITCH;
-        break;
-      }
-      
-      /* if room contains PC, show PC regardless of order - ditto
-         for dragons, but show PCs before dragons (note that val is
-         initialized to 0) */
-      
-      if(IS_DRAGON(who) || IS_DEMON(who) || IS_DEVIL(who))
-      {
-        val = CONTAINS_DRAGON;
-        break;
+        val = MIN( val, CONTAINS_WITCH);
+        continue;
       }
 
-      if( IS_DISGUISE_NPC(who))
+      if( IS_DRAGON(who) || IS_DEMON(who) || IS_DEVIL(who) )
       {
-        val = CONTAINS_MOB;
-        break;        
+        val = MIN( val, CONTAINS_DRAGON);
+        continue;
       }
 
-      if(IS_PC(who) && !IS_DISGUISE_NPC(who))
+      if( IS_DISGUISE_NPC(who) )
       {
-        if(distance < 8 && grouped(ch, who))
+        val = MIN( val, CONTAINS_MOB);
+        continue;
+      }
+
+      if( IS_PC(who) )
+      {
+        if( distance < 8 && grouped(ch, who) )
         {
-          val = CONTAINS_GROUP;
-          break;
+          val = MIN( val, CONTAINS_GROUP);
+          continue;
         }
-        
+
         if( distance <= 4 )
         {
-          // randomize priority of good/evil
-          if(!number(0,1))
+          // Priority of good/evil: You see enemy P before friendly P color.
+          if( GET_RACEWAR(ch) != GET_RACEWAR(who) )
           {
             if( IS_GOOD(who) && IS_AFFECTED2(ch, AFF2_DETECT_GOOD) )
             {
-              val = CONTAINS_GOOD_PC;
+              val = MIN( val, CONTAINS_GOOD_PC);
             }
+            // Here is tricky.. CONTAINS_GOOD_PC < CONTAINS_EVIL_PC, but we still want to show Evil over Good.
             else if( IS_EVIL(who) && IS_AFFECTED2(ch, AFF2_DETECT_EVIL) )
             {
-              val = CONTAINS_EVIL_PC;
+              val = (val == CONTAINS_GOOD_PC) ? CONTAINS_EVIL_PC : MIN(val, CONTAINS_EVIL_PC);
             }
             else
             {
-              val = CONTAINS_PC;
+              val = MIN(val, CONTAINS_PC);
             }
           }
+          // For friendlies, we don't change the color of the P (if it is colored) to preserve the above.
           else
           {
+            if( val == CONTAINS_EVIL_PC || val == CONTAINS_GOOD_PC )
+            {
+              continue;
+            }
+
             if( IS_EVIL(who) && IS_AFFECTED2(ch, AFF2_DETECT_EVIL) )
             {
-              val = CONTAINS_EVIL_PC;
+              val = MIN( val, CONTAINS_EVIL_PC);
             }
             else if( IS_GOOD(who) && IS_AFFECTED2(ch, AFF2_DETECT_GOOD) )
             {
-              val = CONTAINS_GOOD_PC;
+              val = MIN( val, CONTAINS_GOOD_PC);
             }
             else
             {
-              val = CONTAINS_PC;
+              val = MIN(val, CONTAINS_PC);
             }
           }
         }
         else
         {
-          val = CONTAINS_PC;
+          val = MIN(val, CONTAINS_PC);
         }
-
-        break;
+        continue;
       }
-      
-      if(IS_NPC(who) && GET_SIZE(who) >= SIZE_SMALL)
-          val = CONTAINS_MOB;
-      
+      if( IS_NPC(who) && GET_SIZE(who) >= SIZE_SMALL )
+      {
+          val = MIN(val, CONTAINS_MOB);
+      }
     }
   }
-  
-  if(HIDDEN_BY_FOREST(from_room, room))
-    return 0;
-  
-  if(val)
-    return val;
+
+  // Category 5: Objects - handled during Category 2.
+  return val;
 }
 
 // Show ch the map with a distance of n as if the ch is in room from_room
