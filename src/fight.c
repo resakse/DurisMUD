@@ -1983,7 +1983,6 @@ P_char ForceReturn(P_char ch)
   P_char   true_id, t_ch = ch;
   int      is_avatar = FALSE, virt;
 
-
   if (!t_ch)
     return NULL;
 
@@ -2049,7 +2048,7 @@ P_char ForceReturn(P_char ch)
   if (t_ch->desc && t_ch->desc->original && IS_PC(t_ch->desc->original) &&
       t_ch->desc->original->only.pc->switched)
   {
-    do_return(t_ch, 0, -4);
+    do_return(t_ch, 0, CMD_DEATH);
   }
   return (t_ch);
 }

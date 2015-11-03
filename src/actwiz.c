@@ -4491,7 +4491,8 @@ void do_switch(P_char ch, char *argument, int cmd)
         {
           act("$n's &+Wyeyes&n slowly &+wglaze&n over, and then $n slowly fades out &+wof view&+L...&n",
             FALSE, ch, 0, 0, TO_ROOM);
-          GET_WIZINVIS(ch) = GET_LEVEL(ch);
+          // The - 1 is because we don't want to be invis to others of the same level, esp for Overlords.
+          GET_WIZINVIS(ch) = GET_LEVEL(ch) - 1;
         }
       }
 
@@ -4503,6 +4504,8 @@ void do_switch(P_char ch, char *argument, int cmd)
 
       victim->desc = ch->desc;
 
+      // We could, at this point, pull ch from room and leave the was_in_room, and put them back there
+      //   upon do_return, but that's not really necessary.
       one_argument(argument, arg);
       if( !strcmp(arg, "silent") )
       {

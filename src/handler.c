@@ -1267,6 +1267,11 @@ bool char_to_room(P_char ch, int room, int dir)
   {
     if( IS_NPC(ch) )
     {
+      // If we have an Immortal switched into the char.
+      if( ch->desc )
+      {
+        do_return( ch, NULL, CMD_DEATH );
+      }
       extract_char(ch);
       ch = NULL;
       return FALSE;
@@ -3020,7 +3025,7 @@ void extract_char(P_char ch)
   if (ch->desc)
   {
     if (ch->desc->original)
-      do_return(ch, 0, -4);
+      do_return(ch, 0, CMD_DEATH);
   }
   if (ch->desc)
   {

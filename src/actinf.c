@@ -6181,9 +6181,37 @@ void do_who(P_char ch, char *argument, int cmd)
   bool     sort = FALSE, zone = FALSE, lfg = FALSE, mortalsonly = FALSE;
   struct affected_type *pafepics;
 
-  if( !IS_ALIVE(ch) || IS_NPC(ch) )
+  if( !IS_ALIVE(ch) )
   {
     return;
+  }
+  if( IS_NPC(ch) )
+  {
+    // Switched Immortal.
+    if( ch->desc && ch->desc->original )
+    {
+      // If we still have an NPC, then something's f'd up, but ok.
+      if( IS_NPC(ch->desc->original) )
+      {
+        send_to_char("NPCs do not use the who list.  BTW, HTF are you switched?!?\n", ch );
+        return;
+      }
+      // If Immortal is switched silent, nothing will show.
+      else if( !(ch->desc->original->desc) )
+      {
+        send_to_char( "You're switched silent, so who is not going to work.\n", ch );
+        return;
+      }
+      else
+      {
+        ch = ch->desc->original;
+      }
+    }
+    else
+    {
+      send_to_char("NPCs do not use the who list.\n", ch );
+      return;
+    }
   }
   if( IS_MORPH(ch) )
   {
