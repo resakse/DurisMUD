@@ -1606,7 +1606,7 @@ void point_update(void)
       }
 
       // Void if mortal idle for 15 min, or Immortal linkdead and idle for over 15 min.
-      if( (i->specials.timer > 3) && (GET_LEVEL(i) < MINLVLIMMORTAL || !i->desc) )
+      if( (i->specials.timer > 15) && (GET_LEVEL(i) < MINLVLIMMORTAL || !i->desc) )
       {
         act("$n disappears into the void.", TRUE, i, 0, 0, TO_ROOM);
         send_to_char("You have been idle, and are pulled into a void.\r\n", i);
