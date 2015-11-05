@@ -37,10 +37,11 @@ int gellz_test_obj_procs(P_obj obj, P_char ch, int cmd, char *argument)
   char        argstring1[MAX_STRING_LENGTH];
   char        argstring2[MAX_STRING_LENGTH];
   char        argstring3[MAX_STRING_LENGTH];
-  char		    buf[200];
+  char		    buf[MAX_STRING_LENGTH];
   string      argstring;
   P_ship      ship;
 	ShipVisitor svs;
+  P_char      owner;
 
   if( cmd == CMD_SET_PERIODIC )
   {
@@ -70,6 +71,15 @@ int gellz_test_obj_procs(P_obj obj, P_char ch, int cmd, char *argument)
 
   if( !strcmp(argstring1, "ship") )
   {
+    if( !*argstring2 )
+    {
+      send_to_char( "This command needs arguments:\n"
+        "'all'  - list all ships and locations.\n"
+        "rename - rename a ship (not done since you can just 'rename ship <owner> <new name>'.\n"
+        "owner  - change the owner of a ship from one char to another (useful for failed renames).\n"
+        "delete - delete a ship.\n", ch );
+      return TRUE;
+    }
     if( !strcmp(argstring2, "all") )
     {
       act( "&+yListing &+YALL ships &+yin game:&n", FALSE, ch, obj, obj, TO_CHAR );
@@ -101,6 +111,40 @@ int gellz_test_obj_procs(P_obj obj, P_char ch, int cmd, char *argument)
     else if (!strcmp(argstring2, "rename"))
     {
       act ("&+YJust use the &+w'rename ship <owner> <new name>'&+Y command.", FALSE, ch, obj, obj, TO_CHAR);
+    }
+    else if (!strcmp(argstring2, "owner"))
+    {
+      if( !*argstring3 )
+      {
+        send_to_char( "&+YYou must supply the name of the &+yold&+Y captain and the &+Bnew&+Y captain of the ship.&n\n", ch);
+        return TRUE;
+      }
+      if( !(ship = get_ship_from_owner( argstring3 )) )
+      {
+        sprintf(buf, "Could not find a ship for '%s'.\n"
+          "&+YYou must supply the name of the &+yold&+Y captain of the ship.&n\n", skip_spaces(argument) );
+        send_to_char( buf, ch );
+        return TRUE;
+      }
+      if( !*argument || !(owner = get_char_vis(ch, skip_spaces(argument))) )
+      {
+        sprintf(buf, "Could not find char '%s' (must be in game).\n"
+          "&+YYou must supply the name of the &+Bnew&+Y captain of the ship.&n\n", skip_spaces(argument) );
+        send_to_char( buf, ch );
+        return TRUE;
+      }
+      if( !rename_ship_owner(argstring3, skip_spaces(argument)) )
+      {
+        send_to_char( "Ship re-owner failed.", ch );
+      }
+      else
+      {
+        sprintf( buf, "Ship '%s' owner changed from %s to %s.", strip_ansi(ship->name).c_str(), argstring3,
+          skip_spaces(argument) );
+        logit(LOG_SHIP, buf );
+        send_to_char_f( ch, "Ship '%s' now owned by %s.\n", ship->name, GET_NAME(owner) );
+      }
+      return TRUE;
     }
     else if (!strcmp(argstring2, "delete"))
     {
