@@ -5073,23 +5073,24 @@ void spell_dark_compact(int level, P_char ch, char *arg, int type,
   */
 }
 
-void spell_relocate(int level, P_char ch, char *arg, int type, P_char victim,
-                    P_obj obj)
+void spell_relocate( int level, P_char ch, char *arg, int type, P_char victim, P_obj obj )
 {
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(ch->in_room))
-        return;
-        
-  if(GET_SPEC(ch, CLASS_SORCERER, SPEC_SHADOW))
+  if( !IS_ALIVE(ch) || ch->in_room == NOWHERE )
+  {
+    return;
+  }
+
+  if( GET_SPEC(ch, CLASS_SORCERER, SPEC_SHADOW) )
     CharWait(ch, 4);
-  else if(IS_PC(ch))
+  else if( IS_PC(ch) )
     CharWait(ch, 80);
   else
     CharWait(ch, 5);
-    
-  if(!can_relocate_to(ch, victim))
+
+  if( !can_relocate_to(ch, victim) )
+  {
     return;
+  }
 
   act("&+W$n starts to become less solid &+Luntil $e fades into nothing!",
     FALSE, ch, 0, 0, TO_ROOM);
@@ -5108,7 +5109,7 @@ void spell_relocate(int level, P_char ch, char *arg, int type, P_char victim,
   char_to_room(ch, victim->in_room, -1);
 
   act("&+WA coalescing of the ethereal substances causes your vision to blur...\n&+WWhen it at last clears&n $n &+Wstands before you!&n",
-       FALSE, ch, 0, 0, TO_ROOM);
+    FALSE, ch, 0, 0, TO_ROOM);
   act("&+WYou materialize elsewhere!&n",
     FALSE, ch, 0, 0, TO_CHAR);
 }

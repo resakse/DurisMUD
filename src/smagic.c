@@ -4300,47 +4300,37 @@ void spell_reveal_spirit_essence(int level, P_char ch, char *arg, int type,
 }
 
 
-void spell_spirit_jump(int level, P_char ch, char *arg, int type,
-                       P_char victim, P_obj obj)
+void spell_spirit_jump(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int      location, in_room, distance;
   char     buf[256] = { 0 };
   P_char   tmp = NULL;
 
-  if(!(ch) ||
-     !IS_ALIVE(ch) ||
-     !(victim) ||
-     !IS_ALIVE(victim))
-        return;
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
+    return;
 
-  if(IS_PC(ch) &&
-     !IS_SPIRITUALIST(ch))
+  if( IS_PC(ch) && !IS_SPIRITUALIST(ch) )
     CharWait(ch, 42);
   else
     CharWait(ch, 12);
 
-  if(!(victim) ||
-     !(victim->in_room) ||
-     victim->in_room == NOWHERE)
+  if( victim->in_room == NOWHERE )
   {
     send_to_char("&+CYou failed.\n", ch);
     return;
   }
 
-  if(IS_AFFECTED3(victim, AFF3_NON_DETECTION) ||
-      IS_HOMETOWN(ch->in_room) ||
-      IS_SET(world[ch->in_room].room_flags, NO_TELEPORT) ||
-      world[victim->in_room].sector_type == SECT_CASTLE ||
-      world[victim->in_room].sector_type == SECT_CASTLE_WALL ||
-      world[victim->in_room].sector_type == SECT_CASTLE_GATE ||
-      (IS_PC(victim) && IS_SET(victim->specials.act2, PLR2_NOLOCATE)
-       && !is_introd(victim, ch)))
+  if( IS_AFFECTED3(victim, AFF3_NON_DETECTION) || IS_HOMETOWN(ch->in_room)
+    || IS_SET(world[ch->in_room].room_flags, NO_TELEPORT) || world[victim->in_room].sector_type == SECT_CASTLE
+    || world[victim->in_room].sector_type == SECT_CASTLE_WALL
+    || world[victim->in_room].sector_type == SECT_CASTLE_GATE
+    || (IS_PC(victim) && IS_SET(victim->specials.act2, PLR2_NOLOCATE) && !is_introd(victim, ch)) )
   {
     send_to_char("&+CYou failed.\n", ch);
     return;
   }
   P_char rider = get_linking_char(victim, LNK_RIDING);
-  if(IS_NPC(victim) && rider)
+  if( IS_NPC(victim) && rider )
   {
     send_to_char("&+CYou failed.\n", ch);
     return;
@@ -4348,49 +4338,42 @@ void spell_spirit_jump(int level, P_char ch, char *arg, int type,
 
   location = victim->in_room;
 
-  if(IS_SET(world[location].room_flags, NO_TELEPORT) ||
-      IS_HOMETOWN(location) ||
-      racewar(ch, victim) || (GET_MASTER(ch) && IS_PC(victim)))
+  if( IS_SET(world[location].room_flags, NO_TELEPORT) || IS_HOMETOWN(location) || racewar(ch, victim)
+    || (GET_MASTER(ch) && IS_PC(victim)) )
   {
     send_to_char("&+CYou failed.\n", ch);
     return;
   }
-  
-  distance = (int)(level * 1.35);
-  
-  if(IS_SPIRITUALIST(ch))
-    distance += 15;
-  
-  if(!IS_TRUSTED(ch) &&
-      (how_close(ch->in_room, victim->in_room, distance) < 0) &&
-      (how_close(victim->in_room, ch->in_room, distance) < 0))
+
+  distance = (int)(level * 1.35) + IS_SPIRITUALIST(ch) ? 15 : 0;
+
+  if( !IS_TRUSTED(ch)
+    && (how_close(ch->in_room, victim->in_room, distance) < 0)
+    && (how_close(victim->in_room, ch->in_room, distance) < 0) )
   {
     send_to_char("&+CYou failed.\n", ch);
     return;
   }
-  
-  if(ch &&
-     !is_Raidable(ch, 0, 0))
+
+  if( !is_Raidable(ch, 0, 0) )
   {
     send_to_char("&+WYou are not raidable. The spell fails!\r\n", ch);
     return;
   }
-  
-  if(victim &&
-     IS_PC(ch) &&
-     IS_PC(victim) &&
-     !is_Raidable(victim, 0, 0))
+
+  if( IS_PC(ch) && IS_PC(victim) && !is_Raidable(victim, 0, 0) )
   {
     send_to_char("&+WYour target is not raidable. The spell fails!\r\n", ch);
     return;
   }
-  
-  for (tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room)
+
+  for( tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room )
   {
-    if((IS_AFFECTED(tmp, AFF_BLIND) ||
-         (tmp->specials.z_cord != ch->specials.z_cord) ||
-         (tmp == ch) || !number(0, 5)) && (IS_PC(ch) && !IS_TRUSTED(ch)))
+    // Blind / diff't altitude don't see PCs jumping. (And skip ch seeing themself).
+    if( (IS_AFFECTED(tmp, AFF_BLIND) || (tmp->specials.z_cord != ch->specials.z_cord) || (tmp == ch)) && IS_PC(ch) )
+    {
       continue;
+    }
     if(CAN_SEE(tmp, ch))
     {
       if(IS_SPIRITUALIST(ch))
@@ -4402,25 +4385,23 @@ void spell_spirit_jump(int level, P_char ch, char *arg, int type,
     }
     else
       strcpy(buf, "&+YA bright flash of light briefly lights the area.\n");
-    
     act(buf, FALSE, ch, 0, tmp, TO_VICT);
   }
 
 #if defined(CTF_MUD) && (CTF_MUD == 1)
-    if (ctf_carrying_flag(ch) == CTF_PRIMARY)
-    {
-      send_to_char("You can't carry that with you.\r\n", ch);
-      drop_ctf_flag(ch);
-    }
+  if (ctf_carrying_flag(ch) == CTF_PRIMARY)
+  {
+    send_to_char("You can't carry that with you.\r\n", ch);
+    drop_ctf_flag(ch);
+  }
 #endif
 
   char_from_room(ch);
   char_to_room(ch, location, -1);
 
-  for (tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room)
+  for( tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room )
   {
-    if((IS_AFFECTED(tmp, AFF_BLIND) || (tmp == ch) || !number(0, 5)) &&
-        (IS_PC(ch) && !IS_TRUSTED(ch)))
+    if( (IS_AFFECTED(tmp, AFF_BLIND) || (tmp == ch)) && IS_PC(ch) )
       continue;
     if(CAN_SEE(tmp, ch))
     {
@@ -4428,12 +4409,11 @@ void spell_spirit_jump(int level, P_char ch, char *arg, int type,
       {
         strcpy(buf, "&+Y$n &+Yappears in a &+Wradiant &=LYflash&n &+Yof light.");
       }
-      else 
+      else
         strcpy(buf, "&+Y$n &+Yappears in a bright flash of light.");
     }
     else
       strcpy(buf, "&+YA bright flash of light briefly lights the area.");
-    
     act(buf, FALSE, ch, 0, tmp, TO_VICT);
   }
 }

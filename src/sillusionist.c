@@ -1354,7 +1354,7 @@ void spell_dream_travel(int level, P_char ch, char *arg, int type, P_char victim
   P_desc   i;
   struct group_list *group;
 
-  if( !IS_ALIVE(ch) || ch->in_room < 1)
+  if( !IS_ALIVE(ch) || ch->in_room < 0 )
   {
     return;
   }

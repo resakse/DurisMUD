@@ -2870,8 +2870,7 @@ void spell_ethereal_rift(int level, P_char ch, char *arg, int type,
   return;
 }
 
-void spell_ether_warp(int level, P_char ch, char *arg, int type,
-                      P_char victim, P_obj obj)
+void spell_ether_warp(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   int      to_room, dam, temp;
   P_char   tmp, tmp_next;
@@ -2882,7 +2881,7 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
     raise(SIGSEGV);
   }
 
-  if (!victim)
+  if( !victim )
     victim = ch;
 
   dam = 70 - ((GET_LEVEL(ch) / 2) + number(10, 50));
@@ -2891,12 +2890,7 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
     dam = 1;
   }
 
-  if(victim &&
-    IS_PC(victim) &&
-    IS_ILLITHID(ch) &&
-    !IS_TRUSTED(ch) &&
-    !IS_ILLITHID(victim) &&
-    GET_LEVEL(victim) < 51)
+  if( IS_PC(victim) && IS_ILLITHID(ch) && !IS_TRUSTED(ch) && !IS_ILLITHID(victim) && GET_LEVEL(victim) < 51 )
   {
     send_to_char("&+CThat being is too weak for you to find in the ether!\r\n", ch);
     send_to_char("&+MThe Elder Brain is displeased and you feel numbness engulf you.&n\r\n", ch);
@@ -2908,7 +2902,7 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
 
   to_room = victim->in_room;
   temp = world[ch->in_room].sector_type;
-  if (!IS_TRUSTED(ch) /*  && !IS_ILLITHID(ch) */  &&
+  if( !IS_TRUSTED(ch) /*  && !IS_ILLITHID(ch) */  &&
       ((to_room == NOWHERE) || (to_room == ch->in_room) ||
        IS_TRUSTED(victim) ||
        IS_SET(world[ch->in_room].room_flags, NO_TELEPORT) ||
@@ -2959,24 +2953,25 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
 
   send_to_char("Your body explodes into light.\r\n", ch);
 
-  if (!IS_TRUSTED(ch))
+  if( !IS_TRUSTED(ch) )
   {
     char logbuf[500];
-    sprintf(logbuf, "Ether Warp from %s[%d] to %s[%d]",
-            GET_NAME(ch), world[ch->in_room].number,
-            GET_NAME(victim), world[to_room].number);
+    sprintf(logbuf, "Ether Warp from %s[%d] to %s[%d]", GET_NAME(ch), world[ch->in_room].number,
+      GET_NAME(victim), world[to_room].number);
     logit(LOG_PORTALS, logbuf);
     // spam immo's if it looks like a possible camped target
-    if ((world[to_room].number == GET_HOME(victim)) || (GET_LEVEL(victim) < 10))
+    if( (world[to_room].number == GET_HOME(victim)) || (GET_LEVEL(victim) < 10) )
+    {
+      strcat( logbuf, " - &=RCPossible Camped Target&n" );
       statuslog(57, logbuf);
+    }
   }
-  for (tmp = world[ch->in_room].people; tmp; tmp = tmp_next)
+  for( tmp = world[ch->in_room].people; tmp; tmp = tmp_next )
   {
     tmp_next = tmp->next_in_room;
-    if (!CAN_SEE(tmp, ch) || IS_AFFECTED(tmp, AFF_BLIND) || (tmp == ch))
+    if( !CAN_SEE(tmp, ch) || IS_AFFECTED(tmp, AFF_BLIND) || (tmp == ch) )
       continue;
-    act("&+YBeams of light emit from $n, and $n explodes into energy!", FALSE,
-        ch, 0, tmp, TO_VICT);
+    act("&+YBeams of light emit from $n, and $n explodes into energy!", FALSE, ch, 0, tmp, TO_VICT);
   }
   char_from_room(ch);
   ch->specials.z_cord = victim->specials.z_cord;
@@ -2986,14 +2981,13 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type,
   for (tmp = world[ch->in_room].people; tmp; tmp = tmp_next)
   {
     tmp_next = tmp->next_in_room;
-    if (!CAN_SEE(tmp, ch) || IS_AFFECTED(tmp, AFF_BLIND) || (tmp == ch))
+    if( !CAN_SEE(tmp, ch) || IS_AFFECTED(tmp, AFF_BLIND) || (tmp == ch) )
       continue;
-    act("Beams of light appear from nowhere, and $n explodes into energy!",
-        FALSE, ch, 0, tmp, TO_VICT);
+    act("Beams of light appear from nowhere, and implode into $n!", FALSE, ch, 0, tmp, TO_VICT);
   }
 
   //if (!damage(ch, ch, dam, TYPE_UNDEFINED))
-  if(GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PSYCHEPORTER))
+  if( GET_SPEC(ch, CLASS_PSIONICIST, SPEC_PSYCHEPORTER) )
 	{
 	  send_to_char("&+LBeing a &+Bmaster &+Lof &+gmol&+Gecu&+glar &+Ltravel, your &+Gbody &+Lquickly recovers from your &+mjour&+Mney&+L.&n\r\n", ch);
 	}
