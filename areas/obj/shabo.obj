@@ -548,7 +548,7 @@ A glyph of withering is here.~
 32913 1 -1 0 0 0 0 0
 0 0 100
 #32853
-potion enlightenment 51~
+potion enlightenment 51 _noquest_~
 &+Ya potion of enlightenment&N~
 &+YA potion of enlightenment rests here.&N~
 ~
@@ -564,7 +564,7 @@ A tiny inscription on the bottle reads:
 A
 8 51
 #32854
-potion enlightenment 52~
+potion enlightenment 52 _noquest_~
 &+Ya potion of enlightenment&N~
 &+YA potion of enlightenment rests here.&N~
 ~
