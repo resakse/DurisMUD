@@ -4,6 +4,9 @@
 #   the main mud code.  For example, if you add a race to the MUD, this script
 #   should pull the new race into the DE code and recompile.
 
+echo -e 'This is no longer needed as we are now using links instead of duplicate files.'
+exit
+
 echo Pulling files from main code...
 echo
 
