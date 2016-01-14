@@ -12009,12 +12009,17 @@ void where_nowhere(P_char ch, char *args)
   P_char t_ch;
 
   send_to_char( "&-LObjects in NOWHERE:&n\n", ch );
+  send_to_char_f( ch, "Nowhere: %d, Worn: %d, Carried: %d, Room: %d, Inside: %d.\n",
+    LOC_NOWHERE, LOC_WORN, LOC_CARRIED, LOC_ROOM, LOC_INSIDE );
   // For each object in the game..
   for( count = 0, obj = object_list; obj; obj = obj->next )
   {
-    if( OBJ_NOWHERE(obj) )
+    // If it's in nowhere, in room nowhere (or out of bounds room vnum), or on NULL char or in a NULL obj
+    if( OBJ_NOWHERE(obj) || (OBJ_ROOM(obj) && ( ROOM_VNUM(obj->loc.room) == NOWHERE ))
+      || (OBJ_WORN(obj) && ( obj->loc.wearing == NULL )) || (OBJ_CARRIED(obj) && ( obj->loc.carrying == NULL ))
+      || (OBJ_INSIDE(obj) && ( obj->loc.inside == NULL )) )
     {
-      sprintf( buf, "%3d)%6d %s&n\n", ++count, GET_OBJ_VNUM(obj), OBJ_SHORT(obj) );
+      sprintf( buf, "%3d) %d %6d %s&n\n", ++count, obj->loc_p, GET_OBJ_VNUM(obj), OBJ_SHORT(obj) );
       send_to_char( buf, ch );
     }
   }
