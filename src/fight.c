@@ -9418,13 +9418,14 @@ void perform_violence(void)
 
   for( ch = combat_list; ch; ch = combat_next_ch )
   {
+    combat_next_ch = ch->specials.next_fighting;
+
     if( !IS_ALIVE(ch) )
     {
       continue;
     }
 
     room_rnums.insert( ch->in_room );
-    combat_next_ch = ch->specials.next_fighting;
 
     opponent = ch->specials.fighting;
 
