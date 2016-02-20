@@ -7172,9 +7172,8 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
 
   case PRISMATIC_WALL:
 
-    //if (GET_PID(ch) == obj->value[5])
-     if((IS_PC(ch) && GET_PID(ch) == obj->value[5]) ||
-        (IS_NPC(ch) && GET_RNUM(ch) == obj->value[5]))
+    if( (IS_PC(ch) && GET_PID(ch) == obj->value[5])
+      || (IS_NPC(ch) && GET_RNUM(ch) == obj->value[5]) )
     {
       act("You walk through your own wall.", TRUE, ch, obj, NULL, TO_CHAR);
       do_simple_move_skipping_procs(ch, dircmd, 0);
@@ -7182,8 +7181,8 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       return TRUE;
     }
 
-    // let them walk through the wall 25% of the time
-    if (!number(0, 3) && IS_PC(ch))
+    // let them walk through the wall 33% of the time
+    if( !number(0, 2) && IS_PC(ch) )
     {
       act("$p fades to shards of magic, and blows away...&n", TRUE, ch, obj, NULL, TO_ROOM);
       send_to_char("The prismatic creation fades into nothing.\n", ch);
@@ -7192,30 +7191,23 @@ int wall_generic(P_obj obj, P_char ch, int cmd, char *arg)
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
       do_simple_move_skipping_procs(ch, dircmd, 0);
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
-      GET_HIT(ch) = MAX(1, GET_HIT(ch) - 100);
-     return TRUE;
+      GET_HIT(ch) = MAX(1, GET_HIT(ch) - 75);
+      return TRUE;
     }
-    else if(IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING )
-      && number(1,100) > 60 )
+    else if( IS_PC(ch) && has_innate( ch, INNATE_WALL_CLIMBING ) && number(1,100) > 60 )
     {
       act("&+L$n&+L slams up against the wall, slinks into a shadow, and quickly darts over the wall.", TRUE, ch, obj, 0, TO_ROOM);
       act("&+LYou thrust yourself up against the wall and slip into a nearby shadow, quickly darting over the top of the wall and away.", TRUE, ch, obj, 0, TO_CHAR);
       do_simple_move_skipping_procs(ch, dircmd, 0);
       return TRUE;
     }
-    else
-    {
-      act("Oof! You bump into $p...", TRUE, ch, obj, 0, TO_CHAR);
-      act("Oof! $n bumps into $p...", TRUE, ch, obj, 0, TO_NOTVICT);
-    }
-
-    if (!number(0, 3) && IS_PC_PET(ch))
+    else if( !number(0, 2) && IS_PC_PET(ch) )
     {
       act("You walk through the wall.", TRUE, ch, obj, NULL, TO_CHAR);
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
       do_simple_move_skipping_procs(ch, dircmd, 0);
       act("$n steps through the wall.", TRUE, ch, obj, NULL, TO_ROOM);
-      GET_HIT(ch) = MAX(1, GET_HIT(ch) - 100);
+      GET_HIT(ch) = MAX(1, GET_HIT(ch) - 75);
 
       return TRUE;
     }
