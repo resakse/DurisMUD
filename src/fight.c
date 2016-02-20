@@ -3217,9 +3217,10 @@ bool decrease_skin_counter(P_char ch, unsigned int skin)
 }
 
 // Attempt by a berserker to slam weapon aside and deal damage, possibly disarming opponent in the process.
-// Similar to riposte.
-bool try_mangle( P_char mangler, P_char attacker, P_obj weap )
+// Similar to riposte, does not require a successful parry though.
+bool mangleSucceed( P_char mangler, P_char attacker, P_obj weap )
 {
+  bool skill_notch = FALSE;
   int skl, wloc;
   struct damage_messages messages =
   {
@@ -3234,14 +3235,6 @@ bool try_mangle( P_char mangler, P_char attacker, P_obj weap )
 
   // Can't mangle vs a non-weapon.
   if( !weap || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
-  {
-    return FALSE;
-  }
-
-  skl = GET_CHAR_SKILL(mangler, SKILL_MANGLE);
-
-  if( IS_TRUSTED(attacker) || IS_IMMOBILE(mangler) || !IS_HUMANOID(attacker) || !MIN_POS(mangler, POS_STANDING + STAT_NORMAL)
-    || (skl < 20 && !notch_skill( mangler, SKILL_MANGLE, get_property("skill.notch.defensive", 17) )) )
   {
     return FALSE;
   }
@@ -3275,37 +3268,49 @@ bool try_mangle( P_char mangler, P_char attacker, P_obj weap )
           return FALSE;
   */
 
-  // Epic parry now reduces mangle percentage. Jan08 -Lucrot
-  if( GET_CHAR_SKILL(attacker, SKILL_EXPERT_PARRY) )
+  skl = GET_CHAR_SKILL(mangler, SKILL_MANGLE);
+
+  if( IS_TRUSTED(attacker) || IS_IMMOBILE(mangler) || !IS_HUMANOID(attacker) || !MIN_POS(mangler, POS_STANDING + STAT_NORMAL)
+    || (skl < 20 && !( skill_notch = notch_skill(mangler, SKILL_MANGLE, get_property( "skill.notch.defensive", 17 )) )) )
   {
-    if( (skl -= GET_CHAR_SKILL( attacker, SKILL_EXPERT_PARRY )) < 20 )
+    return FALSE;
+  }
+
+  if( !skill_notch )
+  {
+    // Epic parry now reduces mangle percentage. Jan08 -Lucrot
+    if( GET_CHAR_SKILL(attacker, SKILL_EXPERT_PARRY) )
+    {
+      if( (skl -= GET_CHAR_SKILL( attacker, SKILL_EXPERT_PARRY ) / 2) < 20 )
+      {
+        return FALSE;
+      }
+    }
+
+    // Elite mobs are not affected as much. Jan08 -Lucrot
+    if( IS_ELITE(attacker) )
+    {
+      skl = 20;
+    }
+
+    if( IS_ELITE(mangler) )
+    {
+      skl += 100;
+    }
+
+    if( (skl -= ( GET_C_DEX(attacker) - GET_C_DEX(mangler) ) * 5) < 20 )
     {
       return FALSE;
     }
-  }
 
-  // Elite mobs are not affected as much. Jan08 -Lucrot
-  if( IS_ELITE(attacker) )
-  {
-    skl = 20;
-  }
+    skl /= 20;
+    skl = BOUNDED(0, skl, 5);
 
-  if( IS_ELITE(mangler) )
-  {
-    skl += 100;
-  }
-
-  if( (skl -= ( GET_C_DEX(attacker) - GET_C_DEX(mangler) ) * 5) < 20 )
-  {
-    return FALSE;
-  }
-
-  skl = BOUNDED(0, skl / 20, 5);
-
-  // 5% max chance.
-  if( number(0, 100) > skl )
-  {
-    return FALSE;
+    // 5% max chance.
+    if( number(1, 100) > skl )
+    {
+      return FALSE;
+    }
   }
 
   act("$n blocks your attack and slashes viciously at your arm.", TRUE, mangler, 0, attacker, TO_VICT);
@@ -8587,22 +8592,18 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   bool npcepicparry = false;
   int expertparry = 0;
 
-  if(!(attacker) ||
-      !(victim) ||
-      !IS_ALIVE(victim) ||
-      !IS_ALIVE(attacker))
-    return false;
+  if( !IS_ALIVE(victim) || !IS_ALIVE(attacker) )
+    return FALSE;
 
-  if(GET_POS(victim) != POS_STANDING)
-    return false;
+  if( GET_POS(victim) != POS_STANDING )
+    return FALSE;
 
 
-  if(affected_by_spell(victim, SPELL_COMBAT_MIND) &&
-      GET_CLASS(victim, CLASS_PSIONICIST))
+  if( affected_by_spell(victim, SPELL_COMBAT_MIND) && GET_CLASS(victim, CLASS_PSIONICIST) )
     learnedvictim += GET_LEVEL(victim);
 
   if(learnedvictim < 1)
-    return false;
+    return FALSE;
 
   // Monks and immaterial (ghosts, phantoms, etc...) may be parried when attacker
   // has a weapon.
@@ -8610,32 +8611,30 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
       IS_IMMATERIAL(attacker))
     if(!attacker->equipment[WIELD] &&
         !attacker->equipment[WIELD2])
-      return false;
+      return FALSE;
 
   // Ensure the victim has a weapon for parrying.
   // May want to expand this in the future by adding modifiers
   // based on weapon types (e.g. maces are harder to parry with or
   // parry against).
-  if(!victim->equipment[WIELD] &&
-      !victim->equipment[WIELD2] &&
-      !victim->equipment[WIELD3] &&
-      !victim->equipment[WIELD4])
-    return false;
+  if( !victim->equipment[WIELD] && !victim->equipment[WIELD2]
+    && !victim->equipment[WIELD3] && !victim->equipment[WIELD4] )
+    return FALSE;
 
   // Flaying weapons are !parry.
-  if((wpn && IS_FLAYING(wpn)) ||
-      (victim->equipment[WIELD] && IS_FLAYING(victim->equipment[WIELD])))
-    return false;
+  if( (wpn && IS_FLAYING(wpn)) ||
+      (victim->equipment[WIELD] && IS_FLAYING(victim->equipment[WIELD])) )
+    return FALSE;
 
-  if (affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting)
-    return false;
+  if( affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting )
+    return FALSE;
 
   // Notching the parry skill fails the parry check.
-  if(notch_skill(victim, SKILL_PARRY, get_property("skill.notch.defensive", 17)) &&
-      !affected_by_spell(victim, SPELL_COMBAT_MIND))
-    return false;
+  if( notch_skill(victim, SKILL_PARRY, get_property("skill.notch.defensive", 17)) &&
+      !affected_by_spell(victim, SPELL_COMBAT_MIND) )
+    return FALSE;
 
-  // Victim's parry:    
+  // Victim's parry:
 
   if(affected_by_spell(victim, SPELL_COMBAT_MIND) &&
       GET_CLASS(victim, CLASS_PSIONICIST))
@@ -8643,8 +8642,8 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   learnedvictim += dex_app[STAT_INDEX(GET_C_DEX(victim))].reaction * 15;
   learnedvictim += wis_app[STAT_INDEX(GET_C_WIS(victim))].bonus * 5;
 
-  if(learnedvictim < 1)
-    return false;
+  if( learnedvictim < 1 )
+    return FALSE;
 
   // Attacker's parry:
   learnedattacker = WeaponSkill(attacker, wpn);
@@ -8653,15 +8652,15 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
 
   // If attacker is significantly stronger than the defender, parry is reduced.
   // This will benefit giants, dragons, etc... which is logical.
-  if(GET_C_STR(attacker) > GET_C_STR(victim) + 35)
+  if( GET_C_STR(attacker) > GET_C_STR(victim) + 35 )
     learnedattacker += GET_C_STR(attacker) - 35 - GET_C_STR(victim); 
 
   // Harder to parry incoming attacks when not standing.
-  if(!MIN_POS(victim, POS_STANDING + STAT_NORMAL))
+  if( !MIN_POS(victim, POS_STANDING + STAT_NORMAL) )
     learnedvictim = (int) (learnedvictim * 0.75);
 
   // Attackers are easier to parry when they are not standing.
-  if(!MIN_POS(attacker, POS_STANDING + STAT_NORMAL))
+  if( !MIN_POS(attacker, POS_STANDING + STAT_NORMAL) )
     learnedattacker = (int) (learnedattacker * 0.65); //old 0.75
 
   if(IS_AFFECTED5(victim, AFF5_DAZZLEE))
@@ -8685,7 +8684,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
         GET_CLASS(victim, CLASS_RANGER))
     {
       learnedvictim = (int) (learnedvictim * 1.25);
-      npcepicparry == true;
+      npcepicparry == TRUE;
     }
   }
 
@@ -8724,8 +8723,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   // Much harder to parry with fireweapons like a bow, but not impossible.
   P_obj weapon = victim->equipment[WIELD];
 
-  if(weapon &&
-      GET_ITEM_TYPE(weapon) == ITEM_FIREWEAPON)
+  if(weapon && GET_ITEM_TYPE(weapon) == ITEM_FIREWEAPON)
   {
     learnedvictim /= 10;
   }
@@ -8736,22 +8734,21 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   }
 
   // Harder to parry something you are not fighting.
-  if(IS_PC(victim) &&
-      victim->specials.fighting != attacker)
+  if( IS_PC(victim) && victim->specials.fighting != attacker )
   {
     learnedvictim = (int) (learnedvictim * 0.90);
   }
 
-  // Generate attacker and victim ranges.    
+  // Generate attacker and victim ranges.
   int defroll, attroll;
   defroll = MAX(5, number(1, learnedvictim));
   attroll = MAX(5, number(1, learnedattacker));
 
   // debug("Defroll (%d), Attroll (%d)", defroll, attroll);
 
-  // Simple parry success check via comparison of two constrained random numbers.  
+  // Simple parry success check via comparison of two constrained random numbers.
   if(attroll > defroll)
-    return false;
+    return FALSE;
 
   if(rapier_dirk(victim, attacker))
   {
@@ -8762,15 +8759,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   if( try_riposte(victim, attacker, wpn) )
     return TRUE;
 
-  // Mangle check.
-  if( try_mangle(victim, attacker, wpn) )
-  {
-    return TRUE;
-  }
-
-
-  if(expertparry > number(1, 250) &&
-      !IS_NPC(victim))
+  if( expertparry > number(1, 250) && !IS_NPC(victim) )
   {
     act("You anticipate $n's maneuver and &+wmasterfully&n parry the attack.", FALSE, attacker, 0, victim,
         TO_VICT | ACT_NOTTERSE);
@@ -8779,9 +8768,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
     act("$N anticipates $n's attack and &+wmasterfully&n parries the incoming blow.", FALSE, attacker, 0, victim,
         TO_NOTVICT | ACT_NOTTERSE);
   }
-  else if(((npcepicparry == true) &&
-        !number(0, 12)) &&
-      IS_NPC(victim))
+  else if( ((npcepicparry == true) && !number(0, 12)) && IS_NPC(victim) )
   {
     //  act("You anticipate $n's maneuver and &+wmasterfully&n parry the attack.", FALSE, attacker, 0, victim,
     //      TO_VICT | ACT_NOTTERSE);
@@ -8789,7 +8776,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
         TO_CHAR | ACT_NOTTERSE);
     act("$N anticipates $n's attack and &+wmasterfully&n parries the incoming blow.", FALSE, attacker, 0, victim,
         TO_NOTVICT | ACT_NOTTERSE);
-  }  
+  }
   else
   {
     act("You parry $n's lunge at you.", FALSE, attacker, 0, victim,
@@ -8799,7 +8786,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
     act("$N parries $n's lunge at $M.", FALSE, attacker, 0, victim,
         TO_NOTVICT | ACT_NOTTERSE);
   }
-  return true;
+  return TRUE;
 }
 
 /* old mob-based trophy; deprecated in favor of zone trophy */
@@ -9820,13 +9807,14 @@ int pv_common(P_char ch, P_char opponent, const P_obj wpn)
     }
     else
     {
-      if(!IS_IMMOBILE(opponent) &&
-          (parrySucceed(opponent, ch, wpn) ||
-           divine_blessing_parry(opponent, ch)||
-           blockSucceed(opponent, ch, wpn) ||
-           dodgeSucceed(opponent, ch, wpn) ||
-           leapSucceed(opponent, ch) ||
-           MonkRiposte(opponent, ch, wpn)))
+      if( !IS_IMMOBILE(opponent)
+        && (mangleSucceed( opponent, ch, wpn )
+        || parrySucceed( opponent, ch, wpn )
+        || divine_blessing_parry( opponent, ch )
+        || blockSucceed( opponent, ch, wpn )
+        || dodgeSucceed( opponent, ch, wpn )
+        || leapSucceed( opponent, ch )
+        || MonkRiposte( opponent, ch, wpn )) )
       {
         //justice_witness(ch, opponent, CRIME_ATT_MURDER);
         return FALSE;
