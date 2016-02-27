@@ -4333,7 +4333,7 @@ SPELL_ADD(CLASS_SUMMONER, 11);
   
   SPELL_CREATE_MSG("protection from undead", SPELL_PROT_FROM_UNDEAD, PULSE_SPELLCAST * 2,
                 TAR_CHAR_ROOM | TAR_NOCOMBAT,
-                spell_prot_from_undead, "You no longer feel safe from &+Lundead&n.");
+                spell_prot_from_undead, "Your field of &+Yliving energy&n dissipates&n.");
   SPELL_ADD(CLASS_NECROMANCER, 1);
   SPELL_ADD(CLASS_THEURGIST, 1);
   SPEC_SPELL_ADD(CLASS_CLERIC, 7, SPEC_ZEALOT);
