@@ -6297,7 +6297,7 @@ void spell_curse(int level, P_char ch, char *arg, int type, P_char victim, P_obj
 
   if(IS_TRUSTED(victim) || affected_by_spell(victim, SPELL_CURSE))
   {
-    send_to_char("Aren't they already cursed enough?\r", ch);
+    send_to_char("Aren't they already cursed enough?\n", ch);
     return;
   }
 
