@@ -144,8 +144,8 @@ string wiki_help(string str)
     return_str += matching_topics[i];
     return_str += "\n";
   }
-  
-  return return_str;  
+
+  return return_str;
 }
 
 // display racial stats for a race category help file
@@ -499,7 +499,7 @@ string wiki_races(string title, int type )
   return return_str;
 }
 
-// display a single help topic
+// Display a single help topic
 string wiki_help_single(string str)
 {
   string return_str, title;
@@ -519,6 +519,17 @@ string wiki_help_single(string str)
   }
 
   MYSQL_ROW row = mysql_fetch_row(res);
+
+  // If category undefined and we have a redirect entry..
+  if( atoi(row[2]) == 1 )
+  {
+    char redirect[MAX_STRING_LENGTH];
+    if( sscanf( row[1], "Redirect: %s", redirect) == 1 )
+    {
+      mysql_free_result(res);
+      return wiki_help_single(redirect);
+    }
+  }
 
   return_str += "&+c";
   return_str += row[0];
