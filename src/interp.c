@@ -2147,13 +2147,14 @@ bool special(P_char ch, int cmd, char *arg)
 }
 
 /*
- * 6 macros for command assignment: CMD_Y() -     may be used while
- * fighting CMD_N() -     may NOT be used while fighting CMD_CNF_Y() -
- * REQUIRES confirmation, and may be used while fighting CMD_CNF_N() -
- * REQUIRES confirmation, and may NOT be used while fighting CMD_TRIG() -
- * Used for reserved keywords that don't DO anything, but are used to
- * trigger specials. CMD_SOC() -   Social, calls do_action CMD_GRT() -
- * must be granted to be usable.
+ * 6 macros for command assignment:
+ *   CMD_Y()     - May be used while fighting
+ *   CMD_N()     - May NOT be used while fighting
+ *   CMD_CNF_Y() - REQUIRES confirmation, and may be used while fighting
+ *   CMD_CNF_N() - REQUIRES confirmation, and may NOT be used while fighting
+ *   CMD_TRIG()  - Used for reserved keywords that don't DO anything, but are used to trigger specials.
+ *   CMD_SOC()   - Social, calls do_action
+ *   CMD_GRT()   - Must be granted to be usable.
  *
  * first 4 have same format,  (command number (macro from interp.h),
  * minimum position/status, name of the routine to invoke for this
@@ -2366,7 +2367,7 @@ void assign_command_pointers(void)
 #endif
   CMD_Y(CMD_NCHAT, STAT_SLEEPING + POS_PRONE, do_nchat, 1);
   CMD_Y(CMD_PAGE, STAT_NORMAL + POS_STANDING, do_page, 58);
-  CMD_Y(CMD_SKILLS, STAT_RESTING + POS_PRONE, do_skills, 1);
+  CMD_Y(CMD_SKILLS, STAT_SLEEPING + POS_PRONE, do_skills, 1);
   CMD_Y(CMD_SPELLS, STAT_SLEEPING + POS_PRONE, do_spells, 1);
   CMD_Y(CMD_TELL, STAT_RESTING + POS_PRONE, do_tell, 1);
   CMD_Y(CMD_BEEP, STAT_RESTING + POS_PRONE, do_beep, 1);
