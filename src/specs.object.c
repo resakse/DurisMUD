@@ -11029,7 +11029,6 @@ int ring_of_regeneration(P_obj obj, P_char ch, int cmd, char *arg)
 int proc_whirlwinds(P_obj obj, P_char ch, int cmd, char *arg)
 {
   int curr_time = time(NULL);
-  char first_arg[256];
 
   if( cmd == CMD_SET_PERIODIC )
   {
@@ -11043,13 +11042,12 @@ int proc_whirlwinds(P_obj obj, P_char ch, int cmd, char *arg)
       return FALSE;
   }
 
-  one_argument(arg, first_arg);
-
-  if( cmd == CMD_TAP && !strcmp("bracer", first_arg) )
+  if( cmd == CMD_TAP && obj == get_obj_equipped(ch, arg) )
   {
     if( !IS_SET(obj->extra_flags, ITEM_HUM) )
     {
-      return FALSE;
+      send_to_char( "Nothing seems to happen.\n", ch );
+      return TRUE;
     }
     else
     {

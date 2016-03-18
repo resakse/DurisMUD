@@ -1144,6 +1144,7 @@ P_obj get_obj_in_list_num(int num, P_obj);
 P_obj get_obj_in_list_vis(P_char ch, char *name, P_obj list, bool no_tracks = TRUE);
 P_obj get_obj_num(int);
 P_obj get_obj_vis(P_char ch, char *name, int zrange = 0);
+P_obj get_obj_equipped( P_char ch, char *arg );
 P_obj unequip_char(P_char, int);
 void unequip_all(P_char);
 struct affected_type *get_spell_from_char(P_char ch, int spell);

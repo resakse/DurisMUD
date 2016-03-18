@@ -3515,6 +3515,48 @@ P_obj get_obj_vis_no_tracks(P_char ch, char *name, int zrange )
   return NULL;
 }
 
+// Looks through equipped items to find arg (ie. bracer / 2.ring / 4.bronze / etc)
+P_obj get_obj_equipped( P_char ch, char *arg )
+{
+  char *tmp, item[MAX_INPUT_LENGTH];
+  int count, i, vnum;
+
+  while( *arg == ' ' )
+  {
+    arg++;
+  }
+
+  strcpy( item, arg );
+  if( *item == '\0' )
+    return NULL;
+
+  tmp = item;
+  if( !(count = get_number(&tmp)) )
+  {
+    return (0);
+  }
+  vnum = atoi(tmp);
+
+  for( i = 0; i < MAX_WEAR; i++ )
+  {
+    // Skip empty slots
+    if( !ch->equipment[i] )
+      continue;
+    // Skip items that don't match
+    if( !isname(tmp, ch->equipment[i]->name)
+      && !(IS_TRUSTED( ch ) && ( vnum > 0 ) && ( vnum == OBJ_VNUM(ch->equipment[i]) )) )
+    {
+      continue;
+    }
+    // Checks for 5.wood or whatever.
+    if( --count == 0 )
+    {
+      return ch->equipment[i];
+    }
+  }
+  return NULL;
+}
+
 void add_coins(P_obj pile, int copper, int silver, int gold, int platinum)
 {
   int      num, i, j, p;
