@@ -1054,8 +1054,7 @@ int look_weapon (P_char ch, P_ship ship, char* arg)
 
 int look_tactical_map(P_char ch, P_ship ship, char* arg1, char* arg2)
 {
-  int      x, y;
-  float    shiprange;
+  int x, y, maxrange, lookrange;
 
   if( SHIP_DOCKED(ship))
   {
@@ -1077,15 +1076,15 @@ int look_tactical_map(P_char ch, P_ship ship, char* arg1, char* arg2)
     }
     if( is_number(arg1) && is_number(arg2) )
     {
-      shiprange = range(ship->x, ship->y, 0, atoi(arg1), atoi(arg2), 0);
-      if ((int) (shiprange + .5) <= 35) 
+      x = atoi(arg1);
+      y = atoi(arg2);
+      // Calculate range in tenths of a block.
+      lookrange = (int)(5 + 10 * range(ship->x, ship->y, 0, x, y, 0));
+      maxrange = 350 + 10 * ship->crew.get_contact_range_mod();
+      if( lookrange > maxrange )
       {
-        x = atoi(arg1);
-        y = atoi(arg2);
-      }
-      else
-      {
-        send_to_char_f(ch, "This coord is out of range.\r\nMust be within 35 units.\r\nCurrent range: %3.1f\r\n", shiprange);
+        send_to_char_f(ch, "This location is out of range.\r\nThe distance must be within %d units.\r\nAttempted distance: %d.%d.\n",
+          maxrange / 10, lookrange / 10, lookrange % 10);
         return TRUE;
       }
     }
@@ -1096,7 +1095,7 @@ int look_tactical_map(P_char ch, P_ship ship, char* arg1, char* arg2)
     }
   }
 
-  if( !getmap(ship) )
+  if( !getmap(ship, TRUE) )
   {
     send_to_char("You have no maps for this region.\r\n", ch);
     return TRUE;

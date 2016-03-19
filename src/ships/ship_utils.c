@@ -2,7 +2,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <math.h>
-#include <stdarg.h> 
+#include <stdarg.h>
 
 #include "comm.h"
 #include "db.h"
@@ -29,6 +29,7 @@ float ShipTypeData::get_hull_mod() const
     return hull_mod[_classid - 1];
 }
 
+static float ship_range( P_ship ship, P_ship target, int x, int y );
 
 ShipObjHash shipObjHash;
 
@@ -583,13 +584,14 @@ void assignid(P_ship ship, char *id, bool npc)
 
 }
 
-int getmap(P_ship ship)
+bool getmap(P_ship ship, bool limit_range)
 {
   int      x, y, rroom;
   P_obj    obj;
+  float    rng = 35 + ship->crew.get_contact_range_mod();
 
-  if (!IS_MAP_ROOM(ship->location))
-      return FALSE;
+  if( !IS_MAP_ROOM(ship->location) )
+    return FALSE;
 
   for (y = 0; y < 100; y++)
   {
@@ -598,7 +600,7 @@ int getmap(P_ship ship)
       strcpy(tactical_map[x][y].map, "  ");
     }
   }
-  for (y = 99; y >= 0; y--)
+  for( y = 99; y >= 0; y-- )
   {
     for (x = 0; x < 100; x++)
     {
@@ -612,16 +614,17 @@ int getmap(P_ship ship)
       {
         sprintf(tactical_map[x][y].map, "%s", ship_symbol[0]);
       }
-      if (world[rroom].contents)
+      if( world[rroom].contents )
       {
-        for (obj = world[rroom].contents; obj; obj = obj->next_content)
+        for( obj = world[rroom].contents; obj; obj = obj->next_content )
         {
-          if ((GET_ITEM_TYPE(obj) == ITEM_SHIP) && (obj->value[6] == 1))
+          if( (GET_ITEM_TYPE(obj) == ITEM_SHIP) && (obj->value[6] == 1) )
           {
             P_ship temp = shipObjHash.find(obj);
             if (temp == NULL)
               continue;
-            sprintf(tactical_map[x][y].map, "&+W%s&N", temp->id);
+            if( !limit_range || (ship_range( ship, temp, x, 100 - y ) <= rng) )
+              sprintf(tactical_map[x][y].map, "&+W%s&N", temp->id);
           }
         }
       }
@@ -667,7 +670,7 @@ void setcontact(int i, P_ship target, P_ship ship, int x, int y)
 {
   contacts[i].bearing = bearing(ship->x, ship->y, (float) x + (target->x - 50.0), (float) y + (target->y - 50.0));
 
-  contacts[i].range = range(ship->x, ship->y, ship->z, (float) x + (target->x - 50.0), (float) y + (target->y - 50.0), target->z);
+  contacts[i].range = ship_range(ship, target, x, y);
 
   contacts[i].x = x;
   contacts[i].y = y;
@@ -682,14 +685,12 @@ void setcontact(int i, P_ship target, P_ship ship, int x, int y)
 
 int getcontacts(P_ship ship, bool limit_range)
 {
-  int      i, j, counter;
-  P_obj    obj;
+  int    i, j, counter;
+  P_obj  obj;
   P_ship temp;
+  float  rng = 35 + ship->crew.get_contact_range_mod();
 
-  if(!ship)
-    return 0;
-
-  if (!getmap(ship))
+  if( !ship || !getmap(ship, limit_range) )
     return 0;
 
   counter = 0;
@@ -708,10 +709,10 @@ int getcontacts(P_ship ship, bool limit_range)
 
           if ((GET_ITEM_TYPE(obj) == ITEM_SHIP) && (obj->value[6] == 1))
           {
-            if (obj != ship->shipobj)
+            if( obj != ship->shipobj )
             {
               temp = shipObjHash.find(obj);
-              if (!limit_range || range(ship->x, ship->y, ship->z, j, 100 - i, temp->z) <= (float)(35 + ship->crew.get_contact_range_mod()))
+              if( !limit_range || (ship_range( ship, temp, j, 100 - i ) <= rng) )
               {
                 setcontact(counter, temp, ship, j, 100 - i);
                 counter++;
@@ -1408,6 +1409,11 @@ const char* condition_prefix(int maxhp, int curhp, bool light)
   {
     return light ? "&+G" : "&+g";
   }
+}
+
+static float ship_range( P_ship ship, P_ship target, int x, int y )
+{
+    return range( ship->x, ship->y, ship->z, x + target->x - 50.0, y + target->y - 50.0, target->z );
 }
 
 float range(float x1, float y1, float z1, float x2, float y2, float z2)

@@ -10,10 +10,10 @@
 /* couple of basic things */
 
 #ifndef FALSE
-#define FALSE (0)          /* pretty damn basic */
+#define FALSE false          /* pretty damn basic */
 #endif
 #ifndef TRUE
-#define TRUE (1)           /* pretty damn basic */
+#define TRUE true           /* pretty damn basic */
 #endif
 
 /* default mother socket number */

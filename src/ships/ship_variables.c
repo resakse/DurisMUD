@@ -210,44 +210,45 @@ const ulong arcbitmap[4] = {
   STAR_BIT
 };
 const char *ship_symbol[NUM_SECT_TYPES] = {
-  "&=wl^^&N",                   /* * larger towns */
-  "&+L++&N",                    /* * roads */
-  "&+g..&N",                    /* * plains/fields */
-  "&+G**&N",                    /* * forest */
-  "&+y^^&N",                    /* * hills */
-  "&+yMM&N",                    /* * mountains */
-  "&=cCrr&N",                   /* * water shallow */
-  "&+b~~&N",                    /* * water boat */
-  "  ",                         /* * noground */
-  "&+b~~&N",                    /* * underwater */
-  "&+b~~&N",                    /* * underwater ground */
-  "  ",                         /* * fire plane */
-  "&+b~~&N",                    /* * water ship */
-  "  ",                         /* * UD wild */
-  "  ",                         /* * UD city */
-  "  ",                         /* * UD inside */
-  "  ",                         /* * UD water */
-  "  ",                         /* * UD noswim */
-  "  ",                         /* * UD noground */
-  "  ",                         /* * air plane */
-  "  ",                         /* * water plane */
-  "  ",                         /* * earth plane */
-  "  ",                         /* * etheral plane */
-  "  ",                         /* * astral plane */
-  "&+Y..&N",                    /* desert */
-  "&+C..&N",                    /* arctic tundra */
-  "&+M**&N",                    /* swamp */
-  "  ",                         /* UD mountains */
-  "  ",                         /* UD slime */
-  "  ",                         /* UD low ceilings */
-  "  ",                         /* UD liquid mithril */
-  "  ",                         /* UD mushroom forest */
-  "&-w  &N",                    /* Castle Wall */
-  "&=wl##&N",                   /* Castle Gate */
-  "&=wl..&N",                   /* Castle Itself */
-  "  ",                         /* negative plane */
-  "  ",                          /* plane of avernus */
-  "&+L++&N",                      // roads
-  "&=cW**&N",                    /* snowy forest */
+  "&=wl^^&N",                   // Zones
+  "&+L++&N",                    // Roads
+  "&+g..&N",                    // Plains/Fields
+  "&+G**&N",                    // Forest
+  "&+y^^&N",                    // Hills
+  "&+yMM&N",                    // Mountains
+  "&=cCrr&N",                   // Water-Shallow
+  "&+b~~&N",                    // Water-Boat
+  "  ",                         // Noground
+  "&+b~~&N",                    // Underwater
+  "&+b~~&N",                    // Underwater-Ground
+  "&-r  &N",                    // Fire Plane
+  "&+b~~&N",                    // Water Ship
+  "  ",                         // UD Wild
+  "  ",                         // UD City
+  "  ",                         // UD Inside
+  "  ",                         // UD Water
+  "  ",                         // UD Noswim
+  "  ",                         // UD Noground
+  "&-C  &N",                    // Air Plane
+  "&-B  &N",                    // Water Plane
+  "&-y  &N",                    // Earth Plane
+  "&-w  &N",                    // Etheral Plane
+  "&-L  &n",                    // Astral Plane
+  "&+Y..&N",                    // Desert
+  "&+C..&N",                    // Arctic Tundra
+  "&+M**&N",                    // Swamp
+  "  ",                         // UD Mountains
+  "  ",                         // UD Slime
+  "  ",                         // UD Low Ceilings
+  "  ",                         // UD Liquid Mithril
+  "  ",                         // UD Mushroom Forest
+  "&-w  &N",                    // Castle Wall
+  "&=wl##&N",                   // Castle Gate
+  "&=wl..&N",                   // Castle Itself
+  "  ",                         // Negative Plane
+  "  ",                         // Plane of Avernus
+  "&+L++&N",                    // Roads
+  "&=cW**&N",                   // Snowy Forest
+  "&-r  &N"                     // Lava
 };
 
