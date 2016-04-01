@@ -9013,12 +9013,16 @@ void spell_invigorate(int level, P_char ch, char *arg, int type, P_char victim, 
     GET_VITALITY(victim) += movepoints;
   }
 
-  act("You &+Winvigorate&n $N with renewed &+cenergy.&n",
-    FALSE, ch, 0, victim, TO_CHAR);
-  act("$N &+Wappears invigorated.&n",
-    FALSE, ch, 0, victim, TO_NOTVICT);
-  act("&+yFresh energy pours through your body. &+WYou are invigorated!&n",
-    FALSE, ch, 0, victim, TO_VICT);
+  if( ch != victim )
+  {
+    act("You &+Winvigorate&n $N with renewed &+cenergy.&n", FALSE, ch, 0, victim, TO_CHAR);
+  }
+  else
+  {
+    act("You &+Winvigorate&n yourself with renewed &+cenergy.&n", FALSE, ch, 0, victim, TO_CHAR);
+  }
+  act("&+yFresh energy pours through your body. &+WYou are invigorated!&n", FALSE, NULL, 0, victim, TO_VICT);
+  act("$N &+Wappears invigorated.&n", FALSE, ch, 0, victim, TO_NOTVICT);
 
   update_pos(victim);
 }
