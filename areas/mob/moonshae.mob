@@ -145,7 +145,7 @@ firbolg~
 You see a huge, hairy ball of beast before you.
 ~
 33556556 1 0 0 33554440 0 0 0 -1000 S
-A 0 0 0 -1
+FB 0 0 0 -1
 25 11 19 25d40+200 3d5+3
 0.0.0.0 22275
 8 8 1
@@ -157,7 +157,7 @@ firbolg guard~
 A very large, hairy, looking man-beast.
 ~
 1174407242 1 0 0 33554448 0 0 0 -1000 S
-A 0 1 0 -1
+FB 0 1 0 -1
 30 8 3 30d65+390 3d6+4
 0.0.0.0 26730
 8 8 1
@@ -170,7 +170,7 @@ This firbolg is extreamly drunk, his grunting sounds are long and
 hard to understand.
 ~
 72 0 0 0 33554432 0 0 0 -1000 S
-A 0 1 0 -1
+FB 0 1 0 -1
 23 11 26 23d47+230 3d5+3
 0.0.0.0 20493
 8 8 1
@@ -184,7 +184,7 @@ huge arms and legs, and is coverd with hari from head to toe. he watches you
 with an uneasy, yet mean stare.
 ~
 1174407246 1 0 0 33661020 0 0 0 -1000 S
-H 0 1 0 -1
+FB 0 1 0 -1
 50 2 -28 40d95+920 4d7+10
 3.3.3.3 51840
 8 8 0
