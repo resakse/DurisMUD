@@ -1978,6 +1978,7 @@ void assign_objects(void)
    obj_index[real_object0(30411)].func.obj = teleporting_pool;
    obj_index[real_object0(30412)].func.obj = teleporting_pool;
    obj_index[real_object0(30413)].func.obj = teleporting_pool;
+   obj_index[real_object0(30414)].func.obj = teleporting_pool;
 
   /*
      The Domain of Lost Souls
