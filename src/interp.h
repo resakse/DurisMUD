@@ -589,12 +589,12 @@ extern unsigned int game_locked;
 #define CMD_ECHOE          562
 #define CMD_ASCLIST        563 // Association list
 #define CMD_WHOIS          564
-#define CMD_FREE           565 // Keyword?
+#define CMD_FREE           565 // Keyword Only
 #define CMD_ECHOT          566
 #define CMD_ROUNDKICK      567
 #define CMD_PLEASANT       568 // Inflict pleasantry
 #define CMD_HAMSTRING      569
-#define CMD_DECREE         570 // Unused command.
+#define CMD_EMPTY          570 // Not an empty slot: "empty <container1> <container2>" moves contents from 1 into 2.
 #define CMD_ARENA          571
 #define CMD_ARTIFACTS      572
 #define CMD_INVITE         573

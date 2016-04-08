@@ -311,6 +311,7 @@ bool is_salvageable(P_obj);
 void do_drink(P_char, char *, int);
 void do_drop(P_char, char *, int);
 void do_eat(P_char, char *, int);
+void do_empty(P_char, char *, int);
 void do_fill(P_char, char *, int);
 void do_get(P_char, char *, int);
 void do_give(P_char, char *, int);

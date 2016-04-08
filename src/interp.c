@@ -815,7 +815,7 @@ const char *command[MAX_CMD] = {
   "roundkick",
   "pleasant",
   "hamstring",
-  "decree",                     /* 570 */
+  "empty",                      /* 570 */
   "arena",
   "artifacts",
   "invite",
@@ -2480,6 +2480,7 @@ void assign_command_pointers(void)
   CMD_N(CMD_PRACTICE, STAT_RESTING + POS_KNEELING, do_practice, 0);
   CMD_N(CMD_PRACTISE, STAT_RESTING + POS_KNEELING, do_practice, 0);
   CMD_N(CMD_PUT, STAT_RESTING + POS_SITTING, do_put, 0);
+  CMD_N(CMD_EMPTY, STAT_RESTING + POS_SITTING, do_empty, 0);
   CMD_N(CMD_QUI, STAT_DEAD + POS_PRONE, do_qui, 0);
   CMD_N(CMD_READ, STAT_RESTING + POS_PRONE, do_read, 0);
   CMD_N(CMD_RECITE, STAT_RESTING + POS_PRONE, do_recite, 0);

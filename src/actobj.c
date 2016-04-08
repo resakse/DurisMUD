@@ -6102,3 +6102,86 @@ void list_foods()
     }
   }
 }
+
+void do_empty(P_char ch, char *argument, int cmd)
+{
+  P_char unused_ch;
+  P_obj obj1, obj2, content;
+  char objname[MAX_STRING_LENGTH];
+  int count;
+
+  argument = one_argument( argument, objname);
+  if( objname[0] == '\0' || !strcmp(objname, "?") )
+  {
+    send_to_char( "&+YSyntax: &+wempty <container1> <container2>&n\n", ch );
+    send_to_char( "Empties the contents of &+w<container1>&n into &+w<container2>&n.\n", ch );
+    return;
+  }
+
+  generic_find( objname, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &unused_ch, &obj1 );
+  if( !obj1 )
+  {
+    send_to_char_f( ch, "Could not find container1 '%s'.\n", objname );
+    send_to_char( "&+YSyntax: &+wempty <container1> <container2>&n\n", ch );
+    return;
+  }
+  if( obj1->type != ITEM_CONTAINER )
+  {
+    act( "$p is not a container.", FALSE, ch, obj1, NULL, TO_CHAR );
+    send_to_char( "&+YSyntax: &+wempty <container1> <container2>&n\n", ch );
+    return;
+  }
+  if( IS_SET(obj1->value[1], CONT_CLOSED) )
+  {
+    act( "$p is closed.", FALSE, ch, obj1, NULL, TO_CHAR );
+    return;
+  }
+  if( obj1->contains == NULL )
+  {
+    act( "$p is already empty.\n", FALSE, ch, obj1, NULL, TO_CHAR );
+    return;
+  }
+
+  one_argument( argument, objname);
+  generic_find( objname, FIND_OBJ_INV | FIND_OBJ_ROOM, ch, &unused_ch, &obj2 );
+  if( !obj2 )
+  {
+    send_to_char_f( ch, "Could not find container2 '%s'.\n", objname );
+    send_to_char( "&+YSyntax: &+wempty <container1> <container2>&n\n", ch );
+    return;
+  }
+  if( IS_SET(obj2->value[1], CONT_CLOSED) )
+  {
+    act( "$p is closed.", FALSE, ch, obj2, NULL, TO_CHAR );
+    return;
+  }
+
+  count = 0;
+  while( (content = obj1->contains) != NULL )
+  {
+
+    if( (( GET_OBJ_WEIGHT(obj2) + GET_OBJ_WEIGHT(content) ) > obj1->value[0]) && (obj1->value[0] != -1) )
+    {
+      act( "$P will not fit in $p.", FALSE, ch, obj2, (void *)content, TO_CHAR );
+      send_to_char_f( ch, "You moved %d item%s from %s to %s.\n", count, count == 1 ? "" : "s",
+        OBJ_SHORT(obj1), OBJ_SHORT(obj2) );
+      return;
+    }
+
+#if USE_SPACE
+    if( (( GET_OBJ_SPACE(obj2) + GET_OBJ_SPACE(content) ) > obj1->value[3]) && (obj1->value[3] != -1) )
+    {
+      act( "$P will not fit in $p.", FALSE, ch, obj2, (void *)content, TO_CHAR );
+      send_to_char_f( ch, "You moved %d item%s from %s to %s.\n", count, count == 1 ? "" : "s",
+        OBJ_SHORT(obj1), OBJ_SHORT(obj2) );
+      return;
+    }
+#endif
+
+    obj_from_obj(content);
+    obj_to_obj(content, obj2);
+    count++;
+  }
+  send_to_char_f( ch, "You moved %d item%s from %s to %s.\n", count, count == 1 ? "" : "s",
+    OBJ_SHORT(obj1), OBJ_SHORT(obj2) );
+}
