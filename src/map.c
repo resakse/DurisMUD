@@ -174,7 +174,7 @@ mapSymbolInfo color_symbol[NUM_SECT_TYPES] = {
   {"=gl", true},
   {"+y" , false},
   {"+y" , false},
-  {"=cl", true},
+  {"=cw", true},
   {"=bB", true},
   {"+w" , false},
   {"+w" , false},
