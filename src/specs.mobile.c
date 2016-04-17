@@ -16088,37 +16088,68 @@ int bs_stirge(P_char ch, P_char pl, int cmd, char *arg)
 
 int llyren(P_char ch, P_char pl, int cmd, char *arg)
 {
-  P_obj t_obj;
+  P_obj t_obj, container;
   P_char owner = NULL;
   char buffer[256];
 
-  if (cmd != CMD_LIST)
+  if( cmd != CMD_LIST )
     return FALSE;
-  
-  if (!transact(pl, NULL, ch, 1000 * 50))
+
+  // Cost 50 p.
+  if( !transact(pl, NULL, ch, 50 * 1000) )
     return TRUE;
 
-  for (t_obj = object_list; t_obj; t_obj = t_obj->next) {
-    if (!IS_ARTIFACT(t_obj) || !strstr(t_obj->name, "unique") || 
-        obj_index[t_obj->R_num].virtual_number == 22070) 
-      // revenants crown won't be shown, it's a rareload
+  for (t_obj = object_list; t_obj; t_obj = t_obj->next)
+  {
+    // Revenants crown won't be shown as it's a rareload
+    if( !IS_ARTIFACT(t_obj) || !strstr(t_obj->name, "unique")
+      || obj_index[t_obj->R_num].virtual_number == 22070 )
+    {
       continue;
-    if (OBJ_WORN(t_obj))
+    }
+
+    if( OBJ_WORN(t_obj) )
       owner = t_obj->loc.wearing;
     else if (OBJ_CARRIED(t_obj))
       owner = t_obj->loc.carrying;
-    else if (OBJ_ROOM(t_obj)) {
+    else if( OBJ_ROOM(t_obj) )
+    {
       sprintf(buffer, "I see %s in %s.\n", t_obj->short_description,
           world[t_obj->loc.room].name);
       send_to_char(buffer, pl);
       continue;
-    } else
-      continue;
-    if (IS_PC(owner))
+    }
+    else if( OBJ_INSIDE(t_obj) && (( container = t_obj->loc.inside ) != NULL) )
+    {
+      while( OBJ_INSIDE(container) )
+      {
+        container = container->loc.inside;
+      }
+      if( OBJ_ROOM(container) )
+      {
+        sprintf(buffer, "I see %s inside %s in %s.\n", OBJ_SHORT(t_obj), OBJ_SHORT(container),
+          world[container->loc.room].name);
+        send_to_char(buffer, pl);
+        continue;
+      }
+      else if( OBJ_WORN(container) )
+      {
+        owner = t_obj->loc.wearing;
+      }
+      else if( OBJ_CARRIED(container) )
+      {
+        owner = t_obj->loc.carrying;
+      }
+      else
+        continue;
+    }
+    else
       continue;
 
-    sprintf(buffer, "I see %s in posession of %s.\n",
-        t_obj->short_description, owner->player.short_descr);
+    if( IS_PC(owner) )
+      continue;
+
+    sprintf(buffer, "I see %s in posession of %s.\n", t_obj->short_description, owner->player.short_descr);
     send_to_char(buffer, pl);
   }
 
