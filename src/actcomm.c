@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <sys/stat.h>
 
 #include "comm.h"
 #include "db.h"
@@ -519,8 +520,24 @@ void do_gcc(P_char ch, char *argument, int cmd)
   // If not guilded, not a member, or a PC who's not above parole rank.
   if( !from_guild || !IS_MEMBER(GET_A_BITS(ch)) || ( IS_PC(ch) && !GT_PAROLE(GET_A_BITS(ch)) ) )
   {
-    send_to_char("Try becoming part of a guild first!  DUH!\r\n", ch);
-    return;
+    if( IS_TRUSTED(ch) )
+    {
+      struct stat statbuf;
+      argument = one_argument( argument, Gbuf1 );
+      from_guild = atoi(Gbuf1);
+      sprintf(Gbuf1, "%sasc.%u", ASC_DIR, from_guild);
+      if( stat(Gbuf1, &statbuf) )
+      {
+        send_to_char( "&+WSyntax:&n\n   &+wgcc [guild number] <message>&n\n   &+wgcc <message>&n\n", ch );
+        send_to_char( "Where you are either &+wsupervis&ning a guild or supply the &+wnumber&n of the guild.\n", ch );
+        return;
+      }
+    }
+    else
+    {
+      send_to_char("Try becoming part of a guild first!  DUH!\r\n", ch);
+      return;
+    }
   }
 
   // Skip leading spaces..
