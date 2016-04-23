@@ -24,7 +24,8 @@
 #include <string>
 using namespace std;
 
-#define EQ_WIPE 20000000 // Comment out before pwipe.
+// The below line will abuse player times in game, and use it to eq-wipe every player in the game.
+// #define EQ_WIPE 20000000
 
 /* global strings, these should only be used sparingly, by functions that
    build and return a string pointer.  I'm adding first to support where_obj(),
