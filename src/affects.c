@@ -3537,7 +3537,7 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
     raise(SIGSEGV);
   }
 
-  if (ch->in_room == NOWHERE)
+  if( ch->in_room == NOWHERE )
     return FALSE;
 
   if (!caller_is_event)
@@ -3585,16 +3585,19 @@ bool falling_char(P_char ch, const int kill_char, bool caller_is_event)
         return FALSE;
       }
     }
-    act("$n has just realized $e has no visible means of support!", TRUE, ch,
-        0, 0, TO_ROOM);
+    // If they have climb, they get a max 50% chance not to start falling.
+    if( affected_by_spell(ch, SKILL_CLIMB) && number( 1, 100 ) > GET_CHAR_SKILL(ch, SKILL_CLIMB) / 2 )
+    {
+      send_to_char( "You start to slip, but catch yourself.\n", ch );
+      return FALSE;
+    }
+    act("$n has just realized $e has no visible means of support!", TRUE, ch, 0, 0, TO_ROOM);
     if (GET_STAT(ch) > STAT_SLEEPING)
-      send_to_char("You rediscover the law of gravity...\n...the hard way!\n",
-                   ch);
+      send_to_char("You rediscover the law of gravity...\n...the hard way!\n", ch);
     else if (GET_STAT(ch) > STAT_INCAP)
       send_to_char("You get a sinking feeling.\n", ch);
     else
-      send_to_char("Just when it seemed things couldn't get any worse...\n",
-                   ch);
+      send_to_char("Just when it seemed things couldn't get any worse...\n", ch);
 
     if (CAN_GO(ch, DOWN) || ch->specials.z_cord > 0)
     {
