@@ -14,15 +14,40 @@
 
 #define VOBJ_WALLS                          759
 
-#define VOBJ_INGRED_DESERT_GRASS            820
-#define VOBJ_INGRED_NIGHTSHADE              821
-#define VOBJ_INGRED_MANDRAKE                822
-#define VOBJ_INGRED_GARLIC                  823
-#define VOBJ_INGRED_FAERIE_DUST             824
-#define VOBJ_INGRED_DRAGON_BLOOD            825
-#define VOBJ_INGRED_GREEN_HERB              826
-#define VOBJ_INGRED_STRANGE_STONE           827
-#define VOBJ_INGRED_HUMAN_BONE              828
+#define VOBJ_FORAGE_FIRST                   800
+
+#define VOBJ_FORAGE_SWAMP_GRUB              800
+#define VOBJ_FORAGE_MANGROVE_ROOT           801
+#define VOBJ_FORAGE_MARSH_REEDS             802
+#define VOBJ_FORAGE_EDIBLE_ROOT             803
+#define VOBJ_FORAGE_EDIBLE_SPROUTS          804
+#define VOBJ_FORAGE_BLUEBERRIES             805
+#define VOBJ_FORAGE_FOREST_TOADSTOOL        806
+#define VOBJ_FORAGE_CRABAPPLES              807
+#define VOBJ_FORAGE_RASPBERRIES             808
+#define VOBJ_FORAGE_TREEROOT_MOSS           809
+#define VOBJ_FORAGE_WIREGRASS               810
+#define VOBJ_FORAGE_BROWN_TUBER             811
+#define VOBJ_FORAGE_LICHEN                  812
+#define VOBJ_FORAGE_RED_MUSHROOMS           813
+#define VOBJ_FORAGE_BLIND_CAVEWORM          814
+#define VOBJ_FORAGE_GREEN_MUSHROOMS         815
+#define VOBJ_FORAGE_BLUE_MUSHROOMS          816
+#define VOBJ_FORAGE_PURPLE_MUSHROOMS        817
+#define VOBJ_FORAGE_PINK_MUSHROOMS          818
+#define VOBJ_FORAGE_EDIBLE_CACTUS           819
+#define VOBJ_FORAGE_DESERT_GRASS            820
+#define VOBJ_FORAGE_NIGHTSHADE              821
+#define VOBJ_FORAGE_MANDRAKE                822
+#define VOBJ_FORAGE_GARLIC                  823
+#define VOBJ_FORAGE_FAERIE_DUST             824
+#define VOBJ_FORAGE_DRAGON_BLOOD            825
+#define VOBJ_FORAGE_GREEN_HERB              826
+#define VOBJ_FORAGE_STRANGE_STONE           827
+#define VOBJ_FORAGE_HUMAN_BONE              828
+
+#define VOBJ_FORAGE_NUM_TYPES                29
+
 #define VOBJ_POTION_BOTTLES                 835
 
 #define VOBJ_RANDOM_ARMOR                  1252

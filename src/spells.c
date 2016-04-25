@@ -2255,7 +2255,7 @@ void cast_vines(int level, P_char ch, char *arg, int type, P_char tar_ch, P_obj 
     {
       next_obj = t_obj->next_content;
 
-      if (obj_index[t_obj->R_num].virtual_number == VOBJ_INGRED_GREEN_HERB )
+      if (obj_index[t_obj->R_num].virtual_number == VOBJ_FORAGE_GREEN_HERB )
       {
         used_obj[count] = t_obj;
         if( ++count == 4 )

@@ -7263,19 +7263,19 @@ grub swamp large _frg_~
 1 0 100
 E
 grub swamp large~
-Looks delicious.
+&+wIt looks delicious.&n
 ~
 #801
 root mangrove _frg_~
 &+yan edible section of mangrove root&n~
 &+ySome mangrove root is here.&n~
 ~
-19 5 3 0 7 0 8200 16385 0 0 0
+19 48 3 0 7 0 8200 16385 0 0 0
 5 0 0 0 0 0 0 0
 3 0 100
 E
 root mangrove~
-Mmm, crunchy.
+&+yMmm, crunchy.&n
 ~
 #802
 reeds marsh _frg_~
@@ -7287,19 +7287,19 @@ reeds marsh _frg_~
 2 0 100
 E
 reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+&+gRoughly a foot long, this small collection of r&+me&+ge&+md&+gs looks safe to eat.&n
 ~
 #803
 root edible _frg_~
 &+yan edible root&n~
 &+yAn edible root lies here.&n~
 ~
-19 42 3 0 7 0 8200 16385 0 0 0
+19 48 3 0 7 0 8200 16385 0 0 0
 4 0 0 0 0 0 0 0
 2 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+root edible~
+&+yRoughly half of a foot long, this root looks edible.&n
 ~
 #804
 sprouts edible _frg_~
@@ -7310,20 +7310,20 @@ sprouts edible _frg_~
 1 0 0 0 0 0 0 0
 0 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+sprouts edible~
+&+gThis small collection of sprouts looks safe to eat.&n
 ~
 #805
-blueberries berries half ripe _frg_~
+blueberries berries half ripe half-ripe _frg_~
 &+bsome half-ripe blueberries&n~
-&+gSome reeds lie here, pulled out of the ground.&n~
+&+gSome &+bblueberries&+g lie here, pulled off a bush.&n~
 ~
 19 48 3 0 7 0 8200 16385 0 0 0
 1 0 0 0 0 0 0 0
 0 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+blueberries half ripe half-ripe~
+&+gThere are a handful of &+bblueberries&+g here, waiting to be eaten.&n
 ~
 #806
 toadstool forest _frg_~
@@ -7334,8 +7334,8 @@ toadstool forest _frg_~
 1 0 0 0 0 0 0 0
 1 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+forest toadstool~
+&+yRoughly a foot tall, this t&+wo&+ya&+wd&+ys&+wt&+yo&+wo&+yl looks safe to eat.
 ~
 #807
 crabapples apples crab _frg_~
@@ -7346,20 +7346,20 @@ crabapples apples crab _frg_~
 3 0 0 0 0 0 0 0
 2 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+crabapples crab apples~
+&+rThis pile of crabapples looks mighty tasty.&n
 ~
 #808
 raspberries berries _frg_~
-&+rsome raspberries&n~
-&+rSome raspberries are here.~
+&+msome raspberries&n~
+&+mSome raspberries are here.~
 ~
 19 48 3 0 7 0 8200 16385 0 0 0
 1 0 0 0 0 0 0 0
 0 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+raspberries berries~
+&+mThis is a large handful of raspberries, begging you to eat them.&n
 ~
 #809
 moss treeroot root _frg_~
@@ -7370,8 +7370,8 @@ moss treeroot root _frg_~
 2 0 0 0 0 0 0 0
 1 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+treeroot root moss~
+&+wThis moss actually smells like a treat to eat.&n
 ~
 #810
 wiregrass grass wire clump _frg_~
@@ -7382,8 +7382,8 @@ wiregrass grass wire clump _frg_~
 2 0 0 0 0 0 0 0
 1 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+clump wiregrass wire grass~
+&+gThis clump of grass seems edible.&n
 ~
 #811
 tuber brown _frg_~
@@ -7394,8 +7394,8 @@ tuber brown _frg_~
 4 0 0 0 0 0 0 0
 2 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+brown tuber potato~
+&+yThis looks like a potato.  Mmmm...&n
 ~
 #812
 lichen _frg_~
@@ -7406,8 +7406,8 @@ lichen _frg_~
 1 0 0 0 0 0 0 0
 0 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+lichen~
+&+rThis lichen is red and luscious.&n
 ~
 #813
 mushrooms red _frg_~
@@ -7418,8 +7418,8 @@ mushrooms red _frg_~
 3 0 0 7 0 0 0 0
 2 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+red mushrooms~
+&+rThese m&+wu&+rs&+wh&+rr&+wo&+ro&+wm&+rs look tasty.&n
 ~
 #814
 caveworm worm _frg_~
@@ -7430,32 +7430,32 @@ caveworm worm _frg_~
 2 0 0 0 0 0 0 0
 1 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+caveworm worm~
+&+WThis worm looks like a yummy treat.&n
 ~
 #815
 mushrooms green clump _frg_~
 &+ga clump of green mushrooms&n~
 &+gSome mushrooms are here.~
 ~
-19 42 3 0 7 0 8200 16385 0 0 0
+19 48 3 0 7 0 8200 16385 0 0 0
 2 0 0 0 0 0 0 0
 1 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+clump green mushrooms~
+&+gThese mushrooms look tasty.&n
 ~
 #816
 mushrooms blue _frg_~
 &+bsome blue mushrooms&n~
 &+bSome blue mushrooms are here.&n~
 ~
-19 42 3 0 7 0 8200 16385 0 0 0
+19 48 3 0 7 0 8200 16385 0 0 0
 2 0 0 0 0 0 0 0
 1 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+mushrooms blue~
+&+bThese mushrooms look tasty.&n
 ~
 #817
 mushrooms purple _frg_~
@@ -7466,8 +7466,8 @@ mushrooms purple _frg_~
 2 0 0 9 0 0 0 0
 2 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+mushrooms purple~
+&+mThese mushrooms look tasty.&n
 ~
 #818
 mushrooms pink _frg_~
@@ -7478,11 +7478,11 @@ mushrooms pink _frg_~
 4 0 0 0 0 0 0 0
 2 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+mushrooms pink~
+&+MThese mushrooms look tasty.&n
 ~
 #819
-cactus _frg_~
+small edible cactus _frg_~
 &+ga small edible cactus&n~
 &+gA small cactus is here.~
 ~
@@ -7490,63 +7490,83 @@ cactus _frg_~
 2 0 0 0 0 0 0 0
 2 0 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+small edible cactus~
+&+gThis cactus has not yet bloomed.&n
 ~
 #820
 grass clump desert _frg_~
 &+ya small clump of desert grass&n~
-&+gSome desert grass is here.~
+&+ySome desert grass is here.~
 ~
 19 42 3 0 7 0 8200 16385 0 0 0
 1 0 0 0 0 0 0 0
 2 45 100
 E
-reeds marsh~
-&+gRoughly a foot long, this small collection of reeds looks safe to eat.
+desert grass clump~
+&+yThis small clump of desert grass looks possibly edible.&n
 ~
 #821
-nightshade plant~
+nightshade plant _frg_~
 &+Lsome nightshade&n~
 &+LA strange looking plant rests here.&n~
 ~
-19 15 3 0 7 0 0 16385 0 0 0
-0 0 0 0 0 0 0 0
+19 48 3 0 7 0 0 16385 0 0 0
+0 0 0 1 0 0 0 0
 0 55 100
+E
+nightshade plant~
+&+LThis small plant looks dangerous.&n
+~
 #822
-mandrak root~
+mandrake root _frg_~
 &+ya mandrake root&n~
 &+yA mandrake root has been left here.&n~
 ~
-19 15 3 0 7 0 0 16385 0 0 0
+19 48 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 62 100
+E
+mandrake root~
+&+yThis looks like a mandrake root.  Maybe you could make some mandrake stew.&n
+~
 #823
-garlic~
+garlic _frg_~
 &+Wsome garlic&n~
 &+WA garlic bulb has been left here.&n~
 ~
-19 15 3 0 7 0 0 16385 0 0 0
+19 48 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 55 100
+E
+garlic~
+&+yThis bulb of garlic still has a little &+ydirt&+W on it.&n
+~
 #824
-faerie dust~
+faerie dust _frg_~
 &+msome faerie dust&n~
 &+mSomeone has left some faerie dust here.&n~
 ~
 19 45 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 72 100
+E
+faerie dust~
+&+mThis dust looks magically delicious.&n
+~
 #825
-dragon blood~
+dragon dragons blood _frg_~
 &+ra few drops of dragons blood&n~
 &+rThere are drops of dragon blood on the ground here.&n~
 ~
 19 2 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 60 100
+E
+dragon dragons blood~
+&+rThis blood refuses to congeal.&n
+~
 #826
-herb buds green _id_~
+herb buds green _id_ _frg_~
 &+ga green herb&n~
 &+gSome green buds have been left here&n~
 ~
@@ -7558,11 +7578,11 @@ herb buds green~
 &+gPart of a strange five leaf plant.&n
 ~
 #827
-stone strange _id_ stones~
+stone strange _id_ stones _frg_~
 &+La &+rstrange &+Lstone&n~
 &+LSome &+Lstrange&+r stones&+L have been left here&n~
 ~
-13 15 3 0 7 0 0 16385 0 0 0
+13 11 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 1230 100
 E
@@ -7570,11 +7590,11 @@ stone living~
 &+LPart of a strange &+rliving&+Lstone.&n
 ~
 #828
-bones bone _id_~
+bones bone _id_ _frg_~
 &+Wa &nhuman&+W &+Wbone&n~
 &+WA &nhuman&+W &+Wbone&n have been left here.~
 ~
-13 15 3 0 7 0 0 16385 0 0 0
+13 10 3 0 7 0 0 16385 0 0 0
 0 0 0 0 0 0 0 0
 0 56 100
 E

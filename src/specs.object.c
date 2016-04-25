@@ -10566,7 +10566,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
     obj->timer[0] = curr_time;
 
     // nightshade
-    ingred = read_object( VOBJ_INGRED_NIGHTSHADE, VIRTUAL);
+    ingred = read_object( VOBJ_FORAGE_NIGHTSHADE, VIRTUAL);
     if( !ingred )
     {
       return FALSE;
@@ -10574,7 +10574,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
     obj_to_obj(ingred, obj);
 
     // mandrake
-    ingred = read_object( VOBJ_INGRED_MANDRAKE, VIRTUAL);
+    ingred = read_object( VOBJ_FORAGE_MANDRAKE, VIRTUAL);
     if( !ingred )
     {
       return FALSE;
@@ -10582,7 +10582,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
     obj_to_obj(ingred, obj);
 
     // garlic
-    ingred = read_object( VOBJ_INGRED_GARLIC, VIRTUAL);
+    ingred = read_object( VOBJ_FORAGE_GARLIC, VIRTUAL);
     if( !ingred )
     {
       return FALSE;
@@ -10590,7 +10590,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
     obj_to_obj(ingred, obj);
 
     // faerie dust
-    ingred = read_object( VOBJ_INGRED_FAERIE_DUST, VIRTUAL);
+    ingred = read_object( VOBJ_FORAGE_FAERIE_DUST, VIRTUAL);
     if( !ingred )
     {
       return FALSE;
@@ -10598,7 +10598,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
     obj_to_obj(ingred, obj);
 
     // dragons blood
-    ingred = read_object( VOBJ_INGRED_DRAGON_BLOOD, VIRTUAL);
+    ingred = read_object( VOBJ_FORAGE_DRAGON_BLOOD, VIRTUAL);
     if( !ingred )
     {
       return FALSE;
@@ -10606,7 +10606,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
     obj_to_obj(ingred, obj);
 
     // green herb
-    ingred = read_object( VOBJ_INGRED_GREEN_HERB, VIRTUAL);
+    ingred = read_object( VOBJ_FORAGE_GREEN_HERB, VIRTUAL);
     if( !ingred )
     {
       return FALSE;
@@ -10615,7 +10615,7 @@ int alch_bag(P_obj obj, P_char ch, int cmd, char *arg)
 
 
     // strange stone
-    ingred = read_object( VOBJ_INGRED_STRANGE_STONE, VIRTUAL);
+    ingred = read_object( VOBJ_FORAGE_STRANGE_STONE, VIRTUAL);
     if( !ingred )
     {
       return FALSE;

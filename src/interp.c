@@ -1567,9 +1567,8 @@ void command_interpreter(P_char ch, char *argument)
       {
         clear_links(ch, LNK_ESSENCE_OF_WOLF);
       }
-      if (IS_AFFECTED2(ch, AFF2_SCRIBING) &&
-          (cmd != CMD_PETITION && cmd != CMD_TELL && cmd != CMD_MOVE &&
-           cmd != CMD_LOOK && cmd != CMD_WHISPER))
+      if( IS_AFFECTED2(ch, AFF2_SCRIBING) && (cmd != CMD_PETITION && cmd != CMD_TELL && cmd != CMD_MOVE
+        && cmd != CMD_LOOK && cmd != CMD_WHISPER && cmd != CMD_FORAGE) )
       {
         send_to_char("You're busy scribing a spell into your spellbook!\r\n", ch);
         return;
@@ -2440,7 +2439,7 @@ void assign_command_pointers(void)
   CMD_N(CMD_THROW, STAT_NORMAL + POS_STANDING, do_throw, 0);    /* TASFALEN */
   CMD_N(CMD_FIRSTAID, STAT_NORMAL + POS_STANDING, do_first_aid, 0);
   CMD_N(CMD_FLY, STAT_NORMAL + POS_SITTING, do_fly, IMMORTAL);
-  CMD_N(CMD_FORAGE, STAT_NORMAL + POS_STANDING, do_forage, 0);
+  CMD_N(CMD_FORAGE, STAT_RESTING + POS_SITTING, do_forage, 0);
   CMD_N(CMD_CONSTRUCT, STAT_NORMAL + POS_STANDING, do_construct, 20);
   CMD_N(CMD_GUILDHALL, STAT_DEAD + POS_PRONE, do_guildhall, 25);
   // old guildhalls (deprecated)

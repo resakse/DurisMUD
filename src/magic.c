@@ -5959,7 +5959,7 @@ void spell_summon_insects(int level, P_char ch, char *arg, int type, P_char vict
     {
       next_obj = t_obj->next_content;
 
-      if( obj_index[t_obj->R_num].virtual_number == VOBJ_INGRED_MANDRAKE )
+      if( obj_index[t_obj->R_num].virtual_number == VOBJ_FORAGE_MANDRAKE )
       {
         used_obj = t_obj;
         break;
@@ -21037,7 +21037,7 @@ void spell_spore_burst(int level, P_char ch, char *arg, int type, P_char victim,
      break;
    }
   
-  garlic = get_spell_component(ch, VOBJ_INGRED_GARLIC, 1);
+  garlic = get_spell_component(ch, VOBJ_FORAGE_GARLIC, 1);
   if(!garlic)
   {
     send_to_char("You must have &+Wsome garlic&n in your inventory.\n", ch);
@@ -21077,7 +21077,7 @@ void event_spore_burst(P_char ch, P_char victim, P_obj obj, void *data)
 
   if(number(0, 1) && (sbdata->spores < 3))
   { 
-    garlic = get_spell_component(ch, VOBJ_INGRED_GARLIC, 1);
+    garlic = get_spell_component(ch, VOBJ_FORAGE_GARLIC, 1);
     sbdata->spores++;
   }
 

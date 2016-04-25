@@ -970,43 +970,393 @@ void do_rage(P_char ch, char *argument, int cmd)
   set_short_affected_by(ch, SKILL_RAGE_REORIENT, dura + (5 * WAIT_SEC) / 2);
 }
 
-/*
- * forage - look for little food items in suitable terrain
- */
+// Creates a foragable item that would grow in sector, sends forage message to ch, and gives obj to them.
+// Returns TRUE iff we found a forage item to give to ch, and FALSE if we couldn't find an item for the sector.
+bool forage_sect( P_char ch, int sector, bool poisoned )
+{
+  char *text, buf[MAX_STRING_LENGTH];
+  P_obj forage_obj;
 
+  forage_obj = NULL;
+  switch( sector )
+  {
+  case SECT_FOREST:
+    text = "through the undergrowth";
+    switch( number(1, 15) )
+    {
+    case 1:
+      forage_obj = read_object( VOBJ_FORAGE_EDIBLE_ROOT, VIRTUAL );
+      break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_SPROUTS, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_BLUEBERRIES, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_FOREST_TOADSTOOL, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_CRABAPPLES, VIRTUAL );
+        break;
+      case 6:
+        forage_obj = read_object( VOBJ_FORAGE_RASPBERRIES, VIRTUAL );
+        break;
+      case 7:
+        forage_obj = read_object( VOBJ_FORAGE_TREEROOT_MOSS, VIRTUAL );
+        break;
+      case 8:
+        forage_obj = read_object( VOBJ_FORAGE_BROWN_TUBER, VIRTUAL );
+        break;
+      case 9:
+        forage_obj = read_object( VOBJ_FORAGE_RED_MUSHROOMS, VIRTUAL );
+        break;
+      case 10:
+        forage_obj = read_object( VOBJ_FORAGE_NIGHTSHADE, VIRTUAL );
+        break;
+      case 11:
+        forage_obj = read_object( VOBJ_FORAGE_MANDRAKE, VIRTUAL );
+        break;
+      case 12:
+        forage_obj = read_object( VOBJ_FORAGE_GARLIC, VIRTUAL );
+        break;
+      case 13:
+        forage_obj = read_object( VOBJ_FORAGE_FAERIE_DUST, VIRTUAL );
+        break;
+      case 14:
+        forage_obj = read_object( VOBJ_FORAGE_DRAGON_BLOOD, VIRTUAL );
+        break;
+      case 15:
+      default:
+        forage_obj = read_object( VOBJ_FORAGE_GREEN_HERB, VIRTUAL );
+        break;
+    }
+    break;
+      break;
+  case SECT_SWAMP:
+    text = "the surrounding swamp";
+    switch( number(1, 8) )
+    {
+      case 1:
+        forage_obj = read_object( VOBJ_FORAGE_SWAMP_GRUB, VIRTUAL );
+        break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_MANGROVE_ROOT, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_SPROUTS, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_NIGHTSHADE, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_MANDRAKE, VIRTUAL );
+        break;
+      case 6:
+        forage_obj = read_object( VOBJ_FORAGE_FAERIE_DUST, VIRTUAL );
+        break;
+      case 7:
+        forage_obj = read_object( VOBJ_FORAGE_GREEN_HERB, VIRTUAL );
+        break;
+      case 8:
+      default:
+        forage_obj = read_object( VOBJ_FORAGE_HUMAN_BONE, VIRTUAL );
+        break;
+    }
+    break;
+  case SECT_FIELD:
+    text = "through the brush";
+    switch( number(1, 15) )
+    {
+      case 1:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_ROOT, VIRTUAL );
+        break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_BLUEBERRIES, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_RASPBERRIES, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_WIREGRASS, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_BROWN_TUBER, VIRTUAL );
+        break;
+      case 6:
+        forage_obj = read_object( VOBJ_FORAGE_LICHEN, VIRTUAL );
+        break;
+      case 7:
+        forage_obj = read_object( VOBJ_FORAGE_RED_MUSHROOMS, VIRTUAL );
+        break;
+      case 8:
+        forage_obj = read_object( VOBJ_FORAGE_NIGHTSHADE, VIRTUAL );
+        break;
+      case 9:
+        forage_obj = read_object( VOBJ_FORAGE_MANDRAKE, VIRTUAL );
+        break;
+      case 10:
+        forage_obj = read_object( VOBJ_FORAGE_GARLIC, VIRTUAL );
+        break;
+      case 11:
+        forage_obj = read_object( VOBJ_FORAGE_FAERIE_DUST, VIRTUAL );
+        break;
+      case 12:
+        forage_obj = read_object( VOBJ_FORAGE_DRAGON_BLOOD, VIRTUAL );
+        break;
+      case 13:
+        forage_obj = read_object( VOBJ_FORAGE_GREEN_HERB, VIRTUAL );
+        break;
+      case 14:
+        forage_obj = read_object( VOBJ_FORAGE_STRANGE_STONE, VIRTUAL );
+        break;
+      case 15:
+      default:
+        forage_obj = read_object( VOBJ_FORAGE_HUMAN_BONE, VIRTUAL );
+        break;
+    }
+    break;
+  case SECT_HILLS:
+    text = "through the rocky terrain";
+    switch( number(1, 15) )
+    {
+      case 1:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_ROOT, VIRTUAL );
+        break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_SPROUTS, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_BLUEBERRIES, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_CRABAPPLES, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_RASPBERRIES, VIRTUAL );
+        break;
+      case 6:
+        forage_obj = read_object( VOBJ_FORAGE_WIREGRASS, VIRTUAL );
+        break;
+      case 7:
+        forage_obj = read_object( VOBJ_FORAGE_BROWN_TUBER, VIRTUAL );
+        break;
+      case 8:
+        forage_obj = read_object( VOBJ_FORAGE_LICHEN, VIRTUAL );
+        break;
+      case 9:
+        forage_obj = read_object( VOBJ_FORAGE_BLIND_CAVEWORM, VIRTUAL );
+        break;
+      case 10:
+        forage_obj = read_object( VOBJ_FORAGE_MANDRAKE, VIRTUAL );
+        break;
+      case 11:
+        forage_obj = read_object( VOBJ_FORAGE_GARLIC, VIRTUAL );
+        break;
+      case 12:
+        forage_obj = read_object( VOBJ_FORAGE_FAERIE_DUST, VIRTUAL );
+        break;
+      case 13:
+        forage_obj = read_object( VOBJ_FORAGE_DRAGON_BLOOD, VIRTUAL );
+        break;
+      case 14:
+        forage_obj = read_object( VOBJ_FORAGE_STRANGE_STONE, VIRTUAL );
+        break;
+      case 15:
+        forage_obj = read_object( VOBJ_FORAGE_HUMAN_BONE, VIRTUAL );
+        break;
+    }
+    break;
+  case SECT_MOUNTAIN:
+    text = "through the rocky terrain";
+    switch( number(1, 10) )
+    {
+      case 1:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_ROOT, VIRTUAL );
+        break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_BLUEBERRIES, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_RASPBERRIES, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_BROWN_TUBER, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_LICHEN, VIRTUAL );
+        break;
+      case 6:
+        forage_obj = read_object( VOBJ_FORAGE_BLIND_CAVEWORM, VIRTUAL );
+        break;
+      case 7:
+        forage_obj = read_object( VOBJ_FORAGE_FAERIE_DUST, VIRTUAL );
+        break;
+      case 8:
+        forage_obj = read_object( VOBJ_FORAGE_DRAGON_BLOOD, VIRTUAL );
+        break;
+      case 9:
+        forage_obj = read_object( VOBJ_FORAGE_STRANGE_STONE, VIRTUAL );
+        break;
+      case 10:
+      default:
+        forage_obj = read_object( VOBJ_FORAGE_HUMAN_BONE, VIRTUAL );
+        break;
+    }
+    break;
+  case SECT_UNDRWLD_WILD:
+    text = "the surrounding area";
+    switch( number(1, 8) )
+    {
+      case 1:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_ROOT, VIRTUAL );
+        break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_BLIND_CAVEWORM, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_GREEN_MUSHROOMS, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_PURPLE_MUSHROOMS, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_PINK_MUSHROOMS, VIRTUAL );
+        break;
+      case 6:
+        forage_obj = read_object( VOBJ_FORAGE_MANDRAKE, VIRTUAL );
+        break;
+      case 7:
+        forage_obj = read_object( VOBJ_FORAGE_GARLIC, VIRTUAL );
+        break;
+      case 8:
+      default:
+        forage_obj = read_object( VOBJ_FORAGE_FAERIE_DUST, VIRTUAL );
+        break;
+    }
+    break;
+  case SECT_UNDRWLD_MUSHROOM:
+    text = "the surrounding area";
+    switch( number(1, 12) )
+    {
+      case 1:
+        forage_obj = read_object( VOBJ_FORAGE_MANGROVE_ROOT, VIRTUAL );
+        break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_FOREST_TOADSTOOL, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_TREEROOT_MOSS, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_RED_MUSHROOMS, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_GREEN_MUSHROOMS, VIRTUAL );
+        break;
+      case 6:
+        forage_obj = read_object( VOBJ_FORAGE_BLUE_MUSHROOMS, VIRTUAL );
+        break;
+      case 7:
+        forage_obj = read_object( VOBJ_FORAGE_PURPLE_MUSHROOMS, VIRTUAL );
+        break;
+      case 8:
+        forage_obj = read_object( VOBJ_FORAGE_NIGHTSHADE, VIRTUAL );
+        break;
+      case 9:
+        forage_obj = read_object( VOBJ_FORAGE_MANDRAKE, VIRTUAL );
+        break;
+      case 10:
+        forage_obj = read_object( VOBJ_FORAGE_GARLIC, VIRTUAL );
+        break;
+      case 11:
+        forage_obj = read_object( VOBJ_FORAGE_DRAGON_BLOOD, VIRTUAL );
+        break;
+      case 12:
+        forage_obj = read_object( VOBJ_FORAGE_GREEN_HERB, VIRTUAL );
+        break;
+    }
+    break;
+  case SECT_DESERT:
+    text = "the surrounding desert";
+    switch( number(1, 6) )
+    {
+      case 1:
+        forage_obj = read_object( VOBJ_FORAGE_EDIBLE_ROOT, VIRTUAL );
+        break;
+      case 2:
+        forage_obj = read_object( VOBJ_FORAGE_WIREGRASS, VIRTUAL );
+        break;
+      case 3:
+        forage_obj = read_object( VOBJ_FORAGE_DESERT_GRASS, VIRTUAL );
+        break;
+      case 4:
+        forage_obj = read_object( VOBJ_FORAGE_NIGHTSHADE, VIRTUAL );
+        break;
+      case 5:
+        forage_obj = read_object( VOBJ_FORAGE_STRANGE_STONE, VIRTUAL );
+        break;
+      case 6:
+      default:
+        forage_obj = read_object( VOBJ_FORAGE_HUMAN_BONE, VIRTUAL );
+        break;
+    }
+    break;
+  // If we can't find a valid sector type, then return FALSE.
+  default:
+    return FALSE;
+    break;
+  }
+
+  // Handle poison.
+  if( !GET_CLASS(ch, CLASS_RANGER) && !GET_CLASS(ch, CLASS_DRUID) && poisoned )
+  {
+    // 1 in 7 chance for a non-poisoned food to be poisoned.
+    if( !number(0, 6) && !forage_obj->value[3] )
+      forage_obj->value[3] = 10 + number(0, 10);
+  }
+
+  obj_to_char(forage_obj, ch);
+  sprintf(buf, "Searching %s, you manage to find $p.", text);
+  act(buf, FALSE, ch, forage_obj, 0, TO_CHAR);
+  act("Foraging around, $n comes up with $p.", TRUE, ch, forage_obj, 0, TO_ROOM);
+  return TRUE;
+}
+
+// do_forage - look for little food items in suitable terrain
 void do_forage(P_char ch, char *arg, int cmd)
 {
-  P_obj    foodobj, treeobj = NULL;
-  int      chance = 0;
-  int      chance2 = 0;
-  char     sectname[64] = "through the area", buf[512], pois = TRUE;
+  P_obj treeobj;
+  int   chance, chance2;
+  char  *sectmessage, buf[512];
+  bool  poisoned;
 
-  if (!SanityCheck(ch, "do_forage"))
+  if( !SanityCheck(ch, "do_forage") )
     return;
 
-  if (IS_NPC(ch))
+  if( IS_NPC(ch) )
   {
     send_to_char("You are far too NPC-like to even try.\r\n", ch);
     return;
   }
-  if (IS_AFFECTED2(ch, AFF2_SCRIBING))
+  if( IS_AFFECTED2(ch, AFF2_SCRIBING) || IS_AFFECTED2(ch, AFF2_MEMORIZING) )
   {
-    send_to_char
-      ("Sorry, you're quite busy with your scribing right now..\r\n", ch);
+    treeobj = read_object( VOBJ_FORAGE_FIRST + number(0, VOBJ_FORAGE_NUM_TYPES - 1), VIRTUAL );
+    act("You doodle a picture of $p in your spellbook.\r\n", FALSE, ch, treeobj, NULL, TO_CHAR);
+    extract_obj( treeobj );
     return;
   }
-  if (IS_AFFECTED2(ch, AFF2_MEMORIZING))
-  {
-    send_to_char("Sorry, you're quite busy memorizing at the moment.\r\n",
-                 ch);
-    return;
-  }
+
   if( IS_FIGHTING(ch) || IS_DESTROYING(ch) )
   {
-    act("Forage while fighting?  Are you mad!?",
-        FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
+    act("Forage while fighting?  Are you mad!?", FALSE, ch, NULL, NULL, TO_CHAR);
     return;
   }
+
+  // Default 0 % chance and can be poisoned, and no tree.
+  chance = chance2 = 0;
+  poisoned = TRUE;
+  treeobj = NULL;
 
   /*
    * check out the general terrain
@@ -1014,9 +1364,9 @@ void do_forage(P_char ch, char *arg, int cmd)
   switch (world[ch->in_room].sector_type)
   {
   case SECT_OCEAN:
-    send_to_char
-      ("You manage to grab a fish, but it flops out of your hands.\r\n", ch);
+    send_to_char("You manage to grab a fish, but it flops out of your hands.\r\n", ch);
     return;
+  case SECT_ROAD:
   case SECT_CITY:
   case SECT_UNDRWLD_CITY:
   case SECT_INSIDE:
@@ -1034,8 +1384,7 @@ void do_forage(P_char ch, char *arg, int cmd)
     return;
   case SECT_NO_GROUND:
   case SECT_UNDRWLD_NOGROUND:
-    send_to_char("Not much food hanging around in midair, I'm afraid.\r\n",
-                 ch);
+    send_to_char("Not much food hanging around in midair, I'm afraid.\r\n", ch);
     return;
   case SECT_UNDERWATER:
   case SECT_UNDERWATER_GR:
@@ -1054,23 +1403,19 @@ void do_forage(P_char ch, char *arg, int cmd)
   case SECT_ETHEREAL:
   case SECT_ASTRAL:
   case SECT_LAVA:
-    send_to_char
-      ("Food? Here?! I don't think so.\r\n", ch);
+    send_to_char("Food? Here?! I don't think so.\r\n", ch);
     return;
 
     /* following just may have something */
-
   case SECT_SWAMP:
-    if (GET_RACE(ch) != RACE_TROLL)
+    if( (GET_RACE( ch ) != RACE_TROLL) && number( 0, 1) )
     {
-      send_to_char
-        ("You have no idea what around here is edible and what isn't..\r\n",
-         ch);
+      send_to_char("You have no idea what around here is edible and what isn't..\r\n", ch);
       return;
     }
 
     chance = 30;
-    pois = FALSE;
+    poisoned = FALSE;
     break;
   case SECT_FIELD:
     chance = 15;
@@ -1115,193 +1460,115 @@ void do_forage(P_char ch, char *arg, int cmd)
     chance2 = 30;
     break;
   case SECT_DESERT:
-  case SECT_ROAD:
   case SECT_ARCTIC:
   case SECT_SNOWY_FOREST:
     chance = 3;
     break;
   default:
-    logit(LOG_DEBUG, "Bogus sector_type (%d) in do_forage",
-          world[ch->in_room].sector_type);
+    logit( LOG_DEBUG, "do_forage: Bogus sector_type %d for room vnum %d.", world[ch->in_room].sector_type,
+      world[ch->in_room].number );
     send_to_char("How strange!  This terrain doesn't seem to exist!\r\n", ch);
     return;
   }
-  if (ch->specials.z_cord < 0)
+  if( ch->specials.z_cord < 0 )
   {
     send_to_char("Fish, sure.  Forage?  Nah.\r\n", ch);
     return;
   }
   else if (ch->specials.z_cord > 0)
   {
-    send_to_char("Not much food hanging around in midair, I'm afraid.\r\n",
-                 ch);
+    send_to_char("Not much food hanging around in midair, I'm afraid.\r\n", ch);
     return;
   }
+
   /*
    * ok, terrain is good, let's see if there are any extenuating
    * circumstances (SINGLE_FILE, etc)
    */
-
-  if (IS_SET(world[ch->in_room].room_flags, TUNNEL) ||
-      IS_SET(world[ch->in_room].room_flags, SINGLE_FILE))
+  if( IS_SET(world[ch->in_room].room_flags, TUNNEL)
+    || IS_SET(world[ch->in_room].room_flags, SINGLE_FILE) )
   {
     send_to_char("It's a little too cramped to forage in here.\r\n", ch);
     return;
   }
-  if (IS_SET(world[ch->in_room].room_flags, UNDERWATER))
+  if( IS_SET(world[ch->in_room].room_flags, UNDERWATER) )
   {
     send_to_char("Fish, sure.  Forage?  Nah.\r\n", ch);
     return;
   }
-  if (IS_STUNNED(ch))
+  if( IS_STUNNED(ch) )
   {
     send_to_char("You're too stunned to try and forage.\r\n", ch);
     return;
   }
 
-  /* slight int bonus.. */
-
-  if (GET_RACE(ch) == RACE_MOUNTAIN)
-    chance = 15;
-
+  // Slight int bonus..
   chance += GET_C_INT(ch) / 15;
 
-  if (GET_CLASS(ch, CLASS_ALCHEMIST))
+  // Alchemists main this.
+  if( GET_CLASS(ch, CLASS_ALCHEMIST) )
     chance += 50;
 
-  if (GET_C_LUK(ch) / 2 > number(0, 100)) {
+  // Lucky ppl get better chances.
+  if( GET_C_LUK(ch) / 2 > number(0, 100) )
+  {
     chance += 25;
   }
 
-  if (number(0, 99) > chance)
+  // If we fail regular forage..
+  if( number(0, 99) > chance )
   {
-    send_to_char
-      ("You forage about for a bit, but find nothing of any substance.\r\n",
-       ch);
-    act("$n forages around the area for a bit, but finds nothing.", TRUE,
-        ch, 0, 0, TO_ROOM);
+    // Chance for a giant to uproot a tree.
+    if( IS_GIANT(ch) && chance2 > 0 )
+    {
+      chance2 += GET_C_INT(ch) / 15;
+
+      if( number(0, 99) > chance2 )
+        return;
+
+      switch( world[ch->in_room].sector_type )
+      {
+      case SECT_FIELD:
+        sectmessage = "through the brush";
+        break;
+      case SECT_FOREST:
+        sectmessage = "through the undergrowth";
+        break;
+      case SECT_HILLS:
+      case SECT_MOUNTAIN:
+        sectmessage = "through the rocky terrain";
+        break;
+      case SECT_UNDRWLD_WILD:
+      case SECT_UNDRWLD_MUSHROOM:
+        sectmessage = "the surrounding area";
+        break;
+      default:
+        return;
+        break;
+      }
+      treeobj = read_object(20, VIRTUAL);
+      obj_to_room(treeobj, ch->in_room);
+      sprintf(buf, "Searching %s, you manage to unroot $p.", sectmessage);
+      act(buf, FALSE, ch, treeobj, 0, TO_CHAR);
+      act("Foraging around, $n unroots $p.", TRUE, ch, treeobj, 0, TO_ROOM);
+      CharWait(ch, PULSE_VIOLENCE * 1);
+      return;
+    }
+    send_to_char("You forage about for a bit, but find nothing of any substance.\r\n", ch);
+    act("$n forages around the area for a bit, but finds nothing.", TRUE, ch, 0, 0, TO_ROOM);
     CharWait(ch, PULSE_VIOLENCE * 1 / 2);
   }
   else
   {
-
-    /* success!  let's give them delicious grub, whaddaya say */
-
-    switch (world[ch->in_room].sector_type)
+    // Success!  let's give them delicious grub, whaddaya say?
+    if( !forage_sect(ch, world[ch->in_room].sector_type, poisoned) )
     {
-    case SECT_SWAMP:
-      foodobj = read_object(VOBJ_INGRED_NIGHTSHADE + number(0, 2), VIRTUAL);
-      strcpy(sectname, "the surrounding swamp");
-      break;
-
-    case SECT_FIELD:
-      foodobj = read_object(VOBJ_INGRED_NIGHTSHADE + number(0, 1), VIRTUAL);
-      strcpy(sectname, "through the brush");
-      break;
-
-    case SECT_FOREST:
-      foodobj = read_object(VOBJ_INGRED_MANDRAKE + number(0, 4), VIRTUAL);
-      strcpy(sectname, "through the undergrowth");
-      break;
-
-    case SECT_HILLS:
-      foodobj = read_object(VOBJ_INGRED_DRAGON_BLOOD + number(0, 3), VIRTUAL);
-      strcpy(sectname, "through the rocky terrain");
-      break;
-
-    case SECT_MOUNTAIN:
-      foodobj = read_object(VOBJ_INGRED_GREEN_HERB + number(0, 2), VIRTUAL);
-      strcpy(sectname, "through the rocky terrain");
-      break;
-
-    case SECT_UNDRWLD_WILD:
-      foodobj = read_object(VOBJ_INGRED_MANDRAKE + number(0, 2), VIRTUAL);
-      strcpy(sectname, "the surrounding area");
-      break;
-
-    case SECT_UNDRWLD_MUSHROOM:
-      foodobj = read_object(VOBJ_INGRED_MANDRAKE + number(0, 3), VIRTUAL);
-      strcpy(sectname, "the surrounding area");
-      break;
-
-    case SECT_DESERT:
-      foodobj = read_object(VOBJ_INGRED_DESERT_GRASS + number(0, 1), VIRTUAL);
-      strcpy(sectname, "the surrounding desert");
-      break;
-
-    default:
-      send_to_char("error in forage..  tell somebody.\r\n", ch);
+      logit( LOG_DEBUG, "do_forage: sector %d, room %d, could not find forage object.", world[ch->in_room].sector_type,
+        world[ch->in_room].number );
+      send_to_char("You found something; you found a bug.  Tell a god.\r\n", ch);
       return;
-    }
-
-    if (!foodobj)
-    {
-      send_to_char("you found something, but not really.  tell a god.\r\n",
-                   ch);
-      return;
-    }
-
-    obj_to_char(foodobj, ch);
-    sprintf(buf, "Searching %s, you manage to find $p.", sectname);
-    act(buf, FALSE, ch, foodobj, 0, TO_CHAR);
-    act("Foraging around, $n comes up with $p.", TRUE, ch, foodobj, 0,
-        TO_ROOM);
-    if (!GET_CLASS(ch, CLASS_RANGER) && !GET_CLASS(ch, CLASS_DRUID) && pois)
-    {
-      if (!number(0, 6) && !foodobj->value[3])
-        foodobj->value[3] = 10 + number(0, 10);
     }
     CharWait(ch, PULSE_VIOLENCE * 2);
-  }
-
-  if (IS_GIANT(ch))
-  {
-    chance2 += GET_C_INT(ch) / 15;
-
-    if (number(0, 99) > chance2)
-      return;
-
-    switch (world[ch->in_room].sector_type)
-    {
-    case SECT_FIELD:
-      treeobj = read_object(20, VIRTUAL);
-      strcpy(sectname, "through the brush");
-      break;
-
-    case SECT_FOREST:
-      treeobj = read_object(20, VIRTUAL);
-      strcpy(sectname, "through the undergrowth");
-      break;
-
-    case SECT_HILLS:
-      treeobj = read_object(20, VIRTUAL);
-      strcpy(sectname, "through the rocky terrain");
-      break;
-
-    case SECT_MOUNTAIN:
-      treeobj = read_object(20, VIRTUAL);
-      strcpy(sectname, "through the rocky terrain");
-      break;
-
-    case SECT_UNDRWLD_WILD:
-      treeobj = read_object(20, VIRTUAL);
-      strcpy(sectname, "the surrounding area");
-      break;
-
-    case SECT_UNDRWLD_MUSHROOM:
-      treeobj = read_object(20, VIRTUAL);
-      strcpy(sectname, "the surrounding area");
-      break;
-
-    default:
-      send_to_char("error in forage..  tell somebody.\r\n", ch);
-      return;
-    }
-    obj_to_room(treeobj, ch->in_room);
-    sprintf(buf, "Searching %s, you manage to unroot $p.", sectname);
-    act(buf, FALSE, ch, treeobj, 0, TO_CHAR);
-    act("Foraging around, $n unroots $p.", TRUE, ch, treeobj, 0, TO_ROOM);
-    CharWait(ch, PULSE_VIOLENCE * 1);
   }
 }
 
