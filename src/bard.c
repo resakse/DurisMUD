@@ -758,82 +758,100 @@ void bard_healing(int l, P_char ch, P_char victim, int song)
 
 void bard_charm(int l, P_char ch, P_char victim, int song)
 {
-  P_obj    tmp_obj;
+  int i;
+  bool PC = IS_PC(ch);
+  char buf[256];
+  P_obj tmp_obj;
+  P_char follower;
   struct affected_type af;
   struct char_link_data *cld;
-  int      i;
-  struct follow_type *k;
-
-  /* re-enable charm */
-  /* return; *//* charm shouldn't be working .. */
+  struct follow_type *k, *fol, *next_fol;
 
   if( GET_MASTER(victim) || GET_MASTER(ch) )
     return;
 
-
-  if(IS_PC(victim))
-  return;
- /*
-    if(GET_LEVEL(victim) > (GET_LEVEL(ch) - 5) && IS_PC(ch))
+  if( IS_PC(victim) || (( GET_LEVEL(victim) >= (GET_LEVEL( ch ) - 5) ) && PC) )
     return;
 
-  if(GET_LEVEL(ch) < (GET_LEVEL(victim)) && IS_PC(ch)) 
+  if( (victim == ch) || circle_follow(victim, ch) )
     return;
- */
-    if(GET_LEVEL(victim) > 50 && IS_PC(ch))
-	return;
 
-    if(GET_LEVEL(victim) > GET_LEVEL(ch) && IS_PC(ch))
-	return;
-    
-  if(victim == ch)
-    return;
-  if(circle_follow(victim, ch))
-    return;
-  /*
+  /*  What?  Sorcs/Psis/Clerics/etc can't be charmed?
   if(victim->player.m_class &
       (CLASS_SORCERER | CLASS_PSIONICIST | CLASS_CLERIC |
        CLASS_CONJURER | CLASS_WARLOCK | CLASS_ILLUSIONIST) && IS_PC(ch))
     return;
   */
-  if(victim->player.m_class &
-	(CLASS_WARLOCK | CLASS_ILLUSIONIST) && IS_PC(ch))
-	return;
 
-   if(bard_saves(ch, victim, song) && !IS_NPC(ch))
+  if( PC && (( victim->player.m_class & (CLASS_WARLOCK | CLASS_ILLUSIONIST) ) || bard_saves( ch, victim, song )) )
+  {
     return;
+  }
 
-  if(mob_index[GET_RNUM(victim)].func.mob == shop_keeper || (mob_index[GET_RNUM(victim)].qst_func == shop_keeper))
+  if( mob_index[GET_RNUM(victim)].func.mob == shop_keeper || (mob_index[GET_RNUM( victim )].qst_func == shop_keeper)
+    || affected_by_spell(victim, TAG_CONJURED_PET) )
+  {
+    return;
+  }
+
+  // Check for !charm eq.
+  for( tmp_obj = victim->carrying; tmp_obj; tmp_obj = tmp_obj->next_content )
+  {
+    if( IS_SET(tmp_obj->extra_flags, ITEM_NOCHARM) )
     {
-       return;
+      return;
     }
-
-
-  for (tmp_obj = victim->carrying; tmp_obj; tmp_obj = tmp_obj->next_content)
-    if(IS_SET(tmp_obj->extra_flags, ITEM_NOCHARM))
+  }
+  for( i = 0; i < MAX_WEAR; i++ )
+  {
+    if( victim->equipment[i] && IS_SET(victim->equipment[i]->extra_flags, ITEM_NOCHARM) )
+    {
       return;
-  for (i = 0; (i < MAX_WEAR); i++)
-    if(victim->equipment[i] &&
-        IS_SET(victim->equipment[i]->extra_flags, ITEM_NOCHARM))
-      return;
+    }
+  }
 
-
-
-  if(count_pets(ch) >= 3)
+  if( count_pets(ch) >= 3 )
     return;
-  if(victim->following && (victim->following != ch))
+
+  // Success!
+  // Pets try'n save their master!
+  if( victim->followers )
+  {
+    for( fol = victim->followers; fol; fol = next_fol )
+    {
+      next_fol = fol->next;
+      follower = fol->follower;
+      if( IS_AFFECTED(follower, AFF_CHARM) )
+        add_event(event_pet_death, 10 * WAIT_SEC, follower, NULL, NULL, 0, NULL, 0);
+      clear_links(follower, LNK_PET);
+      if( IS_NPC(follower) )
+      {
+        strcpy( buf, GET_NAME(ch) );
+        do_action(follower, buf, CMD_GROWL);
+        MobStartFight(follower, ch);
+      }
+      else
+      {
+        set_fighting(follower, ch);
+      }
+    }
+    stop_follower( victim );
+  }
+
+  if( victim->following && (victim->following != ch) )
     stop_follower(victim);
-  if(!victim->following)
+
+  if( !victim->following )
     add_follower(victim, ch);
+
   setup_pet(victim, ch, GET_C_INT(victim) ? 1240 / GET_C_INT(victim) : 4, 0);
-  act("You stand enthralled by $n's charming song...",
-      FALSE, ch, 0, victim, TO_VICT);
-  if(IS_FIGHTING(victim))
+  act("You stand enthralled by $n's charming song...", FALSE, ch, 0, victim, TO_VICT);
+  if( IS_FIGHTING(victim) )
     stop_fighting(victim);
-  if(IS_DESTROYING(victim))
+  if( IS_DESTROYING(victim) )
     stop_destroying(victim);
   StopMercifulAttackers(victim);
-  if(IS_NPC(victim))
+  if( IS_NPC(victim) )
     victim->only.npc->aggro_flags = 0;
 }
 
