@@ -3271,18 +3271,18 @@ void do_follow(P_char ch, char *argument, int cmd)
     act("You can't see!", FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
-  
+
 // There is a function called stop_all_followers, but it does not
 // distinguish between players and mobs. Follow stop only allows
 // someone to stop the following players in the same room.
   if(!strcmp("stop", name))
   {
     act("You look around and quickly decide nobody is worthy enough to follow your greatness.", FALSE, ch, 0, 0, TO_CHAR);
-   
+
     for (k = ch->followers; k; k = j)
     {
       j = k->next;
-      
+
       if(IS_PC(k->follower) &&
         !IS_TRUSTED(k->follower) &&
         ch->in_room == k->follower->in_room)
@@ -3309,24 +3309,20 @@ void do_follow(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(IS_NPC(leader) &&
-    !IS_TRUSTED(ch) &&
-    (IS_PC(ch) || IS_MORPH(ch) || (ch->following && IS_PC(ch->following))))
+  if( IS_NPC(leader) && !IS_TRUSTED(ch) && (IS_PC(ch) || IS_MORPH(ch) || ( ch->following && IS_PC(ch->following) )) )
   {
     send_to_char("Why would you follow a stupid mob?\n", ch);
     return;
   }
 
-  if(IS_PC(leader) &&
-    !IS_TRUSTED(ch) &&
-    IS_PC(ch) &&
-    !IS_DISGUISE(ch) &&
-    racewar(leader, ch))
+//  if( IS_PC(leader) && !IS_TRUSTED(ch) && IS_PC(ch) && !IS_DISGUISE(ch) && racewar(leader, ch) )
+  // racewar( viewer, viewee ) handles all of these.
+  if( racewar(leader, ch) )
   {
     send_to_char("You wish it was that easy, don't you?\n", ch);
     return;
   }
-  
+
   if(GET_MASTER(ch))
   {
     act("But you only feel like following $N!",

@@ -3553,8 +3553,6 @@ bool racewar(P_char viewer, P_char viewee)
     return FALSE;
   }
 
-  /* illithids see everyone's true name */
-//  if (IS_ILLITHID(viewer)) return FALSE;
 
   if( IS_DISGUISE(viewee) )
   {
@@ -3571,6 +3569,14 @@ bool racewar(P_char viewer, P_char viewee)
     return TRUE;
   }
 
+  // Illithids see everyone's true name.
+  if( IS_ILLITHID(viewer) )
+    return FALSE;
+  if( GET_RACEWAR(viewer) != GET_RACEWAR(viewee) )
+    return TRUE;
+
+  return FALSE;
+/*
   if (RACE_EVIL(viewer) && !RACE_EVIL(viewee))
     return TRUE;
 
@@ -3583,7 +3589,7 @@ bool racewar(P_char viewer, P_char viewee)
   if ((IS_HARPY(viewer) && GET_RACEWAR(viewer) == RACEWAR_NEUTRAL) &&
       !(IS_HARPY(viewee) && GET_RACEWAR(viewee) == RACEWAR_NEUTRAL))
     return TRUE;
-
+*/
 #if 0
   if (RACE_PUNDEAD(viewer) && RACE_PUNDEAD(viewee))
     return FALSE;
