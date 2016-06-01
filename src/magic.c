@@ -13285,7 +13285,8 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type, P_char victim
     "$p turns red hot and burns $N!",
     "$p turns red hot and burns the last bit of life out of $N!",
     "$p turns red hot and burns the last bit of life out of you!",
-    "$p turns red hot and burns the last bit of life out of $N!", 0
+    "$p turns red hot and burns the last bit of life out of $N!",
+    0
   };
 
   if( !IS_ALIVE(ch) || !IS_ALIVE(victim) )
@@ -13323,6 +13324,7 @@ void spell_disintegrate(int level, P_char ch, char *arg, int type, P_char victim
 
             if(!NewSaves(victim, SAVING_SPELL, -5) && !CHAR_IN_ARENA(victim) && !IS_ARTIFACT(obj) && !IS_NOSHOW(obj) )
             {
+              eqburnmsg.obj = obj;
               spell_damage(ch, victim, (int)get_property("spell.disintegrate.burn.dmg", 3), SPLDAM_FIRE, 0, &eqburnmsg);
               obj->condition -= BOUNDED(0, number(1, (int)get_property("spell.disintegrate.max.eq.dmg", 10)),
                 (obj->condition-1));
