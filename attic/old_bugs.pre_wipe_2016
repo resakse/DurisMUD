@@ -1,0 +1,884 @@
+Sat Jun  4 15:41:50 2016
+ **Kymaz[6401]: Looks like the delete character feature is not working.  I try delete character, says Deleting character, but then still exists
+Sat Jun  4 08:10:07 2016
+ **Yzar[1488]: all random eq is no stat
+Sat Jun  4 08:05:32 2016
+ **Drok[17140]: cannot delete and reroll char
+Sat Jun  4 06:07:13 2016
+ **Rolsek[15290]: merchant room in Faang, enter from the west, and only direction out is south
+Sat Jun  4 03:13:34 2016
+ **Zkl[88927]: character creations, says HARDCORE'S get 5 lives before they die, that should be updated
+Sat Jun  4 02:08:33 2016
+ **Urth[570866]: Lohrr... perhaps switch the forest colors so that they are normally bright green and dark green in the wind.. would make it easier to read
+Fri Jun  3 15:04:44 2016
+ **Laz[36329]: Blighter starts with nearly 2 sets of gear, has 1h pierce skill but can not wield the starting dagger.
+Fri Jun  3 13:15:00 2016
+ **Amatl[82250]: Gweniver the half orc anti-paladin is lying here, quite dead, fighting YOU!
+Thu Jun  2 16:03:03 2016
+ **Pahle[10304]: frost giants and fire giants seem to have all base stats
+Thu Jun  2 07:41:43 2016
+ **Zil[132522]: it seems the epic skill 'devastating critical' is used by warriors not paladins anymore, yet the help files say paladin have it and not warriors
+Wed Jun  1 22:50:41 2016
+ **Pnut[97663]: Monk/Blighter shows up as Errror #2 class
+Wed Jun  1 12:43:20 2016
+ **Bluhd[95652]: Summon Imp innate doesn't function properly at all.. you summon the imp, but he wont follow you, you make him consent he does, you group him, he still doesn't follow
+Tue May 31 08:04:45 2016
+ **Zip[66887]: can't seem to practice 'switch opponents' at teacher, it says the teacher doesn't know the skill. i tried 'switch' 'switch_opponent' 'switch opponents'...
+Tue May 31 01:15:37 2016
+ **Zip[571696]: dagger on the ground has typo "A crystal dagger lies here.7N"
+Mon May 30 23:44:22 2016
+ **Znarc[133066]: allg ates in tharn should be iron/gates
+Mon May 30 19:53:59 2016
+ **Znarc[553686]: i can still will offensive spells throuh minor para
+Mon May 30 12:40:31 2016
+ **Cholon[630599]: Your devotion to your god causes you to unleash a Flurry of attacks against (NULL)!
+Sun May 29 14:06:02 2016
+ **Doo[48021]: "help Artifact_maceoftheeffreeti" states that efreeti mace grants Globe of Invulnerability. It does not
+Sat May 28 00:49:09 2016
+ **Bluhd[552479]: I am permanently sated for some reason
+Fri May 27 16:46:41 2016
+ **Zkl[61271]: after multiclassing i didn't forget my spells, 1st circle:  6 of  2   (-121 seconds)
+Fri May 27 05:58:35 2016
+ **Juv[60807]: a big problem next wipe, will be the power stat vs bard spells and psi spells, many races have horrible power, which makes then very unattractive choices.  I would prolly bring the lowest racial power alot closer to the highest one, to avoid too much utter destruction of all races save grey/drow/gith , as these races have far too much power already, cheers.
+Tue May 24 02:58:32 2016
+ **Obeanti[623782]: demonic rider pets no longer have battle x
+Mon May 23 05:14:39 2016
+ **Sadash[65202]: not sure if should bug or idea this but random dropped shield weights don't align with their material at all. weight of shield helps with bashing doesn't it?
+Fri May 20 08:39:56 2016
+ **Amatl[66600]: DISPLAY command doesn't work
+Thu May 19 09:20:58 2016
+ **Znarc[822141]: pets don't take damage when walking thru curtains
+Thu May 19 06:04:40 2016
+ **Juv[569686]: it seems that you can still make long term pets of pets with the rod of summoning, not expiring
+Thu May 19 05:31:31 2016
+ **Znarc[581232]: pulchritude self only
+Wed May 18 22:37:29 2016
+ **Znarc[93646]: hurricane doesn't hit all in room, it's broken
+Tue May 17 13:33:02 2016
+ **Vojo[66885]: legsweep helpfile shows syntax as tackle
+Mon May 16 17:51:07 2016
+ **Znarc[35806]: creeping doom doesn't allow u to cast before the wave gives finished message, it should be able to be finished once pulse is done
+Mon May 16 01:36:47 2016
+ **Znarc[132535]: spike growth no worky
+Sun May 15 22:35:08 2016
+ **Hookte[20251]: power word kill is killing ppl with 400 or more hp
+Sun May 15 17:03:16 2016
+ **Metztli[35804]: Can KICK a butterfly in Abandoned Homestead, but you can't ROUNDKICK one.  It says "You can't figure out how to kick them!"  If that is true why can I regular kick them.
+Sat May 14 21:07:22 2016
+ **Jubei[580609]: protection from light cold fire etc double up when you ahve them as perm affects and then somebody casts spells on you it creates new spell
+Sat May 14 01:36:36 2016
+ **Znarc[69026]: mob in torrhan randomly flees, some mobs all over do that An elven woman attempts to flee.
+Fri May 13 13:34:51 2016
+ **Merm[93925]: can someone check to see if portal to KK from ardgral is working? i cant seem to find any new portals.
+Sun May  8 16:02:26 2016
+ **Zrkl[88971]: ansi on '7th Circle:' in help water magus, is too dark
+Sat May  7 20:24:25 2016
+ **Zoid[1134]: there is a penalty for excessive suicie, but no help file
+Fri May  6 22:32:55 2016
+ **Orthsquid[96524]: You land with stunning force!/mob slayed after fall, re log on and your perm knocked out
+Fri May  6 22:32:00 2016
+ **Orthsquid[96524]: You land with stunning force!
+Fri May  6 19:27:12 2016
+ **Zrkl[88971]: typo in githzerai help file, ' because of their connection to the spirit wworld,'  two 'ww' in world
+Wed May  4 18:42:02 2016
+ **Metztli[82217]: No help cheater file, or any way to indicate that CHEATER is even a command.
+Mon May  2 20:17:47 2016
+ **Lansec[93395]: had quest to kill adolescent centaur in centaur villages (the conjurer one...) killed it and got this error: MEMORY ERROR! quest_kill_original is zero, inform a god!
+Mon May  2 01:57:14 2016
+ **Amatl[588184]: Guild rank NORMAL can title others (except leader), but OFFICER cannot title others.  Perhaps allow officers to title others.. the toggle to block title changes prevents abuse.
+Sun May  1 22:04:58 2016
+ **Amatl[629254]: Should also allow group leader to use Outpost Repair to claim an outpost if a group goes through trouble and time to beat it and there is no leader on
+Sun May  1 20:58:03 2016
+ **Amatl[628856]: swarm doesn't cause outpost to target the caster with an arrow
+Sat Apr 30 20:43:25 2016
+ **Dubaria[93360]: Quest Go kill 2 a treant guardian (2 left) in Centaur Village....This doesn't seem to work.  Killed all the (hidden) treants in zone, none counted.
+Sat Apr 30 11:02:22 2016
+ **Metztli[558462]: Should be a space between stats and (help toughen up) [all words in parenthesis should be dark cyan like the help strahd above it] on ACHIEVEMENTS... Might want to add a fishing achievement of some kind.  Like Fisherman's Tale, catch 500 rainbow trout.  Kills any !catch timer function on fishing that might be implemented, and allows something interesting like catching fish that randomly have increased size and effectiveness (marked by immense or other modifier in the short description).  Or something similar.  
+Wed Apr 27 19:45:05 2016
+ **Naurakii[566467]: my mount ran out of moves on the water and even with a raft I can't dismount. I'm stuck!
+Wed Apr 27 12:16:44 2016
+ **Bluhd[545662]: Winterhaven troops still riding around GC even though news said they aren't anymore
+Wed Apr 27 10:02:02 2016
+ **Urae[82231]: illithid race can be followed
+Tue Apr 26 13:32:42 2016
+ **Dubaria[80467]: when a mob wanders into a zone and drops random equipment, it drops the equipment from the zone it's in, not the zone its from
+Mon Apr 25 21:03:12 2016
+ **Dubaria[6243]: Sticks to snakes does not consume any arrows to turn into snakes.  This is a druid spell.
+Mon Apr 25 20:59:56 2016
+ **Dubaria[6243]: A mandrake root (forage item) is made of IRON.
+Mon Apr 25 20:56:56 2016
+ **Dubaria[6243]: Some nightshade (forage item) says it is made of IRON.
+Mon Apr 25 19:55:03 2016
+ **Zrkl[88971]: 'a butterfly mask' should be worn on face, not eyes
+Mon Apr 25 07:41:24 2016
+ **Metztli[35845]: CLIMB SKILL: It might have a use or point, but the help file doesn't explain it.
+Mon Apr 25 07:38:06 2016
+ **Metztli[35845]: If you actually hold or wield a fishing pole, it doesn't recognize that you have one.
+Mon Apr 25 02:44:23 2016
+ **Bu[53640]: max con/dex eq doesn't help illithids
+Sun Apr 24 22:23:06 2016
+ **Metztli[88932]: a widemouth bass topples to the ground, your neck broken.  <-- Mob should be capitalized, and it shouldn't be "your" it should be "its"
+Sun Apr 24 21:48:59 2016
+ **Metztli[88924]: COMBINATION SKILL:  You attempt a combination, but fall flat on your face.  (but I didn't change postion at all)
+Sun Apr 24 20:39:53 2016
+ **Zloin[531916]: During combat - You maneuvers himself into a better position.
+Sun Apr 24 12:05:18 2016
+ **Malus[571688]: Can't mine if your pick is in your third or fourth hands as a thri
+Sun Apr 24 03:01:48 2016
+ **Bu[14907]: it's so anonying mindflayers can't stack/cast spells
+Sat Apr 23 06:47:10 2016
+ **Krimtad[36307]: Need a save!! Lost all mobility
+Sat Apr 23 04:13:46 2016
+ **Zloin[617475]: I feel young again
+Sat Apr 23 04:13:20 2016
+ **Zloin[617475]: You shout 'The one thing I don't have to worry about regarding those who have my artis on the goodie is this - you pussy fart sucking mother dust piles of lard won't be feeding my beloved's any time soon, so i'll just go farm them back for my next assault after you glaze filled regressed suck-faced tard-fucks let them poof.  I'm all over the place, like a ghost...bitches.'
+Fri Apr 22 16:23:07 2016
+ **Sarris[4053]: i think my bug is crashing tge mud
+Thu Apr 21 17:02:00 2016
+ **Keluk[65202]: petty but when salvaging mithril axe from hearth guard in Kimo - [2] m small piece of mithril   (extra leading "m")
+Thu Apr 21 12:57:37 2016
+ **Pogi[132833]: im doing damage with my hands while vampiric touch but not gaining hps...
+Thu Apr 21 03:41:32 2016
+ **Faelyn[48023]: elemental swarm for mobs seems to last much longer than for players (controller with Sierra mob  that then summons elemental swarm)
+Wed Apr 20 02:57:10 2016
+ **Jubei[3579]: listen ne/nw doesn't work
+Tue Apr 19 23:50:19 2016
+ **Bluhd[15124]: stiletto named tainted bliss has to 'l' in stiletto
+Tue Apr 19 23:01:55 2016
+ **Juv[48025]: illithids seem to be turned on, they can see the entire who list, they can be mindflayers, which totally ruin pvp fights, since between the skill reducing skill (to 10), and enrage, they have no issue fighting basically anyone, specially if they team up..
+Tue Apr 19 20:46:38 2016
+ **Rhoka[568507]: when disguised and the only one on your racewar side, there are no connections shown
+Tue Apr 19 03:16:55 2016
+ **Bluhd[16558]: Barskin fade message is wrong: You feel your skin once again take on a more barklike quality.   <-- its failing, so you should feel less barklike.
+Tue Apr 19 01:35:27 2016
+ **Bluhd[530304]: third tree east from the top of the IC outpost is drawing White for some reason
+Tue Apr 19 00:44:57 2016
+ **Bluhd[4914]: dirt toss use during combat as a class that doesn't use it doesn't give any response.. not even to say you don't have it.
+Mon Apr 18 14:18:12 2016
+ **Kojo[65202]: help legsweep skills syntax in help shows it as tackle
+Sun Apr 17 14:28:27 2016
+ **Zloin[48023]: I know you don't get exp for GH deaths, but I also didn't gain any for killing a goodie in their GH!
+Sun Apr 17 12:00:13 2016
+ **Bluhd[38332]: Abandoned Elven Homestead (Huggers) has a period added to the end of its name, which messes up dropped eq.
+Sun Apr 17 11:16:29 2016
+ **Dagnec[40656]: i am currenly unable to memorize detect i on my 42 lev necro. its in my book. it says that i cant hold the thought dispite showing i have the slot available
+Sun Apr 17 00:22:22 2016
+ **Bluhd[620880]: shouldn't be able to dim 2.squid in Domain of Lost Souls.  The whole zone is supposed to be !port, !Tele, etc.. except the one room in the garden which is supposed to be !mob so u can't dim in.  
+Sat Apr 16 17:27:24 2016
+ **Saif[48023]: 200+ per round from necro pets seems like a lot
+Fri Apr 15 12:35:29 2016
+ **Fenriz[38548]: awe, does it work at all? ive tested it and cant seem to get it to land
+Fri Apr 15 05:15:22 2016
+ **Tirl[14872]: uhh, as a monk I just threw my weapon, that was attached to my belt, never seen that before. maybe it was because i was accidently holding a container
+Thu Apr 14 20:18:13 2016
+ **Orthyn[48023]: not sure if bug but, never ever ever ever see ambram or death rider load. i check list every booy, never seen them on there all wipe.
+Thu Apr 14 19:34:29 2016
+ **Saif[48023]: helpfile for proc rate affects.  more info on game mechanics in general
+Thu Apr 14 15:28:11 2016
+ **Vul[65202]: Addendum to prior bug:  It should tell you LEG isn't a spot, or figure out LEG was supposed to mean LEGS
+Thu Apr 14 15:26:58 2016
+ **Vul[65202]: EQ SORT CUSTOM THIEF LEG puts feet, ear, finger, arm, etc items into 2.CHEST.  
+Thu Apr 14 12:24:02 2016
+ **Tyko[4024]: the kobolds in mt. skelenak are flagged as humanoids
+Wed Apr 13 19:30:26 2016
+ **Jubei[132508]: Enhancing an item with an encrusted stone (enhnace essence) will cause the item to object name as a random enhanced object blah blah blah
+Wed Apr 13 01:08:44 2016
+ **Zrkl[88972]: i'm trying examine to legend lore the infinity collar, since it's a container with stats, it won't show stats when identified
+Wed Apr 13 01:06:52 2016
+ **Zrkl[88972]: 'A necklace of pure obsidian' is made of iron, maybe change to obsidian
+Tue Apr 12 19:25:44 2016
+ **Zrkl[88972]: as a minstrel, if i examine an item that is !ID, i can't see the ivalue #
+Tue Apr 12 15:11:29 2016
+ **Parn[88618]: noone on either side is playing - pwipe please!
+Tue Apr 12 13:52:24 2016
+ **Amatl[132506]: adding an essence to an encrusted item creates an unnamed item thats encrusted.. Jubei is wielding one
+Tue Apr 12 12:33:47 2016
+ **Kojo[41724]: this Kearonor Beast mob in southern coastal never drops his quest item :(
+Mon Apr 11 17:53:30 2016
+ **Amatl[122728]: An elite Alatorin peacekeeper is missing  + in color code
+Mon Apr 11 16:17:55 2016
+ **Amatl[60703]: not sure if this is by design or a bug, but the unique: a wispy astral-twined mindstone ring   .. doesn't hum.
+Mon Apr 11 11:26:25 2016
+ **Amatl[571225]: Should be idea, but you read this more.  Shift PSI_SPELL to its own shrug system based on pow and int and con.. give that shrug to gith races.  So elves can shrug normal magic, and giths can shrug psi, but niether is uber shrugger.  This might help to break up the fact that there are a million elves on each side because shrug is a lifesaver in certain situations.  By splitting the spell systems, it gives these races an innate weakness, so while they get power they also suffer.  Think you should seriously consider this, Lohrr.
+Mon Apr 11 01:29:06 2016
+ **Coatl[35807]: that means the satchel and 100 p for my ship.
+Mon Apr 11 01:28:41 2016
+ **Coatl[35807]: and now it just re-gave me the lvl 5 and 20 achievements
+Mon Apr 11 01:28:10 2016
+ **Coatl[35807]: Since the crash happened the second I actually died, I'm thinking it had something to do with the arti and me.. but not sure
+Mon Apr 11 01:25:56 2016
+ **Coatl[35807]: I had a flesh golem pet, and the dagger called icicle arti.. I was morted, took 5 mins to get to -10.. it crashed the mud.. appeared naked at my start spot, ran back to corpse and it was empty.
+Mon Apr 11 01:13:52 2016
+ **Coatl[35808]: EXIT command is missing carriage returns after "Too dark to tell.." it causes the lines to run into each other.. also there is one too many periods
+Sun Apr 10 22:38:26 2016
+ **Rethan[22320]: the effect 'Fear' from beholder procs gives hit and damroll Hitroll: 78   Damroll: 50
+Sun Apr 10 12:49:50 2016
+ **Amatl[80914]: As a withered old bard attempts to attack a withered old bard, Jubei intercepts the attack with their hands and twist a withered old bard's arm! <- second withered old guard should be the target
+Sun Apr 10 11:45:43 2016
+ **Jubei[23206]: i got ported out of an underwater room and then into a normal room plane of water, and lungs began to burn like i was still underwater
+Sun Apr 10 11:45:04 2016
+ **Jubei[23206]: i got ported out of an under water room
+Sun Apr 10 10:28:23 2016
+ **Amatl[23206]: PSI_SPELLS and REG_SPELLs work on different mechanics.. PSI_SPELL_SHRUG should also be a different mechanic than SPELL_SHRUG
+Sun Apr 10 04:45:12 2016
+ **Jov[132723]: please remove the troggan egg quest for 2 planar essences, you can lock yourself in this zone then escape out great backdoors.  Make elemental essences matter, by only coming from actual planes again! This is currently unleashing tons of long form quest eq into the game. Like the fire/cold elemental collars questline, and the Damnations lines to name a few, lets give these items the respect they deserve by making them rare and not cheesable!
+Sat Apr  9 21:57:24 2016
+ **Rokk[55196]: the bartender in winterhaven is a quest giver but missing the golden G like the bartender in Woodseer
+Sat Apr  9 21:17:54 2016
+ **Rokk[49051]: if in a group with guilded members it says this when you try to group someone:  You can not enroll group members without being head of a group.
+Sat Apr  9 19:09:23 2016
+ **Coatl[35800]: assign someone to a guild without proper authority.  or something to that effect.
+Sat Apr  9 19:08:59 2016
+ **Coatl[549654]: when grouped with guilded people if you try to group someone it says you cannot assigndism
+Sat Apr  9 15:58:42 2016
+ **Vul[70852]: all the items in opal phoenix are missing their 'a', 'the', 'some' markers before their names.
+Fri Apr  8 23:37:00 2016
+ **Akatl[29418]: Harrow:  leather collar <-- missing 'a' at the beginning
+Fri Apr  8 17:18:03 2016
+ **Kojo[82065]: can someone check to see if Jindon circus on kk links to Jindon deadwood forest? i think the connector is busted as i can only teleport to get into this part of the zone.
+Fri Apr  8 15:49:07 2016
+ **Kojo[41787]: intimidator dagger - quest item for king in southern coastal didn't load on thief captain :(
+Fri Apr  8 12:30:39 2016
+ **Coatl[94723]: Garrote Typo:  You can seem to get your arms around your neck!  <-  Should be You can't seem to get your arms around his neck!  (so "'t" added to "can" then change the second pronoun selection to the pronoun of target not user)
+Fri Apr  8 11:47:08 2016
+ **Coatl[550035]: Yes, my character i noticed it on is level 46.. was told at 41 i could earn epic track by the machine.. thats how i knew it wasnt listed on epic skills
+Thu Apr  7 18:30:33 2016
+ **Coatl[83000]: EPIC SKILLS command doesn't show IMPROVED TRACK with teacher KEEBO
+Thu Apr  7 14:01:35 2016
+ **Vul[523659]: couldn't target disguised player using keywords from his disguise.  If he is disguised as a barbarian then 'k barbarian' should target him
+Wed Apr  6 19:08:21 2016
+ **Coatl[82744]: if you try to dirt toss in combat as an assassin it doesn't tell you you can't.  It doesn't tell you anything.
+Wed Apr  6 17:17:52 2016
+ **Lohrr[1200]: In DE, when you have 2 extra descriptions and you try to look at the second one, it shows the first instead.
+Wed Apr  6 16:31:58 2016
+ **Vul[15003]: DISGUISE: It increased the skill mid-sentence. (You do a horrid jobYou feel your skill in disguise improving., but manage to salvage the rest of the kit's supplies.)
+Wed Apr  6 15:58:51 2016
+ **Rem[82010]: MEMORY ERROR! quest_kill_original is zero, inform a god!
+Wed Apr  6 15:32:49 2016
+ **Vul[132507]: Disguise -> You disguise yourself into a elf.  (Should be "an elf")
+Wed Apr  6 13:03:08 2016
+ **Vul[82048]: blind mob just dodged a kick... if you can't kick while blind (as if you suddenly dont realize someone in front of you is beating on you) then you shouldn't be able to dodge kicks as if you see them.
+Wed Apr  6 12:17:35 2016
+ **Vul[6337]: size TINY swarm of small insects in Shadow Forest are not only bodyslamming, but bodyslamming during combat
+Tue Apr  5 23:43:40 2016
+ **Alrax[35838]: Inn charm tried on a non-animal should not burn up use of the ability
+Tue Apr  5 18:56:39 2016
+ **Zrkl[88972]: can't you please remove the flashing from the fishermans wharf map's ansi, i didn't mean for it to flash when i created it, the colors are fine, just no flashing
+Tue Apr  5 13:08:24 2016
+ **Tik[26270]: the firbolgs in the moonshaes aren't firbolgs, they're humanoids
+Tue Apr  5 09:13:12 2016
+ **Vul[16633]: Bartender in Woodseer doesn't have the Gold (Q), but still gives quests
+Mon Apr  4 22:56:54 2016
+ **Coatl[564041]: mobs outside tharnadia (ie. a Highwayman) talk about winterhaven not tharnadia.. likewise the room echoes of troops parading about are winterhaven troups not tharnadian troups.
+Mon Apr  4 22:26:27 2016
+ **Coatl[524896]: Mobs with wimpy flag randomly flee from no one
+Mon Apr  4 20:49:03 2016
+ **Drisk[38533]: staff still dont work 
+Mon Apr  4 19:42:03 2016
+ **Rethan[520860]: A young Gnomish scientist appears to be Human and is in excellent condition.
+Mon Apr  4 10:33:35 2016
+ **Vul[600071]: Arti_Loss Message (A Drow Elf shouts across the world 'Oudh!') when opposite side racewar, resets color after the race instead of setting it to dark cyan like the start of the sentence.
+Mon Apr  4 09:05:53 2016
+ **Vul[552493]: Sneak doesn't end on renting.  If you rent sneaking, you come back in the game sneaking.  Sneak is actually quite messed up with when it starts and terminates.
+Mon Apr  4 01:12:26 2016
+ **Rokk[522080]: gnomish scientist on em has wandered off his island.. the mud doesn't seem to stop mobs from walking on water
+Sun Apr  3 16:39:53 2016
+ **Azatl[93317]: none of the follower files or necro help files mention DISMISS, nor is there a help file on it.  This command is rather important and should at least be in the pets help file.
+Sun Apr  3 16:25:13 2016
+ **Azatl[93323]: moving under someone while reclined tells you u moved under them then it says you can't move in that direction.  It shouldn't say you can't move if you just did.
+Sun Apr  3 16:07:53 2016
+ **Azatl[82712]: won't allow me to assist my own zombie.. tells me that I decide not to for some reason.
+Sat Apr  2 23:26:41 2016
+ **Malus[76076]: mobs cast haste on themselves during combat
+Sat Apr  2 16:52:04 2016
+ **Malus[60884]: HELP STRAHD: Dyeing -> Dieing.
+Sat Apr  2 16:44:08 2016
+ **Malus[98610]: Corpse generation bug: the corpse of A mangy snarling bitch <-- corpse being created using capitalized mob name, when it should not.
+Sat Apr  2 16:43:20 2016
+ **Malus[98610]: Get from corpse:  the corpse of A mangy snarling bitch appears to be empty.  <-- 'T' in the should be capitalized, and the first letter of the mob name shouldn't.
+Sat Apr  2 14:02:53 2016
+ **Oi[48035]: alot of summoner mobs can't area or cast their full list of spells....
+Sat Apr  2 12:40:03 2016
+ **Beemo[132512]: cant quaff a bottle of past experience?? what is this? You suddenly feel.. like doing some exp so you can quaff a bottle of Past Experiences!
+Sat Apr  2 10:54:35 2016
+ **Vul[82033]: backstab doesn't always give a message.. to the user or the room
+Fri Apr  1 15:59:50 2016
+ **Faelyn[89164]: mobs will dismiss mobs that normally follow them (example: make gnome guard at keep in new hope use command 'dismiss' and it will dismiss the ogre and drow guard as well
+Fri Apr  1 14:28:43 2016
+ **Tyco[35285]: when 'gaze' You stare deep into (NULL)'s eyes... Fascinating.
+Fri Apr  1 08:20:45 2016
+ **Vul[82670]: List Hull says type Help Warship... there is no HELP WARSHIP
+Fri Apr  1 08:00:36 2016
+ **Jov[132575]: and when removing the price updating feature on guildhall cargo board, we can remove them from guild hall, and just place them at crew shops, for references only, not scouting tool 
+Fri Apr  1 07:55:05 2016
+ **Jov[60760]: i suggest removing the price updating feature on cargo board, that you can buy in the guild hall,  These can be used to park afk chars to figure out what cargo spots are being used, to determine cargoing habits with 0 risk, instead of having to scout docks or seas, which is much less informative and far more risky
+Fri Apr  1 02:14:29 2016
+ **Jubei[27048]: wear 2.vambraces still doesn't auto remove arm slot
+Thu Mar 31 13:34:57 2016
+ **Vul[132822]: if you buy accelerated healing from doctor, and then buy another spell before he finishes casting, he aborts the spell and casts the new one.  But he still charges you for the accelerated healing.
+Thu Mar 31 12:36:03 2016
+ **Vul[82755]: (hit enter on accident) ... greatly reduced for those 7 levels or more to squish newbie killing as a viable exp path.  Also think about making mushrooms unable to work on a character less than level 40.  Please.  This exp situation is so stupid and needs to be corrected. 
+Thu Mar 31 12:34:33 2016
+ **Vul[82755]: if you refuse to see light and put EXP back to something normal.. Kill all EXP from pkilling anyone lower than 15 levels than you.. and greatly reduced for those 7 levels or more
+Thu Mar 31 12:26:50 2016
+ **Vul[82762]: Results of Current EXP situation (Evil Leveling Path):  Mort-kill powerleveling by higher level until lvl 20.. then 25 mushrooms in 1 hr to reach level 46, then hunt newbs to get to level 50.  doing tiamat at 1hr30mins if you die once you end up at -EXP for whole zone, and the whole zone on spamkill is worth less than apparently 1 Bar Quest.  Exp system is forcing people to not play for 20 hours at a time to get well-rested so they have regular exp tables, and then to buy shrooms or cheese newbies to get the final levels.  They reach level 46 in 2.5 hours using this method, so the heightened EXP has NO EFFECT on slowing leveling... it just makes playing the game basically untenable.  It is better to wipe more often and have a real game with full playlists than to wipe 1 time a year and have like 4 players most of the time because no one wants to deal with the crappy exp.
+Wed Mar 30 21:58:45 2016
+ **Alrax[86026]: Quest to kill giant bats in Arcium appears to be bugged. Killed all the mobs I could find and none were the quest mob
+Wed Mar 30 18:43:34 2016
+ **Rokk[16633]: You invigorate you with renewed energy. <-- 2nd you should be yourself
+Wed Mar 30 17:13:01 2016
+ **Rokk[628051]: you shouldn't be able to track across swimmable_water, especially not a water room that requires a raft or lev/fly to get across.
+Wed Mar 30 11:17:21 2016
+ **Juv[48025]: is it possible to fix auction list, where we only auction items to one side of the racewars? this would be a helpful way to equip up people without eq, at not much cost to them if i desired, while not allowing the other side to take advantage of low prices and level chars to steamroll our side !
+Wed Mar 30 10:24:39 2016
+ **Juv[38176]: this rare load eq is really a bummer, when it comes to mid level zones, seeing almost no eq load in boyard , or even tezcat is not good really, If we wanna limit really good eq, that is one thing, which i agree with.
+Tue Mar 29 23:11:16 2016
+ **Bhsik[21509]: hammer - does 77 damage unsaved. 40s saved. burning hands does around 60s unsaved. boulder does 70 unsaved and knocks people down. hammer needs to be 150 unsave i think
+Tue Mar 29 00:08:58 2016
+ **Amatl[30169]: He THOUGHT your was going to hit you... <-- Just.. what?!
+Mon Mar 28 20:40:11 2016
+ **Amatl[60431]: LOOK OUT from a ship when two ships in same room, doesn't show other ship.
+Mon Mar 28 19:31:06 2016
+ **Amatl[536842]: charing elf gate guards do not aggro evil
+Mon Mar 28 15:35:11 2016
+ **Rokk[99538]: doorbash looks upon entering new room... BEFORE it removes the door.  Should remove door first.
+Sun Mar 27 23:17:49 2016
+ **Bluhd[95316]: someone has dropped an enhance material here! <-- Needs to be capitalized
+Sun Mar 27 22:52:55 2016
+ **Bluhd[538486]: can see spring appear when spell cast if you are asleep
+Sun Mar 27 07:53:14 2016
+ **Malus[35388]: can't use soc when sleeping
+Sun Mar 27 00:09:00 2016
+ **Vul[35205]: Quest Give Bug:  The armorer gives you gleaming longsword <--- no '.' at end of sentence and the object is missing the 'a' from the beginning
+Sat Mar 26 12:53:30 2016
+ **Beemo[132575]: i cant toggle vicious for paladin for some reason
+Sat Mar 26 11:52:48 2016
+ **Nauraki[75929]: the windtalker in Rogue Plains isnt leaving his north exit from his load grid. There's something wrong with north exits and load grids.
+Sat Mar 26 10:31:19 2016
+ **Malus[16633]: WS bartender that gives quests doesnt have the gold Q
+Sat Mar 26 06:53:27 2016
+ **Selm[99522]: MEMORY ERROR! quest_kill_original is zero, inform a god! by Selm 3/26/16 @ 2:53 AM EST. killed A tanned Farmer in cloud giant kingdom, using cause critical wounds. it was a kill quest 1 of 1 mob
+Fri Mar 25 19:11:43 2016
+ **Bluhd[88955]: With superb grace and ease, you intercept a blood hungry leech's attack with flaming dagger [poor] and counter-attack! <-- Obj should have its preposition before it ('a')
+Fri Mar 25 15:54:16 2016
+ **Raksha[97118]: rare load mob myrke the stalker, no eq, kinda stupid
+Thu Mar 24 20:16:37 2016
+ **Rethaz[22243]: Still bugged (zealot): Your devotion to your god causes you to unleash a Flurry of attacks against (NULL)!
+Thu Mar 24 17:54:04 2016
+ **Nauraki[76237]: When there's a load grid with a noth exit - like the demon in Arcaneum to the white fragment of a dream or the windtalker in Rogue plains - the mob isn't wandering out
+Thu Mar 24 17:53:26 2016
+ **Nauraki[76237]: please fix rogue pets running out of zones
+Thu Mar 24 17:53:15 2016
+ **Nauraki[76237]: The "Bel" invoke on the bastard sword of the demon slayer isn't working. The Euronymous and Jubilex invokes work just fine.
+Thu Mar 24 15:53:53 2016
+ **Bluhd[82861]: MEMORY ERROR! quest_kill_original is zero, inform a god!
+Thu Mar 24 12:29:49 2016
+ **Bluhd[99608]: recall doesn't capture standard says... 
+Thu Mar 24 03:44:41 2016
+ **Amatl[49209]: elven shrug shouldn't block psi attacks... different spells systems completely
+Thu Mar 24 01:40:36 2016
+ **Malus[563239]: As you tap on bracer of the whirlwinds an immense rush of vibrating energy flows down your limbs!.  <-- should have a 'the' before bracer and no '.' at the end
+Wed Mar 23 18:27:36 2016
+ **Sojo[30835]: no bank in storm giant hometown on kk.  this is craziness.
+Wed Mar 23 17:05:32 2016
+ **Malus[549305]: Sign at Clavados' Crossing as an extra space before every town listed, throwing the right side of sign and the balance of the text off.
+Tue Mar 22 20:54:32 2016
+ **Jov[811737]: Zone Name: The Arcaneum of L'srillizzin   seems to be agro good, despite what i was told, should this be an easy potion and hangout for evils, when we have a zone like torrhan which evils can camp with impunity? This is clearly a bit outta wack
+Tue Mar 22 19:21:51 2016
+ **Malus[82706]: no help on MELEE MASTERY
+Tue Mar 22 19:03:24 2016
+ **Malus[82762]: healer mobs shouldn't auto-heal a mob u are fighting in a room.. they can randomly be a dick, but if they don't have protector flag and they aren't grouped with the mob, its kinda bullshit
+Tue Mar 22 15:25:33 2016
+ **Bluhd[560471]: you can still walk over the marker for savannah
+Sat Mar 19 02:21:03 2016
+ **Oi[132920]: conjure fail rate is a joke for summoners. so undependable
+Fri Mar 18 16:24:55 2016
+ **Malus[60701]: look ship doesn't say the kind of vessel anywhere.
+Fri Mar 18 15:45:23 2016
+ **Malus[559633]: so apparently the news says you can't sell cargo with a diplo flag, but the code says u can and charges you 10% of yer sales price.. can u verify in the news which is correct so we know
+Fri Mar 18 12:53:46 2016
+ **Elmari[132575]: awe is broken not wanting to work
+Fri Mar 18 09:23:02 2016
+ **Malus[567625]: mining with a thri in a hand outside of hands 1 and 2 says u need a weapon suitable for minin
+Fri Mar 18 04:34:25 2016
+ **Malus[55355]: the rose that loads once outside the tharn gates isn't loading
+Fri Mar 18 02:15:57 2016
+ **Malus[132766]: Addendum.. typing list gives u the crew list, not the bartenders shop items... so its kinda buggy.. maybe move the crew list to the bar in the southeast corner of town.. the bloodmoon tavern
+Fri Mar 18 02:15:16 2016
+ **Malus[132766]: whats the command to buy crew from the bartender in tharn.. when I try to buy crew i get the items the bartender sells..
+Fri Mar 18 00:02:42 2016
+ **Malus[132508]: deposited 6000 p in myrabolus bank.. rented out.. logged in today its all gone.. dunno what can cause that but please fix it so it doesn't do it again :(
+Wed Mar 16 16:38:48 2016
+ **Dignar[48039]: syntax "use wand target" when target is not in room (he fleed) drain charges from wand. Should drain charges only when spell is realy casted not on attempt ?
+Wed Mar 16 08:39:24 2016
+ **Dignar[48043]: Druid see track in forest without proper skill - http://www.durismud.com/pvp/logs/227682
+Wed Mar 16 07:14:04 2016
+ **Kaene[48039]: Pane opens (NULL) and begins studying it intently.
+Wed Mar 16 00:04:11 2016
+ **Malus[98619]: If you try to "put all bp" and the bp is closed it doesn't do anything... doesn't even tell you that the bp is closed.  
+Tue Mar 15 16:46:24 2016
+ **Bluhd[35847]: you shouldn't need to be awake to see SKILLS
+Tue Mar 15 15:45:31 2016
+ **Malus[67745]: the ship combat file doesn't tell you how to FIRE the weapons.  So I spent alf the time fleeing an evil typing ORDER FIRE REAR or ORDER FIRE WEAPONS REAR, etc.  Figured out to just type fire right before I was sunk and killed.  I don't care bout that as its a game, but the help files should actually help.
+Tue Mar 15 15:01:36 2016
+ **Sojo[132743]: i actually meant the horses in the tharn stables e n n e s of square should be resized for my fat mino body
+Tue Mar 15 00:14:13 2016
+ **Doo[132614]: Typing "buy 1" in Kylara's pet shop results in "There is no such pet!"
+Tue Mar 15 00:06:33 2016
+ **Malus[30913]: Room 94701 Room Title:  Temperatee -> Temperate
+Mon Mar 14 21:12:00 2016
+ **Rethan[13348]: (message ends up on a new line)
+Mon Mar 14 21:11:47 2016
+ **Rethan[13348]: wretched breath!
+Mon Mar 14 21:11:38 2016
+ **Rethan[13348]: The Horseman of Pestilence chokes you with its 
+Mon Mar 14 18:08:12 2016
+ **Rokk[133055]: Tharnadia's docks aren't attached to the ocean..
+Mon Mar 14 17:42:59 2016
+ **Bhsik[88618]: when having two types of named equipment sets it is buggy and drops hps and stuff
+Mon Mar 14 04:37:32 2016
+ **Sadash[97655]: Not sure if it's a bug or not but i dismissed my pet and the weapons i had him wieldling poofed...i thought they dropped to ground as i believe that's what was/is suppose to happen..
+Mon Mar 14 00:13:21 2016
+ **Rokk[82762]: Help tags shouldn't exist.  Example:  Help Ships... this should auto-retarget to Help Ship.  No need to have two help files one of which is useless when u can just put the keyword on the same help file.
+Sun Mar 13 03:38:33 2016
+ **Sojo[132743]: all the mounts in tharn mount shop are small size. pls fix
+Sat Mar 12 23:14:28 2016
+ **Rokk[526462]: moon/sun messages and weather messages show through sleep
+Sat Mar 12 18:37:13 2016
+ **Grotar[620211]: the potion of endurance that was recently added to wh potion shop is !take.
+Sat Mar 12 18:35:56 2016
+ **Malus[512696]: you can walk onto the marker to The Ancient Halls of Ironstar from the west side, on Icecrag
+Sat Mar 12 17:21:32 2016
+ **Dignar[48039]: command "rem 2.ring" when standing in front of board in guild hall will remove message 2
+Sat Mar 12 16:32:19 2016
+ **Dignar[48039]: - NULL in mob desc - Alatorium Zone - Mob echo in room - Dortweimer Cuttlebuck the Deramuth Port clerk comes across a certain document, which he holds high and quickly reads from top to bottom.He makes a few marks on it, flips it over, and makes a few marks on the back. After a few more moments staring at the piece of paper, (NULL) slides it under one of many stacks on his desk and continues shuffling throug
+Sat Mar 12 16:30:49 2016
+ **Dignar[48039]: Bad Ansi Coding - Shag puts some _ore_(s) into a bottomless bag of the illithids.
+Sat Mar 12 14:55:36 2016
+ **Zloin[13430]: My pets just randomly dusted on me, no spell was cast and no damage
+Sat Mar 12 07:50:23 2016
+ **Malus[616871]: fish caught during fishing should all have the keyword Fish
+Sat Mar 12 06:48:02 2016
+ **Oi[132575]: why do summoner pets ALWAYS go rogue. also when their timer runs out they get a free hit on me?
+Sat Mar 12 06:13:03 2016
+ **Bmo[16621]: lol i bought potions but cant get it from my bag they not takeable
+Fri Mar 11 21:07:38 2016
+ **Tik[38457]: the gnome ambassador in valosian castle is flagged as halfling race
+Fri Mar 11 20:54:33 2016
+ **Solpwn[94566]: necro lich pets can wall engaged
+Fri Mar 11 20:54:32 2016
+ **Solpwn[94566]: necro lich pets can wall engaged
+Fri Mar 11 19:24:09 2016
+ **Malus[35254]: poison shouldn't work against certain races... undead for example.. this coming from a Thri.
+Fri Mar 11 13:08:48 2016
+ **Malus[23478]: mosswood: the company's cook need's keywords to match its long description
+Fri Mar 11 07:05:05 2016
+ **Rokk[82709]: News said you see room kick directions, this is what I see:  Your mighty kick sends a fallow deer flying out of the room!
+Fri Mar 11 00:24:56 2016
+ **Bluhd[35273]: when someone stops bandaging you, you don't get a message saying so.
+Thu Mar 10 18:08:17 2016
+ **Naurake[48041]: the diamond stud in court of the muse should be wearable ear
+Thu Mar 10 10:54:23 2016
+ **Oi[45000]: giant oak trees in charing are giant race instead of tree with no spec
+Thu Mar 10 08:33:23 2016
+ **Dignar[48039]: Total visible players: 4. Total in-game connections: 7. Record number of connections this boot: 13. - TIME Time elapsed since boot-up: 0:01:39 - I think Tottal connection this boot is not working good - somehow i cant belive 13 ppl log in and log of in less than 1 min.
+Thu Mar 10 07:51:59 2016
+ **Akatl[60149]: to move a ship ne for example, take current room #, subtract width # of rooms to map, add 1.. move ship to that room number
+Thu Mar 10 07:46:27 2016
+ **Akatl[60149]: apparently my ship bug was wrong, doesn't seem to move same each time :)
+Thu Mar 10 07:39:09 2016
+ **Akatl[60149]: in ship heading se moves 1 e 1 s 1 e etc... but heading sw moves 1 sw 1 sw 1 sw.. the sw is the correct way, other directions need to be adjusted to match
+Thu Mar 10 07:38:06 2016
+ **Akatl[60149]: in ship heading se moves 1 e 1 s 1 e etc... 
+Thu Mar 10 00:01:54 2016
+ **Sabir[30041]: illusionist pets shadow monster and insects don't display damage with toggle pet damage on
+Wed Mar  9 23:26:41 2016
+ **Saif[24523]: stornogs spheres should refresh to max number if you recast
+Wed Mar  9 21:32:09 2016
+ **Malus[611658]: when a thri wields something two-handed in its off hands, it doesn't show it as two-handed. 
+Wed Mar  9 18:25:24 2016
+ **Malus[37798]: mosswood named eq is either not on the help named eq list, or doesn't give you any benefits for wearing sets.
+Wed Mar  9 08:38:34 2016
+ **Malus[23477]: Mosswood:  a leather-lined iron bracer <-- flagged wear hands not wear wrist
+Wed Mar  9 00:33:17 2016
+ **Malus[23475]: Mosswood: a bored soldier -> keyword: guard    <-- add:  bored, soldier
+Tue Mar  8 20:51:55 2016
+ **Rhoka[48043]: auction lists items useable by you, even if it goes on horns or tail and you have none, that's pretty wack
+Tue Mar  8 15:25:28 2016
+ **Rokk[37935]: Wild Rapid rooms in Nax are not flagged 'fishable'
+Tue Mar  8 08:28:44 2016
+ **Rethaz[22210]: Your devotion to your god causes you to unleash a Flurry of attacks against (NULL)!
+Tue Mar  8 08:28:30 2016
+ **Rethaz[22210]: zealot message still bugged
+Tue Mar  8 05:17:58 2016
+ **Ru[45131]: wierd, when you make a new char the welcome screen has no ansi color, and if you don't log in right away, it keeps being no color until you log in, no biggie, just odd
+Tue Mar  8 02:25:10 2016
+ **Kaene[82124]: the tomes from coras torrhan like zone all loaded at the end of scorched valley
+Mon Mar  7 20:57:09 2016
+ **Kojo[45007]: a glittering diamond stud from court of muse cannot be taken out of backpack once you put it in.
+Mon Mar  7 16:36:05 2016
+ **Sadis[93322]: quest still broken for Treant guardian - found them all hidden - none have quest marker in centaur villages
+Mon Mar  7 11:13:01 2016
+ **Denic[48037]: shieldpunch does the same damage on sitting as on standing target. even though its much harder to hit on a sitting target.
+Sun Mar  6 22:49:09 2016
+ **Coatl[35827]: trying to use my pick lock skill with my pick in inv and hand and it say 'With what?  Your teeth?"
+Sun Mar  6 19:42:50 2016
+ **Glar[85722]: Mercenary/Assassin improved track: player's own tracks show immediately in a new room when entering, makes it very confusing
+Sun Mar  6 18:41:02 2016
+ **Saif[48023]: i can't remove evils' posts from our gh board
+Sun Mar  6 14:12:23 2016
+ **Dignar[48043]: When wielding/wearing arti/unique - and having same keyword item in inventory - ie. mace/ring - If you exam mace/ring you get info about Arti AND item in inventory.
+Sun Mar  6 11:55:11 2016
+ **Rethan[66780]: The Horseman of Famine glares at (NULL)!
+Sun Mar  6 10:55:49 2016
+ **Coatl[93392]: a failed backstab doesn't give any message
+Sun Mar  6 08:17:25 2016
+ **Ashyel[1200]: daederon had to buy off twice then log out and log back in and buy off again to change bartender quest. i reimbursed him 2 of the buyoffs
+Sun Mar  6 04:09:14 2016
+ **Tesak[132824]: help monk spelling error, enhance their agility " an " dexterity in order to optimize their skills.
+Sun Mar  6 02:33:42 2016
+ **Tesak[132824]: help sorcerer file has typo, "memorized using the *+<MSorcerer's intelligence."
+Sat Mar  5 17:48:27 2016
+ **Coatl[82217]: a bottle of spring water from lyr-meop is !take but they sell it to u and u can put it into a bag
+Sat Mar  5 15:54:41 2016
+ **Coatl[65202]: eq sort rogue doesnt work in locker
+Sat Mar  5 15:23:34 2016
+ **Dignar[48043]: MSP terminal dont update ship map when you on not moving Ship - you need spam "look out" to keep informed on ships position. Map is updated only if your ship move.
+Sat Mar  5 10:49:20 2016
+ **Amatl[35364]: The corpse of A monkey is lying here. <-- the indefinite article 'A' shouldn't be capitalized
+Sat Mar  5 07:31:48 2016
+ **Oi[40173]: wierd cant use the command to look
+Sat Mar  5 06:02:08 2016
+ **Rokk[37764]: Item 37744 - potion.. has 2 spells set to out of range
+Sat Mar  5 02:19:31 2016
+ **Rab[27334]: when worn items get damaged the % damage shown is followed by a bunch of spaces.  This causes the item line to wrap.  If the spaces were removed the line would fit inside the window and not force the % to wrap to the next line.  This only happens for items with long descriptions.
+Fri Mar  4 22:27:15 2016
+ **Grotar[16260]: The Horseman of Death cackles and swings a massive deadly scythe at (NULL)! -- msg from apocalypse
+Fri Mar  4 16:37:12 2016
+ **Skig[4121]: still getting a message about a named random item with nothing in corpse. did not recieve the salvage eq msg that normally comes with it (when you actually get something :)
+Fri Mar  4 15:35:48 2016
+ **Coatl[88952]: err.. It wasn't bless, it was invigorate :)
+Fri Mar  4 15:32:18 2016
+ **Coatl[88951]: Help Named:  Vella's Bordello 3 pieces = bless
+Thu Mar  3 22:44:38 2016
+ **Meth[48025]: aoe spells from players should not autoengage the room, until the damage hits.  if you don't get hit by the aoe, you shouldn't be engaged to the caster
+Thu Mar  3 21:38:01 2016
+ **Saif[65202]: type frag illusionist
+Thu Mar  3 21:37:16 2016
+ **Coatl[93623]: sneak still practices even if you were just in combat then start to walk without re-engaging sneak
+Thu Mar  3 18:52:11 2016
+ **Rethaz[66832]: Your devotion to your god causes you to unleash a Flurry of attacks against (NULL)!
+Thu Mar  3 18:51:58 2016
+ **Grotar[31915]: I'm not sure if this is intentional, but Bahamut's mask of vigor replaces your current vit with your enemy's vit rather than refreshing your current vit, so if your enemy has a lower level of vit, you actually lose hp from the proc.
+Thu Mar  3 17:44:34 2016
+ **Saif[65202]: in the guild locker, people just salvage or enhance everything possible.  i want newbies to eq, but i dont have the patience to track them all down and eq them.  can you make it so eq that gets dropped in glocker is flagged !salvage !enhance?  maybe restricted to above ivalue 20 or so.
+Thu Mar  3 17:25:29 2016
+ **Moxo[48041]: a tome appears to lose it's scribed spells (kind of) when it gets encrusted, but the slots written are still taken up though exam book shows full empty pages, it is not tru
+Thu Mar  3 14:39:00 2016
+ **Nazz[48039]: update help epic skill cost
+Thu Mar  3 02:56:23 2016
+ **Cora[48039]: I saw a (NULL) when Sadash opened his spellbook to mem.
+Thu Mar  3 02:33:52 2016
+ **Grotar[71236]: The Horseman of Pestilence breaths on (NULL)!
+Thu Mar  3 00:31:24 2016
+ **Amatl[4929]: halfing mine: a bums knapsack <- missing ' in bum's
+Wed Mar  2 19:41:11 2016
+ **Shag[45545]: If you recast a moon/bloodstone, die, etc -- anything that invalidates a moonstone, the visible timer will start anew but when the _old_ timer would expire it still breaks your current moonstone.  Except for its timer which will still break any new moonstones you cast.
+Wed Mar  2 18:34:04 2016
+ **Shag[45628]: "hellish imp"s don't have the keyword "hellish", which makes targetting impossible if there are "blazing imp" familiars in the group.
+Wed Mar  2 03:22:41 2016
+ **Amatl[99520]: Cloud Giants: A strong farmer  <-- missing keyword 'strong'
+Wed Mar  2 03:11:25 2016
+ **Amatl[29441]: Harrow: a tired bard <- missing keyword 'tired'
+Tue Mar  1 12:39:06 2016
+ **Akatl[35317]: the corpse of A bristling snow leopard appears to be empty.  <--- 'The' should be capital, and the mob name shouldn't
+Tue Mar  1 03:28:13 2016
+ **Akatl[35313]: room kick shouldn't occur to mobs lock in the center of single-file rooms
+Tue Mar  1 03:11:24 2016
+ **Akatl[617670]: A huge grey ape Random Mob on KK is walking on the water...
+Mon Feb 29 19:01:33 2016
+ **Lohrr[55201]: In 55201, the purchase list runs from 3-13 instead of 1-11 wtf over?
+Mon Feb 29 18:01:09 2016
+ **Akatl[67710]: last few dates in the news are listed as 20150.. if it isn't fixed you guys will keep copying the error into new dates.
+Mon Feb 29 15:49:59 2016
+ **Doo[43272]: Something happened with the way ship insurance works and reboots, I had 55343 platinum before getting sunk (in a frigate), and now I have a sloop, coffers empty and still 55343 platinum in bank
+Mon Feb 29 11:05:01 2016
+ **Doo[55201]: Pets in Winterhaven at Tavern of the Bearded Lady don't work. Trying to buy results in "There is no such pet!"
+Mon Feb 29 03:26:20 2016
+ **Amatl[132548]: Flight spell rebuffs, but only gives the cast message, not the rebuff message.
+Mon Feb 29 03:03:17 2016
+ **Shag[60136]: For the imp spam vit bug, the fix is: mobact.c:CastClericSpell(), to !affected_by_spell(target, SPELL_VITALITY) add !affected_by_spell for SPELL_MIELIKKI_VITALITY and (I guess) SPELL_FALUZURE_VITALITY
+Mon Feb 29 02:49:20 2016
+ **Shag[60136]: Imps from 'summon familiar' spam vits even if their target has mielikki/faluzure's vitality.
+Sun Feb 28 22:32:50 2016
+ **Glar[526274]: when I run through a forest (or desert), a path opens up behind me
+Sun Feb 28 19:37:32 2016
+ **Dignar[87770]: Curse Echo bugged - You complete your spell... | Aren't they already cursed enough?Kir attacks a snow ogre elite guardian. [10 hits] | Endline lost
+Sun Feb 28 15:47:13 2016
+ **Azatl[35208]: [Damage: 23 ] You reach out and touch a warder, leeching some of his's lifeforce.  <- Shouldn't have an 's
+Sun Feb 28 05:02:19 2016
+ **Amatl[93323]: You slither past <mob>.  <-- pretty sure it should be "passed".  Also, after you slither by a mob, it shouldn't say "You can't go that way."
+Sun Feb 28 00:53:45 2016
+ **Rokk[66639]: Torrhan > an old seaman > A burly seaman walks by here, enjoying some time off.   <--- burly isn't a keyword
+Sat Feb 27 19:32:55 2016
+ **Kaene[19612]: trident of storms raise command should be disabled thrust command and tap command should share the same timer and thrust should work in all terrain
+Sat Feb 27 18:06:40 2016
+ **Akatl[4907]: Halfing Mines:  An exhaused halfling tries to relax here. <-- exhausTed
+Sat Feb 27 15:11:34 2016
+ **Akatl[35212]: <mob> attacks you.  <-- mob name is not capitalized during this most basic attack
+Sat Feb 27 15:08:08 2016
+ **Lohrr[1200]: Three items flagged transparent that don't need to be: 8719 - badge of blood horde, 8731 - a simple quiver, and 8739 - a worn and rusted key.
+Sat Feb 27 15:07:48 2016
+ **Lohrr[1200]: Three items flagged transparent that don't need to be: 8719 - badge of blood horde, 8731 - a simple quiver, and 9739 - a worn and rusted key.
+Sat Feb 27 11:51:09 2016
+ **Akatl[29424]: swirling wand of light <- missing the indefinite article 'a' and keyword wand
+Sat Feb 27 09:18:47 2016
+ **Amatl[569270]: innate command shouldn't require you to be standing to use it to list your innates
+Sat Feb 27 07:16:26 2016
+ **Amatl[88903]: Exp is a punishing factor.  If you decide to play beyond your well-rested bonus you are punished for doing so.  If you log in before 10 hours passes, you lose out on your well-rested bonus until you complete 10 hours of not playing that character.  Thus prolonging the punishment.  If EXP were generally higher, this mechanic would act as a bonus, but in current state exp is so horrible it is only possible to level with well-rested.. without it it is a waste of time, thus making it a punishment not a boon.
+Sat Feb 27 04:05:40 2016
+ **Amatl[22065]: intellect fortress doesn't give a re-up echo.. it re-ups.. just doesn't tell you.
+Fri Feb 26 20:34:51 2016
+ **Rhoka[567294]: deathfield gives no map direction message
+Fri Feb 26 07:02:33 2016
+ **Amatl[544065]: the pet sale fail might be if they are listed but the room behind the pet shop (where pet mobs are loaded to see what the shop sells) is 2 rooms.. this was done so that mobs could wander and thus vary the list of available animals.. if this is the case, the list function should probably check eat time it is called (assuming it now caches what mobs should be there)
+Fri Feb 26 06:59:29 2016
+ **Amatl[132614]: can't buy panthers in kylara's pet shop in Tharnadia.. says There is no such pet!
+Thu Feb 25 23:28:55 2016
+ **Kaene[9036]: Orrak zone is 10 rooms long and has a key/locked door before epics, you can dim/port directly to epic mob bypassing entire zone
+Thu Feb 25 00:40:52 2016
+ **Akatl[34462]: Batakas continues to bandage Batakas  <-- Needs a period at the end
+Wed Feb 24 22:51:59 2016
+ **Akatl[35274]: credits should be a dynamic list created upon load of mud.. as each zone loads the credits should be populated.. this ensures it is always up to date and accurate.
+Wed Feb 24 03:54:35 2016
+ **Amatl[22010]: zebras in desolate not flagged quadrapeds
+Wed Feb 24 03:52:51 2016
+ **Amatl[22010]: animals waving quarters around when watching combat in zones
+Tue Feb 23 20:48:29 2016
+ **Azatl[35211]: unless its because I have sense follower up.. which is strange as it shouldnt affect player visibility
+Tue Feb 23 20:48:03 2016
+ **Azatl[35211]: sometimes when I type who i see invis characters even though I dont have detect invis, other times I do not... its rather random so far
+Tue Feb 23 20:38:36 2016
+ **Azatl[35203]: [Damage: 27 ] You reach out and touch a warder, leeching some of her's lifeforce.  <--- get rid of the 's
+Tue Feb 23 20:30:01 2016
+ **Azatl[35203]: after my dead follower attacked me it said i abandon my studies, i try to continue my mem/med and it doesn't engage mem again
+Tue Feb 23 20:28:22 2016
+ **Azatl[35203]: My zombie follower died (R.I.P. then after its dead and falls to pieces and stops following: The zombie of a vicious mole suddenly attacks YOU!
+Tue Feb 23 04:43:58 2016
+ **Taern[549692]: file this under low priority, but for 'eq list' you can see the items you have equipped when you would not be able to otherwise (such as when your char is asleep or blind)
+Tue Feb 23 01:37:03 2016
+ **Tik[70870]: a summoner can contain a necro's pets, but the mob that gets added is 1201 an undead corpse
+Tue Feb 23 01:19:04 2016
+ **Amatl[35253]: MEMORY ERROR! quest_kill_original is zero, inform a god!
+Tue Feb 23 01:18:48 2016
+ **Amatl[35253]: MEMORY ERROR! quest_kill_original is zero, inform a god!
+Mon Feb 22 05:30:19 2016
+ **Sadash[82574]: while i'm in room with it..
+Mon Feb 22 05:30:09 2016
+ **Sadash[82574]: my pet tries to auto dispel my walls
+Sun Feb 21 21:02:23 2016
+ **Amatl[13535]: update to last bug: apparently it compresses it like that when yer mana is 0 or -
+Sun Feb 21 20:48:52 2016
+ **Amatl[13534]: psi combat prompt < 17h/17H/17M 119v/120V Pos: standing >  the mana should be separated and have the 17m
+Sun Feb 21 19:56:03 2016
+ **Lohrr[1200]: Need to make the key 97018 in "Voluntown" max number 2 instead of whatever it is currently.
+Sun Feb 21 05:16:45 2016
+ **Saif[25406]: pets cannot engage outpost towers
+Sun Feb 21 00:10:08 2016
+ **Oba[132575]: werrun stone does not load
+Sat Feb 20 07:22:33 2016
+ **Bryken[97716]: can't even loot your own corpse in the day so lame
+Fri Feb 19 22:29:55 2016
+ **Abue[48037]: exp is so bad can't do shit to get the level but quest and frag. not sure how this is good for pvp when nobody will exp.
+Fri Feb 19 14:03:14 2016
+ **Jov[48025]: i think that the 50 min summon time on sunken boats is far too much, 25 mins would be perfectly fine to let huge and epic ship battles play out.
+Fri Feb 19 11:02:13 2016
+ **Akatl[23439]: <Mob_Name> eyes close quickly as your foot flies by <Mob_Sex> face.  ->  should have a 's after <Mob_Name>
+Fri Feb 19 06:05:17 2016
+ **Akatl[23449]: farmer's wife mob in mosswood is flagged male
+Fri Feb 19 04:21:30 2016
+ **Azatl[35214]: inn in Newhaven (1st gate) isn't marked inn, but Inn in 2nd gate is.  If anything it should be reversed, or both should be flagged inn.
+Thu Feb 18 01:55:49 2016
+ **Shag[70916]: Wrong gender in message: Nauraki has just shared his epic task with you!
+Thu Feb 18 01:19:47 2016
+ **Obeen[15141]: power word kill is bugged and kills from full hp
+Wed Feb 17 22:26:56 2016
+ **Shag[17091]: Can't "eq sort blighter" in a locker, other classes work.
+Wed Feb 17 22:01:52 2016
+ **Pilty[40809]: (emition in divine home)
+Wed Feb 17 22:00:51 2016
+ **Pilty[40757]: Titan racen cannot speak, which means the shops dont work (divine home)
+Wed Feb 17 17:14:16 2016
+ **Lohrr[1200]: evidently, when a psycheporter enters a rift to someone fighting on astral, it removes them from the fighting list without actually stopping them from fighting.  end result = mobs don't get attacks and mud crashes when they die.
+Wed Feb 17 12:32:04 2016
+ **Rokk[93507]: wemic warrior in welhoven is flagged giant.. they aren't technically giants at all
+Tue Feb 16 17:50:45 2016
+ **Nazz[48039]: Khildarak's Hammer - takes 30 mins to do the quest to get the key etc for a mediocre weapon that never loads...case is always empty - waste of time... 
+Tue Feb 16 11:26:44 2016
+ **Orthyn[608872]: road are wordable? saw duergar word off road. thought roads were no relo/port/word. 
+Tue Feb 16 02:54:11 2016
+ **Rokk[35214]: inn of the eternal pheonix in Newhaven isn't flagged an inn.
+Mon Feb 15 18:11:32 2016
+ **Azatl[88902]: slashing darkness when cast on snails in fisherman's wharf make them aggro (looking in room says its fighting u), but doesn't engage them.  You can't rest to mem because it says it would be bad for your health, but you are safe from the snail, it thinks its fighting you but isn't.
+Mon Feb 15 17:40:51 2016
+ **Rokk[53639]: "Too dark to tell.." in the Exit command is missing a NewLine after it, and has 1 too many periods (its beyond color codes)
+Mon Feb 15 06:45:31 2016
+ **Juv[38429]: i would maybe add a key to elite soldiers , just inside the royal gates, so one can at least bust oneself out
+Mon Feb 15 06:45:07 2016
+ **Juv[38429]: it seems if you crash or lose connection in valois main castle, the door locks behind you then have no key to get outta zone, not is any of the zone porty
+Mon Feb 15 03:56:51 2016
+ **Rokk[132560]: bartender quest mobs shouldn't echo any of their speech to the room, just to the person requesting the quest.  If it must echo, perhaps shorten the amount of lines it echoes as 5 people requesting and abandoning quests spams out all other info coming in
+Mon Feb 15 02:54:52 2016
+ **Rokk[567269]: if you level while completing a quest, it resets quest count and then detracts the quest u just completed, instead of detracting the quest and then reseting quest count
+Mon Feb 15 01:38:34 2016
+ **Rokk[35214]: can't consider someone while laying down... this doesn't make sense
+Sun Feb 14 20:54:34 2016
+ **Rokk[568886]: the sign objects on the goodie continent point to zones long ago moved off the continent and in different directions
+Sun Feb 14 11:17:59 2016
+ **Kaberf[35252]: description of the spell turn undead has a mispelled word - it should be spelled successful
+Sat Feb 13 05:44:19 2016
+ **Rokk[35846]: fish mobs marked as mobs shouldnt throw elbows and armbars, etc... mud should probably convert all !humanoid, !PC_race mobs to be warriors over monks.  At least animals, fish and insects should lose monk class.
+Sat Feb 13 05:28:00 2016
+ **Oi[65202]: 5 deaths because my pets went rogue on me....summoners pets go rogue on them 90% of the time..... they are the most pet dependent class in the game....this does not make any sense
+Sat Feb 13 03:13:56 2016
+ **Saif[65203]: i have impproved shield combat epic skill, but not the shield combat regular skill
+Fri Feb 12 15:43:45 2016
+ **Rethan[132535]: dracolich kicks (when you order them to kick a mob), does 1 damage. Should be doing alot more then that.
+Thu Feb 11 21:29:07 2016
+ **Yansy[83383]: and since im a bard and cant mem any 1th circle spells, u hafto remem with assimlate all those every 10 mins it trances me
+Thu Feb 11 21:28:35 2016
+ **Yansy[83383]: plasm is kinda buggy.. If you dont death mem by using mem before trancing you hafto assimlate all ur spells everytime it retrances you
+Thu Feb 11 16:14:50 2016
+ **Zen[16910]: i have bandaged the whole way up thru leveling to 30 and have yet to notch bandage
+Thu Feb 11 08:57:35 2016
+ **Saif[32802]: air conj staff has limited charges
+Wed Feb 10 23:51:24 2016
+ **Zen[93546]: i dont hit after a failed maul during my pulses?
+Tue Feb  9 21:08:08 2016
+ **Shag[48039]: the "Tough Guy" achievement title is wrong on females
+Tue Feb  9 20:02:53 2016
+ **Saif[634065]: why should i see farther when the sun sets
+Tue Feb  9 14:48:27 2016
+ **Zen[93649]: berserker parry at 60...riposte will never work with that why bother with the skill...its even a spec skill
+Tue Feb  9 14:38:18 2016
+ **Zen[93621]: ther eis no whip artis...change one of the many swords or maces to a whip on arti or uni list we have plenty of those
+Mon Feb  8 21:15:56 2016
+ **Zen[99520]: Your mighty kick send a chicken crashing onto the gorund.it doesnt show them sitting or on ass and it never stands...so it snot really knocking it down ?
+Mon Feb  8 08:38:04 2016
+ **Jov[60946]: can you please stop being so vague about news changes? Transparency is the best option i think .   Why should we have all the knowedge of the game with just the old heads, and not give new players much more info so they can understand what they are doing?  
+Sun Feb  7 09:03:15 2016
+ **Iokl[564519]: since you made the eq loading change, none of the named random mobs are loading eq. I kiled 6 of them, no random eq was on their corpes, like dragonscale or named random eq
+Sat Feb  6 23:30:32 2016
+ **Rab[48037]: my follow up attcks from crit hits, seem to be punches not slashes.  even though I have full weapons.
+Sat Feb  6 21:06:42 2016
+ **Obeen[132764]: mud constantly crashes
+Thu Feb  4 21:56:33 2016
+ **Jov[65202]: This item is from the zone: The Arcaneum of L'srillizzin.: the drider robe of the shadow spinner'
+Thu Feb  4 21:56:04 2016
+ **Jov[65202]: 'the drider robe of the shadow spinner  3 con max and 10+ move regen,  Keep in mind this is from a lowbie zone, drider only eq.  Volo boots are rare load in tia vault, and give 15 move regen, one of the highest in game.  most items that give this much move regen have a downside to it.  Most move regen items are 3+ or 5+.   This and other items from that zone might need looking at for balance purposes
+Thu Feb  4 20:27:55 2016
+ **Rhoka[97800]: you can enlarge, disguise, then let enlarge run out and be disguised and someting size does not permit
+Thu Feb  4 06:08:57 2016
+ **Saif[21636]: pets dont engage on outpost towers
+Wed Feb  3 20:29:56 2016
+ **Sadash[48038]: my pets miss bash constantly on players...why suck so bad?
+Mon Feb  1 12:00:12 2016
+ **Orthyn[552494]: summoner spec mobs are counting as epic mobs.
+Mon Feb  1 02:53:49 2016
+ **Obeen[132766]: bulwark is a % of your shield ac but with all the ac nerfing perhaps it can be changed to grant bonus ac instead.
+Thu Jan 28 21:33:09 2016
+ **Nauraki[71243]: What appears to be the problem is that some of the VNUMs you used in Court of the Muse are conflicting with VNUMs in Dragonnia. Just an FYI. Which is causing Muse eq to load in the place of Dragonnia keys.
+Wed Jan 27 20:46:51 2016
+ **Zax[545246]: lyrical mastery finishs song alot being a uni....othe rinstrumetns i never have this problem
+Wed Jan 27 18:59:24 2016
+ **Saif[132575]: two weapon combat for casters - not so we can shred, but so we can wield two weapons for their effects!
+Wed Jan 27 03:02:20 2016
+ **Grotar[48039]: if flamberge is disarmed, it doesn't drop the sanc effect.  It's possible that blur weapons would also have this same feature.
+Tue Jan 26 16:38:35 2016
+ **Zax[528283]: charmed pets leaving zone or wansering off back to orginal zone while charmed
+Mon Jan 25 21:40:10 2016
+ **Nauraki[82432]: the golden circlet and golden earring in Temple of the Sun are iron materials - should be gold
+Mon Jan 25 21:31:13 2016
+ **Zax[6701]: and no magic can still drift into it
+Mon Jan 25 21:30:48 2016
+ **Zax[6720]: can still drift into silent rooms
+Mon Jan 25 02:36:50 2016
+ **Xax[635260]: My ship is stuck on summon
+Sun Jan 24 20:36:11 2016
+ **Saif[48023]: proc rate of random eq with procs is crap
+Sun Jan 24 13:51:36 2016
+ **Juno[16558]: drow can be necromancer but a grey cant?
+Sun Jan 24 05:40:50 2016
+ **Xang[48023]: make well rested not tick down
+Sat Jan 23 08:50:33 2016
+ **Kaene[142454]: i got this message on an attack not wielding a piercing weapon [Damage: 19 ] Your%s pierce %s.
+Fri Jan 22 19:09:29 2016
+ **Znarc[66619]: commune is bugged..
+Fri Jan 22 16:35:21 2016
+ **Juno[80277]: necromancers can be drow why not grey?
+Thu Jan 21 07:31:52 2016
+ **Saif[132508]: because if my pet is elsewhere and i need to summon another without fleeing
+Thu Jan 21 07:31:28 2016
+ **Saif[132508]: need to be able to dismiss while engaged
+Wed Jan 20 18:48:03 2016
+ **Nauraki[139048]: !fear items don't seem to work on fear from judgement
+Tue Jan 19 22:33:03 2016
+ **Skig[4096]: recieved a notification that i found a named random item, but corpse was empty :(
+Tue Jan 19 13:59:49 2016
+ **Lurt[45131]: You must fix monks, this is stupid -- second time this week I die from full hps to death pre stand - Kir issues 1 command
+Tue Jan 19 12:25:05 2016
+ **Iok[132575]: if i type multiclass it tells me i can multi into a cleric or warrior, help multiclass says they are still in the game, but everyone is telling me they aren't? can you update the help files if this is true
+Mon Jan 18 22:02:20 2016
+ **Zloin[637223]: My lich pet randomly died for no apparent reason while at full life, i'm a necrolyte.
+Mon Jan 18 16:08:20 2016
+ **Bamsu[6518]: a bashed individual somehow can 'step back, etc" to avoid a kick
+Sun Jan 17 05:33:51 2016
+ **Saif[48023]: should be able to dismiss while engaged
+Sat Jan 16 22:21:25 2016
+ **Shag[42500]: Upon entering a locker commune stops and doesn't resume when exiting.
+Fri Jan 15 20:57:19 2016
+ **Saif[38122]: petdamage is broken.. randomly doesnt work, have to turn on and off and maybe it works
+Fri Jan 15 20:56:32 2016
+ **Saif[38120]: higher epic output for 2-3 man groups.. so we can actually keep artis
+Fri Jan 15 11:42:51 2016
+ **Lurt[6798]: The portal to epic part of Court of the Muse doesnt work.
+Fri Jan 15 06:45:17 2016
+ **Saif[24412]: air pets should last longer ogod
+Thu Jan 14 13:40:55 2016
+ **Zax[98009]: some pets sit every room when charmed
+Thu Jan 14 03:04:51 2016
+ **Zax[25460]: i cant dismiss my charmed pets
+Wed Jan 13 20:54:00 2016
+ **Pilty[132550]: PLEASE REMOVE THIS STUPID THING: Your fireball hits Fiera, the wood-elven apple farmer with full force, causing an immediate death.You receive your share of experience. You attempt to charm your listeners, but suddenly Drannak appears from the skies! Drannak makes a strange gesture, causing a large brick of cheese the size of a whale to suddenly fall on you, crushing you completely!
+Tue Jan 12 21:41:02 2016
+ **Zax[40685]: in golden halls the bug with teleport room sorry
+Tue Jan 12 21:40:46 2016
+ **Zax[40685]: room with centaur cell is !magic room but you can teleport into it door locked so a trap
+Tue Jan 12 06:08:43 2016
+ **Saif[561247]: air pets shouldnt poof all the time
+Mon Jan 11 22:02:42 2016
+ **Zax[30694]: if have a bard in group pet ieven if stop sining heal it wont let me sing heal i get message song has no power 
+Mon Jan 11 02:46:08 2016
+ **Zax[49000]: old name was morrigu 
+Sun Jan 10 18:38:36 2016
+ **Kaene[48039]: scimitar of demogorgan is working off buckle slot like rage buckle
+Sun Jan 10 13:45:09 2016
+ **Zax[132508]: i lost my ship when i name changed...
+Sat Jan  9 12:35:11 2016
+ **Kenon[17748]: 8
+Fri Jan  8 18:16:34 2016
+ **Yansy[25884]: got tasked at 794 epics somehow
+Thu Jan  7 20:35:29 2016
+ **Dubar[65202]: the long description in Mask of Tentro (from Tentro Mountain Village) is what breaks the zone.  Please remove the long description (bad Ascii art) so the zone works correctly.
+Thu Jan  7 17:50:08 2016
+ **Salaf[80313]: my backstabs at low lvl are doing less damage than my melee rounds
+Thu Jan  7 07:26:46 2016
+ **Saif[48023]: liches can wall while engaged.. broken
+Wed Jan  6 02:47:04 2016
+ **Juv[60861]: ambram also never loads on the arti list
+Wed Jan  6 02:46:21 2016
+ **Juv[60861]: ambram hasn't loaded all wipe, we have done shabbo 20 times or so, can you let us know why?
+Tue Jan  5 20:51:44 2016
+ **Saif[95572]: Epic points(total): 82(0).  also all my eq disappeared on death
+Tue Jan  5 20:46:47 2016
+ **Saif[21434]: so hey m
