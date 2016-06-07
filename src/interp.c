@@ -1863,7 +1863,11 @@ void command_interpreter(P_char ch, char *argument)
         {
           // 33% chance to fail sneak.
           if( (exec_char->in_room == old_room) || !SNEAK(exec_char) || !number(0, 2) )
-            check_aggro_from_command( exec_char );
+            // 33% chance for calming.
+            if( !has_innate(ch, INNATE_CALMING) || !number(0, 2) )
+              // And the charisma calm chance.
+              if( number(1,100) > CALMCHANCE(exec_char) )
+                check_aggro_from_command( exec_char );
         }
       }
     }
