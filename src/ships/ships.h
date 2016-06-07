@@ -778,6 +778,7 @@ void kick_everyone_off(P_ship ship);
 void clear_ship_content(P_ship ship);
 void look_out_ship(P_ship ship, P_char ch);
 void everyone_look_out_ship(P_ship ship);
+void set_pvp_on_passengers(P_ship ship);
 bool is_valid_sailing_location(P_ship ship, int room);
 
 bool has_eq_ram(const ShipData* ship);

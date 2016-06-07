@@ -520,9 +520,12 @@ void volley_hit_event(P_char ch, P_char victim, P_obj obj, void *data)
         return;
 
     // forcing target into battle state
-    if (target->timer[T_BSTATION] == 0) 
-        act_to_all_in_ship(target, "&=LRYour crew scrambles to their battlestions&N!\r\n");
+    if (target->timer[T_BSTATION] == 0)
+        act_to_all_in_ship(target, "&=LRYour crew scrambles to their battlestations&N!\r\n");
     target->timer[T_BSTATION] = BSTATION;
+
+    set_pvp_on_passengers( ship );
+    set_pvp_on_passengers( target );
 
     int k = getcontacts(target);
     attacked_by(target, ship, k);
@@ -956,6 +959,10 @@ int try_ram_ship(P_ship ship, P_ship target, float tbearing)
     if (target->timer[T_BSTATION] == 0)
         act_to_all_in_ship(target, "&=LRYour crew scrambles madly to battlestations!&N\r\n");
     target->timer[T_BSTATION] = BSTATION;
+
+    set_pvp_on_passengers( ship );
+    set_pvp_on_passengers( target );
+
     act_to_all_in_ship_f(target, "&+W[%s]&N: %s attempts to ram you!", SHIP_ID(ship), SHIP_NAME(ship));
     act_to_outside_ships(ship, target, DEFAULT_RANGE, "&+W[%s]&N:%s&N attempts to ram &+W[%s]&N:%s&N!", SHIP_ID(ship), SHIP_NAME(ship), SHIP_ID(target), SHIP_NAME(target));
 
@@ -1277,6 +1284,9 @@ int fire_weapon(P_ship ship, int w_num, int t_contact, int hit_chance, P_char ch
 
 
     ship->timer[T_BSTATION] = BSTATION;
+
+    set_pvp_on_passengers( ship );
+    set_pvp_on_passengers( target );
 
     // initiating reload
     if (ship->slot[w_num].val1 == 1 && ch) 

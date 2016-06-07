@@ -158,6 +158,25 @@ void look_out_ship(P_ship ship, P_char ch)
    ch->specials.z_cord = 0;
 }
 
+void set_pvp_on_passengers( P_ship ship )
+{
+  P_char   ch, ch_next;
+  int      i;
+
+  for( i = 0; i < ship->room_count; i++ )
+  {
+    for( ch = world[real_room(ship->room[i].roomnum)].people; ch; ch = ch_next )
+    {
+      if( ch )
+      {
+        ch_next = ch->next_in_room;
+        affect_from_char( ch, TAG_PVPDELAY );
+        set_short_affected_by( ch, TAG_PVPDELAY, WAIT_PVPDELAY );
+      }
+    }
+  }
+}
+
 void everyone_look_out_ship(P_ship ship)
 {
   P_char   ch, ch_next;
