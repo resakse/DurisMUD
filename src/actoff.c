@@ -9742,10 +9742,7 @@ void gaze(P_char ch, P_char victim)
       {
         CharWait(victim, (int) (0.75 * PULSE_VIOLENCE));
       }
-      if(number(0, 2))
-      {
-        StopCasting(victim);
-      }
+      StopCasting(victim);
       engage(ch, victim);
     }
   }
