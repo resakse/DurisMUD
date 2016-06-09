@@ -1016,7 +1016,7 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
     return (FALSE);
 
   // not a god and not in a town?  then there's no locker here
-  else if( !CHAR_IN_TOWN(ch) && (!IS_TRUSTED(ch) && (GET_RACE(ch) != RACE_LICH) && !IS_ILLITHID(ch)) )
+  else if( !CHAR_IN_TOWN(ch) && (!IS_TRUSTED(ch) && (GET_RACE(ch) != RACE_LICH) && !IS_RACEWAR_NEUTRAL(ch)) )
   {
     return FALSE;
   }
