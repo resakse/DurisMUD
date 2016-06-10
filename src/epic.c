@@ -527,7 +527,7 @@ void epic_frag(P_char ch, int victim_pid, int amount)
 
   if( afp = get_epic_task(ch) )
   {
-    if( afp->modifier == SPILL_BLOOD )
+    if( abs(afp->modifier) == SPILL_BLOOD )
     {
       send_to_char("The &+rGods of Duris&n are very pleased with this &+rblood&n.\n", ch);
       send_to_char("You can now progress further in your quest for epic power!\n", ch);
