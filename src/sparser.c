@@ -2202,12 +2202,6 @@ void do_cast(P_char ch, char *argument, int cmd)
     }
   }
 
-  if( affected_by_spell(ch, TAG_BARDSONG_FAILURE) )
-  {
-    send_to_char("You haven't regained your composure.\n", ch);
-    return;
-  }
-
   if( IS_HEADLOCK(ch) )
   {
     send_to_char("You're having a hard enough time breathing, let alone trying to cast anything right now!\n", ch);
