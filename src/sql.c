@@ -369,7 +369,7 @@ void sql_save_progress(int pid, int delta, const char *type)
 }
 
 // Retrieves the current highest number of frags and which racewar side has it.
-void get_level_cap( long *max_frags, int* racewar )
+void get_level_cap_info( long *max_frags, int* racewar )
 {
   MYSQL_RES *db = NULL;
   MYSQL_ROW row;
@@ -377,7 +377,7 @@ void get_level_cap( long *max_frags, int* racewar )
 
   if( (db == NULL) || (( row = mysql_fetch_row(db) ) == NULL) )
   {
-    debug( "get_level_cap: Database read fail." );
+    debug( "get_level_cap_info: Database read fail." );
     *max_frags = (long)-1;
     *racewar = RACEWAR_NONE;
   }
@@ -398,7 +398,7 @@ int sql_level_cap( int racewar_side )
   long max_frags;
   int  leading_racewar, level_cap;
 
-  get_level_cap( &max_frags, &leading_racewar );
+  get_level_cap_info( &max_frags, &leading_racewar );
 
   // This goes from 25 for no frags, 26 for .4 frags, 27 for .8 frags, up to 56 for 12.4 or more frags.
   level_cap = (int) ( (max_frags / 40) + 25 );
@@ -420,13 +420,24 @@ void sql_check_level_cap( long max_frags, int racewar )
   int  old_racewar;
   char query[1024];
 
-  get_level_cap( &old_max_frags, &old_racewar );
+  get_level_cap_info( &old_max_frags, &old_racewar );
 
   if( max_frags > old_max_frags )
   {
     sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d", max_frags/100., racewar );
     db_query(query);
   }
+}
+
+// Sets the values of level (actual cap) and racewar (the side that is in the lead).
+void get_level_cap( int *level, int *racewar )
+{
+  long max_frags;
+
+  get_level_cap_info( &max_frags, racewar );
+  // This is a little redundant, since sql_level_cap(int) calls get_level_cap_info,
+  //   but it saves on having calculations in two places (easier to update).
+  *level = sql_level_cap( *racewar );
 }
 
 /* Save frags delta */

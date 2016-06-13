@@ -1027,7 +1027,7 @@ int deleteHouseObj(int);
 int fragWorthy(P_char ch, P_char victim);
 void deleteFragEntry(char names[15 ][MAX_STRING_LENGTH ], int frags[15 ], int pos);
 void insertFragEntry(char names[15 ][MAX_STRING_LENGTH ], int frags[15 ], char *name, int newFrags, int pos);
-void displayFragList(P_char ch, char *arg, int cmd);
+void do_fraglist(P_char ch, char *arg, int cmd);
 void checkFragList(P_char ch);
 
 /* random.mob.c */

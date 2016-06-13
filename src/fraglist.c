@@ -9,11 +9,15 @@
 #include "spells.h"
 #include "ships.h"
 #define MAX_FRAG_SIZE    10     /* max size of high/low lists */
+
 extern const struct class_names class_names_table[];
 extern const struct race_names race_names_table[];
 extern P_char misfire_check(P_char ch, P_char spell_target, int flag);
 
 extern P_room world;
+extern const racewar_struct racewar_color[MAX_RACEWAR+2];
+
+extern void get_level_cap( int *max_level, int *racewar );
 
 /*
  * fragWorthy - is ch worthy of gaining a frag and victim worthy of losing
@@ -167,11 +171,8 @@ void insertFragEntry(char names[MAX_FRAG_SIZE][MAX_STRING_LENGTH],
 }
 
 
-/*
- * displayFragList
- */
-
-void displayFragList(P_char ch, char *arg, int cmd)
+// Shows the frag list.
+void do_fraglist(P_char ch, char *arg, int cmd)
 {
   FILE    *fragList;
   char     name[MAX_STRING_LENGTH], buf[65536], buf2[2048];
@@ -179,13 +180,12 @@ void displayFragList(P_char ch, char *arg, int cmd)
   char     i;
   float    fragnum = 0;
   char     filename[1024];
+  int      cap_level, cap_racewar;
 
-  if (!ch)
+  if( !IS_ALIVE(ch) )
     return;
 
-//  sprintf(filename, "Fraglists/fraglist.normal");
-
-  if (arg)
+  if( arg )
   {
     if (strstr("normal", arg))
     {
@@ -496,9 +496,7 @@ void displayFragList(P_char ch, char *arg, int cmd)
     }
     else
     {
-      send_to_char
-        ("Valid fraglists exist by race, class, undead/evil/good, and overall (no argument).\r\n",
-         ch);
+      send_to_char("Valid fraglists exist by race, class, undead/evil/good, and overall (no argument).\r\n", ch);
       return;
     }
   }
@@ -506,14 +504,18 @@ void displayFragList(P_char ch, char *arg, int cmd)
     sprintf(filename, "Fraglists/fraglist.normal");
 
 
-  if (!(fragList = fopen(filename, "rt")))
+  if( !(fragList = fopen(filename, "rt")) )
   {
     sprintf(name, "Couldn't open fraglist: %s\r\n", filename);
+    send_to_char( "&+RError: Couldn't open fraglist.&n\n", ch );
     logit(LOG_DEBUG, name);
     return;
   }
 
-  strcpy(buf, "\r\n&+WTop Fraggers\r\n\r\n");
+//  sprintf(buf, "\r\n&+WTop Fraggers\r\n\r\n");
+  get_level_cap( &cap_level, &cap_racewar );
+  sprintf(buf, "Frag Level Cap: %d - &+%c%s&n, %d - Others\n\n&+WTop Fraggers\n\n",
+    cap_level, racewar_color[cap_racewar].color, racewar_color[cap_racewar].name, cap_level - 1 );
 
   for (i = 0; i < MAX_FRAG_SIZE; i++)
   {

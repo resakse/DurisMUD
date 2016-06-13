@@ -2482,7 +2482,7 @@ void assign_command_pointers(void)
   CMD_N(CMD_GUILDHALL, STAT_DEAD + POS_PRONE, do_guildhall, 25, FALSE);
   // old guildhalls (deprecated)
 //  CMD_N(CMD_SACK, STAT_NORMAL + POS_STANDING, do_sack, 25);
-  CMD_N(CMD_FRAGLIST, STAT_DEAD + POS_PRONE, displayFragList, 0, FALSE);
+  CMD_N(CMD_FRAGLIST, STAT_DEAD + POS_PRONE, do_fraglist, 0, FALSE);
   CMD_N(CMD_HARDCORE, STAT_DEAD + POS_PRONE, displayHardCore, 0, FALSE);
   CMD_N(CMD_LEADERBOARD, STAT_DEAD + POS_PRONE, displayLeader, 0, FALSE);
   CMD_N(CMD_SOULBIND, STAT_DEAD + POS_PRONE, do_soulbind, 0, TRUE);
