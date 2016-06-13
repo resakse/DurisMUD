@@ -157,6 +157,7 @@ extern const struct innate_data innates_data[];
 extern float racial_exp_mods[LAST_RACE + 1];
 extern float racial_exp_mod_victims[LAST_RACE + 1];
 extern int damroll_cap;
+extern const racewar_struct racewar_color[MAX_RACEWAR+2];
 
 typedef void cmd_func(P_char, char *, int);
 extern const struct innate_data
@@ -2606,7 +2607,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     if(IS_NPC(k))
       sprintf(buf + strlen(buf), "&+wNPC&n");
     else if(GET_RACEWAR(k) == RACEWAR_GOOD)
-      sprintf(buf + strlen(buf), "&+WGood&n");
+      sprintf(buf + strlen(buf), "&+YGood&n");
     else if(GET_RACEWAR(k) == RACEWAR_EVIL)
       sprintf(buf + strlen(buf), "&+rEvil&n");
     else if(GET_RACEWAR(k) == RACEWAR_UNDEAD)
@@ -3845,22 +3846,22 @@ void do_nchat(P_char ch, char *argument, int cmd)
   {
     if( IS_RACEWAR_GOOD(ch) )
     {
-      sprintf(Gbuf2, "&+Wgood&n");
+      sprintf( Gbuf2, "&+%c%s&N", racewar_color[RACEWAR_GOOD].color, racewar_color[RACEWAR_GOOD].name );
       good = TRUE;
     }
     else if(IS_RACEWAR_EVIL(ch))
     {
-      sprintf(Gbuf2, "&+Revil&n");
+      sprintf( Gbuf2, "&+%c%s&N", racewar_color[RACEWAR_EVIL].color, racewar_color[RACEWAR_EVIL].name );
       evil = TRUE;
     }
     else if(IS_RACEWAR_UNDEAD(ch))
     {
-      sprintf(Gbuf2, "&+Lundead&n");
+      sprintf( Gbuf2, "&+%c%s&N", racewar_color[RACEWAR_UNDEAD].color, racewar_color[RACEWAR_UNDEAD].name );
       undead = TRUE;
     }
     else if(IS_RACEWAR_NEUTRAL(ch))
     {
-      sprintf(Gbuf2, "&+Mneutral&n");
+      sprintf( Gbuf2, "&+%c%s&N", racewar_color[RACEWAR_NEUTRAL].color, racewar_color[RACEWAR_NEUTRAL].name );
       neutral = TRUE;
     }
     else
