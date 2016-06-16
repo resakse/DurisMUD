@@ -597,48 +597,44 @@ int reliance_pegasus(P_obj obj, P_char ch, int cmd, char *arg)
   P_char   mount;
   struct char_link_data *cld;
 
-  /*
-     check for periodic event calls
-   */
-  if (cmd == CMD_SET_PERIODIC)
+  if( cmd == CMD_SET_PERIODIC )
     return FALSE;
 
-  if( IS_ALIVE(ch) || !(obj) || !OBJ_WORN_BY(obj, ch) )
+  if( !IS_ALIVE(ch) || !(obj) || !OBJ_WORN_BY(obj, ch) )
   {
     return FALSE;
   }
 
-  if (arg && (cmd == CMD_SAY))
+  if( arg && (cmd == CMD_SAY) )
   {
-    if (strstr(arg, "reliance"))
+    if( strstr(arg, "reliance") )
     {
-	  if(IS_RIDING(ch))
-	  {
-		send_to_char("While mounted? I don't think so...\r\n", ch);
-		return false;
-	  }
-	  
-	  if(IS_FIGHTING(ch))
-	  {
-	    send_to_char("Try again whenever you are NOT fighting something.\r\n", ch);
-		return false;
-	  }		
+      if(IS_RIDING(ch))
+      {
+        send_to_char("While mounted? I don't think so...\r\n", ch);
+        return TRUE;
+      }
 
-	  if(!is_prime_plane(ch->in_room))
-	  {
-		send_to_char("&+WThe pegasus cannot be called here.\r\n", ch);
-		return false;
-	  }
-	  
-	  if (IS_SET(world[ch->in_room].room_flags, LOCKER) ||
-		  IS_SET(world[ch->in_room].room_flags, SINGLE_FILE) )
-	  {
-		send_to_char("A pegasus couldn't fit in here!\r\n", ch);
-		return false;
-	  }
+      if(IS_FIGHTING(ch))
+      {
+        send_to_char("Try again whenever you are NOT fighting something.\r\n", ch);
+        return TRUE;
+      }
+
+      if( !is_prime_plane(ch->in_room) )
+      {
+        send_to_char("&+WThe pegasus cannot be called here.\r\n", ch);
+        return TRUE;
+      }
+
+      if( IS_SET(world[ch->in_room].room_flags, LOCKER) || IS_SET(world[ch->in_room].room_flags, SINGLE_FILE) )
+      {
+        send_to_char("A pegasus couldn't fit in here!\r\n", ch);
+        return TRUE;
+      }
 
       curr_time = time(NULL);
-	  
+
 	  if (obj->timer[0] + 200 <= curr_time)
 	  {
 		act("You say 'reliance' to your $q...", FALSE, ch, obj, 0, TO_CHAR);
