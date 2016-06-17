@@ -1038,7 +1038,7 @@ void initialize_skills()
                 spell_mind_blank, "&+YYour mind is not as concealed anymore!&N");
   SPELL_ADD(CLASS_MINDFLAYER, 12);
 
-  SPELL_CREATE_MSG("psychic crush", SPELL_PSYCHIC_CRUSH, PULSE_SPELLCAST * 2,
+  SPELL_CREATE_MSG("psychic crush", SPELL_PSYCHIC_CRUSH, PULSE_SPELLCAST * 3,
                 TAR_CHAR_ROOM + TAR_FIGHT_VICT | TAR_AGGRO,
 				spell_psychic_crush, "&+MYou feel your mind recover from the assault.&n");
   SPELL_ADD(CLASS_PSIONICIST, 9);
