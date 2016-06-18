@@ -3701,7 +3701,8 @@ void spell_lesser_mending(int level, P_char ch, char *arg, int type, P_char vict
     return;
   }
 
-  act("$N &+wis surrounded by a flashing &+ggreen &+waura!&n", FALSE, ch, 0, victim, TO_CHAR);
+  if( ch != victim )
+    act("$N &+wis surrounded by a flashing &+ggreen &+waura!&n", FALSE, ch, 0, victim, TO_CHAR);
   act("&+wA light &+ggreen &+waura flashes around you and your wounds start to heal!&n", FALSE,
       ch, 0, victim, TO_VICT);
   act("$N &+wis surrounded by a flashing &+ggreen &+waura!", FALSE, ch, 0, victim, TO_NOTVICT);
