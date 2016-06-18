@@ -2494,7 +2494,7 @@ void spell_shadow_spawn(int level, P_char ch, char *arg, int type, P_char victim
 void event_asphyxiate(P_char ch, P_char victim, P_obj obj, void *data)
 {
   int rounds = *( (int *)data );
-  int dam;
+  int dam, level;
   struct damage_messages messages = {
     "&+cYou smirk as a pair of &+Wgh&+Los&+wtl&+Wy h&+Lan&+wds &+Rtighten &+caround $N&+c's throat!&n",
     "&+cYou gasp for &+Cair &+cas a pair of &+Wgh&+Los&+wtl&+Wy h&+Lan&+wds &+ctighten around your throat!&n",
@@ -2509,15 +2509,19 @@ void event_asphyxiate(P_char ch, P_char victim, P_obj obj, void *data)
     return;
   }
 
+  level = GET_LEVEL(ch);
+  if( level > 51 )
+    level = 51;
+
   if( NewSaves(victim, SAVING_SPELL, GET_LEVEL(ch) / 10) )
   {
-    // 40 +/- 5 dam at 56.
-    dam = (5 * GET_LEVEL(ch)) / 2 + number( 0, 40 );
+    // 45 +/- 5 dam at 51.
+    dam = (5 * GET_LEVEL(ch) + 65) / 2 + number( 0, 40 );
   }
   else
   {
     // 70 +/- 5 dam at 56.
-    dam = 5 * GET_LEVEL(ch) + number( -20, 20 );
+    dam = 5 * GET_LEVEL(ch) + number( 5, 45 );
   }
 
   if( spell_damage(ch, victim, dam, SPLDAM_GENERIC, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD
