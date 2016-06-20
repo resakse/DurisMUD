@@ -2993,7 +2993,6 @@ void event_change_yzar_race(P_char ch, P_char victim, P_obj obj, void *data)
   all_affects( ch, FALSE );
   all_affects( ch, TRUE );
   GET_HIT(ch) = (hps < 1) ? 1 : hps;
-  GET_MAX_VITALITY(ch) = 175;
 
   act("A &+wSkeleton&n continues to change into $n.", TRUE, ch, 0, 0, TO_ROOM);
 
