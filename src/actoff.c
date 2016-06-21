@@ -3583,7 +3583,7 @@ void kick(P_char ch, P_char victim)
   // Includes dracoliches. Jan08 -Lucrot
   if( IS_DRAGON(ch) || IS_CENTAUR(ch) )
   {
-    dam = (int) ( dam * 2 * (GET_LEVEL(ch) / 60) );
+    dam = (dam * 2 * GET_LEVEL( ch )) / 60;
     CharWait(ch, (int) ((PULSE_VIOLENCE * 2) / 3));
   }
   else
