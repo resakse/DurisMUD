@@ -1082,7 +1082,8 @@ int look_tactical_map(P_char ch, P_ship ship, char* arg1, char* arg2)
       // Calculate range in tenths of a block.
       lookrange = (int)(5 + 10 * range(ship->x, ship->y, 0, x, y, 0));
       maxrange = 350 + 10 * ship->crew.get_contact_range_mod();
-      if( lookrange > maxrange )
+      // If we're trying to look to far, or we're trying so hard to see that we go out of bounds (overflow).
+      if( (lookrange > maxrange) || (lookrange < 0) )
       {
         send_to_char_f(ch, "This location is out of range.\r\nThe distance must be within %d units.\r\nAttempted distance: %d.%d.\n",
           maxrange / 10, lookrange / 10, lookrange % 10);
