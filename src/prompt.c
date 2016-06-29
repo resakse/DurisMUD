@@ -48,7 +48,7 @@ void make_prompt(void)
     ansi = IS_ANSI_TERM(point);
     if (t_ch)
     {
-      t_ch_f = t_ch->specials.fighting;
+      t_ch_f = GET_OPPONENT(t_ch);
       t_obj_f = t_ch->specials.destroying_obj;
     }
 
@@ -384,7 +384,7 @@ void make_prompt(void)
       if( t_ch_f && (t_ch->in_room == t_ch_f->in_room) )
       {
         /* TANK elements only active if... */
-        if( (tank = t_ch_f->specials.fighting) && (t_ch->in_room == tank->in_room) )
+        if( (tank = GET_OPPONENT(t_ch_f)) && (t_ch->in_room == tank->in_room) )
         {
           if( IS_SET(t_ch_p, PROMPT_TANK_NAME))
           {
@@ -776,8 +776,8 @@ void UpdateScreen(P_char ch, int update)
   P_char   enemy = NULL, tank = NULL;
 
   size = ch->only.pc->screen_length + 1;
-  if (ch->specials.fighting)
-    enemy = ch->specials.fighting;
+  if (GET_OPPONENT(ch))
+    enemy = GET_OPPONENT(ch);
 
 /* hits */
   sprintf(buf, VT_CURSAVE);
@@ -853,7 +853,7 @@ void UpdateScreen(P_char ch, int update)
   if (enemy && (enemy->in_room == ch->in_room) &&
       IS_SET(ch->specials.act, PLR_DEBUG))
   {
-    if ((tank = enemy->specials.fighting) && (ch->in_room == tank->in_room))
+    if ((tank = GET_OPPONENT(enemy)) && (ch->in_room == tank->in_room))
       sprintf(buf, "%s", ch == tank ? "yourself" : !CAN_SEE(ch, tank) ?
               "someone" : J_NAME(tank));
     if (ch != tank)

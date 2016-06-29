@@ -359,7 +359,7 @@ int hoa_death(P_char ch, P_char vict, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
     if (!number(0, 35) || IS_NPC(victim))
     {
       if (!victim || IS_TRUSTED(victim))
@@ -386,7 +386,7 @@ int hoa_sin(P_char ch, P_char vict, int cmd, char *arg)
   if (ch && IS_FIGHTING(ch))
     if (!number(0, 4))
     {
-      victim = ch->specials.fighting;
+      victim = GET_OPPONENT(ch);
       if (!victim || GET_CLASS(victim, CLASS_PALADIN) || IS_TRUSTED(victim))
         return FALSE;
 

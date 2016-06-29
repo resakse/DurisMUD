@@ -166,8 +166,8 @@ int notch_skill(P_char ch, int skill, float chance)
   {
     // This prevents players from notching up skills using images and
     //   summoned pets such as elementals. Jan08 -Lucrot
-    if( IS_PC_PET(ch->specials.fighting)
-      || GET_LEVEL(ch->specials.fighting) < 2 )
+    if( IS_PC_PET(GET_OPPONENT(ch))
+      || GET_LEVEL(GET_OPPONENT(ch)) < 2 )
     {
       return 0;
     }

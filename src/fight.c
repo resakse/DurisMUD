@@ -390,7 +390,7 @@ bool rapier_dirk(P_char victim, P_char attacker)
 
   // Off-hand special riposte
   if( rapier_dirk_check(victim) && chance > number(1, 1000) && MIN_POS(victim, POS_STANDING + STAT_NORMAL)
-    && !IS_DRAGON(attacker) && victim->specials.fighting == attacker )
+    && !IS_DRAGON(attacker) && GET_OPPONENT(victim) == attacker )
   {
     if(number(0, 1))
     {
@@ -964,7 +964,7 @@ void update_pos(P_char ch)
     return;
 
   if (IS_FIGHTING(ch))
-    if (ch->in_room != ch->specials.fighting->in_room)
+    if (ch->in_room != GET_OPPONENT(ch)->in_room)
       stop_fighting(ch);
   if( IS_DESTROYING(ch) )
     if( ch->in_room != ch->specials.destroying_obj->loc.room)
@@ -1581,7 +1581,7 @@ void make_bloodstain(P_char ch)
   if( !HAS_FOOTING(ch) )
     return;
 
-  if( ch->specials.fighting && (IS_UNDEADRACE(ch->specials.fighting) || IS_ANGEL(ch->specials.fighting)) )
+  if( GET_OPPONENT(ch) && (IS_UNDEADRACE(GET_OPPONENT(ch)) || IS_ANGEL(GET_OPPONENT(ch))) )
     return;
 
   if (IS_UNDEADRACE(ch) || IS_ANGEL(ch))
@@ -2029,7 +2029,7 @@ P_char ForceReturn(P_char ch)
         ("As the last of life leaves your form, you return to your normal body.\r\n",
          t_ch);
     }
-    if (t_ch->specials.fighting)
+    if (GET_OPPONENT(t_ch))
       stop_fighting(t_ch);
     if( IS_DESTROYING(t_ch) )
       stop_destroying(t_ch);
@@ -2047,7 +2047,7 @@ P_char ForceReturn(P_char ch)
     act
       ("&+BThe soul holding $n &+Bto this realm has perished!\r\n$n&+B vanishes.",
        FALSE, t_ch, 0, 0, TO_ROOM);
-    if (t_ch->specials.fighting)
+    if (GET_OPPONENT(t_ch))
       stop_fighting(t_ch);
     if( IS_DESTROYING(t_ch) )
       stop_destroying(t_ch);
@@ -2432,7 +2432,7 @@ void die(P_char ch, P_char killer)
   {
     nq_char_death(killer, ch);
   }
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
   {
     stop_fighting(ch);
   }
@@ -3459,7 +3459,7 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
   }
 
   // Much harder to riposte something you are not fighting.
-  if(ch->specials.fighting != victim)
+  if(GET_OPPONENT(ch) != victim)
   {
     skl *= 0.50;
   }
@@ -3490,7 +3490,7 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
   else
     wpn = ch->equipment[PRIMARY_WEAPON];
 
-  if( expertriposte > number(1, 500) && ch->specials.fighting == victim )
+  if( expertriposte > number(1, 500) && GET_OPPONENT(ch) == victim )
   {
     act("$n &+wslams aside&n $N's attack and then pounds $M!", TRUE, ch, 0, victim, TO_NOTVICT);
     act("$n &+wslams aside&n your attack and counters!", TRUE, ch, 0, victim, TO_VICT);
@@ -3503,7 +3503,7 @@ int try_riposte(P_char ch, P_char victim, P_obj wpn)
       hit(ch, victim, wpn);
     }
   }
-  else if( (npcepicriposte == TRUE) && !number(0, 4) && ch->specials.fighting == victim )
+  else if( (npcepicriposte == TRUE) && !number(0, 4) && GET_OPPONENT(ch) == victim )
   {
     act("$n &+wslams aside&n $N's attack and then pounds $M!", TRUE, ch, 0, victim,
         TO_NOTVICT);
@@ -3680,7 +3680,7 @@ bool can_hit_target(P_char ch, P_char vict)
   for (opponent = combat_list; opponent; opponent = next_ch)
   {
     next_ch = opponent->specials.next_fighting;
-    if ((opponent->specials.fighting == vict) && (opponent != ch) && IS_PC(ch)
+    if ((GET_OPPONENT(opponent) == vict) && (opponent != ch) && IS_PC(ch)
         && IS_PC(opponent))
     {
       num_opponents++;
@@ -6640,7 +6640,7 @@ bool frightening_presence(P_char ch, P_char victim)
 {
   int      chance;
 
-  if( victim->specials.fighting == ch )
+  if( GET_OPPONENT(victim) == ch )
   {
     return FALSE;
   }
@@ -7765,7 +7765,7 @@ void StopAllAttackers(P_char ch)
   for (t_ch = combat_list; t_ch; t_ch = hold)
   {
     hold = t_ch->specials.next_fighting;
-    if (t_ch->specials.fighting == ch)
+    if (GET_OPPONENT(t_ch) == ch)
     {
       t_ch->specials.was_fighting = ch;
       stop_fighting(t_ch);
@@ -7783,7 +7783,7 @@ void StopMercifulAttackers(P_char ch)
   for (t_ch = combat_list; t_ch; t_ch = hold)
   {
     hold = t_ch->specials.next_fighting;
-    if ((t_ch->specials.fighting == ch) &&
+    if ((GET_OPPONENT(t_ch) == ch) &&
         !affected_by_spell(t_ch, SKILL_BERSERK) &&
         ((IS_PC(t_ch) && !IS_SET(t_ch->specials.act, PLR_VICIOUS)) ||
          (IS_NPC(t_ch) && !is_aggr_to(t_ch, ch))))
@@ -7908,7 +7908,7 @@ void set_fighting(P_char ch, P_char vict)
     strcpy(Gbuf, "q\n");
     show_string(victim->desc, Gbuf);
   }
-  ch->specials.fighting = victim;
+  GET_OPPONENT(ch) = victim;
   ch->specials.next_fighting = combat_list;
   combat_list = ch;
   stop_memorizing(ch);
@@ -8070,7 +8070,7 @@ void MoveAllAttackers(P_char ch,P_char v)
   for (t_ch = combat_list; t_ch; t_ch = hold)
   {
     hold = t_ch->specials.next_fighting;
-    if (t_ch->specials.fighting == ch)
+    if (GET_OPPONENT(t_ch) == ch)
     {
       t_ch->specials.was_fighting = ch;
       stop_fighting(t_ch);
@@ -8092,7 +8092,7 @@ void retarget_event(P_char ch, P_char victim, P_obj obj, void *data)
   }
 
   /* no need to retarget when target _Does_ exist */
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     return;
 
   /* retarget blues: */
@@ -8208,7 +8208,7 @@ int dodgeSucceed(P_char char_dodger, P_char attacker, P_obj wpn)
     return 0;
   }
 
-  if (affected_by_spell(char_dodger, SKILL_RAGE) && attacker != char_dodger->specials.fighting)
+  if( affected_by_spell(char_dodger, SKILL_RAGE) && attacker != GET_OPPONENT(char_dodger) )
   {
     return 0;
   }
@@ -8376,7 +8376,7 @@ int blockSucceed(P_char victim, P_char attacker, P_obj wpn)
       !(shield = victim->equipment[WEAR_SHIELD]))
     return false;
 
-  if (affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting)
+  if (affected_by_spell(victim, SKILL_RAGE) && attacker != GET_OPPONENT(victim))
     return false;
 
   if(notch_skill(victim, SKILL_SHIELD_BLOCK, get_property("skill.notch.defensive", 17)))
@@ -8646,7 +8646,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
       (victim->equipment[WIELD] && IS_FLAYING(victim->equipment[WIELD])) )
     return FALSE;
 
-  if( affected_by_spell(victim, SKILL_RAGE) && attacker != victim->specials.fighting )
+  if( affected_by_spell(victim, SKILL_RAGE) && attacker != GET_OPPONENT(victim) )
     return FALSE;
 
   // Notching the parry skill fails the parry check.
@@ -8754,7 +8754,7 @@ int parrySucceed(P_char victim, P_char attacker, P_obj wpn)
   }
 
   // Harder to parry something you are not fighting.
-  if( IS_PC(victim) && victim->specials.fighting != attacker )
+  if( IS_PC(victim) && GET_OPPONENT(victim) != attacker )
   {
     learnedvictim = (int) (learnedvictim * 0.90);
   }
@@ -8909,7 +8909,7 @@ void stop_fighting(P_char ch)
   if (IS_SET(ch->specials.affected_by3, AFF3_TRACKING)) // needed for new track *Alv*
     REMOVE_BIT(ch->specials.affected_by3, AFF3_TRACKING);
 
-  ch->specials.was_fighting = ch->specials.fighting;
+  ch->specials.was_fighting = GET_OPPONENT(ch);
 
   if (ch == combat_next_ch)
     combat_next_ch = ch->specials.next_fighting;
@@ -8929,7 +8929,7 @@ void stop_fighting(P_char ch)
   }
 
   ch->specials.next_fighting = NULL;
-  ch->specials.fighting = NULL;
+  GET_OPPONENT(ch) = NULL;
 
   if (affected_by_spell(ch, SPELL_CEGILUNE_BLADE)) {
     struct affected_type *afp = get_spell_from_char(ch, SPELL_CEGILUNE_BLADE);
@@ -9000,7 +9000,7 @@ int calculate_attacks(P_char ch, int attacks[])
   P_char rider;
   int number_attacks = 0;
 
-  if( IS_AFFECTED5(ch, AFF5_NOT_OFFENSIVE) || !IS_ALIVE(ch->specials.fighting) )
+  if( IS_AFFECTED5(ch, AFF5_NOT_OFFENSIVE) || !IS_ALIVE(GET_OPPONENT(ch)) )
   {
     return 0;
   }
@@ -9137,7 +9137,7 @@ int calculate_attacks(P_char ch, int attacks[])
             break;
           case 2:
             act("&+WYour devotion to your god causes you to unleash a &+rF&+Rlurr&+ry&+W of attacks against $N!&n",
-                FALSE, ch, NULL, ch->specials.fighting, TO_CHAR);
+                FALSE, ch, NULL, GET_OPPONENT(ch), TO_CHAR);
             act("$n says 'The non-believer must be punished!", FALSE, ch, 0, 0, TO_ROOM);
             ADD_ATTACK(PRIMARY_WEAPON);
             ADD_ATTACK(PRIMARY_WEAPON);
@@ -9160,21 +9160,21 @@ int calculate_attacks(P_char ch, int attacks[])
             act("&n$n gasps suddenly as their body is &+Benhanced&n by some &+Wother-worldly &npower!&n",
               FALSE, ch, 0, 0, TO_NOTVICT);
             act("&+WYour devotion to your god causes you to unleash a &+rF&+Rlurr&+ry&+W of attacks against $N!&n",
-              FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
+              FALSE, ch, 0, GET_OPPONENT(ch), TO_CHAR);
             do_say( ch, "The non-believer must be punished!", CMD_SAY );
             ADD_ATTACK(PRIMARY_WEAPON);
             ADD_ATTACK(PRIMARY_WEAPON);
             break;
           case 4:
             act("&+WYour devotion to your god causes you to unleash a &+rF&+Rlurr&+ry&+W of attacks against $N!&n",
-                FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
+                FALSE, ch, 0, GET_OPPONENT(ch), TO_CHAR);
             ADD_ATTACK(PRIMARY_WEAPON);
             do_say( ch, "Beg for forgiveness and be saved!", CMD_SAY );
             ADD_ATTACK(PRIMARY_WEAPON);
             break;
           case 5:
             act("&+WYour devotion to your god causes you to unleash a &+rF&+Rlurr&+ry&+W of attacks against $N!&n",
-                FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
+                FALSE, ch, 0, GET_OPPONENT(ch), TO_CHAR);
             do_say( ch, "May your bloodshed be a willing sacrifice!", CMD_SAY );
             ADD_ATTACK(PRIMARY_WEAPON);
             ADD_ATTACK(PRIMARY_WEAPON);
@@ -9485,7 +9485,7 @@ void perform_violence(void)
 
     room_rnums.insert( ch->in_room );
 
-    opponent = ch->specials.fighting;
+    opponent = GET_OPPONENT(ch);
 
     if( !opponent && ch->in_room != NOWHERE )
     {
@@ -9653,7 +9653,7 @@ void perform_violence(void)
 
     for (i = 0; i < real_attacks; i++)
     {
-      if(!ch->specials.fighting || !is_char_in_room(ch, room) || !is_char_in_room(opponent, room))
+      if(!GET_OPPONENT(ch) || !is_char_in_room(ch, room) || !is_char_in_room(opponent, room))
       {
         break;
       }

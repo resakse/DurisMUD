@@ -2152,7 +2152,7 @@ int NumAttackers(P_char ch)
     return 0;
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
-    if (tch->specials.fighting && (tch->specials.fighting == ch))
+    if (GET_OPPONENT(tch) && (GET_OPPONENT(tch) == ch))
       total++;
 
   return total;
@@ -2396,7 +2396,7 @@ bool aggressive_to(P_char ch, P_char target)
   if (GET_MASTER(ch) && ch->in_room == GET_MASTER(ch)->in_room)
   {
     /* master is in room, lets check to see if he's fighting */
-    if (GET_MASTER(ch)->specials.fighting == target)
+    if( GET_OPPONENT(GET_MASTER(ch)) )
       return TRUE;              /* master is fighting the target, so return true */
     return FALSE;
   }
@@ -4816,7 +4816,7 @@ bool should_area_hit(P_char ch, P_char victim)
   if( GET_STAT(victim) == STAT_DEAD )
     return FALSE;
 
-  if( (ch->specials.fighting == victim) || (victim->specials.fighting == ch) )
+  if( (GET_OPPONENT(ch) == victim) || (GET_OPPONENT(victim) == ch) )
     return TRUE;
 
   if( IS_AFFECTED(victim, AFF_WRAITHFORM) )
@@ -4827,7 +4827,7 @@ bool should_area_hit(P_char ch, P_char victim)
     && !(GET_PLYR(ch)->following && IS_PC(GET_PLYR(ch)->following)) )
     return FALSE;
 
-  if (IS_TRUSTED(victim) && (victim->specials.fighting != ch))
+  if( IS_TRUSTED(victim) && (GET_OPPONENT(victim) != ch) )
     return FALSE;
 
   if( (world[ch->in_room].room_flags & SINGLE_FILE) && !AdjacentInRoom(ch, victim) )
@@ -4847,8 +4847,8 @@ bool should_area_hit(P_char ch, P_char victim)
   while (c_leader->following)
     c_leader = c_leader->following;
 
-  if ((ch->specials.fighting == v_leader) ||
-      (victim->specials.fighting == c_leader))
+  if ((GET_OPPONENT(ch) == v_leader) ||
+      ( GET_OPPONENT(victim) == c_leader))
     return TRUE;
 
   if (grouped(ch, victim))

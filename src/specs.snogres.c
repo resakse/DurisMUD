@@ -251,7 +251,7 @@ int berserker_toss(P_char ch, P_char vict, int cmd, char *arg)
   if (!IS_FIGHTING(ch))
     return FALSE;
 
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
   /* count number of PCs, pick someone */

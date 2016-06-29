@@ -1084,7 +1084,7 @@ bool char_to_room(P_char ch, int room, int dir)
    * fighting if it's not a do_at() call (farsee spell uses do_at())
    */
 
-  if (ch->specials.fighting && (dir >= 0))
+  if (GET_OPPONENT(ch) && (dir >= 0))
     stop_fighting(ch);
   if( IS_DESTROYING(ch) && (dir >= 0) )
     stop_destroying(ch);
@@ -2937,7 +2937,7 @@ void extract_char(P_char ch)
    */
   ac_stopAllFromIgnoring(ch);
 
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     stop_fighting(ch);
   if( IS_DESTROYING(ch) )
     stop_destroying(ch);

@@ -129,7 +129,7 @@ void do_holy_smite(P_char ch, char *argument, int cmd)
 
   if( !*argument )
   {
-    if (!(vict = ch->specials.fighting))
+    if (!(vict = GET_OPPONENT(ch)))
     {
       send_to_char("Smite whom?\r\n", ch);
       return;

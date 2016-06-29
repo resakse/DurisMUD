@@ -3027,7 +3027,7 @@ int vapor(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if( IS_FIGHTING(ch) && OBJ_WORN(obj) )
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
       if( !IS_ALIVE(vict) )
       {
         return FALSE;
@@ -3358,7 +3358,7 @@ int good_evil_fightingProc(P_char ch, P_obj obj, int isGood, int mana)
   else
     rand = number(0, 14);
 
-  opponent = ch->specials.fighting;
+  opponent = GET_OPPONENT(ch);
   if (opponent == NULL)
     return mana;
 
@@ -3667,9 +3667,9 @@ void good_evil_startBigFight(P_char attacker, P_char defender,
   good_evil_spellUp(attacker);
   good_evil_spellUp(defender);
   obj->value[5] = TRUE;
-  if (attacker->specials.fighting != defender)
+  if( GET_OPPONENT(attacker) != defender)
     stop_fighting(attacker);
-  if (defender->specials.fighting != attacker)
+  if( GET_OPPONENT(defender) != attacker)
     stop_fighting(defender);
 
    // Original crashes - Clav
@@ -3704,7 +3704,7 @@ int killOtherSword(P_obj obj, P_char ch, int isGood)
 
   enemySwordVNum = isGood ? 21 : 22;
 
-  if (IS_FIGHTING(ch) && isWieldingVnum(ch->specials.fighting, enemySwordVNum))
+  if (IS_FIGHTING(ch) && isWieldingVnum(GET_OPPONENT(ch), enemySwordVNum))
   {  /* already fighting the other sword */
     obj->value[5] = TRUE;
     obj->value[7] = -10000;
@@ -4040,16 +4040,16 @@ int good_evil_sword(P_obj obj, P_char ch, int cmd, char *arg)
     {
       num_attacks = number(3, 5);
       act("$p &+Wflares up, slashing your opponent with incredible speed!&n",
-          TRUE, ch, obj, ch->specials.fighting, TO_CHAR);
+          TRUE, ch, obj, GET_OPPONENT(ch), TO_CHAR);
       act("&+W$n's&N $p&+W flares up, slashing $N with incredible speed!&n",
-          TRUE, ch, obj, ch->specials.fighting, TO_NOTVICT);
+          TRUE, ch, obj, GET_OPPONENT(ch), TO_NOTVICT);
       act("&+W$n's&N $p&+W flares up, slashing YOU with incredible speed!&n",
-          TRUE, ch, obj, ch->specials.fighting, TO_VICT);
+          TRUE, ch, obj, GET_OPPONENT(ch), TO_VICT);
       for( i = 0; i < num_attacks; i++ )
       {
-        if( IS_ALIVE(ch) && IS_ALIVE(ch->specials.fighting) )
+        if( IS_ALIVE(ch) && IS_ALIVE(GET_OPPONENT(ch)) )
         {
-          hit(ch, ch->specials.fighting, obj);
+          hit(ch, GET_OPPONENT(ch), obj);
         }
       }
     }
@@ -4081,7 +4081,7 @@ int dranum_mask(P_obj obj, P_char ch, int cmd, char *arg)
   // 1/10 chance.
   if( IS_FIGHTING(ch) && !number(0, 9) )
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     // no cheesing mobs/dead ppl.
     if( !IS_ALIVE(vict) || IS_NPC(vict) )
     {
@@ -4243,7 +4243,7 @@ int vigor_mask(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && !number(0, 9) && cmd == 0)
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     send_to_char
       ("&+WThe essense of Bahamut streams of of your mask and attacks your victim!&N\n",
        ch);
@@ -5152,18 +5152,18 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
       for(tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
       {
         // Skip the people just standing there (and attacking ch).
-        if( !IS_FIGHTING(tch) || tch->specials.fighting == ch )
+        if( !IS_FIGHTING(tch) || GET_OPPONENT(tch) == ch )
         {
           continue;
         }
         // If tch is attacking someone in ch's group.
-        if( grouped(ch, tch->specials.fighting) && IS_CASTER(tch->specials.fighting) )
+        if( grouped(ch, GET_OPPONENT(tch)) && IS_CASTER(GET_OPPONENT(tch)) )
         {
-          tmpper = (GET_HIT(tch->specials.fighting) / GET_MAX_HIT(tch->specials.fighting)) * 100;
+          tmpper = (GET_HIT(GET_OPPONENT(tch)) / GET_MAX_HIT(GET_OPPONENT(tch))) * 100;
           if( tmpper < pcnt )
           {
             attacker = tch;
-            vict = tch->specials.fighting;
+            vict = GET_OPPONENT(tch);
             pcnt = tmpper;
           }
         }
@@ -5193,7 +5193,7 @@ int holy_weapon(P_obj obj, P_char ch, int cmd, char *arg)
           act("$n&+L's $q &+Rglows &+Las its pommel smashes into you, &+Lknocking you off-balance and back several steps!",
             FALSE, ch, obj, attacker, TO_VICT);
         }
-        if( vict->specials.fighting == attacker )
+        if( GET_OPPONENT(vict) == attacker )
           stop_fighting(vict);
         stop_fighting(attacker);
         set_fighting(attacker, ch);
@@ -5771,7 +5771,7 @@ int banana(P_obj obj, P_char ch, int cmd, char *arg)
       act("$n slips on a banana peel, falls over with a surprised look on $s "
           "face, and passes out when $s head smacks the ground!", TRUE, ch, 0,
           0, TO_ROOM);
-      if (ch->specials.fighting)
+      if (GET_OPPONENT(ch))
         stop_fighting(ch);
       if( IS_DESTROYING(ch) )
         stop_destroying(ch);
@@ -7858,11 +7858,11 @@ int flaming_mace_ruzdo(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if (!ch->specials.fighting)
+      if (!GET_OPPONENT(ch))
         set_fighting(ch, vict);
     }
   }
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     return (FALSE);             /*
                                    do the normal hit damage as well
                                  */
@@ -7903,13 +7903,13 @@ int sword_named_magik(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if( !ch->specials.fighting )
+      if( !GET_OPPONENT(ch) )
       {
         set_fighting(ch, vict);
       }
     }
   }
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return (FALSE);
   }
@@ -8696,7 +8696,7 @@ int blind_boots(P_obj obj, P_char ch, int cmd, char *arg)
   // 1/25 chance == 4%
   if( IS_FIGHTING(ch) && !number(0, 24) )
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
 
     if( affected_by_spell(vict, SPELL_BLINDNESS) || (GET_RACE(vict) == RACE_DRAGON)
       || (GET_RACE(vict) == RACE_DEMON) || (GET_RACE(vict) == RACE_DEVIL)
@@ -9115,7 +9115,7 @@ int tripboots(P_obj obj, P_char ch, int cmd, char *arg)
     // 70% chance.
     if( rand < 8 )
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
       act("&N$n sweep sends you crashing to the ground!&N", TRUE, ch, obj, vict, TO_VICT);
       act("&N$n sweep sends $N crashing to the ground!!&N", TRUE, ch, obj, vict, TO_NOTVICT);
       act("&NYour sweep sends $N crashing to the ground!&N", TRUE, ch, obj, vict, TO_CHAR);
@@ -9125,7 +9125,7 @@ int tripboots(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
       act("&N$n falls like a drunk turkey to the ground!&N", TRUE, ch, obj, vict, TO_VICT);
       act("&N$n falls like a drunk turkey to the ground!&N", TRUE, ch, obj, vict, TO_NOTVICT);
       act("&NIn your haste to sweep $N off the ground, you fall to the ground in embarrassment! &N", TRUE, ch, obj, vict, TO_CHAR);
@@ -9157,7 +9157,7 @@ int blindbadge(P_obj obj, P_char ch, int cmd, char *arg)
   // 1/6 chance.
   if( IS_FIGHTING(ch) && !number(0, 5) )
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if( !IS_ALIVE(vict) )
     {
       return FALSE;
@@ -9181,7 +9181,7 @@ int blindbadge(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
       act("&+y$n &+m's $q &+yfalls down over his eyes!&n", TRUE, ch, obj, vict, TO_VICT);
       act("&+y$n &+m's $q &+yfalls down over his eyes!&n", TRUE, ch, obj, vict, TO_NOTVICT);
       act("&+yYour $q &+yfalls down over your eyes!&n", TRUE, ch, obj, vict, TO_CHAR);
@@ -9266,7 +9266,7 @@ int fumblegaunts(P_obj obj, P_char ch, int cmd, char *arg)
   // 1/15 chance.
   if( IS_FIGHTING(ch) && !number(0, 14) )
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if( !IS_ALIVE(vict) )
     {
       return FALSE;
@@ -9283,16 +9283,16 @@ int fumblegaunts(P_obj obj, P_char ch, int cmd, char *arg)
       act("&+L$n's $q blurs as it strikes&N $N.", FALSE, ch, obj, vict, TO_NOTVICT);
 #endif
 #ifndef NEW_COMBAT
-      if (ch->specials.fighting)
-        hit(ch, ch->specials.fighting, ch->equipment[PRIMARY_WEAPON]);
-      if (ch->specials.fighting)
-        hit(ch, ch->specials.fighting, ch->equipment[PRIMARY_WEAPON]);
-      if (ch->specials.fighting)
-        hit(ch, ch->specials.fighting, ch->equipment[PRIMARY_WEAPON]);
-      if (ch->specials.fighting)
-        hit(ch, ch->specials.fighting, ch->equipment[PRIMARY_WEAPON]);
-      if (ch->specials.fighting)
-        hit(ch, ch->specials.fighting, ch->equipment[PRIMARY_WEAPON]);
+      if (GET_OPPONENT(ch))
+        hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
+      if (GET_OPPONENT(ch))
+        hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
+      if (GET_OPPONENT(ch))
+        hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
+      if (GET_OPPONENT(ch))
+        hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
+      if (GET_OPPONENT(ch))
+        hit(ch, GET_OPPONENT(ch), ch->equipment[PRIMARY_WEAPON]);
 #endif
     }
     else
@@ -9878,9 +9878,9 @@ int lifereaver(P_obj obj, P_char ch, int cmd, char *arg)
   else if(IS_FIGHTING(ch))
   {
     if(!number(0, 3) &&
-       !IS_UNDEADRACE(ch->specials.fighting))
+       !IS_UNDEADRACE(GET_OPPONENT(ch)))
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
       act("&+LYour $q &+Lslices into $N&+L, making him &+rBLEED&+L!&N", TRUE,
           ch, obj, vict, TO_CHAR);
       act("&+L$ns $q &+Lslices into $N&+L, making him &+rBLEED&+L!&N", TRUE,
@@ -10469,7 +10469,7 @@ int dragon_skull_helm(P_obj obj, P_char ch, int cmd, char *argument)
     }
     if( IS_FIGHTING(ch) && number(0, 1) )
     {
-      victim = ch->specials.fighting;
+      victim = GET_OPPONENT(ch);
       if( !IS_ALIVE(victim) )
       {
         return FALSE;
@@ -10554,7 +10554,7 @@ int ljs_armor(P_obj obj, P_char ch, int cmd, char *arg)
   {
     return FALSE;
   }
-  vict = ch->specials.fighting;
+  vict = GET_OPPONENT(ch);
   if( !IS_ALIVE(vict) )
   {
     return FALSE;
@@ -11902,7 +11902,7 @@ int lyrical_instrument_of_time(P_obj obj, P_char ch, int cmd, char *argument)
 
   if (IS_FIGHTING(temp_ch) && !number(0, 2))
   {
-    vict = temp_ch->specials.fighting;
+    vict = GET_OPPONENT(temp_ch);
 
     if (!vict)
       return FALSE;

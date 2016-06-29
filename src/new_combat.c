@@ -1847,12 +1847,12 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
 
       // weapon special proc
       if (weapon && weapon_has_proc && char_in_list(ch) && victim &&
-          ch->specials.fighting && (ch->in_room == victim->in_room))
+          GET_OPPONENT(ch) && (ch->in_room == victim->in_room))
         (*obj_index[weapon->R_num].func.obj) (weapon, ch, 1000,
                                               (char *) victim);
 
       if (weapon && (dam > 0) && weap_has_poison && char_in_list(ch) &&
-          ch->specials.fighting)
+          GET_OPPONENT(ch))
       {
         resolve_poison(victim, weapon->value[4], TRUE);
         weapon->value[4] = 0;
@@ -2324,7 +2324,7 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
    */
 
   if (p_weapon && obj_index[p_weapon->R_num].func.obj && (dam > 0)
-      && ch->specials.fighting && (ch->in_room == victim->in_room))
+      && GET_OPPONENT(ch) && (ch->in_room == victim->in_room))
     (*obj_index[p_weapon->R_num].func.obj) (p_weapon, ch, 1000,
                                             (char *) victim);
 
@@ -2377,7 +2377,7 @@ void perform_violence(void)
     no_dodge = FALSE;
 
     /* even if they're bashed, they can still recover from headbutt */
-    opponent = ch->specials.fighting;
+    opponent = GET_OPPONENT(ch);
 
     if (!opponent)
     {

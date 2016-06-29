@@ -198,14 +198,14 @@ int storm_legplates(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
   }
 
-  if( IS_ALIVE(ch->specials.fighting) && ch->in_room == ch->specials.fighting->in_room )
+  if( IS_ALIVE(GET_OPPONENT(ch)) && ch->in_room == GET_OPPONENT(ch)->in_room )
   {
     if( arg && (cmd == CMD_SAY) )
     {
       if( isname(arg, "storm") )
       {
         curr_time = time(NULL);
-        vict = ch->specials.fighting;
+        vict = GET_OPPONENT(ch);
         // 10 min timer.
         if( obj->timer[0] + 600 <= curr_time )
         {
@@ -328,7 +328,7 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
       if( isname(arg, "blur") )
       {
         curr_time = time(NULL);
-        vict = ch->specials.fighting;
+        vict = GET_OPPONENT(ch);
         // 10 min timer.
         if( obj->timer[0] + 600 <= curr_time)
         {
@@ -339,17 +339,17 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
           act("$n's $q &+Lslows down time and freezes&n $n &+Lin place!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
           act("&+L...$n &+Lleaps towards&n $N &+Land deals a series of &+cvicious &+Lattacks!&n", TRUE, ch, obj, NULL, TO_NOTVICT);
 
-          if( IS_ALIVE(ch) && ch->specials.fighting )
+          if( IS_ALIVE(ch) && GET_OPPONENT(ch) )
           {
-            hit(ch, ch->specials.fighting, obj);
+            hit(ch, GET_OPPONENT(ch), obj);
           }
-          if( IS_ALIVE(ch) && ch->specials.fighting )
+          if( IS_ALIVE(ch) && GET_OPPONENT(ch) )
           {
-            hit(ch, ch->specials.fighting, obj);
+            hit(ch, GET_OPPONENT(ch), obj);
           }
-          if( IS_ALIVE(ch) && ch->specials.fighting )
+          if( IS_ALIVE(ch) && GET_OPPONENT(ch) )
           {
-            hit(ch, ch->specials.fighting, obj);
+            hit(ch, GET_OPPONENT(ch), obj);
           }
 
           act("$Q &+Cglows &+Las it touches $N's &+Csoul&+L!&n", TRUE, ch, obj, NULL, TO_CHAR);
@@ -392,7 +392,7 @@ int blur_shortsword(P_obj obj, P_char ch, int cmd, char *arg)
         return FALSE;
       }
       vict = data->victim;
-      if( !IS_ALIVE(vict) || vict != ch->specials.fighting )
+      if( !IS_ALIVE(vict) || vict != GET_OPPONENT(ch) )
       {
         return FALSE;
       }
@@ -642,9 +642,9 @@ int snowogre_warhammer(P_obj obj, P_char ch, int cmd, char *arg)
   }
 
   room = ch->in_room;
-  vict = ch->specials.fighting;
+  vict = GET_OPPONENT(ch);
   // 1/33 chance.
-  if( cmd == CMD_MELEE_HIT && CanDoFightMove(ch, ch->specials.fighting) && !IS_IMMOBILE(ch) && !number(0, 32)
+  if( cmd == CMD_MELEE_HIT && CanDoFightMove(ch, GET_OPPONENT(ch)) && !IS_IMMOBILE(ch) && !number(0, 32)
     && CheckMultiProcTiming(ch) && !IS_ELITE(vict) )
   {
     if( !IS_ALIVE(vict) || ch->in_room != vict->in_room )
@@ -1629,7 +1629,7 @@ int wh_guard(P_char ch, P_char victim, int cmd, char *arg)
 	int      helpers[] = { 55240, 55241, 55255, 55256, 55257, 55258, 55259, 55260, 55022, 0 };
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;
-  if (!victim && IS_FIGHTING(ch) && EVIL_RACE(ch->specials.fighting))
+  if (!victim && IS_FIGHTING(ch) && EVIL_RACE(GET_OPPONENT(ch)))
     return shout_and_hunt(ch, 20, "&+YCome to my aid! We are being invaded!&n", NULL, helpers, 0, 0);
   return FALSE;
 }
@@ -2058,7 +2058,7 @@ int helmet_vampires(P_obj obj, P_char ch, int cmd, char *arg)
     }
   }
 
-  if( IS_FIGHTING(ch) && !IS_IMMOBILE(ch) && IS_ALIVE(ch->specials.fighting) && ch->in_room == ch->specials.fighting->in_room )
+  if( IS_FIGHTING(ch) && !IS_IMMOBILE(ch) && IS_ALIVE(GET_OPPONENT(ch)) && ch->in_room == GET_OPPONENT(ch)->in_room )
   {
     if( arg && (cmd == CMD_PRAY) )
     {

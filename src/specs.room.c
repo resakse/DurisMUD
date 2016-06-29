@@ -573,7 +573,7 @@ int akh_elamshin(int room, P_char ch, int cmd, char *arg)
   if (cmd != CMD_WORSHIP)
     return (FALSE);
 
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     return (FALSE);
 
   send_to_char
@@ -1369,7 +1369,7 @@ int duergar_guild(int room, P_char ch, int cmd, char *arg)
   if (number(1, 101) > 25)
     return FALSE;
 
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     return FALSE;
 
   killer = read_mobile(17260, VIRTUAL);

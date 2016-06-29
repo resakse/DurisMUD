@@ -155,7 +155,7 @@ int vecnas_fight_proc(P_char ch, P_char tch, int cmd, char *arg)
   {
     if (!number(0, 50))
     {
-      victim = ch->specials.fighting;
+      victim = GET_OPPONENT(ch);
       if (!victim || IS_TRUSTED(victim))
       {
 	return FALSE;
@@ -445,7 +445,7 @@ int vecna_pestilence(P_obj obj, P_char ch, int cmd, char *arg)
 
   if( number(0, 100) <= 30 && GET_ALIGNMENT(ch) < -750 )
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
     if( !IS_ALIVE(victim) )
     {
       return FALSE;
@@ -483,7 +483,7 @@ int vecna_minifist(P_obj obj, P_char ch, int cmd, char *arg)
   // 5% chance to proc.
   if( number(1, 100) <= 5 )
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
     if( !IS_ALIVE(victim) )
     {
       return FALSE;
@@ -513,7 +513,7 @@ int vecna_dispel(P_obj obj, P_char ch, int cmd, char *arg)
 
   if (number(0, 100) <= 5)
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
     act("&+LYour &+rrazor-edged dagger &+Lglows with motes of &+rcrimson &+Llight as it attacks $N's &+c m&+Cagi&+cc!", FALSE, ch, NULL, victim, TO_CHAR);
     act("$n's &+rrazor-edged dagger &+Lglows with motes of &+rcrimson &+Llight as it attacks your &+cm&+Cagi&+cc!", FALSE, ch, NULL, victim, TO_VICT);
     act("$n's &+rrazor-edged dagger &+Lglows with motes of &+rcrimson &+Llight as it attacks $N's &+cm&+Cagi&+cc!", FALSE, ch, NULL, victim, TO_NOTVICT);
@@ -534,7 +534,7 @@ int vecna_boneaxe(P_obj obj, P_char ch, int cmd, char *arg)
 
   if( number(0, 100) <= 6 )
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
     act("&+LYour large &+Wbone &+Laxe shrieks in &+rrage &+Lat the sight of $N!", FALSE, ch, NULL, victim, TO_CHAR);
     act("&n's &+Llarge &+Wbone &+Laxe shrieks in &+rrage &+Lat the sight of you!", FALSE, ch, NULL, victim, TO_VICT);
     act("$n's &+Llarge &+Wbone &+Laxe shrieks in &+rrage &+Lat the sight of $N!", FALSE, ch, NULL, victim, TO_NOTVICT);
@@ -697,7 +697,7 @@ int vecna_staffoaken(P_obj obj, P_char ch, int cmd, char *arg)
   }
 
   // Ok, past all the periodic stuff, time for attack procs
-  victim = ch->specials.fighting;
+  victim = GET_OPPONENT(ch);
   // 10% chance to proc.
   if( IS_ALIVE(victim) && cmd == CMD_MELEE_HIT && number(0, 100) < 10 )
   {

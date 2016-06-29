@@ -3951,7 +3951,7 @@ void free_char(P_char ch)
     logit(LOG_DEBUG, "free_char called with no char!");
     return;
   }
-  if ((ch->specials.fighting))
+  if ((GET_OPPONENT(ch)))
   {
     logit(LOG_EXIT, "free_char: called with a non-extracted char");
     // tmp = (struct affected_type *) (0 / 0);
@@ -4211,7 +4211,7 @@ void reset_char(P_char ch)
   ch->specials.next_fighting = 0;
 #endif
   ch->specials.destroying_obj = 0;
-  ch->specials.fighting = 0;
+  GET_OPPONENT(ch) = 0;
   ch->specials.carry_weight = 0;
   ch->specials.carry_items = 0;
   if (IS_PC(ch))

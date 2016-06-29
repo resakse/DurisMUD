@@ -78,7 +78,7 @@ void spell_beholder_sleep(int level, P_char ch, P_char victim, P_obj obj)
        "&+Lall but impossible! The world becomes a faint memory as you slip into\r\n"
        "&+Lla-la land.\r\n", victim);
        
-    if(victim->specials.fighting)
+    if(GET_OPPONENT(victim))
       stop_fighting(victim);
     if( IS_DESTROYING(victim) )
       stop_destroying(victim);

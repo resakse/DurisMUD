@@ -573,7 +573,7 @@ int leave_by_exit(P_char ch, int exitnumb)
 
         if( (GET_POS(t_ch) == POS_PRONE) && !IS_FIGHTING(t_ch) &&
             (GET_POS(ch) > POS_PRONE) &&
-            (!IS_FIGHTING(ch) || (ch->specials.fighting != t_ch)))
+            (!IS_FIGHTING(ch) || (GET_OPPONENT(ch) != t_ch)))
         {
 
           /*
@@ -609,7 +609,7 @@ int leave_by_exit(P_char ch, int exitnumb)
         }
         else if( (GET_POS(t_ch) > POS_PRONE) && !IS_FIGHTING(t_ch) &&
                  (GET_POS(ch) == POS_PRONE) &&
-                 (!IS_FIGHTING(ch) || (ch->specials.fighting != t_ch)))
+                 (!IS_FIGHTING(ch) || (GET_OPPONENT(ch) != t_ch)))
         {
 
           /*
@@ -679,9 +679,9 @@ int leave_by_exit(P_char ch, int exitnumb)
 
         if( IS_FIGHTING(ch))
         {
-          if( IS_FIGHTING(ch->specials.fighting) &&
-              (ch->specials.fighting->specials.fighting == ch))
-            stop_fighting(ch->specials.fighting);
+          if( IS_FIGHTING(GET_OPPONENT(ch)) &&
+              (GET_OPPONENT(GET_OPPONENT(ch)) == ch))
+            stop_fighting(GET_OPPONENT(ch));
           stop_fighting(ch);
         }
         /*
@@ -1227,7 +1227,7 @@ void blow_char_somewhere_else(P_char ch, int dir)
   if( IS_DESTROYING(ch) )
     stop_destroying(ch);
   for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next)
-    if( IS_FIGHTING(t_ch) && (t_ch->specials.fighting == ch))
+    if( IS_FIGHTING(t_ch) && (GET_OPPONENT(t_ch) == ch))
       stop_fighting(t_ch);
 
   send_to_char("The mighty winds toss you around like an orc in the ocean!\n",
@@ -1393,7 +1393,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
     moving = ch;
   }
 
-  if( mount && mount->specials.fighting )
+  if( mount && GET_OPPONENT(mount) )
   {
     send_to_char("&+WYour mount is in combat, maybe you should stay and fight!&n\n", ch);
     return FALSE;
@@ -3906,13 +3906,13 @@ void do_sit(P_char ch, char *argument, int cmd)
         /*
          * they can, if they want, but...  JAB
          */
-        if( ch->specials.fighting->specials.fighting &&
-            (ch->specials.fighting->specials.fighting != ch) &&
-            IS_NPC(ch->specials.fighting) && CAN_ACT(ch->specials.fighting) &&
-            CAN_SEE(ch->specials.fighting, ch))
+        if( GET_OPPONENT(GET_OPPONENT(ch)) &&
+            (GET_OPPONENT(GET_OPPONENT(ch)) != ch) &&
+            IS_NPC(GET_OPPONENT(ch)) && CAN_ACT(GET_OPPONENT(ch)) &&
+            CAN_SEE(GET_OPPONENT(ch), ch))
         {
           SET_POS(ch, GET_STAT(ch) + POS_SITTING);
-          attack(ch->specials.fighting, ch);    /*
+          attack(GET_OPPONENT(ch), ch);    /*
                                                  * ie: switch
                                                  */
           return;
@@ -3999,13 +3999,13 @@ void do_kneel(P_char ch, char *argument, int cmd)
         /*
          * they can, if they want, but...  JAB
          */
-        if( ch->specials.fighting->specials.fighting &&
-            (ch->specials.fighting->specials.fighting != ch) &&
-            IS_NPC(ch->specials.fighting) && CAN_ACT(ch->specials.fighting) &&
-            CAN_SEE(ch->specials.fighting, ch))
+        if( GET_OPPONENT(GET_OPPONENT(ch)) &&
+            (GET_OPPONENT(GET_OPPONENT(ch)) != ch) &&
+            IS_NPC(GET_OPPONENT(ch)) && CAN_ACT(GET_OPPONENT(ch)) &&
+            CAN_SEE(GET_OPPONENT(ch), ch))
         {
           SET_POS(ch, GET_STAT(ch) + POS_KNEELING);
-          attack(ch->specials.fighting, ch);    /*
+          attack(GET_OPPONENT(ch), ch);    /*
                                                  * ie: switch
                                                  */
           return;
@@ -4091,14 +4091,14 @@ void do_recline(P_char ch, char *argument, int cmd)
         /*
          * they can, if they want, but...  JAB
          */
-        if( ch->specials.fighting->specials.fighting &&
-            (ch->specials.fighting->specials.fighting != ch) &&
-            IS_NPC(ch->specials.fighting) && CAN_ACT(ch->specials.fighting) &&
-            CAN_SEE(ch->specials.fighting, ch))
+        if( GET_OPPONENT(GET_OPPONENT(ch)) &&
+            (GET_OPPONENT(GET_OPPONENT(ch)) != ch) &&
+            IS_NPC(GET_OPPONENT(ch)) && CAN_ACT(GET_OPPONENT(ch)) &&
+            CAN_SEE(GET_OPPONENT(ch), ch))
         {
           SET_POS(ch, GET_STAT(ch) + POS_PRONE);
           stop_memorizing(ch);
-          attack(ch->specials.fighting, ch);    /*
+          attack(GET_OPPONENT(ch), ch);    /*
                                                  * ie: switch
                                                  */
           return;

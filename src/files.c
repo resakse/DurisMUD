@@ -4674,7 +4674,8 @@ int restorePetStatus(char *buf, P_char ch)
   ch->specials.act = GET_INTE(buf);
   ch->specials.act2 = GET_INTE(buf);
   ch->specials.alignment = GET_INTE(buf);
-  ch->specials.fighting = NULL;
+  if( GET_OPPONENT(ch) )
+    stop_fighting(ch);
   ch->points.max_hit = ch->points.base_hit;
   ch->points.max_mana = ch->points.base_mana;
   ch->points.max_vitality = ch->points.base_vitality;

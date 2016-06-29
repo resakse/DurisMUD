@@ -494,7 +494,7 @@ bool intercept_defensiveproc(P_char merc, P_char hitter)
   int num, room, save, pos;
 
   // If !( both are alive and hitter hitting merc )
-  if( !IS_ALIVE(hitter) || !IS_FIGHTING(hitter) || !(merc == hitter->specials.fighting)
+  if( !IS_ALIVE(hitter) || !IS_FIGHTING(hitter) || !(merc == GET_OPPONENT(hitter))
     || !IS_ALIVE(merc) || !(room = hitter->in_room) || !has_innate( merc, INNATE_INTERCEPT) )
   {
     return FALSE;
@@ -571,7 +571,7 @@ bool minotaur_race_proc(P_char ch, P_char victim)
       break;
   }
 
-  if( !(victim = ch->specials.fighting) || !IS_ALIVE(victim)
+  if( !(victim = GET_OPPONENT(ch)) || !IS_ALIVE(victim)
     || !(room) || number(0, class_chance)) // 3% for default (15)
   {
     return FALSE;
@@ -730,7 +730,7 @@ void newbie_reincarnate(P_char ch)
     death_cry(ch);
   }
 
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     stop_fighting(ch);
   if( IS_DESTROYING(ch) )
     stop_destroying(ch);
@@ -738,7 +738,7 @@ void newbie_reincarnate(P_char ch)
   for (t = world[ch->in_room].people; t; t = t_next)
   {
     t_next = t->next_in_room;
-    if (t->specials.fighting == ch)
+    if (GET_OPPONENT(t) == ch)
     {
       stop_fighting(t);
       clearMemory(t);

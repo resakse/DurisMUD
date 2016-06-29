@@ -303,7 +303,7 @@ void event_super_cannon_fire(P_char ch, P_char vict, P_obj obj, void *data)
     
       if (ch->in_room != NOWHERE)
         for (P_char attacker = world[ch->in_room].people; attacker; attacker = attacker->next)
-	  if (IS_FIGHTING(attacker) && (attacker->specials.fighting == ch))
+	  if (IS_FIGHTING(attacker) && (GET_OPPONENT(attacker) == ch))
 	    stop_fighting(attacker);
 
       if (IS_PC(ch) && IS_RIDING(ch))

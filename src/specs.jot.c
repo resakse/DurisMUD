@@ -109,11 +109,11 @@ int betrayal(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if (!ch->specials.fighting)
+      if (!GET_OPPONENT(ch))
         set_fighting(ch, vict);
     }
   }
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     return (FALSE);             /*
                                    do the normal hit damage as well
                                  */
@@ -147,7 +147,7 @@ int faith(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
   }
 
-  if( !IS_FIGHTING(ch) || !(vict = ch->specials.fighting) )
+  if( !IS_FIGHTING(ch) || !(vict = GET_OPPONENT(ch)) )
   {
     return FALSE;
   }
@@ -191,7 +191,7 @@ int faith(P_obj obj, P_char ch, int cmd, char *arg)
     }
   }
   // Do the normal hit damage as well
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
     return FALSE;
   else
     return TRUE;
@@ -281,14 +281,14 @@ int mistweave(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if( !ch->specials.fighting )
+      if( !GET_OPPONENT(ch) )
       {
         set_fighting(ch, vict);
       }
     }
   }
   // Do the normal hit damage as well
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return FALSE;
   }
@@ -417,14 +417,14 @@ int ogrebane(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if (!ch->specials.fighting)
+      if (!GET_OPPONENT(ch))
       {
         set_fighting(ch, vict);
       }
     }
   }
   // Do the normal hit damage as well
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
   {
     return FALSE;
   }
@@ -470,14 +470,14 @@ int giantbane(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if (!ch->specials.fighting)
+      if (!GET_OPPONENT(ch))
       {
         set_fighting(ch, vict);
       }
     }
   }
   // Do the normal hit damage as well
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return FALSE;
   }
@@ -522,14 +522,14 @@ int dwarfslayer(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if( !ch->specials.fighting )
+      if( !GET_OPPONENT(ch) )
       {
         set_fighting(ch, vict);
       }
     }
   }
   // Do the normal hit damage as well
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return FALSE;
   }
@@ -574,14 +574,14 @@ int mindbreaker(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if (!ch->specials.fighting)
+      if (!GET_OPPONENT(ch))
       {
         set_fighting(ch, vict);
       }
     }
   }
   // Do the normal hit damage as well
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return FALSE;
   }

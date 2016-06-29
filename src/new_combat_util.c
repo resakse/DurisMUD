@@ -2003,7 +2003,7 @@ int getCharParryVal(const P_char vict, const P_char attacker,
 
   for (tch = world[vict->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting == vict)
+    if (GET_OPPONENT(tch) == vict)
       numb_att++;
   }
 
@@ -2218,7 +2218,7 @@ int getCharDodgeVal(const P_char vict, const P_char attacker,
 
   for (tch = world[vict->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting == vict)
+    if (GET_OPPONENT(tch) == vict)
       numb_att++;
   }
 

@@ -1088,14 +1088,14 @@ P_char parse_victim(P_char ch, char *arg, uint flags)
 {
   P_char   victim = NULL;
 
-  if ((flags & PRSVCT_ENGFIRST) && ch->specials.fighting)
-    return ch->specials.fighting;
+  if ((flags & PRSVCT_ENGFIRST) && GET_OPPONENT(ch))
+    return GET_OPPONENT(ch);
 
   if (arg && *arg)
     victim = get_char_room_vis(ch, arg);
 
   if (!victim && !(flags & PRSVCT_NOENG))
-    return ch->specials.fighting;
+    return GET_OPPONENT(ch);
   else
     return victim;
 }
@@ -1227,7 +1227,7 @@ bool check_reincarnate(P_char ch)
          death_cry(ch);
       }
 
-      if (ch->specials.fighting)
+      if (GET_OPPONENT(ch))
       {
         stop_fighting(ch);
       }
@@ -1240,7 +1240,7 @@ bool check_reincarnate(P_char ch)
       for (t = world[ch->in_room].people; t; t = t_next)
       {
         t_next = t->next_in_room;
-        if (t->specials.fighting == ch)
+        if (GET_OPPONENT(t) == ch)
         {
           stop_fighting(t);
           clearMemory(t);
@@ -4704,7 +4704,7 @@ void do_layhand(P_char ch, char *argument, int cmd)
   */
 
   /*
-  if (ch->specials.fighting && (vict != ch))
+  if (GET_OPPONENT(ch) && (vict != ch))
   {
     send_to_char("You can't lay hands on others while fighting.\r\n", ch);
     return;

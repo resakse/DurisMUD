@@ -770,7 +770,7 @@ int mox_totem(P_obj obj, P_char ch, int cmd, char *argument)
 
   if (IS_FIGHTING(ch) && !number(0, 2))
   {
-    kala = ch->specials.fighting;
+    kala = GET_OPPONENT(ch);
     rand = number(0,3);
     switch (rand)
     {

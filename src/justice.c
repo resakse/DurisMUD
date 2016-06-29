@@ -1375,7 +1375,7 @@ void justice_hunt_cancel(P_char ch)
     return;
 
   if (IS_SET(ch->only.npc->spec[2], MOB_SPEC_J_OUTCAST))
-    if (ch->specials.arrest_by == ch->specials.fighting)
+    if (ch->specials.arrest_by == GET_OPPONENT(ch))
       /* we are doing exactly what we are supposed to! */
       return;
 
@@ -1650,8 +1650,8 @@ void justice_witness(P_char attacker, P_char victim, int crime)
 
     if (victim)
     {
-      if ((attacker->specials.fighting == victim) ||
-          (victim->specials.fighting == attacker))
+      if ((GET_OPPONENT(attacker) == victim) ||
+          (GET_OPPONENT(victim) == attacker))
         return;
 
       if (crime == CRIME_ATT_MURDER)
@@ -1735,8 +1735,8 @@ void justice_witness(P_char attacker, P_char victim, int crime)
        the first blow got logged */
     if (victim)
     {
-      if ((attacker->specials.fighting == victim) ||
-          (victim->specials.fighting == attacker))
+      if ((GET_OPPONENT(attacker) == victim) ||
+          (GET_OPPONENT(victim) == attacker))
         return;
 
       if (crime == CRIME_ATT_MURDER)
@@ -2362,10 +2362,10 @@ int shout_and_hunt(P_char ch, int max_distance, const char *shout_str, int (*loc
   }
 
   // Attack the master and shout for the master not the pet.
-  if( IS_NPC(ch->specials.fighting) && IS_PC_PET( ch->specials.fighting )
-    && ch->specials.fighting->in_room == (GET_MASTER(ch->specials.fighting))->in_room )
+  if( IS_NPC(GET_OPPONENT(ch)) && IS_PC_PET( GET_OPPONENT(ch) )
+    && GET_OPPONENT(ch)->in_room == (GET_MASTER(GET_OPPONENT(ch)))->in_room )
   {
-    ch->specials.fighting = GET_MASTER(ch->specials.fighting);
+    GET_OPPONENT(ch) = GET_MASTER(GET_OPPONENT(ch));
   }
 
   /*
@@ -2373,7 +2373,7 @@ int shout_and_hunt(P_char ch, int max_distance, const char *shout_str, int (*loc
    * him
    */
 
-  if( witness_find(ch->specials.witnessed, J_NAME(ch->specials.fighting), NULL, 0, NOWHERE, NULL) )
+  if( witness_find(ch->specials.witnessed, J_NAME(GET_OPPONENT(ch)), NULL, 0, NOWHERE, NULL) )
     return FALSE;
   /*
    * party time
@@ -2384,7 +2384,7 @@ int shout_and_hunt(P_char ch, int max_distance, const char *shout_str, int (*loc
    * scream for help
    */
   sprintf(buffer, "%s shouts '", ch->player.short_descr);
-  sprintf(buffer2, shout_str, CAN_SEE(ch, ch->specials.fighting) ? J_NAME(ch->specials.fighting) : "Someone");
+  sprintf(buffer2, shout_str, CAN_SEE(ch, GET_OPPONENT(ch)) ? J_NAME(GET_OPPONENT(ch)) : "Someone");
   strcat(buffer, buffer2);
   strcat(buffer, "&n'\n");
 
@@ -2494,10 +2494,10 @@ int shout_and_hunt(P_char ch, int max_distance, const char *shout_str, int (*loc
         continue;
       }
 
-      if (CAN_SEE(ch, ch->specials.fighting))
+      if (CAN_SEE(ch, GET_OPPONENT(ch)))
       {
         data.hunt_type = HUNT_JUSTICE_INVADER;
-        data.targ.victim = ch->specials.fighting;
+        data.targ.victim = GET_OPPONENT(ch);
       }
       else
       {
@@ -2520,7 +2520,7 @@ int shout_and_hunt(P_char ch, int max_distance, const char *shout_str, int (*loc
    * memory so we don't shout about him/her again
    */
 
-  witness_add(ch, ch->specials.fighting, ch, ch->in_room, CRIME_ATT_MURDER);
+  witness_add(ch, GET_OPPONENT(ch), ch, ch->in_room, CRIME_ATT_MURDER);
 
   return TRUE;
 }

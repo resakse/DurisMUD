@@ -2877,7 +2877,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     else
       sprintf(buf, "&+YPosition: &N%s", buf1);
     sprintf(buf1, "%s  &+YFighting:&n %s", buf,
-            ((k->specials.fighting) ? GET_NAME(k->specials.
+            ((GET_OPPONENT(k)) ? GET_NAME(k->specials.
                                                fighting) : "---"));
     if(IS_NPC(k))
     {
@@ -10273,11 +10273,11 @@ void tranquilize(P_char ch, P_char victim)
       return;
   }
   
-  if(victim->specials.fighting)
+  if(GET_OPPONENT(victim))
   {
     for (P_char tch = world[victim->in_room].people; tch; tch = tch->next_in_room)
     {
-      if(tch->specials.fighting && (tch->specials.fighting == victim))
+      if(GET_OPPONENT(tch) && (GET_OPPONENT(tch) == victim))
       {
         stop_fighting(tch);
         clearMemory(tch);

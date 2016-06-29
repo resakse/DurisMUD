@@ -674,7 +674,7 @@ void do_grapple(P_char ch, char *arg, int cmd)
   }
   else
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if (!vict)
     {
       stop_fighting(ch);
@@ -738,14 +738,14 @@ void do_grapple(P_char ch, char *arg, int cmd)
     if(kala == vict)
       continue;
 
-    if(kala->specials.fighting == ch)
+    if(GET_OPPONENT(kala) == ch)
     {
       stop_fighting(kala);
                                                                                            
       act("You cannot fight for fear of hitting $N. ", FALSE, ch, 0, kala, TO_CHAR);
     }
 
-    if(kala->specials.fighting == vict)
+    if(GET_OPPONENT(kala) == vict)
     {
       stop_fighting(kala);
       act("You cannot fight for fear of hitting $N. ", FALSE, vict, 0, kala, TO_CHAR);

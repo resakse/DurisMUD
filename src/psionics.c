@@ -2255,7 +2255,7 @@ void spell_depart(int level, P_char ch, char *arg, int type, P_char victim, P_ob
   if(victim->in_room != NOWHERE)
     for (t_ch = world[victim->in_room].people; t_ch; t_ch = t_ch->next)
       if(IS_FIGHTING(t_ch) &&
-         t_ch->specials.fighting == victim)
+         GET_OPPONENT(t_ch) == victim)
             stop_fighting(t_ch);
   
   if(victim->in_room != to_room)

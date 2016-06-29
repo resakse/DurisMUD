@@ -17,7 +17,7 @@ void event_dread_wrath(P_char ch, P_char victim, P_obj obj, void *data)
   struct affected_type *af;
   P_char curr_vict;
 
-  curr_vict = ch->specials.fighting;
+  curr_vict = GET_OPPONENT(ch);
 
   if (curr_vict != victim)
   {

@@ -436,7 +436,7 @@ void event_righteous_aura_check(P_char ch, P_char victim, P_obj obj, void *data)
       if(IS_FIGHTING(opponent))
       {
         // Set they target the paladin automatically
-        opponent->specials.fighting = ch;
+        GET_OPPONENT(opponent) = ch;
       }
       else
       {
@@ -557,7 +557,7 @@ bool dread_blade_proc(P_char ch, P_char victim)
   spell_func_type spell_func;
   
   if (!IS_FIGHTING(ch) ||
-      !(victim = ch->specials.fighting) ||
+      !(victim = GET_OPPONENT(ch)) ||
       !IS_ALIVE(victim) ||
       !(room) ||
       number(0, 32)) // 3%
@@ -623,7 +623,7 @@ bool holy_weapon_proc(P_char ch, P_char victim)
   };
 
   // Ok, 4.5 hits/round for lvl 56 -> proc every 2.5 rounds or so
-  if( !IS_ALIVE(ch) || !IS_FIGHTING(ch) || !(victim = ch->specials.fighting)
+  if( !IS_ALIVE(ch) || !IS_FIGHTING(ch) || !(victim = GET_OPPONENT(ch))
     || !IS_ALIVE(victim) || !(room = ch->in_room) || number(0, 12)) // 7.69%
   {
     return FALSE;

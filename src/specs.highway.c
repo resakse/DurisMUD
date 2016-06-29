@@ -808,7 +808,7 @@ int amphisbean(P_char ch, P_char tch, int cmd, char *arg)
   if (!IS_FIGHTING(ch))
     return FALSE;
 
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
   if (!number(0, 9))

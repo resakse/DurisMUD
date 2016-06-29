@@ -149,8 +149,8 @@ P_char pick_target(P_char ch, unsigned int flags)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if(!is_aggr_to(ch, tch) && tch->specials.fighting != ch
-      && ch->specials.fighting != tch)
+    if(!is_aggr_to(ch, tch) && GET_OPPONENT(tch) != ch
+      && GET_OPPONENT(ch) != tch)
     {
       continue;
     }
@@ -271,8 +271,8 @@ int char_deserves_helping(const P_char ch, const P_char candidate,
   if(IS_PC_PET(ch))
     return FALSE;
 
-  if((ch->specials.fighting == candidate) ||
-      (candidate->specials.fighting == ch))
+  if((GET_OPPONENT(ch) == candidate) ||
+      (GET_OPPONENT(candidate) == ch))
     return FALSE;
 
   /* if candidate fighting ch followers, don't help */
@@ -433,7 +433,7 @@ P_char FindDispelTarget(P_char ch, int lvl)
   for (tmp = world[ch->in_room].people, i = 0; (i < 50) && tmp; tmp = tmp->next_in_room)
   {
     if(IS_FIGHTING(tmp) &&
-       ((tmp->specials.fighting == ch) ||
+       ((GET_OPPONENT(tmp) == ch) ||
        (tmp == ch)))
     {
       /* the plusses */
@@ -524,7 +524,7 @@ P_char FindDispelTarget(P_char ch, int lvl)
     /* yup, we have a likely target, let's nail em */
     i = 0;
     for (tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room)
-      if(IS_FIGHTING(tmp) && ((tmp->specials.fighting == ch) || (tmp == ch)))
+      if(IS_FIGHTING(tmp) && ((GET_OPPONENT(tmp) == ch) || (tmp == ch)))
         if(l == i++)
           return (tmp);
   }
@@ -961,7 +961,7 @@ bool CastIllusionistSpell(P_char ch, P_char victim, int helping)
   /* mob in combat *Alv* */
 
   if(!victim && IS_FIGHTING(ch))
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -980,7 +980,7 @@ bool CastIllusionistSpell(P_char ch, P_char victim, int helping)
       for (tmp = world[ch->in_room].people; tmp && !spl;
            tmp = tmp->next_in_room)
       {
-        if(!((ch == tmp->specials.fighting) || are_together(target, tmp)))
+        if(!((ch == GET_OPPONENT(tmp)) || are_together(target, tmp)))
           continue;
 
         /*if(!spl && npc_has_spell_slot(ch, SPELL_IMPRISON) && !(tmp == ch)
@@ -1484,7 +1484,7 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
    */
 
   if(!victim && IS_FIGHTING(ch))
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -1815,7 +1815,7 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
     for(target = world[ch->in_room].people; target; target = target->next_in_room)
     {
       if((target != ch) && should_area_hit(ch, target) &&
-        (CAN_SEE(ch, target) || (target == ch->specials.fighting)) &&
+        (CAN_SEE(ch, target) || (target == GET_OPPONENT(ch))) &&
         IS_PC(target) && !affected_by_spell(target, SPELL_FEEBLEMIND) && number(0, 2))
       {
         break;
@@ -1827,7 +1827,7 @@ bool CastMageSpell(P_char ch, P_char victim, int helping)
       spl = 0;
 
       if(!victim)
-        target = ch->specials.fighting;
+        target = GET_OPPONENT(ch);
       else
         target = victim;
     }
@@ -2022,7 +2022,7 @@ bool CastReaverSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -2037,7 +2037,7 @@ bool CastReaverSpell(P_char ch, P_char victim, int helping)
     {
       for (tmp = world[ch->in_room].people; tmp && !spl; tmp = tmp->next_in_room)
       {
-        if(!((ch == tmp->specials.fighting) || are_together(target, tmp)))
+        if(!((ch == GET_OPPONENT(tmp)) || are_together(target, tmp)))
           continue;
 
         if(!spl && npc_has_spell_slot(ch, SPELL_FEEBLEMIND) && !(tmp == ch)
@@ -2284,7 +2284,7 @@ bool CastRangerSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -2345,7 +2345,7 @@ bool CastRangerSpell(P_char ch, P_char victim, int helping)
    return (FALSE);
 
    if(!victim)
-   target = ch->specials.fighting;
+   target = GET_OPPONENT(ch);
    else
    target = victim;
 
@@ -2484,7 +2484,7 @@ bool CastWarlockSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -2691,7 +2691,7 @@ bool CastDruidSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -2788,7 +2788,7 @@ bool CastDruidSpell(P_char ch, P_char victim, int helping)
      return (FALSE);
 
    if(!victim)
-     target = ch->specials.fighting;
+     target = GET_OPPONENT(ch);
    else
      target = victim;
 
@@ -3062,7 +3062,7 @@ bool CastShamanSpell(P_char ch, P_char victim, int helping)
   if( !victim )
   {
     // Yes, we want victim set too, because we jump back and forth between offensive/defensive.
-    target = victim = ch->specials.fighting;
+    target = victim = GET_OPPONENT(ch);
   }
   else
   {
@@ -3311,7 +3311,7 @@ bool CastShamanSpell(P_char ch, P_char victim, int helping)
      return (FALSE);
 
    if(!victim)
-     target = ch->specials.fighting;
+     target = GET_OPPONENT(ch);
    else
      target = victim;
 
@@ -3479,7 +3479,7 @@ bool CastEtherSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -3839,7 +3839,7 @@ bool CastClericSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -4054,7 +4054,7 @@ bool CastClericSpell(P_char ch, P_char victim, int helping)
      return (FALSE);
 
    if(!victim)
-     target = ch->specials.fighting;
+     target = GET_OPPONENT(ch);
    else
      target = victim;
 
@@ -4264,7 +4264,7 @@ bool CastPaladinSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -4508,7 +4508,7 @@ bool CastAntiPaladinSpell(P_char ch, P_char victim, int helping)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -4782,7 +4782,7 @@ bool WillPsionicistSpell(P_char ch, P_char victim)
     return (FALSE);
 
   if(!victim)
-    target = ch->specials.fighting;
+    target = GET_OPPONENT(ch);
   else
     target = victim;
 
@@ -5150,7 +5150,7 @@ void BreathWeapon(P_char ch, int dir)
   {
     if( IS_FIGHTING(ch) )
     {
-      victim = ch->specials.fighting;
+      victim = GET_OPPONENT(ch);
     }
     else
     {
@@ -5245,8 +5245,8 @@ void StompAttack(P_char ch)
     }
     else if(!IS_PC(tch) &&
             (!tch->following || IS_NPC(tch->following)) &&
-            (ch->specials.fighting != tch) &&
-            (tch->specials.fighting != ch))
+            (GET_OPPONENT(ch) != tch) &&
+            (GET_OPPONENT(tch) != ch))
     {
       continue;
     }
@@ -5274,7 +5274,7 @@ void StompAttack(P_char ch)
     }
     
     if(((IS_FIGHTING(tch) &&
-        (tch->specials.fighting == ch)) ||
+        (GET_OPPONENT(tch) == ch)) ||
         !IS_FIGHTING(tch)) &&
         !IS_DRAGON(tch) &&
 	!IS_TITAN(tch) &&
@@ -5350,7 +5350,7 @@ void SweepAttack(P_char ch)
 
     // If not a PC pet, and NPC, and tch is not a PC pet, and they're not fighting eachother, skip.
     if( !chMaster && IS_NPC(tch) && (!tch->following || IS_NPC(tch->following))
-      && (ch->specials.fighting != tch) && (tch->specials.fighting != ch))
+      && (GET_OPPONENT(ch) != tch) && (GET_OPPONENT(tch) != ch))
     {
       continue;
     }
@@ -5370,7 +5370,7 @@ void SweepAttack(P_char ch)
     }
 
     // If target is fighting sweeper or not fighting.  And target not a dragon.
-    if( ((IS_FIGHTING(tch) && (tch->specials.fighting == ch))
+    if( ((IS_FIGHTING(tch) && (GET_OPPONENT(tch) == ch))
       || !IS_FIGHTING(tch)) && !IS_DRAGON(tch) )
     {
       if( !StatSave(tch, APPLY_AGI, chance) )
@@ -5576,7 +5576,7 @@ bool MobAlchemist(P_char ch)
 
   tch = pick_target(ch, PT_NUKETARGET | PT_WEAKEST);
 
-  if((tch || (tch = ch->specials.fighting)) && (t_obj = get_potion(ch)) &&
+  if((tch || (tch = GET_OPPONENT(ch))) && (t_obj = get_potion(ch)) &&
       t_obj)
     if(throw_potion(ch, t_obj, tch, 0))
     {
@@ -5638,7 +5638,7 @@ bool MobMonk(P_char ch)
      !number(0, 6) &&
      ((number(1, 100) < (GET_LEVEL(ch) * 3))) &&
      ((n_atkr > 1) ||
-     has_help(ch->specials.fighting)))
+     has_help(GET_OPPONENT(ch))))
   {
     if(GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) )
     {
@@ -5656,8 +5656,8 @@ bool MobMonk(P_char ch)
     LOOP_THRU_PEOPLE(tch, ch)
     {
       if(IS_FIGHTING(tch) &&
-         ((tch->specials.fighting == ch) ||
-         are_together(tch, ch->specials.fighting)) &&
+         ((GET_OPPONENT(tch) == ch) ||
+         are_together(tch, GET_OPPONENT(ch))) &&
          CAN_SEE(ch, tch))
       {
         t_tend = GET_HIT(tch);
@@ -5684,13 +5684,13 @@ bool MobMonk(P_char ch)
     }
 
     if(juiciest &&
-       (juiciest != ch->specials.fighting))
+       (juiciest != GET_OPPONENT(ch)))
     {
       attack(ch, juiciest);
     }
   }
 
-  if(IS_FIGHTING(ch) && (victim = ch->specials.fighting))
+  if(IS_FIGHTING(ch) && (victim = GET_OPPONENT(ch)))
   {
     if(GET_SPEC(ch, CLASS_MONK, SPEC_WAYOFSNAKE) ||
       (IS_ELITE(ch) && GET_CLASS(ch, CLASS_MONK)))
@@ -5757,7 +5757,7 @@ bool MobMonk(P_char ch)
       }
 
     case 9:
-      if(isSpringable(ch, ch->specials.fighting))
+      if(isSpringable(ch, GET_OPPONENT(ch)))
       {
         do_kneel(ch, 0, CMD_KNEEL);
         do_springleap(ch, buf, 0);
@@ -5852,16 +5852,16 @@ bool MobDreadlord(P_char ch)
     }
   }
   
-  if(GOOD_FOR_GAZING(ch, ch->specials.fighting) &&
+  if(GOOD_FOR_GAZING(ch, GET_OPPONENT(ch)) &&
      number(0, 2))
   {
-    gaze(ch, ch->specials.fighting);
+    gaze(ch, GET_OPPONENT(ch));
   }
   
   if(GOOD_FOR_FLANKING(ch) &&
     number(0, 2))
   {
-    flank(ch, ch->specials.fighting);
+    flank(ch, GET_OPPONENT(ch));
     return true;
   }
 
@@ -6025,7 +6025,7 @@ bool MobWarrior(P_char ch)
   {
     for( tch = world[ch->in_room].people; tch; tch = tch->next_in_room )
     {
-      if( (ch == tch->specials.fighting) && (IS_MAGE(tch) || IS_CLERIC(tch))
+      if( (ch == GET_OPPONENT(tch)) && (IS_MAGE(tch) || IS_CLERIC(tch))
         && (GET_POS(ch) == POS_STANDING) && number(0, 1) )
       {
         break;
@@ -6036,7 +6036,7 @@ bool MobWarrior(P_char ch)
       && (GET_POS(tch) == POS_STANDING) && !IS_IMMATERIAL(ch) )
     {
       // Switch to target instead of bashing.
-      if( ch != tch->specials.fighting && number(0, 1))
+      if( ch != GET_OPPONENT(tch) && number(0, 1))
       {
         attack(ch, tch);
       }
@@ -6048,12 +6048,12 @@ bool MobWarrior(P_char ch)
     }
   }
 
-  if( isKickable(ch, ch->specials.fighting) && number(0, 2) )
+  if( isKickable(ch, GET_OPPONENT(ch)) && number(0, 2) )
   {
     do_kick(ch, 0, 0);
     return TRUE;
   }
-  else if( !number(0, 3) && ch->specials.fighting
+  else if( !number(0, 3) && GET_OPPONENT(ch)
     && (GET_POS(GET_OPPONENT(ch)) == POS_STANDING) && isBashable(ch, GET_OPPONENT(ch)) )
   {
     do_bash(ch, 0, 0);
@@ -6076,8 +6076,8 @@ bool MobWarrior(P_char ch)
 
       if((tch != ch) &&
         IS_FIGHTING(tch) &&
-        ((tch->specials.fighting == ch) ||
-        (ch->specials.fighting == tch)))
+        ((GET_OPPONENT(tch) == ch) ||
+        (GET_OPPONENT(ch) == tch)))
       {
         if(number(0, 135) > MAX(99, ((GET_LEVEL(ch) - 10) * 9)))
 #ifndef NEW_COMBAT
@@ -6093,7 +6093,7 @@ bool MobWarrior(P_char ch)
     return TRUE;
   }
   else if(((number(1, 100) < (GET_LEVEL(ch) * 3))) &&
-         ((n_atkr > 1) || has_help(ch->specials.fighting)))
+         ((n_atkr > 1) || has_help(GET_OPPONENT(ch))))
   {
     /*
      * The anti-tank clause.  The way players set things up, there is
@@ -6107,8 +6107,8 @@ bool MobWarrior(P_char ch)
     LOOP_THRU_PEOPLE(tch, ch)
     {
       if(IS_FIGHTING(tch) &&
-        ((tch->specials.fighting == ch) ||
-        are_together(tch, ch->specials.fighting)) &&
+        ((GET_OPPONENT(tch) == ch) ||
+        are_together(tch, GET_OPPONENT(ch))) &&
         CAN_SEE(ch, tch))
       {
         t_tend = GET_HIT(tch) /*+ (100 - GET_AC(tch)) */ ;
@@ -6129,7 +6129,7 @@ bool MobWarrior(P_char ch)
       }
     }
 
-    if(juiciest && (juiciest != ch->specials.fighting))
+    if(juiciest && (juiciest != GET_OPPONENT(ch)))
       attack(ch, juiciest);
   }
   return FALSE;
@@ -6156,7 +6156,7 @@ bool MobRanger(P_char ch)
     tch = PickTarget(ch);
     if((ch && tch) &&
        (ch->in_room == tch->in_room) &&
-       (tch != ch->specials.fighting))
+       (tch != GET_OPPONENT(ch)))
     {
       attack(ch, tch);
       return (TRUE);
@@ -6164,8 +6164,8 @@ bool MobRanger(P_char ch)
   }
 
   if(number(0, 2) &&
-     ch->specials.fighting &&
-     isSpringable(ch, ch->specials.fighting))
+     GET_OPPONENT(ch) &&
+     isSpringable(ch, GET_OPPONENT(ch)))
   {
     do_kneel(ch, 0, CMD_KNEEL);
     do_springleap(ch, NULL, 0);
@@ -6173,16 +6173,16 @@ bool MobRanger(P_char ch)
 
   if(GET_CHAR_SKILL(ch, SKILL_WHIRLWIND) > 0 &&
      !affected_by_spell(ch, SKILL_WHIRLWIND) &&
-     ch->specials.fighting &&
+     GET_OPPONENT(ch) &&
      !number(0, 2))
   {
     do_whirlwind(ch, 0, 0);
     return true;
   }
 
-  if(!ch->specials.fighting ||
+  if(!GET_OPPONENT(ch) ||
     (GET_POS(ch) < POS_STANDING) ||
-    (GET_POS(ch->specials.fighting) < POS_STANDING))
+    (GET_POS(GET_OPPONENT(ch)) < POS_STANDING))
   {
     return TRUE;
   }
@@ -6223,12 +6223,12 @@ bool MobMercenary(P_char ch)
   {
     tch = PickTarget(ch);
     if((ch && tch) && (ch->in_room == tch->in_room) &&
-        (tch != ch->specials.fighting))
+        (tch != GET_OPPONENT(ch)))
       attack(ch, tch);
     return (TRUE);
   }
 
-  if(IS_FIGHTING(ch) && (vict = ch->specials.fighting) &&
+  if(IS_FIGHTING(ch) && (vict = GET_OPPONENT(ch)) &&
       !IS_AFFECTED(ch, AFF_BLIND) && !number(0, 2))
   {
     if(number(0, 2) && !GRAPPLE_TIMER(ch) &&
@@ -6306,12 +6306,12 @@ bool MobReaver(P_char ch)
   {
     tch = PickTarget(ch);
     if((ch && tch) && (ch->in_room == tch->in_room) &&
-        (tch != ch->specials.fighting))
+        (tch != GET_OPPONENT(ch)))
       attack(ch, tch);
     return (TRUE);
   }
 
-  if(IS_FIGHTING(ch) && (vict = ch->specials.fighting) &&
+  if(IS_FIGHTING(ch) && (vict = GET_OPPONENT(ch)) &&
       !IS_AFFECTED(ch, AFF_BLIND) && !number(0, 2))
     /*if(number(0, 1))
     {
@@ -6329,14 +6329,14 @@ bool MobReaver(P_char ch)
     }*/
     /*else
       if((GET_POS(vict) == POS_STANDING) &&
-          isBashable(ch, ch->specials.fighting))
+          isBashable(ch, GET_OPPONENT(ch)))
     {
       //  wizlog(56,"%s tried to bash",GET_NAME(ch));
       do_bash(ch, 0, 0);
     }*/
 
-  if(!ch || !ch->specials.fighting || (GET_POS(ch) < POS_STANDING) ||
-      (GET_POS(ch->specials.fighting) < POS_STANDING))
+  if(!ch || !GET_OPPONENT(ch) || (GET_POS(ch) < POS_STANDING) ||
+      (GET_POS(GET_OPPONENT(ch)) < POS_STANDING))
     return TRUE;
 
   if(IS_MULTICLASS_NPC(ch) && !number(0, 2))
@@ -6467,10 +6467,10 @@ bool MobThief(P_char ch)
   }
   /* let's toss some dirt now and then */
 
-  if(IS_FIGHTING(ch) && !IS_AFFECTED(ch->specials.fighting, AFF_BLIND) &&
+  if(IS_FIGHTING(ch) && !IS_AFFECTED(GET_OPPONENT(ch), AFF_BLIND) &&
       GET_CHAR_SKILL(ch, SKILL_DIRTTOSS) && !number(0, 6))
   {
-    do_dirttoss(ch, GET_NAME(ch->specials.fighting), CMD_DIRTTOSS);
+    do_dirttoss(ch, GET_NAME(GET_OPPONENT(ch)), CMD_DIRTTOSS);
     return TRUE;
   }
 
@@ -6564,8 +6564,8 @@ void MobCombat( P_char ch )
     return;
   }
 
-  if( number(0, 2) && ch->specials.fighting
-    && isSpringable(ch, ch->specials.fighting) )
+  if( number(0, 2) && GET_OPPONENT(ch)
+    && isSpringable(ch, GET_OPPONENT(ch)) )
   {
     do_kneel(ch, 0, CMD_KNEEL);
     do_springleap(ch, NULL, 0);
@@ -6604,16 +6604,16 @@ void MobCombat( P_char ch )
   {
     tch = PickTarget(ch);
 
-    if( tch && (tch != ch->specials.fighting) )
+    if( tch && (tch != GET_OPPONENT(ch)) )
     {
       stop_fighting(ch);
       MobStartFight(ch, tch);
     }
 
-    if( !CAN_ACT(ch) || !ch->specials.fighting )
+    if( !CAN_ACT(ch) || !GET_OPPONENT(ch) )
       return;
   }
-  else if( !ch->specials.fighting )
+  else if( !GET_OPPONENT(ch) )
   {
     tch = PickTarget(ch);
     if( !tch )
@@ -6685,10 +6685,10 @@ void MobCombat( P_char ch )
   }
   // infuse life (epic skill) allows players to not have their pets getting charmed. Huzzah!
 /* Guess this is no longer valid.
-  if(GET_LEVEL(ch) > 60 && ch->specials.fighting
-    && (GET_CHAR_SKILL(GET_MASTER(ch->specials.fighting), SKILL_INFUSE_LIFE) < number(1, 100)))
+  if(GET_LEVEL(ch) > 60 && GET_OPPONENT(ch)
+    && (GET_CHAR_SKILL(GET_MASTER(GET_OPPONENT(ch)), SKILL_INFUSE_LIFE) < number(1, 100)))
   {
-    if(recharm_ch(ch, ch->specials.fighting, TRUE,
+    if(recharm_ch(ch, GET_OPPONENT(ch), TRUE,
       "$N suddenly appears overcome by $n's charming nature!"))
     {
       return;
@@ -6853,7 +6853,7 @@ void MobCombat( P_char ch )
     }
   }
 
-  if( !ch->specials.fighting )
+  if( !GET_OPPONENT(ch) )
   {
     return;
   }
@@ -7004,7 +7004,7 @@ P_char PickTarget(P_char ch)
     if(t_ch == ch)
       continue;
 /*
- * if(n_a && (!IS_FIGHTING(t_ch) || t_ch->specials.fighting != ch))
+ * if(n_a && (!IS_FIGHTING(t_ch) || GET_OPPONENT(t_ch) != ch))
  * continue;
  */
     if(!is_aggr_to(ch, t_ch))
@@ -7114,7 +7114,7 @@ void MobStartFight(P_char ch, P_char vict)
     return;
   }
 
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return;
   }
@@ -7217,7 +7217,7 @@ void MobStartFight(P_char ch, P_char vict)
     bash(ch, vict);
     // Due to certain cleverness in bash (if not likely to succeed, mob doesn't)
     //   return only if bashed (success/fail matters not). Let's make sure nobody died too.
-    if( !IS_ALIVE(ch) || !IS_ALIVE(vict) || ch->specials.fighting )
+    if( !IS_ALIVE(ch) || !IS_ALIVE(vict) || GET_OPPONENT(ch) )
       return;
   }
   /*
@@ -7523,7 +7523,7 @@ int handle_npc_assist(P_char ch)
   if( (GET_POS(ch) > POS_SITTING) && (ch->following)
     && (ch->in_room == ch->following->in_room) && (IS_NPC(ch->following)
     || (GET_MASTER(ch) && GET_MASTER(ch) != GET_RIDER(ch)))
-    && (ch->following->specials.fighting || NumAttackers(ch->following)) )
+    && (GET_OPPONENT(ch->following) || NumAttackers(ch->following)) )
   {
     if( GET_CHAR_SKILL(ch, SKILL_RESCUE) > 0
       && (NumAttackers(ch) < NumAttackers(ch->following))
@@ -7550,7 +7550,7 @@ int handle_npc_assist(P_char ch)
       }
     }
 
-    if(!ch->specials.fighting)
+    if(!GET_OPPONENT(ch))
     {
       if(CAN_SPEAK(ch))
       {
@@ -7573,7 +7573,7 @@ int handle_npc_assist(P_char ch)
         }
       }
 
-      foe = ch->following->specials.fighting;
+      foe = GET_OPPONENT(ch->following);
 
       if(foe && CAN_SEE(ch, foe))
       {
@@ -7603,7 +7603,7 @@ int handle_npc_assist(P_char ch)
       if( IS_FIGHTING(tmp_ch) && (tmp_ch->in_room == ch->in_room)
         && IS_NPC(tmp_ch) && !(IS_MORPH(tmp_ch)) )
       {
-        foe = tmp_ch->specials.fighting;
+        foe = GET_OPPONENT(tmp_ch);
         if(CAN_SEE(ch, foe))
         {
           if(CAN_SPEAK(ch))
@@ -7625,7 +7625,7 @@ int handle_npc_assist(P_char ch)
   {
     if( (Victim = find_protector_target(ch)) != NULL )
     {
-      foe = Victim->specials.fighting;
+      foe = GET_OPPONENT(Victim);
     }
 
     if( Victim && foe && CAN_SEE(ch, foe) )
@@ -8279,7 +8279,7 @@ PROFILE_START(mundane_attack);
       !IS_AFFECTED2(ch, AFF2_MINOR_PARALYSIS) &&
       !IS_AFFECTED2(ch, AFF2_MAJOR_PARALYSIS))
   { // 0%
-    tmp_ch = ch->specials.fighting;
+    tmp_ch = GET_OPPONENT(ch);
     if(IS_NPC(tmp_ch) && GET_MASTER(tmp_ch) &&
         (GET_MASTER(tmp_ch)->in_room == ch->in_room) &&
         CAN_SEE(ch, GET_MASTER(tmp_ch)) && StatSave(ch, APPLY_INT, 0))
@@ -8335,7 +8335,7 @@ PROFILE_START(mundane_assist);
         {
           next = tmp_ch->next_in_room;
 
-          if(tmp_ch->specials.fighting)
+          if(GET_OPPONENT(tmp_ch))
           {
             ch->only.npc->last_direction = door;
             do_move(ch, 0, exitnumb_to_cmd(door));
@@ -8814,8 +8814,8 @@ void MobHuntCheck(P_char ch, P_char vict)
   if(GET_HIT(ch) <= (GET_MAX_HIT(ch) / 3))
     return;
 
-  if(ch->specials.fighting != NULL &&
-      ch->specials.fighting->in_room == ch->in_room)
+  if(GET_OPPONENT(ch) != NULL &&
+      GET_OPPONENT(ch)->in_room == ch->in_room)
     return;
 
   /* mother fucking code needs some fucking sanity checks.  Here they
@@ -8829,17 +8829,17 @@ void MobHuntCheck(P_char ch, P_char vict)
     return;
 
   for (tmp = world[ch->in_room].people; tmp; tmp = tmp->next_in_room)
-    if((tmp->specials.fighting == ch) && tmp != vict)
+    if((GET_OPPONENT(tmp) == ch) && tmp != vict)
       return;
   if((tmp = PickTarget(ch)) != NULL)
-    if(ch->specials.fighting == NULL)
+    if(GET_OPPONENT(ch) == NULL)
     {
       MobStartFight(ch, tmp);
 
       if(GET_STAT(ch) == STAT_DEAD)
         return;
 
-      if(ch->specials.fighting != NULL)
+      if(GET_OPPONENT(ch) != NULL)
         return;
     }
   /*
@@ -9013,7 +9013,7 @@ void MobHuntCheck(P_char ch, P_char vict)
       CharWait(ch, PULSE_VIOLENCE);
     return;
   }
-  if(ch->specials.fighting == NULL && CAN_SEE(ch, vict))
+  if(GET_OPPONENT(ch) == NULL && CAN_SEE(ch, vict))
   {
     MobStartFight(ch, vict);
     if(is_char_in_room(ch, room))
@@ -10203,7 +10203,7 @@ P_char find_protector_target(P_char ch)
       continue;
     }
 
-    vict = t_ch->specials.fighting;
+    vict = GET_OPPONENT(t_ch);
 
     // If both vict and t_ch are town guards, they do not engage eachother.
     if( vict && IS_GUARD(vict) && is_guard )
@@ -10952,7 +10952,7 @@ bool CastBlighterSpell(P_char ch, P_char victim, bool helping)
   if( (victim == ch) || helping )
     return FALSE;
 
-  target = victim ? victim : ch->specials.fighting;
+  target = victim ? victim : GET_OPPONENT(ch);
 
   if( !IS_ALIVE(target) )
   {

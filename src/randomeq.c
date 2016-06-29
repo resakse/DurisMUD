@@ -1581,7 +1581,7 @@ int random_eq_proc(P_obj obj, P_char ch, int cmd, char *argument)
     if( IS_FIGHTING(ch) && ((numNamed > 2 && !number(0, chance))
       || (cmd == CMD_MELEE_HIT && obj->value[6] == 999 && IS_SET(obj->wear_flags, ITEM_WIELD) && !number(0, 10))) )
     {
-      kala = ch->specials.fighting;;
+      kala = GET_OPPONENT(ch);;
       act("&+B$n's $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",
          TRUE, ch, obj, kala, TO_NOTVICT);
       act("&+BYour $q &+rpu&+Rls&+rat&+Res &+Lwith &+be&+Bn&+Wer&+Bg&+by &+Lfor a &+rmoment&+L...&N",

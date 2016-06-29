@@ -383,7 +383,7 @@ int UndeadCombat(P_char ch)
     DragonCombat(ch, FALSE);
 
   if( IS_FIGHTING(ch) )
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
   
   if (IS_ZOMBIE(ch))
     ZombieCombat(ch, victim);
@@ -440,7 +440,7 @@ int AngelCombat(P_char ch)
     DragonCombat(ch, FALSE);
 
   if( IS_FIGHTING(ch) )
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
   
   if (IS_ARCHON(ch))
     ArchonCombat(ch, victim);
@@ -492,7 +492,7 @@ int BeholderCombat(P_char ch)
     if((tch != ch) &&
       ((IS_PC(tch) &&
       !IS_TRUSTED(tch)) ||
-      (tch->specials.fighting == ch)))
+      (GET_OPPONENT(tch) == ch)))
     {
       numbPCs++;
       if(!firstPC)
@@ -526,7 +526,7 @@ int BeholderCombat(P_char ch)
 
     if((tch != ch) &&
       ((IS_PC(tch) && !IS_TRUSTED(tch)) ||
-      (tch->specials.fighting == ch)))
+      (GET_OPPONENT(tch) == ch)))
     {
       if(currPC == luckyPC)
       {
@@ -802,7 +802,7 @@ int GenMobCombat(P_char ch)
   if(ch &&
     IS_FIGHTING(ch))
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
   }
   if(IS_DRIDER(ch))
   {
@@ -988,8 +988,8 @@ bool DragonCombat(P_char ch, int awe)
         /* for non-pets: allow any non-PC-following NPCs to ignore it */
         else if (IS_NPC(tchar1) &&
                 (!tchar1->following || IS_NPC(tchar1->following)) &&
-                (ch->specials.fighting != tchar1) &&
-                (tchar1->specials.fighting != ch))
+                (GET_OPPONENT(ch) != tchar1) &&
+                (GET_OPPONENT(tchar1) != ch))
         {
           continue;
         }
@@ -1062,7 +1062,7 @@ bool DragonCombat(P_char ch, int awe)
              */
             for (tchar1 = world[ch->in_room].people; tchar1;
                  tchar1 = tchar1->next_in_room)
-              if (tchar1->specials.fighting == ch)
+              if( GET_OPPONENT(tchar1) == ch)
                 return (CastMageSpell(ch, tchar1));
           }
         }
@@ -1238,8 +1238,8 @@ int babau_combat(P_char ch, P_char vict, int cmd, char* arg)
    if(!IS_SET(ch->specials.affected_by, AFF_SNEAK));
      SET_BIT(ch->specials.affected_by, AFF_SNEAK);
 
-   if(ch->specials.fighting)
-     target = ch->specials.fighting;
+   if(GET_OPPONENT(ch))
+     target = GET_OPPONENT(ch);
 
    if(!number(0, 20) && IS_FIGHTING(ch))
    {

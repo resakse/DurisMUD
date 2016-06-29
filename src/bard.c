@@ -943,7 +943,7 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
 
   act("&+LYou feel very sleepy ..... zzzzzz", FALSE, victim, 0, 0, TO_CHAR);
   
-  if(victim->specials.fighting)
+  if(GET_OPPONENT(victim))
     stop_fighting(victim);
   if( IS_DESTROYING(victim) )
     stop_destroying(victim);
@@ -959,7 +959,7 @@ void bard_sleep(int l, P_char ch, P_char victim, int song)
 
 void bard_calm(int l, P_char ch, P_char victim, int song)
 {
-  if(victim->specials.fighting)
+  if(GET_OPPONENT(victim))
   {
     if(!bard_saves(ch, victim, song) ||
        IS_TRUSTED(ch))

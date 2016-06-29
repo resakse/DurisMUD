@@ -295,7 +295,7 @@ void do_camp(P_char ch, char *arg, int cmd)
   }
   if( IS_FIGHTING(ch) )
   {
-    act("Better finish dealing with $N first, bunky.", FALSE, ch, 0, ch->specials.fighting, TO_CHAR);
+    act("Better finish dealing with $N first, bunky.", FALSE, ch, 0, GET_OPPONENT(ch), TO_CHAR);
     return;
   }
   if( IS_DESTROYING(ch) )

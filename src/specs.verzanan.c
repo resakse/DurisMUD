@@ -1874,17 +1874,17 @@ int casino_three(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
       }
     }
   }
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     if (IS_FIGHTING(evil))
       stop_fighting(evil);
@@ -2016,10 +2016,10 @@ int guard_one(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
@@ -2027,7 +2027,7 @@ int guard_one(P_char ch, P_char pl, int cmd, char *arg)
     }
   }
 
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     mobsay(ch,
            "Heeey!  You c-can't do that, I'ma..I'ma a guard of Wateeerdeepp!");
@@ -4618,13 +4618,13 @@ int gesen(P_obj obj, P_char ch, int cmd, char *arg)
   }
   else
   {
-    if( !ch->specials.fighting )
+    if( !GET_OPPONENT(ch) )
     {
       set_fighting(ch, vict);
     }
   }
   // Do the normal hit damage as well.
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
   {
     return FALSE;
   }
@@ -4740,7 +4740,7 @@ int guild_protection(P_char ch, P_char pl)
 
   if (!SanityCheck(ch, "guild_protection - guard") ||
       !SanityCheck(pl, "guild_protection - vict") ||
-      !IS_FIGHTING(ch) || (ch->specials.fighting != pl))
+      !IS_FIGHTING(ch) || (GET_OPPONENT(ch) != pl))
     return 0;
 
   if (IS_NPC(pl))
@@ -4796,7 +4796,7 @@ int guild_guard_one(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -4841,10 +4841,10 @@ int guild_guard_one(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
@@ -4852,7 +4852,7 @@ int guild_guard_one(P_char ch, P_char pl, int cmd, char *arg)
     }
   }
 
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     act("$n screams 'PROTECT THE INNOCENT! BANZAI! CHARGE! ARARAGGGHH!'",
         FALSE, ch, 0, 0, TO_ROOM);
@@ -4929,7 +4929,7 @@ int guild_guard_two(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5037,7 +5037,7 @@ int guild_guard_three(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5135,7 +5135,7 @@ int guild_guard_four(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5177,17 +5177,17 @@ int guild_guard_four(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
       }
     }
   }
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     if (IS_FIGHTING(evil))
       stop_fighting(evil);
@@ -5312,7 +5312,7 @@ int guild_guard_five(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5425,7 +5425,7 @@ int guild_guard_six(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5532,7 +5532,7 @@ int guild_guard_seven(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5606,7 +5606,7 @@ int guild_guard_eight(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5714,7 +5714,7 @@ int guild_guard_nine(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5820,7 +5820,7 @@ int guild_guard_ten(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -5924,7 +5924,7 @@ int guild_guard_eleven(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -6030,7 +6030,7 @@ int guild_guard_twelve(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -6134,7 +6134,7 @@ int guild_guard_thirteen(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return (TRUE);
   }
@@ -6936,17 +6936,17 @@ int bouncer_one(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
       }
     }
   }
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     while (evil && ch && (evil->in_room == ch->in_room) &&
            (real_room(b_path[bp_var]) == ch->in_room))
@@ -7059,17 +7059,17 @@ int bouncer_two(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
       }
     }
   }
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     while (evil && ch && (evil->in_room == ch->in_room) &&
            (real_room(b_path[bp_var]) == ch->in_room))
@@ -7170,17 +7170,17 @@ int bouncer_three(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
       }
     }
   }
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     while (evil && ch && (evil->in_room == ch->in_room) &&
            (real_room(b_path[bp_var]) == ch->in_room))
@@ -7269,17 +7269,17 @@ int bouncer_four(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch))
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch))
     {
       if ((GET_ALIGNMENT(tch) < max_evil) &&
-          (IS_NPC(tch) || IS_NPC(tch->specials.fighting)))
+          (IS_NPC(tch) || IS_NPC(GET_OPPONENT(tch))))
       {
         max_evil = GET_ALIGNMENT(tch);
         evil = tch;
       }
     }
   }
-  if (evil && (GET_ALIGNMENT(evil->specials.fighting) >= 0))
+  if (evil && (GET_ALIGNMENT(GET_OPPONENT(evil)) >= 0))
   {
     while (evil && ch && (evil->in_room == ch->in_room) &&
            (real_room(b_path[bp_var]) == ch->in_room))

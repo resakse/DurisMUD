@@ -49,7 +49,7 @@ int tree_spirit(P_char ch, P_char pl, int cmd, char *arg)
   }
   else if (cmd == 0)
   {
-    if (ch->specials.fighting)
+    if (GET_OPPONENT(ch))
     {
       count++;
       /*
@@ -83,7 +83,7 @@ int tree_spirit(P_char ch, P_char pl, int cmd, char *arg)
           ("$n incants a powerful spell of creation and $N breaks through the wall of the chamber in aid!",
            FALSE, ch, 0, mob, TO_ROOM);
         char_to_room(mob, ch->in_room, 0);
-        MobStartFight(mob, ch->specials.fighting);
+        MobStartFight(mob, GET_OPPONENT(ch));
         count = 0;
         return (TRUE);
       }

@@ -1937,7 +1937,7 @@ void append_prompt(P_char ch ,char *promptbuf)
 
   if (ch)
   {
-    t_ch_f = ch->specials.fighting;
+    t_ch_f = GET_OPPONENT(ch);
     t_obj_f = ch->specials.destroying_obj;
   }
 
@@ -2017,15 +2017,10 @@ void append_prompt(P_char ch ,char *promptbuf)
     strcat(promptbuf, "&+g<");
 
     /* TANK elements only active if... */
-    if ((tank = t_ch_f->specials.fighting) &&
-        (ch->in_room == tank->in_room)){
-      sprintf(promptbuf + strlen(promptbuf), " &+BT: %s",
-          (ch != tank &&
-           !CAN_SEE(ch, tank)) ? "someone" : (IS_PC(tank)
-           ? PERS(tank, ch, 0)
-           : (FirstWord
-             ((tank)->player.
-              name))));
+    if( (tank = GET_OPPONENT(t_ch_f)) && (ch->in_room == tank->in_room) )
+    {
+      sprintf(promptbuf + strlen(promptbuf), " &+BT: %s", (ch != tank && !CAN_SEE(ch, tank)) ? "someone"
+        : (IS_PC(tank) ? PERS(tank, ch, 0) : ( FirstWord(GET_NAME( tank )) )) );
       strcat(promptbuf, " &+CTP:&+g");
       if (GET_POS(tank) == POS_STANDING)
         strcat(promptbuf, " sta");

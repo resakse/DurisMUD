@@ -1443,21 +1443,21 @@ bool parse_spell_arguments(P_char ch, struct spell_target_data * data, char *arg
         target_ok = TRUE;
       }
       if (IS_SET(skills[spl].targets, TAR_FIGHT_SELF))
-        if (ch->specials.fighting)
+        if (GET_OPPONENT(ch))
         {
           vict = ch;
           target_ok = TRUE;
         }
       if (!target_ok && IS_SET(skills[spl].targets, TAR_FIGHT_VICT))
-        if (ch->specials.fighting &&
-            (GET_STAT(ch->specials.fighting) != STAT_DEAD) &&
-            (ch->specials.fighting->in_room == ch->in_room))
+        if (GET_OPPONENT(ch) &&
+            (GET_STAT(GET_OPPONENT(ch)) != STAT_DEAD) &&
+            (GET_OPPONENT(ch)->in_room == ch->in_room))
         {
 //          if( GET_SPEC(ch, CLASS_CLERIC, SPEC_HOLYMAN)
 //            || ( spl != SPELL_HEAL && spl != SPELL_FULL_HEAL ) )
           {
             /* WARNING, MAKE INTO POINTER  */
-            vict = ch->specials.fighting;
+            vict = GET_OPPONENT(ch);
             target_ok = TRUE;
           }
         }
@@ -1996,7 +1996,7 @@ void do_will(P_char ch, char *argument, int cmd)
 
   LOOP_THRU_PEOPLE(kala, ch)
   {
-    if( kala->specials.fighting == ch )
+    if( GET_OPPONENT(kala) == ch )
     {
       is_tank = TRUE;
     }
@@ -2081,7 +2081,7 @@ bool check_disruptive_blow(P_char ch)
   int success;
   P_char tch;
 
-  if( !IS_ALIVE(ch) || !ch->specials.fighting || IS_IMMOBILE(ch)
+  if( !IS_ALIVE(ch) || !GET_OPPONENT(ch) || IS_IMMOBILE(ch)
     || !IS_AWAKE(ch) || IS_STUNNED(ch) || !IS_HUMANOID(ch))
     return FALSE;
 
@@ -2098,7 +2098,7 @@ bool check_disruptive_blow(P_char ch)
       continue;
 
     // Merc must be targeting caster.
-    if(tch->specials.fighting != ch)
+    if(GET_OPPONENT(tch) != ch)
       continue;
 
     skl = GET_CHAR_SKILL(tch, SKILL_DISRUPTIVE_BLOW);
@@ -2347,7 +2347,7 @@ void do_cast(P_char ch, char *argument, int cmd)
 
   LOOP_THRU_PEOPLE(kala, ch)
   {
-    if (kala->specials.fighting == ch)
+    if( GET_OPPONENT(kala) == ch)
       is_tank = TRUE;
   }
 

@@ -832,9 +832,9 @@ int nexus_guardian_pwn_mace(P_obj obj, P_char ch, int cmd, char *arg)
     {
       P_char target;
       
-      if( ch->specials.fighting )
+      if( GET_OPPONENT(ch) )
       {
-        target = ch->specials.fighting;
+        target = GET_OPPONENT(ch);
       }
       else
       {

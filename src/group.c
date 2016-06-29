@@ -124,9 +124,9 @@ int on_front_line(P_char ch)
 
   if( IS_FIGHTING(ch))
   {
-    if (!IS_FIGHTING(ch->specials.fighting))
+    if (!IS_FIGHTING(GET_OPPONENT(ch)))
     {
-      tch = ch->specials.fighting;
+      tch = GET_OPPONENT(ch);
       if (IS_NPC(tch) && !IS_PC_PET(tch))
       {
         REMOVE_BIT(ch->specials.act2, PLR2_BACK_RANK);

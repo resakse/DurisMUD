@@ -124,7 +124,7 @@ int hammer(P_obj obj, P_char ch, int cmd, char *arg)
         if (t_vict->group && (t_vict->group == ch->group)) continue;
 
         if ((t_vict != ch) && CAN_SEE(ch, t_vict) && !number(0, 3) && !IS_TRUSTED(t_vict) &&
-            ((ch->specials.fighting == t_vict) || (t_vict->specials.fighting == ch))) {
+            ((GET_OPPONENT(ch) == t_vict) || (t_GET_OPPONENT(vict) == ch))) {
           cast_lightning_bolt(51, ch, 0, SPELL_TYPE_SPELL, t_vict, 0);
         }
       }
@@ -132,13 +132,13 @@ int hammer(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else
     {
-      if( !ch->specials.fighting )
+      if( !GET_OPPONENT(ch) )
       {
         set_fighting(ch, vict);
       }
     }
   }
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return FALSE;
   }
@@ -235,7 +235,7 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
   }
 
   vict = (P_char) arg;
-  if( !dam || !IS_ALIVE(vict) || !ch->specials.fighting )
+  if( !dam || !IS_ALIVE(vict) || !GET_OPPONENT(ch) )
   {
     return FALSE;
   }
@@ -342,7 +342,7 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
         tch_next = tch->next_in_room;
 
         if( IS_NPC(tch) && (!tch->following || IS_NPC(tch->following))
-          && (ch->specials.fighting != tch) && (tch->specials.fighting != ch) )
+          && (GET_OPPONENT(ch) != tch) && (GET_OPPONENT(tch) != ch) )
         {
           continue;
         }
@@ -350,7 +350,7 @@ int dragonkind(P_obj obj, P_char ch, int cmd, char *arg)
         {
           continue;
         }
-        if( ((IS_FIGHTING(tch) && (tch->specials.fighting == ch)) ||
+        if( ((IS_FIGHTING(tch) && (GET_OPPONENT(tch) == ch)) ||
              !IS_FIGHTING(ch)) && !IS_DRAGON(tch) )
         {
           if( !StatSave(tch, APPLY_AGI, -2) )
@@ -933,7 +933,7 @@ int doombringer(P_obj obj, P_char ch, int cmd, char *arg)
 
   if( IS_FIGHTING(ch) )
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
   }
   else
   {
@@ -1401,12 +1401,12 @@ int purple_worm( P_char ch, P_char pl, int cmd, char *arg )
   }
 
   // pl is defined if called from command_interpreter
-  if( ch->specials.fighting && !pl )
+  if( GET_OPPONENT(ch) && !pl )
   {
     if( !number(0, 9) )
     {
       // swallow the bastard
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
 
       if( !IS_TRUSTED(vict) && !(IS_NPC(vict) && IS_ELITE(vict)) && !IS_NEXUS_GUARDIAN(vict) && !IS_GH_GOLEM(vict) && !IS_OP_GOLEM(vict) )
       {
@@ -1480,7 +1480,7 @@ int piercer(P_char ch, P_char pl, int cmd, char *arg)
   /*
      if fighting, leave alone
    */
-  if (!ch->specials.fighting && IS_AFFECTED(ch, AFF_HIDE) &&
+  if (!GET_OPPONENT(ch) && IS_AFFECTED(ch, AFF_HIDE) &&
       MIN_POS(ch, POS_STANDING + STAT_RESTING))
   {
     for (tmp_ch = world[ch->in_room].people; tmp_ch; tmp_ch = next)
@@ -1598,7 +1598,7 @@ int elfgate(P_obj obj, P_char ch, int cmd, char *arg)
     stop_destroying(ch);
   if (ch->in_room != NOWHERE)
     for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next)
-      if (IS_FIGHTING(t_ch) && (t_ch->specials.fighting == ch))
+      if (IS_FIGHTING(t_ch) && (GET_OPPONENT(t_ch) == ch))
         stop_fighting(t_ch);
   char_from_room(ch);
   char_to_room(ch, to_room, -1);
@@ -1664,7 +1664,7 @@ int nexus(P_obj obj, P_char ch, int cmd, char *arg)
     stop_destroying(ch);
   if (ch->in_room != NOWHERE)
     for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next)
-      if (IS_FIGHTING(t_ch) && (t_ch->specials.fighting == ch))
+      if (IS_FIGHTING(t_ch) && (GET_OPPONENT(t_ch) == ch))
         stop_fighting(t_ch);
   char_from_room(ch);
   char_to_room(ch, to_room, -1);
@@ -1875,12 +1875,12 @@ int githyanki(P_obj obj, P_char ch, int cmd, char *arg)
   }
   else
   {
-    if( !ch->specials.fighting )
+    if( !GET_OPPONENT(ch) )
     {
       set_fighting(ch, vict);
     }
   }
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return FALSE;
   }
@@ -1948,7 +1948,7 @@ int githpc_special_weap(P_obj obj, P_char ch, int cmd, char *arg)
             {
               for( t_ch = world[vict->in_room].people; t_ch; t_ch = t_ch->next_in_room )
               {
-                if( IS_FIGHTING(t_ch) && (t_ch->specials.fighting == vict) )
+                if( IS_FIGHTING(t_ch) && (GET_OPPONENT(t_ch) == vict) )
                 {
                   stop_fighting(t_ch);
                 }
@@ -1982,7 +1982,7 @@ int githpc_special_weap(P_obj obj, P_char ch, int cmd, char *arg)
     }
     else if( !number(0, 399) )
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
       if (vict && (GET_LEVEL(vict) < 51) && !IS_TRUSTED(vict))
       {
         /* sword */
@@ -2024,14 +2024,14 @@ int githpc_special_weap(P_obj obj, P_char ch, int cmd, char *arg)
     {
       vict = (P_char) arg;
 
-      if( !ch->specials.fighting && vict )
+      if( !GET_OPPONENT(ch) && vict )
       {
         set_fighting(ch, vict);
       }
     }
   }
 
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     return FALSE;
   }
@@ -2157,7 +2157,7 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
       if(!IS_DRAGON(vict) &&
          !affected_by_spell(vict, SKILL_BERSERK) &&
          IS_FIGHTING(vict) &&
-         (vict->specials.fighting == ch))
+         (GET_OPPONENT(vict) == ch))
       {
         if (!StatSave(vict, APPLY_AGI, -4))
         {
@@ -2179,14 +2179,14 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
   case 2:
     if (!(vict = char_in_room(ch->in_room)))    /* Bitch slap someone */
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
     }
     
     if(vict &&
       !IS_DRAGON(vict) &&
       !affected_by_spell(vict, SKILL_BERSERK) &&
       IS_FIGHTING(vict) &&
-      (vict->specials.fighting == ch))
+      (GET_OPPONENT(vict) == ch))
     {
       if (!StatSave(vict, APPLY_AGI, -4))
       {
@@ -2216,7 +2216,7 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
   default:
     if (!(vict = char_in_room(ch->in_room)))    /* Bitch stab someone */
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
     }
     
     {
@@ -2224,7 +2224,7 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
         !IS_DRAGON(vict) &&
         !affected_by_spell(vict, SKILL_BERSERK) &&
         IS_FIGHTING(vict) &&
-        (vict->specials.fighting == ch) &&
+        (GET_OPPONENT(vict) == ch) &&
         !IS_TRUSTED(vict))
       {
         struct damage_messages msgs = {
@@ -2253,7 +2253,7 @@ int tiamat(P_char ch, P_char pl, int cmd, char *arg)
     case 1:
     case 2:                    /* Bite someone          */
       if (!(vict = char_in_room(ch->in_room)))
-        vict = ch->specials.fighting;
+        vict = GET_OPPONENT(ch);
       if (vict)
       {
         sprintf(bufs[0], "You bite $N with your %s head.", colors[i - 1]);
@@ -2452,10 +2452,10 @@ int dranum_jurtrem(P_char ch, P_char pl, int cmd, char *arg)
   if (cmd != -2)
     return (FALSE);
 
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return (FALSE);
 
-  vict = ch->specials.fighting;
+  vict = GET_OPPONENT(ch);
 
   if (!number(0, 19) && vict != ch && !IS_TRUSTED(vict))
   {
@@ -4135,7 +4135,7 @@ int dagger_of_wind(P_obj obj, P_char ch, int cmd, char *arg)
     }
     for( vict = world[ch->in_room].people; vict; vict = vict->next_in_room )
     {
-      if( vict->specials.fighting == ch )
+      if( GET_OPPONENT(vict) == ch )
       {
         act("&+C...suddenly, $n &+Cis engulfed in a sw&+cwi&+Wrl&+cin&+Cg &+Ltornado &+Cof &+Wwind... sweeping them from &+rbattle&+c!", FALSE, ch, 0, vict, TO_ROOM);
         act("&+C...suddenly, $n &+Cis engulfed in a sw&+cwi&+Wrl&+cin&+Cg &+Ltornado &+Cof &+Wwind... sweeping them from &+rbattle&+c!", FALSE, ch, 0, vict, TO_VICT);

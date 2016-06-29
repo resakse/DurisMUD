@@ -534,7 +534,7 @@ void do_feign_death(P_char ch, char *arg, int cmd)
     skl_lvl = MIN(100, GET_LEVEL(ch) * 3);
   }
 
-  if( !ch->specials.fighting )
+  if( !GET_OPPONENT(ch) )
   {
     send_to_char("You are not fighting anything!\r\n", ch);
     return;
@@ -577,7 +577,7 @@ void do_feign_death(P_char ch, char *arg, int cmd)
     for (t = world[ch->in_room].people; t; t = t_next)
     {
       t_next = t->next_in_room;
-      if (t->specials.fighting == ch)
+      if( GET_OPPONENT(t) == ch)
       {
         stop_fighting(t);
         if((GET_CLASS(ch, CLASS_NECROMANCER) || GET_CLASS(ch, CLASS_THEURGIST))
@@ -684,7 +684,7 @@ void chant_calm(P_char ch, char *argument, int cmd)
 
   for (d = world[ch->in_room].people; d; d = d->next_in_room)
   {
-    if (d->specials.fighting)
+    if( GET_OPPONENT(d) )
     {
       if (notch_skill(ch, SKILL_CALM, 10) || number(1, 130) < skl_lvl )
       {
@@ -996,9 +996,9 @@ void chant_quivering_palm(P_char ch, char *argument, int cmd)
     one_argument(argument, name);
   if (!argument || !*argument || !(vict = get_char_room_vis(ch, name)))
   {
-    if (ch->specials.fighting &&
-        (GET_STAT(ch->specials.fighting) != STAT_DEAD))
-      vict = ch->specials.fighting;
+    if (GET_OPPONENT(ch) &&
+        (GET_STAT(GET_OPPONENT(ch)) != STAT_DEAD))
+      vict = GET_OPPONENT(ch);
   }
   if (!vict || (GET_STAT(vict) == STAT_DEAD))
   {
@@ -1087,7 +1087,7 @@ void chant_jin_touch(P_char ch, char *argument, int cmd)
   //debug("(%s) jin skill is (%d).", GET_NAME(ch), skl_lvl);
 
   if(IS_FIGHTING(ch))
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
   else if (argument)
   {
     one_argument(argument, name);
@@ -1233,8 +1233,8 @@ void chant_ki_strike(P_char ch, char *argument, int cmd)
     one_argument(argument, name);
   if( !argument || !*argument || !(vict = get_char_room_vis(ch, name)) )
   {
-    if( ch->specials.fighting && (GET_STAT(ch->specials.fighting) != STAT_DEAD) )
-      vict = ch->specials.fighting;
+    if( GET_OPPONENT(ch) && (GET_STAT(GET_OPPONENT(ch)) != STAT_DEAD) )
+      vict = GET_OPPONENT(ch);
   }
   if( !vict || (GET_STAT(vict) == STAT_DEAD) )
   {
@@ -1370,7 +1370,7 @@ void chant_regenerate(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
   {
     send_to_char("You can't concentrate enough!\r\n", ch);
     return;
@@ -2399,9 +2399,9 @@ void do_ogre_roar(P_char ch, char *argument, int cmd)
   one_argument(argument, name);
   if (*name)
     vict = get_char_room_vis(ch, name);
-  else if (!vict && ch->specials.fighting)
+  else if (!vict && GET_OPPONENT(ch))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if (vict->in_room != ch->in_room)
     {
       stop_fighting(ch);
@@ -3064,7 +3064,7 @@ void capture(P_char ch, P_char victim)
     return;
   }
 
-  if (IS_FIGHTING(ch) && (ch->specials.fighting != victim))
+  if (IS_FIGHTING(ch) && (GET_OPPONENT(ch) != victim))
   {
     send_to_char
       ("You're WAY too busy to even attempt to capture someone else.\r\n",
@@ -3268,9 +3268,9 @@ void capture(P_char ch, P_char victim)
     return;
   }
 #ifdef REALTIME_COMBAT
-  if (ch->specials.fighting && !ch->specials.combat)
+  if (GET_OPPONENT(ch) && !ch->specials.combat)
   {
-    ch->specials.fighting = NULL;
+    stop_fighting(ch);
     set_fighting(ch, victim);
   }
 #endif

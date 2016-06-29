@@ -63,7 +63,7 @@ int frost_elb_dagger(P_obj obj, P_char ch, int cmd, char *arg)
   }
   if (!incombat)                /* past here, we have to be in combat */
     return FALSE;
-  victim = ch->specials.fighting;
+  victim = GET_OPPONENT(ch);
   if (!victim)
     return FALSE;
   if (!is_charged)

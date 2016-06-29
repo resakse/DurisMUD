@@ -1653,7 +1653,7 @@ void show_char_to_char(P_char i, P_char ch, int mode)
 
         if (i->lobj && i->lobj->Visible_Type())
           sprintf(buffer + strlen(buffer), " %s $p",i->lobj->Visible_Message());
-        if (!i->specials.fighting)
+        if (!GET_OPPONENT(i))
         {
           if( i->specials.destroying_obj )
           {
@@ -1665,11 +1665,11 @@ void show_char_to_char(P_char i, P_char ch, int mode)
         else
         {
           strcat(buffer, ", fighting ");
-          if (i->specials.fighting == ch)
+          if (GET_OPPONENT(i) == ch)
             strcat(buffer, "YOU!");
           else
           {
-            if (i->in_room == i->specials.fighting->in_room)
+            if (i->in_room == GET_OPPONENT(i)->in_room)
             {
               strcat(buffer, "$N.");
             }
@@ -1696,7 +1696,7 @@ void show_char_to_char(P_char i, P_char ch, int mode)
       if( IS_TRUSTED(ch) && IS_SET(ch->specials.act, PLR_VNUM) && IS_NPC(i))
         sprintf(buffer + strlen(buffer), " [&+Y%d&n]", mob_index[GET_RNUM(i)].virtual_number);
 
-      act(buffer, TRUE, ch, i->lobj->Visible_Object(), i->specials.fighting, TO_CHAR);
+      act(buffer, TRUE, ch, i->lobj->Visible_Object(), GET_OPPONENT(i), TO_CHAR);
     }
     else
     {                           /* npc with long */
@@ -4746,9 +4746,9 @@ void do_score(P_char ch, char *argument, int cmd)
     if (IS_FIGHTING(ch))
     {
       logit(LOG_DEBUG, "%s dying, but still fighting %s.", GET_NAME(ch),
-            GET_NAME(ch->specials.fighting));
+            GET_NAME(GET_OPPONENT(ch)));
       statuslog(GET_LEVEL(ch), "%s is dying, but still fighting %s.",
-                GET_NAME(ch), GET_NAME(ch->specials.fighting));
+                GET_NAME(ch), GET_NAME(GET_OPPONENT(ch)));
       strcat(buf, ".");
     }
     else if (NumAttackers(ch) > 0)
@@ -4769,9 +4769,9 @@ void do_score(P_char ch, char *argument, int cmd)
     if (IS_FIGHTING(ch))
     {
       logit(LOG_DEBUG, "%s incap, but still fighting %s.", GET_NAME(ch),
-            GET_NAME(ch->specials.fighting));
+            GET_NAME(GET_OPPONENT(ch)));
       statuslog(GET_LEVEL(ch), "%s is incap, but still fighting %s.",
-                GET_NAME(ch), GET_NAME(ch->specials.fighting));
+                GET_NAME(ch), GET_NAME(GET_OPPONENT(ch)));
       strcat(buf, ".");
     }
     else if (NumAttackers(ch) > 0)
@@ -4820,9 +4820,9 @@ void do_score(P_char ch, char *argument, int cmd)
     if (IS_FIGHTING(ch))
     {
       logit(LOG_DEBUG, "%s asleep, but still fighting %s.", GET_NAME(ch),
-            GET_NAME(ch->specials.fighting));
+            GET_NAME(GET_OPPONENT(ch)));
       statuslog(GET_LEVEL(ch), "%s is asleep, but still fighting %s.",
-                GET_NAME(ch), GET_NAME(ch->specials.fighting));
+                GET_NAME(ch), GET_NAME(GET_OPPONENT(ch)));
       strcat(buf, ".");
     }
     else if (NumAttackers(ch) > 0)
@@ -4863,9 +4863,9 @@ void do_score(P_char ch, char *argument, int cmd)
     if (IS_FIGHTING(ch))
     {
       logit(LOG_DEBUG, "%s resting, but still fighting %s.", GET_NAME(ch),
-            GET_NAME(ch->specials.fighting));
+            GET_NAME(GET_OPPONENT(ch)));
       statuslog(GET_LEVEL(ch), "%s is resting, but still fighting %s.",
-                GET_NAME(ch), GET_NAME(ch->specials.fighting));
+                GET_NAME(ch), GET_NAME(GET_OPPONENT(ch)));
       strcat(buf, ".");
     }
     else if (NumAttackers(ch) > 0)
@@ -4908,7 +4908,7 @@ void do_score(P_char ch, char *argument, int cmd)
     if (IS_FIGHTING(ch))
     {
       sprintf(buf + strlen(buf), ", fighting %s.",
-              PERS(ch->specials.fighting, ch, FALSE));
+              PERS(GET_OPPONENT(ch), ch, FALSE));
     }
     else if( IS_DESTROYING(ch) )
     {
@@ -8338,9 +8338,9 @@ void do_glance(P_char ch, char *argument, int cmd)
       return;
     }
   }
-  else if( ch->specials.fighting )
+  else if( GET_OPPONENT(ch) )
   {
-    tar_char = ch->specials.fighting;
+    tar_char = GET_OPPONENT(ch);
   }
   if( !tar_char )
   {

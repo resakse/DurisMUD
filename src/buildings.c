@@ -237,7 +237,7 @@ int check_outpost_death(P_char ch, P_char killer)
   
   act("&+W$n has been destroyed!&n", TRUE, ch, 0, 0, TO_ROOM);
   
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     stop_fighting(ch);
   
   StopAllAttackers(ch);

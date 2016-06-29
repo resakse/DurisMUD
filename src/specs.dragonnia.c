@@ -85,9 +85,9 @@ void do_mobdisarm(P_char ch, char *argument, int cmd)
   }
   if (!(victim = get_char_room_vis(ch, name)))
   {
-    if (ch->specials.fighting)
+    if (GET_OPPONENT(ch))
     {
-      victim = ch->specials.fighting;
+      victim = GET_OPPONENT(ch);
     }
     else
     {
@@ -351,15 +351,15 @@ int demodragon(P_char ch, P_char pl, int cmd, char *arg)
       return FALSE;
     }
   }
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
   for (vict = world[ch->in_room].people; vict; vict = temp)
   {
     temp = vict->next_in_room;
-    if (vict && ch == vict->specials.fighting)
+    if (vict && ch == GET_OPPONENT(vict))
     {
-      if ((vict != ch->specials.fighting) &&
+      if ((vict != GET_OPPONENT(ch)) &&
           (GET_LEVEL(ch) > 13) && !number(0, 8))
       {
         call_b_fire(ch, vict, TRUE);
@@ -374,7 +374,7 @@ int demodragon(P_char ch, P_char pl, int cmd, char *arg)
         if (!number(0, 3))
           return TRUE;
       }
-      if ((vict != ch->specials.fighting) &&
+      if ((vict != GET_OPPONENT(ch)) &&
           (GET_LEVEL(ch) > 13) && !number(0, 8))
       {
         call_b_frost(ch, vict, TRUE);
@@ -648,14 +648,14 @@ int dragons_of_dragonnia(P_char ch, P_char pl, int cmd, char *arg)
   else
     head = FALSE;
 
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
   for (vict = world[ch->in_room].people; vict; vict = temp)
   {
     temp = vict->next_in_room;
 
-    if (vict && vict->specials.fighting == ch)
+    if (vict && GET_OPPONENT(vict) == ch)
     {
       if ((GET_HIT(vict) < 39) && (GET_RNUM(ch) == real_mobile(6813)) &&
           (IS_GOOD(vict)))
@@ -1017,12 +1017,12 @@ int baby_dragon(P_char ch, P_char pl, int cmd, char *arg)
   if( cmd == CMD_SET_PERIODIC )
     return TRUE;
 
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     act("$n is crying.", 0, ch, 0, 0, TO_ROOM);
     for( tmp_ch = world[ch->in_room].people; tmp_ch; tmp_ch = tmp_ch->next_in_room )
     {
-      if( IS_ALIVE(tmp_ch) && (tmp_ch->specials.fighting == ch) )
+      if( IS_ALIVE(tmp_ch) && (GET_OPPONENT(tmp_ch) == ch) )
       {
         /* Commented this out.. to make it harder to cheese the dragonslayer achievement.
         if( OUTSIDE(ch) && !ch->group )
@@ -1088,7 +1088,7 @@ int baby_dragon(P_char ch, P_char pl, int cmd, char *arg)
         {
           for( attacker = world[ch->in_room].people; attacker; attacker = attacker->next_in_room )
           {
-            if( attacker && (attacker->specials.fighting == ch) )
+            if( attacker && (GET_OPPONENT(attacker) == ch) )
             {
               call_protection(ch, attacker);
             }
@@ -1200,14 +1200,14 @@ int statue(P_char ch, P_char pl, int cmd, char *arg)
     {
       char_to_room(temp, ch->in_room, 0);
       temp->only.npc->spec[0] = ch->only.npc->spec[0];
-      set_fighting(temp, ch->specials.fighting);
+      set_fighting(temp, GET_OPPONENT(ch));
     }
     temp = read_mobile(GET_RNUM(ch), REAL);
     if (temp)
     {
       char_to_room(temp, ch->in_room, 0);
       temp->only.npc->spec[0] = ch->only.npc->spec[0];
-      set_fighting(temp, ch->specials.fighting);
+      set_fighting(temp, GET_OPPONENT(ch));
     }
     act
       ("The stones of the statue split apart and reform into two new statues.",

@@ -535,7 +535,7 @@ void trapdamage(P_char ch, P_obj obj)
 
         act("&+LA strange gas pours forth from $p, making you feel very sleepy ..... zzzzzz",
           FALSE, ch, obj, 0, TO_CHAR);
-        if( ch->specials.fighting )
+        if( GET_OPPONENT(ch) )
           stop_fighting(ch);
         if( IS_DESTROYING(ch) )
           stop_destroying(ch);
@@ -562,7 +562,7 @@ void trapdamage(P_char ch, P_obj obj)
 
           act("&+LA strange gas pours forth from $p, making you feel very sleepy ..... zzzzzz",
             FALSE, wch, obj, 0, TO_CHAR);
-          if (wch->specials.fighting)
+          if (GET_OPPONENT(wch))
             stop_fighting(wch);
           if( IS_DESTROYING(wch) )
             stop_destroying(wch);

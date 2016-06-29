@@ -1109,7 +1109,7 @@ int relic_proc(P_obj obj, P_char ch, int cmd, char *arg)
   {
     return FALSE;
   }
-  kala = ch->specials.fighting;
+  kala = GET_OPPONENT(ch);
 
   // Find an offensive spell.
   while( !(IS_SET(skills[j].targets, TAR_FIGHT_VICT)) || (!IS_AGG_SPELL(j)) )
@@ -1153,7 +1153,7 @@ int random_mob_proc(P_char ch, P_char pl, int cmd, char *arg)
 
 
 
-  kala = ch->specials.fighting;
+  kala = GET_OPPONENT(ch);
 
   while (!(IS_SET(skills[j].targets, TAR_FIGHT_VICT)) || (!IS_AGG_SPELL(j)))
     j = number(FIRST_SPELL, LAST_SPELL);

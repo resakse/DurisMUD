@@ -610,9 +610,9 @@ P_char ParseTarget(P_char ch, char *argument)
   if(*name)
     victim = get_char_room_vis(ch, name);
 
-  if(!victim && ch->specials.fighting)
+  if(!victim && GET_OPPONENT(ch))
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
     if((!IS_ALIVE(victim)) || (victim->in_room != ch->in_room) ||
         victim->specials.z_cord != ch->specials.z_cord)
     {
@@ -1821,9 +1821,9 @@ void do_circle(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(ch->specials.fighting)
+  if(GET_OPPONENT(ch))
   {
-    circle(ch, ch->specials.fighting);
+    circle(ch, GET_OPPONENT(ch));
     return;
   }
 
@@ -1914,11 +1914,11 @@ bool circle(P_char ch, P_char victim)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if(tch->specials.fighting == ch)
+    if(GET_OPPONENT(tch) == ch)
       break;
   }
 
-  if(ch->specials.fighting == NULL)
+  if(GET_OPPONENT(ch) == NULL)
     engage(ch, victim);
 
   act("You stealthily position yourself behind $N, circling $M.", FALSE, ch, 0, victim, TO_CHAR);
@@ -2002,7 +2002,7 @@ void do_circle(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(victim->specials.fighting && victim->specials.fighting == ch)
+  if(GET_OPPONENT(victim) && GET_OPPONENT(victim) == ch)
   {
     if(GET_CHAR_SKILL(ch, SKILL_CIRCLE) < 75)
       send_to_char("Although you haven't mastered circling someone hitting you, you try anyway..\n", ch);
@@ -2529,7 +2529,7 @@ void do_flee(P_char ch, char *argument, int cmd)
   }
 
   start_room = ch->in_room;     /* room they initially tried to flee from */
-  was_fighting = ch->specials.fighting;
+  was_fighting = GET_OPPONENT(ch);
   atts = NumAttackers(ch);
 
   chance_when_engaged = MIN_CHANCE_TO_FLEE +
@@ -2744,7 +2744,7 @@ void event_combination(P_char ch, P_char victim, P_obj obj, void *data)
       "$N topples to the ground, $s neck broken."
   };
 
-  victim = ch->specials.fighting;
+  victim = GET_OPPONENT(ch);
   victim = guard_check(ch, victim);
   affect_from_char(ch, SKILL_COMBINATION);
   if(!victim)
@@ -2923,7 +2923,7 @@ void event_barrage(P_char ch, P_char victim, P_obj obj, void *data)
       "$N topples to the ground, $s neck broken."
   };
 
-  victim = ch->specials.fighting;
+  victim = GET_OPPONENT(ch);
   victim = guard_check(ch, victim);
   affect_from_char(ch, SKILL_BLADE_BARRAGE);
 
@@ -3227,8 +3227,8 @@ void rush(P_char ch, P_char victim)
     return;
   }
 
-  if(ch->specials.fighting &&
-     ch->specials.fighting == victim)
+  if(GET_OPPONENT(ch) &&
+     GET_OPPONENT(ch) == victim)
   {
     send_to_char("You are already fighting them!\n", ch);
     return;
@@ -3263,10 +3263,10 @@ void rush(P_char ch, P_char victim)
     act("&+rA red haze fills your vision as you madly rush at $N.",
       FALSE, ch, 0, victim, TO_CHAR);
 
-    if(ch->specials.fighting)
+    if(GET_OPPONENT(ch))
     {
 // The person you are rushing away from gets a free attack.
-      hit(ch->specials.fighting, ch, ch->specials.fighting->equipment[PRIMARY_WEAPON]);
+      hit(GET_OPPONENT(ch), ch, GET_OPPONENT(ch)->equipment[PRIMARY_WEAPON]);
       stop_fighting(ch);
       set_fighting(ch, victim);
     }
@@ -3955,9 +3955,9 @@ bool roundkick(P_char ch, P_char victim)
       }
   }
 #ifdef REALTIME_COMBAT
-  if(ch->specials.fighting && !ch->specials.combat)
+  if(GET_OPPONENT(ch) && !ch->specials.combat)
   {
-    ch->specials.fighting = NULL;
+    stop_fighting(ch);
     set_fighting(ch, victim);
   }
 #endif
@@ -3990,7 +3990,7 @@ void do_roundkick(P_char ch, char *argument, int cmd)
 
 void do_assist_core(P_char ch, P_char victim)
 {
-  if(ch->specials.fighting)
+  if(GET_OPPONENT(ch))
   {
     send_to_char("You are too busy with your own problem to assist.\n", ch);
     return;
@@ -4007,17 +4007,17 @@ void do_assist_core(P_char ch, P_char victim)
       act("You can't get to $N to assist $M!", FALSE, ch, 0, victim, TO_CHAR);
     return;
   }
-  if(!victim->specials.fighting)
+  if(!GET_OPPONENT(victim))
   {
     send_to_char("That person is not fighting anyone.\n", ch);
     return;
   }
-  if(!CAN_SEE(ch, victim->specials.fighting))
+  if(!CAN_SEE(ch, GET_OPPONENT(victim)))
   {
     act("You can't see who is fighting $N.", FALSE, ch, 0, victim, TO_CHAR);
     return;
   }
-  if(GET_STAT(victim->specials.fighting) == STAT_DEAD)
+  if(GET_STAT(GET_OPPONENT(victim)) == STAT_DEAD)
   {
     act("Too late, doesn't look like $N really needs any help.",
         FALSE, ch, 0, victim, TO_CHAR);
@@ -4037,7 +4037,7 @@ void do_assist_core(P_char ch, P_char victim)
   /*
    * can't assist and attack someone who isn't within your level
    */
-  if(should_not_kill(ch, victim->specials.fighting) == TRUE)
+  if(should_not_kill(ch, GET_OPPONENT(victim)) == TRUE)
   {
     return;
   }
@@ -4047,12 +4047,12 @@ void do_assist_core(P_char ch, P_char victim)
   act("$n assists $N heroically.", FALSE, ch, 0, victim, TO_NOTVICT);
   
   if(IS_NPC(ch))
-    MobStartFight(ch, victim->specials.fighting);
+    MobStartFight(ch, GET_OPPONENT(victim));
   else
 #ifndef NEW_COMBAT
-    hit(ch, victim->specials.fighting, ch->equipment[PRIMARY_WEAPON]);
+    hit(ch, GET_OPPONENT(victim), ch->equipment[PRIMARY_WEAPON]);
 #else
-    hit(ch, victim->specials.fighting, ch->equipment[WIELD], TYPE_UNDEFINED,
+    hit(ch, GET_OPPONENT(victim), ch->equipment[WIELD], TYPE_UNDEFINED,
         getBodyTarget(ch), TRUE, FALSE);
 #endif
 
@@ -4438,7 +4438,7 @@ void do_headbutt(P_char ch, char *argument, int cmd)
     {
       for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
       {
-        if (tch->specials.fighting == ch)
+        if (GET_OPPONENT(tch) == ch)
         {
           break;
         }
@@ -4852,9 +4852,9 @@ void do_sneaky_strike(P_char ch, char *argument, int cmd)
     return;
   }
 
-  if(ch->specials.fighting)
+  if(GET_OPPONENT(ch))
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
   }
   else
   {
@@ -5188,7 +5188,7 @@ bool backstab(P_char ch, P_char victim)
     return FALSE;
   }
 
-  if( ch->specials.fighting )
+  if( GET_OPPONENT(ch) )
   {
     send_to_char("Sorry, you cannot concentrate enough with that fellow pounding on you.\n", ch);
     return FALSE;
@@ -5496,15 +5496,15 @@ void attack(P_char ch, P_char victim)
       CharWait(ch, PULSE_VIOLENCE + 2);
     }
   }
-  else if( victim == ch->specials.fighting )
+  else if( victim == GET_OPPONENT(ch) )
   {
     send_to_char("C'mon, you are doing it all the time!\n", ch);
     return;
   }
   else
   {
-    if( !CanDoFightMove(ch->specials.fighting, ch) || IS_IMMOBILE(ch)
-      || GET_STAT(ch->specials.fighting) <= STAT_SLEEPING )
+    if( !CanDoFightMove(GET_OPPONENT(ch), ch) || IS_IMMOBILE(ch)
+      || GET_STAT(GET_OPPONENT(ch)) <= STAT_SLEEPING )
     {
       stop_fighting(ch);
       act("$n turns to focus $s attack on $N!", FALSE, ch, 0, victim, TO_ROOM);
@@ -5827,8 +5827,8 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
     }
   }
 
-  if( skewer > 0 && IS_FIGHTING(ch) && victim->specials.fighting != ch
-    && ch->specials.fighting != victim )
+  if( skewer > 0 && IS_FIGHTING(ch) && GET_OPPONENT(victim) != ch
+    && GET_OPPONENT(ch) != victim )
   {
     skewer = (int) (skewer * get_property("skill.skewer.OffTarget.Penalty", 0.500));
   }
@@ -5877,7 +5877,7 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
   }
 
   // If they are fighting something and try to bash something else
-  if( IS_FIGHTING(ch) && victim->specials.fighting != ch && ch->specials.fighting != victim )
+  if( IS_FIGHTING(ch) && GET_OPPONENT(victim) != ch && GET_OPPONENT(ch) != victim )
   {
     send_to_char("You are fighting something else! Nevertheless, you attempt the bash...\n", ch);
     percent_chance = (int) (percent_chance * 0.7);
@@ -6101,9 +6101,9 @@ if((GET_RACE(victim) == RACE_OGRE) && ch_size < vict_size)
   }
 
 #ifdef REALTIME_COMBAT
-  if( ch->specials.fighting && !ch->specials.combat )
+  if( GET_OPPONENT(ch) && !ch->specials.combat )
   {
-    ch->specials.fighting = NULL;
+    stop_fighting(ch);
     set_fighting(ch, victim);
   }
 #endif
@@ -6144,7 +6144,7 @@ void parlay(P_char ch, P_char victim)
   if(IS_ELITE(victim))
   skl_lvl -= (number(50, 150));
 
-  if(victim->specials.fighting) 
+  if(GET_OPPONENT(victim)) 
   {
     if(number(85, 200) < skl_lvl)
     {
@@ -6222,7 +6222,7 @@ void do_tackle(P_char ch, char *arg, int cmd)
   }
   else
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if(!vict)
     {
       stop_fighting(ch);
@@ -6729,7 +6729,7 @@ void do_retreat(P_char ch, char *arg, int cmd)
    */
   LOOP_THRU_PEOPLE(k, ch)
   {
-    if(k->specials.fighting == ch)
+    if(GET_OPPONENT(k) == ch)
     {
       ct++;
       found = TRUE;
@@ -6912,7 +6912,7 @@ void rescue(P_char ch, P_char rescuee, bool rescue_all)
     return;
   }
 
-  if(ch->specials.fighting == rescuee)
+  if(GET_OPPONENT(ch) == rescuee)
   {
     send_to_char("How can you rescue someone you are trying to kill?\n", ch);
     return;
@@ -6920,7 +6920,7 @@ void rescue(P_char ch, P_char rescuee, bool rescue_all)
 
   for (t_ch = world[ch->in_room].people; t_ch; t_ch = t_ch->next_in_room)
   {
-    if(t_ch->specials.fighting != rescuee)
+    if(GET_OPPONENT(t_ch) != rescuee)
       continue;
 
     if(!found)
@@ -6970,7 +6970,7 @@ void rescue(P_char ch, P_char rescuee, bool rescue_all)
         else
           act("$n &+Wheroically dives at $N &+Wand pulls $M out of combat.", FALSE,
               ch, 0, rescuee, TO_NOTVICT);
-        if(rescuee->specials.fighting == t_ch)
+        if(GET_OPPONENT(rescuee) == t_ch)
           stop_fighting(rescuee);
         if( !IS_FIGHTING(ch) && !IS_DESTROYING(ch) )
           set_fighting(ch, t_ch);
@@ -6978,7 +6978,7 @@ void rescue(P_char ch, P_char rescuee, bool rescue_all)
       }
     }
 
-    if(t_ch->specials.fighting)
+    if(GET_OPPONENT(t_ch))
     {
       stop_fighting(t_ch);
       set_fighting(t_ch, ch);
@@ -7113,8 +7113,8 @@ void maul(P_char ch, P_char victim)
    * if they are fighting something and try to maul something else
    */
   if(IS_FIGHTING(ch) &&
-    victim->specials.fighting != ch &&
-    ch->specials.fighting != victim &&
+    GET_OPPONENT(victim) != ch &&
+    GET_OPPONENT(ch) != victim &&
     !GET_SPEC(ch, CLASS_BERSERKER, SPEC_MAULER))
   {
     send_to_char("You are fighting something else! Nevertheless, you attempt the maul...\n", ch);
@@ -7386,8 +7386,8 @@ void shieldpunch(P_char ch, P_char victim)
    * if they are fighting something and try to shield punch something else
    */
   if(IS_FIGHTING(ch) &&
-    victim->specials.fighting != ch &&
-    ch->specials.fighting != victim)
+    GET_OPPONENT(victim) != ch &&
+    GET_OPPONENT(ch) != victim)
   {
     percent_chance = (int) (percent_chance * 0.7);
   }
@@ -7631,8 +7631,8 @@ void do_sweeping_thrust(P_char ch, char *argument, int cmd)
  * if they are fighting something and try to sweeping thrust something else
  */
   if(IS_FIGHTING(ch) &&
-    victim->specials.fighting != ch &&
-    ch->specials.fighting != victim)
+    GET_OPPONENT(victim) != ch &&
+    GET_OPPONENT(ch) != victim)
   {
     percent_chance = (int) (percent_chance * 0.9); // Trying to sweeping another target is penalized.
   }
@@ -7920,7 +7920,7 @@ void do_rearkick(P_char ch, char *argument, int cmd)
 /*
   percent_chance = 0.95*MAX(20, GET_CHAR_SKILL(ch, SKILL_KICK));
 
-  if(IS_FIGHTING(ch) && (ch->specials.fighting != victim)) {
+  if(IS_FIGHTING(ch) && (GET_OPPONENT(ch) != victim)) {
     percent_chance *= 0.8;
   }
 
@@ -8127,7 +8127,7 @@ void do_trample(P_char ch, char *argument, int cmd)
   if (!(victim) &&
       IS_FIGHTING(ch))
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
   }
   else if(!(victim))
   {
@@ -8357,7 +8357,7 @@ void bodyslam(P_char ch, P_char victim)
     return;
   }
 
-  if(ch->specials.fighting)
+  if(GET_OPPONENT(ch))
   {
     send_to_char("You cannot get enough speed to bodyslam in the midst of combat!\n", ch);
     return;
@@ -8887,9 +8887,9 @@ void do_trip(P_char ch, char *argument, int cmd)
 
   if(*name)
     vict = get_char_room_vis(ch, name);
-  else if(!vict && ch->specials.fighting)
+  else if(!vict && GET_OPPONENT(ch))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if(vict->in_room != ch->in_room)
     {
       stop_fighting(ch);
@@ -8911,8 +8911,8 @@ void do_trip(P_char ch, char *argument, int cmd)
   }
 
   if(IS_FIGHTING(ch) &&
-    vict->specials.fighting != ch &&
-    ch->specials.fighting != vict)
+    GET_OPPONENT(vict) != ch &&
+    GET_OPPONENT(ch) != vict)
   {
     act("You are locked in combat with someone else and unable to trip $N.&n",
       FALSE, ch, 0, vict, TO_CHAR);
@@ -9072,9 +9072,9 @@ void do_flank(P_char ch, char *argument, int cmd)
     return;
   }
   
-  if(ch->specials.fighting)
+  if(GET_OPPONENT(ch))
   {
-    flank(ch, ch->specials.fighting);
+    flank(ch, GET_OPPONENT(ch));
     return;
   }
 
@@ -9151,11 +9151,11 @@ bool flank(P_char ch, P_char victim)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if(tch->specials.fighting == ch)
+    if(GET_OPPONENT(tch) == ch)
       break;
   }
 
-  if(ch->specials.fighting == NULL)
+  if(GET_OPPONENT(ch) == NULL)
     engage(ch, victim);
 
   act("You circle $N flanking $M.", FALSE, ch, 0, victim, TO_CHAR);
@@ -9461,9 +9461,9 @@ void do_gaze(P_char ch, char *argument, int cmd)
 
   if(!(victim = get_char_room_vis(ch, target)))
   {
-    if(ch->specials.fighting)
+    if(GET_OPPONENT(ch))
     {
-      gaze(ch, ch->specials.fighting);
+      gaze(ch, GET_OPPONENT(ch));
     }
     else
     {
@@ -9643,8 +9643,8 @@ void gaze(P_char ch, P_char victim)
   }
   
   if(IS_FIGHTING(ch) &&
-    victim->specials.fighting != ch &&
-    ch->specials.fighting != victim)
+    GET_OPPONENT(victim) != ch &&
+    GET_OPPONENT(ch) != victim)
   {
     act("You aren't battling $N, but you notice $M across the &+rfield of battle...&n",
       FALSE, ch, 0, victim, TO_CHAR);
@@ -9664,8 +9664,8 @@ void gaze(P_char ch, P_char victim)
   }
   
   if(IS_FIGHTING(ch) &&
-    victim->specials.fighting != ch &&
-    ch->specials.fighting != victim)
+    GET_OPPONENT(victim) != ch &&
+    GET_OPPONENT(ch) != victim)
   {
     battling = 0;
   }
@@ -9891,7 +9891,7 @@ void restrain(P_char ch, P_char victim)
     percent_chance = (int) (percent_chance * 0.65);
   }
 
-  if( IS_FIGHTING(ch) && victim->specials.fighting != ch && ch->specials.fighting != victim )
+  if( IS_FIGHTING(ch) && GET_OPPONENT(victim) != ch && GET_OPPONENT(ch) != victim )
   {
     act("&+LYou turn from your current victim and direct your &+rsummons&+L toward&n $N&+L...&n",
       FALSE, ch, 0, victim, TO_CHAR);
@@ -9910,7 +9910,7 @@ void restrain(P_char ch, P_char victim)
     standing = 0;
   }
 
-  if( IS_FIGHTING(ch) && victim->specials.fighting != ch && ch->specials.fighting != victim )
+  if( IS_FIGHTING(ch) && GET_OPPONENT(victim) != ch && GET_OPPONENT(ch) != victim )
   {
     battling = 0;
   }
@@ -10489,7 +10489,7 @@ void do_legsweep(P_char ch, char *arg, int cmd)
   }
   else
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     // If fighting and not fighting. buggy!
     if( !vict )
     {
@@ -10667,12 +10667,12 @@ bool check_crippling_strike( P_char ch )
 
       // We want to have crippling strike activate when the merc is not fighting
       // tanking the victim. It's more logical this way.
-      if( ch->specials.fighting == kala )
+      if( GET_OPPONENT(ch) == kala )
       {
         continue;
       }
 
-      if(kala->specials.fighting != ch)
+      if(GET_OPPONENT(kala) != ch)
       {
         continue;
       }

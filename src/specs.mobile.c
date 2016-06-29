@@ -711,8 +711,8 @@ int do_fetid_breath(P_char ch)
     if (IS_TRUSTED(tch))
       continue;
     
-    if ((ch->specials.fighting == tch) ||
-        (tch->specials.fighting == ch))
+    if ((GET_OPPONENT(ch) == tch) ||
+        (GET_OPPONENT(tch) == ch))
     {
       fetid_breath(ch, tch);
       continue;
@@ -983,7 +983,7 @@ int earth_treant(P_char ch, P_char tch, int cmd, char *arg)
       return FALSE;
     else
     {
-    	if (ch->specials.fighting != victim)
+    	if (GET_OPPONENT(ch) != victim)
     	{
     	  stop_fighting(ch);
         act("$n switches targets...", FALSE, ch, 0, 0, TO_ROOM);
@@ -1036,7 +1036,7 @@ int shadow_demon(P_char ch, P_char tch, int cmd, char *arg)
                                          */
       return (FALSE);
 
-    if (CAN_SEE(ch, tch) && IS_PC(tch) && !tch->specials.fighting)
+    if (CAN_SEE(ch, tch) && IS_PC(tch) && !GET_OPPONENT(tch))
     {
       if (tch->equipment[GUILD_INSIGNIA])
         Mask =
@@ -1106,7 +1106,7 @@ int tiaka_ghoul(P_char ch, P_char tch, int cmd, char *arg)
                                          */
       return (FALSE);
 
-    if (CAN_SEE(ch, tch) && !IS_NPC(tch) && !tch->specials.fighting)
+    if (CAN_SEE(ch, tch) && !IS_NPC(tch) && !GET_OPPONENT(tch))
     {
       if (tch->equipment[GUILD_INSIGNIA])
         Mask =
@@ -1192,7 +1192,7 @@ int mystra_dragon(P_char ch, P_char tch, int cmd, char *arg)
                                          */
       return (FALSE);
 
-    if (CAN_SEE(ch, tch) && IS_PC(tch) && !tch->specials.fighting)
+    if (CAN_SEE(ch, tch) && IS_PC(tch) && !GET_OPPONENT(tch))
     {
       if (tch->equipment[GUILD_INSIGNIA])
         Mask =
@@ -1276,7 +1276,7 @@ int hunt_cat(P_char ch, P_char tch, int cmd, char *arg)
                                          */
       return (FALSE);
 
-    if (CAN_SEE(ch, tch) && IS_PC(tch) && !tch->specials.fighting)
+    if (CAN_SEE(ch, tch) && IS_PC(tch) && !GET_OPPONENT(tch))
     {
       if (tch->equipment[GUILD_INSIGNIA])
         Mask =
@@ -1879,8 +1879,8 @@ int poison(P_char ch, P_char pl, int cmd, char *arg)
   if (!IS_FIGHTING(ch))
     return FALSE;
 
-  if (ch->specials.fighting &&
-      (ch->specials.fighting->in_room == ch->in_room) &&
+  if (GET_OPPONENT(ch) &&
+      (GET_OPPONENT(ch)->in_room == ch->in_room) &&
       !number(0, (MAXLVL - GET_LEVEL(ch))))
   {
     if (GET_LEVEL(ch) < 10)
@@ -1891,9 +1891,9 @@ int poison(P_char ch, P_char pl, int cmd, char *arg)
       type = 3;
     else
       type = 10;
-    act("$n bites $N!", 1, ch, 0, ch->specials.fighting, TO_NOTVICT);
-    act("$n bites you!", 1, ch, 0, ch->specials.fighting, TO_VICT);
-    poison_neurotoxin(GET_LEVEL(ch), ch, 0, 0, ch->specials.fighting, 0);
+    act("$n bites $N!", 1, ch, 0, GET_OPPONENT(ch), TO_NOTVICT);
+    act("$n bites you!", 1, ch, 0, GET_OPPONENT(ch), TO_VICT);
+    poison_neurotoxin(GET_LEVEL(ch), ch, 0, 0, GET_OPPONENT(ch), 0);
     return TRUE;
   }
   return FALSE;
@@ -2309,7 +2309,7 @@ int guild_guard(P_char ch, P_char pl, int cmd, char *arg)
   }
   if (g_prot && IS_FIGHTING(ch) && (cmd == 0))
   {
-    if (guild_protection(ch, ch->specials.fighting))
+    if (guild_protection(ch, GET_OPPONENT(ch)))
       return (TRUE);
   }
   if (block)
@@ -2528,7 +2528,7 @@ void event_tentacles(P_char ch, P_char victim, P_obj obj, void *data)
   P_char   tch;
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next)
-    if ((tch->specials.fighting == ch) && (tch->points.damnodice == 4) &&
+    if ((GET_OPPONENT(tch) == ch) && (tch->points.damnodice == 4) &&
         (tch->points.damsizedice == 4) && (tch->specials.alignment == -200))
       break;
 
@@ -2597,7 +2597,7 @@ int charon(P_char ch, P_char pl, int cmd, char *arg)
     for (tch = world[ch->in_room].people; tch; tch = next_tch)
     {
       next_tch = tch->next_in_room;
-      if (ch->specials.fighting == tch ||
+      if (GET_OPPONENT(ch) == tch ||
           (IS_PC(tch) && !number(0, 5) && !IS_TRUSTED(tch)))
       {
         act("$n&+w's mighty blade cuts $N clean in half!!", FALSE, ch, 0, tch,
@@ -3468,7 +3468,7 @@ int xexos(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    was_fighting = ch->specials.fighting;
+    was_fighting = GET_OPPONENT(ch);
 
     /*
      * load agthrodos
@@ -3517,10 +3517,10 @@ int xexos(P_char ch, P_char pl, int cmd, char *arg)
         TRUE, ch, 0, 0, TO_ROOM);
 
     act("Whatever $n has become roars and charges to attack you!",
-        FALSE, ch, 0, ch->specials.fighting, TO_VICT);
+        FALSE, ch, 0, GET_OPPONENT(ch), TO_VICT);
 
     act("Whatever $n has become roars and charges to attack $N!",
-        FALSE, ch, 0, ch->specials.fighting, TO_NOTVICT);
+        FALSE, ch, 0, GET_OPPONENT(ch), TO_NOTVICT);
 
     /*
      * remove xexos
@@ -4019,7 +4019,7 @@ int cityguard(P_char ch, P_char pl, int cmd, char *arg)
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    if (tch->specials.fighting && CAN_SEE(ch, tch) &&
+    if (GET_OPPONENT(tch) && CAN_SEE(ch, tch) &&
         (IS_PC(tch) || (GET_VNUM(ch) !=
                         GET_VNUM(tch))))
     {
@@ -8302,7 +8302,7 @@ int warhorse(P_char ch, P_char pl, int cmd, char *arg)
    * has a rider.
    */
   rider = get_linking_char(ch, LNK_RIDING);
-  vict = ch->specials.fighting;
+  vict = GET_OPPONENT(ch);
 
   switch (number(1, 3))
   {
@@ -8994,7 +8994,7 @@ int ice_wolf(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    was_fighting = ch->specials.fighting;
+    was_fighting = GET_OPPONENT(ch);
     stop_fighting(ch);
 
     tempchar = read_mobile(97054, VIRTUAL);
@@ -9185,11 +9185,11 @@ int ice_malice(P_char ch, P_char pl, int cmd, char *arg)
     for (hated_one = world[ch->in_room].people; hated_one; hated_one = next)
     {
       next = hated_one->next_in_room;
-      if ((ch == hated_one->specials.fighting) && IS_CLERIC(hated_one))
+      if ((ch == GET_OPPONENT(hated_one)) && IS_CLERIC(hated_one))
         /*
          * A cleric is fighting him
          */
-        if ((hated_one != ch->specials.fighting) && CAN_SEE(ch, hated_one))
+        if ((hated_one != GET_OPPONENT(ch)) && CAN_SEE(ch, hated_one))
         {
           /*
            * But, he is not targeting them...
@@ -9258,7 +9258,7 @@ int jotun_thrym(P_char ch, P_char pl, int cmd, char *arg)
   if (ch && IS_FIGHTING(ch))
     if (!number(0, 2))
     {
-      vict = ch->specials.fighting;
+      vict = GET_OPPONENT(ch);
       if (!vict)
         return FALSE;
 
@@ -10439,12 +10439,12 @@ int patrol_leader(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && number(1, 3) == 1)
   {
-    if (IS_PC(ch->specials.fighting) && IS_RACEWAR_EVIL(ch->specials.fighting))
+    if (IS_PC(GET_OPPONENT(ch)) && IS_RACEWAR_EVIL(GET_OPPONENT(ch)))
     {
       strcpy(buf, "Die you evil scum!");
       do_yell(ch, buf, CMD_SHOUT);
     }
-    else if (IS_PC(ch->specials.fighting) && IS_RACEWAR_GOOD(ch->specials.fighting))
+    else if (IS_PC(GET_OPPONENT(ch)) && IS_RACEWAR_GOOD(GET_OPPONENT(ch)))
     {
       strcpy(buf, "You moron I am here to protect you!");
       do_say(ch, buf, CMD_SAY);
@@ -10578,12 +10578,12 @@ int patrol_leader_road(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && number(1, 3) == 1)
   {
-    if (IS_PC(ch->specials.fighting) && IS_RACEWAR_EVIL(ch->specials.fighting))
+    if (IS_PC(GET_OPPONENT(ch)) && IS_RACEWAR_EVIL(GET_OPPONENT(ch)))
     {
       strcpy(buf, "Die you evil scum!");
       do_yell(ch, buf, CMD_SHOUT);
     }
-    else if (IS_PC(ch->specials.fighting) && IS_RACEWAR_GOOD(ch->specials.fighting))
+    else if (IS_PC(GET_OPPONENT(ch)) && IS_RACEWAR_GOOD(GET_OPPONENT(ch)))
     {
       strcpy(buf, "You moron I am here to protect you!");
       do_say(ch, buf, CMD_SAY);
@@ -10872,7 +10872,7 @@ int recharm_ch(P_char master, P_char vict, bool madatOldMaster,
 
   for (tmpch = world[vict->in_room].people; tmpch;
        tmpch = tmpch->next_in_room)
-    if ((tmpch != vict) && (tmpch->specials.fighting == vict))
+    if ((tmpch != vict) && (GET_OPPONENT(tmpch) == vict))
       stop_fighting(tmpch);
 
   if (vict->following)
@@ -10990,7 +10990,7 @@ int obsid_cit_death_knight(P_char ch, P_char pl, int cmd, char *arg)
   if (!IS_FIGHTING(ch))
     return FALSE;
 
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
   /* count number of PCs, pick someone */
@@ -11738,7 +11738,7 @@ int Malevolence(P_char ch, P_char pl, int cmd, char *arg)
   if (!IS_FIGHTING(ch))
     return FALSE;
 
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
   /* loop number of PC, pick someone */
@@ -11823,7 +11823,7 @@ int Malevolence_vapor(P_char ch, P_char pl, int cmd, char *arg)
   if (!IS_FIGHTING(ch))
     return FALSE;
 
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
 
@@ -11881,10 +11881,10 @@ int Malevolence_vapor(P_char ch, P_char pl, int cmd, char *arg)
     return TRUE;
   case 6:
   case 7:
-    if (!ch->specials.fighting)
+    if (!GET_OPPONENT(ch))
       break;
 
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
 
     act
       ("$n &+Ltouches $N&+L, draining his lifeforce and leaving $M&+L collapsed at $s feet.&n",
@@ -11958,7 +11958,7 @@ int construct(P_char ch, P_char pl, int cmd, char *arg)
 
   if (ch->in_room == NOWHERE)
     return FALSE;
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
   for (vict = world[ch->in_room].people; vict; vict = vict->next_in_room)
   {
@@ -12001,7 +12001,7 @@ int nyneth(P_char ch, P_char pl, int cmd, char *arg)
     return FALSE;
 
 
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
   {
     if (number(1, 100) < 10)
     {
@@ -12035,13 +12035,13 @@ int elemental_swarm_fire(P_char ch, P_char pl, int cmd, char *arg)
   char     didit = FALSE;
   char     buf[256];
 
-  if (cmd == CMD_SET_PERIODIC && ch->specials.fighting)
+  if (cmd == CMD_SET_PERIODIC && GET_OPPONENT(ch))
     return FALSE;
 
   if (!ch)
     return FALSE;
   //let's junk it on anything if not fighitng!
-  if (cmd && ch->specials.fighting)
+  if (cmd && GET_OPPONENT(ch))
     return FALSE;
 
 
@@ -12060,13 +12060,13 @@ int elemental_swarm_earth(P_char ch, P_char pl, int cmd, char *arg)
   char     didit = FALSE;
   char     buf[256];
 
-  if (cmd == CMD_SET_PERIODIC && ch->specials.fighting)
+  if (cmd == CMD_SET_PERIODIC && GET_OPPONENT(ch))
     return FALSE;
 
   if (!ch)
     return FALSE;
   //let's junk it on anything if not fighitng!
-  if (cmd && ch->specials.fighting)
+  if (cmd && GET_OPPONENT(ch))
     return FALSE;
 
 
@@ -12085,13 +12085,13 @@ int elemental_swarm_air(P_char ch, P_char pl, int cmd, char *arg)
   char     didit = FALSE;
   char     buf[256];
 
-  if (cmd == CMD_SET_PERIODIC && ch->specials.fighting)
+  if (cmd == CMD_SET_PERIODIC && GET_OPPONENT(ch))
     return FALSE;
 
   if (!ch)
     return FALSE;
   //let's junk it on anything if not fighitng!
-  if (cmd && ch->specials.fighting)
+  if (cmd && GET_OPPONENT(ch))
     return FALSE;
 
 
@@ -12110,13 +12110,13 @@ int elemental_swarm_water(P_char ch, P_char pl, int cmd, char *arg)
   char     didit = FALSE;
   char     buf[256];
 
-  if (cmd == CMD_SET_PERIODIC && ch->specials.fighting)
+  if (cmd == CMD_SET_PERIODIC && GET_OPPONENT(ch))
     return FALSE;
 
   if (!ch)
     return FALSE;
   //let's junk it on anything if not fighitng!
-  if (cmd && ch->specials.fighting)
+  if (cmd && GET_OPPONENT(ch))
     return FALSE;
 
 
@@ -12134,7 +12134,7 @@ int shadow_monster(P_char ch, P_char pl, int cmd, char *arg)
     return TRUE;
   }
 
-  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !ch->specials.fighting)) )
+  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !GET_OPPONENT(ch))) )
   {
     act("$n &+Lquickly fades into the thin air!", TRUE, ch, 0, 0, TO_ROOM);
     act("$n &+rdisappears as &+Lquickly&+r as it came!", TRUE, ch, 0, 0, TO_ROOM);
@@ -12158,7 +12158,7 @@ int insects(P_char ch, P_char pl, int cmd, char *arg)
     return FALSE;
   }
 
-  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !ch->specials.fighting)) )
+  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !GET_OPPONENT(ch))) )
   {
     act("$n &+Lquickly fades into the thin air!", TRUE, ch, 0, 0, TO_ROOM);
     act("$n &+rdisappears as &+Lquickly&+r as it came!", TRUE, ch, 0, 0, TO_ROOM);
@@ -12169,12 +12169,12 @@ int insects(P_char ch, P_char pl, int cmd, char *arg)
   }
 
   // Let's junk it on anything if not fighting!
-  if( !ch->specials.fighting || cmd != CMD_PERIODIC )
+  if( !GET_OPPONENT(ch) || cmd != CMD_PERIODIC )
   {
     return FALSE;
   }
 
-  if( (ch->specials.fighting->in_room == ch->in_room) && !number(0, (MAXLVL - GET_LEVEL(ch))) )
+  if( (GET_OPPONENT(ch)->in_room == ch->in_room) && !number(0, (MAXLVL - GET_LEVEL(ch))) )
   {
     /* This isn't used anywhere?
     int type;
@@ -12186,9 +12186,9 @@ int insects(P_char ch, P_char pl, int cmd, char *arg)
       type = 10;
     */
 
-    act("$n bites $N!", 1, ch, 0, ch->specials.fighting, TO_NOTVICT);
-    act("$n bites you!", 1, ch, 0, ch->specials.fighting, TO_VICT);
-    poison_neurotoxin(10, ch, 0, 0, ch->specials.fighting, 0);
+    act("$n bites $N!", 1, ch, 0, GET_OPPONENT(ch), TO_NOTVICT);
+    act("$n bites you!", 1, ch, 0, GET_OPPONENT(ch), TO_VICT);
+    poison_neurotoxin(10, ch, 0, 0, GET_OPPONENT(ch), 0);
     return TRUE;
   }
 
@@ -12202,7 +12202,7 @@ int illus_dragon(P_char ch, P_char pl, int cmd, char *arg)
     return TRUE;
   }
 
-  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !ch->specials.fighting)) )
+  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !GET_OPPONENT(ch))) )
   {
     act("$n &+Lquickly fades into the thin air!", TRUE, ch, 0, 0, TO_ROOM);
     act("$n &+rdisappears as &+Lquickly&+r as it came!", TRUE, ch, 0, 0,
@@ -12221,7 +12221,7 @@ int illus_titan(P_char ch, P_char pl, int cmd, char *arg)
     return TRUE;
   }
 
-  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !ch->specials.fighting)) )
+  if( cmd == CMD_DEATH || (cmd == CMD_PERIODIC && (!number(0, GET_LEVEL(ch) / 3) || !GET_OPPONENT(ch))) )
   {
     act("$n &+Lquickly fades into the thin air!", TRUE, ch, 0, 0, TO_ROOM);
     act("$n &+rdisappears as &+Lquickly&+r as it came!", TRUE, ch, 0, 0,
@@ -12475,7 +12475,7 @@ int long_john_silver_shout(P_char ch, P_char tch, int cmd, char *arg)
             "&+LThe wraith of a pirate appears out of thin air!&n\r\n",
             FALSE, ch, 0, ljswraith, TO_ROOM);
         char_to_room(ljswraith, ch->in_room, 0);
-        vict = ch->specials.fighting;   /* lets make our pets fight something! */
+        vict = GET_OPPONENT(ch);   /* lets make our pets fight something! */
         MobStartFight(ljswraith, vict);
         return TRUE;
       }
@@ -12637,8 +12637,8 @@ int shabo_butler(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    was_fighting = ch->specials.fighting;
-    gunnadie = ch->specials.fighting;
+    was_fighting = GET_OPPONENT(ch);
+    gunnadie = GET_OPPONENT(ch);
     stop_fighting(ch);
 
     tempchar = read_mobile(32844, VIRTUAL);
@@ -12936,8 +12936,8 @@ int shabo_petre(P_char ch, P_char pl, int cmd, char *arg)
   if(IS_FIGHTING(ch) &&
      ch->in_room != real_room(32885))
   {
-    was_fighting = ch->specials.fighting;
-    gunnadie = ch->specials.fighting;
+    was_fighting = GET_OPPONENT(ch);
+    gunnadie = GET_OPPONENT(ch);
 
     act("\n&+YHELP! Anyone please help! $N just hit me! HELP!\n&n", 0, ch, 0, gunnadie, TO_ROOM);
     stop_fighting(ch);
@@ -13498,7 +13498,7 @@ int necro_specpet_bone(P_char ch, P_char pl, int cmd, char *arg)
   if (IS_FIGHTING(ch) && (cmd == 0) && (number(1, 15) == 1))
   {
     room = ch->in_room;
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
 
     act("$n&+L cackles with delight!", FALSE, ch, 0, vict, TO_ROOM);
     spell_energy_drain(GET_LEVEL(ch), ch, NULL, SPELL_TYPE_SPELL, vict, 0);
@@ -13533,7 +13533,7 @@ int necro_specpet_flesh(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && (cmd == 0) && !number(0, 19))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
 
     act
       ("&+LBlack blood &+wspurts from your wound as $N&+w's weapon &+wrips your &+rflesh.&n",
@@ -13583,7 +13583,7 @@ int conj_specpet_xorn(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && (cmd == 0) && (number(1, 10) == 1))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if ((GET_SIZE(vict) >= SIZE_TINY) && (GET_SIZE(vict) <= SIZE_GIANT))
     {
       if ((GET_POS(vict) == POS_PRONE) || (GET_POS(vict) == POS_SITTING) ||
@@ -13673,7 +13673,7 @@ int conj_specpet_golem(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && (cmd == 0) && (number(1, 10) == 1))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     // whee bearhug!
     
     if(vict->in_room != ch->in_room)
@@ -13843,7 +13843,7 @@ int conj_specpet_djinni(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && (cmd == 0) && (number(1, 10) == 1))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if(vict->in_room != ch->in_room)
         return false;
     act("$n&+C suddenly picks up speed and &+Wtears &+Cthrough the room!",
@@ -13899,7 +13899,7 @@ int conj_specpet_slyph(P_char ch, P_char pl, int cmd, char *arg)
   if( IS_ALIVE(ch) && IS_FIGHTING(ch) && cmd == CMD_MOB_MUNDANE && number(1, 10) == 1 )
   {
     room = ch->in_room;
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if( vict->in_room != room )
     {
       return FALSE;
@@ -13951,7 +13951,7 @@ int conj_specpet_undine(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch) && (cmd == 0) && (number(1, 10) == 1))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     
     if(vict->in_room != ch->in_room)
         return false;
@@ -13989,7 +13989,7 @@ int conj_specpet_salamander(P_char ch, P_char pl, int cmd, char *arg)
   if( IS_FIGHTING(ch) && cmd == CMD_MOB_MUNDANE && (number(1, 10) == 1)
     && world[ch->in_room].sector_type != SECT_WATER_PLANE )
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if( vict->in_room != ch->in_room )
     {
       return FALSE;
@@ -14024,7 +14024,7 @@ int conj_specpet_serpent(P_char ch, P_char pl, int cmd, char *arg)
     (number(1, 10) == 1) &&
     world[ch->in_room].sector_type != SECT_WATER_PLANE)
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if(vict->in_room != ch->in_room)
         return false;
         
@@ -14316,8 +14316,8 @@ int outpost_captain(P_char ch, P_char pl, int cmd, char *arg)
   /* Fix this to check how many in room */
   if (IS_FIGHTING(ch) && number(1, 3) == 1)
   {
-    if ((IS_PC(ch->specials.fighting) && IS_RACEWAR_EVIL(ch->specials.fighting)) ||
-        (IS_RACEWAR_UNDEAD(ch->specials.fighting) && IS_PC(ch->specials.fighting)))
+    if ((IS_PC(GET_OPPONENT(ch)) && IS_RACEWAR_EVIL(GET_OPPONENT(ch))) ||
+        (IS_RACEWAR_UNDEAD(GET_OPPONENT(ch)) && IS_PC(GET_OPPONENT(ch))))
     {
       LOOP_THRU_PEOPLE(t_ch, ch)
       {
@@ -14364,7 +14364,7 @@ int outpost_captain(P_char ch, P_char pl, int cmd, char *arg)
                               NULL, helpers_3, 0, 0);
 
     }
-    else if (IS_PC(ch->specials.fighting) && IS_RACEWAR_GOOD(ch->specials.fighting))
+    else if (IS_PC(GET_OPPONENT(ch)) && IS_RACEWAR_GOOD(GET_OPPONENT(ch)))
     {
       strcpy(buf, "You moron I am here to protect you!");
       do_say(ch, buf, CMD_SAY);
@@ -16427,7 +16427,7 @@ int undead_howl(P_char ch, P_char pl, int cmd, char *arg)
 
   if (ch->in_room == NOWHERE)
     return FALSE;
-  if (!ch->specials.fighting)
+  if (!GET_OPPONENT(ch))
     return FALSE;
 
   act("$n&+L unleashes a hellish, low &+whowl&+L; everything becomes a shade darker as it pierces your spirit.&n",

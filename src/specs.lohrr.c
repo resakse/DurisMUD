@@ -68,9 +68,9 @@ int proc_lohrr( P_obj obj, P_char ch, int cmd, char *argument )
     case WIELD3:
     case WIELD4:
       // RAWR!  On a 4, 5 or 6 proc bigbys hand!
-      if( (cmd == CMD_MELEE_HIT) && ch->specials.fighting && (dice(1, 6) > 3) )
+      if( (cmd == CMD_MELEE_HIT) && GET_OPPONENT(ch) && (dice(1, 6) > 3) )
       {
-        spell_bigbys_crushing_hand(60, ch, NULL, SPELL_TYPE_SPELL, ch->specials.fighting, 0);
+        spell_bigbys_crushing_hand(60, ch, NULL, SPELL_TYPE_SPELL, GET_OPPONENT(ch), 0);
         return TRUE;
       }
     break;
@@ -95,7 +95,7 @@ void dagger_of_wind( P_obj obj, P_char ch, int cmd, char *argument )
    if( cmd != CMD_MELEE_HIT || !ch || !obj || !OBJ_WORN(obj) || obj->loc.wearing != ch )
       return;
    // Verify that ch is in battle with someone.
-   if( !IS_FIGHTING(ch) || !ch->specials.fighting )
+   if( !IS_FIGHTING(ch) || !GET_OPPONENT(ch) )
       return;
 
    // 50% chance to proc.
@@ -117,9 +117,9 @@ void dagger_of_wind( P_obj obj, P_char ch, int cmd, char *argument )
       while( i < numhits )
       {
          // Stop hitting if no one to hit.
-         if( !ch->specials.fighting )
+         if( !GET_OPPONENT(ch) )
             break;
-         hit(ch, ch->specials.fighting, obj );
+         hit(ch, GET_OPPONENT(ch), obj );
          i++;
       }
    }
@@ -254,7 +254,7 @@ int leviathan( P_char ch, P_char pl, int cmd, char *arg )
          }
       break;
       case 2:
-         tch = ch->specials.fighting;
+         tch = GET_OPPONENT(ch);
          if( tch )
          {
             act( "$N lashes out with a tentacle, wrapping it around you, lifts and quickly slams you upon the water surface!", FALSE, tch, NULL, ch, TO_CHAR );

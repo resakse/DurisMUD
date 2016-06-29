@@ -766,7 +766,7 @@ void spell_reflection(int level, P_char ch, char *arg, int type,
       {
         if( IS_FIGHTING(tch) )
         {
-          if( tch->specials.fighting == victim )
+          if( GET_OPPONENT(tch) == victim )
           {
             stop_fighting(tch);
             stop_fighting(victim);
@@ -1801,7 +1801,7 @@ bool handle_imprison_damage(P_char ch, P_char victim, int dam)
     return FALSE;
   }
 
-  if (ch->specials.fighting == victim)
+  if (GET_OPPONENT(ch) == victim)
   {
     stop_fighting(victim);
     stop_fighting(ch);

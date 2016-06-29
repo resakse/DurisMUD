@@ -204,7 +204,7 @@ P_char guard_check(P_char attacker, P_char victim)
     return victim;
   }
   
-  if( attacker->specials.fighting == victim )
+  if( GET_OPPONENT(attacker) == victim )
   {
     return victim;
   }
@@ -245,7 +245,7 @@ P_char guard_check(P_char attacker, P_char victim)
     if( GET_C_LUK(victim) / 2 > number(0, 100) )
       sneak_chance -= 10;
   
-    if( guard->specials.fighting )
+    if( GET_OPPONENT(guard) )
       sneak_chance += 5;
  
     sneak_chance = BOUNDED(5, sneak_chance, 75);
@@ -277,7 +277,7 @@ P_char guard_check(P_char attacker, P_char victim)
                     get_property("skill.guard.agiDiffMaxBonus", 5) );
 
   // penalty if the guard is already engaged
-  //if( guard->specials.fighting )
+  //if( GET_OPPONENT(guard) )
   //  chance -= get_property("skill.guard.guardFightingPenalty", 5);
   
   // and if the victim is lucky, they stay a bit safer :)

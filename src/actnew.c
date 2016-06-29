@@ -476,7 +476,7 @@ void do_stampede(P_char ch, char *arg, int cmd)
         (IS_AFFECTED4(vict, AFF4_PHANTASMAL_FORM)))
       continue;
 
-    if (vict->specials.fighting)
+    if (GET_OPPONENT(vict))
       continue;
 
     missed = 0;
@@ -861,7 +861,7 @@ void do_flurry_of_blows(P_char ch, char *arg)
     if (!should_area_hit(ch, tch))
       continue;
 
-    if (!hit_all && (tch->specials.fighting != ch))
+    if (!hit_all && (GET_OPPONENT(tch) != ch))
       continue;
 
     num_targets++;
@@ -887,7 +887,7 @@ void do_flurry_of_blows(P_char ch, char *arg)
     if (!should_area_hit(ch, tch))
       continue;
 
-    if (!hit_all && (tch->specials.fighting != ch))
+    if (!hit_all && (GET_OPPONENT(tch) != ch))
       continue;
 
     if (!CAN_SEE(ch, tch))
@@ -1001,7 +1001,7 @@ void do_hitall(P_char ch, char *arg, int cmd)
       else
         notch_skill(ch, SKILL_BLINDFIGHTING, 5);
 
-    if (IS_NPC(ch) && (mob->specials.fighting != ch))
+    if (IS_NPC(ch) && (GET_OPPONENT(mob) != ch))
       continue;
 
     percent = number(1, 101);
@@ -1403,7 +1403,7 @@ void do_disarm(P_char ch, char *arg, int cmd)
   }
 
   percent = 0;
-  if( !IS_FIGHTING(ch) || ch->specials.fighting != victim )
+  if( !IS_FIGHTING(ch) || GET_OPPONENT(ch) != victim )
   {
     if( GET_SPEC(ch, CLASS_WARRIOR, SPEC_SWASHBUCKLER) )
     {
@@ -1977,7 +1977,7 @@ bool shapechange_canShapechange(P_char ch)
     send_to_char("No snooping AND shapechanging at any one time.\r\n", ch);
     return FALSE;
   }
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
   {
     send_to_char
       ("You can't muster the mental energy to do that right now.\r\n", ch);
@@ -2007,7 +2007,7 @@ void shapechange_return(P_char ch)
   /*
    * can't change back when fighting a PC
    */
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
   {
     send_to_char("You can't concentrate on that right now.\r\n", ch);
     return;
@@ -2475,7 +2475,7 @@ void do_dirttoss(P_char ch, char *arg, int cmd)
   }
   else
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if (!vict)
     {
       stop_fighting(ch);
@@ -3172,7 +3172,7 @@ void do_throat_crush(P_char ch, char *arg, int cmd)
   }
   else
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if (!vict)
     {
       stop_fighting(ch);
@@ -3342,7 +3342,7 @@ void do_hamstring(P_char ch, char *arg, int cmd)
   }
   else
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if (!vict)
     {
       stop_fighting(ch);
@@ -4563,9 +4563,9 @@ void do_throw_potion(P_char ch, char *argument, int cmd)
       return;
     }
   }
-  else if (ch->specials.fighting)
+  else if (GET_OPPONENT(ch))
   {
-    victim = ch->specials.fighting;
+    victim = GET_OPPONENT(ch);
   }
 
   if (!victim && !obj)

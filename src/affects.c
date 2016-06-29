@@ -1764,7 +1764,7 @@ char affect_total(P_char ch, int kill_ch)
     // No more vit death or zerk death to avoid frags
     for( killer = world[ch->in_room].people; killer; killer = killer->next_in_room )
     {
-      if( killer->specials.fighting && killer->specials.fighting == ch
+      if( GET_OPPONENT(killer) && GET_OPPONENT(killer) == ch
         && killer->in_room == ch->in_room && GET_RACEWAR(killer) != GET_RACEWAR(ch) )
       {
         die(ch, killer);
@@ -4203,7 +4203,7 @@ void short_affect_update(void)
       // No more vit death or zerk death to avoid frags
       for( killer = world[i->in_room].people; killer; killer = killer->next_in_room )
       {
-        if( killer->specials.fighting && killer->specials.fighting == i &&
+        if( GET_OPPONENT(killer) && GET_OPPONENT(killer) == i &&
 	        killer->in_room == i->in_room && GET_RACEWAR(killer) != GET_RACEWAR(i) )
         {
           die(i, killer);

@@ -277,7 +277,7 @@ int fade_drusus(P_obj obj, P_char ch, int cmd, char *argument)
 
   if (!number(0, 30))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
     if (!vict)
       return FALSE;             /* can't be too careful */
 
@@ -2025,7 +2025,7 @@ int malodine_one(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    vict = ch->specials.fighting;
+    vict = GET_OPPONENT(ch);
 
     act("$n rises slowly into the air, and turns to face $N.", 1, ch, 0, vict,
         TO_NOTVICT);

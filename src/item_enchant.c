@@ -559,11 +559,11 @@ weapon, on the weapon. Contact a god immediately.\r\n", ch);
     }
     else
     {
-      if (!ch->specials.fighting)
+      if (!GET_OPPONENT(ch))
         set_fighting(ch, vict);
     }
   }
-  if (ch->specials.fighting)
+  if (GET_OPPONENT(ch))
     return (FALSE);             /*
                                    do the normal hit damage as well
                                  */

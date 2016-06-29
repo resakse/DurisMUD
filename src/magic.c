@@ -5328,7 +5328,7 @@ void spell_teleport(int level, P_char ch, char *arg, int type, P_char victim, P_
     stop_destroying(vict);
   if(vict->in_room != NOWHERE)
     for (t_ch = world[vict->in_room].people; t_ch; t_ch = t_ch->next)
-      if(IS_FIGHTING(t_ch) && (t_ch->specials.fighting == vict))
+      if(IS_FIGHTING(t_ch) && (GET_OPPONENT(t_ch) == vict))
         stop_fighting(t_ch);
   if(vict->in_room != to_room) {
 #if defined(CTF_MUD) && (CTF_MUD == 1)
@@ -8100,7 +8100,7 @@ void spell_sleep(int level, P_char ch, char *arg, int type, P_char victim,
     af.bitvector = AFF_SLEEP;
 
     act("&+LYou feel very sleepy ..... zzzzzz", FALSE, victim, 0, 0, TO_CHAR);
-    if(victim->specials.fighting)
+    if(GET_OPPONENT(victim))
       stop_fighting(victim);
     if( IS_DESTROYING(victim) )
       stop_destroying(victim);
@@ -8244,7 +8244,7 @@ void spell_word_of_recall(int level, P_char ch, char *arg, int type, P_char vict
   }
   if(IS_FIGHTING(ch))
   {
-    if(IS_PC(ch) && IS_PC(ch->specials.fighting) && !number(0, 2))
+    if(IS_PC(ch) && IS_PC(GET_OPPONENT(ch)) && !number(0, 2))
     {
       if(ch == victim)
         act("$n utters a single word.", TRUE, ch, 0, 0, TO_ROOM);
@@ -8558,7 +8558,7 @@ void spell_summon(int level, P_char ch, char *arg, int type, P_char victim,
   
   if(victim->in_room != NOWHERE)
     for (t_ch = world[victim->in_room].people; t_ch; t_ch = t_ch->next)
-      if(IS_FIGHTING(t_ch) && (t_ch->specials.fighting == victim))
+      if(IS_FIGHTING(t_ch) && (GET_OPPONENT(t_ch) == victim))
         stop_fighting(t_ch);
   
   if(IS_PC(victim) &&
@@ -12647,7 +12647,7 @@ void spell_greater_wraithform(int level, P_char ch, P_char victim, char *arg)
   /*
    * ok, now we _can_ use this beauty.. muhahahahahaa!
    */
-  if(ch->specials.fighting)
+  if(GET_OPPONENT(ch))
     stop_fighting(ch);
   if( IS_DESTROYING(ch) )
     stop_destroying(ch);
@@ -12723,7 +12723,7 @@ void spell_wraithform(int level, P_char ch, P_char victim, char *arg)
         0, 0, TO_ROOM);
   }
 #endif
-  if(ch->specials.fighting)
+  if(GET_OPPONENT(ch))
     stop_fighting(ch);
   if( IS_DESTROYING(ch) )
     stop_destroying(ch);
@@ -15411,7 +15411,7 @@ void spell_resurrect(int level, P_char ch, char *arg, int type, P_char victim, P
 
     t_ch->only.pc->pc_timer[PC_TIMER_HEAVEN] = 0;
 
-    if( t_ch->specials.fighting )
+    if( GET_OPPONENT(t_ch) )
     {
       stop_fighting(t_ch);
     }
@@ -15813,7 +15813,7 @@ void spell_lesser_resurrect(int level, P_char ch, char *arg, int type, P_char vi
 
     t_ch->only.pc->pc_timer[PC_TIMER_HEAVEN] = 0;
 
-    if(t_ch->specials.fighting)
+    if(GET_OPPONENT(t_ch))
       stop_fighting(t_ch);
     if( IS_DESTROYING(t_ch) )
       stop_destroying(t_ch);
@@ -16139,7 +16139,7 @@ void spell_animal_friendship(int level, P_char ch, char *arg, int type,
   {
     if(IS_FIGHTING(victim))
     {
-      if(victim->specials.fighting)
+      if(GET_OPPONENT(victim))
       {
         stop_fighting(victim);
         stop_fighting(ch);
@@ -16618,7 +16618,7 @@ void spell_mass_heal(int level, P_char ch, char *arg, int type, P_char victim,
     int maxhits = IS_HARDCORE(ch) ? 110 : 100;
 
     healed = vamp(tch, (int) maxhits + number(1, level / 3), GET_MAX_HIT(tch) - number(1, 4));
-    if(tch->specials.fighting) {
+    if(GET_OPPONENT(tch)) {
       gain_exp(ch, tch, healed, EXP_HEALING);
     }
     update_pos(tch);
@@ -16721,10 +16721,10 @@ void spell_tranquility(int level, P_char ch, char *arg, int type,
       FALSE, ch, 0, 0, TO_CHAR);
   for (d = world[ch->in_room].people; d; d = d->next_in_room)
   {
-    if(d->specials.fighting)
+    if(GET_OPPONENT(d))
       if(number(1, 130) < skl_lvl)
       {
-         oponent = d->specials.fighting;
+         oponent = GET_OPPONENT(d);
          // Lom: made them forget each other in pairs. as StopMercifulAttackers dont clear memories 
          if(IS_PC(oponent))
             send_to_char("A sense of calm comes upon you.\n", oponent);
@@ -19859,7 +19859,7 @@ void spell_blink(int level, P_char ch, char *arg, int type, P_char victim, P_obj
       stop_destroying(ch);
     for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
     {
-      if(tch->specials.fighting == ch)
+      if(GET_OPPONENT(tch) == ch)
       {
         act("Without warning $n simply ceases to be. Doh! Where did he go?", FALSE, ch,
           0, tch, TO_ROOM);
@@ -21283,7 +21283,7 @@ void event_holy_dharma(P_char ch, P_char victim, P_obj obj, void *data)
     {
       if(IS_FIGHTING(ch))
       {
-        opponent = ch->specials.fighting;
+        opponent = GET_OPPONENT(ch);
 
         if(GET_HIT(opponent) > GET_MAX_HIT(opponent) &&
            opponent)

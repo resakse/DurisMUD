@@ -3724,7 +3724,7 @@ int bs_guildguard_necro(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return TRUE;
   }
@@ -3771,7 +3771,7 @@ int bs_guildguard_thief(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return TRUE;
   }
@@ -3824,7 +3824,7 @@ int bs_guildguard_assassin(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return TRUE;
   }
@@ -3870,7 +3870,7 @@ int bs_guildguard_sorcconj(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return TRUE;
   }
@@ -3917,7 +3917,7 @@ int bs_guildguard_clersham(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return TRUE;
   }
@@ -3966,7 +3966,7 @@ int bs_guildguard_antiwar(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return TRUE;
   }
@@ -4028,7 +4028,7 @@ int bs_guildguard_monk(P_char ch, P_char pl, int cmd, char *arg)
 
   if (IS_FIGHTING(ch))
   {
-    g_prot = guild_protection(ch, ch->specials.fighting);
+    g_prot = guild_protection(ch, GET_OPPONENT(ch));
     if (g_prot == 1)
       return TRUE;
   }

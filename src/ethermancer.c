@@ -450,7 +450,7 @@ void spell_wind_blade(int level, P_char ch, char *arg, int type, P_char
   if (IS_FIGHTING(ch))
     if (has_wind_blade_wielded(ch))
     {
-        if (P_char vict = ch->specials.fighting)
+        if (P_char vict = GET_OPPONENT(ch))
         wind_blade_attack_routine(ch, vict);
     }
     else
@@ -1177,7 +1177,7 @@ void spell_induce_tupor(int level, P_char ch, char *arg, int type, P_char victim
   af.duration = (int) (5 * PULSE_VIOLENCE);
   af.bitvector = AFF_SLEEP;
 
-  if(victim->specials.fighting)
+  if(GET_OPPONENT(victim))
     stop_fighting(victim);
   if( IS_DESTROYING(victim) )
     stop_destroying(victim);
@@ -2758,7 +2758,7 @@ void spell_etheric_gust(int level, P_char ch, char *arg, int type, P_char victim
   if(victim->in_room != NOWHERE)
     for (t_ch = world[victim->in_room].people; t_ch; t_ch = t_ch->next)
       if(IS_FIGHTING(t_ch) &&
-         t_ch->specials.fighting == victim)
+         GET_OPPONENT(t_ch) == victim)
             stop_fighting(t_ch);
   
   if(victim->in_room != to_room)
