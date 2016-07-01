@@ -2595,14 +2595,17 @@ bool is_aggr_to(P_char ch, P_char target)
     return FALSE;
   }
   // 99.9% calls will leave here
-  if(IS_NPC(ch) &&
-     IS_NPC(target) &&
-     (!target->following || IS_NPC(target->following)) &&
-     !IS_MORPH(target))
+  if( IS_NPC(ch) && IS_NPC(target) && (!target->following || IS_NPC( target->following )) && !IS_MORPH(target) )
   {
     return FALSE;
   }
-  
+
+  if( (target->group && ( target->group == ch->group ))
+    || (target->following && ( target->following == ch->following )) )
+  {
+    return FALSE;
+  }
+
   if(IS_FIGHTING(ch) ||
     IS_DESTROYING(ch) ||
     !IS_AWAKE(ch) ||
