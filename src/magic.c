@@ -3069,6 +3069,9 @@ void spell_bigbys_clenched_fist(int level, P_char ch, char *arg, int type, P_cha
     "$n's &+Ymagic fist&N punches $N into so much pulp!", 0
   };
 
+  if( level > 50 )
+    level = 50;
+
   int dam = 10 * level + number(1, 25);
 
   if(!NewSaves(victim, SAVING_SPELL, 0))
