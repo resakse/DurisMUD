@@ -537,49 +537,38 @@ int woundhealer_scimitar(P_obj obj, P_char ch, int cmd, char *arg)
 }
 
 
-int flame_of_north_sword(P_obj obj, P_char ch, int cmd, char *arg)
+int flame_of_north_sword( P_obj obj, P_char ch, int cmd, char *arg )
 {
-  P_char   vict;
-  char     e_pos;
-  int      in_battle, working;
+  char e_pos;
+  bool in_battle, working;
+  P_char vict;
 
   vict = (P_char) arg;
   in_battle = cmd / 1000;
 
-  if (cmd == CMD_SET_PERIODIC)               /*
-                                   Events have priority
-                                 */
+  if( cmd == CMD_SET_PERIODIC )
     return FALSE;
 
-  if (!ch || !obj)              /*
-                                   If the player ain't here, why are we?
-                                 */
+  if( !IS_ALIVE(ch) || !obj )
     return FALSE;
 
-  if (!OBJ_WORN(obj))           /*
-                                   Most things don't work in a sack...
-                                 */
+  if( !OBJ_WORN(obj) )
     return FALSE;
 
-/*
-   If it must be wielded, use this
- */
+  // If it must be wielded, use this
   e_pos = ((obj->loc.wearing->equipment[WIELD] == obj) ? WIELD :
            (obj->loc.wearing->equipment[SECONDARY_WEAPON] == obj) ?
            SECONDARY_WEAPON : 0);
-  if (!e_pos)
+  if( !e_pos )
     return FALSE;
 
-  if (IS_OBJ_STAT(obj, ITEM_LIT))       /*
-                                          works only when flame on
-                                         */
+  // Must be lit to proc.
+  if( IS_OBJ_STAT(obj, ITEM_LIT) )
     working = TRUE;
   else
     working = FALSE;
 
-/*
-   Any powers activated by keywords? Right here, bud.
- */
+  // Any powers activated by keywords? Right here, bud.
   if (arg && (cmd == CMD_SAY))
   {
     if ((isname(arg, "fly")) && working)
@@ -614,14 +603,14 @@ int flame_of_north_sword(P_obj obj, P_char ch, int cmd, char *arg)
         return TRUE;
       }
   }
-  if (!in_battle)               /*
-                                   Past here, and you're fighting
-                                 */
+
+  // Past here, and you're fighting.
+  if( !in_battle )
     return FALSE;
 
-  if ((!number(0, 30)) && working)
+  if( (!number(0, 30)) && working )
   {
-    act("&=LWYou score a CRITICAL HIT!!!!!&n", FALSE, ch, 0, 0, TO_CHAR);
+    act("&=LYYou score a CRITICAL HIT!!!!!&n", FALSE, ch, 0, 0, TO_CHAR);
     spell_flamestrike(50, ch, 0, SPELL_TYPE_SPELL, vict, 0);
     return TRUE;
   }
