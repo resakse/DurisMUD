@@ -9502,10 +9502,23 @@ void perform_violence(void)
 
     opponent = GET_OPPONENT(ch);
 
-    if( !opponent && ch->in_room != NOWHERE )
+    if( !opponent )
     {
-      logit(LOG_DEBUG, "%s fighting null opponent in (%d) perform_violence()!", GET_NAME(ch), world[ch->in_room].number);
-      return;
+      if( ch->in_room != NOWHERE )
+      {
+        debug( "perform_violence%s fighting null opponent in %s (%d) perform_violence()!", GET_NAME(ch),
+          world[ch->in_room].name, world[ch->in_room].number);
+        logit(LOG_DEBUG, "perform_violence%s fighting null opponent in %s (%d) perform_violence()!", GET_NAME(ch),
+          world[ch->in_room].name, world[ch->in_room].number);
+        return;
+      }
+      else
+      {
+        debug( "%s fighting null opponent in NOWHERE!", GET_NAME(ch) );
+        logit(LOG_DEBUG, "%s fighting null opponent in NOWHERE!", GET_NAME(ch) );
+        stop_fighting(ch);
+        continue;
+      }
     }
 
     // If someone's hitting on opponent (ch is) then give opponent melee exp.
