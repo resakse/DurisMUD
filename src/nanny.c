@@ -2670,6 +2670,10 @@ void load_obj_to_newbies(P_char ch)
                                      -1}));
 
 /*END Wood Elf Classes*/
+  CREATE_KIT(RACE_SKELETON, CLASS_ROGUE, ((int[])
+                                       {
+                                       1317, 1317, 1128, 1129, 1130, 1131, 1132,
+                                       412, 412, 412, 412, 412, -1}));
 
   if (ch->carrying && IS_PC(ch))        /* we are _NOT_ here to give people free eq many times */
     return;
