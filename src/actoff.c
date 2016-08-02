@@ -349,6 +349,9 @@ void show_failed_takedown_messages(P_char ch, P_char victim, int skill, int reas
   case SKILL_MAUL:
     messages_set = (struct failed_takedown_messages *) failed_maul_messages;
     break;
+  // Kick does not give messages for failed takedown; it's room / wall / groin kicks.
+  case SKILL_KICK:
+    return;
   default:
     debug( "show_failed_takedown_mesages: Bad skill %s (%d) not in switch.", skills[skill].name, skill );
     return;
