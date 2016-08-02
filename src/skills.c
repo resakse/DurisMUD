@@ -1026,6 +1026,7 @@ void initialize_skills()
                 spell_fly, "&+CYour feet slowly descend to the ground.&n");
   SPELL_ADD(CLASS_MINDFLAYER, 5);
   SPELL_ADD(CLASS_PSIONICIST, 6);
+  SPEC_SPELL_ADD(CLASS_REAVER, 9, SPEC_SHOCK_REAVER);
 
   SPELL_CREATE("confuse", SPELL_CONFUSE, PULSE_SPELLCAST * 4,
                 TAR_AREA | TAR_AGGRO, spell_confuse);
@@ -1247,6 +1248,7 @@ void initialize_skills()
   SPELL_ADD(CLASS_NECROMANCER, 9);
   SPELL_ADD(CLASS_BARD, 7);
   SPELL_ADD(CLASS_THEURGIST, 9);
+  SPELL_ADD(CLASS_REAVER, 10);
 
   SPELL_CREATE("dark compact", SPELL_DARK_COMPACT, PULSE_SPELLCAST,
                 TAR_SELF_ONLY, spell_dark_compact);

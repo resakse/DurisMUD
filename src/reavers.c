@@ -832,8 +832,8 @@ void spell_lliendils_stormshock(int level, P_char ch, char *arg, int type, P_cha
 
   af.type = SPELL_LLIENDILS_STORMSHOCK;
   af.duration = level / 2;
-  af.location = APPLY_HITROLL;
-  af.modifier = number(1, 4);
+  af.location = APPLY_COMBAT_PULSE;
+  af.modifier = number(-1, -2);
 
   affect_to_char(victim, &af);
 
