@@ -792,6 +792,8 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 		(GET_RACE(ch) == RACE_I_ELEMENTAL) || \
         (GET_RACE(ch) == RACE_E_ELEMENTAL))
 
+#define IS_PC_CORPSE(obj) ( (obj->type == ITEM_CORPSE) && IS_SET(obj->value[1], PC_CORPSE) )
+
 #define IS_NOCORPSE(ch) ((GET_RACE(ch) == RACE_UNDEAD) || \
            ( GET_RACE(ch) == RACE_GHOST ) || \
            ( GET_RACE(ch) == RACE_VAMPIRE ) || \

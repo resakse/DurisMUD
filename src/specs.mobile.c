@@ -16187,6 +16187,10 @@ int llyren(P_char ch, P_char pl, int cmd, char *arg)
       {
         container = container->loc.inside;
       }
+      if( IS_PC_CORPSE(container) )
+      {
+        continue;
+      }
       if( OBJ_ROOM(container) )
       {
         sprintf(buffer, "You see %s inside %s in %s.\n", OBJ_SHORT(t_obj), OBJ_SHORT(container),

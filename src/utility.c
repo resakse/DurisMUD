@@ -5127,18 +5127,12 @@ void hummer(P_obj obj)
     return;
   if ((OBJ_WORN(obj) || OBJ_CARRIED(obj)))
   {
-    act("&+LA faint hum can be heard from&N $p&n&+L carried by $n&n.",
-        FALSE, obj->loc.wearing, obj, 0, TO_ROOM);
-    act("&+LA faint hum can be heard from&N $p&n&+L you are carrying.",
-        FALSE, obj->loc.wearing, obj, 0, TO_CHAR);
+    act("&+LA faint hum can be heard from&N $p&n&+L carried by $n&n.", FALSE, obj->loc.wearing, obj, 0, TO_ROOM);
+    act("&+LA faint hum can be heard from&N $p&n&+L you are carrying.", FALSE, obj->loc.wearing, obj, 0, TO_CHAR);
   }
   else if (OBJ_ROOM(obj))
   {
-    act("&+LA strange humming sound comes from&N $p&+L.",
-        0, world[obj->loc.room].people, obj, 0, TO_ROOM);
-    act("&+LA strange humming sound comes from&N $p&+L.",
-        0, world[obj->loc.room].people, obj, 0, TO_ROOM);
-
+    act("&+LA strange humming sound comes from&N $p&+L.", FALSE, world[obj->loc.room].people, obj, 0, TO_ROOM);
   }
   return;
 }
