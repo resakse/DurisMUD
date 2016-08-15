@@ -1130,17 +1130,17 @@ key~
 &+WA key.
 ~
 #57578
-object unnamed~
+ice crystal~
 &+Can ice crystal~
-An unnamed object lies here, looking lonely and forelorn.~
+&+CAn ice crystal&N lies here.~
 ~
 11 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100 0 8388608 0 0
 #57579
-object unnamed~
-&+Ra flame~
-An unnamed object lies here, looking lonely and forelorn.~
+flame~
+&+Ra flame&n~
+&+RA flame&n dances here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
@@ -1192,14 +1192,6 @@ A
 35 2
 A
 5 8
-#57584
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
 #57585
 razor-sharp adamantium longsword razor sharp~
 a &+Wra&+Yzo&+yr-&+Wsh&+Yar&+yp &+Wad&+Yam&+yant&+Wiu&+Ym &+Wlo&+Yng&+ysw&+Yor&+Wd~

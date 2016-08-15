@@ -1,7 +1,7 @@
 #135201
 essence red dragon flight~
 &+Lthe &+ressence &+Lof the &+rr&+Re&+rd &+Ldragon flight&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+rA swirling ball of energy lies here.&n~
 ~
 13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
@@ -39,23 +39,23 @@ essence white dragon flight~
 0 0 0 0 0 0 0 0
 0 0 100
 #135206
-object unnamed~
+orb dragonian malice~
 &+Lthe &+corb &+Lof &+Gd&+graconia&+Gn &+Lmalice&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LThe &+corb &+Lof &+Gd&+graconia&+Gn &+Lmalice&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135207
-object unnamed~
+forged essence essences eternal fury~
 &+Lthe &+rf&+Ro&+rr&+Rg&+re&+Rd &+Lessences of &+Ge&+gterna&+Gl &+rf&+Ru&+rr&+Ry&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LThe &+rf&+Ro&+rr&+Rg&+re&+Rd &+Lessences of &+Ge&+gterna&+Gl &+rf&+Ru&+rr&+Ry&n lie here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135208
-object unnamed~
+pillar skulls skull~
 &+LThe &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof S&+wk&+Lu&+wl&+Ll&+ws&n~
 &+LThe &+rP&+Ri&+rl&+Rl&+ra&+Rr &+Lof &+wS&+Lk&+wu&+Ll&+wl&+Ls towers over you, its summit dissapearing in the &+rfiery &+Lsky.&n~
 ~
@@ -99,9 +99,9 @@ A
 A
 19 4
 #135213
-object unnamed~
+think red potion fires embrace~
 &+La thick &+rred &+Lpotion labeled '&+RFi&+Yre&+W's Emb&+Yra&+Rce&+L'&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LA thick &+rred &+Lpotion labeled '&+RFi&+Yre&+W's Emb&+Yra&+Rce&+L'&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
@@ -165,39 +165,39 @@ A
 #135219
 shield battle dragon~
 &+La &+msh&+Mie&+mld &+Lof the &+mba&+Mtt&+mle &+Ldragon&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LA &+msh&+Mie&+mld &+Lof the &+mba&+Mtt&+mle &+Ldragon&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135220
-object unnamed~
+bluesteel gauntlets electricity~
 &+Lsome &+Cblue&+csteel &+Lgauntlets enshrouded in &+Yc&+yracklin&+Yg &+Be&+blectricit&+By&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LSome &+Cblue&+csteel &+Lgauntlets enshrouded in &+Yc&+yracklin&+Yg &+Be&+blectricit&+By&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135221
-boots volo~
-the mystic boots of Volo the Traveler~
-An unnamed object lies here, looking lonely and forelorn.~
+boots mystical volo~
+&+Lthe mystical boots of &+cV&+Lo&+cl&+Lo the Traveller&n~
+&+LA pair of boots as dark as the night has been left here.&N~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135222
-object unnamed~
+wickedly barbed stiletto whispering shadows~
 &+La w&+ri&+Lc&+rk&+Le&+rd&+Ll&+ry &+Lbarbed stiletto of &+cwh&+Cis&+cpe&+Cri&+cng &+Lshadows&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LA w&+ri&+Lc&+rk&+Le&+rd&+Ll&+ry &+Lbarbed stiletto of &+cwh&+Cis&+cpe&+Cri&+cng &+Lshadows&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135223
-object unnamed~
+suit shimmering woven dragonscale armor~
 &+La suit of &+Ys&+Wh&+Yi&+Wm&+Ym&+We&+Yr&+Wi&+Yn&+Yg &+Lw&+mo&+Lv&+me&+Ln &+gd&+Gr&+ga&+Gg&+go&+Gn&+ys&+Ycal&+ye &+Larmor&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LA suit of &+Ys&+Wh&+Yi&+Wm&+Ym&+We&+Yr&+Wi&+Yn&+Yg &+Lw&+mo&+Lv&+me&+Ln &+gd&+Gr&+ga&+Gg&+go&+Gn&+ys&+Ycal&+ye &+Larmor&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
@@ -343,21 +343,5 @@ no-show guardian generator~
 &+LA No-Show Guardian Generator lies here, waiting to be triggered by mortals.&n~
 ~
 13 15 3 0 7 0 2 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-#135239
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
-#135240
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100

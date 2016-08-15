@@ -78,7 +78,7 @@ A
 #135404
 eyepatch~
 &+Lan &+Ley&ne&+Cpa&nt&+Lch of &+rli&+Rvi&+rng&+L d&+Ba&+brkne&+Bs&+Ls and scr&nea&+Wming sh&nado&+Lws~
-An unnamed object lies here, looking lonely and forelorn.~
+&+LAn &+Ley&ne&+Cpa&nt&+Lch of &+rli&+Rvi&+rng&+L d&+Ba&+brkne&+Bs&+Ls and scr&nea&+Wming sh&nado&+Lws lies here.~
 ~
 9 15 2 0 13 0 8192 131073 64 0 0
 25 0 0 3 0 0 0 0
@@ -654,25 +654,25 @@ A book with mithril bindings and a battle-forgers sigil has been left here.~
 0 0 0 0 0 0 0 0
 0 0 100
 #135440
-object unnamed~
-the hide of Kezef, the Chaos Hound~
-An unnamed object lies here, looking lonely and forelorn.~
+hide kezef chaos hound~
+&+Lthe hide of &+rK&+Re&+rz&+Re&+rf&+L, the Chaos Ho&+Wu&+Cn&+Ld&n~
+&+LThe hide of &+rK&+Re&+rz&+Re&+rf&+L, the Chaos Ho&+Wu&+Cn&+Ld&+L lies here.&n~
 ~
 13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135441
-object unnamed~
-the corpse of an elf Moon Warrior~
-An unnamed object lies here, looking lonely and forelorn.~
+corpse elf moon warrior~
+the corpse of an elven Moon Warrior~
+The corpse of an elven Moon Warrior lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135442
-visage dendar~
-the visage of Dendar, the Elder Eternal Evil~
-An unnamed object lies here, looking lonely and forelorn.~
+visage dendar night serpent~
+&+Lthe visage of Den&nd&+Ca&+Lr, the &+LNi&n&+wg&+Wht Se&n&+wrp&+Lent&n~
+&+LThe visage of Den&nd&+Ca&+Lr, the &+LNi&n&+wg&+Wht Se&n&+wrp&+Lent lies here.&n~
 ~
 13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
@@ -802,33 +802,33 @@ platemail~
 &+Lto its, and decorated with a sigil of a serpent devouring a sun.
 ~
 #135451
-object unnamed~
-the scale of the Death Serpent~
-An unnamed object lies here, looking lonely and forelorn.~
+scale death serpent~
+&+Lthe scale of the D&+wea&+Lth &+GS&+gerpent&n~
+&+LThe scale of the D&+wea&+Lth &+GS&+gerpent&+L shimmers here.&n~
 ~
 13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135452
-object unnamed~
-the scale of the Night Serpent~
-An unnamed object lies here, looking lonely and forelorn.~
+scale night serpent~
+&+Lthe scale of the Ni&n&+wg&+Wht Se&n&+wrp&+Lent&n~
+&+LThe scale of the Ni&n&+wg&+Wht Se&n&+wrp&+Lent&+L shimmers here.&n~
 ~
 13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135453
-object unnamed~
-the scale of the Shadow Serpent~
-An unnamed object lies here, looking lonely and forelorn.~
+scale shadow serpent~
+&+Lthe scale of the Sh&nad&+Wow &+rSe&+Rrpe&+rnt&n~
+&+Lthe scale of the Sh&nad&+Wow &+rSe&+Rrpe&+rnt&+L shimmers here.&n~
 ~
 13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135454
-object unnamed~
-the scale of the Emerald Serpent~
-An unnamed object lies here, looking lonely and forelorn.~
+scale emerald serpent~
+&+Lthe scale of the &+gE&+Gme&+Wrald Serp&+Gen&+gt&n~
+&+LThe scale of the &+gE&+Gme&+Wrald Serp&+Gen&+gt&+L shimmers here.&n~
 ~
 13 15 3 0 7 0 0 0 32768 0 0
 0 0 0 0 0 0 0 0
@@ -909,41 +909,41 @@ A circlet that resembles serpent of intwined snakes devouring each other has bee
 0 0 0 0 0 0 0 0
 0 0 100
 #135462
-object unnamed~
+deathgaze visor abyssal ravager~
 &+W'&+wDe&+Wathga&+wze&+W'&+L the &+WV&+wiso&+Wr&+L of the &+rA&+Rb&+Lyssal Ravag&+Re&+rr&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+W'&+wDe&+Wathga&+wze&+W'&+L the &+WV&+wiso&+Wr&+L of the &+rA&+Rb&+Lyssal Ravag&+Re&+rr&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135463
-object unnamed~
-&+ma&+Ln &+ma&+Mm&+Lethys&+Mt&+ms e&+Ma&+Lrri&+Mn&+mg &+Lnamed &+M'&+mM&+Lagi&+mk&+M'&n~
-An unnamed object lies here, looking lonely and forelorn.~
+amethyst earring magik~
+&+ma&+Ln &+ma&+Mm&+Lethy&+ms&+Mt e&+Ma&+Lrri&+Mn&+mg &+Lnamed &+M'&+mM&+Lagi&+mk&+M'&n~
+&+mA&+Ln &+ma&+Mm&+Lethy&+ms&+Mt e&+Ma&+Lrri&+Mn&+mg &+Lnamed &+M'&+mM&+Lagi&+mk&+M'&n lies here.~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135464
-object unnamed~
+cloak living faerie flesh~
 &+La &+Wc&+wloa&+Wk&+L of &+rl&+Ri&+Lvi&+Rn&+rg &+Yf&+La&+we&+Wr&+Yi&+Le &+rf&+Rl&+Le&+Rs&+rh&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+La &+Wc&+wloa&+Wk&+L of &+rl&+Ri&+Lvi&+Rn&+rg &+Yf&+La&+we&+Wr&+Yi&+Le &+rf&+Rl&+Le&+Rs&+rh&+L writhes here.&n~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135465
-object unnamed~
-&+La &+Wf&+woo&+Wt&+L long &+Ws&+we&+Wr&+wr&+Wa&+wt&+We&+wd &+Wun&+Cico&+Wrn &+Ch&+Wor&+Cn&n~
-An unnamed object lies here, looking lonely and forelorn.~
+foot long foot-long serrated unicorn horn~
+&+La &+Wf&+woo&+Wt&n-&+Llong &+Ws&+we&+Wr&+wr&+Wa&+wt&+We&+wd &+Wun&+Cico&+Wrn &+Ch&+Wor&+Cn&n~
+&+LA &+Wf&+woo&+Wt&n-&+Llong &+Ws&+we&+Wr&+wr&+Wa&+wt&+We&+wd &+Wun&+Cico&+Wrn &+Ch&+Wor&+Cn&+L wobbles about here.&n~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135466
-object unnamed~
-&+Lan &+ma&+Mn&+Lcie&+Mn&+mt n&+Me&+Lckla&+Mc&+me&+L of dangling &+ms&+Mh&+Lam&+Ma&+mn r&+Mu&+Ln&+Me&+ms~
-An unnamed object lies here, looking lonely and forelorn.~
+ancient necklace dangling shaman runes~
+&+Lan &+ma&+Mn&+Lcie&+Mn&+mt n&+Me&+Lckla&+Mc&+me&+L of dangling &+ms&+Mh&+Lam&+Ma&+mn r&+Mu&+Ln&+Me&+ms&N~
+&+LAn &+ma&+Mn&+Lcie&+Mn&+mt n&+Me&+Lckla&+Mc&+me&+L of dangling &+ms&+Mh&+Lam&+Ma&+mn r&+Mu&+Ln&+Me&+ms&+L vibrates here.&N~
 ~
 13 15 3 0 7 0 0 0 0 0 0
 0 0 0 0 0 0 0 0

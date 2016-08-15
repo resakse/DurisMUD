@@ -103,25 +103,25 @@ frost encrusted hammer shadow steel shadowsteel~
 4 4 4 0 0 393525 56 1
 0 0 100
 #135114
-hidden enchantment priest proc~
-&+Lhidden blood priest proc 1&n~
-An unnamed object lies here, looking lonely and forelorn.~
+hidden blood priest proc weapon~
+&+La hidden &+rbl&+Roo&+rd&+L priest proc 1&n~
+&+LA hidden &+rbl&+Roo&+rd&+L priest proc 1&n lies here.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 8192 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135115
-hidden enchantment priest proc~
-hidden enchantment priest proc 2~
-An unnamed object lies here, looking lonely and forelorn.~
+hidden blood priest proc weapon~
+&+La hidden &+rbl&+Roo&+rd&+L priest proc 2&n~
+&+LA hidden &+rbl&+Roo&+rd&+L priest proc 2&n lies here.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 8192 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135116
-priest proc weapon~
-hidden enchantment priest proc 1~
-priest proc weapon sits here, not being seen by players.~
+hidden enchantment priest proc weapon~
+&+La hidden en&+mch&+Lan&+mtm&+Len&+mt&+L priest proc 1&n~
+&+LA hidden en&+mch&+Lan&+mtm&+Len&+mt&+L priest proc 1&n lies here.~
 ~
 5 15 3 0 7 0 2 8192 0 0 0
 4 4 4 0 0 1573425351 50 10
@@ -137,11 +137,11 @@ _victim_msg~
 &+Lpowers surge through the priests hands as he touches you!&n
 ~
 #135117
-object unnamed~
-&+Lhidden blood priest proc 2&n~
-An unnamed object lies here, looking lonely and forelorn.~
+hidden enchantment priest proc weapon~
+&+La hidden en&+mch&+Lan&+mtm&+Len&+mt&+L priest proc 2&n~
+&+LA hidden en&+mch&+Lan&+mtm&+Len&+mt&+L priest proc 2&n lies here.~
 ~
-13 15 3 0 7 0 0 0 0 0 0
+13 15 3 0 7 0 0 8192 0 0 0
 0 0 0 0 0 0 0 0
 0 0 100
 #135118

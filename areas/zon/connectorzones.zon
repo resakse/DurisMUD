@@ -2,7 +2,7 @@
 &+LThe Great &n&+yRealm &+Lof &N&+rDuris&N~
 54245 2 0 40 50 1
 *
-* Zone edited with durisEdit v3.00
+* Zone edited with durisEdit v3.02
 *
 *
 D 0 53606 1 1 100 0 0 0
@@ -720,6 +720,7 @@ M 0 53713 4 54194 100 0 0 0        * a filthy maggot
 M 0 53714 4 54194 100 0 0 0        * a disgusting maggot
 M 0 53715 4 54194 100 0 0 0        * a small maggot larvae
 M 0 53716 1 54194 100 0 0 0        * a large carcass beetle
+E 1 53659 1 16 100 0 0 0           *   carcass beetle claw (not for players)
 M 0 53709 6 54196 100 0 0 0        * a fat troggler
 M 0 53710 6 54196 100 0 0 0        * a warty troggler
 M 0 53711 6 54196 100 0 0 0        * a smelly troggler

@@ -813,14 +813,6 @@ A trustee artifact lies here, discarded.~
 9 16 0 0 7 0 0 2097153 0 0 0
 0 16 0 3 0 0 0 0
 1 1 100
-#56
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-13 15 3 0 7 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
 #57
 tome pirate guide~
 &+ya &+Wsalty &+ytome marked &+L'&+bA Guide to the &+BHigh Seas&+L'&n~
@@ -1199,14 +1191,6 @@ flames bulletin board~
 ~
 13 16 4 50 7 0 0 0 0 0 0
 2 2 2 57 0 0 0 0
-0 0 100
-#93
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-13 15 3 0 5 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
 0 0 100
 #94
 map maps duris~
@@ -2096,14 +2080,6 @@ quarrel bolt crossbow heavy~
 7 5 2 3 7 0 0 1 0 0 0
 2 2 8 3 0 0 0 0
 1 20 100
-#171
-object unnamed~
-an unnamed object~
-An unnamed object lies here, looking lonely and forelorn.~
-~
-13 15 3 0 5 0 0 0 0 0 0
-0 0 0 0 0 0 0 0
-0 0 100
 #172
 tome ancient dusty~
 &+yan ancient tome filled with forgotten knowledge&n~
@@ -2113,7 +2089,7 @@ tome ancient dusty~
 0 0 0 0 0 0 0 0
 0 0 100
 #173
-object unnamed~
+large wooden chest~
 a large &+ywooden chest&n~
 A large &+ywooden chest&n, its timbers split, lies here.~
 ~
@@ -3610,9 +3586,9 @@ a &+Wsmall diamond&n~
 0 0 0 0 0 0 0 0
 0 4500000 100
 #346
-object unnamed~
+chunk malachite~
 a &+gchunk of &+Gm&+gal&+Gach&+git&+Ge&n~
-An unnamed object lies here, looking lonely and forelorn.~
+A &+gchunk of &+Gm&+gal&+Gach&+git&+Ge&n lies here.~
 ~
 8 15 3 0 5 0 0 1 0 0 0
 0 0 0 0 0 0 0 0
@@ -3660,7 +3636,7 @@ a &+yjagged piece of &+Ychrysoberyl&n~
 #352
 death sickle~
 &+La death sickle&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+La death sickle&n vibrates here.~
 ~
 5 1 3 0 5 0 8913985 8193 0 142607360 0
 17 3 7 0 0 0 0 0
@@ -8058,7 +8034,7 @@ A
 #915
 large blue ioun stone~
 &+ba LARGE blue ioun stone&N~
-An unnamed object lies here, looking lonely and forelorn.~
+&+ba LARGE blue ioun stone&N floats here.~
 ~
 9 11 10 0 15 0 268435456 268435457 0 0 0
 0 0 0 0 0 0 0 0

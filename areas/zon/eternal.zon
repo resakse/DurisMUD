@@ -2,7 +2,7 @@
 The Spires of the Elder Eternal Evil~
 135732 2 0 40 50 1
 *
-* Zone edited with durisEdit v3.00
+* Zone edited with durisEdit v3.02
 *
 *
 D 0 135443 3 2 100 0 0 0
@@ -180,6 +180,7 @@ E 1 135443 51 16 100 0 0 0         *   a serpentine two-handed yuan-ti scimitar
 M 0 135413 1 135447 100 0 0 0      * Ityak-Ortheel, the Elf-Eater
 M 0 135407 1 135453 100 0 0 0      * Ss'thar'tiss'ssun, the Emerald Princess
 E 1 135408 1 1 100 0 0 0           *   a ring of serpents devouring each other
+G 1 135454 1 0 100 0 0 0           *    the scale of the Emerald Serpent
 M 0 135420 30 135458 100 0 0 0     * a yuan-ti
 E 1 135450 46 5 100 0 0 0          *   a suit of serpentine yuan-ti platemail
 E 1 135449 50 6 100 0 0 0          *   a yuan-ti helmet with a serpentine viser
@@ -255,9 +256,10 @@ M 0 135437 3 135554 100 0 0 0      * A shadow yuan-ti
 E 1 135445 11 16 100 0 0 0         *   a serpentine yuan-ti dagger
 E 1 135445 11 17 100 0 0 0         *   a serpentine yuan-ti dagger
 M 0 135400 1 135555 100 0 0 0      * Eshadow, the Shadow Serpent
-E 1 135405 1 16 100 0 0 0          *   a serpentine stilletto named 'Tainted Kiss'
+E 1 135405 1 16 100 0 0 0          *   a serpentine stiletto named 'Tainted Kiss'
 E 1 135445 11 17 100 0 0 0         *   a serpentine yuan-ti dagger
 E 1 135404 1 19 100 0 0 0          *   an eyepatch of living darkness and screaming shadows
+G 1 135453 1 0 100 0 0 0           *    the scale of the Shadow Serpent
 M 0 135436 2 135555 100 0 0 0      * A shadow yuan-ti
 E 1 135445 11 16 100 0 0 0         *   a serpentine yuan-ti dagger
 E 1 135445 11 17 100 0 0 0         *   a serpentine yuan-ti dagger
@@ -350,6 +352,7 @@ E 1 135410 1 3 100 0 0 0           *   the burning crowns and skulls of fallen k
 E 1 135413 1 16 100 0 0 0          *   'Onslaught' the Weapon of Slaazh, the Kingslayer
 M 0 135414 1 135609 100 0 0 0      * Xaod, the Death Serpent
 E 1 135421 1 10 100 0 0 0          *   the insidious coils of a death serpent
+G 1 135451 1 0 100 0 0 0           *    the scale of the Death Serpent
 F 1 135415 1 135609 100 0 0 0      * Oothoous, the Alhoon (following)
 E 1 135423 1 9 100 0 0 0           *   some mauve-skinned fingerless gloves of an illithidlich
 G 1 135422 1 0 100 0 0 0           *    the shrunken head of an illithidlich
@@ -360,7 +363,8 @@ E 1 135403 1 5 100 0 0 0           *   a suit of yuan-ti platemail bearing a Ser
 E 1 135443 51 16 100 0 0 0         *   a serpentine two-handed yuan-ti scimitar
 F 1 135406 1 135631 100 0 0 0      * Se'Sehen, the yuan-ti half-blood (following)
 M 0 135411 1 135670 100 0 0 0      * Dendar, the Night Serpent
-G 1 135442 1 0 100 0 0 0           *    the visage of Dendar, the Elder Eternal Evil
+G 1 135442 1 0 100 0 0 0           *    the visage of Dendar, the Night Serpent
+G 1 135452 1 0 100 0 0 0           *    the scale of the Night Serpent
 M 0 135441 1 135672 100 0 0 0      * Issis, the Queen of the Fanged Kingdom
 M 0 135442 1 135674 100 0 0 0      * Horanth,  the Champion of Vaprak
 M 0 135412 1 135732 100 0 0 0      * Kezef, the Chaos Hound

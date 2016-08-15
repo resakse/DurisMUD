@@ -4,8 +4,8 @@ golem assoc5_n_0 _nobutt_ gargoyle~
 &+La stone ga&+cr&+Cgo&+cy&+Lle guards the gateway.
 ~
 ~
-67205707 0 0 301990188 30 0 0 0 S
-OG 0 1 6
+67205707 0 0 0 301990188 30 0 0 0 S
+OG 0 1 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0
@@ -15,8 +15,8 @@ golem assoc5_n_0 _nobutt_ gargoyle~
 &+La stone ga&+rr&+Rgo&+ry&+Lle guards the gateway.
 ~
 ~
-67205707 0 0 301990188 30 0 0 0 S
-OG 0 32 6
+67205707 0 0 0 301990188 30 0 0 0 S
+OG 0 32 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0
@@ -26,8 +26,8 @@ shopkeeper merchant keeper~
 &+LT&+ch&+Ce &+Lk&+Cee&+cp&+Ce&+Lr stands at attention here, ready to assist you.
 ~
 ~
-30794 0 0 301990204 30 0 0 0 S
-PH 0 0 -1
+30794 0 0 0 301990204 30 0 0 0 S
+PH 0 0 0 -1
 1 0 0 100d100+20000 1d1+1
 0.0.0.0 0
 8 8 0
@@ -37,8 +37,8 @@ golem assoc5_n_0 _nobutt_ gargoyle~
 &+La stone ga&+gr&+Ggo&+gy&+Lle guards the gateway.
 ~
 ~
-67205707 0 0 301990188 30 0 0 0 S
-OG 0 512 6
+67205707 0 0 0 301990188 30 0 0 0 S
+OG 0 512 0 6
 60 0 0 10d10+30000 7d7+30
 0.0.0.0 0
 8 8 0

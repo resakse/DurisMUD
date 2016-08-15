@@ -2,7 +2,7 @@
 The Altar of the Firesworn~
 135171 0 0 40 50 2
 *
-* Zone edited with durisEdit v3.00
+* Zone edited with durisEdit v3.02
 *
 *
 D 0 135105 0 2 100 0 0 0
@@ -108,6 +108,8 @@ M 0 135108 11 135110 100 0 0 0     * a firesworn legion sentry
 E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 G 1 135123 1 0 100 0 0 0           *    a key of blood
 M 0 135103 1 135112 100 0 0 0      * the guardian of the blood
+E 1 135114 1 16 100 0 0 0          *   a hidden blood priest proc 1
+E 1 135115 1 17 100 0 0 0          *   a hidden blood priest proc 2
 G 1 135106 1 0 100 0 0 0           *    the divine essence of blood
 M 0 135108 11 135113 100 0 0 0     * a firesworn legion sentry
 E 1 135132 11 16 100 0 0 0         *   a black steel longsword
@@ -133,8 +135,8 @@ M 0 135108 11 135119 100 0 0 0     * a firesworn legion sentry
 E 1 135132 11 16 100 0 0 0         *   a black steel longsword
 G 1 135126 1 0 100 0 0 0           *    a key of binding enchantment
 M 0 135106 1 135121 100 0 0 0      * the guardian of enchantment
-E 1 135116 2 16 100 0 0 0          *   hidden enchantment priest proc 1
-E 1 135116 2 17 100 0 0 0          *   hidden enchantment priest proc 1
+E 1 135116 1 16 100 0 0 0          *   a hidden enchantment priest proc 1
+E 1 135117 1 17 100 0 0 0          *   a hidden enchantment priest proc 2
 G 1 135109 1 0 100 0 0 0           *    the divine essence of enchantment
 M 0 135113 2 135122 100 0 0 0      * a construct of infused shadowsteel
 E 1 135118 2 16 100 0 0 0          *   a wickedly barbed shadowsteel greatsword

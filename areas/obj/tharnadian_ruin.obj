@@ -350,9 +350,9 @@ A
 A
 18 4
 #5524
-dagger~
-assassins dagger not for players~
-An unnamed object lies here, looking lonely and forelorn.~
+assassins dagger~
+&+Lassassins dagger (not for players)&n~
+&+LAn assassins dagger not designed to be used by players lies here.&N~
 ~
 5 15 3 0 7 0 8912898 8192 0 0 0
 2 4 4 0 0 0 0 0
@@ -513,9 +513,9 @@ shouldn't continue unless you are aware and keep an eye on the horizon
 for trouble.
 ~
 #5536
-object unnamed~
 coin repop stop~
-An unnamed object lies here, looking lonely and forelorn.~
+coin repop stop~
+A coin repop stop is here.~
 ~
 13 15 3 0 7 0 2 0 0 0 0
 0 0 0 0 0 0 0 0

@@ -20,7 +20,7 @@ table wooden~
 &+ybits of animals and pieces of &+Wbone&+y.
 ~
 #97902
-unnamed object~
+dirty grate~
 &+ca dirty grate~
 &+cA dirty metal grate covers the floor of the chute.~
 ~
@@ -238,7 +238,7 @@ A
 #97919
 greater wand healing~
 &+Wthe &+Cgreater &+Wwand of &+Chealing&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+WThe &+Cgreater &+Wwand of &+Chealing&n lies here... better get it fast!~
 ~
 3 15 3 0 7 0 1 8404993 32768 0 0
 56 3 3 371 0 0 0 0
@@ -246,7 +246,7 @@ An unnamed object lies here, looking lonely and forelorn.~
 #97920
 lesser wand healing~
 &+Wthe &+Clesser &+Wwand of &+Chealing&n~
-An unnamed object lies here, looking lonely and forelorn.~
+&+WThe &+Clesser &+Wwand of &+Chealing&n lies here.~
 ~
 3 15 3 0 7 0 1 8404993 32768 0 0
 35 3 3 190 0 0 0 0

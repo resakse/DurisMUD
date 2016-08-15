@@ -541,9 +541,9 @@ key~
 This key probably opens the auctioneer's steel chest.
 ~
 #14834
-currency~
+metal calimshan currency~
 &+Ya small pile of metal Calimshan currency&N~
-An unnamed object lies here, looking lonely and forelorn.~
+&+Ya small pile of metal Calimshan currency&+Y lies here.&n~
 ~
 20 15 3 0 7 0 0 1 0 0 0
 0 0 0 10 0 0 0 0

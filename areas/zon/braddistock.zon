@@ -2,7 +2,7 @@
 &+bBraddistock &+WMansion&n~
 1399 1 4 15 20 1
 *
-* Zone edited with durisEdit v3.00
+* Zone edited with durisEdit v3.02
 *
 *
 D 0 1300 0 1 100 0 0 0
@@ -132,29 +132,29 @@ M 0 1305 28 1302 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1303 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1305 100 0 0 0         * a swarm of giant rats
 M 0 1306 12 1305 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1305 28 1306 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1308 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1309 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1310 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1312 100 0 0 0         * a swarm of giant rats
 M 0 1306 12 1313 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1306 12 1313 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1305 28 1315 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1315 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1315 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1315 100 0 0 0         * a swarm of giant rats
 M 0 1306 12 1315 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1306 12 1315 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1305 28 1317 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1317 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1317 100 0 0 0         * a swarm of giant rats
@@ -164,14 +164,14 @@ M 0 1305 28 1317 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1317 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1317 100 0 0 0         * a swarm of giant rats
 M 0 1306 12 1317 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1306 12 1317 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1306 12 1317 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1311 3 1327 100 0 0 0          * a ratman
 M 0 1312 2 1327 100 0 0 0          * a ratman archer
 M 0 1313 3 1327 100 0 0 0          * a ratman mage
@@ -183,8 +183,8 @@ M 0 1304 5 1334 100 0 0 0          * a swarm of bloodthirsty stirges
 M 0 1305 28 1335 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1335 100 0 0 0         * a swarm of giant rats
 M 0 1306 12 1335 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1305 28 1336 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1336 100 0 0 0         * a swarm of giant rats
 M 0 1305 28 1336 100 0 0 0         * a swarm of giant rats
@@ -205,14 +205,14 @@ M 0 1309 2 1342 100 0 0 0          * a ratman mage
 M 0 1309 2 1342 100 0 0 0          * a ratman mage
 M 0 1308 4 1342 100 0 0 0          * a ratman archer
 M 0 1306 12 1343 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1306 12 1343 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1306 12 1343 100 0 0 0         * a HUGE diseased rat
-E 1 1376 24 16 100 0 0 0           *   diseased rat proc
-E 1 1376 24 17 100 0 0 0           *   diseased rat proc
+E 1 1376 24 16 100 0 0 0           *   a diseased rat proc
+E 1 1376 24 17 100 0 0 0           *   a diseased rat proc
 M 0 1310 1 1345 100 0 0 0          * Chkr'Keeth, the Rat Lord
 E 1 1374 1 16 100 0 0 0            *   a searing two-handed sword of lightning
 G 1 1334 1 0 100 0 0 0             *    a silver key
