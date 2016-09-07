@@ -29,7 +29,7 @@ void breath_weapon_fire(int level, P_char ch, char *arg, int type, P_char victim
   }
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
+  dam = (int) 4 * (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
 
   if( IS_PC_PET(ch) )
   {
@@ -40,8 +40,8 @@ void breath_weapon_fire(int level, P_char ch, char *arg, int type, P_char victim
   {
     dam = (int) ((float)dam / get_property("dragon.Breath.savedDamage", 2.0));
   }
-  // 2 - 50 damage.
-  dam = BOUNDED(8, dam, 200);
+  // 5 - 250 damage.
+  dam = BOUNDED(20, dam, 1000);
 
   if( spell_damage(ch, victim, dam, SPLDAM_FIRE, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) != DAM_NONEDEAD )
   {
@@ -117,7 +117,7 @@ void breath_weapon_lightning(int level, P_char ch, char *arg, int type, P_char v
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
@@ -128,7 +128,7 @@ void breath_weapon_lightning(int level, P_char ch, char *arg, int type, P_char v
     dam = (int) ((float)dam * .80);
   }
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   spell_damage(ch, victim, dam, SPLDAM_LIGHTNING, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages);
 }
@@ -154,7 +154,7 @@ void breath_weapon_frost(int level, P_char ch, char *arg, int type, P_char victi
   }
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
   if( IS_PC_PET(ch) )
   {
     dam /= 2;
@@ -164,7 +164,7 @@ void breath_weapon_frost(int level, P_char ch, char *arg, int type, P_char victi
   {
     dam = (int) ((float)dam / get_property("dragon.Breath.savedDamage", 2.0));
   }
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( spell_damage(ch, victim, dam, SPLDAM_COLD, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) != DAM_NONEDEAD )
   {
@@ -238,13 +238,13 @@ void breath_weapon_acid(int level, P_char ch, char *arg, int type, P_char victim
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 12) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 12) + level);
   if(IS_PC_PET(ch))
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if(IS_AFFECTED2(victim, AFF2_PROT_ACID) &&
     number(0, 4))
@@ -297,11 +297,12 @@ void breath_weapon_poison(int level, P_char ch, char *arg, int type, P_char vict
   save = BREATH_WEAPON_SAVE( ch, victim );
   dam = dice(level + get_property("dragon.Breath.DamageMod", 1), 2)
     + ((level + get_property("dragon.Breath.DamageMod", 1)) / 4);
+  dam *= 4;
   if( IS_PC_PET(ch) )
     dam /= 2;
   if(NewSaves(victim, SAVING_BREATH, save))
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2.0));
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( spell_damage(ch, victim, dam, SPLDAM_GAS, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD )
   {
@@ -345,12 +346,12 @@ void breath_weapon_shadow_1(int level, P_char ch, char *arg, int type, P_char vi
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 5) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 5) + level);
 
   if(NewSaves(victim, SAVING_BREATH, save))
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2.0));
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   spell_damage(ch, victim, dam, SPLDAM_NEGATIVE, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages);
 }
@@ -372,12 +373,12 @@ void breath_weapon_shadow_2(int level, P_char ch, char *arg, int type, P_char vi
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 7) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 7) + level);
 
   if( NewSaves(victim, SAVING_BREATH, save) )
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2.0));
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( !NewSaves(victim, SAVING_SPELL, save) )
   {
@@ -405,13 +406,13 @@ void breath_weapon_blind(int level, P_char ch, char *arg, int type, P_char victi
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (180 + dice(4, 10) + ((level + get_property("dragon.Breath.DamageMod", 1)) / 2));
+  dam = 4 * (int) (180 + dice(4, 10) + ((level + get_property("dragon.Breath.DamageMod", 1)) / 2));
   if( IS_PC_PET(ch) )
     dam /= 2;
   if( NewSaves(victim, SAVING_BREATH, save) )
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));;
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( spell_damage(ch, victim, dam, SPLDAM_GAS, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) != DAM_NONEDEAD )
   {
@@ -446,7 +447,7 @@ void breath_weapon_crimson(int level, P_char ch, char *arg, int type, P_char vic
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 9) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 9) + level);
 
   if( IS_PC_PET(ch) )
     dam /= 2;
@@ -454,7 +455,7 @@ void breath_weapon_crimson(int level, P_char ch, char *arg, int type, P_char vic
   if( NewSaves(victim, SAVING_BREATH, save) )
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( spell_damage(ch, victim, dam, SPLDAM_FIRE, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) != DAM_NONEDEAD )
   {
@@ -528,13 +529,13 @@ void breath_weapon_jasper(int level, P_char ch, char *arg, int type, P_char vict
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 7) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 7) + level);
   if( IS_PC_PET(ch) )
     dam /= 2;
   if( NewSaves(victim, SAVING_BREATH, save) )
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( spell_damage(ch, victim, dam, SPLDAM_GAS, SPLDAM_BREATH | SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD )
   {
@@ -560,14 +561,14 @@ void breath_weapon_azure(int level, P_char ch, char *arg, int type, P_char victi
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 8) + level);
 
   if( IS_PC_PET(ch) )
     dam /= 2;
   if( NewSaves(victim, SAVING_BREATH, save) )
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( IS_AFFECTED2(victim, AFF2_PROT_LIGHTNING) )
   {
@@ -594,14 +595,14 @@ void breath_weapon_basalt(int level, P_char ch, char *arg, int type, P_char vict
     return;
 
   save = BREATH_WEAPON_SAVE( ch, victim );
-  dam = (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 11) + level);
+  dam = 4 * (int) (dice(level + get_property("dragon.Breath.DamageMod", 1), 11) + level);
 
   if( IS_PC_PET(ch) )
     dam /= 2;
   if( NewSaves(victim, SAVING_BREATH, save) )
     dam = (int) (dam / get_property("dragon.Breath.savedDamage", 2));
 
-  dam = BOUNDED(8, dam, 200);
+  dam = BOUNDED(20, dam, 1000);
 
   if( IS_AFFECTED2(victim, AFF2_PROT_ACID) )
   {
