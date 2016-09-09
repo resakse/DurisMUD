@@ -9480,7 +9480,7 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
   int      cur_time;
   P_obj    tempobj;
   struct affected_type af;
-  int      affects_bonus = 0;
+  int      affects_bonus;
   int      i, count, weekday;
   char     buf1[MAX_STRING_LENGTH];
   P_obj    item, next_item;
@@ -9491,18 +9491,23 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
     return TRUE;
   }
 
-  if( cmd != CMD_PERIODIC || !IS_ALIVE(ch) || IS_NPC(ch) || !OBJ_WORN_BY(obj, ch) )
+  if( cmd != CMD_PERIODIC || !OBJ_WORN(obj) )
   {
      return FALSE;
   }
+  ch = WEARER(obj);
+  if( !IS_ALIVE(ch) || IS_NPC(ch) )
+  {
+    return FALSE;
+  }
 
-  // Let's only call this function once every 12 min.
+
   curr_time = time(NULL);
-  if( obj->timer[0] + 12*SECS_PER_REAL_MIN <= curr_time )
+  if( obj->timer[0] <= curr_time )
   {
     // Things breaks sometimes...
-    //   be scared all time - on regular proc this object have chance to break.
-    if( !number(0, 90) || obj->timer[0] + 10*SECS_PER_REAL_DAY <= curr_time && !number(0, 7) )
+    //   be scared all the time - on regular proc this object has a chance to break.
+    if( !number(0, 90) )
     {
       act("&+L$p &+Lhums with a &+GCRA&+YC&+GKING &+Lsound.&n", FALSE, ch, obj, 0, TO_CHAR);
       act("&+L$p &+Lcrumble to dust.&n", FALSE, ch, obj, 0, TO_CHAR);
@@ -9510,15 +9515,18 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
       return TRUE;
     }
 
-    // Didnt break it? ok.... lets give them some fun then.
-    obj->timer[0] = curr_time;
+    // Let's only proc this function once every 12 min.
+    obj->timer[0] = curr_time + 12 * SECS_PER_REAL_MIN;
 
+    // Didnt break it? ok.... lets give them some fun then (if they're a positive fragger).
     // Things that modifes the badge.
     // If you have alot of frags, that's good for you!
     if( ch->only.pc->frags > 0 )
     {
-      affects_bonus = (int) (ch->only.pc->frags / 12);
+      // 20.00 frags gives 400 points.
+      affects_bonus = (int) (ch->only.pc->frags / 5);
 
+      // Artis are worth some also!
       for( i = count = 0; i < MAX_WEAR; i++ )
       {
         if( ch->equipment[i] )
@@ -9529,122 +9537,131 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
           }
         }
       }
+      // 80 points per artifact.
+      affects_bonus += 80 * count;
 
-      // One arti is worth some also!
-      affects_bonus = affects_bonus + (60 * count);
-
-      // Level ! ofcourse lvl changes is!
-      affects_bonus = BOUNDED(0, affects_bonus, 1000);
-      affects_bonus = (affects_bonus * GET_LEVEL(ch) / 50);
+      // Level! Of course lvl changes is!
+      // 4 points per level: up to 224 points at 56.
+      affects_bonus += 4 * GET_LEVEL(ch);
 
       // Goodies have it a bit easier get good stat's
       if( IS_RACEWAR_GOOD(ch) )
       {
-        affects_bonus = (int) (affects_bonus * 1.3);
+        affects_bonus = (affects_bonus * 13) / 10;
       }
-      // Add some little randomness
-      affects_bonus = affects_bonus + number(0,10);
 
-      // Ok lets switch affects depenings on weekday.
+      // Add some little randomness
+      affects_bonus += number(0, 100);
+
+      // affects_bonus will always be at least 0, since we start with a non-negative and
+      //   only add more non-negatives or multiply/divide by a positive.
+      // We cap it at 1000 to make the below modifiers cap properly.
+      affects_bonus = MIN(affects_bonus, 1000);
+
+      // Ok lets switch affects depending on weekday.
       weekday = ((35 * time_info.month) + time_info.day + 1) % 7;
       switch( weekday )
       {
       case 0:
         obj->affected[0].location = APPLY_HIT;
-        obj->affected[0].modifier = (int) (affects_bonus / 25);
-        if( obj->affected[0].modifier < 0 )
+        // Max 35 hps.
+        obj->affected[0].modifier = affects_bonus / 28;
+        // Remove the affect if there's no modifier.
+        if( obj->affected[0].modifier == 0 )
         {
-          obj->affected[0].modifier = 0;
+          obj->affected[0].location = APPLY_NONE;
         }
         obj->affected[1].location = APPLY_STR_MAX;
-        obj->affected[1].modifier = (int) (affects_bonus / 200);
-        if (obj->affected[1].modifier < 0)
-        {
-          obj->affected[1].modifier = 0;
-        }
+        // Max 5 maxstat.
+        obj->affected[1].modifier = affects_bonus / 200;
         break;
       case 1:
         obj->affected[0].location = APPLY_HIT;
-        obj->affected[0].modifier = (int) (affects_bonus / 25);
-        if (obj->affected[0].modifier < 0)
+        obj->affected[0].modifier = affects_bonus / 28;
+        if( obj->affected[0].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[0].location = APPLY_NONE;
         }
+        // Max 5 damroll.
         obj->affected[1].location = APPLY_DAMROLL;
-        obj->affected[1].modifier = (int) (affects_bonus / 200);
-        if (obj->affected[1].modifier < 0)
+        obj->affected[1].modifier = affects_bonus / 200;
+        if( obj->affected[1].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[1].location = APPLY_NONE;
         }
         break;
       case 2:
         obj->affected[0].location = APPLY_AC;
-        obj->affected[0].modifier = -((int) (affects_bonus / 100));
-        if (obj->affected[0].modifier > 0)
+        // Best negative 50 ac (Remember negative ac is good, positive is bad).
+        obj->affected[0].modifier = -(affects_bonus / 20);
+        if( obj->affected[0].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[0].location = APPLY_NONE;
         }
         obj->affected[1].location = APPLY_CON_MAX;
-        obj->affected[1].modifier = (int) (affects_bonus / 200);
-        if (obj->affected[1].modifier < 0)
+        obj->affected[1].modifier = affects_bonus / 200;
+        if( obj->affected[1].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[1].location = APPLY_NONE;
         }
         break;
       case 3:
         obj->affected[0].location = APPLY_AC;
-        obj->affected[0].modifier = (int) (affects_bonus / 25);
-        if (obj->affected[0].modifier < 0)
+        obj->affected[0].modifier = -(affects_bonus / 20);
+        if( obj->affected[0].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[0].location = APPLY_NONE;
         }
         obj->affected[1].location = APPLY_SAVING_SPELL;
-        obj->affected[1].modifier = 1 - ((int) (affects_bonus / 200));
-        if (obj->affected[1].modifier > 0)
+        // Best negative 5 save spell (Remember negative save spell is good).
+        obj->affected[1].modifier = -(affects_bonus / 200);
+        if( obj->affected[1].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[1].location = APPLY_NONE;
         }
         break;
       case 4:
         obj->affected[0].location = APPLY_AC;
-        obj->affected[0].modifier = (int) (affects_bonus / 25);
-        if (obj->affected[0].modifier < 0)
+        obj->affected[0].modifier = -(affects_bonus / 20);
+        if( obj->affected[0].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[0].location = APPLY_NONE;
         }
+        // Max 8 regular stat.
         obj->affected[1].location = APPLY_DEX;
-        obj->affected[1].modifier = (int) (affects_bonus / 200);
-        if (obj->affected[1].modifier < 0)
+        obj->affected[1].modifier = affects_bonus / 125;
+        if( obj->affected[1].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[1].location = APPLY_NONE;
         }
         break;
       case 5:
         obj->affected[0].location = APPLY_HIT;
-        obj->affected[0].modifier = (int) (affects_bonus / 25);
-        if (obj->affected[0].modifier < 0)
+        obj->affected[0].modifier = affects_bonus / 28;
+        if( obj->affected[0].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[0].location = APPLY_NONE;
         }
         obj->affected[1].location = APPLY_SAVING_PARA;
-        obj->affected[1].modifier = 1 - ((int) (affects_bonus / 200));
-        if (obj->affected[1].modifier > 0)
+        // Best negative 5 save para (Remember negative save spell is good).
+        obj->affected[1].modifier = -(affects_bonus / 200);
+        if( obj->affected[1].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[1].location = APPLY_NONE;
         }
         break;
       case 6:
         obj->affected[0].location = APPLY_HIT;
-        obj->affected[0].modifier = (int) (affects_bonus / 25);
-        if (obj->affected[0].modifier < 0)
+        obj->affected[0].modifier = affects_bonus / 28;
+        if( obj->affected[0].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[0].location = APPLY_NONE;
         }
         obj->affected[1].location = APPLY_CON;
-        obj->affected[1].modifier = (int) (affects_bonus / 200);
-        if (obj->affected[1].modifier < 0)
+        obj->affected[1].modifier = affects_bonus / 125;
+        if( obj->affected[1].modifier == 0 )
         {
-          obj->affected[1].modifier = 0;
+          obj->affected[1].location = APPLY_NONE;
         }
         break;
       default:
@@ -9656,6 +9673,17 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
       act("&+L$p &+Lhums briefly.&n", FALSE, ch, obj, 0, TO_CHAR);
       if( GET_TITLE(ch) )
       {
+        // The long desc is, "A magical symbol floats in the air.", so keywords magical and symbol are important.
+        // The short desc is "The symbol of ...", so keywords symbol and ... are important.
+        sprintf(buf1, "badge symbol magical %s", strip_ansi(GET_TITLE(ch)).c_str());
+        if( (obj->str_mask & STRUNG_DESC1) && obj->name )
+        {
+           FREE(obj->name);
+        }
+        obj->name = NULL;
+        obj->str_mask |= STRUNG_DESC1;
+        obj->name = str_dup(buf1);
+
         sprintf(buf1, "&+LThe symbol of %s&N", GET_TITLE(ch));
         if( (obj->str_mask & STRUNG_DESC2) && obj->short_description )
         {
@@ -9667,6 +9695,17 @@ int guild_badge(P_obj obj, P_char ch, int cmd, char *arg)
       }
       else
       {
+        // The long desc is, "A magical symbol floats in the air.", so keywords magical and symbol are important.
+        // The short desc is "The symbol of <ch's name>", so keywords symbol and <ch's name> are important.
+        sprintf(buf1, "badge symbol magical %s", GET_NAME(ch) );
+        if( (obj->str_mask & STRUNG_DESC1) && obj->name )
+        {
+           FREE(obj->name);
+        }
+        obj->name = NULL;
+        obj->str_mask |= STRUNG_DESC1;
+        obj->name = str_dup(buf1);
+
         sprintf(buf1, "&+LThe symbol of %s&N", GET_NAME(ch));
         if( (obj->str_mask & STRUNG_DESC2) && obj->short_description )
         {

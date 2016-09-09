@@ -1078,6 +1078,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 #define OBJ_NOWHERE(o) (((o) != NULL) && ((o)->loc_p & LOC_NOWHERE))
 
 #define OBJ_WORN_BY(o, c)     (OBJ_WORN(o) && ((o)->loc.wearing == (c)))
+#define WEARER(o)             (OBJ_WORN(o) ? (o)->loc.wearing : NULL)
 #define OBJ_WORN_POS(o, p)    (OBJ_WORN(o) && ((o)->loc.wearing->equipment[(p)] == (o)))
 #define OBJ_CARRIED_BY(o, c)  (OBJ_CARRIED(o) && ((o)->loc.carrying == (c)))
 #define OBJ_IN_ROOM(o, r)     (OBJ_ROOM(o) && ((o)->loc.room == (r)))
