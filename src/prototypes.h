@@ -1151,7 +1151,7 @@ P_obj get_obj_in_list_vis(P_char ch, char *name, P_obj list, bool no_tracks = TR
 P_obj get_obj_num(int);
 P_obj get_obj_vis(P_char ch, char *name, int zrange = 0);
 P_obj get_obj_equipped( P_char ch, char *arg );
-P_obj unequip_char(P_char, int);
+P_obj unequip_char(P_char, int, bool = FALSE);
 void unequip_all(P_char);
 struct affected_type *get_spell_from_char(P_char ch, int spell);
 struct room_affect *get_spell_from_room(P_room, int );

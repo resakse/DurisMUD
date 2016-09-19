@@ -2805,7 +2805,8 @@ void initialize_links()
   define_link(LNK_TETHER,           "TETHERING",          tether_broken,    LNKFLG_ROOM);
   define_link(LNK_SNG_HEALING,      "SONG_HEALING",       song_broken,      LNKFLG_AFFECT | LNKFLG_ROOM);
 
-  define_olink(LNK_CEGILUNE,        "CEGILUNES_SEARING",  cegilunes_broken, LNKFLG_EXCLUSIVE | LNKFLG_BREAK_REMOVE );
+  define_olink(LNK_CEGILUNE,        "CEGILUNES_SEARING",  cegilunes_broken, LNKFLG_EXCLUSIVE | LNKFLG_REMOVE_AFF | LNKFLG_BREAK_REMOVE );
+  define_olink(LNK_CHAR_OBJ_AFF,    "CHAR_OBJ_AFFECT",    NULL,             LNKFLG_REMOVE_AFF | LNKFLG_BREAK_REMOVE | LNKFLG_SHOW_REMOVE_MSG );
 }
 
 //---------------------------------------------------------------------------------
@@ -3005,10 +3006,11 @@ void clear_links(P_char ch, ush_int type)
   struct char_link_data *cld;
   P_char   tch;
 
-  while (tch = get_linked_char(ch, type))
+  while( tch = get_linked_char(ch, type) )
     unlink_char(ch, tch, type);
 }
 
+// Clears all links with flag set.
 void clear_links( P_char ch, P_obj obj, int flag )
 {
   struct char_obj_link_data *cold, *cold_prev, *cold_next;
@@ -3020,6 +3022,15 @@ void clear_links( P_char ch, P_obj obj, int flag )
   {
     if( IS_SET( link_types[cold->type].flags, LNKFLG_OBJECT) && link_types[cold->type].break_func.obj )
       link_types[cold->type].break_func.obj(cold);
+    if( IS_SET(link_types[cold->type].flags, LNKFLG_REMOVE_AFF) && (cold->affect != NULL) )
+    {
+      // We remove this bit so we don't go in circles removing the link which removes the affect
+      //   which removes the link...
+      REMOVE_BIT( cold->affect->flags, AFFTYPE_LINKED_OBJ );
+      if( IS_SET(link_types[cold->type].flags, LNKFLG_SHOW_REMOVE_MSG) )
+        wear_off_message(ch, cold->affect);
+      affect_remove( ch, cold->affect );
+    }
     ch->obj_linked = cold->next;
     cold->next = NULL;
     mm_release(dead_obj_link_pool, cold);
@@ -3035,9 +3046,20 @@ void clear_links( P_char ch, P_obj obj, int flag )
     {
       // Set cold_next to the second item after cold_prev in the list (possibly NULL).
       cold_next = cold->next;
+
       // If we have a hit,
       if( cold->obj == obj )
       {
+        if( IS_SET(link_types[cold->type].flags, LNKFLG_REMOVE_AFF) )
+        {
+          REMOVE_BIT( cold->affect->flags, AFFTYPE_LINKED_OBJ );
+          affect_remove( ch, cold->affect );
+        }
+        if( IS_SET( link_types[cold->type].flags, LNKFLG_OBJECT) && link_types[cold->type].break_func.obj )
+          link_types[cold->type].break_func.obj(cold);
+        if( IS_SET(link_types[cold->type].flags, LNKFLG_SHOW_REMOVE_MSG) )
+          wear_off_message(ch, cold->affect);
+
         // Remove cold from the list.
         cold_prev->next = cold_next;
         // And free memory.

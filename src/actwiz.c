@@ -3138,8 +3138,9 @@ void do_stat(P_char ch, char *argument, int cmd)
       }
       for( olink = k->obj_linked; olink; olink = olink->next )
       {
-        sprintf(o_buf + strlen(o_buf), "%s: &+Ylinked to&n %s.\n", link_types[olink->type].name,
-          OBJ_SHORT(olink->obj) );
+        sprintf( o_buf + strlen(o_buf), "%s: &+Ylinked to&n %s - %s.\n", link_types[olink->type].name,
+          OBJ_SHORT(olink->obj), (olink->affect == NULL) ? "no affect" : (( skills[olink->affect->type].name )
+          ? skills[olink->affect->type].name : "Nameless Type") );
       }
       strcat(o_buf, "\n");
     }

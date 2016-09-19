@@ -1753,7 +1753,7 @@ int writeCharacter(P_char ch, int type, int room)
 
   for (i = 0; i < MAX_WEAR; i++)
     if (ch->equipment[i])
-      save_equip[i] = unequip_char(ch, i);
+      save_equip[i] = unequip_char(ch, i, TRUE);
     else
       save_equip[i] = NULL;
 

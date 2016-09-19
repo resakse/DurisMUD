@@ -355,107 +355,121 @@ int eth2_godsfury(P_obj obj, P_char ch, int cmd, char *arg)
 
 int eth2_aramus_crown(P_obj obj, P_char ch, int cmd, char *arg)
 {
+  int  curr_time;
+  struct affected_type af;
+
   if( cmd == CMD_SET_PERIODIC )
     return TRUE;
-  
+
   if( !obj )
     return FALSE;
-  
+
   if( cmd == CMD_PERIODIC )
   {
-    hummer(obj);    
-    
-    if (OBJ_WORN(obj))
+    hummer(obj);
+
+    if( OBJ_WORN_POS(obj, WEAR_HEAD) )
       ch = obj->loc.wearing;
     else
       return FALSE;
-    
-    int curr_time = time(NULL);
-    
+
+    curr_time = time(NULL);
+
     if (obj->timer[0] + 10 <= curr_time)
     {
       obj->timer[0] = curr_time;
-      
       if (!IS_AWAKE(ch))
       {
         if( !affected_by_spell(ch, SPELL_REGENERATION) )
         {
-          struct affected_type af;
           bzero(&af, sizeof(af));
           af.type = SPELL_REGENERATION;
           af.duration = 10;
           af.location = APPLY_HIT_REG;
           af.modifier = 3 * GET_LEVEL(ch);
-          affect_to_char(ch, &af);            
-          
+          affect_to_char(ch, &af);
+
           send_to_char("As you settle into your dreams, your body begins to heal itself quicker.\r\n", ch);
           add_event(event_aramus_crown_sleep_check, PULSE_VIOLENCE, ch, 0, 0, 0, 0, 0);
         }
-        
+
+        bzero(&af, sizeof(af));
+        af.duration = GET_LEVEL(ch);
+
         switch( number(0, 6) )
         {
           case 0:
             if (!IS_AFFECTED(ch, AFF_HASTE))
             {
               send_to_char("Your dreams are filled with visions of ultimate speed.\r\n", ch);
-              spell_haste(GET_LEVEL(ch), ch, 0, 0, ch, 0);
+              af.type = SPELL_HASTE;
+              af.bitvector = AFF_HASTE;
+              linked_affect_to_char_obj( ch, &af, obj, LNK_CHAR_OBJ_AFF );
             }
             break;
-            
+
           case 1:
             if (!affected_by_spell(ch, SPELL_STONE_SKIN))
             {
               send_to_char("You dream of a lonely hillside, covered with rocky shale.\r\n", ch);
-              spell_stone_skin(GET_LEVEL(ch), ch, 0, 0, ch, 0);
+              af.type = SPELL_STONE_SKIN;
+              af.bitvector = AFF_STONE_SKIN;
+              linked_affect_to_char_obj( ch, &af, obj, LNK_CHAR_OBJ_AFF );
             }
             break;
-            
+
           case 2:
             if (!IS_AFFECTED(ch, AFF_FLY))
             {
               send_to_char("You dream of soaring above the fjords.\r\n", ch);
-              spell_fly(GET_LEVEL(ch), ch, 0, 0, ch, 0);
+              af.type = SPELL_FLY;
+              af.bitvector = AFF_FLY;
+              linked_affect_to_char_obj( ch, &af, obj, LNK_CHAR_OBJ_AFF );
             }
             break;
-            
+
           case 3:
             if (!IS_AFFECTED(ch, AFF_BARKSKIN))
             {
               send_to_char("You dream of a dark and mysterious forest.\r\n", ch);
-              spell_barkskin(GET_LEVEL(ch), ch, 0, 0, ch, 0);
+              af.type = SPELL_BARKSKIN;
+              af.bitvector = AFF_BARKSKIN;
+              linked_affect_to_char_obj( ch, &af, obj, LNK_CHAR_OBJ_AFF );
             }
             break;
-            
+
           case 4:
             if (!affected_by_spell(ch, SPELL_VITALITY))
             {
               send_to_char("In your dream, you feel life essence flowing freely through your veins.\r\n", ch);
-              spell_vitality(GET_LEVEL(ch), ch, 0, 0, ch, 0);
+              af.type = SPELL_VITALITY;
+              af.modifier = MAX( 10, GET_LEVEL(ch) * 4 );
+              af.location = APPLY_HIT;
+              linked_affect_to_char_obj( ch, &af, obj, LNK_CHAR_OBJ_AFF );
             }
             break;
-            
+
           case 5:
             if (!affected_by_spell(ch, SPELL_INERTIAL_BARRIER))
             {
               send_to_char("Your dreams are filled with strange visions of interrupted motion.\r\n", ch);
-              spell_inertial_barrier(GET_LEVEL(ch), ch, 0, 0, ch, 0);
+              af.type = SPELL_INERTIAL_BARRIER;
+              af.bitvector3 = AFF3_INERTIAL_BARRIER;
+              linked_affect_to_char_obj( ch, &af, obj, LNK_CHAR_OBJ_AFF );
             }
             break;
-            
+
           case 6:
             send_to_char("You have a horrible nightmare of appearing in public totally naked!\r\n", ch);
             unequip_all(ch);
             break;
-          
         }
-        
         return TRUE;
       }
     }
-    
     return TRUE;
   }
-    
+
   return FALSE;
 }
 
@@ -469,5 +483,5 @@ void event_aramus_crown_sleep_check(P_char ch, P_char vict, P_obj obj, void *dat
   else
   {
     add_event(event_aramus_crown_sleep_check, PULSE_VIOLENCE, ch, 0, 0, 0, 0, 0);
-  }  
+  }
 }

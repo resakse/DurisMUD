@@ -1639,7 +1639,7 @@ void equip_char(P_char ch, P_obj obj, int pos, int nodrop)
 // Note: There's no need to update arti data here, as we will update when it's
 //   put somewhere other than NOWHERE.  This is important because we don't want to
 //   update the arti info when eq is removed when someone rents.
-P_obj unequip_char(P_char ch, int pos)
+P_obj unequip_char(P_char ch, int pos, bool saving)
 {
   P_obj    obj;
   struct obj_affect *o_af;
@@ -1659,7 +1659,8 @@ P_obj unequip_char(P_char ch, int pos)
   if (IS_PC(ch) && GET_ITEM_TYPE(ch->equipment[pos]) == ITEM_ARMOR)
     ch->only.pc->prestige -= obj->value[2];
 
-  clear_links( ch, obj, LNKFLG_BREAK_REMOVE );
+  if( !saving )
+    clear_links( ch, obj, LNKFLG_BREAK_REMOVE );
   all_affects(ch, FALSE);
   ch->equipment[pos] = NULL;
   obj->loc_p = LOC_NOWHERE;

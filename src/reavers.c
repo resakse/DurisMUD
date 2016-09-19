@@ -449,7 +449,6 @@ void ilienze_sword_proc_messages(struct damage_messages *messages, const char *s
 void cegilunes_broken( struct char_obj_link_data *cold )
 {
   wear_off_message( cold->ch, cold->affect );
-  affect_remove( cold->ch, cold->affect );
 }
 
 void spell_cegilunes_searing_blade(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)

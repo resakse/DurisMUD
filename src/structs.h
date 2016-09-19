@@ -271,15 +271,17 @@ struct edit_data {
 #define LNK_TETHER          19
 #define LNK_SNG_HEALING     20
 #define LNK_CEGILUNE        21
-#define LNK_MAX             21
+#define LNK_CHAR_OBJ_AFF    22
+#define LNK_MAX             22
 
 #define LNKFLG_NONE                 0
 #define LNKFLG_ROOM             BIT_1
 #define LNKFLG_AFFECT           BIT_2
 #define LNKFLG_EXCLUSIVE        BIT_3
 #define LNKFLG_OBJECT           BIT_4
-#define LNKFLG_BREAK_REMOVE     BIT_5
-#define LNKFLG_BREAK_DROP       BIT_6 // Not implemented yet.
+#define LNKFLG_REMOVE_AFF       BIT_5 // Clear the affect associated when this link is broken.
+#define LNKFLG_BREAK_REMOVE     BIT_6 // Break this link when obj is removed.
+#define LNKFLG_SHOW_REMOVE_MSG  BIT_7 // Show message when removing affect.
 
 #define PET_NOCASH       BIT_1
 #define PET_NOORDER      BIT_2
