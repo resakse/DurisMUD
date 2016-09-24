@@ -72,6 +72,8 @@ extern struct time_info_data time_info;
 extern struct zone_data *zone;
 extern struct zone_data *zone_table;
 extern const char *shutdown_message;
+extern const int max_ingame_good;
+extern const int max_ingame_evil;
 
 long     sentbytes = 0;
 long     recivedbytes = 0;
@@ -455,6 +457,7 @@ void run_the_game(int port)
   if( _reboot )
   {
     logit(LOG_EXIT, "Rebooting.");
+    logit(LOG_EXIT, "Max Goods: %d, Max Evils: %d.", max_ingame_good, max_ingame_evil);
     exit(52);                   /* what's so great about HHGTTG, anyhow? */
   }
   if( _copyover )
@@ -462,25 +465,30 @@ void run_the_game(int port)
     if( _autoboot )
     {
       logit(LOG_EXIT, "Auto reboot with copyover.");
+      logit(LOG_EXIT, "Max Goods: %d, Max Evils: %d.", max_ingame_good, max_ingame_evil);
       exit(57);
     }
     else
     {
       logit(LOG_EXIT, "Copyover reboot.");
+      logit(LOG_EXIT, "Max Goods: %d, Max Evils: %d.", max_ingame_good, max_ingame_evil);
       exit(53);
     }
   }
   if( _autoboot )
   {
     logit(LOG_EXIT, "Auto reboot.");
+    logit(LOG_EXIT, "Max Goods: %d, Max Evils: %d.", max_ingame_good, max_ingame_evil);
     exit(54);
   }
   if( _pwipe )
   {
     logit(LOG_EXIT, "Pwipe Shutdown.");
+    logit(LOG_EXIT, "Max Goods: %d, Max Evils: %d.", max_ingame_good, max_ingame_evil);
     exit(55);
   }
   logit(LOG_EXIT, "Normal termination of game.");
+  logit(LOG_EXIT, "Max Goods: %d, Max Evils: %d.", max_ingame_good, max_ingame_evil);
   logit(LOG_STATUS, "Normal termination of game.");
 }
 

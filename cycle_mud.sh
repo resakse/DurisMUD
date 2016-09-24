@@ -33,13 +33,20 @@ while [[ $RESULT != 0 && $RESULT != 55 ]]; do
   nm --demangle dms | grep " T " | sed -e 's/[(].*//g' > lib/misc/event_names
 
 	if [ -f /usr/bin/sendemail ]; then
-		/usr/bin/sendEmail -t alert@durismud.com \
-			-f mud@durismud.com -u "Duris Booting..." \
-			-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
+		if [ -f /logs/old-logs/$DATESTR/exit ]; then
+			/usr/bin/sendEmail -t alert@durismud.com \
+				-f mud@durismud.com -u "Duris Booting..." \
+				-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]." \
+      	-a "logs/old-logs/${DATESTR}/exit"
+		else
+			/usr/bin/sendEmail -t alert@durismud.com \
+				-f mud@durismud.com -u "Duris Booting..." \
+				-m "Mud booting at ${DATESTR}, previous shutdown reason: ${STOP_REASON} [${RESULT}]."
+		fi
 	fi
 
   echo "Starting duris..."
-  ./dms 7777 # > dms.out
+  ./dms 7788 # > dms.out
 
 	# capture the exit code
   RESULT=${PIPESTATUS[0]}
