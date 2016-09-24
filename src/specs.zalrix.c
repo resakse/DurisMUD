@@ -55,10 +55,11 @@ extern struct zone_data *zone_table;
 
 int drowcrusher(P_obj obj, P_char ch, int cmd, char *arg)
 {
-  P_char   ch2, victim, next;
-  struct group_list *gl = 0;
+//  P_char   ch2, victim, next;
+//  struct group_list *gl = NULL;
+  P_char   ch2;
   P_obj    obj2;
-  int      i, from_room;
+  int      i, from_room, to_room;
 
   if( cmd != CMD_HIT )
     return FALSE;
@@ -81,23 +82,23 @@ int drowcrusher(P_obj obj, P_char ch, int cmd, char *arg)
     act("You playfully hit $p&n, *tink* *tink*", TRUE, ch, obj2, 0, TO_CHAR);
     return TRUE;
   }
-  act("Your $q&n hums loudly as you strike the stone!", TRUE, ch, obj, 0, TO_CHAR);
-  act("$N's $q&n hums loudly as it strikes the stone!", TRUE, ch, obj, 0, TO_ROOM);
-  act("$p&n explodes, covering the room in a fine dust.", TRUE, ch, obj2, 0, TO_NOTVICT);
-  act("The $q in your hands crumbles into small, unusable pieces.", TRUE, ch, obj, 0, TO_CHAR);
+  act("Your $q&n hums loudly as you strike the stone!", TRUE, ch, obj, NULL, TO_CHAR);
+  act("$n's $q&n hums loudly as it strikes the stone!", TRUE, ch, obj, NULL, TO_ROOM);
+  act("$p&n explodes, covering the room in a fine dust.", TRUE, NULL, obj2, NULL, TO_NOTVICT);
+  act("The $q in your hands crumbles into small, unusable pieces.", TRUE, ch, obj, NULL, TO_CHAR);
+
+  act( "  A deep rumbling can be heard from within the temple, and rocks and other\n"
+    "debris start to fall on you. All of a sudden a sphere of force surrounds\n"
+    "you and a large booming voice can be heard, \"You have succeeded in your\n"
+    "quest, however do not expect Xueqin to save your hides again\". You are\n"
+    "then magicly transported to a different location, or perhaps a different\r\n"
+    "time, it is hard to tell, but a thick layer of dust covers the room, and a\r\n"
+    "dank smell overpowers your senses.\r\n", TRUE, NULL, obj2, NULL, TO_ROOM );
 
   /* remove stone from room, and hammer from user */
   unequip_char(ch, WIELD);
   extract_obj(obj, TRUE); // Not an arti, but 'in game.'
   extract_obj(obj2, TRUE); // Not an arti, but 'in game.'
-
-  send_to_room("  A deep rumbling can be heard from within the temple, and rocks and other\r\n", ch->in_room);
-  send_to_room("debris start to fall on you. All of a sudden a sphere of force surrounds\r\n", ch->in_room);
-  send_to_room("you and a large booming voice can be heard. You have succeeded in your\r\n", ch->in_room);
-  send_to_room("quest, however do not expect Xueqin to save your hides again. You are\r\n", ch->in_room);
-  send_to_room("then magicly transported to a different location, or perhaps a different\r\n", ch->in_room);
-  send_to_room("time, it is hard to tell, but a thick layer of dust covers the room, and a\r\n", ch->in_room);
-  send_to_room("dank smell overpowers your senses.\r\n", ch->in_room);
 
   /* No.. just moving group members that were in the room with the stone.
   // Bring all users in room 80500-80545 to room 80546
@@ -113,6 +114,7 @@ int drowcrusher(P_obj obj, P_char ch, int cmd, char *arg)
       }
     }
   }*/
+/* Moving everyone that was in the room to make the message make sense.
   from_room = ch->in_room;
   if( ch->group )
   {
@@ -139,12 +141,20 @@ int drowcrusher(P_obj obj, P_char ch, int cmd, char *arg)
     // If they're fighting, break it up
     if(IS_FIGHTING(ch))
       stop_fighting(ch);
-    if(IS_DESTROYING(gl->ch))
-      stop_destroying(gl->ch);
+    if(IS_DESTROYING(ch))
+      stop_destroying(ch);
 
     // Move the char
     char_from_room(ch);
     char_to_room(ch, real_room(VROOM_YUANTI_RUBBLEFILLED), -1);
+  }
+*/
+  from_room = ch->in_room;
+  to_room = real_room(VROOM_YUANTI_RUBBLEFILLED);
+  while( (ch2 = world[from_room].people) != NULL )
+  {
+    char_from_room(ch2);
+    char_to_room(ch2, to_room, -1);
   }
   return TRUE;
 }
