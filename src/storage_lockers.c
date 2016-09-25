@@ -948,10 +948,11 @@ static int locker_equipcmd(P_char ch, char *arg);
 
 /* cmds for access lists... */
 static void locker_access_addAccess(P_char locker, char *ch_name);
-static int locker_access_canAccess(P_char locker, char *ch_name);
+static void locker_access_transferAccess(P_char locker, P_char ch);
+static bool locker_access_canAccess(P_char locker, char *ch_name);
 static int locker_access_count(P_char locker);
 static void locker_access_show(P_char ch, P_char locker);
-static int locker_access_CanAdd(P_char locker, char *ch_name);
+static bool locker_access_CanAdd(P_char locker, char *ch_name);
 static void locker_access_remAccess(P_char locker, char *ch_name);
 
 int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg);
@@ -1276,7 +1277,7 @@ int guild_locker_room_hook(int room, P_char ch, int cmd, char *arg)
   is_guild_locker = 1;
   
   sprintf(lockerName, "%s.locker", enterWho);
-  
+
   chLocker = load_locker_char(ch, lockerName, bValidate);
   
   if (!chLocker)
@@ -1646,30 +1647,27 @@ static int locker_grantcmd(P_char ch, char *arg)
     *(strrchr(arg1, '.')) = '\0';
   if (str_cmp(arg1, GET_NAME(ch)) && !bPlayerIsGod)
   {
-    send_to_char
-      ("Only the actual owner of a locker can manipulate access lists.\r\n",
-       ch);
+    send_to_char("Only the actual owner of a locker can manipulate access lists.\r\n", ch);
     return TRUE;
   }
   chLocker = pLocker->GetLockerChar();
-  if (!chLocker)
+  if( !chLocker )
   {
-    send_to_char
-      ("Error: unable to locate chLocker.  Please report ASAP\r\n", ch);
+    send_to_char("Error: unable to locate chLocker.  Please report ASAP\r\n", ch);
     return TRUE;
   }
-  if (!bPlayerIsGod)
+  if( !bPlayerIsGod )
     GET_RACEWAR(chLocker) = GET_RACEWAR(ch);
   argument_interpreter(arg, arg1, arg2);
-  if (!str_cmp(arg1, "list"))
-  {
+  if( *arg1 == '\0' )
+    sprintf( arg1, "?" );
 
-    send_to_char("Locker Access List\r\n", ch);
-    send_to_char("------------------\r\n", ch);
+  if( is_abbrev(arg1, "list") )
+  {
     locker_access_show(ch, chLocker);
     return TRUE;
   }
-  else if (!str_cmp(arg1, "add"))
+  else if( is_abbrev(arg1, "add") )
   {                             /* max of 10 people in the list */
     if ('\0' == arg2[0])
     {
@@ -1677,8 +1675,7 @@ static int locker_grantcmd(P_char ch, char *arg)
     }
     else if (locker_access_count(chLocker) >= 10)
     {
-      send_to_char
-        ("Too many people would have access!  Remove someone first.\r\n", ch);
+      send_to_char("Too many people would have access!  Remove someone first.\r\n", ch);
     }
     else if (locker_access_canAccess(chLocker, arg2))
     {
@@ -1689,6 +1686,7 @@ static int locker_grantcmd(P_char ch, char *arg)
       if (locker_access_CanAdd(chLocker, arg2))
       {
         locker_access_addAccess(chLocker, arg2);
+        send_to_char_f( ch, "'%s' given access to your locker.\n", arg2 );
         storage_locker(ch->in_room, ch, (-81), NULL);   // saves the locker
         storage_locker(ch->in_room, ch, CMD_GRANT, "list");
       }
@@ -1701,7 +1699,7 @@ static int locker_grantcmd(P_char ch, char *arg)
     }
     return TRUE;
   }
-  else if (!str_cmp(arg1, "rem"))
+  else if( is_abbrev(arg1, "remove") )
   {
     if ('\0' == arg2[0])
     {
@@ -1709,31 +1707,35 @@ static int locker_grantcmd(P_char ch, char *arg)
     }
     else if (!locker_access_canAccess(chLocker, arg2))
     {
-      send_to_char
-        ("You can only remove someone who already has access.  Duh!\r\n", ch);
+      send_to_char("You can only remove someone who already has access.  Duh!\r\n", ch);
     }
     else
     {
       locker_access_remAccess(chLocker, arg2);
+      send_to_char_f( ch, "'%s' lost access to your locker.\n", arg2 );
       storage_locker(ch->in_room, ch, (-81), NULL);     // saves the locker
       storage_locker(ch->in_room, ch, CMD_GRANT, "list");
     }
     return TRUE;
   }
+  else if( is_abbrev(arg1, "transfer") )
+  {
+    locker_access_transferAccess( chLocker, ch );
+    return TRUE;
+  }
   else
   {
+    if( str_cmp(arg1, "?") && !is_abbrev(arg1, "help") )
+    {
+      send_to_char_f( ch, "'%s' is not a valid locker command.\n", arg1 );
+    }
     send_to_char("Locker Grant Commands\r\n", ch);
-    send_to_char
-      ("-------------------------------------------------------------------------\r\n",
-       ch);
-    send_to_char
-      ("grant list           shows who has access to your locker\r\n", ch);
-    send_to_char
-      ("grant add <name>     adds <name> to those who can access your locker\r\n",
-       ch);
-    send_to_char
-      ("grant rem <name>     removes <name> from those who can access your locker\r\n\r\n",
-       ch);
+    send_to_char("----------------------------------------------------------------------------------\n", ch);
+    send_to_char("grant list            shows who has access to your locker.\n", ch);
+    send_to_char("grant add <name>      adds <name> to those who can access your locker.\n", ch);
+    send_to_char("grant remove <name>   removes <name> from those who can access your locker.\n", ch);
+    send_to_char("grant transfer        transfers the old list of those with access to the new list.\n", ch);
+    send_to_char("grant [? | help]      displays this help.\n\n", ch);
     return TRUE;
   }
   return FALSE;
@@ -1741,148 +1743,106 @@ static int locker_grantcmd(P_char ch, char *arg)
 
 static void locker_access_show(P_char ch, P_char locker)
 {
-  char Gbuf1[MAX_STR_NORMAL];
-  char    *p, *n;
+  char buffer[MAX_STR_NORMAL];
+  MYSQL_RES *res;
+  MYSQL_ROW row;
 
-  if (!locker->player.description)
+  if( !qry("select visitor from locker_access where owner = '%s'", GET_NAME( locker )) )
   {
-    send_to_char("No one has access to your locker\r\n", ch);
+    send_to_char( "Error with database.\n", ch );
     return;
   }
-  strcpy(Gbuf1, locker->player.description);
-  n = Gbuf1;
 
-  do
+  res = mysql_store_result(DB);
+  if( mysql_num_rows(res) < 1)
   {
-    p = strchr(n, ' ');
-    if (p)
-      *p = '\0';
-
-    send_to_char(n, ch);
-    send_to_char("\r\n", ch);
-    if (p)
-      n = p + 1;
+    sprintf( buffer, "No one has access to your locker but you.\n" );
   }
-  while (p);
+  else
+  {
+    sprintf( buffer, "Locker Access: " );
+    while( (row = mysql_fetch_row( res )) != NULL )
+    {
+      strcat( buffer, row[0] );
+      strcat( buffer, ", " );
+    }
+    sprintf( &(buffer[strlen(buffer)-2]), ".\n" );
+  }
+
+  mysql_free_result(res);
+  send_to_char( buffer, ch );
+  return;
 }
 
-static int locker_access_CanAdd(P_char locker, char *ch_name)
+static bool locker_access_CanAdd(P_char locker, char *ch_name)
 {
   /* load ch_name, and if loaded, compare RACEWAR() sides.  if they are the
      same, return 1, else return 0.   if the restore of ch_name fails, return 0 */
   P_char vict = NULL;
-  int tmp;
+  bool bCanAdd = FALSE;
 
   vict = (P_char) mm_get(dead_mob_pool);
   clear_char(vict);
   vict->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
-  vict->only.pc->aggressive = -1;
-  vict->desc = NULL;
 
-  tmp = restoreCharOnly(vict, ch_name);
-  if (tmp < (0))
-    return 0;
+  if( (restoreCharOnly( vict, ch_name )) >= 0 )
+  {
+    bCanAdd = GET_RACEWAR(locker) == GET_RACEWAR(vict);
+    free_char(vict);
+  }
 
-  tmp = (GET_RACEWAR(locker) == GET_RACEWAR(vict)) ? 1 : 0;
-
-  free_char(vict);
-  return tmp;
+  return bCanAdd;
 }
 
 static int locker_access_count(P_char locker)
 {
-  char    *p = locker->player.description;
-  int cnt = 1;
+  MYSQL_RES *res;
+  int count;
 
-  if (!p || ('\0' == p[0]))
-    return 0;
-  while (NULL != (p = strchr(p, ' ')))
+  if( !qry("select owner, visitor from locker_access where owner = '%s'", GET_NAME( locker )) )
   {
-    p++;
-    cnt++;
+    return FALSE;
   }
-  return cnt;
+
+  res = mysql_store_result(DB);
+
+  count = mysql_num_rows(res);
+
+  mysql_free_result(res);
+  return count;
 }
 
-static int locker_access_canAccess(P_char locker, char *ch_name)
+static bool locker_access_canAccess(P_char locker, char *ch_name)
 {
-  char Gbuf1[MAX_STR_NORMAL];
-  char    *p, *n;
+  MYSQL_RES *res;
 
-  if (!locker->player.description)
-    return 0;
-
-  strcpy(Gbuf1, locker->player.description);
-  n = Gbuf1;
-  do
+  if( !qry("select owner, visitor from locker_access where owner = '%s' and visitor = '%s' limit 1",
+    GET_NAME( locker ), ch_name) )
   {
-    p = strchr(n, ' ');
-    if (p)
-      *p = '\0';
-
-    if (!str_cmp(n, ch_name))
-      return 1;
-    if (p)
-      n = p + 1;
+    return FALSE;
   }
-  while (p);
-  return 0;
+
+  res = mysql_store_result(DB);
+
+  if( mysql_num_rows(res) < 1 )
+  {
+    mysql_free_result(res);
+    return FALSE;
+  }
+
+  mysql_free_result(res);
+  return TRUE;
 }
 
 static void locker_access_remAccess(P_char locker, char *ch_name)
 {
-  char Gbuf1[MAX_STR_NORMAL];
-  char Gbuf2[MAX_STR_NORMAL];
-  char    *p, *n;
-
-  Gbuf2[0] = '\0';
-
-  if (!locker->player.description)
-    return;
-
-  strcpy(Gbuf1, locker->player.description);
-  n = Gbuf1;
-  do
-  {
-    p = strchr(n, ' ');
-    if (p)
-      *p = '\0';
-
-    if (str_cmp(n, ch_name))
-    {
-      if ('\0' != Gbuf2[0])
-        strcat(Gbuf2, " ");
-      strcat(Gbuf2, n);
-    }
-    if (p)
-      n = p + 1;
-  }
-  while (p);
-  str_free(locker->player.description);
-  locker->player.description = NULL;
-  if ('\0' != Gbuf2[0])
-    locker->player.description = str_dup(Gbuf2);
+  qry( "DELETE FROM locker_access WHERE owner='%s' AND visitor='%s'", GET_NAME(locker), ch_name );
 }
 
 static void locker_access_addAccess(P_char locker, char *ch_name)
 {
-  char Gbuf1[MAX_STR_NORMAL];
-
-  if (locker->player.description)
-  {
-    strcpy(Gbuf1, locker->player.description);
-    strcat(Gbuf1, " ");
-  }
-  else
-  {
-    Gbuf1[0] = '\0';
-  }
-  strcat(Gbuf1, ch_name);
-  str_free(locker->player.description);
-  locker->player.description = str_dup(Gbuf1);
+  qry( "INSERT INTO locker_access (owner, visitor) VALUES ('%s', '%s')", GET_NAME(locker), ch_name );
 }
-
-
 
 static int create_new_locker(P_char ch, P_char locker)
 {
@@ -2369,4 +2329,50 @@ void StorageLocker::SortIValues(void)
   else
     logit( LOG_DEBUG, "SortIValues called when m_bIValue is not set!" );
   m_bIValue = false;
+}
+
+void remove_all_locker_access( P_char ch )
+{
+  qry( "DELETE FROM locker_access WHERE visitor='%s'", GET_NAME(ch) );
+}
+
+static void locker_access_transferAccess(P_char chLocker, P_char ch)
+{
+  // 8 = ".locker" + string terminator.
+  char locker_name[MAX_NAME_LENGTH + 8];
+  char ch_name[MAX_NAME_LENGTH+1];
+  char names[MAX_STR_NORMAL], *pIndex;
+
+  // Set locker name. (for speed)
+  sprintf( locker_name, "%s", GET_NAME(chLocker) );
+  // Set list of names that have access to locker.
+  if( chLocker->player.description != NULL )
+    sprintf( names, "%s", chLocker->player.description );
+  else
+    names[0] = '\0';
+
+  if( names[0] == '\0' )
+  {
+    send_to_char( "No old accesses found.\n", ch );
+    return;
+  }
+
+  pIndex = names;
+  do
+  {
+    // Grab the next name.
+    pIndex = one_argument( pIndex, ch_name );
+    // If they already have access
+    if( locker_access_canAccess(chLocker, ch_name) )
+    {
+      send_to_char_f( ch, "'%s' already has access to your locker.\n", ch_name );
+    }
+    else
+    {
+      // Insert it into the table
+      qry( "INSERT INTO locker_access (owner, visitor) VALUES ('%s', '%s')", locker_name, ch_name );
+      send_to_char_f( ch, "'%s' given access to your locker.\n", ch_name );
+    }
+  } while( pIndex[0] != '\0' );
+
 }

@@ -15,6 +15,7 @@
 #include <string.h>
 
 int guild_locker_room_hook(int room, P_char ch, int cmd, char *arg);
+void remove_all_locker_access( P_char ch );
 
 class LockerChest;
 class ComboChest;

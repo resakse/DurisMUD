@@ -27,6 +27,7 @@
 #include "trophy.h"
 #include "vnum.obj.h"
 #include "assocs.h"
+#include "storage_lockers.h"
 
 #include <iostream>
 using namespace std;
@@ -2007,6 +2008,7 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
 
   // Remove all artis from char.
   remove_all_artifacts_sql( ch );
+  remove_all_locker_access( ch );
 
 #ifdef USE_ACCOUNT
   remove_char_from_list(ch->desc->account, ch->player.name);
