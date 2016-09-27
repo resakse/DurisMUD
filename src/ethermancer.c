@@ -731,8 +731,7 @@ void event_frost_bolt(P_char ch, P_char victim, P_obj obj, void *data)
 {
   struct frost_data *fdata;
 
-  struct affected_type af;
-  int      dam, temp, round;
+  int      dam;
   struct damage_messages messages = {
     "&+WYou send a bolt of &+Bchilling frost&n &+Wstreaking towards $N, which shatters on impact.",
     "&+BThe chill in your bones makes your body ache.",
@@ -745,15 +744,17 @@ void event_frost_bolt(P_char ch, P_char victim, P_obj obj, void *data)
 
   fdata = (struct frost_data *) data;
 
-  if (fdata->round >= 2)
-    return;
-
-  fdata->round++;
-  temp = MIN(16, (fdata->level + 2));
-  dam = dice(temp, 2);
+  // Actual damage @lvl 11: 9-12 | 6-8 saved, @lvl 30: 16-19 | 10-12 saved.
+  dam = 4 * ( number(6, 9) + (fdata->level / 3) );
+  if( NewSaves(victim, SAVING_SPELL, 0) )
+    dam = (2 * dam ) / 3;
 
   if( spell_damage(ch, victim, dam, SPLDAM_COLD, SPLDAM_ALLGLOBES, &messages) == DAM_NONEDEAD )
-    add_event(event_frost_bolt, (3 * PULSE_SPELLCAST) / 2, ch, victim, NULL, 0, fdata, sizeof(struct frost_data));
+  {
+    // We will have an initil round 0 at cast, then round 1 on first pulse, and round 2 on second pulse, but no 3rd.
+    if( ++(fdata->round) < 2 )
+      add_event(event_frost_bolt, (3 * PULSE_SPELLCAST) / 2, ch, victim, NULL, 0, fdata, sizeof(struct frost_data));
+  }
 }
 
 void spell_frost_bolt(int level, P_char ch, char *arg, int type, P_char victim, P_obj tar_obj)
@@ -761,7 +762,7 @@ void spell_frost_bolt(int level, P_char ch, char *arg, int type, P_char victim, 
   P_obj    obj;
   struct frost_data fdata;
   struct affected_type af;
-  int      dam, temp, round;
+  int      dam;
   struct damage_messages messages = {
     "&+WYou send a bolt of &+Bchilling frost&n &+Wstreaking towards $N, which shatters on impact.",
     "&+BYou feel an intense cold that turns your body numb.",
@@ -779,16 +780,18 @@ void spell_frost_bolt(int level, P_char ch, char *arg, int type, P_char victim, 
   set_obj_affected(obj, 800, TAG_OBJ_DECAY, 0);
   obj_to_room(obj, ch->in_room);
 
+  if( level > 30 )
+    level = 30;
 
-  round = 0;
-  temp = MIN(16, (level + 2));
-  dam = dice(temp, 3);
+  // Actual damage @lvl 11: 9-12 | 6-8 saved, @lvl 30: 16-19 | 10-12 saved.
+  dam = 4 * ( number(6, 9) + (level / 3) );
+  if( NewSaves(victim, SAVING_SPELL, 0) )
+    dam = (2 * dam ) / 3;
 
   fdata.round = 0;
   fdata.level = level;
 
-  if (!spell_damage
-      (ch, victim, dam, SPLDAM_COLD, SPLDAM_ALLGLOBES, &messages))
+  if( !spell_damage(ch, victim, dam, SPLDAM_COLD, SPLDAM_ALLGLOBES, &messages) )
   {
     if (!NewSaves(victim, SAVING_SPELL, 2))
     {
@@ -2222,6 +2225,7 @@ struct static_discharge_data
 {
   int      level;
   int      intensity;
+  int      round;
   bool     discharge_now;
   P_char   caster;
 };
@@ -2273,11 +2277,10 @@ void event_static_discharge(P_char ch, P_char victim, P_obj obj, void *data)
 {
   struct static_discharge_data *sdata;
   struct affected_type afp;
-  int charges_active = 0;
-  
+
   sdata = (struct static_discharge_data *) data;
-  
-  if (sdata->discharge_now || !number(0, 4-sdata->intensity))
+
+  if( sdata->discharge_now || !number(0, 4-sdata->intensity) || (++( sdata->round ) > 5) )
     static_discharge(victim, ch, sdata->level, sdata->intensity);
   else
   {
@@ -2300,6 +2303,7 @@ void spell_static_discharge(int level, P_char ch, char *arg, int type, P_char vi
 
   sdata.level = GET_LEVEL(ch);
   sdata.intensity = 1;
+  sdata.round = 0;
   sdata.discharge_now = FALSE;
   sdata.caster = ch;
 
