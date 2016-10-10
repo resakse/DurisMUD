@@ -1421,6 +1421,7 @@ void spell_dream_travel(int level, P_char ch, char *arg, int type, P_char victim
              SET_POS(targ, GET_POS(targ) + STAT_NORMAL);
           send_to_char("&+WYou open your eyes and see:&N\r\n", targ);
 
+          targ->specials.z_cord = ch->specials.z_cord;
           char_from_room(targ);
           char_to_room(targ, location, -1);
           if( GET_STAT(targ) > STAT_SLEEPING )
