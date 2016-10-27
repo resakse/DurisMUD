@@ -3887,10 +3887,10 @@ int attuned_to_terrain(P_char ch)
           return 0;
       }
       return 1;
-
+    default:
+      return 0;
   }
-  
-  return 1;
+  return 0;
 }
 
 int get_innate_regeneration(P_char ch)
@@ -3900,14 +3900,14 @@ int get_innate_regeneration(P_char ch)
   switch(GET_RACE(ch))
   {
     case RACE_TROLL:
-    {
       if( affected_by_spell(ch, TAG_TROLL_BURN) )
         return 1;
       else
-        mult += regen_factor[REG_TROLL];
-    }
+        mult += (int)regen_factor[REG_TROLL];
+      break;
     case RACE_REVENANT:
         mult += regen_factor[REG_REVENANT];
+      break;
     default:
       break;
   }

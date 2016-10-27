@@ -306,9 +306,12 @@ int hit_regen(P_char ch, bool display_only)
     gain += GET_LEVEL(ch) * 2;
   }
 
-  gain += ch->points.hit_reg;
+  if( ch->points.hit_reg > 16 )
+    gain += (int)(2. * sqrt(4 * ch->points.hit_reg));
+  else
+    gain += ch->points.hit_reg;
 
-  gain += (int)((float)gain * get_epic_bonus(ch, EPIC_BONUS_HEALTH_REG));
+  gain += EPIC_HEALTH_REGEN_MOD * get_epic_bonus(ch, EPIC_BONUS_HEALTH_REG);
 
   if( IS_AFFECTED4(ch, AFF4_REGENERATION) || has_innate(ch, INNATE_REGENERATION)
     || (has_innate(ch, INNATE_WOODLAND_RENEWAL) && (world[ch->in_room].sector_type == SECT_FOREST))
@@ -369,7 +372,6 @@ int hit_regen(P_char ch, bool display_only)
       gain = 0;
     }
   }
-
 
   if( has_innate(ch, INNATE_VULN_SUN) && IS_SUNLIT(ch->in_room)
     && !IS_TWILIGHT_ROOM(ch->in_room) && !IS_AFFECTED4(ch, AFF4_GLOBE_OF_DARKNESS)

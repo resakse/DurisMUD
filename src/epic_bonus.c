@@ -74,7 +74,11 @@ void epic_bonus_help(P_char ch)
   send_to_char_f(ch, "&+C%10s &+c(&+CMAX: %3d%%&+c) &+w- &+c%s\r\n", ebd[0].name, (int)(get_epic_bonus_max(0)*100), ebd[0].description);
   for (int i = 1; ebd[i].type; i++)
   {
-    send_to_char_f(ch, "&+C%10s &+c(&+CMax: %3d%%&+c) &+w- &+c%s\r\n", ebd[i].name, (int)(get_epic_bonus_max(i)*100), ebd[i].description);
+    if( ebd[i].type == EPIC_BONUS_HEALTH_REG )
+      send_to_char_f(ch, "&+C%10s &+c(&+CMax: %3d &+c) &+w- &+c%s\r\n",
+        ebd[i].name, (int)(get_epic_bonus_max(i)*EPIC_HEALTH_REGEN_MOD), ebd[i].description);
+    else
+      send_to_char_f(ch, "&+C%10s &+c(&+CMax: %3d%%&+c) &+w- &+c%s\r\n", ebd[i].name, (int)(get_epic_bonus_max(i)*100), ebd[i].description);
   }
   send_to_char("\r\n", ch);
   return;

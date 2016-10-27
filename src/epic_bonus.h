@@ -9,6 +9,8 @@
 #define EPIC_BONUS_HEALTH_REG 5
 #define EPIC_BONUS_MOVE_REG   6
 
+#define EPIC_HEALTH_REGEN_MOD 40
+
 struct EpicBonusData {
   int pid;
   int type;
