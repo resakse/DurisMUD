@@ -3567,19 +3567,19 @@ int itemvalue( P_obj obj )
     multiplier *= .80;
   }
 
+  workingvalue *= multiplier;
+
   if( workingvalue < 1 )
   {
     workingvalue = 1;
   }
-
-  workingvalue *= multiplier;
 
   if( (!CAN_WEAR(obj, ITEM_TAKE) && obj->type == ITEM_TELEPORT) || obj->type == ITEM_KEY || obj->type == ITEM_SWITCH
     || obj->type == ITEM_VEHICLE || obj->type == ITEM_SHIP || obj->type == ITEM_STORAGE )
   {
     if( workingvalue != 1 )
     {
-      debug( "Always load obj '%s' %d has stats giving ival %d.", OBJ_SHORT(obj), OBJ_VNUM(obj), workingvalue );
+      debug( "Always load obj '%s' %d has stats giving ival %.3lf.", OBJ_SHORT(obj), OBJ_VNUM(obj), workingvalue );
     }
     return 1;
   }
