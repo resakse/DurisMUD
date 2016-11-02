@@ -5,9 +5,9 @@
 * Zone edited with durisEdit v3.02
 *
 *
-D 0 139000 0 1 100 0 0 0
+D 0 139000 0 9 100 0 0 0
 *     north exit from "The Mighty Gates Of The City Of Brass" to
-*     "Royal Way" - closed
+*     "Royal Way" - closed/blocked
 *
 D 0 139001 2 1 100 0 0 0
 *     south exit from "Royal Way" to
@@ -469,8 +469,8 @@ O 0 139090 1 139335 60 0 0 0       * a ring of fire protection
 O 0 139039 1 139335 60 0 0 0       * a fiery cloak
 O 0 139049 1 139335 60 0 0 0       * a pair of fiery boots
 *
-M 0 25400 2 139000 100 0 0 0       * (mob type not in this .mob file)
-M 0 25400 2 139000 100 0 0 0       * (mob type not in this .mob file)
+M 0 25400 1 139000 100 0 0 0       * (mob type not in this .mob file)
+M 0 25401 1 139000 100 0 0 0       * (mob type not in this .mob file)
 M 0 139073 6 139001 100 0 0 0      * a medium fire elemental
 M 0 139090 47 139001 100 0 0 0     * an efreeti commoner
 M 0 139054 37 139002 100 0 0 0     * a guard member of the Illuminated

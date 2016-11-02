@@ -6,7 +6,20 @@ golem iron guardian _no_move_~
 This twenty foot tall iron golem stands here glowing with power, he seems
 to be almost statue like until you try to enter the city.
 ~
-33556587 1 0 0 671154424 309441 0 0 0 S
+41945195 1 0 0 671154424 309441 0 0 0 S
+G 0 256 0 -1
+60 -10 -122 60d132+6540 7d6+35
+6.6.9.7 243000
+8 8 0
+#25401
+golem iron guardian _no_move_~
+&+yan iron golem&n~
+&+yA mighty iron golem gate guardian stands guarding the city of brass&n!
+~
+This twenty foot tall iron golem stands here glowing with power, he seems
+to be almost statue like until you try to enter the city.
+~
+41945195 1 0 0 671154424 309441 0 0 0 S
 G 0 256 0 -1
 60 -10 -122 60d132+6540 7d6+35
 6.6.9.7 243000
