@@ -5069,28 +5069,27 @@ void roll_basic_attributes(P_char ch, int type)
   int faces, rolls, base, value;
 /* screw 'bell curves' and stat totalling, let's keep it simple */
 
-#if 0
+/*
   int i, rolls[10], statp, temp, total, sides;
-  /* this gives the total points distributed on _10_ stats,
-     according to type+1 */
+  // this gives the total points distributed on _10_ stats, according to type+1
   static int totlim[5] =
   {
     250, 550, 600, 650, 700
   };
 
-  /* set minimum of points for class, 25 min in all stats,
-     except for luck&karma (invis to player) */
+  // Set minimum of points for class, 25 min in all stats,
+  //   except for luck&karma (invis to player)
   temp = 0;
   for (i = 0; i < 8; i++) {
-    /* class requirements? */
+    // class requirements?
     rolls[i] = min_stats_for_class[GET_CLASS(ch)][i];
-    /* min stat */
+    // min stat
     if (rolls[i] < 25)
       rolls[i] = 25;
     temp += rolls[i];
   }
 
-  /* determine how many points will be distributed */
+  // determine how many points will be distributed
   if (type >= 4)
     total = number(temp, 800);
   else {
@@ -5099,13 +5098,13 @@ void roll_basic_attributes(P_char ch, int type)
   }
 
   if (temp > total)
-    /* probably punished, no additional points */
+    // probably punished, no additional points
     total = 0;
   else
     total -= temp;
 
-  /* distribute the rest of the points, choose random
-     stat and add with a pseudo-bell made by 3 dices */
+  // distribute the rest of the points, choose random
+     stat and add with a pseudo-bell made by 3 dices
   while (total) {
     temp = number(0, 7);
     sides = (100 - rolls[temp]) / 3;
@@ -5132,7 +5131,7 @@ void roll_basic_attributes(P_char ch, int type)
   ch->base_stats.Cha = ch->curr_stats.Cha = rolls[7];
   ch->base_stats.Kar = ch->curr_stats.Kar = number(1, 100);
   ch->base_stats.Luk = ch->curr_stats.Luk = number(1, 100);
-#endif
+*/
 
   // Bad rolls - 44 to 80.
   if( type == ROLL_BAD )
@@ -5141,12 +5140,13 @@ void roll_basic_attributes(P_char ch, int type)
     faces = 10;
     base = 40;
   }
-  // Normal rolls - 58 to 93.
+  // Normal rolls - 80 to 95.
   else if( type == ROLL_NORMAL )
   {
-    rolls = 5;
-    faces = 8;
-    base = 53;
+    // Used to be 5 8 53.
+    rolls = 3;
+    faces = 6;
+    base = 77;
   }
   // Normal mob rolls - 68 - 98.
   else if( type == ROLL_MOB_NORMAL )
