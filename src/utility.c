@@ -2845,6 +2845,14 @@ char *PERS(P_char ch, P_char vict, int short_d, bool noansi)
   }
 
   // We can assume here that vict can see ch in some way.
+  if( IS_TRUSTED(vict) )
+  {
+    if( IS_NPC(ch) )
+    {
+      return ch->player.short_descr;
+    }
+    return ch->player.name;
+  }
 
   // Handle infravision during dayblind / nightblind.
   // If they have infra, then it's a red shape..
