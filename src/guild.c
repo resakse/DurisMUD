@@ -77,8 +77,13 @@ void update_skills(P_char ch)
     }
     else if ( GET_LVL_FOR_SKILL(ch, s) > 0 && GET_LEVEL(ch) >= GET_LVL_FOR_SKILL(ch, s) )
     {
+/* Why is there 3 possibilitie for .taught?  Either you lose a lvl or spec out of the skill and it goes down,
+ *   or you gain a level or spec to a higher skill max and it goes up.  There should be no MAX( ... ).
       ch->only.pc->skills[s].taught = MAX(ch->only.pc->skills[s].taught, MAX(SKILL_DATA_ALL(ch, s).maxlearn[0],
         SKILL_DATA_ALL(ch, s).maxlearn[ch->player.spec]));
+*/
+      ch->only.pc->skills[s].taught = SKILL_DATA_ALL(ch, s).maxlearn[ch->player.spec];
+
       lastlvl = ch->only.pc->skills[s].learned;
       shouldbe = (GET_LEVEL(ch) * 3 / 2);
       notched = lastlvl-shouldbe;
@@ -141,7 +146,7 @@ void update_skills(P_char ch)
   }
 }
 
-int notch_skill(P_char ch, int skill, float chance)
+bool notch_skill(P_char ch, int skill, float chance)
 {
   int intel, t, lvl, l, slvl, i;
   char buf[MAX_STRING_LENGTH];
@@ -151,22 +156,21 @@ int notch_skill(P_char ch, int skill, float chance)
 //#endif
 
   if( !IS_ALIVE(ch) )
-    return 0;
+    return FALSE;
 
   if( IS_NPC(ch) )
-    return 0;
+    return FALSE;
 
   if( IS_ROOM(ch->in_room, ROOM_GUILD | ROOM_SAFE) )
-    return 0;
+    return FALSE;
 
   if( IS_FIGHTING(ch) )
   {
     // This prevents players from notching up skills using images and
     //   summoned pets such as elementals. Jan08 -Lucrot
-    if( IS_PC_PET(GET_OPPONENT(ch))
-      || GET_LEVEL(GET_OPPONENT(ch)) < 2 )
+    if( IS_PC_PET(GET_OPPONENT(ch)) || (GET_LEVEL(GET_OPPONENT(ch)) < 2) )
     {
-      return 0;
+      return FALSE;
     }
   }
 
@@ -175,11 +179,12 @@ int notch_skill(P_char ch, int skill, float chance)
   l = ch->only.pc->skills[skill].learned;
   t = ch->only.pc->skills[skill].taught;
 
-  if(l >= t)
+  if( l >= t )
   {
     ch->only.pc->skills[skill].learned = t;
-    return 0;
+    return FALSE;
   }
+
 #if wipe2011
   // The following addition is for wipe 2011, where intelligence will help determine
   //   chance to notch a skill, thus making it a partially important stat for rockhead melee
@@ -233,13 +238,14 @@ int notch_skill(P_char ch, int skill, float chance)
 #endif
 
 #if !defined(CHAOS_MUD) || (CHAOS_MUD == 0)
+  // Actual check here.
   if( number(1, 10000) > chance * 100 )
   {
-    return 0;
+    return FALSE;
   }
 
   // These will fail if ch is already affected by TAG_..._SKILL_NOTCH.
-  if(IS_SET(skills[skill].targets, TAR_PHYS))
+  if( IS_SET(skills[skill].targets, TAR_PHYS) )
   {
     if(!affect_timer(ch, get_property("timer.mins.physicalNotch", 5) * WAIT_MIN, TAG_PHYS_SKILL_NOTCH))
     {
@@ -268,7 +274,7 @@ int notch_skill(P_char ch, int skill, float chance)
     }
   }
 
-  return 1;
+  return TRUE;
 }
 
 

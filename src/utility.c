@@ -4543,11 +4543,11 @@ int GET_ALT_SIZE(P_char ch)
  *          limited to max of 100
  */
 
-
+// Returns the maximum data for the skill.
 ClassSkillInfo SKILL_DATA_ALL(P_char ch, int skill)
 {
   ClassSkillInfo dummy;
-  int required_level, new_cap;
+  int required_level, new_cap, innate;
   int pri_rlevel, sec_rlevel, pri_cap, sec_cap;
   float pri_mod = get_property("skill.cap.multi.mod.primarySkill", 100.0);
   float sec_mod = get_property("skill.cap.multi.mod.secondarySkill", 95.0);
@@ -4609,6 +4609,15 @@ ClassSkillInfo SKILL_DATA_ALL(P_char ch, int skill)
   else
   {
     dummy = SKILL_DATA(ch, skill);
+  }
+
+  // If there's an innate associated with the skill.
+  if( (innate = get_innate_from_skill( skill )) >= 0 )
+  {
+    if( has_innate(ch, innate) )
+    {
+      dummy.maxlearn[ch->player.spec] = 100;
+    }
   }
 
   return dummy;
@@ -4723,29 +4732,30 @@ int GET_CHAR_SKILL_P(P_char ch, int skl)
 
 int GET_LVL_FOR_SKILL(P_char ch, int skill)
 {
-  int nonspeclvl = SKILL_DATA_ALL(ch, skill).rlevel[0];
-  int speclvl = SKILL_DATA_ALL(ch, skill).rlevel[ch->player.spec];
+  int classlvl, innatelvl;
 
-  if(!ch)
-  {
-    return 0;
-  }  
-  if( nonspeclvl && speclvl )
-  {
-    return MIN(nonspeclvl, speclvl);
-  }
-  else if( nonspeclvl )
-  {
-    return nonspeclvl;
-  }
-  else if( speclvl )
-  {
-    return speclvl;
-  }
-  else
+  if( !IS_ALIVE(ch) )
   {
     return 0;
   }
+
+  classlvl = SKILL_DATA_ALL(ch, skill).rlevel[ch->player.spec];
+  innatelvl = get_innate_from_skill(skill);
+
+  // If there is an innate that grants skill.
+  if( innatelvl >= 0 )
+  {
+    // If ch has the innate.
+    if( (innatelvl = get_level_from_innate( ch, innatelvl )) )
+    {
+      if( classlvl )
+        return MIN( innatelvl, classlvl );
+      else
+        return innatelvl;
+    }
+  }
+
+  return classlvl;
 }
 
 /* this function returns a random non-god character in room

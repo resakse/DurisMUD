@@ -8,6 +8,7 @@
 
 #define TYPE_UNDEFINED               -1
 #define SPELL_RESERVED_DBC            0 /* SKILL NUMBER ZERO */
+#define SKILL_NONE                    0
 
 #define FIRST_SPELL                   1
 #define SPELL_ARMOR                   1

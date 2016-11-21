@@ -5165,15 +5165,15 @@ int melee_damage(P_char ch, P_char victim, double dam, int flags, struct damage_
     {
       // No bonus.
     }
-    else if( MIN_POS(victim, POS_KNEELING + STAT_DEAD) && !has_innate(victim, INNATE_GROUNDFIGHTING) )
+    else if( MIN_POS(victim, POS_KNEELING + STAT_DEAD) && !GROUNDFIGHTING_CHECK(victim) )
     {
       dam *= dam_factor[DF_KNEELING];
     }
-    else if( MIN_POS(victim, POS_SITTING + STAT_DEAD) && !has_innate(victim, INNATE_GROUNDFIGHTING) )
+    else if( MIN_POS(victim, POS_SITTING + STAT_DEAD) && !GROUNDFIGHTING_CHECK(victim) )
     {
       dam *= dam_factor[DF_SITTING];
     }
-    else if( MIN_POS(victim, POS_PRONE + STAT_DEAD) && !has_innate(victim, INNATE_GROUNDFIGHTING) )
+    else if( MIN_POS(victim, POS_PRONE + STAT_DEAD) && !GROUNDFIGHTING_CHECK(victim) )
     {
       dam *= dam_factor[DF_PRONE];
     }
@@ -8254,8 +8254,7 @@ int dodgeSucceed(P_char char_dodger, P_char attacker, P_obj wpn)
   }
 
   // Cannot dodge while on the ground except with groundfighting.
-  if((GET_POS(char_dodger) < POS_STANDING) &&
-      !has_innate(char_dodger, INNATE_GROUNDFIGHTING))
+  if( (GET_POS(char_dodger) < POS_STANDING) && !GROUNDFIGHTING_CHECK(char_dodger) )
   {
     return 0;
   }
@@ -8310,10 +8309,8 @@ int dodgeSucceed(P_char char_dodger, P_char attacker, P_obj wpn)
   percent = BOUNDED( minimum, learned, 50);
 
   // Modifiers
-
-  if((has_innate(char_dodger,INNATE_GROUNDFIGHTING) &&
-        !MIN_POS(char_dodger, POS_STANDING + STAT_NORMAL)) ||
-      affected_by_spell(char_dodger, SKILL_GAZE))
+  if( (has_innate(char_dodger, INNATE_GROUNDFIGHTING) && !MIN_POS(char_dodger, POS_STANDING + STAT_NORMAL))
+    || affected_by_spell(char_dodger, SKILL_GAZE) )
   {
     percent = (int) (percent * 0.50);
   }
@@ -9508,7 +9505,8 @@ int calculate_attacks(P_char ch, int attacks[])
   }
 
   // Not-standing? half attacks - Drannak 7/22/13
-  if(!MIN_POS(ch, POS_STANDING + STAT_NORMAL) && !has_innate(ch, INNATE_GROUNDFIGHTING))
+  // Don't you mean less attacks?
+  if( !MIN_POS(ch, POS_STANDING + STAT_NORMAL) && !GROUNDFIGHTING_CHECK(ch) )
   {
     if(GET_POS(ch) == POS_KNEELING)
       number_attacks = (int)(number_attacks - (number_attacks * .70));

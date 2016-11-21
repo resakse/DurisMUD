@@ -134,296 +134,297 @@ bool GOOD_FOR_GAZING(P_char ch, P_char victim);
 extern const struct innate_data innates_data[];
 const struct innate_data
 {
-  char    *name;
+  char     *name;
   cmd_func *func;
+  int       skill; // What skill is associated?
 } innates_data[LAST_INNATE + 1] =
 {
   {
-  "horse body", NULL},
+  "horse body", NULL, SKILL_NONE},
   {
-  "levitate", do_levitate},
+  "levitate", do_levitate, SKILL_NONE},
   {
-  "darkness", do_darkness},
+  "darkness", do_darkness, SKILL_NONE},
   {
-  "faerie fire", do_faerie_fire},
+  "faerie fire", do_faerie_fire, SKILL_NONE},
   {
-  "invisibility", do_ud_invisibility},
+  "invisibility", do_ud_invisibility, SKILL_NONE},
   {
-  "strength", do_strength},
+  "strength", do_strength, SKILL_NONE},
   {
-  "doorbash", do_doorbash},
+  "doorbash", do_doorbash, SKILL_NONE},
   {
-  "infravision", NULL},
+  "infravision", NULL, SKILL_NONE},
   {
-  "summon horde", do_summon_orc},
+  "summon horde", do_summon_orc, SKILL_NONE},
   {
-  "ultravision", NULL},
+  "ultravision", NULL, SKILL_NONE},
   {
-  "outdoor sneak", NULL},
+  "outdoor sneak", NULL, SKILL_NONE},
   {
-  "bodyslam", do_bodyslam},
+  "bodyslam", do_bodyslam, SKILL_NONE},
   {
-  "summon mount", do_summon_mount},
+  "summon mount", do_summon_mount, SKILL_NONE},
   {
-  "anti-good", NULL},
+  "anti-good", NULL, SKILL_NONE},
   {
-  "anti-evil", NULL},
+  "anti-evil", NULL, SKILL_NONE},
   {
-  "ogre roar", do_ogre_roar},
+  "ogre roar", do_ogre_roar, SKILL_NONE},
   {
-  "blast", do_blast},
+  "blast", do_blast, SKILL_NONE},
   {
-  "ud-sneak", NULL},
+  "ud-sneak", NULL, SKILL_NONE},
   {
-  "shift_astral", do_shift_astral},
+  "shift_astral", do_shift_astral, SKILL_NONE},
   {
-  "shift_prime", do_shift_prime},
+  "shift_prime", do_shift_prime, SKILL_NONE},
   {
-  "vampiric touch", NULL},
+  "vampiric touch", NULL, SKILL_NONE},
   {
-  "bite", do_bite},
+  "bite", do_bite, SKILL_NONE},
   {
-  "leap", NULL},
+  "leap", NULL, SKILL_NONE},
   {
-  "doorkick", do_doorkick},
+  "doorkick", do_doorkick, SKILL_NONE},
   {
-  "stampede", do_stampede},
+  "stampede", do_stampede, SKILL_NONE},
   {
-  "charge", do_charge},
+  "charge", do_charge, SKILL_NONE},
   {
-  "waterbreath", NULL},
+  "waterbreath", NULL, SKILL_NONE},
   {
-  "enlarge", do_enlarge},
+  "enlarge", do_enlarge, SKILL_NONE},
   {
-  "regeneration", NULL},
+  "regeneration", NULL, SKILL_NONE},
   {
-  "reduce", do_reduce},
+  "reduce", do_reduce, SKILL_NONE},
   {
-  "breathe", do_breathe},
+  "breathe", do_breathe, SKILL_NONE},
   {
-  "project image", do_project_image},
+  "project image", do_project_image, SKILL_NONE},
   {
-  "fireball", do_fireball},
+  "fireball", do_fireball, SKILL_NONE},
   {
-  "fireshield", do_fireshield},
+  "fireshield", do_fireshield, SKILL_NONE},
   {
-  "firestorm", do_firestorm},
+  "firestorm", do_firestorm, SKILL_NONE},
   {
-  "protection from fire", NULL},
+  "protection from fire", NULL, SKILL_NONE},
   {
-  "tupor", do_tupor},
+  "tupor", do_tupor, SKILL_NONE},
   {
-  "sneak", NULL},
+  "sneak", NULL, SKILL_NONE},
   {
-  "protection from lightning", NULL},
+  "protection from lightning", NULL, SKILL_NONE},
   {
-  "plane shift", do_plane_shift},
+  "plane shift", do_plane_shift, SKILL_NONE},
   {
-  "charm animal", do_charm_animal},
+  "charm animal", do_charm_animal, SKILL_NONE},
   {
-  "burrow", do_innate_hide},
+  "burrow", do_innate_hide, SKILL_NONE},
   {
-  "dispel", do_dispel_magic},
+  "dispel", do_dispel_magic, SKILL_NONE},
   {
-  "globe of darkness", do_globe_of_darkness},
+  "globe of darkness", do_globe_of_darkness, SKILL_NONE},
   {
-  "mass dispel", do_mass_dispel},
+  "mass dispel", do_mass_dispel, SKILL_NONE},
   {
-  "disappear", do_disappear},
+  "disappear", do_disappear, SKILL_NONE},
   {
-  "flurry", do_flurry},
+  "flurry", do_flurry, SKILL_NONE},
   {
-  "shapechange", do_shapechange},
+  "shapechange", do_shapechange, SKILL_NONE},
   {
-  "battle frenzy", NULL},
+  "battle frenzy", NULL, SKILL_NONE},
   {
-  "throw lightning", do_throw_lightning},
+  "throw lightning", do_throw_lightning, SKILL_NONE},
   {
-  "fly", NULL},
+  "fly", NULL, SKILL_NONE},
   {
-  "stone skin", do_stone_skin},
+  "stone skin", do_stone_skin, SKILL_NONE},
   {
-  "phantasmal form", do_phantasmal_form},
+  "phantasmal form", do_phantasmal_form, SKILL_NONE},
   {
-  "farsee", NULL},
+  "farsee", NULL, SKILL_NONE},
   {
-  "shade movement", do_shade_movement},
+  "shade movement", do_shade_movement, SKILL_NONE},
   {
-  "shadow door", do_dimension_door},
+  "shadow door", do_dimension_door, SKILL_NONE},
   {
-  "god call", do_god_call},
+  "god call", do_god_call, SKILL_NONE},
   {
-  "forest sight", NULL},
+  "forest sight", NULL, SKILL_NONE},
   {
-  "battlerage", do_battle_rage},
+  "battlerage", do_battle_rage, SKILL_NONE},
   {
-  "damage spread", NULL},
+  "damage spread", NULL, SKILL_NONE},
   {
-  "troll skin", NULL},
+  "troll skin", NULL, SKILL_NONE},
   {
-  "dayvision", NULL},
+  "dayvision", NULL, SKILL_NONE},
   {
-  "spell absorb", NULL},
+  "spell absorb", NULL, SKILL_NONE},
   {
-  "vulnerable to fire", NULL},
+  "vulnerable to fire", NULL, SKILL_NONE},
   {
-  "vulnerable to cold", NULL},
+  "vulnerable to cold", NULL, SKILL_NONE},
   {
-  "eyeless", NULL},
+  "eyeless", NULL, SKILL_NONE},
   {
-  "wildmagic", NULL},
+  "wildmagic", NULL, SKILL_NONE},
   {
-  "knight", NULL},
+  "knight", NULL, SKILL_NONE},
   {
-  "sense weakness", NULL},
+  "sense weakness", NULL, SKILL_NONE},
   {
-  "acid blood"},
+  "acid blood", SKILL_NONE},
   {
-  "conjure water", do_conjure_water},
+  "conjure water", do_conjure_water, SKILL_NONE},
   {
-  "barter", NULL},
+  "barter", NULL, SKILL_NONE},
   {
-  "weapon immunity", NULL},
+  "weapon immunity", NULL, SKILL_NONE},
   {
-  "magic resistance", NULL},
+  "magic resistance", NULL, SKILL_NONE},
   {
-  "battlefield aid", NULL},
+  "battlefield aid", NULL, SKILL_NONE},
   {
-  "perception", NULL},
+  "perception", NULL, SKILL_NONE},
   {
-  "dayblind", NULL},
+  "dayblind", NULL, SKILL_NONE},
   {
-  "summon book", do_summon_book},
+  "summon book", do_summon_book, SKILL_NONE},
   {
-  "quick thinker", NULL},
+  "quick thinker", NULL, SKILL_NONE},
   {
-  "resurrection", NULL},
+  "resurrection", NULL, SKILL_NONE},
   {
-  "improved healing", NULL},
+  "improved healing", NULL, SKILL_NONE},
   {
-  "gamblers luck", NULL},
+  "gamblers luck", NULL, SKILL_NONE},
   {
-  "blood scent", NULL},
+  "blood scent", NULL, SKILL_NONE},
   {
-  "unholy alliance", NULL},
+  "unholy alliance", NULL, SKILL_NONE},
   {
-  "mummify", NULL},
+  "mummify", NULL, SKILL_NONE},
   {
-  "frightening presence", NULL},
+  "frightening presence", NULL, SKILL_NONE},
   {
-  "blindsinging", NULL},
+  "blindsinging", NULL, SKILL_NONE},
   {
-  "improved flee", NULL}, // Deceiver Spec
+  "improved flee", NULL, SKILL_NONE}, // Deceiver Spec
   {
-  "echo", NULL},
+  "echo", NULL, SKILL_NONE},
   {
-  "branch", do_branch},
+  "branch", do_branch, SKILL_NONE},
   {
-  "webwrap", do_webwrap},
+  "webwrap", do_webwrap, SKILL_NONE},
   {
-  "summon imp", do_summon_imp},
+  "summon imp", do_summon_imp, SKILL_NONE},
   {
-  "hammer master", NULL},
+  "hammer master", NULL, SKILL_NONE},
   {
-  "axe master", NULL},
+  "axe master", NULL, SKILL_NONE},
   {
-  "gaze", do_innate_gaze},
+  "gaze", do_innate_gaze, SKILL_NONE},
   {
-  "embrace death", NULL},
+  "embrace death", NULL, SKILL_NONE},
   {
-  "drain life", do_lifedrain},
+  "drain life", do_lifedrain, SKILL_NONE},
   {
-  "pyrokinesis", do_immolate},
+  "pyrokinesis", do_immolate, SKILL_NONE},
   {
-  "vulnerable to sun", NULL},
+  "vulnerable to sun", NULL, SKILL_NONE},
   {
-  "decrepify", NULL},
+  "decrepify", NULL, SKILL_NONE},
   {
-  "groundfighting", NULL},
+  "groundfighting", NULL, SKILL_GROUNDFIGHTING},
   {
-  "bow mastery", NULL},
+  "bow mastery", NULL, SKILL_NONE},
   {
-  "summon warg", do_summon_warg},
+  "summon warg", do_summon_warg, SKILL_NONE},
   {
-  "hatred", NULL},
+  "hatred", NULL, SKILL_NONE},
   {
-  "evasion", NULL},
+  "evasion", NULL, SKILL_NONE},
   {
-  "mind of the dragon", NULL},
+  "mind of the dragon", NULL, SKILL_NONE},
   {
-  "shift ethereal", do_shift_ethereal},
+  "shift ethereal", do_shift_ethereal, SKILL_NONE},
   {
-  "astral affinity", NULL},
+  "astral affinity", NULL, SKILL_NONE},
   {
-  "two daggers", NULL},
+  "two daggers", NULL, SKILL_NONE},
   {
-  "holy light", NULL},
+  "holy light", NULL, SKILL_NONE},
   {
-  "command aura", NULL},
+  "command aura", NULL, SKILL_NONE},
   {
-  "deceptive flee", NULL},
-  {"miner", NULL},
-  {"foundry", do_foundry},
-  {"fade", do_fade},
-  {"spacial focus", NULL},
-  {"lay hands", do_layhand},
-  {"holy crusade", NULL},
-  {"magical reduction", NULL},
-  {"aura_of_protection", do_aura_protection},
-  {"aura_of_precision", do_aura_precision},
-  {"aura_of_battlelust", do_aura_battlelust},
-  {"aura_of_endurance", do_aura_endurance},
-  {"aura_of_improved_healing", do_aura_healing},
-  {"aura_of_vigor", do_aura_vigor},
-  {"speedy", NULL},
-  {"dauntless", NULL},
-  {"summon totem", do_summon_totem},
-  {"entrapment", NULL},
-  {"protection from cold", NULL},
-  {"protection from acid", NULL},
-  {"fire aura", NULL},
-  {"spawn", do_spawn},
-  {"warcallers fury", NULL},
-  {"spirit of the rrakkma", NULL},
-  {"diseased bite", NULL},
-  {"divine force", do_divine_force},
-  {"undead fealty", NULL},
-  {"call of the grave", do_call_grave},
-  {"sacrilegious power", NULL}, // Vampire innate
-  {"blur", NULL}, // Not passive, but no supporting func anymore.
-  {"rapier and dirk", NULL}, // Swashbuckler
-  {"elemental body", NULL},
-  {"amorphous body", NULL},
-  {"engulf", do_engulf},
-  {"slime", do_slime},
-  {"dual wielding master", NULL},
-  {"speed", NULL},
-  {"ice aura", NULL},
-  {"requiem", NULL},
-  {"ally", do_spawn},
-  {"summon host", do_summon_host},
-  {"spider body", NULL},
-  {"swamp sneak", NULL},
-  {"calming", NULL},
-  {"longsword master", NULL},
-  {"melee mastery", NULL},
-  {"bulwark", NULL},
-  {"wall climbing", NULL},
-  {"woodland renewal", NULL},
-  {"natural movement", NULL},
-  {"magic vulnerability", NULL},
-  {"two-handed sword mastery", NULL},
-  {"holy combat", NULL},
-  {"giant avoidance", NULL},
-  {"seadog", NULL},
-  {"aura_of_spell_protection", do_aura_spell_protection},
-  {"vision of the dead", NULL},
-  {"remort", do_remort},
-  {"elemental power", NULL},
-  {"intercept", NULL},
-  {"detect subversion", NULL },
-  {"living stone", NULL },
-  {"invisibility", NULL }
+  "deceptive flee", NULL, SKILL_NONE},
+  {"miner", NULL, SKILL_NONE},
+  {"foundry", do_foundry, SKILL_NONE},
+  {"fade", do_fade, SKILL_NONE},
+  {"spacial focus", NULL, SKILL_NONE},
+  {"lay hands", do_layhand, SKILL_NONE},
+  {"holy crusade", NULL, SKILL_NONE},
+  {"magical reduction", NULL, SKILL_NONE},
+  {"aura_of_protection", do_aura_protection, SKILL_NONE},
+  {"aura_of_precision", do_aura_precision, SKILL_NONE},
+  {"aura_of_battlelust", do_aura_battlelust, SKILL_NONE},
+  {"aura_of_endurance", do_aura_endurance, SKILL_NONE},
+  {"aura_of_improved_healing", do_aura_healing, SKILL_NONE},
+  {"aura_of_vigor", do_aura_vigor, SKILL_NONE},
+  {"speedy", NULL, SKILL_NONE},
+  {"dauntless", NULL, SKILL_NONE},
+  {"summon totem", do_summon_totem, SKILL_NONE},
+  {"entrapment", NULL, SKILL_NONE},
+  {"protection from cold", NULL, SKILL_NONE},
+  {"protection from acid", NULL, SKILL_NONE},
+  {"fire aura", NULL, SKILL_NONE},
+  {"spawn", do_spawn, SKILL_NONE},
+  {"warcallers fury", NULL, SKILL_NONE},
+  {"spirit of the rrakkma", NULL, SKILL_NONE},
+  {"diseased bite", NULL, SKILL_NONE},
+  {"divine force", do_divine_force, SKILL_NONE},
+  {"undead fealty", NULL, SKILL_NONE},
+  {"call of the grave", do_call_grave, SKILL_NONE},
+  {"sacrilegious power", NULL, SKILL_NONE}, // Vampire innate
+  {"blur", NULL, SKILL_NONE}, // Not passive, but no supporting func anymore.
+  {"rapier and dirk", NULL, SKILL_NONE}, // Swashbuckler
+  {"elemental body", NULL, SKILL_NONE},
+  {"amorphous body", NULL, SKILL_NONE},
+  {"engulf", do_engulf, SKILL_NONE},
+  {"slime", do_slime, SKILL_NONE},
+  {"dual wielding master", NULL, SKILL_NONE},
+  {"speed", NULL, SKILL_NONE},
+  {"ice aura", NULL, SKILL_NONE},
+  {"requiem", NULL, SKILL_NONE},
+  {"ally", do_spawn, SKILL_NONE},
+  {"summon host", do_summon_host, SKILL_NONE},
+  {"spider body", NULL, SKILL_NONE},
+  {"swamp sneak", NULL, SKILL_NONE},
+  {"calming", NULL, SKILL_NONE},
+  {"longsword master", NULL, SKILL_NONE},
+  {"melee mastery", NULL, SKILL_NONE},
+  {"bulwark", NULL, SKILL_NONE},
+  {"wall climbing", NULL, SKILL_NONE},
+  {"woodland renewal", NULL, SKILL_NONE},
+  {"natural movement", NULL, SKILL_NONE},
+  {"magic vulnerability", NULL, SKILL_NONE},
+  {"two-handed sword mastery", NULL, SKILL_NONE},
+  {"holy combat", NULL, SKILL_NONE},
+  {"giant avoidance", NULL, SKILL_NONE},
+  {"seadog", NULL, SKILL_NONE},
+  {"aura_of_spell_protection", do_aura_spell_protection, SKILL_NONE},
+  {"vision of the dead", NULL, SKILL_NONE},
+  {"remort", do_remort, SKILL_NONE},
+  {"elemental power", NULL, SKILL_NONE},
+  {"intercept", NULL, SKILL_NONE},
+  {"detect subversion", NULL, SKILL_NONE},
+  {"living stone", NULL, SKILL_NONE},
+  {"invisibility", NULL, SKILL_NONE }
 };
 
 string list_innates(int race, int cls, int spec)
@@ -536,7 +537,7 @@ void assign_innates()
   ADD_RACIAL_INNATE(INNATE_BODYSLAM, RACE_BARBARIAN, 1);
   ADD_RACIAL_INNATE(INNATE_DAUNTLESS, RACE_BARBARIAN, 41);
   ADD_RACIAL_INNATE(INNATE_DOORBASH, RACE_BARBARIAN, 1);
-  //ADD_RACIAL_INNATE(INNATE_GROUNDFIGHTING, RACE_BARBARIAN, 21);
+  ADD_RACIAL_INNATE(INNATE_GROUNDFIGHTING, RACE_BARBARIAN, 21);
   ADD_RACIAL_INNATE(INNATE_PROT_COLD, RACE_BARBARIAN, 31);
   /* List of Centaur Innates        */
   ADD_RACIAL_INNATE(INNATE_HORSE_BODY, RACE_CENTAUR, 1);
@@ -5118,3 +5119,67 @@ void update_regen_properties()
   regen_factor[REG_WATERMAGUS] = get_property("hit.regen.WaterMagus", 4.000);
 }
 
+int get_innate_from_skill( int skill )
+{
+  for( int innate = 0; innate <= LAST_INNATE; innate++ )
+  {
+    if( innates_data[innate].skill == skill )
+    {
+      return innate;
+    }
+  }
+  return -1;
+}
+
+int get_level_from_innate( P_char ch, int innate )
+{
+  int race;
+  int level;
+  bool specd = IS_SPECIALIZED(ch);
+  struct affected_type *af, *af2;
+
+  // Start above maximum lvl.
+  level = MAXLVL + 1;
+
+  if( class_innates_at_all[innate] & ch->player.m_class )
+  {
+    for( int i = 0; i < CLASS_COUNT; i++ )
+    {
+      if( GET_CLASS(ch, 1 << i) )
+      {
+        // If there's a spec level, then it takes precedence.
+        if( class_innates[innate][i][ch->player.spec] )
+        {
+          level = MIN( level, class_innates[innate][i][ch->player.spec] );
+        }
+        // Otherwise, if the spec didn't lose the innate and the class has the innate
+        else if( !specd && class_innates[innate][i][0] )
+        {
+          level = MIN( level, class_innates[innate][i][0] );
+        }
+      }
+    }
+  }
+
+  race = ch->player.race;
+  // If they're corpseformed without the innates change.
+  if( (( af = get_spell_from_char(ch, TAG_RACE_CHANGE) ) != NULL)
+    && (( af2 = get_spell_from_char(ch, SPELL_CORPSEFORM) ) != NULL) )
+  {
+    if( af2->modifier == CORPSEFORM_REG )
+    {
+      // Use their regular race's innates.
+      race = af->modifier;
+    }
+  }
+
+  if( racial_innates[innate][race] )
+  {
+    return level = MIN( level, racial_innates[innate][race] );
+  }
+
+  if( level <= MAXLVL )
+    return level;
+
+  return 0;
+}

@@ -655,8 +655,8 @@ void advance_level(P_char ch)
     sql_log(ch, PLAYERLOG, "Advanced to level %d", GET_LEVEL(ch));
   }
 
-  // If we're at a circle level & use slots...
-  if( GET_LEVEL(ch) % 5 == 1 && USES_SPELL_SLOTS(ch) )
+  // If we're at a circle level & ch uses slot casting...
+  if( (GET_LEVEL(ch) % 5 == 1) && USES_SPELL_SLOTS(ch) )
   {
     // Zero out the new spell slots gained..
     ch->specials.undead_spell_slots[(GET_LEVEL(ch)+4)/5] = 0;
