@@ -1694,7 +1694,8 @@ void show_char_to_char(P_char i, P_char ch, int mode)
               strcat(buffer, "someone who has already left.");
           }
         }
-        if( (( GET_LEVEL(ch) - GET_LEVEL(i) ) > 10) && (GET_RACEWAR( ch ) != GET_RACEWAR( i )) )
+        if( (( GET_LEVEL(ch) - GET_LEVEL(i) ) > 10) && (GET_RACEWAR( ch ) != GET_RACEWAR( i ))
+          && IS_PC(ch) && IS_PC(i) )
           strcat(buffer, " (&+RNon-Fraggable&N)");
       }
 
