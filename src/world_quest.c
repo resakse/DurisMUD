@@ -589,7 +589,7 @@ void do_quest(P_char ch, char *args, int cmd)
   if (q_giver = read_mobile(real_mobile(ch->only.pc->quest_giver), REAL))
   {
     sprintf(q_name, "%s", q_giver->player.short_descr);
-    sprintf(buf ,"The %s gave you the following quest:\r\n", q_name);
+    sprintf(buf ,"%s gave you the following quest:\r\n", q_name);
     send_to_char(buf, ch);
 
     if (q_giver)
