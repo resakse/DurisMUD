@@ -2752,6 +2752,12 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
     // 1 - lvl mushroom
     else if( strstr(arg, "1") )
     {
+      // Check for level requirement.
+      if( GET_LEVEL(pl) < 51 )
+      {
+        send_to_char("&+WKannard&+L &+wsays '&nI'm sorry, but you do not seem to have enough &+Wexperience&n to buy that item.\r\n&n", pl);
+        return TRUE;
+      }
       // Check for the epics required to purchase mushroom..
       if( pl->only.pc->epics < COST_EPIC_MUSHROOM )
       {
