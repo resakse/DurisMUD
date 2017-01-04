@@ -3604,7 +3604,7 @@ void do_nchat(P_char ch, char *argument, int cmd)
   bool   good, evil, undead, neutral, all;
   char   Gbuf1[MAX_STRING_LENGTH];
   char   Gbuf2[MAX_STRING_LENGTH];
-  static char LastNchat[MAX_INPUT_LENGTH];
+  static char LastNchat1[MAX_INPUT_LENGTH], LastNchat2[MAX_INPUT_LENGTH];
   P_char to;
 
   if( !IS_ALIVE(ch) )
@@ -3677,7 +3677,15 @@ void do_nchat(P_char ch, char *argument, int cmd)
       return;
     }
   }
-  if( !strcmp(argument, LastNchat) )
+  if( !strcmp(argument, LastNchat1) )
+  {
+    if( SpammingNchat(ch) > 5 )
+    {
+      send_to_char( "You have temporarily lost nchat privledges due to spam.\n", ch );
+      return;
+    }
+  }
+  if( !strcmp(argument, LastNchat2) )
   {
     if( SpammingNchat(ch) > 5 )
     {
@@ -3687,7 +3695,8 @@ void do_nchat(P_char ch, char *argument, int cmd)
   }
   else
   {
-    sprintf( LastNchat, "%s", argument );
+    sprintf( LastNchat2, "%s", LastNchat1 );
+    sprintf( LastNchat1, "%s", argument );
   }
 
   if( ch->desc )
@@ -12978,7 +12987,7 @@ int SpammingNchat( P_char ch )
     af.type = TAG_NCHATSPAMMER;
     af.modifier = 1;
     af.duration = 10;
-    af.flags = AFFTYPE_NOSHOW | AFFTYPE_NODISPEL | AFFTYPE_NOMSG | AFFTYPE_OFFLINE;
+    af.flags = AFFTYPE_NOSHOW | AFFTYPE_NODISPEL | AFFTYPE_NOMSG;
     affect_to_char(ch, &af);
     return 1;
   }
