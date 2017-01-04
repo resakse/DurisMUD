@@ -3669,6 +3669,14 @@ void do_nchat(P_char ch, char *argument, int cmd)
   }
 
   choronize(argument);
+  if( is_abbrev("PANIC!  You couldn't escape! PANIC!  You couldn't escape! PANIC!  You couldn't escape!", argument) )
+  {
+    if( SpammingNchat(ch) > 3 )
+    {
+      send_to_char( "You have temporarily lost nchat privledges due to spam.\n", ch );
+      return;
+    }
+  }
   if( !strcmp(argument, LastNchat) )
   {
     if( SpammingNchat(ch) > 5 )
