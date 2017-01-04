@@ -1340,7 +1340,7 @@ void command_interpreter(P_char ch, char *argument)
         do_confirm(ch, 1);
         return;
       }
-      else if (*(argument + begin) == 'n')
+      else if( (*( argument + begin ) == 'n') || (*( argument + begin ) == '\0') )
       {
         do_confirm(ch, 0);
         return;
@@ -1809,6 +1809,11 @@ void command_interpreter(P_char ch, char *argument)
         }
       }
 
+      while( *(argument + begin + look_at) == ' ' )
+      {
+        look_at++;
+      }
+
       if( !no_specials && special(exec_char, cmd, argument + begin + look_at) )
       {
         return;
@@ -1821,7 +1826,8 @@ void command_interpreter(P_char ch, char *argument)
       }
 
       // Execute the bloody thing!!!
-      if( (cmd_info[cmd].req_confirm == 1) && (IS_NPC(exec_char) || (exec_char->desc->confirm_state == CONFIRM_DONE)) )
+      if( (cmd_info[cmd].req_confirm == 1) && (IS_NPC( exec_char ) || ( exec_char->desc->confirm_state == CONFIRM_DONE )
+        || !strcmp( argument + begin + look_at, "confirm" )) )
       {
         if( exec_char->desc )
         {
@@ -1832,6 +1838,7 @@ void command_interpreter(P_char ch, char *argument)
       }
       else if( cmd_info[cmd].req_confirm == 1 )
       {
+debug( "PENIS: %s", argument + begin + look_at );
         if( exec_char->desc )
         {
           exec_char->desc->confirm_state = CONFIRM_AWAIT;

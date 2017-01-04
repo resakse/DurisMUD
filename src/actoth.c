@@ -23,6 +23,7 @@
 #include "interp.h"
 #include "justice.h"
 #include "prototypes.h"
+#include "ships.h"
 #include "spells.h"
 #include "structs.h"
 #include "utils.h"
@@ -61,7 +62,7 @@ extern const char *shot_types[];
 extern const int shot_damage[];
 extern const struct stat_data stat_factor[];
 extern int forced_command;
-extern int rev_dir[];
+extern const int rev_dir[];
 extern long reboot_time;
 extern struct agi_app_type agi_app[];
 extern struct command_info cmd_info[];
@@ -6126,17 +6127,20 @@ void do_suicide(P_char ch, char *argument, int cmd)
   if( (IS_AFFECTED(ch, AFF_SLEEP)) || (GET_STAT(ch) == STAT_SLEEPING) )
   {
     send_to_char("Please wake up to kill yourself.\r\n", ch);
+    ch->desc->confirm_state = CONFIRM_NONE;
     return;
   }
 
   // No suiciding to escape being fragged.
-  if( affected_by_spell(ch, TAG_PVPDELAY) )
+  if( affected_by_spell(ch, TAG_PVPDELAY)
+    || (( IS_OCEAN_ROOM(ch->in_room) || IS_SHIP_ROOM(ch->in_room) ) && ocean_pvp_state(  )) )
   {
     send_to_char("There is too much adrenaline pumping through your body right now.\r\n", ch);
+    ch->desc->confirm_state = CONFIRM_NONE;
     return;
   }
 
-  if (!command_confirm)
+  if( !command_confirm )
   {
     if (ch->desc)
     {

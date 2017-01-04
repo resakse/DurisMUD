@@ -9,6 +9,7 @@
 #include "interp.h"
 #include "utility.h"
 #include "objmisc.h"
+#include "ships.h"
 #include <fstream>
 #include <math.h>
 using namespace std;
@@ -358,6 +359,10 @@ void do_test(P_char ch, char *arg, int cmd)
 
   arg = one_argument(arg, buff);
 
+  if( isname("oceanpvp", buff) )
+  {
+    send_to_char_f( ch, "Ocean PvP state: %s.\n", YESNO(ocean_pvp_state()) );
+  }
   if( isname("weapondice", buff) )
   {
     P_obj obj;
