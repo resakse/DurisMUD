@@ -243,8 +243,8 @@ listen
 GET_C_LUK(ch
 ~
 mangle
-GET_C_DEX(at
-GET_C_DEX(ma
+GET_C_DEX(vi
+GET_C_DEX(ch
 ~
 maul
 GET_C_LUK(ch
@@ -477,8 +477,6 @@ GET_C_LUK(ch
 GET_C_LUK(vi
 GET_C_AGI(ch
 GET_C_AGI(vi
-GET_C_AGI(vi
-GET_C_AGI(ch
 ~
 use
 ~

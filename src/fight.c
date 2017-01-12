@@ -3249,7 +3249,9 @@ bool decrease_skin_counter(P_char ch, unsigned int skin)
 
 // Attempt by a berserker to slam weapon aside and deal damage, possibly disarming opponent in the process.
 // Similar to riposte, does not require a successful parry though.
-bool mangleSucceed( P_char mangler, P_char attacker, P_obj weap )
+// ch is the mangler, and victim is the person attacking (that might be mangled).  It's important
+//   to have it this way for the help files to be correct.
+bool mangleSucceed( P_char ch, P_char victim, P_obj weap )
 {
   bool skill_notch = FALSE;
   int skl, wloc;
@@ -3271,19 +3273,19 @@ bool mangleSucceed( P_char mangler, P_char attacker, P_obj weap )
   }
 
   // Make sure weap is wielded.
-  if( weap == attacker->equipment[WIELD] )
+  if( weap == victim->equipment[WIELD] )
   {
     wloc = WIELD;
   }
-  else if( weap == attacker->equipment[WIELD2] )
+  else if( weap == victim->equipment[WIELD2] )
   {
     wloc = WIELD2;
   }
-  else if( weap == attacker->equipment[WIELD3] )
+  else if( weap == victim->equipment[WIELD3] )
   {
     wloc = WIELD3;
   }
-  else if( weap == attacker->equipment[WIELD4] )
+  else if( weap == victim->equipment[WIELD4] )
   {
     wloc = WIELD4;
   }
@@ -3292,17 +3294,17 @@ bool mangleSucceed( P_char mangler, P_char attacker, P_obj weap )
 
   /* Checked above now, and has weapon as argument to function.
   // Find a weapon to disarm (must exist and be a weapon and not be cursed).
-  if( (weap = attacker->equipment[WIELD]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
-    if( (weap = attacker->equipment[WIELD2]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
-      if( (weap = attacker->equipment[WIELD3]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
-        if( (weap = attacker->equipment[WIELD4]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
+  if( (weap = victim->equipment[WIELD]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
+    if( (weap = victim->equipment[WIELD2]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
+      if( (weap = victim->equipment[WIELD3]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
+        if( (weap = victim->equipment[WIELD4]) == NULL || (weap->type != ITEM_WEAPON) || IS_SET(weap->extra_flags, ITEM_NODROP) )
           return FALSE;
   */
 
-  skl = GET_CHAR_SKILL(mangler, SKILL_MANGLE);
+  skl = GET_CHAR_SKILL(ch, SKILL_MANGLE);
 
-  if( IS_TRUSTED(attacker) || IS_IMMOBILE(mangler) || !IS_HUMANOID(attacker) || !MIN_POS(mangler, POS_STANDING + STAT_NORMAL)
-    || (skl < 20 && !( skill_notch = notch_skill(mangler, SKILL_MANGLE, get_property( "skill.notch.defensive", 17 )) )) )
+  if( IS_TRUSTED(victim) || IS_IMMOBILE(ch) || !IS_HUMANOID(victim) || !MIN_POS(ch, POS_STANDING + STAT_NORMAL)
+    || (skl < 20 && !( skill_notch = notch_skill(ch, SKILL_MANGLE, get_property( "skill.notch.defensive", 17 )) )) )
   {
     return FALSE;
   }
@@ -3310,26 +3312,26 @@ bool mangleSucceed( P_char mangler, P_char attacker, P_obj weap )
   if( !skill_notch )
   {
     // Epic parry now reduces mangle percentage. Jan08 -Lucrot
-    if( GET_CHAR_SKILL(attacker, SKILL_EXPERT_PARRY) )
+    if( GET_CHAR_SKILL(victim, SKILL_EXPERT_PARRY) )
     {
-      if( (skl -= GET_CHAR_SKILL( attacker, SKILL_EXPERT_PARRY ) / 2) < 20 )
+      if( (skl -= GET_CHAR_SKILL( victim, SKILL_EXPERT_PARRY ) / 2) < 20 )
       {
         return FALSE;
       }
     }
 
     // Elite mobs are not affected as much. Jan08 -Lucrot
-    if( IS_ELITE(attacker) )
+    if( IS_ELITE(victim) )
     {
       skl = 20;
     }
 
-    if( IS_ELITE(mangler) )
+    if( IS_ELITE(ch) )
     {
       skl += 100;
     }
 
-    if( (skl -= ( GET_C_DEX(attacker) - GET_C_DEX(mangler) ) * 5) < 20 )
+    if( (skl -= ( GET_C_DEX(victim) - GET_C_DEX(ch) ) * 5) < 20 )
     {
       return FALSE;
     }
@@ -3344,31 +3346,31 @@ bool mangleSucceed( P_char mangler, P_char attacker, P_obj weap )
     }
   }
 
-  act("$n blocks your attack and slashes viciously at your arm.", TRUE, mangler, 0, attacker, TO_VICT);
-  act("$n blocks $N's attack and slashes viciously at $S arm.", TRUE, mangler, 0, attacker, TO_NOTVICT);
-  act("You block $N's attack and slash viciously at $S arm.", TRUE, mangler, 0, attacker, TO_CHAR);
+  act("$n blocks your attack and slashes viciously at your arm.", TRUE, ch, 0, victim, TO_VICT);
+  act("$n blocks $N's attack and slashes viciously at $S arm.", TRUE, ch, 0, victim, TO_NOTVICT);
+  act("You block $N's attack and slash viciously at $S arm.", TRUE, ch, 0, victim, TO_CHAR);
 
   // 2-8 damage - can be mitigated.
-  if( melee_damage(mangler, attacker, 4. * dice(2, 4), PHSDAM_NONE, &messages) != DAM_NONEDEAD )
+  if( melee_damage(ch, victim, 4. * dice(2, 4), PHSDAM_NONE, &messages) != DAM_NONEDEAD )
     return TRUE;
 
   // 25% chance to actually disarm.
-  if( weap && !number(0, 3) && !affected_by_spell(attacker, SPELL_COMBAT_MIND) )
+  if( weap && !number(0, 3) && !affected_by_spell(victim, SPELL_COMBAT_MIND) )
   {
-    send_to_char("&=LYYou swing at your foe _really_ badly, losing control of your weapon!\r\n", attacker);
-    act("$n stumbles with $s attack, losing control of $s weapon!", TRUE, attacker, 0, 0, TO_ROOM);
+    send_to_char("&=LYYou swing at your foe _really_ badly, losing control of your weapon!\r\n", victim);
+    act("$n stumbles with $s attack, losing control of $s weapon!", TRUE, victim, 0, 0, TO_ROOM);
 
-    set_short_affected_by(attacker, SKILL_DISARM, 2 * PULSE_VIOLENCE);
+    set_short_affected_by(victim, SKILL_DISARM, 2 * PULSE_VIOLENCE);
 
-    unequip_char(attacker, wloc);
-    obj_to_char(weap, attacker);
+    unequip_char(victim, wloc);
+    obj_to_char(weap, victim);
 
-    char_light(attacker);
-    room_light(attacker->in_room, REAL);
+    char_light(victim);
+    room_light(victim->in_room, REAL);
   }
   else
   {
-    send_to_char("You stumble, but recover in time!\r\n", attacker);
+    send_to_char("You stumble, but recover in time!\r\n", victim);
   }
 
   return TRUE;
