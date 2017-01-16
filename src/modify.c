@@ -1528,6 +1528,7 @@ int mob_do_rename_hook(P_char npc, P_char ch, int cmd, char *arg)
     {
       return TRUE;
     }
+    rename_ship_owner( old_name, new_name );
     SUB_MONEY(ch, renamePrice, 0);
 
     sprintf(buffer, "&+WCongratulations! From now on you will be known as %s!\r\n", GET_NAME(ch));
