@@ -272,8 +272,9 @@ struct edit_data {
 #define LNK_TETHER          19
 #define LNK_SNG_HEALING     20
 #define LNK_CEGILUNE        21
-#define LNK_CHAR_OBJ_AFF    22
-#define LNK_MAX             22
+#define LNK_ILESH           22
+#define LNK_CHAR_OBJ_AFF    23
+#define LNK_MAX             23
 
 #define LNKFLG_NONE                 0
 #define LNKFLG_ROOM             BIT_1

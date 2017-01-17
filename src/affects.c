@@ -103,6 +103,7 @@ extern void casting_broken(struct char_link_data *);
 extern void tether_broken(struct char_link_data *);
 
 extern void cegilunes_broken(struct char_obj_link_data *);
+extern void ileshs_broken(struct char_obj_link_data *);
 
 extern char *get_function_name(void *func);
 void unlink_char_affect(P_char, struct affected_type *);
@@ -2813,6 +2814,7 @@ void initialize_links()
   define_link(LNK_SNG_HEALING,      "SONG_HEALING",       song_broken,      LNKFLG_AFFECT | LNKFLG_ROOM);
 
   define_olink(LNK_CEGILUNE,        "CEGILUNES_SEARING",  cegilunes_broken, LNKFLG_EXCLUSIVE | LNKFLG_REMOVE_AFF | LNKFLG_BREAK_REMOVE );
+  define_olink(LNK_ILESH,           "ILESHS_SMASHING",    ileshs_broken,    LNKFLG_EXCLUSIVE | LNKFLG_REMOVE_AFF | LNKFLG_BREAK_REMOVE );
   define_olink(LNK_CHAR_OBJ_AFF,    "CHAR_OBJ_AFFECT",    NULL,             LNKFLG_REMOVE_AFF | LNKFLG_BREAK_REMOVE | LNKFLG_SHOW_REMOVE_MSG );
 }
 

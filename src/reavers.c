@@ -170,14 +170,17 @@ void spell_kanchelsis_fury(int level, P_char ch, char *arg, int type, P_char vic
 {
   struct affected_type af;
 
-  if (!affected_by_spell(victim, SPELL_KANCHELSIS_FURY))
+  if( !affected_by_spell(victim, SPELL_KANCHELSIS_FURY) )
   {
-    send_to_char
-    ("&+mYou feel your heart start to burn as the fury of Kanchelsis takes hold!\n",
-     victim);
-    act("$n &+mlooks stronger and starts to move with uncanny speed!", TRUE,
-        victim, 0, 0, TO_ROOM);
+    send_to_char("&+mYou feel your heart start to burn as the fury of Kanchelsis takes hold!\n", victim);
+    act("$n &+mlooks stronger and starts to move with uncanny speed!", TRUE, victim, 0, 0, TO_ROOM);
     bzero(&af, sizeof(af));
+
+    // Earth reavers are a bit slower.
+    if( GET_SPEC(ch, CLASS_REAVER, SPEC_EARTH_REAVER) )
+    {
+      level -= 3;
+    }
     af.type = SPELL_KANCHELSIS_FURY;
     af.duration = 10;
     af.modifier = (level / 7) + 2;
@@ -700,6 +703,220 @@ void event_cegilune_searing(P_char ch, P_char vict, P_obj wpn, void *data)
   }
 }
 
+void spell_girilals_granite_hammer(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
+{
+  P_obj weapon = NULL;
+
+  if( !IS_ALIVE(ch) )
+  {
+    return;
+  }
+
+  if( affected_by_spell(ch, SPELL_GIRILALS_GRANITE_HAMMER) )
+  {
+    send_to_char("&+LGirilal&+L refuses to grant you any more of his powers!&n\n", ch);
+    return;
+  }
+
+  if( ch->equipment[WIELD] && EARTH_REAVER_WEAPONS(ch->equipment[WIELD]) )
+  {
+    weapon = ch->equipment[WIELD];
+  }
+
+  if( !weapon && ch->equipment[WIELD2] && EARTH_REAVER_WEAPONS(ch->equipment[WIELD2]) )
+  {
+    weapon = ch->equipment[WIELD2];
+  }
+
+  if( !weapon )
+  {
+    send_to_char("&+LThe power of &+yGirilal&+L requires you to have a suitable weapon!&n\n", ch);
+    return;
+  }
+
+  struct affected_type af;
+  bzero(&af, sizeof(af));
+
+  af.type = SPELL_GIRILALS_GRANITE_HAMMER;
+  af.duration = level / 2;
+  af.location = APPLY_DAMROLL;
+  // +1 at 30 and +4 at 56.
+  af.modifier = level / 14;
+
+  affect_to_char(victim, &af);
+
+  act( "&+LA dull &+yglow&+L surrounds $p.", FALSE, ch, weapon, NULL, TO_CHAR);
+}
+
+bool girilals_granite_hammer(P_char ch, P_char victim, P_obj wpn)
+{
+  int dam;
+  struct affected_type *afp, af;
+
+  struct damage_messages messages = {
+    "&+LThe &+ydust&+L surrounding $p &+Lscratches at $N&+L!&n",
+    "&+LThe &+ydust&+L surrounding $n&+L's $q &+Lscratches at your flesh!&n",
+    "&+LThe &+ydust&+L surrounding $n&+L's $q &+Lscratchs at $N&+L's flesh!&n",
+    "&+LThe &+ydust&+L is too much for $N&+L; they fall to the ground in a &+rbloody&+L heap.&n",
+    "&+LThe &+ydust&+L overwhelms you causing everything to go black.&n",
+    "&+LThe &+ydust&+L is too much for $N&+L; they fall to the ground in a &+rbloody&+L heap.&n",
+    DAMMSG_TERSE
+  };
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) || !(wpn) || !EARTH_REAVER_WEAPONS(wpn) )
+  {
+    return FALSE;
+  }
+
+  messages.obj = wpn;
+
+  // 2 to 5 damage at lvl 50.
+  dam = number( 8, (GET_LEVEL(ch) * 2) / 5 );
+
+  dam = MAX(1, dam);
+
+  if( spell_damage(ch, victim, dam, SPLDAM_EARTH, SPLDAM_NODEFLECT | SPLDAM_NOSHRUG, &messages) != DAM_NONEDEAD )
+    return TRUE;
+
+  return FALSE;
+}
+
+void ileshs_broken( struct char_obj_link_data *cold )
+{
+  wear_off_message( cold->ch, cold->affect );
+}
+
+void spell_ileshs_smashing_fury(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
+{
+  struct affected_type af;
+  P_obj weapon;
+
+  if( !IS_ALIVE(ch) )
+  {
+    return;
+  }
+
+  // If they don't have a prime or secondary reaver weapon.
+  if( !(( (weapon = ch->equipment[WIELD]) && EARTH_REAVER_WEAPONS(weapon) )
+    || ( (weapon = ch->equipment[WIELD2]) && EARTH_REAVER_WEAPONS(weapon) )
+    || ( (weapon = ch->equipment[WIELD3]) && EARTH_REAVER_WEAPONS(weapon) )
+    || ( (weapon = ch->equipment[WIELD4]) && EARTH_REAVER_WEAPONS(weapon) )) )
+  {
+    send_to_char("You need to wield the correct type of weapon!\n", ch);
+    return;
+  }
+
+  if( affected_by_spell(ch, SPELL_ILESHS_SMASHING_FURY) )
+  {
+    send_to_char("&+yIlesh &+Lwill infuse your weapon no further.&n\n", ch);
+    return;
+  }
+
+  if( !affected_by_spell(ch, SPELL_GIRILALS_GRANITE_HAMMER) )
+  {
+    send_to_char("&+LYour weapon glows for a moment, and then grows cool once more.&n\n", ch);
+    return;
+  }
+
+  struct affected_type *afp = get_spell_from_char(ch, SPELL_GIRILALS_GRANITE_HAMMER);
+
+  bzero(&af, sizeof(af));
+
+  af.type = SPELL_ILESHS_SMASHING_FURY;
+  af.duration = MIN(afp->duration,  level / 2);
+  af.location = APPLY_NONE;
+  af.modifier = 0;
+
+  linked_affect_to_char_obj( ch, &af, weapon, LNK_ILESH );
+
+  act("&+L$p&+L glows with a strange &+yhue&+L as &+yIlesh&+L infuses it.&n", FALSE, ch, weapon, 0, TO_CHAR);
+}
+
+// Called by reaver_hit_proc, this function handles the Ilesh's proc.
+bool ilesh_fury(P_char ch, P_char victim, P_obj wpn)
+{
+  struct affected_type *afp;
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(victim) || !(wpn) || !EARTH_REAVER_WEAPONS(wpn) )
+  {
+    return FALSE;
+  }
+
+  afp = get_spell_from_char(ch, SPELL_ILESHS_SMASHING_FURY);
+  if( !afp )
+    return FALSE;
+
+  // Chance for upgrading tier of damage.
+  if( !number(0, 4) )
+  {
+    // Modifier holds tier of damage.
+    switch( afp->modifier++ )
+    {
+      case 0:
+        spell_blindness( GET_LEVEL(ch), ch, NULL, 0, victim, NULL );
+        break;
+      case 1:
+      case 2:
+        spell_acid_blast( GET_LEVEL(ch), ch, NULL, 0, victim, NULL );
+        break;
+      case 3:
+        spell_earthen_grasp( GET_LEVEL(ch), ch, NULL, 0, victim, NULL );
+        break;
+      case 4:
+        if( !number(0, 3) )
+          spell_acidimmolate( GET_LEVEL(ch), ch, NULL, 0, victim, NULL );
+        else
+          spell_acid_stream( GET_LEVEL(ch), ch, NULL, 0, victim, NULL );
+        break;
+      default:
+        act( "&+LThe &+ydust&+L flies into your &+reyes&n.", FALSE, ch, 0, victim, TO_VICT);
+        blind(ch, victim, number(5, 20) * WAIT_SEC);
+        afp->modifier = 0; // lets not go over max int
+        break;
+    }
+  }
+}
+
+/*
+void event_cegilune_searing(P_char ch, P_char vict, P_obj wpn, void *data)
+{
+  struct damage_messages messages = {
+    "",
+    "&+LThe &+rf&+Ri&+rr&+Re&+rs &+Llick at your wound, causing you to scream in pain!&n",
+    "",
+    "&+L$N &+Lsuddenly begins thrashing around violently. Several chunks of smoldering &+rflesh&+L fall from $S body, and $E topples to the ground, screaming violently--then is suddenly silent!&n",
+    "&+LThe &+rf&+Ri&+re&+Rr&+ry &+Lp&+rai&+Ln is too much for you to handle, and you think you hear the incessant cackling of &+md&+Lemoni&+mc &+Llaughter as your vision spins toward oblivion...&n",
+    "&+L$N &+Lsuddenly begins thrashing around violently. Several chunks of smoldering &+rflesh&+L fall from$S body, and $E topples to the ground, screaming violently--then is suddenly silent!&n", 0
+  };
+
+  if( !IS_ALIVE(ch) || !IS_ALIVE(vict) || !FLAME_REAVER_WEAPONS(wpn) )
+  {
+    return;
+  }
+
+  struct affected_type *afp;
+  afp = get_spell_from_char(vict, TAG_CEGILUNE_FIRE);
+
+  if (!afp)
+  {
+    return;
+  }
+
+  if( --(afp->modifier) <= 0 )
+  {
+    send_to_char("&+RThe flames engulfing your body subside.\n", vict);
+    affect_remove(vict, afp);
+    return;
+  }
+
+  // This correlates to 3 to 12 damage
+  if( spell_damage(ch, vict, dice( 12, 4 ), SPLDAM_FIRE, SPLDAM_NODEFLECT, &messages) == DAM_NONEDEAD )
+  {
+    add_event(event_cegilune_searing, PULSE_VIOLENCE, ch, vict, wpn, 0, 0, 0);
+  }
+}
+
+*/
 void spell_thryms_icerazor(int level, P_char ch, char *arg, int type, P_char victim, P_obj obj)
 {
   bool weapon = false;
@@ -1192,6 +1409,9 @@ bool reaver_hit_proc(P_char ch, P_char victim, P_obj weapon)
   if( is_linked_to( ch, weapon, LNK_CEGILUNE ) && cegilune_blade(ch, victim, weapon) )
     return TRUE;
 
+  if( is_linked_to( ch, weapon, LNK_ILESH ) && ilesh_fury(ch, victim, weapon) )
+    return TRUE;
+
   if (affected_by_spell(ch, SPELL_ILIENZES_FLAME_SWORD) && ilienze_sword(ch, victim, weapon))
     return TRUE;
 
@@ -1200,7 +1420,10 @@ bool reaver_hit_proc(P_char ch, P_char victim, P_obj weapon)
 
   if (affected_by_spell(ch, SPELL_LLIENDILS_STORMSHOCK) && lliendils_stormshock(ch, victim, weapon))
     return TRUE;
-  
+
+  if( affected_by_spell(ch, SPELL_GIRILALS_GRANITE_HAMMER) && girilals_granite_hammer(ch, victim, weapon) )
+    return TRUE;
+
   return FALSE;
 }
 
@@ -1250,3 +1473,4 @@ void apply_reaver_mods(P_char ch)
     }
   } */
 }
+
