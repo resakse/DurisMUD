@@ -1514,15 +1514,58 @@ int player_council_room(int room, P_char ch, int cmd, char *argument)
 
 }
 
+void proc_knob( P_char ch )
+{
+  switch( number(1, 20) )
+  {
+    case  1:
+    case  2:
+    case  3:
+    case  4:
+    case  5:
+    case  6:
+    case  7:
+      send_to_char( "That one doesn't work either.\n", ch );
+      break;
+    case  8:
+    case  9:
+      send_to_char( "This one shocks you as you touch it!\n", ch );
+      break;
+    case 10:
+    case 11:
+      send_to_char( "This knob is really cold.\n", ch );
+      break;
+    case 12:
+    case 13:
+    case 14:
+      send_to_char( "Something about this knob feels right.\n", ch );
+      break;
+    case 15:
+    case 16:
+    case 17:
+    case 18:
+      send_to_char( "Something about this knob just doesn't feel right.\n", ch );
+      break;
+    case 19:
+    default:
+      send_to_char( "Your hand slips off the knob!\n", ch );
+      break;
+    case 20:
+      send_to_char( "This one seems to move a bit.\n", ch );
+      break;
+  }
+}
+
 // Just some sadistic fun with caged people.
 int cage_room1(int room, P_char ch, int cmd, char *argument)
 {
   static int tries = 0;
   int knob;
 
-  if( cmd == CMD_WIGGLE )
+  if( cmd == CMD_WIGGLE || cmd == CMD_TUG || cmd == CMD_TOUCH || cmd == CMD_TURN_IN )
   {
-    if( (sscanf(argument, "%d.knob", &knob) == 1) && knob > 0 && knob < 18 )
+    if( (( sscanf(argument, "%d.knob", &knob) == 1 ) && ( knob > 0 ) && ( knob < 18 ))
+      || !strcmp(argument, "knob") )
     {
       if( number( 1, 1000 ) == 666 )
       {
@@ -1547,48 +1590,17 @@ int cage_room1(int room, P_char ch, int cmd, char *argument)
         }
         else
         {
-          switch( number(1, 20) )
-          {
-            case  1:
-            case  2:
-            case  3:
-            case  4:
-            case  5:
-            case  6:
-            case  7:
-              send_to_char( "That one doesn't work either.\n", ch );
-              break;
-            case  8:
-            case  9:
-              send_to_char( "This one shocks you as you touch it!\n", ch );
-              break;
-            case 10:
-            case 11:
-              send_to_char( "This knob is really cold.\n", ch );
-              break;
-            case 12:
-            case 13:
-            case 14:
-              send_to_char( "Something about this knob feels right.\n", ch );
-              break;
-            case 15:
-            case 16:
-            case 17:
-            case 18:
-              send_to_char( "Something about this knob just doesn't feel right.\n", ch );
-              break;
-            case 19:
-            default:
-              send_to_char( "Your hand slips off the knob!\n", ch );
-              break;
-            case 20:
-              send_to_char( "This one seems to move a bit.\n", ch );
-              break;
-          }
+          proc_knob(ch);
         }
         return TRUE;
       }
     }
+  }
+  if( cmd == CMD_SUICIDE )
+  {
+    send_to_char( "You slit your wrists, bleed some, then realize your wounds have healed.\n", ch );
+    make_bloodstain(ch);
+    return TRUE;
   }
   return FALSE;
 }
@@ -1596,6 +1608,8 @@ int cage_room1(int room, P_char ch, int cmd, char *argument)
 // Really bad boy tried to escape!
 int cage_room2(int room, P_char ch, int cmd, char *argument)
 {
+  int knob;
+
   if( cmd == CMD_SET_PERIODIC )
   {
     return TRUE;
@@ -1604,6 +1618,21 @@ int cage_room2(int room, P_char ch, int cmd, char *argument)
   if( ch && cmd != CMD_PERIODIC && (number(1, 8) == 6) )
   {
     return TRUE;
+  }
+  if( cmd == CMD_SUICIDE )
+  {
+    send_to_char( "You cut vigorously at yourself.\n", ch );
+    make_bloodstain(ch);
+    return TRUE;
+  }
+  if( cmd == CMD_WIGGLE || cmd == CMD_TUG || cmd == CMD_TOUCH || cmd == CMD_TURN_IN )
+  {
+    if( (( sscanf(argument, "%d.knob", &knob) == 1 ) && ( knob > 0 ) && ( knob < 18 ))
+      || !strcmp(argument, "knob") )
+    {
+      proc_knob(ch);
+      return TRUE;
+    }
   }
   if( cmd != CMD_PERIODIC )
   {
