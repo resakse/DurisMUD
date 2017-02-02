@@ -433,8 +433,8 @@ int sql_level_cap( int racewar_side )
 }
 
 //#define CAP_DELAY(old_level) (time(NULL) + SECS_PER_REAL_DAY * (old_level / 10 - 1))
-// 1 Day for under lvl 50, 2 days over + random number of hours up to a day..
-#define CAP_DELAY(old_level) (time(NULL) + SECS_PER_REAL_DAY * (old_level / 50 + 1) + SECS_PER_REAL_HOUR * number(1,24))
+// 1 Day for under lvl 40, 2 days over + random number of hours up to a day..
+#define CAP_DELAY(old_level) (time(NULL) + SECS_PER_REAL_DAY * (old_level / 39 + 1) + SECS_PER_REAL_HOUR * number(1,24))
 
 // Checks the number of frags against the current highest and sets the new highest if applicable.
 // Adjusted the time inbetween notches from a static 1 day to 1 day for levels 26-29, 2 days for 30-39,
