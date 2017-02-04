@@ -275,7 +275,7 @@ void npc_steal(P_char ch, P_char vict)
   int      percent, roll, loc, gold, chance;
   bool     failed, caught;
 
-  if( !IS_ALIVE(ch) || !IS_ALIVE(vict) || IS_NPC(vict) )
+  if( !IS_ALIVE(ch) || !IS_ALIVE(vict) || IS_NPC(vict) || IS_PC_PET(ch) )
   {
     return;
   }
