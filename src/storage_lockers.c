@@ -351,6 +351,8 @@ bool StorageLocker::MakeChests(P_char ch, char *args)
         p = AddLockerChest(new EqSlotChest(ITEM_WEAR_TAIL, chestKeyword, chestDesc));
       IF_ISLOCKERTYPE("horse", "worn on a horses body")
         p = AddLockerChest(new EqSlotChest(ITEM_HORSE_BODY, chestKeyword, chestDesc));
+      IF_ISLOCKERTYPE("spider", "worn on a spider body")
+        p = AddLockerChest(new EqSlotChest(ITEM_SPIDER_BODY, chestKeyword, chestDesc));
       IF_ISLOCKERTYPE("back", "worn on back")
         p = AddLockerChest(new EqSlotChest(ITEM_WEAR_BACK, chestKeyword, chestDesc));
       IF_ISLOCKERTYPE("badge", "worn as a badge")
