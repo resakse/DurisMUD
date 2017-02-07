@@ -7405,13 +7405,27 @@ bool hit(P_char ch, P_char victim, P_obj weapon)
 
   if( weapon )
   {
-    if( IS_PC(ch) || IS_PC_PET(ch) )
+    if( IS_SET(weapon->extra_flags, ITEM_TWOHANDS) )
     {
-      dam = dam_factor[DF_TWOHANDED_MODIFIER] * dice(weapon->value[1], weapon->value[2]);
+      if( IS_PC(ch) || IS_PC_PET(ch) )
+      {
+        dam = dam_factor[DF_TWOHANDED_MODIFIER] * dice(weapon->value[1], weapon->value[2]);
+      }
+      else
+      {
+        dam += dam_factor[DF_TWOHANDED_MODIFIER] * dice(weapon->value[1], weapon->value[2]);
+      }
     }
     else
     {
-      dam += dam_factor[DF_TWOHANDED_MODIFIER] * dice(weapon->value[1], weapon->value[2]);
+      if( IS_PC(ch) || IS_PC_PET(ch) )
+      {
+        dam = dice(weapon->value[1], weapon->value[2]);
+      }
+      else
+      {
+        dam += dice(weapon->value[1], weapon->value[2]);
+      }
     }
 
     dam *= dam_factor[DF_WEAPON_DICE];
