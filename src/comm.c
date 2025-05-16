@@ -625,7 +625,7 @@ void game_loop(int s)
         SEND_TO_Q(buf, point);
         if (bannedsite(point->host, 0) || bannedsite(host_ans_buf.addr, 0))
         {
-          write_to_descriptor(point->descriptor,
+          write_to_descriptor(point,
                               "Your site has been banned from being able to connect to Duris.\r\n"
                               "You were banned because someone at your site has flagrantly violated\r\n"
                               "the rules to a point where banning your site was necessary.  If you\r\n"
@@ -731,7 +731,7 @@ void game_loop(int s)
         case CON_GET_TERM:
           if (point->wait > 240)
           {
-            write_to_descriptor(point->descriptor, "Idle Timeout\n");
+            write_to_descriptor(point, "Idle Timeout\n");
             close_socket(point);
             continue;
           }
@@ -757,7 +757,7 @@ void game_loop(int s)
         case CON_REROLL:
           if (point->wait > 2400)
           {
-            write_to_descriptor(point->descriptor, "Idle Timeout\n");
+            write_to_descriptor(point, "Idle Timeout\n");
             close_socket(point);
             continue;
           }
@@ -769,7 +769,7 @@ void game_loop(int s)
         default:
           if (point->wait > 3600)
           {
-            write_to_descriptor(point->descriptor, "Idle Timeout\n");
+            write_to_descriptor(point, "Idle Timeout\n");
             close_socket(point);
             continue;
           }
@@ -1028,11 +1028,11 @@ void game_loop(int s)
         }
         if( shutdown_message )
         {
-          write_to_descriptor(point->descriptor, shutdown_message);
+          write_to_descriptor(point, shutdown_message);
         }
         if( !_pwipe )
         {
-          write_to_descriptor(point->descriptor, "\r\nSaving...\r\n");
+          write_to_descriptor(point, "\r\nSaving...\r\n");
           do_save_silent(point->character, 3);
         }
         // If it's not an immortal.
@@ -1631,7 +1631,8 @@ int new_descriptor(int s)
 
   if (used_descs >= avail_descs)
   {
-    write_to_descriptor(desc, "Sorry, the game is full...\r\n");
+    // shouldn't write anything before setup
+    // write(desc, "Sorry, the game is full...\r\n");
     used_descs--;
     shutdown(desc, 2);
     close(desc);
@@ -1669,6 +1670,7 @@ int new_descriptor(int s)
             ((unsigned char *) &(sock.sin_addr))[2],
             ((unsigned char *) &(sock.sin_addr))[3]);
 
+#if 0
     if (strlen(Gbuf1) < 8)
     {
       /*
@@ -1676,7 +1678,8 @@ int new_descriptor(int s)
        */
       if (bounce_null_sites)
       {
-        write_to_descriptor(desc, "Your site name is unparseable!\r\n");
+        // WTF?  This is a set of valid addresses!
+        write(desc, "Your site name is unparseable!\r\n");
         logit(LOG_COMM, "Null site name bounced.");
         shutdown(desc, 2);
         used_descs--;
@@ -1696,6 +1699,7 @@ int new_descriptor(int s)
         flag = TRUE;
       }
     }
+#endif
     /*
      * things got ugly, 20k+ sites, so, split it into 2 files, a
      * sorted historical one and an unsorted 'recent' one.  Rather
@@ -1800,8 +1804,8 @@ int new_descriptor(int s)
 
     snprintf(Gbuf1, MAX_STRING_LENGTH, "%s", buf.addr);
   }
-  if (!found)
-    write_to_descriptor(desc, "Looking up your hostname...\r\n");
+//  if (!found)
+//    write_to_descriptor(desc, "Looking up your hostname...\r\n");
   /*
    * init desc data
    */
@@ -1851,7 +1855,7 @@ int new_descriptor(int s)
 
   if (bannedsite(newd->host, 0))
   {
-    write_to_descriptor(newd->descriptor,
+    write_to_descriptor(newd,
                         "Your site has been banned from being able to connect to Duris.\r\n"
                         "You were banned because someone at your site has flagrantly violated\r\n"
                         "the rules to a point where banning your site was necessary.  If you\r\n"
@@ -1912,7 +1916,7 @@ int new_descriptor(int s)
 
 
 
-  advertise_mccp(desc);
+  advertise_mccp(newd);
 
   return (0);
 }
@@ -2252,7 +2256,7 @@ int process_output(P_desc t)
     || (t->prompt_mode != PLR_FLAGGED(realChar, PLR_OLDSMARTP)))) )
   {
     if( !t->snoop.snooping || !t->snoop.snooping->desc || !t->snoop.snooping->desc->prompt_mode)
-    if( write_to_descriptor(t->descriptor, "\r\n") < 0 )
+    if( write_to_descriptor(t, "\r\n") < 0 )
     {
       return (-1);
     }
@@ -2421,7 +2425,7 @@ int process_output(P_desc t)
     buffer[j] = '\0';
 
 
-    if (write_to_descriptor(t->descriptor, buffer) < 0)
+    if (write_to_descriptor(t, buffer) < 0)
       return (-1);
   }
 
@@ -2429,7 +2433,7 @@ int process_output(P_desc t)
       (IS_PC(t->character) || IS_MORPH(t->character)) &&
       !IS_SET(GET_PLYR(t->character)->specials.act, PLR_COMPACT))
   {
-    if (write_to_descriptor(t->descriptor, "\r\n") < 0)
+    if (write_to_descriptor(t, "\r\n") < 0)
     {
       return (-1);
     }
@@ -2573,7 +2577,7 @@ int process_input(P_desc t)
         k = MAX_INPUT_LENGTH - 1;
         *(tmp + k) = 0;
         snprintf(buffer, MAX_STRING_LENGTH, "Line too long. Truncated to:\r\n%s\r\n", tmp);
-        if (write_to_descriptor(t->descriptor, buffer) < 0)
+        if (write_to_descriptor(t, buffer) < 0)
           return (-1);
 
         /* skip the rest of the line */
