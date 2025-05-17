@@ -33,8 +33,8 @@ using namespace std;
 
 extern char GS_buf1[MAX_STRING_LENGTH];
 
-int new_descriptor(int s);
-int new_connection(int s);
+int new_descriptor(int s, bool ssl);
+int new_connection(int s, bool ssl);
 
 /* affects.c */
 void event_short_affect(P_char, P_char , P_obj , void *);
@@ -2390,9 +2390,9 @@ void signal_setup(void);
 struct timeval timediff(struct timeval *, struct timeval *);
 void AddDeadChar(P_char);
 void AddDeadObj(P_obj);
-void game_loop(int);
+void game_loop(int, int);
 void game_up_message(int);
-void run_the_game(int);
+void run_the_game(int, int);
 
 /* sparser.c */
 
@@ -2853,7 +2853,14 @@ void spell_single_doom_aoe(int, P_char, char *, int, P_char, P_obj);
 void spell_curse_of_yzar(int, P_char, char *, int, P_char, P_obj);
 void spell_rest(int, P_char, char *, int, P_char, P_obj);
 
+/* ssl.c */
+gnutls_session_t ssl_new(int);
+int ssl_negotiate(gnutls_session_t);
+void ssl_close(gnutls_session_t);
+
+/* sspells.c */
 void cast_restore_item(int, P_char, char *, int, P_char, P_obj);
+
 /* sillusionist.c */
 
 int is_illusion_char(P_char ch);

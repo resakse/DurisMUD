@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <gnutls/gnutls.h>
 #include "structs.h"
 #include "prototypes.h"
 #include "telnet.h"
@@ -257,7 +258,18 @@ int raw_write_to_descriptor(P_desc d, const char *txt, const int total)
   if(d->character)
     d->character->only.pc->send_data = d->character->only.pc->send_data + total;
 
-  do
+  if (d->sslses)
+  {
+    int ret = gnutls_record_send(d->sslses, txt, total);
+    while (ret==GNUTLS_E_AGAIN || ret==GNUTLS_E_INTERRUPTED)
+      ret = gnutls_record_send(d->sslses, NULL, 0);
+    if (ret)
+    {
+      logit(LOG_COMM, "Write to SSL socket error: %s", gnutls_strerror(ret));
+      return -1;
+    }
+  }
+  else do
   {
     thisround = write(d->descriptor, txt + sofar, (unsigned) (total - sofar));
     if (thisround < 0)

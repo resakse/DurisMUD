@@ -20,6 +20,7 @@
 #include <zlib.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <gnutls/gnutls.h>
 
 #include "helpfile.h"
 #include "comm.h"
@@ -89,6 +90,7 @@ bool newHardcoreBoard(P_char ch, char *arg, int cmd);
 void format_to_snoopers( char *from_string, char *to_string );
 extern void update_breath_weapon_properties();
 extern void update_regen_properties();
+static void greet(P_desc newd);
 
 /* local globals */
 
@@ -172,12 +174,13 @@ the DurisMUD system operators\r\n\r\n";
 
 int main(int argc, char **argv)
 {
-  int      port;
+  int      port, sslport;
   int      pos = 1;
   const char *dir;
 
   port = DFLT_PORT;
   dir = DFLT_DIR;
+  sslport = SSL_PORT;
 
   init_genrand(time(NULL));
 
@@ -247,6 +250,8 @@ int main(int argc, char **argv)
       printf("Illegal port #\n");
       raise(SIGSEGV);
     }
+    else
+      sslport = port + 1;
 //Global variable so can check if mainmud or not!
   RUNNING_PORT = port;
 
@@ -292,7 +297,7 @@ int main(int argc, char **argv)
 
   init_cmdlog();                /* init cmd.debug file - DCL */
 
-  run_the_game(port);
+  run_the_game(port, sslport);
 
   return (0);
 }
@@ -335,9 +340,8 @@ void game_up_message(int port)
 
 /* Init sockets, run game, and cleanup sockets */
 
-void run_the_game(int port)
+void run_the_game(int port, int sslport)
 {
-  int      s;
   long     time_before = 0;
   long     time_after = 0;
   char     buf[MAX_STRING_LENGTH];
@@ -348,9 +352,6 @@ void run_the_game(int port)
 
   logit(LOG_STATUS, "Signal trapping.");
   signal_setup();
-
-  logit(LOG_STATUS, "Opening mother connection.");
-  s = init_socket(port);
 
   SetSpellCircles();            /* spells circlewise done with pure math */
 
@@ -440,9 +441,7 @@ void run_the_game(int port)
 
   fprintf(stderr, "Entering game loop.\n\r");
   logit(LOG_STATUS, "Entering game loop.");
-  game_loop(s);
-
-  close_sockets(s);
+  game_loop(port, sslport);
 
   /* Don't need this anymore, as dropped artis are handled in real time on the DB.
   // Look for dropped artis and remove them from the next boot.
@@ -494,7 +493,7 @@ void run_the_game(int port)
 
 /* Accept new connects, relay commands, and call 'heartbeat-functs' */
 
-void game_loop(int s)
+void game_loop(int port, int sslport)
 {
   P_char   t_ch = NULL;
   P_desc   point, next_point;
@@ -507,8 +506,8 @@ void game_loop(int s)
   struct host_answer host_ans_buf;
   struct ident_answer ident_ans_buf;
   sigset_t mask, oldset;
-
-
+  int s, S;
+  
   sentbytes = 0;
   recivedbytes = 0;
   null_time.tv_sec = 0;
@@ -559,6 +558,11 @@ void game_loop(int s)
 #ifdef DO_PROFILE
   init_func_call_info();
 #endif
+  
+  logit(LOG_STATUS, "Opening mother connection.");
+  s = init_socket(port);
+  logit(LOG_STATUS, "Opening father connection.");
+  S = init_socket(sslport);
 
   /* Main loop */
   while (!shutdownflag)
@@ -599,6 +603,7 @@ void game_loop(int s)
     /* Continue with original code */
     PROFILE_START(connections);
     FD_SET(s, &input_set);
+    FD_SET(S, &input_set);
     for (point = descriptor_list; point; point = point->next)
     {
       /*
@@ -615,7 +620,6 @@ void game_loop(int s)
           !strncmp(host_ans_buf.addr, point->host /*+ 3 */ ,
                    strlen(host_ans_buf.addr)))
       {
-
         /* we have a match! */
         strncpy(point->host, host_ans_buf.name, 49);
         point->host[49] = 0;
@@ -676,7 +680,11 @@ void game_loop(int s)
 
     /* New connection? */
     if (FD_ISSET(s, &input_set))
-      if (new_descriptor(s) < 0)
+      if (new_descriptor(s, 0) < 0)
+        perror("New connection");
+    /* New secure connection? */
+    if (FD_ISSET(S, &input_set))
+      if (new_descriptor(S, 1) < 0)
         perror("New connection");
 
     /* kick out the freaky folks */
@@ -689,7 +697,7 @@ void game_loop(int s)
         close_socket(point);
       }
       else if (FD_ISSET(point->descriptor, &input_set))
-        if (process_input(point) < 0)
+        if (point->connected != CON_SSLNEGO && process_input(point) < 0)
         {
           close_socket(point);
         }
@@ -707,6 +715,20 @@ void game_loop(int s)
     {
       next_to_process = point->next;
       t_ch = point->character;
+
+      if (point->connected == CON_SSLNEGO)
+      {
+        switch (ssl_negotiate(point->sslses))
+        {
+        case 0:
+          greet(point);
+          break;
+        default:
+          close_socket(point);
+        case 1:
+          continue;
+        }
+      }
 
       /* update max_users_playing for "who" information */
       if ((point->connected) == CON_PLAYING)
@@ -1411,6 +1433,8 @@ void close_socket(struct descriptor_data *d)
   time_t   ct;
 
   compress_end(d, TRUE);        /* does flushing out all output break anything ? */
+  if (d->sslses)
+    ssl_close(d->sslses);
   if (d->descriptor)
     close(d->descriptor);
   flush_queues(d);
@@ -1615,7 +1639,7 @@ void nonblock(int s)
         * old/new socket code. 9/18/95  JAB
         */
 
-int new_descriptor(int s)
+int new_descriptor(int s, bool ssl)
 {
   P_desc   newd;
   bool     flag = FALSE, found = FALSE, looking_up = FALSE;
@@ -1623,9 +1647,13 @@ int new_descriptor(int s)
   int      desc, size;
   struct sockaddr_in sock;
   FILE    *f;
+  gnutls_session_t sslses = 0;
 
   if ((desc = new_connection(s)) < 0)
     return (-1);
+
+  if (ssl && !(sslses = ssl_new(desc)))
+    return 0; // can legitimately fail if client sends garbage
 
   used_descs++;
 
@@ -1843,16 +1871,21 @@ int new_descriptor(int s)
   newd->olc = NULL;
   newd->out_compress = MCCP_NONE;
   newd->z_str = NULL;
+  newd->sslses = sslses;
   *newd->client_str = '\0';
+  newd->term_type = TERM_ANSI;
+  descriptor_list = newd;
 
-/*
-  MakeIdentReq(ipc_id, desc, time((time_t *) (newd->login + 4)));
-*/
-  /*
-   * prepend to list
-   */
+  if (ssl && ssl_negotiate(sslses)) // do first round immediately
+    STATE(newd) = CON_SSLNEGO;
+  else
+    greet(newd);
 
+  return 0;
+}
 
+static void greet(P_desc newd)
+{
   if (bannedsite(newd->host, 0))
   {
     write_to_descriptor(newd,
@@ -1862,63 +1895,14 @@ int new_descriptor(int s)
                         "feel this is in error, please e-mail multiplay@durismud.com\r\n");
     banlog(56, "Reject Connect from %s, banned site.", newd->host);
     logit(LOG_STATUS, "Rejected Connect from %s, banned site.", newd->host);
-    STATE(newd) = CON_GET_TERM;
-
-
-    if (newd->descriptor)
-      close(newd->descriptor);
-    flush_queues(newd);
-    --used_descs;
-    if (newd->descriptor)
-      shutdown(newd->descriptor, 2);
-
-    if (newd->showstr_head)
-    {
-      FREE(newd->showstr_head);
-    }
-#ifdef I_REALLY_WANT_TO_CRASH_THE_GAME
-    if (newd->showstr_point)
-    {
-#   ifdef MEM_DEBUG
-      mem_use[MEM_STRINGS] -= strlen(newd->showstr_point);
-#   endif
-      FREE(newd->showstr_point);
-    }
-
-    if (newd->showstr_count)
-#   ifdef MEM_DEBUG
-      mem_use[MEM_STRINGS] -= strlen(newd->showstr_vector);
-#   endif
-    FREE(newd->showstr_vector);
-
-    if (newd->storage)
-      FREE(newd->storage);
-
-#endif /* I really don't wanna crash it  */
-    if (newd)
-    {
-#if 0
-#   ifdef MEM_DEBUG
-      mem_use[MEM_DESC] -= sizeof(struct descriptor_data);
-#   endif
-      FREE((char *) newd);
-#endif
-      mm_release(dead_desc_pool, newd);
-    }
-//  close_socket(newd);
-    return (0);
+    STATE(newd) = CON_EXIT;
+    //flush_queues(newd);
+    return;
   }
-  descriptor_list = newd;
 
-  newd->term_type = TERM_ANSI;
   select_terminal(newd, "");
-  // Prompt will be sent by nanny.c after select_terminal completes
-
-
 
   advertise_mccp(newd);
-
-  return (0);
 }
 
 
@@ -2461,7 +2445,27 @@ int process_input(P_desc t)
   /*
    * Read in some stuff
    */
-  do
+  if (t->sslses)
+  {
+    thisround = gnutls_record_recv(t->sslses, t->buf + begin, 
+      (MAX_QUEUE_LENGTH - begin));
+    if (!thisround)
+    {
+      logit(LOG_COMM, "EOF encountered on socket read for %s.",
+        (t->character) ? GET_NAME(t->character) : "NOCHAR");
+      return (-1);
+    }
+    else if (thisround > 0)
+      sofar += thisround;
+    else if (thisround != GNUTLS_E_AGAIN && thisround != GNUTLS_E_INTERRUPTED)
+    {
+      logit(LOG_COMM, "process_input() CON_%d %s Read: %d Error: %s",
+            t->connected, (t->character) ? GET_NAME(t->character) : "",
+            thisround, gnutls_strerror(thisround));
+      return (-1);
+    }
+  }
+  else do
   {
     if ((thisround = read(t->descriptor, (t->buf + begin + sofar),
                           (unsigned) (MAX_QUEUE_LENGTH - begin - sofar -
