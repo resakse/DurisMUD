@@ -219,6 +219,7 @@ OBJS =  $(SHIP_OBJS) \
 				 trap.o \
 				 transport.o \
 				 trophy.o \
+				 unicode.o \
 				 utility.o \
 				 weather.o \
 				 ferry.o \

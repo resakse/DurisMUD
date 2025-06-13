@@ -7,6 +7,7 @@
 #include "prototypes.h"
 #include "telnet.h"
 #include "mccp.h"
+#include "unicode.h"
 #include "utils.h"
 
 /* external variables used by this module */
@@ -202,6 +203,15 @@ int write_to_descriptor(P_desc player, const char *txt)
   conv_buf[j] = '\0';
   txt = conv_buf;
   total = j;
+
+  char down[j + 1];
+  if (!player->sslses) // tying charset to port choice, because zmud
+  {
+    char *dend = down;
+    downgrade_string(dend, txt, u_cp437);
+    txt = down;
+    total = strlen(txt);
+  }
 
   if (!player->out_compress)
   {
