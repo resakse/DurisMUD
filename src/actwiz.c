@@ -510,7 +510,7 @@ void do_read_player(P_char ch, char *arg, int cmd)
   if((tmp = restorePasswdOnly(vict, arg)) < 0)
   {
     send_to_char
-      ("&=RlDange�Will Robinson!0Bad pfile!!&n (Or maybe you just fucked up typing the name.)\n",
+      ("&=RlDanger Will Robinson! Bad pfile!!&n (Or maybe you just fucked up typing the name.)\n",
        ch);
     return;
   }

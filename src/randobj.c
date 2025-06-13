@@ -186,24 +186,6 @@ void do_randobj(P_char ch, char *strn, int val)
     return;
   }
 
-
-/* Dunno where this came from...
-  if (!str_cmp("test", strn))
-  {
-    if (isascii("הוצ"))
-		  wizlog(56, "1 ja");
-	  else
-		  wizlog(56, "1 nej");
-
-    if ( isprint("צהו"))
-      wizlog(56, "2 ja");
-    else
-      wizlog(56, "2 nej");
-
-    wizlog(56, "jag הter glass med trה sked צהו.");
-  }
-*/
-
   if( !str_cmp("remove", strn) )
   {
 
