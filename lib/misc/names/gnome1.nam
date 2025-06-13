@@ -1,9 +1,9 @@
 /*****************************************************/
 /* Deverry1.nam                                      */
-/* Namnfil fîr namn frÜn Deverry (mÑn)               */
+/* Namnfil f√∂r namn fr√•n Deverry (m√§n)               */
 /* av Johan Danforth                                 */
-/* rader som bîrjar med / Ñr kommentar-rader         */
-/* varje section bîrjar med [xxx] enlig filen nedan  */
+/* rader som b√∂rjar med / √§r kommentar-rader         */
+/* varje section b√∂rjar med [xxx] enlig filen nedan  */
 /*****************************************************/
 [startstav]
 /* startstavelser skall sluta med en konsonant som b,k,t etc... */
@@ -26,7 +26,7 @@ T
 V
 Yr
 [mittstav]
-/* mittstavelser skall bîrja och sluta med en vokal som a,o,u,i,e,y etc... */
+/* mittstavelser skall b√∂rja och sluta med en vokal som a,o,u,i,e,y etc... */
 a
 ae
 e
@@ -36,7 +36,7 @@ o
 u
 y
 [slutstav]
-/* slutstavelser skall bîrja med en konsonant som b,k,t etc... */
+/* slutstavelser skall b√∂rja med en konsonant som b,k,t etc... */
 bryn
 c
 cyn
@@ -59,4 +59,4 @@ rraent
 ran
 ryn
 [stop]
-/* hÑr Ñr filen slut */
+/* h√§r √§r filen slut */

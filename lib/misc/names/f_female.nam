@@ -1,9 +1,9 @@
 /*****************************************************/
 /* ALBION1.NAM                                       */
-/* Namnfil fîr namn med Albion-klang                 */
+/* Namnfil f√∂r namn med Albion-klang                 */
 /* Johan Danforth                                    */
-/* rader som bîrjar med / Ñr kommentar-rader         */
-/* varje section bîrjar med [xxx] enlig filen nedan  */
+/* rader som b√∂rjar med / √§r kommentar-rader         */
+/* varje section b√∂rjar med [xxx] enlig filen nedan  */
 /*****************************************************/
 [startstav]
 A
@@ -181,4 +181,4 @@ weth
 wien
 wiel
 [stop]
-/* hÑr Ñr filen slut */
+/* h√§r √§r filen slut */
