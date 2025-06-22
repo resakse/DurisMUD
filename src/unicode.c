@@ -71,6 +71,58 @@ const char16_t cp437_u[257] = u" ☺☻♥♦♣♠•◘○◙♂♀♪♫☼�
 // Control characters map to controls or ' '.
 unimap u_cp437(u"       \a\b\t\n  \r             \e    " CP437_PRINTABLE);
 
+unimap ascii("  " // U+00A0 = &nbsp;
+"!¡ c¢ L£ $¤ Y¥ |¦ $§ \"¨ <« !¬ -­ -¯ 2² 3³ '´ uµ $¶ .· ,¸ 1¹ >» ?¿ AÀ AÁ AÂ AÃ"
+"AÄ AÅ AÆ CÇ EÈ EÉ EÊ EË IÌ IÍ IÎ IÏ DÐ NÑ OÒ OÓ OÔ OÕ OÖ *× OØ UÙ UÚ UÛ UÜ YÝ"
+"TÞ sß aà aá aâ aã aä aå aæ cç eè eé eê eë iì ií iî iï dð nñ oò oó oô oõ oö /÷"
+"oø uù uú uû uü yý tþ yÿ AĀ"
+"aā AĂ aă AĄ aą CĆ cć CĈ cĉ CĊ cċ CČ cč DĎ dď DĐ dđ EĒ eē EĔ eĕ EĖ eė EĘ eę EĚ"
+"eě GĜ gĝ GĞ gğ GĠ gġ GĢ gģ HĤ hĥ HĦ hħ IĨ iĩ IĪ iī IĬ iĭ IĮ iį Iİ iı JĴ jĵ KĶ"
+"kķ kĸ KĹ lĺ LĻ lļ LĽ lľ LĿ lŀ LŁ lł NŃ nń NŅ nņ NŇ nň nŉ NŊ nŋ OŌ oō OŎ oŏ OŐ"
+"oő OŒ oœ RŔ rŕ RŖ rŗ RŘ rř SŚ sś SŜ sŝ SŞ sş SŠ sš TŢ tţ TŤ tť TŦ tŧ UŨ uũ UŪ"
+"uū UŬ uŭ UŮ uů UŰ uű UŲ uų WŴ wŵ YŶ yŷ YŸ ZŹ zź ZŻ zż ZŽ zž sſ bƀ BƁ BƂ bƃ 6Ƅ"
+"6ƅ OƆ CƇ Cƈ DƉ DƊ DƋ dƌ dƍ EƎ EƏ EƐ FƑ fƒ GƓ GƔ hƕ iƖ IƗ KƘ kƙ lƚ lƛ MƜ NƝ nƞ"
+"OƟ OƠ oơ OƢ oƣ PƤ pƥ kƦ SƧ sƨ EƩ eƪ tƫ TƬ tƭ TƮ UƯ uư UƱ VƲ YƳ yƴ ZƵ zƶ EƷ eƸ"
+"eƹ eƺ 2ƻ 5Ƽ 5ƽ sƾ pƿ AǍ aǎ IǏ iǐ OǑ oǒ UǓ uǔ UǕ uǖ UǗ uǘ UǙ uǚ UǛ uǜ eǝ AǞ aǟ"
+"AǠ aǡ AǢ aǣ GǤ gǥ GǦ gǧ KǨ kǩ OǪ oǫ OǬ oǭ EǮ eǯ jǰ GǴ gǵ HǶ PǷ NǸ nǹ AǺ aǻ AǼ"
+"aǽ OǾ oǿ AȀ"
+"aȁ AȂ aȃ EȄ eȅ EȆ eȇ IȈ iȉ IȊ iȋ OȌ oȍ OȎ oȏ RȐ rȑ RȒ rȓ UȔ uȕ UȖ uȗ SȘ sș TȚ"
+"tț 3Ȝ 3ȝ HȞ hȟ NȠ dȡ ZȤ zȥ AȦ aȧ EȨ eȩ OȪ oȫ OȬ oȭ OȮ oȯ OȰ oȱ YȲ yȳ lȴ nȵ tȶ"
+"jȷ AȺ CȻ cȼ LȽ TȾ sȿ zɀ aɐ aɑ aɒ bɓ oɔ cɕ dɖ dɗ eɘ eə eɚ eɛ eɜ eɝ eɞ jɟ gɠ gɡ"
+"Gɢ gɣ hɥ hɦ hɧ iɨ iɩ Iɪ lɫ lɬ lɭ mɯ mɰ mɱ nɲ nɳ Nɴ oɵ rɹ rɺ rɻ rɼ rɽ rɾ rɿ Rʀ"
+"Rʁ sʂ sʃ sʄ sʅ sʆ tʇ tʈ uʉ uʊ vʋ vʌ wʍ yʎ Yʏ zʐ zʑ 3ʒ 3ʓ ?ʔ Cʗ Bʙ eʚ gʛ Hʜ jʝ"
+"kʞ Lʟ qʠ ?ʡ hʮ hʯ hʰ hʱ jʲ rʳ rʴ rʵ Rʶ wʷ yʸ 'ʹ \"ʺ `ʻ 'ʼ `ʽ 'ʾ `ʿ <˂ >˃ ^˄ v˅"
+"^ˆ vˇ 'ˊ `ˋ ,ˏ +˖ -˗ ~˜ \"˝ `˞ '˟ \"ˮ -‐"
+"-‑ -‒ -– -— -― |‖ _‗ `‘ '’ ,‚ `‛ \"“ \"” \"„ \"‟ +† $‡ o• +‣ .․ :‥ .… -‧ '′ \"″ `‵"
+"\"‶ ^‸ <‹ >› ?‽ _‿ *⁂ -⁃ /⁄ [⁅ ]⁆ <⁌ >⁍ *⁎ ;⁏ *⁕ F₣ L₤ W₩ e€ p₱ hℎ"
+"KK AÅ e℮ <← ^↑ >→ v↓ -−"
+"/∕ \\∖ *∗ |∣ ~∼ ~∽ ~≈ ^⌃"
+"v⌄ [⌊ ]⌋ -─"
+"-━ |│ |┃ -┄ -┅ |┆ |┇ -┈ -┉ |┊ |┋ +┌ +┍ +┎ +┏ +┐ +┑ +┒ +┓ +└ +┕ +┖ +┗ +┘ +┙ +┚"
+"+┛ +├ +┝ +┞ +┟ +┠ +┡ +┢ +┣ +┤ +┥ +┦ +┧ +┨ +┩ +┪ +┫ +┬ +┭ +┮ +┯ +┰ +┱ +┲ +┳ +┴"
+"+┵ +┶ +┷ +┸ +┹ +┺ +┻ +┼ +┽ +┾ +┿ +╀ +╁ +╂ +╃ +╄ +╅ +╆ +╇ +╈ +╉ +╊ +╋ -╌ -╍ |╎"
+"|╏ =═ |║ +╒ +╓ +╔ +╕ +╖ +╗ +╘ +╙ +╚ +╛ +╜ +╝ +╞ +╟ +╠ +╡ +╢ +╣ +╤ +╥ +╦ +╧ +╨"
+"+╩ +╪ +╫ +╬ .╭ .╮ '╯ `╰ /╱ \\╲ X╳ -╴ '╵ -╶ .╷ -╸ '╹ -╺ .╻ -╼ |╽ -╾ |╿ #█ .░ X▒"
+"#▓ *▪ *▫ ^▲ ^△ ^▴ ^▵ >▶ >▷ >▸ >▹ >► >▻ V▼ V▽ v▾ v▿ <◀ <◁ <◂ <◃ <◄ <◅ o○ O◯ "
+);
+
+unimap::unimap(const char *in)
+{
+  resize(1);
+
+  while (*in)
+  {
+    unsigned char i = *in++;
+    int o = get_utf8(in);
+    if (!o)
+      break;
+    set(o, i);
+
+    while (*in == ' ') // spaces for readability
+      in++;
+  }
+}
+
 int get_utf8(const char *&str)
 {
   if (!*str)
@@ -163,8 +215,12 @@ void downgrade_string(char *out, const char *in, const unimap &conv)
 
     int c = get_utf8(in);
     int r = conv[c];
-    if (!r) // TODO: downgrade by dropping accents, etc
-      r = '?';
+    if (!r)
+    {
+      r = ascii[c]; // downgrade by dropping accents, etc
+      if (!r)
+        r = '?';
+    }
     *out++ = r;
   }
   *out = 0;

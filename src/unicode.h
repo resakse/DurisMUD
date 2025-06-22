@@ -20,6 +20,7 @@ class unimap : private std::vector<um128>
 public:
   unimap();
   unimap(const char16_t[256]);
+  unimap(const char*);
   ushort operator[](int c) const;
   void set(int c, ushort v);
 };
