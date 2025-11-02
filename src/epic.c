@@ -208,7 +208,7 @@ void epic_choose_new_epic_task(P_char ch)
   }
   else
   {
-    sprintf(buffer, "The Gods of &+rDuris&n have sent you to seek out the &+Bmagical &+Lstone&n of %s!\n", zone_table[real_zone0(zone_number)].name);
+    snprintf(buffer, 512, "The Gods of &+rDuris&n have sent you to seek out the &+Bmagical &+Lstone&n of %s!\n", zone_table[real_zone0(zone_number)].name);
     send_to_char(buffer, ch);
     af.modifier = zone_number;
   }
@@ -398,7 +398,7 @@ void gain_epic(P_char ch, int type, int data, int amount)
     GET_ASSOC(ch)->add_points_from_epics(ch, amount, type);
 
 //  int old = ch->only.pc->epics; - Disabled epic skill points.
-  sprintf(buffer, "You have gained %d epic point%s.\n", amount, amount == 1 ? "" : "s");
+  snprintf(buffer, 256, "You have gained %d epic point%s.\n", amount, amount == 1 ? "" : "s");
   send_to_char(buffer, ch);
   ch->only.pc->epics += amount;
   log_epic_gain(GET_PID(ch), type, data, amount);
@@ -740,7 +740,7 @@ __attribute__ ((deprecated))
 void epic_free_level(P_char ch)
 {
   char buf[256];
-  sprintf(buf, "epic.forLevel.%d", GET_LEVEL(ch)+1);
+  snprintf(buf, 256, "epic.forLevel.%d", GET_LEVEL(ch)+1);
 
   int epics_for_level = get_property(buf, 1 << ((GET_LEVEL(ch) + 1) - 43));
 
@@ -788,7 +788,7 @@ void epic_stone_level_char(P_obj obj, P_char ch)
     return;
   }
 
-  sprintf(buf, "epic.forLevel.%d", GET_LEVEL(ch)+1);
+  snprintf(buf, 256, "epic.forLevel.%d", GET_LEVEL(ch)+1);
   // If the property can not be found, set epics_for_level to -1.
   epics_for_level = get_property(buf, -1);
 
@@ -873,7 +873,7 @@ void epic_stone_one_touch(P_obj obj, P_char ch, int epic_value)
     gain_epic(ch, EPIC_ZONE, obj->value[2], epic_value);
   }
 
-  sprintf( buf, "epic.forLevel.%d", GET_LEVEL(ch) + 1 );
+  snprintf(buf, 256, "epic.forLevel.%d", GET_LEVEL(ch) + 1 );
   // Characters can now level up to 55 by epics and exp alone - 11/13/12 Drannak
   // Characters can now level up to 56 with double epics/exp. If they get BIT_32*2 epics they can be a imm... not.
   // Characters with exp >= exp needed for lvl need epics to level.
@@ -1130,65 +1130,65 @@ int stat_shops(int room, P_char ch, int cmd, char *arg)
 
      cost = ch->base_stats.Str * ch->base_stats.Str * ch->base_stats.Str * cost_mod;
      if(ch->base_stats.Str < MAX_SHOP_BUY)
-       sprintf(buf, "1. A &+Gmagical&n strength potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "1. A &+Gmagical&n strength potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "1. A &+Gmagical&n strength potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "1. A &+Gmagical&n strength potion is not available for you.\r\n");
      send_to_char(buf, ch); 
 
      cost = ch->base_stats.Agi * ch->base_stats.Agi * ch->base_stats.Agi * cost_mod;
      if(ch->base_stats.Agi < MAX_SHOP_BUY)
-       sprintf(buf, "2. A &+Gmagical&n agility potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "2. A &+Gmagical&n agility potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "2. A &+Gmagical&n agility potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "2. A &+Gmagical&n agility potion is not available for you.\r\n");
      send_to_char(buf, ch);
 
      cost = ch->base_stats.Dex * ch->base_stats.Dex * ch->base_stats.Dex * cost_mod;
      if(ch->base_stats.Dex < MAX_SHOP_BUY)
-       sprintf(buf, "3. A &+Gmagical&n dexterity potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "3. A &+Gmagical&n dexterity potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "3. A &+Gmagical&n dexterity potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "3. A &+Gmagical&n dexterity potion is not available for you.\r\n");
      send_to_char(buf, ch);
 
      cost = ch->base_stats.Con * ch->base_stats.Con * ch->base_stats.Con * cost_mod;
      if(ch->base_stats.Con < MAX_SHOP_BUY)
-       sprintf(buf, "4. A &+Gmagical&n constitution potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "4. A &+Gmagical&n constitution potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "4. A &+Gmagical&n constitution potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "4. A &+Gmagical&n constitution potion is not available for you.\r\n");
      send_to_char(buf, ch); 
 
      cost = ch->base_stats.Luk * ch->base_stats.Luk * ch->base_stats.Luk * cost_mod;
      if(ch->base_stats.Luk < MAX_SHOP_BUY)
-       sprintf(buf, "5. A &+Gmagical&n luck potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "5. A &+Gmagical&n luck potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "5. A &+Gmagical&n luck stat potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "5. A &+Gmagical&n luck stat potion is not available for you.\r\n");
      send_to_char(buf, ch);
 
       cost = ch->base_stats.Pow   *ch->base_stats.Pow   *ch->base_stats.Pow  * cost_mod;
      if(ch->base_stats.Pow < MAX_SHOP_BUY)
-       sprintf(buf, "6. A &+Gmagical&n power potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "6. A &+Gmagical&n power potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "6. A &+Gmagical&n power stat potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "6. A &+Gmagical&n power stat potion is not available for you.\r\n");
      send_to_char(buf, ch);
 
      cost = ch->base_stats.Int * ch->base_stats.Int * ch->base_stats.Int * cost_mod;
      if(ch->base_stats.Int < MAX_SHOP_BUY)
-       sprintf(buf, "7. A &+Gmagical&n intelligence potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "7. A &+Gmagical&n intelligence potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "7. A &+Gmagical&n intelligence stat potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "7. A &+Gmagical&n intelligence stat potion is not available for you.\r\n");
      send_to_char(buf, ch);
 
      cost = ch->base_stats.Wis * ch->base_stats.Wis * ch->base_stats.Wis * cost_mod;
      if(ch->base_stats.Wis < MAX_SHOP_BUY)
-       sprintf(buf, "8. A &+Gmagical&n wisdom potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "8. A &+Gmagical&n wisdom potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "8. A &+Gmagical&n wisdom stat potion is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "8. A &+Gmagical&n wisdom stat potion is not available for you.\r\n");
      send_to_char(buf, ch);
 
      cost = ch->base_stats.Cha * ch->base_stats.Cha * ch->base_stats.Cha * cost_mod;
      if(ch->base_stats.Cha < MAX_SHOP_BUY)
-       sprintf(buf, "9. A &+Gmagical&n charisma potion for %s\r\n", coin_stringv(cost));
+       snprintf(buf, MAX_INPUT_LENGTH, "9. A &+Gmagical&n charisma potion for %s\r\n", coin_stringv(cost));
      else
-       sprintf(buf, "9. A &+Gmagical&n charisma stat potion  is not available for you.\r\n");
+       snprintf(buf, MAX_INPUT_LENGTH, "9. A &+Gmagical&n charisma stat potion  is not available for you.\r\n");
      send_to_char(buf, ch);
 
      return TRUE;
@@ -1594,7 +1594,7 @@ int epic_zone_data::displayed_alignment() const
 //    else
 //      freq_str = 3;
 //
-//    sprintf(buff, "  %s%s %s\r\n", done_str, epic_zones[i].name.c_str(), freq_strs[freq_str]);
+//    snprintf(buff, MAX_STRING_LENGTH, "  %s%s %s\r\n", done_str, epic_zones[i].name.c_str(), freq_strs[freq_str]);
 //    send_to_char(buff, ch);
 //  }
 //
@@ -1685,7 +1685,7 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
         coins += coins_cost;
       }      
       
-      sprintf(buff2, "&+W%s %d&n: &+W%d&n esp, %s\n", skills[skill_id].name, learned, points, coin_stringv(coins));
+      snprintf(buff2, MAX_STRING_LENGTH, "&+W%s %d&n: &+W%d&n esp, %s\n", skills[skill_id].name, learned, points, coin_stringv(coins));
       send_to_char(buff2, ch);
       
       point_refund += points;
@@ -1695,13 +1695,13 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
     }
   }
   
-  sprintf(buff2, "Total: &+W%d&n esp, %s&n refunded\r\n", point_refund, coin_stringv(coins_refund));
+  snprintf(buff2, MAX_STRING_LENGTH, "Total: &+W%d&n esp, %s&n refunded\r\n", point_refund, coin_stringv(coins_refund));
   send_to_char(buff2, ch);
   
   insert_money_pickup(GET_PID(t_ch), coins_refund);
   t_ch->only.pc->epic_skill_points += point_refund;
 
-  sprintf(buff2, "\r\n&+GYour epic skills have been reset: your skill points have been refunded, \r\n&+Gand %s&+G has been reimbursed and is waiting for you at the nearest auction house.\r\n\r\n", coin_stringv(coins_refund));
+  snprintf(buff2, MAX_STRING_LENGTH, "\r\n&+GYour epic skills have been reset: your skill points have been refunded, \r\n&+Gand %s&+G has been reimbursed and is waiting for you at the nearest auction house.\r\n\r\n", coin_stringv(coins_refund));
   
   if(!send_to_pid(buff2, GET_PID(t_ch)))
     send_to_pid_offline(buff2, GET_PID(t_ch));
@@ -1751,7 +1751,7 @@ void do_epic_zones(P_char ch, char *arg, int cmd)
 
     zone_align = BOUNDED(0, EPIC_ZONE_ALIGNMENT_MAX + epic_zones[i].displayed_alignment(), 10);
 
-    sprintf(buff, "  %c%s %s\r\n", done_char, pad_ansi(epic_zones[i].name.c_str(), 45).c_str(),
+    snprintf(buff, MAX_STRING_LENGTH, "  %c%s %s\r\n", done_char, pad_ansi(epic_zones[i].name.c_str(), 45).c_str(),
       alignment_strs[zone_align] );
 
     send_to_char(buff, ch);
@@ -1841,7 +1841,7 @@ void do_epic_trophy(P_char ch, char *arg, int cmd)
   {
     if(trophy[i].zone_number >= 0 && real_zone0(trophy[i].zone_number))
     {
-      sprintf(buff2, "[&+W%3d&n] %s\n", trophy[i].count, zone_table[real_zone0(trophy[i].zone_number)].name);
+      snprintf(buff2, MAX_STRING_LENGTH, "[&+W%3d&n] %s\n", trophy[i].count, zone_table[real_zone0(trophy[i].zone_number)].name);
       send_to_char(buff2, ch);
     }
 
@@ -2115,13 +2115,13 @@ void do_epic_reset_norefund(P_char ch, char *arg, int cmd)
     }
   }
 /*  
-  sprintf(buff2, "Total: &+W%d&n esp, %s&n refunded\r\n", point_refund, coin_stringv(coins_refund));
+  snprintf(buff2, MAX_STRING_LENGTH, "Total: &+W%d&n esp, %s&n refunded\r\n", point_refund, coin_stringv(coins_refund));
   send_to_char(buff2, ch);
   
   insert_money_pickup(GET_PID(t_ch), coins_refund);
   t_ch->only.pc->epic_skill_points += point_refund;
 
-  sprintf(buff2, "\r\n&+GYour epic skills have been reset: your skill points have been refunded, \r\n&+Gand %s&+G has been reimbursed and is waiting for you at the nearest auction house.\r\n\r\n", coin_stringv(coins_refund));
+  snprintf(buff2, MAX_STRING_LENGTH, "\r\n&+GYour epic skills have been reset: your skill points have been refunded, \r\n&+Gand %s&+G has been reimbursed and is waiting for you at the nearest auction house.\r\n\r\n", coin_stringv(coins_refund));
 */
   if(!send_to_pid(buff2, GET_PID(t_ch)))
     send_to_pid_offline(buff2, GET_PID(t_ch));
@@ -2226,7 +2226,7 @@ void do_epic_reset(P_char ch, char *arg, int cmd)
     }
   }
 /*  
-  sprintf(buff2, "Total: &+W%d&n esp, %s&n refunded\r\n", point_refund, coin_stringv(coins_refund));
+  snprintf(buff2, MAX_STRING_LENGTH, "Total: &+W%d&n esp, %s&n refunded\r\n", point_refund, coin_stringv(coins_refund));
   send_to_char(buff2, ch);
   
   insert_money_pickup(GET_PID(t_ch), coins_refund);

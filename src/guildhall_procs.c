@@ -294,7 +294,7 @@ int guildhall_window(P_obj obj, P_char ch, int cmd, char *arg)
         if( !real_room0(obj->value[0]) )
           return FALSE;
 	*/
-        //sprintf(buff, "You peer into %s&n and see...\r\n\r\n", obj->short_description);
+        //snprintf(buff, MAX_STRING_LENGTH, "You peer into %s&n and see...\r\n\r\n", obj->short_description);
 		send_to_char("You look out the window...\r\n", ch);
         //send_to_char(buff, ch);
         new_look(ch, 0, CMD_LOOKOUT, real_room0(obj->value[0]));    
@@ -305,7 +305,7 @@ int guildhall_window(P_obj obj, P_char ch, int cmd, char *arg)
       if( !real_room0(obj->value[0]) )
         return FALSE;
       
-      sprintf(buff, "You peer into %s&n and see...\r\n\r\n", obj->short_description);
+      snprintf(buff, MAX_STRING_LENGTH, "You peer into %s&n and see...\r\n\r\n", obj->short_description);
       send_to_char(buff, ch);
       new_look(ch, 0, CMD_LOOKOUT, real_room0(obj->value[0]));    
       return TRUE;
@@ -366,7 +366,7 @@ int guildhall_cargo_board(P_obj obj, P_char ch, int cmd, char *arg)
 
     if (isname(buff, obj->name))
     {
-      sprintf(buff, "You look at %s&n...\r\n", obj->short_description);
+      snprintf(buff, MAX_STRING_LENGTH, "You look at %s&n...\r\n", obj->short_description);
       send_to_char(buff, ch);
       show_cargo_prices(ch);
       return TRUE;

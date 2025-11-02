@@ -300,10 +300,10 @@ void update_racial_dam_factors()
   {
     for( type = 0; type < LAST_SPLDAM_TYPE; type++ )
     {
-      sprintf(buf, "damage.spellTypeMod.offensive.racial.%s.%s", race_names_table[race].no_spaces, spldam_types[type]);
+      snprintf(buf, 256, "damage.spellTypeMod.offensive.racial.%s.%s", race_names_table[race].no_spaces, spldam_types[type]);
       racial_spldam_offensive_factor[race][type] = get_property(buf, 1.00);
 
-      sprintf(buf, "damage.spellTypeMod.defensive.racial.%s.%s", race_names_table[race].no_spaces, spldam_types[type]);
+      snprintf(buf, 256, "damage.spellTypeMod.defensive.racial.%s.%s", race_names_table[race].no_spaces, spldam_types[type]);
       racial_spldam_defensive_factor[race][type] =  get_property(buf, 1.00);
     }
   }
@@ -539,7 +539,7 @@ int vamp(P_char ch, double fhits, double fcap)
 
   /* if(hits > 1)
      {
-  //sprintf(buf, "%s healed: %d\n", GET_NAME(ch), hits);
+  //snprintf(buf, 16, "%s healed: %d\n", GET_NAME(ch), hits);
   // only send buf if it actually filled
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
 #ifndef TEST_MUD
@@ -866,7 +866,7 @@ void AddFrags(P_char ch, P_char victim)
         else
           real_gain = gain;
 
-        sprintf(buffer, "You just gained %.02f frags!\r\n", real_gain/100.0);
+        snprintf(buffer, 1024, "You just gained %.02f frags!\r\n", real_gain/100.0);
         send_to_char(buffer, tch, LOG_PUBLIC);
 
         tch->only.pc->oldfrags = tch->only.pc->frags;
@@ -893,7 +893,7 @@ void AddFrags(P_char ch, P_char victim)
         if( GET_RACE(tch) == RACE_HALFLING || GET_CLASS(tch, CLASS_MERCENARY) )
         {
           char     tmp[1024];
-          sprintf(tmp, "You get %s in blood money.\r\n", coin_stringv(10000 * real_gain));
+          snprintf(tmp, 1024, "You get %s in blood money.\r\n", coin_stringv(10000 * real_gain));
           send_to_char(tmp, tch);
           ADD_MONEY(tch, 10000 * real_gain);
         }
@@ -1364,32 +1364,32 @@ P_obj make_corpse(P_char ch, int loss)
 
   if( IS_PC(ch) )
   {
-    sprintf(buf, "%s %s", GET_NAME(ch), "corpse _pcorpse_");
+    snprintf(buf, MAX_STRING_LENGTH, "%s %s", GET_NAME(ch), "corpse _pcorpse_");
   }
   else
   {
-    sprintf(buf, "%s %s", GET_NAME(ch), "corpse _npcorpse_");
+    snprintf(buf, MAX_STRING_LENGTH, "%s %s", GET_NAME(ch), "corpse _npcorpse_");
   }
 
   corpse->name = str_dup(buf);
 
   if (IS_PC(ch))
   {
-    sprintf(buf2, "%s %s", index("AEIOU", race_names_table[ch->player.race].normal[0]) == NULL ? "a" : "an",
+    snprintf(buf2, MAX_STRING_LENGTH, "%s %s", index("AEIOU", race_names_table[ch->player.race].normal[0]) == NULL ? "a" : "an",
       race_names_table[ch->player.race].normal);
   }
-  sprintf(buf, "The corpse of %s is lying here.", IS_PC(ch) ? buf2 : ch->player.short_descr);
+  snprintf(buf, MAX_STRING_LENGTH, "The corpse of %s is lying here.", IS_PC(ch) ? buf2 : ch->player.short_descr);
   DECAP(buf + 14);
 
   corpse->description = str_dup(buf);
 
-  sprintf(buf, "the corpse of %s", IS_NPC(ch) ? ch->player.short_descr : GET_NAME(ch));
+  snprintf(buf, MAX_STRING_LENGTH, "the corpse of %s", IS_NPC(ch) ? ch->player.short_descr : GET_NAME(ch));
   corpse->short_description = str_dup(buf);
 
   /*
    * for animate dead and resurrect
    */
-  sprintf(buf, "%s", IS_NPC(ch) ? ch->player.short_descr : GET_NAME(ch));
+  snprintf(buf, MAX_STRING_LENGTH, "%s", IS_NPC(ch) ? ch->player.short_descr : GET_NAME(ch));
   corpse->action_description = str_dup(buf);
 
   /*
@@ -1631,7 +1631,7 @@ void make_bloodstain(P_char ch)
   msgnum = number(0, 3);
   blood->value[0] = msgnum;
   blood->value[1] = BLOOD_FRESH;
-  sprintf(buf, "%s", long_desc[msgnum]);
+  snprintf(buf, MAX_STRING_LENGTH, "%s", long_desc[msgnum]);
   blood->description = str_dup(buf);
 
   // 15 minutes, changes to regular blood at 3 minutes and dry blood at 7 minutes.
@@ -1960,15 +1960,15 @@ void death_cry(P_char ch)
         switch(number(1, 3))
         {
           case 1:
-            sprintf(buf,
+            snprintf(buf, MAX_INPUT_LENGTH,
                 "&+rThe unmistakable sound of something dying reverberates from nearby.\r\n");
             break;
           case 2:
-            sprintf(buf,
+            snprintf(buf, MAX_INPUT_LENGTH,
                 "&+rYour spine tingles as a rattling death cry reaches your senses from nearby.\r\n");
             break;
           case 3:
-            sprintf(buf,
+            snprintf(buf, MAX_INPUT_LENGTH,
                 "&+rA nearby death cry rings out loudly, heightening your bloodlust.\r\n");
             break;
         }
@@ -1995,7 +1995,7 @@ void death_rattle(P_char ch)
       if (VIRTUAL_CAN_GO(was_in, door))
       {
         room = world[ch->in_room].dir_option[door]->to_room;
-        sprintf(buf,
+        snprintf(buf, MAX_INPUT_LENGTH,
             "&+rYou hear a shrill death rattle nearby!\r\n");
         send_to_room(buf, room);
         play_sound(SOUND_DEATH_CRY, NULL, room, TO_ROOM);
@@ -2773,14 +2773,14 @@ void die(P_char ch, P_char killer)
 
     if(ch == killer)
     {
-      sprintf(strn, "&+W%s killed %s own dumb self!&N\r\n", GET_NAME(ch),
+      snprintf(strn, MAX_STRING_LENGTH, "&+W%s killed %s own dumb self!&N\r\n", GET_NAME(ch),
           HSHR(ch));
       send_to_arena(strn, -1);
       ARENA_PLAYER(ch).frags -= 1;
     }
     else
     {
-      sprintf(strn, "&+R%s was %s by %s!&N\r\n", GET_NAME(ch),
+      snprintf(strn, MAX_STRING_LENGTH, "&+R%s was %s by %s!&N\r\n", GET_NAME(ch),
           arena_death_msg(killer->equipment[WIELD]), GET_NAME(killer));
       send_to_arena(strn, -1);
       ARENA_PLAYER(killer).frags += 2;
@@ -2831,7 +2831,7 @@ void die(P_char ch, P_char killer)
         {
           ARENA_PLAYER(ch).lives--;
           arena_char_spawn(ch);
-          sprintf(strn,
+          snprintf(strn, MAX_STRING_LENGTH,
               "&+WYou breathe new air as you respawn.\r\nLives remaining: %d\r\n",
               ARENA_PLAYER(ch).lives);
           send_to_char(strn, ch);
@@ -2840,7 +2840,7 @@ void die(P_char ch, P_char killer)
         {
           char_to_room(ch, real_room(arena_hometown_location[arena_team(ch)]),
               -1);
-          sprintf(strn, "&+C%s has been vanquished!\r\n&N", GET_NAME(ch));
+          snprintf(strn, MAX_STRING_LENGTH, "&+C%s has been vanquished!\r\n&N", GET_NAME(ch));
           send_to_arena(strn, -1);
           SET_BIT(ARENA_PLAYER(ch).flags, PLAYER_DEAD);
         }
@@ -3153,20 +3153,20 @@ void dam_message(double fdam, P_char ch, P_char victim, struct damage_messages *
 
 /* 
   char showdam[MAX_STRING_LENGTH];
-  sprintf(showdam, " [&+wDamage: %d&n] ", dam);
+  snprintf(showdam, MAX_STRING_LENGTH, " [&+wDamage: %d&n] ", dam);
 */
   if (msg_flags & DAMMSG_HIT_EFFECT)
   {
-    sprintf(buf_char, messages->attacker, weapon_damage[w_loop],
+    snprintf(buf_char, 160, messages->attacker, weapon_damage[w_loop],
         victim_damage[h_loop]);
-    sprintf(buf_vict, messages->victim, weapon_damage[w_loop],
+    snprintf(buf_vict, 160, messages->victim, weapon_damage[w_loop],
         victim_damage[h_loop]);
-    sprintf(buf_notvict, messages->room, weapon_damage[w_loop],
+    snprintf(buf_notvict, 160, messages->room, weapon_damage[w_loop],
         victim_damage[h_loop]);
   }
   else if (msg_flags & DAMMSG_EFFECT_HIT)
   {
-    sprintf(buf_char, messages->attacker, victim_damage2[h_loop],
+    snprintf(buf_char, 160, messages->attacker, victim_damage2[h_loop],
         weapon_damage[w_loop]);
     sprintf(buf_vict, messages->victim, victim_damage[h_loop],
         weapon_damage[w_loop]);
@@ -4504,7 +4504,7 @@ int spell_damage(P_char ch, P_char victim, double dam, int type, uint flags, str
     }
     else
     {
-      sprintf(buf, "You feel less vulnerable to &+%s!&n\n", colors[type - 2]);
+      snprintf(buf, 128, "You feel less vulnerable to &+%s!&n\n", colors[type - 2]);
       send_to_char(buf, victim);
       af->modifier = type;
     }
@@ -6015,7 +6015,7 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
     }
 /*
     char showdam[MAX_STRING_LENGTH];
-    sprintf(showdam, " [&+wDamage: %d&n] ", (int) dam);
+    snprintf(showdam, MAX_STRING_LENGTH, " [&+wDamage: %d&n] ", (int) dam);
 */
     new_stat = calculate_ch_state(victim);
 
@@ -6148,9 +6148,9 @@ int raw_damage(P_char ch, P_char victim, double dam, uint flags, struct damage_m
         P_obj portal;
         portal = read_object(400220, VIRTUAL);
         portal->value[0] = world[victim->in_room].number;
-        sprintf(bufpc, "%s %s", GET_NAME(victim), "corpseportal portal");
+        snprintf(bufpc, MAX_STRING_LENGTH, "%s %s", GET_NAME(victim), "corpseportal portal");
         portal->name = str_dup(bufpc);
-        sprintf(buffer, "%s %s&n", portal->description, GET_NAME(victim));
+        snprintf(buffer, MAX_STRING_LENGTH, "%s %s&n", portal->description, GET_NAME(victim));
         set_long_description(portal, buffer); 
         set_short_description(portal, buffer);
         obj_to_room(portal, real_room(400000));
@@ -6872,7 +6872,7 @@ int required_weapon_skill(P_obj wpn)
       if(IS_SET(wpn->extra_flags, ITEM_TWOHANDS) )
       {
         char Gbuf[MAX_STRING_LENGTH];
-        sprintf( Gbuf, "Weapon '%s' [%d] has 2h flag set and is a %s (%d).",
+        snprintf(Gbuf, MAX_STRING_LENGTH, "Weapon '%s' [%d] has 2h flag set and is a %s (%d).",
           wpn->short_description, OBJ_VNUM(wpn), (wpn->value[0] == WEAPON_DAGGER) ? "Dagger" : "Horn", wpn->value[0] );
         debug( Gbuf );
         logit( LOG_OBJ, Gbuf );
@@ -8175,7 +8175,7 @@ void retarget_event(P_char ch, P_char victim, P_obj obj, void *data)
     MobStartFight(ch, target);
   else
   {
-    sprintf(buf, "hit %s", GET_NAME(target));
+    snprintf(buf, 255, "hit %s", GET_NAME(target));
     command_interpreter(ch, buf);
   }
 }
@@ -8935,7 +8935,7 @@ show_frag_trophy(ch, ch);
 }
 else
 {
-sprintf(Gbuf1, "&+WTrophy data:&n\r\n");
+snprintf(Gbuf1, MAX_STRING_LENGTH, "&+WTrophy data:&n\r\n");
 for (tr = who->only.pc->trophy; tr; tr = tr->next)
 {
 char     let;
@@ -10084,7 +10084,7 @@ int pv_common(P_char ch, P_char opponent, const P_obj wpn)
       if(spell = memorize_last_spell(ch))
       {
         char buf[256];
-        sprintf( buf, "%s's essence &+Cempowers you&n and you are rewarded with &+G%s!\n",
+        snprintf(buf, 256, "%s's essence &+Cempowers you&n and you are rewarded with &+G%s!\n",
             get_god_name(ch), skills[spell].name );
         send_to_char(buf, ch);
       }
@@ -10315,12 +10315,12 @@ bool critical_attack(P_char ch, P_char victim, int msg)
     }
     else
     {
-      sprintf(attacker_msg, "Your attack penetrates $N's defense and strikes to the &+Wbone!&n&N",
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your attack penetrates $N's defense and strikes to the &+Wbone!&n&N",
           attack_hit_text[msg].singular);
-      sprintf(victim_msg, "$n's attack causes you to gush &+Rblood!&n&N",
+      snprintf(victim_msg, MAX_STRING_LENGTH, "$n's attack causes you to gush &+Rblood!&n&N",
           attack_hit_text[msg].plural);
       act(victim_msg, TRUE, ch, NULL, victim, TO_VICT);
-      sprintf(room_msg, "$N's body &+yquivers&n as $n's hit strikes deep!&N",
+      snprintf(room_msg, MAX_STRING_LENGTH, "$N's body &+yquivers&n as $n's hit strikes deep!&N",
           attack_hit_text[msg].plural);
       act(room_msg, TRUE, ch, NULL, victim, TO_NOTVICT);
 
@@ -10335,11 +10335,11 @@ bool critical_attack(P_char ch, P_char victim, int msg)
   }
   if(random == 1 && !number(0, 2))
   {
-    sprintf(room_msg, "$n's mighty %s knocks $N's weapon from $S grasp!&n",
+    snprintf(room_msg, MAX_STRING_LENGTH, "$n's mighty %s knocks $N's weapon from $S grasp!&n",
         attack_hit_text[msg].singular);
-    sprintf(attacker_msg, "Your mighty %s knocks $N's weapon from $S grasp!&n",
+    snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty %s knocks $N's weapon from $S grasp!&n",
         attack_hit_text[msg].singular);
-    sprintf(victim_msg, "$n's mighty %s knocks your weapon from your grasp!&n",
+    snprintf(victim_msg, MAX_STRING_LENGTH, "$n's mighty %s knocks your weapon from your grasp!&n",
         attack_hit_text[msg].plural);
     if(critical_disarm(ch, victim))
     {
@@ -10358,15 +10358,15 @@ bool critical_attack(P_char ch, P_char victim, int msg)
   {
     if( affected_by_spell(victim, SPELL_STONE_SKIN) )
     {
-      sprintf(attacker_msg, "Your mighty attack shatters $N's magical protection!&N",
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N",
           attack_hit_text[msg].singular);
       act(attacker_msg, TRUE, ch, NULL, victim, TO_CHAR);
 
-      sprintf(victim_msg, "The magic protecting your body shatters as $n %s you!&N",
+      snprintf(victim_msg, MAX_STRING_LENGTH, "The magic protecting your body shatters as $n %s you!&N",
           attack_hit_text[msg].plural);
       act(victim_msg, TRUE, ch, NULL, victim, TO_VICT);
 
-      sprintf(room_msg, "$n grins slightly as their %s drops $N's defenses!&N",
+      snprintf(room_msg, MAX_STRING_LENGTH, "$n grins slightly as their %s drops $N's defenses!&N",
           attack_hit_text[msg].singular);
       act(room_msg, TRUE, ch, NULL, victim, TO_NOTVICT);
 
@@ -10374,15 +10374,15 @@ bool critical_attack(P_char ch, P_char victim, int msg)
     }
     else if( affected_by_spell(victim, SPELL_BIOFEEDBACK) )
     {
-      sprintf(attacker_msg, "Your mighty attack shatters $N's magical protection!&N",
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N",
           attack_hit_text[msg].singular);
       act(attacker_msg, TRUE, ch, NULL, victim, TO_CHAR);
 
-      sprintf(victim_msg, "The magic protecting your body shatters as $n %s you!&N",
+      snprintf(victim_msg, MAX_STRING_LENGTH, "The magic protecting your body shatters as $n %s you!&N",
           attack_hit_text[msg].plural);
       act(victim_msg, TRUE, ch, NULL, victim, TO_VICT);
 
-      sprintf(room_msg, "$n grins slightly as their %s drops $N's defenses!&N",
+      snprintf(room_msg, MAX_STRING_LENGTH, "$n grins slightly as their %s drops $N's defenses!&N",
           attack_hit_text[msg].singular);
       act(room_msg, TRUE, ch, NULL, victim, TO_NOTVICT);
 
@@ -10390,11 +10390,11 @@ bool critical_attack(P_char ch, P_char victim, int msg)
     }
     else if( affected_by_spell(victim, SPELL_SHADOW_SHIELD) )
     {
-      sprintf(attacker_msg, "Your mighty attack shatters $N's magical protection!&N",
+      snprintf(attacker_msg, MAX_STRING_LENGTH, "Your mighty attack shatters $N's magical protection!&N",
           attack_hit_text[msg].singular);
       act(attacker_msg, TRUE, ch, NULL, victim, TO_CHAR);
 
-      sprintf(victim_msg, "The magic protecting your body shatters as $n %s you!&N",
+      snprintf(victim_msg, MAX_STRING_LENGTH, "The magic protecting your body shatters as $n %s you!&N",
           attack_hit_text[msg].plural);
       act(victim_msg, TRUE, ch, NULL, victim, TO_VICT);
 

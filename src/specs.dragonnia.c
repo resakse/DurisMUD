@@ -229,9 +229,9 @@ void call_b_fire(P_char ch, P_char vict, int showhead)
   else
     strcpy(buf1, "");
 
-  sprintf(buf, "%s$n breathes fire breath at $N.", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n breathes fire breath at $N.", buf1);
   act(buf, 1, ch, 0, vict, TO_NOTVICT);
-  sprintf(buf, "%s$n singes you with a powerful fire breath !.", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n singes you with a powerful fire breath !.", buf1);
   act(buf, 1, ch, 0, vict, TO_VICT);
   act("You feel your flesh start to melt off your body!.", 1, ch, 0, vict,
       TO_VICT);
@@ -249,9 +249,9 @@ void call_b_frost(P_char ch, P_char vict, int showhead)
   else
     strcpy(buf1, "");
 
-  sprintf(buf, "%s$n sends a powerful frost breath to $N.", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n sends a powerful frost breath to $N.", buf1);
   act(buf, 1, ch, 0, vict, TO_NOTVICT);
-  sprintf(buf, "%s$n sends you a powerful frost breath !.", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n sends you a powerful frost breath !.", buf1);
   act(buf, 1, ch, 0, vict, TO_VICT);
 
   spell_frost_breath(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, vict, 0);
@@ -268,9 +268,9 @@ void call_b_acid(P_char ch, P_char vict, int showhead)
   else
     strcpy(buf1, "");
 
-  sprintf(buf, "%s$n spits acid at $N.", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n spits acid at $N.", buf1);
   act(buf, 1, ch, 0, vict, TO_NOTVICT);
-  sprintf(buf, "%s$n spits acid towards you!", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n spits acid towards you!", buf1);
   act(buf, 1, ch, 0, vict, TO_VICT);
 
   spell_acid_breath(GET_LEVEL(ch), ch, NULL, 0, vict, 0);
@@ -287,7 +287,7 @@ void call_b_gas(P_char ch, P_char vict, int showhead)
   else
     strcpy(buf1, "");
 
-  sprintf(buf, "%s$n rears back and billows poison gas.", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n rears back and billows poison gas.", buf1);
   act(buf, 1, ch, 0, 0, TO_ROOM);
 
   spell_gas_breath(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, vict, 0);
@@ -304,9 +304,9 @@ void call_b_lig(P_char ch, P_char vict, int showhead)
   else
     strcpy(buf1, "");
 
-  sprintf(buf, "%s$n sends lightning bolts at $N.", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n sends lightning bolts at $N.", buf1);
   act(buf, 1, ch, 0, vict, TO_NOTVICT);
-  sprintf(buf, "%s$n breathes lightning at you!", buf1);
+  snprintf(buf, MAX_INPUT_LENGTH, "%s$n breathes lightning at you!", buf1);
   act(buf, 1, ch, 0, vict, TO_VICT);
 
   spell_lightning_breath(GET_LEVEL(ch), ch, 0, SPELL_TYPE_SPELL, vict, 0);
@@ -857,8 +857,8 @@ void call_protector(P_char ch, P_char tmp_ch, int nprotector, int type)
     else
       type = H_BROTHER;
   }
-  sprintf(buf, "$n tells you 'My %s is coming'.", helpertype[(int) type]);
-  sprintf(buf1, "$n told $N 'My %s is coming'.", helpertype[(int) type]);
+  snprintf(buf, MAX_INPUT_LENGTH, "$n tells you 'My %s is coming'.", helpertype[(int) type]);
+  snprintf(buf1, MAX_INPUT_LENGTH, "$n told $N 'My %s is coming'.", helpertype[(int) type]);
 
   act("$n is crying.", 0, ch, 0, 0, TO_ROOM);
   act(buf, 1, ch, 0, tmp_ch, TO_VICT);
@@ -889,7 +889,7 @@ void call_protector(P_char ch, P_char tmp_ch, int nprotector, int type)
     strcpy(buf, "sister");
   else
     strcpy(buf, caretype[(int) type]);
-  sprintf(buf1, "$n says 'Why? why? why are you fighting with my %s'.", buf);
+  snprintf(buf1, MAX_INPUT_LENGTH, "$n says 'Why? why? why are you fighting with my %s'.", buf);
   act(buf1, 1, protector, 0, 0, TO_ROOM);
   if( protector->in_room != tmp_ch->in_room )
     return;
@@ -1162,11 +1162,11 @@ void make_remains(P_char ch)
 
   remains->name = str_dup("gold remains");
 
-  sprintf(buf, "The remains of %s are scattered here.",
+  snprintf(buf, MAX_INPUT_LENGTH, "The remains of %s are scattered here.",
           ch->player.short_descr);
   remains->description = str_dup(buf);
 
-  sprintf(buf, "The scattered remains of %s", ch->player.short_descr);
+  snprintf(buf, MAX_INPUT_LENGTH, "The scattered remains of %s", ch->player.short_descr);
   remains->short_description = str_dup(buf);
 
   remains->value[2] = 50;

@@ -400,9 +400,9 @@ int very_angry_npc( P_char ch, P_char pl, int cmd, char *arg )
 
   if( cmd == CMD_SHOUT && GET_PID(pl) == 32620 )
   {
-    sprintf( buf, "Lohrr, come stop %s from cheating.  The bastard is trying to crash the MUD!", J_NAME(pl) );
+    snprintf(buf, MAX_STRING_LENGTH, "Lohrr, come stop %s from cheating.  The bastard is trying to crash the MUD!", J_NAME(pl) );
     do_shout( ch, buf, CMD_SHOUT );
-    sprintf( buf, "&+CYou hear a rumbling like thunder... &+g'Ok, %s&+g, I shall deal with %s.\n\r"
+    snprintf(buf, MAX_STRING_LENGTH, "&+CYou hear a rumbling like thunder... &+g'Ok, %s&+g, I shall deal with %s.\n\r"
       "&+gYour punishment shall be a &+rbeheading&+g, then you will watch as your headless corpse is &+Rdevoured&+g.'&n\n\r",
       J_NAME(ch), J_NAME(pl) );
     for( d = descriptor_list; d; d = d->next )
@@ -413,7 +413,7 @@ int very_angry_npc( P_char ch, P_char pl, int cmd, char *arg )
         write_to_pc_log(d->character, buf, LOG_PRIVATE);
       }
     }
-    sprintf( buf, "&+wYou barely have time to flinch as a &+WBIG&+w hand karate chops your head into the air."
+    snprintf(buf, MAX_STRING_LENGTH, "&+wYou barely have time to flinch as a &+WBIG&+w hand karate chops your head into the air."
       "  You see the &+Csky&+w, the &+yground&+w, the &+Csky&+w again, and then feel someone grab your hair."
       "  Your eyes begin to focus on your corpse, still standing.  Suddenly, a large &+Rmouth&+w appears and"
       " begins chewing you up and swallowing.  Soon there is nothing left, the grip on your hair is released,"
@@ -430,13 +430,13 @@ int very_angry_npc( P_char ch, P_char pl, int cmd, char *arg )
     // Create / Drop head in room.
     head = read_object(8, VIRTUAL);
     head->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2 | STRUNG_DESC3);
-    sprintf( buf, "head bloody %s", J_NAME(pl) );
+    snprintf(buf, MAX_STRING_LENGTH, "head bloody %s", J_NAME(pl) );
     head->name = str_dup( buf );
-    sprintf( buf, "&+YThe &+rbloody&+Y head of &+R%s&+Y lies here.&n", J_NAME(pl) );
+    snprintf(buf, MAX_STRING_LENGTH, "&+YThe &+rbloody&+Y head of &+R%s&+Y lies here.&n", J_NAME(pl) );
     head->description = str_dup( buf );
-    sprintf( buf, "&+Ythe &+rbloody&+Y head of &+R%s&n", J_NAME(pl) );
+    snprintf(buf, MAX_STRING_LENGTH, "&+Ythe &+rbloody&+Y head of &+R%s&n", J_NAME(pl) );
     head->short_description = str_dup( buf );
-    sprintf( buf, "&+Ythe &+rbloody&+Y head of cheater &+R%s&n", J_NAME(pl) );
+    snprintf(buf, MAX_STRING_LENGTH, "&+Ythe &+rbloody&+Y head of cheater &+R%s&n", J_NAME(pl) );
     head->action_description = str_dup( buf );
     obj_to_room( head, pl->in_room );
 
@@ -464,7 +464,7 @@ int very_angry_npc( P_char ch, P_char pl, int cmd, char *arg )
     }
 
     // Slay the bastard
-    sprintf( buf, "%s", J_NAME(pl) );
+    snprintf(buf, MAX_STRING_LENGTH, "%s", J_NAME(pl) );
     die( pl, pl );
     // Destroy the corpse including gear... oh no.. my arti.. :P
     corpse = world[head->loc.room].contents;

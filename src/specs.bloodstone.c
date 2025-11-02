@@ -3732,7 +3732,7 @@ int bs_guildguard_necro(P_char ch, P_char pl, int cmd, char *arg)
   {
     if (GET_CLASS(pl) == CLASS_NECROMANCER)
     {
-      sprintf(buf, "door");
+      snprintf(buf, MAX_STRING_LENGTH, "door");
       do_open(ch, buf, 0);
       mobsay(ch, "Go forward, sibling.");
       act("You enter the guild, nodding to $n as you pass.",
@@ -3785,7 +3785,7 @@ int bs_guildguard_thief(P_char ch, P_char pl, int cmd, char *arg)
       act
         ("$n eyes $N thoughtfully before turning to move a huge boulder to one side.",
          TRUE, ch, 0, pl, TO_NOTVICT);
-      sprintf(buf, "boulder");
+      snprintf(buf, MAX_STRING_LENGTH, "boulder");
       do_open(ch, buf, 0);
       act("You enter the guild.", FALSE, ch, 0, pl, TO_VICT);
       act("$N enters the guild.", TRUE, ch, 0, pl, TO_NOTVICT);
@@ -3834,7 +3834,7 @@ int bs_guildguard_assassin(P_char ch, P_char pl, int cmd, char *arg)
     {
       act("$n nods at you.", FALSE, ch, 0, pl, TO_VICT);
       act("$n nods at $N.", TRUE, ch, 0, pl, TO_NOTVICT);
-      sprintf(buf, "door");
+      snprintf(buf, MAX_STRING_LENGTH, "door");
       do_open(ch, buf, 0);
       act("You enter the guild.", FALSE, ch, 0, pl, TO_VICT);
       act("$N enters the guild.", TRUE, ch, 0, pl, TO_NOTVICT);
@@ -3881,7 +3881,7 @@ int bs_guildguard_sorcconj(P_char ch, P_char pl, int cmd, char *arg)
     {
       act("$n lowers $s eyes before your gaze.", FALSE, ch, 0, pl, TO_VICT);
       act("$n lowers $s eyes at $N's gaze.", TRUE, ch, 0, pl, TO_NOTVICT);
-      sprintf(buf, "door");
+      snprintf(buf, MAX_STRING_LENGTH, "door");
       do_open(ch, buf, 0);
       act("You enter the guild.", FALSE, ch, 0, pl, TO_VICT);
       act("$n enters the guild.", TRUE, ch, 0, pl, TO_NOTVICT);
@@ -3977,7 +3977,7 @@ int bs_guildguard_antiwar(P_char ch, P_char pl, int cmd, char *arg)
     {
       mobsay(ch, "Aaah, an evil sibling!");
       mobsay(ch, "Enter, enter, the master will want to see you.");
-      sprintf(buf, "door");
+      snprintf(buf, MAX_STRING_LENGTH, "door");
       do_open(ch, buf, 0);
       act("You enter the guild.", FALSE, ch, 0, pl, TO_VICT);
       act("$n enters the guild.", TRUE, ch, 0, pl, TO_NOTVICT);
@@ -4036,7 +4036,7 @@ int bs_guildguard_monk(P_char ch, P_char pl, int cmd, char *arg)
   {
     if (GET_CLASS(pl) == CLASS_MONK)
     {
-      sprintf(buf, "door");
+      snprintf(buf, MAX_STRING_LENGTH, "door");
       do_open(ch, buf, 0);
       act("The $n nods $s head at you and steps aside for you to pass.",
           FALSE, ch, 0, pl, TO_VICT);

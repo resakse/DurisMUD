@@ -58,7 +58,7 @@ void olc_build_flag_menu8(char *str, ubyte value, const char *names[])
 
   for (i = 0; i <= ttl; i++)
   {
-    sprintf(buf, " %s &+W%2d.&N %s%-33.33s&N",
+    snprintf(buf, 128, " %s &+W%2d.&N %s%-33.33s&N",
             value == i ? "&+M*&N" : " ",
             i + 1, value == i ? "&+C" : "", names[i]);
 
@@ -105,7 +105,7 @@ void olc_build_bitflag_menu32(char *str, ulong value, const char *names[])
 
   for (i = 0; i <= ttl; i++)
   {
-    sprintf(buf, " %s &+W%2d.&N %s%-33.33s&N",
+    snprintf(buf, 128, " %s &+W%2d.&N %s%-33.33s&N",
             IS_SET(value, 1 << i) ? "&+M*&N" : " ",
             i + 1, IS_SET(value, 1 << i) ? "&+C" : "", names[i]);
 
@@ -283,38 +283,38 @@ void olc_prompt(struct olc_data *data)
   switch (data->mode)
   {
   case OLC_MODE_ROOM0:
-    sprintf(prompt, "OLC Room Editor (#%d): ", world[data->rnum].number);
+    snprintf(prompt, MAX_STRING_LENGTH, "OLC Room Editor (#%d): ", world[data->rnum].number);
     break;
   case OLC_MODE_ROOM1:
-    sprintf(prompt, ">");
+    snprintf(prompt, MAX_STRING_LENGTH, ">");
     break;
   case OLC_MODE_ROOM_FLAGS:
-    sprintf(prompt, "OLC Room Flag Editor (#%d): ", world[data->rnum].number);
+    snprintf(prompt, MAX_STRING_LENGTH, "OLC Room Flag Editor (#%d): ", world[data->rnum].number);
     break;
   case OLC_MODE_ROOM_SECT:
-    sprintf(prompt, "OLC Room Sector Editor (#%d): ",
+    snprintf(prompt, MAX_STRING_LENGTH, "OLC Room Sector Editor (#%d): ",
             world[data->rnum].number);
     break;
   case OLC_MODE_XTRA:
-    sprintf(prompt, "OLC Keyword Editor (#%d): ", world[data->rnum].number);
+    snprintf(prompt, MAX_STRING_LENGTH, "OLC Keyword Editor (#%d): ", world[data->rnum].number);
     break;
   case OLC_MODE_XTRA1:
-    sprintf(prompt, "OLC Keyword Editor (#%d) [%s]: ",
+    snprintf(prompt, MAX_STRING_LENGTH, "OLC Keyword Editor (#%d) [%s]: ",
             world[data->rnum].number,
             ((struct extra_descr_data *) data->misc)->keyword);
     break;
   case OLC_MODE_XTRA2:
-    sprintf(prompt, ">");
+    snprintf(prompt, MAX_STRING_LENGTH, ">");
     break;
 
   case OLC_MODE_XTRA_DEL:
-    sprintf(prompt, "OLC Keyword Removal (#%d): ", world[data->rnum].number);
+    snprintf(prompt, MAX_STRING_LENGTH, "OLC Keyword Removal (#%d): ", world[data->rnum].number);
     break;
 
   case OLC_MODE_EXIT:
   case OLC_MODE_EXIT_DEL:
   case OLC_MODE_EXIT1:
-    sprintf(prompt, "OLC Exit Editor (#%d): ", world[data->rnum].number);
+    snprintf(prompt, MAX_STRING_LENGTH, "OLC Exit Editor (#%d): ", world[data->rnum].number);
     break;
 
   default:

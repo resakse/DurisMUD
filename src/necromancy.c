@@ -1253,7 +1253,7 @@ void create_saved_corpse(P_obj obj, P_char mob)
 
   P_obj savecorpse = clone_obj(obj);
   clone_container_obj(savecorpse, obj);
-  sprintf(buff, "%s %s", savecorpse->name, "_savecorpse_");
+  snprintf(buff, MAX_STRING_LENGTH, "%s %s", savecorpse->name, "_savecorpse_");
   savecorpse->name = str_dup(buff);
   savecorpse->value[CORPSE_SAVEID] = time(NULL);
   obj_to_room(savecorpse, real_room(40));
@@ -3042,7 +3042,7 @@ void spell_compact_corpse(int level, P_char ch, char *arg, int type, P_char vict
   {
     pile->value[CORPSE_LEVEL] = obj->value[CORPSE_LEVEL];
 
-    sprintf( buf, "&+WCrunching&n sounds are heard as $p collapses into %s.", OBJ_SHORT(pile) );
+    snprintf(buf, MAX_STRING_LENGTH, "&+WCrunching&n sounds are heard as $p collapses into %s.", OBJ_SHORT(pile) );
     act( buf, FALSE, NULL, obj, NULL, TO_ROOM );
 
     extract_obj(obj);

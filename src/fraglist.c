@@ -195,91 +195,91 @@ void do_fraglist(P_char ch, char *arg, int cmd)
   {
     if (strstr("normal", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.normal");
+      snprintf(filename, 1024, "Fraglists/fraglist.normal");
     }
     else if (strstr("goodie", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.goodie");
+      snprintf(filename, 1024, "Fraglists/fraglist.goodie");
     }
     else if (strstr("evil", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.evil");
+      snprintf(filename, 1024, "Fraglists/fraglist.evil");
     }
     else if (strstr("undead", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.undead");
+      snprintf(filename, 1024, "Fraglists/fraglist.undead");
     }
     // else if (strstr("death knight", arg))
     // {
-      // sprintf(filename, "Fraglists/fraglist.death_knight");
+      // snprintf(filename, 1024, "Fraglists/fraglist.death_knight");
     // }
     else if (strstr("lich", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.lich");
+      snprintf(filename, 1024, "Fraglists/fraglist.lich");
     }
     else if (strstr("vampire", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.vampire");
+      snprintf(filename, 1024, "Fraglists/fraglist.vampire");
     }
     // else if (strstr("shadow beast", arg))
     // {
-      // sprintf(filename, "Fraglists/fraglist.shadow_beast");
+      // snprintf(filename, 1024, "Fraglists/fraglist.shadow_beast");
     // }
     // else if (strstr("wight", arg))
     // {
-      // sprintf(filename, "Fraglists/fraglist.wight");
+      // snprintf(filename, 1024, "Fraglists/fraglist.wight");
     // }
     // else if (strstr("phantom", arg))
     // {
-      // sprintf(filename, "Fraglists/fraglist.phantom");
+      // snprintf(filename, 1024, "Fraglists/fraglist.phantom");
     // }
     // else if (strstr("shade", arg))
     // {
-      // sprintf(filename, "Fraglists/fraglist.shade");
+      // snprintf(filename, 1024, "Fraglists/fraglist.shade");
     // }
     else if (strstr("revenant", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.revenant");
+      snprintf(filename, 1024, "Fraglists/fraglist.revenant");
     }
     else if (strstr("illithid", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.squid");
+      snprintf(filename, 1024, "Fraglists/fraglist.squid");
     }
     else if (strstr("human", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.human");
+      snprintf(filename, 1024, "Fraglists/fraglist.human");
     }
     else if (strstr("barbarian", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.barbarian");
+      snprintf(filename, 1024, "Fraglists/fraglist.barbarian");
     }
     else if (strstr("drow elf", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.drow_elf");
+      snprintf(filename, 1024, "Fraglists/fraglist.drow_elf");
     }
     else if (strstr("grey elf", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.grey_elf");
+      snprintf(filename, 1024, "Fraglists/fraglist.grey_elf");
     }
     else if (strstr("mountain dwarf", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.mountain_dwarf");
+      snprintf(filename, 1024, "Fraglists/fraglist.mountain_dwarf");
     }
     else if (strstr("duergar dwarf", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.duergar_dwarf");
+      snprintf(filename, 1024, "Fraglists/fraglist.duergar_dwarf");
     }
     else if (strstr("halfling", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.halfling");
+      snprintf(filename, 1024, "Fraglists/fraglist.halfling");
     }
     else if (strstr("gnome", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.gnome");
+      snprintf(filename, 1024, "Fraglists/fraglist.gnome");
     }
     else if (strstr("storm giant", arg))
     {
-      sprintf(filename, "Fraglists/fraglist.storm_giant");
+      snprintf(filename, 1024, "Fraglists/fraglist.storm_giant");
     }
     else if (strstr("ogre", arg))
     {
@@ -599,28 +599,28 @@ void checkFragList_internal(P_char ch, char type)
     return;
 
   if (type == FRAGLIST_NORMAL)
-    sprintf(fraglist_file, "Fraglists/fraglist.normal");
+    snprintf(fraglist_file, 1024, "Fraglists/fraglist.normal");
   else if (type == FRAGLIST_RACEWAR)
   {
     if (IS_ILLITHID(ch))
-      sprintf(fraglist_file, "Fraglists/fraglist.squid");
+      snprintf(fraglist_file, 1024, "Fraglists/fraglist.squid");
     else if (GOOD_RACE(ch))
-      sprintf(fraglist_file, "Fraglists/fraglist.goodie");
+      snprintf(fraglist_file, 1024, "Fraglists/fraglist.goodie");
     else if (IS_RACEWAR_UNDEAD(ch))
-      sprintf(fraglist_file, "Fraglists/fraglist.undead");
+      snprintf(fraglist_file, 1024, "Fraglists/fraglist.undead");
     else if (EVIL_RACE(ch))
-      sprintf(fraglist_file, "Fraglists/fraglist.evil");
+      snprintf(fraglist_file, 1024, "Fraglists/fraglist.evil");
 
 
   }
   else if (type == FRAGLIST_RACE)
   {
-    sprintf(fraglist_file, "Fraglists/fraglist.%s",
+    snprintf(fraglist_file, 1024, "Fraglists/fraglist.%s",
             race_names_table[(int) GET_RACE(ch)].normal);
   }
   else if (type == FRAGLIST_CLASS)
   {
-    sprintf(fraglist_file, "Fraglists/fraglist.%s",
+    snprintf(fraglist_file, 1024, "Fraglists/fraglist.%s",
             class_names_table[(int) flag2idx(ch->player.m_class)].normal);
   }
   else
@@ -643,16 +643,16 @@ void checkFragList_internal(P_char ch, char type)
   fraglist = fopen(fraglist_file, "rt");
   if (!fraglist)
   {
-    sprintf(buffer, "cp lib/etc/fraglist.empty %s", fraglist_file);
+    snprintf(buffer, 1024, "cp lib/etc/fraglist.empty %s", fraglist_file);
     system(buffer);
-    sprintf(buffer, "Fraglist didn't exist, so created empty one: %s\r\n", fraglist_file);
+    snprintf(buffer, 1024, "Fraglist didn't exist, so created empty one: %s\r\n", fraglist_file);
     logit(LOG_DEBUG, buffer);
     fraglist = fopen(fraglist_file, "rt");
   }
 
   if (!fraglist)
   {
-    sprintf(buffer, "Couldn't open fraglist: %s\r\n", fraglist_file);
+    snprintf(buffer, 1024, "Couldn't open fraglist: %s\r\n", fraglist_file);
     logit(LOG_DEBUG, buffer);
     return;
   }

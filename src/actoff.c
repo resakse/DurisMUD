@@ -6553,7 +6553,7 @@ void do_disengage(P_char ch, char *arg, int cmd)
     if( IS_DESTROYING( ch ) )
     {
       char buf[ 300 ];
-      sprintf( buf, "You stop trying to destroy %s.\n",
+      snprintf(buf, 300, "You stop trying to destroy %s.\n",
         ch->specials.destroying_obj->short_description );
       send_to_char( buf, ch );
       stop_destroying( ch );
@@ -6940,13 +6940,13 @@ void rescue(P_char ch, P_char rescuee, bool rescue_all)
         {
           char Gbuf1[MAX_STRING_LENGTH];
 
-          sprintf(Gbuf1, "&+LAs you rush in to rescue %s&+L, the black magic surrounding $N &+Lcauses you\n&+Lto to tremble in terror! You spinelessly abandon your comrade!&n", GET_NAME(rescuee));
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+LAs you rush in to rescue %s&+L, the black magic surrounding $N &+Lcauses you\n&+Lto to tremble in terror! You spinelessly abandon your comrade!&n", GET_NAME(rescuee));
           act(Gbuf1, FALSE, ch, 0, t_ch, TO_CHAR);
 
           act("&+LAs $N &+Lattempts to rescue $S comrade, the black aura around you flares, and you\n"
               "&+Lgrin evilly as $E reels backward, unable to complete $S maneuver!&n", FALSE, t_ch, NULL, ch, TO_CHAR);
 
-          sprintf(Gbuf1, "&+LA feeling of hope fills your body as you see %s &+Lrushing to your rescue - but $n\n&+Lgrins evilly, and %s &+Lreels in terror!&n", GET_NAME(ch), GET_NAME(ch));
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+LA feeling of hope fills your body as you see %s &+Lrushing to your rescue - but $n\n&+Lgrins evilly, and %s &+Lreels in terror!&n", GET_NAME(ch), GET_NAME(ch));
           act( Gbuf1, FALSE, t_ch, 0, rescuee, TO_VICT);
 
           act("&+LThe black aura surrounding $n &+Lflares, and $e grins evilly as he blocks an\n"

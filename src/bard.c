@@ -577,12 +577,12 @@ void do_bardsing(P_char ch, char *arg)
     {
       if(foo != ch)
       {
-        sprintf(Gbuf4, "$n sings %s '%s'", language_known(ch, foo),
+        snprintf(Gbuf4, MAX_STRING_LENGTH, "$n sings %s '%s'", language_known(ch, foo),
                 language_CRYPT(ch, foo, arg));
         act(Gbuf4, FALSE, ch, 0, foo, TO_VICT);
       }
     }
-    sprintf(Gbuf4, "You sing %s '%s'", language_known(ch, ch), arg);
+    snprintf(Gbuf4, MAX_STRING_LENGTH, "You sing %s '%s'", language_known(ch, ch), arg);
     act(Gbuf4, FALSE, ch, 0, 0, TO_CHAR);
   }
 }
@@ -1736,7 +1736,7 @@ void event_echosong(P_char ch, P_char victim, P_obj obj, void *data)
     // show a message to the room for the echo
     char     echoText[100];
 
-    sprintf(echoText, "&+LYou hear the faint echo of music...\r\n", GET_NAME(ch));
+    snprintf(echoText, 100, "&+LYou hear the faint echo of music...\r\n", GET_NAME(ch));
     send_to_room(echoText, room);
 
     // get the song

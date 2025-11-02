@@ -90,7 +90,7 @@ void event_track_move(P_char ch, P_char vict, P_obj obj, void *data)
   else
   {
     /* still following the trail */
-    sprintf(buf, "You find traces of tracks leading %s.\r\n", dirs[dir]);
+    snprintf(buf, MAX_STRING_LENGTH, "You find traces of tracks leading %s.\r\n", dirs[dir]);
     send_to_char(buf, ch);
     if (EXIT(ch, dir) && (EXIT(ch, dir)->to_room != NOWHERE)
       && IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED)
@@ -98,16 +98,16 @@ void event_track_move(P_char ch, P_char vict, P_obj obj, void *data)
     {
       if( (dir == DIR_DOWN) || (dir == DIR_UP) )
       {
-        sprintf(buf, "You open the %sward %s.\n", dirs[dir],
+        snprintf(buf, MAX_STRING_LENGTH, "You open the %sward %s.\n", dirs[dir],
           EXIT(ch, dir)->keyword ? FirstWord(EXIT(ch, dir)->keyword) : "door" );
       }
       else
       {
-        sprintf(buf, "You open the %s to the %s.\n",
+        snprintf(buf, MAX_STRING_LENGTH, "You open the %s to the %s.\n",
           EXIT(ch, dir)->keyword ? FirstWord(EXIT(ch, dir)->keyword) : "door", dirs[dir] );
       }
       send_to_char(buf, ch);
-      sprintf(buf, "%s", dirs[(int) dir]);
+      snprintf(buf, MAX_STRING_LENGTH, "%s", dirs[(int) dir]);
       do_open(ch, buf, 0);
     }
 
@@ -167,11 +167,11 @@ void do_track_not_in_use(P_char ch, char *arg, int cmd)
     
     if( found_path )
     {
-      sprintf(descbuf, "&+BFound path (%d steps):\r\n", path.size());
+      snprintf(descbuf, MAX_STRING_LENGTH, "&+BFound path (%d steps):\r\n", path.size());
       send_to_char(descbuf, ch);
       for( vector<int>::iterator it = path.begin(); it != path.end(); it++ )
       {
-        sprintf(descbuf, "%s ", short_dirs[*it]);
+        snprintf(descbuf, MAX_STRING_LENGTH, "%s ", short_dirs[*it]);
         send_to_char(descbuf, ch);
       }
       send_to_char("\r\n", ch);
@@ -213,21 +213,21 @@ void do_track_not_in_use(P_char ch, char *arg, int cmd)
     {
       if (obj->value[1] == BLOOD_FRESH)
       {
-        sprintf(descbuf, "%s\n", obj->description);
+        snprintf(descbuf, MAX_STRING_LENGTH, "%s\n", obj->description);
         send_to_char(descbuf, ch);
         found_track = TRUE;
       }
       else if ((obj->value[1] == BLOOD_REG) &&
                (epic_skill >= number(50, 70)))
       {
-        sprintf(descbuf, "%s\n", obj->description);
+        snprintf(descbuf, MAX_STRING_LENGTH, "%s\n", obj->description);
         send_to_char(descbuf, ch);
         found_track = TRUE;
       }
       else if ((obj->value[1] == BLOOD_DRY) &&
                (epic_skill >= number(90, 100)))
       {
-        sprintf(descbuf, "%s\n", obj->description);
+        snprintf(descbuf, MAX_STRING_LENGTH, "%s\n", obj->description);
         send_to_char(descbuf, ch);
         found_track = TRUE;
       }
@@ -731,7 +731,7 @@ char    *sickprocess(const char *arg)
    return arg;    old line, generates errors. fix later. 
  */
     return NULL;
-  sprintf(hmm, "%c%s", tolower(arg[0]), arg + 1);
+  snprintf(hmm, 20, "%c%s", tolower(arg[0]), arg + 1);
   return hmm;
 }
 

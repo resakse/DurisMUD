@@ -78,7 +78,7 @@ int clock_tower(P_obj obj, P_char ch, int cmd, char *arg)
     current_event->timer = 1;
     return TRUE;
   }
-  sprintf(Gbuf1, "%d%s.\r\n", (time_info.hour % 12) ? (time_info.hour % 12) : 12,
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%d%s.\r\n", (time_info.hour % 12) ? (time_info.hour % 12) : 12,
     (time_info.hour == 12) ? " noon" : (time_info.hour == 0) ? " midnight" :
     (time_info.hour > 11) ? "pm" : "am" );
 
@@ -91,9 +91,9 @@ int clock_tower(P_obj obj, P_char ch, int cmd, char *arg)
     }
     zon = world[zon].zone;
 
-    sprintf(Gbuf2, "The clock tower chimes the hour of %s", Gbuf1);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "The clock tower chimes the hour of %s", Gbuf1);
     send_to_zone_outdoor(zon, Gbuf2);
-    sprintf(Gbuf2, "From outside, the faint chimes of the clock tower sound %s", Gbuf1);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "From outside, the faint chimes of the clock tower sound %s", Gbuf1);
     send_to_zone_indoor(zon, Gbuf2);
   }
 
@@ -106,9 +106,9 @@ int clock_tower(P_obj obj, P_char ch, int cmd, char *arg)
     }
     zon = world[zon].zone;
 
-    sprintf(Gbuf2, "From the city, the clock tower chimes %s", Gbuf1);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "From the city, the clock tower chimes %s", Gbuf1);
     send_to_zone_outdoor(zon, Gbuf2);
-    sprintf(Gbuf2, "From outside in the direction of the city, the clock tower chimes %s", Gbuf1);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "From outside in the direction of the city, the clock tower chimes %s", Gbuf1);
     send_to_zone_indoor(zon, Gbuf2);
   }
 
@@ -4829,7 +4829,7 @@ int guild_guard_one(P_char ch, P_char pl, int cmd, char *arg)
         ("The holy warrior bows reverently before you as you enter.\r\n", pl);
       send_to_char("The holy paladin says, 'You are welcome, brethren..'\r\n",
                    pl);
-      sprintf(Gbuf3, "%s arrives from the west.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the west.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5501));
       char_from_room(pl);
       char_to_room(pl, real_room(5501), 0);
@@ -4959,7 +4959,7 @@ int guild_guard_two(P_char ch, P_char pl, int cmd, char *arg)
          pl);
       act("$N leaves east, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the west.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the west.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5511));
       char_from_room(pl);
       char_to_room(pl, real_room(5511), 0);
@@ -5062,7 +5062,7 @@ int guild_guard_three(P_char ch, P_char pl, int cmd, char *arg)
       send_to_char("The monk bows before you as you enter.\r\n", pl);
       act("$N leaves south, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the north.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the north.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5521));
       char_from_room(pl);
       char_to_room(pl, real_room(5521), 0);
@@ -5165,7 +5165,7 @@ int guild_guard_four(P_char ch, P_char pl, int cmd, char *arg)
       send_to_char
         ("The bouncer steps aside as you climb up the staircase.\r\n", pl);
       act("$N leaves up, entering the guild.", FALSE, ch, 0, pl, TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from below.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from below.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5535));
       char_from_room(pl);
       char_to_room(pl, real_room(5535), 0);
@@ -5341,7 +5341,7 @@ int guild_guard_five(P_char ch, P_char pl, int cmd, char *arg)
          pl);
       act("$N leaves south, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the north.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the north.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5541));
       char_from_room(pl);
       char_to_room(pl, real_room(5541), 0);
@@ -5452,7 +5452,7 @@ int guild_guard_six(P_char ch, P_char pl, int cmd, char *arg)
          pl);
       act("$N leaves east, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the west.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the west.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5561));
       char_from_room(pl);
       char_to_room(pl, real_room(5561), 0);
@@ -5556,7 +5556,7 @@ int guild_guard_seven(P_char ch, P_char pl, int cmd, char *arg)
          pl);
       act("$N leaves east, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the west.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the west.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5571));
       char_from_room(pl);
       char_to_room(pl, real_room(5571), 0);
@@ -5634,7 +5634,7 @@ int guild_guard_eight(P_char ch, P_char pl, int cmd, char *arg)
       do_open(ch, tbuf, 0);
       act("$N leaves east, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the west.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the west.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(5573));
       char_from_room(pl);
       char_to_room(pl, real_room(5573), 0);
@@ -5733,7 +5733,7 @@ int guild_guard_nine(P_char ch, P_char pl, int cmd, char *arg)
       do_open(ch, tbuf, 0);
       act("$N leaves south, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the north.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the north.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(3039));
       char_from_room(pl);
       char_to_room(pl, real_room(3039), 0);
@@ -5836,7 +5836,7 @@ int guild_guard_ten(P_char ch, P_char pl, int cmd, char *arg)
       do_open(ch, tbuf, 0);
       act("$N leaves north, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the south.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the south.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(3068));
       char_from_room(pl);
       char_to_room(pl, real_room(3068), 0);
@@ -5940,7 +5940,7 @@ int guild_guard_eleven(P_char ch, P_char pl, int cmd, char *arg)
       do_open(ch, tbuf, 0);
       act("$N leaves south, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the north.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the north.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(3056));
       char_from_room(pl);
       char_to_room(pl, real_room(3056), 0);
@@ -6059,7 +6059,7 @@ int guild_guard_twelve(P_char ch, P_char pl, int cmd, char *arg)
       do_open(ch, tbuf, 0);
       act("$N leaves east, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the west.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the west.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(3284));
       char_from_room(pl);
       char_to_room(pl, real_room(3284), 0);
@@ -6159,7 +6159,7 @@ int guild_guard_thirteen(P_char ch, P_char pl, int cmd, char *arg)
          pl);
       act("$N leaves north, entering the guild.", FALSE, ch, 0, pl,
           TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the south.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the south.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(2952));
       char_from_room(pl);
       char_to_room(pl, real_room(2952), 0);

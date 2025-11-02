@@ -222,7 +222,7 @@ void do_mreport(P_char ch, char *argument, int cmd)
   if (!ch || !ch->desc || !IS_TRUSTED(ch))
     return;
 
-  sprintf(buf, "&+CDirectly allocated memory:&N\n");
+  snprintf(buf, MAX_STRING_LENGTH, "&+CDirectly allocated memory:&N\n");
   sprintf(buf + strlen(buf), "  &+WTag       &+BAllocations       &+YSize&n\n");
   sprintf(buf + strlen(buf), "------------------------------------\n"); 
   for(int i = 0; i < 52; i++)

@@ -84,22 +84,22 @@ void language_show(P_char ch)
     if ((lang = GET_LANGUAGE(ch, a)) >= 20)
     {
       if (lang < 40)
-        sprintf(buf, "You have a basic understanding of %s.",
+        snprintf(buf, 512, "You have a basic understanding of %s.",
                 language_names[a - 1]);
       else if (lang < 60)
-        sprintf(buf, "You comprehend %s%s.",
+        snprintf(buf, 512, "You comprehend %s%s.",
                 language_names[a - 1], lang < 55 ? " somewhat" : "");
       else if (lang < 90)
-        sprintf(buf, "You are quite fluent in %s.", language_names[a - 1]);
+        snprintf(buf, 512, "You are quite fluent in %s.", language_names[a - 1]);
       else
-        sprintf(buf, "You are a master of %s.", language_names[a - 1]);
+        snprintf(buf, 512, "You are a master of %s.", language_names[a - 1]);
       act(buf, TRUE, ch, 0, 0, TO_CHAR);
     }
   if (GET_LANGUAGE(ch, 0) >= 1 && GET_LANGUAGE(ch, 0) <= TONGUE_GOD)
-    sprintf(buf, "Currently speaking: %s",
+    snprintf(buf, 512, "Currently speaking: %s",
             language_names[GET_LANGUAGE(ch, 0) - 1]);
   else
-    sprintf(buf,
+    snprintf(buf, 512,
             "Currently speaking impossible language. Please contact someone about this.");
   act(buf, TRUE, ch, 0, 0, TO_CHAR);
 }
@@ -127,7 +127,7 @@ void do_speak(P_char ch, char *argument, int cmd)
   if (GET_LANGUAGE(ch, a + 1) >= 20)
   {
     GET_LANGUAGE(ch, 0) = a + 1;
-    sprintf(buf, "Okay, now speaking %s.\r\n", language_names[a]);
+    snprintf(buf, 512, "Okay, now speaking %s.\r\n", language_names[a]);
     send_to_char(buf, ch);
   }
   else
@@ -206,7 +206,7 @@ char    *language_known(P_char ch, P_char vict)
   if ((a > 0) && (a <= TONGUE_GOD))
     if (affected_by_spell(ch, SPELL_COMPREHEND_LANGUAGES) ||
         ((IS_PC(vict) && (GET_LANGUAGE(vict, a) >= (20 + number(1, 20))))))
-      sprintf(kala, "in %s ", language_names[a - 1]);
+      snprintf(kala, MAX_STRING_LENGTH, "in %s ", language_names[a - 1]);
 #else
   strcpy(kala, "");
 #endif

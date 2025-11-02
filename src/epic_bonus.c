@@ -116,7 +116,7 @@ float get_epic_bonus_max(int id)
     return 0;
   }
 
-  sprintf(buff, "epic.bonus.max.%s", ebd[id].name);
+  snprintf(buff, MAX_STRING_LENGTH, "epic.bonus.max.%s", ebd[id].name);
 
   return get_property(buff, 0.000);
 }

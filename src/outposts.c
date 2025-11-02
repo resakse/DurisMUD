@@ -110,13 +110,14 @@ int outpost_locations[][2] = {
 int init_outposts()
 {
   fprintf(stderr, "-- Booting outposts\r\n");
-  
+
   // Outpost specs, (can be found in building.c)
   //mob_index[real_mobile(0)].func.mob = ;
   //obj_index[real_object(0)].func.obj = ;
 
   load_outposts();
   //init_outpost_resources();
+  return 0;
 }
 
 int load_outposts()
@@ -199,11 +200,11 @@ void show_outposts(P_char ch)
 
     mysql_free_result(res);
 
-    sprintf(Gbuf1, "%sasc.%u", ASC_DIR, (ush_int)owner);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%sasc.%u", ASC_DIR, (ush_int)owner);
     f = fopen(Gbuf1, "r");
     if (!f)
     {
-      sprintf(title, "Unknown");
+      snprintf(title, MAX_STRING_LENGTH, "Unknown");
     }
     else
     {
@@ -214,15 +215,15 @@ void show_outposts(P_char ch)
       fclose(f);
     }
 
-    sprintf(buff, "&+W*ID: &+c%2d &+WContinent: &+c%-18s&n &+WOwner: &+c%-15s&n\r\n", i+1, pad_ansi(continent_name(world[building->location()].continent), 18).c_str(), title);
+    snprintf(buff, MAX_STRING_LENGTH, "&+W*ID: &+c%2d &+WContinent: &+c%-18s&n &+WOwner: &+c%-15s&n\r\n", i+1, pad_ansi(continent_name(world[building->location()].continent), 18).c_str(), title);
     send_to_char(buff, ch);
     if (IS_TRUSTED(ch) || ((owner != 0) && (owner == GET_ASSOC(ch)->get_id())))
     {
-      sprintf(buff, "       &+LGateguards: &+c%d &+LPortal: &+c%-4s &+LArchers: &+c%-4s &+LMeurtriere: &+c%-4s&n\r\n",
+      snprintf(buff, MAX_STRING_LENGTH, "       &+LGateguards: &+c%d &+LPortal: &+c%-4s &+LArchers: &+c%-4s &+LMeurtriere: &+c%-4s&n\r\n",
         golems, YESNO(portal), YESNO(archers), YESNO(meurtriere) );
       send_to_char(buff, ch);
       int basehit = building_types[BUILDING_OUTPOST-1].hitpoints;
-      sprintf(buff, "       &+LOutpost Condition: %s%-6d&+L/&+c%d&n\r\n",
+      snprintf(buff, MAX_STRING_LENGTH, "       &+LOutpost Condition: %s%-6d&+L/&+c%d&n\r\n",
 	  ((hitp <= basehit*10/100) ? "&+R" :
 	   (hitp <= basehit*30/100) ? "&+r" :
 	   (hitp <= basehit*50/100) ? "&+m" :
@@ -266,14 +267,14 @@ P_Guild get_outpost_owner(Building *building)
   if (!qry("SELECT id, owner_id FROM outposts WHERE id = %d", building->get_id()-1))
   {
     debug("get_outpost_owner() cant read from db");
-    return FALSE;
+    return NULL;
   }
   MYSQL_RES *res = mysql_store_result(DB);
 
   if (mysql_num_rows(res) < 1)
   {
     mysql_free_result(res);
-    return FALSE;
+    return NULL;
   }
   MYSQL_ROW row = mysql_fetch_row(res);
 
@@ -472,7 +473,7 @@ void do_outpost(P_char ch, char *arg, int cmd)
         return;
       }
       reset_one_outpost(building);
-      sprintf(buff, "You reset outpost # %d.", id);
+      snprintf(buff, MAX_STRING_LENGTH, "You reset outpost # %d.", id);
       return;
     }
     return;
@@ -1067,7 +1068,7 @@ int outpost_rubble(P_obj obj, P_char ch, int cmd, char *arg)
       stone = obj->value[1];
       outpost_update_resources(ch, wood, stone);
 
-      sprintf(buff2, "You receive %d wood and %d stone in outpost resources.\r\n", wood, stone);
+      snprintf(buff2, MAX_STRING_LENGTH, "You receive %d wood and %d stone in outpost resources.\r\n", wood, stone);
       send_to_char(buff2, ch);
       
       extract_obj(obj);
@@ -1429,7 +1430,7 @@ void event_outposts_upkeep( P_char ch, P_char vict, P_obj obj, void *data )
             {
 	            continue;
             }
-      	    sprintf(buff, "Dropping %s&+C outpost.", continent_name(world[building->location()].continent));
+      	    snprintf(buff, MAX_STRING_LENGTH, "Dropping %s&+C outpost.", continent_name(world[building->location()].continent));
 	          send_to_guild(guild, "The Guild Banker", buff);
       	    building->update_outpost_owner( NULL );
 	          reset_one_outpost(building);
@@ -1446,10 +1447,10 @@ int outpost_archer_attack(P_char ch, P_char vict)
   char buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH];
   char buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
 
-  sprintf(buf, "You feel a sharp pain in your side as an arrow finds its mark!");
-  sprintf(buf1, "You hear a dull thud as an arrow pierces $n!");
-  sprintf(buf2, "An arrow whistles by your ear, barely missing you!");
-  sprintf(buf3, "An arrow narrowly misses $n!");
+  snprintf(buf, MAX_STRING_LENGTH, "You feel a sharp pain in your side as an arrow finds its mark!");
+  snprintf(buf1, MAX_STRING_LENGTH, "You hear a dull thud as an arrow pierces $n!");
+  snprintf(buf2, MAX_STRING_LENGTH, "An arrow whistles by your ear, barely missing you!");
+  snprintf(buf3, MAX_STRING_LENGTH, "An arrow narrowly misses $n!");
 
   if (IS_TRUSTED(vict))
     return 0;
@@ -1496,10 +1497,10 @@ int outpost_meurtriere_attack(P_char ch)
   char buf[MAX_STRING_LENGTH], buf1[MAX_STRING_LENGTH];
   char buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
 
-  sprintf(buf, "&+LThe &+Rburning &+Loil splashes on you causing severe &+Rpain&+L!&n");
-  sprintf(buf1, "&+LThe &+Rburning &+Loil splashes on $n causing him severe &+Rpain&+L!");
-  sprintf(buf2, "You narrowly avoid being smothered in &+Rsearing &+Loil&n!");
-  sprintf(buf3, "$n narrowly avoids being smothered in &+Rsearing &+Loil&n!");
+  snprintf(buf, MAX_STRING_LENGTH, "&+LThe &+Rburning &+Loil splashes on you causing severe &+Rpain&+L!&n");
+  snprintf(buf1, MAX_STRING_LENGTH, "&+LThe &+Rburning &+Loil splashes on $n causing him severe &+Rpain&+L!");
+  snprintf(buf2, MAX_STRING_LENGTH, "You narrowly avoid being smothered in &+Rsearing &+Loil&n!");
+  snprintf(buf3, MAX_STRING_LENGTH, "$n narrowly avoids being smothered in &+Rsearing &+Loil&n!");
 
   // Make sure we're in the gates.
   if (world[ch->in_room].sector_type != SECT_CASTLE_GATE)

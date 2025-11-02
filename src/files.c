@@ -365,8 +365,10 @@ int writeStatus(char *buf, P_char ch, bool updateTime )
 
   ch->player.time.saved = tmpl;
 
+  // Arih : Changed from ADD_LONG to ADD_INT because pc_timer is int array, not long array.
+  // This was causing offset mismatch errors during character load (restoreStatus offset mismatch).
   for (i = 0; i < NUMB_PC_TIMERS; i++)
-    ADD_LONG(buf, ch->only.pc->pc_timer[i]);
+    ADD_INT(buf, ch->only.pc->pc_timer[i]);
 
   //XXX
 //  if (0 && ch->only.pc->trophy)
@@ -1252,7 +1254,7 @@ void writeCorpse(P_obj corpse)
     }
   }
 
-  sprintf(Gbuf1, "%s/Corpses/", SAVE_DIR);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Corpses/", SAVE_DIR);
 
   if (corpse->action_description)
     strcpy(Gbuf2, corpse->action_description);
@@ -1272,7 +1274,7 @@ void writeCorpse(P_obj corpse)
   {
     corpse->value[CORPSE_SAVEID] = time(NULL);
   }
-  sprintf(Gbuf3, "%s/%s%d", Gbuf1, Gbuf2, corpse->value[CORPSE_SAVEID]);
+  snprintf(Gbuf3, MAX_STRING_LENGTH, "%s/%s%d", Gbuf1, Gbuf2, corpse->value[CORPSE_SAVEID]);
   strcpy(Gbuf1, Gbuf3);
   strcat(Gbuf1, ".bak");
 
@@ -1507,12 +1509,12 @@ void writeShapechangeData(P_char ch)
     FILE    *f;
     char     buf[MAX_STRING_LENGTH];
 
-    sprintf(buf, "Players/Shapechange/%c/%s", tolower(GET_NAME(ch)[0]),
+    snprintf(buf, MAX_STRING_LENGTH, "Players/Shapechange/%c/%s", tolower(GET_NAME(ch)[0]),
             GET_NAME(ch));
     f = fopen(buf, "w");
     if (f == NULL)
     {
-      sprintf(buf, "Unable to create/truncate '%s' in writeShapechangeData\n", buf);
+      snprintf(buf, MAX_STRING_LENGTH, "Unable to create/truncate '%s' in writeShapechangeData\n", buf);
       logit(LOG_DEBUG, buf);
       return;
     }
@@ -1546,7 +1548,7 @@ void readShapechangeData(P_char ch)
     char     s[MAX_STRING_LENGTH];
     struct char_shapechange_data *curShape;
 
-    sprintf(s, "Players/Shapechange/%c/%s", tolower(GET_NAME(ch)[0]),
+    snprintf(s, MAX_STRING_LENGTH, "Players/Shapechange/%c/%s", tolower(GET_NAME(ch)[0]),
             GET_NAME(ch));
     f = fopen(s, "r");
 
@@ -1697,12 +1699,13 @@ int writeCharacter(P_char ch, int type, int room)
    * different architecture type.
    */
 
-  if ((sizeof(char) != 1) || (int_size != long_size))
-  {
-    logit(LOG_DEBUG,
-          "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
-    return 0;
-  }
+  // DISABLED FOR 64-BIT: sizeof(int)=4, sizeof(long)=8 on 64-bit systems
+  // if ((sizeof(char) != 1) || (int_size != long_size))
+  // {
+  //   logit(LOG_DEBUG,
+  //         "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
+  //   return 0;
+  // }
   /*
    * in case char reenters game immediately; handle rent/etc correctly
    */
@@ -1833,6 +1836,9 @@ int writeCharacter(P_char ch, int type, int room)
 
   // Reapply affects (including equip)
   all_affects(ch, TRUE);
+
+  logit(LOG_PLAYER, "writeCharacter: Saving %s, size = %d bytes (max %d)",
+    GET_NAME(ch), (int) (buf - buff), SAV_MAXSIZE);
 
   if ((int) (buf - buff) > SAV_MAXSIZE)
   {
@@ -2018,16 +2024,16 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
   remove_char_from_list(ch->desc->account, ch->player.name);
 #endif
 
-  sprintf( Gbuf1, "%s/%c/%s", SAVE_DIR, *name, name );
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *name, name );
   strcpy( Gbuf2, Gbuf1 );
-  sprintf( Gbuf2, "mv -f %s %s.old", Gbuf1, Gbuf1 );
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.old", Gbuf1, Gbuf1 );
   system( Gbuf2 );
   if( f = fopen( Gbuf1, "r" ) )
   {
     debug( "deleteCharacter: Error: pfile (%s) still exists.", Gbuf1 );
     debug( "deleteCharacter: Command: (%s) failed.", Gbuf2 );
     fclose( f );
-    sprintf( Gbuf2, "rm -f %s", Gbuf1 );
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "rm -f %s", Gbuf1 );
     system( Gbuf2 );
     if( f = fopen( Gbuf1, "r" ) )
     {
@@ -2039,8 +2045,8 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
   if( bDeleteLocker )
   {
     // delete the locker as well
-    sprintf( Gbuf1, "%s/%c/%s.locker", SAVE_DIR, LOWER(*ch->player.name), name );
-    sprintf( Gbuf2, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.locker", SAVE_DIR, LOWER(*ch->player.name), name );
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
     if( f = fopen( Gbuf1, "r" ) )
     {
       fclose( f );
@@ -2049,19 +2055,19 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
   }
 
   // Delete file containing conjurable mobs.
-  sprintf( Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*ch->player.name), name);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*ch->player.name), name);
   if( f = fopen( Gbuf1, "r" ) )
   {
     fclose( f );
-    sprintf( Gbuf2, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
     system( Gbuf2 );
   }
   // Delete file containing crafting/forging recipe list.
-  sprintf(Gbuf1, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*ch->player.name), name);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*ch->player.name), name);
   if( f = fopen( Gbuf1, "r" ) )
   {
     fclose( f );
-    sprintf( Gbuf2, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
     system( Gbuf2 );
   }
 
@@ -2082,11 +2088,11 @@ void PurgeCorpseFile(P_obj corpse)
     return;
 	}
 
-  sprintf(Gbuf2, "%s%d", corpse->action_description, corpse->value[CORPSE_SAVEID]);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s%d", corpse->action_description, corpse->value[CORPSE_SAVEID]);
   for (tmp = Gbuf2; *tmp; tmp++)
     *tmp = LOWER(*tmp);
 
-  sprintf(Gbuf1, "%s/Corpses/%s", SAVE_DIR, Gbuf2);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Corpses/%s", SAVE_DIR, Gbuf2);
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
 
@@ -2850,10 +2856,10 @@ int restorePasswdOnly(P_char ch, char *name)
   for (; *buf; buf++)
     *buf = LOWER(*buf);
   buf = buff;
-  sprintf(Gbuf1, "%s/%c/%s", SAVE_DIR, *buff, buff);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *buff, buff);
   if (stat(Gbuf1, &statbuf) != 0)
   {
-    sprintf(Gbuf1, "%s/%c/%s", SAVE_DIR, *buff, name);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *buff, name);
     if (stat(Gbuf1, &statbuf) != 0)
       return -1;
   }
@@ -2881,10 +2887,18 @@ int restorePasswdOnly(P_char ch, char *name)
    return -2;
    }
  */
-  if ((GET_BYTE(buf) != short_size) || (GET_BYTE(buf) != int_size) ||
-      (GET_BYTE(buf) != long_size))
+  // Read the type sizes from the save file
+  int saved_short_size = GET_BYTE(buf);
+  int saved_int_size = GET_BYTE(buf);
+  int saved_long_size = GET_BYTE(buf);
+
+  logit(LOG_FILE, "restoreCharacter: %s - saved sizes: short=%d int=%d long=%d, current sizes: short=%d int=%d long=%d",
+    name, saved_short_size, saved_int_size, saved_long_size, short_size, int_size, long_size);
+
+  if ((saved_short_size != short_size) || (saved_int_size != int_size) ||
+      (saved_long_size != long_size))
   {
-    logit(LOG_FILE, "Save file of %s is in an old format.", name);
+    logit(LOG_FILE, "Save file of %s has mismatched architecture.", name);
     send_to_char
       ("Your character file was created on a machine of a different architecture\r\n"
        "type than the current one; loading such a file is not yet supported.\r\n"
@@ -3000,12 +3014,12 @@ int restoreCharOnly(P_char ch, char *name)
     *buf = LOWER(*buf);
   }
   buf = buff;
-  sprintf(Gbuf1, "%s/%c/%s", SAVE_DIR, *buff, buff);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *buff, buff);
 //  logit(LOG_FILE, "%s is the pfile string!", Gbuf1);
 #ifndef _PFILE_
   if (stat(Gbuf1, &statbuf) != 0)
   {
-    sprintf(Gbuf1, "%s/%c/%s", SAVE_DIR, *buff, name);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *buff, name);
     if (stat(Gbuf1, &statbuf) != 0)
       return -1;
   }
@@ -3041,10 +3055,18 @@ int restoreCharOnly(P_char ch, char *name)
 
 /* end TASFALEN */
 
-  if ((GET_BYTE(buf) != short_size) || (GET_BYTE(buf) != int_size) ||
-      (GET_BYTE(buf) != long_size))
+  // Read the type sizes from the save file
+  int saved_short_size = GET_BYTE(buf);
+  int saved_int_size = GET_BYTE(buf);
+  int saved_long_size = GET_BYTE(buf);
+
+  logit(LOG_FILE, "restoreCharacter: %s - saved sizes: short=%d int=%d long=%d, current sizes: short=%d int=%d long=%d",
+    name, saved_short_size, saved_int_size, saved_long_size, short_size, int_size, long_size);
+
+  if ((saved_short_size != short_size) || (saved_int_size != int_size) ||
+      (saved_long_size != long_size))
   {
-    logit(LOG_FILE, "Save file of %s is in an old format.", name);
+    logit(LOG_FILE, "Save file of %s has mismatched architecture.", name);
     send_to_char
       ("Your character file was created on a machine of a different architecture\r\n"
        "type than the current one; loading such a file is not yet supported.\r\n"
@@ -3094,9 +3116,16 @@ int restoreCharOnly(P_char ch, char *name)
 
   GET_LONG(buf);
   start = (int) (buf - buff);
-  if ((restoreStatus(buf, ch) + start) != skill_off)
+  int bytes_read_by_restoreStatus = restoreStatus(buf, ch);
+  int expected_skill_off = start + bytes_read_by_restoreStatus;
+
+  logit(LOG_FILE, "restoreStatus debug: %s - start=%d, bytes_read=%d, expected_skill_off=%d, actual_skill_off=%d",
+    name, start, bytes_read_by_restoreStatus, expected_skill_off, skill_off);
+
+  if (expected_skill_off != skill_off)
   {
-    logit(LOG_FILE, "Warning: restoreStatus() not match offset.");
+    logit(LOG_FILE, "Warning: restoreStatus() not match offset. Difference: %d bytes",
+      skill_off - expected_skill_off);
     fprintf(stderr, "Problem restoring save file of: %s\n", name);
     logit(LOG_FILE, "Problem restoring save file of %s.", name);
     send_to_char
@@ -4095,7 +4124,7 @@ int restoreItemsOnly(P_char ch, int flatrate)
   for (; *buf; buf++)
     *buf = LOWER(*buf);
   buf = buff;
-  sprintf(Gbuf1, "%s/%c/%s", SAVE_DIR, *buff, buff);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *buff, buff);
 
   f = fopen(Gbuf1, "r");
   if (!f)
@@ -4216,13 +4245,13 @@ void restoreCorpses(void)
   int      size, csize, tmp, start, map, end;
   struct stat statbuf;
 
-  sprintf(Gbuf1, "%s/Corpses", SAVE_DIR);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Corpses", SAVE_DIR);
   if (stat(Gbuf1, &statbuf) == -1)
   {
     perror("Corpses dir");
     return;
   }
-  sprintf(Gbuf2, "%s/corpse_list", SAVE_DIR);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s/corpse_list", SAVE_DIR);
   if (stat(Gbuf2, &statbuf) == 0)
   {
     unlink(Gbuf2);
@@ -4232,7 +4261,7 @@ void restoreCorpses(void)
     perror("corpse_list");
     return;
   }
-  sprintf(Gbuf3, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
+  snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
   system(Gbuf3);                /* ls a list of Corpses dir into corpse_list */
   flist = fopen(Gbuf2, "r");
   if (!flist)
@@ -4240,7 +4269,7 @@ void restoreCorpses(void)
 
   while (fscanf(flist, " %s \n", Gbuf2) != EOF)
   {
-    sprintf(Gbuf3, "%s/%s", Gbuf1, Gbuf2);
+    snprintf(Gbuf3, MAX_STRING_LENGTH, "%s/%s", Gbuf1, Gbuf2);
     f = fopen(Gbuf3, "r");
     if (!f)
     {
@@ -4283,7 +4312,7 @@ void restoreCorpses(void)
      * (rename) but that's cheaper than most other solutions.  JAB
      */
 
-    sprintf(Gbuf2, "%s.bak", Gbuf3);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "%s.bak", Gbuf3);
     if (rename(Gbuf3, Gbuf2) == -1)
     {
       logit(LOG_FILE, "Problem with player Corpses directory!\n");
@@ -4416,12 +4445,13 @@ int writePet(P_char ch)
   {
     return 0;
   }
-  if ((sizeof(char) != 1) || (int_size != long_size))
-  {
-    logit(LOG_DEBUG,
-          "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
-    return 0;
-  }
+  // DISABLED FOR 64-BIT: sizeof(int)=4, sizeof(long)=8 on 64-bit systems
+  // if ((sizeof(char) != 1) || (int_size != long_size))
+  // {
+  //   logit(LOG_DEBUG,
+  //         "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
+  //   return 0;
+  // }
   buf = buff;
   ADD_BYTE(buf, (char) (short_size));
   ADD_BYTE(buf, (char) (int_size));
@@ -4484,7 +4514,7 @@ int writePet(P_char ch)
   }
 //  if (!ch->only.npc->owner)
 //    ch->only.npc->owner = str_dup("shop");
-//  sprintf(Gbuf1, "%s/Pets/%s%d", SAVE_DIR, ch->only.npc->owner, GET_IDNUM(ch));
+//  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Pets/%s%d", SAVE_DIR, ch->only.npc->owner, GET_IDNUM(ch));
 
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
@@ -4604,7 +4634,7 @@ int deletePet(char *id)
   if (!id)
     return FALSE;
 
-  sprintf(Gbuf1, "%s/Pets/%s", SAVE_DIR, id);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Pets/%s", SAVE_DIR, id);
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
   unlink(Gbuf1);
@@ -4709,7 +4739,7 @@ P_char restorePet(char *id)
     wizlog(OVERLORD, "Who? Pet's IDnum not given!");
     return 0;
   }
-  sprintf(Gbuf1, "%s/Pets/%s", SAVE_DIR, id);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Pets/%s", SAVE_DIR, id);
 
   f = fopen(Gbuf1, "r");
   if (!f)
@@ -4798,14 +4828,14 @@ void writeSavedItem(P_obj item)
     logit(LOG_DEBUG, "writeSaveditem called with item someplace impossible");
   	return;
 	}
-  sprintf(obj_dir_name, "%s/SavedItems/", SAVE_DIR);
+  snprintf(obj_dir_name, MAX_STRING_LENGTH, "%s/SavedItems/", SAVE_DIR);
 
-  sprintf(obj_file_name, "item.%s.%d", FirstWord(item->name), (int) item);
+  snprintf(obj_file_name, MAX_STRING_LENGTH, "item.%s.%d", FirstWord(item->name), (int) item);
 
   for (buf = obj_file_name; *buf; buf++)
     *buf = LOWER(*buf);
 
-  sprintf(obj_path, "%s/%s", obj_dir_name, obj_file_name);
+  snprintf(obj_path, MAX_STRING_LENGTH, "%s/%s", obj_dir_name, obj_file_name);
 
   buf = buffer;
 
@@ -4869,7 +4899,7 @@ void restoreSavedItems(void)
   P_obj    loaded[4096];
   int      count = 0;
 
-  sprintf(obj_dir_name, "%s/SavedItems", SAVE_DIR);
+  snprintf(obj_dir_name, MAX_STRING_LENGTH, "%s/SavedItems", SAVE_DIR);
   obj_dir = opendir(obj_dir_name);
   if (!obj_dir)
   {
@@ -4881,7 +4911,7 @@ void restoreSavedItems(void)
   {
     if (strstr(obj_entry->d_name, "item.") != obj_entry->d_name)
       continue;
-    sprintf(obj_path, "%s/%s", obj_dir_name, obj_entry->d_name);
+    snprintf(obj_path, MAX_STRING_LENGTH, "%s/%s", obj_dir_name, obj_entry->d_name);
     obj_file = fopen(obj_path, "r");
     if (!obj_file)
     {
@@ -4936,11 +4966,11 @@ void PurgeSavedItemFile(P_obj item)
   if (!item)
 		return;
 
-  sprintf(Gbuf2, "item.%s.%d", FirstWord(item->name), (int) item);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "item.%s.%d", FirstWord(item->name), (int) item);
   for (tmp = Gbuf2; *tmp; tmp++)
     *tmp = LOWER(*tmp);
 
-  sprintf(Gbuf1, "%s/SavedItems/%s", SAVE_DIR, Gbuf2);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/SavedItems/%s", SAVE_DIR, Gbuf2);
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
 
@@ -4972,12 +5002,13 @@ int writeShopKeeper(P_char ch)
 
   for (shop_nr = 0; shop_index[shop_nr].keeper != GET_RNUM(ch); shop_nr++) ;
 
-  if ((sizeof(char) != 1) || (int_size != long_size))
-  {
-    logit(LOG_DEBUG,
-          "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
-    return 0;
-  }
+  // DISABLED FOR 64-BIT: sizeof(int)=4, sizeof(long)=8 on 64-bit systems
+  // if ((sizeof(char) != 1) || (int_size != long_size))
+  // {
+  //   logit(LOG_DEBUG,
+  //         "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
+  //   return 0;
+  // }
   buf = buff;
   ADD_BYTE(buf, (char) (short_size));
   ADD_BYTE(buf, (char) (int_size));
@@ -5024,7 +5055,7 @@ int writeShopKeeper(P_char ch)
           GET_NAME(ch), (int) (buf - buff));
     return 0;
   }
-  sprintf(Gbuf1, "%s/ShopKeepers/%d", SAVE_DIR, shop_nr);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/ShopKeepers/%d", SAVE_DIR, shop_nr);
 
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
@@ -5149,7 +5180,7 @@ int deleteShopKeeper(int id)
     logit(LOG_EXIT, "invalid shop id %d in deleteShopKeeper", id);
     raise(SIGSEGV);
   }
-  sprintf(Gbuf1, "%s/ShopKeepers/%d", SAVE_DIR, id);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/ShopKeepers/%d", SAVE_DIR, id);
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
   unlink(Gbuf1);
@@ -5171,7 +5202,7 @@ P_char restoreShopKeeper(int id)
   {
     return 0;
   }
-  sprintf(Gbuf1, "%s/ShopKeepers/%d", SAVE_DIR, id);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/ShopKeepers/%d", SAVE_DIR, id);
 
   f = fopen(Gbuf1, "r");
   if (!f)
@@ -5234,13 +5265,13 @@ void restore_shopkeepers(void)
   P_char   mob, keeper2;
   struct stat statbuf;
 
-  sprintf(Gbuf1, "%s/ShopKeepers", SAVE_DIR);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/ShopKeepers", SAVE_DIR);
   if (stat(Gbuf1, &statbuf) == -1)
   {
     perror("ShopKeepers dir");
     return;
   }
-  sprintf(Gbuf2, "%s/shop_list", SAVE_DIR);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s/shop_list", SAVE_DIR);
   if (stat(Gbuf2, &statbuf) == 0)
   {
     unlink(Gbuf2);
@@ -5250,7 +5281,7 @@ void restore_shopkeepers(void)
     perror("shop_list");
     return;
   }
-  sprintf(Gbuf3, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
+  snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
   system(Gbuf3);
   flist = fopen(Gbuf2, "r");
   if (!flist)
@@ -5296,13 +5327,13 @@ void restore_allpets(void)
   P_char   mob;
   struct stat statbuf;
 
-  sprintf(Gbuf1, "%s/Pets", SAVE_DIR);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Pets", SAVE_DIR);
   if (stat(Gbuf1, &statbuf) == -1)
   {
     perror("Pets dir");
     return;
   }
-  sprintf(Gbuf2, "%s/pet_list", SAVE_DIR);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s/pet_list", SAVE_DIR);
   if (stat(Gbuf2, &statbuf) == 0)
   {
     unlink(Gbuf2);
@@ -5312,7 +5343,7 @@ void restore_allpets(void)
     perror("pet_list");
     return;
   }
-  sprintf(Gbuf3, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
+  snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
   system(Gbuf3);
   flist = fopen(Gbuf2, "r");
   if (!flist)
@@ -5352,12 +5383,13 @@ int writeTownJustice(int town_nr)
   crm_rec *crec;
   int      count = 0;
 
-  if ((sizeof(char) != 1) || (int_size != long_size))
-  {
-    logit(LOG_DEBUG,
-          "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
-    return 0;
-  }
+  // DISABLED FOR 64-BIT: sizeof(int)=4, sizeof(long)=8 on 64-bit systems
+  // if ((sizeof(char) != 1) || (int_size != long_size))
+  // {
+  //   logit(LOG_DEBUG,
+  //         "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
+  //   return 0;
+  // }
   buf = buff;
 
   crec = hometowns[town_nr - 1].crime_list;
@@ -5395,7 +5427,7 @@ int writeTownJustice(int town_nr)
           town_nr, (int) (buf - buff));
     return 0;
   }
-  sprintf(Gbuf1, "%s/Justice/%d", SAVE_DIR, town_nr);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Justice/%d", SAVE_DIR, town_nr);
 
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
@@ -5519,7 +5551,7 @@ int deleteTownJustice(int id)
     logit(LOG_EXIT, "invalid justice id %d in deleteTownJustice", id);
     raise(SIGSEGV);
   }
-  sprintf(Gbuf1, "%s/Justice/%d", SAVE_DIR, id);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Justice/%d", SAVE_DIR, id);
   strcpy(Gbuf2, Gbuf1);
   strcat(Gbuf2, ".bak");
   unlink(Gbuf1);
@@ -5543,7 +5575,7 @@ int restoreTownJustice(int town_nr)
   {
     return 0;
   }
-  sprintf(Gbuf1, "%s/Justice/%d", SAVE_DIR, town_nr);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Justice/%d", SAVE_DIR, town_nr);
 
   f = fopen(Gbuf1, "r");
   if (!f)
@@ -5599,13 +5631,13 @@ void restore_town_justice(void)
   char     Gbuf3[MAX_STRING_LENGTH];
   struct stat statbuf;
 
-  sprintf(Gbuf1, "%s/Justice", SAVE_DIR);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Justice", SAVE_DIR);
   if (stat(Gbuf1, &statbuf) == -1)
   {
     logit(LOG_FILE, "restore_town_justice: dir '%s' missing.", Gbuf1);
     return;
   }
-  sprintf(Gbuf2, "%s/justice_list", SAVE_DIR);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s/justice_list", SAVE_DIR);
   if (stat(Gbuf2, &statbuf) == 0)
   {
     unlink(Gbuf2);
@@ -5615,7 +5647,7 @@ void restore_town_justice(void)
     logit(LOG_FILE, "restore_town_justice: File '%s' missing.", Gbuf2);
     return;
   }
-  sprintf(Gbuf3, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
+  snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
   system(Gbuf3);
   flist = fopen(Gbuf2, "r");
   if (!flist)
@@ -5655,12 +5687,13 @@ int writeJailItems(P_char ch)
    * different architecture type.
    */
 
-  if ((sizeof(char) != 1) || (int_size != long_size))
-  {
-    logit(LOG_DEBUG,
-          "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
-    return 0;
-  }
+  // DISABLED FOR 64-BIT: sizeof(int)=4, sizeof(long)=8 on 64-bit systems
+  // if ((sizeof(char) != 1) || (int_size != long_size))
+  // {
+  //   logit(LOG_DEBUG,
+  //         "sizeof(char) must be 1 and int_size must == long_size for player saves!\n");
+  //   return 0;
+  // }
   /*
    * in case char reenters game immediately; handle rent/etc correctly
    */
@@ -5723,7 +5756,7 @@ int writeJailItems(P_char ch)
           GET_NAME(ch), (int) (buf - buff));
     return 0;
   }
-  sprintf(Gbuf1, "%s/Justice/", SAVE_DIR);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Justice/", SAVE_DIR);
   tmp = Gbuf1 + strlen(Gbuf1);
   strcat(Gbuf1, GET_NAME(ch));
   for (; *tmp; tmp++)
@@ -5882,7 +5915,7 @@ int deleteJailItems(P_char ch)
   for (; *buf; buf++)
     *buf = LOWER(*buf);
   buf = buff;
-  sprintf(Gbuf1, "%s/Justice/%s", SAVE_DIR, buff);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Justice/%s", SAVE_DIR, buff);
 
   f = fopen(Gbuf1, "r");
   if (!f)
@@ -5914,7 +5947,7 @@ int restoreJailItems(P_char ch)
   for (; *buf; buf++)
     *buf = LOWER(*buf);
   buf = buff;
-  sprintf(Gbuf1, "%s/Justice/%s", SAVE_DIR, buff);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Justice/%s", SAVE_DIR, buff);
 
   f = fopen(Gbuf1, "r");
   if (!f)
@@ -6044,7 +6077,7 @@ int restoreJailItems(P_char ch)
 //    logit(LOG_HOUSE, "Could not save contruction Q");
 //    return 0;
 //  }
-//  sprintf(fname, "%s/House/HouseConstructionQ", SAVE_DIR);
+//  snprintf(fname, MAX_STRING_LENGTH, "%s/House/HouseConstructionQ", SAVE_DIR);
 //  if (!(f = fopen(fname, "w")))
 //    return 0;
 //  fwrite(buff, 1, (unsigned) (buf - buff), f);
@@ -6063,7 +6096,7 @@ int restoreJailItems(P_char ch)
 //
 //  house_upgrade_list = NULL;
 //  current_job = 0;
-//  sprintf(fname, "%s/House/HouseConstructionQ", SAVE_DIR);
+//  snprintf(fname, MAX_STRING_LENGTH, "%s/House/HouseConstructionQ", SAVE_DIR);
 //  if (!(f = fopen(fname, "r")))
 //    return 0;
 //  size = fread(buf, 1, SAV_MAXSIZE, f);
@@ -6099,8 +6132,8 @@ int restoreJailItems(P_char ch)
 //  struct stat statbuf;
 //  int      tmp_errno;
 //
-//  sprintf(Gbuf1, "%s/House/HouseRoom/house.%d", SAVE_DIR, house->vnum);
-//  sprintf(Gbuf2, "%s/House/HouseRoom/house.%d", SAVE_DIR, new_vnum);
+//  snprintf(Gbuf1, 256, "%s/House/HouseRoom/house.%d", SAVE_DIR, house->vnum);
+//  snprintf(Gbuf2, 256, "%s/House/HouseRoom/house.%d", SAVE_DIR, new_vnum);
 //    
 //  if (stat(Gbuf1, &statbuf) == 0)
 //  {
@@ -6208,8 +6241,8 @@ int restoreJailItems(P_char ch)
 //          house->vnum, (int) (buf - buff));
 //    return 0;
 //  }
-//  sprintf(housefile, "house.%d", house->vnum);
-//  sprintf(Gbuf1, "%s/House/HouseRoom/%s", SAVE_DIR, housefile);
+//  snprintf(housefile, MAX_STRING_LENGTH, "house.%d", house->vnum);
+//  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/House/HouseRoom/%s", SAVE_DIR, housefile);
 //
 //  strcpy(Gbuf2, Gbuf1);
 //  strcat(Gbuf2, ".bak");
@@ -6325,7 +6358,7 @@ int restoreJailItems(P_char ch)
 //  {
 //    return 0;
 //  }
-//  sprintf(Gbuf1, "%s/House/HouseRoom/%s", SAVE_DIR, file_name);
+//  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/House/HouseRoom/%s", SAVE_DIR, file_name);
 //
 //  f = fopen(Gbuf1, "r");
 //  if (!f)
@@ -6461,7 +6494,7 @@ int restoreJailItems(P_char ch)
 //  struct dirent *house_entry;
 //  char     house_dir_name[MAX_STRING_LENGTH];
 //
-//  sprintf(house_dir_name, "%s/House/HouseRoom", SAVE_DIR);
+//  snprintf(house_dir_name, MAX_STRING_LENGTH, "%s/House/HouseRoom", SAVE_DIR);
 //  house_dir = opendir(house_dir_name);
 //  if (!house_dir)
 //  {
@@ -6514,7 +6547,7 @@ void moveToBackup( char *name )
   strcpy( lowername, name );
   lowername[0] = LOWER(name[0]);
 
-  sprintf( filename, "%s/%c/%s", SAVE_DIR, lowername[0], lowername );
-  sprintf( command, "mv -f %s %s.bak", filename, filename );
+  snprintf(filename, 512, "%s/%c/%s", SAVE_DIR, lowername[0], lowername );
+  snprintf(command, 1024, "mv -f %s %s.bak", filename, filename );
   system( command );
 }

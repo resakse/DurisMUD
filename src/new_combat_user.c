@@ -61,17 +61,17 @@ void display_condition_body_loc(const P_char ch, const P_char vict,
 
   percent = ((float) currloc / (float) maxloc) * 100;
 
-  sprintf(strn2, "%s%s&n", getBodyLocColorPercent(percent),
+  snprintf(strn2, 256, "%s%s&n", getBodyLocColorPercent(percent),
           getBodyLocStrn(loc, vict));
 
   if (IS_TRUSTED(ch) || (ch == vict))
   {
-    sprintf(strn, "  %48s &+L-&n %d&+g/&n%d &+c(%s%u%%&n&+c)&n\r\n",
+    snprintf(strn, 256, "  %48s &+L-&n %d&+g/&n%d &+c(%s%u%%&n&+c)&n\r\n",
             strn2, currloc, maxloc, getBodyLocColorPercent(percent), percent);
   }
   else
   {
-    sprintf(strn, "  %48s &+L-&n %s%u%%&n\r\n",
+    snprintf(strn, 256, "  %48s &+L-&n %s%u%%&n\r\n",
             strn2, getBodyLocColorPercent(percent), percent);
   }
 
@@ -121,13 +121,13 @@ void display_condition_paired_body_loc(const P_char ch, const P_char vict,
   percent2 = ((float) currloc2 / (float) maxloc2) * 100;
 
 
-  sprintf(strn2, "%s%s&n&+w/&n%s%s&n",
+  snprintf(strn2, 256, "%s%s&n&+w/&n%s%s&n",
           getBodyLocColorPercent(percent), getBodyLocStrn(loc, vict),
           getBodyLocColorPercent(percent2), getBodyLocStrn(loc2, vict));
 
   if (IS_TRUSTED(ch) || (ch == vict))
   {
-    sprintf(strn, "  %58s &+L-&n %d&+g/&n%d&+G|&n%d&+g/&n%d "
+    snprintf(strn, 512, "  %58s &+L-&n %d&+g/&n%d&+G|&n%d&+g/&n%d "
             "&+c(%s%u%%&n&+c/%s%u%%&n&+c)&n\r\n",
             strn2, currloc, maxloc, currloc2, maxloc2,
             getBodyLocColorPercent(percent), percent,
@@ -135,7 +135,7 @@ void display_condition_paired_body_loc(const P_char ch, const P_char vict,
   }
   else
   {
-    sprintf(strn, "  %58s &+L-&n %s%u%%&n&+w/&n%s%u%%&n\r\n",
+    snprintf(strn, 512, "  %58s &+L-&n %s%u%%&n&+w/&n%s%u%%&n\r\n",
             strn2, getBodyLocColorPercent(percent), percent,
             getBodyLocColorPercent(percent2), percent2);
   }

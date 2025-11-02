@@ -1264,7 +1264,7 @@ void do_confirm(P_char ch, bool yes)
       return;
     }
 
-    sprintf(guildinfo, "%s", ch->desc->last_command);
+    snprintf(guildinfo, MAX_INPUT_LENGTH, "%s", ch->desc->last_command);
     bool x = found_asc(founder, ch, "n", guildinfo);
     if(x)
     SUB_MONEY(ch, GUILD_COST, 0);
@@ -1316,7 +1316,7 @@ void command_interpreter(P_char ch, char *argument)
 
   if(!testing)
   {
-  sprintf(blah, "%s", testing);
+  snprintf(blah, MAX_STRING_LENGTH, "%s", testing);
   command_interpreter(ch, testing);
   return;
   }

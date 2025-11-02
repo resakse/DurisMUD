@@ -62,11 +62,11 @@ void make_prompt(void)
     if (point->showstr_count)
     {
       if (ansi)
-        sprintf(promptbuf,
+        snprintf(promptbuf, MAX_INPUT_LENGTH,
                 "\n\033[32m[Return to continue, (q)uit, (r)efresh, (b)ack, or page number (%d/%d)]\033[0m\n",
                 point->showstr_page, point->showstr_count);
       else
-        sprintf(promptbuf,
+        snprintf(promptbuf, MAX_INPUT_LENGTH,
                 "\n[Return to continue, (q)uit, (r)efresh, (b)ack, or page number (%d/%d)]\n",
                 point->showstr_page, point->showstr_count);
       if (write_to_descriptor(point->descriptor, promptbuf) < 0)
@@ -126,7 +126,7 @@ void make_prompt(void)
     if( IS_SET((orig ? orig : t_ch)->specials.act, PLR_SMARTPROMPT) )
     {
       UpdateScreen(t_ch, 0);
-      sprintf(promptbuf, "&+R>&n");
+      snprintf(promptbuf, MAX_INPUT_LENGTH, "&+R>&n");
       send_to_char(promptbuf, t_ch);
       point->prompt_mode = FALSE;
       return;
@@ -780,81 +780,81 @@ void UpdateScreen(P_char ch, int update)
     enemy = GET_OPPONENT(ch);
 
 /* hits */
-  sprintf(buf, VT_CURSAVE);
+  snprintf(buf, 255, VT_CURSAVE);
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size - 3, 13);
+  snprintf(buf, 255, VT_CURSPOS, size - 3, 13);
   send_to_char(buf, ch);
-  sprintf(buf, "          ");
+  snprintf(buf, 255, "          ");
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size - 3, 13);
+  snprintf(buf, 255, VT_CURSPOS, size - 3, 13);
   send_to_char(buf, ch);
-  sprintf(buf, "%s", make_bar(GET_HIT(ch), GET_MAX_HIT(ch), 50));
+  snprintf(buf, 255, "%s", make_bar(GET_HIT(ch), GET_MAX_HIT(ch), 50));
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURREST);
+  snprintf(buf, 255, VT_CURREST);
   send_to_char(buf, ch);
 
 /* moves */
-  sprintf(buf, VT_CURSAVE);
+  snprintf(buf, 255, VT_CURSAVE);
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size - 2, 13);
+  snprintf(buf, 255, VT_CURSPOS, size - 2, 13);
   send_to_char(buf, ch);
-  sprintf(buf, "          ");
+  snprintf(buf, 255, "          ");
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size - 2, 13);
+  snprintf(buf, 255, VT_CURSPOS, size - 2, 13);
   send_to_char(buf, ch);
-  sprintf(buf, "%s", make_bar(GET_VITALITY(ch), GET_MAX_VITALITY(ch), 50));
+  snprintf(buf, 255, "%s", make_bar(GET_VITALITY(ch), GET_MAX_VITALITY(ch), 50));
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURREST);
+  snprintf(buf, 255, VT_CURREST);
   send_to_char(buf, ch);
 
 /* mana */
   if (IS_SET(ch->only.pc->prompt, PROMPT_MANA))
   {
-    sprintf(buf, VT_CURSAVE);
+    snprintf(buf, 255, VT_CURSAVE);
     send_to_char(buf, ch);
-    sprintf(buf, VT_CURSPOS, size - 1, 13);
+    snprintf(buf, 255, VT_CURSPOS, size - 1, 13);
     send_to_char(buf, ch);
-    sprintf(buf, "          ");
+    snprintf(buf, 255, "          ");
     send_to_char(buf, ch);
-    sprintf(buf, VT_CURSPOS, size - 1, 13);
+    snprintf(buf, 255, VT_CURSPOS, size - 1, 13);
     send_to_char(buf, ch);
-    sprintf(buf, "%s", make_bar(GET_MANA(ch), GET_MAX_MANA(ch), 50));
+    snprintf(buf, 255, "%s", make_bar(GET_MANA(ch), GET_MAX_MANA(ch), 50));
     send_to_char(buf, ch);
-    sprintf(buf, VT_CURREST);
+    snprintf(buf, 255, VT_CURREST);
     send_to_char(buf, ch);
   }
 
 /* God visibility */
   if (IS_TRUSTED(ch))
   {
-    sprintf(buf, VT_CURSAVE);
+    snprintf(buf, 255, VT_CURSAVE);
     send_to_char(buf, ch);
-    sprintf(buf, VT_CURSPOS, size - 1, 70);
+    snprintf(buf, 255, VT_CURSPOS, size - 1, 70);
     send_to_char(buf, ch);
-    sprintf(buf, "     ");
+    snprintf(buf, 255, "     ");
     send_to_char(buf, ch);
-    sprintf(buf, VT_CURSPOS, size - 1, 70);
+    snprintf(buf, 255, VT_CURSPOS, size - 1, 70);
     send_to_char(buf, ch);
-    sprintf(buf, "%d", ch->only.pc->wiz_invis);
+    snprintf(buf, 255, "%d", ch->only.pc->wiz_invis);
     send_to_char(buf, ch);
-    sprintf(buf, VT_CURREST);
+    snprintf(buf, 255, VT_CURREST);
     send_to_char(buf, ch);
   }
 
 /* tank */
-  sprintf(buf, VT_CURSAVE);
+  snprintf(buf, 255, VT_CURSAVE);
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size, 7);
+  snprintf(buf, 255, VT_CURSPOS, size, 7);
   send_to_char(buf, ch);
-  sprintf(buf, "          ");
+  snprintf(buf, 255, "          ");
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size, 7);
+  snprintf(buf, 255, VT_CURSPOS, size, 7);
   send_to_char(buf, ch);
   if (enemy && (enemy->in_room == ch->in_room) &&
       IS_SET(ch->specials.act, PLR_DEBUG))
   {
     if ((tank = GET_OPPONENT(enemy)) && (ch->in_room == tank->in_room))
-      sprintf(buf, "%s", ch == tank ? "yourself" : !CAN_SEE(ch, tank) ?
+      snprintf(buf, 255, "%s", ch == tank ? "yourself" : !CAN_SEE(ch, tank) ?
               "someone" : J_NAME(tank));
     if (ch != tank)
     {
@@ -934,51 +934,51 @@ void InitScreen(P_char ch)
   int      size;
 
   size = ch->only.pc->screen_length + 1;
-  sprintf(buf, VT_HOMECLR);
+  snprintf(buf, 255, VT_HOMECLR);
   send_to_char(buf, ch);
-  sprintf(buf, VT_MARGSET, 0, size - 5);
+  snprintf(buf, 255, VT_MARGSET, 0, size - 5);
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size - 4, 1);
+  snprintf(buf, 255, VT_CURSPOS, size - 4, 1);
   send_to_char(buf, ch);
-  sprintf(buf,
+  snprintf(buf, 255,
           "&+r-===================================Duris=====================================-&n");
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size - 3, 1);
+  snprintf(buf, 255, VT_CURSPOS, size - 3, 1);
   send_to_char(buf, ch);
-  sprintf(buf, "Vitality: ");
+  snprintf(buf, 255, "Vitality: ");
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size - 2, 1);
+  snprintf(buf, 255, VT_CURSPOS, size - 2, 1);
   send_to_char(buf, ch);
-  sprintf(buf, "Stamina : ");
+  snprintf(buf, 255, "Stamina : ");
   send_to_char(buf, ch);
   if (IS_SET(ch->only.pc->prompt, PROMPT_MANA))
   {
-    sprintf(buf, VT_CURSPOS, size - 1, 1);
+    snprintf(buf, 255, VT_CURSPOS, size - 1, 1);
     send_to_char(buf, ch);
-    sprintf(buf, "Mental: ");
+    snprintf(buf, 255, "Mental: ");
     send_to_char(buf, ch);
   }
 
   if (IS_TRUSTED(ch))
   {
-    sprintf(buf, VT_CURSPOS, size - 1, 70);
+    snprintf(buf, 255, VT_CURSPOS, size - 1, 70);
     send_to_char(buf, ch);
-    sprintf(buf, "Vis: ");
+    snprintf(buf, 255, "Vis: ");
     send_to_char(buf, ch);
   }
-  sprintf(buf, VT_CURSPOS, size, 1);
+  snprintf(buf, 255, VT_CURSPOS, size, 1);
   send_to_char(buf, ch);
-  sprintf(buf, "Tank: ");
+  snprintf(buf, 255, "Tank: ");
   send_to_char(buf, ch);
-  sprintf(buf, VT_CURSPOS, size, 40);
+  snprintf(buf, 255, VT_CURSPOS, size, 40);
   send_to_char(buf, ch);
-  sprintf(buf, "Enemy: ");
+  snprintf(buf, 255, "Enemy: ");
   send_to_char(buf, ch);
 
 /* first update */
   UpdateScreen(ch, 0);
 
 /* put cursor back to top */
-  sprintf(buf, VT_CURSPOS, 0, 0);
+  snprintf(buf, 255, VT_CURSPOS, 0, 0);
   send_to_char(buf, ch);
 }

@@ -153,7 +153,7 @@ void initialize_boards(void)
   {
     if ((BOARD_RNUM(i) = real_object(BOARD_VNUM(i))) == -1)
     {
-      sprintf(buf, " Fatal board error: board vnum %d does not exist!",
+      snprintf(buf, 256, " Fatal board error: board vnum %d does not exist!",
               BOARD_VNUM(i));
       logit(LOG_BOARD, buf);
       continue;
@@ -270,7 +270,7 @@ void Board_write_message(int board_type, struct char_data *ch, char *arg)
   tmstr = (char *) asctime(localtime(&ct));
   *(tmstr + strlen(tmstr) - 9) = '\0';  /* kill seconds and year */
 
-  sprintf(buf, "[%s (%s)] %s", tmstr, GET_NAME(ch), arg);
+  snprintf(buf, MAX_INPUT_LENGTH, "[%s (%s)] %s", tmstr, GET_NAME(ch), arg);
   len = strlen(buf) + 1;
 
   CREATE(NEW_MSG_INDEX(board_type).heading, char, len, MEM_TAG_STRING);
@@ -392,7 +392,7 @@ int Board_display_msg(int board_type, struct char_data *ch, char *arg)
     send_to_char("That message seems to be empty.\r\n", ch);
     return 1;
   }
-  sprintf(buffer, "Message %d : %s\r\n\r\n%s\r\n", msg,
+  snprintf(buffer, MAX_STRING_LENGTH, "Message %d : %s\r\n\r\n%s\r\n", msg,
           MSG_HEADING(board_type, ind),
           msg_storage[MSG_SLOTNUM(board_type, ind)]);
 
@@ -434,7 +434,7 @@ int Board_remove_msg(int board_type, struct char_data *ch, char *arg)
     send_to_char("That message appears to be screwed up.\r\n", ch);
     return 1;
   }
-  sprintf(buf, "(%s)", GET_NAME(ch));
+  snprintf(buf, MAX_INPUT_LENGTH, "(%s)", GET_NAME(ch));
   if (GET_LEVEL(ch) < REMOVE_LVL(board_type) &&
       !(strstr(MSG_HEADING(board_type, ind), buf)))
   {
@@ -476,7 +476,7 @@ int Board_remove_msg(int board_type, struct char_data *ch, char *arg)
   }
   num_of_msgs[board_type]--;
   send_to_char("Message removed.\r\n", ch);
-  sprintf(buf, "$n just removed message %d.", msg);
+  snprintf(buf, MAX_INPUT_LENGTH, "$n just removed message %d.", msg);
   act(buf, FALSE, ch, 0, 0, TO_ROOM);
   Board_save_board(board_type);
 

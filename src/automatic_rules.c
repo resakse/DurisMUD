@@ -137,12 +137,12 @@ void do_raid(P_char ch, char *argument, int cmd)
           {  
             if (!str_cmp(arg2, "bad"))
               continue;
-            sprintf(Gbuf, "%s is &+Wgood&n.\n", GET_NAME(tch));
+            snprintf(Gbuf, MAX_INPUT_LENGTH, "%s is &+Wgood&n.\n", GET_NAME(tch));
             send_to_char(Gbuf, ch);
           }
           else
           {
-            sprintf(Gbuf, "&+R%s&n is &+Rnot raidable!\n", GET_NAME(tch));
+            snprintf(Gbuf, MAX_INPUT_LENGTH, "&+R%s&n is &+Rnot raidable!\n", GET_NAME(tch));
             send_to_char(Gbuf, ch);
           }
         }

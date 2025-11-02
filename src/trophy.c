@@ -227,11 +227,11 @@ void do_trophy(P_char ch, char *arg, int cmd)
       
       if( IS_TRUSTED(ch) )
       {        
-        sprintf(Gbuf1, " %s  &n%s&n(%d:%d)\n", pad_ansi(zone.name.c_str(), 40).c_str(), Gbuf2, it->exp, notches);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, " %s  &n%s&n(%d:%d)\n", pad_ansi(zone.name.c_str(), 40).c_str(), Gbuf2, it->exp, notches);
       }
       else
       {
-        sprintf(Gbuf1, " %s  &n%s\n", pad_ansi(zone.name.c_str(), 40).c_str(), Gbuf2);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, " %s  &n%s\n", pad_ansi(zone.name.c_str(), 40).c_str(), Gbuf2);
       }      
       
       send_to_char(Gbuf1, ch);

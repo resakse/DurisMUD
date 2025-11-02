@@ -21,7 +21,7 @@
 #include "db.h"
 #include "events.h"
 #include "prototypes.h"
-#include "types.h"
+//#include "types.h"  // Not needed on modern Linux systems
 #include "interp.h"
 #include "spells.h"
 #include "structs.h"
@@ -257,7 +257,7 @@ char    *comma_string(long num)
   0};
   int      bp1, bp2, len, j;
 
-  sprintf(buf1, "%ld", num);
+  snprintf(buf1, 50, "%ld", num);
 
   len = strlen(buf1);
   bp1 = 0;
@@ -456,7 +456,7 @@ void test_load_all_chars(P_char ch)
   
   for (i = 0; i < 26; i++)
   {
-    sprintf(filename, "/bin/ls Players/%s > %s", alphabet[i], "temp_letterfile");
+    snprintf(filename, MAX_STRING_LENGTH, "/bin/ls Players/%s > %s", alphabet[i], "temp_letterfile");
     system(filename);
     flist = fopen("temp_letterfile", "r");
     if(!flist)
@@ -588,7 +588,7 @@ void do_release(P_char ch, char *argument, int cmd)
       if(!d->character || CAN_SEE(ch, d->character))
       {
         close_socket(d);
-        sprintf(buf, "Closing socket to descriptor #%d\n", sdesc);
+        snprintf(buf, MAX_STRING_LENGTH, "Closing socket to descriptor #%d\n", sdesc);
         send_to_char(buf, ch);
         if(GET_LEVEL(ch) < 62)
         {
@@ -653,19 +653,19 @@ void do_emote(P_char ch, char *argument, int cmd)
   else
   {
     /*
-     * sprintf(buf, "$n %s", argument + i);
+     * snprintf(buf, MAX_STRING_LENGTH, "$n %s", argument + i);
      */
     for (k = world[ch->in_room].people; k; k = k->next_in_room)
       if(IS_AWAKE(k))
       {
-        sprintf(buf, "$n %s", language_CRYPT(ch, k, argument + i));
+        snprintf(buf, MAX_STRING_LENGTH, "$n %s", language_CRYPT(ch, k, argument + i));
         act(buf, FALSE, ch, 0, k, TO_VICT | ACT_SILENCEABLE);
       }
     listen_broadcast(ch, (const char*)buf, LISTEN_EMOTE);
 
     if(IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(GET_PLYR(ch)))
     {
-      sprintf(buf, "$N %s", argument + i);
+      snprintf(buf, MAX_STRING_LENGTH, "$N %s", argument + i);
       act(buf, FALSE, ch, 0, ch, TO_CHAR);
     }
     else
@@ -691,7 +691,7 @@ void do_echo(P_char ch, char *argument, int cmd)
     send_to_char("That must be a mistake...\n", ch);
   else
   {
-    sprintf(buf, "%s\n", argument + i);
+    snprintf(buf, MAX_STRING_LENGTH, "%s\n", argument + i);
     send_to_room(buf, ch->in_room);
     
     for (d = descriptor_list; d; d = d->next)
@@ -1106,7 +1106,7 @@ void do_goto(P_char ch, char *argument, int cmd)
 
   if(ch->only.pc->poofOutSound)
   {
-    sprintf(output, "!!SOUND(%s F=1 P=10)\n", ch->only.pc->poofOutSound);
+    snprintf(output, MAX_STRING_LENGTH, "!!SOUND(%s F=1 P=10)\n", ch->only.pc->poofOutSound);
 
     for (pers = world[ch->in_room].people; pers; pers = pers->next_in_room)
     {
@@ -1322,12 +1322,12 @@ void do_deathobj(P_char ch, char *argument, int cmd)
       vnum[strlen(vnum) - 1] = '\0';
       if((obj = read_object(atoi(vnum), VIRTUAL)))
       {
-        sprintf(Gbuf, "%d. [%s] %s\n", count, vnum, obj->short_description);
+        snprintf(Gbuf, MAX_STRING_LENGTH, "%d. [%s] %s\n", count, vnum, obj->short_description);
         extract_obj(obj);
       }
       else
       {
-        sprintf(Gbuf, "%d. [%s] No object found.\n", count, vnum);
+        snprintf(Gbuf, MAX_STRING_LENGTH, "%d. [%s] No object found.\n", count, vnum);
       }
       strcat(out, Gbuf);
     }
@@ -1370,7 +1370,7 @@ void do_deathobj(P_char ch, char *argument, int cmd)
         }
         else
         {
-          sprintf(Gbuf, "%d\n", newvnum);
+          snprintf(Gbuf, MAX_STRING_LENGTH, "%d\n", newvnum);
           strcat(out, Gbuf);
           strcat(out, vnum);
           inserted = TRUE;
@@ -1378,7 +1378,7 @@ void do_deathobj(P_char ch, char *argument, int cmd)
       }
       if(!inserted)
       {
-        sprintf(Gbuf, "%d\n", newvnum);
+        snprintf(Gbuf, MAX_STRING_LENGTH, "%d\n", newvnum);
         strcat(out, Gbuf);
       }
       obj_index[rn].func.obj = death_proc;
@@ -1450,13 +1450,13 @@ void stat_dam(P_char ch, char *arg)
     race_name = race_names_table[race].ansi;
     pulse = combat_by_race[race][0];
     pulse += (int)(get_property("damage.pulse.class.all", 2));
-    sprintf(prop_name, "damage.totalOutput.racial.%s", race_names_table[race].no_spaces);
+    snprintf(prop_name, 512, "damage.totalOutput.racial.%s", race_names_table[race].no_spaces);
     mult_mod = get_property(prop_name, 1.);
     multiplier = combat_by_race[race][1];
     damcap = combat_by_race[race][2];
-    sprintf(buf, "%%-%ds &+W%%2d&n  %%.3f  (&+W%%.3f&n) &+%%c%%.3f (%%d)&n\n",
+    snprintf(buf, 512, "%%-%ds &+W%%2d&n  %%.3f  (&+W%%.3f&n) &+%%c%%.3f (%%d)&n\n",
       strlen(race_name) - ansi_strlen(race_name) + 15);
-    sprintf(tmplate, buf, race_name, (int) pulse, multiplier, mult_mod, (damcap > 1) ? 'C' : 'c', damcap,
+    snprintf(tmplate, 512, buf, race_name, (int) pulse, multiplier, mult_mod, (damcap > 1) ? 'C' : 'c', damcap,
       (int)(damcap * damroll_cap) );
     send_to_char(tmplate, ch);
   }
@@ -1482,12 +1482,12 @@ void stat_spldam(P_char ch, char *arg)
     // List modifier for each type of spell damage.
     for( type = 0; type < LAST_SPLDAM_TYPE; type++ )
     {
-      sprintf(buf, "damage.spellTypeMod.offensive.racial.%s.%s",
+      snprintf(buf, 512, "damage.spellTypeMod.offensive.racial.%s.%s",
         race_names_table[race].no_spaces, spldam_types[type]);
 
       val = get_property(buf, 1.00);
 
-      sprintf(buf, "%1.3f ", val);
+      snprintf(buf, 512, "%1.3f ", val);
       strcat(line, buf);
     }
 
@@ -1495,12 +1495,12 @@ void stat_spldam(P_char ch, char *arg)
 
     for( type = 0; type < LAST_SPLDAM_TYPE; type++ )
     {
-      sprintf(buf, "damage.spellTypeMod.defensive.racial.%s.%s",
+      snprintf(buf, 512, "damage.spellTypeMod.defensive.racial.%s.%s",
         race_names_table[race].no_spaces, spldam_types[type]);
 
       val = get_property(buf, 1.00);
 
-      sprintf(buf, "%1.3f ", val);
+      snprintf(buf, 512, "%1.3f ", val);
       strcat(line, buf);
     }
 
@@ -1698,7 +1698,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     rm = &world[i];
     
     sprinttype(rm->sector_type, sector_types, buf2);
-    sprintf(o_buf,
+    snprintf(o_buf, MAX_STRING_LENGTH,
             "&+YRoom: [&N%d&+Y](&N%d&+Y)  Zone: &N%d&+Y  Sector type: &N%s\n",
             rm->number, i, 
             zone_table[rm->zone].number, 
@@ -2204,7 +2204,7 @@ void do_stat(P_char ch, char *argument, int cmd)
 
     strcat(o_buf, buf);
 
-    sprintf(buf, "\n&+YSpecial procedure:&N ");
+    snprintf(buf, MAX_STRING_LENGTH, "\n&+YSpecial procedure:&N ");
     if(j->R_num >= 0)
       strcat(buf, (obj_index[j->R_num].func.obj ? get_function_name((void*)obj_index[j->R_num].func.obj) : "No"));
     else
@@ -2273,7 +2273,7 @@ void do_stat(P_char ch, char *argument, int cmd)
     /* Since quality of an item can have some meaning now, let's add it to stat command -Alver */
     {
         int craft = j->craftsmanship;
-        sprintf(buf, "\n&+YQuality:&N ");
+        snprintf(buf, MAX_STRING_LENGTH, "\n&+YQuality:&N ");
 
       if( craft < OBJCRAFT_LOWEST || craft > OBJCRAFT_HIGHEST )
       {
@@ -3292,7 +3292,7 @@ void do_echoa(P_char ch, char *argument, int cmd)
       {
         if(GET_LEVEL(d->character) >= level)
         {
-          sprintf(Gbuf1, "A[%s]", GET_NAME(ch));
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "A[%s]", GET_NAME(ch));
           send_to_char(Gbuf1, d->character);
         }
 	send_to_char(argument, d->character);
@@ -3338,7 +3338,7 @@ void do_echoz(P_char ch, char *arg, int cmd)
         {
           if(GET_LEVEL(d->character) >= level)
           {
-            sprintf(Gbuf1, "Z[%s]", GET_NAME(ch));
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "Z[%s]", GET_NAME(ch));
             send_to_char(Gbuf1, d->character);
           }
           send_to_char(arg, d->character);
@@ -3385,7 +3385,7 @@ void do_echog(P_char ch, char *arg, int cmd)
         {
           if(GET_LEVEL(d->character) >= level)
           {
-            sprintf(Gbuf1, "G[%s]", GET_NAME(ch));
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "G[%s]", GET_NAME(ch));
             send_to_char(Gbuf1, d->character);
           }
           send_to_char(arg, d->character);
@@ -3433,7 +3433,7 @@ void do_echoe(P_char ch, char *arg, int cmd)
         {
           if(GET_LEVEL(d->character) >= level)
           {
-            sprintf(Gbuf1, "E[%s]", GET_NAME(ch));
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "E[%s]", GET_NAME(ch));
             send_to_char(Gbuf1, d->character);
           }
           send_to_char(arg, d->character);
@@ -3480,7 +3480,7 @@ void do_echou(P_char ch, char *arg, int cmd)
         {
           if(GET_LEVEL(d->character) >= level)
           {
-            sprintf(Gbuf1, "U[%s]", GET_NAME(ch));
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "U[%s]", GET_NAME(ch));
             send_to_char(Gbuf1, d->character);
           }
           send_to_char(arg, d->character);
@@ -3520,12 +3520,12 @@ void do_wizlock(P_char ch, char *arg, int cmd)
     if(IS_SET(game_locked, LOCK_CREATION))
     {
       REMOVE_BIT(game_locked, LOCK_CREATION);
-      sprintf(buf, "&+GDuris DikuMUD ->&n Restrictions on new character creations lifted.\n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+GDuris DikuMUD ->&n Restrictions on new character creations lifted.\n");
     }
     else
     {
       SET_BIT(game_locked, LOCK_CREATION);
-      sprintf(buf, "&+RDuris DikuMUD ->&n Game is being locked;  no more character creation.\n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+RDuris DikuMUD ->&n Game is being locked;  no more character creation.\n");
     }
   }
   else if(is_abbrev(buf1, "connections"))
@@ -3533,12 +3533,12 @@ void do_wizlock(P_char ch, char *arg, int cmd)
     if(IS_SET(game_locked, LOCK_CONNECTIONS))
     {
       REMOVE_BIT(game_locked, LOCK_CONNECTIONS);
-      sprintf(buf, "&+GDuris DikuMUD ->&n Restrictions on new connections lifted.\n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+GDuris DikuMUD ->&n Restrictions on new connections lifted.\n");
     }
     else
     {
       SET_BIT(game_locked, LOCK_CONNECTIONS);
-      sprintf(buf, "&+RDuris DikuMUD ->&n Game is being locked; no more connections.\n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+RDuris DikuMUD ->&n Game is being locked; no more connections.\n");
     }
   }
   else if(is_abbrev(buf1, "maxplayers"))
@@ -3546,7 +3546,7 @@ void do_wizlock(P_char ch, char *arg, int cmd)
     if(IS_SET(game_locked, LOCK_MAX_PLAYERS))
     {
       REMOVE_BIT(game_locked, LOCK_MAX_PLAYERS);
-      sprintf(buf, "&+GDuris DikuMUD ->&n Restrictions on max players lifted.\n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+GDuris DikuMUD ->&n Restrictions on max players lifted.\n");
     }
     else
     {
@@ -3555,7 +3555,7 @@ void do_wizlock(P_char ch, char *arg, int cmd)
       {
         SET_BIT(game_locked, LOCK_MAX_PLAYERS);
         game_locked_players = atoi(buf1);
-        sprintf(buf,"&+RDuris DikuMUD ->&n Game is limited to a MAX of %d players.\n", game_locked_players );
+        snprintf(buf, MAX_STRING_LENGTH,"&+RDuris DikuMUD ->&n Game is limited to a MAX of %d players.\n", game_locked_players );
       }
       else
       {
@@ -3568,7 +3568,7 @@ void do_wizlock(P_char ch, char *arg, int cmd)
     if( IS_SET(game_locked, LOCK_LEVEL) )
     {
       REMOVE_BIT(game_locked, LOCK_LEVEL);
-      sprintf(buf, "&+GDuris DikuMUD ->&n Restrictions on level lifted.\n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+GDuris DikuMUD ->&n Restrictions on level lifted.\n");
     }
     else
     {
@@ -3577,7 +3577,7 @@ void do_wizlock(P_char ch, char *arg, int cmd)
       {
         SET_BIT(game_locked, LOCK_LEVEL);
         game_locked_level = atoi(buf1);
-        sprintf(buf,"&+RDuris DikuMUD ->&n Game is limited to level %d players.\n", game_locked_level );
+        snprintf(buf, MAX_STRING_LENGTH,"&+RDuris DikuMUD ->&n Game is limited to level %d players.\n", game_locked_level );
       }
       else
       {
@@ -3697,8 +3697,8 @@ void do_nchat(P_char ch, char *argument, int cmd)
   }
   else
   {
-    sprintf( LastNchat2, "%s", LastNchat1 );
-    sprintf( LastNchat1, "%s", argument );
+    snprintf(LastNchat2, MAX_INPUT_LENGTH, "%s", LastNchat1 );
+    snprintf(LastNchat1, MAX_INPUT_LENGTH, "%s", argument );
   }
 
   if( ch->desc )
@@ -3891,18 +3891,18 @@ void do_wizmsg(P_char ch, char *arg, int cmd)
 
   if( min_level > AVATAR )
   {
-     sprintf(color, "&+R");
+     snprintf(color, 4, "&+R");
   }
   else
   {
-     sprintf(color, "&+r");
+     snprintf(color, 4, "&+r");
   }
 
   // If God is visible - Show real chars name, not the switched...
-  sprintf(Gbuf1, "%s : (%s%d&n) [ %s &n]\n\r", GET_NAME(realChar), color, min_level, send_string);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s : (%s%d&n) [ %s &n]\n\r", GET_NAME(realChar), color, min_level, send_string);
 
   // If God is invisible
-  sprintf(Gbuf3, "Someone : (%s%d&n) [ %s &n]\n\r", color, min_level, send_string);
+  snprintf(Gbuf3, MAX_STRING_LENGTH, "Someone : (%s%d&n) [ %s &n]\n\r", color, min_level, send_string);
 
   for( d = descriptor_list; d; d = d->next )
   {
@@ -3949,7 +3949,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
     switch (shutdownData.eShutdownType)
     {
       case TimedShutdownData::OK:
-        sprintf(buf, "\r\n%s grabs Duris by the balls and rips them off.\r\n", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\n%s grabs Duris by the balls and rips them off.\r\n", shutdownData.IssuedBy);
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
@@ -3957,7 +3957,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         break;
 
       case TimedShutdownData::REBOOT:
-        sprintf(buf, "\r\n%s shreds the world around you.\r\n", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\n%s shreds the world around you.\r\n", shutdownData.IssuedBy);
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
@@ -3965,7 +3965,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         break;
 
       case TimedShutdownData::COPYOVER:
-        sprintf(buf, "\r\n%s destroys the world as you know it.\r\n", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\n%s destroys the world as you know it.\r\n", shutdownData.IssuedBy);
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
@@ -3973,7 +3973,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         break;
 
       case TimedShutdownData::AUTOREBOOT_COPYOVER:
-        sprintf(buf, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n", shutdownData.IssuedBy);
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
@@ -3981,7 +3981,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         break;
 
       case TimedShutdownData::AUTOREBOOT:
-        sprintf(buf, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\nDuris fades into nothing, as the world begins its reconstruction...\r\n", shutdownData.IssuedBy);
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
@@ -3990,7 +3990,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
 
       case TimedShutdownData::PWIPE:
         // Dunno why, but send_to_all isn't color coding here, maybe term type is erased in database or such? :(
-        sprintf(buf, "\r\n\033[1;5;44mDuris begins to fade into nothing.. So do you.. \033[0m\r\n\033[1;5;44mThis is really the end!!!\033[0m\r\n\033[1;5;44m............\033[0m\r\n\033[1;5;44m........\033[0m\r\n\033[1;5;44m......\033[0m\r\n\033[1;5;44m...\033[0m\r\n\033[1;5;44m.\033[0m\n\r", shutdownData.IssuedBy);
+        snprintf(buf, 500, "\r\n\033[1;5;44mDuris begins to fade into nothing.. So do you.. \033[0m\r\n\033[1;5;44mThis is really the end!!!\033[0m\r\n\033[1;5;44m............\033[0m\r\n\033[1;5;44m........\033[0m\r\n\033[1;5;44m......\033[0m\r\n\033[1;5;44m...\033[0m\r\n\033[1;5;44m.\033[0m\n\r", shutdownData.IssuedBy);
         send_to_all(buf);
         logit(LOG_STATUS, "Shutdown pwipe called.");
         if( !sql_pwipe( 1723699 ) )
@@ -4029,7 +4029,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
       // CANCEL the reboot.
       shutdownData.eShutdownType = TimedShutdownData::NONE;
       send_to_all("&+R*** Scheduled Reboot Cancelled ***&n\n");
-      sprintf(buf, "Scheduled reboot cancelled: unable to locate %s", shutdownData.IssuedBy);
+      snprintf(buf, 500, "Scheduled reboot cancelled: unable to locate %s", shutdownData.IssuedBy);
       wizlog(60, buf);
       return;
     }
@@ -4124,9 +4124,9 @@ void displayShutdownMsg(P_char ch)
   }
 
   if(secs > 60)
-    sprintf(buf, "&+R*** Scheduled %s in %ld minute%s***&n\n", type, secs/60, (secs >= 120) ? "s " : " ");
+    snprintf(buf, 200, "&+R*** Scheduled %s in %ld minute%s***&n\n", type, secs/60, (secs >= 120) ? "s " : " ");
   else
-    sprintf(buf, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
+    snprintf(buf, 200, "&+R*** Scheduled &-L%s&n&+R in %ld seconds ***&n\n", type, secs);
   send_to_char(buf, ch);
 }
 
@@ -4178,9 +4178,9 @@ void do_shutdown(P_char ch, char *argument, int cmd)
   // if there is a pending shutdown, cancel it now...
   if((shutdownData.eShutdownType != TimedShutdownData::NONE))
   {
-    sprintf(buf, "&+R*** Scheduled %s cancelled ***&n\n", type, GET_NAME(ch));
+    snprintf(buf, 100, "&+R*** Scheduled %s cancelled ***&n\n", type, GET_NAME(ch));
     send_to_all(buf);
-    sprintf(buf, "Scheduled %s cancelled by %s", type, GET_NAME(ch));
+    snprintf(buf, 100, "Scheduled %s cancelled by %s", type, GET_NAME(ch));
     shutdownData.eShutdownType = TimedShutdownData::NONE;
     wizlog(60, buf);
     sql_log( ch, WIZLOG, "Shutdown cancelled by %s", GET_NAME(ch) );
@@ -4821,7 +4821,7 @@ void do_purge(P_char ch, char *argument, int cmd)
         if( IS_ARTIFACT(obj) )
         {
           act("You purged artifact $p; not removing it from the artifact list.", FALSE, ch, obj, 0, TO_CHAR);
-          sprintf( buf, "&+WIf you wish to clear the artifact entry, use '&+wartifact clear %d&+W'.&n\n\r",
+          snprintf(buf, 512, "&+WIf you wish to clear the artifact entry, use '&+wartifact clear %d&+W'.&n\n\r",
             OBJ_VNUM(obj) );
         }
         extract_obj(obj);
@@ -5456,7 +5456,7 @@ void do_reroll(P_char ch, char *argument, int cmd)
     send_to_char("Rerolled...\n", ch);
   else
   {
-    sprintf(buf, "%s Rerolled:     Avg:(%d)\n  S:%3d  D:%3d  A:%3d  C:%3d\n  P:%3d  I:%3d  W:%3d Ch:%3d\n",
+    snprintf(buf, MAX_STRING_LENGTH, "%s Rerolled:     Avg:(%d)\n  S:%3d  D:%3d  A:%3d  C:%3d\n  P:%3d  I:%3d  W:%3d Ch:%3d\n",
       GET_NAME(victim), (GET_C_STR(victim) + GET_C_DEX(victim) + GET_C_AGI(victim) + GET_C_CON(victim)
       + GET_C_POW(victim) + GET_C_INT(victim) + GET_C_WIS(victim) + GET_C_CHA(victim)) / 8, GET_C_STR(victim),
       GET_C_DEX(victim), GET_C_AGI(victim), GET_C_CON(victim), GET_C_POW(victim), GET_C_INT(victim), GET_C_WIS(victim),
@@ -5736,7 +5736,7 @@ void do_zreset(P_char ch, char *argument, int cmd)
   }
   else if(!str_cmp(arg, "ok"))
   {
-    sprintf(buf, "Zone: %s has been reset.\n", zone_struct->name);
+    snprintf(buf, MAX_STRING_LENGTH, "Zone: %s has been reset.\n", zone_struct->name);
     send_to_char(buf, ch);
     reset_zone(zone_number, 0);
     // If char resetting zone is a mortal.. hrm..
@@ -5747,7 +5747,7 @@ void do_zreset(P_char ch, char *argument, int cmd)
   }
   else if(!str_cmp(arg, "full"))
   {
-    sprintf(buf, "Zone: %s has been reset.\n", zone_struct->name);
+    snprintf(buf, MAX_STRING_LENGTH, "Zone: %s has been reset.\n", zone_struct->name);
     send_to_char(buf, ch);
     zone_purge(zone_number);
     reset_zone(zone_number, 1);
@@ -5792,7 +5792,7 @@ void do_reinitphys(P_char ch, char *arg, int cmd)
   else if( ch == vict || !IS_TRUSTED(vict) )
   {
     NewbySkillSet(vict, TRUE);
-    sprintf(buf, "Resetting of $N's skills completed.");
+    snprintf(buf, MAX_STRING_LENGTH, "Resetting of $N's skills completed.");
     act(buf, FALSE, ch, 0, vict, TO_CHAR);
   }
   else
@@ -5905,7 +5905,7 @@ void do_vis(P_char ch, char *argument, int cmd)
   if(!*buf)
   {                             /* Inquire visibility */
     if(IS_TRUSTED(ch))
-      sprintf(buf,
+      snprintf(buf, MAX_STRING_LENGTH,
               "You are currently visible only to players with level > %d.\n",
               ch->only.pc->wiz_invis);
     if(IS_AFFECTED(ch, AFF_INVISIBLE) || IS_AFFECTED2(ch, AFF2_MINOR_INVIS))
@@ -5941,7 +5941,7 @@ void do_vis(P_char ch, char *argument, int cmd)
          ch);
       return;
     }
-    sprintf(buf, "You are now visible only to PCs with level > %d.\n",
+    snprintf(buf, MAX_STRING_LENGTH, "You are now visible only to PCs with level > %d.\n",
             min_level);
 
     ch->only.pc->wiz_invis = (ubyte) min_level;
@@ -5981,7 +5981,7 @@ void do_law_flags(P_char ch, char *argument, int cmd)
        ch);
     for (i = 1; i <= LAST_HOME; i++)
     {
-      sprintf(buf, "%-40s%-20s\n", town_name_list[i],
+      snprintf(buf, MAX_STRING_LENGTH, "%-40s%-20s\n", town_name_list[i],
               ((i - 1) > JUSTICE_IS_LAST_FLAG) ? "" :
               justice_flag_names[i - 1]);
       send_to_char(buf, ch);
@@ -6000,13 +6000,13 @@ void do_law_flags(P_char ch, char *argument, int cmd)
   if(*c_city == '\0')
   {
     /* okay.. just show them all the law flags for this player  */
-    sprintf(buf, "Current justice flags for %s:\n\n", vict->player.name);
+    snprintf(buf, MAX_STRING_LENGTH, "Current justice flags for %s:\n\n", vict->player.name);
     send_to_char(buf, ch);
     for (i = 1; i <= LAST_HOME; i++)
     {
       if(IS_TOWN_INVADER(vict, i))
         continue;
-      sprintf(buf, "%-15s    %s\n", town_name_list[i],
+      snprintf(buf, MAX_STRING_LENGTH, "%-15s    %s\n", town_name_list[i],
               justice_flag_names[PC_TOWN_JUSTICE_FLAGS(vict, i)]);
       send_to_char(buf, ch);
     }
@@ -6168,7 +6168,7 @@ void do_demote(P_char ch, char *argument, int cmd)
   
   /* Tell caster */
 
-  sprintf(buf,
+  snprintf(buf, MAX_STRING_LENGTH,
           "You have just demoted %s to level 1!  Ain't they hating..\n",
           GET_NAME(victim));
   send_to_char(buf, ch);
@@ -6696,7 +6696,7 @@ void do_wizhost(P_char ch, char *argument, int cmd)
        ch);
     for (count = 0, tmp = wizconnect; tmp; count++, tmp = tmp->next)
     {
-      sprintf(buf, "%16s %s\n", tmp->name, tmp->ban_str);
+      snprintf(buf, MAX_STRING_LENGTH, "%16s %s\n", tmp->name, tmp->ban_str);
       send_to_char(buf, ch);
     }
     return;
@@ -6750,16 +6750,16 @@ void do_ban(P_char ch, char *argument, int cmd)
     }
     for (count = 0, tmp = ban_list; tmp; count++, tmp = tmp->next)
     {
-      sprintf(buf, "%3d %16s %s\n", tmp->lvl, tmp->name, tmp->ban_str);
+      snprintf(buf, MAX_STRING_LENGTH, "%3d %16s %s\n", tmp->lvl, tmp->name, tmp->ban_str);
       send_to_char(buf, ch);
     }
     if(count == 1)
     {
-      sprintf(buf, "\nThere is 1 banned site string.\n");
+      snprintf(buf, MAX_STRING_LENGTH, "\nThere is 1 banned site string.\n");
     }
     else
     {
-      sprintf(buf, "\nThere are %d banned site strings.\n", count);
+      snprintf(buf, MAX_STRING_LENGTH, "\nThere are %d banned site strings.\n", count);
     }
     send_to_char(buf, ch);
     return;
@@ -6872,7 +6872,7 @@ void do_allow(P_char ch, char *argument, int cmd)
       FREE(curr);
       curr = NULL;
       send_to_char("Ok.\n", ch);
-      sprintf(buf, "WIZ: (%s) allow %s", ch->player.name, argument);
+      snprintf(buf, MAX_STRING_LENGTH, "WIZ: (%s) allow %s", ch->player.name, argument);
       logit(LOG_WIZ, buf);
       save_ban_file();
       return;
@@ -6986,7 +6986,7 @@ void do_lookup(P_char ch, char *argument, int cmd)
     half_chop(buf, level, pattern);
     half_chop(pattern, m_class, buf);
     half_chop(buf, race, pattern);
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "&+RQuery:\n&+WFind all ch with first letter:&+R%s&+W Level:&+R%s&+W Class:&+R%s&+W Race:&+R%s&+W\n",
             start_letter, level, m_class, race);
     send_to_char(buf, ch);
@@ -7008,11 +7008,11 @@ void do_lookup(P_char ch, char *argument, int cmd)
     P_char   owner;
 
 
-    sprintf(buf, "&+W%-12s %s %-10s\t %-10s&n\n", "Name", "Lev", "Class",
+    snprintf(buf, MAX_STRING_LENGTH, "&+W%-12s %s %-10s\t %-10s&n\n", "Name", "Lev", "Class",
             "Race");
     send_to_char(buf, ch);
 
-    sprintf(Gbuf3, "/bin/ls -1 Players/%s > %s", start_letter,
+    snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 Players/%s > %s", start_letter,
             "temp_letterfile");
     system(Gbuf3);              /* ls a list of Players into the temp_file */
     flist = fopen("temp_letterfile", "r");
@@ -7095,7 +7095,7 @@ void do_lookup(P_char ch, char *argument, int cmd)
         if((length + strlen(arg) + 40) > MAX_STRING_LENGTH)
         {
           strcat(o_buf, "...and the list goes on...\n");
-          irc = 0;
+          irc = NULL;
         }
         else
         {
@@ -7105,7 +7105,7 @@ void do_lookup(P_char ch, char *argument, int cmd)
         }
       }
     }
-    while (irc > 0);
+    while (irc != NULL);
 
     fclose(fp);
 
@@ -7144,7 +7144,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
     // find association cash
     send_to_char("Associations:\r\n", ch);
 
-    sprintf(buff, "/bin/ls -1 Players/Assocs/*.? > %s", "temp_assocsfile");
+    snprintf(buff, MAX_STRING_LENGTH, "/bin/ls -1 Players/Assocs/*.? > %s", "temp_assocsfile");
     system(buff);
 
     flist = fopen("temp_assocsfile", "r");
@@ -7171,7 +7171,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
           }
 
           fscanf(f, "%ld %ld %ld %ld\n", &p, &g, &s, &c);
-          sprintf(buff, "%s: &+W%ld p &+Y%ld g &+w%ld s &+y%ld c\r\n", guild_name, p, g, s, c);
+          snprintf(buff, MAX_STRING_LENGTH, "%s: &+W%ld p &+Y%ld g &+w%ld s &+y%ld c\r\n", guild_name, p, g, s, c);
           send_to_char(buff, ch);
           total_p += p;
           total_g += g;
@@ -7188,13 +7188,13 @@ void do_money_supply(P_char ch, char *argument, int cmd)
     send_to_char("Players with more than 10k plat:\r\n", ch);
     for(int l = 97; l < 123; l++) 
     {
-       sprintf(buff, "/bin/ls -1 Players/%c > %s", l, "temp_letterfile");
+       snprintf(buff, MAX_STRING_LENGTH, "/bin/ls -1 Players/%c > %s", l, "temp_letterfile");
        system(buff);
  
        flist = fopen("temp_letterfile", "r");
        if(!flist) 
        {
-          sprintf(buff, "error reading from letter file %c\r\n", l);
+          snprintf(buff, MAX_STRING_LENGTH, "error reading from letter file %c\r\n", l);
           send_to_char(buff, ch);
           fclose(flist);
           continue;
@@ -7215,7 +7215,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
              c = GET_COPPER(tch) + GET_BALANCE_COPPER(tch);
              if(((1000*p) + (100*g) + (10*s) + (c)) >= 10000000)
              {
-                sprintf(buff, "%s: &+W%ld p &+Y%ld g &+w%ld s &+y%ld c\r\n", GET_NAME(tch), p, g, s, c);
+                snprintf(buff, MAX_STRING_LENGTH, "%s: &+W%ld p &+Y%ld g &+w%ld s &+y%ld c\r\n", GET_NAME(tch), p, g, s, c);
                 send_to_char(buff, ch);
              }
 
@@ -7414,13 +7414,13 @@ void do_ptell(P_char ch, char *arg, int cmd)
   {
     if(IS_SET(ch->specials.act, PLR_ECHO))
     {
-      sprintf(Gbuf1, "&+rYou ptell %s '&+R%s&n&+r'\n", GET_NAME(vict), msg);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+rYou ptell %s '&+R%s&n&+r'\n", GET_NAME(vict), msg);
       send_to_char(Gbuf1, ch, LOG_PRIVATE);
     }
     else
       send_to_char("Ok.\n", ch);
   }
-  sprintf(Gbuf1, "&+r%s responds to your petition with '&+R%s&n&+r'\n",
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+r%s responds to your petition with '&+R%s&n&+r'\n",
           (CAN_SEE(vict, ch) && IS_TRUSTED(ch)) ? ch->player.name :
           IS_TRUSTED(vict) ? ch->player.name : "Someone", msg);
   send_to_char(Gbuf1, vict, LOG_PRIVATE);
@@ -7435,7 +7435,7 @@ void do_ptell(P_char ch, char *arg, int cmd)
         IS_SET(d->character->specials.act, PLR_PETITION) &&
         (d->character != vict) && (d->character != ch))
     {
-      sprintf(Gbuf1, "&+rPetition: %s responds to %s with '&+R%s&n&+r'.\n",
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+rPetition: %s responds to %s with '&+R%s&n&+r'.\n",
               CAN_SEE(d->character, ch) ? GET_NAME(ch) : "Someone",
               GET_NAME(vict), msg);
       send_to_char(Gbuf1, d->character, LOG_PRIVATE);
@@ -7583,14 +7583,14 @@ void do_finger(P_char ch, char *arg, int cmd)
       free_char(finger_foo);
     return;
   }
-  sprintf(Gbuf1, "&+cName:&n %s %s &n&+cLevel:&n %d &+cClass:&n %s &n&+cRace:&n %s\n",
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cName:&n %s %s &n&+cLevel:&n %d &+cClass:&n %s &n&+cRace:&n %s\n",
     GET_NAME(finger_foo), GET_TITLE(finger_foo), GET_LEVEL(finger_foo), get_class_string(finger_foo, Gbuf2),
     race_names_table[(int) GET_RACE(finger_foo)].ansi);
   laston = finger_foo->player.time.saved;
   timegone = (time(0) - laston) / 60;
   send_to_char(Gbuf1, ch);
   pid = GET_PID(finger_foo);
-  sprintf(Gbuf1, "&+cPID:&n %d &+cLast saved:&n %s", pid, asctime(localtime(&laston)));
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cPID:&n %d &+cLast saved:&n %s", pid, asctime(localtime(&laston)));
   Gbuf1[strlen(Gbuf1) - 1] = 0;
   send_to_char(Gbuf1, ch);
   send_to_char("\n", ch);
@@ -7632,7 +7632,7 @@ void do_finger(P_char ch, char *arg, int cmd)
     send_to_char("  &n(&+cPlaying:&+w ", ch);
     *Gbuf1 = '\0';
     if( hours > 0 )
-      sprintf(Gbuf1, "%d hour%s", hours, (hours > 1) ? "s" : "");
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "%d hour%s", hours, (hours > 1) ? "s" : "");
     if( minutes > 0 )
       sprintf(Gbuf1 + strlen(Gbuf1), "%s%d minute%s", (hours > 0) ? ", " : "", minutes, (minutes > 1) ? "s" : "");
     // display seconds only if there are no hours/minutes
@@ -7655,7 +7655,7 @@ void do_finger(P_char ch, char *arg, int cmd)
   }
   send_to_char(Gbuf1, ch);
 
-  sprintf(Gbuf1, "\n&+cLast Rented: &n%s&n &+W[&+C%d&+W]\n&n&+cBirthplace: &n%s&n &+W[&+C%d&+W]&n\n",
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "\n&+cLast Rented: &n%s&n &+W[&+C%d&+W]\n&n&+cBirthplace: &n%s&n &+W[&+C%d&+W]&n\n",
     world[real_room0(GET_HOME(finger_foo))].name, GET_HOME(finger_foo),
     world[real_room0(GET_BIRTHPLACE(finger_foo))].name, GET_BIRTHPLACE(finger_foo));
   send_to_char(Gbuf1, ch);
@@ -7702,9 +7702,9 @@ void do_decline(P_char ch, char *arg, int cmd)
       logit(LOG_NEWCHAR, "%s declined new char %s (%s): %s.",
             GET_NAME(ch), GET_NAME(d->character),
             (d->host ? d->host : "UNKNOWN"), (arg ? arg : "NO REASON GIVEN"));
-      sprintf(Gbuf1, "&+c*** STATUS: %s declined new player %s. (%s)\n",
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c*** STATUS: %s declined new player %s. (%s)\n",
               GET_NAME(ch), GET_NAME(d->character), arg);
-      sprintf(Gbuf2, "&+c*** STATUS: Someone declined new player %s. (%s)\n",
+      snprintf(Gbuf2, MAX_STRING_LENGTH, "&+c*** STATUS: Someone declined new player %s. (%s)\n",
               GET_NAME(d->character), arg);
       for (i = descriptor_list; i; i = i->next)
         if(!i->connected && i->character &&
@@ -7745,7 +7745,7 @@ void do_approve(P_char ch, char *arg, int cmd)
   {
     /* list characters needing approval:  */
     count = 0;
-    sprintf(Gbuf1, "&+cAC: Post-creation approval system is now %s.\n", approve_modes[approve_mode]);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cAC: Post-creation approval system is now %s.\n", approve_modes[approve_mode]);
     send_to_char(Gbuf1, ch);
     if( approve_mode == APPROVE_ON )
     {
@@ -7754,7 +7754,7 @@ void do_approve(P_char ch, char *arg, int cmd)
       {
         if( STATE(d1) == CON_ACCEPTWAIT )
         {
-          sprintf( Gbuf1, "%d. %s (%s %s) %s - Rolled for %ld:%02ld, Socket: %d, Idle: %d:%02d.\n",
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "%d. %s (%s %s) %s - Rolled for %ld:%02ld, Socket: %d, Idle: %d:%02d.\n",
             ++count, GET_NAME(d1->character),
             get_class_string(d1->character, Gbuf2), race_names_table[(int) GET_RACE(d1->character)].ansi,
             d1->host ? d1->host : "UNKNOWN", d1->character->only.pc->pc_timer[PC_TIMER_HEAVEN]/60,
@@ -7782,8 +7782,8 @@ void do_approve(P_char ch, char *arg, int cmd)
       }
       approve_mode = APPROVE_OFF;
 
-      sprintf(Gbuf1, "&+cAC: %s set newchar application system %s.\n", GET_NAME(ch), approve_modes[APPROVE_OFF]);
-      sprintf(Gbuf2, "&+CAC: Someone set newchar application system %s.\n", approve_modes[APPROVE_OFF]);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cAC: %s set newchar application system %s.\n", GET_NAME(ch), approve_modes[APPROVE_OFF]);
+      snprintf(Gbuf2, MAX_STRING_LENGTH, "&+CAC: Someone set newchar application system %s.\n", approve_modes[APPROVE_OFF]);
       logit(LOG_WIZ, Gbuf1);
       for( d1 = descriptor_list; d1; d1 = d1->next )
       {
@@ -7805,9 +7805,9 @@ void do_approve(P_char ch, char *arg, int cmd)
       }
       approve_mode = APPROVE_ON;
 
-      sprintf(Gbuf1, "&+cAC: %s set newchar application system %s.\n", GET_NAME(ch), approve_modes[APPROVE_ON]);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cAC: %s set newchar application system %s.\n", GET_NAME(ch), approve_modes[APPROVE_ON]);
       logit(LOG_WIZ, Gbuf1);
-      sprintf(Gbuf2, "&+cAC: Someone set newchar application system %s.\n", approve_modes[APPROVE_ON]);
+      snprintf(Gbuf2, MAX_STRING_LENGTH, "&+cAC: Someone set newchar application system %s.\n", approve_modes[APPROVE_ON]);
       for( d1 = descriptor_list; d1; d1 = d1->next )
       {
         if( (d1->connected == CON_PLAYING) && d1->character && IS_SET(d1->character->specials.act, PLR_PETITION)
@@ -7827,9 +7827,9 @@ void do_approve(P_char ch, char *arg, int cmd)
         {
           logit(LOG_NEWCHAR, "%s approved new char %s from %s.", GET_NAME(ch), GET_NAME(d1->character),
             (d1->host ? d1->host : "UNKNOWN"));
-          sprintf(Gbuf1, "&+c*** STATUS: %s approved new player %s from %s.\n", GET_NAME(ch), GET_NAME(d1->character),
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c*** STATUS: %s approved new player %s from %s.\n", GET_NAME(ch), GET_NAME(d1->character),
             d1->host ? d1->host : "&+WUNKNOWN&n");
-          sprintf(Gbuf2, "&+c*** STATUS: Someone approved new player %s from %s.\n", GET_NAME(d1->character),
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "&+c*** STATUS: Someone approved new player %s from %s.\n", GET_NAME(d1->character),
             d1->host ? d1->host : "&+WUNKNOWN&n");
 
           for( d2 = descriptor_list; d2; d2 = d2->next )
@@ -7915,7 +7915,7 @@ void do_uninvite(P_char ch, char *arg, int cmd)
 
   arg = one_argument(arg, f_a);
 
-  sprintf(path, "Players/Invited/%c/%s", f_a[0], f_a);
+  snprintf(path, 2048, "Players/Invited/%c/%s", f_a[0], f_a);
 
   // -1 is failure, 0 is success.
   if( unlink(path) == -1)
@@ -8304,16 +8304,16 @@ void do_ingame(P_char ch, char *args, int cmd)
     {
       sprintf( name, "%s", GET_TRUE_NAME(desc->character) );
       // We know there's at least one %s in the string that needs substituting.
-      sprintf( buf2, buf1, name );
+      snprintf(buf2, MAX_STRING_LENGTH, buf1, name );
       i = 1;
       // Substitute the rest if there are any.
       while( i++ < count )
       {
         // Swap back and forth between buffers.
         if( (i % 2) == 0 )
-          sprintf( buf3, buf2, name );
+          snprintf(buf3, MAX_STRING_LENGTH, buf2, name );
         else
-          sprintf( buf2, buf3, name );
+          snprintf(buf2, MAX_STRING_LENGTH, buf3, name );
       }
       // count % 2 tells us which buffer we have the final string.
       if( (count % 2) == 0 )
@@ -8386,7 +8386,7 @@ void do_inroom(P_char ch, char *args, int cmd)
      * everywhere else)
      */
 
-    sprintf(buf2, buf1, FirstWord(GET_NAME(v)));
+    snprintf(buf2, MAX_STRING_LENGTH, buf1, FirstWord(GET_NAME(v)));
 
     /* okay.. now just dump buf2 to the command interpretter  */
 
@@ -8560,7 +8560,7 @@ void do_which(P_char ch, char *args, int cmd)
     {
       if( IS_ROOM(room_nr, w_bit) )
       {
-        sprintf(buf1, "&+Y[&n%5d&+Y](&n%5d&+Y)&n %s\n", world[room_nr].number,
+        snprintf(buf1, MAX_STRING_LENGTH, "&+Y[&n%5d&+Y](&n%5d&+Y)&n %s\n", world[room_nr].number,
                 room_nr, world[room_nr].name);
         o_len += strlen(buf1);
         if(o_len > MAX_STRING_LENGTH)
@@ -8598,7 +8598,7 @@ void do_which(P_char ch, char *args, int cmd)
     for (zone_nr = 0; zone_nr <= top_of_zone_table; zone_nr++)
       if(zone_table[zone_nr].flags & w_bit)
       {
-        sprintf(buf1, "&+Y[&n%3d&+Y]&n %s\n", zone_nr,
+        snprintf(buf1, MAX_STRING_LENGTH, "&+Y[&n%3d&+Y]&n %s\n", zone_nr,
                 zone_table[zone_nr].name);
         o_len += strlen(buf1);
         if(o_len > MAX_STRING_LENGTH)
@@ -8761,7 +8761,7 @@ void do_which(P_char ch, char *args, int cmd)
                   obj_index[t_obj->R_num].virtual_number,
                   t_obj->short_description, where_obj(t_obj, FALSE), temp);
 
-          sprintf(temp, "");
+          snprintf(temp, MAX_STRING_LENGTH, "");
           o_len += strlen(buf1);
           if(o_len > MAX_STRING_LENGTH)
           {
@@ -8946,7 +8946,7 @@ void do_grant(P_char ch, char *args, int cmd)
 
   if(!cmdname[0])
   {
-    sprintf(buf, "&+WCommands currently granted to %s:\n\n", GET_NAME(vict));
+    snprintf(buf, MAX_STRING_LENGTH, "&+WCommands currently granted to %s:\n\n", GET_NAME(vict));
 
     if(!vict->only.pc->gcmd_arr)
     {
@@ -8958,7 +8958,7 @@ void do_grant(P_char ch, char *args, int cmd)
 
       for (i = 0; i < s; i++)
       {
-        sprintf(buf2, "[&+Y%d&n] &+c%-20s&n",
+        snprintf(buf2, MAX_STRING_LENGTH, "[&+Y%d&n] &+c%-20s&n",
                 cmd_info[vict->only.pc->gcmd_arr[i]].minimum_level,
                 command[vict->only.pc->gcmd_arr[i] - 1]);
 
@@ -9301,7 +9301,7 @@ void do_sethome(P_char ch, char *args, int cmd)
     send_to_char("\nValid home flags are:\n", ch);
     for (i = 0; homeflags[i][0] != '\n'; i++)
     {
-      sprintf(buf, "\t%s\n", homeflags[i]);
+      snprintf(buf, MAX_STRING_LENGTH, "\t%s\n", homeflags[i]);
       send_to_char(buf, ch);
     }
     return;
@@ -9311,13 +9311,13 @@ void do_sethome(P_char ch, char *args, int cmd)
    * flag'
    */
 
-  sprintf(buf, "char %s %s %s", name, setbit_flags[hflg_index], val);
+  snprintf(buf, MAX_STRING_LENGTH, "char %s %s %s", name, setbit_flags[hflg_index], val);
   do_setbit(ch, buf, CMD_SETHOME);
   // a hack :)
   if(1 == hflg_index)
   {
     // set the origbp too
-    sprintf(buf, "char %s origbp %s", name, val);
+    snprintf(buf, MAX_STRING_LENGTH, "char %s origbp %s", name, val);
     do_setbit(ch, buf, CMD_SETHOME);
   }
 }
@@ -9327,9 +9327,9 @@ void revert_sethome(P_char member)
   char buf[MAX_STRING_LENGTH];
 
   // Revert their home to their original birthplace.
-  sprintf(buf, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+  snprintf(buf, MAX_STRING_LENGTH, "char %s home %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
   do_setbit(member, buf, CMD_SETHOME);
-  sprintf(buf, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
+  snprintf(buf, MAX_STRING_LENGTH, "char %s orighome %d", J_NAME(member), GET_ORIG_BIRTHPLACE(member));
   do_setbit(member, buf, CMD_SETHOME);
 }
 
@@ -9396,7 +9396,7 @@ void do_proc(P_char ch, char *args, int cmd)
 
     for (i = 0; dynam_proc_list[i].name; i++)
     {
-      sprintf(libname, "%-23s %-8s\n", dynam_proc_list[i].name,
+      snprintf(libname, MAX_STRING_LENGTH, "%-23s %-8s\n", dynam_proc_list[i].name,
               dynam_proc_list[i].handle ? "Loaded" : "Unloaded");
       send_to_char(libname, ch);
     }
@@ -9665,7 +9665,7 @@ ACMD(do_depiss)
     send_to_char("Sorry, Mobile Not Found!\n", ch);
     return;
   }
-  sprintf(buf3, "%s has been removed from %s's pissed list.\n",
+  snprintf(buf3, MAX_STRING_LENGTH, "%s has been removed from %s's pissed list.\n",
           J_NAME(vic), J_NAME(mob));
   send_to_char(buf3, ch);
 }
@@ -9706,7 +9706,7 @@ ACMD(do_repiss)
     send_to_char("Sorry, Mobile Not Found!\n", ch);
     return;
   }
-  sprintf(buf3, "%s has been added to %s's pissed list.\n",
+  snprintf(buf3, MAX_STRING_LENGTH, "%s has been added to %s's pissed list.\n",
           J_NAME(vic), J_NAME(mob));
   send_to_char(buf3, ch);
 }
@@ -9755,7 +9755,7 @@ ACMD(do_tedit)
     {
       if(GET_LEVEL(ch) >= fields[l].level)
       {
-        sprintf(buf, "%s%-11.11s", buf, fields[l].cmd);
+        snprintf(buf, MAX_STRING_LENGTH, "%s%-11.11s", buf, fields[l].cmd);
         if(!(i % 7))
           strcat(buf, "\n");
         i++;
@@ -9876,12 +9876,12 @@ ACMD(do_list_witness)
       {
         if(!hometowns[town - 1].crime_list)
         {
-          sprintf(buf, "Crime record for %s is empty.\n",
+          snprintf(buf, MAX_STRING_LENGTH, "Crime record for %s is empty.\n",
                   town_name_list[town]);
           send_to_char(buf, ch);
           return;
         }
-        sprintf(buf, "Crimes report for &+M%s&N:\n", town_name_list[town]);
+        snprintf(buf, MAX_STRING_LENGTH, "Crimes report for &+M%s&N:\n", town_name_list[town]);
 
         while ((crec = crime_find(hometowns[town - 1].crime_list,
                                   NULL, NULL, 0, NOWHERE, J_STATUS_NONE,
@@ -9891,36 +9891,36 @@ ACMD(do_list_witness)
           switch (crec->status)
           {
           case J_STATUS_WANTED:
-            sprintf(buf, "%s&+R%s&N wanted for %s; reward %d platinums.\n",
+            snprintf(buf, MAX_STRING_LENGTH, "%s&+R%s&N wanted for %s; reward %d platinums.\n",
                     buf, crec->attacker, crime_list[crec->crime],
                     crec->money);
             break;
           case J_STATUS_DEBT:
-            sprintf(buf, "%s&+R%s&N owe %d plat. to the town.\n",
+            snprintf(buf, MAX_STRING_LENGTH, "%s&+R%s&N owe %d plat. to the town.\n",
                     buf, crec->attacker, crec->money);
             break;
           case J_STATUS_PARDON:
-            sprintf(buf, "%s&+R%s&N pardon %s for %s.\n",
+            snprintf(buf, MAX_STRING_LENGTH, "%s&+R%s&N pardon %s for %s.\n",
                     buf, crec->victim, crec->attacker,
                     crime_list[crec->crime]);
             break;
           case J_STATUS_CRIME:
-            sprintf(buf, "%s&+R%s&N commited %s against %s.\n",
+            snprintf(buf, MAX_STRING_LENGTH, "%s&+R%s&N commited %s against %s.\n",
                     buf, crec->attacker, crime_list[crec->crime],
                     crec->victim);
             break;
           case J_STATUS_IN_JAIL:
-            sprintf(buf, "%s&+R%s&N is waiting in jail.\n",
+            snprintf(buf, MAX_STRING_LENGTH, "%s&+R%s&N is waiting in jail.\n",
                     buf, crec->attacker);
             break;
           case J_STATUS_JAIL_TIME:
-            sprintf(buf, "%s&+R%s&N is in jail for %d days.\n",
+            snprintf(buf, MAX_STRING_LENGTH, "%s&+R%s&N is in jail for %d days.\n",
                     buf, crec->attacker, crec->money);
             break;
           case J_STATUS_DELETED:
             break;
           case J_STATUS_NONE:
-            sprintf(buf,
+            snprintf(buf, MAX_STRING_LENGTH,
                     "%s&+R%s&N commited %s against %s, status &+c%s&n (%d)(%d).\n",
                     buf, crec->attacker, crime_list[crec->crime],
                     crec->victim, justice_status[crec->status], crec->money,
@@ -10048,7 +10048,7 @@ void do_echot(P_char ch, char *argument, int cmd)
   {
     if(IS_SET(ch->specials.act, PLR_ECHO))
     {
-      sprintf(Gbuf1, "&+WYou echot %s '&n%s&+W'.&n\n", GET_NAME(vict), message);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+WYou echot %s '&n%s&+W'.&n\n", GET_NAME(vict), message);
       send_to_char(Gbuf1, ch);
     }
     else
@@ -10082,7 +10082,7 @@ int vnum_mobile(char *searchname, struct char_data *ch)
       char_to_room(t_mob, ch->in_room, -2);
       strcpy(mobile_name, /*strip_color */ (t_mob->player.short_descr));
       strToLower(mobile_name);
-      sprintf(buf, "%6d  %5d  %-s\n",
+      snprintf(buf, MAX_STRING_LENGTH, "%6d  %5d  %-s\n",
               mob_index[i].virtual_number, mob_index[i].number - 1,
               (t_mob->player.short_descr) ?
               t_mob->player.short_descr : "None");
@@ -10141,12 +10141,12 @@ int vnum_object(char *searchname, struct char_data *ch)
     {
       if(strlen(buf) > MAX_STRING_LENGTH - 50)
       {
-        sprintf(buf, "%s\n...and the list goes on...\n", buf);
+        snprintf(buf, MAX_STRING_LENGTH, "%s\n...and the list goes on...\n", buf);
         break;
       }
       else
       {
-        sprintf(buf, "%s%3d. &+B[%5d] &n%s\n", buf, ++found,
+        snprintf(buf, MAX_STRING_LENGTH, "%s%3d. &+B[%5d] &n%s\n", buf, ++found,
                 obj_index[nr].virtual_number,
                 obj_index[nr].short_description);
       }
@@ -10177,12 +10177,12 @@ int vnum_room(char *searchname, struct char_data *ch)
     {
       if(strlen(buf) > MAX_STRING_LENGTH - 50)
       {
-        sprintf(buf, "%s\n...and the list goes on...\n", buf);
+        snprintf(buf, MAX_STRING_LENGTH, "%s\n...and the list goes on...\n", buf);
         break;
       }
       else
       {
-        sprintf(buf, "%s%3d. &+B[%5d]&n %s\n", buf, ++found,
+        snprintf(buf, MAX_STRING_LENGTH, "%s%3d. &+B[%5d]&n %s\n", buf, ++found,
                 world[nr].number, world[nr].name);
       }
     }
@@ -10534,12 +10534,12 @@ void do_givepet(P_char ch, char *arg, int cmd)
     if(isname("dog", pet))
     {
       mob = read_mobile(28124, VIRTUAL);
-      sprintf(msg, "$N runs up to you and barks playfully.");
+      snprintf(msg, MAX_STRING_LENGTH, "$N runs up to you and barks playfully.");
     }
     else if(isname("cat", pet))
     {
       mob = read_mobile(74132, VIRTUAL);
-      sprintf(msg, "$N walks up to you and rubs up against your leg.");
+      snprintf(msg, MAX_STRING_LENGTH, "$N walks up to you and rubs up against your leg.");
     }
     else if(isdigit(*pet))
     {
@@ -10654,7 +10654,7 @@ void do_questwhere(P_char ch, char *arg, int cmd)
    {
       if( isname( arg, obj->name) && is_quested_item( obj ) )
       {
-         sprintf( buf2, "%3d. [%6d] %s - ", ++count, 
+         snprintf(buf2, MAX_STRING_LENGTH, "%3d. [%6d] %s - ", ++count, 
             obj_index[obj->R_num].virtual_number,
             pad_ansi( obj->short_description, 40).c_str() );
             strcat( buf2, where_obj( obj, FALSE ));
@@ -10711,7 +10711,7 @@ void do_setship( P_char ch, char *arg )
   if( (ship = get_ship_from_owner(name)) != NULL )
   {
 // Debugging:
-//    sprintf( Gbuf1, "Found ship '%s', Owner: '%s'.\n\r", ship->name, ship->ownername );
+//    snprintf(Gbuf1, MAX_STRING_LENGTH, "Found ship '%s', Owner: '%s'.\n\r", ship->name, ship->ownername );
 //    send_to_char( Gbuf1, ch );
 
     arg = one_argument(arg, name);
@@ -10723,10 +10723,10 @@ void do_setship( P_char ch, char *arg )
         send_to_char( "You must enter a postive amount to set ship frags to.\n\r", ch );
         return;
       }
-      sprintf( Gbuf1, "Name: '%s&n' Owner: '%s&n'\n\rOld Ship Frags: %d, ", ship->name, ship->ownername, ship->frags );
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "Name: '%s&n' Owner: '%s&n'\n\rOld Ship Frags: %d, ", ship->name, ship->ownername, ship->frags );
       send_to_char( Gbuf1, ch );
       ship->frags = atoi(name);
-      sprintf( Gbuf1, "New Ship frags: %d.\n\r", ship->frags );
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "New Ship frags: %d.\n\r", ship->frags );
       send_to_char( Gbuf1, ch );
     }
     else if( isname( name, "guns") )
@@ -10766,7 +10766,7 @@ void do_setship( P_char ch, char *arg )
   }
   else
   {
-    sprintf( Gbuf1, "Couldn't find ship '%s'.\n\r", name );
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "Couldn't find ship '%s'.\n\r", name );
     send_to_char( Gbuf1, ch );
   }
 }
@@ -10836,13 +10836,13 @@ void which_race( P_char ch, char *argument )
   // If we couldn't identify the race to look for.. (allowing RACE_NONE since this is a Imm command).
   if( raceIndex < 0 || raceIndex > LAST_RACE )
   {
-    sprintf( buf, "Race '%s' not found.  Please enter a number between 0 and %d or a valid race name.\n\r",
+    snprintf(buf, MAX_STRING_LENGTH, "Race '%s' not found.  Please enter a number between 0 and %d or a valid race name.\n\r",
       arg, LAST_RACE );
     send_to_char( buf, ch );
     return;
   }
 
-  sprintf( buf, "Race: %s (%d) listing: \n\r", race_names_table[raceIndex].ansi, raceIndex );
+  snprintf(buf, MAX_STRING_LENGTH, "Race: %s (%d) listing: \n\r", race_names_table[raceIndex].ansi, raceIndex );
   send_to_char( buf, ch );
 
   count = 0;
@@ -10888,7 +10888,7 @@ void which_race( P_char ch, char *argument )
         }
       }
       extract_char( mob );
-      sprintf( buf, "%3d)&+W%c&n%6d %s &n-%c&+c%2d&n/&+C%2d&n  %s\n", ++count, (mobIndex->func.mob == NULL) ? ' ' : '*',
+      snprintf(buf, MAX_STRING_LENGTH, "%3d)&+W%c&n%6d %s &n-%c&+c%2d&n/&+C%2d&n  %s\n", ++count, (mobIndex->func.mob == NULL) ? ' ' : '*',
         mobVnum, pad_ansi( (mobIndex->desc2==NULL) ? "(NULL)" : mobIndex->desc2, 30, TRUE ).c_str(),
         (mobIndex->qst_func == NULL) ? ' ' : 'Q', mobIndex->number, mobIndex->limit, zone_table[mobZone].name );
       // If the next line exceeds size of return buffer (-30 for terminating char + "And the list goes on...\n\r").
@@ -10907,7 +10907,7 @@ void which_race( P_char ch, char *argument )
   }
   if( count > 0 )
   {
-    sprintf( buf, "Num)   Vnum          Name                &+cInGame&n/&+CMax&n Home Zone\n\r"
+    snprintf(buf, MAX_STRING_LENGTH, "Num)   Vnum          Name                &+cInGame&n/&+CMax&n Home Zone\n\r"
                   "    &+W*&n=Special Func                         -Q=Quest Mob\n\r" );
     send_to_char( buf, ch);
     page_string(ch->desc, oBuf, 1);
@@ -10926,12 +10926,12 @@ void stat_single_race( P_char ch, int race )
   int  i;
 
   // Note: Right now the longest race name is "Water Elemental" (42) at 15 chars. 6/5/2015
-  sprintf( buf, "\n\rRace: %s&n (%2d) %15s %10s %2s\n\r",
+  snprintf(buf, MAX_STRING_LENGTH, "\n\rRace: %s&n (%2d) %15s %10s %2s\n\r",
     pad_ansi(race_names_table[race].ansi, 15).c_str(), race, race_names_table[race].normal,
     race_names_table[race].no_spaces, race_names_table[race].code );
   send_to_char( buf, ch );
 
-  sprintf( buf, "Strength    : &+c%3d&n | Power       : &+c%3d&n\n\r"
+  snprintf(buf, MAX_STRING_LENGTH, "Strength    : &+c%3d&n | Power       : &+c%3d&n\n\r"
                 "Dexterity   : &+c%3d&n | Intelligence: &+c%3d&n\n\r"
                 "Agility     : &+c%3d&n | Wisdom      : &+c%3d&n\n\r"
                 "Constitution: &+c%3d&n | Charisma    : &+c%3d&n\n\r"
@@ -10944,7 +10944,7 @@ void stat_single_race( P_char ch, int race )
     combat_by_race[race][1], combat_by_race[race][2] );
   send_to_char( buf, ch );
 
-  sprintf( buf, "Base Age: &+c%3d&n, Max Age: &+c%4d&n, HP Bonus: &+c%2d&n\n\r"
+  snprintf(buf, MAX_STRING_LENGTH, "Base Age: &+c%3d&n, Max Age: &+c%4d&n, HP Bonus: &+c%2d&n\n\r"
                 "Base Moves: &+c%3d&n, Base Mana: &+c%3d&n, Max Mana: &+c%3d&n\n\r"
                 "Base Height: &+c%3d&n, Base Weight: &+c%3d&n\n\r",
     racial_data[race].base_age, racial_data[race].max_age, racial_data[race].hp_bonus,
@@ -10952,7 +10952,7 @@ void stat_single_race( P_char ch, int race )
     racial_values[race][0], racial_values[race][1] );
   send_to_char( buf, ch );
 
-  sprintf( buf, "&+MShrug&n: &+c%2d&n, ExpFactor: &+c%1.3f&n, VictimExpFactor: &+c%1.3f&n\n\r",
+  snprintf(buf, MAX_STRING_LENGTH, "&+MShrug&n: &+c%2d&n, ExpFactor: &+c%1.3f&n, VictimExpFactor: &+c%1.3f&n\n\r",
     racial_shrug_data[race], racial_exp_mods[race], racial_exp_mod_victims[race] );
   send_to_char( buf, ch );
 
@@ -11011,7 +11011,7 @@ void stat_zone( P_char ch, char *arg )
       // If the room is teleportable, display it w/room vnum.
       if( !IS_ROOM( i, ROOM_NO_TELEPORT) )
       {
-        sprintf( buf, "[&+C%d&n] %s\n", world[i].number, world[i].name );
+        snprintf(buf, MAX_STRING_LENGTH, "[&+C%d&n] %s\n", world[i].number, world[i].name );
         send_to_char( buf, ch );
       }
     }
@@ -11024,7 +11024,7 @@ void stat_zone( P_char ch, char *arg )
     return;
   }
 
-  sprintf(o_buf, "&+YZone: [&N%d&+Y](&N%d&+Y)  Name:&N %s&n  &+YFilename:&n %s\n",
+  snprintf(o_buf, MAX_STRING_LENGTH, "&+YZone: [&N%d&+Y](&N%d&+Y)  Name:&N %s&n  &+YFilename:&n %s\n",
     zone->number, zone_id, zone->name, zone->filename);
 
   int maproom = maproom_of_zone(zone_id);
@@ -11194,7 +11194,7 @@ void stat_race(P_char ch, char *arg)
   // If we couldn't identify the race to look for.. (allowing RACE_NONE since this is a Imm command).
   if( race < 0 || race > LAST_RACE )
   {
-    sprintf( buf, "Race '%s' not found.  Please enter a number between 0 and %d or a valid race name.\n\r",
+    snprintf(buf, MAX_STRING_LENGTH, "Race '%s' not found.  Please enter a number between 0 and %d or a valid race name.\n\r",
       arg, LAST_RACE );
     send_to_char( buf, ch );
     return;
@@ -11224,14 +11224,14 @@ void do_offlinemsg(P_char ch, char *arg, int cmd)
 
   if( !name || !*name || *name == '?' )
   {
-    sprintf( buf, "&+YSyntax:&N offlinemsg <player's name> <message to send>\n\r", name );
+    snprintf(buf, MAX_STRING_LENGTH, "&+YSyntax:&N offlinemsg <player's name> <message to send>\n\r", name );
     send_to_char( buf, ch );
     return;
   }
 
   if( pid == 0 )
   {
-    sprintf( buf, "&+YCould not find player '&+w%s&+Y'.&n\n\r", name );
+    snprintf(buf, MAX_STRING_LENGTH, "&+YCould not find player '&+w%s&+Y'.&n\n\r", name );
     send_to_char( buf, ch );
     return;
   }
@@ -11243,7 +11243,7 @@ void do_offlinemsg(P_char ch, char *arg, int cmd)
   }
 
   // This needs a carriage return.. *sigh*
-  sprintf( message, "&+W%s&n: %s\n\r", GET_NAME(ch), rest );
+  snprintf(message, MAX_INPUT_LENGTH, "&+W%s&n: %s\n\r", GET_NAME(ch), rest );
 
   // Walk through the connected players, looking for the recipient online first.
   for( d = descriptor_list; d; d = d->next )
@@ -11270,10 +11270,10 @@ void do_offlinemsg(P_char ch, char *arg, int cmd)
     {
       if( CAN_SEE_Z_CORD(ch, recipient) )
       {
-        sprintf( buf, "&+YSending &=LWin-game&n&+Y message '&n%s&n&+Y' to '&+w%s&+Y' (pid: &+w%d&+Y).&n\n\r",
+        snprintf(buf, MAX_STRING_LENGTH, "&+YSending &=LWin-game&n&+Y message '&n%s&n&+Y' to '&+w%s&+Y' (pid: &+w%d&+Y).&n\n\r",
           rest, name, pid );
         send_to_char( buf, ch );
-        sprintf( buf, "&+Y%s&+Y sends you an in-game message '&n%s&n&+W'&N\r\n",
+        snprintf(buf, MAX_STRING_LENGTH, "&+Y%s&+Y sends you an in-game message '&n%s&n&+W'&N\r\n",
           CAN_SEE( recipient, ch ) ? J_NAME(ch) : "Someone", rest );
         SEND_TO_Q( buf, d );
         return;
@@ -11284,7 +11284,7 @@ void do_offlinemsg(P_char ch, char *arg, int cmd)
       }
     }
   }
-  sprintf( buf, "&+YSending offline message '&n%s&+Y' to '&+w%s&n&+Y' (pid: &+w%d&+Y).&n\n\r", rest, name, pid );
+  snprintf(buf, MAX_STRING_LENGTH, "&+YSending offline message '&n%s&+Y' to '&+w%s&n&+Y' (pid: &+w%d&+Y).&n\n\r", rest, name, pid );
   send_to_char( buf, ch );
   send_to_pid_offline( message, pid );
 }
@@ -11325,7 +11325,7 @@ void which_stat(P_char ch, char *argument)
         " skilladd&+W,&+w hitreg&+W,&+w movereg&+W,&+w manareg&+W,&+w pulsecombat&+W|&+wcombatpulse&+W,&+w"
         " pulsespell&+W|&+wspellpulse&+W.&n\n", ch );
 
-      sprintf( buf, "&=LWList options&n&+W:&+w " );
+      snprintf(buf, MAX_STRING_LENGTH, "&=LWList options&n&+W:&+w " );
       lesser = FALSE;
       for( flags = 0; *(apply_types[flags]) != '\n'; flags++ )
       {
@@ -11715,6 +11715,7 @@ void which_stat(P_char ch, char *argument)
 
 void whois_ip( P_char ch, char *ip_address )
 {
+#ifndef __NO_MYSQL__
   MYSQL_RES *res;
   MYSQL_ROW row;
   P_char targ;
@@ -11782,6 +11783,9 @@ void whois_ip( P_char ch, char *ip_address )
   }
   mysql_free_result(res);
   send_to_char( ".\n", ch );
+#else
+  send_to_char( "This command requires MySQL support which is not compiled in.\n", ch );
+#endif
 }
 
 void do_whois(P_char ch, char *arg, int cmd)
@@ -11790,8 +11794,10 @@ void do_whois(P_char ch, char *arg, int cmd)
   char name[MAX_INPUT_LENGTH];
   int  pid;
   P_char targ;
+#ifndef __NO_MYSQL__
   MYSQL_RES *res;
   MYSQL_ROW row;
+#endif
 
   arg = one_argument( arg, name );
 
@@ -11816,6 +11822,7 @@ void do_whois(P_char ch, char *arg, int cmd)
   }
   else
   {
+#ifndef __NO_MYSQL__
     if( (pid = get_player_pid_from_name(name)) < 1 )
     {
       send_to_char_f( ch, "Name '%s' not found.\n", name );
@@ -11845,11 +11852,17 @@ void do_whois(P_char ch, char *arg, int cmd)
     }
     strcpy( ip_address, row[0]);
     mysql_free_result(res);
+#else
+    send_to_char( "This command requires MySQL support which is not compiled in.\n", ch );
+    return;
+#endif
   }
 
+#ifndef __NO_MYSQL__
   send_to_char_f( ch, "&=LWIP Address: '%s'&N\n", ip_address );
 
   whois_ip( ch, ip_address );
+#endif
 }
 
 char *food_modifiers( P_obj food )
@@ -11860,7 +11873,7 @@ char *food_modifiers( P_obj food )
   // Poison is in value[3].
   if( food->value[3] > 0 )
   {
-    sub = sprintf( mod_string, "&+GPOISON&N: %d, HP_REG: %d, ", food->value[3], -food->value[3] );
+    sub = snprintf(mod_string, MAX_STRING_LENGTH, "&+GPOISON&N: %d, HP_REG: %d, ", food->value[3], -food->value[3] );
   }
   else
   {
@@ -11869,7 +11882,7 @@ char *food_modifiers( P_obj food )
     {
       mod = 1;
     }
-    sub = sprintf( mod_string, "HP_REG: %d, ", mod * 15 );
+    sub = snprintf(mod_string, MAX_STRING_LENGTH, "HP_REG: %d, ", mod * 15 );
     if( food->value[2] != 0 )
     {
       mod = food->value[2];
@@ -11908,7 +11921,7 @@ void which_food(P_char ch, char *argument)
 
   // Display the Header:
                  // "  1)    0/   0     13 a *huge* valium tablet measuri - Unknown."
-  sprintf( buf, "&=LWNum) INGAME      VNUM Description                    - Modifiers&n\n"
+  snprintf(buf, MAX_STRING_LENGTH, "&=LWNum) INGAME      VNUM Description                    - Modifiers&n\n"
                 "         &=LW/ LIMIT&n\n" );
   send_to_char( buf, ch );
 
@@ -11919,7 +11932,7 @@ void which_food(P_char ch, char *argument)
 
     if( obj->type == ITEM_FOOD )
     {
-      sprintf( buf, "%3d) &%s%4d/%4d %6d&n %s&n - %s.\n", ++count, OBJ_COLOR(r_num), obj_index[r_num].number-1,
+      snprintf(buf, MAX_STRING_LENGTH, "%3d) &%s%4d/%4d %6d&n %s&n - %s.\n", ++count, OBJ_COLOR(r_num), obj_index[r_num].number-1,
         obj_index[r_num].limit, obj_index[r_num].virtual_number,
         pad_ansi( obj->short_description, 30, TRUE ).c_str(), food_modifiers(obj) );
       send_to_char( buf, ch );
@@ -11960,7 +11973,7 @@ void where_stat(P_char ch, char *argument)
         " skilladd&+W,&+w hitreg&+W,&+w movereg&+W,&+w manareg&+W,&+w pulsecombat&+W|&+wcombatpulse&+W,&+w"
         " pulsespell&+W|&+wspellpulse&+W.&n\n", ch );
 
-      sprintf( buf, "&=LWList options&n&+W:&+w " );
+      snprintf(buf, MAX_STRING_LENGTH, "&=LWList options&n&+W:&+w " );
       lesser = FALSE;
       for( flags = 0; *(apply_types[flags]) != '\n'; flags++ )
       {
@@ -12353,7 +12366,7 @@ void where_nowhere(P_char ch, char *args)
       || (OBJ_WORN(obj) && ( obj->loc.wearing == NULL )) || (OBJ_CARRIED(obj) && ( obj->loc.carrying == NULL ))
       || (OBJ_INSIDE(obj) && ( obj->loc.inside == NULL )) )
     {
-      sprintf( buf, "%3d) %d %6d %s&n\n", ++count, obj->loc_p, OBJ_VNUM(obj), OBJ_SHORT(obj) );
+      snprintf(buf, MAX_STRING_LENGTH, "%3d) %d %6d %s&n\n", ++count, obj->loc_p, OBJ_VNUM(obj), OBJ_SHORT(obj) );
       send_to_char( buf, ch );
     }
   }
@@ -12366,7 +12379,7 @@ void where_nowhere(P_char ch, char *args)
   {
     if( t_ch->in_room == NOWHERE )
     {
-      sprintf( buf, "%3d)%6d %s&n\n", ++count, GET_ID(t_ch), J_NAME(t_ch) );
+      snprintf(buf, MAX_STRING_LENGTH, "%3d)%6d %s&n\n", ++count, GET_ID(t_ch), J_NAME(t_ch) );
       send_to_char( buf, ch );
     }
   }
@@ -12789,7 +12802,7 @@ void which_spec(P_char ch, char *argument)
     for( spec = 0; spec < MAX_SPEC; spec++ )
     {
       // Get the ansi-less spec name..
-      sprintf( specname, "%s", strip_ansi(specdata[mclass][spec]).c_str() );
+      snprintf(specname, MAX_STRING_LENGTH, "%s", strip_ansi(specdata[mclass][spec]).c_str() );
       // And make it all lower case.
       tmp = specname;
       while( *tmp != '\0' )
@@ -12851,7 +12864,7 @@ char *weapon_modifiers( P_obj weapon )
     }
   }
 
-  sprintf( mod_string, "%dd%d %d/%d", weapon->value[1], weapon->value[2], hit, dam );
+  snprintf(mod_string, MAX_STRING_LENGTH, "%dd%d %d/%d", weapon->value[1], weapon->value[2], hit, dam );
 
   return mod_string;
 }
@@ -12898,7 +12911,7 @@ void which_weapon(P_char ch, char *argument)
 
   // Display the Header:
                  // "  1)    0/   0     13 a *huge* valium tablet measuri - Unknown."
-  sprintf( buf, "&=LWNum) INGAME      VNUM Description                    - Modifiers&n\n"
+  snprintf(buf, MAX_STRING_LENGTH, "&=LWNum) INGAME      VNUM Description                    - Modifiers&n\n"
                 "         &=LW/ LIMIT&n\n" );
   send_to_char( buf, ch );
   count = 0;
@@ -12910,7 +12923,7 @@ void which_weapon(P_char ch, char *argument)
     if( (obj->type == ITEM_WEAPON) && (( type == -1 && IS_SET(obj->extra_flags, ITEM_TWOHANDS) )
       || ( obj->value[0] == type )) )
     {
-      sprintf( buf, "%3d) &%s%4d/%4d %6d&n %s&n - %s.\n", ++count, OBJ_COLOR(r_num), obj_index[r_num].number-1,
+      snprintf(buf, MAX_STRING_LENGTH, "%3d) &%s%4d/%4d %6d&n %s&n - %s.\n", ++count, OBJ_COLOR(r_num), obj_index[r_num].number-1,
         obj_index[r_num].limit, obj_index[r_num].virtual_number,
         pad_ansi( obj->short_description, 30, TRUE ).c_str(), weapon_modifiers(obj) );
       send_to_char( buf, ch );

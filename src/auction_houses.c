@@ -483,7 +483,7 @@ bool auction_list(P_char ch, char *args)
 
     mysql_real_escape_string(DB, buff, list_arg, strlen(list_arg));
 
-    sprintf(where_str, " and seller_name like '%s'", buff);
+    snprintf(where_str, MAX_STRING_LENGTH, " and seller_name like '%s'", buff);
 
   }
   else if( isname(list_arg, "sort s") )
@@ -577,10 +577,10 @@ bool auction_list(P_char ch, char *args)
     if( cur_price < 1000 ) cur_price = 1000; // change to copper
 
     char buf[128];
-    sprintf(buf, "&+W%dp", (int) (cur_price/1000));
+    snprintf(buf, 128, "&+W%dp", (int) (cur_price/1000));
     string cur_price_str(buf);
 
-    sprintf(buf, "&+W%dp", (int) (buy_price/1000));
+    snprintf(buf, 128, "&+W%dp", (int) (buy_price/1000));
     string buy_price_str(buf);
 
     char mine_flag[] = " ";
@@ -1170,16 +1170,16 @@ string format_time(long seconds) {
 	if( seconds < 0 ) seconds = 0;
 	
 	if( seconds < 60 ) {
-		sprintf(tmp, "&+R<1m&n", seconds );
+		snprintf(tmp, 128, "&+R<1m&n", seconds );
 		
 	} else if( seconds < ( 60 * 60 ) ) {
-		sprintf(tmp, "&+R%ldm&n", (seconds / 60) % 60 );
+		snprintf(tmp, 128, "&+R%ldm&n", (seconds / 60) % 60 );
 		
 	} else if( seconds < ( 6 * 60 * 60  ) ) {
-		sprintf(tmp, "&+Y%ldh %ldm&n", (seconds / 3600) % ( 60 * 60 ) , (seconds / 60 ) % 60 );
+		snprintf(tmp, 128, "&+Y%ldh %ldm&n", (seconds / 3600) % ( 60 * 60 ) , (seconds / 60 ) % 60 );
 		
 	} else {
-		sprintf(tmp, "&+W%ldh&n", (seconds / 3600) % ( 60 * 60 ) );
+		snprintf(tmp, 128, "&+W%ldh&n", (seconds / 3600) % ( 60 * 60 ) );
 		
 	}
 	

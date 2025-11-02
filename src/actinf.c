@@ -702,7 +702,7 @@ int ageCorpse(P_char ch, P_obj obj, char *s)
     error = -error;
   guessAge = realAge + error;
 
-  sprintf(buf, "\nThis corpse will remain fresh for a further %d hours.",
+  snprintf(buf, MAX_STRING_LENGTH, "\nThis corpse will remain fresh for a further %d hours.",
           guessAge);
   strcat(s, buf);
 
@@ -717,7 +717,7 @@ char *show_obj_to_char(P_obj object, P_char ch, int mode, bool print)
   P_obj    wpn;
 
   if (IS_TRUSTED(ch) && IS_SET(ch->specials.act, PLR_VNUM))
-    sprintf(buf, "[&+B%5d&N] ", (object->R_num >= 0 ? obj_index[object->R_num].virtual_number : -1));
+    snprintf(buf, MAX_STRING_LENGTH, "[&+B%5d&N] ", (object->R_num >= 0 ? obj_index[object->R_num].virtual_number : -1));
   else
     buf[0] = 0;
 
@@ -920,7 +920,7 @@ void list_obj_to_char(P_obj list, P_char ch, int mode, bool show)
       {
         if( count )
         {
-          sprintf(buf2, "[%d] ", count + 1);
+          snprintf(buf2, 20, "[%d] ", count + 1);
           send_to_char(buf2, ch);
           count = 0;
         }
@@ -940,7 +940,7 @@ void list_obj_to_char(P_obj list, P_char ch, int mode, bool show)
   {
     if( count )
     {
-      sprintf(buf2, "[%d] ", count + 1);
+      snprintf(buf2, 20, "[%d] ", count + 1);
       send_to_char(buf2, ch);
     }
     if( buf[0] )
@@ -965,71 +965,71 @@ void show_visual_status(P_char ch, P_char tar_char)
     percent = -1;
 
   //if (IS_NPC(tar_char) && !IS_TRUSTED(ch)) {
-  //  sprintf(buf, "$N %%s");
+  //  snprintf(buf, 256, "$N %%s");
   //}
   //else
   if (!racewar(ch, tar_char) || IS_ILLITHID(ch)/* || IS_TRUSTED(ch)*/)
   {
     if( ch != tar_char )
     {
-      sprintf(buf, "$N appears to be %s and %%s",
+      snprintf(buf, 256, "$N appears to be %s and %%s",
         GET_RACE(tar_char) ? race_names_table[(int) GET_RACE1(tar_char)].ansi : "&=LRBogus race!&n");
     }
     else
     {
-      sprintf(buf, "You appear to be %s and %%s",
+      snprintf(buf, 256, "You appear to be %s and %%s",
         GET_RACE(tar_char) ? race_names_table[(int) GET_RACE1(tar_char)].ansi : "&=LRBogus race!&n");
     }
   }
   else
   {
-    sprintf(buf, "This %s %%s", race_names_table[(int) GET_RACE1(tar_char)].ansi);
+    snprintf(buf, 256, "This %s %%s", race_names_table[(int) GET_RACE1(tar_char)].ansi);
   }
 
   if (percent >= 100)
-    sprintf(buf2, buf, "is in &+Gexcellent&n condition.");
+    snprintf(buf2, 256, buf, "is in &+Gexcellent&n condition.");
   else if (percent >= 90)
-    sprintf(buf2, buf, "has a &+yfew scratches&n.");
+    snprintf(buf2, 256, buf, "has a &+yfew scratches&n.");
   else if (percent >= 75)
   {
     if(IS_CONSTRUCT(tar_char))
-      sprintf(buf2, buf, "has &+Ysome gouges and cracks in its surface&n.");
+      snprintf(buf2, 256, buf, "has &+Ysome gouges and cracks in its surface&n.");
     else
-      sprintf(buf2, buf, "has &+Ysome small wounds and bruises&n.");
+      snprintf(buf2, 256, buf, "has &+Ysome small wounds and bruises&n.");
   }
   else if (percent >= 50)
   {
     if(IS_CONSTRUCT(tar_char))
-      sprintf(buf2, buf, "has &+Mdeep gouges and serious cracks in its surface&n.");
+      snprintf(buf2, 256, buf, "has &+Mdeep gouges and serious cracks in its surface&n.");
     else
-    sprintf(buf2, buf, "has &+Mquite a few wounds&n.");
+    snprintf(buf2, 256, buf, "has &+Mquite a few wounds&n.");
   }
   else if (percent >= 30)
   {
     if(IS_CONSTRUCT(tar_char))
-      sprintf(buf2, buf, "has &+mbegun to crumble from from an ongoing assault&n.");
+      snprintf(buf2, 256, buf, "has &+mbegun to crumble from from an ongoing assault&n.");
     else
-    sprintf(buf2, buf, "has &+msome big nasty wounds and scratches&n.");
+    snprintf(buf2, 256, buf, "has &+msome big nasty wounds and scratches&n.");
   }
   else if (percent >= 15)
   {
     if(IS_CONSTRUCT(tar_char))
-      sprintf(buf2, buf, "has &+Rlarge holes and cracks in its surface&n.");
+      snprintf(buf2, 256, buf, "has &+Rlarge holes and cracks in its surface&n.");
     else
-      sprintf(buf2, buf, "looks &+Rpretty hurt&n.");
+      snprintf(buf2, 256, buf, "looks &+Rpretty hurt&n.");
   }
   else if (percent >= 0)
   {
     if(IS_CONSTRUCT(tar_char))
-      sprintf(buf2, buf, "is &+ralmost completely destroyed&n.");
+      snprintf(buf2, 256, buf, "is &+ralmost completely destroyed&n.");
     else
-      sprintf(buf2, buf, "is in &+rawful condition&n.");
+      snprintf(buf2, 256, buf, "is in &+rawful condition&n.");
   }
   else
-    sprintf(buf2, buf, "is &+rbleeding awfully from big wounds&n.");
+    snprintf(buf2, 256, buf, "is &+rbleeding awfully from big wounds&n.");
   SVS(buf2);
 
-  sprintf(buf, "&+c$E's %s in size.", size_types[GET_ALT_SIZE(tar_char)]);
+  snprintf(buf, 256, "&+c$E's %s in size.", size_types[GET_ALT_SIZE(tar_char)]);
   SVS(buf);
 
   if (IS_CASTING(tar_char))
@@ -1985,7 +1985,7 @@ void list_char_to_char(P_char list, P_char ch, int mode)
       //   red shape if infra + ( dayblind and lit and no darkness globe, or nightblind and dark and no mage flame)
       if( vis_mode == 3 )
       {
-        sprintf(buf, "&+rYou see the red shape of a %s living being %shere.\n",
+        snprintf(buf, MAX_STRING_LENGTH, "&+rYou see the red shape of a %s living being %shere.\n",
           size_types[GET_ALT_SIZE(i)], higher ? "above you " : lower ? "below you " : "");
         send_to_char(buf, ch);
       }
@@ -2032,7 +2032,7 @@ void ShowCharSpellBookSpells(P_char ch, P_obj obj, char *short_desc)
   desc = find_spell_description(obj);
   if( !desc )
   {
-    sprintf(buf, "%s appears to be unused and has %d pages left.", short_desc, obj->value[2]);
+    snprintf(buf, MAX_STRING_LENGTH, "%s appears to be unused and has %d pages left.", short_desc, obj->value[2]);
     act(buf, TRUE, ch, obj, 0, TO_CHAR);
     return;
   }
@@ -2046,7 +2046,7 @@ void ShowCharSpellBookSpells(P_char ch, P_obj obj, char *short_desc)
  */
   if( obj->value[1] && !GET_CLASS(ch, obj->value[1]) )
   {
-    sprintf(buf, "%s appears to have been originally written by a %s.",
+    snprintf(buf, MAX_STRING_LENGTH, "%s appears to have been originally written by a %s.",
       short_desc, class_names_table[flag2idx(obj->value[1])].ansi);
     act(buf, TRUE, ch, obj, 0, TO_CHAR);
   }
@@ -2143,7 +2143,7 @@ void display_room_auras(P_char ch, int room_no)
        get_spell_from_room(&world[room_no], SPELL_CONSECRATE_LAND)))
   {
     buffer[0] = 0;
-    sprintf(buffer, "&+WA &+Bsoothing&+W aura fills the area.&n\n");
+    snprintf(buffer, MAX_STRING_LENGTH, "&+WA &+Bsoothing&+W aura fills the area.&n\n");
     send_to_char(buffer, ch);
   }
     
@@ -2153,7 +2153,7 @@ void display_room_auras(P_char ch, int room_no)
       IS_ROOM( room_no, ROOM_NO_HEAL))
   {
     buffer[0] = 0;  
-    sprintf(buffer, "&+LAn &n&+revil&+L aura fills the area.&n\n");
+    snprintf(buffer, MAX_STRING_LENGTH, "&+LAn &n&+revil&+L aura fills the area.&n\n");
     send_to_char(buffer, ch);
   }
   
@@ -2163,14 +2163,14 @@ void display_room_auras(P_char ch, int room_no)
       IS_ROOM( room_no, ROOM_NO_MAGIC))
   {
     buffer[0] = 0;
-    sprintf(buffer, "&+bThis area seems to be &+Ldevoid&n&+b of &+Bmagic&n&+b!&n\n");
+    snprintf(buffer, MAX_STRING_LENGTH, "&+bThis area seems to be &+Ldevoid&n&+b of &+Bmagic&n&+b!&n\n");
     send_to_char(buffer, ch);
   }
     
   if(IS_ROOM( room_no, ROOM_SINGLE_FILE) || IS_ROOM( room_no, ROOM_TUNNEL))
   {
     buffer[0] = 0;
-    sprintf(buffer, "&+WThis area seems to be exceptionally &+ynarrow!&n\n");
+    snprintf(buffer, MAX_STRING_LENGTH, "&+WThis area seems to be exceptionally &+ynarrow!&n\n");
     send_to_char(buffer, ch);
   }
   
@@ -3313,7 +3313,7 @@ void do_read(P_char ch, char *argument, int cmd)
   /*
    * This is just for now - To be changed later.!
    */
-  sprintf(buf, "at %s", argument);
+  snprintf(buf, MAX_INPUT_LENGTH, "at %s", argument);
   do_look(ch, buf, -4);
 }
 
@@ -3332,7 +3332,7 @@ void do_examine(P_char ch, char *argument, int cmd)
     send_to_char("Examine what?\n", ch);
     return;
   }
-  sprintf(buf, "at %s", argument);
+  snprintf(buf, MAX_INPUT_LENGTH, "at %s", argument);
   do_look(ch, buf, -4);
 
   // This needs to match the generic find in new_look, switch(keyword_no) case 7,
@@ -3392,11 +3392,11 @@ void do_examine(P_char ch, char *argument, int cmd)
     else
       mat = tmp_object->material;
 
-    sprintf(buf, "$p is made of %s and appears to be %s.",
+    snprintf(buf, MAX_INPUT_LENGTH, "$p is made of %s and appears to be %s.",
             materials[mat].name, craftsmanship_names[craft]);
     act(buf, FALSE, ch, tmp_object, 0, TO_CHAR);
 
-    sprintf(buf, "$p &nhas an item value of &+W%d&n.",
+    snprintf(buf, MAX_INPUT_LENGTH, "$p &nhas an item value of &+W%d&n.",
             itemvalue(tmp_object));
     act(buf, FALSE, ch, tmp_object, 0, TO_CHAR);
 
@@ -3599,7 +3599,7 @@ void show_vnums(P_char ch)
       int diff = next_bottom - top - 1;
       unused_vnums += diff;
       
-      sprintf(buff, "[%4d](%3d) %s %6d-%6d | &+G%d\n",
+      snprintf(buff, MAX_STRING_LENGTH, "[%4d](%3d) %s %6d-%6d | &+G%d\n",
               zone_table[z].number,
               z,
               pad_ansi(zone->name, 45).c_str(),
@@ -3610,7 +3610,7 @@ void show_vnums(P_char ch)
     }
     else
     {
-      sprintf(buff, "[%4d](%3d) %s %6d-%6d\n",
+      snprintf(buff, MAX_STRING_LENGTH, "[%4d](%3d) %s %6d-%6d\n",
               zone_table[z].number,
               z,
               pad_ansi(zone->name, 45).c_str(),
@@ -3621,7 +3621,7 @@ void show_vnums(P_char ch)
     send_to_char(buff, ch);
   }
   
-  sprintf(buff, "Unused room vnums: %d\n", unused_vnums);
+  snprintf(buff, MAX_STRING_LENGTH, "Unused room vnums: %d\n", unused_vnums);
   send_to_char(buff, ch);
 }
 
@@ -3694,7 +3694,7 @@ void do_world(P_char ch, char *argument, int cmd)
 
   if (world_index == -1 || (!IS_TRUSTED(ch) && (choice = world_values[world_index]) > WORLD_ZONES) )
   {
-    sprintf(buff, "Syntax: world < ");
+    snprintf(buff, MAX_STRING_LENGTH, "Syntax: world < ");
     for (i = 0; world_values[i] != (IS_TRUSTED(ch) ? -1 : WORLD_ZONES + 1); i++)
     {
       if (i)
@@ -3713,63 +3713,63 @@ void do_world(P_char ch, char *argument, int cmd)
     ct = time(0);
     tmstr = asctime(localtime(&ct));
     *(tmstr + strlen(tmstr) - 1) = '\0';
-    sprintf(buf, "Current time is: %s (GMT)\n", tmstr);
+    snprintf(buf, MAX_STRING_LENGTH, "Current time is: %s (GMT)\n", tmstr);
     send_to_char(buf, ch);
 
     diff_time = ct - boot_time;
-    sprintf(buf, "Time elapsed since boot-up: %ldH %ldM %ldS\n\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Time elapsed since boot-up: %ldH %ldM %ldS\n\n",
             diff_time / 3600, (diff_time / 60) % 60, diff_time % 60);
     send_to_char(buf, ch);
 
-    sprintf(buf, "Total number of zones in world:        %5d\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Total number of zones in world:        %5d\n",
             top_of_zone_table + 1);
     send_to_char(buf, ch);
-    sprintf(buf, "Total number of real rooms in world:     %4d\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Total number of real rooms in world:     %4d\n",
             top_of_world + 1);
     send_to_char(buf, ch);
-    sprintf(buf, "Total number of virtual rooms in world:  10452396\n");
+    snprintf(buf, MAX_STRING_LENGTH, "Total number of virtual rooms in world:  10452396\n");
     send_to_char(buf, ch);
-    sprintf(buf, "&+WGrand total number of rooms in world:    %4d\n\n",
+    snprintf(buf, MAX_STRING_LENGTH, "&+WGrand total number of rooms in world:    %4d\n\n",
             top_of_world + 10452397);
     send_to_char(buf, ch);
 
     if (IS_TRUSTED(ch))
     {
-      sprintf(buf, "Total number of different mobiles:       %5d\n",
+      snprintf(buf, MAX_STRING_LENGTH, "Total number of different mobiles:       %5d\n",
               top_of_mobt + 1);
       send_to_char(buf, ch);
     }
     for (i = 0, count = 0; i <= top_of_mobt;
          i++, count += mob_index[i].number) ;
-    sprintf(buf, "&+WTotal number of living mobiles:          %5d\n", count);
+    snprintf(buf, MAX_STRING_LENGTH, "&+WTotal number of living mobiles:          %5d\n", count);
     send_to_char(buf, ch);
 
     if (IS_TRUSTED(ch))
     {
-      sprintf(buf, "Total number of different objects:       %5d\n",
+      snprintf(buf, MAX_STRING_LENGTH, "Total number of different objects:       %5d\n",
               top_of_objt + 1);
       send_to_char(buf, ch);
     }
     for (i = 0, count = 0; i <= top_of_objt;
          i++, count += obj_index[i].number) ;
-    sprintf(buf, "&+WTotal number of existing objects:        %5d\n", count);
+    snprintf(buf, MAX_STRING_LENGTH, "&+WTotal number of existing objects:        %5d\n", count);
     send_to_char(buf, ch);
 
-    sprintf(buf, "Total number of shops:                 %5d\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Total number of shops:                 %5d\n",
             number_of_shops);
     send_to_char(buf, ch);
-    sprintf(buf, "Total number of quests:                %5d\n\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Total number of quests:                %5d\n\n",
             number_of_quests);
     send_to_char(buf, ch);
 
     if (IS_TRUSTED(ch))
     {
 /* Didn't do this.. guess needs to be handled in mmc somehow.
-      sprintf(buf, "Total allocated events:                  %5ld\n",
+      snprintf(buf, MAX_STRING_LENGTH, "Total allocated events:                  %5ld\n",
               ne_event_counter );
 */
       send_to_char(buf, ch);
-      sprintf(buf, "Total number of pending events:          %5ld\n\n",
+      snprintf(buf, MAX_STRING_LENGTH, "Total number of pending events:          %5ld\n\n",
               ne_event_counter );
       send_to_char(buf, ch);
 
@@ -4117,11 +4117,11 @@ void do_attributes(P_char ch, char *argument, int cmd)
     return;
   }
   /* header */
-  sprintf(buf, "\n\t\t&+gCharacter attributes for &+G%s\n\n&n", GET_NAME(ch));
+  snprintf(buf, MAX_STRING_LENGTH, "\n\t\t&+gCharacter attributes for &+G%s\n\n&n", GET_NAME(ch));
   send_to_char(buf, ch);
 
   /* level, race, class */
-  sprintf(buf, "&+cLevel: &+Y%d   &n&+cRace:&n %s   &+cClass:&n %s &n\n",
+  snprintf(buf, MAX_STRING_LENGTH, "&+cLevel: &+Y%d   &n&+cRace:&n %s   &+cClass:&n %s &n\n",
           GET_LEVEL(ch), race_to_string(ch), get_class_string(ch, buffer));
   send_to_char(buf, ch);
 
@@ -4134,7 +4134,7 @@ void do_attributes(P_char ch, char *argument, int cmd)
     h = w = -1;
 
   /* age, height, weight */
-  sprintf(buf, "&+cAge: &+Y%d &n&+yyrs &+L/ &+Y%d &n&+ymths  "
+  snprintf(buf, MAX_STRING_LENGTH, "&+cAge: &+Y%d &n&+yyrs &+L/ &+Y%d &n&+ymths  "
           "&+cHeight: &+Y%d &n&+yinches "
           "&+cWeight: &+Y%d &n&+ylbs  &+cSize: &+Y%s\n\n", 
           GET_AGE(ch), age(ch).month, h, w, size_types[GET_ALT_SIZE(ch)]);
@@ -4148,9 +4148,9 @@ void do_attributes(P_char ch, char *argument, int cmd)
       /* this is ugly, because of new racial stat mods.  JAB */
 #if 0
       if (GET_C_STR(ch) > stat_factor[(int) GET_RACE(ch)].Str)
-        sprintf(buf, "&+cSTR: &+Y***&n");
+        snprintf(buf, MAX_STRING_LENGTH, "&+cSTR: &+Y***&n");
       else
-        sprintf(buf, "&+cSTR: &+Y%3d&n",
+        snprintf(buf, MAX_STRING_LENGTH, "&+cSTR: &+Y%3d&n",
                 MAX(1, (int) ((GET_C_STR(ch) * 100 / stat_factor[(int) GET_RACE(ch)].Str) + .55)));
 
       if (GET_C_AGI(ch) > stat_factor[(int) GET_RACE(ch)].Agi)
@@ -4580,7 +4580,7 @@ void do_score(P_char ch, char *argument, int cmd)
   }
   
   /* header */
-  sprintf(buf, "\n\t\t&+gScore information for&n &+G%s\n\n&n",
+  snprintf(buf, MAX_STRING_LENGTH, "\n\t\t&+gScore information for&n &+G%s\n\n&n",
           IS_MORPH(ch) ? ch->player.short_descr : GET_NAME(ch));
   send_to_char(buf, ch);
 
@@ -4598,7 +4598,7 @@ void do_score(P_char ch, char *argument, int cmd)
   }
 
   /* level, race, class */
-  sprintf(buf, "Level: %d   Race: %s   Class: %s &nSex: %s\n&n",
+  snprintf(buf, MAX_STRING_LENGTH, "Level: %d   Race: %s   Class: %s &nSex: %s\n&n",
           GET_LEVEL(ch),
           race_to_string(ch), get_class_string(ch, buffer), buf2);
   send_to_char(buf, ch);
@@ -4607,7 +4607,7 @@ void do_score(P_char ch, char *argument, int cmd)
 #if 0
   if (ch->player.short_descr)
   {
-    sprintf(buf, "Quick Description: %s\n", ch->player.short_descr);
+    snprintf(buf, MAX_STRING_LENGTH, "Quick Description: %s\n", ch->player.short_descr);
     send_to_char(buf, ch);
   }
 #endif
@@ -4615,7 +4615,7 @@ void do_score(P_char ch, char *argument, int cmd)
   /* hit pts, mana, moves */
   if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
   {
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "&+RHit points: %d&+r(%d)   &+MMana: %d&+m(%d)   &+YMoves: %d&+y(%d)&N\n",
             GET_HIT(ch), GET_MAX_HIT(ch),
             GET_MANA(ch), GET_MAX_MANA(ch),
@@ -4623,7 +4623,7 @@ void do_score(P_char ch, char *argument, int cmd)
   }
   else
   {
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "&+RHit points: %d&+r(%d)  &+YMoves: %d&+y(%d)&N\n",
             GET_HIT(ch), GET_MAX_HIT(ch),
             GET_VITALITY(ch), GET_MAX_VITALITY(ch));
@@ -4631,14 +4631,14 @@ void do_score(P_char ch, char *argument, int cmd)
   send_to_char(buf, ch);
 
   /* money */
-  sprintf(buf,
+  snprintf(buf, MAX_STRING_LENGTH,
           "Coins carried: &+W%4d platinum&N  &+Y%4d gold&N  &n%4d silver&N  &+y%4d copper&N\n",
           GET_PLATINUM(ch), GET_GOLD(ch), GET_SILVER(ch), GET_COPPER(ch));
   send_to_char(buf, ch);
   buf[0] = 0;
   if (IS_PC(ch))
   {
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "Coins in bank: &+W%4d platinum&N  &+Y%4d gold&N  &n%4d silver&N  &+y%4d copper&N\n",
             GET_BALANCE_PLATINUM(ch),
             GET_BALANCE_GOLD(ch),
@@ -4682,15 +4682,15 @@ void do_score(P_char ch, char *argument, int cmd)
 #else
     playing_time = real_time_passed((long) ((time(0) - ch->player.time.logon) + ch->player.time.played - EQ_WIPE), 0);
 #endif
-    sprintf(buf, "Playing time: %d days / %d hours/ %d minutes\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Playing time: %d days / %d hours/ %d minutes\n",
             playing_time.day, playing_time.hour, playing_time.minute);
     send_to_char(buf, ch);
 
     /* traffic info*/
-    sprintf(buf, "&+wReceived data:&+y %5.4f &+wMB this session.\n", (float) (ch->only.pc->send_data / 1048576.0000 ));
+    snprintf(buf, MAX_STRING_LENGTH, "&+wReceived data:&+y %5.4f &+wMB this session.\n", (float) (ch->only.pc->send_data / 1048576.0000 ));
     send_to_char(buf, ch);
 
-    sprintf(buf, "&+wSend data:    &+y %5.4f &+wMB this session.\n", (float) (ch->only.pc->recived_data / 1048576.0000 ));
+    snprintf(buf, MAX_STRING_LENGTH, "&+wSend data:    &+y %5.4f &+wMB this session.\n", (float) (ch->only.pc->recived_data / 1048576.0000 ));
     send_to_char(buf, ch);
 
 
@@ -4699,20 +4699,20 @@ void do_score(P_char ch, char *argument, int cmd)
     send_to_char("Compression ratio: ", ch);
     if (ch->desc && ch->desc->z_str)
     {
-      sprintf(buf, "%d%%\n", compress_get_ratio(ch->desc));
+      snprintf(buf, MAX_STRING_LENGTH, "%d%%\n", compress_get_ratio(ch->desc));
       send_to_char(buf, ch);
     }
     else
       send_to_char("none\n", ch);
 
 //    /* prestige */
-//    sprintf(buf, "Prestige: %s\n", epic_prestige(ch));
+//    snprintf(buf, MAX_STRING_LENGTH, "Prestige: %s\n", epic_prestige(ch));
 //    send_to_char(buf, ch);
 //    buf[0] = 0;
 
     /* title */
     if (GET_TITLE(ch))
-      sprintf(buf, "Title: %s\n", GET_TITLE(ch));
+      snprintf(buf, MAX_STRING_LENGTH, "Title: %s\n", GET_TITLE(ch));
 
     /* poofin/poofout for gods */
     if (IS_TRUSTED(ch))
@@ -5054,7 +5054,7 @@ void do_score(P_char ch, char *argument, int cmd)
   {
     hardcorepts = getHardCorePts(ch);
     hardcorepts = (hardcorepts / 100.0);
-    sprintf(buf, "&nHardCore pts:   &+R%+6.2f&n\n", hardcorepts);
+    snprintf(buf, MAX_STRING_LENGTH, "&nHardCore pts:   &+R%+6.2f&n\n", hardcorepts);
     send_to_char(buf, ch);
   }
   /* frags */
@@ -5466,7 +5466,7 @@ void do_score(P_char ch, char *argument, int cmd)
 	  {
 	    ct = time(0);
 	    timer = real_time_countdown(ct, af->modifier, 60*60*24*2);
-	    sprintf(buf, "Stat Pool timeout: %d:%s%d:%s%d\n", 
+	    snprintf(buf, MAX_STRING_LENGTH, "Stat Pool timeout: %d:%s%d:%s%d\n", 
 	            //af->duration * PULSES_IN_TICK / (WAIT_SEC * SECS_PER_REAL_HOUR));
 	      timer.day * 24 + timer.hour,
 	      (timer.minute > 9) ? "" : "0", timer.minute,
@@ -5480,13 +5480,13 @@ void do_score(P_char ch, char *argument, int cmd)
   if(IS_PC(ch))
   {
   	int RemainingBartenderQuests = sql_world_quest_can_do_another(ch);
-	  sprintf(buf, "&+yBartender Quests Remaining:&n %d\n", RemainingBartenderQuests);
+	  snprintf(buf, MAX_STRING_LENGTH, "&+yBartender Quests Remaining:&n %d\n", RemainingBartenderQuests);
 	  send_to_char(buf, ch);
   }
 
   if(IS_PC(ch))
   {
-    sprintf(buf, "&+YCombat Pulse: &N%4d&+Y &+MSpell Pulse&n:  %.2f&+Y ",
+    snprintf(buf, MAX_STRING_LENGTH, "&+YCombat Pulse: &N%4d&+Y &+MSpell Pulse&n:  %.2f&+Y ",
       (int)ch->specials.base_combat_round, spell_pulse_data[GET_RACE(ch)] * SPELL_PULSE(ch) );
 //            ch->specials.base_combat_round, ch->points.spell_pulse);
 
@@ -5495,7 +5495,7 @@ void do_score(P_char ch, char *argument, int cmd)
     strcat(buf, "\n");
     send_to_char(buf, ch);
 
-    sprintf(buf, "&+LLea&+wder&+Wboard Points&n: &n%4ld&n ", (getLeaderBoardPts(ch) / 100));
+    snprintf(buf, MAX_STRING_LENGTH, "&+LLea&+wder&+Wboard Points&n: &n%4ld&n ", (getLeaderBoardPts(ch) / 100));
     strcat(buf, "\n");
     send_to_char(buf, ch);
   }
@@ -5540,7 +5540,7 @@ void do_score(P_char ch, char *argument, int cmd)
         strcat(buf2, " &+wBroken leg");
      }
   }
-  sprintf(buf, "Injuries: ");
+  snprintf(buf, MAX_STRING_LENGTH, "Injuries: ");
   if(*buf2)
   {
     send_to_char(buf, ch);
@@ -5800,12 +5800,12 @@ void do_time(P_char ch, char *argument, int cmd)
 
 #if 0
   if (IS_TRUSTED(ch))
-    sprintf(Gbuf1, ":%s%d", ((pulse / 5) > 9) ? "" : "0", pulse / 5);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, ":%s%d", ((pulse / 5) > 9) ? "" : "0", pulse / 5);
   else
 #endif
     Gbuf1[0] = 0;
 
-  sprintf(Gbuf2, "It is %d%s%s, on ",
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "It is %d%s%s, on ",
           (time_info.hour % 12) ? (time_info.hour % 12) : 12, Gbuf1,
           (time_info.hour > 11) ? "pm" : "am");
 
@@ -5839,7 +5839,7 @@ void do_time(P_char ch, char *argument, int cmd)
   else
     suf = "th";
 
-  sprintf(Gbuf2, "The %d%s Day of the %s, Year %d.\n",
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "The %d%s Day of the %s, Year %d.\n",
           day, suf, month_name[time_info.month], (time_info.year + 1000));
   send_to_char(Gbuf2, ch);
 
@@ -5857,7 +5857,7 @@ void do_time(P_char ch, char *argument, int cmd)
     }
   }
 
-  sprintf(Gbuf2, "Time elapsed since boot-up: %d:%s%d:%s%d\n",
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "Time elapsed since boot-up: %d:%s%d:%s%d\n",
           uptime.day * 24 + uptime.hour,
           (uptime.minute > 9) ? "" : "0", uptime.minute,
           (uptime.second > 9) ? "" : "0", uptime.second);
@@ -5866,7 +5866,7 @@ void do_time(P_char ch, char *argument, int cmd)
   lt = localtime(&ct);
   tmstr = asctime(lt);
   *(tmstr + strlen(tmstr) - 1) = '\0';
-  sprintf(Gbuf2, "Current time is: %s (%s)\n",
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "Current time is: %s (%s)\n",
           tmstr, (lt->tm_isdst <= 0) ? "GMT" : "GMT");
   send_to_char(Gbuf2, ch);
   // Subtract 5 hrs.
@@ -5874,7 +5874,7 @@ void do_time(P_char ch, char *argument, int cmd)
   lt = localtime(&ct);
   tmstr = asctime(lt);
   *(tmstr + strlen(tmstr) - 1) = '\0';
-  sprintf(Gbuf2, "                 %s (EST)\n", tmstr );
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "                 %s (EST)\n", tmstr );
   send_to_char(Gbuf2, ch);
 
   if (IS_TRUSTED(ch))
@@ -5952,11 +5952,11 @@ void do_weather(P_char ch, char *argument, int cmd)
       send_to_char("Couldn't find a valid season. How odd.\n", ch);
       return;
     }
-    sprintf(buf, "Weather Dump for sector %d:\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Weather Dump for sector %d:\n",
             in_weather_sector(ch->in_room));
     send_to_char(buf, ch);
 
-    sprintf(buf, "  Current Season: %s", season_name[seas]);
+    snprintf(buf, MAX_STRING_LENGTH, "  Current Season: %s", season_name[seas]);
     send_to_char(buf, ch);
 
     send_to_char("\n&+YVariable data, current for this season:&n", ch);
@@ -5975,12 +5975,12 @@ void do_weather(P_char ch, char *argument, int cmd)
     send_to_char(temp_patterns[clime->season_temp[seas] - 1], ch);
 
     send_to_char("\n&+YSector statics, not affected by seasons:&n", ch);
-    sprintf(buf, "\nTemp: %dc %df  Humidity: %d  Pressure: %d\n", cond->temp,
+    snprintf(buf, MAX_STRING_LENGTH, "\nTemp: %dc %df  Humidity: %d  Pressure: %d\n", cond->temp,
             (9 / 5 * (cond->temp) + 32), cond->humidity, cond->pressure);
 
     send_to_char(buf, ch);
 
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "Windspeed: %d  Direction: %d  Precip Rate: %d  Precip Depth: %d\n",
             cond->windspeed, cond->wind_dir, cond->precip_rate,
             cond->precip_depth);
@@ -6141,7 +6141,7 @@ void do_wizhelp(P_char ch, char *argument, int cmd)
     return;
   }
 
-  sprintf(buf, "The following privileged commands are available to %s:\n\n", target ? J_NAME(target) : "you");
+  snprintf(buf, MAX_STRING_LENGTH, "The following privileged commands are available to %s:\n\n", target ? J_NAME(target) : "you");
   send_to_char( buf, ch );
 
   if( !target )
@@ -6788,7 +6788,7 @@ void do_users(P_char ch, char *argument, int cmd)
     {
       if( !*d->host2 )
       {
-        sprintf(hostbuf, "lib/etc/hosts/%d", d->descriptor);
+        snprintf(hostbuf, MAX_STRING_LENGTH, "lib/etc/hosts/%d", d->descriptor);
         FILE *f = fopen(hostbuf, "r");
 
         if( f != NULL )
@@ -6808,19 +6808,19 @@ void do_users(P_char ch, char *argument, int cmd)
 
       if( got_dupe_host(d) )
       {
-        sprintf(hostbuf, "&+R%s (%s)&n", d->host2, d->host);
+        snprintf(hostbuf, MAX_STRING_LENGTH, "&+R%s (%s)&n", d->host2, d->host);
       }
       else
       {
-        sprintf(hostbuf, "%s (%s)", d->host2, d->host);
+        snprintf(hostbuf, MAX_STRING_LENGTH, "%s (%s)", d->host2, d->host);
       }
     }
     else
     {
-      sprintf(hostbuf, "&+Yunknown&n");
+      snprintf(hostbuf, MAX_STRING_LENGTH, "&+Yunknown&n");
     }
 
-    sprintf(linebuf, " %s | %3d | %s | %4d | %s\r\n",
+    snprintf(linebuf, MAX_STRING_LENGTH, " %s | %3d | %s | %4d | %s\r\n",
       ((d->character && GET_NAME(d->character)) ? pad_ansi(GET_NAME(d->character), 11).c_str() : "-          "),
       d->descriptor, pad_ansi(connbuf, 11).c_str(), (d->wait / 240), hostbuf );
 
@@ -6880,7 +6880,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
 
     num_non_play++;
 
-    sprintf(line, "%3d I:%3d", d->descriptor, d->wait / 240);
+    snprintf(line, MAX_INPUT_LENGTH, "%3d I:%3d", d->descriptor, d->wait / 240);
 
     if (d && d->z_str)
     {
@@ -6916,7 +6916,7 @@ void do_users_DEPRECATED(P_char ch, char *argument, int cmd)
     {
       if (!*d->host2)
       {
-        sprintf(buf2, "lib/etc/hosts/%d", d->descriptor);
+        snprintf(buf2, MAX_INPUT_LENGTH, "lib/etc/hosts/%d", d->descriptor);
         f = fopen(buf2, "r");
 
         if (f != NULL)
@@ -7154,7 +7154,7 @@ void do_inventory(P_char ch, char *argument, int cmd)
   }
   else
   {
-    sprintf(buf, "You are carrying: (%d/%d)\n", IS_CARRYING_N(ch), CAN_CARRY_N(ch));
+    snprintf(buf, MAX_STRING_LENGTH, "You are carrying: (%d/%d)\n", IS_CARRYING_N(ch), CAN_CARRY_N(ch));
     send_to_char(buf, ch);
     list_obj_to_char(ch->carrying, ch, LISTOBJ_SHORTDESC | LISTOBJ_STATS, TRUE);
   }
@@ -7846,12 +7846,12 @@ void do_report(P_char ch, char *argument, int cmd)
   }
   report_name[0] = 0;
   if (GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER))
-    sprintf(buf,
+    snprintf(buf, 240,
             "I have %d (%d) hits, %d (%d) mana, and %d (%d) movement points.",
             GET_HIT(ch), GET_MAX_HIT(ch), GET_MANA(ch), GET_MAX_MANA(ch),
             GET_VITALITY(ch), GET_MAX_VITALITY(ch));
   else
-    sprintf(buf, "I have %d (%d) hits, and %d (%d) movement points.",
+    snprintf(buf, 240, "I have %d (%d) hits, and %d (%d) movement points.",
             GET_HIT(ch), GET_MAX_HIT(ch),
             GET_VITALITY(ch), GET_MAX_VITALITY(ch));
 
@@ -8143,7 +8143,7 @@ void do_ok(P_char ch, char *arg, int cmd)
 
   t = time(0);
 
-  sprintf(Gbuf1, "%s accepted - %s : %s", GET_NAME(t_ch), arg, ctime(&t));
+  snprintf(Gbuf1, MAX_INPUT_LENGTH, "%s accepted - %s : %s", GET_NAME(t_ch), arg, ctime(&t));
 
   if (!(fl = fopen(OK_FILE, "a")))
   {
@@ -8209,14 +8209,14 @@ void do_punish(P_char ch, char *arg, int cmd)
 
   if( !*arg )
   {
-    sprintf(Gbuf1, "Supply a damn reason!\n", GET_NAME(t_ch));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "Supply a damn reason!\n", GET_NAME(t_ch));
     send_to_char(Gbuf1, ch);
     clear_title(t_ch);
     return;
   }
   t = time(0);
   // Note: ctime contains a carriage return, so nothing after it.
-  sprintf(Gbuf1, "&+W%s &+Lpunished&+W %d level%s for: %s -  %s", GET_NAME(t_ch), i, (i>1) ? "s" : "", arg, ctime(&t));
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+W%s &+Lpunished&+W %d level%s for: %s -  %s", GET_NAME(t_ch), i, (i>1) ? "s" : "", arg, ctime(&t));
 
   if( !(fl = fopen(CHEATERS_FILE, "a")) )
   {
@@ -8280,15 +8280,15 @@ void do_title(P_char ch, char *arg, int cmd)
   }*/
   if (!*arg)
   {
-    sprintf(Gbuf1, "%s's title cleared.\n", GET_NAME(t_ch));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s's title cleared.\n", GET_NAME(t_ch));
     send_to_char(Gbuf1, ch);
     clear_title(t_ch);
     return;
   }
-  sprintf(Gbuf1, "Title Bestowed:\n%s %s\n", GET_NAME(t_ch), arg);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "Title Bestowed:\n%s %s\n", GET_NAME(t_ch), arg);
   send_to_char(Gbuf1, ch);
 
-  sprintf(Gbuf1, "char %s title %s", GET_NAME(t_ch), arg);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "char %s title %s", GET_NAME(t_ch), arg);
   do_string(ch, Gbuf1, -4);
 }
 
@@ -8500,7 +8500,7 @@ void do_scan(P_char ch, char *argument, int cmd)
       vict_next = vict->next_in_room;
       if( CAN_SEE_Z_CORD(ch, vict) &&  ch != vict )
       {
-        sprintf(buf, "$N is %s here.", GET_POS(vict) == POS_PRONE ? "reclining" : GET_POS(vict) == POS_KNEELING ? "kneeling" : GET_POS(vict) == POS_SITTING ? "sitting" : "standing");
+        snprintf(buf, MAX_STRING_LENGTH, "$N is %s here.", GET_POS(vict) == POS_PRONE ? "reclining" : GET_POS(vict) == POS_KNEELING ? "kneeling" : GET_POS(vict) == POS_SITTING ? "sitting" : "standing");
         act(buf , FALSE, ch, 0, vict, TO_CHAR);
         found = TRUE;
       }
@@ -8695,7 +8695,7 @@ void web_info(void)
   Gbuf2[0] = 0;
   Gbuf3[0] = 0;
 
-  sprintf(Gbuf2, "It is %d%s%s, on ",
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "It is %d%s%s, on ",
           (time_info.hour % 12) ? (time_info.hour % 12) : 12, Gbuf1,
           (time_info.hour > 11) ? "pm" : "am");
 
@@ -8729,14 +8729,14 @@ void web_info(void)
   else
     suf = "th";
 
-  sprintf(Gbuf2, "The %d%s Day of the %s, Year %d.\n",
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "The %d%s Day of the %s, Year %d.\n",
           day, suf, month_name[time_info.month], time_info.year);
 
   strcat(Gbuf3, Gbuf2);
 
   ct = time(0);
   uptime = real_time_passed(ct, boot_time);
-  sprintf(Gbuf2, "Time elapsed since boot-up: %d:%s%d:%s%d\n",
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "Time elapsed since boot-up: %d:%s%d:%s%d\n",
           uptime.day * 24 + uptime.hour,
           (uptime.minute > 9) ? "" : "0", uptime.minute,
           (uptime.second > 9) ? "" : "0", uptime.second);
@@ -8746,7 +8746,7 @@ void web_info(void)
   lt = localtime(&ct);
   tmstr = asctime(lt);
   *(tmstr + strlen(tmstr) - 1) = '\0';
-//  sprintf(Gbuf2, "Current time is: %s (%s)\n",
+//  snprintf(Gbuf2, MAX_STRING_LENGTH, "Current time is: %s (%s)\n",
 //          tmstr, (lt->tm_isdst <= 0) ? "EDT" : "EDT");
 
 //  strcat(Gbuf3, Gbuf2);
@@ -8763,7 +8763,7 @@ void web_info(void)
     }
   }
 
-  sprintf(Gbuf2,
+  snprintf(Gbuf2, MAX_STRING_LENGTH,
           "&+RRecord number of connections this boot: &+W%d&n\n", max_descs);
   
   strcat(Gbuf3, Gbuf2);
@@ -8793,7 +8793,7 @@ void do_recall(P_char ch, char *argument, int cmd)
     victim = get_char_vis(ch, argument);
     if( !victim )
     {
-      sprintf( buf, "Could not find char '%s'.\n", argument );
+      snprintf(buf, 2048, "Could not find char '%s'.\n", argument );
       send_to_char( buf, ch );
       return;
     }
@@ -8813,7 +8813,7 @@ void do_recall(P_char ch, char *argument, int cmd)
     return;
   if( victim && !IS_PC(victim) )
   {
-    sprintf( buf, "'%s' is not a PC.\n", argument );
+    snprintf(buf, 2048, "'%s' is not a PC.\n", argument );
     send_to_char( buf, ch );
     return;
   }
@@ -8897,7 +8897,7 @@ void list_ships_to_char( P_char ch, int room_no )
       // Show vnum if applicable (this will probably never apply unless PLR_MORTAL is toggled on).
       if( IS_TRUSTED(ch) && IS_SET(ch->specials.act, PLR_VNUM) )
       {
-        sprintf( buf2, "[&+B%5d&N] ", (obj->R_num >= 0 ? obj_index[obj->R_num].virtual_number : -1));
+        snprintf(buf2, MAX_STRING_LENGTH, "[&+B%5d&N] ", (obj->R_num >= 0 ? obj_index[obj->R_num].virtual_number : -1));
         strcat( buf, buf2 );
       }
 

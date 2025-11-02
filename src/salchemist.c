@@ -528,9 +528,9 @@ void do_mix(P_char ch, char *argument, int cmd)
         potion = read_object(potion_data[i].vnum, VIRTUAL);
         potion->value[0] = GET_LEVEL(ch);
         act("You've &+Wcreated&n $p.", FALSE, ch, potion, 0, TO_CHAR);
-        sprintf(gbuf2, "%s %s", GET_NAME(ch), potion->name);
+        snprintf(gbuf2, MAX_STRING_LENGTH, "%s %s", GET_NAME(ch), potion->name);
         potion->name = str_dup(gbuf2);
-        sprintf(buffer, "%s mixed by %s", potion->short_description, GET_NAME(ch));
+        snprintf(buffer, MAX_STRING_LENGTH, "%s mixed by %s", potion->short_description, GET_NAME(ch));
         set_short_description(potion, buffer);
         obj_to_char(potion, ch);
        }
@@ -614,7 +614,7 @@ void do_spellbind (P_char ch, char *argument, int cmd)
     return;
   }
 
-  sprintf(buf , "You have %d spellbinds left...\n" , (int)
+  snprintf(buf, MAX_STRING_LENGTH, "You have %d spellbinds left...\n" , (int)
     (total_epic_points));
 
   send_to_char(buf, ch);
@@ -843,7 +843,7 @@ void do_encrust(P_char ch, char *argument, int cmd)
   	return;
   }
 
-  sprintf(buf2, "%s attempts to encrust %s with %s...", GET_NAME(ch),
+  snprintf(buf2, MAX_STRING_LENGTH, "%s attempts to encrust %s with %s...", GET_NAME(ch),
           item->short_description, jewel->short_description);
   act(buf2, TRUE, ch, 0, 0, TO_ROOM);
   wizlog(56, buf2 );
@@ -1052,7 +1052,7 @@ void do_fix(P_char ch, char *argument, int cmd)
   P_obj needed = read_object(imat, VIRTUAL);
   if (i < 1)
   {
-    sprintf(gbuf1, "You must have %s in your inventory to repair that item.\r\n", needed->short_description);
+    snprintf(gbuf1, MAX_STRING_LENGTH, "You must have %s in your inventory to repair that item.\r\n", needed->short_description);
     send_to_char(gbuf1, ch);
     extract_obj(needed);
     return;

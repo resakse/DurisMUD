@@ -924,34 +924,34 @@ void handle_undead_mem(P_char ch)
     if( IS_PUNDEAD(ch) || is_wearing_necroplasm(ch)
       || GET_CLASS(ch, CLASS_WARLOCK) || IS_UNDEADRACE(ch) )
     {
-      sprintf(gbuf, "&+LYou feel infused by %d%s circle DARK powers!\n",
+      snprintf(gbuf, MAX_STRING_LENGTH, "&+LYou feel infused by %d%s circle DARK powers!\n",
         i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
     else if( USES_TUPOR(ch) )
     {
-      sprintf(gbuf, "&+WEthereal e&+Cssences flo&+cw into you, res&+Ctoring your %d%s&+c &+Wcircle powers!\n",
+      snprintf(gbuf, MAX_STRING_LENGTH, "&+WEthereal e&+Cssences flo&+cw into you, res&+Ctoring your %d%s&+c &+Wcircle powers!\n",
         i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
     /* reverting to use mana
 	else if(GET_CLASS(ch, CLASS_PSIONICIST) || GET_CLASS(ch, CLASS_MINDFLAYER) || GET_RACE(ch) == RACE_PILLITHID)
     {
-      sprintf(gbuf, "&+mYou feel a rush of energy as a&+L %d%s circle &+mspell coalesces in your mind...\n",
+      snprintf(gbuf, MAX_STRING_LENGTH, "&+mYou feel a rush of energy as a&+L %d%s circle &+mspell coalesces in your mind...\n",
               i, i== 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
 	*/
     else if(IS_ANGEL(ch))
     {
-      sprintf(gbuf, "&+WYou feel illuminated with a %d%s circle spell.\n",
+      snprintf(gbuf, MAX_STRING_LENGTH, "&+WYou feel illuminated with a %d%s circle spell.\n",
 	      i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
     else if( USES_DEFOREST(ch) )
     {
-      sprintf(gbuf, "&+yYou draw a %d%s circle of energy from your surroundings.\n",
+      snprintf(gbuf, MAX_STRING_LENGTH, "&+yYou draw a %d%s circle of energy from your surroundings.\n",
         i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
     else
     {
-      sprintf(gbuf, "&+GYou feel nature's energy flow into your %d%s circle of knowledge.\n",
+      snprintf(gbuf, MAX_STRING_LENGTH, "&+GYou feel nature's energy flow into your %d%s circle of knowledge.\n",
         i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
     }
 
@@ -1805,7 +1805,7 @@ void use_spell(P_char ch, int spell)
     {
       if( MIN(GET_CHAR_SKILL(ch, SKILL_DEVOTION)/10, 5) + 4 > number(0,100) )
       {
-        sprintf(buf, "%s's grace flows down on you refreshing your spell power!&n\n", get_god_name(ch));
+        snprintf(buf, 128, "%s's grace flows down on you refreshing your spell power!&n\n", get_god_name(ch));
         send_to_char( buf, ch );
         return;
       }
@@ -1832,7 +1832,7 @@ void use_spell(P_char ch, int spell)
     {
       if( MIN(GET_CHAR_SKILL(ch, SKILL_DEVOTION)/10, 5) + 4 > number(0,100) )
       {
-        sprintf(buf, "%s's grace flows down on you restoring the power of &+W%s.&n\n",
+        snprintf(buf, 128, "%s's grace flows down on you restoring the power of &+W%s.&n\n",
           get_god_name(ch), skills[spell].name);
         send_to_char(buf, ch);
         return;
@@ -1918,7 +1918,7 @@ P_obj FindSpellBookWithSpell(P_char ch, int spl, int mode)
 
    */
   char wizBookName[512];
-  sprintf(wizBookName, "bookof%s", ch->player.name);
+  snprintf(wizBookName, 512, "bookof%s", ch->player.name);
 
 
   if (IS_SET(mode, SBOOK_MODE_AT_HAND))
@@ -2494,7 +2494,7 @@ void spell_mordenkainens_lucubration(int level, P_char ch, char *arg, int type, 
 
   act("&+C$n releases a &+Ymassive&+C cloud of energy which $e immediately consumes, leaving $m with a dark grin...", TRUE, ch, 0, 0, TO_ROOM);
   
-  sprintf(buff, "&+CYour spell releases a &+Ymassive&+C cloud of energy which you instantly focus into your &+mmind&+C...\n");
+  snprintf(buff, MAX_STRING_LENGTH, "&+CYour spell releases a &+Ymassive&+C cloud of energy which you instantly focus into your &+mmind&+C...\n");
   send_to_char(buff, ch);
 
   if(!USES_COMMUNE(ch) && 
@@ -2516,7 +2516,7 @@ void spell_mordenkainens_lucubration(int level, P_char ch, char *arg, int type, 
           number(0,100) < (int) get_property("spell.mordenkainensLucubration.spellMemChance", 80) )
       {
         af->flags |= MEMTYPE_FULL;
-        sprintf(buff, "&+WYou regain the power of %s!\n", spells[af->modifier]);
+        snprintf(buff, MAX_STRING_LENGTH, "&+WYou regain the power of %s!\n", spells[af->modifier]);
         send_to_char(buff, ch);
       }
     }
@@ -2535,7 +2535,7 @@ void spell_mordenkainens_lucubration(int level, P_char ch, char *arg, int type, 
         if( number(0,100) < (int) get_property("spell.mordenkainensLucubration.spellMemChance", 80) )
         {
           ch->specials.undead_spell_slots[i]++;
-          sprintf(buff, "&+WYou regain power in the %d%s circle of magic!\n",
+          snprintf(buff, MAX_STRING_LENGTH, "&+WYou regain power in the %d%s circle of magic!\n",
                   i, i == 1 ? "st" : (i == 2 ? "nd" : (i == 3 ? "rd" : "th")));
           send_to_char(buff, ch);
         }

@@ -125,7 +125,7 @@ void do_whitelist(P_char ch, char *argument, int cmd)
 
     for (vector<whitelist_data>::iterator it = whitelist.begin(); it != whitelist.end(); it++ )
     {
-      sprintf(linebuf, " %s%s | %s | %s | %s | %s&n\r\n",
+      snprintf(linebuf, MAX_STRING_LENGTH, " %s%s | %s | %s | %s | %s&n\r\n",
               (is_connected(it->pattern.c_str()) ? string("&+R").c_str() : ""),
               pad_ansi(it->pattern.c_str(), 15).c_str(),
               pad_ansi(it->admin.c_str(), 12).c_str(),

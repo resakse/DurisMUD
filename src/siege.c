@@ -121,9 +121,9 @@ int ballista( P_obj obj, P_char ch, int cmd, char *arg )
           return TRUE;
         }
         // Move it that direction.
-        sprintf( buf, "You begin to push $p %sward.", dirs[dir] );
+        snprintf(buf, MAX_STRING_LENGTH, "You begin to push $p %sward.", dirs[dir] );
         act( buf, FALSE, ch, obj, NULL, TO_CHAR );
-        sprintf( buf, "$n starts pushing $p %sward.", dirs[dir] );
+        snprintf(buf, MAX_STRING_LENGTH, "$n starts pushing $p %sward.", dirs[dir] );
         act( buf, TRUE, ch, obj, 0, TO_ROOM);
         // Yes, this lags you to stop you from spamming.
         CharWait(ch, siege_move_wait(ch) );
@@ -330,9 +330,9 @@ int battering_ram( P_obj obj, P_char ch, int cmd, char *arg )
           return TRUE;
         }
         // Move it that direction.
-        sprintf( buf, "You begin to push $p %sward.", dirs[dir] );
+        snprintf(buf, MAX_STRING_LENGTH, "You begin to push $p %sward.", dirs[dir] );
         act( buf, FALSE, ch, obj, NULL, TO_CHAR );
-        sprintf( buf, "$n starts pushing $p %sward.", dirs[dir] );
+        snprintf(buf, MAX_STRING_LENGTH, "$n starts pushing $p %sward.", dirs[dir] );
         act( buf, TRUE, ch, obj, 0, TO_ROOM);
         // Yes, this lags you to stop you from spamming.
         CharWait(ch, siege_move_wait(ch) );
@@ -359,9 +359,9 @@ int battering_ram( P_obj obj, P_char ch, int cmd, char *arg )
         // Yes, this lags you to stop you from spamming.
         CharWait(ch, siege_move_wait(ch) / 2 );
 
-        sprintf( buf, "You thrust %s at $p!", obj->short_description );
+        snprintf(buf, MAX_STRING_LENGTH, "You thrust %s at $p!", obj->short_description );
         act( buf, FALSE, ch, target, NULL, TO_CHAR );
-        sprintf( buf, "$n thrusts %s at $p!", obj->short_description );
+        snprintf(buf, MAX_STRING_LENGTH, "$n thrusts %s at $p!", obj->short_description );
         act( buf, FALSE, ch, target, NULL, TO_ROOM );
 
         damage_siege( target, obj );
@@ -417,9 +417,9 @@ int catapult( P_obj obj, P_char ch, int cmd, char *arg )
           return TRUE;
         }
         // Move it that direction.
-        sprintf( buf, "You begin to push $p %sward.", dirs[dir] );
+        snprintf(buf, MAX_STRING_LENGTH, "You begin to push $p %sward.", dirs[dir] );
         act( buf, FALSE, ch, obj, NULL, TO_CHAR );
-        sprintf( buf, "$n starts pushing $p %sward.", dirs[dir] );
+        snprintf(buf, MAX_STRING_LENGTH, "$n starts pushing $p %sward.", dirs[dir] );
         act( buf, TRUE, ch, obj, 0, TO_ROOM);
         // Yes, this lags you to stop you from spamming.
         CharWait(ch, siege_move_wait(ch) );
@@ -540,9 +540,9 @@ void event_move_engine(P_char ch, P_char victim, P_obj obj, void *data)
   // If there's an exit and it's unblocked (and ch isn't fighting).
   if( can_move( ch, dir ) )
   {
-    sprintf( buf, "You push $p %sward.", dirs[dir] );
+    snprintf(buf, MAX_STRING_LENGTH, "You push $p %sward.", dirs[dir] );
     act( buf, FALSE, ch, obj, NULL, TO_CHAR );
-    sprintf( buf, "$n pushes $p %sward.", dirs[dir] );
+    snprintf(buf, MAX_STRING_LENGTH, "$n pushes $p %sward.", dirs[dir] );
     act( buf, TRUE, ch, obj, 0, TO_ROOM);
 
     to_room = EXIT(ch, dir)->to_room;
@@ -552,7 +552,7 @@ void event_move_engine(P_char ch, P_char victim, P_obj obj, void *data)
     char_from_room( ch );
     char_to_room( ch, to_room, dir );
 
-    sprintf( buf, "$n pushes $p in from the %s.", dirs[rev_dir[dir]] );
+    snprintf(buf, MAX_STRING_LENGTH, "$n pushes $p in from the %s.", dirs[rev_dir[dir]] );
     act( buf, TRUE, ch, obj, 0, TO_ROOM);
   }
   else
@@ -890,7 +890,7 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
   if(cmd == CMD_LIST)
   {
       // List town's name, offense, defense, and resrources..
-    sprintf( buf, "'%s'\nOffense:     %7d\nDefense:     %7d\nResources:   %7d\n"
+    snprintf(buf, MAX_STRING_LENGTH, "'%s'\nOffense:     %7d\nDefense:     %7d\nResources:   %7d\n"
         "Town Guards:  %s\nTown Cavalry: %s\nTown Portals: %s\n\n",
         town->zone->name, town->offense, town->defense, town->resources, 
         town->deploy_guard ? "  Deployed" : "Not Deployed",
@@ -900,11 +900,11 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
 
     if( IS_TRUSTED( pl ) )
     {
-      sprintf( buf, "Guards: %d deployed of %d max, vnum %d, load in room %d.\n", 
+      snprintf(buf, MAX_STRING_LENGTH, "Guards: %d deployed of %d max, vnum %d, load in room %d.\n", 
           town->guard_vnum ? mob_index[real_mobile(town->guard_vnum)].number : 0,
           town->guard_max, town->guard_vnum, town->guard_load_room );
       send_to_char( buf, pl );
-      sprintf( buf, "Cavalry: %d deployed of %d max, vnum %d, load in room %d.\n\n", 
+      snprintf(buf, MAX_STRING_LENGTH, "Cavalry: %d deployed of %d max, vnum %d, load in room %d.\n\n", 
           town->cavalry_vnum ? mob_index[real_mobile(town->cavalry_vnum)].number : 0,
           town->cavalry_max, town->cavalry_vnum,  town->cavalry_load_room );
       send_to_char( buf, pl );
@@ -945,7 +945,7 @@ int warmaster( P_char ch, P_char pl, int cmd, char *arg )
       send_to_char( "Donate what?!?\n", pl );
       return TRUE;
     }
-    sprintf( buf, "You donate %s to %s.\n", donation->short_description, 
+    snprintf(buf, MAX_STRING_LENGTH, "You donate %s to %s.\n", donation->short_description, 
         town->zone->name );
     send_to_char( buf, pl );
     obj_from_char( donation );
@@ -1251,7 +1251,7 @@ void check_deploy( struct zone_data *zone )
   {
     rnum = real_mobile( town->guard_vnum );
 
-    sprintf( buf, "Mob: %d '%s': Current load: %d, Max load: %d in room: %d.",
+    snprintf(buf, MAX_STRING_LENGTH, "Mob: %d '%s': Current load: %d, Max load: %d in room: %d.",
         town->guard_vnum, mob_index[rnum].desc2, mob_index[rnum].number,
         mob_index[rnum].limit, town->guard_load_room );
     wizlog( 60, buf );
@@ -1268,7 +1268,7 @@ void check_deploy( struct zone_data *zone )
   {
     rnum = real_mobile( town->cavalry_vnum );
 
-    sprintf( buf, "Mob: %d '%s': Current load: %d, Max load: %d in room: %d.",
+    snprintf(buf, MAX_STRING_LENGTH, "Mob: %d '%s': Current load: %d, Max load: %d in room: %d.",
         town->cavalry_vnum, mob_index[rnum].desc2, mob_index[rnum].number,
         mob_index[rnum].limit, town->cavalry_load_room );
     wizlog( 60, buf );
@@ -1382,14 +1382,14 @@ void multihit_siege( P_char ch )
   }
   if( num_attacks > number_attacks )
     num_attacks = number_attacks;
-  sprintf( buf, "You hit $p &+R%d&n times.", num_attacks );
+  snprintf(buf, MAX_STRING_LENGTH, "You hit $p &+R%d&n times.", num_attacks );
   act( buf, FALSE, ch, siege, NULL, TO_CHAR | ACT_TERSE );
-  sprintf( buf, "$n hits $p &+R%d&n times.", num_attacks );
+  snprintf(buf, MAX_STRING_LENGTH, "$n hits $p &+R%d&n times.", num_attacks );
   act( buf, FALSE, ch, siege, NULL, TO_ROOM | ACT_TERSE );
   if( siege->condition <= 0 )
     destroy = TRUE;
 
-  sprintf(buf, "$q %s", destroy ? "is completely destroyed!" :
+  snprintf(buf, MAX_STRING_LENGTH, "$q %s", destroy ? "is completely destroyed!" :
       "is damaged from the blow!" );
   act(buf, TRUE, NULL, siege, 0, TO_ROOM);
 
@@ -1411,12 +1411,12 @@ void multihit_siege( P_char ch )
       extract_obj( siege, TRUE ); // Siege arti?
       return;
     }
-    sprintf(buf, "Scraps from %s&n lie in a pile here.",
+    snprintf(buf, MAX_STRING_LENGTH, "Scraps from %s&n lie in a pile here.",
         siege->short_description);
     scraps->description = str_dup(buf);
-    sprintf(buf, "a pile of scraps from %s", siege->short_description);
+    snprintf(buf, MAX_STRING_LENGTH, "a pile of scraps from %s", siege->short_description);
     scraps->short_description = str_dup(buf);
-    sprintf(buf, "%s scraps pile", siege->name);
+    snprintf(buf, MAX_STRING_LENGTH, "%s scraps pile", siege->name);
     scraps->name = str_dup(buf);
     scraps->str_mask = STRUNG_DESC1 | STRUNG_DESC2 | STRUNG_KEYS;
     set_obj_affected(scraps, 400, TAG_OBJ_DECAY, 0);
@@ -1558,7 +1558,7 @@ void list_town( P_char ch, P_town town )
   }
 
   // Show town name: level, off, def.
-  sprintf( buf, "Town '%s': Resources %d, Offense %d, Defense %d\n"
+  snprintf(buf, MAX_STRING_LENGTH, "Town '%s': Resources %d, Offense %d, Defense %d\n"
                 "  Guards:  %3s: Max %3d Vnum %6d Room %6d.\n"
                 "  Cavalry: %3s: Max %3d Vnum %6d Room %6d.\n"
                 "  Portals: %3s:         Vnum %6d Room %6d.\n",
@@ -1592,7 +1592,7 @@ void add_troopresources(P_char ch, P_town town, int amount )
   char buf[MAX_STRING_LENGTH];
 
 /* For debugging...
-  sprintf( buf, "add_trooplevel: '%s' amount: '%d'.\n", town->zone->name, amount );
+  snprintf(buf, MAX_STRING_LENGTH, "add_trooplevel: '%s' amount: '%d'.\n", town->zone->name, amount );
   send_to_char( buf, ch );
 */
 
@@ -1820,7 +1820,7 @@ void list_siege( P_char ch )
   // For each siege object
   for( siege = siege_objects; siege; siege = siege->next_siege )
   {
-    sprintf( buf, "%d) %s\n", siege->obj->loc.room, siege->obj->short_description );
+    snprintf(buf, MAX_STRING_LENGTH, "%d) %s\n", siege->obj->loc.room, siege->obj->short_description );
     send_to_char( buf, ch );
   }
 }

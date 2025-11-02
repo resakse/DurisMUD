@@ -3924,7 +3924,7 @@ void do_introduce(P_char ch, char *arg, int level)
     for (x = 0; x < MAX_INTRO; x++)
       if (ch->only.pc->introd_list[x])
       {
-        sprintf(buf, "%ld\r\n", ch->only.pc->introd_list[x]);
+        snprintf(buf, 40, "%ld\r\n", ch->only.pc->introd_list[x]);
         send_to_char(buf, ch);
       }
     return;
@@ -3991,7 +3991,7 @@ void do_introduce(P_char ch, char *arg, int level)
   /* add ch to victs list */
   add_intro(ch, vict);
   send_to_char("They now know your name.\r\n", ch);
-/*  sprintf(buf,"%s has introduced himself to you!\n\r",GET_NAME(ch));
+/*  snprintf(buf, 40,"%s has introduced himself to you!\n\r",GET_NAME(ch));
   send_to_char(buf, vict); */
   act("$n has introduced $mself to you!", FALSE, ch, 0, vict, TO_VICT);
   return;
@@ -4112,43 +4112,43 @@ void generate_desc(P_char ch)
   switch (number(0, 9))
   {
   case 0:                      /* just shape */
-    sprintf(buf2, "%s", generate_shape(ch));
-    sprintf(buf, "%s %s %s", VOWEL(buf2[0]) ? "An" : "A", buf2,
+    snprintf(buf2, 40, "%s", generate_shape(ch));
+    snprintf(buf, 80, "%s %s %s", VOWEL(buf2[0]) ? "An" : "A", buf2,
             race_names_table[GET_RACE(ch)].ansi);
     break;
   case 1:                      /* just modif */
-    sprintf(buf, "%s %s with %s", prep, race_names_table[GET_RACE(ch)].ansi,
+    snprintf(buf, 80, "%s %s with %s", prep, race_names_table[GET_RACE(ch)].ansi,
             generate_modif(ch));
     break;
   case 2:                      /* just appearance */
-    sprintf(buf2, "%s", generate_appear(ch));
-    sprintf(buf, "%s %s %s", VOWEL(buf2[0]) ? "An" : "A", buf2,
+    snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_appear(ch));
+    snprintf(buf, 80, "%s %s %s", VOWEL(buf2[0]) ? "An" : "A", buf2,
             race_names_table[GET_RACE(ch)].ansi);
     break;
   case 3:
   case 4:                      /* s+m */
-    sprintf(buf2, "%s", generate_shape(ch));
-    sprintf(buf, "%s %s %s with %s",
+    snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_shape(ch));
+    snprintf(buf, 80, "%s %s %s with %s",
             VOWEL(buf2[0]) ? "An" : "A", buf2,
             race_names_table[GET_RACE(ch)].ansi, generate_modif(ch));
     break;
   case 5:
   case 6:                      /*s+a */
-    sprintf(buf2, "%s", generate_shape(ch));
-    sprintf(buf, "%s %s, %s %s",
+    snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_shape(ch));
+    snprintf(buf, 80, "%s %s, %s %s",
             VOWEL(buf2[0]) ? "An" : "A", buf2, generate_appear(ch),
             race_names_table[GET_RACE(ch)].ansi);
     break;
   case 7:
   case 8:                      /*m+a */
-    sprintf(buf2, "%s", generate_appear(ch));
-    sprintf(buf, "%s %s %s with %s",
+    snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_appear(ch));
+    snprintf(buf, 80, "%s %s %s with %s",
             VOWEL(buf2[0]) ? "An" : "A", buf2,
             race_names_table[GET_RACE(ch)].ansi, generate_modif(ch));
     break;
   case 9:                      /*m+a+s */
-    sprintf(buf2, "%s", generate_shape(ch));
-    sprintf(buf, "%s %s, %s %s with %s",
+    snprintf(buf2, MAX_STRING_LENGTH, "%s", generate_shape(ch));
+    snprintf(buf, 80, "%s %s, %s %s with %s",
             VOWEL(buf2[0]) ? "An" : "A", buf2, generate_appear(ch),
             race_names_table[GET_RACE(ch)].ansi, generate_modif(ch));
     break;
@@ -4393,7 +4393,7 @@ void broadcast_to_arena(const char *msg, P_char ch, P_char vict, int rm)
 
       /* msg must have first %s be name of ch, second be name of vict */
 
-      sprintf(strn, msg, PERS(ch, c, 1), vict ? PERS(vict, c, 1) : "(null)");
+      snprintf(strn, MAX_STRING_LENGTH, msg, PERS(ch, c, 1), vict ? PERS(vict, c, 1) : "(null)");
       send_to_char(strn, c);
     }
 
@@ -5498,7 +5498,7 @@ char *get_player_name_from_pid(int pid)
 
   MYSQL_ROW row = mysql_fetch_row(res);
 
-  sprintf(name, "%s", row[0]);
+  snprintf(name, MAX_STRING_LENGTH, "%s", row[0]);
  
   mysql_free_result(res);
 
@@ -5998,13 +5998,13 @@ char *CRYPT2( char *passwd, char *name )
   // If it's not already encrypted.
   if( *name != '$' )
   {
-    sprintf( buf, "$1$" );
+    snprintf(buf, 40, "$1$" );
     strncpy( buf+3, name, 8 );
     strcat( buf, "$" );
   }
   else
   {
-    sprintf( buf, "%s", name );
+    snprintf(buf, 40, "%s", name );
   }
 
   return crypt( passwd, buf );
@@ -6159,7 +6159,7 @@ char *coins_to_string( int platinum, int gold, int silver, int copper, char *col
   // If we have no coins.
   if( coins == 0 )
   {
-    sprintf( ret_string, "%snothing&n", color_string );
+    snprintf(ret_string, MAX_STRING_LENGTH, "%snothing&n", color_string );
     return ret_string;
   }
 
@@ -6169,12 +6169,12 @@ char *coins_to_string( int platinum, int gold, int silver, int copper, char *col
     // If we have another type, use a comma.
     if( coins & (BIT_2 | BIT_3 | BIT_4) )
     {
-      pos1 = sprintf( ret_string, "&+W%dp%s, ", platinum, color_string );
+      pos1 = snprintf(ret_string, MAX_STRING_LENGTH, "&+W%dp%s, ", platinum, color_string );
     }
     // Otherwise, print just plat and return it.
     else
     {
-      sprintf( ret_string, "&+W%dp&n", platinum, color_string );
+      snprintf(ret_string, MAX_STRING_LENGTH, "&+W%dp&n", platinum, color_string );
       return ret_string;
     }
   }

@@ -110,7 +110,7 @@ int get_name(char return_namn[256])
   if (infil == NULL)
   {
     printf("Cant open name file");
-    sprintf(return_namn, "Cant locate name file");
+    snprintf(return_namn, 256, "Cant locate name file");
     return 0;
     /* print the name               */
   }

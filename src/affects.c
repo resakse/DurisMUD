@@ -639,7 +639,7 @@ void add_racial_stat_bonus(P_char ch, struct hold_data *affs)
     raise(SIGSEGV);
   }
 
-  sprintf(buf, "stats.bonus.%s", race_names_table[ch->player.race].no_spaces);
+  snprintf(buf, 256, "stats.bonus.%s", race_names_table[ch->player.race].no_spaces);
 
   bonus = get_property(buf, 0);
 
@@ -2659,6 +2659,7 @@ int affect_from_obj(P_obj obj, sh_int spell)
       obj_affect_remove(obj, af);
     }
   }
+  return 0;
 }
 
 
@@ -3222,32 +3223,32 @@ void update_damage_data()
 
   for (i = 0; i <= LAST_RACE; i++)
   {
-    sprintf(buf, "damage.pulse.racial.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "damage.pulse.racial.%s", race_names_table[i].no_spaces);
     combat_by_race[i][0] = pulse = get_property(buf, (float) PULSE_VIOLENCE);
 /* Disabling the totalOutput for the 2015-16 wipe.
  * This has the effect of setting everyone's totaloutput to 1.0, so less hidden variables.
  * It might have a strong mob buff (for weak) and nerf (for strong) for the various mob races.
  *   However, it'll be more like the zone writers intended etc.
  *   We can just up the damage where it should be; in the zone files / mob load.
-    sprintf(buf, "damage.totalOutput.racial.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "damage.totalOutput.racial.%s", race_names_table[i].no_spaces);
     multiplier = get_property(buf, 1.0);
     // Cancelling the rest of this crap. It doesn't work right anyway. - Lohrr
     // get_property(buf, 1.0) * melee_factor * pulse / PULSE_VIOLENCE;
     combat_by_race[i][1] = multiplier;
  */
     combat_by_race[i][1] = 1;
-    sprintf(buf, "damage.damrollModifier.racial.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "damage.damrollModifier.racial.%s", race_names_table[i].no_spaces);
     multiplier = get_property(buf, 1.0);
     combat_by_race[i][2] = multiplier;
   }
 
   for (i = 0; i <= CLASS_COUNT; i++)
   {
-    sprintf(buf, "damage.totalOutput.class.%s", class_names_table[i].normal);
+    snprintf(buf, 128, "damage.totalOutput.class.%s", class_names_table[i].normal);
     combat_by_class[i][1] = get_property(buf, 0.0);
-    sprintf(buf, "damage.pulse.class.%s", class_names_table[i].normal);
+    snprintf(buf, 128, "damage.pulse.class.%s", class_names_table[i].normal);
     combat_by_class[i][0] = get_property(buf, 0.0);
-    sprintf(buf, "hitpoints.class.%s", class_names_table[i].normal);
+    snprintf(buf, 128, "hitpoints.class.%s", class_names_table[i].normal);
     class_hitpoints[i] = get_property(buf, 1.0);
   }
 

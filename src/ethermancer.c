@@ -3016,8 +3016,8 @@ void spell_wall_of_air(int level, P_char ch, char *arg, int type, P_char tar_ch,
     "&+WThe &+Cwinds &+Wappear to be especially strong coming from the %s&+W!&n", ITEM_NONE) )
   {
 
-    sprintf(buf1, "&+WThe winds pick up &+Rviolently &+Wto the %s!&n\r\n", dirs[var]);
-    sprintf(buf2, "&+WThe winds pick up &+Rviolently &+Wto the %s!&n\r\n", dirs[rev_dir[var]]);
+    snprintf(buf1, MAX_STRING_LENGTH, "&+WThe winds pick up &+Rviolently &+Wto the %s!&n\r\n", dirs[var]);
+    snprintf(buf2, MAX_STRING_LENGTH, "&+WThe winds pick up &+Rviolently &+Wto the %s!&n\r\n", dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
     send_to_room(buf2, (world[ch->in_room].dir_option[var])->to_room);

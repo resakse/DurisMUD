@@ -83,9 +83,10 @@ int init_ctf()
 {
 #if defined (CTF_MUD) && (CTF_MUD == 1)
   fprintf(stderr, "-- Loading ctf\r\n");
-  
+
   load_ctf();
 #endif
+  return 0;
 }
 
 int load_ctf()
@@ -125,7 +126,7 @@ int load_ctf()
 	ctfdata[i].type == CTF_BOON ||
 	ctfdata[i].type == CTF_RANDOM)
     {
-      sprintf(buff, "&+Lthe flag of&n %s&n", zone_table[world[real_room0(ctfdata[i].room)].zone].name);
+      snprintf(buff, MAX_STRING_LENGTH, "&+Lthe flag of&n %s&n", zone_table[world[real_room0(ctfdata[i].room)].zone].name);
       set_short_description(ctfdata[i].obj, buff);
       sprintf(buff + strlen(buff), "&+L is here.&n");
       set_long_description(ctfdata[i].obj, buff);
@@ -173,7 +174,7 @@ int ctf_flag_proc(P_obj flag, P_char ch, int cmd, char *argument)
       {
 	// Not needed because reload makes us a new flag
 	flag->timer[0] = 0; // But just in case...
-	sprintf(buff, "%s &+Whas been left alone for too long and has reset!\r\n", flag->short_description);
+	snprintf(buff, MAX_STRING_LENGTH, "%s &+Whas been left alone for too long and has reset!\r\n", flag->short_description);
 	CAP(buff);
 	ctf_notify(buff, 0);
 	ctf_reload_flag(i);
@@ -239,7 +240,7 @@ int ctf_flag_proc(P_obj flag, P_char ch, int cmd, char *argument)
 	obj_to_room(flag, real_room(ctfdata[i].room));
 	send_to_room_f(real_room0(ctfdata[i].room), "%s suddenly appears in a &+YBLINDING flash&n.\r\n", flag->short_description);
 	if (GET_RACEWAR(ch) == RACEWAR_GOOD)
-	  sprintf(buff, "&+YA beautiful melody rings through your ears as %s reclaims your team flag!\r\n", GET_NAME(ch));
+	  snprintf(buff, MAX_STRING_LENGTH, "&+YA beautiful melody rings through your ears as %s reclaims your team flag!\r\n", GET_NAME(ch));
 	else
 	  sprintf(buff, "&+YYou feel the bloodlust of a thousand ogres rise within you as %s reclaims your team flag!&n\r\n", GET_NAME(ch));
 	sprintf(buff2, "&+YTorment and anguish can be felt gripping your soul as %s reclaims %s team's flag!&n\r\n", GET_NAME(ch), HSHR(ch));
@@ -417,7 +418,7 @@ bool drop_ctf_flag(P_char ch)
     }
     obj_to_room(flag, ch->in_room);
     affect_remove(ch, af);
-    sprintf(buff, "&+Y%s has dropped %s at %s&n\r\n", GET_NAME(ch), flag->short_description, world[ch->in_room].name);
+    snprintf(buff, MAX_STRING_LENGTH, "&+Y%s has dropped %s at %s&n\r\n", GET_NAME(ch), flag->short_description, world[ch->in_room].name);
     ctf_notify(buff, 0);
     act("You drop $p&n.", TRUE, ch, flag, 0, TO_CHAR);
     act("$n drops $p&n.", TRUE, ch, flag, 0, TO_ROOM);
@@ -504,18 +505,18 @@ void capture_flag(P_char ch, P_obj flag, int id)
   char buff2[MAX_STRING_LENGTH];
   if (ctfdata[id].racewar == RACEWAR_EVIL)
   {
-    sprintf(buff, "&+YThe sound of a thousand trumpets can be heard erupting through the area as %s captures the evil flag.&n\r\n", GET_NAME(ch));
-    sprintf(buff2, "&+YThe souls of a thousand demons can be heard wailing in anguish as %s captures your flag!&n\r\n", GET_NAME(ch));
+    snprintf(buff, MAX_STRING_LENGTH, "&+YThe sound of a thousand trumpets can be heard erupting through the area as %s captures the evil flag.&n\r\n", GET_NAME(ch));
+    snprintf(buff2, MAX_STRING_LENGTH, "&+YThe souls of a thousand demons can be heard wailing in anguish as %s captures your flag!&n\r\n", GET_NAME(ch));
   }
   else if (ctfdata[id].racewar == RACEWAR_GOOD)
   {
-    sprintf(buff, "&+YA chilling monotonous horn can be heard echoing through the area as %s captures the good flag.&n\r\n", GET_NAME(ch));
-    sprintf(buff2, "&+YA high-pitched shriek screams through the area as %s captures your flag!&n\r\n", GET_NAME(ch));
+    snprintf(buff, MAX_STRING_LENGTH, "&+YA chilling monotonous horn can be heard echoing through the area as %s captures the good flag.&n\r\n", GET_NAME(ch));
+    snprintf(buff2, MAX_STRING_LENGTH, "&+YA high-pitched shriek screams through the area as %s captures your flag!&n\r\n", GET_NAME(ch));
   }
   else if (ctfdata[id].racewar == RACEWAR_NONE)
   {
-    sprintf(buff, "&+YA calming feeling washes over you as %s captures %s&+Y.&n\r\n", GET_NAME(ch), flag->short_description);
-    sprintf(buff2, "&+YA deep anger overcomes you as %s captures %s&+Y.&n\r\n", GET_NAME(ch), flag->short_description);
+    snprintf(buff, MAX_STRING_LENGTH, "&+YA calming feeling washes over you as %s captures %s&+Y.&n\r\n", GET_NAME(ch), flag->short_description);
+    snprintf(buff2, MAX_STRING_LENGTH, "&+YA deep anger overcomes you as %s captures %s&+Y.&n\r\n", GET_NAME(ch), flag->short_description);
   }
   ctf_notify(buff, GET_RACEWAR(ch));
   ctf_notify(buff2, (GET_RACEWAR(ch) == 1 ? 2 : 1));
@@ -531,7 +532,7 @@ void capture_flag(P_char ch, P_obj flag, int id)
     if (ctfdata[id].type == CTF_RANDOM)
     {
       ctfdata[id].room = ctf_get_random_room(id);
-      sprintf(buff, "&+Lthe flag of&n %s&n", zone_table[world[real_room0(ctfdata[id].room)].zone].name);
+      snprintf(buff, MAX_STRING_LENGTH, "&+Lthe flag of&n %s&n", zone_table[world[real_room0(ctfdata[id].room)].zone].name);
       set_short_description(ctfdata[id].obj, buff);
       sprintf(buff + strlen(buff), "&+L is here.&n");
       set_long_description(ctfdata[id].obj, buff);
@@ -563,7 +564,7 @@ void show_ctf(P_char ch)
   int i;
 
   send_to_char("&+WCapture The Flag&n\r\n", ch);
-  sprintf(buff, "%-2s %-60s %-60s\r\n", "ID", "Flag", "Location");
+  snprintf(buff, MAX_STRING_LENGTH, "%-2s %-60s %-60s\r\n", "ID", "Flag", "Location");
 
   for (i = 1; ctfdata[i].id; i++)
   {
@@ -576,7 +577,7 @@ void show_ctf(P_char ch)
       }
       else if (get_flag_carrier(i))
       {
-	sprintf(buff2, "Carried by %s in %s", GET_NAME(get_flag_carrier(i)), pad_ansi(world[get_flag_carrier(i)->in_room].name, 60).c_str());
+	snprintf(buff2, MAX_STRING_LENGTH, "Carried by %s in %s", GET_NAME(get_flag_carrier(i)), pad_ansi(world[get_flag_carrier(i)->in_room].name, 60).c_str());
 	sprintf(buff + strlen(buff), "%-60s\r\n", buff2);
       }
       else
@@ -651,7 +652,7 @@ void show_ctf_score(P_char ch, char *argument)
     }
   }
 
-  sprintf(dbqry, "SELECT COUNT(pid) as 'score', pid FROM ctf_data");
+  snprintf(dbqry, MAX_STRING_LENGTH, "SELECT COUNT(pid) as 'score', pid FROM ctf_data");
 
   if (racewar || type || flagtype)
     sprintf(dbqry + strlen(dbqry), " WHERE");
@@ -896,7 +897,7 @@ int ctf_reload_flag(int id)
       ctfdata[id].type == CTF_BOON ||
       ctfdata[id].type == CTF_RANDOM)
   {
-    sprintf(buff, "&+Lthe flag of&n %s&n", zone_table[world[real_room0(ctfdata[i].room)].zone].name);
+    snprintf(buff, MAX_STRING_LENGTH, "&+Lthe flag of&n %s&n", zone_table[world[real_room0(ctfdata[i].room)].zone].name);
     set_short_description(ctfdata[id].obj, buff);
     sprintf(buff + strlen(buff), "&+L is here.&n");
     set_long_description(ctfdata[id].obj, buff);

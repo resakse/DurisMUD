@@ -621,7 +621,7 @@ void display_random_zones(P_char ch)
   int      unknown = 0;
   P_char   temp_ch, next;
 
-  sprintf(buf,
+  snprintf(buf, 20000,
           "\t\t\t\t&+L-=&+WInitialized &+Lrandom&+W zones&+L=-&n\r\n\r\n");
 
   while (i < LOADED_RANDOM_ZONES)
@@ -650,16 +650,16 @@ void display_random_zones(P_char ch)
 
 
       if (player)
-        sprintf(color_buf, "%s", "&+Y");
+        snprintf(color_buf, 20, "%s", "&+Y");
       else if (mob)
-        sprintf(color_buf, "%s", "&+L");
+        snprintf(color_buf, 20, "%s", "&+L");
       else if (!mob)
-        sprintf(color_buf, "%s", "&+y");
+        snprintf(color_buf, 20, "%s", "&+y");
 
 
       if (god_check(GET_NAME(ch)))
       {
-        sprintf(temp_buf,
+        snprintf(temp_buf, 20000,
                 "&+W%2d %sTheme:&+W%2d %sRoom range:(&+W%d%s->&+W%d%s) Total:&+W%2d%s Map room:&+W%7d %sPlayers:%s%2d %sMobs:&+W%2d %sChest:&+W%d %sPotion:&+W%d\r\n",
                 i + 1, color_buf, random_zone_data[i].theme, color_buf,
                 random_zone_data[i].first_room, color_buf,
@@ -673,7 +673,7 @@ void display_random_zones(P_char ch)
       }
       else
       {
-        sprintf(temp_buf,
+        snprintf(temp_buf, 20000,
                 "&+W%2d %sTheme:&+W%2d %sRoom range:(&+W%d%s->&+W%d%s) Total:&+W%2d%s Map room:&+W%7d %sPlayers:%s%2d %sMobs:&+W%2d %sChest:&+W%d %sPotion:&+W??\r\n",
                 i + 1, color_buf, random_zone_data[i].theme, color_buf,
                 random_zone_data[i].first_room, color_buf,
@@ -900,24 +900,24 @@ void displayRelic(P_char ch, char *arg, int cmd)
 
   send_to_char("\t  &+L-= Total &+WRELIC&+L points =-&n\r\n\r\n", ch);
 
-  sprintf(buf, "\t         &+WGoodies:&+W %d&n\r\n", GOODIE_RELIC_POINTS);
+  snprintf(buf, 512, "\t         &+WGoodies:&+W %d&n\r\n", GOODIE_RELIC_POINTS);
   send_to_char(buf, ch);
-  sprintf(buf, "\t         &+rEvils:&+W   %d&n\r\n", EVIL_RELIC_POINTS);
+  snprintf(buf, 512, "\t         &+rEvils:&+W   %d&n\r\n", EVIL_RELIC_POINTS);
   send_to_char(buf, ch);
-  sprintf(buf, "\t         &+LUndeads:&+W %d&n\r\n\r\n", UNDEAD_RELIC_POINTS);
+  snprintf(buf, 512, "\t         &+LUndeads:&+W %d&n\r\n\r\n", UNDEAD_RELIC_POINTS);
   send_to_char(buf, ch);
 
   send_to_char("\t  &+L-= This boot &+WRELIC&+L points =-&n\r\n\r\n", ch);
 
-  sprintf(buf, "\t         &+WGoodies:&+W %d&n\r\n",
+  snprintf(buf, 512, "\t         &+WGoodies:&+W %d&n\r\n",
           relic_struct_data[0].evil_relic +
           relic_struct_data[0].undead_relic);
   send_to_char(buf, ch);
-  sprintf(buf, "\t         &+rEvils:&+W   %d&n\r\n",
+  snprintf(buf, 512, "\t         &+rEvils:&+W   %d&n\r\n",
           relic_struct_data[1].good_relic +
           relic_struct_data[1].undead_relic);
   send_to_char(buf, ch);
-  sprintf(buf, "\t         &+LUndeads:&+W %d&n\r\n",
+  snprintf(buf, 512, "\t         &+LUndeads:&+W %d&n\r\n",
           relic_struct_data[2].evil_relic + relic_struct_data[2].good_relic);
   send_to_char(buf, ch);
 
@@ -1384,9 +1384,9 @@ P_obj create_sigil(int zone_number)
   obj = read_object( VOBJ_RANDOM_ARMOR, VIRTUAL );
   zone = &zone_table[find_a_zone()];
 
-  sprintf(buf1, "sigil %s", zone->name);
-  sprintf(buf2, "&+ra sigil from %s&n", zone->name);
-  sprintf(buf3, "&+ra sigil from %s&n lies here.", zone->name);
+  snprintf(buf1, MAX_STRING_LENGTH, "sigil %s", zone->name);
+  snprintf(buf2, MAX_STRING_LENGTH, "&+ra sigil from %s&n", zone->name);
+  snprintf(buf3, MAX_STRING_LENGTH, "&+ra sigil from %s&n lies here.", zone->name);
 
   set_keywords(obj, buf1);
   set_short_description(obj, buf2);

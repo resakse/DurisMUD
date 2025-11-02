@@ -130,7 +130,7 @@ char *proclibobj_parse_actroom(char *argument)
         while (strchr(arg, '%'))
           *(strchr(arg, '%')) = '$';
 
-        sprintf(params, "%d\xFF%s", chance, arg);
+        snprintf(params, MAX_STRING_LENGTH, "%d\xFF%s", chance, arg);
         CREATE(pRet, char, strlen(params) + 1, MEM_TAG_EXDESCD);
         strcpy(pRet, params);
         return pRet;
@@ -158,7 +158,7 @@ int proclibobj_actroom(P_obj obj, P_char ch, int cmd, char *params)
   if (!chance || !pAct || !(*pAct))
   {
     char buf[500];
-    sprintf(buf, "Malformed _proclib_actroom description on object %d", obj_index[obj->R_num].virtual_number);
+    snprintf(buf, 500, "Malformed _proclib_actroom description on object %d", obj_index[obj->R_num].virtual_number);
     debug(buf);
     wizlog(58, buf);
     return FALSE;
@@ -202,7 +202,7 @@ char *proclibobj_parse_actworn(char *argument)
           while (strchr(arg2, '%'))
             *(strchr(arg2, '%')) = '$';
 
-          sprintf(params, "%d\xFF%s\xFF%s", chance, arg1, arg2);
+          snprintf(params, MAX_STRING_LENGTH, "%d\xFF%s\xFF%s", chance, arg1, arg2);
           CREATE(pRet, char, strlen(params) + 1, MEM_TAG_EXDESCD);
           strcpy(pRet, params);
           return pRet;
@@ -256,7 +256,7 @@ int proclibobj_actworn(P_obj obj, P_char ch, int cmd, char *params)
       }
     }
   }
-  sprintf(buf, "Malformed _proclib_actworn description on object %d", obj_index[obj->R_num].virtual_number);
+  snprintf(buf, 500, "Malformed _proclib_actworn description on object %d", obj_index[obj->R_num].virtual_number);
   debug(buf);
   wizlog(58, buf);
   return FALSE;
@@ -400,7 +400,7 @@ int proclibObj_add(P_obj obj, char *procName, char *args)
     ed = ed->next;
   }
   char keyword[50];
-  sprintf(keyword, "_proclib_%s%d", object_proc_libs[libIdx].procName, suffix+1);
+  snprintf(keyword, 50, "_proclib_%s%d", object_proc_libs[libIdx].procName, suffix+1);
 
   CREATE(ed, struct extra_descr_data, 1, MEM_TAG_EXDESCD);
   ed->next = obj->ex_description;

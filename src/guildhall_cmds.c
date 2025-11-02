@@ -212,14 +212,14 @@ void do_construct_overmax(P_char ch, char *arg)
     debug("%d, %d", plat_cost, GET_MONEY(ch));
     if(GET_MONEY(ch) < plat_cost)
     {
-      sprintf(buff, "You don't have enough money on you - it costs %s&n to extend your max players.\r\n", coin_stringv(plat_cost));
+      snprintf(buff, MAX_STRING_LENGTH, "You don't have enough money on you - it costs %s&n to extend your max players.\r\n", coin_stringv(plat_cost));
       send_to_char(buff, ch);
       return;
     }
 
     if( GET_ASSOC(ch)->get_construction() < cp_cost )
     {
-      sprintf(buff, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to add a member over max.\r\n", cp_cost);
+      snprintf(buff, MAX_STRING_LENGTH, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to add a member over max.\r\n", cp_cost);
       send_to_char(buff, ch);
       return;
     }
@@ -262,14 +262,14 @@ void do_construct_guildhall(P_char ch, char *arg)
 
     if(GET_MONEY(ch) < plat_cost)
     {
-      sprintf(buff, "You don't have enough money on you - it costs %s&n to build a guildhall.\r\n", coin_stringv(plat_cost));
+      snprintf(buff, MAX_STRING_LENGTH, "You don't have enough money on you - it costs %s&n to build a guildhall.\r\n", coin_stringv(plat_cost));
       send_to_char(buff, ch);
       return;
     }
 
     if( GET_ASSOC(ch)->get_construction() < cp_cost )
     {
-      sprintf(buff, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to build a guildhall.\r\n", cp_cost);
+      snprintf(buff, MAX_STRING_LENGTH, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to build a guildhall.\r\n", cp_cost);
       send_to_char(buff, ch);
       return;
     }
@@ -326,7 +326,7 @@ void do_construct_room(P_char ch, char *arg)
   
   if(!*arg)
   {
-    sprintf(buff, "Syntax: construct room <north|east|south|west|up|down|northwest|northeast|southwest|southeast>\r\n"
+    snprintf(buff, MAX_STRING_LENGTH, "Syntax: construct room <north|east|south|west|up|down|northwest|northeast|southwest|southeast>\r\n"
                   "Cost: %s&n and %d &+Wconstruction points&n\r\n", coin_stringv(plat_cost), cp_cost);
     send_to_char(buff, ch);
     return;
@@ -358,14 +358,14 @@ void do_construct_room(P_char ch, char *arg)
   {
     if(GET_MONEY(ch) < plat_cost)
     {
-      sprintf(buff, "You don't have enough money on you - it costs %s&n to build a new room.\r\n", coin_stringv(plat_cost));
+      snprintf(buff, MAX_STRING_LENGTH, "You don't have enough money on you - it costs %s&n to build a new room.\r\n", coin_stringv(plat_cost));
       send_to_char(buff, ch);
       return;
     }    
     
     if(GET_ASSOC(ch)->get_construction() < cp_cost)
     {
-      sprintf(buff, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to build a new room.\r\n", cp_cost);
+      snprintf(buff, MAX_STRING_LENGTH, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to build a new room.\r\n", cp_cost);
       send_to_char(buff, ch);
       return;
     }    
@@ -433,7 +433,7 @@ void do_construct_golem(P_char ch, char *arg)
 
     for(int i = 0; i < GH_GOLEM_NUM_SLOTS; i++)
     {
-      sprintf(buff, "&+W%d&n) %s\r\n", (i+1), ( gh->entrance_room->golems[i] ? gh->entrance_room->golems[i]->player.short_descr : "none" ));
+      snprintf(buff, MAX_STRING_LENGTH, "&+W%d&n) %s\r\n", (i+1), ( gh->entrance_room->golems[i] ? gh->entrance_room->golems[i]->player.short_descr : "none" ));
       send_to_char(buff, ch);
     }
 
@@ -443,17 +443,17 @@ void do_construct_golem(P_char ch, char *arg)
 
     send_to_char("Cost:\r\n", ch);
 
-    sprintf(buff, " %s: %s&n and %d &+Wconstruction points&n\r\n", "warrior", 
+    snprintf(buff, MAX_STRING_LENGTH, " %s: %s&n and %d &+Wconstruction points&n\r\n", "warrior", 
             coin_stringv(get_property("guildhalls.construction.platinum.golem.warrior", 0)*1000), 
             get_property("guildhalls.construction.points.golem.warrior", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, " %s: %s&n and %d &+Wconstruction points&n\r\n", "cleric", 
+    snprintf(buff, MAX_STRING_LENGTH, " %s: %s&n and %d &+Wconstruction points&n\r\n", "cleric", 
             coin_stringv(get_property("guildhalls.construction.platinum.golem.cleric", 0)*1000), 
             get_property("guildhalls.construction.points.golem.cleric", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, " %s: %s&n and %d &+Wconstruction points&n\r\n", "sorcerer", 
+    snprintf(buff, MAX_STRING_LENGTH, " %s: %s&n and %d &+Wconstruction points&n\r\n", "sorcerer", 
             coin_stringv(get_property("guildhalls.construction.platinum.golem.sorcerer", 0)*1000), 
             get_property("guildhalls.construction.points.golem.sorcerer", 0));
     send_to_char(buff, ch);
@@ -585,32 +585,32 @@ void do_construct_upgrade(P_char ch, char *arg)
                  "&+b-----------------------------------------\r\n", ch);
     
     
-    sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "heal", "a relaxing healing room with a fountain", 
+    snprintf(buff, MAX_STRING_LENGTH, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "heal", "a relaxing healing room with a fountain", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.heal", 0) * 1000), 
             get_property("guildhalls.construction.points.upgrade.heal", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "window", "a room with a magical window that gives you a glimpse outside the guildhall", 
+    snprintf(buff, MAX_STRING_LENGTH, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "window", "a room with a magical window that gives you a glimpse outside the guildhall", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.window", 0) * 1000), 
             get_property("guildhalls.construction.points.upgrade.window", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "bank", "a guild bank where you can enter your guild locker and deposit/withdraw guild funds", 
+    snprintf(buff, MAX_STRING_LENGTH, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "bank", "a guild bank where you can enter your guild locker and deposit/withdraw guild funds", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.bank", 0) * 1000), 
             get_property("guildhalls.construction.points.upgrade.bank", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "town", "a portal to your local hometown inn", 
+    snprintf(buff, MAX_STRING_LENGTH, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "town", "a portal to your local hometown inn", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.town_portal", 0) * 1000), 
             get_property("guildhalls.construction.points.upgrade.town_portal", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "library", "a library with a tome from which you can memorize all spells", 
+    snprintf(buff, MAX_STRING_LENGTH, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "library", "a library with a tome from which you can memorize all spells", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.library", 0) * 1000), 
             get_property("guildhalls.construction.points.upgrade.library", 0));
     send_to_char(buff, ch);
 
-    sprintf(buff, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "cargo", "an information board with current cargo prices across the world", 
+    snprintf(buff, MAX_STRING_LENGTH, "&+W%s&n) %s (%s and %d &+Wconstruction points&n)\r\n", "cargo", "an information board with current cargo prices across the world", 
             coin_stringv(get_property("guildhalls.construction.platinum.upgrade.cargo", 0) * 1000), 
             get_property("guildhalls.construction.points.upgrade.cargo", 0));
     send_to_char(buff, ch);
@@ -747,7 +747,7 @@ void do_construct_rename(P_char ch, char *arg)
   
   if(!*arg || !arg)
   {
-    sprintf(buff, "Syntax: construct rename <new room name>\r\nYou can use the 'testcolor' command to test your name first.\r\n"
+    snprintf(buff, MAX_STRING_LENGTH, "Syntax: construct rename <new room name>\r\nYou can use the 'testcolor' command to test your name first.\r\n"
                   "Cost: %s&n and %d &+Wconstruction points&n\r\n", coin_stringv(plat_cost), cp_cost);
     
     send_to_char(buff, ch);
@@ -761,14 +761,14 @@ void do_construct_rename(P_char ch, char *arg)
   {
     if(GET_MONEY(ch) < plat_cost)
     {
-      sprintf(buff, "You don't have enough money on you - it costs %s&n to rename the room.\r\n", coin_stringv(plat_cost));
+      snprintf(buff, MAX_STRING_LENGTH, "You don't have enough money on you - it costs %s&n to rename the room.\r\n", coin_stringv(plat_cost));
       send_to_char(buff, ch);
       return;
     }    
     
     if(GET_ASSOC(ch)->get_construction() < cp_cost)
     {
-      sprintf(buff, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to rename the room.\r\n", cp_cost);
+      snprintf(buff, MAX_STRING_LENGTH, "Your guild doesn't yet have enough &+Wconstruction points&n - it costs %d to rename the room.\r\n", cp_cost);
       send_to_char(buff, ch);
       return;
     }    
@@ -882,7 +882,7 @@ void do_guildhall_list(P_char ch, char *arg)
 
     char buff[MAX_STRING_LENGTH];
 
-    sprintf(buff, "%4d &+b|&n %2d: %s&n &+b|&n &+C%10d&n &+b|&n &+C%7d&n &+b| %s&n\r\n", 
+    snprintf(buff, MAX_STRING_LENGTH, "%4d &+b|&n %2d: %s&n &+b|&n &+C%10d&n &+b|&n &+C%7d&n &+b| %s&n\r\n", 
             gh->id, 
             gh->guild->get_id(),
             pad_ansi(gh->guild->get_name().c_str(), 25).c_str(), 
@@ -1234,13 +1234,13 @@ void guildhall_info(Guildhall *gh, P_char ch)
   
   char buff[MAX_STRING_LENGTH];
   
-  sprintf(buff, "&+BGuildhall in &n%s\r\n", world[real_room0(gh->outside_vnum)].name);
+  snprintf(buff, MAX_STRING_LENGTH, "&+BGuildhall in &n%s\r\n", world[real_room0(gh->outside_vnum)].name);
   send_to_char(buff, ch);
 
-  sprintf(buff, "&+BOwned by&n %s\r\n", gh->guild->get_name().c_str());
+  snprintf(buff, MAX_STRING_LENGTH, "&+BOwned by&n %s\r\n", gh->guild->get_name().c_str());
   send_to_char(buff, ch);
 
-  sprintf(buff, "&+BRooms:&n %d\r\n", (int) gh->rooms.size());
+  snprintf(buff, MAX_STRING_LENGTH, "&+BRooms:&n %d\r\n", (int) gh->rooms.size());
   send_to_char(buff, ch);
   
   send_to_char("\r\n&+BGolems\r\n"
@@ -1250,12 +1250,12 @@ void guildhall_info(Guildhall *gh, P_char ch)
   {
     if(gh->entrance_room->golems[i])
     {
-      sprintf(buff, "&+W%d&n) %s &n(%s&n)\r\n", (i+1), pad_ansi(gh->entrance_room->golems[i]->player.short_descr, 30).c_str(), condition_str(gh->entrance_room->golems[i]));
+      snprintf(buff, MAX_STRING_LENGTH, "&+W%d&n) %s &n(%s&n)\r\n", (i+1), pad_ansi(gh->entrance_room->golems[i]->player.short_descr, 30).c_str(), condition_str(gh->entrance_room->golems[i]));
       send_to_char(buff, ch);
     }
     else
     {
-      sprintf(buff, "&+W%d&n) none\r\n", (i+1));
+      snprintf(buff, MAX_STRING_LENGTH, "&+W%d&n) none\r\n", (i+1));
       send_to_char(buff, ch);
     }
   }

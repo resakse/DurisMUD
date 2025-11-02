@@ -286,12 +286,12 @@ int enchant_arrows(P_char ch, P_char vict, P_obj arrow, int cmd)
       {
         return DAM_NONEDEAD;
       }
-      sprintf(buf2, "&n of &+L%s&n", GET_NAME(ch));
-      sprintf(buf, "%s", arrow->short_description);
+      snprintf(buf2, 256, "&n of &+L%s&n", GET_NAME(ch));
+      snprintf(buf, 256, "%s", arrow->short_description);
       strcat(buf, buf2);
       arrow->short_description = str_dup(buf);
 
-      sprintf(buf, "%s a%s", arrow->name, GET_NAME(ch));
+      snprintf(buf, 256, "%s a%s", arrow->name, GET_NAME(ch));
       arrow->name = str_dup(buf);
 
       arrow->timer[5] = ARROW_MARK;
@@ -456,7 +456,7 @@ void do_fire(P_char ch, char *argument, int cmd)
   missile = quiver->contains;
   if( missile->value[3] != weapon->value[3] )
   {
-    sprintf( buf, "%s doesn't fit right in $p.", missile->short_description );
+    snprintf(buf, 256, "%s doesn't fit right in $p.", missile->short_description );
     act( buf, FALSE, ch, weapon, ch, TO_CHAR );
     return;
   }
@@ -1182,7 +1182,7 @@ void do_throw(P_char ch, char *argument, int cmd)
 
  if (!weapon)
  {
-   sprintf(buf, "You're not wielding the %s!\r\n", arg1);
+   snprintf(buf, MAX_STRING_LENGTH, "You're not wielding the %s!\r\n", arg1);
    send_to_char(buf, ch);
    return;
  }
@@ -2021,7 +2021,7 @@ P_obj get_wall_dir(P_char ch, int dir)
        return tobj;
    }
  }
- return FALSE;
+ return NULL;
 }
 
 /* to take cover when someone fire from above */
@@ -2110,9 +2110,9 @@ void do_cover(P_char ch, char *argument, int cmd)
 
  if (number(1, 100) <= chance)
  {
-   sprintf(buf, "You take cover!");
+   snprintf(buf, MAX_STRING_LENGTH, "You take cover!");
    act(buf, FALSE, ch, 0, 0, TO_CHAR);
-   sprintf(buf, "$n take cover!");
+   snprintf(buf, MAX_STRING_LENGTH, "$n take cover!");
    act(buf, FALSE, ch, 0, 0, TO_ROOM);
 
    bzero(&af, sizeof(af));
@@ -2123,9 +2123,9 @@ void do_cover(P_char ch, char *argument, int cmd)
  }
  else
  {
-   sprintf(buf, "Panic! You cannot find anywhere to take cover!");
+   snprintf(buf, MAX_STRING_LENGTH, "Panic! You cannot find anywhere to take cover!");
    act(buf, FALSE, ch, 0, 0, TO_CHAR);
-   sprintf(buf, "$n runs in circle trying to take cover!");
+   snprintf(buf, MAX_STRING_LENGTH, "$n runs in circle trying to take cover!");
    act(buf, FALSE, ch, 0, 0, TO_ROOM);
  }
 }

@@ -264,7 +264,7 @@ int flow_amulet(P_obj obj, P_char ch, int cmd, char *arg)
             if( ch->specials.undead_spell_slots[circle] < max_spells_in_circle(ch, circle) )
             {
               //debug("circle slot: %d", circle); some zion debug nonsense, can re-enable it if you wish.
-              sprintf(buf, "&+LPowerful magic flows into your %d%s circle of knowledge.\n",
+              snprintf(buf, 256, "&+LPowerful magic flows into your %d%s circle of knowledge.\n",
                 circle, circle == 1 ? "st" : (circle == 2 ? "nd" : (circle == 3 ? "rd" : "th")));
               send_to_char(buf, ch);
               ch->specials.undead_spell_slots[circle]++;
@@ -278,7 +278,7 @@ int flow_amulet(P_obj obj, P_char ch, int cmd, char *arg)
 
           if( spell )
           {
-            sprintf( buf, "&+BPowerful magic flows forth from the amulet, and your power of %s &+Breturns to you!&n\n",
+            snprintf(buf, 256, "&+BPowerful magic flows forth from the amulet, and your power of %s &+Breturns to you!&n\n",
             skills[spell].name );
             send_to_char(buf, ch);
           }

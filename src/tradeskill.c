@@ -298,11 +298,11 @@ P_obj forge_create(int choice, P_char ch, int material)
     return 0;
   }
 
-  sprintf(keywords, "%s", forge_item_list[choice].keywords);
-  sprintf(dummy, "%s", forge_item_list[choice].short_desc);
-  sprintf(short_desc, dummy, GET_NAME(ch));
-  sprintf(dummy, "%s", forge_item_list[choice].long_desc);
-  sprintf(long_desc, dummy, GET_NAME(ch));
+  snprintf(keywords, MAX_INPUT_LENGTH, "%s", forge_item_list[choice].keywords);
+  snprintf(dummy, MAX_INPUT_LENGTH, "%s", forge_item_list[choice].short_desc);
+  snprintf(short_desc, MAX_STRING_LENGTH, dummy, GET_NAME(ch));
+  snprintf(dummy, MAX_INPUT_LENGTH, "%s", forge_item_list[choice].long_desc);
+  snprintf(long_desc, MAX_INPUT_LENGTH, dummy, GET_NAME(ch));
 
   set_short_description(obj, short_desc);
   set_long_description(obj, long_desc);
@@ -344,13 +344,13 @@ void forge_describe(int choice, P_char ch)
   char buffer[1024];
   int i;
 
-  sprintf(buffer, "To create %s you need:\n", forge_item_list[choice].short_desc);  
+  snprintf(buffer, 1024, "To create %s you need:\n", forge_item_list[choice].short_desc);  
   for (i = 0; i < 5 && forge_item_list[choice].ore_needed[i]; i++)
     sprintf(buffer + strlen(buffer), "%s\n", 
         obj_index[real_object(forge_item_list[choice].ore_needed[i])].desc2 ); 
 
   send_to_char(buffer, ch);
-  sprintf(buffer, "It will cost you %s to forge this.\n", coin_stringv(forge_prices[i-1]));
+  snprintf(buffer, 1024, "It will cost you %s to forge this.\n", coin_stringv(forge_prices[i-1]));
   send_to_char(buffer, ch);
 }
 
@@ -398,7 +398,7 @@ void do_forge(P_char ch, char *argument, int cmd)
   // Only need to lower the first initial (the rest are always lowercase).
   *buf = LOWER(*buf);
   //buf[0] snags first character of name
-  sprintf(Gbuf1, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
   // If we can't open the recipe book file.
   if( !(recipeBookFile = fopen(Gbuf1, "r")) )
   {
@@ -448,7 +448,7 @@ void do_forge(P_char ch, char *argument, int cmd)
       {
         logit( LOG_DEBUG, "'%s' has bad recipe vnum %d.", ch ? J_NAME(ch) : "NULL", objVnum );
       }
-      sprintf(recipe, "   &+W%-22d&n%s&n\n", objVnum, obj->short_description);
+      snprintf(recipe, 256, "   &+W%-22d&n%s&n\n", objVnum, obj->short_description);
       page_string(ch->desc, recipe, 1);
       send_to_char("----------------------------------------------------------------------------\n", ch);
       extract_obj(obj);
@@ -1807,7 +1807,7 @@ int smith(P_char ch, P_char pl, int cmd, char *arg)
     act("$n tells you, 'I can forge the following items:'", FALSE, ch, 0, pl, TO_VICT);
     for( i = 0; i < SMITH_MAX_ITEMS && sdata->items[i] != -1; i++ )
     {
-      sprintf(buffer, "%d) %s\n", i + 1, forge_item_list[sdata->items[i]].short_desc);
+      snprintf(buffer, 256, "%d) %s\n", i + 1, forge_item_list[sdata->items[i]].short_desc);
       send_to_char(buffer, pl);
     }
     return TRUE;
@@ -2105,7 +2105,7 @@ void event_bandage_check(P_char ch, P_char victim, P_obj, void *data)
     return;
 
   if (mdata->healed >= mdata->maxheal) {
-    sprintf(buf, "You can't &+Wbandage&n any more with this bandage.\n");
+    snprintf(buf, MAX_STRING_LENGTH, "You can't &+Wbandage&n any more with this bandage.\n");
     send_to_char(buf, ch);
     return;
   }
@@ -2212,7 +2212,7 @@ void do_mine(P_char ch, char *arg, int cmd)
     {
       if (isname(arg2, mine_data[i].abbrev))
       {
-        sprintf(buf2, "purge %s", mine_data[i].abbrev);
+        snprintf(buf2, MAX_STRING_LENGTH, "purge %s", mine_data[i].abbrev);
         do_mine(ch, buf2, CMD_MINE);
         wizlog(56, "%s loaded mines in %s", GET_NAME(ch), mine_data[i].name);
         logit(LOG_WIZ, "%s loaded mines in %s", GET_NAME(ch), mine_data[i].name);
@@ -2220,7 +2220,7 @@ void do_mine(P_char ch, char *arg, int cmd)
         return;
       }
     }
-    sprintf(buf2, "Available options for mine reset: map | ud\n");
+    snprintf(buf2, MAX_STRING_LENGTH, "Available options for mine reset: map | ud\n");
     /*
       for (i = 0; mine_data[i].start; i++);
       {
@@ -2244,7 +2244,7 @@ void do_mine(P_char ch, char *arg, int cmd)
         return;
       }
     }
-    sprintf(buf2, "Available options for mine load: map | ud\n");
+    snprintf(buf2, MAX_STRING_LENGTH, "Available options for mine load: map | ud\n");
     /*for (i = 0; mine_data[i].abbrev; i++);
     {
       debug("%s", mine_data[i].abbrev);
@@ -2298,7 +2298,7 @@ void do_mine(P_char ch, char *arg, int cmd)
     }
     else
     {
-      sprintf(buf2, "Available options for mine purge: all | map | tharnrift\n");
+      snprintf(buf2, MAX_STRING_LENGTH, "Available options for mine purge: all | map | tharnrift\n");
       /*
       for (i = 0; mine_data[i].start; i++);
       {
@@ -2436,7 +2436,7 @@ void create_recipes_file(const char *dir, char *name)
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
-  sprintf(Gbuf1, "%s/%c/%s.crafting", dir, buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.crafting", dir, buf[0], buf);
   f = fopen(Gbuf1, "w");
   fclose(f);
 }
@@ -2542,7 +2542,7 @@ int learn_recipe(P_obj obj, P_char ch, int cmd, char *arg)
   for (; *buff; buff++)
     *buff = LOWER(*buff);
   //buf[0] snags first character of name
-  sprintf(Gbuf1, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
 
   /*just a debug test
   send_to_char(Gbuf1, ch);*/
@@ -2629,7 +2629,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
     if( !arg || !*arg )
     {
       // list called with no arguments
-      sprintf(buffer,
+      snprintf(buffer, MAX_STRING_LENGTH,
         "&+WKannard&+L slowly lifts his hood and smiles.'\n"
 	      "&+WKannard&+L &+wsays 'Welcome adventurer. I offer exotic items from the far reaches beyond our own realm in exchange for &+cepic points&n.'\n"
 	      "&+WKannard&+L &+wsays 'Please &+Yrefer to my &-L&+ysign&n&-l for an explanation of each of these items and their affects.'\n"
@@ -2656,7 +2656,7 @@ int epic_store(P_char ch, P_char pl, int cmd, char *arg)
   {
     if( !arg || !*arg )
     {
-      sprintf(buffer, "&+WKannard&+L &+wsays 'What item would you like to buy?'\n");
+      snprintf(buffer, MAX_STRING_LENGTH, "&+WKannard&+L &+wsays 'What item would you like to buy?'\n");
       send_to_char(buffer, pl);
       return TRUE;
     }
@@ -2858,7 +2858,7 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
         if(!arg || !*arg)
     {
       // practice called with no arguments
-      sprintf(buffer,
+      snprintf(buffer, MAX_STRING_LENGTH,
               "'Greetings Adventurer!'\n"
               "'The choice of a &+Wtradeskill&n is an important one, as only &+Yone&n can be made.'\n"
 		"'Of the abilities which I can train you are &+Lm&+wi&+Wn&+wi&+Lng&n, &+Lforging&n, or &+rcrafting&n.'\n"
@@ -2906,11 +2906,11 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
      	 buff = buf;
  	 for (; *buff; buff++)
   	 *buff = LOWER(*buff);
-  	 sprintf(Gbuf1, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
+  	 snprintf(Gbuf1, MAX_STRING_LENGTH, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
         recipelist = fopen(Gbuf1, "w");
         fclose(recipelist);
 
-      sprintf(buffer, "Your teacher takes you aside, and performs a cleansing geasture about your body&n. Your mind feels &+Wrenewed&n!\n");
+      snprintf(buffer, MAX_STRING_LENGTH, "Your teacher takes you aside, and performs a cleansing geasture about your body&n. Your mind feels &+Wrenewed&n!\n");
       act(buffer, FALSE, ch, 0, pl, TO_VICT);
       pl->only.pc->skills[SKILL_FORGE].taught = 0;
         pl->only.pc->skills[SKILL_FORGE].learned = 0;
@@ -2937,7 +2937,7 @@ int learn_tradeskill(P_char ch, P_char pl, int cmd, char *arg)
         send_to_char("Unfortunately, I cannot teach you anything more, as you have already learned a tradeskill!\n", pl);
         return TRUE;
       }
-      sprintf(buffer, "Your teacher takes you aside and teaches you the finer points of &+W%s&n.\n"
+      snprintf(buffer, MAX_STRING_LENGTH, "Your teacher takes you aside and teaches you the finer points of &+W%s&n.\n"
                       "&+cYou feel your skill in %s improving.&n\n",
               skills[SKILL_FORGE].name, skills[SKILL_FORGE].name);
       act(buffer, FALSE, ch, 0, pl, TO_VICT);
@@ -3926,7 +3926,7 @@ void do_dice(P_char ch, char *arg, int cmd)
     {
 	result = number(1, dice);
        i++;
-      sprintf(gbuf, "&+yResult for &+W%s's&+y roll &+L#&+W%d&+y of a &+r%d&+y sided die: &+W%d&+y.", GET_NAME(ch), i, dice, result);
+      snprintf(gbuf, MAX_STRING_LENGTH, "&+yResult for &+W%s's&+y roll &+L#&+W%d&+y of a &+r%d&+y sided die: &+W%d&+y.", GET_NAME(ch), i, dice, result);
      act(gbuf, FALSE, ch, 0, 0, TO_CHAR);
      act(gbuf, FALSE, ch, 0, 0, TO_ROOM);
 
@@ -3946,8 +3946,8 @@ int assoc_founder(P_char mob, P_char pl, int cmd, char *arg)
   {
     if( !arg || !*arg )
     {
-      sprintf( buffer2, "%s", PERS(mob, pl, FALSE) );
-      sprintf( buffer, "%s&+L looks you over briefly and then chuckles.'\n"
+      snprintf(buffer2, MAX_STRING_LENGTH, "%s", PERS(mob, pl, FALSE) );
+      snprintf(buffer, MAX_STRING_LENGTH, "%s&+L looks you over briefly and then chuckles.'\n"
 	      "%s &+wsays 'Welcome adventurer.  If it is a guild ye are wishing to found, then ye have come to the right place&n.'\n"
 	      "%s &+wsays 'Ye will find the command to create a guild listed here, as well as the cost.'\n"
         "&+y=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+\n"
@@ -3984,7 +3984,7 @@ int assoc_founder(P_char mob, P_char pl, int cmd, char *arg)
       return TRUE;
     }
     // Skip the opening '.
-    sprintf( guild_name, "%s", arg + 1 );
+    snprintf(guild_name, MAX_INPUT_LENGTH, "%s", arg + 1 );
     // Overwrite the closing ' with a color normal.
     sprintf( guild_name + strlen(guild_name) - 1, "&n" );
 
@@ -4001,7 +4001,7 @@ int assoc_founder(P_char mob, P_char pl, int cmd, char *arg)
       return TRUE;
     }
 
-    sprintf(buffer2, "You have selected: %s for your guild name, is this correct? (y/n)\n", guild_name );
+    snprintf(buffer2, MAX_STRING_LENGTH, "You have selected: %s for your guild name, is this correct? (y/n)\n", guild_name );
     send_to_char(buffer2, pl);
 
     strcpy(pl->desc->last_command, guild_name);

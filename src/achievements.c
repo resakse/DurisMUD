@@ -30,93 +30,93 @@ void do_achievements(P_char ch, char *arg, int cmd)
   paf = get_spell_from_char(ch, AIP_ORE_MINED);
   int ore = paf ? paf->modifier : 0;
 
-  sprintf(buf, "\r\n&+L=-=-=-=-=-=-=-=-=-=--= &+rDuris Mud &+yAch&+Yieveme&+ynts &+Lfor &+r%s &+L=-=-=-=-=-=-=-=-=-=-=-&n\r\n\r\n", GET_NAME(ch));
+  snprintf(buf, MAX_STRING_LENGTH, "\r\n&+L=-=-=-=-=-=-=-=-=-=--= &+rDuris Mud &+yAch&+Yieveme&+ynts &+Lfor &+r%s &+L=-=-=-=-=-=-=-=-=-=-=-&n\r\n\r\n", GET_NAME(ch));
 
-  sprintf(buf2, "  &+W%-23s&+W%-42s&+W%s\r\n",
+  snprintf(buf2, MAX_STRING_LENGTH, "  &+W%-23s&+W%-42s&+W%s\r\n",
       "Achievement", "Requirement", "Affect/Reward");
   strcat(buf, buf2);
-  sprintf(buf2, "  &+W%-23s&+W%-42s&+W%s\r\n",
+  snprintf(buf2, MAX_STRING_LENGTH, "  &+W%-23s&+W%-42s&+W%s\r\n",
       "-----------", "-----------", "-------------");
   strcat(buf, buf2);
 
   // PVP ACHIEVEMENTS
-  sprintf(buf2, "   &+W%-23s           &+W%s\r\n",
+  snprintf(buf2, MAX_STRING_LENGTH, "   &+W%-23s           &+W%s\r\n",
       " ", "&+L-=(&+rP&+Rv&+rP&+L)=-&n");
   strcat(buf, buf2);
 
   //-----Achievement: Soul Reaper
   if(get_frags(ch) >= 2000)
-    sprintf(buf2, "  &+L%-50s&+L%-45s&+L%s\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "  &+L%-50s&+L%-45s&+L%s\r\n",
         "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+BObtain 20 Frags", "&+BAccess to the soulbind ability");
   else
-    sprintf(buf2, "  &+L%-50s&+L%-45s&+L%s\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "  &+L%-50s&+L%-45s&+L%s\r\n",
         "&+B&+LS&+wo&+Wu&+Ll R&+we&+Wap&+we&+Lr", "&+wObtain 20 Frags", "&+wAccess to the soulbind ability");
   strcat(buf, buf2);
   //-----End Soul Reaper
 
   //-----Achievement: Serial Killer
   if(affected_by_spell(ch, ACH_SERIALKILLER))
-    sprintf(buf2, "  &+L%-41s&+L%-45s&+L%s\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "  &+L%-41s&+L%-45s&+L%s\r\n",
         "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+BObtain 10.00 Frags", "&+BGain 2 points in every attribute");
   else
-    sprintf(buf2, "  &+L%-41s&+L%-45s&+L%s\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "  &+L%-41s&+L%-45s&+L%s\r\n",
         "&+LSe&+wr&+Wi&+wa&+Ll &+rKiller", "&+wObtain 10.00 Frags", "&+wGain 2 points in every attribute");
   strcat(buf, buf2);
   //-----End Serial Killer
 
   //-----Achievement: Let's Get Dirty
   if(affected_by_spell(ch, ACH_LETSGETDIRTY))
-    sprintf(buf2, "  &+L%-44s&+L%-45s&+L%s\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "  &+L%-44s&+L%-45s&+L%s\r\n",
         "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+BObtain 1.00 Frags", "&+BGain 2 CON points");
   else
-    sprintf(buf2, "  &+L%-44s&+L%-45s&+L%s\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "  &+L%-44s&+L%-45s&+L%s\r\n",
         "&+LLet's Get &+rD&+Ri&+rr&+Rt&+ry&+R!", "&+wObtain 1.00 Frags", "&+wGain 2 CON points");
   strcat(buf, buf2);
   //-----End Let's Get Dirty
 
   /*  PVE ACHIEVEMENTS */
-  sprintf(buf2, "\r\n");
+  snprintf(buf2, MAX_STRING_LENGTH, "\r\n");
   strcat(buf, buf2);
-  sprintf(buf3, "   &+W%-23s           &+W%s\r\n",
+  snprintf(buf3, MAX_STRING_LENGTH, "   &+W%-23s           &+W%s\r\n",
       " ", "&+L-=(&+gP&+Gv&+gE&+L)=-&n");
   strcat(buf, buf3);
 
   //-----Achievement: The Journey Begins
   if( lvlachi >= 5 )
-    sprintf(buf3, "  &+L%-34s&+L%-45s&+L%s\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-34s&+L%-45s&+L%s\r\n",
         "&+gThe Jou&+Grney Beg&+gins&n", "&+BGain level 5", "&+B&+ya rugged a&+Yd&+yv&+Ye&+yn&+Yt&+yu&+Yr&+ye&+Yr&+ys &+Lsatchel");
   else
-    sprintf(buf3, "  &+L%-34s&+L%-45s&+L%s\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-34s&+L%-45s&+L%s\r\n",
         "&+gThe Jou&+Grney Beg&+gins&n", "&+wGain level 5", "&+wan Unknown Item");
   strcat(buf, buf3);
   //-----The Journey Begins
 
   //-----Achievement: The Sailor's Tattoo
   if( lvlachi >= 30 )
-    sprintf(buf3, "  &+L%-34s&+L%-45s&+L%s\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-34s&+L%-45s&+L%s\r\n",
         "&+bThe Sai&+Blor's Tat&+btoo&n", "&+BGain level 30", "&+ya small &+bS&+Ba&+bi&+Bl&+bo&+Br&+b'&+Bs&n &+yTattoo&n");
   else
-    sprintf(buf3, "  &+L%-34s&+L%-45s&+L%s\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-34s&+L%-45s&+L%s\r\n",
         "&+bThe Sai&+Blor's Tat&+btoo&n", "&+wGain level 30", "&+wan Unknown Item");
   strcat(buf, buf3);
   //-----The Sailor's Tattoo
 
   //-----Achievement: Dragonslayer
   if(affected_by_spell(ch, ACH_DRAGONSLAYER))
-    sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-43s&+L%-45s&+L%s\r\n",
         "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+BKill 1000 Dragons", "&+B10% damage increase vs Dragons");
   else
-    sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s: &+W%d%%\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-43s&+L%-45s&+L%s: &+W%d%%\r\n",
         "&+gDr&+Gag&+Lon &+gS&+Glaye&+gr&n", "&+wKill 1000 Dragons", "&+w10% damage increase vs Dragons", get_progress(ch, AIP_DRAGONSLAYER, 1000));
   strcat(buf, buf3);
   //-----Dragonslayer
 
   //-----Achievement: Demonslayer
   if(affected_by_spell(ch, ACH_DEMONSLAYER))
-    sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-43s&+L%-45s&+L%s\r\n",
         "&+rD&+Rem&+Lon &+rS&+Rlaye&+rr&n", "&+BKill 1000 Demons", "&+B10% damage increase vs Demons");
   else
-    sprintf(buf3, "  &+L%-43s&+L%-45s&+L%s: &+W%d%%\r\n",
+    snprintf(buf3, MAX_STRING_LENGTH, "  &+L%-43s&+L%-45s&+L%s: &+W%d%%\r\n",
         "&+rD&+Rem&+Lon &+rS&+Rlaye&+rr&n", "&+wKill 1000 Demons", "&+w10% damage increase vs Demons", get_progress(ch, AIP_DEMONSLAYER, 1000));
   strcat(buf, buf3);
   //-----Demonslayer
@@ -498,7 +498,7 @@ void do_addicted_blood(P_char ch, char *arg, int cmd)
   secs = 60 *(PULSES_IN_TICK - pulse) / PULSES_IN_TICK;
 
 /*
-  sprintf( buf, "%s - %s\n%s\nYou are &+W%d%%&n complete.\n",
+  snprintf(buf, MAX_STRING_LENGTH, "%s - %s\n%s\nYou are &+W%d%%&n complete.\n",
       "&+rAddicted to Blood&n", "&+wEXP and Plat Bonus&n", "&+wKill &+W30 &+wmobs within 30 minutes", get_progress(ch, TAG_ADDICTED_BLOOD, 30));
   send_to_char( buf, ch );
 */
@@ -516,18 +516,18 @@ void do_addicted_blood(P_char ch, char *arg, int cmd)
     bonus = 0;
     time = 0;
   }
-  sprintf( buf, "You are currently receiving %d%% bonus experience on kills.\n", bonus );
+  snprintf(buf, MAX_STRING_LENGTH, "You are currently receiving %d%% bonus experience on kills.\n", bonus );
   send_to_char( buf, ch );
-  sprintf( buf, "You have %d:%s%d left before this bonus runs out.\n\n", time / 60, (time % 60) < 10 ? "0" : "", time % 60 );
+  snprintf(buf, MAX_STRING_LENGTH, "You have %d:%s%d left before this bonus runs out.\n\n", time / 60, (time % 60) < 10 ? "0" : "", time % 60 );
   send_to_char( buf, ch );
 
   af = ch->affected;
   while( af && !(af->type == TAG_BLOODLUST) )
     af = af->next;
-  sprintf( buf, "&+rBloodlust&n - Damage Bonus(&+yvs mob only&n)\nCurrent lust: &+W%d%%&n\n", af ? af->modifier * 10 : 0 );
+  snprintf(buf, MAX_STRING_LENGTH, "&+rBloodlust&n - Damage Bonus(&+yvs mob only&n)\nCurrent lust: &+W%d%%&n\n", af ? af->modifier * 10 : 0 );
   send_to_char( buf, ch );
   time = af ? af->duration*60 + secs : 0;
-  sprintf( buf, "You have %d:%s%d left.\n", time / 60, (time % 60) < 10 ? "0" : "", time % 60 );
+  snprintf(buf, MAX_STRING_LENGTH, "You have %d:%s%d left.\n", time / 60, (time % 60) < 10 ? "0" : "", time % 60 );
   send_to_char( buf, ch );
 }
 

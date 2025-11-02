@@ -230,7 +230,7 @@ void quest_full_reward(P_char ch, P_char quest_mob, int type)
     {
       int temp = GET_LEVEL(ch) * 1256 + number(1,500);
       mobsay(quest_mob, "I know you mercenaries don't work for free. Take this.");
-      sprintf(Gbuf1, "You receive %s.\r\n", coin_stringv(temp) );
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You receive %s.\r\n", coin_stringv(temp) );
       send_to_char(Gbuf1, ch);
       ADD_MONEY(ch, temp);
     }
@@ -245,7 +245,7 @@ void quest_full_reward(P_char ch, P_char quest_mob, int type)
   int exp_gain = quest_exp_reward(ch, type);
   gain_exp(ch, NULL, exp_gain, EXP_WORLD_QUEST);
 
-  sprintf(Gbuf1, "&+WYou gain some experience.&n");
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+WYou gain some experience.&n");
   act(Gbuf1, FALSE, quest_mob, 0, ch, TO_VICT);
 
   sql_world_quest_finished(ch, reward);
@@ -370,7 +370,7 @@ int get_map_room(int zone_id)
             if(IS_MAP_ROOM (world[i].dir_option[i2]->to_room) )
             {
                   /*
-                 sprintf(o_buf,
+                 snprintf(o_buf, MAX_STRING_LENGTH,
                  " &+Y[&n%5d&+Y](&n%5d&+Y)&n &+R%-5s&n to &+Y[&+R%3d&n:&+Y%5d&+Y](&n%5d&+Y)&n %s\n",
                  world[i].number, i, dirs[i2],
                  world[world[i].dir_option[i2]->to_room].zone,
@@ -455,7 +455,7 @@ void do_quest(P_char ch, char *args, int cmd)
       }
       pcdata = victim->only.pc;
       // One big string.. rawr.
-      sprintf( buf, "Quest for %s (PID %d): \n\rActive: %s, Level: %d, Type: %s, Started: %s, Accomplished: %s\n\r"
+      snprintf(buf, MAX_STRING_LENGTH, "Quest for %s (PID %d): \n\rActive: %s, Level: %d, Type: %s, Started: %s, Accomplished: %s\n\r"
         "Bartender Vnum: %d, Shares left: %d, Original Questor PID: %d, Can share: %s\n\r"
         "Target Mob Vnum: %d, Number Killed: %d out of %d needed.\n\r"
         "Zone: %s (%d), Map room: %s (%d), Map purchased: %s.\n\r", J_NAME(victim), GET_PID(victim),
@@ -875,7 +875,7 @@ int getItemFromZone(int zone)
           continue;
         }
         /* Debugging code.
-        sprintf(buf, "%6d  %5d  %-s\n", obj_index[i].virtual_number, obj_index[i].number - 1,
+        snprintf(buf, MAX_STRING_LENGTH, "%6d  %5d  %-s\n", obj_index[i].virtual_number, obj_index[i].number - 1,
           (t_obj->short_description) ? t_obj->short_description : "None");
         wizlog(56, buf);
         */
@@ -1140,34 +1140,44 @@ int suggestQuestMob(int zone_num, P_char ch, int QUEST_TYPE)
 //Called from comm.c to populate avg_mob_level
 int calc_zone_mob_level()
 {
-  vector<float> avg_mob_level(top_of_zone_table+1, 0.00);
-  vector<float> mob_count(top_of_zone_table+1, 0);
-    
+  // Use C-style arrays instead of std::vector to avoid destructor issues
+  float *avg_mob_level = (float *)calloc(top_of_zone_table+1, sizeof(float));
+  float *mob_count = (float *)calloc(top_of_zone_table+1, sizeof(float));
+
+  if (!avg_mob_level || !mob_count) {
+    if (avg_mob_level) free(avg_mob_level);
+    if (mob_count) free(mob_count);
+    return 0;
+  }
+
   for( P_char tch = character_list; tch; tch = tch->next )
   {
     if( !IS_NPC(tch) )
       continue;
-    
+
     if( GET_ZONE(tch) > top_of_zone_table )
       continue;
-    
-    avg_mob_level[GET_ZONE(tch)] = 
+
+    avg_mob_level[GET_ZONE(tch)] =
       ( (avg_mob_level[GET_ZONE(tch)] * mob_count[GET_ZONE(tch)]) + (float) GET_LEVEL(tch) ) / ( mob_count[GET_ZONE(tch)] + 1.0);
     mob_count[GET_ZONE(tch)] += 1.0;
   }
-  
+
   for( int i = 0; i <= top_of_zone_table; i++ )
   {
     if( mob_count[i] < 1 )
     {
-      zone_table[i].avg_mob_level = -1;      
+      zone_table[i].avg_mob_level = -1;
     }
     else
     {
       zone_table[i].avg_mob_level = (int) avg_mob_level[i];
     }
   }
-  
+
+  free(avg_mob_level);
+  free(mob_count);
+  return 0;
 }
 
 

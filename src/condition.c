@@ -36,21 +36,21 @@ char *item_condition( P_obj obj )
   static char buf[32];
 
   if( obj->condition > 90 )
-    sprintf(bufCOLOR, "&+G");
+    snprintf(bufCOLOR, 8, "&+G");
   else if( obj->condition > 70 )
-    sprintf(bufCOLOR, "&+g");
+    snprintf(bufCOLOR, 8, "&+g");
   else if( obj->condition > 50 )
-    sprintf(bufCOLOR, "&+y");
+    snprintf(bufCOLOR, 8, "&+y");
   else if( obj->condition > 20 )
-    sprintf(bufCOLOR, "&+r");
+    snprintf(bufCOLOR, 8, "&+r");
   else if( obj->condition > 0 )
-    sprintf(bufCOLOR, "&+R");
+    snprintf(bufCOLOR, 8, "&+R");
   else
-    sprintf(bufCOLOR, "&=LR");
+    snprintf(bufCOLOR, 8, "&=LR");
 
   // Print either the [20%] or spaces of equivalent length.
   if( obj->condition < 90 )
-    sprintf(buf, " [%s%2d&n%%]", bufCOLOR , obj->condition);
+    snprintf(buf, 32, " [%s%2d&n%%]", bufCOLOR , obj->condition);
   else
     buf[0] = '\0';
 
@@ -74,34 +74,34 @@ char *item_condition( P_obj obj )
   switch (value)
   {
   case 1:
-    sprintf(buf, " [ruined]         ");
+    snprintf(buf, MAX_STRING_LENGTH, " [ruined]         ");
     break;
   case 2:
-    sprintf(buf, " [well worn]      ");
+    snprintf(buf, MAX_STRING_LENGTH, " [well worn]      ");
     break;
   case 3:
-    sprintf(buf, " [worn]           ");
+    snprintf(buf, MAX_STRING_LENGTH, " [worn]           ");
     break;
   case 4:
-    sprintf(buf, " [partially worn] ");
+    snprintf(buf, MAX_STRING_LENGTH, " [partially worn] ");
     break;
   case 5:
-    sprintf(buf, " [fair]           ");
+    snprintf(buf, MAX_STRING_LENGTH, " [fair]           ");
     break;
   case 6:
-    sprintf(buf, " [used]           ");
+    snprintf(buf, MAX_STRING_LENGTH, " [used]           ");
     break;
   case 7:
-    sprintf(buf, " [good]           ");
+    snprintf(buf, MAX_STRING_LENGTH, " [good]           ");
     break;
   case 8:
-    sprintf(buf, " [very good]      ");
+    snprintf(buf, MAX_STRING_LENGTH, " [very good]      ");
     break;
   case 9:
-    sprintf(buf, " [almost new]     ");
+    snprintf(buf, MAX_STRING_LENGTH, " [almost new]     ");
     break;
   default:
-    sprintf(buf, "");
+    snprintf(buf, MAX_STRING_LENGTH, "");
   }
   */
 
@@ -176,10 +176,10 @@ int DamageOneItem(P_char ch, int dam_type, P_obj obj, bool destroy)
 
   objtype = GET_ITEM_TYPE(obj);
 
-  sprintf(buf, "Your $q %s", item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
+  snprintf(buf, MAX_STRING_LENGTH, "Your $q %s", item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
   act(buf, TRUE, ch, obj, 0, TO_CHAR);
 
-  sprintf(buf, "$n's $q %s", item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
+  snprintf(buf, MAX_STRING_LENGTH, "$n's $q %s", item_damage_messages[dam_type - 1][destroy ? 1 : 0]);
   act(buf, TRUE, ch, obj, 0, TO_ROOM);
 
   if(destroy)
@@ -210,16 +210,16 @@ void MakeScrap(P_char ch, P_obj obj)
   if (!t)
     return;
 
-  sprintf(buf, "Scraps from %s&n lie in a pile here.",
+  snprintf(buf, MAX_STRING_LENGTH, "Scraps from %s&n lie in a pile here.",
           obj->short_description);
 
   t->description = str_dup(buf);
 
-  sprintf(buf, "a pile of scraps from %s", obj->short_description);
+  snprintf(buf, MAX_STRING_LENGTH, "a pile of scraps from %s", obj->short_description);
 
   t->short_description = str_dup(buf);
 
-  sprintf(buf, "%s scraps pile", obj->name);
+  snprintf(buf, MAX_STRING_LENGTH, "%s scraps pile", obj->name);
 
   t->name = str_dup(buf);
 

@@ -721,7 +721,7 @@ bool isname( const char *match, const char *namelist )
         str = match_copy;
         while ( *str == ' ' ) str++;
         if ( !*str ) return FALSE;
-        sprintf(exp_namelist, " %s ", namelist );
+        snprintf(exp_namelist, MAX_STRING_LENGTH, " %s ", namelist );
 
         // Ok str now points to begining of match's copy
         for (;;) {
@@ -733,7 +733,7 @@ bool isname( const char *match, const char *namelist )
                 // Now we check if word exists in namelist
                 // Best solution would be splitting namelist and store each
                 // word in a hash, however lacking hashes we do an strstr
-                sprintf( exp_word, " %s ", word );
+                snprintf(exp_word, MAX_STRING_LENGTH, " %s ", word );
                 if ( !strstr( exp_namelist, exp_word ) ) return FALSE;
         }
         return TRUE;
@@ -1418,7 +1418,7 @@ bool char_to_room(P_char ch, int room, int dir)
             P_obj  flow = read_object(6107, VIRTUAL);
             obj_to_char(flow, t_ch);
             char     text[MAX_STRING_LENGTH];
-            sprintf(text, "rose %s", GET_NAME(ch) );
+            snprintf(text, MAX_STRING_LENGTH, "rose %s", GET_NAME(ch) );
             do_give(t_ch, text, CMD_GIVE);
           }
       }
@@ -1468,7 +1468,7 @@ void obj_to_char(P_obj object, P_char ch)
   {
     if (ch->in_room)
     {
-      sprintf(Gbuf, "&+LThe magic within %s &+Lfades causing it to crumble to dust.\r\n", object->short_description);
+      snprintf(Gbuf, MAX_STRING_LENGTH, "&+LThe magic within %s &+Lfades causing it to crumble to dust.\r\n", object->short_description);
       send_to_room(Gbuf, ch->in_room);
     }
     extract_obj(object, TRUE); // Crumbleloot arti?
@@ -2295,7 +2295,7 @@ void obj_to_obj(P_obj obj, P_obj obj_to)
 
     if (obj && obj_to)
     {
-      sprintf(buf, "Object %d: %s to Object %d: %s error\r\n", obj->R_num,
+      snprintf(buf, MAX_STRING_LENGTH, "Object %d: %s to Object %d: %s error\r\n", obj->R_num,
               obj->short_description, obj_to->R_num,
               obj_to->short_description);
       logit(LOG_EXIT, buf);
@@ -2894,7 +2894,7 @@ void extract_char(P_char ch)
     {
       P_char   auctioneer = find_auctioneer(i);
 
-      sprintf(buf,
+      snprintf(buf, MAX_STRING_LENGTH,
               "Sale of %s has been cancelled by the seller's early departure!",
               auction[i].item->short_description);
       if (auctioneer)
@@ -3680,8 +3680,8 @@ void add_coins(P_obj pile, int copper, int silver, int gold, int platinum)
   }
   else if (num > 1)
   {
-    sprintf(buf, "%d coins are scattered about here.", num);
-    sprintf(buf2, "%d coins", num);
+    snprintf(buf, 200, "%d coins are scattered about here.", num);
+    snprintf(buf2, 200, "%d coins", num);
     desc = buf;
     desc2 = buf2;
   }
@@ -3690,8 +3690,8 @@ void add_coins(P_obj pile, int copper, int silver, int gold, int platinum)
     for (i = 0; i < 4; i++)
       if (pile->value[i])
         j = i;
-    sprintf(buf, "A %s coin is here.", coin_names[j]);
-    sprintf(buf2, "a %s coin", coin_names[j]);
+    snprintf(buf, 200, "A %s coin is here.", coin_names[j]);
+    snprintf(buf2, 200, "a %s coin", coin_names[j]);
     desc = buf;
     desc2 = buf2;
   }

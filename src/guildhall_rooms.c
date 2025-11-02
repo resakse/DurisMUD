@@ -126,7 +126,7 @@ bool GuildhallRoom::init()
   else
   {
     char buff[MAX_STRING_LENGTH];
-    sprintf(buff, world[real_room0(this->template_vnum)].name, this->guild->get_name().c_str());
+    snprintf(buff, MAX_STRING_LENGTH, world[real_room0(this->template_vnum)].name, this->guild->get_name().c_str());
     this->room->name = str_dup(buff);
   }
 
@@ -175,7 +175,7 @@ bool EntranceRoom::init()
   {
     char buff[MAX_STRING_LENGTH];
     this->door->str_mask = STRUNG_DESC1;
-    sprintf(buff, this->door->description, this->guild->get_name().c_str());
+    snprintf(buff, MAX_STRING_LENGTH, this->door->description, this->guild->get_name().c_str());
     this->door->description = str_dup(buff);
     this->door->value[0] = this->vnum;
     obj_to_room(this->door, real_room0(this->guildhall->outside_vnum));
@@ -383,17 +383,17 @@ bool TownPortalRoom::init()
       char buff[MAX_STRING_LENGTH];
       if (dest == WS_INN_VNUM)
       {
-        sprintf(buff, this->portal->description, "&+GWoodseer&n");
+        snprintf(buff, MAX_STRING_LENGTH, this->portal->description, "&+GWoodseer&n");
         this->portal->value[0] = WS_INN_VNUM;
       }
       else if (dest == KI_INN_VNUM)
       {
-        sprintf(buff, this->portal->description, "&+YKimordril&n");
+        snprintf(buff, MAX_STRING_LENGTH, this->portal->description, "&+YKimordril&n");
         this->portal->value[0] = KI_INN_VNUM;
       }
       else
       {
-        sprintf(buff, this->portal->description, "&+cTharnadia&n");
+        snprintf(buff, MAX_STRING_LENGTH, this->portal->description, "&+cTharnadia&n");
         this->portal->value[0] = TH_INN_VNUM;
       }
       this->portal->description = str_dup(buff);
@@ -405,12 +405,12 @@ bool TownPortalRoom::init()
       char buff[MAX_STRING_LENGTH];
       if( IS_UD_MAP(real_room( this->guildhall->outside_vnum )) )
       {
-        sprintf(buff, this->portal->description, "&+LShady Grove&n");
+        snprintf(buff, MAX_STRING_LENGTH, this->portal->description, "&+LShady Grove&n");
         this->portal->value[0] = SHADY_INN_VNUM;
       }
       else
       {
-        sprintf(buff, this->portal->description, "&+rKhildarak&n");
+        snprintf(buff, MAX_STRING_LENGTH, this->portal->description, "&+rKhildarak&n");
         this->portal->value[0] = KHILD_INN_VNUM;
       }
       this->portal->description = str_dup(buff);

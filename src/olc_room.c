@@ -723,7 +723,7 @@ void olc_save_wld(int zone)
   strcat(file, zone_name);
   FREE(zone_name);
   strcat(file, ".wld");
-  sprintf(filebak, "%s.bak", file);
+  snprintf(filebak, MAX_STRING_LENGTH, "%s.bak", file);
 
   /* 2) open it */
 

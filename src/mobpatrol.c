@@ -221,7 +221,7 @@ void event_patrol_move(P_char ch, P_char vict, P_obj obj, void *data)
       
       if (IS_CLOSED(ch->in_room, dir))
       {
-        sprintf(buf, "%s", dirs[(int) dir]);
+        snprintf(buf, MAX_STRING_LENGTH, "%s", dirs[(int) dir]);
         do_open(ch, buf, 0);
       }
       else if (IS_WALLED(ch->in_room, dir))

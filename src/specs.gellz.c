@@ -121,14 +121,14 @@ int gellz_test_obj_procs(P_obj obj, P_char ch, int cmd, char *argument)
       }
       if( !(ship = get_ship_from_owner( argstring3 )) )
       {
-        sprintf(buf, "Could not find a ship for '%s'.\n"
+        snprintf(buf, MAX_STRING_LENGTH, "Could not find a ship for '%s'.\n"
           "&+YYou must supply the name of the &+yold&+Y captain of the ship.&n\n", skip_spaces(argument) );
         send_to_char( buf, ch );
         return TRUE;
       }
       if( !*argument || !(owner = get_char_vis(ch, skip_spaces(argument))) )
       {
-        sprintf(buf, "Could not find char '%s' (must be in game).\n"
+        snprintf(buf, MAX_STRING_LENGTH, "Could not find char '%s' (must be in game).\n"
           "&+YYou must supply the name of the &+Bnew&+Y captain of the ship.&n\n", skip_spaces(argument) );
         send_to_char( buf, ch );
         return TRUE;
@@ -830,7 +830,7 @@ int showhand(P_obj obj, P_char ch, int cmd, char *argument, int whoscard)
     {
       if( !(player_hand[tmpcounter].Value == 0) )
       {
-        sprintf(buf, "&+yYour card is %s&+y of %s&+y.", player_hand[tmpcounter].Display, player_hand[tmpcounter].Suit);
+        snprintf(buf, MAX_STRING_LENGTH, "&+yYour card is %s&+y of %s&+y.", player_hand[tmpcounter].Display, player_hand[tmpcounter].Suit);
         act (buf, FALSE, ch,obj, ch, TO_CHAR);
       }
       else
@@ -843,7 +843,7 @@ int showhand(P_obj obj, P_char ch, int cmd, char *argument, int whoscard)
     {
       if( !(dealer_hand[tmpcounter].Number == 0))
       {
-        sprintf(buf, "&+yDealer shows a %s&+y of %s&+y.", dealer_hand[tmpcounter].Display, dealer_hand[tmpcounter].Suit);
+        snprintf(buf, MAX_STRING_LENGTH, "&+yDealer shows a %s&+y of %s&+y.", dealer_hand[tmpcounter].Display, dealer_hand[tmpcounter].Suit);
         act( buf, FALSE, ch,obj, ch, TO_CHAR);
       }
       else
@@ -855,12 +855,12 @@ int showhand(P_obj obj, P_char ch, int cmd, char *argument, int whoscard)
   }
 	if( whoscard == 1 )
 	{
-    sprintf(buf, "&+mYour total is         &+Y-- &+M%d &+Y--&+y &+mand your bet is : &+Y%d %s.\n\n", player_total, betamt, strbettype);
+    snprintf(buf, MAX_STRING_LENGTH, "&+mYour total is         &+Y-- &+M%d &+Y--&+y &+mand your bet is : &+Y%d %s.\n\n", player_total, betamt, strbettype);
     send_to_char(buf,ch);
   }
 	else if( whoscard == 2 )
 	{
-    sprintf(buf, "&+mDealer is total is    &+Y-- &+r%d &+Y--&+y.\n\n", dealer_total);
+    snprintf(buf, MAX_STRING_LENGTH, "&+mDealer is total is    &+Y-- &+r%d &+Y--&+y.\n\n", dealer_total);
     send_to_char(buf,ch);
   }
 } //end showhands
@@ -889,7 +889,7 @@ void do_deaths_door(P_char ch, char *arg, int cmd)
     {
       return;
     }
-    sprintf( buf, "&+yYou still need&+W: " );
+    snprintf(buf, MAX_STRING_LENGTH, "&+yYou still need&+W: " );
     if( ch->base_stats.Str < 100 )
     {
       sprintf( buf + strlen(buf), "&+w%d &+LStr&+y, ", 100 - ch->base_stats.Str );

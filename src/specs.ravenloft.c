@@ -123,9 +123,9 @@ int ravenloft_bell(P_obj bell, P_char ch, int cmd, char *arg)
         "&+wthe &+WHall of &+YHeroes&+w.\n", FALSE, ch, obj, 0, TO_ROOM);
       extract_obj(obj, TRUE); // Not an arti, but 'in game.'
       REMOVE_BIT(swordcase->value[1], CONT_LOCKED);
-      sprintf(buf, "&+WA brilliant &+Ybeam &+Wof light shines upon an &+Lancient &+wsword case &+Where.&n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+WA brilliant &+Ybeam &+Wof light shines upon an &+Lancient &+wsword case &+Where.&n");
       set_long_description(swordcase, buf);
-      sprintf(buf, "&+Wan &+Lancient &+wswordcase &+Wbathed in &+Ylight&n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+Wan &+Lancient &+wswordcase &+Wbathed in &+Ylight&n");
       set_short_description(swordcase, buf);
       return TRUE;
     }
@@ -189,21 +189,21 @@ int strahd_charm(P_char strahd, P_char charmie, int cmd, char *arg)
 
             if (IS_FIGHTING(vict) && (vict != strahd) && GET_MASTER(vict) != strahd)
             {
-              sprintf(Gbuf4, "Strahd harshly orders %s, 'Protect me!'",
+              snprintf(Gbuf4, MAX_STRING_LENGTH, "Strahd harshly orders %s, 'Protect me!'",
                       (IS_NPC(tmp_ch) ? tmp_ch->player.
                        short_descr : GET_NAME(tmp_ch)));
               act(Gbuf4, FALSE, strahd, 0, tmp_ch, TO_NOTVICT);
-              sprintf(Gbuf4,
+              snprintf(Gbuf4, MAX_STRING_LENGTH,
                       "Strahd harshly orders you, 'Protect me!'\r\n");
               send_to_char(Gbuf4, tmp_ch);
-              sprintf(Gbuf4,
+              snprintf(Gbuf4, MAX_STRING_LENGTH,
                       "%s looks blankly for a moment, before shoving Strahd aside and attacking you!",
                       (IS_NPC(tmp_ch) ? tmp_ch->player.
                        short_descr : GET_NAME(tmp_ch)),
                       (IS_NPC(vict) ? vict->player.
                        short_descr : GET_NAME(vict)));
               act(Gbuf4, FALSE, strahd, 0, 0, TO_NOTVICT);
-              sprintf(Gbuf4,
+              snprintf(Gbuf4, MAX_STRING_LENGTH,
                       "Your master's actions compel you to attack %s!\r\n",
                       (IS_NPC(vict) ? vict->player.
                        short_descr : GET_NAME(vict)));

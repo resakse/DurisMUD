@@ -93,9 +93,9 @@ void regenCondition(P_char ch, int pts)
 /*
     if (ch->points.location_hit[i] == get) {
       locstrn = getBodyLocStrn(i, ch);
-      sprintf(buf, "$n's %s begins to grow back.", locstrn);
+      snprintf(buf, 256, "$n's %s begins to grow back.", locstrn);
       act(buf, FALSE, ch, 0, 0, TO_ROOM);
-      sprintf(buf, "Your %s begins to grow back.", locstrn);
+      snprintf(buf, 256, "Your %s begins to grow back.", locstrn);
       act(buf, FALSE, ch, 0, 0, TO_CHAR);
     }
 */

@@ -265,7 +265,7 @@ void MoveShadower(P_char ch, int to_room)
         }
       }
 
-      sprintf(buf, "You shadow $N %s as $E leaves %s.", dirs[j], dirs[i]);
+      snprintf(buf, 128, "You shadow $N %s as $E leaves %s.", dirs[j], dirs[i]);
       act(buf, FALSE, sh_ptr->shadower, 0, ch, TO_CHAR);
 
       sh_ptr->num_of_moves++;
@@ -533,14 +533,14 @@ void spell_locate_object(int level, P_char ch, char *arg)
       if (OBJ_CARRIED(i)) {
   if (!i->short_description)
     raise(SIGSEGV);
-  sprintf(Gbuf1, "%s carried by %s.\r\n", i->short_description,
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s carried by %s.\r\n", i->short_description,
     ((level > MAXLVLMORTAL) ||
   (number((level - 7), (level + 7)) > GET_LEVEL(i->loc.carrying)) ?
      PERS(i->loc.carrying, ch, FALSE) : "someone"));
       } else if (OBJ_WORN(i)) {
   if (!i->short_description)
     raise(SIGSEGV);
-  sprintf(Gbuf1, "%s equipped by %s.\r\n", i->short_description,
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s equipped by %s.\r\n", i->short_description,
     ((level > MAXLVLMORTAL) ||
      (number((level - 7), (level + 7)) >
       GET_LEVEL(i->loc.wearing)) ?
@@ -548,7 +548,7 @@ void spell_locate_object(int level, P_char ch, char *arg)
       } else if (OBJ_INSIDE(i)) {
   if (!i->short_description)
     raise(SIGSEGV);
-  sprintf(Gbuf1, "%s in %s.\r\n", i->short_description,
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s in %s.\r\n", i->short_description,
     (level > MAXLVLMORTAL) ?
     i->loc.inside->short_description :
     "some sort of container.");
@@ -557,10 +557,10 @@ void spell_locate_object(int level, P_char ch, char *arg)
     if (!i->short_description)
       raise(SIGSEGV);
     if (level > MAXLVLMORTAL) {
-      sprintf(Gbuf1, "%s in %s [%d].\r\n", i->short_description,
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "%s in %s [%d].\r\n", i->short_description,
         world[i->loc.room].name, world[i->loc.room].number);
     } else {
-      sprintf(Gbuf1, "%s in %s.\r\n", i->short_description,
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "%s in %s.\r\n", i->short_description,
         world[i->loc.room].name);
     }
   } else
@@ -628,7 +628,7 @@ void spell_locate_object(int level, P_char ch, char *arg)
    //            ch->equipment[PRIMARY_WEAPON] && num_hits) {
    //                struct generic_event_arguments args;
    //                             char buf[16];
-   //                                          sprintf(buf, "%d", num_hits);
+   //                                          snprintf(buf, 16, "%d", num_hits);
    //                                                       args.actor1 = ch;
    //                                                                    args.actor2 = opponent;
    //                                                                                 args.data = buf;
@@ -855,7 +855,7 @@ void shapechange_studyShape(P_char ch, struct char_shapechange_data *shape,
     return;
   }
 
-  sprintf(s, "With all of $s attention, $n observes %s.\r\n", shortDesc);
+  snprintf(s, MAX_STRING_LENGTH, "With all of $s attention, $n observes %s.\r\n", shortDesc);
   act(s, TRUE, ch, NULL, NULL, TO_ROOM);
 
   /*
@@ -880,7 +880,7 @@ void shapechange_studyShape(P_char ch, struct char_shapechange_data *shape,
 
   if (shape->timesResearched == 0)
   {
-    sprintf(s, "You gain a basic understanding of %s&n.\r\n", shortDesc);
+    snprintf(s, MAX_STRING_LENGTH, "You gain a basic understanding of %s&n.\r\n", shortDesc);
     send_to_char(s, ch);
   }
   else if (shape->timesResearched >= 15)
@@ -890,7 +890,7 @@ void shapechange_studyShape(P_char ch, struct char_shapechange_data *shape,
   }
   else
   {
-    sprintf(s, "You increase your understanding of %s&n.\r\n", shortDesc);
+    snprintf(s, MAX_STRING_LENGTH, "You increase your understanding of %s&n.\r\n", shortDesc);
     send_to_char(s, ch);
   }
 
@@ -1002,7 +1002,7 @@ void shapechange_event(void)
     strcat(buf, "\r\n");
     send_to_char(buf, ch);
     count--;
-    sprintf(buf, "%s %d %d %d", chName, room, shapeNum, count);
+    snprintf(buf, MAX_STRING_LENGTH, "%s %d %d %d", chName, room, shapeNum, count);
     AddEvent(EVENT_SPECIAL, PULSE_SHAPECHANGE, TRUE, shapechange_event, buf);
     return;
   }
@@ -1087,7 +1087,7 @@ void shapechange_changeShape(P_char ch, int shapeNum)
 
   count = shapechange_timeToChange(ch, shapeNum);;
 
-  sprintf(eventArgs, "%s %d %d %d",
+  snprintf(eventArgs, MAX_STRING_LENGTH, "%s %d %d %d",
           GET_NAME(ch), ch->in_room, shapeNum, count);
 
   send_to_char("You begin altering your form.\r\n", ch);

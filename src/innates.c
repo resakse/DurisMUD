@@ -449,9 +449,9 @@ string list_innates(int race, int cls, int spec)
       {
         return_str += " &n(obtained at level &+c";
         if (race)
-	  sprintf(level, "%d", racial_innates[innate][race]);
+	  snprintf(level, 5, "%d", racial_innates[innate][race]);
 	else if (cls)
-          sprintf(level, "%d", class_innates[innate][cls - 1][spec]);
+          snprintf(level, 5, "%d", class_innates[innate][cls - 1][spec]);
 	return_str += string(level);
 	return_str += "&n)";
       }
@@ -1122,7 +1122,7 @@ int get_innate_property(int innate, const char *prefix, int default_value)
   char innate_name[128], property_string[256];
 
   get_property_format(innates_data[innate].name, innate_name);
-  sprintf(property_string, "%s.%s", prefix, innate_name);
+  snprintf(property_string, 256, "%s.%s", prefix, innate_name);
 
   return get_property(property_string, default_value);
 }
@@ -2440,7 +2440,7 @@ void do_project_image(P_char ch, char *arg, int cmd)
   image->player.name = str_dup("image");
   image->player.short_descr = str_dup(ch->player.name);
 
-  sprintf(Gbuf1, "%s stands here.\n", ch->player.name);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s stands here.\n", ch->player.name);
   image->player.long_descr = str_dup(Gbuf1);
   if (GET_TITLE(ch))
     image->player.title = str_dup(GET_TITLE(ch));
@@ -2680,7 +2680,7 @@ void event_tempus(P_char ch, P_char victim, P_obj obj, void *args)
   }
 
   send_to_char("Your fury rages as your deity infuses you with eternal power!\n", ch);
-  sprintf(buf, "%s$n %sis briefly surrounded by a%s glow!",
+  snprintf(buf, 256, "%s$n %sis briefly surrounded by a%s glow!",
           IS_EVIL(ch) ? "&+R" : "&+W", IS_EVIL(ch) ? "&+R" : "&+W",
           IS_EVIL(ch) ? "n unholy" : " holy");
   act(buf, TRUE, ch, 0, 0, TO_ROOM);
@@ -2721,7 +2721,7 @@ void event_torm(P_char ch, P_char victim, P_obj obj, void *args)
   if (GET_SPEC(ch, CLASS_AVENGER, SPEC_LIGHTBRINGER)) {
     act("&+WA strong feeling of peace seems to radiate from $n.",
         FALSE, ch, 0, 0, TO_ROOM);
-    sprintf(buffer, "You feel the power of %s protect you.",
+    snprintf(buffer, 256, "You feel the power of %s protect you.",
         get_god_name(ch));
     act(buffer, FALSE, ch, 0, 0, TO_CHAR);
     memset(&af, 0, sizeof(af));
@@ -2890,7 +2890,7 @@ void do_god_call(P_char ch, char *args, int cmd)
 
   if(!check_innate_time(ch, INNATE_GOD_CALL, duration))
   {
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
         "%s &+Ccannot answer your prayers. Trust your own strength.&n\n",
         god_name);
     send_to_char(Gbuf1, ch);
@@ -2909,22 +2909,22 @@ void do_god_call(P_char ch, char *args, int cmd)
   switch (choice)
   {
   case SPEC_HEALER:
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+CAs $n raises $s hands sending a prayer to %s, &+Ca &+Wsoft glow&n &+Cdescends from above.&n",
             god_name);
     act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+CAs you raise your hands and send a prayer to %s, &+Ca &+Wsoft glow&n &+Cdescends from above.&n",
             god_name);
     act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
     add_event(event_lathander, PULSE_VIOLENCE / 2, ch, get_char_room_vis(ch, args), 0, 0, 0, 0);
     break;
   case SPEC_HOLYMAN:
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+wAs $n raises $s hands calling for aid of %s, &+wa &+Wsoft glow&n &+wdescends from above bringing peace and safety.&n",
             god_name);
     act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+wAs you raise your hands calling for aid of %s, &+wa &+Wsoft glow&n &+wdescends from above bringing peace and safety.&n",
             god_name);
     act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
@@ -2934,11 +2934,11 @@ void do_god_call(P_char ch, char *args, int cmd)
       add_event(event_torm, PULSE_VIOLENCE / 2, ch, 0, 0, 0, 0, 0);
     break;
   case SPEC_ZEALOT:
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+wAs $n raises $s hands calling for aid of %s, &+wa &+rpurple haze&n &+wdescends from above waking &+RA&+rnG&+ReR&n and &+RF&+ruR&+Ry!&n",
             god_name);
     act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+wAs you raise your hands calling for aid of %s, &+wa &+rpurple haze&n &+wdescends from above waking &+RA&+rnG&+ReR&n and &+RF&+ruR&+Ry!&n",
             god_name);
     act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
@@ -3011,7 +3011,7 @@ void do_doorbash(P_char ch, char *arg, int cmd)
   send_to_char
     ("You charge the door, fully intent on getting it open, FOR GOOD!\n",
      ch);
-  sprintf(Gbuf1,
+  snprintf(Gbuf1, MAX_STRING_LENGTH,
           "$n&n screws $s eyes in concentration, and decides that the %s to the %s is in $s way!",
           "door", dirs[dir]);
   act(Gbuf1, TRUE, ch, 0, 0, TO_ROOM);
@@ -3028,7 +3028,7 @@ void do_doorbash(P_char ch, char *arg, int cmd)
       isname("_nobash_", EXIT(ch, dir)->keyword))
   {
     send_to_char("The door doesn't budge, but your body does!\n", ch);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "$n charges the %s to the %s at full swing, yet bounces back, door intact, body hurting.",
             "door", dirs[dir]);
     act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
@@ -3041,7 +3041,7 @@ void do_doorbash(P_char ch, char *arg, int cmd)
     send_to_char
       ("You did it!  The door budges under your weight, and you charge into a new place!\n",
        ch);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "The %s gives way with a nice crash, and $n&n charges to the %s with the remnants of the door still clinging to $m!",
             "door", dirs[dir]);
     act(Gbuf1, TRUE, ch, 0, 0, TO_ROOM);
@@ -3150,7 +3150,7 @@ void do_doorkick(P_char ch, char *arg, int cmd)
   send_to_char
     ("You kick the door with your hind legs, fully intent on getting it open, FOR GOOD!\n",
      ch);
-  sprintf(Gbuf1,
+  snprintf(Gbuf1, MAX_STRING_LENGTH,
           "$n&n's hindquarters tense up, preparing to kick the %s to the %s...",
           "door", dirs[dir]);
   act(Gbuf1, TRUE, ch, 0, 0, TO_ROOM);
@@ -3169,7 +3169,7 @@ void do_doorkick(P_char ch, char *arg, int cmd)
     send_to_char
       ("The door doesn't budge, and your rear legs feel none the better..\n",
        ch);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "$n&n's rear legs bounce off the %s with no noticable result.",
             "door");
     act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
@@ -3189,7 +3189,7 @@ void do_doorkick(P_char ch, char *arg, int cmd)
     send_to_char
       ("You did it!  The door shatters under the enormous force of your kick!\n",
        ch);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "The %s gives way under the incredible force of $n&n's kick!",
             "door");
     act(Gbuf1, TRUE, ch, 0, 0, TO_ROOM);
@@ -3688,11 +3688,11 @@ void do_innate(P_char ch, char *arg, int cmd)
       {
         if( innates_data[i].func )
         {
-          sprintf(buf, "   %s", innates_data[i].name);
+          snprintf(buf, MAX_STRING_LENGTH, "   %s", innates_data[i].name);
         }
         else
         {
-          sprintf(buf, "  *%s", innates_data[i].name);
+          snprintf(buf, MAX_STRING_LENGTH, "  *%s", innates_data[i].name);
         }
 
         if (can_use_innate(ch, i))
@@ -4945,11 +4945,11 @@ void do_list_innates( P_char ch, char *args )
       {
         if( !racefound )
         {
-          sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+W%s:\n", innates_data[i].name );
           send_to_char( Gbuf1, ch );
           send_to_char( "&+B Races:&n", ch );
         }
-        sprintf( Gbuf1, "%s%s", racefound ? ", " : " ", race_names_table[j].ansi );
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "%s%s", racefound ? ", " : " ", race_names_table[j].ansi );
         racefound = TRUE;
         send_to_char( Gbuf1, ch );
       }
@@ -4977,14 +4977,14 @@ void do_list_innates( P_char ch, char *args )
         {
           if( !racefound && !classfound )
           {
-            sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "&+W%s:\n", innates_data[i].name );
             send_to_char( Gbuf1, ch );
           }
           if( !classfound )
           {
             send_to_char( "&+B Classes:&n", ch );
           }
-          sprintf( Gbuf1, "%s%s", classfound ? ", " : " ", class_names_table[j].ansi );
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "%s%s", classfound ? ", " : " ", class_names_table[j].ansi );
           classfound = TRUE;
           send_to_char( Gbuf1, ch );
         }
@@ -4996,14 +4996,14 @@ void do_list_innates( P_char ch, char *args )
             {
               if( !racefound && !classfound )
               {
-                sprintf( Gbuf1, "&+W%s:\n", innates_data[i].name );
+                snprintf(Gbuf1, MAX_STRING_LENGTH, "&+W%s:\n", innates_data[i].name );
                 send_to_char( Gbuf1, ch );
               }
               if( !classfound )
               {
                 send_to_char( "&+B Classes:&n", ch );
               }
-              sprintf( Gbuf1, "%s%s", classfound ? ", " : " ", specdata[j][k-1] );
+              snprintf(Gbuf1, MAX_STRING_LENGTH, "%s%s", classfound ? ", " : " ", specdata[j][k-1] );
               classfound = TRUE;
               send_to_char( Gbuf1, ch );
             }

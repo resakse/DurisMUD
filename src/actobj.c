@@ -1145,7 +1145,7 @@ void do_junk(P_char ch, char *argument, int cmd)
      */
     else if (ch->desc && !IS_TRUSTED(ch))
     {
-      sprintf(Gbuf3,
+      snprintf(Gbuf3, MAX_STRING_LENGTH,
               "WARNING: JUNK permanently destroys the specified object(s).\r\n"
               "Please confirm that you wish to JUNK %s (Yes/No) [No]:\r\n",
               Gbuf1);
@@ -1183,7 +1183,7 @@ void do_junk(P_char ch, char *argument, int cmd)
           {
             if (CAN_SEE_OBJ(ch, tmp_object))
             {
-              sprintf(Gbuf3, "You junk %s&n.\r\n", OBJ_SHORT(tmp_object));
+              snprintf(Gbuf3, MAX_STRING_LENGTH, "You junk %s&n.\r\n", OBJ_SHORT(tmp_object));
               send_to_char(Gbuf3, ch);
               act("You are awarded for outstanding performance in recycling.",
                   FALSE, ch, 0, 0, TO_CHAR);
@@ -1198,7 +1198,7 @@ void do_junk(P_char ch, char *argument, int cmd)
           }
           else
           {
-            sprintf(Gbuf3, "%s dissolves with a blinding light.\r\n", OBJ_SHORT(tmp_object));
+            snprintf(Gbuf3, MAX_STRING_LENGTH, "%s dissolves with a blinding light.\r\n", OBJ_SHORT(tmp_object));
             // Capitalize the first non-ansi char.
             CAP( Gbuf3 );
 
@@ -1313,7 +1313,7 @@ void do_dropalldot(P_char ch, char *name, int cmd)
       return;
     }
 
-    sprintf(Gbuf3,
+    snprintf(Gbuf3, MAX_STRING_LENGTH,
             "You drop %d &+Wplatinum&n, %d &+Ygold&n, %d silver, and %d &+ycopper&n coin%s.\n\r",
             copp, silv, gold, plat,
             ((plat + gold + silv + copp) > 1) ? "s" : "");
@@ -1388,14 +1388,14 @@ void do_dropalldot(P_char ch, char *name, int cmd)
   {
     if (total == 1)
     {
-      sprintf(Gbuf1, "You drop one %s.", name);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You drop one %s.", name);
       act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
-      sprintf(Gbuf1, "$n drops one %s.", name);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "$n drops one %s.", name);
       act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
     }
     else if (total < 6)
     {
-      sprintf(Gbuf1, "You drop %d %s(s).", total, name);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You drop %d %s(s).", total, name);
       act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
       sprintf(Gbuf1, "$n drops some %s(s).", name);
       act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
@@ -1747,7 +1747,7 @@ void do_put(P_char ch, char *argument, int cmd)
 
     if (ctype >= 0 && ch->points.cash[ctype] < amount)
     {
-      sprintf(buf, "You do not have that many %s coins!\r\n",
+      snprintf(buf, MAX_STRING_LENGTH, "You do not have that many %s coins!\r\n",
               coin_names[ctype]);
       send_to_char(buf, ch);
       return;
@@ -1785,7 +1785,7 @@ void do_put(P_char ch, char *argument, int cmd)
 
   if( !*cont_name )
   {
-    sprintf(buf, "Put %s in what?\r\n", obj_name);
+    snprintf(buf, MAX_STRING_LENGTH, "Put %s in what?\r\n", obj_name);
     send_to_char(buf, ch);
     return;
   }
@@ -2183,7 +2183,7 @@ void do_give(P_char ch, char *argument, int cmd)
     if ((ch->points.cash[ctype] < amount) &&
         (IS_NPC(ch) || (GET_LEVEL(ch) < MAXLVL)))
     {
-      sprintf(Gbuf1, "You do not have that many %s coins!\r\n", coin_names[ctype]);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You do not have that many %s coins!\r\n", coin_names[ctype]);
       send_to_char(Gbuf1, ch);
       return;
     }
@@ -2239,10 +2239,10 @@ void do_give(P_char ch, char *argument, int cmd)
             J_NAME(ch), J_NAME(vict), amount, coin_names[ctype]);
       sql_log(ch, WIZLOG, "Gave %s %d %s coins.", J_NAME(vict), amount, coin_names[ctype]);
     }
-    sprintf(Gbuf1, "%s gives you %d %s coins.\r\n",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s gives you %d %s coins.\r\n",
             PERS(ch, vict, FALSE), amount, coin_names[ctype]);
     send_to_char(Gbuf1, vict);
-    sprintf(Gbuf1, "$n gives some %s to $N", coin_names[ctype]);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "$n gives some %s to $N", coin_names[ctype]);
     act(Gbuf1, TRUE, ch, 0, vict, TO_NOTVICT);
 
     if (IS_NPC(ch) || (GET_LEVEL(ch) < MAXLVL))
@@ -2354,7 +2354,7 @@ void do_give(P_char ch, char *argument, int cmd)
     writeCharacter(ch, 1, ch->in_room);
     writeCharacter(vict, 1, vict->in_room);
 #ifndef __NO_MYSQL__
-  artifact_switch_check(ch, obj);
+    artifact_switch_check(ch, obj);
 #endif
   }
   /*
@@ -2572,9 +2572,9 @@ void do_drink(P_char ch, char *argument, int cmd)
   {
     if (temp->value[1])
     {                           /* Not empty */
-      sprintf(Gbuf4, "$n drinks %s from $p.", drinks[temp->value[2]]);
+      snprintf(Gbuf4, MAX_STRING_LENGTH, "$n drinks %s from $p.", drinks[temp->value[2]]);
       act(Gbuf4, TRUE, ch, temp, 0, TO_ROOM);
-      sprintf(Gbuf4, "You drink the %s from $p.", drinks[temp->value[2]]);
+      snprintf(Gbuf4, MAX_STRING_LENGTH, "You drink the %s from $p.", drinks[temp->value[2]]);
       act(Gbuf4, TRUE, ch, temp, 0, TO_CHAR);
 
       amount = 1;
@@ -2981,7 +2981,7 @@ void do_pour(P_char ch, char *argument, int cmd)
     act("There is no room for more.", FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
-  sprintf(Gbuf4, "You pour the %s into the %s.",
+  snprintf(Gbuf4, MAX_STRING_LENGTH, "You pour the %s into the %s.",
           drinks[from_obj->value[2]], Gbuf2);
   send_to_char(Gbuf4, ch);
 
@@ -3104,7 +3104,7 @@ void do_fill(P_char ch, char *argument, int cmd)
     act("There is no room for more.", FALSE, ch, 0, 0, TO_CHAR);
     return;
   }
-  sprintf(Gbuf4, "You fill the %s with the %s.", Gbuf1,
+  snprintf(Gbuf4, MAX_STRING_LENGTH, "You fill the %s with the %s.", Gbuf1,
           drinks[from_obj->value[2]]);
   act(Gbuf4, FALSE, ch, 0, 0, TO_CHAR);
 
@@ -3213,7 +3213,7 @@ void do_sip(P_char ch, char *argument, int cmd)
     return;
   }
   act("$n sips from the $q.", TRUE, ch, temp, 0, TO_ROOM);
-  sprintf(Gbuf4, "It tastes like %s.\r\n", drinks[temp->value[2]]);
+  snprintf(Gbuf4, MAX_STRING_LENGTH, "It tastes like %s.\r\n", drinks[temp->value[2]]);
   send_to_char(Gbuf4, ch);
 
   if (temp->value[3])
@@ -4917,7 +4917,7 @@ void do_wear(P_char ch, char *argument, int cmd)
         keyword = search_block(Gbuf2, keywords, FALSE); // Partial Match
         if( keyword == -1 )
         {
-          sprintf(Gbuf4, "%s is an unknown body location.\r\n", Gbuf2);
+          snprintf(Gbuf4, MAX_STRING_LENGTH, "%s is an unknown body location.\r\n", Gbuf2);
           send_to_char(Gbuf4, ch);
         }
         else
@@ -5052,7 +5052,7 @@ void do_wield(P_char ch, char *argument, int cmd)
     }
     else
     {
-      sprintf(Gbuf3, "You do not seem to have the '%s'.\r\n", Gbuf1);
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "You do not seem to have the '%s'.\r\n", Gbuf1);
       send_to_char(Gbuf3, ch);
     }
   }
@@ -5095,7 +5095,7 @@ void do_grab(P_char ch, char *argument, int cmd)
     }
     else
     {
-      sprintf(Gbuf3, "You do not seem to have the '%s'.\r\n", Gbuf1);
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "You do not seem to have the '%s'.\r\n", Gbuf1);
       send_to_char(Gbuf3, ch);
       return;
     }
@@ -5818,7 +5818,7 @@ void do_search(P_char ch, char *argument, int cmd)
     /* resources first, as they aren't true objects in the room */
 /*    if (world[ch->in_room].resources && find_chance(ch)) {
       sprintbit(world[ch->in_room].resources, resource_list, buf);
-      sprintf(buf2, "The area appears to be rich in: %s\r\n", buf);
+      snprintf(buf2, MAX_STRING_LENGTH, "The area appears to be rich in: %s\r\n", buf);
       send_to_char(buf2, ch);
 //      found_something = TRUE;
     }*/

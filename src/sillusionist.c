@@ -943,10 +943,10 @@ void spell_watching_wall(int level, P_char ch, char *arg, int type,
   {
     SET_BIT(EXIT(ch, var)->exit_info, EX_BREAKABLE);
     SET_BIT(VIRTUAL_EXIT((world[ch->in_room].dir_option[var])->to_room, rev_dir[var])->exit_info, EX_BREAKABLE);
-    sprintf(buf1,
+    snprintf(buf1, MAX_STRING_LENGTH,
             "&+yA massive eye-covered stone wall appears to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2,
+    snprintf(buf2, MAX_STRING_LENGTH,
             "&+yA massive eye-covered stone wall appears to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
@@ -982,8 +982,8 @@ void spell_illusionary_wall(int level, P_char ch, char *arg, int type,
                    "&+LAn &Nil&+Wlusiona&Nry&+L wall is here to the %s.&n",
                    ITEM_SECRET))
   {
-    sprintf(buf1, "&+LThe exit to the %s disappears!&n\r\n", dirs[var]);
-    sprintf(buf2, "&+LThe exit to the %s disappears!&n\r\n",
+    snprintf(buf1, MAX_STRING_LENGTH, "&+LThe exit to the %s disappears!&n\r\n", dirs[var]);
+    snprintf(buf2, MAX_STRING_LENGTH, "&+LThe exit to the %s disappears!&n\r\n",
             dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
@@ -1611,7 +1611,7 @@ void spell_clone_form(int level, P_char ch, char *arg, int type, P_char victim, 
       ch->disguise.racewar = GET_RACEWAR(target);
       ch->disguise.race = GET_RACE(t_ch);
       ch->disguise.hit = GET_LEVEL(ch) * 2;
-      sprintf(tbuf, "&+LYou &+Bblur&N and take on the form of %s!\r\n", t_ch->player.short_descr);
+      snprintf(tbuf, MAX_STRING_LENGTH, "&+LYou &+Bblur&N and take on the form of %s!\r\n", t_ch->player.short_descr);
       send_to_char(tbuf, ch);
       sprintf(tbuf, " &+LThe image of %s &Ndisappears&+L, and is replaced by %s!\r\n",
         GET_NAME(ch), t_ch->player.short_descr);
@@ -1771,7 +1771,7 @@ void spell_imprison(int level, P_char ch, char *arg, int type, P_char victim,
 
   SET_BIT(shell->str_mask, STRUNG_DESC1);
 
-  sprintf(buf, shell->description,
+  snprintf(buf, 1024, shell->description,
           victim->player.short_descr ? victim->player.short_descr : "someone");
 
   shell->description = str_dup(buf);
@@ -2014,12 +2014,12 @@ void spell_titan(int level, P_char ch, char *arg, int type, P_char victim,
   mob->specials.act |= ACT_SPEC_DIE;
 
   mob->only.npc->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-  sprintf(Gbuf1, "titan huge illusion %s %s", GET_NAME(ch),
+  snprintf(Gbuf1, 512, "titan huge illusion %s %s", GET_NAME(ch),
           race_names_table[GET_RACE(ch)].normal);
   mob->player.name = str_dup(Gbuf1);
-  sprintf(Gbuf1, "&+BA &+Yhuge&+B illusion of &+R%s&n", ch->player.name);
+  snprintf(Gbuf1, 512, "&+BA &+Yhuge&+B illusion of &+R%s&n", ch->player.name);
   mob->player.short_descr = str_dup(Gbuf1);
-  sprintf(Gbuf1, "&+BA &+Yhuge&+B illusion of &+R%s &+Bstands here.&n\r\n",
+  snprintf(Gbuf1, 512, "&+BA &+Yhuge&+B illusion of &+R%s &+Bstands here.&n\r\n",
           ch->player.name);
   mob->player.long_descr = str_dup(Gbuf1);
 

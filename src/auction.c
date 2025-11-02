@@ -105,10 +105,10 @@ void do_auction(P_char ch, char *argument, int dummy)
       /* show item data here */
       spell_lore(50, ch, NULL, 0, 0, auction[i].item);
       if (auction[i].bet > 0)
-        sprintf(buf, "Current bid on this item is %s.\r\n",
+        snprintf(buf, MAX_STRING_LENGTH, "Current bid on this item is %s.\r\n",
                 coin_stringv(auction[i].bet));
       else
-        sprintf(buf, "No bids on this item have been received.\r\n");
+        snprintf(buf, MAX_STRING_LENGTH, "No bids on this item have been received.\r\n");
       send_to_char(buf, ch);
       return;
     }
@@ -119,7 +119,7 @@ void do_auction(P_char ch, char *argument, int dummy)
     }
   if (IS_TRUSTED(ch) && !str_cmp(arg1, "debug"))
   {
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "Auctioneer: %d, Room: %d, Item: %s, Bid: %d, Buyer: %s, Seller: %s, Pulse: %d, Going: %d\r\n",
             auction[i].auctioneer, auction[i].room,
             auction[i].item ? auction[i].item->short_description : "Nothing",
@@ -138,7 +138,7 @@ void do_auction(P_char ch, char *argument, int dummy)
     }
     else
     {
-      sprintf(buf, "Sale of %s has been stopped by God. Item confiscated.",
+      snprintf(buf, MAX_STRING_LENGTH, "Sale of %s has been stopped by God. Item confiscated.",
               auction[i].item->short_description);
       mobsay(auctioneer, buf);
       obj_to_char(auction[i].item, ch);
@@ -171,7 +171,7 @@ void do_auction(P_char ch, char *argument, int dummy)
       newbet = parsebet(auction[i].bet, argument);
       if (newbet)
       {
-        sprintf(buf, "You bid %s.\r\n", coin_stringv(newbet));
+        snprintf(buf, MAX_STRING_LENGTH, "You bid %s.\r\n", coin_stringv(newbet));
         send_to_char(buf, ch);
       }
       if (newbet < (auction[i].bet + (auction[i].bet / 100 * 5)))
@@ -292,12 +292,12 @@ void auction_update(void)
         case 1:                /* * going once */
         case 2:                /* * going twice */
           if (auction[i].bet > 0)
-            sprintf(buf, "%s: going %s for %s.",
+            snprintf(buf, MAX_STRING_LENGTH, "%s: going %s for %s.",
                     auction[i].item->short_description,
                     ((auction[i].going == 1) ? "once" : "twice"),
                     coin_stringv(auction[i].bet));
           else
-            sprintf(buf, "%s: going %s with no bids yet received.",
+            snprintf(buf, MAX_STRING_LENGTH, "%s: going %s with no bids yet received.",
                     auction[i].item->short_description,
                     ((auction[i].going == 1) ? "once" : "twice"));
           mobsay(auctioneer, buf);
@@ -307,7 +307,7 @@ void auction_update(void)
 
           if (auction[i].bet > 0)
           {
-            sprintf(buf, "%s sold to %s for %s.",
+            snprintf(buf, MAX_STRING_LENGTH, "%s sold to %s for %s.",
                     auction[i].item->short_description,
                     J_NAME(auction[i].buyer), coin_stringv(auction[i].bet));
             mobsay(auctioneer, buf);
@@ -318,7 +318,7 @@ void auction_update(void)
           }
           else
           {                     /* * not sold */
-            sprintf(buf, "No bids received for %s - object has been removed.",
+            snprintf(buf, MAX_STRING_LENGTH, "No bids received for %s - object has been removed.",
                     auction[i].item->short_description);
             mobsay(auctioneer, buf);
             obj_to_char(auction[i].item, auction[i].seller);

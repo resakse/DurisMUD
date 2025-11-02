@@ -227,7 +227,7 @@ void do_smoke( P_char ch, char *argument, int cmd )
     && (( (herb = ch->equipment[WIELD3]) == NULL ) || ( !isname(arg1, herb->name) ))
     && (( (herb = ch->equipment[WIELD4]) == NULL ) || ( !isname(arg1, herb->name) )) )
   {
-    sprintf( buf, "&nYou do not have any &+g%s&n in your inventory or hands.\n\r", arg1 );
+    snprintf(buf, MAX_STRING_LENGTH, "&nYou do not have any &+g%s&n in your inventory or hands.\n\r", arg1 );
     send_to_char( buf, ch );
     return;
   }
@@ -247,7 +247,7 @@ void do_smoke( P_char ch, char *argument, int cmd )
     && (( (pipe = ch->equipment[WIELD3]) == NULL ) || ( !isname(arg2, pipe->name) ))
     && (( (pipe = ch->equipment[WIELD4]) == NULL ) || ( !isname(arg2, pipe->name) )) )
   {
-    sprintf( buf, "&nYou are not holding a &+L%s&n.\n\r", arg2 );
+    snprintf(buf, MAX_STRING_LENGTH, "&nYou are not holding a &+L%s&n.\n\r", arg2 );
     send_to_char( buf, ch );
     return;
   }

@@ -245,7 +245,7 @@ void list_artifacts_sql( P_char ch, int type, bool Godlist, bool allArtis )
 
   if( Godlist )
   {
-    sprintf(buf, "&+YOwner                  Time      Last Update           %s\r\n\r\n",
+    snprintf(buf, MAX_STRING_LENGTH, "&+YOwner                  Time      Last Update           %s\r\n\r\n",
       type == ARTIFACT_MAJOR ? "Artifact" : type == ARTIFACT_UNIQUE ? "Unique" :
       type == ARTIFACT_IOUN ? "Ioun" : "Unknown Type" );
     send_to_char( buf, ch );
@@ -255,7 +255,7 @@ void list_artifacts_sql( P_char ch, int type, bool Godlist, bool allArtis )
   }
   else
   {
-    sprintf(buf, "&+YOwner               %s\r\n\r\n", type == ARTIFACT_MAJOR ? "Artifact" :
+    snprintf(buf, MAX_STRING_LENGTH, "&+YOwner               %s\r\n\r\n", type == ARTIFACT_MAJOR ? "Artifact" :
       type == ARTIFACT_UNIQUE ? "Unique" : type == ARTIFACT_IOUN ? "Ioun" : "Unknown Type" );
     send_to_char( buf, ch );
 
@@ -468,8 +468,10 @@ void setupMortArtiList_sql()
 {
   // Clear the mortals table.
   qry( "TRUNCATE TABLE artifacts_mortal" );
-  // Repopulate it:
-  qry( "INSERT INTO artifacts_mortal SELECT * FROM artifacts WHERE locType='OnPC' OR locType='OnCorpse'" );
+  // Arih : Explicitly specify columns to avoid "Column count doesn't match value count" error.
+  // artifacts_mortal doesn't have 'lastUpdate' column but artifacts does, so SELECT * fails.
+  // Repopulate it: Only select columns that exist in both tables (excluding lastUpdate)
+  qry( "INSERT INTO artifacts_mortal (vnum, owned, locType, location, timer, type) SELECT vnum, owned, locType, location, timer, type FROM artifacts WHERE locType='OnPC' OR locType='OnCorpse'" );
 }
 
 // Loads the artis that were on the ground and owned back into the boot.
@@ -544,6 +546,16 @@ void artifact_feed_to_min_sql( P_obj arti, int min_minutes )
 
   // Calculate the minimum time to poof in seconds.
   to_time = time(NULL) + min_minutes * 60;
+
+  // Arih : Validate to_time to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
+  // When min_minutes is 0 or negative, FROM_UNIXTIME(0) causes MySQL to reject the datetime.
+  // Ensure to_time is never 0 or in the past (MySQL will reject FROM_UNIXTIME(0))
+  if( to_time <= 0 )
+  {
+    to_time = time(NULL) + 60;  // Default to 1 minute from now
+    logit(LOG_ARTIFACT, "artifact_feed_to_min_sql: WARNING: to_time was %ld, resetting to current time + 60 seconds for vnum %d",
+      (long)(time(NULL) + min_minutes * 60), vnum);
+  }
 
   if( !qry("select owned, UNIX_TIMESTAMP(timer) from artifacts where vnum = %d", vnum) )
   {
@@ -906,6 +918,15 @@ void artifact_update_sql( P_obj arti, char owned, time_t timer )
   // If we have an entry already in the DB, update it.
   if( update_existing )
   {
+    // Arih : Validate timer to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
+    // FROM_UNIXTIME(0) causes MySQL to reject the datetime.
+    if( timer <= 0 )
+    {
+      timer = time(NULL) + 60;  // Default to 1 minute from now
+      logit(LOG_ARTIFACT, "arti_update_sql (UPDATE): WARNING: timer was %ld, resetting to current time + 60 seconds for vnum %d",
+        (long)0, vnum);
+    }
+
     // lastUpdate should update automatically.
     qry("UPDATE artifacts SET owned='%c', locType=%d, location=%d, timer=FROM_UNIXTIME(%lu), type=%d WHERE vnum=%d",
       new_owned ? 'Y' : 'N', locType, location, timer, type, vnum );
@@ -915,6 +936,15 @@ void artifact_update_sql( P_obj arti, char owned, time_t timer )
   {
     logit( LOG_ARTIFACT, "arti_update_sql: Creating entry: vnum: %d, new_owned: %c, locType: %d, location; %d, timer: %lu, type: %d.",
       vnum, new_owned ? 'Y' : 'N', locType, location, timer, type );
+
+    // Arih : Validate timer to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
+    // FROM_UNIXTIME(0) causes MySQL to reject the datetime.
+    if( timer <= 0 )
+    {
+      timer = time(NULL) + 60;  // Default to 1 minute from now
+      logit(LOG_ARTIFACT, "arti_update_sql: WARNING: timer was %ld, resetting to current time + 60 seconds for vnum %d",
+        (long)0, vnum);
+    }
 
     // lastUpdate should update automatically.
     qry("INSERT INTO artifacts VALUES( %d, '%c', %d, %d, FROM_UNIXTIME(%lu), %d, SYSDATE())",
@@ -952,6 +982,15 @@ void artifact_update_sql( int vnum, bool owned, int locType, int location, time_
     update_existing = TRUE;
   }
   mysql_free_result(res);
+
+  // Arih : Validate timer to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
+  // FROM_UNIXTIME(0) causes MySQL to reject the datetime.
+  if( timer <= 0 )
+  {
+    timer = time(NULL) + 60;  // Default to 1 minute from now
+    logit(LOG_ARTIFACT, "artifact_update_sql: WARNING: timer was %ld, resetting to current time + 60 seconds for vnum %d",
+      (long)0, vnum);
+  }
 
   if( update_existing )
   {
@@ -1189,6 +1228,16 @@ void artifact_feed_sql(P_char owner, P_obj arti, int feed_seconds, bool soulChec
 
   // Get data from DB.
   poof_time = time(NULL) + ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
+
+  // Arih : Validate poof_time to prevent MySQL error "Incorrect datetime value: '1970-01-01 00:00:00'".
+  // FROM_UNIXTIME(0) causes MySQL to reject the datetime.
+  if( poof_time <= 0 )
+  {
+    poof_time = time(NULL) + 60;  // Default to 1 minute from now
+    logit(LOG_ARTIFACT, "artifact_feed_sql: WARNING: poof_time was %ld, resetting to current time + 60 seconds for vnum %d",
+      (long)0, vnum);
+  }
+
   if( !get_artifact_data_sql( vnum, &artidata ) )
   {
     statuslog(MINLVLIMMORTAL, "artifact_feed_sql: called without an entry in DB?!");
@@ -1698,7 +1747,7 @@ void arti_files_to_sql( P_char ch, char *arg )
 
   if( !dir )
   {
-    sprintf(buf, "Could not open arti dir (%s)\r\n", ARTIFACT_DIR);
+    snprintf(buf, MAX_STRING_LENGTH, "Could not open arti dir (%s)\r\n", ARTIFACT_DIR);
     send_to_char(buf, ch);
     return;
   }
@@ -1711,8 +1760,8 @@ void arti_files_to_sql( P_char ch, char *arg )
     {
       continue;
     }
-    sprintf(fname, ARTIFACT_DIR "%d", vnum);
-    sprintf(buf, "Loading artifact file '%s'.\n\r", fname );
+    snprintf(fname, 256, ARTIFACT_DIR "%d", vnum);
+    snprintf(buf, MAX_STRING_LENGTH, "Loading artifact file '%s'.\n\r", fname );
     send_to_char( buf, ch );
 
     if( !(f = fopen(fname, "rt")) )
@@ -1732,7 +1781,7 @@ void arti_files_to_sql( P_char ch, char *arg )
     fclose(f);
 
     timer += ARTIFACT_BLOOD_DAYS * SECS_PER_REAL_DAY;
-    sprintf( buf, "  Char '%s' %d, has arti %d (%s) with timer %s", pname, pid, vnum,
+    snprintf(buf, MAX_STRING_LENGTH, "  Char '%s' %d, has arti %d (%s) with timer %s", pname, pid, vnum,
       (temp == 0) ? "on char" : ((temp == 1) ? "on corpse" : "unknown location"), ctime(&timer) );
     send_to_char( buf, ch );
 
@@ -1741,7 +1790,7 @@ void arti_files_to_sql( P_char ch, char *arg )
       // If it's owned by some other PC.
       if( artidata.owned && (artidata.locType == ARTIFACT_ON_PC || artidata.locType == ARTIFACT_ONCORPSE) )
       {
-        sprintf( buf, "  &+rConflicts with data already in DB: Char '%s' %d (%s).. skipping...&n\n\r",
+        snprintf(buf, MAX_STRING_LENGTH, "  &+rConflicts with data already in DB: Char '%s' %d (%s).. skipping...&n\n\r",
           get_player_name_from_pid(artidata.location), artidata.location,
           (artidata.locType == ARTIFACT_ON_PC) ? "on char" : ((artidata.locType == ARTIFACT_ONCORPSE) ? "on corpse"
           : "unknown location") );
@@ -1751,7 +1800,7 @@ void arti_files_to_sql( P_char ch, char *arg )
       // Otherwise, pull it from ground/NPC/etc.
       else if( arti = artifact_find(artidata) )
       {
-        sprintf( buf, "Found another copy of arti %s (%d) in game, pulling it.\n\r",
+        snprintf(buf, MAX_STRING_LENGTH, "Found another copy of arti %s (%d) in game, pulling it.\n\r",
           OBJ_SHORT(arti), OBJ_VNUM(arti) );
         send_to_char( buf, ch );
         extract_obj(arti, FALSE);
@@ -2227,6 +2276,7 @@ void event_artifact_wars_sql(P_char ch, P_char vict, P_obj obj, void *arg)
 
   // We only care about artis on a PC or corpse (Note: it's implied that owned='Y' on these).
   // The other options: not in game, on npc, on ground can not have fighting artis.
+  debug( "event_artifact_wars_sql: Querying artifacts on PC/Corpse..." );
   qry("SELECT vnum, locType+0, location, UNIX_TIMESTAMP(timer), type FROM artifacts WHERE locType='OnPC' OR locType='OnCorpse'" );
   res = mysql_store_result(DB);
 
@@ -2237,6 +2287,7 @@ void event_artifact_wars_sql(P_char ch, P_char vict, P_obj obj, void *arg)
     return;
   }
 
+  debug( "event_artifact_wars_sql: Found %d artifacts, processing...", mysql_num_rows(res) );
   artilist = NULL;
   // First, build a list of those with multiple artifacts.
   // The list needs to be of a format: pid of char, then some sort of list of owned artifact vnum+type
@@ -2245,6 +2296,8 @@ void event_artifact_wars_sql(P_char ch, P_char vict, P_obj obj, void *arg)
     // Since locType is on PC or on PC corpse, location will always be the PID of the PC.
     pid = atoi(row[2]);
     vnum = atoi(row[0]);
+    debug( "event_artifact_wars_sql: Processing artifact vnum=%d, locType=%s, pid=%d, timer=%s, type=%s",
+           vnum, row[1], pid, row[3], row[4] );
     if( artilist == NULL )
     {
       artilist = new arti_list;
@@ -2410,7 +2463,7 @@ void arti_hunt_sql( P_char ch, char *arg )
     // For the rest of the letters search for them with an incremented delay to prevent lag.
     for( initial = 'b', count = 1;initial <= 'z';initial++, count++ )
     {
-      sprintf( buf, "%c", initial );
+      snprintf(buf, MAX_STRING_LENGTH, "%c", initial );
       add_event(event_arti_hunt_sql, count, ch, NULL, NULL, 0, &buf, sizeof(buf));
     }
     return;
@@ -2428,7 +2481,7 @@ void arti_hunt_sql( P_char ch, char *arg )
 
   // Read & loop through the directory..
   // Open the directory!
-  sprintf( dname, "%s/%c", SAVE_DIR, *arg );
+  snprintf(dname, 256, "%s/%c", SAVE_DIR, *arg );
   dir = opendir( dname );
   if( !dir )
   {
@@ -2446,7 +2499,7 @@ void arti_hunt_sql( P_char ch, char *arg )
 
     if( (owner = load_dummy_char( dire->d_name )) == NULL )
     {
-      sprintf( buf, "hunt_for_artis: %s has bad pfile.\n\r", dire->d_name );
+      snprintf(buf, MAX_STRING_LENGTH, "hunt_for_artis: %s has bad pfile.\n\r", dire->d_name );
       send_to_char( buf, ch );
       continue;
     }
@@ -2458,7 +2511,7 @@ void arti_hunt_sql( P_char ch, char *arg )
     }
 
     /* For debugging only.. gets spammy on live mud.
-    sprintf( buf, "Hunting pfile of '%s'.\n", J_NAME(owner) );
+    snprintf(buf, MAX_STRING_LENGTH, "Hunting pfile of '%s'.\n", J_NAME(owner) );
     send_to_char( buf, ch );
     */
 
@@ -2472,7 +2525,7 @@ void arti_hunt_sql( P_char ch, char *arg )
         continue;
       }
 
-      sprintf( buf, "%-12s has %s&n (%6d) : ", J_NAME(owner),
+      snprintf(buf, MAX_STRING_LENGTH, "%-12s has %s&n (%6d) : ", J_NAME(owner),
         pad_ansi(arti->short_description, 35, TRUE).c_str(), OBJ_VNUM(arti) );
       send_to_char( buf, ch );
 
@@ -2695,12 +2748,12 @@ void arti_poof_sql( P_char ch, char *arg )
     extract_obj(arti);
     return;
   }
-  sprintf( artishort, "%s&n", OBJ_SHORT(arti) );
+  snprintf(artishort, MAX_STRING_LENGTH, "%s&n", OBJ_SHORT(arti) );
   extract_obj(arti);
 
   if( !get_artifact_data_sql(vnum, &artidata) )
   {
-    sprintf( buf, "&+WThere is no data for %s atm; It shouldn't be in the game.&n\n\r", artishort );
+    snprintf(buf, MAX_STRING_LENGTH, "&+WThere is no data for %s atm; It shouldn't be in the game.&n\n\r", artishort );
     send_to_char( buf, ch );
     return;
   }
@@ -2711,19 +2764,19 @@ void arti_poof_sql( P_char ch, char *arg )
     // If it isn't on a char, or the char is online.
     if( artidata.locType != ARTIFACT_ON_PC || is_pid_online(artidata.location, TRUE) )
     {
-      sprintf( buf, "Could not find %s in game.\n\r", artishort );
+      snprintf(buf, MAX_STRING_LENGTH, "Could not find %s in game.\n\r", artishort );
       send_to_char( buf, ch );
       return;
     }
     if( !(owner = load_dummy_char( get_player_name_from_pid(artidata.location) )) )
     {
-      sprintf(buf, "Could not load pfile of %s.\n\r", get_player_name_from_pid(artidata.location) );
+      snprintf(buf, MAX_STRING_LENGTH, "Could not load pfile of %s.\n\r", get_player_name_from_pid(artidata.location) );
       send_to_char( buf, ch );
       return;
     }
     if( (arti = get_object_from_char( owner, vnum )) == NULL )
     {
-      sprintf(buf, "Strange, arti '%s' %d was not on %s's pfile!\n\r", artishort, vnum,
+      snprintf(buf, MAX_STRING_LENGTH, "Strange, arti '%s' %d was not on %s's pfile!\n\r", artishort, vnum,
         get_player_name_from_pid(artidata.location));
       nuke_eq(owner);
       extract_char(owner);
@@ -2788,7 +2841,7 @@ void arti_timer_sql( P_char ch, char *arg )
   else
   {
     send_to_char( "&+WFormat: &+wartifact timer <set|add|subtract> <vnum> <time in minutes>&+W.&n\n\r", ch );
-    sprintf( buf, "&+W'&+w%s&+W' is not a valid subcommand. Please choose set, add or subtract.&n\n\r", arg1 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' is not a valid subcommand. Please choose set, add or subtract.&n\n\r", arg1 );
     send_to_char( buf, ch );
     return;
   }
@@ -2797,31 +2850,31 @@ void arti_timer_sql( P_char ch, char *arg )
   if( (vnum = atoi(arg2)) <= 0 )
   {
     send_to_char( "&+WFormat: &+wartifact timer <set|add|subtract> <vnum> <time in minutes>&+W.&n\n\r", ch );
-    sprintf( buf, "&+W'&+w%s&+W' is not a valid vnum.  Please use a positive number for the vnum.&n\n\r", arg2 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' is not a valid vnum.  Please use a positive number for the vnum.&n\n\r", arg2 );
     send_to_char( buf, ch );
     return;
   }
   if( (arti = read_object( vnum, VIRTUAL )) == NULL )
   {
     send_to_char( "&+WFormat: &+wartifact timer <set|add|subtract> <vnum> <time in minutes>&+W.&n\n\r", ch );
-    sprintf( buf, "&+W'&+w%s&+W' is not the vnum of any object in the game.&n\n\r", arg2 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' is not the vnum of any object in the game.&n\n\r", arg2 );
     send_to_char( buf, ch );
     return;
   }
   if( !IS_ARTIFACT(arti) )
   {
-    sprintf( buf, "&+W'&+w%s&+W' &+w%d&+W is not an artifact.  This command only works with artifacts.&n\n\r",
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' &+w%d&+W is not an artifact.  This command only works with artifacts.&n\n\r",
       OBJ_SHORT(arti), vnum );
     send_to_char( buf, ch );
     return;
   }
-  sprintf( artishort, "%s&n", OBJ_SHORT(arti) );
+  snprintf(artishort, 256, "%s&n", OBJ_SHORT(arti) );
   extract_obj(arti);
 
   // Handle arg3: the time in minutes.
   if( (minutes = atoi(arg3)) == 0 )
   {
-    sprintf( buf, "&+W'%s' is not a positive number.  Please supply a positive number of minutes.&n\n\r", arg3 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'%s' is not a positive number.  Please supply a positive number of minutes.&n\n\r", arg3 );
     send_to_char( buf, ch );
     return;
   }
@@ -2829,12 +2882,12 @@ void arti_timer_sql( P_char ch, char *arg )
   {
     if( !strcmp(arg1, "add") )
     {
-      sprintf( buf, "&+WMaybe you should try '&+wartifact timer subtract %d %d&+W'.&n\n\r", vnum, minutes * -1 );
+      snprintf(buf, MAX_STRING_LENGTH, "&+WMaybe you should try '&+wartifact timer subtract %d %d&+W'.&n\n\r", vnum, minutes * -1 );
       send_to_char( buf, ch );
     }
     else if( !strcmp(arg1, "subtract") )
     {
-      sprintf( buf, "&+WMaybe you should try '&+wartifact timer add %d %d&+W'.&n\n\r", vnum, minutes * -1 );
+      snprintf(buf, MAX_STRING_LENGTH, "&+WMaybe you should try '&+wartifact timer add %d %d&+W'.&n\n\r", vnum, minutes * -1 );
       send_to_char( buf, ch );
     }
     else
@@ -2926,45 +2979,45 @@ void arti_swap_sql( P_char ch, char *arg )
   if( (vnum1 = atoi(arg1)) <= 0 )
   {
     send_to_char( "&+WFormat: &+wartifact swap <vnum1> <vnum2>&+W.&n\n\r", ch );
-    sprintf( buf, "&+W'&+w%s&+W' is not a valid vnum.  Please use a positive number for the vnum.&n\n\r", arg1 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' is not a valid vnum.  Please use a positive number for the vnum.&n\n\r", arg1 );
     send_to_char( buf, ch );
     return;
   }
   if( (arti1 = read_object( vnum1, VIRTUAL )) == NULL )
   {
     send_to_char( "&+WFormat: &+wartifact swap <vnum1> <vnum2>&+W.&n\n\r", ch );
-    sprintf( buf, "&+W'&+w%s&+W' is not the vnum of any object in the game.&n\n\r", arg1 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' is not the vnum of any object in the game.&n\n\r", arg1 );
     send_to_char( buf, ch );
     return;
   }
   if( !IS_ARTIFACT(arti1) )
   {
-    sprintf( buf, "&+W'&+w%s&+W' &+w%d&+W is not an artifact.  This command only works with artifacts.&n\n\r",
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' &+w%d&+W is not an artifact.  This command only works with artifacts.&n\n\r",
       OBJ_SHORT(arti1), vnum1 );
     send_to_char( buf, ch );
     return;
   }
-  sprintf( artishort1, "%s&n", OBJ_SHORT(arti1) );
+  snprintf(artishort1, 256, "%s&n", OBJ_SHORT(arti1) );
   extract_obj(arti1);
 
   // Handle arg2: the vnum of the first arti.
   if( (vnum2 = atoi(arg2)) <= 0 )
   {
     send_to_char( "&+WFormat: &+wartifact swap <vnum1> <vnum2>&+W.&n\n\r", ch );
-    sprintf( buf, "&+W'&+w%s&+W' is not a valid vnum.  Please use a positive number for the vnum.&n\n\r", arg2 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' is not a valid vnum.  Please use a positive number for the vnum.&n\n\r", arg2 );
     send_to_char( buf, ch );
     return;
   }
   if( (arti2 = read_object( vnum2, VIRTUAL )) == NULL )
   {
     send_to_char( "&+WFormat: &+wartifact swap <vnum1> <vnum2>&+W.&n\n\r", ch );
-    sprintf( buf, "&+W'&+w%s&+W' is not the vnum of any object in the game.&n\n\r", arg2 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' is not the vnum of any object in the game.&n\n\r", arg2 );
     send_to_char( buf, ch );
     return;
   }
   if( !IS_ARTIFACT(arti2) )
   {
-    sprintf( buf, "&+W'&+w%s&+W' &+w%d&+W is not an artifact.  This command only works with artifacts.&n\n\r",
+    snprintf(buf, MAX_STRING_LENGTH, "&+W'&+w%s&+W' &+w%d&+W is not an artifact.  This command only works with artifacts.&n\n\r",
       OBJ_SHORT(arti2), vnum2 );
     send_to_char( buf, ch );
     return;
@@ -2974,14 +3027,14 @@ void arti_swap_sql( P_char ch, char *arg )
   // Now we have 2 valid vnums and their corresponding short descriptions.
   if( !get_artifact_data_sql( vnum1, &artidata ) )
   {
-    sprintf( buf, "&+WThere's no timer ticking on '&+w%s&+W' &+w%d&+W. That won't work.&n\n\r", artishort1, vnum1 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+WThere's no timer ticking on '&+w%s&+W' &+w%d&+W. That won't work.&n\n\r", artishort1, vnum1 );
     send_to_char( buf, ch );
     return;
   }
   // We just want to make sure it's not ticking.
   if( get_artifact_data_sql( vnum2, NULL ) )
   {
-    sprintf( buf, "&+WThere's a timer ticking on '&+w%s&+W' &+w%d&+W.  That won't work.&n\n\r",
+    snprintf(buf, MAX_STRING_LENGTH, "&+WThere's a timer ticking on '&+w%s&+W' &+w%d&+W.  That won't work.&n\n\r",
       OBJ_SHORT(arti2), vnum2 );
     send_to_char( buf, ch );
     return;
@@ -2990,7 +3043,7 @@ void arti_swap_sql( P_char ch, char *arg )
   if( (arti1 = artifact_find(vnum2)) != NULL )
   {
     extract_obj(arti1);
-    sprintf( buf, "&+WPulled artifact '&+w%s&+W' &+w%d&+W from zone.&n\n\r", OBJ_SHORT(arti2), vnum2 );
+    snprintf(buf, MAX_STRING_LENGTH, "&+WPulled artifact '&+w%s&+W' &+w%d&+W from zone.&n\n\r", OBJ_SHORT(arti2), vnum2 );
     send_to_char( buf, ch );
   }
 
@@ -3463,6 +3516,7 @@ void addOnMobArtis_sql()
 
 void arti_player_sql( P_char ch, char *arg )
 {
+#ifndef __NO_MYSQL__
   char  buf[MAX_STRING_LENGTH], locationBuf[MAX_STRING_LENGTH], timeBuf[128], *name;
   int   pid, vnum, locType, minutes, hours;
   long  totalTime;
@@ -3481,12 +3535,12 @@ void arti_player_sql( P_char ch, char *arg )
   }
   if( (name = get_player_name_from_pid(pid)) == NULL )
   {
-    sprintf( buf, "'%s' was not found to be a valid player name or pid.\n", arg );
+    snprintf(buf, MAX_STRING_LENGTH, "'%s' was not found to be a valid player name or pid.\n", arg );
     send_to_char( buf, ch );
     return;
   }
 
-  sprintf(buf, "&+YOwner                  Time      Last Update           Artifact\r\n\r\n" );
+  snprintf(buf, MAX_STRING_LENGTH, "&+YOwner                  Time      Last Update           Artifact\r\n\r\n" );
   send_to_char( buf, ch );
 
   // locType is an enum type, so to get the values not the names, we want locType+0.
@@ -3536,16 +3590,16 @@ void arti_player_sql( P_char ch, char *arg )
 
     if( locType == ARTIFACT_ON_PC )
     {
-      sprintf(locationBuf, "%-21s", name);
+      snprintf(locationBuf, MAX_STRING_LENGTH, "%-21s", name);
     }
     else if( locType == ARTIFACT_ONCORPSE )
     {
-      sprintf( buf, "%s's corpse", name );
-      sprintf( locationBuf, "%-21s", buf );
+      snprintf(buf, MAX_STRING_LENGTH, "%s's corpse", name );
+      snprintf(locationBuf, MAX_STRING_LENGTH, "%-21s", buf );
     }
     else
     {
-      sprintf(buf, "&+RError reading query result.  Skipping... '%s' %d.\n", OBJ_SHORT(arti), OBJ_VNUM(arti) );
+      snprintf(buf, MAX_STRING_LENGTH, "&+RError reading query result.  Skipping... '%s' %d.\n", OBJ_SHORT(arti), OBJ_VNUM(arti) );
       send_to_char( buf, ch );
       extract_obj( arti );
       continue;
@@ -3577,4 +3631,7 @@ void arti_player_sql( P_char ch, char *arg )
     extract_obj( arti, FALSE );
   }
   mysql_free_result(res);
+#else
+  send_to_char( "This command requires MySQL support which is not compiled in.\n", ch );
+#endif
 }

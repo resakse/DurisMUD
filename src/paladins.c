@@ -44,7 +44,7 @@ void aura_broken(struct char_link_data *cld)
   int   aura_type = ( cld->affect ? cld->affect->type : -1 );
 
   if( aura_type >= FIRST_AURA && aura_type <= LAST_AURA ) {
-    sprintf(_buff, "The %s surrounding you fades away.\n", auras[aura_type-FIRST_AURA].glow_name );
+    snprintf(_buff, MAX_STRING_LENGTH, "The %s surrounding you fades away.\n", auras[aura_type-FIRST_AURA].glow_name );
     send_to_char(_buff, ch);
     
     bool has_other_auras = false;
@@ -87,10 +87,10 @@ void do_aura(P_char ch, int aura)
 {
   purge_linked_auras(ch);
 
-  sprintf(_buff, "You recite a chant and a %s radiates from your finger tips.", auras[aura-FIRST_AURA].glow_name);
+  snprintf(_buff, MAX_STRING_LENGTH, "You recite a chant and a %s radiates from your finger tips.", auras[aura-FIRST_AURA].glow_name);
   act(_buff, FALSE, ch, 0, ch, TO_CHAR);
 
-  sprintf(_buff, "$n recites a chant and a %s radiates from $s finger tips.", auras[aura-FIRST_AURA].glow_name);
+  snprintf(_buff, MAX_STRING_LENGTH, "$n recites a chant and a %s radiates from $s finger tips.", auras[aura-FIRST_AURA].glow_name);
   act(_buff, TRUE, ch, 0, ch, TO_NOTVICTROOM);
 
   apply_aura(ch, ch, aura);

@@ -323,7 +323,7 @@ void game_up_message(int port)
   char     Gbuf1[200];
 
   f = fopen("foo_tmp", "w");
-  sprintf(Gbuf1, "Duris> The mud is up at port %d. Run! Panic! *FLEE*\n",
+  snprintf(Gbuf1, 200, "Duris> The mud is up at port %d. Run! Panic! *FLEE*\n",
           port);
   fputs(Gbuf1, f);
   fclose(f);
@@ -402,7 +402,7 @@ void run_the_game(int port)
 
   reset_racewar_stat_mods();
   init_nexus_stones();
- 
+
   init_outposts();
 
   fprintf(stderr, "-- Loading alliances\r\n");
@@ -418,11 +418,11 @@ void run_the_game(int port)
 
   // This guarentees that files exist for reading.
   fprintf(stderr, "-- Touching leaderboard\r\n");
-  sprintf( buf, "touch %s", leaderboard_file );
+  snprintf(buf, MAX_STRING_LENGTH, "touch %s", leaderboard_file );
   system( buf );
   newLeaderBoard( NULL, "boot", 0 );
   fprintf(stderr, "-- Touching hall of fame\r\n");
-  sprintf( buf, "touch %s", halloffamelist_file );
+  snprintf(buf, MAX_STRING_LENGTH, "touch %s", halloffamelist_file );
   system( buf );
   newHardcoreBoard( NULL, "boot", 0 );
   init_ctf();
@@ -531,7 +531,7 @@ void game_loop(int s)
   avail_descs = getdtablesize() - 10;
 #endif
 
-  sprintf(buf, "avail_descs set to: %d", avail_descs);
+  snprintf(buf, MAX_STRING_LENGTH, "avail_descs set to: %d", avail_descs);
   logit(LOG_STATUS, buf);
 
   sigaddset(&mask, SIGUSR1 | SIGUSR2 | SIGINT | SIGPIPE | SIGHUP |
@@ -1655,7 +1655,7 @@ int new_descriptor(int s)
   else
   {
 
-    sprintf(Gbuf1, "%d.%d.%d.%d",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%d.%d.%d.%d",
             ((unsigned char *) &(sock.sin_addr))[0],
             ((unsigned char *) &(sock.sin_addr))[1],
             ((unsigned char *) &(sock.sin_addr))[2],
@@ -2704,7 +2704,7 @@ void send_to_char(const char *messg, P_char ch, int log)
       if( SWITCHED(ch) && !bSwitched )
       {
         char buf[30];
-        sprintf( buf, "&+M@&+W%s&n: ", J_NAME(ch) );
+        snprintf(buf, 30, "&+M@&+W%s&n: ", J_NAME(ch) );
         bSwitched = TRUE;
         write_to_q(buf, &ch->desc->output, 1);
         bSwitched = FALSE;
@@ -2868,7 +2868,7 @@ void send_to_room_except(const char *messg, int room, P_char ch)
       {
         if (GET_LEVEL(i) >= GET_LEVEL(ch))
         {
-          sprintf(Gbuf4, "R[%s]", GET_NAME(ch));
+          snprintf(Gbuf4, MAX_STRING_LENGTH, "R[%s]", GET_NAME(ch));
           write_to_q(Gbuf4, &i->desc->output, 1);
         }
         write_to_q(messg, &i->desc->output, 2);

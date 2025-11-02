@@ -3034,9 +3034,9 @@ void perform_eq_wipe(P_char ch)
   }
 
   // Delete the locker as well
-  sprintf( Gbuf2, "%c%s", LOWER(*ch->player.name), ch->player.name + 1 );
-  sprintf( Gbuf1, "%s/%c/%s.locker", SAVE_DIR, *Gbuf2, Gbuf2 );
-  sprintf( Gbuf2, "rm -f %s %s.bak", Gbuf1, Gbuf1 );
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "%c%s", LOWER(*ch->player.name), ch->player.name + 1 );
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.locker", SAVE_DIR, *Gbuf2, Gbuf2 );
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "rm -f %s %s.bak", Gbuf1, Gbuf1 );
   system( Gbuf2 );
 
   // Delete the ship too
@@ -3054,7 +3054,7 @@ void perform_eq_wipe(P_char ch)
   {
     longestptime = ch->player.time.played;
     playing_time = real_time_passed((long) ((time(0) - ch->player.time.logon) + ch->player.time.played), 0);
-    sprintf( Gbuf1, "New Longest Ptime: '%s' %d with %d %dD%dH%dM%dS",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "New Longest Ptime: '%s' %d with %d %dD%dH%dM%dS",
       J_NAME(ch), ch->only.pc->pid, ch->player.time.played, playing_time.day, playing_time.hour, playing_time.minute, playing_time.second );
     debug( Gbuf1 );
     logit( LOG_STATUS, Gbuf1 );
@@ -3990,10 +3990,10 @@ bool pfile_exists(const char *dir, char *name)
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
-  sprintf(Gbuf1, "%s/%c/%s", dir, buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", dir, buf[0], buf);
   if (stat(Gbuf1, &statbuf) != 0)
   {
-    sprintf(Gbuf1, "%s/%c/%s", dir, buf[0], name);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", dir, buf[0], name);
     if (stat(Gbuf1, &statbuf) != 0)
       return FALSE;
   }
@@ -4015,7 +4015,7 @@ void create_denied_file(const char *dir, char *name)
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
-  sprintf(Gbuf1, "%s/%c/%s", dir, buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", dir, buf[0], buf);
   if( f = fopen(Gbuf1, "w") )
   {
     fclose(f);
@@ -4338,7 +4338,7 @@ bool is_multiplaying(P_desc d)
       
       char buf[MAX_STRING_LENGTH];
       
-      sprintf(buf, "\r\nYou are already in the game as %s, and you need to rent or camp them before you can\r\n"
+      snprintf(buf, MAX_STRING_LENGTH, "\r\nYou are already in the game as %s, and you need to rent or camp them before you can\r\n"
               "enter the game with a new character.\r\n\r\n"
               "If you are multiple people playing from the same location, please petition or send an email to multiplay@durismud.com\r\n"
               "and if approved we can allow multiple connections from your location.\r\n\r\n", GET_NAME(t_ch));
@@ -5513,7 +5513,7 @@ void display_classtable(P_desc d)
   for (cls = 1; cls <= CLASS_COUNT; cls++)
     if (class_table[GET_RACE(d->character)][cls] != 5)
     {
-      sprintf(template_buf, "\r\n%%c) %%-%ds(%%c for help)",
+      snprintf(template_buf, MAX_STRING_LENGTH, "\r\n%%c) %%-%ds(%%c for help)",
               strlen(class_names_table[cls].ansi) -
               ansi_strlen(class_names_table[cls].ansi) + 20);
       sprintf(buf + strlen(buf), template_buf, class_names_table[cls].letter,
@@ -5738,7 +5738,7 @@ void display_characteristics(P_desc d)
   char     Gbuf1[MAX_STRING_LENGTH];
   char     buffer[MAX_STRING_LENGTH];
 
-  sprintf(Gbuf1,
+  snprintf(Gbuf1, MAX_STRING_LENGTH,
           "\r\n\r\n---------------------------------------\r\nNAME:   %s\r\n",
           GET_NAME(d->character));
 
@@ -5875,7 +5875,7 @@ void show_avail_hometowns(P_desc d)
       // }
       // else
       // {
-        sprintf(Gbuf1, "%c)%s\r\n", town_name_list[i][0],
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "%c)%s\r\n", town_name_list[i][0],
                 &town_name_list[i][1]);
         SEND_TO_Q(Gbuf1, d);
       // }
@@ -5893,7 +5893,7 @@ int find_hometown(int race, bool force)
 
   if ((race < 1) || (race > LAST_RACE))
   {
-    sprintf(Gbuf1, "find_hometown: illegal race, %d\n", race);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "find_hometown: illegal race, %d\n", race);
     logit(LOG_STATUS, Gbuf1);
     return (HOME_THARN);    /* default */
   }
@@ -5908,7 +5908,7 @@ int find_hometown(int race, bool force)
   }
   if (count == 0)
   {                             /* none found, avail_hometowns matrix fucked */
-    sprintf(Gbuf1, "find_hometown: race %d has no avail hometowns\n", race);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "find_hometown: race %d has no avail hometowns\n", race);
     logit(LOG_STATUS, Gbuf1);
     return (HOME_THARN);    /* default */
   }
@@ -5932,7 +5932,7 @@ void find_starting_location(P_char ch, int hometown)
   }
   if ((hometown < 1) || (hometown > LAST_HOME))
   {
-    sprintf(Gbuf1, "find_starting_location: illegal hometown %d for %s",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "find_starting_location: illegal hometown %d for %s",
             hometown, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
     GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
@@ -5941,7 +5941,7 @@ void find_starting_location(P_char ch, int hometown)
   if ((ch->player.m_class < 1) ||
       (ch->player.m_class > (1 << (CLASS_COUNT - 1))))
   {
-    sprintf(Gbuf1, "find_starting_location: illegal class %d for %s",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "find_starting_location: illegal class %d for %s",
             ch->player.m_class, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
     GET_HOME(ch) = guild_locations[HOME_THARN][0];  /* default */
@@ -5951,7 +5951,7 @@ void find_starting_location(P_char ch, int hometown)
 
   if (guild_num == -1)
   {
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "find_starting_location: hometown %d, no guild for class %d (%s)",
             hometown, ch->player.m_class, GET_NAME(ch));
     logit(LOG_DEBUG, Gbuf1);
@@ -5971,13 +5971,13 @@ int find_starting_alignment(int race, int m_class)
 
   if ((race < 1) || (race > LAST_RACE))
   {
-    sprintf(Gbuf1, "find_starting_alignment: illegal race, %d\n", race);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "find_starting_alignment: illegal race, %d\n", race);
     logit(LOG_STATUS, Gbuf1);
     return (0);                 /* default */
   }
   if ((m_class < 1) || (m_class > (1 << (CLASS_COUNT - 1))))
   {
-    sprintf(Gbuf1, "find_starting_alignment: illegal class, %d\n", m_class);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "find_starting_alignment: illegal class, %d\n", m_class);
     logit(LOG_STATUS, Gbuf1);
     return (0);                 /* default */
   }
@@ -6324,14 +6324,14 @@ void init_char(P_char ch)
   ch->only.pc->skillpoints = 0;
 }
 
-int      approve_mode = 1;       /* whether to have need to accept new players or not */
+int      approve_mode = 0;       /* whether to have need to accept new players or not */
 
 void newby_announce(P_desc d)
 {
   char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
   P_desc   i;
 
-  sprintf( Gbuf1, "&+C*** New char: &n%s (%s %s %s) - Rolled for %ld:%02ld, Socket: %d, Idle: %d:%02d, IP: %s %s.\n",
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+C*** New char: &n%s (%s %s %s) - Rolled for %ld:%02ld, Socket: %d, Idle: %d:%02d, IP: %s %s.\n",
     GET_NAME(d->character),
     GET_SEX(d->character) == SEX_MALE ? "Male" : GET_SEX(d->character) == SEX_FEMALE ? "Female" : "Neuter",
     race_names_table[(int) GET_RACE(d->character)].ansi, get_class_string(d->character, Gbuf2),
@@ -6983,7 +6983,7 @@ void email_player_info(char *login, char *host, struct descriptor_data *d)
   for (counter = 6; counter < 8; counter++)
     password[counter] = (random() % 10) + 48;
   password[8] = '\0';
-  sprintf(buf, "/tmp/%s.REG", GET_NAME(d->character));
+  snprintf(buf, MAX_STRING_LENGTH, "/tmp/%s.REG", GET_NAME(d->character));
   if (!(fp = fopen(buf, "w")))
   {
     ereglog(AVATAR, "Could not open emailreg temp file! (%s)",
@@ -7046,6 +7046,7 @@ int tossHint(P_char ch)
     return 0;
   sprintf(buf2, "&+MHint: &+m%s", hint_array[number(0, iLOADED - 1)]);
   send_to_char(buf2, ch);
+  return 0;
 }
 
 

@@ -140,9 +140,9 @@ void do_trapstat(P_char ch, char *argument, int cmd)
     if (IS_SET(obj->trap_eff, TRAP_EFF_ROOM))
       send_to_char("The trap affects the whole room.\r\n", ch);
   }
-  sprintf(buf, "Trap Charges left: %d.\r\n", obj->trap_charge);
+  snprintf(buf, MAX_STRING_LENGTH, "Trap Charges left: %d.\r\n", obj->trap_charge);
   send_to_char(buf, ch);
-  sprintf(buf, "Trap level: %d\r\n", obj->trap_level);
+  snprintf(buf, MAX_STRING_LENGTH, "Trap level: %d\r\n", obj->trap_level);
   send_to_char(buf, ch);
   return;
 }
@@ -159,7 +159,7 @@ void do_traplist(P_char ch, char *argument, int cmd)
       continue;
 
     found = TRUE;
-    sprintf(buf, "%s \r\n", where_obj(obj, FALSE));
+    snprintf(buf, MAX_INPUT_LENGTH, "%s \r\n", where_obj(obj, FALSE));
     send_to_char(buf, ch);
   }
   if (!found)

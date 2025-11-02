@@ -84,7 +84,7 @@ int load_proc_lib(char *name)
     {
       if (dynam_proc_list[i].handle)
         return 0;
-      sprintf(buf, "%s.so", dynam_proc_list[i].name);
+      snprintf(buf, 180, "%s.so", dynam_proc_list[i].name);
       handle = dlopen(buf, RTLD_NOW);
       if (!handle)
       {
@@ -129,7 +129,7 @@ void load_all_proc_libs(void)
 
   for (i = 0; dynam_proc_list[i].name; i++)
   {
-    sprintf(name, "%s.so", dynam_proc_list[i].name);
+    snprintf(name, 180, "%s.so", dynam_proc_list[i].name);
     handle = dlopen(name, RTLD_NOW);
     if (!handle)
     {

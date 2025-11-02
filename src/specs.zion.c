@@ -724,12 +724,12 @@ int zion_dispator(P_obj obj, P_char ch, int cmd, char *arg)
     int random_dir = number(0, NUM_EXITS-1);
 
     char buff[128];
-    sprintf(buff, "&+y$n's $q &+ydeflects the blow, and channels a torrent of magical energy %s!&n", dirs[random_dir]);
+    snprintf(buff, 128, "&+y$n's $q &+ydeflects the blow, and channels a torrent of magical energy %s!&n", dirs[random_dir]);
 
     if(exit_wallable(ch->in_room, random_dir, ch))
     {
       act(buff, TRUE, ch, obj, NULL, TO_ROOM);
-      sprintf(buff, "%s", dirs[random_dir]);
+      snprintf(buff, 128, "%s", dirs[random_dir]);
       // store the direction keyword in a buffer to be passed to spell_wall_of_iron
       spell_wall_of_iron(60, ch, buff, 0, 0, 0);
     }
@@ -854,7 +854,7 @@ void event_zion_netheril(P_char ch, P_char victim, P_obj obj, void *data)
         if (ch->specials.undead_spell_slots[circle] <
             max_spells_in_circle(ch, circle))
          {
-          sprintf(buf, "&+LYou feel your %d%s circle power returning to you.\n",
+          snprintf(buf, 256, "&+LYou feel your %d%s circle power returning to you.\n",
           circle, circle == 1 ? "st" : (circle == 2 ? "nd" : (circle == 3 ? "rd" : "th")));
           send_to_char(buf, ch);
           ch->specials.undead_spell_slots[circle]++;
@@ -867,7 +867,7 @@ void event_zion_netheril(P_char ch, P_char victim, P_obj obj, void *data)
   int spell = memorize_last_spell(ch);
   if( spell )
     {
-      sprintf( buf, "&+WYou feel your power of %s &+Wreturning to you.&n\n",
+      snprintf(buf, 256, "&+WYou feel your power of %s &+Wreturning to you.&n\n",
         skills[spell].name );
       send_to_char(buf, ch);
     }

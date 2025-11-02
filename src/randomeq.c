@@ -534,7 +534,7 @@ void create_randoms()
 
   fprintf(stderr, " -- Generating random zone from areas/RANDOM_AREA file\r\n");
 
-  sprintf(fname, "areas/RANDOM_AREA");
+  snprintf(fname, 256, "areas/RANDOM_AREA");
   f = fopen(fname, "r");
   if (!f)
   {
@@ -572,9 +572,9 @@ P_obj create_material(int index)
   P_obj obj = read_object(RANDOM_EQ_VNUM, VIRTUAL);
   obj->material = material_data[index].m_number;
 
-  sprintf(buf1, "random piece %s", strip_ansi(material_data[index].m_name).c_str());
-  sprintf(buf2, "a piece of %s&n", material_data[index].m_name);
-  sprintf(buf3, "&+La piece of %s&n lies here.", material_data[index].m_name);
+  snprintf(buf1, MAX_STRING_LENGTH, "random piece %s", strip_ansi(material_data[index].m_name).c_str());
+  snprintf(buf2, MAX_STRING_LENGTH, "a piece of %s&n", material_data[index].m_name);
+  snprintf(buf3, MAX_STRING_LENGTH, "&+La piece of %s&n lies here.", material_data[index].m_name);
 
   set_keywords(obj, buf1);
   set_short_description(obj, buf2);
@@ -615,7 +615,7 @@ P_obj create_stones(P_char ch)
   int      i = number(1, 9);  // stones_list # of elements
 
   obj = read_object(RANDOM_OBJ_VNUM, VIRTUAL);
-  sprintf(buf1, "random strange %s _strange_", strip_ansi(stone_list[i]).c_str());
+  snprintf(buf1, MAX_STRING_LENGTH, "random strange %s _strange_", strip_ansi(stone_list[i]).c_str());
 
   if ((obj->str_mask & STRUNG_KEYS) && obj->name)
     FREE(obj->short_description);
@@ -623,7 +623,7 @@ P_obj create_stones(P_char ch)
   obj->str_mask |= STRUNG_KEYS;
   obj->name = str_dup(buf1);
 
-  sprintf(buf1, "&+La strange %s", stone_list[i]);
+  snprintf(buf1, MAX_STRING_LENGTH, "&+La strange %s", stone_list[i]);
 
   if ((obj->str_mask & STRUNG_DESC2) && obj->short_description)
     FREE(obj->short_description);
@@ -631,7 +631,7 @@ P_obj create_stones(P_char ch)
   obj->str_mask |= STRUNG_DESC2;
   obj->short_description = str_dup(buf1);
 
-  sprintf(buf1, "&+La strange %s lies here.", stone_list[i]);
+  snprintf(buf1, MAX_STRING_LENGTH, "&+La strange %s lies here.", stone_list[i]);
   if ((obj->str_mask & STRUNG_DESC1) && obj->description)
     FREE(obj->description);
   obj->description = NULL;
@@ -925,11 +925,11 @@ P_obj create_random_eq_new( P_char killer, P_char mob, int object_type, int mate
 
   if( IS_PC(killer) )
   {
-    sprintf( owner, "%s", GET_NAME(killer) );
+    snprintf(owner, MAX_STRING_LENGTH, "%s", GET_NAME(killer) );
   }
   else
   {
-    sprintf( owner, "%s", FirstWord(GET_NAME(killer)) );
+    snprintf(owner, MAX_STRING_LENGTH, "%s", FirstWord(GET_NAME(killer)) );
   }
 
   // Chance for a named item. 0% for <= level 10, luck = every 4 points over 60 gives one point to multiplier
@@ -948,7 +948,7 @@ P_obj create_random_eq_new( P_char killer, P_char mob, int object_type, int mate
     {
       send_to_char( "You got a named random item!  Use 'help named equipment' for a list of what named eq can do for you!\n\r", killer );
     }
-    sprintf(o_name, "random _noquest_ %s %s %s %s", strip_ansi(prefix_data[prefix].m_name).c_str(),
+    snprintf(o_name, MAX_STRING_LENGTH, "random _noquest_ %s %s %s %s", strip_ansi(prefix_data[prefix].m_name).c_str(),
       strip_ansi(material_data[material].m_name).c_str(),
       strip_ansi(slot_data[slot].m_name).c_str(), strip_ansi(zone->name).c_str());
 
@@ -1724,7 +1724,7 @@ bool identify_random(P_obj obj)
   if (c = strstr(old_name, " crafted by"))
     *c = '\0';
 
-  sprintf(buffer, "%s of %s&n", old_name, spells_data[i].name);
+  snprintf(buffer, 256, "%s of %s&n", old_name, spells_data[i].name);
 
   if (!strcmp(buffer, obj->short_description))
     return false;

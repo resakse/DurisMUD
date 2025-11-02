@@ -622,23 +622,23 @@ int akh_elamshin(int room, P_char ch, int cmd, char *arg)
   send_to_room
     ("&+LThere is a low hum as the statue begins to vibrate in a deep harmony\r\n",
      real_room(8531));
-  sprintf(buf,
+  snprintf(buf, MAX_INPUT_LENGTH,
           "&+mBoth %s and the statue are surrounded by a &+Mviolet&N&+m aura of energy!\r\n",
           GET_NAME(ch));
   send_to_room(buf, real_room(8531));
 
   if (GET_SEX(ch) == 1)
-    sprintf(god, "he");
+    snprintf(god, MAX_INPUT_LENGTH, "he");
   else
-    sprintf(god, "she");
+    snprintf(god, MAX_INPUT_LENGTH, "she");
   if (GET_RACE(ch) != RACE_DROW)
   {
-    sprintf(buf,
+    snprintf(buf, MAX_INPUT_LENGTH,
             "&+rThe aura around %s suddenly turns red and %s passes out!\r\n",
             GET_NAME(ch), god);
     send_to_room(buf, real_room(8531));
   }
-  sprintf(buf,
+  snprintf(buf, MAX_INPUT_LENGTH,
           "&+MThe aura &=LCflashes&N&+M, and %s slowly fades out of exsistance..\r\n",
           god);
   send_to_room(buf, real_room(8531));
@@ -676,7 +676,7 @@ int dump(int room, P_char ch, int cmd, char *arg)
     {
       continue;
     }
-    sprintf(Gbuf1, "The %s vanishes in a puff of smoke.\r\n", FirstWord(obj->name));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "The %s vanishes in a puff of smoke.\r\n", FirstWord(obj->name));
     for( tmp_char = world[ch->in_room].people; tmp_char; tmp_char = tmp_char->next_in_room )
       if (CAN_SEE_OBJ(tmp_char, obj))
         send_to_char(Gbuf1, tmp_char);
@@ -699,7 +699,7 @@ int dump(int room, P_char ch, int cmd, char *arg)
       continue;
     }
 
-    sprintf(Gbuf1, "The %s vanishes in a puff of smoke.\r\n", FirstWord(obj->name));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "The %s vanishes in a puff of smoke.\r\n", FirstWord(obj->name));
     for( tmp_char = world[ch->in_room].people; tmp_char; tmp_char = tmp_char->next_in_room )
       if (CAN_SEE_OBJ(tmp_char, obj))
         send_to_char(Gbuf1, tmp_char);
@@ -767,7 +767,7 @@ int patrol_shops(int room, P_char ch, int cmd, char *arg)
     {
       count++;
       temp = GET_EXP(pet) / 2;
-      sprintf(buf, "[%d] %-25s for %s, currently %d patroling.\r\n", count, (pet->player.short_descr),
+      snprintf(buf, MAX_INPUT_LENGTH, "[%d] %-25s for %s, currently %d patroling.\r\n", count, (pet->player.short_descr),
               coin_stringv(temp), count_patrol(GET_VNUM(pet)));
       send_to_char(buf, ch);
     }
@@ -851,7 +851,7 @@ int pet_shops(int room, P_char ch, int cmd, char *arg)
     for( pet = world[pet_room].people, count = 0; pet; pet = pet->next_in_room )
     {
       temp = 8 * GET_EXP(pet);
-      sprintf(buf, "[%d] %s for %s.\r\n", ++count, pad_ansi(pet->player.short_descr, 25, TRUE).c_str(), coin_stringv(temp));
+      snprintf(buf, MAX_INPUT_LENGTH, "[%d] %s for %s.\r\n", ++count, pad_ansi(pet->player.short_descr, 25, TRUE).c_str(), coin_stringv(temp));
       send_to_char(buf, ch);
     }
     return TRUE;
@@ -1497,13 +1497,13 @@ int player_council_room(int room, P_char ch, int cmd, char *argument)
     {
       if (vict != ch)
       {
-        sprintf(Gbuf2, "%s projects '%s'\r\n", GET_NAME(ch), argument + i);
+        snprintf(Gbuf2, MAX_STRING_LENGTH, "%s projects '%s'\r\n", GET_NAME(ch), argument + i);
         send_to_char(Gbuf2, vict);
       }
     }
 
 
-    sprintf(Gbuf1, "You project '%s'\r\n", argument + i);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "You project '%s'\r\n", argument + i);
 
     send_to_char(Gbuf1, ch);
 

@@ -1051,7 +1051,7 @@ int shadow_demon(P_char ch, P_char tch, int cmd, char *arg)
         act
           ("&+L$N is lost to the shadows of darkness and slowly slips from sight...",
            FALSE, ch, 0, tch, TO_NOTVICT);
-        sprintf(buf,
+        snprintf(buf, MAX_INPUT_LENGTH,
                 "&+LThe shadows lift for a moment as %s fades into exsistance..\r\n",
                 GET_NAME(tch));
         send_to_room(buf, real_room(8450));
@@ -1137,7 +1137,7 @@ int tiaka_ghoul(P_char ch, P_char tch, int cmd, char *arg)
         act
           ("&+r$N is enveloped into the portal, and slowly fades out of exsistance.",
            FALSE, ch, 0, tch, TO_NOTVICT);
-        sprintf(buf,
+        snprintf(buf, MAX_INPUT_LENGTH,
                 "&+rA portal opens up inside the room and %s steps through it..\r\n",
                 GET_NAME(tch));
         send_to_room(buf, real_room(8556));
@@ -1220,7 +1220,7 @@ int mystra_dragon(P_char ch, P_char tch, int cmd, char *arg)
         act
           ("&+b$N is enveloped in a blue aura, and slowly fades out of exsistance.",
            FALSE, ch, 0, tch, TO_NOTVICT);
-        sprintf(buf,
+        snprintf(buf, MAX_INPUT_LENGTH,
                 "&+bA soft aura of light fills the room as %s fades into exsistance..\r\n",
                 GET_NAME(tch));
         send_to_room(buf, real_room(8512));
@@ -1309,7 +1309,7 @@ int hunt_cat(P_char ch, P_char tch, int cmd, char *arg)
         act
           ("&+R$N is enveloped in a crimson aura, and slowly fades out of exsistance.",
            FALSE, ch, 0, tch, TO_NOTVICT);
-        sprintf(buf,
+        snprintf(buf, MAX_INPUT_LENGTH,
                 "&+RA soft aura of light fills the room as %s fades into exsistance..\r\n",
                 GET_NAME(tch));
         send_to_room(buf, real_room(8426));
@@ -1478,7 +1478,7 @@ int seas_coral_golem(P_char ch, P_char pl, int cmd, char *arg)
           0, 0, TO_ROOM);
       send_to_char("The coral golem bows before you as you enter.\r\n", pl);
       act("$N leaves east, entering the cave.", FALSE, ch, 0, pl, TO_NOTVICT);
-      sprintf(Gbuf3, "%s arrives from the west.\r\n", (GET_NAME(pl)));
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "%s arrives from the west.\r\n", (GET_NAME(pl)));
       send_to_room(Gbuf3, real_room(20201));
       char_from_room(pl);
       char_to_room(pl, real_room(20201), 0);
@@ -1564,18 +1564,18 @@ int money_changer(P_char me, P_char ch, int cmd, char *arg)
   }
   if (cmd == CMD_LIST)
   {
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "Our surcharge is %d percent for exchange to a lower coin-type,",
             RATE_TO_LOWER);
     mobsay(me, Gbuf1);
-    sprintf(Gbuf1, "%d percent for an exchange from copper to silver,",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%d percent for an exchange from copper to silver,",
             RATE_TO_SILVER);
     mobsay(me, Gbuf1);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "%d percent for an exchange from copper or silver to gold,",
             RATE_TO_GOLD);
     mobsay(me, Gbuf1);
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "and %d percent for an exchange from a lesser coin to platinum.",
             RATE_TO_PLATINUM);
     mobsay(me, Gbuf1);
@@ -1623,7 +1623,7 @@ int money_changer(P_char me, P_char ch, int cmd, char *arg)
      */
     if (ch->points.cash[from] < (amount / pow10(from)))
     {
-      sprintf(Gbuf1,
+      snprintf(Gbuf1, MAX_STRING_LENGTH,
               "You don't have enough %s coins to complete that exchange.\r\n",
               coin_names[from]);
       send_to_char(Gbuf1, ch);
@@ -1641,7 +1641,7 @@ int money_changer(P_char me, P_char ch, int cmd, char *arg)
     ch->points.cash[from] -= (amount / pow10(from));
     ch->points.cash[to] += n;
     act("$n exchanges some coins with $N.", TRUE, ch, 0, me, TO_ROOM);
-    sprintf(Gbuf1, "You exchange %ld %s coins for %ld %s coins.\r\n",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "You exchange %ld %s coins for %ld %s coins.\r\n",
             (amount / pow10(from)), coin_names[from], n, coin_names[to]);
     send_to_char(Gbuf1, ch);
     return TRUE;
@@ -2433,10 +2433,10 @@ int guardian(P_char ch, P_char pl, int cmd, char *arg)
       }
       else
       {
-        sprintf(Gbuf1, "$N bows before you, saying 'Right this way, My %s'",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "$N bows before you, saying 'Right this way, My %s'",
                 (GET_SEX(pl) == SEX_FEMALE) ? "Lady" : "Lord");
         act(Gbuf1, FALSE, pl, 0, ch, TO_CHAR);
-        sprintf(Gbuf1, "$N bows before $n, saying 'Right this way, My %s'",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "$N bows before $n, saying 'Right this way, My %s'",
                 (GET_SEX(pl) == SEX_FEMALE) ? "Lady" : "Lord");
         act(Gbuf1, FALSE, pl, 0, ch, TO_ROOM);
         return FALSE;
@@ -2734,21 +2734,21 @@ int dryad(P_char ch, P_char pl, int cmd, char *arg)
 
             if (IS_FIGHTING(vict) && (vict != ch) && GET_MASTER(vict) != ch)
             {
-              sprintf(Gbuf4, "The dryad screams at %s, 'Protect me slave!'",
+              snprintf(Gbuf4, MAX_STRING_LENGTH, "The dryad screams at %s, 'Protect me slave!'",
                       (IS_NPC(tmp_ch) ? tmp_ch->player.
                        short_descr : GET_NAME(tmp_ch)));
               act(Gbuf4, FALSE, ch, 0, tmp_ch, TO_NOTVICT);
-              sprintf(Gbuf4,
+              snprintf(Gbuf4, MAX_STRING_LENGTH,
                       "The dryad screams at you, 'Protect me slave!'\r\n");
               send_to_char(Gbuf4, tmp_ch);
-              sprintf(Gbuf4,
+              snprintf(Gbuf4, MAX_STRING_LENGTH,
                       "%s dives inbetween %s and the dryad, and takes up the fight!",
                       (IS_NPC(tmp_ch) ? tmp_ch->player.
                        short_descr : GET_NAME(tmp_ch)),
                       (IS_NPC(vict) ? vict->player.
                        short_descr : GET_NAME(vict)));
               act(Gbuf4, FALSE, ch, 0, 0, TO_NOTVICT);
-              sprintf(Gbuf4,
+              snprintf(Gbuf4, MAX_STRING_LENGTH,
                       "You dive inbetween your dryad and %s, taking up the fight!\r\n",
                       (IS_NPC(vict) ? vict->player.
                        short_descr : GET_NAME(vict)));
@@ -4329,7 +4329,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
                 FALSE, ch, selling, 0, TO_ROOM);
             break;
           case 1:
-            sprintf(Gbuf4, "Only %d coppers - a bargain!", i_val);
+            snprintf(Gbuf4, MAX_STRING_LENGTH, "Only %d coppers - a bargain!", i_val);
             do_say(ch, Gbuf4, 0);
             break;
           case 2:
@@ -4398,7 +4398,7 @@ int sales_spec(P_char ch, P_char pl, int cmd, char *arg)
         {
           add_follower(ch, pl);
           SET_BIT(ch->specials.act, ACT_SENTINEL);
-          sprintf(Gbuf4,
+          snprintf(Gbuf4, MAX_STRING_LENGTH,
                   "The salesman saunters up to you and says, 'Hey %s!  Have I got a\r\n"
                   "deal for you! Take a look at this magnificent $o.\r\n"
                   "Isn't it just a dream?  And it can be yours for just %d coins!'",
@@ -5036,7 +5036,7 @@ int mage_anapest(P_char ch, P_char pl, int cmd, char *arg)
         }
         else if ((i != ch) && (GET_ALIGNMENT(i) > 350))
         {
-          sprintf(Gbuf4, "%s I don't think I like you!", i->player.name);
+          snprintf(Gbuf4, MAX_STRING_LENGTH, "%s I don't think I like you!", i->player.name);
           do_tell(ch, Gbuf4, 0);
         }
       }
@@ -9432,10 +9432,10 @@ int jotun_mimer(P_char ch, P_char pl, int cmd, char *arg)
         mobsay(ch, "None but giants may pass through to my well.");
       else
       {
-        sprintf(Gbuf1, "$N bows before you, saying 'Right this way, My %s'",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "$N bows before you, saying 'Right this way, My %s'",
                 (GET_SEX(pl) == SEX_FEMALE) ? "Lady" : "Lord");
         act(Gbuf1, FALSE, pl, 0, ch, TO_CHAR);
-        sprintf(Gbuf1, "$N bows before $n, saying 'Right this way, My %s'",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "$N bows before $n, saying 'Right this way, My %s'",
                 (GET_SEX(pl) == SEX_FEMALE) ? "Lady" : "Lord");
         act(Gbuf1, FALSE, pl, 0, ch, TO_ROOM);
         return FALSE;
@@ -9502,10 +9502,10 @@ int archer(P_char ch, P_char pl, int cmd, char *arg)
   if (GET_POS(ch) != POS_STANDING)
     return FALSE;
 
-  sprintf(buf, "You feel a sharp pain in your side as an arrow finds its mark!");
-  sprintf(buf1, "You hear a dull thud as an arrow pierces $n!");
-  sprintf(buf2, "An arrow whistles by your ear, barely missing you!");
-  sprintf(buf3, "An arrow narrowly misses $n!");
+  snprintf(buf, MAX_STRING_LENGTH, "You feel a sharp pain in your side as an arrow finds its mark!");
+  snprintf(buf1, MAX_STRING_LENGTH, "You hear a dull thud as an arrow pierces $n!");
+  snprintf(buf2, MAX_STRING_LENGTH, "An arrow whistles by your ear, barely missing you!");
+  snprintf(buf3, MAX_STRING_LENGTH, "An arrow narrowly misses $n!");
 
   for (i = 0; i < NUM_ARCHERS; i++)
   {
@@ -10027,7 +10027,7 @@ int justice_clerk(P_char ch, P_char pl, int cmd, char *arg)
 
     if (i < 1 || i > LAST_HOME)
     {
-      sprintf(tempbuf, "Justice_clerk is in town %d?!?\r\n", i);
+      snprintf(tempbuf, 512, "Justice_clerk is in town %d?!?\r\n", i);
       if( pl )
         send_to_char( "This town has issues... It doesn't seem to be a town.\n", pl );
       return FALSE;
@@ -10039,7 +10039,7 @@ int justice_clerk(P_char ch, P_char pl, int cmd, char *arg)
     {
       if( IS_PC(pl) )
       {
-        sprintf( tempbuf, "%s", GET_NAME(pl) );
+        snprintf(tempbuf, 512, "%s", GET_NAME(pl) );
         do_action(ch, tempbuf, CMD_SLAP);
       }
       return FALSE;
@@ -10053,12 +10053,12 @@ int justice_clerk(P_char ch, P_char pl, int cmd, char *arg)
         return TRUE;
       }
 
-      sprintf(buf, "&+RList of all wanted criminals&N.\r\n");
+      snprintf(buf, MAX_STRING_LENGTH, "&+RList of all wanted criminals&N.\r\n");
       while ((crec = crime_find(hometowns[CHAR_IN_TOWN(ch) - 1].crime_list,
                                 NULL, NULL, 0, NOWHERE, J_STATUS_WANTED,
                                 crec)))
       {
-        sprintf(buf, "%s&+R%s&N wanted for %s, reward &+c%d&n platinums.\r\n",
+        snprintf(buf, MAX_STRING_LENGTH, "%s&+R%s&N wanted for %s, reward &+c%d&n platinums.\r\n",
                 buf, crec->attacker, crime_list[crec->crime],
                 (int) crec->money);
       }
@@ -10079,7 +10079,7 @@ int justice_clerk(P_char ch, P_char pl, int cmd, char *arg)
             ADD_MONEY(ch, crec->money * 1000);
           else
             return TRUE;
-          sprintf(buf, "You give %s %s.\r\n\r\n", ch->player.short_descr,
+          snprintf(buf, MAX_STRING_LENGTH, "You give %s %s.\r\n\r\n", ch->player.short_descr,
                   coin_stringv(crec->money * 1000));
           send_to_char(buf, pl);
           act("$n gives $N some money.", TRUE, pl, 0, ch, TO_NOTVICT);
@@ -10090,7 +10090,7 @@ int justice_clerk(P_char ch, P_char pl, int cmd, char *arg)
         }
         else
         {
-          sprintf(buf,
+          snprintf(buf, MAX_STRING_LENGTH,
                   "You do not have enough money, your debt is %d platinum.\r\n\r\n",
                   crec->money);
           send_to_char(buf, pl);
@@ -10930,7 +10930,7 @@ int transp_tow_acerlade(P_char ch, P_char pl, int cmd, char *arg)
   if (ch->in_room == NOWHERE)
     return FALSE;
 
-  sprintf(buf,
+  snprintf(buf, 256,
           "&+LWith a wicked grin, Aceralde brutally steals control of &n$N&+L!");
   for (tch = world[ch->in_room].people; tch; tch = next)
   {
@@ -11492,7 +11492,7 @@ int world_quest(P_char ch, P_char pl, int cmd, char *arg)
         }
       }
 
-      sprintf(money_string, "OH NO, you've cost me alot of time and money, but toss me %s and I'll take care of your task!", coin_stringv(temp) );
+      snprintf(money_string, MAX_INPUT_LENGTH, "OH NO, you've cost me alot of time and money, but toss me %s and I'll take care of your task!", coin_stringv(temp) );
 
       mobsay(ch, money_string);
       if (GET_MONEY(pl) < temp)
@@ -14072,7 +14072,7 @@ int shabo_palle(P_char ch, P_char vict, int cmd, char *arg)
 
   if (arg && cmd == CMD_ASK)
   {
-    sprintf(asked, "%s", arg);
+    snprintf(asked, MAX_STRING_LENGTH, "%s", arg);
     for (rr = 0; *(asked + rr) != '\0'; rr++)
       asked[rr] = LOWER(*(asked + rr));
   }
@@ -14532,7 +14532,7 @@ int witch_doctor(P_char witch, P_char customer, int cmd, char *arg)
       FALSE, witch, 0, customer, TO_VICT);
     for( i = 0; elixir_list[i].keyword; i++ )
     {
-      sprintf(buf, "&+W%d)&n %s  - %d &+Wplatinum&n\r\n", i + 1, elixir_list[i].desc, elixir_list[i].price);
+      snprintf(buf, 256, "&+W%d)&n %s  - %d &+Wplatinum&n\r\n", i + 1, elixir_list[i].desc, elixir_list[i].price);
       send_to_char(buf, customer);
     }
     return TRUE;
@@ -14587,7 +14587,7 @@ int witch_doctor(P_char witch, P_char customer, int cmd, char *arg)
           else if (elixir_list[i].affect_vector == 5)
             af.bitvector5 = elixir_list[i].affect_flag;
           affect_to_char(customer, &af);
-          sprintf(buf, "$n reaches down to $s sack and hands to you %s.\n"
+          snprintf(buf, 256, "$n reaches down to $s sack and hands to you %s.\n"
             "As you quaff %s you feel the &+Ymagical powers&n surge through your body"
             " transforming you and making more &+Wpowerful&n than before.",
             elixir_list[i].desc, elixir_list[i].desc);
@@ -16175,7 +16175,7 @@ int llyren(P_char ch, P_char pl, int cmd, char *arg)
       owner = t_obj->loc.carrying;
     else if( OBJ_ROOM(t_obj) )
     {
-      sprintf(buffer, "You see %s in %s.\n", t_obj->short_description,
+      snprintf(buffer, 256, "You see %s in %s.\n", t_obj->short_description,
           world[t_obj->loc.room].name);
       send_to_char(buffer, pl);
       continue;
@@ -16192,7 +16192,7 @@ int llyren(P_char ch, P_char pl, int cmd, char *arg)
       }
       if( OBJ_ROOM(container) )
       {
-        sprintf(buffer, "You see %s inside %s in %s.\n", OBJ_SHORT(t_obj), OBJ_SHORT(container),
+        snprintf(buffer, 256, "You see %s inside %s in %s.\n", OBJ_SHORT(t_obj), OBJ_SHORT(container),
           world[container->loc.room].name);
         send_to_char(buffer, pl);
         continue;
@@ -16230,7 +16230,7 @@ int teacher(P_char ch, P_char pl, int cmd, char *arg)
       !pl || !GET_CLASS(pl, ch->player.m_class))
     return FALSE;
 
-  sprintf(buf, 
+  snprintf(buf, 512, 
     "For your further path of development it is crucial that you visit\n"
     "%s of the magical runestones locates in the following lands:\n",
     GET_LEVEL(pl) >= get_property("exp.levelForAllRunestones", 51) - 1 ? 
@@ -16328,7 +16328,7 @@ int clear_epic_task_spec(P_char npc, P_char ch, int cmd, char *arg)
     if( GET_MONEY(ch) < price )
     {
       mobsay(npc, "I can't pray a proper prayer on an empty stomach!");
-      sprintf(buffer, "You need at least %s&n more!", coin_stringv(price - GET_MONEY(ch)));
+      snprintf(buffer, MAX_STRING_LENGTH, "You need at least %s&n more!", coin_stringv(price - GET_MONEY(ch)));
       mobsay(npc, buffer);
       return TRUE;
     }
@@ -16600,7 +16600,7 @@ int monk_remort(P_char ch, P_char pl, int cmd, char *arg)
   if (!strcmp(msg, "monk"))
   {
     do_say(ch, "Yes Monks are a powerful kind indeed.  If you seek to become one, I can teach you for a price.", -4);
-    sprintf(Gbuf, "It will cost you %s, and you must posses %d epics.", coin_stringv(plat), epiccost);
+    snprintf(Gbuf, MAX_STRING_LENGTH, "It will cost you %s, and you must posses %d epics.", coin_stringv(plat), epiccost);
     do_say(ch, Gbuf, -4);
     do_say(ch, "Ask me 'remort' to confirm.", -4);
     return TRUE;
@@ -16642,7 +16642,7 @@ int monk_remort(P_char ch, P_char pl, int cmd, char *arg)
     // PASSED!
 
     SUB_MONEY(pl, plat, 0);
-    sprintf(Gbuf, "%s takes your money.\n", ch->player.short_descr);
+    snprintf(Gbuf, MAX_STRING_LENGTH, "%s takes your money.\n", ch->player.short_descr);
     send_to_char(Gbuf, pl);
     
     forget_spells(pl, -1);
@@ -16651,7 +16651,7 @@ int monk_remort(P_char ch, P_char pl, int cmd, char *arg)
     pl->player.m_class = CLASS_MONK;
     do_start(pl, 1);
 
-    sprintf(Gbuf2, "You begin listening to %s as he begins\n", ch->player.short_descr);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "You begin listening to %s as he begins\n", ch->player.short_descr);
     send_to_char(Gbuf2, pl);
     send_to_char("describing the ways of the &+LM&+won&+Lk&n to you.\n", pl);
     send_to_char("Before too long, you begin to forget your priesthood.\n", pl);
@@ -16687,9 +16687,9 @@ int smelter(P_char ch, P_char pl, int cmd, char *argument)
     }
     if( isname(arg2, "smelting smelt") )
     {
-      sprintf( buf, "You ask $N '%s'", rest );
+      snprintf(buf, MAX_STRING_LENGTH, "You ask $N '%s'", rest );
       act( buf, FALSE, pl, 0, ch, TO_CHAR );
-      sprintf( buf, "$n asks $N '%s'", rest );
+      snprintf(buf, MAX_STRING_LENGTH, "$n asks $N '%s'", rest );
       act( buf, TRUE, pl, 0, ch, TO_ROOM );
       act( "&n$n says to $N '&+YSmelting &Nhappens to be my specialty!'", TRUE, ch, 0, pl, TO_ROOM );
       act( "&n$n claps his hands, smiling.", FALSE, ch, 0, NULL, TO_ROOM );
@@ -16728,7 +16728,7 @@ int smelter(P_char ch, P_char pl, int cmd, char *argument)
       }
       pl->points.cash[type] -= amount;
       ch->points.cash[type] += amount;
-      sprintf( buf, "You give %d %s to $N.", amount, (type == 0) ? "copper" : (type == 1) ? "silver" :
+      snprintf(buf, MAX_STRING_LENGTH, "You give %d %s to $N.", amount, (type == 0) ? "copper" : (type == 1) ? "silver" :
         (type == 2) ? "gold" : "platinum" );
       act(buf, FALSE, pl, obj, ch, TO_CHAR);
       finish_smelt( ch, pl, 0 );
@@ -16931,7 +16931,7 @@ void finish_smelt( P_char ch, P_char pl, int vnum )
     }
     if( GET_PLATINUM(ch) < price )
     {
-      sprintf( buf, "I need %d more &+Wplatinum&n to complete this transaction.", price - GET_PLATINUM(ch) );
+      snprintf(buf, MAX_STRING_LENGTH, "I need %d more &+Wplatinum&n to complete this transaction.", price - GET_PLATINUM(ch) );
       do_say( ch, buf, CMD_SAY );
       return;
     }

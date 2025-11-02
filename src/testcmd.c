@@ -88,7 +88,7 @@ void disproom(P_char ch, int x, int y)
   int newy = local_y + y;
 
   char buff[100];
-  sprintf(buff, "(%3d,%3d) : [%6d] <%3d,%3d>\n", x,y, (zone_start_vnum + newx + ( newy * zone->mapx)), newx, newy);
+  snprintf(buff, 100, "(%3d,%3d) : [%6d] <%3d,%3d>\n", x,y, (zone_start_vnum + newx + ( newy * zone->mapx)), newx, newy);
   send_to_char(buff, ch);
 }
 
@@ -97,7 +97,7 @@ void display_exp_table(P_char ch, char *arg, int cmd)
   for( int i = 0; i < TOTALLVLS; i++ )
   {
     char buff[128];
-    sprintf(buff, "%d: %ld\n", i, new_exp_table[i]);
+    snprintf(buff, 128, "%d: %ld\n", i, new_exp_table[i]);
     send_to_char(buff, ch);
   }
 }
@@ -120,7 +120,7 @@ void do_test_lava(P_char ch, char *arg, int cmd)
 
       sprintbitde(rm->room_flags, room_bits, buf2);
 
-      sprintf( buf, "&+YRoom: [&N%d&+Y](&N%d&+Y)  Zone: &N%d&+Y  Sector type: &N%s\n"
+      snprintf(buf, MAX_STRING_LENGTH, "&+YRoom: [&N%d&+Y](&N%d&+Y)  Zone: &N%d&+Y  Sector type: &N%s\n"
         "&+YName: &N%s\n&+YRoom flags:&N %s\n\n",
         rm->number, realRoomNum, zone_table[rm->zone].number, sector_types[rm->sector_type],
         rm->name, buf2 );
@@ -130,7 +130,7 @@ void do_test_lava(P_char ch, char *arg, int cmd)
     realRoomNum++;
   }
   --realRoomNum;
-  sprintf( buf, "From room %d (%d) to %d (%d), found %d Lava rooms.\n\r", START_ROOM, world[START_ROOM].number,
+  snprintf(buf, MAX_STRING_LENGTH, "From room %d (%d) to %d (%d), found %d Lava rooms.\n\r", START_ROOM, world[START_ROOM].number,
     realRoomNum, world[realRoomNum].number, count );
   send_to_char( buf, ch );
 }
@@ -165,7 +165,7 @@ void do_test_room(P_char ch, char *arg, int cmd)
   local_x = ( vroom - zone_start_vnum) % zone->mapy;
 
   char buff[100];
-  sprintf( buff, "&+CZone:&n (%dx%d) [%d,%d] '%s'&n %s\n",
+  snprintf(buff, 100, "&+CZone:&n (%dx%d) [%d,%d] '%s'&n %s\n",
     zone->mapx, zone->mapy, local_x, local_y, zone->name, zone->filename );
   send_to_char(buff, ch);
 
@@ -352,7 +352,7 @@ void do_test(P_char ch, char *arg, int cmd)
     return;
   }
 
-  sprintf(buff, "%s in [%d]: test %s", GET_NAME(ch), world[ch->in_room].number, arg);
+  snprintf(buff, MAX_STRING_LENGTH, "%s in [%d]: test %s", GET_NAME(ch), world[ch->in_room].number, arg);
 
   wizlog(56, buff);
   logit(LOG_WIZ, buff);
@@ -766,12 +766,12 @@ void do_test(P_char ch, char *arg, int cmd)
     char buf2[MAX_STRING_LENGTH];
 
     arg = skip_spaces(arg);
-    sprintf( buf1, "%s", CRYPT( arg, GET_NAME(ch) ) );
-    sprintf( buf2, "%s", CRYPT2( arg, GET_NAME(ch) ) );
+    snprintf(buf1, MAX_STRING_LENGTH, "%s", CRYPT( arg, GET_NAME(ch) ) );
+    snprintf(buf2, MAX_STRING_LENGTH, "%s", CRYPT2( arg, GET_NAME(ch) ) );
     sprintf( buff, "%s\n\rcrypt1: %s, crypt1(crypt1): %s.\n\rcrypt2: %s, crypt2(crypt2): %s.\n\r",
       arg, buf1, CRYPT( arg, buf1 ), buf2, CRYPT2( arg, buf2 ) );
     send_to_char( buff, ch );
-    sprintf( buf1, "%s", CRYPT2( arg, buf2 ) );
+    snprintf(buf1, MAX_STRING_LENGTH, "%s", CRYPT2( arg, buf2 ) );
     if( !strcmp( buf1, buf2 ) )
       send_to_char( "They are the same.\n\r", ch );
     else
@@ -843,7 +843,7 @@ void do_test(P_char ch, char *arg, int cmd)
     if( spell )
     {
       char buf[256];
-      sprintf( buf, "&+Cpower of %s\n", skills[spell].name );
+      snprintf(buf, 256, "&+Cpower of %s\n", skills[spell].name );
       send_to_char(buf, ch);
     }
     return;
@@ -871,12 +871,12 @@ void do_test(P_char ch, char *arg, int cmd)
     if( mob )
     {
       classes = count_classes( mob );
-      sprintf( buf, "%s (%d) has %d classes.\n", J_NAME(mob), IS_PC(mob) ? -1 : GET_VNUM(mob), classes );
+      snprintf(buf, MAX_STRING_LENGTH, "%s (%d) has %d classes.\n", J_NAME(mob), IS_PC(mob) ? -1 : GET_VNUM(mob), classes );
       send_to_char( buf, ch );
     }
     else
     {
-      sprintf( buf, "Char '%s' not found.\n", skip_spaces(arg) );
+      snprintf(buf, MAX_STRING_LENGTH, "Char '%s' not found.\n", skip_spaces(arg) );
       send_to_char( buf, ch );
     }
     return;
@@ -898,7 +898,7 @@ void do_test(P_char ch, char *arg, int cmd)
     {
       for( int i = 1;i <= num; i++ )
       {
-        sprintf( buf, "%d log %d: %f == %d.\n\r", i, i, i * log(i), (int) (i * log(i)) );
+        snprintf(buf, MAX_STRING_LENGTH, "%d log %d: %f == %d.\n\r", i, i, i * log(i), (int) (i * log(i)) );
         send_to_char( buf, ch );
       }
     }
@@ -916,7 +916,7 @@ void do_test(P_char ch, char *arg, int cmd)
     {
       for( int i = 1;i <= num; i++ )
       {
-        sprintf( buf, "%d log2 %d: %f == %d.\n\r", i, i, i * log2(i), (int) (i * log2(i)) );
+        snprintf(buf, MAX_STRING_LENGTH, "%d log2 %d: %f == %d.\n\r", i, i, i * log2(i), (int) (i * log2(i)) );
         send_to_char( buf, ch );
       }
     }
@@ -936,11 +936,11 @@ void do_test(P_char ch, char *arg, int cmd)
     }
     if( num < FIRST_SPELL || num > LAST_SPELL )
     {
-      sprintf( buf, "Spell must be a number between %d and %d, or a valid spell name.\n\r", FIRST_SPELL, LAST_SPELL );
+      snprintf(buf, MAX_STRING_LENGTH, "Spell must be a number between %d and %d, or a valid spell name.\n\r", FIRST_SPELL, LAST_SPELL );
       send_to_char( buf, ch );
       return;
     }
-    sprintf( buf, "The mincircle for spell '%s' (%d), is %d.\n\r", spells[num], num, get_mincircle(num) );
+    snprintf(buf, MAX_STRING_LENGTH, "The mincircle for spell '%s' (%d), is %d.\n\r", spells[num], num, get_mincircle(num) );
     send_to_char( buf, ch );
   }
   else if ( isname("randomize", buff) )
@@ -1106,7 +1106,7 @@ void do_test_radiate(P_char ch, char *arg, int cmd)
   num_rooms = atoi(buff);
   message = skip_spaces(arg);
 
-  sprintf(buff, "%s in %s [%d] radiates \"%s\" %d rooms.", J_NAME(ch), world[ch->in_room].name,
+  snprintf(buff, MAX_STRING_LENGTH, "%s in %s [%d] radiates \"%s\" %d rooms.", J_NAME(ch), world[ch->in_room].name,
     world[ch->in_room].number, message, num_rooms );
   wizlog(56, buff);
   logit(LOG_WIZ, buff);

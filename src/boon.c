@@ -293,7 +293,7 @@ int count_boons(int active, int random)
   char dbqry[MAX_STRING_LENGTH];
   int count = 0;
 
-  sprintf(dbqry, "SELECT id FROM boons%s%s%s%s",
+  snprintf(dbqry, MAX_STRING_LENGTH, "SELECT id FROM boons%s%s%s%s",
       (active || random ? " WHERE " : ""),
       (active ? "(active = 1) " : ""),
       (active && random ? "AND " : ""),
@@ -1865,7 +1865,7 @@ int boon_display(P_char ch, char *argument)
 	  if (*player)
 	    sprintf(player + strlen(player), "OR pid = '%d' ", pid);
 	  else
-	    sprintf(player, "pid = '%d' ", pid);
+	    snprintf(player, MAX_STRING_LENGTH, "pid = '%d' ", pid);
 	  break;
 	}
       case 'u':
@@ -1874,7 +1874,7 @@ int boon_display(P_char ch, char *argument)
 	  if (*name)
 	    sprintf(name + strlen(name), "OR author LIKE '%s' ", arg);
 	  else
-	    sprintf(name, "author LIKE '%s' ", arg);
+	    snprintf(name, MAX_STRING_LENGTH, "author LIKE '%s' ", arg);
 	  break;
 	}
       case 't':
@@ -1893,7 +1893,7 @@ int boon_display(P_char ch, char *argument)
 	    if (*type)
 	      sprintf(type + strlen(type), "OR type = '%d' ", get_valid_boon_type(arg));
 	    else
-	      sprintf(type, "type = '%d' ", get_valid_boon_type(arg));
+	      snprintf(type, MAX_STRING_LENGTH, "type = '%d' ", get_valid_boon_type(arg));
 	  }
 	  break;
 	}
@@ -1913,7 +1913,7 @@ int boon_display(P_char ch, char *argument)
 	    if (*option)
 	      sprintf(option + strlen(option), "OR opt = '%d' ", get_valid_boon_option(arg));
 	    else
-	      sprintf(option, "opt = '%d' ", get_valid_boon_option(arg));
+	      snprintf(option, MAX_STRING_LENGTH, "opt = '%d' ", get_valid_boon_option(arg));
 	  }
 	  break;
 	}
@@ -2498,13 +2498,13 @@ void boon_notify(int id, P_char ch, int action)
       switch (action)
       {
       case BN_CREATE: // Might become annoying
-        sprintf(buff, "&+CYou qualify for a new boon (#%d) that has been created.&n\r\n", bdata.id);
+        snprintf(buff, MAX_STRING_LENGTH, "&+CYou qualify for a new boon (#%d) that has been created.&n\r\n", bdata.id);
         break;
       case BN_REACTIVATE:
-  	    sprintf(buff, "&+CYou qualify for a boon (#%d) that has been reactivated.&n\r\n", bdata.id);
+  	    snprintf(buff, MAX_STRING_LENGTH, "&+CYou qualify for a boon (#%d) that has been reactivated.&n\r\n", bdata.id);
 	      break;
       case BN_EXTEND:
-        sprintf(buff, "&+CThe duration for Boon # %d has been extended.&n\r\n", bdata.id);
+        snprintf(buff, MAX_STRING_LENGTH, "&+CThe duration for Boon # %d has been extended.&n\r\n", bdata.id);
         break;
       case BN_NOTCH: // Progress notification
         BoonProgress bpg;
@@ -2517,13 +2517,13 @@ void boon_notify(int id, P_char ch, int action)
           char tmp[MAX_STRING_LENGTH];
           if( (int)bdata.criteria2 < 0 || (int)bdata.criteria2 > LAST_RACE )
           {
-            sprintf(tmp, "Invalid Race");
+            snprintf(tmp, MAX_STRING_LENGTH, "Invalid Race");
           }
           else
           {
-            sprintf(tmp, "%s", race_names_table[(int)bdata.criteria2].ansi);
+            snprintf(tmp, MAX_STRING_LENGTH, "%s", race_names_table[(int)bdata.criteria2].ansi);
           }
-          sprintf(buff, "&+CYou have killed %d of %d %s&+C(s) for boon # %d.&n\r\n", (int)bpg.counter, (int)bdata.criteria, race_names_table[(int)bdata.criteria2].ansi, bdata.id);
+          snprintf(buff, MAX_STRING_LENGTH, "&+CYou have killed %d of %d %s&+C(s) for boon # %d.&n\r\n", (int)bpg.counter, (int)bdata.criteria, race_names_table[(int)bdata.criteria2].ansi, bdata.id);
         }
         else if( bdata.option == BOPT_MOB )
         {
@@ -2534,34 +2534,34 @@ void boon_notify(int id, P_char ch, int action)
           if( (int)bdata.criteria2 > 0 && (r_num = real_mobile((int)bdata.criteria2)) > 0
             && (mob = read_mobile(r_num, REAL)) )
 	        {
-            sprintf(tmp, "%s", J_NAME(mob));
+            snprintf(tmp, MAX_STRING_LENGTH, "%s", J_NAME(mob));
             extract_char(mob);
   	      }
           else
           {
-            sprintf(tmp, "Invalid Mob");
+            snprintf(tmp, MAX_STRING_LENGTH, "Invalid Mob");
           }
-          sprintf(buff, "&+CYou have killed %d of %d %s&+C(s) for boon # %d.&n\r\n", (int)bpg.counter, (int)bdata.criteria, tmp, bdata.id);
+          snprintf(buff, MAX_STRING_LENGTH, "&+CYou have killed %d of %d %s&+C(s) for boon # %d.&n\r\n", (int)bpg.counter, (int)bdata.criteria, tmp, bdata.id);
         }
         else if( bdata.option == BOPT_FRAGS )
         {
-          sprintf(buff, "&+CYou have obtained %.2f out of %.2f frags for boon # %d.&n\r\n", bpg.counter, bdata.criteria, bdata.id);
+          snprintf(buff, MAX_STRING_LENGTH, "&+CYou have obtained %.2f out of %.2f frags for boon # %d.&n\r\n", bpg.counter, bdata.criteria, bdata.id);
         }
         else if( bdata.option == BOPT_NONE ) // neverending progression
         {
-          sprintf(buff, "&+CYou gain some bonus experience.&n\r\n");
+          snprintf(buff, MAX_STRING_LENGTH, "&+CYou gain some bonus experience.&n\r\n");
         }
         break;
       case BN_COMPLETE: // Completion notification
-        sprintf(buff, "&+CYou have completed boon # %d.&n\r\n", bdata.id);
+        snprintf(buff, MAX_STRING_LENGTH, "&+CYou have completed boon # %d.&n\r\n", bdata.id);
         break;
       case BN_VOID: // boon_remove()
-        sprintf(buff, "&+CBoon # %d is no longer available.&n\r\n", bdata.id);
+        snprintf(buff, MAX_STRING_LENGTH, "&+CBoon # %d is no longer available.&n\r\n", bdata.id);
         break;
       case BN_EXPIRE: // Expired notification
         // TODO: Might just make this only if you have a progress entry for it.
         // or if you're currently in the zone, or if you're currently in the nexus, etc...
-        sprintf(buff, "&+CBoon # %d has expired.&n\r\n", bdata.id);
+        snprintf(buff, MAX_STRING_LENGTH, "&+CBoon # %d has expired.&n\r\n", bdata.id);
         break;
       default:
         break;
@@ -2816,21 +2816,21 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
   // Modify the SQL search based on the option
   if( option == BOPT_NONE )
   {
-    sprintf(buff, " AND (criteria = '%d')", ROOM_ZONE_NUMBER(ch->in_room));
+    snprintf(buff, MAX_STRING_LENGTH, " AND (criteria = '%d')", ROOM_ZONE_NUMBER(ch->in_room));
   }
   else if( option == BOPT_ZONE )
   {
-    sprintf(buff, " AND (criteria = '%d')", (int)data);
+    snprintf(buff, MAX_STRING_LENGTH, " AND (criteria = '%d')", (int)data);
   }
   else if( option == BOPT_LEVEL )
   {
-    sprintf(buff, " AND (criteria = '%d' OR criteria = '0')", GET_LEVEL(ch));
+    snprintf(buff, MAX_STRING_LENGTH, " AND (criteria = '%d' OR criteria = '0')", GET_LEVEL(ch));
   }
   else if( option == BOPT_MOB )
   {
     if( IS_NPC(victim) && !IS_PC_PET(victim) )
     {
-      sprintf(buff, " AND (criteria2 = '%d')", GET_VNUM(victim));
+      snprintf(buff, MAX_STRING_LENGTH, " AND (criteria2 = '%d')", GET_VNUM(victim));
     }
     else
     {
@@ -2850,7 +2850,7 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
     if( (IS_NPC(victim) && !get_linked_char(victim, LNK_PET) && !affected_by_spell(victim, TAG_CONJURED_PET))
       || (IS_PC(victim) && GET_RACEWAR(ch) != GET_RACEWAR(victim)) )
     {
-      sprintf(buff, " AND (criteria2 = '%d')", GET_RACE(victim));
+      snprintf(buff, MAX_STRING_LENGTH, " AND (criteria2 = '%d')", GET_RACE(victim));
     }
     else
     {
@@ -2859,17 +2859,17 @@ void check_boon_completion(P_char ch, P_char victim, double data, int option)
   }
   else if( option == BOPT_FRAG )
   {
-    sprintf(buff, " AND (criteria <= '%f')", data);
+    snprintf(buff, MAX_STRING_LENGTH, " AND (criteria <= '%f')", data);
   }
   //else if (option == BOPT_FRAGS) // No need for this, we check below in progress
   //else if (option == BOPT_GH) // not imped
   else if( option == BOPT_OP || option == BOPT_NEXUS || option == BOPT_CTF || option == BOPT_CTFB )
   {
-    sprintf(buff, " AND (criteria = '%d')", (int)data);
+    snprintf(buff, MAX_STRING_LENGTH, " AND (criteria = '%d')", (int)data);
   }
 
   // Perform the search
-  sprintf(dbqry, "SELECT id FROM boons WHERE opt = '%d' AND active = '1' AND (racewar = '0' OR racewar = '%d') AND (pid = '0' OR pid = '%d')%s", option, GET_RACEWAR(ch), GET_PID(ch), buff);
+  snprintf(dbqry, MAX_STRING_LENGTH, "SELECT id FROM boons WHERE opt = '%d' AND active = '1' AND (racewar = '0' OR racewar = '%d') AND (pid = '0' OR pid = '%d')%s", option, GET_RACEWAR(ch), GET_PID(ch), buff);
   if( !qry(dbqry) )
   {
     debug("check_boon_completion(): can't read from db");

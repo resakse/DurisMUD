@@ -994,12 +994,12 @@ void show_world_events(P_char ch, const char* arg)
             count++;
           }
         }
-      sprintf(buf, "There are currently %d events scheduled on the system.\nSpecify a function name to see more information about that particular event.\n", count);
+      snprintf(buf, MAX_STRING_LENGTH, "There are currently %d events scheduled on the system.\nSpecify a function name to see more information about that particular event.\n", count);
       send_to_char(buf, ch);
       return;
     }
 
-    sprintf(buf, "Event function: %s\n\n", arg);
+    snprintf(buf, MAX_STRING_LENGTH, "Event function: %s\n\n", arg);
     strcat(buf, "    pulse | timer |  char name   |  vict name   | obj vnum |  data ptr  \n");
     strcat(buf, "   -------|-------|--------------|--------------|----------|------------\n");
     for (int i = 0; i < PULSES_IN_TICK; i++)

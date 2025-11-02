@@ -121,7 +121,7 @@ void event_write_statistic(P_char ch, P_char victim, P_obj obj, void *data)
     else if (t_ch && IS_TRUSTED(t_ch))
       gods++;
   }
-  sprintf(fname, "lib/statistics/statistics_general%s", mdate);
+  snprintf(fname, 256, "lib/statistics/statistics_general%s", mdate);
   f = fopen(fname, "a");
   if (!f)
     return;
@@ -247,7 +247,7 @@ void do_statistic(P_char ch, char *argument, int val)
     return;
   }
 
-  sprintf(fname, "lib/statistics/statistics_general%s", Gbuf1);
+  snprintf(fname, 256, "lib/statistics/statistics_general%s", Gbuf1);
   f = fopen(fname, "r");
   if (!f)
   {
@@ -540,7 +540,7 @@ int show_moth_stati(P_char ch, char *stati_date, char *argument)
 //create_zone(0);
   memset(day, 0, sizeof(day));
   memset(month, 0, sizeof(month));
-  sprintf(Gbuf4, "");
+  snprintf(Gbuf4, MAX_STRING_LENGTH, "");
   strcat(buf, "");
 
   send_to_char("\t\t\t&+W", ch);
@@ -559,11 +559,11 @@ int show_moth_stati(P_char ch, char *stati_date, char *argument)
     i++;
     stati_date[strlen(stati_date) - 2] = '\0';
     if (i < 10)
-      sprintf(Gbuf0, "0%d", i);
+      snprintf(Gbuf0, MAX_STRING_LENGTH, "0%d", i);
     else
-      sprintf(Gbuf0, "%2d", i);
+      snprintf(Gbuf0, MAX_STRING_LENGTH, "%2d", i);
     strcat(stati_date, Gbuf0);
-    sprintf(fname, "lib/statistics/statistics_general%s", stati_date);
+    snprintf(fname, 256, "lib/statistics/statistics_general%s", stati_date);
     f = fopen(fname, "r");
     if (!f)
     {

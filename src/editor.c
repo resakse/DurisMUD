@@ -310,7 +310,7 @@ static void edit_list_data(struct edit_data *data)
   char     buf[4096];
   int      i = 0;
 
-  sprintf(buf, "\r\n&+CEdit to a maximum of %d lines&N\r\n", data->max_lines);
+  snprintf(buf, 4096, "\r\n&+CEdit to a maximum of %d lines&N\r\n", data->max_lines);
   SEND_TO_Q(buf, data->desc);
   SEND_TO_Q("\r\n&+YType \"&+W+h&+Y\" on line by itself for help&N\r\n",
             data->desc);
@@ -320,7 +320,7 @@ static void edit_list_data(struct edit_data *data)
   {
     if (i == data->cur_line)
       SEND_TO_Q("&+G --- CURRENT INSERT POINT ---&N\r\n", data->desc);
-    sprintf(buf, "%3d&+W:&N %s\r\n", i + 1, data->lines[i]);
+    snprintf(buf, 4096, "%3d&+W:&N %s\r\n", i + 1, data->lines[i]);
     SEND_TO_Q(buf, data->desc);
     i++;
   }
@@ -371,7 +371,7 @@ void edit_string_add(struct edit_data *data, char *str)
       }
       else
       {
-        sprintf(buf, "&+YLine %d deleted.&N\r\n", ln);
+        snprintf(buf, MAX_STRING_LENGTH, "&+YLine %d deleted.&N\r\n", ln);
         SEND_TO_Q(buf, data->desc);
       }
     }
@@ -392,12 +392,12 @@ void edit_string_add(struct edit_data *data, char *str)
         c++;
       if (ln > c)
       {
-        sprintf(buf, "&+YMoved to end of buffer.&N\r\n");
+        snprintf(buf, MAX_STRING_LENGTH, "&+YMoved to end of buffer.&N\r\n");
         ln = c + 1;
       }
       else
       {
-        sprintf(buf, "&+YMoved to line %d.&N\r\n", ln);
+        snprintf(buf, MAX_STRING_LENGTH, "&+YMoved to line %d.&N\r\n", ln);
       }
       SEND_TO_Q(buf, data->desc);
       data->cur_line = (ln - 1);
@@ -505,7 +505,7 @@ edit_start(P_desc desc, char *old_text, int max_lines,
   SEND_TO_Q("\r\n", data->desc);
   edit_list_data(data);
 
-  sprintf(buf, "%3d&+W:&N ", data->cur_line + 1);
+  snprintf(buf, 20, "%3d&+W:&N ", data->cur_line + 1);
   SEND_TO_Q(buf, data->desc);
   return;
 }

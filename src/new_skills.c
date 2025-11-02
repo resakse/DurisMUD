@@ -756,7 +756,7 @@ void chant_diamond_soul(P_char ch, char *argument, int cmd)
     return;
   }
   
-  sprintf(buf, "You feel your magical resistance harden like a diamond.\r\n");
+  snprintf(buf, 100, "You feel your magical resistance harden like a diamond.\r\n");
   bzero(&af, sizeof(af));
   af.type = SKILL_DIAMOND_SOUL;
   af.flags = AFFTYPE_NODISPEL;
@@ -819,7 +819,7 @@ void chant_heroism(P_char ch, char *argument, int cmd)
     return;
   }
 
-  sprintf(buf, "A sense of heroism grows in your heart.\r\n");
+  snprintf(buf, 100, "A sense of heroism grows in your heart.\r\n");
 
   bzero(&af, sizeof(af));
   af.type = SKILL_HEROISM;
@@ -1529,30 +1529,30 @@ void do_chant(P_char ch, char *argument, int cmd)
 
   if (!argument || !*argument)
   {
-    sprintf(buf, "You know the following chants:\r\n");
-    sprintf(buf, "%s============================\r\n", buf);
+    snprintf(buf, 512, "You know the following chants:\r\n");
+    snprintf(buf, 512, "%s============================\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_QUIVERING_PALM) > 0)
-      sprintf(buf, "%sQuivering Palm\r\n", buf);
+      snprintf(buf, 512, "%sQuivering Palm\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_BUDDHA_PALM) > 0)
-      sprintf(buf, "%sBuddha palm\r\n", buf);
+      snprintf(buf, 512, "%sBuddha palm\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_HEROISM) > 0)
-      sprintf(buf, "%sHeroism\r\n", buf);
+      snprintf(buf, 512, "%sHeroism\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_CHI_PURGE) > 0)
-      sprintf(buf, "%sChi Purge\r\n", buf);
+      snprintf(buf, 512, "%sChi Purge\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_CALM) > 0)
-      sprintf(buf, "%sCalm\r\n", buf);
+      snprintf(buf, 512, "%sCalm\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_REGENERATE) > 0)
-      sprintf(buf, "%sRegenerate\r\n", buf);
+      snprintf(buf, 512, "%sRegenerate\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_JIN_TOUCH) > 0)
-      sprintf(buf, "%sJin Touch\r\n", buf);
+      snprintf(buf, 512, "%sJin Touch\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_FIST_OF_DRAGON) > 0)
-      sprintf(buf, "%sFist of dragon\r\n", buf);
+      snprintf(buf, 512, "%sFist of dragon\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_KI_STRIKE) > 0)
-      sprintf(buf, "%sKi Strike\r\n", buf);
+      snprintf(buf, 512, "%sKi Strike\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_TIGER_PALM) > 0)
-      sprintf(buf, "%sTiger Palm\r\n", buf);
+      snprintf(buf, 512, "%sTiger Palm\r\n", buf);
     if( IS_TRUSTED(ch) || GET_CHAR_SKILL(ch, SKILL_DIAMOND_SOUL) > 0)
-      sprintf(buf, "%sDiamond Soul\r\n", buf);
+      snprintf(buf, 512, "%sDiamond Soul\r\n", buf);
 
     send_to_char(buf, ch);
     return;
@@ -1778,7 +1778,7 @@ void do_OLD_bandage(P_char ch, char *arg, int cmd)
   if (GET_HIT(t_char) >= 0 /* && GET_HIT(t_char) < GET_MAX_HIT(t_char) */ )
   {
 /*
-    sprintf(Gbuf1, "Your battlefield first-aid won't do much for %s right now.\r\n", GET_NAME(t_char));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "Your battlefield first-aid won't do much for %s right now.\r\n", GET_NAME(t_char));
     send_to_char(Gbuf1, ch);
 */
     act("Your battlefield first-aid won't do much for $N right now.", TRUE,
@@ -1788,7 +1788,7 @@ void do_OLD_bandage(P_char ch, char *arg, int cmd)
   else if (GET_HIT(t_char) == GET_MAX_HIT(t_char))
   {
 /*
-    sprintf(Gbuf1, "%s is in perfect shape already!\r\n", HSSH(t_char));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s is in perfect shape already!\r\n", HSSH(t_char));
     send_to_char(Gbuf1, ch);
 */
     act("$N is in perfect shape already!", TRUE, ch, 0, t_char, TO_CHAR);
@@ -1887,7 +1887,7 @@ void event_summon_book(P_char ch, P_char victim, P_obj obj, void *data)
   char     namebuf[512];
   char    *tmp;
 
-  sprintf(bookname, "bookof%s", ch->player.name);
+  snprintf(bookname, 512, "bookof%s", ch->player.name);
 
   for (book = object_list; book; book = book->next)
   {
@@ -1904,9 +1904,9 @@ void event_summon_book(P_char ch, P_char victim, P_obj obj, void *data)
     return;
 
   SET_BIT(book->str_mask, STRUNG_DESC2 || STRUNG_KEYS);
-  sprintf(namebuf, "book spellbook %s", bookname);
+  snprintf(namebuf, 512, "book spellbook %s", bookname);
   book->name = str_dup(namebuf);
-  sprintf(namebuf, "a &+Wsp&+wel&+Wlb&+woo&+Wk&n &+Lbearing the insignia of&n %s", ch->player.name);
+  snprintf(namebuf, 512, "a &+Wsp&+wel&+Wlb&+woo&+Wk&n &+Lbearing the insignia of&n %s", ch->player.name);
   book->short_description = str_dup(namebuf);
   book->extra_flags |= ITEM_NORENT;
   book->bitvector = 0;
@@ -1929,7 +1929,7 @@ void event_summon_totem(P_char ch, P_char victim, P_obj obj, void *data)
   char     namebuf[512];
   char    *tmp;
 
-  sprintf(totemname, "totem spirit %s", ch->player.name);
+  snprintf(totemname, 512, "totem spirit %s", ch->player.name);
 
   for (totem = object_list; totem; totem = totem->next)
   {
@@ -1946,9 +1946,9 @@ void event_summon_totem(P_char ch, P_char victim, P_obj obj, void *data)
     return;
 
   SET_BIT(totem->str_mask, STRUNG_DESC2 || STRUNG_KEYS);
-  sprintf(namebuf, "totem spirit %s", totemname);
+  snprintf(namebuf, 512, "totem spirit %s", totemname);
   totem->name = str_dup(namebuf);
-  sprintf(namebuf, "a &+wspirit &+ytotem&n of&n &+G%s&n", ch->player.name);
+  snprintf(namebuf, 512, "a &+wspirit &+ytotem&n of&n &+G%s&n", ch->player.name);
   totem->short_description = str_dup(namebuf);
   totem->extra_flags |= ITEM_NORENT;
   totem->bitvector = 0;
@@ -2633,7 +2633,7 @@ void do_carve(struct char_data *ch, char *argument, int cmd)
   none = 0;
   if (!*part)
   {
-    sprintf(buf, "Parts of %s that are still intact:\r\n",
+    snprintf(buf, MAX_STRING_LENGTH, "Parts of %s that are still intact:\r\n",
             corpse->short_description);
     for (i = 0; i < numCarvables; i++)
       if (!(corpse->value[1] & carve_part_flag[i]))
@@ -3366,9 +3366,9 @@ void do_appraise(P_char ch, char *argument, int cmd)
   }
 
   if (estimate_value <= 0)
-    sprintf(buf, "This look like a piece of crap.\r\n");
+    snprintf(buf, MAX_STRING_LENGTH, "This look like a piece of crap.\r\n");
   else
-    sprintf(buf, "You estimate its value to: %s\r\n",
+    snprintf(buf, MAX_STRING_LENGTH, "You estimate its value to: %s\r\n",
             coin_stringv(estimate_value));
   send_to_char(buf, ch);
   CharWait(ch, 2 * PULSE_VIOLENCE);

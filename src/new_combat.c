@@ -945,16 +945,16 @@ void victParry(const P_char ch, const P_char victim, P_obj weapon,
 
   weaptype = weapon->value[0];
 
-  sprintf(notvictmsg, "$N %s a %s at $S %s from $n.",
+  snprintf(notvictmsg, MAX_STRING_LENGTH, "$N %s a %s at $S %s from $n.",
           getParryEaseString(passedby, FALSE),
           getWeaponUseString(weaptype),
           getBodyLocStrn(body_loc_target, victim));
 
-  sprintf(charmsg, "$N %s your %s at $S %s.",
+  snprintf(charmsg, MAX_STRING_LENGTH, "$N %s your %s at $S %s.",
           getParryEaseString(passedby, FALSE), getWeaponUseString(weaptype),
           getBodyLocStrn(body_loc_target, victim));
 
-  sprintf(victmsg, "You %s a %s from $n at your %s.",
+  snprintf(victmsg, MAX_STRING_LENGTH, "You %s a %s from $n at your %s.",
           getParryEaseString(passedby, TRUE), getWeaponUseString(weaptype),
           getBodyLocStrn(body_loc_target, victim));
 
@@ -986,16 +986,16 @@ void victDodge(const P_char ch, const P_char victim, const int weaptype,
     return;
 
 
-  sprintf(notvictmsg, "$N %s a %s at $S %s from $n.",
+  snprintf(notvictmsg, MAX_STRING_LENGTH, "$N %s a %s at $S %s from $n.",
           getDodgeEaseString(passedby, FALSE),
           getWeaponUseString(weaptype),
           getBodyLocStrn(body_loc_target, victim));
 
-  sprintf(charmsg, "$N %s your %s at $S %s.",
+  snprintf(charmsg, MAX_STRING_LENGTH, "$N %s your %s at $S %s.",
           getDodgeEaseString(passedby, FALSE), getWeaponUseString(weaptype),
           getBodyLocStrn(body_loc_target, victim));
 
-  sprintf(victmsg, "You %s a %s from $n at your %s.",
+  snprintf(victmsg, MAX_STRING_LENGTH, "You %s a %s from $n at your %s.",
           getDodgeEaseString(passedby, TRUE), getWeaponUseString(weaptype),
           getBodyLocStrn(body_loc_target, victim));
 
@@ -1045,16 +1045,16 @@ void createBodypartinRoom(const int room, const int loc, const char *bodypart,
   }
   part->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2 | STRUNG_DESC3);
 
-  sprintf(strn, "%s %s", bodypart, GET_NAME(vict));
+  snprintf(strn, 1024, "%s %s", bodypart, GET_NAME(vict));
   part->name = str_dup(strn);
 
-  sprintf(strn, "The %s of %s is lying here.", bodypart, charname);
+  snprintf(strn, 1024, "The %s of %s is lying here.", bodypart, charname);
   part->description = str_dup(strn);
 
-  sprintf(strn, "the %s of %s", bodypart, charname);
+  snprintf(strn, 1024, "the %s of %s", bodypart, charname);
   part->short_description = str_dup(strn);
 
-  sprintf(strn, "%s", bodypart);
+  snprintf(strn, 1024, "%s", bodypart);
   part->action_description = str_dup(strn);
 
   part->weight = getBodypartWeight(vict, loc);
@@ -1084,12 +1084,12 @@ int victLostLowerArm(P_char victim, const int loc)
 
   createBodypartinRoom(victim->in_room, loc, locstrn, victim);
 
-  sprintf(buf, "$n's %s is destroyed and falls to the ground, useless.",
+  snprintf(buf, 1024, "$n's %s is destroyed and falls to the ground, useless.",
           locstrn);
 
   act(buf, FALSE, victim, 0, 0, TO_ROOM);
 
-  sprintf(buf, "Your %s is destroyed and falls to the ground, useless.",
+  snprintf(buf, 1024, "Your %s is destroyed and falls to the ground, useless.",
           locstrn);
 
   act(buf, FALSE, victim, 0, 0, TO_CHAR);
@@ -1316,23 +1316,23 @@ int victDamage(P_char ch, P_char victim, const int barehanded,
 
   if (!barehanded)
   {
-    sprintf(notvictmsg, "$n's%s %s %s $N in the %s.",
+    snprintf(notvictmsg, MAX_STRING_LENGTH, "$n's%s %s %s $N in the %s.",
             weapon_damage[w_loop], getWeaponHitVerb(weaptype, TRUE),
             victim_damage[h_loop], getBodyLocStrn(loc, victim));
-    sprintf(charmsg, "Your%s %s %s $N in the %s.", weapon_damage[w_loop],
+    snprintf(charmsg, MAX_STRING_LENGTH, "Your%s %s %s $N in the %s.", weapon_damage[w_loop],
             getWeaponHitVerb(weaptype, TRUE), victim_damage[h_loop],
             getBodyLocStrn(loc, victim));
-    sprintf(victmsg, "$n's%s %s %s you in the %s.", weapon_damage[w_loop],
+    snprintf(victmsg, MAX_STRING_LENGTH, "$n's%s %s %s you in the %s.", weapon_damage[w_loop],
             getWeaponHitVerb(weaptype, TRUE), victim_damage[h_loop],
             getBodyLocStrn(loc, victim));
   }
   else
   {
-    sprintf(notvictmsg, "$n's punch %s $N in the %s.",
+    snprintf(notvictmsg, MAX_STRING_LENGTH, "$n's punch %s $N in the %s.",
             victim_damage[h_loop], getBodyLocStrn(loc, victim));
-    sprintf(charmsg, "Your punch %s $N in the %s.",
+    snprintf(charmsg, MAX_STRING_LENGTH, "Your punch %s $N in the %s.",
             victim_damage[h_loop], getBodyLocStrn(loc, victim));
-    sprintf(victmsg, "$n punches %s you in the %s.",
+    snprintf(victmsg, MAX_STRING_LENGTH, "$n punches %s you in the %s.",
             victim_damage[h_loop], getBodyLocStrn(loc, victim));
   }
 
@@ -1394,20 +1394,20 @@ void victMiss(const P_char ch, const P_char victim, const int weaptype,
 
   if (!barehanded)
   {
-    sprintf(notvictmsg, "$n misses $N with $s %s at $S %s.",
+    snprintf(notvictmsg, MAX_STRING_LENGTH, "$n misses $N with $s %s at $S %s.",
             getWeaponUseString(weaptype), getBodyLocStrn(loc, victim));
-    sprintf(charmsg, "You miss $N with your %s at $S %s.",
+    snprintf(charmsg, MAX_STRING_LENGTH, "You miss $N with your %s at $S %s.",
             getWeaponUseString(weaptype), getBodyLocStrn(loc, victim));
-    sprintf(victmsg, "$n misses you with $s %s at your %s.",
+    snprintf(victmsg, MAX_STRING_LENGTH, "$n misses you with $s %s at your %s.",
             getWeaponUseString(weaptype), getBodyLocStrn(loc, victim));
   }
   else
   {
-    sprintf(notvictmsg, "$n misses $N with $s %s at $S %s.",
+    snprintf(notvictmsg, MAX_STRING_LENGTH, "$n misses $N with $s %s at $S %s.",
             "punch", getBodyLocStrn(loc, victim));
-    sprintf(charmsg, "You miss $N with your %s at $S %s.",
+    snprintf(charmsg, MAX_STRING_LENGTH, "You miss $N with your %s at $S %s.",
             "punch", getBodyLocStrn(loc, victim));
-    sprintf(victmsg, "$n misses you with $s %s at your %s.",
+    snprintf(victmsg, MAX_STRING_LENGTH, "$n misses you with $s %s at your %s.",
             "punch", getBodyLocStrn(loc, victim));
   }
 
@@ -1515,11 +1515,11 @@ void displayArmorAbsorbedAllDamageMessage(const P_char ch,
   if (!ch || !victim || !armor_hit)
     return;                     // whoops
 
-  sprintf(notvictmsg, "$N's $q absorbs all damage from $n's %s.",
+  snprintf(notvictmsg, 256, "$N's $q absorbs all damage from $n's %s.",
           getWeaponUseString(weaptype));
-  sprintf(victmsg, "Your $q absorbs all damage from $n's %s.",
+  snprintf(victmsg, 256, "Your $q absorbs all damage from $n's %s.",
           getWeaponUseString(weaptype));
-  sprintf(charmsg, "$N's $q absorbs all damage from your %s.",
+  snprintf(charmsg, 256, "$N's $q absorbs all damage from your %s.",
           getWeaponUseString(weaptype));
 
   act(notvictmsg, FALSE, ch, armor_hit, victim, TO_NOTVICT);
@@ -1824,11 +1824,11 @@ int hit(P_char ch, P_char victim, P_obj weapon, const int hit_type,
       {
         char     notvictmsg[256], charmsg[256], victmsg[256];
 
-        sprintf(notvictmsg, "$n's weak %s does no appreciable damage to $N.",
+        snprintf(notvictmsg, 256, "$n's weak %s does no appreciable damage to $N.",
                 getWeaponUseString(weaptype));
-        sprintf(charmsg, "Your weak %s does no noticeable damage to $N.",
+        snprintf(charmsg, 256, "Your weak %s does no noticeable damage to $N.",
                 getWeaponUseString(weaptype));
-        sprintf(victmsg, "$n's weak %s does no noticeable damage to you.",
+        snprintf(victmsg, 256, "$n's weak %s does no noticeable damage to you.",
                 getWeaponUseString(weaptype));
 
         act(notvictmsg, FALSE, ch, 0, victim, TO_NOTVICT);

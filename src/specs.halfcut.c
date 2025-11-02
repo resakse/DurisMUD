@@ -46,7 +46,7 @@ int halfcut_defenders(P_char ch, P_char player, int cmd, char *arg)
   if ((GET_LEVEL(player) < 44) && (!number(0, 20)))
   {
     do_consider(ch, GET_NAME(player), CMD_CONSIDER);
-    sprintf( buf, "chuckle" );
+    snprintf(buf, 32, "chuckle" );
     command_interpreter( ch, buf );
     return FALSE;
   }

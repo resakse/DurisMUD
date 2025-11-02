@@ -95,7 +95,7 @@ Alliance::Alliance( P_Guild forgers, P_Guild joiners, int tribute_owed )
   alliances.push_back(*this);
   save_alliances();
 
-  sprintf(buff, "%s &+band &n%s &+bhave formed an alliance!\n",
+  snprintf(buff, MAX_STRING_LENGTH, "%s &+band &n%s &+bhave formed an alliance!\n",
     forgers->get_name( ).c_str(), joiners->get_name( ).c_str() );
   send_to_alliance(buff, this );
 }
@@ -128,7 +128,7 @@ void sever_alliance( P_Guild guild )
   if( !found )
     return;
 
-  sprintf( buff, "%s &+bhave severed their alliance with &n%s&+b!\n", guild->get_name().c_str(), severee_name.c_str() );
+  snprintf(buff, MAX_STRING_LENGTH, "%s &+bhave severed their alliance with &n%s&+b!\n", guild->get_name().c_str(), severee_name.c_str() );
   send_to_alliance( buff, &(*it) );
 
   alliances.erase( it );
@@ -178,7 +178,7 @@ void do_alliance( P_char ch, char *arg, int cmd )
       name = alliance->get_forgers()->get_name();
     }
 
-    sprintf(buff, "&+bYou are allied with &n%s&+b.\n", name.c_str());
+    snprintf(buff, MAX_STRING_LENGTH, "&+bYou are allied with &n%s&+b.\n", name.c_str());
     send_to_char(buff, ch);
     return;
   }
@@ -371,7 +371,7 @@ void do_acc(P_char ch, char *argument, int cmd)
     {
       if( IS_NPC(ch) || IS_SET(ch->specials.act, PLR_ECHO) )
       {
-        sprintf(Gbuf1, "&+yYou tell your alliance '&+Y%s&+y'\r\n", argument);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "&+yYou tell your alliance '&+Y%s&+y'\r\n", argument);
         send_to_char(Gbuf1, ch, LOG_PRIVATE);
       }
       else

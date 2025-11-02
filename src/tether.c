@@ -146,7 +146,7 @@ void tetherheal( P_char ch, int damageamount )
       vamp( victim, damageamount * get_property( "innate.cabalist.healing_mod", 0.200), GET_MAX_HIT(victim) );
 //      healamount = damageamount * get_property( "innate.cabalist.healing_mod", 2.00 );
 //      vamp( victim, healamount, GET_MAX_HIT(victim) );
-//      sprintf( message, "You tether-healed $N for %d hps.", vampamount );
+//      snprintf(message, 100, "You tether-healed $N for %d hps.", vampamount );
 //      act( message, FALSE, ch, NULL, victim, TO_CHAR );
    else
    {

@@ -156,15 +156,15 @@ void displayM(P_char ch, char *tbuf)
 //wizlog(56, "percent:%d", percent);
 
   if (percent == 100)
-    sprintf(color, "&+G");
+    snprintf(color, 10, "&+G");
   else if (percent > 95)
-    sprintf(color, "&+g");
+    snprintf(color, 10, "&+g");
   else if (percent > 50)
-    sprintf(color, "&+Y");
+    snprintf(color, 10, "&+Y");
   else if (percent > 0)
-    sprintf(color, "&+R");
+    snprintf(color, 10, "&+R");
   else
-    sprintf(color, "&+L");
+    snprintf(color, 10, "&+L");
 
   sprintf(tbuf, "%s <%s%dm&n/%s%dM&n>", tbuf, color, GET_VITALITY(ch), color,
           GET_MAX_VITALITY(ch));
@@ -182,15 +182,15 @@ void displayH(P_char ch, char *tbuf)
 //wizlog(56, "percent:%d", percent);
 
   if (percent == 100)
-    sprintf(color, "&+G");
+    snprintf(color, 10, "&+G");
   else if (percent > 95)
-    sprintf(color, "&+g");
+    snprintf(color, 10, "&+g");
   else if (percent > 50)
-    sprintf(color, "&+Y");
+    snprintf(color, 10, "&+Y");
   else if (percent > 0)
-    sprintf(color, "&+R");
+    snprintf(color, 10, "&+R");
   else
-    sprintf(color, "&+L");
+    snprintf(color, 10, "&+L");
 
   sprintf(tbuf, "%s <%s%dh&n/%s%dH&n>", tbuf, color, GET_HIT(ch), color,
           GET_MAX_HIT(ch));
@@ -319,15 +319,15 @@ void do_group(P_char ch, char *argument, int cmd)
 
         gl = ch->group;
         if (IS_NPC(gl->ch))
-          sprintf(Gbuf3, "%s", gl->ch->player.short_descr);
+          snprintf(Gbuf3, MAX_STRING_LENGTH, "%s", gl->ch->player.short_descr);
         else
         {
           if (racewar(ch, gl->ch))
             strcpy(Gbuf3, race_names_table[GET_RACE(gl->ch)].ansi);
           else
-            sprintf(Gbuf3, "%s", GET_NAME(gl->ch));
+            snprintf(Gbuf3, MAX_STRING_LENGTH, "%s", GET_NAME(gl->ch));
         }
-        sprintf(Gbuf1, "( Head) %-s\n",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "( Head) %-s\n",
                 (!CAN_SEE_Z_CORD(ch, gl->ch)) ? "Someone" : Gbuf3);
 
         if (ch->in_room == gl->ch->in_room)
@@ -337,22 +337,22 @@ void do_group(P_char ch, char *argument, int cmd)
         }
         else
         {
-          sprintf(Gbuf1, "%s\n", Gbuf1);
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "%s\n", Gbuf1);
         }
 
         for (gl = gl->next; gl; gl = gl->next)
         {
           if (IS_NPC(gl->ch))
-            sprintf(Gbuf3, "%s", gl->ch->player.short_descr);
+            snprintf(Gbuf3, MAX_STRING_LENGTH, "%s", gl->ch->player.short_descr);
           else
           {
             if (racewar(ch, gl->ch))
               strcpy(Gbuf3, race_names_table[GET_RACE(gl->ch)].ansi);
             else
-              sprintf(Gbuf3, "%s", GET_NAME(gl->ch));
+              snprintf(Gbuf3, MAX_STRING_LENGTH, "%s", GET_NAME(gl->ch));
           }
 
-          sprintf(Gbuf2, "\n(%-5s)  %-s\n",
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "\n(%-5s)  %-s\n",
                   (!IS_BACKRANKED(gl->ch) ? "Front" : "Back"),
                   (!CAN_SEE_Z_CORD(ch, gl->ch)) ? "Someone" : Gbuf3);
 
@@ -363,9 +363,9 @@ void do_group(P_char ch, char *argument, int cmd)
           }
           else
           {
-            sprintf(Gbuf2, "%s\n", Gbuf2);
+            snprintf(Gbuf2, MAX_STRING_LENGTH, "%s\n", Gbuf2);
           }
-          sprintf(Gbuf1, "%s%s", Gbuf1, Gbuf2);
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "%s%s", Gbuf1, Gbuf2);
 
         }
         send_to_char(Gbuf1, ch, LOG_NONE);
@@ -761,7 +761,7 @@ void do_disband(P_char ch, char *arg, int cmd)
   }
   send_to_char("You disband the group.\n", ch);
 
-  sprintf(buf, "%s has disbanded the group.\n", GET_NAME(ch));
+  snprintf(buf, MAX_STRING_LENGTH, "%s has disbanded the group.\n", GET_NAME(ch));
 
   while (ch->group && ch->group->next)
   {
@@ -903,7 +903,7 @@ bool group_remove_member(P_char ch)
   {
     char     buf[MAX_STRING_LENGTH];
 
-    sprintf(buf, "%s is no longer in your group.\n",
+    snprintf(buf, MAX_STRING_LENGTH, "%s is no longer in your group.\n",
             IS_NPC(ch) ? ch->player.short_descr : GET_NAME(ch));
     send_to_char(buf, gl->ch);
   }
@@ -1016,7 +1016,7 @@ bool group_add_member(P_char leader, P_char member)
 
   if( member->group )
   {
-    sprintf(buf, "%s is already in another group!\n", GET_NAME(member));
+    snprintf(buf, MAX_STRING_LENGTH, "%s is already in another group!\n", GET_NAME(member));
     send_to_char(buf, leader);
     return FALSE;
   }

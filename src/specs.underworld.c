@@ -3660,7 +3660,7 @@ int gfstone(P_obj obj, P_char ch, int cmd, char *arg)
 
   if( strcmp(GET_NAME(ch), owner) != 0 )
   {
-    sprintf(buf3, "%s %s %s", buf, buf2, GET_NAME(ch));
+    snprintf(buf3, MAX_STRING_LENGTH, "%s %s %s", buf, buf2, GET_NAME(ch));
     obj->name = str_dup(buf3);
     for( i = 1; i <= TOTAL_GF; i++ )
     {

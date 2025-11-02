@@ -80,7 +80,7 @@ void writePeriodOfFame(P_char ch, char thekiller[1024])
   if (!ch)
     return;
 
-  sprintf(periodoffamelist_file, "lib/information/period_list");
+  snprintf(periodoffamelist_file, 1024, "lib/information/period_list");
 
   ptr = periodoffamelist_file;
   for (ptr = periodoffamelist_file; *ptr != '\0'; ptr++)
@@ -96,7 +96,7 @@ void writePeriodOfFame(P_char ch, char thekiller[1024])
 
   if (!periodoffamelist)
   {
-    sprintf(buffer, "Couldn't open periodoffamelist: %s\r\n",
+    snprintf(buffer, 1024, "Couldn't open periodoffamelist: %s\r\n",
             periodoffamelist_file);
     send_to_char(buffer, ch);
     return;
@@ -250,21 +250,21 @@ void displayPERIODCore(P_char ch, char *arg, int cmd)
 
   if (MORTAL_LIST && !IS_TRUSTED(ch))
   {
-    sprintf(filename, "lib/information/period_list_mortal");
+    snprintf(filename, 1024, "lib/information/period_list_mortal");
   }
   else
   {
-    sprintf(filename, "lib/information/period_list");
+    snprintf(filename, 1024, "lib/information/period_list");
   }
   if (!(periodoffameList = fopen(filename, "rt")))
   {
-    sprintf(name, "Couldn't open periodoffamelist: %s\n", filename);
+    snprintf(name, MAX_STRING_LENGTH, "Couldn't open periodoffamelist: %s\n", filename);
     send_to_char(name, ch);
     return;
   }
 
   strcpy(buf, " \t\n\t&+Y-= &+y  Epic points&+Y   =-&n\n\n");
-  sprintf(tempbuf, "   &+w%-15s           &+w%s           &+w%-15s\n",
+  snprintf(tempbuf, 2048, "   &+w%-15s           &+w%s           &+w%-15s\n",
           "Name", "Points", "");
   strcat(buf, tempbuf);
   for (i = 0; i < MAX_PERIODOFFAME_SIZE; i++)
@@ -272,7 +272,7 @@ void displayPERIODCore(P_char ch, char *arg, int cmd)
     fscanf(periodoffameList, "%s %d %s\n", name, &periodoffames, killer);
     name[0] = toupper(name[0]);
 
-    sprintf(buf2, "   &+y%-15s          &+Y%d&n\n", name, periodoffames);
+    snprintf(buf2, 2048, "   &+y%-15s          &+Y%d&n\n", name, periodoffames);
     strcat(buf, buf2);
   }
 

@@ -889,8 +889,8 @@ void say_spell(P_char ch, int si)
     if (Gbuf1[j] == ' ')
       space = TRUE;
 
-  sprintf(Gbuf2, "$n utters the word%s '%s'", space ? "s" : "", Gbuf1);
-  sprintf(Gbuf1, "$n utters the word%s '%s'", space ? "s" : "", skills[si].name);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "$n utters the word%s '%s'", space ? "s" : "", Gbuf1);
+  snprintf(Gbuf1, j, "$n utters the word%s '%s'", space ? "s" : "", skills[si].name);
 
 // This for allows players who hear a spell being casted the opportunity to notch.
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
@@ -1031,7 +1031,7 @@ void SpellCastShow(P_char ch, int spl)
     if (IS_TRUSTED(tch))
       detharm = idok = 1;
 
-    sprintf(Gbuf1, "$n starts casting %s spell%s%s%s.",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "$n starts casting %s spell%s%s%s.",
             (detharm && IS_AGG_SPELL(spl)) ? "an offensive" : "a",
             idok ? " called '" : "", idok ? skills[spl].name : "",
             idok ? "'" : "");
@@ -1052,9 +1052,9 @@ void update_saving_throws()
 
   for (int i = SAVING_PARA; i <= SAVING_SPELL; i++)
   {
-    sprintf(buf, "saves.%s.starting", saves_data[i].name);
+    snprintf(buf, 256, "saves.%s.starting", saves_data[i].name);
     saves_data[i].starting = get_property(buf, 70);
-    sprintf(buf, "saves.%s.top", saves_data[i].name);
+    snprintf(buf, 256, "saves.%s.top", saves_data[i].name);
     saves_data[i].top = get_property(buf, 20);
   }
 }
@@ -1067,12 +1067,12 @@ int find_save(P_char ch, int save_type)
   save = saves_data[save_type].starting -
     (GET_LEVEL(ch) * (saves_data[save_type].starting - saves_data[save_type].top))/60;
 
-  sprintf(buf, "saves.%s.racial.%s", saves_data[save_type].name, 
+  snprintf(buf, 256, "saves.%s.racial.%s", saves_data[save_type].name, 
       race_names_table[GET_RACE(ch)].no_spaces);
 
   save += get_property(buf, 0, false);
 
-  sprintf(buf, "saves.%s.class.%s", saves_data[save_type].name, 
+  snprintf(buf, 256, "saves.%s.class.%s", saves_data[save_type].name, 
       class_names_table[flag2idx(ch->player.m_class)].normal);
 
   save += get_property(buf, 0, false);
@@ -2964,7 +2964,7 @@ void update_spellpulse_data()
 
   for (i = 0; i <= LAST_RACE; i++)
   {
-    sprintf(buf, "spellcast.pulse.racial.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "spellcast.pulse.racial.%s", race_names_table[i].no_spaces);
     spell_pulse_data[i] = get_property(buf, 1.0);
   }
 }
@@ -2976,7 +2976,7 @@ void update_racial_shrug_data()
 
   for (i = 0; i <= LAST_RACE; i++)
   {
-    sprintf(buf, "innate.shrug.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "innate.shrug.%s", race_names_table[i].no_spaces);
     racial_shrug_data[i] = get_property(buf, 0);
   }
 }
@@ -2988,7 +2988,7 @@ void update_racial_exp_mods()
 
   for (i = 0; i <= LAST_RACE; i++)
   {
-    sprintf(buf, "exp.factor.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "exp.factor.%s", race_names_table[i].no_spaces);
     racial_exp_mods[i] = get_property(buf, 1.0);
   }
 }
@@ -3000,7 +3000,7 @@ void update_racial_exp_mod_victims()
 
   for (i = 0; i <= LAST_RACE; i++)
   {
-    sprintf(buf, "gain.exp.mod.victim.race.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "gain.exp.mod.victim.race.%s", race_names_table[i].no_spaces);
     racial_exp_mod_victims[i] = get_property(buf, 1.0);
   }
 }
@@ -3013,7 +3013,7 @@ void update_misfire_properties()
   misfire_properties.zoning_maxGroup = get_property("misfire.zoning.maxGroup", 99);
   for( int i = 0; i <= MAX_RACEWAR; i++ )
   {
-    sprintf( buf, "misfire.pvp.maxAllies.%s", racewar_color[i].name );
+    snprintf(buf, MAX_STRING_LENGTH, "misfire.pvp.maxAllies.%s", racewar_color[i].name );
     misfire_properties.pvp_maxAllies[i] = get_property(buf, 5);
   }
   misfire_properties.pvp_recountDelay = get_property("misfire.pvp.recountDelay.sec", 2);

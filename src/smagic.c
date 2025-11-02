@@ -310,7 +310,7 @@ void spell_spirit_walk(int level, P_char ch, char *arg, int type, P_char victim,
   if(!IS_TRUSTED(ch))
   {
     char logbuf[500];
-    sprintf(logbuf, "SpiritWalk from %s[%d] to corpse of %s[%d]",
+    snprintf(logbuf, 500, "SpiritWalk from %s[%d] to corpse of %s[%d]",
             GET_NAME(ch), world[ch->in_room].number,
             GET_NAME(victim), world[location].number);
     logit(LOG_PORTALS, logbuf);
@@ -4099,7 +4099,7 @@ void spell_reveal_spirit_essence(int level, P_char ch, char *arg, int type, P_ch
   }
   if(align >= 350 || align <= -350)
   {
-    sprintf(buff2, "%sA %s glow surrounds you briefly.\n", buff3, buff);
+    snprintf(buff2, 256, "%sA %s glow surrounds you briefly.\n", buff3, buff);
   }
   else
   {

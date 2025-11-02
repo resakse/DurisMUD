@@ -90,7 +90,7 @@ void do_terrain(P_char ch, char *arg, int cmd)
   if (!ch)
     return;
 
-  sprintf(out, "Your current terrain is:  %s.\r\n",
+  snprintf(out, MAX_STRING_LENGTH, "Your current terrain is:  %s.\r\n",
           sector_types[world[ch->in_room].sector_type]);
   send_to_char(out, ch);
 }
@@ -123,7 +123,7 @@ void do_multiclass(P_char ch, char *arg, int cmd)
 
   if( GET_LEVEL(ch) < min_level )
   {
-    sprintf(buf, "You cannot multiclass until you reach level %d.\r\nHowever, here is a list of your future choices:\r\n\r\n", min_level);
+    snprintf(buf, MAX_STRING_LENGTH, "You cannot multiclass until you reach level %d.\r\nHowever, here is a list of your future choices:\r\n\r\n", min_level);
     send_to_char(buf, ch);
   }
   else if( cmd != -1 )           // indicates called from proc with no arg..  aren't i nice
@@ -138,7 +138,7 @@ void do_multiclass(P_char ch, char *arg, int cmd)
     {
       char     strn[2048];
 
-      sprintf(strn, "   %s\r\n", (class_names_table[i].ansi));
+      snprintf(strn, 2048, "   %s\r\n", (class_names_table[i].ansi));
 
       send_to_char(strn, ch);
 
@@ -192,7 +192,7 @@ void do_target(P_char ch, char *arg, int cmd)
     loc = 0;
     while (target_locs[loc][0] != '\n')
     {
-      sprintf(buf, "    %s\n\r", target_locs[loc]);
+      snprintf(buf, 256, "    %s\n\r", target_locs[loc]);
       send_to_char(buf, ch);
       loc++;
     }
@@ -224,7 +224,7 @@ void do_order_target(P_char ch, P_char vict, char *arg, int cmd)
     loc = 0;
     while (target_locs[loc][0] != '\n')
     {
-      sprintf(buf, "    %s\n\r", target_locs[loc]);
+      snprintf(buf, 256, "    %s\n\r", target_locs[loc]);
       send_to_char(buf, ch);
       loc++;
     }
@@ -237,7 +237,7 @@ void do_order_target(P_char ch, P_char vict, char *arg, int cmd)
     return;
   }
   vict->player.combat_target_loc = loc;
-  sprintf(buf, "%s changes their combat tactics slightly.\r\n", J_NAME(vict));
+  snprintf(buf, 256, "%s changes their combat tactics slightly.\r\n", J_NAME(vict));
   send_to_char(buf, ch);
   return;
 }
@@ -323,7 +323,7 @@ void do_camp(P_char ch, char *arg, int cmd)
     ct = time(NULL);
     // Convert to EST.
     ct -= 4*60*60;
-    sprintf(timestr, "%s", asctime( localtime(&ct) ));
+    snprintf(timestr, 1024, "%s", asctime( localtime(&ct) ));
     *(timestr + strlen(timestr) - 1) = '\0';
     strcat( timestr, " EST" );
 
@@ -1731,7 +1731,7 @@ void do_save_silent(P_char ch, int type)
 
   if (IS_HARDCORE(ch))
   {
-    sprintf(tmp_buf, "NotDead %lu", ch->only.pc->numb_deaths);
+    snprintf(tmp_buf, MAX_STRING_LENGTH, "NotDead %lu", ch->only.pc->numb_deaths);
     checkHallOfFame(ch, tmp_buf);
   }
   if (!IS_TRUSTED(ch))
@@ -1747,7 +1747,7 @@ void do_save_silent(P_char ch, int type)
       send_to_char("Autosaving...\r\n", ch);
     if (ch->desc)
     {
-      sprintf(tmp_buf, "../hosts/%d", ch->desc->descriptor);
+      snprintf(tmp_buf, MAX_STRING_LENGTH, "../hosts/%d", ch->desc->descriptor);
       f = fopen(tmp_buf, "r");
 
       if (f != NULL)
@@ -1762,7 +1762,7 @@ void do_save_silent(P_char ch, int type)
           {
             sscanf(tmp_buf, "Name:    %s\n", tmp_buf2);
             strncpy(ch->desc->host2, tmp_buf2, 128);
-            sprintf(tmp_buf, "rm ../hosts/%d", ch->desc->descriptor);
+            snprintf(tmp_buf, MAX_STRING_LENGTH, "rm ../hosts/%d", ch->desc->descriptor);
             system(tmp_buf);
           }
         }
@@ -1807,7 +1807,7 @@ void do_save(P_char ch, char *argument, int cmd)
 
   if (IS_HARDCORE(ch))
   {
-    sprintf(tmp_buf, "NotDead %lu", ch->only.pc->numb_deaths);
+    snprintf(tmp_buf, MAX_STRING_LENGTH, "NotDead %lu", ch->only.pc->numb_deaths);
     checkHallOfFame(ch, tmp_buf);
 
   }
@@ -1835,7 +1835,7 @@ void do_save(P_char ch, char *argument, int cmd)
       wizlog(OVERLORD, "Pet %s saved to file %ld!", GET_NAME(ch),
              GET_IDNUM(ch));
   }
-  sprintf(Gbuf1, "Saving %s.\r\n", GET_NAME(GET_PLYR(ch)));
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "Saving %s.\r\n", GET_NAME(GET_PLYR(ch)));
   send_to_char(Gbuf1, ch);
   update_pos(ch);
 
@@ -1917,7 +1917,7 @@ void do_balance(P_char ch, char *argument, int cmd)
       }
     }
 #endif
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "Your account contains:\r\n    %d &+Wplatinum&N, %d &+Ygold&N, %d silver, %d &+ycopper&N coins.\r\n",
             GET_BALANCE_PLATINUM(ch), GET_BALANCE_GOLD(ch),
             GET_BALANCE_SILVER(ch), GET_BALANCE_COPPER(ch));
@@ -2462,12 +2462,12 @@ void listen(P_char ch, char *argument)
         /*
          * being a higher level is better
          */
-        sprintf(buf,
+        snprintf(buf, MAX_STRING_LENGTH,
                 "You hear what might be %d creatures invisible, or hiding.\r\n",
                 MAX(1, (found + number(0, 1) - number(0, 1))));
       }
       else
-        sprintf(buf, "You hear an odd rustling in the immediate area.\r\n");
+        snprintf(buf, MAX_STRING_LENGTH, "You hear an odd rustling in the immediate area.\r\n");
       send_to_char(buf, ch);
       notch_skill(ch, SKILL_LISTEN, 50);
     }
@@ -2503,13 +2503,13 @@ void listen(P_char ch, char *argument)
       {
         if (GET_LEVEL(ch) >= 15)
         {
-          sprintf(buf, "You hear what might be %d creatures %s%s.\r\n",
+          snprintf(buf, MAX_STRING_LENGTH, "You hear what might be %d creatures %s%s.\r\n",
                   MAX(1, (found + number(0, 1) - number(0, 1))),
                   ((dir == 5) ? "below" : (dir == 4) ? "above" : "to the "),
                   ((dir == 5) ? "" : (dir == 4) ? "" : dirs[dir]));
         }
         else
-          sprintf(buf, "You hear sounds from %s%s.\r\n",
+          snprintf(buf, MAX_STRING_LENGTH, "You hear sounds from %s%s.\r\n",
                   ((dir == 5) ? "below" : (dir == 4) ? "above" : "the "),
                   ((dir == 5) ? "" : (dir == 4) ? "" : dirs[dir]));
         send_to_char(buf, ch);
@@ -3365,7 +3365,7 @@ void do_explist(P_char ch, char *argument, int cmd)
 
   if (GET_LEVEL(ch) >= (int)get_property("exp.min.lvl.see.numbers", 51))
   {
-    sprintf(Gbuf1, "&+bExperience till level: &+W%d&n\r\n",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+bExperience till level: &+W%d&n\r\n",
             (new_exp_table[GET_LEVEL(ch) + 1] - GET_EXP(ch)));
     send_to_char(Gbuf1, ch);
     return;
@@ -3374,41 +3374,41 @@ void do_explist(P_char ch, char *argument, int cmd)
   result = ((double)GET_EXP(ch) * 100) / new_exp_table[GET_LEVEL(ch) + 1];
 
   if (result < 0)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou have a long long way to go to your next level!&n\r\n");
   else if (result < 11)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou have just begun the trek to your next level!&n\r\n");
   else if (result < 21)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou are still a very long way from your next level.&n\r\n");
   else if (result < 31)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou have gained some progress, but still have a ways to "
             "&+bgo yet towards your next level.&n\r\n");
   else if (result < 41)
-    sprintf(Gbuf1, "&+bYou have gained some progress, and are nearing the "
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+bYou have gained some progress, and are nearing the "
             "&+bhalf-way point in the trek to your next level.&n\r\n");
   else if (result < 49)
-    sprintf(Gbuf1, "&+bYou are close to the half-way point in the journey "
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+bYou are close to the half-way point in the journey "
             "&+btowards your next level.&n\r\n");
   else if (result < 53)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou are at the half-way point towards this next level!&n\r\n");
   else if (result < 61)
-    sprintf(Gbuf1, "&+bYou have just passed the half-way point on the way "
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+bYou have just passed the half-way point on the way "
             "&+btowards your next level.&n\r\n");
   else if (result < 71)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou are well on your way towards your next level.&n\r\n");
   else if (result < 81)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou are three quarters the way to your next level.&n\r\n");
   else if (result < 91)
-    sprintf(Gbuf1,
+    snprintf(Gbuf1, MAX_STRING_LENGTH,
             "&+bYou are almost ready to attain your next level!&n\r\n");
   else
-    sprintf(Gbuf1, "&+bYou should level anytime now!&n\r\n");
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+bYou should level anytime now!&n\r\n");
 
   send_to_char(Gbuf1, ch);
 }
@@ -3434,7 +3434,7 @@ void do_idea(P_char ch, char *argument, int cmd)
     return;
   }
 
-  sprintf(buf, "**%s: %s\n", GET_NAME(ch), argument);
+  snprintf(buf, MAX_STRING_LENGTH, "**%s: %s\n", GET_NAME(ch), argument);
 
   result = InsertIntoFile(IDEA_FILE, buf);
   if (result == 1)
@@ -3474,7 +3474,7 @@ void do_typo(P_char ch, char *argument, int cmd)
     return;
   }
 
-  sprintf(buf, "**%s[%d]: %s\n", GET_NAME(ch), world[ch->in_room].number,
+  snprintf(buf, MAX_STRING_LENGTH, "**%s[%d]: %s\n", GET_NAME(ch), world[ch->in_room].number,
           argument);
 
   result = InsertIntoFile(TYPO_FILE, buf);
@@ -3517,7 +3517,7 @@ void do_bug(P_char ch, char *argument, int cmd)
 
   t = time(0);
 
-  sprintf(buf, "%s **%s[%d]: %s\n", ctime(&t), GET_NAME(ch),
+  snprintf(buf, MAX_STRING_LENGTH, "%s **%s[%d]: %s\n", ctime(&t), GET_NAME(ch),
           world[ch->in_room].number, argument);
 
   result = InsertIntoFile(BUG_FILE, buf);
@@ -3570,7 +3570,7 @@ void do_cheat(P_char ch, char *argument, int cmd)
     return;
   }
   t = time(0);
-  sprintf(Gbuf1, "%s &+W%s[%d] reports following cheat:&+r %s&n\n",
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s &+W%s[%d] reports following cheat:&+r %s&n\n",
           ctime(&t), GET_NAME(ch), world[ch->in_room].number, argument);
   fputs(Gbuf1, fl);
   fclose(fl);
@@ -3610,18 +3610,18 @@ void do_area(P_char ch, char *argument, int cmd)
 
     if( IS_TRUSTED(ch) )
     {
-      sprintf(buf, "&+LZone Name: %s %d\r\n", pad_ansi(zone->name, 30).c_str(), zone_id);
+      snprintf(buf, MAX_STRING_LENGTH, "&+LZone Name: %s %d\r\n", pad_ansi(zone->name, 30).c_str(), zone_id);
     }
     else
     {
-      sprintf(buf, "&+LZone Name: %s\r\n", pad_ansi(zone->name, 30).c_str());
+      snprintf(buf, MAX_STRING_LENGTH, "&+LZone Name: %s\r\n", pad_ansi(zone->name, 30).c_str());
     }
 
-    sprintf(buf2, "&+LAverage &+rmob&+L level in zone: &n%d\r\n ", zone->avg_mob_level);
+    snprintf(buf2, MAX_STRING_LENGTH, "&+LAverage &+rmob&+L level in zone: &n%d\r\n ", zone->avg_mob_level);
     strcat(buf, buf2);
     if( (zone->avg_mob_level - GET_LEVEL(ch)) > 15 )
     {
-      sprintf(buf2, "&-L&+RWarning&-L, some mobs in this zone may be very hazardous for you! Travel with care!&n\r\n");
+      snprintf(buf2, MAX_STRING_LENGTH, "&-L&+RWarning&-L, some mobs in this zone may be very hazardous for you! Travel with care!&n\r\n");
       strcat(buf, buf2);
     }
     send_to_char(buf, ch);
@@ -3645,7 +3645,7 @@ void do_area(P_char ch, char *argument, int cmd)
         // Skipping zone 0 which doesn't seem valid for some reason.
         for( zone_id = 1; zone_id <= top_of_zone_table; zone_id++ )
         {
-          sprintf( buf2, "%4d, ", zone_table[zone_id].number );
+          snprintf(buf2, MAX_STRING_LENGTH, "%4d, ", zone_table[zone_id].number );
           strcat( buf, buf2 );
           if( (zone_id % 12) == 0 )
             strcat( buf, "\n" );
@@ -3690,7 +3690,7 @@ void do_area(P_char ch, char *argument, int cmd)
         {
           continue;
         }
-        sprintf( buf2, "%5d  %6d  %-s\n", rrnum, world[rrnum].number, world[rrnum].name );
+        snprintf(buf2, MAX_STRING_LENGTH, "%5d  %6d  %-s\n", rrnum, world[rrnum].number, world[rrnum].name );
         if( (strlen(buf2) + length + 40) < MAX_STRING_LENGTH )
         {
           strcat(buf, buf2);
@@ -3774,10 +3774,10 @@ void do_quaff(P_char ch, char *argument, int cmd)
       i = (int) (i/j);
       if ( i <=1)
       {
-        sprintf(Gbuf1, "&+cYou feel &+Calmost &+cready to try another potion&+g.&n\n");
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cYou feel &+Calmost &+cready to try another potion&+g.&n\n");
       } else 
       {
-        sprintf(Gbuf1, "&+cYou dont feel like another potion would do you any good yet.&n\n");
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cYou dont feel like another potion would do you any good yet.&n\n");
       }
       send_to_char( Gbuf1, ch );
 /*    send_to_char("Your body cannot yet handle another jolt of magical influence!\r\n", ch);
@@ -4217,18 +4217,18 @@ void show_toggles(P_char ch)
   }
   else
   {
-    sprintf(Gbuf2, "%4d", GET_WIMPY(ch));
+    snprintf(Gbuf2, MAX_INPUT_LENGTH, "%4d", GET_WIMPY(ch));
   }
   if (IS_PC(ch) && (ch->only.pc->screen_length > 0))
   {
-    sprintf(Gbuf3, "%3d", ch->only.pc->screen_length);
+    snprintf(Gbuf3, MAX_INPUT_LENGTH, "%3d", ch->only.pc->screen_length);
   }
   else
   {
     strcpy(Gbuf3, " 24");
   }
 
-  sprintf(Gbuf1,
+  snprintf(Gbuf1, MAX_STRING_LENGTH,
           "&+y-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
           "-=-=-=-=-=-=-=-=-=-=-=-=-=-&N\r\n"
           "                          &+r    STATUS of toggles.    "
@@ -4631,7 +4631,7 @@ void do_toggle(P_char ch, char *arg, int cmd)
       }
       else
       {
-        sprintf(Gbuf1, "%s[%2d] %-15s%s", Gbuf1, i + 1, toggles_list[i], (!(++j % 3) ? "\r\n" : ""));
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "%s[%2d] %-15s%s", Gbuf1, i + 1, toggles_list[i], (!(++j % 3) ? "\r\n" : ""));
       }
     }
     strcat(Gbuf1, "\r\n");
@@ -5643,7 +5643,7 @@ void try_to_donate(P_char ch, P_obj obj_to_put)
   // If not-droppable
   if (IS_SET(obj_to_put->extra_flags, ITEM_NODROP))
   {
-    sprintf(Gbuf3, "Donating %s?  How thoughtful....too bad it's CURSED!\r\n", obj_to_put->short_description);
+    snprintf(Gbuf3, MAX_STRING_LENGTH, "Donating %s?  How thoughtful....too bad it's CURSED!\r\n", obj_to_put->short_description);
     send_to_char(Gbuf3, ch);
     return;
   }
@@ -5658,7 +5658,7 @@ void try_to_donate(P_char ch, P_obj obj_to_put)
   {                             /*
                                  * If food
                                  */
-    sprintf(Gbuf3,
+    snprintf(Gbuf3, MAX_STRING_LENGTH,
             "%s?  Donate equipment! - give food to the Homeless!\r\n",
             obj_to_put->short_description);
     send_to_char(Gbuf3, ch);
@@ -5666,7 +5666,7 @@ void try_to_donate(P_char ch, P_obj obj_to_put)
   }
   if (GET_ITEM_TYPE(obj_to_put) == ITEM_CORPSE || GET_ITEM_TYPE(obj_to_put) == ITEM_TRASH)
   {
-    sprintf(Gbuf3, "%s isn't too valuable - just bury it!\r\n",
+    snprintf(Gbuf3, MAX_STRING_LENGTH, "%s isn't too valuable - just bury it!\r\n",
             obj_to_put->short_description);
     send_to_char(Gbuf3, ch);
     return;
@@ -5677,7 +5677,7 @@ void try_to_donate(P_char ch, P_obj obj_to_put)
   if ((GET_ITEM_TYPE(obj_to_put) == ITEM_CONTAINER ||
        GET_ITEM_TYPE(obj_to_put) == ITEM_STORAGE) && (obj_to_put->contains))
   {
-    sprintf(Gbuf3, "You have to empty the %s before donating it.\r\n",
+    snprintf(Gbuf3, MAX_STRING_LENGTH, "You have to empty the %s before donating it.\r\n",
             FirstWord(obj_to_put->name));
     send_to_char(Gbuf3, ch);
     return;
@@ -6144,7 +6144,7 @@ void do_suicide(P_char ch, char *argument, int cmd)
   {
     if (ch->desc)
     {
-      sprintf(buf, "WARNING: You are about to take your own life.\r\n"
+      snprintf(buf, MAX_STRING_LENGTH, "WARNING: You are about to take your own life.\r\n"
               "Please confirm that you wish to do this!(Yes/No) [No]:\r\n");
       send_to_char(buf, ch);
       return;
@@ -6334,7 +6334,7 @@ void ascend_theurgist(P_char ch)
 
   if(ch->only.pc->epics < (int) get_property("ascend.epicCost.Eladrin", 250))
   {
-    sprintf(buff, "It costs &+W%d&n epics to ascend...\n", (int) get_property("descend.epicCost.Eladrin", 10));
+    snprintf(buff, 64, "It costs &+W%d&n epics to ascend...\n", (int) get_property("descend.epicCost.Eladrin", 10));
     send_to_char(buff, ch);
     return;
   }
@@ -6449,7 +6449,7 @@ void do_ascend(P_char ch, char *arg, int cmd)
         "Your prayers have been answered, as you ascend into the ranks of\n"
         "the holy army, from this day on you will be an "
         "&+WAvenger&n of divine law.\n\n", ch);
-      sprintf(buffer,
+      snprintf(buffer, 256,
         "You hear a loud voice exclaiming, '&+WWelcome my child, you shall\n"
         "&+Wnow be the avenging hand of %s,\n"
         "&+Wthe %s &+Wfor his enemies!'",
@@ -6467,7 +6467,7 @@ void do_ascend(P_char ch, char *arg, int cmd)
     }
     if(ch->only.pc->epics < (int) get_property("ascend.epicCost", 10)) 
     {
-      sprintf(buffer, "&+WYou must first prove yourself worthy! The transformation will consume &n%d&+W epic points.\n",
+      snprintf(buffer, 256, "&+WYou must first prove yourself worthy! The transformation will consume &n%d&+W epic points.\n",
         (int) get_property("ascend.epicCost", 10));
       send_to_char(buffer, ch);
       return;
@@ -6672,7 +6672,7 @@ void do_old_descend(P_char ch, char *arg, int cmd)
        (GET_CLASS(ch, CLASS_NECROMANCER) &&
 	(ch->only.pc->epics < (int) get_property("descend.epicCost.Lich", 250))))
     {
-      sprintf(buff, "It costs &+W%d&n epics to descend...\n", (GET_CLASS(ch, CLASS_ANTIPALADIN) ? (int) get_property("descend.epicCost", 10) : (int) get_property("descend.epicCost.Lich", 250))) ;
+      snprintf(buff, 64, "It costs &+W%d&n epics to descend...\n", (GET_CLASS(ch, CLASS_ANTIPALADIN) ? (int) get_property("descend.epicCost", 10) : (int) get_property("descend.epicCost.Lich", 250))) ;
       send_to_char(buff, ch);
       return;
     }

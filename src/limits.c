@@ -562,7 +562,7 @@ void githyanki_weapon(P_char ch)
     sword = read_object(19, VIRTUAL);
     if (sword)
     {
-      sprintf(strn, "staff silverish silver %sz", GET_NAME(ch));
+      snprintf(strn, 256, "staff silverish silver %sz", GET_NAME(ch));
       sword->str_mask = STRUNG_KEYS;
       sword->name = str_dup(strn);
 
@@ -580,7 +580,7 @@ void githyanki_weapon(P_char ch)
     sword = read_object(418, VIRTUAL);
     if (sword)
     {
-      sprintf(strn, "warhammer hammer silverish silver %sz",
+      snprintf(strn, 256, "warhammer hammer silverish silver %sz",
               GET_NAME(ch));
       sword->str_mask = STRUNG_KEYS;
       sword->name = str_dup(strn);
@@ -599,7 +599,7 @@ void githyanki_weapon(P_char ch)
     sword = read_object(18, VIRTUAL);
     if (sword)
     {
-      sprintf(strn, "longsword sword long silverish silver %sz",
+      snprintf(strn, 256, "longsword sword long silverish silver %sz",
               GET_NAME(ch));
       sword->str_mask = STRUNG_KEYS;
       sword->name = str_dup(strn);
@@ -712,7 +712,7 @@ void advance_level(P_char ch)
   if ((GET_LEVEL(ch) == get_property("exp.maxExpLevel", 45)) && !IS_HARDCORE(ch) && (!GET_RACE(ch) == RACE_LICH))
   {
     char buf[512];
-    sprintf(buf,
+    snprintf(buf, 512,
         "You are now level %d and are considered among the high level adventurers\n"
         "of Duris!  The path now set before you is a difficult one, as you must now\n"
         "battle the higher forces of the realms to further your conquest!\n",
@@ -809,9 +809,9 @@ void display_gain(P_char ch, int gain)
     return;
 
   if( GET_LEVEL(ch) >= MINLVLIMMORTAL )
-    sprintf(buffer, "&+yExperience&n: %s would have gained %d.\n", GET_NAME(ch), gain);
+    snprintf(buffer, MAX_STRING_LENGTH, "&+yExperience&n: %s would have gained %d.\n", GET_NAME(ch), gain);
   else
-    sprintf(buffer, "&+yExperience&n: %s by %d.\n", GET_NAME(ch), gain);
+    snprintf(buffer, MAX_STRING_LENGTH, "&+yExperience&n: %s by %d.\n", GET_NAME(ch), gain);
 
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
@@ -836,8 +836,8 @@ void update_exp_table()
     // Changed this so we start at exp.required.1 and can set each value
     //   up to exp.required.62.  If no value is set, take the previous.
     // If you change this back, need to reset values in duris.properties.
-//    sprintf(buf, "exp.required.%d", ((i + 4) / 5) * 5);
-    sprintf(buf, "exp.required.%02d", i);
+//    snprintf(buf, 128, "exp.required.%d", ((i + 4) / 5) * 5);
+    snprintf(buf, 128, "exp.required.%02d", i);
     new_exp_table[i] = get_property(buf, -1);
     // If exp.required.i not found, set to i-1's value.
     if( new_exp_table[i] == -1 )
@@ -1576,7 +1576,7 @@ void point_update(void)
   *Gbuf1 = '\0';
   // Subtract 5 hrs: GMT -> EST.
   ct = time(0) - 5*60*60;
-  sprintf(timestr, "%s", asctime( localtime(&ct) ));
+  snprintf(timestr, MAX_STRING_LENGTH, "%s", asctime( localtime(&ct) ));
   *(timestr + strlen(timestr) - 1) = '\0';
   strcat( timestr, " EST" );
 

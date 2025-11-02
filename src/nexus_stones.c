@@ -140,15 +140,16 @@ extern MYSQL* DB;
 int init_nexus_stones()
 {
   fprintf(stderr, "-- Booting nexus stones\r\n");
-  
+
   mob_index[real_mobile(MOB_GOOD_GUARDIAN)].func.mob = nexus_stone_guardian;
   mob_index[real_mobile(MOB_EVIL_GUARDIAN)].func.mob = nexus_stone_guardian;
   mob_index[real_mobile(MOB_GOOD_SAGE)].func.mob = nexus_sage;
-  mob_index[real_mobile(MOB_EVIL_SAGE)].func.mob = nexus_sage;  
+  mob_index[real_mobile(MOB_EVIL_SAGE)].func.mob = nexus_sage;
   obj_index[real_object(OBJ_NEXUS_STONE)].func.obj = nexus_stone;
   obj_index[real_object(OBJ_GUARDIAN_MACE)].func.obj = nexus_guardian_pwn_mace;
 
   load_nexus_stones();
+  return 0;
 }
 
 int load_nexus_stones()
@@ -250,7 +251,7 @@ int check_nexus_bonus(P_char ch, int amount, int type)
   else
     racewar = 0;
 
-  sprintf(buff, "nexusStones.bonus.%s", nexus_bonus_data[type].name);
+  snprintf(buff, MAX_STRING_LENGTH, "nexusStones.bonus.%s", nexus_bonus_data[type].name);
 
   if (GET_RACEWAR(ch) == racewar)
   {
@@ -263,7 +264,7 @@ int check_nexus_bonus(P_char ch, int amount, int type)
      case NEXUS_BONUS_EXP:
        break;
      case NEXUS_BONUS_CARGO:
-       sprintf(buff2, "&+yEnlil&n grants you an additional %s&n.\r\n", coin_stringv(newamnt));
+       snprintf(buff2, MAX_STRING_LENGTH, "&+yEnlil&n grants you an additional %s&n.\r\n", coin_stringv(newamnt));
        send_to_char(buff2, ch);
        break;
      default:
@@ -1010,7 +1011,7 @@ int nexus_sage_ask(P_char ch, P_char pl, char *arg)
   }
   else
   {
-    sprintf(buff, "$n says, 'If you have acquired truly epic experiences, type \"train\" to learn from my considerable %s.'", apply_names[info.stat_affect]);
+    snprintf(buff, MAX_STRING_LENGTH, "$n says, 'If you have acquired truly epic experiences, type \"train\" to learn from my considerable %s.'", apply_names[info.stat_affect]);
     act(buff, FALSE, ch, 0, pl, TO_VICT);
   }
 
@@ -1053,7 +1054,7 @@ int nexus_sage_train(P_char ch, P_char pl, char *arg)
 
   act("You sit at the feet of $n&n and learn, gaining something of $s ability.", FALSE, ch, 0, pl, TO_VICT);
 
-  sprintf(buff, "&+WYou feel your %s increasing!\r\n", apply_names[info.stat_affect]);
+  snprintf(buff, MAX_STRING_LENGTH, "&+WYou feel your %s increasing!\r\n", apply_names[info.stat_affect]);
   send_to_char(buff, pl);
 
   do_save_silent(pl, 1);
@@ -1271,13 +1272,13 @@ bool load_nexus_stone(int stone_id, const char* stone_name, int room_vnum, int a
   STONE_SAGE_TIMER(stone) = 0;
   
   char namebuff[MAX_STRING_LENGTH];
-  sprintf(namebuff, "nexus stone %s", strip_ansi(stone_name).c_str());
+  snprintf(namebuff, MAX_STRING_LENGTH, "nexus stone %s", strip_ansi(stone_name).c_str());
   stone->name = str_dup(namebuff);
 
-  sprintf(namebuff, "The nexus stone of %s stands here.", stone_name);
+  snprintf(namebuff, MAX_STRING_LENGTH, "The nexus stone of %s stands here.", stone_name);
   stone->description = str_dup(namebuff);
 
-  sprintf(namebuff, "the nexus stone of %s", stone_name);
+  snprintf(namebuff, MAX_STRING_LENGTH, "the nexus stone of %s", stone_name);
   stone->short_description = str_dup(namebuff);
 
   obj_to_room(stone, real_room(room_vnum));
@@ -1348,7 +1349,7 @@ void nexus_stone_list(P_char ch)
   if( !qry("SELECT name, align FROM nexus_stones WHERE align IN ('%d', '%d') ORDER BY id", STONE_ALIGN_GOOD, STONE_ALIGN_EVIL) )
     return;
   
-  sprintf(buff, "&+WNexus Stones &+G=================================\n\n");
+  snprintf(buff, MAX_STRING_LENGTH, "&+WNexus Stones &+G=================================\n\n");
   send_to_char(buff, ch);
   
   MYSQL_RES *res = mysql_store_result(DB);
@@ -1369,12 +1370,12 @@ void nexus_stone_list(P_char ch)
     
     if( align == STONE_ALIGN_EVIL )
     {
-      sprintf(buff, "  %s &n(&+Levil&n)\n", stone_name);
+      snprintf(buff, MAX_STRING_LENGTH, "  %s &n(&+Levil&n)\n", stone_name);
       send_to_char(buff, ch);
     }
     else if( align == STONE_ALIGN_GOOD )
     {
-      sprintf(buff, "  %s &n(&+Wgood&n)\n", stone_name);
+      snprintf(buff, MAX_STRING_LENGTH, "  %s &n(&+Wgood&n)\n", stone_name);
       send_to_char(buff, ch);
     }
   }
@@ -1389,7 +1390,7 @@ void nexus_stone_god_list(P_char ch)
   if( !qry("SELECT id, name, align FROM nexus_stones ORDER BY id", STONE_ALIGN_GOOD, STONE_ALIGN_EVIL) )
     return;
   
-  sprintf(buff, "&+WNexus Stones &+G=================================\n\n");
+  snprintf(buff, MAX_STRING_LENGTH, "&+WNexus Stones &+G=================================\n\n");
   send_to_char(buff, ch);
   
   MYSQL_RES *res = mysql_store_result(DB);
@@ -1411,17 +1412,17 @@ void nexus_stone_god_list(P_char ch)
     
     if( align == STONE_ALIGN_EVIL )
     {
-      sprintf(buff, "  [&+W%d&n] %s &n(&+L%d&n)\n", stone_id, stone_name, align);
+      snprintf(buff, MAX_STRING_LENGTH, "  [&+W%d&n] %s &n(&+L%d&n)\n", stone_id, stone_name, align);
       send_to_char(buff, ch);
     }
     else if( align == STONE_ALIGN_GOOD )
     {
-      sprintf(buff, "  [&+W%d&n] %s &n(&+W%d&n)\n", stone_id, stone_name, align);
+      snprintf(buff, MAX_STRING_LENGTH, "  [&+W%d&n] %s &n(&+W%d&n)\n", stone_id, stone_name, align);
       send_to_char(buff, ch);
     }
     else
     {
-      sprintf(buff, "  [&+W%d&n] %s &n(%d)\n", stone_id, stone_name, align);
+      snprintf(buff, MAX_STRING_LENGTH, "  [&+W%d&n] %s &n(%d)\n", stone_id, stone_name, align);
       send_to_char(buff, ch);
     }
   }

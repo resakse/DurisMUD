@@ -234,11 +234,11 @@ int initialize_mysql()
 {
   /* hack to ensure we're not using the live database when not running on default port */
   char db_name[50];
-  sprintf(db_name, DB_NAME);
+  snprintf(db_name, 50, DB_NAME);
   
   if( RUNNING_PORT != DFLT_PORT )
   {
-    sprintf(db_name, "duris_dev");    
+    snprintf(db_name, 50, "duris_dev");    
   }
   
   logit(LOG_STATUS, "Initializing MySQL persistent connection to %s.", db_name);
@@ -328,7 +328,7 @@ int sql_save_player_core(P_char ch)
   }
   else
   {
-    sprintf( assoc_name, "%s", GET_ASSOC(ch)->get_name().c_str() );
+    snprintf(assoc_name, MAX_STRING_LENGTH, "%s", GET_ASSOC(ch)->get_name().c_str() );
   }
   mysql_str(assoc_name, assoc_name_sql);
 
@@ -344,10 +344,10 @@ int sql_save_player_core(P_char ch)
     ("INSERT INTO players_core (pid, name, race, classname, spec, guild, webinfo_toggle, racewar, level, money, balance, playtime, epics) VALUES( %d, '', '', '', '', '', 0, 0 ,0 ,0,0,0,0)",
      GET_PID(ch));
 
-  sprintf(query, "UPDATE players_core SET active = 0 WHERE name = '%s' and pid != %d", p->name, GET_PID(ch));
+  snprintf(query, MAX_STRING_LENGTH, "UPDATE players_core SET active = 0 WHERE name = '%s' and pid != %d", p->name, GET_PID(ch));
   db_query(query);
 
-  sprintf(query,
+  snprintf(query, MAX_STRING_LENGTH,
           "UPDATE players_core SET name='%s', race = '%s', classname = '%s', "
           "spec = '%s', guild = '%s', webinfo_toggle = %d, "
           "level = %d, racewar=%d, active=1 WHERE pid = %d", p->name,
@@ -461,20 +461,20 @@ void sql_check_level_cap( long max_frags, int racewar )
     // Have enough frags to update level.
     if( old_level < FRAGS_TO_LEVEL(max_frags/100.) )
     {
-      sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d, level = %d, next_update = FROM_UNIXTIME(%ld)",
+      snprintf(query, 1024, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d, level = %d, next_update = FROM_UNIXTIME(%ld)",
         max_frags/100., racewar, old_level + 1, CAP_DELAY(old_level) );
       db_query(query);
     }
     else if( max_frags > old_max_frags )
     {
-      sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d", max_frags / 100., racewar );
+      snprintf(query, 1024, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d", max_frags / 100., racewar );
       db_query(query);
     }
   }
   // Just changing highest frag amount and, possibly, racewar leader.
   else if( max_frags > old_max_frags )
   {
-    sprintf(query, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d", max_frags/100., racewar );
+    snprintf(query, 1024, "UPDATE level_cap SET most_frags = %f, racewar_leader = %d", max_frags/100., racewar );
     db_query(query);
   }
 }
@@ -538,7 +538,7 @@ mysql_str( obj->short_description, sql_short);
   db_query_nolog
     ("INSERT INTO items_stats VALUES( null, '%s', '', %d)",
      sql_short, m_virtual);
-  sprintf(query,
+  snprintf(query, MAX_STRING_LENGTH,
           "UPDATE items_stats SET  obj_stat = '%s', vnum = %d "
           " WHERE short_desc = '%s'",  sql_desc, m_virtual, sql_short);
 
@@ -560,7 +560,7 @@ P_room   rm = &world[i];
 struct zone_data *zone = 0;
 zone = &zone_table[world[ch->in_room].zone];
 
-sprintf(item_id, "o %s", obj->name);
+snprintf(item_id, MAX_STRING_LENGTH, "o %s", obj->name);
 do_stat(ch,item_id, 555);
 
 }
@@ -572,7 +572,7 @@ unsigned long new_pkill_event(P_char ch)
   char     query[MAX_STRING_LENGTH];
 
   mysql_str(world[ch->in_room].name, room_name_sql);
-  sprintf(query, "INSERT INTO pkill_event (stamp, room_vnum, room_name) VALUES( NOW(), %d, '%s' )",
+  snprintf(query, MAX_STRING_LENGTH, "INSERT INTO pkill_event (stamp, room_vnum, room_name) VALUES( NOW(), %d, '%s' )",
            world[ch->in_room].number, room_name_sql);
 
   if (mysql_real_query(DB, query, strlen(query)) != 0)
@@ -595,7 +595,7 @@ void get_pkill_player_description(P_char ch, char *buffer)
   }
   else
   {
-    sprintf( assoc_name, "%s", GET_ASSOC(ch)->get_name().c_str() );
+    snprintf(assoc_name, MAX_STRING_LENGTH, "%s", GET_ASSOC(ch)->get_name().c_str() );
   }
 
   sprintf(buffer, "[%2d %s&n] %s &n%s &n(%s&n)",
@@ -789,12 +789,12 @@ void manual_log(P_char ch)
 
   mysql_str(buf2, log_sql);
 
-  sprintf(a, "%d%ld", rand(), time(NULL));
-  sprintf(b, "%s", CRYPT2(a, ch->player.name));
+  snprintf(a, 256, "%d%ld", rand(), time(NULL));
+  snprintf(b, 256, "%s", CRYPT2(a, ch->player.name));
 
   db_query("INSERT INTO MANUAL_LOG VALUES( 0, '%s', '%s', %d, 0, NOW() )", log_sql, b, GET_PID(ch));
 
-  sprintf(buf, "Your log is @ '&+Whttp://duris.game-host.org/duris/php/stats/mylog.php?password=%s&n' \n", b);
+  snprintf(buf, MAX_STRING_LENGTH, "Your log is @ '&+Whttp://duris.game-host.org/duris/php/stats/mylog.php?password=%s&n' \n", b);
 
   send_to_char(buf, ch, LOG_PRIVATE);
 }
@@ -1007,10 +1007,10 @@ MYSQL_RES *db  = db_query("SELECT UPPER(si_title) , old_id, REPLACE(REPLACE(REPL
     row = mysql_fetch_row(db);
     if (NULL != row)
     {
-     sprintf(buf, "\t&+W========| &+m %s &+W |========&n\n%s" ,query, row[0]);
+     snprintf(buf, MAX_STRING_LENGTH, "\t&+W========| &+m %s &+W |========&n\n%s" ,query, row[0]);
     }
     else
-    sprintf(buf, "&+WNothing matches, see &+mHelp wiki&+W how to add this help.&n");
+    snprintf(buf, MAX_STRING_LENGTH, "&+WNothing matches, see &+mHelp wiki&+W how to add this help.&n");
     while ((row = mysql_fetch_row(db)))
       ;
     mysql_free_result(db);
@@ -1028,7 +1028,7 @@ MYSQL_RES *db  = db_query("SELECT UPPER(si_title) , old_id, REPLACE(REPLACE(REPL
         {
 	strcat(buf2, "\r\n\r\n");
 	strcat(buf2, "&+WOther related topics:&n\r\n");
-        sprintf(buf3, "&+m%s&n, " , row2[0]);
+        snprintf(buf3, MAX_STRING_LENGTH, "&+m%s&n, " , row2[0]);
 	strcat(buf2, buf3);
         }
 
@@ -1038,7 +1038,7 @@ MYSQL_RES *db  = db_query("SELECT UPPER(si_title) , old_id, REPLACE(REPLACE(REPL
         {
         if( atoi(row2[1]) > 0){
 	i++;
-	sprintf(buf3, "&+m%s&n, " , row2[0]);
+	snprintf(buf3, MAX_STRING_LENGTH, "&+m%s&n, " , row2[0]);
 	if(i == 5)
 	strcat(buf3, "\r\n");
 	strcat(buf2, buf3);
@@ -1269,13 +1269,13 @@ void do_sql(P_char ch, char *argument, int cmd)
       rest = skip_spaces( rest );
       if( !*third )
       {
-        sprintf( third, "SELECT * FROM prepstatement_duris_sql WHERE id=%d", prep_statement );
+        snprintf(third, MAX_INPUT_LENGTH, "SELECT * FROM prepstatement_duris_sql WHERE id=%d", prep_statement );
         do_sql( ch, third, cmd );
 /* This won't work due to the fact that we're trying a second sql command?
         if( !qry( third ) )
         {
           send_to_char( "Row does not exist: attempting to create..\n\r", ch );
-          sprintf( buf, "INSERT INTO prepstatement_duris_sql (id, description) VALUES (%d, 'new')", prep_statement );
+          snprintf(buf, MAX_STRING_LENGTH, "INSERT INTO prepstatement_duris_sql (id, description) VALUES (%d, 'new')", prep_statement );
           do_sql( ch, buf, cmd );
         }
         else
@@ -1294,7 +1294,7 @@ void do_sql(P_char ch, char *argument, int cmd)
 
           if( row != NULL )
           {
-            sprintf(tmp, "%s", row[0]);
+            snprintf(tmp, MAX_STRING_LENGTH, "%s", row[0]);
           }
           else
           {
@@ -1316,7 +1316,7 @@ void do_sql(P_char ch, char *argument, int cmd)
       }
       if( strstr(third, "desc" ) )
       {
-        sprintf(buf, "UPDATE prepstatement_duris_sql SET description = '%s' WHERE id='%d'", rest, prep_statement );
+        snprintf(buf, MAX_STRING_LENGTH, "UPDATE prepstatement_duris_sql SET description = '%s' WHERE id='%d'", rest, prep_statement );
         do_sql( ch, buf, 0);
         return;
       }
@@ -1346,7 +1346,7 @@ void do_sql(P_char ch, char *argument, int cmd)
 
   if( mysql_real_query(DB, argument, strlen(argument)) )
   {
-    sprintf(result, "%s", mysql_error(DB));
+    snprintf(result, MAX_STRING_LENGTH, "%s", mysql_error(DB));
     logit(LOG_DEBUG, "MySQL error(sql command): %s", mysql_error(DB));
     send_to_char(result, ch);
     return;
@@ -1359,7 +1359,7 @@ void do_sql(P_char ch, char *argument, int cmd)
     fields = mysql_fetch_fields(db);
     for( i = 0; i < num_fields; i++ )
     {
-      sprintf(tmp, " | %-15s&n ", fields[i].name);
+      snprintf(tmp, MAX_STRING_LENGTH, " | %-15s&n ", fields[i].name);
       strcat(result, tmp);
     }
     strcat(result, " |\n\n");
@@ -1377,7 +1377,7 @@ void do_sql(P_char ch, char *argument, int cmd)
 
       for( i = 0; i < num_fields; i++ )
       {
-        sprintf(tmp, " | %-15s&n ", row[i]);
+        snprintf(tmp, MAX_STRING_LENGTH, " | %-15s&n ", row[i]);
         strcat(result, tmp);
       }
       strcat(result, " |\n\n");
@@ -1486,7 +1486,7 @@ void show_frag_trophy(P_char ch, P_char who)
   MYSQL_ROW row;
   while( row = mysql_fetch_row(res) )
   {
-    sprintf(buff, " &+g(&+G%2d&+g) &+W%s\r\n", atoi(row[1]), row[0]);
+    snprintf(buff, MAX_STRING_LENGTH, " &+g(&+G%2d&+g) &+W%s\r\n", atoi(row[1]), row[0]);
     send_to_char( buff, ch);
   }
   
@@ -1526,10 +1526,10 @@ void sql_log(P_char ch, char * kind, char * format, ...)
 
 	if( ch->desc && ch->desc->host )
 	{
-		sprintf(ip_buff, "%s", ch->desc->host);
+		snprintf(ip_buff, 50, "%s", ch->desc->host);
 	}
 
-  sprintf(buff, "INSERT INTO log_entries (date, kind, ip_address, pid, player_name, zone_number, room_vnum, message) VALUES " \
+  snprintf(buff, MAX_STRING_LENGTH, "INSERT INTO log_entries (date, kind, ip_address, pid, player_name, zone_number, room_vnum, message) VALUES " \
       "(now(), '%s', '%s', %d, '%s', %d, %d, '%s')", kind, ip_buff, GET_PID(ch), GET_NAME(ch), zone_table[world[ch->in_room].zone].number, world[ch->in_room].number, message_buff);
 
 	qry(buff);

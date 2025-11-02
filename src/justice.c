@@ -321,27 +321,27 @@ void do_justice(P_char ch, char *arg, int cmd)
         send_to_char( "No justice items!\r\n", ch);
       } else {
         for (o_obj = justice_items_list; o_obj; o_obj = o_obj->next_content) {
-          sprintf(buf1, "%s belong to %s\r\n", o_obj->short_description, o_obj->justice_name);
+          snprintf(buf1, MAX_INPUT_LENGTH, "%s belong to %s\r\n", o_obj->short_description, o_obj->justice_name);
           send_to_char(buf1, ch);
         }
       }*/
     }
     else if (!str_cmp(arg1, "info"))
     {
-      sprintf(buf1, "Justice info for %s.\r\n", J_NAME(ch));
+      snprintf(buf1, MAX_INPUT_LENGTH, "Justice info for %s.\r\n", J_NAME(ch));
 
       for (town = 1; town <= LAST_HOME; town++)
       {
         if (!hometowns[town - 1].crime_list)
           continue;
-        sprintf(buf1, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
+        snprintf(buf1, MAX_INPUT_LENGTH, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
                 buf1);
-        sprintf(buf1, "%sCrime for %s\r\n", buf1, town_name_list[town]);
+        snprintf(buf1, MAX_INPUT_LENGTH, "%sCrime for %s\r\n", buf1, town_name_list[town]);
         while ((crec =
                 crime_find(hometowns[town - 1].crime_list, J_NAME(ch), NULL,
                            0, NOWHERE, J_STATUS_NONE, crec)))
         {
-          sprintf(buf1, "%s  %s against %s, status &+c%s&n.\r\n",
+          snprintf(buf1, MAX_INPUT_LENGTH, "%s  %s against %s, status &+c%s&n.\r\n",
                   buf1, crime_list[crec->crime], crec->victim,
                   justice_status[crec->status]);
           if (crec->status == J_STATUS_JAIL_TIME)
@@ -351,25 +351,25 @@ void do_justice(P_char ch, char *arg, int cmd)
           }
         }
       }
-      sprintf(buf1, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
+      snprintf(buf1, MAX_INPUT_LENGTH, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
               buf1);
-      sprintf(buf1, "%sNumber of time judged : &+R%d&N.\r\n", buf1,
+      snprintf(buf1, MAX_INPUT_LENGTH, "%sNumber of time judged : &+R%d&N.\r\n", buf1,
               GET_TIME_JUDGE(ch));
-      sprintf(buf1, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
+      snprintf(buf1, MAX_INPUT_LENGTH, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
               buf1);
       if (in_jail)
       {
-        sprintf(buf1, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
+        snprintf(buf1, MAX_INPUT_LENGTH, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
                 buf1);
         crec = NULL;
         crec = crime_find(hometowns[town1 - 1].crime_list, J_NAME(ch), NULL,
                           0, NOWHERE, J_STATUS_JAIL_TIME, NULL);
         if (crec)
         {
-          sprintf(buf1, "%sYou are in jail (%d hours left).\r\n",
+          snprintf(buf1, MAX_INPUT_LENGTH, "%sYou are in jail (%d hours left).\r\n",
                   buf1, (int) ((crec->time - time(NULL)) / 75));
         }
-        sprintf(buf1, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
+        snprintf(buf1, MAX_INPUT_LENGTH, "%s=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\r\n",
                 buf1);
       }
       send_to_char(buf1, ch);
@@ -391,16 +391,16 @@ void do_justice(P_char ch, char *arg, int cmd)
   }
   else
   {
-    sprintf(buf1, "List of crimes:\r\n");
+    snprintf(buf1, MAX_INPUT_LENGTH, "List of crimes:\r\n");
 
     if (CHAR_IN_JUSTICE_AREA(ch))
     {
-      sprintf(buf, "&+R---JUSTICE---&N\r\n");
+      snprintf(buf, MAX_INPUT_LENGTH, "&+R---JUSTICE---&N\r\n");
       for (i = 0; i < CRIME_NB; i++)
       {
         if (GET_CRIME_P(CHAR_IN_JUSTICE_AREA(ch), i))
         {
-          sprintf(buf1, "%s %s\r\n", buf1, crime_list[i]);
+          snprintf(buf1, MAX_INPUT_LENGTH, "%s %s\r\n", buf1, crime_list[i]);
           crime_ok = TRUE;
         }
       }
@@ -699,10 +699,10 @@ void JusticeGuardHunt(P_char ch)
 
     vict = ch->specials.arrest_by;
 
-    sprintf(buf, "&+RStop!&N  %s, you're under &+RARREST!&N", J_NAME(vict));
+    snprintf(buf, MAX_STRING_LENGTH, "&+RStop!&N  %s, you're under &+RARREST!&N", J_NAME(vict));
     mobsay(ch, buf);
     if (PC_TOWN_JUSTICE_FLAGS(ch, CHAR_IN_TOWN(ch)) == JUSTICE_IS_NORMAL)
-      sprintf(buf, "Tourists always cause problems around here.");
+      snprintf(buf, MAX_STRING_LENGTH, "Tourists always cause problems around here.");
     mobsay(ch, buf);
     play_sound(SOUND_LAWPAY, NULL, ch->in_room, TO_ROOM);
     LOOP_THRU_PEOPLE(tch, ch) stop_fighting(tch);
@@ -905,13 +905,13 @@ void justice_set_outcast(P_char ch, int town)
     GET_HOME(ch) = GET_BIRTHPLACE(ch);
 
   /* brag to the hometown about it */
-  sprintf(buf, "&+WSomeone shouts '%s has been exiled from %s!'&n",
+  snprintf(buf, MAX_STRING_LENGTH, "&+WSomeone shouts '%s has been exiled from %s!'&n",
           J_NAME(ch), town_name_list[town]);
   justice_hometown_echo(town, buf);
 
   /* now let them (and the gods) know about it */
 
-  sprintf(buf,
+  snprintf(buf, MAX_STRING_LENGTH,
           "&+Y************************************************************&N\r\n"
           "                          &+R&-L WARNING!&N\r\n"
           "\r\n"
@@ -1995,7 +1995,7 @@ witness_add(P_char ch, P_char attacker, P_char victim, int rroom, int crime)
 #ifdef JUSTICE_DEBUG
   char     debug_buf[MAX_STRING_LENGTH];
 
-  sprintf(debug_buf, "You see %s commit crime %d against %s\r\n",
+  snprintf(debug_buf, MAX_STRING_LENGTH, "You see %s commit crime %d against %s\r\n",
           attacker, crime, victim);
   if (ch)
     send_to_char(debug_buf, ch);
@@ -2047,7 +2047,7 @@ crime_add(int town, char *attacker, const char *victim,
 #ifdef JUSTICE_DEBUG
   char     debug_buf[MAX_STRING_LENGTH];
 
-  sprintf(debug_buf, "You report %s commit crime %d against %s\r\n",
+  snprintf(debug_buf, MAX_STRING_LENGTH, "You report %s commit crime %d against %s\r\n",
           attacker, crime, victim);
   if (ch)
     send_to_char(debug_buf, ch);
@@ -2383,8 +2383,8 @@ int shout_and_hunt(P_char ch, int max_distance, const char *shout_str, int (*loc
    * bashed.  Just because I'm sitting on my butt doesn't mean I can
    * scream for help
    */
-  sprintf(buffer, "%s shouts '", ch->player.short_descr);
-  sprintf(buffer2, shout_str, CAN_SEE(ch, GET_OPPONENT(ch)) ? J_NAME(GET_OPPONENT(ch)) : "Someone");
+  snprintf(buffer, MAX_STRING_LENGTH, "%s shouts '", ch->player.short_descr);
+  snprintf(buffer2, MAX_STRING_LENGTH, shout_str, CAN_SEE(ch, GET_OPPONENT(ch)) ? J_NAME(GET_OPPONENT(ch)) : "Someone");
   strcat(buffer, buffer2);
   strcat(buffer, "&n'\n");
 
@@ -2550,7 +2550,7 @@ void do_sorta_yell(P_char ch, char *str)
         !IS_SET(i->character->specials.act, PLR_NOSHOUT) && !i->connected)
       if (world[i->character->in_room].zone == world[ch->in_room].zone)
       {
-        sprintf(Gbuf1, "$n shouts %s'%s'", language_known(ch, i->character),
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "$n shouts %s'%s'", language_known(ch, i->character),
                 language_CRYPT(ch, i->character, str));
         act(Gbuf1, 0, ch, 0, i->character, TO_VICT);
       }
@@ -2593,9 +2593,9 @@ void justice_judge(P_char ch, int town)
   if (!ch)
     return;
 
-  sprintf(buf, "&+R-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-&N\r\n");
-  sprintf(buf, "%s&+RTHE JUSTICE OF %s&N.\r\n", buf, town_name_list[town]);
-  sprintf(buf, "%s%s, this is what we have against you.\r\n", buf,
+  snprintf(buf, MAX_STRING_LENGTH, "&+R-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-&N\r\n");
+  snprintf(buf, MAX_STRING_LENGTH, "%s&+RTHE JUSTICE OF %s&N.\r\n", buf, town_name_list[town]);
+  snprintf(buf, MAX_STRING_LENGTH, "%s%s, this is what we have against you.\r\n", buf,
           J_NAME(ch));
 
   while ((crec = crime_find(hometowns[town - 1].crime_list, J_NAME(ch), NULL,
@@ -2606,29 +2606,29 @@ void justice_judge(P_char ch, int town)
     {
     case J_STATUS_CRIME:
       crime_index += GET_CRIME_T(town, crec->crime);
-      sprintf(buf, "%s  %s against %s\r\n", buf, crime_list[crec->crime],
+      snprintf(buf, MAX_STRING_LENGTH, "%s  %s against %s\r\n", buf, crime_list[crec->crime],
               crec->victim);
       break;
     case J_STATUS_DEBT:
       crime_index += (crec->money / 100);
-      sprintf(buf, "%s  You still owe money for a previous crime\r\n", buf);
+      snprintf(buf, MAX_STRING_LENGTH, "%s  You still owe money for a previous crime\r\n", buf);
       previous_debt += crec->money;
       break;
     case J_STATUS_PARDON:
       crime_index -= (GET_CRIME_T(town, crec->crime) + 10);
-      sprintf(buf, "%s  %s pardoned you for %s\r\n", buf, crec->victim,
+      snprintf(buf, MAX_STRING_LENGTH, "%s  %s pardoned you for %s\r\n", buf, crec->victim,
               crime_list[crec->crime]);
       break;
     case J_STATUS_WANTED:
       if (crec->crime == CRIME_NOT_PAID)
       {
         crime_index += GET_CRIME_T(town, crec->crime);
-        sprintf(buf, "%s  You did not pay your debt in time\r\n", buf);
+        snprintf(buf, MAX_STRING_LENGTH, "%s  You did not pay your debt in time\r\n", buf);
       }
       else
       {
         crime_index += GET_CRIME_T(town, crec->crime);
-        sprintf(buf, "%s  You are a wanted criminal\r\n", buf);
+        snprintf(buf, MAX_STRING_LENGTH, "%s  You are a wanted criminal\r\n", buf);
       }
       break;
     }
@@ -2650,13 +2650,13 @@ void justice_judge(P_char ch, int town)
     crime_remove(town, crec);
   }
 
-  sprintf(buf, "%s\r\nThe Judge says '", buf);
+  snprintf(buf, MAX_STRING_LENGTH, "%s\r\nThe Judge says '", buf);
 
   if ((crime_index >= SENTENCE_MIN(town, SENTENCE_NONE)) &&
       (crime_index <= SENTENCE_MAX(town, SENTENCE_NONE)))
   {
     logit(LOG_CRIMES, "%s sentence : free", J_NAME(ch));
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "%sWe're gonna let you go this time, provided you obey all laws henceforth.'\r\n",
             buf);
     char_from_room(ch);
@@ -2683,9 +2683,9 @@ void justice_judge(P_char ch, int town)
     temp = (crime_index - SENTENCE_MIN(town, SENTENCE_DEBT) + 1) * 50;
 
     logit(LOG_CRIMES, "%s sentence : pay %d plat.", J_NAME(ch), temp);
-    sprintf(buf, "%sYou are ordered to pay %d platinum to the town.'\r\n",
+    snprintf(buf, MAX_STRING_LENGTH, "%sYou are ordered to pay %d platinum to the town.'\r\n",
             buf, temp);
-    sprintf(buf, "%s&+RYou have 30 days to pay your debt.&N\r\n", buf);
+    snprintf(buf, MAX_STRING_LENGTH, "%s&+RYou have 30 days to pay your debt.&N\r\n", buf);
     char_from_room(ch);
     char_to_room(ch, real_room(hometowns[town - 1].report_room), -1);
     restoreJailItems(ch);
@@ -2900,7 +2900,7 @@ void justice_engine(int town)
           act
             ("&+LThe executioner&N places a &+Mglowing&N dagger in your &+Rheart&N.",
              TRUE, ch, 0, 0, TO_VICT);
-          sprintf(buf1, "&+WSomeone shouts '%s has been executed!'&n\r\n",
+          snprintf(buf1, MAX_STRING_LENGTH, "&+WSomeone shouts '%s has been executed!'&n\r\n",
                   J_NAME(ch));
           justice_hometown_echo(town, buf1);
           while ((crec = crime_find(hometowns[town - 1].crime_list,

@@ -30,7 +30,7 @@ char *Card::Display()
 {
   static char buf[25];
 
-  sprintf( buf, "&+C%s&n %s", getValue(), getSuit() );
+  snprintf(buf, 25, "&+C%s&n %s", getValue(), getSuit() );
 
   return buf;
 }
@@ -40,7 +40,7 @@ char *Card::Display2()
 {
   static char buf[25];
 
-  sprintf( buf, "&+C%2s&n %-14s", getValue(), getSuit() );
+  snprintf(buf, 25, "&+C%2s&n %-14s", getValue(), getSuit() );
 
   return buf;
 }
@@ -297,7 +297,7 @@ int cards_object( P_obj obj, P_char ch, int cmd, char *argument )
       num = atoi( arg );
       // Shuffle at least one time.
       num = (num<1) ? 1 : num;
-      sprintf( buf, "Shuffling %d times....   ", num );
+      snprintf(buf, MAX_STRING_LENGTH, "Shuffling %d times....   ", num );
       send_to_char( buf, ch );
       theDeck->Shuffle( num );
       send_to_char( "done.\n\r", ch );
@@ -369,7 +369,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
 //   since ch is NULL when CMD_PERIODIC fires.
       act( "\n&+yThe &+CDealer&+y takes a new card...&n", FALSE, ch, obj, ch, TO_CHAR );
       dealerHand->ReceiveCard(theDeck->DealACard());
-      sprintf(buf, "&+yDealer shows: %s.\n\r&+yDealer Total: &+Y%d&+y.&n\n\r", dealerHand->Display(), dealerHand->BlackjackValue() );
+      snprintf(buf, MAX_STRING_LENGTH, "&+yDealer shows: %s.\n\r&+yDealer Total: &+Y%d&+y.&n\n\r", dealerHand->Display(), dealerHand->BlackjackValue() );
       send_to_char( buf, ch );
     }
     // End game
@@ -380,7 +380,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
         act( "\n&+yThe &+CDealer&+y decides to &+Wstay&+y with his current hand!&n\n\n", FALSE, ch, obj, ch, TO_CHAR);
         if( playerHand->BlackjackValue() > dealerHand->BlackjackValue() )
         {
-          sprintf( buf, "&+RY&+CO&+BU &+GW&+YI&+MN&+C!&+R!&+y! with &+Y%d&+y versus the dealers &+Y%d&+y.\n",
+          snprintf(buf, MAX_STRING_LENGTH, "&+RY&+CO&+BU &+GW&+YI&+MN&+C!&+R!&+y! with &+Y%d&+y versus the dealers &+Y%d&+y.\n",
             playerHand->BlackjackValue(), dealerHand->BlackjackValue() );
           send_to_char(buf, ch);
           // Return the bid + winnings.
@@ -398,7 +398,7 @@ int blackjack_table(P_obj obj, P_char ch, int cmd, char *argument)
         // Can assume player total < dealer total.
         else
         {
-          sprintf(buf, "&+RYou LOSE!!&+C Dealers &+Y%d &+rbeats your &+Y%d&+r.\n",
+          snprintf(buf, MAX_STRING_LENGTH, "&+RYou LOSE!!&+C Dealers &+Y%d &+rbeats your &+Y%d&+r.\n",
             dealerHand->BlackjackValue(), playerHand->BlackjackValue() );
           logit(LOG_CARDGAMES, "%s lost %d %s at blackjack v2.0.", J_NAME(ch), obj->value[1], (obj->value[2]==0)?"copper":
             (obj->value[2]==1)?"silver":(obj->value[2]==2)?"gold":(obj->value[2]==3)?"platinum":"unknown");

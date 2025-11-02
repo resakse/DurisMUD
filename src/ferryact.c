@@ -337,7 +337,7 @@ int ferry_automat_proc(P_obj obj, P_char ch, int cmd, char *arg) {
 	char buff[MAX_STRING_LENGTH];
 	
 	if( cmd == CMD_LOOK && isname(arg, "contraption") ) {
-		sprintf(buff, "The %s sails from here to the following destinations:\r\n%s\r\n", ferry->name.c_str(), ferry->get_route_list(route_stop).c_str());
+		snprintf(buff, MAX_STRING_LENGTH, "The %s sails from here to the following destinations:\r\n%s\r\n", ferry->name.c_str(), ferry->get_route_list(route_stop).c_str());
 		send_to_char(buff, ch);	
 	
 		int eta = ferry->eta(route_stop);
@@ -356,12 +356,12 @@ int ferry_automat_proc(P_obj obj, P_char ch, int cmd, char *arg) {
 		}
 		else
 		{
-			sprintf(buff, "This ferry is due to arrive in approximately &+G%d hours&n.\r\n\r\n", eta);
+			snprintf(buff, MAX_STRING_LENGTH, "This ferry is due to arrive in approximately &+G%d hours&n.\r\n\r\n", eta);
 			send_to_char(buff, ch);
 		}
 	
 		string price_str(coin_stringv(ferry->ticket_price));
-		sprintf(buff, "Tickets for this ferry cost %s. Type '&+Wbuy ticket&n' to\r\nbuy a ticket, and please keep your ticket for the duration of your journey.\r\n", price_str.c_str());
+		snprintf(buff, MAX_STRING_LENGTH, "Tickets for this ferry cost %s. Type '&+Wbuy ticket&n' to\r\nbuy a ticket, and please keep your ticket for the duration of your journey.\r\n", price_str.c_str());
 		send_to_char(buff, ch);
 
 		return TRUE;
@@ -384,7 +384,7 @@ int ferry_automat_proc(P_obj obj, P_char ch, int cmd, char *arg) {
 		ticket->value[0] = ferry_id;
 
 		char buf[MAX_STRING_LENGTH];
-		sprintf(buf, "a &+Wferry ticket&n for the %s", ferry->name.c_str());
+		snprintf(buf, MAX_STRING_LENGTH, "a &+Wferry ticket&n for the %s", ferry->name.c_str());
 		ticket->short_description = str_dup(buf);
 
 		send_to_char("You put your money into the machine and receive a ticket.\r\n", ch);

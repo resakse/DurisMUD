@@ -1037,11 +1037,11 @@ char    *enter_message(P_char ch, P_char people, int exitnumb, char *amsg,
       if((IS_ROOM(ch->in_room, ROOM_UNDERWATER)) ||
         (ch->specials.z_cord < 0))
       {
-        sprintf(tmp2, "swims in on %s", J_NAME(mount));
+        snprintf(tmp2, 512, "swims in on %s", J_NAME(mount));
       }
       else
       {
-        sprintf(tmp2, "rides in on %s", J_NAME(mount));
+        snprintf(tmp2, 512, "rides in on %s", J_NAME(mount));
       }
     }
     else if((IS_ROOM(ch->in_room, ROOM_UNDERWATER)) ||
@@ -1146,7 +1146,7 @@ char    *leave_message(P_char ch, P_char people, int exitnumb, char *amsg)
 
   if( mount)
   {
-    sprintf(tmp, "%s riding on %s", amsg, CAN_SEE(people, mount) ?
+    snprintf(tmp, 512, "%s riding on %s", amsg, CAN_SEE(people, mount) ?
             mount->player.short_descr : "something");
     strcpy(amsg, tmp);
   }
@@ -1316,7 +1316,7 @@ int do_simple_move_skipping_procs(P_char ch, int exitnumb, unsigned int flags)
     {
       if( EXIT(ch, exitnumb)->keyword )
       {
-        sprintf(amsg, "The %s seems to be closed.\n", FirstWord(EXIT(ch, exitnumb)->keyword));
+        snprintf(amsg, MAX_STRING_LENGTH, "The %s seems to be closed.\n", FirstWord(EXIT(ch, exitnumb)->keyword));
         send_to_char(amsg, ch);
       }
       else
@@ -2223,7 +2223,7 @@ int find_door(P_char ch, char *type, char *dir)
 
         else
         {
-          sprintf(Gbuf1, "I see no %s there.\n", type);
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "I see no %s there.\n", type);
           send_to_char(Gbuf1, ch);
           return (-1);
         }
@@ -2272,7 +2272,7 @@ int find_door(P_char ch, char *type, char *dir)
   
   /* No keyword matching, no direction matching, nothing happens. */
   
-  sprintf(Gbuf1, "I see no %s here.\n", type);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "I see no %s here.\n", type);
   send_to_char(Gbuf1, ch);
   return (-1);
 }
@@ -2389,7 +2389,7 @@ void do_open(P_char ch, char *argument, int cmd)
         bool validobj;
         validobj = FALSE;
 /*
-debug sprintf(buf, "validobj value: %d\n\r", validobj);
+debug snprintf(buf, MAX_STRING_LENGTH, "validobj value: %d\n\r", validobj);
 send_to_char(buf, ch);
 */
         if( door == TURKEY_INNARDS_VNUM )
@@ -2619,7 +2619,7 @@ void do_close(P_char ch, char *argument, int cmd)
             SET_BIT(back->exit_info, EX_CLOSED);
             if( back->keyword)
             {
-              sprintf(Gbuf1, "The %s closes quietly.\n",
+              snprintf(Gbuf1, MAX_STRING_LENGTH, "The %s closes quietly.\n",
                       FirstWord(back->keyword));
               send_to_room(Gbuf1, EXIT(ch, door)->to_room);
             }
@@ -3186,7 +3186,7 @@ void do_enter(P_char ch, char *argument, int cmd)
             command_interpreter(ch, Gbuf1);
             return;
           }
-    sprintf(Gbuf4, "There is no %s here.\n", Gbuf1);
+    snprintf(Gbuf4, MAX_STRING_LENGTH, "There is no %s here.\n", Gbuf1);
     send_to_char(Gbuf4, ch);
   }
   else if( IS_ROOM(ch->in_room, ROOM_INDOORS))

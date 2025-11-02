@@ -276,7 +276,7 @@ void verify_account_name(P_desc d, char *arg)
   if (!arg)
   {
     *d->account->acct_name = toupper(*d->account->acct_name);
-    sprintf(buf, "You chose the name %s, is this correct? (Y/N)  ",
+    snprintf(buf, 1024, "You chose the name %s, is this correct? (Y/N)  ",
             d->account->acct_name);
     SEND_TO_Q(buf, d);
     return;
@@ -326,7 +326,7 @@ void verify_new_account_email(P_desc d, char *arg)
 
   if (!arg)
   {
-    sprintf(buf, "\r\nYou entered %s, is this correct?  (Y/N)",
+    snprintf(buf, 1024, "\r\nYou entered %s, is this correct?  (Y/N)",
             d->account->acct_email);
     SEND_TO_Q(buf, d);
     return;
@@ -511,7 +511,7 @@ void add_ip_entry(P_acct acct, P_desc d)
   struct acct_ip *a = NULL;
   struct acct_ip *b = NULL;
 
-  sprintf(host, "%s", d->host);
+  snprintf(host, 512, "%s", d->host);
 
   CREATE(a, acct_ip, 1, MEM_TAG_OTHER);
 
@@ -600,7 +600,7 @@ void display_character_list(P_desc d)
   SEND_TO_Q("You have the following characters available:\r\n", d);
   while (c)
   {
-    sprintf(buf, "%s\r\n", c->charname);
+    snprintf(buf, 256, "%s\r\n", c->charname);
     SEND_TO_Q(buf, d);
     c = c->next;
   }
@@ -963,7 +963,7 @@ void account_delete_char(P_desc d, char *arg)
       return;
     }
 
-    sprintf(buf, "Are you sure you want to delete %s?  ", c->charname);
+    snprintf(buf, 256, "Are you sure you want to delete %s?  ", c->charname);
     SEND_TO_Q(buf, d);
     d->character = ch;
     return;
@@ -1025,13 +1025,13 @@ int read_account(P_acct acct)   // returns -1 if error, 1 if no errors
   int      serial = 0;
 
 
-  sprintf(name, "%s", acct->acct_name);
+  snprintf(name, 4096, "%s", acct->acct_name);
   ptr = name;
 
   for (; *ptr; ptr++)
     *ptr = LOWER(*ptr);
 
-  sprintf(buf, "Accounts/%c/%s", (*name), name);
+  snprintf(buf, 4096, "Accounts/%c/%s", (*name), name);
   logit(LOG_FILE, "Loading Account %s in %s.", name, buf);
 
   f = fopen(buf, "r");
@@ -1080,16 +1080,16 @@ int write_account(P_acct acct)  // returns -1 if error, 1 if no errors
   if (!acct)
     return -1;
 
-  sprintf(name, "%s", acct->acct_name);
+  snprintf(name, 4096, "%s", acct->acct_name);
 
   ptr = name;
 
   for (; *ptr; ptr++)
     *ptr = LOWER(*ptr);
 
-  sprintf(buf, "Accounts/%c/%s", (*name), name);
+  snprintf(buf, 4096, "Accounts/%c/%s", (*name), name);
   logit(LOG_FILE, "Saving Account %s in %s.", name, buf);
-  sprintf(name, "%s.bak", buf);
+  snprintf(name, 4096, "%s.bak", buf);
 
 
   if (stat(buf, &statbuf) == 0)
@@ -1263,10 +1263,10 @@ void generate_account_confirmation_code(P_desc d, char *arg)
   char     a[256], b[256];
   FILE    *f = NULL;
 
-  sprintf(a, "%d%d", rand(), time(NULL));
-  sprintf(b, "%s", CRYPT2(a, d->account->acct_name));
+  snprintf(a, 256, "%d%d", rand(), time(NULL));
+  snprintf(b, 256, "%s", CRYPT2(a, d->account->acct_name));
 
-  sprintf(a, "/tmp/%s.confirmation", d->account->acct_name);
+  snprintf(a, 256, "/tmp/%s.confirmation", d->account->acct_name);
   f = fopen(a, "w");
   if (!f)
   {
@@ -1285,7 +1285,7 @@ void generate_account_confirmation_code(P_desc d, char *arg)
   write_account(d->account);
 
 
-  sprintf(b, "mail -s \"%s\" %s < %s", "Duris Account Confirmation",
+  snprintf(b, 256, "mail -s \"%s\" %s < %s", "Duris Account Confirmation",
           d->account->acct_email, a);
   system(b);
   unlink(a);
@@ -1308,9 +1308,9 @@ void display_account_information(P_desc d)
 {
   char     buffer[4096];
 
-  sprintf(buffer, "Account Name:              %s\r\n", d->account->acct_name);
+  snprintf(buffer, 4096, "Account Name:              %s\r\n", d->account->acct_name);
   SEND_TO_Q(buffer, d);
-  sprintf(buffer, "Email Address:             %s\r\n",
+  snprintf(buffer, 4096, "Email Address:             %s\r\n",
           d->account->acct_email);
   SEND_TO_Q(buffer, d);
 
@@ -1467,10 +1467,10 @@ bool account_exists(const char *dir, char *name)
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
-  sprintf(Gbuf1, "%s/%c/%s", dir, buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", dir, buf[0], buf);
   if (stat(Gbuf1, &statbuf) != 0)
   {
-    sprintf(Gbuf1, "%s/%c/%s", dir, buf[0], name);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", dir, buf[0], name);
     if (stat(Gbuf1, &statbuf) != 0)
       return FALSE;
   }

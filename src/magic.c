@@ -308,13 +308,13 @@ void show_ray_messages(char *color_string, P_char ch, P_char victim)
 {
   char     buffer[512];
 
-  sprintf(buffer, "You send a %s shaft of light streaking towards $N!",
+  snprintf(buffer, 512, "You send a %s shaft of light streaking towards $N!",
           color_string);
   act(buffer, FALSE, ch, 0, victim, TO_CHAR);
-  sprintf(buffer, "$n sends a %s shaft of light streaking towards YOU!",
+  snprintf(buffer, 512, "$n sends a %s shaft of light streaking towards YOU!",
           color_string);
   act(buffer, FALSE, ch, 0, victim, TO_VICT);
-  sprintf(buffer, "$n sends a %s shaft of light streaking towards $N!",
+  snprintf(buffer, 512, "$n sends a %s shaft of light streaking towards $N!",
           color_string);
   act(buffer, FALSE, ch, 0, victim, TO_NOTVICT);
 }
@@ -1626,11 +1626,11 @@ P_char make_mirror( P_char ch )
 
   /* string it */
   image->only.npc->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-  sprintf(Gbuf1, "image %s %s", GET_NAME(ch),race_names_table[GET_RACE(ch)].normal);
+  snprintf(Gbuf1, 512, "image %s %s", GET_NAME(ch),race_names_table[GET_RACE(ch)].normal);
   image->player.name = str_dup(Gbuf1);
   image->player.short_descr = str_dup(ch->player.name);
 
-  sprintf(Gbuf1, "%s stands here.\n", ch->player.name);
+  snprintf(Gbuf1, 512, "%s stands here.\n", ch->player.name);
   image->player.long_descr = str_dup(Gbuf1);
 
   if( GET_TITLE(ch) )
@@ -4881,7 +4881,7 @@ void spell_teleimage(int level, P_char ch, P_char victim, P_obj obj)
          "then ... suddenly goes transparent and shows ...\n");
   act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
   act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
-  sprintf(Gbuf2, "%d look", target);
+  snprintf(Gbuf2, MAX_STRING_LENGTH, "%d look", target);
   for (tmp_victim = world[ch->in_room].people; tmp_victim;
        tmp_victim = tmp_victim->next_in_room)
   {
@@ -6219,7 +6219,7 @@ void spell_age(int level, P_char ch, char *arg, int type, P_char victim, P_obj o
       (ch != victim) &&
       !IS_TRUSTED(ch))
     {
-      sprintf(Gbuf1, "%s has not given %s consent to you.\n",
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "%s has not given %s consent to you.\n",
               GET_NAME(victim), HSHR(victim));
       send_to_char(Gbuf1, ch);
       return;
@@ -6247,7 +6247,7 @@ void spell_rejuvenate_major(int level, P_char ch, char *arg, int type, P_char vi
     (ch != victim) &&
     !IS_TRUSTED(ch))
   {
-    sprintf(Gbuf1, "%s has not given %s consent to you.\n",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s has not given %s consent to you.\n",
             GET_NAME(victim), HSHR(victim));
     send_to_char(Gbuf1, ch);
     return;
@@ -9953,7 +9953,7 @@ void spell_identify(int level, P_char ch, char *arg, int type, P_char victim,
           ("This item has an enchantment designed to make it unidentifiable, but with your superior experience, you divine its true nature regardless.\n",
            ch);
     }
-    sprintf(Gbuf1, "%s&n weighs %d pounds and is worth roughly %s.\n",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s&n weighs %d pounds and is worth roughly %s.\n",
             obj->short_description, GET_OBJ_WEIGHT(obj),
             coin_stringv(obj->cost));
     send_to_char(Gbuf1, ch);
@@ -10415,7 +10415,7 @@ void spell_lore(int level, P_char ch, char *arg, int type, P_char victim,
         return;
       }
     }
-    sprintf(Gbuf1, "'%s'\nWeight %d, Item type: ",
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "'%s'\nWeight %d, Item type: ",
             obj->short_description, GET_OBJ_WEIGHT(obj));
     sprinttype(GET_ITEM_TYPE(obj), item_types, Gbuf2);
     strcat(Gbuf1, Gbuf2);
@@ -10477,7 +10477,7 @@ void spell_lore(int level, P_char ch, char *arg, int type, P_char victim,
       percent =
         100 - (obj->value[1] ? (100 / obj->value[1]) : 100) * (obj->value[1] -
                                                                obj->value[2]);
-      sprintf(Gbuf1,
+      snprintf(Gbuf1, MAX_STRING_LENGTH,
               "%d%% of its charges remain, and it contains the spell of: ",
               percent);
       send_to_char(Gbuf1, ch);
@@ -10491,13 +10491,13 @@ void spell_lore(int level, P_char ch, char *arg, int type, P_char victim,
       break;
 
     case ITEM_WEAPON:
-      sprintf(Gbuf1, "Damage Dice is '%dD%d'\n",
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "Damage Dice is '%dD%d'\n",
               obj->value[1], obj->value[2]);
       send_to_char(Gbuf1, ch);
       break;
 
     case ITEM_ARMOR:
-      sprintf(Gbuf1, "AC-apply is %d\n", obj->value[0]);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "AC-apply is %d\n", obj->value[0]);
       send_to_char(Gbuf1, ch);
       break;
 
@@ -11294,7 +11294,7 @@ void spell_continual_light(int level, P_char ch, char *arg, int type,
         REMOVE_BIT(world[ch->in_room].room_flags, ROOM_TWILIGHT);
         readd_twilight = TRUE;
       }
-      sprintf(buff, "%d %d %d", ch->in_room, readd_dark, readd_twilight);
+      snprintf(buff, 64, "%d %d %d", ch->in_room, readd_dark, readd_twilight);
 
       SET_BIT(world[ch->in_room].room_flags, ROOM_MAGIC_LIGHT);
 
@@ -12418,7 +12418,7 @@ void spell_regeneration(int level, P_char ch, char *arg, int type, P_char victim
 
   skl_lvl = MAX( 4, (level / 10) );
 
-  sprintf(Gbuf1, "You begin to regenerate rapidly.\n");
+  snprintf(Gbuf1, 100, "You begin to regenerate rapidly.\n");
 
   bzero(&af, sizeof(af));
   af.type = SPELL_REGENERATION;
@@ -12452,7 +12452,7 @@ void spell_endurance(int level, P_char ch, char *arg, int type, P_char victim,
 
   skl_lvl = (int)(MAX(3, ((level / 4) - 1)) * get_property("spell.endurance.modifiers", 1.000));
 
-  sprintf(Gbuf1, "You feel energy begin to surge through your limbs.\n");
+  snprintf(Gbuf1, 100, "You feel energy begin to surge through your limbs.\n");
 
   bzero(&af, sizeof(af));
   af.type = SPELL_ENDURANCE;
@@ -15627,7 +15627,7 @@ void spell_preserve(int level, P_char ch, char *arg, int type, P_char victim, P_
   {
     unsigned timePres;
     timePres = MAX(10, (level/2));
-    sprintf(Gbuf1, "$p is preserved for an additional %d hours.", timePres);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "$p is preserved for an additional %d hours.", timePres);
     act(Gbuf1, 0, ch, obj, 0, TO_CHAR);
     act("$p glows briefly.", 0, ch, obj, 0, TO_ROOM);
 
@@ -16305,7 +16305,7 @@ void spell_darkness(int level, P_char ch, char *arg, int type, P_char victim,
     }
     else
     {
-      sprintf(buff, "%d", ch->in_room);
+      snprintf(buff, 64, "%d", ch->in_room);
       SET_BIT(world[ch->in_room].room_flags, ROOM_MAGIC_DARK);
       send_to_char("&+LThe room is carpeted in darkness!\n", ch);
       act("&+LThe room goes dark!", 0, ch, 0, 0, TO_ROOM);
@@ -16407,7 +16407,7 @@ void spell_embalm(int level, P_char ch, char *arg, int type, P_char victim,
   }
   embalm_time = MAX(50, level*2);
 
-  sprintf(buf, "$p is preserved for an additional %d hours.", embalm_time);
+  snprintf(buf, MAX_STRING_LENGTH, "$p is preserved for an additional %d hours.", embalm_time);
   act(buf, 0, ch, obj, 0, TO_CHAR);
   act("$p glows &+rblood red&n briefly.", 0, ch, obj, 0, TO_ROOM);
 
@@ -16479,7 +16479,7 @@ void spell_divine_fury(int level, P_char ch, char *arg, int type, P_char victim,
   affect_to_char(ch, &af);
   
   send_to_char("&+RYour fury rages as you call upon your deity for power!\n", ch);
-  sprintf(strn, "%s$n %sis briefly surrounded by a%s glow!",
+  snprintf(strn, 256, "%s$n %sis briefly surrounded by a%s glow!",
           IS_EVIL(ch) ? "&+R" : "&+W", IS_EVIL(ch) ? "&+R" : "&+W",
           IS_EVIL(ch) ? "n unholy" : " holy");
   act(strn, TRUE, ch, 0, 0, TO_ROOM);
@@ -16640,9 +16640,9 @@ void spell_prayer(int level, P_char ch, char *arg, int type, P_char victim, P_ob
   }
 
   god_name = get_god_name(ch);
-  sprintf(Gbuf1, "$n &+wopenly prays out to %s, asking for intervention!", god_name);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "$n &+wopenly prays out to %s, asking for intervention!", god_name);
   act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
-  sprintf(Gbuf1, "&+wYou pray to&n %s.", god_name);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+wYou pray to&n %s.", god_name);
   act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
 
   if( !ch->group && !IS_NPC(ch) )
@@ -18904,22 +18904,22 @@ void spell_ether_sense(int level, P_char ch, char *arg, int type, P_char vict,
   {
     if(glevel == 0)
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+WYou detect no good presence in the ether around you.\n");
     }
     else if(glevel < 100)
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+WYou detect a good presence in the ether around you.\n");
     }
     else if(glevel < 250)
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+WYou detect a good presence in the ether around you.\n");
     }
     else
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+WYou detect a good presence in the ether around you.\n");
     }
     send_to_char(buf, ch);
@@ -18928,22 +18928,22 @@ void spell_ether_sense(int level, P_char ch, char *arg, int type, P_char vict,
   {
     if(ilevel == 0)
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+mYou detect no planar presence in the ether around you.\n");
     }
     else if(ilevel < 50)
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+mYou detect planar presence in the ether around you.\n");
     }
     else if(ilevel < 100)
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+mYou detect planar presence in the ether around you.\n");
     }
     else
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+mYou detect planar presence in the ether around you.\n");
     }
     send_to_char(buf, ch);
@@ -18952,7 +18952,7 @@ void spell_ether_sense(int level, P_char ch, char *arg, int type, P_char vict,
   {                             /* show evils */
     if(elevel == 0)
     {
-      sprintf(buf,
+      snprintf(buf, 256,
               "&+rYou detect no evil presence in the ether around you.\n");
     }
     else if(elevel < 100)
@@ -19139,92 +19139,92 @@ void pleasantry(P_char ch)
 
   x = number(1, 24);
 
-  sprintf(buf, "say I'm buggy!");       /* just in case */
+  snprintf(buf, 256, "say I'm buggy!");       /* just in case */
   switch (x)
   {
   case 1:
-    sprintf(buf, "say Duris is the reason I can't pay child-support!");
+    snprintf(buf, 256, "say Duris is the reason I can't pay child-support!");
     break;
   case 2:
-    sprintf(buf, "say I think I'll donate 50 dollars for all the endless volunteer work that goes into Duris!");
+    snprintf(buf, 256, "say I think I'll donate 50 dollars for all the endless volunteer work that goes into Duris!");
     break;
   case 3:
-    sprintf(buf, "say I love this game, I'm teaching my kids how to play!");
+    snprintf(buf, 256, "say I love this game, I'm teaching my kids how to play!");
     break;
   case 4:
-    sprintf(buf, "say I shouldn't be pressuring Zion, he knows what he's doing and it takes time.");
+    snprintf(buf, 256, "say I shouldn't be pressuring Zion, he knows what he's doing and it takes time.");
     break;
   case 5:
-    sprintf(buf, "say I may die a virgin, but at least I'll be the best Duris player ever!");
+    snprintf(buf, 256, "say I may die a virgin, but at least I'll be the best Duris player ever!");
     break;
   case 6:
-    sprintf(buf, "say One of the immortals totally rick-rolled me.");
+    snprintf(buf, 256, "say One of the immortals totally rick-rolled me.");
     break;
   case 7:
-    sprintf(buf, "say Isn't this a REALLY cool zone?  Duris has the BEST areas!");
+    snprintf(buf, 256, "say Isn't this a REALLY cool zone?  Duris has the BEST areas!");
     break;
   case 8:
-    sprintf(buf, "say I heard Torgal spends money on the Duris link. I can't believe I was such a twink as to complain about anything!");
+    snprintf(buf, 256, "say I heard Torgal spends money on the Duris link. I can't believe I was such a twink as to complain about anything!");
     break;
   case 9:
-    sprintf(buf, "dance");
+    snprintf(buf, 256, "dance");
     command_interpreter(ch, buf);
-    sprintf(buf, "say Footloose, I gotta cut footloose!");
+    snprintf(buf, 256, "say Footloose, I gotta cut footloose!");
     command_interpreter(ch, buf);
-    sprintf(buf, "dance");
+    snprintf(buf, 256, "dance");
     break;
   case 10:
-    sprintf(buf, "sload");
+    snprintf(buf, 256, "sload");
     command_interpreter(ch, buf);
-    sprintf(buf, "say Oops! I guess I was having TOO much fun on Duris!");
+    snprintf(buf, 256, "say Oops! I guess I was having TOO much fun on Duris!");
     command_interpreter(ch, buf);
-    sprintf(buf, "blush");
+    snprintf(buf, 256, "blush");
     break;
   case 11:
-    sprintf(buf, "say If I had to choose between sex and Duris, I choose Duris!");
+    snprintf(buf, 256, "say If I had to choose between sex and Duris, I choose Duris!");
     break;
   case 12:
-    sprintf(buf, "say Has anyone seen Aycer? I want to zone, but I'm just too lazy to learn how to lead!");
+    snprintf(buf, 256, "say Has anyone seen Aycer? I want to zone, but I'm just too lazy to learn how to lead!");
     break;
   case 13:
-    sprintf(buf, "omg");
+    snprintf(buf, 256, "omg");
     command_interpreter(ch, buf);
-    sprintf(buf, "say Torgal rules! I hope I'm just like him when I grow up, minus the fu-man-chu!");
+    snprintf(buf, 256, "say Torgal rules! I hope I'm just like him when I grow up, minus the fu-man-chu!");
     break;
   case 14:
-    sprintf(buf, "say Someday, I hope I'm remembered as a great player! Like Vuthen!");
+    snprintf(buf, 256, "say Someday, I hope I'm remembered as a great player! Like Vuthen!");
     command_interpreter(ch, buf);
-    sprintf(buf, "rofl me");
+    snprintf(buf, 256, "rofl me");
     break;
   case 15:
-    sprintf(buf, "say People who whine about anything here should just be deleted!");
+    snprintf(buf, 256, "say People who whine about anything here should just be deleted!");
     break;
   case 16:
-    sprintf(buf, "say Try not to get too good at Duris, or Torgal will code lag to your character!");
+    snprintf(buf, 256, "say Try not to get too good at Duris, or Torgal will code lag to your character!");
     break;
   case 17:
-    sprintf(buf, "say Lions, Tigers and Cerif's, Oh My!");
+    snprintf(buf, 256, "say Lions, Tigers and Cerif's, Oh My!");
     break;
   case 18:
-    sprintf(buf, "say Thank god this isn't Toril!  I'd hate to play a game with no development!");
+    snprintf(buf, 256, "say Thank god this isn't Toril!  I'd hate to play a game with no development!");
     break;
   case 19:
-    sprintf(buf, "say Man, Lohrr really has done a lot of work on here.  We should cut him some slack for all the sleep he's lost.");
+    snprintf(buf, 256, "say Man, Lohrr really has done a lot of work on here.  We should cut him some slack for all the sleep he's lost.");
     break;
   case 20:
-    sprintf(buf, "say I wish exp was harder so we wouldn't level so quickly.");
+    snprintf(buf, 256, "say I wish exp was harder so we wouldn't level so quickly.");
     break;
   case 21:
-    sprintf(buf, "say Just think, if zones were worth less epics, we could do even more zones!");
+    snprintf(buf, 256, "say Just think, if zones were worth less epics, we could do even more zones!");
     break;
   case 22:
-    sprintf(buf, "say I wish mobs were more difficult.  I haven't died enough today.");
+    snprintf(buf, 256, "say I wish mobs were more difficult.  I haven't died enough today.");
     break;
   case 23:
-    sprintf(buf, "say I love how Immortal's handle cheating here.");
+    snprintf(buf, 256, "say I love how Immortal's handle cheating here.");
     break;
   case 24:
-    sprintf(buf, "say I wish Lohrr would go out with me, but Immortals don't date mortals..");
+    snprintf(buf, 256, "say I wish Lohrr would go out with me, but Immortals don't date mortals..");
     break;
   }
   command_interpreter(ch, buf);
@@ -20058,9 +20058,9 @@ void spell_banish(int level, P_char ch, char *arg, int type, P_char victim, P_ob
   P_char tch, next;
   char buf[256];
 
-  sprintf(buf, "You raise your holy symbol and send a prayer to %s to aid you in battle.",get_god_name(ch));
+  snprintf(buf, 256, "You raise your holy symbol and send a prayer to %s to aid you in battle.",get_god_name(ch));
   act(buf, FALSE, ch, 0, 0, TO_CHAR);
-  sprintf(buf, "$n raises $s holy symbol sending a battle prayer to %s.", get_god_name(ch));
+  snprintf(buf, 256, "$n raises $s holy symbol sending a battle prayer to %s.", get_god_name(ch));
   act(buf, FALSE, ch, 0, 0, TO_ROOM);
 
   for (tch = world[ch->in_room].people; tch; tch = next)
@@ -20932,7 +20932,7 @@ bool spell_general_portal( int level, P_char ch, P_char victim, struct portal_se
   {
     if( victim )
     {
-      sprintf(logbuf, "Portal(%d) from %s(%d) [%d] to %s(%d) in [%s].", settings->R_num,
+      snprintf(logbuf, 500, "Portal(%d) from %s(%d) [%d] to %s(%d) in [%s].", settings->R_num,
         J_NAME(ch), IS_NPC(ch) ? GET_VNUM(ch) : GET_PID(ch), world[ch->in_room].number,
         J_NAME(victim), IS_NPC(victim) ? GET_VNUM(victim) : GET_PID(victim), (to_room==NOWHERE) ? "NOWHERE" : "LIMBO");
       logit(LOG_PORTALS, logbuf);
@@ -20941,7 +20941,7 @@ bool spell_general_portal( int level, P_char ch, P_char victim, struct portal_se
     }
     else
     {
-      sprintf(logbuf, "Portal(%d) from %s(%d) [%d] to [%s].", settings->R_num,
+      snprintf(logbuf, 500, "Portal(%d) from %s(%d) [%d] to [%s].", settings->R_num,
         J_NAME(ch), IS_NPC(ch) ? GET_VNUM(ch) : GET_PID(ch), world[ch->in_room].number,
         (to_room==NOWHERE) ? "NOWHERE" : "LIMBO");
       logit(LOG_PORTALS, logbuf);
@@ -20964,7 +20964,7 @@ bool spell_general_portal( int level, P_char ch, P_char victim, struct portal_se
   portal1 = read_object(settings->R_num, VIRTUAL);
   if(!portal1)
   {
-    sprintf(logbuf, "spell_portal(): obj %d not loadable", settings->R_num);
+    snprintf(logbuf, 500, "spell_portal(): obj %d not loadable", settings->R_num);
     logit(LOG_DEBUG, logbuf);
     send_to_char("Spell messed up. contact someone.\n", ch);
     return FALSE;
@@ -20974,7 +20974,7 @@ bool spell_general_portal( int level, P_char ch, P_char victim, struct portal_se
     portal2 = read_object(settings->R_num, VIRTUAL);
     if(!portal2)
     {
-      sprintf(logbuf, "spell_portal(): obj %d not loadable", settings->R_num);
+      snprintf(logbuf, 500, "spell_portal(): obj %d not loadable", settings->R_num);
       logit(LOG_DEBUG, logbuf);
       send_to_char("Spell messed up. contact someone.\n", ch);
       if(portal1)
@@ -20987,7 +20987,7 @@ bool spell_general_portal( int level, P_char ch, P_char victim, struct portal_se
 
   if(victim && !IS_TRUSTED(ch))
   {
-    sprintf(logbuf, "Portal(%d) from %s(%d) in [%d] to %s(%d) in [%d].", settings->R_num,
+    snprintf(logbuf, 500, "Portal(%d) from %s(%d) in [%d] to %s(%d) in [%d].", settings->R_num,
       J_NAME(ch), IS_NPC(ch) ? GET_VNUM(ch) : GET_PID(ch), world[ch->in_room].number,
       J_NAME(victim), IS_NPC(victim) ? GET_VNUM(victim) : GET_PID(victim), world[to_room].number);
     logit(LOG_PORTALS, logbuf);
@@ -21739,8 +21739,8 @@ void do_soulbind(P_char ch, char *argument, int cmd)
       {
         remove_soulbind(victim);
         affect_remove(victim, findaf);
-        sprintf(buffer, "%s", GET_NAME(victim));
-        sprintf(gbuf3, "Cleared soulbind status on %s.\r\n", buffer);
+        snprintf(buffer, MAX_STRING_LENGTH, "%s", GET_NAME(victim));
+        snprintf(gbuf3, MAX_STRING_LENGTH, "Cleared soulbind status on %s.\r\n", buffer);
         send_to_char(gbuf3, ch);
         logit( LOG_WIZ, "%s cleared soulbind on %s", J_NAME(ch), J_NAME(victim));
         // If we're not setting a new soulbound item.
@@ -21810,7 +21810,7 @@ void do_soulbind(P_char ch, char *argument, int cmd)
     affect_to_char(victim, &af);
 
     // Restring item with chars name as a possible argument.
-    sprintf(gbuf2, "%s %s", GET_NAME(victim), obj->name);
+    snprintf(gbuf2, MAX_STRING_LENGTH, "%s %s", GET_NAME(victim), obj->name);
     // Free old name if strung.
     if( (obj->str_mask & STRUNG_KEYS) && obj->name )
     {
@@ -21862,12 +21862,12 @@ void load_soulbind(P_char ch)
    send_to_char("&+rYour &+Wsoul &+rhas not bound with anything yet.&n\r\n", ch);
    return;
   }
- /* sprintf(gbuf2, "%d", item);
+ /* snprintf(gbuf2, MAX_STRING_LENGTH, "%d", item);
   send_to_char(gbuf2, ch);*/
   obj = read_object(item, VIRTUAL);
-           sprintf(gbuf2, "%s %s", GET_NAME(ch), obj->name);
+           snprintf(gbuf2, MAX_STRING_LENGTH, "%s %s", GET_NAME(ch), obj->name);
   	    obj->name = str_dup(gbuf2);
-	    sprintf(buffer, "%s &+Lbearing the &+Wsoul&+L of &+r%s&n", obj->short_description, GET_NAME(ch));
+	    snprintf(buffer, MAX_STRING_LENGTH, "%s &+Lbearing the &+Wsoul&+L of &+r%s&n", obj->short_description, GET_NAME(ch));
 	   set_short_description(obj, buffer);
   obj_to_char(obj, ch); 
   SET_BIT(obj->extra_flags, ITEM_NOSELL);

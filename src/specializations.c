@@ -471,7 +471,7 @@ void do_spec_list(P_char ch)
     }
     if( show )
     {
-      sprintf(Gbuf, "&+W*&n %s &+W*&n\n", class_names_table[cls].ansi);
+      snprintf(Gbuf, MAX_STRING_LENGTH, "&+W*&n %s &+W*&n\n", class_names_table[cls].ansi);
       send_to_char(Gbuf, ch);
     }
     // Walk through each spec.
@@ -479,7 +479,7 @@ void do_spec_list(P_char ch)
     {
       if( strcmp(specdata[cls][spec], "") && strcmp(specdata[cls][spec], "Not Used") )
       {
-        sprintf(list, " %s:", specdata[cls][spec]);
+        snprintf(list, MAX_STRING_LENGTH, " %s:", specdata[cls][spec]);
         comma = FALSE;
         for( race = 1; race <= RACE_PLAYER_MAX; race++ )
         {
@@ -529,7 +529,7 @@ void do_specialize(P_char ch, char *argument, int cmd)
 
   if( !*argument )
   {
-    sprintf(buf, "You can choose from the following specializations:\n\r");
+    snprintf(buf, MAX_STRING_LENGTH, "You can choose from the following specializations:\n\r");
 
     found_one = append_valid_specs(buf, ch);;
 
@@ -588,7 +588,7 @@ void do_specialize(P_char ch, char *argument, int cmd)
 
   if( time(NULL) < ch->only.pc->time_unspecced )
   {
-    sprintf(buf, "You cannot specialize until %s.\r\n",
+    snprintf(buf, MAX_STRING_LENGTH, "You cannot specialize until %s.\r\n",
             asctime(localtime(&ch->only.pc->time_unspecced)));
     send_to_char(buf, ch);
     return;
@@ -610,7 +610,7 @@ void do_specialize(P_char ch, char *argument, int cmd)
 
     if( is_abbrev( argument, strip_ansi(GET_SPEC_NAME(ch->player.m_class, i)).c_str()) )
     {
-      sprintf(buf, "From this day onwards you will follow the path of the %s&n!", GET_SPEC_NAME(ch->player.m_class, i));
+      snprintf(buf, MAX_STRING_LENGTH, "From this day onwards you will follow the path of the %s&n!", GET_SPEC_NAME(ch->player.m_class, i));
       ch->player.spec = i+1;
       update_skills(ch);
       mobsay(teacher, buf);

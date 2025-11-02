@@ -110,7 +110,7 @@ char    *replace(char *g_string, char *replace_from, char *replace_to)
     }
     while (p > p1)
     {
-      sprintf(return_str, "%s%c", return_str, *p1);
+      snprintf(return_str, MAX_STRING_LENGTH, "%s%c", return_str, *p1);
       p1++;
     }
     if (i_diff > 0)
@@ -313,7 +313,7 @@ void parse_action(int command, char *string, struct descriptor_data *d)
   switch (command)
   {
   case PARSE_HELP:
-    sprintf(buf,
+    snprintf(buf, MAX_STRING_LENGTH,
             "Editor command formats: /<letter>\r\n\r\n"
             "/a         -  aborts editor\r\n"
             "/c         -  clears buffer\r\n"
@@ -349,7 +349,7 @@ void parse_action(int command, char *string, struct descriptor_data *d)
       j++;
     }
     format_text(d->str, flags, d, d->max_str);
-    sprintf(buf, "Text formarted with%s indent.\r\n", (indent ? "" : "out"));
+    snprintf(buf, MAX_STRING_LENGTH, "Text formarted with%s indent.\r\n", (indent ? "" : "out"));
     SEND_TO_Q(buf, d);
     break;
   case PARSE_REPLACE:
@@ -398,13 +398,13 @@ void parse_action(int command, char *string, struct descriptor_data *d)
     {
       if ((replaced = replace_str(d->str, s, t, rep_all, d->max_str)) > 0)
       {
-        sprintf(buf, "Replaced %d occurance%sof '%s' with '%s'.\r\n",
+        snprintf(buf, MAX_STRING_LENGTH, "Replaced %d occurance%sof '%s' with '%s'.\r\n",
                 replaced, ((replaced != 1) ? "s " : " "), s, t);
         SEND_TO_Q(buf, d);
       }
       else if (replaced == 0)
       {
-        sprintf(buf, "String '%s' not found.\r\n", s);
+        snprintf(buf, MAX_STRING_LENGTH, "String '%s' not found.\r\n", s);
         SEND_TO_Q(buf, d);
       }
       else
@@ -1499,7 +1499,7 @@ int mob_do_rename_hook(P_char npc, P_char ch, int cmd, char *arg)
     arg = one_argument(arg, new_name);
     if( !*new_name || !new_name )
     {
-      sprintf(buffer, "Syntax: ask %s rename <newname>\r\n", npc->player.short_descr);
+      snprintf(buffer, MAX_STRING_LENGTH, "Syntax: ask %s rename <newname>\r\n", npc->player.short_descr);
       send_to_char(buffer, ch);
       return TRUE;
     }
@@ -1517,7 +1517,7 @@ int mob_do_rename_hook(P_char npc, P_char ch, int cmd, char *arg)
     int renamePrice = get_property("mobspecs.rename.price", 5000000);
     if( GET_MONEY(ch) < renamePrice )
     {
-      sprintf(buffer, "You need %s&n more!", coin_stringv(renamePrice - GET_MONEY(ch)));
+      snprintf(buffer, MAX_STRING_LENGTH, "You need %s&n more!", coin_stringv(renamePrice - GET_MONEY(ch)));
       mobsay(npc, buffer);
       return TRUE;
     }
@@ -1531,7 +1531,7 @@ int mob_do_rename_hook(P_char npc, P_char ch, int cmd, char *arg)
     rename_ship_owner( old_name, new_name );
     SUB_MONEY(ch, renamePrice, 0);
 
-    sprintf(buffer, "&+WCongratulations! From now on you will be known as %s!\r\n", GET_NAME(ch));
+    snprintf(buffer, MAX_STRING_LENGTH, "&+WCongratulations! From now on you will be known as %s!\r\n", GET_NAME(ch));
     send_to_char(buffer, ch);
 
     wizlog(AVATAR, "%s renamed %sself to %s\r\n", old_name, GET_SEX(ch) == SEX_MALE ? "him" : "her", new_name);
@@ -1550,15 +1550,15 @@ bool rename_spellbook( char *old_name, char *new_name )
   char  command[MAX_STRING_LENGTH];
   FILE *file;
 
-  sprintf( old_book, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*old_name), old_name );
-  sprintf( new_book, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*new_name), new_name );
+  snprintf(old_book, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*old_name), old_name );
+  snprintf(new_book, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*new_name), new_name );
 
   // If old_name has a spellbook...
   if( file = fopen( old_book, "r") )
   {
     fclose( file );
     // Move it to new_name.
-    sprintf( command, "mv -f %s %s", old_book, new_book );
+    snprintf(command, MAX_STRING_LENGTH, "mv -f %s %s", old_book, new_book );
     if( system( command ) == 0 )
     {
       return TRUE;
@@ -1579,15 +1579,15 @@ bool rename_craftlist( char *old_name, char *new_name )
   char  command[MAX_STRING_LENGTH];
   FILE *file;
 
-  sprintf( old_book, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*old_name), old_name );
-  sprintf( new_book, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*new_name), new_name );
+  snprintf(old_book, MAX_STRING_LENGTH, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*old_name), old_name );
+  snprintf(new_book, MAX_STRING_LENGTH, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*new_name), new_name );
 
   // If old_name has a crafting book...
   if( file = fopen( old_book, "r") )
   {
     fclose( file );
     // Move it to new_name.
-    sprintf( command, "mv -f %s %s", old_book, new_book );
+    snprintf(command, MAX_STRING_LENGTH, "mv -f %s %s", old_book, new_book );
     if( system( command ) == 0 )
     {
       return TRUE;
@@ -1671,7 +1671,7 @@ bool rename_character(P_char ch, char *old_name, char *new_name)
       if( IS_TRUSTED(ch) )
       {
         // Remove new_name from BADNAME_DIR
-        sprintf(buf, "%s/%c/%s", BADNAME_DIR, *new_name, new_name );
+        snprintf(buf, 256, "%s/%c/%s", BADNAME_DIR, *new_name, new_name );
         unlink(buf);
         send_to_char("Name was in the declined list, but has been removed. :)\r\n", ch);
       }
@@ -2115,7 +2115,7 @@ void for_debug_print_char_list(P_char ch)
 
    for (chLocker = character_list; chLocker; chLocker = chLocker->next)
    {
-           sprintf(buffer, "%d) %s\r\n", nCnt, GET_NAME(chLocker));
+           snprintf(buffer, MAX_STRING_LENGTH, "%d) %s\r\n", nCnt, GET_NAME(chLocker));
            send_to_char(buffer, ch);
            nCnt++;
    }
@@ -2129,7 +2129,7 @@ void for_debug_print_char_list(P_char ch)
 
    for (chDesc = descriptor_list; chDesc; chDesc = chDesc->next)
    {
-           sprintf(buffer, "%d) %s\r\n", nCnt, GET_NAME(chDesc->character));
+           snprintf(buffer, MAX_STRING_LENGTH, "%d) %s\r\n", nCnt, GET_NAME(chDesc->character));
            send_to_char(buffer, ch);
            nCnt++;
    }

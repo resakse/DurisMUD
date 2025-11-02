@@ -98,7 +98,7 @@ StorageLocker::StorageLocker(int rroom, P_char chLocker, P_char chUser)
   strcpy(buf, GET_NAME(chLocker));
   world[rroom].ex_description->keyword = str_dup(buf);
   world[rroom].ex_description->description = NULL;
-  sprintf(buf, "%p", (void *) this);
+  snprintf(buf, 500, "%p", (void *) this);
   world[rroom].ex_description->next->keyword = str_dup(buf);
   world[rroom].ex_description->next->description = NULL;
   world[rroom].ex_description->next->next = NULL;
@@ -752,7 +752,7 @@ void LockerChest::BeautifyDesc(const char *srcDesc, char *destDesc)
 
 void LockerChest::FillExtraDescBuf(char *GBuf1)
 {
-  sprintf(GBuf1, "&+yThis chest contains your items %s&n.",
+  snprintf(GBuf1, MAX_STRING_LENGTH, "&+yThis chest contains your items %s&n.",
           this->m_chestDescText);
 }
 
@@ -1087,7 +1087,7 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
       send_to_char("Your association is not yet prestigious enough to have a locker!\r\n", ch);
       return TRUE;
     }
-    sprintf(enterWho, "guild.%d", GET_ASSOC(ch)->get_id());
+    snprintf(enterWho, MAX_INPUT_LENGTH, "guild.%d", GET_ASSOC(ch)->get_id());
         is_guild_locker = 1;
   }
   else if ('\0' == enterWho[0])
@@ -1099,7 +1099,7 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
     bValidate = 1;
   }
 
-  sprintf(lockerName, "%s.locker", enterWho);
+  snprintf(lockerName, 500, "%s.locker", enterWho);
 
   chLocker = load_locker_char(ch, lockerName, bValidate);
 
@@ -1157,7 +1157,7 @@ int storage_locker_room_hook(int room, P_char ch, int cmd, char *arg)
   }
 
   char money_string[MAX_INPUT_LENGTH];
-  sprintf(money_string, "\r\nThe escort says 'You have &+W%d items&n, this cost you %s'&n\r\n", pLocker->m_itemCount , coin_stringv(temp) );
+  snprintf(money_string, MAX_INPUT_LENGTH, "\r\nThe escort says 'You have &+W%d items&n, this cost you %s'&n\r\n", pLocker->m_itemCount , coin_stringv(temp) );
   send_to_char(money_string, ch);
 
   if( GET_MONEY(ch) < temp && GET_BALANCE(ch) < temp )
@@ -1276,10 +1276,10 @@ int guild_locker_room_hook(int room, P_char ch, int cmd, char *arg)
     return TRUE;
   }
     
-  sprintf(enterWho, "guild.%d", GET_ASSOC(ch)->get_id());
+  snprintf(enterWho, MAX_INPUT_LENGTH, "guild.%d", GET_ASSOC(ch)->get_id());
   is_guild_locker = 1;
   
-  sprintf(lockerName, "%s.locker", enterWho);
+  snprintf(lockerName, 500, "%s.locker", enterWho);
 
   chLocker = load_locker_char(ch, lockerName, bValidate);
   
@@ -1466,7 +1466,7 @@ int storage_locker(int room, P_char ch, int cmd, char *arg)
         {
           char buf[MAX_STRING_LENGTH];
 
-          sprintf(buf, "%s&n flies out in front of you!\r\n",
+          snprintf(buf, MAX_STRING_LENGTH, "%s&n flies out in front of you!\r\n",
                   tmp_obj->short_description);
           send_to_char(buf, ch);
           obj_from_room(tmp_obj);
@@ -1663,7 +1663,7 @@ static int locker_grantcmd(P_char ch, char *arg)
     GET_RACEWAR(chLocker) = GET_RACEWAR(ch);
   argument_interpreter(arg, arg1, arg2);
   if( *arg1 == '\0' )
-    sprintf( arg1, "?" );
+    snprintf(arg1, MAX_INPUT_LENGTH, "?" );
 
   if( is_abbrev(arg1, "list") )
   {
@@ -1759,11 +1759,11 @@ static void locker_access_show(P_char ch, P_char locker)
   res = mysql_store_result(DB);
   if( mysql_num_rows(res) < 1)
   {
-    sprintf( buffer, "No one has access to your locker but you.\n" );
+    snprintf(buffer, MAX_STR_NORMAL, "No one has access to your locker but you.\n" );
   }
   else
   {
-    sprintf( buffer, "Locker Access: " );
+    snprintf(buffer, MAX_STR_NORMAL, "Locker Access: " );
     while( (row = mysql_fetch_row( res )) != NULL )
     {
       strcat( buffer, row[0] );
@@ -1881,7 +1881,7 @@ static int create_new_locker(P_char ch, P_char locker)
       char Gbuf1[MAX_STR_NORMAL];
 
       assoc_num = atoi(GET_NAME(locker) + 6);
-      sprintf(Gbuf1, "%sasc.%u", ASC_DIR, assoc_num);
+      snprintf(Gbuf1, MAX_STR_NORMAL, "%sasc.%u", ASC_DIR, assoc_num);
       f = fopen(Gbuf1, "r");
       if (f)
       {
@@ -1892,11 +1892,11 @@ static int create_new_locker(P_char ch, P_char locker)
       {
         strcpy(Gbuf1, "&+RUNKNOWN ASSOC&n");
       }
-      sprintf(roomNameBuf, "The Storage Locker for %s&n", Gbuf1);
+      snprintf(roomNameBuf, 500, "The Storage Locker for %s&n", Gbuf1);
     }
     else
     {                           /* normal player locker */
-      sprintf(roomNameBuf, "The Storage Locker for %s", GET_NAME(locker));
+      snprintf(roomNameBuf, 500, "The Storage Locker for %s", GET_NAME(locker));
       if (strrchr(roomNameBuf, '.'))
         *(strrchr(roomNameBuf, '.')) = '\0';
     }
@@ -2237,8 +2237,8 @@ bool rename_locker(P_char ch, char *old_charname, char *new_charname)
    P_char chLocker = NULL;
    int tmp;
 
-   sprintf(lockerOldName, "%s.locker", old_charname);
-   sprintf(lockerNewName, "%s.locker", new_charname);
+   snprintf(lockerOldName, MAX_STRING_LENGTH, "%s.locker", old_charname);
+   snprintf(lockerNewName, MAX_STRING_LENGTH, "%s.locker", new_charname);
 
    chLocker = (P_char) mm_get(dead_mob_pool);
    clear_char(chLocker);
@@ -2350,7 +2350,7 @@ static void locker_access_transferAccess(P_char chLocker, P_char ch)
   sprintf( locker_name, "%s", GET_NAME(chLocker) );
   // Set list of names that have access to locker.
   if( chLocker->player.description != NULL )
-    sprintf( names, "%s", chLocker->player.description );
+    snprintf(names, MAX_STR_NORMAL, "%s", chLocker->player.description );
   else
     names[0] = '\0';
 

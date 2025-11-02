@@ -1092,7 +1092,7 @@ void event_reset_zone(P_char ch, P_char victim, P_obj obj, void *data)
   zone_table[zone].age++;
 
   if (zone_table[zone].age >= zone_table[zone].lifespan &&
-     (zone_table[zone].reset_mode == 2 || is_empty(zone)))
+     (zone_table[zone].reset_mode == 2 || ::is_empty(zone)))
   {
     reset_zone(zone, 0);
   }
@@ -1200,7 +1200,7 @@ void init_events(void)
   ///* sector weather */
   //for (j = 0; j < 100; j++)
   //{
-  //  sprintf(Gbuf1, "%d", j);
+  //  snprintf(Gbuf1, 256, "%d", j);
   //  AddEvent(EVENT_SPECIAL, 500 + number(-9, 9), TRUE, weather_change, Gbuf1);
   //
   //}

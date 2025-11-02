@@ -334,11 +334,11 @@ static int setbit_parse(char *arg, int *type, char *name, char *flag, char *val,
   {
     if( *on_off_str )
     {
-      sprintf( bad_on_off, "%s", on_off_str );
+      snprintf(bad_on_off, MAX_STRING_LENGTH, "%s", on_off_str );
     }
     else
     {
-      sprintf( bad_on_off, " " );
+      snprintf(bad_on_off, MAX_STRING_LENGTH, " " );
     }
   }
 
@@ -1319,7 +1319,7 @@ static void setbit_parseTable(P_char ch, void *ptr, SetBitTable * table,
       char buf[128];
 
       setbit_syntax(ch, type);
-      sprintf( buf, "'%s' is not a valid value.  Please enter a number instead.\n\r", value );
+      snprintf(buf, 128, "'%s' is not a valid value.  Please enter a number instead.\n\r", value );
       send_to_char( buf, ch );
       return;
     }
@@ -1331,7 +1331,7 @@ static void setbit_parseTable(P_char ch, void *ptr, SetBitTable * table,
     {
       char buf[128];
 
-      sprintf( buf, "'%s' is not a valid value.  Please enter a number instead.\n\r", bad_on_off );
+      snprintf(buf, 128, "'%s' is not a valid value.  Please enter a number instead.\n\r", bad_on_off );
       send_to_char( buf, ch );
       return;
     }
@@ -1341,7 +1341,7 @@ static void setbit_parseTable(P_char ch, void *ptr, SetBitTable * table,
   {
     char buf[128];
 
-    sprintf( buf, "'%d' is not a valid value.  Please enter a number between 0 and 100.\n\r", on_off );
+    snprintf(buf, 128, "'%d' is not a valid value.  Please enter a number between 0 and 100.\n\r", on_off );
     send_to_char( buf, ch );
     return;
   }
@@ -1403,7 +1403,7 @@ static void setbit_printOutTable(P_char ch, SetBitTable * table, int size)
     if (i && !(i % 3))
       send_to_char("\r\n", ch);
 
-    sprintf(buff, "%-20s", table[i].sb_flag);
+    snprintf(buff, 128, "%-20s", table[i].sb_flag);
     page_string(ch->desc, buff, 1);
   }
 
@@ -1425,7 +1425,7 @@ static void setbit_printOutSubTable(P_char ch, const char **subtable, int entry_
     if (!(i % 3))
       send_to_char("\r\n", ch);
 
-    sprintf(buff, "%-20s", string);
+    snprintf(buff, 128, "%-20s", string);
     page_string(ch->desc, buff, 1);
   }
   send_to_char("\r\n", ch);

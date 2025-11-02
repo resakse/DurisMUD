@@ -203,7 +203,7 @@ bool flying_transport_cmd_list(P_char ch, P_char victim, char *arg)
       continue;
 
     has_one = true;
-    sprintf(buff, "%d) %s &n- %s\n", j++, pad_ansi(transport_routes[i].name, 20).c_str(), coin_stringv(transport_routes[i].cost_in_plat * 1000)); 
+    snprintf(buff, MAX_STRING_LENGTH, "%d) %s &n- %s\n", j++, pad_ansi(transport_routes[i].name, 20).c_str(), coin_stringv(transport_routes[i].cost_in_plat * 1000)); 
     send_to_char(buff, ch);
   }
   
@@ -505,17 +505,17 @@ void event_flying_transport_move(P_char ch, P_char victim, P_obj obj, void *data
   
   int dest_room = TOROOM(was_in, dir);
   
-  sprintf(buff, "Far above, $n flies %s.", dirs[dir]);
+  snprintf(buff, MAX_STRING_LENGTH, "Far above, $n flies %s.", dirs[dir]);
   act(buff, FALSE, ch, 0, victim, TO_NOTVICT | ACT_IGNORE_ZCOORD);
 
-  sprintf(buff, "$n flies %s.", dirs[dir]);
+  snprintf(buff, MAX_STRING_LENGTH, "$n flies %s.", dirs[dir]);
   act(buff, FALSE, ch, 0, victim, TO_VICT);
 
   char_from_room(ch);
   ch->specials.was_in_room = was_in;    
   char_to_room(ch, dest_room, dir);
   
-  sprintf(buff, "Far above, $n flies in from the %s.", dirs2[rev_dir[dir]]);
+  snprintf(buff, MAX_STRING_LENGTH, "Far above, $n flies in from the %s.", dirs2[rev_dir[dir]]);
   act(buff, FALSE, ch, 0, victim, TO_NOTVICT | ACT_IGNORE_ZCOORD);
   
   add_event(event_flying_transport_move, (int) (PULSE_VIOLENCE / 5), ch, victim, 0, 0, 0, 0);
@@ -574,14 +574,14 @@ void event_flying_transport_return(P_char ch, P_char victim, P_obj obj, void *da
   int was_in = ch->in_room;
   int dest_room = TOROOM(was_in, dir);
   
-  sprintf(buff, "Far above, $n flies %s.", dirs[dir]);
+  snprintf(buff, MAX_STRING_LENGTH, "Far above, $n flies %s.", dirs[dir]);
   act(buff, FALSE, ch, 0, 0, TO_ROOM | ACT_IGNORE_ZCOORD);
   
   char_from_room(ch);
   ch->specials.was_in_room = was_in;    
   char_to_room(ch, dest_room, dir);
   
-  sprintf(buff, "Far above, $n flies in from the %s.", dirs2[rev_dir[dir]]);
+  snprintf(buff, MAX_STRING_LENGTH, "Far above, $n flies in from the %s.", dirs2[rev_dir[dir]]);
   act(buff, FALSE, ch, 0, 0, TO_ROOM | ACT_IGNORE_ZCOORD);
   
   add_event(event_flying_transport_return, (int) (PULSE_VIOLENCE / 8), ch, victim, 0, 0, 0, 0);

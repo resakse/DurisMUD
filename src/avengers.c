@@ -94,7 +94,7 @@ void spell_atonement(int level, P_char ch, char *arg, int type,
     return;
   }
 
-  sprintf(Gbuf1, "&+WYou atone for your sins, and feel your holy power begin to heal your body.&n\n");
+  snprintf(Gbuf1, 100, "&+WYou atone for your sins, and feel your holy power begin to heal your body.&n\n");
 
   bzero(&af, sizeof(af));
   af.type = SPELL_ATONEMENT;

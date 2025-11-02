@@ -166,18 +166,18 @@ void display_surnames(P_char ch)
   char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
   int i;
 
-  sprintf(buf, "\r\n&+L=-=-=-=-=-=-=-=-=-=--= &+rTitles &+Lfor &+r%s &+L=-=-=-=-=-=-=-=-=-=-=-&n\r\n", GET_NAME(ch));
+  snprintf(buf, MAX_STRING_LENGTH, "\r\n&+L=-=-=-=-=-=-=-=-=-=--= &+rTitles &+Lfor &+r%s &+L=-=-=-=-=-=-=-=-=-=-=-&n\r\n", GET_NAME(ch));
 
   for( i = 1; i <= MAX_SURNAME; i++ )
   {
     if( HAS_SURNAME( ch, i ) )
     {
-      sprintf(buf2, "   &+L%d) %s\n", i, surnames[i].color_name );
+      snprintf(buf2, MAX_STRING_LENGTH, "   &+L%d) %s\n", i, surnames[i].color_name );
       strcat(buf, buf2);
     }
   }
 
-  sprintf(buf2, "\n&+WNote: &nSome &+cachievements&n grant access to additional surnames.\n");
+  snprintf(buf2, MAX_STRING_LENGTH, "\n&+WNote: &nSome &+cachievements&n grant access to additional surnames.\n");
   strcat(buf, buf2);
 
   page_string(ch->desc, buf, 1);
@@ -314,7 +314,7 @@ int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
     if(!arg || !*arg)
     {
       orb = read_object( VOBJ_GREATER_ORB_MAGIC, VIRTUAL );
-      sprintf(buffer,
+      snprintf(buffer, MAX_STRING_LENGTH,
           "&+LThe Harvester&+L fills your mind with words...\n"
           "&+L'Welcome combatant. I offer exotic items to those who have &+rproven &+Lthemselves in the arts of mortal &+rcombat&+L."
           "&+L  Only those who have collected the necessary amount frags of may purchase these items.."
@@ -335,7 +335,7 @@ int pvp_store(P_char ch, P_char pl, int cmd, char *arg)
     if(!arg || !*arg)
     {//ifnoarg
       // practice called with no arguments
-      sprintf(buffer,"&+LThe Harvester&+L &+wsays 'What item would you like to buy?'\n");
+      snprintf(buffer, MAX_STRING_LENGTH,"&+LThe Harvester&+L &+wsays 'What item would you like to buy?'\n");
       send_to_char(buffer, pl);
       return TRUE;
     }//endifnoarg
@@ -554,7 +554,7 @@ char get_alias(P_char ch, char *argument)
   bufx = buf;
   for (; *bufx; bufx++)
     *bufx = LOWER(*bufx);
-  sprintf(gbuf1, "%s/%c/%s.aliases", SAVE_DIR, buf[0], buf);
+  snprintf(gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.aliases", SAVE_DIR, buf[0], buf);
 
   aliaslist = fopen(gbuf1, "rt");
   if(!aliaslist)
@@ -572,13 +572,13 @@ char get_alias(P_char ch, char *argument)
   while((fscanf(aliaslist, "%s", charalias) != EOF))
   {
     int i = 0;
-    sprintf(bufbug, "%s", charalias);
+    snprintf(bufbug, 256, "%s", charalias);
     int times = 0;
     char buffer[MAX_STRING_LENGTH] = "";
 
     while(times < 1)
     {
-      sprintf(rbuf, "%c", bufbug[i]);
+      snprintf(rbuf, MAX_STRING_LENGTH, "%c", bufbug[i]);
       if(!strstr(rbuf, "("))
       {
         strcat(buffer, rbuf);
@@ -596,11 +596,11 @@ char get_alias(P_char ch, char *argument)
       int i = 0;
       int times = 0;
 
-      sprintf(bfbug, "%s", charalias);
+      snprintf(bfbug, 256, "%s", charalias);
 
       while(times < 2)
       {
-        sprintf(ruf, "%c", bfbug[i]);
+        snprintf(ruf, MAX_STRING_LENGTH, "%c", bfbug[i]);
         if(strstr(ruf, "(") || strstr(ruf, ")"))
           times++;
 
@@ -635,7 +635,7 @@ void create_alias_file(const char *dir, char *name)
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
-  sprintf(Gbuf1, "%s/%c/%s.aliases", dir, buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.aliases", dir, buf[0], buf);
   f = fopen(Gbuf1, "w");
   fclose(f);
 }
@@ -748,7 +748,7 @@ void create_recipe(P_char ch, P_obj temp)
   objrecipe = read_object(400210, VIRTUAL);
   SET_BIT(objrecipe->value[6], recipenumber);
   strcpy(old_name, objrecipe->short_description);
-  sprintf(buffer, "%s %s&n", old_name, temp->short_description);
+  snprintf(buffer, 256, "%s %s&n", old_name, temp->short_description);
 
   if( (objrecipe->str_mask & STRUNG_DESC2) && objrecipe->short_description )
     FREE( objrecipe->short_description );
@@ -929,25 +929,25 @@ void randomizeitem(P_char ch, P_obj obj)
         {
           SET_BIT(obj->bitvector, AFF_SNEAK);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof the Ass&+rass&+Rin&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof the Ass&+rass&+Rin&n");
         }
         else if( rchance < 25 )
         {
           SET_BIT(obj->bitvector3, AFF3_COLDSHIELD);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+Bc&+Chi&+Wll&+Cin&+Bg&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+Bc&+Chi&+Wll&+Cin&+Bg&n");
         }
         else if( rchance < 76 )
         {
           SET_BIT(obj->bitvector, AFF_FARSEE);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+Rsight&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+Rsight&n");
         }
         else
         {
           SET_BIT(obj->bitvector2, AFF2_PROT_COLD);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+Ccold &+Wprotection&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+Ccold &+Wprotection&n");
         }
         obj_from_char(t_obj);
         extract_obj(t_obj);
@@ -959,25 +959,25 @@ void randomizeitem(P_char ch, P_obj obj)
         {
           SET_BIT(obj->bitvector4, AFF4_DAZZLER);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+bd&+Baz&+Wzl&+Bin&+bg&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+bd&+Baz&+Wzl&+Bin&+bg&n");
         }
         else if( rchance < 25 )
         {
           SET_BIT(obj->bitvector, AFF_HASTE);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+rs&+Rp&+re&+Re&+rd&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+rs&+Rp&+re&+Re&+rd&n");
         }
         else if( rchance < 76 )
         {
           SET_BIT(obj->bitvector, AFF_PROTECT_EVIL);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof evil &+Wprotection&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof evil &+Wprotection&n");
         }
         else
         {
           SET_BIT(obj->bitvector, AFF_PROT_FIRE);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+rfire &+Wprotection&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+rfire &+Wprotection&n");
         }
         obj_from_char(t_obj);
         extract_obj(t_obj);
@@ -989,25 +989,25 @@ void randomizeitem(P_char ch, P_obj obj)
         {
           SET_BIT(obj->bitvector4, AFF4_NOFEAR);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof the Se&+yn&+Yti&+yn&+Lel&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof the Se&+yn&+Yti&+yn&+Lel&n");
         }
         else if( rchance < 25 )
         {
           SET_BIT(obj->bitvector4, AFF4_GLOBE_OF_DARKNESS);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+Wda&+wrk&+Lness&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+Wda&+wrk&+Lness&n");
         }
         else if( rchance < 76 )
         {
           SET_BIT(obj->bitvector, AFF_PROTECT_GOOD);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+Ygood &+Wprotection&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+Ygood &+Wprotection&n");
         }
         else
         {
           SET_BIT(obj->bitvector, AFF_MINOR_GLOBE);
           send_to_char("&+LYou infuse the &+Mmagical&+L properties of your stone into your creation...\r\n", ch);
-          sprintf(emsg, " &+Lof &+ylesser &+Yde&+yfen&+Lse&n");
+          snprintf(emsg, MAX_STRING_LENGTH, " &+Lof &+ylesser &+Yde&+yfen&+Lse&n");
         }
         obj_from_char(t_obj);
         extract_obj(t_obj);
@@ -1299,7 +1299,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
   {
     *buff = LOWER(*buff);
   }
-  sprintf(filename, "%s/%c/%s.spellbook", SAVE_DIR, Gbuf1[0], Gbuf1);
+  snprintf(filename, 256, "%s/%c/%s.spellbook", SAVE_DIR, Gbuf1[0], Gbuf1);
   recipefile = fopen(filename, "r");
   if( !recipefile )
   {
@@ -1324,7 +1324,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
     {
       if( (t_ch = read_mobile(recnum, VIRTUAL)) != NULL )
       {
-        sprintf(Gbuf1, "   &+W%-22ld&n%-41s&n\n", recnum, t_ch->player.short_descr);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "   &+W%-22ld&n%-41s&n\n", recnum, t_ch->player.short_descr);
         page_string(ch->desc, Gbuf1, 1);
         send_to_char("----------------------------------------------------------------------------\n", ch);
         extract_char(t_ch);
@@ -1363,7 +1363,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
     send_to_char("&+rYou open your &+RSummoners &+Lt&+mo&+Mm&+We &+rwhich &+Rreveals&+r the following information...&n.\n", ch);
     // Initialize bufer.
     short_buf[0] = '\0';
-    sprintf(Gbuf1, "You glean they are: \r\n&+YLevel &+W%d \r\n&+YClass:&n %s \r\n&+YBase Hitpoints:&n %d\r\n", GET_LEVEL(t_ch), get_class_string(t_ch, short_buf), GET_MAX_HIT(t_ch));
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "You glean they are: \r\n&+YLevel &+W%d \r\n&+YClass:&n %s \r\n&+YBase Hitpoints:&n %d\r\n", GET_LEVEL(t_ch), get_class_string(t_ch, short_buf), GET_MAX_HIT(t_ch));
     send_to_char(Gbuf1, ch);
     extract_char(t_ch);
     return;
@@ -1388,7 +1388,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
       }
       else
       {
-        sprintf( Gbuf1, "Failed load on mob %ld.  Sorry, try again or tell a God.\n\r", selected );
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "Failed load on mob %ld.  Sorry, try again or tell a God.\n\r", selected );
         send_to_char( Gbuf1, ch);
       }
       return;
@@ -1565,7 +1565,7 @@ void do_conjure(P_char ch, char *argument, int cmd)
     fprintf( recipefile, "%s", Gbuf1 );
     fclose(recipefile);
 
-    sprintf( Gbuf1, "&+mRemoved &+Mminion&+m vnum &+M%ld&+m from your spellbook.&n\n\r", selected );
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+mRemoved &+Mminion&+m vnum &+M%ld&+m from your spellbook.&n\n\r", selected );
     send_to_char( Gbuf1, ch );
   }
   else
@@ -1583,7 +1583,7 @@ void create_spellbook_file(P_char ch)
   buff = buf;
   for (; *buff; buff++)
     *buff = LOWER(*buff);
-  sprintf(Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
   f = fopen(Gbuf1, "w");
   fclose(f);
   f = fopen(Gbuf1, "a");
@@ -1781,7 +1781,7 @@ void learn_conjure_recipe(P_char ch, P_char victim)
   for (; *buff; buff++)
     *buff = LOWER(*buff);
   //buf[0] snags first character of name
-  sprintf(Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, buf[0], buf);
 
   /*just a debug test
     send_to_char(Gbuf1, ch);*/
@@ -1968,6 +1968,7 @@ int calculate_shipfrags(P_char ch)
       SHIPTYPE_NAME(SHIP_CLASS(shipfrags[i].ship)),
       shipfrags[i].ship->frags);*/
   }
+  return 0;
 }
 
 bool calmcheck(P_char ch)
@@ -2028,8 +2029,8 @@ void enhance(P_char ch, P_obj source, P_obj material)
   if( itemvalue(material) < minval )
   {
     char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
-    sprintf(buf2, "%s", source->short_description);
-    sprintf(buf, "&+REnhancing %s requires an item with at least an &+Witem value of: %d&n\r\n", buf2, minval);
+    snprintf(buf2, MAX_STRING_LENGTH, "%s", source->short_description);
+    snprintf(buf, MAX_STRING_LENGTH, "&+REnhancing %s requires an item with at least an &+Witem value of: %d&n\r\n", buf2, minval);
     send_to_char(buf, ch);
     return;
   }
@@ -2045,7 +2046,7 @@ void enhance(P_char ch, P_obj source, P_obj material)
 
   if( GET_MONEY(ch) < cost )
   {
-    sprintf(buf, "It will require &+W%d platinum&n to &+Benhance&n this item.\r\n", cost/1000);
+    snprintf(buf, MAX_STRING_LENGTH, "It will require &+W%d platinum&n to &+Benhance&n this item.\r\n", cost/1000);
     send_to_char(buf, ch);
     return;
   }
@@ -2074,7 +2075,7 @@ void enhance(P_char ch, P_obj source, P_obj material)
   }
 
   validobj = FALSE;
-  /*debug sprintf(buf, "validobj value: %d\n\r", validobj);
+  /*debug snprintf(buf, MAX_STRING_LENGTH, "validobj value: %d\n\r", validobj);
     send_to_char(buf, ch);*/
   while( !validobj )
   {
@@ -2314,7 +2315,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_INT;
-      sprintf(modstring, "&+wof &+Mintelligence&n");
+      snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Mintelligence&n");
       mod = 1;
       break;
     case 400239:
@@ -2322,7 +2323,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_INT_MAX;
-      sprintf(modstring, "&+wof &+Mgreater intelligence&n");
+      snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Mgreater intelligence&n");
       mod = 1;
       break;
     case 400240:
@@ -2330,7 +2331,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_CON;
-      sprintf(modstring, "&+wof &+cconstitution&n");
+      snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+cconstitution&n");
       mod = 1;
       break;
     case 400241:
@@ -2338,7 +2339,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_CON_MAX;
-      sprintf(modstring, "&+wof &+cgreater constitution&n");
+      snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+cgreater constitution&n");
       mod = 1;
       break;
     case 400242:
@@ -2346,7 +2347,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_AGI;
-      sprintf(modstring, "&+wof &+Bagility&n");
+      snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Bagility&n");
       mod = 1;
       break;
     case 400243:
@@ -2354,7 +2355,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_AGI_MAX;
-      sprintf(modstring, "&+wof &+Bgreater agility&n");
+      snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+Bgreater agility&n");
       mod = 1;
       break;
     case 400244:
@@ -2362,7 +2363,7 @@ void modenhance(P_char ch, P_obj source, P_obj material)
         loctype = 1; 
       else
         source->affected[2].location = APPLY_DEX;
-      sprintf(modstring, "&+wof &+gdexterity&n");
+      snprintf(modstring, MAX_STRING_LENGTH, "&+wof &+gdexterity&n");
       mod = 1;
       break;
     case 400245:
@@ -2509,10 +2510,10 @@ void modenhance(P_char ch, P_obj source, P_obj material)
   P_obj tempobj = read_object(OBJ_VNUM(source), VIRTUAL);
   char tempdesc[MAX_STRING_LENGTH], short_desc[MAX_STRING_LENGTH], keywords[MAX_STRING_LENGTH];
 
-  sprintf(keywords, "%s enhanced", tempobj->name);
+  snprintf(keywords, MAX_STRING_LENGTH, "%s enhanced", tempobj->name);
 
-  sprintf(tempdesc, "%s", tempobj->short_description);
-  sprintf(short_desc, "%s %s&n", tempdesc, modstring);
+  snprintf(tempdesc, MAX_STRING_LENGTH, "%s", tempobj->short_description);
+  snprintf(short_desc, MAX_STRING_LENGTH, "%s %s&n", tempdesc, modstring);
   set_keywords(source, keywords);
   set_short_description(source, short_desc);
   extract_obj(tempobj);
@@ -2552,7 +2553,7 @@ void thanksgiving_proc(P_char ch)
   if(!ch)
     return;
   char buff[MAX_STRING_LENGTH];
-  sprintf(buff, " %s 86", GET_NAME(ch));
+  snprintf(buff, MAX_STRING_LENGTH, " %s 86", GET_NAME(ch));
   act("&+YSuddenly and without warning, a &+rPlump &+yTurkey &+Yappears out of no where, seemly attracted to the freshly spilled &+Rblood&n!", TRUE, ch, 0, 0, TO_CHAR);
   act("&+YSuddenly and without warning, a &+rPlump &+yTurkey &+Yappears out of no where, seemly attracted to the freshly spilled &+Rblood&n!", TRUE, ch, 0, 0, TO_ROOM);
   //do_givepet(ch, buff, CMD_GIVEPET);
@@ -2668,7 +2669,7 @@ void christmas_proc(P_char ch)
   if(!ch)
     return;
   char buff[MAX_STRING_LENGTH];
-  sprintf(buff, " %s 86", GET_NAME(ch));
+  snprintf(buff, MAX_STRING_LENGTH, " %s 86", GET_NAME(ch));
   act("&+WAs the last bit of &+rblood&+W drips onto the ground, a &+Gf&+We&+Rs&+Gt&+Wi&+Rv&+Ge&+Wl&+Ry &+rdressed &+Gelf &+Wsuddenly appears in a &+Lpuff &+Wof smoke....&n\r\n"
       "&n'Ah ha! Being quite &+RNaughty&n this year aren't we $n? Wait until &+rSanta Claws&n hears about this!' &+Whe cackles as he reaches beneath his &+Gc&+Ro&+Wa&+Gt&+W and pulls out a small parchment and quill.\r\n", TRUE, ch, 0, 0, TO_CHAR);
   act("&+WAs the last bit of &+rblood&+W drips onto the ground, a &+Gf&+We&+Rs&+Gt&+Wi&+Rv&+Ge&+Wl&+Ry &+rdressed &+Gelf &+Wsuddenly appears in a &+Lpuff &+Wof smoke....&n\r\n"
@@ -2796,4 +2797,5 @@ bool add_epiccount(P_char ch, int gain)
       }
     }
   }
+  return FALSE;
 }

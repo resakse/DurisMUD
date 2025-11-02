@@ -320,7 +320,7 @@ void show_scores_to_char(P_char ch, int team)
   {
     if (ch == NULL)
     {
-      sprintf(tmp_buf, "&+YTeam Goodie: &+W%d&N\r\n",
+      snprintf(tmp_buf, MAX_STRING_LENGTH, "&+YTeam Goodie: &+W%d&N\r\n",
               arena.team[GOODIE].score);
       send_to_arena(tmp_buf, -1);
 
@@ -329,7 +329,7 @@ void show_scores_to_char(P_char ch, int team)
         tch = arena.team[GOODIE].player[i].ch;
         if (tch != NULL)
         {
-          sprintf(tmp_buf,
+          snprintf(tmp_buf, MAX_STRING_LENGTH,
                   "&+W%-20s&N &+LFrags: &+W%-3d&N &+WLives Remaining: %d&N\r\n",
                   arena.team[GOODIE].player[i].name,
                   arena.team[GOODIE].player[i].frags,
@@ -340,7 +340,7 @@ void show_scores_to_char(P_char ch, int team)
     }
     else
     {
-      sprintf(tmp_buf, "&+YTeam Goodie: &+W%d&N\r\n",
+      snprintf(tmp_buf, MAX_STRING_LENGTH, "&+YTeam Goodie: &+W%d&N\r\n",
               arena.team[GOODIE].score);
       send_to_char(tmp_buf, ch);
 
@@ -349,7 +349,7 @@ void show_scores_to_char(P_char ch, int team)
         tch = arena.team[GOODIE].player[i].ch;
         if (tch != NULL)
         {
-          sprintf(tmp_buf,
+          snprintf(tmp_buf, MAX_STRING_LENGTH,
                   "&+W%-20s&N &+LFrags: &+W%-3d&N &+WLives Remaining: %d&N\r\n",
                   arena.team[GOODIE].player[i].name,
                   arena.team[GOODIE].player[i].frags,
@@ -363,7 +363,7 @@ void show_scores_to_char(P_char ch, int team)
   {
     if (ch == NULL)
     {
-      sprintf(tmp_buf, "&+rTeam Evil: &+W%d&N\r\n", arena.team[EVIL].score);
+      snprintf(tmp_buf, MAX_STRING_LENGTH, "&+rTeam Evil: &+W%d&N\r\n", arena.team[EVIL].score);
       send_to_arena(tmp_buf, -1);
 
       for (i = 0; i < MAX_EVIL_TEAM; i++)
@@ -371,7 +371,7 @@ void show_scores_to_char(P_char ch, int team)
         tch = arena.team[EVIL].player[i].ch;
         if (tch != NULL)
         {
-          sprintf(tmp_buf,
+          snprintf(tmp_buf, MAX_STRING_LENGTH,
                   "&+W%-20s&N &+LFrags: &+W%-3d&N &+WLives Remaining: %d&N\r\n",
                   arena.team[EVIL].player[i].name,
                   arena.team[EVIL].player[i].frags,
@@ -382,7 +382,7 @@ void show_scores_to_char(P_char ch, int team)
     }
     else
     {
-      sprintf(tmp_buf, "&+rTeam Evil: &+W%d&N\r\n", arena.team[EVIL].score);
+      snprintf(tmp_buf, MAX_STRING_LENGTH, "&+rTeam Evil: &+W%d&N\r\n", arena.team[EVIL].score);
       send_to_char(tmp_buf, ch);
 
       for (i = 0; i < MAX_EVIL_TEAM; i++)
@@ -390,7 +390,7 @@ void show_scores_to_char(P_char ch, int team)
         tch = arena.team[EVIL].player[i].ch;
         if (tch != NULL)
         {
-          sprintf(tmp_buf,
+          snprintf(tmp_buf, MAX_STRING_LENGTH,
                   "&+W%-20s&N &+LFrags: &+W%-3d&N &+WLives Remaining: %d&N\r\n",
                   arena.team[EVIL].player[i].name,
                   arena.team[EVIL].player[i].frags,
@@ -454,9 +454,9 @@ void show_stats_to_char(P_char ch)
   else
   {
     send_to_char("&+YCurrent Arena Statistics:&N\r\n", ch);
-    sprintf(tbuf, "&+LMap: &+W%s&N\r\n", map_name[arena.map.num]);
+    snprintf(tbuf, MAX_STRING_LENGTH, "&+LMap: &+W%s&N\r\n", map_name[arena.map.num]);
     send_to_char(tbuf, ch);
-    sprintf(tbuf, "&+LGame Type: &+W%-20s &+LDeath Mode: &+W%s\r\n&N",
+    snprintf(tbuf, MAX_STRING_LENGTH, "&+LGame Type: &+W%-20s &+LDeath Mode: &+W%s\r\n&N",
             game_type[arena.type], death_type[arena.deathmode]);
     send_to_char(tbuf, ch);
     countg = 0;
@@ -477,11 +477,11 @@ void show_stats_to_char(P_char ch)
         counte++;
       }
     }
-    sprintf(tbuf,
+    snprintf(tbuf, MAX_STRING_LENGTH,
             "&+LPeople in arena - &+YGoodies: &+W%-2d &+rEvils: &+W%-2d&N\r\n",
             countg, counte);
     send_to_char(tbuf, ch);
-    sprintf(tbuf, "&+LArena phase: %-30s &+LTime left: &+W%d&N\r\n",
+    snprintf(tbuf, MAX_STRING_LENGTH, "&+LArena phase: %-30s &+LTime left: &+W%d&N\r\n",
             arena_stage[arena.stage], arena.timer[0]);
     send_to_char(tbuf, ch);
   }

@@ -175,12 +175,12 @@ void spell_beholder_telekinesis(int level, P_char ch, P_char victim,
         {
           if (EXIT(ch, door)->keyword)
           {
-            sprintf(Gbuf1, "The $F to %s closes suddenly!", dirs2[door]);
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "The $F to %s closes suddenly!", dirs2[door]);
             act(Gbuf1, FALSE, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
           }
           else
           {
-            sprintf(Gbuf1, "The door to %s closes suddenly!", dirs2[door]);
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "The door to %s closes suddenly!", dirs2[door]);
             act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
           }
         }
@@ -188,12 +188,12 @@ void spell_beholder_telekinesis(int level, P_char ch, P_char victim,
         {
           if (EXIT(ch, door)->keyword)
           {
-            sprintf(Gbuf1, "The $F %s closes suddenly!", dirs2[door]);
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "The $F %s closes suddenly!", dirs2[door]);
             act(Gbuf1, FALSE, ch, 0, EXIT(ch, door)->keyword, TO_ROOM);
           }
           else
           {
-            sprintf(Gbuf1, "The door %s closes suddenly!", dirs2[door]);
+            snprintf(Gbuf1, MAX_STRING_LENGTH, "The door %s closes suddenly!", dirs2[door]);
             act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
           }
         }
@@ -210,7 +210,7 @@ void spell_beholder_telekinesis(int level, P_char ch, P_char victim,
             {
               if (back->keyword)
               {
-                sprintf(Gbuf1,
+                snprintf(Gbuf1, MAX_STRING_LENGTH,
                         "The %s is closed from the other side.\r\n",
                         FirstWord(back->keyword));
                 send_to_room(Gbuf1, EXIT(ch, door)->to_room);

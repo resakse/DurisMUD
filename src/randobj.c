@@ -241,7 +241,7 @@ void do_randobj(P_char ch, char *strn, int val)
   {
     o = create_random_eq_new(ch, ch, -1, -1);
     obj_to_char(o, ch);
-    sprintf(Gbuf5, "o %s", o->name);
+    snprintf(Gbuf5, MAX_STRING_LENGTH, "o %s", o->name);
     do_stat(ch, Gbuf5, CMD_STAT);
     return;
   }

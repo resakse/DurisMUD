@@ -890,7 +890,7 @@ spell_control_flames(int level, P_char ch, char *arg, int type, P_char victim,
     56, 56, 56, 57, 57, 58, 58, 58, 59, 59
   };
 
-  sprintf (buf, "torch");
+  snprintf(buf, MAX_STRING_LENGTH, "torch");
   obj = get_obj_in_list_vis (ch, buf, victim->carrying);
   if (!obj)
     {
@@ -932,7 +932,7 @@ spell_ego_blast(int level, P_char ch, char *arg, int type, P_char victim,
     56, 56, 56, 57, 57, 58, 58, 58, 59, 59
   };
 /*
-  sprintf (buf, "torch");
+  snprintf(buf, MAX_STRING_LENGTH, "torch");
   obj = get_obj_in_list_vis (ch, buf, victim->carrying);
   if (!obj)
     {
@@ -2919,7 +2919,7 @@ void spell_ether_warp(int level, P_char ch, char *arg, int type, P_char victim, 
   if( !IS_TRUSTED(ch) )
   {
     char logbuf[500];
-    sprintf(logbuf, "Ether Warp from %s[%d] to %s[%d]", GET_NAME(ch), world[ch->in_room].number,
+    snprintf(logbuf, 500, "Ether Warp from %s[%d] to %s[%d]", GET_NAME(ch), world[ch->in_room].number,
       GET_NAME(victim), world[to_room].number);
     logit(LOG_PORTALS, logbuf);
     // spam immo's if it looks like a possible camped target

@@ -82,7 +82,9 @@ string wiki_help(string str)
   }
 
   // first, find the list of help topics that match the search string
-  if( !qry("select title from pages where title like '%%%s%%' order by title asc limit %d", str.c_str(), WIKIHELP_RESULTS_LIMIT+1) )
+  // Arih: Security fix - Escape user input to prevent SQL injection.
+  // Using escape_str() wraps mysql_real_escape_string() to sanitize special chars like quotes.
+  if( !qry("select title from pages where title like '%%%s%%' order by title asc limit %d", escape_str(str.c_str()).c_str(), WIKIHELP_RESULTS_LIMIT+1) )
   {
     return string("&+GSorry, but there was an error with the help system.");
   }
@@ -175,78 +177,78 @@ string wiki_racial_stats(string title)
   }
 
   return_str += "Strength    : &+c";
-  sprintf(race, "stats.str.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.str.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Agility     : &+c";
-  sprintf(race, "stats.agi.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.agi.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Dexterity   : &+c";
-  sprintf(race, "stats.dex.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.dex.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Constitution: &+c";
-  sprintf(race, "stats.con.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.con.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Power       : &+c";
-  sprintf(race, "stats.pow.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.pow.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Intelligence: &+c";
-  sprintf(race, "stats.int.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.int.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Wisdom      : &+c";
-  sprintf(race, "stats.wis.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.wis.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Charisma    : &+c";
-  sprintf(race, "stats.cha.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.cha.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Luck        : &+c";
-  sprintf(race, "stats.luc.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.luc.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "Karma       : &+c";
-  sprintf(race, "stats.kar.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "stats.kar.%s", race_str.c_str());
   //return_str += stat_to_string3((int)get_property(race, 100));
-  sprintf(buf, "%d", (int)get_property(race, 100));
+  snprintf(buf, MAX_STRING_LENGTH, "%d", (int)get_property(race, 100));
   return_str += buf;
   return_str += "&n\n";
   return_str += "\n==Racial Traits==\n";
   // Removing damage output because this is more of a fine tuning function
   // for imm's, and will only confuse players.
   //return_str += "Damage Output: &+c";
-  //sprintf(race, "damage.totalOutput.racial.%s", race_str.c_str());
+  //snprintf(race, MAX_STRING_LENGTH, "damage.totalOutput.racial.%s", race_str.c_str());
   //return_str += stat_to_string_spell_pulse(get_property(race, 1.000));
   //return_str += "&n\n";
   return_str += "Combat Pulse : &+c";
-  sprintf(race, "damage.pulse.racial.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "damage.pulse.racial.%s", race_str.c_str());
   return_str += stat_to_string_damage_pulse(get_property(race, 14.000));
   return_str += "&n\n";
   return_str += "Spell Pulse  : &+c";
-  sprintf(race, "spellcast.pulse.racial.%s", race_str.c_str());
+  snprintf(race, MAX_STRING_LENGTH, "spellcast.pulse.racial.%s", race_str.c_str());
   return_str += stat_to_string_spell_pulse(get_property(race, 1.000));
   return_str += "&n\n";
   return return_str;
@@ -505,7 +507,9 @@ string wiki_help_single(string str)
   string return_str, title;
   int category, dashes;
 
-  if( !qry("select title, text, category_id, last_update, last_update_by from pages where title = '%s' limit 1", str.c_str()) )
+  // Arih: Security fix - Escape user input to prevent SQL injection.
+  // Using escape_str() wraps mysql_real_escape_string() to sanitize special chars like quotes.
+  if( !qry("select title, text, category_id, last_update, last_update_by from pages where title = '%s' limit 1", escape_str(str.c_str()).c_str()) )
   {
     return string("&+GSorry, but there was an error with the help system.");
   }

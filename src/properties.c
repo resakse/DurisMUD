@@ -98,7 +98,7 @@ int get_property(const char *key, int default_value, bool fuss)
   if (float_prop != ((float)((int)float_prop)))
   {
     char buf[500];
-    sprintf(buf, "(int)get_property() called for \"%s\" which has a float value of %f.", key, float_prop);
+    snprintf(buf, 500, "(int)get_property() called for \"%s\" which has a float value of %f.", key, float_prop);
     wizlog(58, buf);
   }
 
@@ -209,7 +209,7 @@ void save_properties(P_char ch)
                   property.key, property.value, result->value);
           result->old_value = result->value;
         }
-        sprintf(buf, "%s=%.3f\n", property.key, result->value);
+        snprintf(buf, 4096, "%s=%.3f\n", property.key, result->value);
       }
       FREE(property.key);
     }
@@ -220,12 +220,12 @@ void save_properties(P_char ch)
   fclose(f_old);
   rename(PROPERTIES_FILE ".new", PROPERTIES_FILE);
 
-  sprintf(buf, "%s saved the properties: %s", GET_NAME(ch), changes);
+  snprintf(buf, 4096, "%s saved the properties: %s", GET_NAME(ch), changes);
   wizlog(57, buf);
   logit(LOG_WIZ, buf);
   sql_log(ch, WIZLOG, "Saved properties");
 
-  //sprintf(buf, "svn commit -m \'%s: %s\' " PROPERTIES_FILE, name, changes);
+  //snprintf(buf, 4096, "svn commit -m \'%s: %s\' " PROPERTIES_FILE, name, changes);
   //system(buf);
 }
 
@@ -260,10 +260,10 @@ void do_properties(P_char ch, char *args, int cmd)
         if (fnmatch(pattern, duris_properties[i].key, FNM_CASEFOLD) == 0)
         {
           if (duris_properties[i].value != duris_properties[i].old_value)
-            sprintf(buf, "*%s: %.3f(%.3f)\r\n", duris_properties[i].key,
+            snprintf(buf, 256, "*%s: %.3f(%.3f)\r\n", duris_properties[i].key,
                     duris_properties[i].value, duris_properties[i].old_value);
           else
-            sprintf(buf, "%s: %.3f\r\n", duris_properties[i].key,
+            snprintf(buf, 256, "%s: %.3f\r\n", duris_properties[i].key,
                     duris_properties[i].value);
           send_to_char(buf, ch);
         }
@@ -274,7 +274,7 @@ void do_properties(P_char ch, char *args, int cmd)
       for (i = 0; i < properties_count; i++)
         if (duris_properties[i].value != duris_properties[i].old_value)
         {
-          sprintf(buf, "%s=%.3f(%.3f)\r\n", duris_properties[i].key,
+          snprintf(buf, 256, "%s=%.3f(%.3f)\r\n", duris_properties[i].key,
                   duris_properties[i].value, duris_properties[i].old_value);
           send_to_char(buf, ch);
         }
@@ -289,7 +289,7 @@ void do_properties(P_char ch, char *args, int cmd)
           if (fnmatch(pattern, duris_properties[i].key, FNM_CASEFOLD) == 0)
           {
             duris_properties[i].value = new_value;
-            sprintf(buf, "%s set %s to %.3f", ch->player.name,
+            snprintf(buf, 256, "%s set %s to %.3f", ch->player.name,
                     duris_properties[i].key, new_value);
             wizlog(57, buf);
             logit(LOG_WIZ, buf);
@@ -299,7 +299,7 @@ void do_properties(P_char ch, char *args, int cmd)
         }
         if( !success )
         {
-          sprintf(buf, "property %s not found", pattern);
+          snprintf(buf, 256, "property %s not found", pattern);
           wizlog(57, buf);
         }
         else
@@ -324,7 +324,7 @@ void do_properties(P_char ch, char *args, int cmd)
       {
         if (duris_properties[i].value != duris_properties[i].old_value)
         {
-          sprintf(buf, "%s reverted to %.3f from %.3f\r\n",
+          snprintf(buf, 256, "%s reverted to %.3f from %.3f\r\n",
                   duris_properties[i].key, duris_properties[i].old_value,
                   duris_properties[i].value);
           send_to_char(buf, ch);
@@ -332,7 +332,7 @@ void do_properties(P_char ch, char *args, int cmd)
         }
       }
       apply_properties();
-      sprintf(buf, "%s reverted property changes.", ch->player.name);
+      snprintf(buf, 256, "%s reverted property changes.", ch->player.name);
       wizlog(57, buf);
       logit(LOG_WIZ, buf);
       sql_log(ch, WIZLOG, "Reverted property changes");

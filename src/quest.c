@@ -98,7 +98,7 @@ void questcheck(P_char ch)
   {
     if (quest_index[i].quester <= quest_index[i - 1].quester)
     {
-      sprintf(tmp_buf,
+      snprintf(tmp_buf, MAX_STRING_LENGTH,
               "Real: %d Virtual: %d is out of order with Real: %d Virtual: %d\n",
               i, quest_index[i].quester, i - 1, quest_index[i - 1].quester);
       send_to_char(tmp_buf, ch);
@@ -207,14 +207,14 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
 
      adjust_lvl_from_epics(gl->ch, value_pts);
 
-     sprintf(buffer, "You gained %d epic points!!\r\n", (value_pts / 100));
+     snprintf(buffer, 1024, "You gained %d epic points!!\r\n", (value_pts / 100));
      send_to_char(buffer, gl->ch);
      }  
      }
 
      value_pts = BOUNDED(1, value_pts, 10000 + number(100,1500) );
 
-     sprintf(buffer, "You gained %d epic points!!\r\n", (value_pts / 100));
+     snprintf(buffer, 1024, "You gained %d epic points!!\r\n", (value_pts / 100));
 
 
      adjust_lvl_from_epics(pl, value_pts);
@@ -272,13 +272,13 @@ void give_reward(struct quest_complete_data *qcp, P_char mob, P_char pl)
     case QUEST_GOAL_COINS:
 
 	     /* if( (temp = sql_quest_trophy(mob)) > 1){
-           sprintf(Gbuf1, "$n says 'This quest is very commonly done, reward is currently very low.'\r\n");
+           snprintf(Gbuf1, MAX_STRING_LENGTH, "$n says 'This quest is very commonly done, reward is currently very low.'\r\n");
            act(Gbuf1, FALSE, mob, 0, pl, TO_VICT);
         }  else 
 				*/
 			temp = 1;
 
-      sprintf(Gbuf1, "$n gives %s to you.", coin_stringv(gp->number / temp));
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "$n gives %s to you.", coin_stringv(gp->number / temp));
       act(Gbuf1, FALSE, mob, 0, pl, TO_VICT);
       act("$n gives some coins to $N.", FALSE, mob, 0, pl, TO_NOTVICT);
       statuslog(58, "%s was rewarded %d coins by %s", GET_NAME(pl), gp->number / temp, mob->player.short_descr);
@@ -369,7 +369,7 @@ void tell_quest(int id, P_char pl)
   send_to_char("My key words are:\n", pl);
   for (qmp = quest_index[id].quest_message; qmp; qmp = qmp->next)
   {
-    sprintf(Gbuf2, "+ Key: %s\n", qmp->key_words);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "+ Key: %s\n", qmp->key_words);
     send_to_char(Gbuf2, pl);
   }
   for (qcp = quest_index[id].quest_complete; qcp; qcp = qcp->next)
@@ -383,23 +383,23 @@ void tell_quest(int id, P_char pl)
         obj = read_object(gp->number, VIRTUAL);
         if (obj && real_object(gp->number) > 0)
         {
-          sprintf(Gbuf2, "  - item #%d %s\n", gp->number, obj->short_description);
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "  - item #%d %s\n", gp->number, obj->short_description);
           extract_obj(obj);
         }
         else
         {
           logit(LOG_DEBUG, "tell_quest(): obj %d not loadable", gp->number);
-          sprintf(Gbuf2, "  - ?????\n");
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "  - ?????\n");
         }
         send_to_char(Gbuf2, pl);
         break;
       case QUEST_GOAL_ITEM_TYPE:
         sprinttype(gp->number, item_types, buf);
-        sprintf(Gbuf2, "  - item type %d - %s\n", gp->number, buf);
+        snprintf(Gbuf2, MAX_STRING_LENGTH, "  - item type %d - %s\n", gp->number, buf);
         send_to_char(Gbuf2, pl);
         break;
       case QUEST_GOAL_COINS:
-        sprintf(Gbuf2, "  - %s\n", coin_stringv(gp->number));
+        snprintf(Gbuf2, MAX_STRING_LENGTH, "  - %s\n", coin_stringv(gp->number));
         send_to_char(Gbuf2, pl);
         break;
       default:
@@ -415,30 +415,30 @@ void tell_quest(int id, P_char pl)
         obj = read_object(gp->number, VIRTUAL);
         if (obj && real_object(gp->number) > 0)
         {
-          sprintf(Gbuf2, "  - item #%d %s\n", gp->number,
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "  - item #%d %s\n", gp->number,
                   obj->short_description);
           extract_obj(obj);
         }
         else
         {
           logit(LOG_DEBUG, "tell_quest(): obj %d not loadable", gp->number);
-          sprintf(Gbuf2, "  - ?????\n");
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "  - ?????\n");
         }
         send_to_char(Gbuf2, pl);
         break;
       case QUEST_GOAL_COINS:
-        sprintf(Gbuf2, "  - %s\n", coin_stringv(gp->number));
+        snprintf(Gbuf2, MAX_STRING_LENGTH, "  - %s\n", coin_stringv(gp->number));
         send_to_char(Gbuf2, pl);
         break;
       case QUEST_GOAL_SKILL:
-        sprintf(Gbuf2, "  - %s\n", skills[gp->number].name);
+        snprintf(Gbuf2, MAX_STRING_LENGTH, "  - %s\n", skills[gp->number].name);
         send_to_char(Gbuf2, pl);
         break;
       case QUEST_GOAL_EXP:
         if (gp->number > 0)
-          sprintf(Gbuf2, "  - %d Experience points\n", gp->number);
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "  - %d Experience points\n", gp->number);
         else
-          sprintf(Gbuf2, "  - ?????\n");
+          snprintf(Gbuf2, MAX_STRING_LENGTH, "  - ?????\n");
         send_to_char(Gbuf2, pl);
         break;
       default:
@@ -857,7 +857,7 @@ int addQuestTropy(int questID)
 
   fclose(f);
   fclose(temp_f);
-  sprintf(sys, "cp %s %s", TEMP_QUEST_FILE_TROPHY, QUEST_FILE_TROPHY);
+  snprintf(sys, 200, "cp %s %s", TEMP_QUEST_FILE_TROPHY, QUEST_FILE_TROPHY);
   system(sys);
 
 

@@ -272,11 +272,11 @@ int vecna_torturerroom(P_obj obj, P_char ch, int cmd, char *arg)
 
     if( corpse->type == ITEM_CORPSE )
     {
-      sprintf(buf, "&+WGhostly hands &+Lrise from the ground and drag &n%s &+Linto the frigid earth.&n\r\n", corpse->short_description);
+      snprintf(buf, MAX_STRING_LENGTH, "&+WGhostly hands &+Lrise from the ground and drag &n%s &+Linto the frigid earth.&n\r\n", corpse->short_description);
       send_to_room(buf, obj->loc.room);
       obj_from_room(corpse);
       obj_to_room(corpse, world[obj->loc.room].dir_option[DIR_NORTH]->to_room);
-      sprintf(buf, "&+WGhostly hands &+Lappear overhead and pull &n%s &+Linto the room.&n\r\n", corpse->short_description);
+      snprintf(buf, MAX_STRING_LENGTH, "&+WGhostly hands &+Lappear overhead and pull &n%s &+Linto the room.&n\r\n", corpse->short_description);
       send_to_room(buf, corpse->loc.room);
       return FALSE;
     }
@@ -306,11 +306,11 @@ int vecna_ghosthands(P_obj obj, P_char ch, int cmd, char *arg)
 
     if( corpse->type == ITEM_CORPSE )
     {
-      sprintf(buf, "&+WGhostly hands &+Lrise from the ground and drag &n%s &+Linto the frigid earth.&n\r\n", corpse->short_description);
+      snprintf(buf, MAX_STRING_LENGTH, "&+WGhostly hands &+Lrise from the ground and drag &n%s &+Linto the frigid earth.&n\r\n", corpse->short_description);
       send_to_room(buf, obj->loc.room);
       obj_from_room(corpse);
       obj_to_room(corpse, world[obj->loc.room].dir_option[DIR_DOWN]->to_room);
-      sprintf(buf, "&+WGhostly hands &+Lappear overhead and pull &n%s &+Linto the room.&n\r\n", corpse->short_description);
+      snprintf(buf, MAX_STRING_LENGTH, "&+WGhostly hands &+Lappear overhead and pull &n%s &+Linto the room.&n\r\n", corpse->short_description);
       send_to_room(buf, corpse->loc.room);
       return FALSE;
     }
@@ -778,7 +778,7 @@ int vecna_krindor_main(P_obj obj, P_char ch, int cmd, char *arg)
         {
           act("$p&n &+Lwrithes and warps as it reforms into &+cKrindor's &+gBoots of &+ythe Night&n.", TRUE, owner, obj, 0, TO_ROOM);
           act("$p&n &+Lwrithes and warps as it reforms into &+cKrindor's &+gBoots of &+ythe Night&n.", TRUE, owner, obj, 0, TO_CHAR);
-          sprintf(buf, "&+cKrindor's &+gBoots of &+ythe Night&n");
+          snprintf(buf, MAX_STRING_LENGTH, "&+cKrindor's &+gBoots of &+ythe Night&n");
           obj->short_description = NULL;
           obj->str_mask |= STRUNG_DESC2;
           obj->short_description = str_dup(buf);
@@ -811,7 +811,7 @@ int vecna_krindor_main(P_obj obj, P_char ch, int cmd, char *arg)
             TRUE, owner, obj, 0, TO_ROOM);
           act("$p&n &+Lwrithes and warps as it reforms into &+cKrindor's &+gMusic &+yBox&n.",
             TRUE, owner, obj, 0, TO_CHAR);
-          sprintf(buf, "&+cKrindor's &+gMusic &+yBox&n");
+          snprintf(buf, MAX_STRING_LENGTH, "&+cKrindor's &+gMusic &+yBox&n");
           obj->short_description = NULL;
           obj->str_mask |= STRUNG_DESC2;
           obj->short_description = str_dup(buf);

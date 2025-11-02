@@ -3432,7 +3432,7 @@ int breale_townsfolk(P_char ch, P_char pl, int cmd, char *arg)
         !should_not_kill(ch, TmpCh) &&
         !IS_SET(TmpCh->specials.act, PLR_AGGIMMUNE) && CAN_SEE(ch, TmpCh))
     {
-      sprintf(TmpBuf,
+      snprintf(TmpBuf, MAX_STRING_LENGTH,
               "We hate your kind here, %s! Leave town, %s, or die by my hand!\r\n",
               GET_NAME(TmpCh),
               GET_SEX(TmpCh) == SEX_MALE ? "warlock" : "witch");

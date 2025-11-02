@@ -178,4 +178,5 @@ int bandage_reward_mob(P_char ch, P_char tch, int cmd, char *arg)
       }
     }
   }
+  return FALSE;
 }

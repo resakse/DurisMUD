@@ -753,11 +753,11 @@ bool Building::generate_portals()
       return 0;
     }
     
-    sprintf(Gbuf1, "%sasc.%u", ASC_DIR, guild->get_id());
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%sasc.%u", ASC_DIR, guild->get_id());
     f = fopen(Gbuf1, "r");
     if (!f)
     {
-      sprintf(ghname, "Unknown");
+      snprintf(ghname, MAX_STRING_LENGTH, "Unknown");
     }
     else
     {
@@ -771,7 +771,7 @@ bool Building::generate_portals()
 
   if( portal_op = read_object(BUILDING_PORTAL, VIRTUAL) )
   {
-    sprintf(buff, portal_op->description, ghname);
+    snprintf(buff, MAX_STRING_LENGTH, portal_op->description, ghname);
     portal_op->value[0] = guildhall_room;
     portal_op->description = str_dup(buff);
     portal_op->str_mask = STRUNG_DESC1;
@@ -780,7 +780,7 @@ bool Building::generate_portals()
 
   if( portal_gh = read_object(BUILDING_PORTAL, VIRTUAL) )
   {
-    sprintf(buff, portal_gh->description, continent_name(world[location()].continent));
+    snprintf(buff, MAX_STRING_LENGTH, portal_gh->description, continent_name(world[location()].continent));
     portal_gh->value[0] = rooms[0]->number;
     portal_gh->description = str_dup(buff);
     portal_gh->str_mask = STRUNG_DESC1;

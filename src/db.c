@@ -753,25 +753,25 @@ void update_stat_data()
 
   for (i = 1; i <= LAST_RACE; i++)
   {
-    sprintf(buf, "stats.str.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.str.%s", race_names_table[i].no_spaces);
     stat_factor[i].Str = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.dex.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.dex.%s", race_names_table[i].no_spaces);
     stat_factor[i].Dex = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.agi.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.agi.%s", race_names_table[i].no_spaces);
     stat_factor[i].Agi = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.con.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.con.%s", race_names_table[i].no_spaces);
     stat_factor[i].Con = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.pow.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.pow.%s", race_names_table[i].no_spaces);
     stat_factor[i].Pow = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.int.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.int.%s", race_names_table[i].no_spaces);
     stat_factor[i].Int = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.wis.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.wis.%s", race_names_table[i].no_spaces);
     stat_factor[i].Wis = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.cha.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.cha.%s", race_names_table[i].no_spaces);
     stat_factor[i].Cha = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.kar.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.kar.%s", race_names_table[i].no_spaces);
     stat_factor[i].Kar = (sh_int) get_property(buf, 100.);
-    sprintf(buf, "stats.luc.%s", race_names_table[i].no_spaces);
+    snprintf(buf, 128, "stats.luc.%s", race_names_table[i].no_spaces);
     stat_factor[i].Luk = (sh_int) get_property(buf, 100.);
   }
 }
@@ -4152,7 +4152,7 @@ char    *file_to_string(const char *name)
   {
     if(!(fl = fopen(name, "w")))
     {
-      sprintf(tmp, "file-to-string (%s)", name);
+      snprintf(tmp, 256, "file-to-string (%s)", name);
       perror(tmp);
       return (NULL);
     }
@@ -4161,7 +4161,7 @@ char    *file_to_string(const char *name)
     
     if (!(fl = fopen(name, "r")))
     {
-      sprintf(tmp, "file-to-string (%s)", name);
+      snprintf(tmp, 256, "file-to-string (%s)", name);
       perror(tmp);
       return (NULL);      
     }
@@ -4550,7 +4550,7 @@ void worldcheck(P_char ch)
   {
     if (world[i].number <= world[i - 1].number)
     {
-      sprintf(tmp_buf,
+      snprintf(tmp_buf, MAX_STRING_LENGTH,
               "Real: %d Virtual: %d is out of order with Real: %d Virtual: %d\r\n",
               i, world[i].number, i - 1, world[i - 1].number);
       send_to_char(tmp_buf, ch);

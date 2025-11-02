@@ -151,7 +151,7 @@ void do_aggr(P_char ch, char *arg, int cmd)
       send_to_char("You are not aggressive to monsters.\r\n", ch);
       return;
     }
-    sprintf(Gbuf2,
+    snprintf(Gbuf2, MAX_STRING_LENGTH,
         "You will be aggressive unless hp < %d.\r\n",
         ch->only.pc->aggressive);
 
@@ -182,7 +182,7 @@ void do_aggr(P_char ch, char *arg, int cmd)
       send_to_char("You are not aggressive to monsters.\r\n", ch);
       return;
     }
-    sprintf(Gbuf2, "You will be aggressive unless hp < %d.\r\n", ch->only.pc->aggressive);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "You will be aggressive unless hp < %d.\r\n", ch->only.pc->aggressive);
 
     send_to_char(Gbuf2, ch);
     return;
@@ -275,7 +275,7 @@ void do_gsay(P_char ch, char *arg, int cmd)
   }
   for (gl = ch->group; gl; gl = gl->next)
   {
-    sprintf(Gbuf1, "&+G$n&+G group-says %s'%s'", language_known(ch, gl->ch),
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+G$n&+G group-says %s'%s'", language_known(ch, gl->ch),
         language_CRYPT(ch, gl->ch, arg + i));
     if (!is_silent(gl->ch, FALSE))
       act(Gbuf1, FALSE, ch, 0, gl->ch, TO_VICT | ACT_SILENCEABLE | ACT_PRIVATE);
@@ -285,7 +285,7 @@ void do_gsay(P_char ch, char *arg, int cmd)
   {
     if (!is_silent(ch, TRUE) && can_talk(ch))
     {
-      sprintf(Gbuf1, "&+GYou group-say '%s'\r\n", arg + i);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+GYou group-say '%s'\r\n", arg + i);
       send_to_char(Gbuf1, ch, LOG_PRIVATE);
     }
   }
@@ -398,14 +398,14 @@ void do_consent(P_char ch, char *argument, int cmd)
    *
    if (ch->specials.consent) {
 
-//   sprintf(Gbuf3,
+//   snprintf(Gbuf3, MAX_STRING_LENGTH,
 //   "You no longer give consent to %s.\r\n", GET_NAME(ch->specials.consent));
 //   send_to_char(Gbuf3, ch);
 
 act("You attempt to give consent...", FALSE, ch, 0, ch->specials.consent, TO_CHAR);
 }
 */
-/*  sprintf(Gbuf3, "You now give consent to %s.\r\n", GET_NAME(target));
+/*  snprintf(Gbuf3, MAX_STRING_LENGTH, "You now give consent to %s.\r\n", GET_NAME(target));
     send_to_char(Gbuf3, ch); */
 act("You attempt to give consent...", FALSE, ch, 0, target, TO_CHAR);
 link_char(ch, target, LNK_CONSENT);
@@ -1616,7 +1616,7 @@ P_char morph(P_char ch, int rnum, int mode)
   }
   if (IS_NPC(ch) || IS_MORPH(ch))
   {
-    return FALSE;
+    return NULL;
   }
   if (mode == REAL)
     mob = read_mobile(rnum, REAL);
@@ -2090,7 +2090,7 @@ void shapechange_showShape(struct char_shapechange_data *curShape,
     return;
   }
 
-  sprintf(buf2, "&+g[%d] &+mStudied:%3d - &n%s&n",
+  snprintf(buf2, MAX_STRING_LENGTH, "&+g[%d] &+mStudied:%3d - &n%s&n",
       listNum++,
       curShape->timesResearched, studiedMob->player.short_descr);
 
@@ -2098,7 +2098,7 @@ void shapechange_showShape(struct char_shapechange_data *curShape,
 
   if (curShape->lastShapechanged + TIME_BETWEEN_SHAPECHANGES > time(0))
   {
-    sprintf(buf2, " (%d hours rest required)",
+    snprintf(buf2, MAX_STRING_LENGTH, " (%d hours rest required)",
         (curShape->lastShapechanged + TIME_BETWEEN_SHAPECHANGES - time(0))
         / SECS_PER_MUD_HOUR);
     strcat(buf, buf2);
@@ -2354,10 +2354,10 @@ void do_shapechange(P_char ch, char *arg, int cmd)
       if (af->type == TAG_KNOWN_SHAPE)
       {
         if( real_mobile(af->modifier) < 0 )
-          sprintf(buf, "[%d] %s &n(&+W%s&n)\n", count++, "Unknown",
+          snprintf(buf, 256, "[%d] %s &n(&+W%s&n)\n", count++, "Unknown",
               how_learned[BOUNDED(0, (5 * af->duration - 1)/get_property("innate.shapechange.memory.time", 500), 4)]);
         else
-          sprintf(buf, "[%d] %s &n(&+W%s&n)\n", count++, mob_index[real_mobile(af->modifier)].desc2,
+          snprintf(buf, 256, "[%d] %s &n(&+W%s&n)\n", count++, mob_index[real_mobile(af->modifier)].desc2,
               how_learned[BOUNDED(0, (5 * af->duration - 1)/get_property("innate.shapechange.memory.time", 500), 4)]);
         send_to_char(buf, ch);
       }
@@ -2405,11 +2405,11 @@ if (IS_DISGUISE(ch))
   IS_DISGUISE_SHAPE(ch) = TRUE;
   if( GET_CLASS( ch, CLASS_BLIGHTER ) )
   {
-    sprintf( mobname, "skeleton %s", GET_NAME(mob) );
+    snprintf(mobname, MAX_STRING_LENGTH, "skeleton %s", GET_NAME(mob) );
     ch->disguise.title = str_dup(mobname);
-    sprintf( mobname, "a skeleton of %s&n", mob->player.short_descr );
+    snprintf(mobname, MAX_STRING_LENGTH, "a skeleton of %s&n", mob->player.short_descr );
     ch->disguise.name = str_dup(mobname);
-    sprintf( mobname, "A skeleton of %s&n stands here.", mob->player.short_descr );
+    snprintf(mobname, MAX_STRING_LENGTH, "A skeleton of %s&n stands here.", mob->player.short_descr );
     ch->disguise.longname = str_dup(mobname);
     ch->disguise.race = RACE_SKELETON;
   }
@@ -2423,9 +2423,9 @@ if (IS_DISGUISE(ch))
   ch->disguise.m_class = mob->player.m_class;
   ch->disguise.racewar = GET_RACEWAR(mob);
   ch->disguise.hit = GET_LEVEL(ch) * 2;
-  sprintf(mobname, "&+WYou shift into the form of %s!\r\n", ch->disguise.name );
+  snprintf(mobname, MAX_STRING_LENGTH, "&+WYou shift into the form of %s!\r\n", ch->disguise.name );
   send_to_char(mobname, ch);
-  sprintf(mobname, "&+WThe image of %s &Nshifts&+W into the form of %s!\r\n",
+  snprintf(mobname, MAX_STRING_LENGTH, "&+WThe image of %s &Nshifts&+W into the form of %s!\r\n",
     GET_NAME(ch), ch->disguise.name );
   act(mobname, FALSE, ch, 0, NULL, TO_ROOM);
   SET_BIT(ch->specials.act, PLR_NOWHO);
@@ -2611,7 +2611,7 @@ void do_lore(P_char ch, char *arg, int cmd)
     P_obj    tmp_object;
     if ( generic_find(name, FIND_CHAR_ROOM, ch, &tmp_char, &tmp_object) && tmp_char )
     {
-      sprintf(name,"%s",GET_NAME(tmp_char));
+      snprintf(name, MAX_STRING_LENGTH,"%s",GET_NAME(tmp_char));
       act("With but a quick glance, you are suddenly aware of the exploits of $N's life, past and present.",
           TRUE, ch, 0, tmp_char, TO_CHAR);
       act("$n nonchalantly glances at $N, his features taking a stern look of concentration.",
@@ -2646,7 +2646,7 @@ void do_lore(P_char ch, char *arg, int cmd)
 
   if( obj )
   {
-    sprintf( Gbuf1, "This item is from the zone: %s.\n", get_str_zone(obj) );
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "This item is from the zone: %s.\n", get_str_zone(obj) );
     send_to_char( Gbuf1, ch );
   }
 
@@ -2715,7 +2715,7 @@ void lore_item( P_char ch, P_obj obj )
       return;
     }
   }
-  sprintf(Gbuf1, "'%s'\r\nWeight %d, Item type: ", obj->short_description, GET_OBJ_WEIGHT(obj));
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "'%s'\r\nWeight %d, Item type: ", obj->short_description, GET_OBJ_WEIGHT(obj));
   sprinttype(GET_ITEM_TYPE(obj), item_types, Gbuf2);
   strcat(Gbuf1, Gbuf2);
   strcat(Gbuf1, "\r\n");
@@ -3556,7 +3556,7 @@ void do_arena(P_char ch, char *arg, int cmd)
     }
     else
     {
-      sprintf(strn,
+      snprintf(strn, MAX_STRING_LENGTH,
           "&+YGOODIES: &+W%-10d &N&+rEVILS: &+W%-10d &+LUNDEAD: &+W%d&N\r\n",
           arena.team[GOODIE].score, arena.team[EVIL].score,
           arena.team[UNDEAD].score);
@@ -3614,7 +3614,7 @@ void do_arena(P_char ch, char *arg, int cmd)
         return;
       }
       arena.type = i;
-      sprintf(strn, "Arena mode changed to: %s\r\n", game_type[i]);
+      snprintf(strn, MAX_STRING_LENGTH, "Arena mode changed to: %s\r\n", game_type[i]);
       send_to_char(strn, ch);
       return;
     }
@@ -3647,11 +3647,11 @@ void do_vote(P_char ch, char *arg, int cmd)
     ""
   };
 
-  sprintf(vote_opts, "\r\n");
+  snprintf(vote_opts, 4096, "\r\n");
 
   for (i = 1; '\0' != vote_options[i][0]; i++)
   {
-    sprintf(vote_opts, "%s%d)  %s\r\n", vote_opts, (i), vote_options[i]);
+    snprintf(vote_opts, 4096, "%s%d)  %s\r\n", vote_opts, (i), vote_options[i]);
     max_vote = i;
   }
 
@@ -3675,7 +3675,7 @@ void do_vote(P_char ch, char *arg, int cmd)
     if( GET_LEVEL(ch) >= FORGER && !str_cmp(skip_spaces(arg), "close") )
     {
       voting_enabled = 0;
-      sprintf( vote_str, "&=Ly%s has closed the voting polls!\n\r", J_NAME(ch) );
+      snprintf(vote_str, 4096, "&=Ly%s has closed the voting polls!\n\r", J_NAME(ch) );
       send_to_all( vote_str );
       return;
     }
@@ -3704,7 +3704,7 @@ void do_vote(P_char ch, char *arg, int cmd)
     return;
   }
 
-  sprintf(voted, "You voted for: %s.\r\n", vote_options[votes]);
+  snprintf(voted, 4096, "You voted for: %s.\r\n", vote_options[votes]);
   f = fopen("lib/etc/vote.miniwipe", "a");
   if( !f )
   {
@@ -3779,7 +3779,7 @@ void do_craft(P_char ch, char *argument, int cmd)
     *buff = LOWER(*buff);
   }
   //buf[0] snags first letter of name
-  sprintf(Gbuf1, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "Players/Tradeskills/%c/%s.crafting", buf[0], buf);
   recipelist = fopen(Gbuf1, "r");
   if( !recipelist )
   {
@@ -3802,7 +3802,7 @@ void do_craft(P_char ch, char *argument, int cmd)
     {
       // Load the object so we can get its short description.
       tobj = read_object(recnum, VIRTUAL);
-      sprintf(buffer, "   &+W%-22ld&n%s&n\n", recnum, tobj->short_description);
+      snprintf(buffer, 256, "   &+W%-22ld&n%s&n\n", recnum, tobj->short_description);
       page_string(ch->desc, buffer, 1);
       send_to_char("----------------------------------------------------------------------------\n", ch);
       extract_obj(tobj);
@@ -3829,7 +3829,7 @@ void do_craft(P_char ch, char *argument, int cmd)
       }
       /* debug
       char bufbug[MAX_STRING_LENGTH];
-      sprintf(bufbug, "choice is: %d\r\n", selected);
+      snprintf(bufbug, MAX_STRING_LENGTH, "choice is: %d\r\n", selected);
       send_to_char(bufbug, ch);
       if( recnum == choice2 )
       {
@@ -4627,7 +4627,7 @@ void do_home(P_char ch, char *argument, int cmd)
 
   if (GET_MONEY(ch) < cost)
   {
-    sprintf(buf2, "&+RIt costs &+W%d platinum&+R to change your home, you need more money!&n\r\n", plat);
+    snprintf(buf2, MAX_STRING_LENGTH, "&+RIt costs &+W%d platinum&+R to change your home, you need more money!&n\r\n", plat);
     act(buf2, TRUE, ch, 0, 0, TO_CHAR);
     return;
   } 
@@ -4650,15 +4650,15 @@ void do_home(P_char ch, char *argument, int cmd)
 
   SUB_MONEY(ch, cost, 0);
 
-  sprintf(buf, "char %s home %d", J_NAME(ch),
+  snprintf(buf, MAX_STRING_LENGTH, "char %s home %d", J_NAME(ch),
       world[ch->in_room].number);
   do_setbit(ch, buf, CMD_SETHOME);
 
-  sprintf(buf, "char %s orighome %d", J_NAME(ch),
+  snprintf(buf, MAX_STRING_LENGTH, "char %s orighome %d", J_NAME(ch),
       world[ch->in_room].number);
   do_setbit(ch, buf, CMD_SETHOME);
 
-  sprintf(buf, "char %s origbp %d", J_NAME(ch),
+  snprintf(buf, MAX_STRING_LENGTH, "char %s origbp %d", J_NAME(ch),
       world[ch->in_room].number);
   do_setbit(ch, buf, CMD_SETHOME);
 

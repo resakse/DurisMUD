@@ -305,17 +305,17 @@ void do_epic_skills(P_char ch, char *arg, int cmd)
     {
       if(teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL))
       {
-        sprintf(buff, "&+W%-25s &n(&+W%-5d&n) %s\n", skills[skill].name, epic_teachers[t].vnum, teacher->player.short_descr);
+        snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n(&+W%-5d&n) %s\n", skills[skill].name, epic_teachers[t].vnum, teacher->player.short_descr);
         extract_char(teacher);
       } else 
 	{
         logit(LOG_DEBUG, "do_epic_skills(): epic_teachers[%d].vnum does not exist for epic skill %s", t, skills[skill].name);
-        sprintf(buff, "&+W%-25s &n(&+W%-5d&n) Teacher does not exist.\n", skills[skill].name, epic_teachers[t].vnum);
+        snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n(&+W%-5d&n) Teacher does not exist.\n", skills[skill].name, epic_teachers[t].vnum);
       }
     } else 
 	if(teacher = read_mobile(epic_teachers[t].vnum, VIRTUAL))
 	{
-      sprintf(buff, "&+W%-25s &n&+yTeacher&+Y: &n %s\n", skills[skill].name,teacher->player.short_descr, teacher->player.short_descr);
+      snprintf(buff, MAX_STRING_LENGTH, "&+W%-25s &n&+yTeacher&+Y: &n %s\n", skills[skill].name,teacher->player.short_descr, teacher->player.short_descr);
 	extract_char(teacher);
     }
     send_to_char(buff, ch);
@@ -382,7 +382,7 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
   if( !arg || !*arg )
   {
     // Practice called with no arguments
-    sprintf(buffer, "Welcome, traveller!\n"
+    snprintf(buffer, 256, "Welcome, traveller!\n"
       "I am pleased that you have wandered so far in order to seek my assistance.\n"
       "There are few adventurers willing to seek out the knowledge of &+W%s&n.\n\n", skills[skl].name);
     send_to_char(buffer, pl);
@@ -397,20 +397,20 @@ int epic_teacher(P_char ch, P_char pl, int cmd, char *arg)
         && !( pTeacher->pre_requisite && GET_CHAR_SKILL(pl, pTeacher->pre_requisite) < pTeacher->pre_req_lvl )
         && !( GET_CHAR_SKILL(pl, skl) >= 100 || GET_CHAR_SKILL(pl, skl) >= pTeacher->max ) )
       {
-        sprintf( buffer, "It would cost you &+W%d&n epic points and &+W%s&n to learn &+W%s&n.\n",
+        snprintf(buffer, 256, "It would cost you &+W%d&n epic points and &+W%s&n to learn &+W%s&n.\n",
           epics_cost, coin_stringv(coins_cost), skills[skl].name );
         send_to_char(buffer, pl);
       }
       else
       {
-        sprintf( buffer, "&+W%s&n is not currently available to you.\n", skills[skl].name );
+        snprintf(buffer, 256, "&+W%s&n is not currently available to you.\n", skills[skl].name );
         CAP(buffer);
         send_to_char(buffer, pl);
       }
     }
     else
     {
-      sprintf( buffer, "You have already maxxed &+W%s&n.\n", skills[skl].name );
+      snprintf(buffer, 256, "You have already maxxed &+W%s&n.\n", skills[skl].name );
       send_to_char(buffer, pl);
     }
     return TRUE;
@@ -596,10 +596,10 @@ void event_blizzard(P_char ch, P_char victim, P_obj obj, void *data)
         (faf = get_spell_from_room(room, SPELL_SCATHING_WIND)) ||
         (faf = get_spell_from_room(room, SPELL_INCENDIARY_CLOUD))) {
       if(victim = get_random_char_in_room(ch->in_room, ch, 0)) {
-        sprintf(buffer, "&+CThe snow melts from the heat of &+R%s &+Cand you are only splashed by &+bwater&n.",
+        snprintf(buffer, 256, "&+CThe snow melts from the heat of &+R%s &+Cand you are only splashed by &+bwater&n.",
             skills[faf->type].name);
         send_to_char(buffer, victim);
-        sprintf(buffer, "&+CThe snow melts from the heat of &+R%s &+Cand $n is only splashed by &+bwater&n.",
+        snprintf(buffer, 256, "&+CThe snow melts from the heat of &+R%s &+Cand $n is only splashed by &+bwater&n.",
             skills[faf->type].name);
         act(buffer, FALSE, victim, 0, 0, TO_ROOM);
         make_wet(victim, 2 * WAIT_MIN);
@@ -674,7 +674,7 @@ void do_summon_familiar(P_char ch, char *argument, int cmd)
   if(strlen(argument) < 1) {
     send_to_char("You can summon the following familiars:\n", ch);
     for (i = 0; familiars[i].vnum && familiars[i].skill <= ch_skill_level; i++) {
-      sprintf(buffer, "  %s\n", familiars[i].name);
+      snprintf(buffer, 256, "  %s\n", familiars[i].name);
       send_to_char(buffer, ch);
     }
     return;
@@ -918,15 +918,15 @@ int devotion_skill_check(P_char ch)
   buf[0] = '\0';
 
     if(dev_power > 4)
-      sprintf(buf,
+      snprintf(buf, MAX_STRING_LENGTH,
         "You feel as if %s took over your body bringing death to your foes!\n",
         get_god_name(ch));
     else if(dev_power > 2)
-      sprintf(buf,
+      snprintf(buf, MAX_STRING_LENGTH,
         "%s fills you with holy power bringing death to your foes!\n",
         get_god_name(ch));
     else if(dev_power > 0)
-      sprintf(buf,
+      snprintf(buf, MAX_STRING_LENGTH,
         "%s fills you with holy power to destroy your foes!\n",
         get_god_name(ch));
 
@@ -969,11 +969,11 @@ int chant_mastery_bonus(P_char ch, int dura)
   if(5 + GET_CHAR_SKILL(ch, SKILL_CHANT_MASTERY) / 10 > number(0,100))
   {
      chant_bonus = MAX(0, GET_CHAR_SKILL(ch, SKILL_CHANT_MASTERY)/40 + number(-1,1));
-     sprintf(buffer, "%s magic surrounds you as you begin your chant.&n",
+     snprintf(buffer, 256, "%s magic surrounds you as you begin your chant.&n",
                      chant_bonus == 0 ? "&+WSparkling&n" :
                      chant_bonus == 1 ? "&+WSparkling" : "&+WSp&+Cark&+Wli&+Cn&+Wg");
      act(buffer, FALSE, ch, 0, 0, TO_CHAR);
-     sprintf(buffer, "%s magic surrounds $n &+Was $e begins $s chant.&n",
+     snprintf(buffer, 256, "%s magic surrounds $n &+Was $e begins $s chant.&n",
                      chant_bonus == 0 ? "&+WSparkling&n" :
                      chant_bonus == 1 ? "&+WSparkling" : "&+WSp&+Cark&+Wli&+Cn&+Wg");
      act(buffer, FALSE, ch, 0, 0, TO_ROOM);
@@ -1158,7 +1158,7 @@ void do_infuse(P_char ch, char *arg, int cmd)
 
   if(stone)
   {
-    sprintf(msg, "&+WYou infuse the magic from %s &+Winto %s&+W.&n\r\n",
+    snprintf(msg, MAX_STRING_LENGTH, "&+WYou infuse the magic from %s &+Winto %s&+W.&n\r\n",
             stone->short_description, device->short_description);
     send_to_char(msg, ch);
     obj_from_char(stone);
@@ -1175,13 +1175,13 @@ void do_infuse(P_char ch, char *arg, int cmd)
 
   for (check = 0, c = charges; c < maxcharges; c++)
   {
-    sprintf(msg, "&+wYou infuse %s &+wwith a charge!&n\r\n", device->short_description);
+    snprintf(msg, MAX_STRING_LENGTH, "&+wYou infuse %s &+wwith a charge!&n\r\n", device->short_description);
     send_to_char(msg, ch);
     device->value[2]++;
 
     if(device->value[2] == device->value[1])
     {
-      sprintf(msg, "&+W%s &+Whas been fully infused!\r\n", device->short_description);
+      snprintf(msg, MAX_STRING_LENGTH, "&+W%s &+Whas been fully infused!\r\n", device->short_description);
       send_to_char(msg, ch);
       break;
     }

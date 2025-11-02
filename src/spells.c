@@ -664,7 +664,7 @@ void cast_nether_gate(int level, P_char ch, char *arg, int type,
 
   if( spell_general_portal(level, ch, 0, &set, &msg) )
   {
-    sprintf(Gbuf4, "A gateway is opened to the %s plane!\r\n", planes_name[plane_id]);
+    snprintf(Gbuf4, MAX_STRING_LENGTH, "A gateway is opened to the %s plane!\r\n", planes_name[plane_id]);
     send_to_char(Gbuf4, ch);
   }
 
@@ -762,7 +762,7 @@ void cast_plane_shift(int level, P_char ch, char *arg, int type, P_char tar_ch, 
       {
         act("$n slowly fades away...", 0, ch, 0, 0, TO_ROOM);
         char_from_room(ch);
-        sprintf(Gbuf4, "You materialize on the %s plane!\r\n", planes_name[plane_id]);
+        snprintf(Gbuf4, MAX_STRING_LENGTH, "You materialize on the %s plane!\r\n", planes_name[plane_id]);
         send_to_char(Gbuf4, ch);
         char_to_room(ch, real_room(GET_BIRTHPLACE(ch)), 0);
         act("$n slowly materializes...", 0, ch, 0, 0, TO_ROOM);
@@ -921,10 +921,10 @@ void spell_wall_of_flames(int level, P_char ch, char *arg, int type, P_char tar_
     "&+Ra billowing wall of flames&n",
     "&+RA towering wall of flames is here to the %s.&n", 0) )
   {
-    sprintf(buf1,
+    snprintf(buf1, MAX_STRING_LENGTH,
             "&+RYou feel a blast of heat as a huge wall of flames bursts to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2,
+    snprintf(buf2, MAX_STRING_LENGTH,
             "&+RYou feel a blast of heat as a huge wall of flames bursts to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
@@ -957,10 +957,10 @@ void spell_wall_of_ice(int level, P_char ch, char *arg, int type,
             ((world[ch->in_room].dir_option[var])->to_room,
              rev_dir[var])->exit_info, EX_BREAKABLE);
 
-    sprintf(buf1,
+    snprintf(buf1, MAX_STRING_LENGTH,
             "&+WYou feel a gust of cold as a huge block of ice forms to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2,
+    snprintf(buf2, MAX_STRING_LENGTH,
             "&+WYou feel a gust of cold as a huge block of ice forms to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
@@ -988,9 +988,9 @@ void cast_life_ward(int level, P_char ch, char *arg, int type, P_char tar_ch,
     "&+La wall of &n&+bnegative energy&n",
     "&+LA strange blackness cloaks the %s exit here.&n", 0) )
   {
-    sprintf(buf1, "&+LA wall of blackness begins to spread to the %s!&n\r\n",
+    snprintf(buf1, MAX_STRING_LENGTH, "&+LA wall of blackness begins to spread to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2, "&+LA wall of blackness begins to spread to the %s!&n\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "&+LA wall of blackness begins to spread to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
@@ -1023,9 +1023,9 @@ void spell_wall_of_stone(int level, P_char ch, char *arg, int type,
             ((world[ch->in_room].dir_option[var])->to_room,
              rev_dir[var])->exit_info, EX_BREAKABLE);
 
-    sprintf(buf1, "&+LA block of grey stone forms to the %s!&n\r\n",
+    snprintf(buf1, MAX_STRING_LENGTH, "&+LA block of grey stone forms to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2, "&+LA block of grey stone forms to the %s!&n\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "&+LA block of grey stone forms to the %s!&n\r\n",
             dirs[rev_dir[var]]);
     send_to_room(buf1, ch->in_room);
     send_to_room(buf2, (world[ch->in_room].dir_option[var])->to_room);
@@ -1056,8 +1056,8 @@ void spell_wall_of_iron(int level, P_char ch, char *arg, int type,
             ((world[ch->in_room].dir_option[var])->to_room,
              rev_dir[var])->exit_info, EX_BREAKABLE);
 
-    sprintf(buf1, "&+yA massive iron wall forms to the %s!&n\r\n", dirs[var]);
-    sprintf(buf2, "&+yA massive iron wall forms to the %s!&n\r\n",
+    snprintf(buf1, MAX_STRING_LENGTH, "&+yA massive iron wall forms to the %s!&n\r\n", dirs[var]);
+    snprintf(buf2, MAX_STRING_LENGTH, "&+yA massive iron wall forms to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
@@ -1089,9 +1089,9 @@ void spell_wall_of_force(int level, P_char ch, char *arg, int type,
             ((world[ch->in_room].dir_option[var])->to_room,
              rev_dir[var])->exit_info, EX_BREAKABLE);
 
-    sprintf(buf1, "&+WThe air swirls and thickens to the %s!&n\r\n",
+    snprintf(buf1, MAX_STRING_LENGTH, "&+WThe air swirls and thickens to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2, "&+WThe air swirls and thickens to the %s!&n\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "&+WThe air swirls and thickens to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
@@ -1118,9 +1118,9 @@ void cast_lightning_curtain(int level, P_char ch, char *arg, int type,
     1800, "&+Ya crackling curtain of lightning&n",
     "&+BA rippling curtain of lightning crackles to the %s.&n", 0) )
   {
-    sprintf(buf1, "&+BYou see an electrical surge to the %s!&n\r\n",
+    snprintf(buf1, MAX_STRING_LENGTH, "&+BYou see an electrical surge to the %s!&n\r\n",
             dirs[var]);
-    sprintf(buf2, "&+BYou see an electrical surge to the %s!&n\r\n",
+    snprintf(buf2, MAX_STRING_LENGTH, "&+BYou see an electrical surge to the %s!&n\r\n",
             dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
@@ -1146,8 +1146,8 @@ void cast_web(int level, P_char ch, char *arg, int type, P_char tar_ch,
   if( create_walls(ch->in_room, var, ch, level, WEB, 0, 1800, "&+Wa sticky web&n",
     "A large web appears %s!", 0) )
   {
-    sprintf(buf1, "A large web appears %s!\r\n", dirs[var]);
-    sprintf(buf2, "A large web appears %s!\r\n", dirs[rev_dir[var]]);
+    snprintf(buf1, MAX_STRING_LENGTH, "A large web appears %s!\r\n", dirs[var]);
+    snprintf(buf2, MAX_STRING_LENGTH, "A large web appears %s!\r\n", dirs[rev_dir[var]]);
 
     send_to_room(buf1, ch->in_room);
     send_to_room(buf2, (world[ch->in_room].dir_option[var])->to_room);
@@ -1174,10 +1174,10 @@ void cast_prismatic_cube(int level, P_char ch, char *arg, int type, P_char tar_c
       "a prismatic wall",
       "A &+rw&N&+ca&N&+bl&N&+yl&N of &+gs&N&+Rh&N&+Ci&N&+Bf&N&+Yt&N&+Gi&N&+rn&N&+Cg&N &+bc&N&+yo&N&+Gl&N&+Ro&N&+cr&N is here to the %s.", 0) )
     {
-      sprintf(buf1,
+      snprintf(buf1, MAX_STRING_LENGTH,
               "A &+rw&N&+ca&N&+bl&N&+yl&N of &+gs&N&+Rh&N&+Ci&N&+Bf&N&+Yt&N&+Gi&N&+rn&N&+Cg&N &+bc&N&+yo&N&+gl&N&+ro&N&+cr&N appears to the %s!\r\n",
               dirs[dir]);
-      sprintf(buf2,
+      snprintf(buf2, MAX_STRING_LENGTH,
               "A &+rw&N&+ca&N&+bl&N&+yl&N of &+gs&N&+Rh&N&+Ci&N&+Bf&N&+Yt&N&+Gi&N&+rn&N&+Cg&N &+bc&N&+yo&N&+gl&N&+ro&N&+cr&N appears to the %s!\r\n",
               dirs[rev_dir[dir]]);
 
@@ -1247,10 +1247,10 @@ void event_earthen_tomb(P_char ch, P_char victim, P_obj obj, void *data)
   if( create_walls(room, exit, NULL, 50, WALL_OF_STONE, 50, 1800, "&+yAn earthen wall&n",
     "&+yAn earthen wall blocks the exit to the %s.&n", 0) )
   {
-    sprintf(buf1,
+    snprintf(buf1, MAX_STRING_LENGTH,
             "&+ySuddenly a tall earthen wall rises from the ground blocking the exit to the %s!&n\r\n",
             dirs[exit]);
-    sprintf(buf2,
+    snprintf(buf2, MAX_STRING_LENGTH,
             "&+ySuddenly a tall earthen wall rises from the ground blocking the exit to the %s!&n\r\n",
             dirs[rev_dir[exit]]);
 
@@ -2665,8 +2665,8 @@ bool create_walls(int room, int exit, P_char ch, int level, int type, int power,
   SET_BIT(wall_inside->str_mask, STRUNG_DESC1 | STRUNG_DESC2);
   SET_BIT(wall_outside->str_mask, STRUNG_DESC1 | STRUNG_DESC2);
 
-  sprintf(buf1, desc, dirs[exit]);
-  sprintf(buf2, desc, dirs[reverse_exit]);
+  snprintf(buf1, 1024, desc, dirs[exit]);
+  snprintf(buf2, 1024, desc, dirs[reverse_exit]);
 
   wall_inside->description = str_dup(buf1);
   wall_outside->description = str_dup(buf2);

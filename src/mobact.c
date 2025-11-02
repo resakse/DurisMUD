@@ -658,7 +658,7 @@ bool MobCastSpell(P_char ch, P_char victim, P_obj object, int spl, int lvl)
   {
     char     message[256];
 
-    sprintf(message,
+    snprintf(message, 256,
             "MobCastSpell():  spell = %s; target = %s; circle = %d; spelltype = %d\r\n",
             skills[spl].name, (victim ? GET_NAME(victim) : "unspecified"),
             circle, GET_SPELLTYPE(spl));
@@ -8626,7 +8626,7 @@ bool MobDestroyWall(P_char ch, P_obj wall, bool bTryHit)
     else if(bTryHit && !IS_FIGHTING(ch) && !IS_DESTROYING(ch))
     {
       char cmdBuf[500];
-      sprintf(cmdBuf, "wall %s", dirs[wall->value[1]]);
+      snprintf(cmdBuf, 500, "wall %s", dirs[wall->value[1]]);
       // call the object proc (if any) with the cmd.  Calling the object proc
       // directly allows us to get the return value to see if the proc cared
       // about the cmd.
@@ -8688,10 +8688,10 @@ void mobact_rescueHandle(P_char mob, P_char attacker)
     if(pl != mob)
     {
       if(IS_GUARD(pl))
-        sprintf(buf,
+        snprintf(buf, MAX_STRING_LENGTH,
                 "Argh! Fighting right in front of me? Have you a deathwish?\r\n");
       else
-        sprintf(buf, "Hey! That's my pal you're messing with!\r\n");
+        snprintf(buf, MAX_STRING_LENGTH, "Hey! That's my pal you're messing with!\r\n");
       mobsay(pl, buf);
 #ifndef NEW_COMBAT
       hit(pl, attacker, pl->equipment[PRIMARY_WEAPON]);
@@ -9278,7 +9278,7 @@ void zone_spellmessage(int room, bool hide_deaf, const char *msg, const char *ms
       {
         if( msg_dir != NULL )
         {
-          sprintf(buf, msg_dir, get_map_direction(c_room, room));
+          snprintf(buf, MAX_STRING_LENGTH, msg_dir, get_map_direction(c_room, room));
           send_to_char(buf, chars_in_zone->c);
         }
         else

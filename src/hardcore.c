@@ -248,7 +248,7 @@ void displayHardCore(P_char ch, char *arg, int cmd)
   }
 
   strcpy(buf, "\t\r\n&+r-= &+LHall Of&+L Fame&+r =-&n\r\n\r\n");
-  sprintf(tempbuf, "   &+w%-15s           &+w%s           &+w%-15s\r\n",
+  snprintf(tempbuf, 2048, "   &+w%-15s           &+w%s           &+w%-15s\r\n",
           "Name", "Points", "Deaths/Killed by");
   strcat(buf, tempbuf);
   for (i = 0; i < MAX_HALLOFFAME_SIZE; i++)
@@ -260,7 +260,7 @@ void displayHardCore(P_char ch, char *arg, int cmd)
     pts = halloffames;
     pts /= 100.0;
 
-    sprintf(buf2, "   &+L%-15s          &+r% 6.2f\t      &+W%-15s\r\n",
+    snprintf(buf2, 2048, "   &+L%-15s          &+r% 6.2f\t      &+W%-15s\r\n",
             name, pts, killer);
     strcat(buf, buf2);
   }
@@ -393,7 +393,7 @@ bool newLeaderBoard(P_char ch, char *arg, int cmd)
     pts = halloffames;
     if(!strcmp(name, "none"))
       break;
-    sprintf(buf, "%s %d\r\n", name, (int)pts);
+    snprintf(buf, MAX_STRING_LENGTH, "%s %d\r\n", name, (int)pts);
     fprintf(newleaderlist, "%s", buf);
   }
 
@@ -473,9 +473,9 @@ void displayLeader(P_char ch, char *arg, int cmd)
 
 
   strcpy(buf, "\r\n&+y=-=-=-=-=-=-=-=-=-=--= &+rDuris Mud &+WLeader Board&+y =-=-=-=-=-=-=-=-=-=-=-&n\r\n\r\n");
-  sprintf(tempbuf, "   &+W%-15s           &+Y%s\r\n",
+  snprintf(tempbuf, 2048, "   &+W%-15s           &+Y%s\r\n",
           "Name", "Score");
-  sprintf(tempbuf2, "   &+L%-15s           &+L%s\r\n",
+  snprintf(tempbuf2, 2048, "   &+L%-15s           &+L%s\r\n",
           "----", "-----");
   strcat(buf, tempbuf);
   strcat(buf, tempbuf2);
@@ -486,7 +486,7 @@ void displayLeader(P_char ch, char *arg, int cmd)
     pts = halloffames;
     pts /= 100.0;
 
-    sprintf(buf2, "   &+w%-15s          &+Y%6.2f\t\r\n",
+    snprintf(buf2, 2048, "   &+w%-15s          &+Y%6.2f\t\r\n",
             name, pts);
     strcat(buf, buf2);
   }
@@ -645,7 +645,7 @@ bool newHardcoreBoard(P_char ch, char *arg, int cmd)
     pts = halloffames;
     if(!strcmp(name, "none"))
       break;
-    sprintf(buf, "%s %d %s\r\n", name, (int)pts, killedby );
+    snprintf(buf, MAX_STRING_LENGTH, "%s %d %s\r\n", name, (int)pts, killedby );
     fprintf(newhardcorelist, "%s", buf);
   }
 

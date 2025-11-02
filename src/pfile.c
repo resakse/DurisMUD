@@ -62,7 +62,7 @@ void scan_all(char *pattern, unsigned int pc_class, unsigned int race,
   total_items = total = 0;
   for (letter = 'a'; letter <= 'z'; letter++)
   {
-    sprintf(dname, "Players/%c", letter);
+    snprintf(dname, 256, "Players/%c", letter);
     pf_dir = opendir(dname);
     if (!pf_dir)
       print_help("can't find pfiles under Players/?");

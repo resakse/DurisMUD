@@ -481,7 +481,7 @@ int super_cannon(P_obj obj, P_char ch, int cmd, char *arg)
     }
     if (atoi(load) > (int)get_property("cannon.super.range", 500))
     {
-      sprintf(buf, "Are you trying to blow up the cannon? That's too much gunpowder! Try %d or less.", (int)get_property("cannon.super.range", 500));
+      snprintf(buf, MAX_STRING_LENGTH, "Are you trying to blow up the cannon? That's too much gunpowder! Try %d or less.", (int)get_property("cannon.super.range", 500));
       act(buf, FALSE, ch, 0, 0, TO_CHAR);
       return TRUE;
     }
@@ -489,9 +489,9 @@ int super_cannon(P_obj obj, P_char ch, int cmd, char *arg)
     obj->value[CANNON_AMMO] = atoi(load);
     obj->value[CANNON_DIR] = atoi(dirstr);
     obj->value[CANNON_PLAYER] = GET_PID(ch);
-    sprintf(buf, "&+L$n &+Lloads &+L$p &+Lwith %d pounds of gunpowder and tweaks it's aim.  Grinning, $e hops in.", atoi(load));
+    snprintf(buf, MAX_STRING_LENGTH, "&+L$n &+Lloads &+L$p &+Lwith %d pounds of gunpowder and tweaks it's aim.  Grinning, $e hops in.", atoi(load));
     act(buf, FALSE, ch, obj, 0, TO_ROOM);
-    sprintf(buf, "&+LYou load $p &+Lwith %d pounds of gunpowder and aim it.", atoi(load));
+    snprintf(buf, MAX_STRING_LENGTH, "&+LYou load $p &+Lwith %d pounds of gunpowder and aim it.", atoi(load));
     act(buf, FALSE, ch, obj, 0, TO_CHAR);
     return TRUE;
   }
@@ -533,7 +533,7 @@ int super_cannon(P_obj obj, P_char ch, int cmd, char *arg)
 void halloween_mine_proc(P_char ch)
 {
   char buff[MAX_STRING_LENGTH];
-  sprintf(buff, " %s 86", GET_NAME(ch));
+  snprintf(buff, MAX_STRING_LENGTH, " %s 86", GET_NAME(ch));
   act("Your dig hits a burried &+ypumpkin&n.&LSuddenly it begins to move and digs itself out of the mine!", TRUE, ch, 0, 0, TO_CHAR);
   act("$n dig hits a burried &+ypumpkin&n.&LSuddenly it begins to move and digs itself out of the mine!", TRUE, ch, 0, 0, TO_ROOM);
   do_givepet(ch, buff, CMD_GIVEPET);
@@ -637,14 +637,14 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
           //set game to standby mode to setup the next round
           obj->value[ZOMBIES_STATUS] = 2;
           obj->timer[ZTIMER_STANDBY] = time(NULL);
-          sprintf(buff, "&+WYou've completed round &+c%d&+W.  Prepare for the next round.&n\r\n", obj->value[ZOMBIES_LEVEL]);
+          snprintf(buff, MAX_STRING_LENGTH, "&+WYou've completed round &+c%d&+W.  Prepare for the next round.&n\r\n", obj->value[ZOMBIES_LEVEL]);
           send_to_zone(zone, buff);
           return TRUE;
         }
       }
       else if( !palive )
       {
-        sprintf(buff, "&+WAll players are dead, the game has ended on level &+c%d&+W.&n\r\n", obj->value[ZOMBIES_LEVEL]);
+        snprintf(buff, MAX_STRING_LENGTH, "&+WAll players are dead, the game has ended on level &+c%d&+W.&n\r\n", obj->value[ZOMBIES_LEVEL]);
         send_to_zone(zone, buff);
         obj->value[ZOMBIES_STATUS] = 0;
         obj->timer[ZTIMER_STANDBY] = 0;
@@ -664,16 +664,16 @@ int zombies_game(P_obj obj, P_char ch, int cmd, char *arg)
           int waves = 0;
           int load = 0;
           char loadstr[MAX_STRING_LENGTH];
-          sprintf(loadstr, "%d", (int)get_property("zombies.game.load", 3445));
+          snprintf(loadstr, MAX_STRING_LENGTH, "%d", (int)get_property("zombies.game.load", 3445));
           char single[MAX_STRING_LENGTH];
           while( loadstr[waves] )
           {
-            sprintf(single, "%c", loadstr[waves]);
+            snprintf(single, MAX_STRING_LENGTH, "%c", loadstr[waves]);
             load = atoi(single);
             waves++;
             max += load;
           }
-          sprintf(single, "%c", loadstr[obj->value[ZOMBIES_WAVE]-1]);
+          snprintf(single, MAX_STRING_LENGTH, "%c", loadstr[obj->value[ZOMBIES_WAVE]-1]);
           load = atoi(single);
           debug("loadstr: %s, load: %d, max: %d, waves: %d", loadstr, load, max, waves);
 

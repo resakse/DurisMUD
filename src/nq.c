@@ -290,7 +290,7 @@ void nq_free_instance(struct nq_instance *instance, P_char ch)
     {
       if (ch)
       {
-        sprintf(buf, "Extracting $N in room [%d].", actor->ch->in_room);
+        snprintf(buf, 512, "Extracting $N in room [%d].", actor->ch->in_room);
         act("$n walks away..", FALSE, actor->ch, 0, 0, TO_ROOM);
         act(buf, FALSE, ch, 0, actor->ch, TO_CHAR);
       }
@@ -612,10 +612,10 @@ void nq_reward_player(struct nq_action *action, struct nq_instance *instance,
     ch->only.pc->skills[action->reward->skill->skill].taught +=
       action->reward->skill->value;
     if (!IS_SPELL(action->reward->skill->skill))
-      sprintf(buf, "Ye feel yer potential in %s improve..\r\n",
+      snprintf(buf, 4096, "Ye feel yer potential in %s improve..\r\n",
               skills[action->reward->skill->skill].name);
     else
-      sprintf(buf,
+      snprintf(buf, 4096,
               "A sudden burst of arcane knowledge flows through your mind.\r\n"
               "You are now familiar with %s spell.\r\n",
               skills[action->reward->skill->skill].name);
@@ -1279,7 +1279,7 @@ struct nq_quest *nq_parse_quest(char *fname)
   int      actor_templates = 0;
   int      i;
 
-  sprintf(buf, "%s/%s", QUEST_DIR, fname);
+  snprintf(buf, 256, "%s/%s", QUEST_DIR, fname);
   doc = xmlParseFile(buf);
   if (doc == NULL)
     return NULL;
@@ -1420,7 +1420,7 @@ void nq_interface_mortal_show(P_char ch, char *args)
     if (!instance)
       continue;
     counter++;
-    sprintf(buf, "[%d] &+B%s&n\r\n", counter, quest->id);
+    snprintf(buf, 4096, "[%d] &+B%s&n\r\n", counter, quest->id);
     for (log_entry = instance->log; log_entry; log_entry = log_entry->next)
     {
       strcat(buf, "\r\n");
@@ -1456,13 +1456,13 @@ void nq_interface_immo_list(P_char ch, char *args)
   send_to_char("The following quests have been loaded:\r\n\r\n", ch);
   for (quest = nq_list; quest; quest = quest->next)
   {
-    sprintf(buf, "&+B[%s]&n\r\n", quest->id);
+    snprintf(buf, 256, "&+B[%s]&n\r\n", quest->id);
     send_to_char(buf, ch);
     instances = 1;
     if (quest->actor)
     {
       exists = char_in_list(tch = quest->actor->ch);
-      sprintf(buf, "  Holder: %s (in %d)\r\n",
+      snprintf(buf, 256, "  Holder: %s (in %d)\r\n",
               exists ? tch->player.short_descr : "&+RMISSING&n",
               exists ? world[tch->in_room].number : 0);
       send_to_char(buf, ch);
@@ -1470,7 +1470,7 @@ void nq_interface_immo_list(P_char ch, char *args)
 
     for (instance = quest->instance; instance; instance = instance->next)
     {
-      sprintf(buf, "  [%d] %s &+g", instances++, instance->questor);
+      snprintf(buf, 256, "  [%d] %s &+g", instances++, instance->questor);
       for (tag = instance->tag; tag; tag = tag->next)
       {
         strcat(buf, tag->string);
@@ -1481,7 +1481,7 @@ void nq_interface_immo_list(P_char ch, char *args)
       for (actor = instance->actor; actor; actor = actor->next)
       {
         exists = char_in_list(actor->ch);
-        sprintf(buf, "    %s (in %d)\r\n",
+        snprintf(buf, 256, "    %s (in %d)\r\n",
                 exists ? actor->ch->player.short_descr : "&+RMISSING&n",
                 exists ? world[actor->ch->in_room].number : 0);
         send_to_char(buf, ch);

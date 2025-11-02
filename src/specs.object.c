@@ -101,7 +101,7 @@ static void artifact_monolith_update(P_obj obj)
   else if (1 == obj->value[0])
     strcpy(buf, "&+LThere is a single &n&+rsymbol&+L, written in the ancient language of dragons.&n\n");
   else
-    sprintf(buf, "&+LThere appear to be %d different &n&+rsymbols&+L, written in the ancient language\n&+Lof the dragons.&n\n",
+    snprintf(buf, 500, "&+LThere appear to be %d different &n&+rsymbols&+L, written in the ancient language\n&+Lof the dragons.&n\n",
             obj->value[0]);
 
   // now, find the proper extra description, remove the old one (if any) and
@@ -675,6 +675,7 @@ int charon_ship(P_obj obj, P_char ch, int cmd, char *argument)
       }
     }
   }
+  return FALSE;
 }
 
 // pathfinder from KT
@@ -953,7 +954,7 @@ int magic_mouth(P_obj obj, P_char ch, int cmd, char *arg)
   if ((obj->value[0] != GET_ASSOC(ch)->get_id()) &&       /* not in guild */
       (!number(0, 4)))          /* do only occasionally */
   {
-    sprintf(buff,
+    snprintf(buff, MAX_STRING_LENGTH,
             "&+cA magic mouth tells your guild 'Alert!  $N&n&+c has trespassed into %s&n&+c!'&N",
             world[ch->in_room].name);
     for (i = descriptor_list; i; i = i->next)
@@ -1299,7 +1300,7 @@ int jailtally(P_obj obj, P_char ch, int cmd, char *arg)
         send_to_char("The tally sheet lists the following inmates:\n", ch);
         for (k = world[room].people; k; k = k->next_in_room)
         {
-          sprintf(Gbuf1, "%s\n", J_NAME(k));
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "%s\n", J_NAME(k));
           send_to_char(Gbuf1, ch);
         }
       }
@@ -1536,7 +1537,7 @@ int item_switch(P_obj obj, P_char ch, int cmd, char *arg)
   {
     if( obj->value[3] == 1 )
     {
-      sprintf(buf, "%s moves aside, revealing a wall behind.\n", obj->short_description);
+      snprintf(buf, MAX_STRING_LENGTH, "%s moves aside, revealing a wall behind.\n", obj->short_description);
       CAP(buf);
       send_to_room(buf, in_room);
     }
@@ -1552,7 +1553,7 @@ int item_switch(P_obj obj, P_char ch, int cmd, char *arg)
       }
       else
       {
-        sprintf(buf, "The %s wall seems to be moving.\n", dirs[door]);
+        snprintf(buf, MAX_STRING_LENGTH, "The %s wall seems to be moving.\n", dirs[door]);
       }
       send_to_room(buf, in_room);
     }
@@ -2830,11 +2831,11 @@ int olympus_portal(P_obj obj, P_char ch, int cmd, char *arg)
 
   if( OBJ_ROOM(obj) )
   {
-    sprintf(Gbuf1, "&+WThe air shifts slighty as %s&+W folds up and vanishes!\n", obj->short_description);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+WThe air shifts slighty as %s&+W folds up and vanishes!\n", obj->short_description);
     send_to_room(Gbuf1, obj->loc.room);
     obj_from_room(obj);
     obj_to_room(obj, to_room);
-    sprintf(Gbuf1, "&+WA slight breeze wafts by as %s&+W materializes in the room!\n", obj->short_description);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+WA slight breeze wafts by as %s&+W materializes in the room!\n", obj->short_description);
     send_to_room(Gbuf1, obj->loc.room);
     if( origin_room > 0 && origin_portal > 0 )
     {
@@ -5389,9 +5390,9 @@ int die_roller(P_obj obj, P_char ch, int cmd, char *arg)
 
       obj_to_room(unequip_char(ch, pos), ch->in_room);
 
-      sprintf(Gbuf1, "Tossing the $q&n onto the ground, you roll a %u.",
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "Tossing the $q&n onto the ground, you roll a %u.",
               numb);
-      sprintf(Gbuf2, "Tossing $p&n onto the ground, $n rolls a %u.", numb);
+      snprintf(Gbuf2, MAX_STRING_LENGTH, "Tossing $p&n onto the ground, $n rolls a %u.", numb);
 
       act(Gbuf1, FALSE, ch, obj, 0, TO_CHAR);
       act(Gbuf2, FALSE, ch, obj, 0, TO_ROOM);
@@ -7734,7 +7735,7 @@ int zarbon_shaper(P_obj obj, P_char ch, int cmd, char *arg)
       if( spell )
       {
         char buf[256];
-        sprintf( buf, "&+WYou feel your power of %s &+Wreturning to you.&n\n",
+        snprintf(buf, 256, "&+WYou feel your power of %s &+Wreturning to you.&n\n",
                  skills[spell].name );
         send_to_char(buf, ch);
 		 		obj->timer[0] = curr_time;
@@ -11011,7 +11012,7 @@ int god_bp(P_obj obj, P_char ch, int cmd, char *arg)
   // check if gbuf2 is a playername in the room
   for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room)
   {
-    sprintf(getname, "%s", GET_NAME(tch));
+    snprintf(getname, MAX_STRING_LENGTH, "%s", GET_NAME(tch));
     for (rr = 0; *(getname + rr) != '\0'; rr++)
       getname[rr] = LOWER(*(getname + rr));
 
@@ -11069,7 +11070,7 @@ int out_of_god_bp(P_obj obj, P_char ch, int cmd, char *arg)
     return FALSE;
 
   // check if gbuf1 is flap
-  sprintf(whee, "%s", Gbuf1);
+  snprintf(whee, MAX_STRING_LENGTH, "%s", Gbuf1);
   for (rr = 0; *(whee + rr) != '\0'; rr++)
     whee[rr] = LOWER(*(whee + rr));
 
@@ -11585,7 +11586,7 @@ int blood_stains(P_obj obj, P_char ch, int cmd, char *argument)
     // Change it up after 3 minutes
     if( (obj->value[1] == BLOOD_FRESH) && (obj->timer[0] < (time(NULL) - 180)) )
     {
-      sprintf(buf, "%s", long_desc_reg[obj->value[0]]);
+      snprintf(buf, MAX_STRING_LENGTH, "%s", long_desc_reg[obj->value[0]]);
       obj->description = str_dup(buf);
       obj->value[1] = BLOOD_REG;
       return TRUE;
@@ -11594,7 +11595,7 @@ int blood_stains(P_obj obj, P_char ch, int cmd, char *argument)
     // Change it up after 7 minutes
     if( (obj->value[1] == BLOOD_REG) && (obj->timer[0] < (time(NULL) - 420)) )
     {
-      sprintf(buf, "%s", long_desc_dry[obj->value[0]]);
+      snprintf(buf, MAX_STRING_LENGTH, "%s", long_desc_dry[obj->value[0]]);
       obj->description = str_dup(buf);
       obj->value[1] = BLOOD_DRY;
       return TRUE;
@@ -11682,7 +11683,7 @@ int frost_beacon(P_obj obj, P_char ch, int cmd, char *argument)
 
     if (tch != NULL && ch->in_room != tch->in_room && !grouped(ch, tch))
     {
-      sprintf(buf, "$N has set off your frost beacon at %s!",
+      snprintf(buf, 1024, "$N has set off your frost beacon at %s!",
               world[ch->in_room].name);
       act(buf, FALSE, tch, 0, ch, TO_CHAR);
     }
@@ -12615,7 +12616,7 @@ int huntsman_ward(P_obj obj, P_char ch, int cmd, char *argument)
     {
       if( tch != NULL && ch->in_room != tch->in_room && !grouped(ch, tch) )
       {
-        sprintf(buf, "$N has trespassed in %s!", world[ch->in_room].name);
+        snprintf(buf, 256, "$N has trespassed in %s!", world[ch->in_room].name);
         act(buf, FALSE, tch, 0, ch, TO_CHAR);
         REMOVE_BIT(obj->extra_flags, ITEM_SECRET);
         obj->value[0] = 0;
@@ -12659,7 +12660,7 @@ int huntsman_ward(P_obj obj, P_char ch, int cmd, char *argument)
       struct affected_type af;
       if( tch != NULL && ch->in_room != tch->in_room && !grouped(ch, tch) )
       {
-        sprintf(buf, "$N &+yhas sprung your &+rcrippling &+ytrap at&n %s!", world[ch->in_room].name);
+        snprintf(buf, 256, "$N &+yhas sprung your &+rcrippling &+ytrap at&n %s!", world[ch->in_room].name);
         act(buf, FALSE, tch, 0, ch, TO_CHAR);
         REMOVE_BIT(obj->extra_flags, ITEM_SECRET);
         obj->value[0] = 0;
@@ -12805,7 +12806,7 @@ int skill_beacon(P_obj obj, P_char ch, int cmd, char *argument)
     }
 
     ch->only.pc->skills[skill].taught = MIN(ch->only.pc->skills[skill].taught + 2, maxlearn);
-    sprintf(buf, "As you reach towards $p, suddenly a &+Bcracking bolt&n\n"
+    snprintf(buf, 1024, "As you reach towards $p, suddenly a &+Bcracking bolt&n\n"
             "jumps from it binding you for a second in an immobilizing\n"
             "grip. In a sudden flash of understanding you feel you can\n"
             "now progress further in &+W%s&n!", skills[skill].name);
@@ -13035,7 +13036,7 @@ void event_random_set_proc(P_char ch, P_char victim, P_obj obj, void* data)
   {
     if( afp == afpp )
     {
-      sprintf(buffer, "Spirits of %s no longer support you.\n", rdata->zone_name);
+      snprintf(buffer, 256, "Spirits of %s no longer support you.\n", rdata->zone_name);
       send_to_char(buffer, ch);
       affect_remove(ch, afp);
     }
@@ -13094,12 +13095,12 @@ void apply_zone_spell(P_char ch, int count, const char *zone_name, P_obj obj, in
 
   if( message == SETMSG_PROTECT )
   {
-    sprintf(buffer, "The spirits of %s grant you their protection.\n", zone_name);
+    snprintf(buffer, 512, "The spirits of %s grant you their protection.\n", zone_name);
     send_to_char(buffer, ch);
   }
   else if( message == SETMSG_STRENGTH )
   {
-    sprintf(buffer, "The spirits of %s grant you their strength.\n", zone_name);
+    snprintf(buffer, 512, "The spirits of %s grant you their strength.\n", zone_name);
     send_to_char(buffer, ch);
   }
 }
@@ -13206,12 +13207,12 @@ int random_set(P_char ch, P_obj obj, int count, int cmd, char *arg)
 
   if( afp->modifier > (count - 2) * 5 )
   {
-    sprintf(buffer, "You feel some of the %s's spirits attention leave you.\n", zone_name);
+    snprintf(buffer, 256, "You feel some of the %s's spirits attention leave you.\n", zone_name);
     send_to_char(buffer, ch);
   }
   else if( afp->modifier < (count - 2) * 5 )
   {
-    sprintf(buffer, "You feel invigorated as the spirits of %s bless you.\n", zone_name);
+    snprintf(buffer, 256, "You feel invigorated as the spirits of %s bless you.\n", zone_name);
     send_to_char(buffer, ch);
   }
   else

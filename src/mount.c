@@ -617,22 +617,22 @@ int wagon_pull(P_char ch, int mob)
       break;
 #if 0
     case 0:
-      sprintf(Gbuf3, "north");
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "north");
       break;
     case 1:
-      sprintf(Gbuf3, "east");
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "east");
       break;
     case 2:
-      sprintf(Gbuf3, "south");
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "south");
       break;
     case 3:
-      sprintf(Gbuf3, "west");
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "west");
       break;
     case 4:
-      sprintf(Gbuf3, "down");
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "down");
       break;
     case 5:
-      sprintf(Gbuf3, "up");
+      snprintf(Gbuf3, MAX_STRING_LENGTH, "up");
       break;
 #endif
     default:

@@ -207,7 +207,7 @@ int scan_mail_file(void)
 
   file_end_pos = ftell(mail_file);
   fclose(mail_file);
-  sprintf(buf, "   %ld bytes read.", file_end_pos);
+  snprintf(buf, 100, "   %ld bytes read.", file_end_pos);
   logit(LOG_DEBUG, buf);
   if (file_end_pos % BLOCK_SIZE)
   {
@@ -216,7 +216,7 @@ int scan_mail_file(void)
     logit(LOG_DEBUG, "SYSERR: Mail disabled!");
     return 0;
   }
-  sprintf(buf, "   Mail file read -- %d messages.", total_messages);
+  snprintf(buf, 100, "   Mail file read -- %d messages.", total_messages);
   logit(LOG_DEBUG, buf);
   return 1;
 }                               /* end of scan_file */
@@ -410,7 +410,7 @@ char    *read_delete(char *recipient, char *recipient_formatted)
   tmstr = asctime(localtime(&header.mail_time));
   *(tmstr + strlen(tmstr) - 1) = '\0';
 
-  sprintf(buf, " &+r* * * * &+RBloodlust Mail System&n&+r * * * *&n\r\n"
+  snprintf(buf, 200, " &+r* * * * &+RBloodlust Mail System&n&+r * * * *&n\r\n"
           "Date: %s\r\n"
           "  To: %s\r\n"
           "From: %s\r\n\r\n", tmstr, recipient_formatted, header.from);
@@ -565,14 +565,14 @@ void postmaster_send_mail(P_char ch, P_char mailman, char *arg)
 
   if (GET_LEVEL(ch) < MIN_MAIL_LEVEL)
   {
-    sprintf(buf, "Sorry, you have to be level %d to send mail!\r\n",
+    snprintf(buf, 200, "Sorry, you have to be level %d to send mail!\r\n",
             MIN_MAIL_LEVEL);
     send_to_char(buf, ch);
     return;
   }
   if (GET_MONEY(ch) < STAMP_PRICE)
   {
-    sprintf(buf, "It will cost %s to deliever this.\r\n"
+    snprintf(buf, 200, "It will cost %s to deliever this.\r\n"
             "...which I see you can't afford.\r\n",
             coin_stringv(STAMP_PRICE));
     send_to_char(buf, ch);
@@ -587,7 +587,7 @@ void postmaster_send_mail(P_char ch, P_char mailman, char *arg)
 /*  tmp = str_dup(arg);
   *tmp = LOWER(*tmp); */
   act("$n starts to write a note.", TRUE, ch, 0, 0, TO_ROOM);
-  sprintf(buf, "I'll take %s for the delivery.\r\n"
+  snprintf(buf, 200, "I'll take %s for the delivery.\r\n"
           "Write your message, use /s to save, /h for help.\r\n",
           coin_stringv(STAMP_PRICE));
   send_to_char(buf, ch);

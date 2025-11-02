@@ -373,11 +373,11 @@ P_obj ran_magical(P_char mob)
   {                             /* weight this chance to taste */
     case 0:                      /* light */
       temp = number(0, nlights);
-      sprintf(buf, "a %s&n", lights[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "a %s&n", lights[temp]);
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A %s &nlies here.", lights[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "A %s &nlies here.", lights[temp]);
       obj->description = str_dup(buf);
-      sprintf(buf, "%s RANOBJ", strip_color(lights[temp]));
+      snprintf(buf, MAX_STRING_LENGTH, "%s RANOBJ", strip_color(lights[temp]));
       obj->name = str_dup(buf);
       obj->type = ITEM_LIGHT;
       obj->value[2] = 8;          /* 8 hour burn time */
@@ -385,11 +385,11 @@ P_obj ran_magical(P_char mob)
       break;
     case 1:                      /* scroll */
       temp = number(0, nscrolls);
-      sprintf(buf, "a %s scroll", scrolls[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "a %s scroll", scrolls[temp]);
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A %s scroll &nlies here.", scrolls[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "A %s scroll &nlies here.", scrolls[temp]);
       obj->description = str_dup(buf);
-      sprintf(buf, "scroll RANOBJ");
+      snprintf(buf, MAX_STRING_LENGTH, "scroll RANOBJ");
       obj->name = str_dup(buf);
       obj->type = ITEM_SCROLL;
       obj->value[0] = GET_LEVEL(mob);
@@ -400,9 +400,9 @@ P_obj ran_magical(P_char mob)
       break;
     case 3:                      /* potion */
       temp = number(0, npotions);
-      sprintf(buf, "a %s potion", potions[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "a %s potion", potions[temp]);
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A %s potion &nlies here.", potions[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "A %s potion &nlies here.", potions[temp]);
       obj->description = str_dup(buf);
       strcat(buf, "potion RANOBJ");
       obj->name = str_dup(buf);
@@ -414,11 +414,11 @@ P_obj ran_magical(P_char mob)
     case 5:
     case 6:
       temp = number(0, nbags);
-      sprintf(buf, "a %s bag", bags[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "a %s bag", bags[temp]);
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A %s bag &nlies here.", bags[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "A %s bag &nlies here.", bags[temp]);
       obj->description = str_dup(buf);
-      sprintf(buf, "bag %s RANOBJ", strip_color(bags[temp]));
+      snprintf(buf, MAX_STRING_LENGTH, "bag %s RANOBJ", strip_color(bags[temp]));
       obj->name = str_dup(buf);
       obj->type = ITEM_CONTAINER;
       obj->value[1] = 1;
@@ -429,11 +429,11 @@ P_obj ran_magical(P_char mob)
     case 8:
     case 9:
       temp = number(0, ndrinks);
-      sprintf(buf, "a %s&n", drinks[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "a %s&n", drinks[temp]);
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A %s &nlies here.", drinks[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "A %s &nlies here.", drinks[temp]);
       obj->description = str_dup(buf);
-      sprintf(buf, "%s RANOBJ", strip_color(drinks[temp]));
+      snprintf(buf, MAX_STRING_LENGTH, "%s RANOBJ", strip_color(drinks[temp]));
       obj->name = str_dup(buf);
       obj->type = ITEM_DRINKCON;
       obj->value[0] = 2;
@@ -445,11 +445,11 @@ P_obj ran_magical(P_char mob)
     case 12:
     case 13:
       temp = number(0, nfoods);
-      sprintf(buf, "a %s&n", foods[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "a %s&n", foods[temp]);
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A %s &nlies here.", foods[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "A %s &nlies here.", foods[temp]);
       obj->description = str_dup(buf);
-      sprintf(buf, "%s RANOBJ", strip_color(foods[temp]));
+      snprintf(buf, MAX_STRING_LENGTH, "%s RANOBJ", strip_color(foods[temp]));
       obj->name = str_dup(buf);
       obj->type = ITEM_FOOD;
       obj->value[0] = number(1, 5);
@@ -458,11 +458,11 @@ P_obj ran_magical(P_char mob)
       random_jewelry(obj, number(1, 100));
       break;
     default:                     /* money */
-      sprintf(buf, "a pile of coins");
+      snprintf(buf, MAX_STRING_LENGTH, "a pile of coins");
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A small pile of coins &nlie here.");
+      snprintf(buf, MAX_STRING_LENGTH, "A small pile of coins &nlie here.");
       obj->description = str_dup(buf);
-      sprintf(buf, "pile coins RANOBJ");
+      snprintf(buf, MAX_STRING_LENGTH, "pile coins RANOBJ");
       obj->name = str_dup(buf);
       obj->type = ITEM_MONEY;
       obj->value[3] = number(0, GET_LEVEL(mob) / 2);
@@ -548,9 +548,9 @@ P_obj ran_obj(P_char mob, ulong which)
       if (!(obj = read_object(1293, VIRTUAL)))
         return NULL;
         obj->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-      sprintf(buf, "a %s ring", rings[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "a %s ring", rings[temp]);
       obj->short_description = str_dup(buf);
-      sprintf(buf, "A %s ring &nlies here.", rings[temp]);
+      snprintf(buf, MAX_STRING_LENGTH, "A %s ring &nlies here.", rings[temp]);
       obj->description = str_dup(buf);
       obj->name = str_dup("ring RANOBJ");
       /* Now that we have name setup, set stats */
@@ -577,12 +577,12 @@ temp = number(0, nnecks);
 if (!(obj = read_object(1285, VIRTUAL)))
 return NULL;
 obj->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-sprintf(buf, "a %s%s%s&n", color[temp3], generics[temp2], necks[temp]);
+snprintf(buf, MAX_STRING_LENGTH, "a %s%s%s&n", color[temp3], generics[temp2], necks[temp]);
 obj->short_description = str_dup(buf);
-sprintf(buf, "A %s%s%s &nlies here.", color[temp3], generics[temp2],
+snprintf(buf, MAX_STRING_LENGTH, "A %s%s%s &nlies here.", color[temp3], generics[temp2],
         necks[temp]);
 obj->description = str_dup(buf);
-sprintf(buf, "%s RANOBJ", strip_color(necks[temp]));
+snprintf(buf, MAX_STRING_LENGTH, "%s RANOBJ", strip_color(necks[temp]));
 obj->name = str_dup(buf);
 break;
 case ITEM_WEAR_BODY:         /* 1286 */
@@ -590,13 +590,13 @@ temp = number(0, nbodys);
 if (!(obj = read_object(1286, VIRTUAL)))
 return NULL;
 obj->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-sprintf(buf, "a %s%s%s&n", color[temp3], generics[number(0, nbodys)],
+snprintf(buf, MAX_STRING_LENGTH, "a %s%s%s&n", color[temp3], generics[number(0, nbodys)],
         bodys[temp]);
 obj->short_description = str_dup(buf);
-sprintf(buf, "A %s%s%s &nlies here.", color[temp3], generics[temp2],
+snprintf(buf, MAX_STRING_LENGTH, "A %s%s%s &nlies here.", color[temp3], generics[temp2],
         bodys[temp]);
 obj->description = str_dup(buf);
-sprintf(buf, "%s RANOBJ", strip_color(bodys[temp]));
+snprintf(buf, MAX_STRING_LENGTH, "%s RANOBJ", strip_color(bodys[temp]));
 obj->name = str_dup(buf);
 /* Now that we have name setup, set stats */
 /*    obj->affected[0].location = APPLY_ARMOR;
@@ -607,12 +607,12 @@ temp = number(0, nheads);
 if (!(obj = read_object(1281, VIRTUAL)))
 return NULL;
 obj->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-sprintf(buf, "a %s%s%s&n", color[temp3], generics[temp2], heads[temp]);
+snprintf(buf, MAX_STRING_LENGTH, "a %s%s%s&n", color[temp3], generics[temp2], heads[temp]);
 obj->short_description = str_dup(buf);
-sprintf(buf, "A %s%s%s &nlies here.", color[temp3], generics[temp2],
+snprintf(buf, MAX_STRING_LENGTH, "A %s%s%s &nlies here.", color[temp3], generics[temp2],
         heads[temp]);
 obj->description = str_dup(buf);
-sprintf(buf, "%s RANOBJ", strip_color(heads[temp]));
+snprintf(buf, MAX_STRING_LENGTH, "%s RANOBJ", strip_color(heads[temp]));
 obj->name = str_dup(buf);
 /* Now that we have name setup, set stats */
 /*    obj->affected[0].location = APPLY_ARMOR;
@@ -623,9 +623,9 @@ temp = number(0, ngenerics);
 if (!(obj = read_object(1296, VIRTUAL)))
 return NULL;
 obj->str_mask = (STRUNG_KEYS | STRUNG_DESC1 | STRUNG_DESC2);
-sprintf(buf, "some %s%sleggings&n", color[temp3], generics[temp]);
+snprintf(buf, MAX_STRING_LENGTH, "some %s%sleggings&n", color[temp3], generics[temp]);
 obj->short_description = str_dup(buf);
-sprintf(buf, "Some %s%sleggings &nlie here.", color[temp3],
+snprintf(buf, MAX_STRING_LENGTH, "Some %s%sleggings &nlie here.", color[temp3],
         generics[temp]);
 obj->description = str_dup(buf);
 obj->name = str_dup("leggings RANOBJ");
@@ -1003,9 +1003,9 @@ while (strlen(properties[orig_base_value_place][prop]) == 0)
 prop = number(0, 14);
 
 /* description and name */
-sprintf(buf, "a %s", properties[orig_base_value_place][prop]);
+snprintf(buf, MAX_STRING_LENGTH, "a %s", properties[orig_base_value_place][prop]);
 gem->short_description = str_dup(buf);
-sprintf(buf, "A %s lies here.", properties[orig_base_value_place][prop]);
+snprintf(buf, MAX_STRING_LENGTH, "A %s lies here.", properties[orig_base_value_place][prop]);
 gem->description = str_dup(buf);
 gem->name = str_dup("gem RANGEM");
 

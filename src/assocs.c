@@ -258,7 +258,7 @@ void show_guild_frags( P_char ch )
   i = 0;
   while( i < guild_count )
   {
-    sprintf(Gbuf1, "\t%s\n\t&+WTotal Guild Frags: \t&+Y%+.2f&n\n"
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "\t%s\n\t&+WTotal Guild Frags: \t&+Y%+.2f&n\n"
       "\t&+WTop Fragger: &+Y%-10s %+.2f&n\n"
       "\t&+WMembers:&+Y%2d&+W Frags/Member:&+Y%+.2f&n\n"
       "    &+L---------------------------------------\n",
@@ -327,7 +327,7 @@ bool found_asc(P_char god, P_char leader, char *bits, char *asc_name)
   /* name of association */
   if( strlen(asc_name) >= ASC_MAX_STR )
   {
-    sprintf( buf, "found_asc: Truncating '%s' to '", asc_name );
+    snprintf(buf, MAX_STRING_LENGTH, "found_asc: Truncating '%s' to '", asc_name );
     asc_name[ASC_MAX_STR - 1] = '\0';
     strcat( buf, asc_name );
     strcat( buf, "'." );
@@ -354,7 +354,7 @@ bool found_asc(P_char god, P_char leader, char *bits, char *asc_name)
       asc_bits = 0;
       break;
     default:
-      sprintf( buf, "'%c' is not a valid bit code.  Valid codes are: 'c', 'h', 's', and 'n'.\n"
+      snprintf(buf, MAX_STRING_LENGTH, "'%c' is not a valid bit code.  Valid codes are: 'c', 'h', 's', and 'n'.\n"
         "'c' - Allow challenges.\n"
         "'h' - Hide titles.\n"
         "'s' - Hide subtitles.\n"
@@ -462,7 +462,7 @@ void Guild::save( )
   char  filename[MAX_STR_NORMAL], write_buf[MAX_STRING_LENGTH], buf[MAX_STR_NORMAL];
   P_member pMembers;
 
-  sprintf( filename, "%sasc.%u", ASC_DIR, id_number );
+  snprintf(filename, MAX_STR_NORMAL, "%sasc.%u", ASC_DIR, id_number );
   file = fopen( filename, "w" );
   if( !file )
   {
@@ -471,9 +471,9 @@ void Guild::save( )
   }
 
   // Print the name first.
-  sprintf( write_buf, "%s\n", name );
+  snprintf(write_buf, MAX_STRING_LENGTH, "%s\n", name );
   // Then the guild number and frag info.
-  sprintf( buf, "%u %lu %lu %s\n", id_number, frags.frags, frags.top_frags, frags.topfragger );
+  snprintf(buf, MAX_STR_NORMAL, "%u %lu %lu %s\n", id_number, frags.frags, frags.top_frags, frags.topfragger );
 
   strcat( write_buf, buf );
   // Then the default guild titles
@@ -485,15 +485,15 @@ void Guild::save( )
     strcat( write_buf, "\n" );
   }
   // Then the guild bits, prestige and construction.
-  sprintf( buf, "%u %lu %lu\n", bits, prestige, construction );
+  snprintf(buf, MAX_STR_NORMAL, "%u %lu %lu\n", bits, prestige, construction );
   strcat( write_buf, buf );
   // Then guild funds.
-  sprintf( buf, "%u %u %u %u\n", platinum, gold, silver, copper );
+  snprintf(buf, MAX_STR_NORMAL, "%u %u %u %u\n", platinum, gold, silver, copper );
   strcat( write_buf, buf );
 
   for( pMembers = members; pMembers != NULL; pMembers = pMembers->next )
   {
-    sprintf( buf, "%s %u %u\n", pMembers->name, pMembers->bits, pMembers->debt );
+    snprintf(buf, MAX_STR_NORMAL, "%s %u %u\n", pMembers->name, pMembers->bits, pMembers->debt );
     strcat( write_buf, buf );
   }
 
@@ -510,7 +510,7 @@ bool Guild::load_guild( int guild_num )
   char     filename[MAX_STR_NORMAL], buf[MAX_STR_NORMAL], mem_name[MAX_NAME_LENGTH + 1];
   int      mem_bits, mem_debt;
 
-  sprintf( filename, "%sasc.%u", ASC_DIR, guild_num );
+  snprintf(filename, MAX_STR_NORMAL, "%sasc.%u", ASC_DIR, guild_num );
   file = fopen( filename, "r" );
   if( !file )
   {
@@ -592,7 +592,7 @@ Guild::~Guild()
 
   sever_alliance( this );
 
-  sprintf( filename, "%sasc.%u", ASC_DIR, id_number );
+  snprintf(filename, MAX_STRING_LENGTH, "%sasc.%u", ASC_DIR, id_number );
   unlink( filename );
 
   // We just need to remove it from guild list.
@@ -689,11 +689,11 @@ void Guild::default_title( P_char ch )
   clear_title( ch );
   if( !IS_HIDDENSUBTITLE(GET_A_BITS(ch)) )
   {
-    sprintf( new_title, "%s %s", titles[NR_RANK(GET_A_BITS(ch))], name );
+    snprintf(new_title, ASC_MAX_STR_TITLE, "%s %s", titles[NR_RANK(GET_A_BITS(ch))], name );
   }
   else
   {
-    sprintf( new_title, "%s", name );
+    snprintf(new_title, ASC_MAX_STR_TITLE, "%s", name );
   }
 
   GET_TITLE(ch) = str_dup(new_title);
@@ -749,9 +749,9 @@ void Guild::update_member( P_char ch )
     {
       logit( LOG_DEBUG, "%s was homed in GH but doesn't belong to guild, resetting to original home",
         GET_NAME(ch) );
-      sprintf( home_string, "char %s home %d", J_NAME(ch), GET_ORIG_BIRTHPLACE(ch));
+      snprintf(home_string, 100, "char %s home %d", J_NAME(ch), GET_ORIG_BIRTHPLACE(ch));
       do_setbit( ch, home_string, CMD_SETHOME);
-      sprintf( home_string, "char %s orighome %d", J_NAME(ch), GET_ORIG_BIRTHPLACE(ch));
+      snprintf(home_string, 100, "char %s orighome %d", J_NAME(ch), GET_ORIG_BIRTHPLACE(ch));
       do_setbit( ch, home_string, CMD_SETHOME);
     }
   }
@@ -913,7 +913,7 @@ bool Guild::is_enemy( P_char enemy )
     return TRUE;
   }
 
-  sprintf(buf, "%sasc.%u", ASC_DIR, id_number);
+  snprintf(buf, MAX_STR_NORMAL, "%sasc.%u", ASC_DIR, id_number);
   if( !(f = fopen( buf, "r" )) )
   {
     return FALSE;
@@ -950,16 +950,16 @@ void Guild::display( P_char member )
   };
   P_member pMembers;
 
-  sprintf(buf, "\n%s&n\n-----------------------------------------------------------------", name );
+  snprintf(buf, MAX_STRING_LENGTH, "\n%s&n\n-----------------------------------------------------------------", name );
   if( (alliance = get_alliance( )) != NULL )
   {
     if( alliance->get_forgers()->get_id() == id_number )
     {
-      sprintf( Gbuf2, "\n&+bAllied with &n%s\n", alliance->get_joiners()->get_name().c_str() );
+      snprintf(Gbuf2, MAX_STR_NORMAL, "\n&+bAllied with &n%s\n", alliance->get_joiners()->get_name().c_str() );
     }
     else
     {
-      sprintf( Gbuf2, "\n&+bAllied to &n%s\n", alliance->get_forgers()->get_name().c_str() );
+      snprintf(Gbuf2, MAX_STR_NORMAL, "\n&+bAllied to &n%s\n", alliance->get_forgers()->get_name().c_str() );
     }
     strcat(buf, Gbuf2);
   }
@@ -1068,7 +1068,7 @@ void Guild::apply(P_char applicant, P_char member )
   SET_APPLICANT( GET_A_BITS(applicant) );
   GET_ASSOC(applicant) = this;
 
-  sprintf( buf, "You ask $N to enroll you in %s.", name );
+  snprintf(buf, MAX_STRING_LENGTH, "You ask $N to enroll you in %s.", name );
   act( buf, FALSE, applicant, NULL, member, TO_CHAR);
   act("$n is applying for membership in your association!", FALSE, applicant, NULL, member, TO_VICT);
 }
@@ -1087,7 +1087,7 @@ void supervise_list( P_char god )
     guild = get_guild_from_id( id_num );
     if( guild != NULL )
     {
-      sprintf( Gbuf1, "   %s %2u : &+%c%7s&n : %s&n\n", (GET_ASSOC(god) == guild) ? "&+Y*&n" : " ", id_num,
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "   %s %2u : &+%c%7s&n : %s&n\n", (GET_ASSOC(god) == guild) ? "&+Y*&n" : " ", id_num,
         racewar_color[guild->get_racewar()].color, racewar_color[guild->get_racewar()].name, guild->get_name().c_str() );
       strcat( buf, Gbuf1 );
       misses = 0;
@@ -1462,7 +1462,7 @@ void do_gmotd( P_char ch, char *argument, int cmd )
     return;
   }
   guild = GET_ASSOC(ch);
-  sprintf(buf, "%sasc.%d.motd", ASC_DIR, guild->get_id() );
+  snprintf(buf, MAX_STRING_LENGTH, "%sasc.%d.motd", ASC_DIR, guild->get_id() );
 
   if( !*argument || (!IS_LEADER(bits) && !GT_LEADER(bits) && !IS_TRUSTED(ch)) )
   {
@@ -1539,7 +1539,7 @@ void do_prestige( P_char ch, char *argument, int cmd )
     cps = atoi(row[3]);
     if( IS_TRUSTED(ch) )
     {
-      sprintf(buf, "&+W%2d. &n%s &n(&+b%8d&n:&+W%8d&n)\n", id, name.c_str(), prestige, cps);
+      snprintf(buf, MAX_STRING_LENGTH, "&+W%2d. &n%s &n(&+b%8d&n:&+W%8d&n)\n", id, name.c_str(), prestige, cps);
     }
     else
     {
@@ -1548,7 +1548,7 @@ void do_prestige( P_char ch, char *argument, int cmd )
         continue;
       }
 
-      sprintf(buf, "%s\n", name.c_str());
+      snprintf(buf, MAX_STRING_LENGTH, "%s\n", name.c_str());
     }
     send_to_char(buf, ch);
   }
@@ -1661,7 +1661,7 @@ void do_society( P_char member, char *argument, int cmd )
     {
       timestr = asctime(localtime(&(temp_time)));
       timestr[10] = '\0';
-      sprintf(buf, "You cannot join another guild until %s\n", timestr);
+      snprintf(buf, MAX_STRING_LENGTH, "You cannot join another guild until %s\n", timestr);
       send_to_char(buf, member);
       return;
     }
@@ -2378,7 +2378,7 @@ void Guild::ledger( P_char member, char *args )
   }
   while( row = mysql_fetch_row(res) )
   {
-    sprintf(buff, "%s\r\n", row[0]);
+    snprintf(buff, MAX_STRING_LENGTH, "%s\r\n", row[0]);
     send_to_char(buff, member );
   }
 

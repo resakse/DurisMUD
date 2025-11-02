@@ -234,14 +234,14 @@ void check_magic_doors(P_char ch, const char *word)
             }
           }
         }
-        sprintf(Gbuf1, "The %s begins to hum, then glow brightly.",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "The %s begins to hum, then glow brightly.",
                 FirstWord(EXIT(ch, door)->keyword));
         act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
         act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
 /*
  * send_to_room(Gbuf1, (EXIT(ch, door)->to_room));
  */
-        sprintf(Gbuf1, "A magical force unlocks the %s.",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "A magical force unlocks the %s.",
                 FirstWord(EXIT(ch, door)->keyword));
         act(Gbuf1, FALSE, ch, 0, 0, TO_ROOM);
         act(Gbuf1, FALSE, ch, 0, 0, TO_CHAR);
@@ -282,7 +282,7 @@ void do_petition(P_char ch, char *argument, int cmd)
   {
     if (IS_SET(ch->specials.act, PLR_ECHO))
     {
-      sprintf(Gbuf1, "&+rYou petition '%s'\r\n"
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+rYou petition '%s'\r\n"
               "&+RThe petition channel is not for general conversation. Use the idea, typo, or bug commands.&n\r\n",
               argument);
       send_to_char(Gbuf1, ch);
@@ -294,8 +294,8 @@ void do_petition(P_char ch, char *argument, int cmd)
     if (get_property("logs.chat.status", 0.000) && IS_PC(ch))
       logit(LOG_CHAT, "%s petitioned '%s'", GET_NAME(ch), argument);
 
-    sprintf(Gbuf1, "&+r$n petitions '%s'&N", argument);
-    sprintf(Gbuf2, "&+r%s petitions '%s'&N", GET_NAME(ch), argument);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+r$n petitions '%s'&N", argument);
+    snprintf(Gbuf2, MAX_STRING_LENGTH, "&+r%s petitions '%s'&N", GET_NAME(ch), argument);
 
     for(i = descriptor_list; i; i = i->next)
       if(!i->connected && !is_silent(i->character, FALSE) &&
@@ -344,7 +344,7 @@ void send_to_avatar(P_char ch, const char *arg)
       ("Being knocked unconscious strictly limits what you can do.\r\n", ch);
     return;
   }
-  sprintf(Gbuf, "\r\n&+m%s projects, '&+M%s&n&+m'&n\r\n", GET_NAME(ch), arg);
+  snprintf(Gbuf, MAX_STRING_LENGTH, "\r\n&+m%s projects, '&+M%s&n&+m'&n\r\n", GET_NAME(ch), arg);
   send_to_char(Gbuf, ch->desc->snoop.snooping);
 }
 
@@ -409,20 +409,20 @@ int say(P_char ch, const char *argument)
         if( mind )
         {
           if( IS_ILLITHID(kala) || IS_PILLITHID(kala) || IS_TRUSTED(kala) )
-            sprintf(Gbuf2, "$n projects '%s'", argument + i);
+            snprintf(Gbuf2, MAX_STRING_LENGTH, "$n projects '%s'", argument + i);
           else
-            sprintf(Gbuf2, "$n invades your mind with '%s'", argument + i);
+            snprintf(Gbuf2, MAX_STRING_LENGTH, "$n invades your mind with '%s'", argument + i);
         }
         else
         {
-          sprintf(Gbuf3, "%s", argument + i);
+          snprintf(Gbuf3, MAX_STRING_LENGTH, "%s", argument + i);
 
           if (IS_THRIKREEN(ch))
           {
-            sprintf(Gbuf2, "$n chitters %s'%s'", language_known(ch, kala), language_CRYPT(ch, kala, Gbuf3));
+            snprintf(Gbuf2, MAX_STRING_LENGTH, "$n chitters %s'%s'", language_known(ch, kala), language_CRYPT(ch, kala, Gbuf3));
           }
           else
-            sprintf(Gbuf2, "$n says %s'%s'", language_known(ch, kala), language_CRYPT(ch, kala, Gbuf3));
+            snprintf(Gbuf2, MAX_STRING_LENGTH, "$n says %s'%s'", language_known(ch, kala), language_CRYPT(ch, kala, Gbuf3));
         }
         if( mind || IS_TRUSTED(ch) )
           act(Gbuf2, FALSE, ch, 0, kala, TO_VICT);
@@ -434,9 +434,9 @@ int say(P_char ch, const char *argument)
     if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
     {
       if (IS_ILLITHID(ch) || IS_PILLITHID(ch) || !strcmp(GET_NAME(ch), "Id"))
-        sprintf(Gbuf1, "You project '%s'\r\n", argument + i);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "You project '%s'\r\n", argument + i);
       else
-        sprintf(Gbuf1, "You %s %s'%s'\r\n", IS_THRIKREEN(ch) ? "chitter" : "say", language_known(ch, ch), argument + i);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "You %s %s'%s'\r\n", IS_THRIKREEN(ch) ? "chitter" : "say", language_known(ch, ch), argument + i);
       send_to_char(Gbuf1, ch);
     }
     else
@@ -562,12 +562,12 @@ void do_gcc(P_char ch, char *argument, int cmd)
       {
         if( IS_NPC(ch) || IS_SET(ch->specials.act3, PLR3_GUILDNAME) )
         {
-          sprintf(Gbuf1, "&+cYou tell %s &+c'&+C%s&n&+c'\r\n", from_guild->get_name().c_str(), argument);
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cYou tell %s &+c'&+C%s&n&+c'\r\n", from_guild->get_name().c_str(), argument);
           send_to_char(Gbuf1, ch, LOG_PRIVATE);
         }
         else
         {
-          sprintf(Gbuf1, "&+cYou tell your &+%cguild&+c '&+C%s&n&+c'\r\n", IS_TRUSTED(ch)
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cYou tell your &+%cguild&+c '&+C%s&n&+c'\r\n", IS_TRUSTED(ch)
             ? racewar_color[from_guild->get_racewar()].color : 'c', argument);
           send_to_char(Gbuf1, ch, LOG_PRIVATE);
         }
@@ -651,7 +651,7 @@ void send_to_guild( P_Guild guild, char *name, char *arg)
       && IS_MEMBER(GET_A_BITS(i->character)) && (GET_ASSOC(i->character) == guild)
       && (!(IS_AFFECTED4(i->character, AFF4_DEAF))) && (GT_PAROLE(GET_A_BITS(i->character))))
     {
-      sprintf(Gbuf1, "&+c%s&n&+c tells your guild '&+C%s&n&+c'\r\n", name, arg);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c%s&n&+c tells your guild '&+C%s&n&+c'\r\n", name, arg);
       send_to_char(Gbuf1, i->character, LOG_PRIVATE);
     }
   }
@@ -702,7 +702,7 @@ void do_rwc(P_char ch, char *argument, int cmd)
     {
       if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
       {
-        sprintf(Gbuf1, "&+mYou RWC '&+M%s&n&+m'\r\n&N", argument);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "&+mYou RWC '&+M%s&n&+m'\r\n&N", argument);
         send_to_char(Gbuf1, ch);
       }
       else
@@ -713,7 +713,7 @@ void do_rwc(P_char ch, char *argument, int cmd)
           !is_silent(i->character, FALSE) &&
           IS_SET(i->character->specials.act2, PLR2_RWC))
       {
-        sprintf(Gbuf1, "&+m(RWC) %s - '&+M%s&n&+m'\r\n&N",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "&+m(RWC) %s - '&+M%s&n&+m'\r\n&N",
                 GET_NAME(ch), argument);
         send_to_char(Gbuf1, i->character);
       }
@@ -764,7 +764,7 @@ void do_project(P_char ch, char *argument, int cmd)
   }
   else if (ch->desc)
   {
-    sprintf(Gbuf1, "&+mYou project '&+M%s&n&+m' across the ether.&n\n", argument);
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "&+mYou project '&+M%s&n&+m' across the ether.&n\n", argument);
 
     if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
     {
@@ -779,7 +779,7 @@ void do_project(P_char ch, char *argument, int cmd)
       logit(LOG_CHAT, "%s projects '%s'", GET_NAME(ch), argument);
   }
 
-  sprintf(Gbuf1, "&+m%s&+m projects '&+M%s&n&+m' across the ether.&n\n", GET_NAME(ch), argument);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "&+m%s&+m projects '&+M%s&n&+m' across the ether.&n\n", GET_NAME(ch), argument);
   for( desc = descriptor_list; desc; desc = desc->next )
   {
     if( (desc->character != ch) && !desc->connected
@@ -867,7 +867,7 @@ void do_shout(P_char ch, char *argument, int cmd)
     {
       if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
       {
-        sprintf(Gbuf1, "&+cYou shout across the world '%s'\r\n", argument);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "&+cYou shout across the world '%s'\r\n", argument);
         send_to_char(Gbuf1, ch);
       }
       else
@@ -882,11 +882,11 @@ void do_shout(P_char ch, char *argument, int cmd)
           !IS_SET(i->character->specials.act, PLR_NOSHOUT))
       {
         if (IS_TRUSTED(ch))
-          sprintf(Gbuf1, "&+c$n shouts from the heavens %s'%s'&N",
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c$n shouts from the heavens %s'%s'&N",
                   language_known(ch, i->character),
                   language_CRYPT(ch, i->character, argument));
         else
-          sprintf(Gbuf1, "&+c$n shouts across the world %s'%s'&N",
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "&+c$n shouts across the world %s'%s'&N",
                   language_known(ch, i->character),
                   language_CRYPT(ch, i->character, argument));
         act(Gbuf1, 0, ch, 0, i->character, TO_VICT);
@@ -909,7 +909,7 @@ void do_reply(P_char ch, char *argument, int cmd)
     return;
   }
 
-  sprintf(Gbuf1, "%s %s", ch->only.pc->last_tell, argument);
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s %s", ch->only.pc->last_tell, argument);
   do_tell(ch, Gbuf1, cmd);
   return;
 }
@@ -1131,14 +1131,14 @@ void do_whisper(P_char ch, char *argument, int cmd)
     if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
     {
       if (IS_ILLITHID(ch) || IS_PILLITHID(ch))
-        sprintf(Gbuf1, "You softly project '%s' to %s\r\n", message,
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "You softly project '%s' to %s\r\n", message,
                 dispname);
       else if (IS_NPC(ch) && !(GET_CLASS(vict, CLASS_DRUID)))
       {
         send_to_char("They wouldn't understand you anyway!\r\n", ch);
         return;
       }
-      sprintf(Gbuf1, "You whisper '%s' to %s\r\n", message, dispname);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You whisper '%s' to %s\r\n", message, dispname);
       send_to_char(Gbuf1, ch);  
     }
     else
@@ -1148,7 +1148,7 @@ void do_whisper(P_char ch, char *argument, int cmd)
       logit(LOG_CHAT, "%s whispers to %s '%s'", GET_NAME(ch), GET_NAME(vict), message);
     if (IS_ILLITHID(ch) || IS_PILLITHID(ch))
     {
-      sprintf(Gbuf1, "A soft voice in your head whispers '%s'", message);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "A soft voice in your head whispers '%s'", message);
       act(Gbuf1, FALSE, ch, 0, vict, TO_VICT);
     }
     else
@@ -1158,7 +1158,7 @@ void do_whisper(P_char ch, char *argument, int cmd)
         send_to_char("They wouldn't understand you!\r\n", ch);
         return;
       }
-      sprintf(Gbuf1, "$n whispers to you, %s'%s'", language_known(ch, vict),
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "$n whispers to you, %s'%s'", language_known(ch, vict),
               language_CRYPT(ch, vict, message));
       act(Gbuf1, FALSE, ch, 0, vict, TO_VICT);
       act("$n whispers something to $N.", FALSE, ch, 0, vict, TO_NOTVICT);
@@ -1212,14 +1212,14 @@ void do_ask(P_char ch, char *argument, int cmd)
     {
 /*
       if (IS_NPC(vict))
-        sprintf(Gbuf1, "You ask %s '%s'\r\n", vict->player.short_descr, message);
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "You ask %s '%s'\r\n", vict->player.short_descr, message);
       else
-        sprintf(Gbuf1, "You ask %s '%s'\r\n",
+        snprintf(Gbuf1, MAX_STRING_LENGTH, "You ask %s '%s'\r\n",
                 (racewar(ch, vict) || is_introd(ch,vict)) ? race_names_table[GET_RACE(vict)].ansi :
                  GET_NAME(vict), message);
       send_to_char(Gbuf1, ch);
 */
-      sprintf(Gbuf1, "You ask $N '%s'", message);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You ask $N '%s'", message);
       act(Gbuf1, FALSE, ch, 0, vict, TO_CHAR);
     }
     else
@@ -1230,12 +1230,12 @@ void do_ask(P_char ch, char *argument, int cmd)
     
     if (IS_ILLITHID(ch) || IS_PILLITHID(ch))
     {
-      sprintf(Gbuf1, "A voice in your head asks '%s'", message);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "A voice in your head asks '%s'", message);
       act(Gbuf1, FALSE, ch, 0, vict, TO_VICT);
     }
     else
     {
-      sprintf(Gbuf1, "$n asks you %s'%s'", language_known(ch, vict),
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "$n asks you %s'%s'", language_known(ch, vict),
               language_CRYPT(ch, vict, message));
       act(Gbuf1, FALSE, ch, 0, vict, TO_VICT | ACT_SILENCEABLE);
       act("$n asks $N a question.", FALSE, ch, 0, vict, TO_NOTVICT);
@@ -1269,13 +1269,13 @@ void do_write(P_char ch, char *argument, int cmd)
   {                             /* there were two arguments */
     if (!(paper = get_obj_in_list_vis(ch, papername, ch->carrying)))
     {
-      sprintf(Gbuf1, "You have no %s.\r\n", papername);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You have no %s.\r\n", papername);
       send_to_char(Gbuf1, ch);
       return;
     }
     if (!(pen = get_obj_in_list_vis(ch, penname, ch->carrying)))
     {
-      sprintf(Gbuf1, "You have no %s.\r\n", papername);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You have no %s.\r\n", papername);
       send_to_char(Gbuf1, ch);
       return;
     }
@@ -1284,7 +1284,7 @@ void do_write(P_char ch, char *argument, int cmd)
   {                             /* there was one arg.let's see what we can find */
     if (!(paper = get_obj_in_list_vis(ch, papername, ch->carrying)))
     {
-      sprintf(Gbuf1, "There is no %s in your inventory.\r\n", papername);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "There is no %s in your inventory.\r\n", papername);
       send_to_char(Gbuf1, ch);
       return;
     }
@@ -1301,7 +1301,7 @@ void do_write(P_char ch, char *argument, int cmd)
     /* one object was found. Now for the other one.  */
     if (!ch->equipment[HOLD])
     {
-      sprintf(Gbuf1, "You can't write with a %s alone.\r\n", papername);
+      snprintf(Gbuf1, MAX_STRING_LENGTH, "You can't write with a %s alone.\r\n", papername);
       send_to_char(Gbuf1, ch);
       return;
     }
@@ -1810,7 +1810,7 @@ void do_insult(P_char ch, char *argument, int cmd)
     {
       if (victim != ch)
       {
-/*        sprintf(buf, "You insult %s.\r\n", GET_NAME(victim));
+/*        snprintf(buf, 100, "You insult %s.\r\n", GET_NAME(victim));
         send_to_char(buf, ch);*/
         act("You insult $N.", FALSE, ch, 0, victim, TO_CHAR);
 
@@ -2029,7 +2029,7 @@ void do_yell(P_char ch, char *argument, int cmd)
     /* Send message to player yelling that he has indeed yelled */
     if (IS_SET(ch->specials.act, PLR_ECHO) || IS_NPC(ch))
     {
-      sprintf(Gbuf4, "You shout '%s'\r\n", argument);
+      snprintf(Gbuf4, MAX_STRING_LENGTH, "You shout '%s'\r\n", argument);
       send_to_char(Gbuf4, ch);
     }
     else
@@ -2062,7 +2062,7 @@ void do_yell(P_char ch, char *argument, int cmd)
         else
 */
         //{
-          sprintf(Gbuf1, "$n shouts %s'%s'",
+          snprintf(Gbuf1, MAX_STRING_LENGTH, "$n shouts %s'%s'",
               language_known(ch, i->character), language_CRYPT(ch,
                 i->
                 character,

@@ -246,7 +246,7 @@ int OutlawAggro(struct char_data *ch, const char *foo)
       if ((CHAR_IS_FLAGGED(tch) == 4) || (CHAR_IS_FLAGGED(tch) == 3))
       {
         flag_lvl = CHAR_IS_FLAGGED(tch);
-        sprintf(Gbuf4, foo,
+        snprintf(Gbuf4, MAX_STRING_LENGTH, foo,
                 (flag_lvl == 4) ? "Outcast" :
                 (flag_lvl == 2) ? "Outlaw" :
                 (flag_lvl == 3) ? "Killer" : "Thief");
