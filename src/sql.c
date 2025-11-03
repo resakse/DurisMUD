@@ -269,12 +269,22 @@ MYSQL_RES *db_query(const char *format, ...)
 {
   char     buf[MAX_LOG_LEN + MAX_STRING_LENGTH + 512];
   va_list  args;
+  int      ret;
 
   va_start(args, format);
   buf[0] = '\0';
-  vsprintf(buf, format, args);
+  // SECURITY FIX: Replace vsprintf with vsnprintf to prevent buffer overflow
+  ret = vsnprintf(buf, sizeof(buf), format, args);
   va_end(args);
-  if(!buf)
+
+  // Check for overflow
+  if (ret < 0 || ret >= (int)sizeof(buf))
+  {
+    logit(LOG_DEBUG, "MySQL: Query too long, truncated or error in formatting");
+    return NULL;
+  }
+
+  if(!buf[0])
         return NULL;
 
   if (mysql_real_query(DB, buf, strlen(buf)) != 0)
@@ -292,11 +302,19 @@ MYSQL_RES *db_query_nolog(const char *format, ...)
 {
   char     buf[MAX_STRING_LENGTH];
   va_list  args;
+  int      ret;
 
   va_start(args, format);
   buf[0] = '\0';
-  vsprintf(buf, format, args);
+  // SECURITY FIX: Replace vsprintf with vsnprintf to prevent buffer overflow
+  ret = vsnprintf(buf, sizeof(buf), format, args);
   va_end(args);
+
+  // Check for overflow
+  if (ret < 0 || ret >= (int)sizeof(buf))
+  {
+    return NULL;
+  }
 
   if (mysql_real_query(DB, buf, strlen(buf)) != 0)
   {
@@ -986,28 +1004,32 @@ int sql_find_racewar_for_ip( char *ip, int *racewar_side )
 void perform_wiki_search(P_char ch, const char *query)
 {
 
-  char     buf[MAX_STRING_LENGTH];  
+  char     buf[MAX_STRING_LENGTH];
   char     buf2[MAX_STRING_LENGTH];
   char     buf3[MAX_STRING_LENGTH];
+  char     escaped_query[MAX_STRING_LENGTH * 2 + 1];  // SECURITY: Buffer for escaped query (MySQL needs 2x+1 size)
   buf[0] = '\0';
   buf2[0] = '\0';
   buf3[0] = '\0';
   MYSQL_ROW row;
   MYSQL_ROW row2;
 
+  // SECURITY FIX: Sanitize user input to prevent SQL injection
+  // Escape the query string using MySQL's built-in escape function
+  mysql_real_escape_string(DB, escaped_query, query, strlen(query));
 
 /*
 MYSQL_RES *db  = db_query("SELECT UPPER(si_title) , old_id, REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(old_text,'<pre>',''),'</pre>',''), ']]', ''),'[[' ,'' ), '::', ':'), '<br>', '') FROM wikki_searchindex, wikki_text where old_id =( SELECT max(rev_text_id) FROM wikki_revision w where rev_page =( select si_page from wikki_searchindex where LOWER(si_title)  like LOWER('%s') limit 1)) and si_title like LOWER('%s') limit 1", query, query);
 */
 
 
-  MYSQL_RES *db = db_query("SELECT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(old_text,'<pre>',''),'</pre>',''), ']]', ''),'[[' ,'' ), '::', ':'), '<br>', ''), '\'\'', '') , '==', '') FROM `wikki_text`  WHERE old_id = (SELECT rev_text_id FROM `wikki_page`,`wikki_revision`  WHERE (page_id=rev_page) AND rev_id = (SELECT page_latest FROM `wikki_page`  WHERE page_id = (SELECT page_id  FROM `wikki_page`  WHERE page_namespace = '0' AND LOWER(page_title) = REPLACE(LOWER('%s'), ' ', '_')  LIMIT 1)  LIMIT 1)  LIMIT 1)  LIMIT 1", query);
+  MYSQL_RES *db = db_query("SELECT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(old_text,'<pre>',''),'</pre>',''), ']]', ''),'[[' ,'' ), '::', ':'), '<br>', ''), '\'\'', '') , '==', '') FROM `wikki_text`  WHERE old_id = (SELECT rev_text_id FROM `wikki_page`,`wikki_revision`  WHERE (page_id=rev_page) AND rev_id = (SELECT page_latest FROM `wikki_page`  WHERE page_id = (SELECT page_id  FROM `wikki_page`  WHERE page_namespace = '0' AND LOWER(page_title) = REPLACE(LOWER('%s'), ' ', '_')  LIMIT 1)  LIMIT 1)  LIMIT 1)  LIMIT 1", escaped_query);
   if (db)
   {
     row = mysql_fetch_row(db);
     if (NULL != row)
     {
-     snprintf(buf, MAX_STRING_LENGTH, "\t&+W========| &+m %s &+W |========&n\n%s" ,query, row[0]);
+     snprintf(buf, MAX_STRING_LENGTH, "\t&+W========| &+m %s &+W |========&n\n%s" ,escaped_query, row[0]);
     }
     else
     snprintf(buf, MAX_STRING_LENGTH, "&+WNothing matches, see &+mHelp wiki&+W how to add this help.&n");
@@ -1058,6 +1080,7 @@ bool qry(const char *format, ...)
 {
   char     buf[MAX_STRING_LENGTH];
   va_list  args;
+  int      ret;
 
   if( !DB )
   {
@@ -1067,8 +1090,16 @@ bool qry(const char *format, ...)
 
   va_start(args, format);
   buf[0] = '\0';
-  vsprintf(buf, format, args);
+  // SECURITY FIX: Replace vsprintf with vsnprintf to prevent buffer overflow
+  ret = vsnprintf(buf, sizeof(buf), format, args);
   va_end(args);
+
+  // Check for overflow
+  if (ret < 0 || ret >= (int)sizeof(buf))
+  {
+    logit(LOG_DEBUG, "MySQL error: Query too long or formatting error");
+    return FALSE;
+  }
 
   if (mysql_real_query(DB, buf, strlen(buf)))
   {
@@ -1316,13 +1347,19 @@ void do_sql(P_char ch, char *argument, int cmd)
       }
       if( strstr(third, "desc" ) )
       {
-        snprintf(buf, MAX_STRING_LENGTH, "UPDATE prepstatement_duris_sql SET description = '%s' WHERE id='%d'", rest, prep_statement );
+        // SECURITY FIX: Escape user input to prevent SQL injection
+        char escaped_desc[MAX_STRING_LENGTH * 2 + 1];
+        mysql_real_escape_string(DB, escaped_desc, rest, strlen(rest));
+        snprintf(buf, MAX_STRING_LENGTH, "UPDATE prepstatement_duris_sql SET description = '%s' WHERE id='%d'", escaped_desc, prep_statement );
         do_sql( ch, buf, 0);
         return;
       }
       if( strstr(third, "sql" ) )
       {
-        if( qry("UPDATE prepstatement_duris_sql SET sql_code = '%s' WHERE id='%d'", rest, prep_statement ) )
+        // SECURITY FIX: Escape user input to prevent SQL injection
+        char escaped_sql[MAX_STRING_LENGTH * 2 + 1];
+        mysql_real_escape_string(DB, escaped_sql, rest, strlen(rest));
+        if( qry("UPDATE prepstatement_duris_sql SET sql_code = '%s' WHERE id='%d'", escaped_sql, prep_statement ) )
         {
           snprintf(buf, MAX_STRING_LENGTH, "Row %d sql_code set to '%s'.\n\r", prep_statement, rest );
           send_to_char(buf, ch );
@@ -1512,10 +1549,19 @@ void sql_log(P_char ch, char * kind, char * format, ...)
   }
 
   va_list  args;
-  
+  int      ret;
+
   va_start(args, format);
-  vsprintf(buff, format, args);
+  // SECURITY FIX: Replace vsprintf with vsnprintf to prevent buffer overflow
+  ret = vsnprintf(buff, sizeof(buff), format, args);
   va_end(args);
+
+  // Check for overflow
+  if (ret < 0 || ret >= (int)sizeof(buff))
+  {
+    debug("sql_log: Message too long or formatting error");
+    return;
+  }
 
   static char message_buff[MAX_STRING_LENGTH];
 	message_buff[0] = '\0';
