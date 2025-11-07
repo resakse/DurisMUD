@@ -794,7 +794,6 @@ void ereglog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
   for (d = descriptor_list; d; d = d->next)
   {
     if (d->connected == CON_PLAYING &&
@@ -818,7 +817,6 @@ void wizlog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for (d = descriptor_list; d; d = d->next)
   {
@@ -843,7 +841,6 @@ void debug(const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
   for (i = descriptor_list; i; i = i->next)
     if (!i->connected && i->character &&
         IS_TRUSTED(i->character) &&
@@ -862,7 +859,6 @@ void loginlog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for (d = descriptor_list; d; d = d->next)
   {
@@ -888,7 +884,6 @@ void statuslog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for( d = descriptor_list; d; d = d->next )
   {
@@ -916,7 +911,6 @@ void epiclog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for( d = descriptor_list; d; d = d->next )
   {
@@ -943,7 +937,6 @@ void banlog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for (d = descriptor_list; d; d = d->next)
   {
