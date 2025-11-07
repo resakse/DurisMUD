@@ -4050,7 +4050,7 @@ void boot_desc_data()
   do
   {
     fgets(buf, 100, f);
-    buf[strlen(buf) - 1] = '\0';
+    *strchrnul(buf, '\n') = '\0';
     appearance_descs[count] = str_dup(buf);
     count++;
   }
