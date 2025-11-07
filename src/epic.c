@@ -1057,7 +1057,7 @@ void epic_zone_balance()
   int i, alignment, delta, lt;
   vector<epic_zone_data> epic_zones = get_epic_zones();
 
-  for (i = 0; i <= epic_zones.size(); i++)
+  for (i = 0; i < epic_zones.size(); i++)
   {
     if(!qry("SELECT alignment, last_touch FROM zones WHERE number = %d", epic_zones[i].number))
       return;
