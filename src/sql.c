@@ -41,7 +41,7 @@ extern const char *specdata[][MAX_SPEC];
 extern P_room world;
 extern int RUNNING_PORT;
 void     get_assoc_name(int, char *);
-void     get_equipment_list(P_char ch, char *buf, int list_only);
+bool     get_equipment_list(P_char ch, char *buf, int list_only);
 extern P_index obj_index;
 extern struct zone_data *zone_table;
 extern int top_of_zone_table;

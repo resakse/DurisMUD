@@ -92,7 +92,7 @@ extern void GetMIA2(char *playerName, char *returned);
 extern int pulse;
 extern P_nevent ne_schedule[PULSES_IN_TICK];
 extern P_nevent ne_schedule_tail[PULSES_IN_TICK];
-extern const struct time_info_data time_info;
+extern struct time_info_data time_info;
 
 #define TOGGLE_BIT(var, bit) ((var) = (var) ^ (bit))
 #define PLR_FLAGS(ch)          ((ch)->specials.act)

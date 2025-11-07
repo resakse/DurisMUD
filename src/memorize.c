@@ -61,7 +61,7 @@ char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH],
    paladins/rangers rock relatively hard as they get more spells/lvl
    than in adnd, but .. karma.
  */
-int spl_table[TOTALLVLS + 1][MAX_CIRCLE];
+int spl_table[TOTALLVLS][MAX_CIRCLE];
 
 /*
    coolest thing since sliced bread, instead of linear or anything table,

@@ -52,7 +52,7 @@ extern char *dirs[];
 extern const struct stat_data stat_factor[];
 extern double lfactor[];
 extern float fake_sqrt_table[];
-extern int MobSpellIndex[LAST_SPELL+1];
+extern int MobSpellIndex[MAX_SKILLS];
 extern int equipment_pos_table[CUR_MAX_WEAR][3];
 extern int no_specials;
 extern int spl_table[TOTALLVLS][MAX_CIRCLE];

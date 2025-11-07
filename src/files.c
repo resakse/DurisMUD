@@ -56,7 +56,6 @@ extern struct mm_ds *dead_crime_pool;
 extern struct mm_ds *dead_house_pool;
 //extern P_house first_house;
 extern int LOADED_RANDOM_ZONES;
-extern struct random_zone random_zone_data[101];
 
 extern P_index obj_index;
 extern P_room world;

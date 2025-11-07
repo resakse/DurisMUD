@@ -45,7 +45,7 @@ extern const char *dirs[], *dirs2[];
 extern const int rev_dir[];
 extern P_desc descriptor_list;
 extern const struct race_names race_names_table[];
-extern const struct time_info_data time_info;
+extern struct time_info_data time_info;
 extern bool exit_wallable(int room, int dir, P_char ch);
 extern bool create_walls(int room, int exit, P_char ch, int level, int type,
                          int power, int decay, char *short_desc, char *desc,
