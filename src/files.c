@@ -3197,7 +3197,7 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
   byte     dummy_byte, o_f_flag;
   int      tmp, count, i, loc, obj_count = 0, V_num, i_count, ignore = 0, k;
   struct extra_descr_data *t_desc;
-  struct obj_data d_obj;
+  static struct obj_data d_obj; // dummy object
   ulong    o_u_flag;
   int      new_vnum = 0;
   P_obj    root_obj = NULL;
