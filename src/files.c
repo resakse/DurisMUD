@@ -3201,7 +3201,6 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
   ulong    o_u_flag;
   int      new_vnum = 0;
   P_obj    root_obj = NULL;
-  int      purge_randoms = FALSE;
 
   obj_vers = (int) GET_BYTE(buf);
   if (obj_vers > SAV_ITEMVERS)
@@ -3221,12 +3220,6 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
             obj_vers, SAV_ITEMVERS);
     }
     return 0;
-  }
-
-  // Randoms purge 12/14/08 - Torgal
-  if( obj_vers < 35 )
-  {
-    purge_randoms = TRUE;
   }
 
   count = GET_INTE(buf);
@@ -3284,17 +3277,9 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
 
     V_num = GET_INTE(buf);
 
-    if( purge_randoms && (V_num == VOBJ_RANDOM_ARMOR || V_num == VOBJ_RANDOM_WEAPON) )
-    {
-      logit(LOG_OBJ, "Purging random #%d", V_num);
-      obj = NULL;
-    }
-    else
-    {
-      obj = read_object(V_num, VIRTUAL);
-    }
-   
-		if (!obj)
+    obj = read_object(V_num, VIRTUAL);
+
+    if (!obj)
     {
       logit(LOG_OBJ, "Could not load object #%d for %s.", V_num,
             (ch) ? GET_NAME(ch) : "pcorpse");
@@ -3316,15 +3301,7 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
    	if (!root_obj)
      	root_obj = obj;
  		
-    if (obj_vers < 32)
-    {
-      GET_SHORT(buf);
-      GET_SHORT(buf);
-      GET_SHORT(buf);
-    }
     obj->craftsmanship = GET_SHORT(buf);
-    if (obj_vers < 32)
-      GET_SHORT(buf);
     obj->condition = GET_SHORT(buf);
     if (o_f_flag & O_F_WORN)
     {
@@ -3338,31 +3315,21 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
 
     if (o_f_flag & O_F_AFFECTS)
     {
-      if (obj_vers < 32)
+      tmp = GET_BYTE(buf);
+      while (tmp--)
       {
-        tmp = (int) GET_SHORT(buf);
-      }
-      else
-      {
-        tmp = GET_BYTE(buf);
-        while (tmp--)
-        {
-          int      time = GET_INTE(buf);
-          sh_int   type = GET_SHORT(buf);
-          sh_int   data = GET_SHORT(buf);
-          ulong    extra2 = 0;
-
-          if (obj_vers >= 33)
-            extra2 = (ulong) GET_INTE(buf);
-          if (type == TAG_ALTERED_EXTRA2)
-            continue;
+        int      time = GET_INTE(buf);
+        sh_int   type = GET_SHORT(buf);
+        sh_int   data = GET_SHORT(buf);
+        ulong    extra2 = GET_INTE(buf);
+        if (type == TAG_ALTERED_EXTRA2)
+          continue;
 #ifndef _PFILE_
-          if (extra2)
-            set_obj_affected_extra(obj, time, type, data, extra2);
-          else
-            set_obj_affected(obj, time, type, data);
+        if (extra2)
+          set_obj_affected_extra(obj, time, type, data, extra2);
+        else
+          set_obj_affected(obj, time, type, data);
 #endif
-        }
       }
     }
 
@@ -3477,11 +3444,6 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
       {
         obj->material = GET_BYTE(buf);
       }
-      if (o_u_flag & O_U_SPACE)
-      {
-        if (obj_vers < 32)
-          GET_BYTE(buf);
-      }
       if (o_u_flag & O_U_COST)
       {
         obj->cost = GET_INTE(buf);
@@ -3513,27 +3475,12 @@ P_obj restoreObjects(char *buf, P_char ch, int not_room)
           obj->affected[i].location = GET_BYTE(buf);
           obj->affected[i].modifier = GET_BYTE(buf);
         }
-        if (obj_vers < 32)
-        {
-          GET_BYTE(buf);
-          GET_BYTE(buf);
-          GET_BYTE(buf);
-          GET_BYTE(buf);
-        }
       }
       if (o_f_flag & O_F_SPELLBOOK)
       {
         if (obj->type == ITEM_SPELLBOOK)
         {
-          if( obj_vers < 34 )
-          {
-            GET_BYTE(buf);
-            tmp = 251;
-          }
-          else
-          {
-            tmp = GET_INTE(buf);
-          }
+          tmp = GET_INTE(buf);
 
           if (tmp)
           {                     /*
@@ -3694,10 +3641,7 @@ P_obj read_one_object(char *read_buf)
           int      time = GET_INTE(buf);
           sh_int   type = GET_SHORT(buf);
           sh_int   data = GET_SHORT(buf);
-          ulong    extra2 = 0;
-
-          if (obj_vers >= 33)
-            extra2 = (ulong) GET_INTE(buf);
+          ulong    extra2 = GET_INTE(buf);
 
           if (type == TAG_ALTERED_EXTRA2)
             continue;
@@ -3823,11 +3767,6 @@ P_obj read_one_object(char *read_buf)
       {
         obj->material = GET_BYTE(buf);
       }
-      if (o_u_flag & O_U_SPACE)
-      {
-        if (obj_vers < 32)
-          GET_BYTE(buf);
-      }
       if (o_u_flag & O_U_COST)
       {
         obj->cost = GET_INTE(buf);
@@ -3859,27 +3798,12 @@ P_obj read_one_object(char *read_buf)
           obj->affected[i].location = GET_BYTE(buf);
           obj->affected[i].modifier = GET_BYTE(buf);
         }
-        if (obj_vers < 32)
-        {
-          GET_BYTE(buf);
-          GET_BYTE(buf);
-          GET_BYTE(buf);
-          GET_BYTE(buf);
-        }
       }
       if (o_f_flag & O_F_SPELLBOOK)
       {
         if (obj->type == ITEM_SPELLBOOK)
         {
-          if( obj_vers < 34 )
-          {
-            GET_BYTE(buf);
-            tmp = 251;
-          }
-          else
-          {
-            tmp = GET_INTE(buf);
-          }
+          tmp = GET_INTE(buf);
           
           if (tmp)
           {                     /*
