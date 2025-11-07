@@ -9,8 +9,6 @@ DEBUG	= -ggdb3
 
 LDFLAGS += -L/usr/lib/mysql
 
-OPTS    = -O0 -march=core2
-
 CFLAGS = -g -Wno-write-strings -std=c++14
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
@@ -38,8 +36,6 @@ LIBS += $(GENERAL_LIBS)
 # if USE_SHARED isn't defined
 
 SH_LIBS 	=
-
-OPT_OBJS	= graph.o mm.o 
 
 SHIP_SRCS = \
 	ship_auto.c \
@@ -108,6 +104,7 @@ OBJS =  $(SHIP_OBJS) \
 				 fraglist.o \
 				 forge_items.o \
 				 genrand.o \
+				 graph.o \
 				 group.o \
 				 guild.o \
 				 guildhall.o \
@@ -131,6 +128,7 @@ OBJS =  $(SHIP_OBJS) \
 				 mccp.o \
 				 memorize.o \
 				 memory.o \
+				 mm.o \
 				 mobact.o \
 				 world_quest.o \
 				 mobcombat.o \
@@ -262,12 +260,12 @@ else
 	PROGS += $(SH_LIBS:.o=.so)
 endif
 
-SRCS	= $(OBJS:.o=.c) $(OPT_OBJS:.o=.c) $(SH_LIBS:.o=.c) $(PFILE_OBJS:.o=.c)
+SRCS	= $(OBJS:.o=.c) $(SH_LIBS:.o=.c) $(PFILE_OBJS:.o=.c)
 
 all: $(PROGS)
 
-dms_new : $(DMS_OBJS) $(OPT_OBJS)
-	$(CC) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
+dms_new : $(DMS_OBJS)
+	$(CC) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(LIBS)
 	chmod a+rx dms_new
 
 pfile : $(PFILE_OBJS) $(SHARED_PFILE_OBJS) mm.o common.o
@@ -281,9 +279,6 @@ $(PFILE_OBJS): %.o: %.c
 
 $(SHARED_PFILE_OBJS): pf-%.o: %.c
 	$(CC) $(CFLAGS) -D_PFILE_ $(INCLUDES) $(DEBUG) -c $< -o $@
-
-$(OPT_OBJS): %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) $(OPTS) -c $< -o $@
 
 $(SH_LIBS:.o=.so): %.so: %.c
 	$(CC) $(CFLAGS) $(DEBUG) -fpic -c $< -o $*.o
