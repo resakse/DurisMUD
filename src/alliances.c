@@ -354,10 +354,7 @@ void do_acc(P_char ch, char *argument, int cmd)
   }
 
   if( (alliance = guild1->get_alliance()) == NULL )
-  {
-    send_to_char("Your association is not in an alliance!\n", ch);
-    return;
-  }
+    return do_gcc(ch, argument, cmd);
 
   argument = skip_spaces(argument);
 
