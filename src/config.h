@@ -34,7 +34,6 @@
 #define CONFIG_JAIL             /* are the jails working? */
 #undef ERANDOM                  /* enable BSD-sytle pseudo-random nuber generator */
 #undef  FIGHT_DEBUG             /* for step by step debug info on fight routines */
-#undef  GR                      /* some wierd thing dealing with high system loads */
 #define LANGUAGE_CRYPT          /* Scramble unknown spoken languages */
 #define MEM_DEBUG               /* detailed tracking of where all the RAM is going */
 #define OOC                     /* allow use of global out of context channel */

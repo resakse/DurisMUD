@@ -132,38 +132,6 @@ void logsig(int signum)
   logit(LOG_SYS, "Signal received. Ignoring.");
 }
 
-#if 0
-/*
-   ** Motivation:
-   **
-   ** On sequent, the priority of the server proces is reduced after
-   ** game being running for a while.  This has the unhappy
-   ** implication that the game will run slower.
-   **
-   ** Solution:  we fork a child process and kill the parent process.
-   ** The child process will have normal priority, and inherits
-   ** all sockets and data structures from parent.
- */
-void fork_request(void)
-{
-  switch (fork())
-  {
-
-  case -1:
-    logit(LOG_SYS, "fork");
-    return;
-
-  case 0:
-    return;
-
-  default:
-    logit(LOG_EXIT, "Received signal USR1 .. terminating");
-    raise(SIGSEGV);
-  }
-}
-
-#endif
-
 /* This should do the trick... fafhrd 11/28/99 */
 
 /* clean up our zombie kids to avoid defunct processes */
@@ -177,21 +145,4 @@ void reap(int sig)
 
 void reaper(int signum)
 {
-  int      status;
-  pid_t    child;
-
-  return;
-
-#if 0
-  child = wait(&status);
-
-  if ((child != lookup_host_process) && (child != lookup_ident_process))
-  {
-    logit(LOG_DEBUG, "Unknown child process died!");
-    signal(SIGCHLD, (void *) reaper);
-    return;
-  }
-  logit(LOG_EXIT, "lookup_process died!  terminating");
-  raise(SIGABRT);
-#endif
 }
