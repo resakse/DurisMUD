@@ -2607,10 +2607,8 @@ void do_stat(P_char ch, char *argument, int cmd)
             move_regen(k, TRUE), GET_SILVER(k));
     if(IS_PC(k))
       snprintf(buf, MAX_STRING_LENGTH, "%s  &nSbank: %5d\n", buf, GET_BALANCE_SILVER(k));
-    else
+    else if ((qi = find_quester_id(GET_RNUM(k)) >= 0))
     {
-      qi = find_quester_id( GET_RNUM(k) );
-
       snprintf(buf, MAX_STRING_LENGTH, "%-52s  &+YQuest: &N%s\n", buf, mob_index[GET_RNUM(k)].qst_func
         ? (has_quest_complete( qi ) ? "&+BComplete&N"
         : ( has_quest_ask(qi) ? "&+RAsk&N" : "&+RRoomMsg&n" )) : "None" );
