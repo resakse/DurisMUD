@@ -7153,7 +7153,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
     {
        send_to_char("error reading association files.\r\n", ch);
        fclose(flist);
-       system("rm -f temp_assocsfile");
+       unlink("temp_assocsfile");
     }
     else 
     {
@@ -7181,7 +7181,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
        }
 
        fclose(flist);
-       system("rm -f temp_assocsfile");
+       unlink("temp_assocsfile");
     }
 
     // find player cash
@@ -7227,7 +7227,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
        }
        fclose(flist);
     }
-    system("rm -f temp_letterfile");
+    unlink("temp_letterfile");
     snprintf(buff, MAX_STRING_LENGTH, "\r\nTotal money in game: &+W%ld platinum, &+Y%ld gold, &+w%ld silver, &+y%ld copper\r\n", total_p, total_g, total_s, total_c);
     send_to_char(buff, ch);
 }
