@@ -3935,7 +3935,7 @@ void skip_fread(FILE * fl)
     }
     for (point = tmp + strlen(tmp) - 1; (point >= tmp) && isspace(*point);
          point--) ;
-    if (*point == '~')
+    if (point >= tmp && *point == '~')
       return;
   }
 }
