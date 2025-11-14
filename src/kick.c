@@ -355,4 +355,5 @@ void kick_messages(P_char ch, P_char victim, bool hit, struct damage_messages *m
     messages->victim = (char *) att_kick_miss_victim[i];
     messages->room = (char *) att_kick_miss_room[i];
   }
+  messages->type = 0;
 }
