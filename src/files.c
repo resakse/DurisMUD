@@ -28,6 +28,7 @@
 #include "vnum.obj.h"
 #include "assocs.h"
 #include "storage_lockers.h"
+#include "json/json.hpp"
 
 #include <iostream>
 using namespace std;
