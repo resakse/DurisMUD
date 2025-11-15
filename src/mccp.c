@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <gnutls/gnutls.h>
 #include "structs.h"
 #include "prototypes.h"
 #include "telnet.h"
 #include "mccp.h"
+#include "unicode.h"
 #include "utils.h"
 
 /* external variables used by this module */
@@ -23,7 +25,7 @@ const unsigned char enable_compress2[] = { IAC, SB, TELOPT_COMPRESS2, IAC, SE, '
 
 void    *zlib_alloc(void *opaque, unsigned int items, unsigned int size);
 void     zlib_free(void *opaque, void *address);
-int      raw_write_to_descriptor(int desc, const char *txt, const int total);
+int      raw_write_to_descriptor(P_desc desc, const char *txt, const int total);
 
 void    *zlib_alloc(void *opaque, unsigned int items, unsigned int size)
 {
@@ -39,7 +41,7 @@ void zlib_free(void *opaque, void *address)
   FREE(address);
 }
 
-void advertise_mccp(int desc)
+void advertise_mccp(P_desc desc)
 {
   write_to_descriptor(desc, (const char *)compress2_on_str);
   write_to_descriptor(desc, (const char *)compress_on_str);
@@ -118,11 +120,11 @@ int compress_start(P_desc player, int mccp_version)
 
   if (mccp_version == MCCP_VER1)
   {
-    write_to_descriptor(player->descriptor, (const char *)enable_compress);
+    write_to_descriptor(player, (const char *)enable_compress);
   }
   else if (mccp_version == MCCP_VER2)
   {
-    write_to_descriptor(player->descriptor, (const char *)enable_compress2);
+    write_to_descriptor(player, (const char *)enable_compress2);
   }
   else
   {
@@ -161,8 +163,7 @@ int compress_end(P_desc player, int flush)
         break;
       }
       len = (long) player->z_str->next_out - (long) player->out_compress_buf;
-      raw_write_to_descriptor(player->descriptor, player->out_compress_buf,
-                              len);
+      raw_write_to_descriptor(player, player->out_compress_buf, len);
     }
     while (status != Z_STREAM_END);
   }
@@ -178,19 +179,11 @@ int compress_end(P_desc player, int flush)
 /* use this function whenever you want to send anything to player,
  do not attempt to call raw_write_to_descriptor, or you may
  screw up compression */
-int write_to_descriptor(int desc, const char *txt)
+int write_to_descriptor(P_desc player, const char *txt)
 {
   int      len, total, status, i, j;
-  P_desc   player;
   char     static_conv_buf[MAX_STRING_LENGTH];
   char    *conv_buf = static_conv_buf;;
-
-  for (player = descriptor_list; player; player = player->next)
-  {
-    if (player->descriptor == desc)
-      break;
-  }
-
 
   if ((len = strlen(txt)) > MAX_STRING_LENGTH * 0.8)
     CREATE(conv_buf, char, (unsigned int)(len * 1.1), MEM_TAG_BUFFER);
@@ -211,9 +204,18 @@ int write_to_descriptor(int desc, const char *txt)
   txt = conv_buf;
   total = j;
 
-  if (!player || !player->out_compress)
+  char down[j + 1];
+  if (!player->sslses) // tying charset to port choice, because zmud
   {
-    raw_write_to_descriptor(desc, txt, total);
+    char *dend = down;
+    downgrade_string(dend, txt, u_cp437);
+    txt = down;
+    total = strlen(txt);
+  }
+
+  if (!player->out_compress)
+  {
+    raw_write_to_descriptor(player, txt, total);
   }
   else
   {
@@ -240,7 +242,7 @@ int write_to_descriptor(int desc, const char *txt)
 
           len = (long) player->z_str->next_out -
             (long) player->out_compress_buf;
-          raw_write_to_descriptor(desc, player->out_compress_buf, len);
+          raw_write_to_descriptor(player, player->out_compress_buf, len);
 
         }
         while (player->z_str->avail_out == 0);
@@ -255,27 +257,31 @@ int write_to_descriptor(int desc, const char *txt)
 }
 
 /* never ever call this function, unless you are write_to_descriptor */
-int raw_write_to_descriptor(int desc, const char *txt, const int total)
+int raw_write_to_descriptor(P_desc d, const char *txt, const int total)
 {
   int      sofar, thisround;
-  P_desc   d;
 
   sofar = 0;
 
   sentbytes += total;
 
-  //Let's look up the player name and add bytes to it.
-  for (d = descriptor_list; d; d = d->next)
-  {
-	
-      if(d->descriptor == desc)
-	 if(d->character)
-  	   d->character->only.pc->send_data = d->character->only.pc->send_data + total;
-  }
+  if(d->character)
+    d->character->only.pc->send_data = d->character->only.pc->send_data + total;
 
-  do
+  if (d->sslses)
   {
-    thisround = write(desc, txt + sofar, (unsigned) (total - sofar));
+    int ret = gnutls_record_send(d->sslses, txt, total);
+    while (ret==GNUTLS_E_AGAIN || ret==GNUTLS_E_INTERRUPTED)
+      ret = gnutls_record_send(d->sslses, NULL, 0);
+    if (ret)
+    {
+      logit(LOG_COMM, "Write to SSL socket error: %s", gnutls_strerror(ret));
+      return -1;
+    }
+  }
+  else do
+  {
+    thisround = write(d->descriptor, txt + sofar, (unsigned) (total - sofar));
     if (thisround < 0)
     {
       logit(LOG_COMM, "Write to socket error");

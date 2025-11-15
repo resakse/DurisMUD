@@ -1,9 +1,9 @@
 /*****************************************************/
 /* HOBER.NAM                                         */
-/* Namnfil fîr hob-namn                              */
+/* Namnfil f√∂r hob-namn                              */
 /* av Johan Danforth                                 */
-/* rader som bîrjar med / Ñr kommentar-rader         */
-/* varje section bîrjar med [xxx] enlig filen nedan  */
+/* rader som b√∂rjar med / √§r kommentar-rader         */
+/* varje section b√∂rjar med [xxx] enlig filen nedan  */
 /*****************************************************/
 /* Frodo Bilbo Sam Meriadoc Peregrin */
 [startstav]
@@ -16,7 +16,7 @@ Per
 R
 S
 [mittstav]
-/* mittstavelser skall bîrja och sluta med en vokal som a,o,u,i,e,y etc... */
+/* mittstavelser skall b√∂rja och sluta med en vokal som a,o,u,i,e,y etc... */
 a
 e
 i
@@ -25,7 +25,7 @@ o
 oi
 u
 [slutstav]
-/* slutstavelser skall bîrja med en konsonant som b,k,t etc... */
+/* slutstavelser skall b√∂rja med en konsonant som b,k,t etc... */
 bo
 do
 doc
@@ -35,4 +35,4 @@ m
 ppi
 rry
 [stop]
-/* hÑr Ñr filen slut */
+/* h√§r √§r filen slut */

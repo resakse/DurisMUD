@@ -35,6 +35,7 @@ sudo apt-get update
 sudo apt-get install build-essential mysql-server libmysqlclient-dev
 sudo apt-get install libxml2 libxml2-dev
 sudo apt-get install zlib1g zlib1g-dev
+sudo apt-get install gnutls-dev
 ```
 
 **CentOS/RHEL:**
@@ -137,6 +138,27 @@ This imports:
 - Parsed help file entries → `pages` table
 
 **Note:** This is only needed if you're running the web interface. The MUD itself reads help files directly from disk.
+
+### 6. Link an SSL Certificate
+
+Unless configured otherwise, the game expects the SSL cert and its private
+key as `duris.crt` and `duris.key`.  It's probably most convenient to use
+symlinks for managing them.
+
+For testing, you can use a self-signed certificate.  You can link it via:
+```
+ln -s localhost.crt duris.crt
+ln -s localhost.key duris.key
+```
+
+For a server reachable from the network, though, you should use a real
+certificate.  You can obtain one eg. via Let's Encrypt.  Once you do,
+you need to set up a cronjob to renew it, allow the Duris process to
+read the files, and point the links appropriately, for example:
+```
+ln -s /var/lib/dehydrated/certs/testduris.net/fullchain.pem duris.crt
+ln -s /var/lib/dehydrated/certs/testduris.net/privkey.pem duris.key
+```
 
 ---
 

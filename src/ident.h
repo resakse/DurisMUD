@@ -2,7 +2,7 @@
 ** ident.h
 **
 ** Author: Peter Eriksson <pen@lysator.liu.se>
-** Intruder: Pär Emanuelsson <pell@lysator.liu.se>
+** Intruder: PÃ¤r Emanuelsson <pell@lysator.liu.se>
 */
 
 #ifndef __IDENT_H__

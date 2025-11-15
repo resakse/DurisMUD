@@ -321,7 +321,7 @@ void olc_prompt(struct olc_data *data)
     strcpy(prompt, "Unknown OLC Mode:");
   }
 
-  if (write_to_descriptor(data->desc->descriptor, prompt) < 0)
+  if (write_to_descriptor(data->desc, prompt) < 0)
   {
     logit(LOG_COMM, "Closing socket on write error");
     close_socket(data->desc);   /* let close_socket deal with clearing

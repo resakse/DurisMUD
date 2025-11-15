@@ -19,6 +19,13 @@
 /* default mother socket number */
 
 #define DFLT_PORT 7777          /* default port */
+#define SSL_PORT  7778
+
+/* SSL private key and certificate */
+// You may want to use symlinks instead of absolute paths
+#define KEYFILE "duris.key"
+#define CERTFILE "duris.crt"
+
 // randomeq constants
 #define MAX_SLOT 109
 #define MAXMATERIAL 43

@@ -1,0 +1,32 @@
+#include <vector>
+
+// Unicode replacement char
+#define UNI_BAD 0xFFFD
+
+typedef unsigned short ushort;
+
+class um128
+{
+private:
+  ushort v[128];
+public:
+  um128() : v{} {};
+  ushort operator[](int c) const { return v[c & 127]; }
+  ushort& operator[](int c) { return v[c & 127]; }
+};
+
+class unimap : private std::vector<um128>
+{
+public:
+  unimap();
+  unimap(const char16_t[256]);
+  unimap(const char*);
+  ushort operator[](int c) const;
+  void set(int c, ushort v);
+};
+
+int get_utf8(const char *&s);
+void put_utf8(char *&d, int v);
+void downgrade_string(char *out, const char *in, const unimap &conv);
+
+extern unimap u_cp437;

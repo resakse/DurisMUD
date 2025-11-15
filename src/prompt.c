@@ -69,7 +69,7 @@ void make_prompt(void)
         snprintf(promptbuf, MAX_INPUT_LENGTH,
                 "\n[Return to continue, (q)uit, (r)efresh, (b)ack, or page number (%d/%d)]\n",
                 point->showstr_page, point->showstr_count);
-      if (write_to_descriptor(point->descriptor, promptbuf) < 0)
+      if (write_to_descriptor(point, promptbuf) < 0)
       {
         logit(LOG_COMM, "Closing socket on write error");
         close_socket(point);
@@ -80,7 +80,7 @@ void make_prompt(void)
     }
     if (point->str)
     {
-      if (write_to_descriptor(point->descriptor, "] ") < 0)
+      if (write_to_descriptor(point, "] ") < 0)
       {
         logit(LOG_COMM, "Closing socket on write error");
         close_socket(point);
@@ -697,13 +697,13 @@ void make_prompt(void)
       }
 
       point->prompt_mode = FALSE;
-      if( write_to_descriptor(point->descriptor, promptbuf) < 0 )
+      if( write_to_descriptor(point, promptbuf) < 0 )
       {
         logit(LOG_COMM, "Closing socket on write error: promptbuf.");
         close_socket(point);
         continue;
       }
-      if( IS_SET(t_ch_p, PROMPT_TWOLINE) && write_to_descriptor(point->descriptor, promptbuf2) < 0)
+      if( IS_SET(t_ch_p, PROMPT_TWOLINE) && write_to_descriptor(point, promptbuf2) < 0)
       {
         logit(LOG_COMM, "Closing socket on write error: promptbuf2.");
         close_socket(point);
@@ -711,7 +711,7 @@ void make_prompt(void)
       }
       if (ansi && point->character && point->character->desc && !(point->character->desc->term_type == TERM_MSP))
       {
-        if (write_to_descriptor(point->descriptor, "\033[0m") < 0)
+        if (write_to_descriptor(point, "\033[0m") < 0)
         {
           logit(LOG_COMM, "Closing socket on write error: normalize.");
           close_socket(point);
