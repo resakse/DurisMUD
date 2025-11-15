@@ -92,7 +92,7 @@ extern void GetMIA2(char *playerName, char *returned);
 extern int pulse;
 extern P_nevent ne_schedule[PULSES_IN_TICK];
 extern P_nevent ne_schedule_tail[PULSES_IN_TICK];
-extern const struct time_info_data time_info;
+extern struct time_info_data time_info;
 
 #define PLR_FLAGS(ch)          ((ch)->specials.act)
 #define PLR_FLAGGED(ch, flag)  (IS_SET(PLR_FLAGS(ch), flag))
@@ -120,6 +120,21 @@ int curr_ingame_good = 0;
 int max_ingame_good = 0;
 int curr_ingame_evil = 0;
 int max_ingame_evil = 0;
+
+/*
+ * Helper function to ensure dead_pconly_pool is initialized - Arih
+ * This function is idempotent - safe to call multiple times.
+ */
+void ensure_pconly_pool(void)
+{
+  if (!dead_pconly_pool)
+  {
+    dead_pconly_pool = mm_create("PC_ONLY",
+                                 sizeof(struct pc_only_data),
+                                 offsetof(struct pc_only_data, switched),
+                                 mm_find_best_chunk(sizeof(struct pc_only_data), 10, 25));
+  }
+}
 
 void swapstat( P_desc d, char *arg);
 void select_swapstat( P_desc d, char *arg);
@@ -3237,9 +3252,6 @@ void enter_game(P_desc d)
       r_room = ch->in_room;
   }
 
-  if (zone_table[world[r_room].zone].flags & ZONE_CLOSED)
-    r_room = real_room(GET_BIRTHPLACE(ch));
-
   if (ch->only.pc->pc_timer[PC_TIMER_HEAVEN] > ct)
   {
     if( IS_RACEWAR_GOOD(ch) )
@@ -3285,6 +3297,9 @@ void enter_game(P_desc d)
   {
     r_room = real_room(GET_BIRTHPLACE(ch));
   }
+
+  if (zone_table[world[r_room].zone].flags & ZONE_CLOSED)
+    r_room = real_room(GET_BIRTHPLACE(ch));
 
   // Stick them in the cage of smoke!
   if( r_room > top_of_world )

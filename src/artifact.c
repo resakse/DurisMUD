@@ -1292,6 +1292,7 @@ P_char load_dummy_char( char *name )
   // Get the memory
   owner = (P_char) mm_get(dead_mob_pool);
   clear_char(owner);
+  ensure_pconly_pool();
   owner->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
   owner->desc = NULL;
 

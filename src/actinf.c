@@ -1346,10 +1346,9 @@ void show_char_to_char(P_char i, P_char ch, int mode)
 
     // If it's a quest mob
     if( IS_NPC(i) && (IS_NPC(ch) || PLR2_FLAGGED(ch, PLR2_SHOW_QUEST))
-      && (GET_LEVEL(ch) <= get_property("look.showquestgiver.maxlvl", 30)) )
+      && (GET_LEVEL(ch) <= get_property("look.showquestgiver.maxlvl", 30))
+      && (qi = find_quester_id(GET_RNUM(i))) >= 0)
     {
-      qi = find_quester_id( GET_RNUM(i) );
-
       if( mob_index[GET_RNUM(i)].func.mob
         && !strcmp(get_function_name((void*)mob_index[GET_RNUM(i)].func.mob), "world_quest") )
       {

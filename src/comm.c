@@ -534,8 +534,16 @@ void game_loop(int s)
   snprintf(buf, MAX_STRING_LENGTH, "avail_descs set to: %d", avail_descs);
   logit(LOG_STATUS, buf);
 
-  sigaddset(&mask, SIGUSR1 | SIGUSR2 | SIGINT | SIGPIPE | SIGHUP |
-            SIGALRM | SIGTERM | SIGURG | SIGSEGV);
+  sigemptyset(&mask);
+  sigaddset(&mask, SIGUSR1);
+  sigaddset(&mask, SIGUSR2);
+  sigaddset(&mask, SIGINT);
+  sigaddset(&mask, SIGPIPE);
+  sigaddset(&mask, SIGHUP);
+  sigaddset(&mask, SIGALRM);
+  sigaddset(&mask, SIGTERM);
+  sigaddset(&mask, SIGURG);
+  sigaddset(&mask, SIGSEGV);
 
 #ifdef USE_ASYNCHRONOUS_IO
   io_init();
@@ -2612,64 +2620,6 @@ int process_input(P_desc t)
   }
   return (1);
 }
-
-#ifdef GR
-/* sleep while the load is too high */
-
-void coma(int s)
-{
-  fd_set   inp_set;
-  static struct timeval timeout = {
-    60,
-    0
-  };
-  int      conn, mask;
-
-  logit(LOG_STATUS, "Entering comatose state.");
-
-  sigsetmask(mask);
-
-  while (descriptor_list)
-    close_socket(descriptor_list);
-
-  FD_ZERO(&inp_set);
-  do
-  {
-    FD_SET(s, &inp_set);
-    if (select(64, &inp_set, 0, 0, &timeout) < 0)
-    {
-      perror("coma select");
-      raise(SIGSEGV);
-    }
-    if (FD_ISSET(s, &inp_set))
-    {
-      if (load() < 6)
-      {
-        logit(LOG_STATUS, "Leaving coma with visitor.");
-        sigsetmask(0);
-        return;
-      }
-      if ((conn = new_connection(s)) >= 0)
-      {
-        write_to_descriptor(conn, COMA_SIGN);
-        sleep(2);
-        shutdown(conn, 2);
-        close(conn);
-      }
-    }
-    tics = 1;
-    if (workhours())
-    {
-      logit(LOG_STATUS, "Working hours collision during coma. Exit.");
-      raise(SIGSEGV);
-    }
-  }
-  while (load() >= 6);
-
-  logit(LOG_STATUS, "Leaving coma.");
-  sigsetmask(0);
-}
-#endif
 
 /*
  * **************************************************************** *

@@ -789,6 +789,7 @@ void boot_world(int);
 void boot_zones(int);
 void clear_char(P_char);
 void clear_object(P_obj);
+void ensure_pconly_pool(void);
 void free_char(P_char);
 void free_obj(P_obj);
 void init_char(P_char);

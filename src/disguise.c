@@ -168,6 +168,7 @@ void do_disguise(P_char ch, char *arg, int cmd)
   else
   {
     target = (struct char_data *) mm_get(dead_mob_pool);
+    ensure_pconly_pool();
     target->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
     // Bad / no pfile. Note: target will never be NULL because of above.

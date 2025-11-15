@@ -51,14 +51,14 @@ void advertise_mccp(int desc)
  * sources of telnetd demon */
 int parse_telnet_options(P_desc player, char *buf)
 {
-  char    *p = buf;
+  ubyte    *p = (ubyte*)(buf);
   int      mccp_ver = 0;
 
-  if (*p != (signed char) IAC)
+  if (*p != IAC)
     return 0;
   switch (*(p + 1))
   {
-  case (signed char) DO:
+  case DO:
     switch (*(p + 2))
     {
     case TELOPT_COMPRESS:
@@ -70,9 +70,9 @@ int parse_telnet_options(P_desc player, char *buf)
       break;
     }
     break;
-  case (signed char) DONT:
-  case (signed char) WILL:
-  case (signed char) WONT:
+  case DONT:
+  case WILL:
+  case WONT:
     if (*(p + 2) != '\0')
       return 3;
     else

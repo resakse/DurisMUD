@@ -2623,6 +2623,7 @@ void do_lore(P_char ch, char *arg, int cmd)
     //---------------------------------------
 
     target = (struct char_data *) mm_get(dead_mob_pool);
+    ensure_pconly_pool();
     target->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
     if ( (restoreCharOnly(target, name) < 0) || !target )

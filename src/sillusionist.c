@@ -797,6 +797,7 @@ void spell_mask(int level, P_char ch, char *arg, int type, P_char victim,
   return;
 
   target = (struct char_data *) mm_get(dead_mob_pool);
+  ensure_pconly_pool();
   target->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
   if (isname(arg, "me") || isname(arg, "self"))

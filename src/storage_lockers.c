@@ -1786,6 +1786,7 @@ static bool locker_access_CanAdd(P_char locker, char *ch_name)
 
   vict = (P_char) mm_get(dead_mob_pool);
   clear_char(vict);
+  ensure_pconly_pool();
   vict->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
   if( (restoreCharOnly( vict, ch_name )) >= 0 )
@@ -1992,6 +1993,7 @@ static P_char load_locker_char(P_char ch, char *locker_name, int bValidateAccess
 
   vict = (P_char) mm_get(dead_mob_pool);
   clear_char(vict);
+  ensure_pconly_pool();
   vict->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
   vict->only.pc->aggressive = -1;
   vict->desc = NULL;
@@ -2242,6 +2244,7 @@ bool rename_locker(P_char ch, char *old_charname, char *new_charname)
 
    chLocker = (P_char) mm_get(dead_mob_pool);
    clear_char(chLocker);
+   ensure_pconly_pool();
    chLocker->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
    chLocker->only.pc->aggressive = -1;
    chLocker->desc = NULL;

@@ -1531,9 +1531,9 @@ void stat_game(P_char ch)
   x = used_descs;
 
   /* clear out counters */
-  for (i = 0; i <= LAST_RACE + 1; i++)
+  for (i = 0; i < ARRAY_SIZE(race); i++)
     race[i] = 0.0;
-  for (i = 0; i <= CLASS_COUNT; i++)
+  for (i = 0; i < ARRAY_SIZE(m_class); i++)
     m_class[i] = 0.0;
   /* begin counting */
   for (d = descriptor_list; d; d = d->next)
@@ -2607,10 +2607,8 @@ void do_stat(P_char ch, char *argument, int cmd)
             move_regen(k, TRUE), GET_SILVER(k));
     if(IS_PC(k))
       snprintf(buf, MAX_STRING_LENGTH, "%s  &nSbank: %5d\n", buf, GET_BALANCE_SILVER(k));
-    else
+    else if ((qi = find_quester_id(GET_RNUM(k))) >= 0)
     {
-      qi = find_quester_id( GET_RNUM(k) );
-
       snprintf(buf, MAX_STRING_LENGTH, "%-52s  &+YQuest: &N%s\n", buf, mob_index[GET_RNUM(k)].qst_func
         ? (has_quest_complete( qi ) ? "&+BComplete&N"
         : ( has_quest_ask(qi) ? "&+RAsk&N" : "&+RRoomMsg&n" )) : "None" );
@@ -4840,6 +4838,7 @@ void do_purge(P_char ch, char *argument, int cmd)
         snprintf(buf2, MAX_STRING_LENGTH, "Players/%c/%s", LOWER(*buf), buf);
         f = fopen(buf2, "r");
         vict = (struct char_data *) mm_get(dead_mob_pool);
+        ensure_pconly_pool();
         vict->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
         if(restoreCharOnly(vict, skip_spaces(buf)) < 0 || !vict)
         {
@@ -7022,6 +7021,7 @@ void do_lookup(P_char ch, char *argument, int cmd)
     while (fscanf(flist, " %s \n", Gbuf2) != EOF)
     {
       owner = (struct char_data *) mm_get(dead_mob_pool);
+      ensure_pconly_pool();
       owner->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
       if(restoreCharOnly(owner, skip_spaces(Gbuf2)) >= 0)
@@ -7153,7 +7153,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
     {
        send_to_char("error reading association files.\r\n", ch);
        fclose(flist);
-       system("rm -f temp_assocsfile");
+       unlink("temp_assocsfile");
     }
     else 
     {
@@ -7181,7 +7181,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
        }
 
        fclose(flist);
-       system("rm -f temp_assocsfile");
+       unlink("temp_assocsfile");
     }
 
     // find player cash
@@ -7199,9 +7199,10 @@ void do_money_supply(P_char ch, char *argument, int cmd)
           fclose(flist);
           continue;
        }
-       while(fscanf(flist, " %s \n", buff) != EOF) 
+       while(fscanf(flist, " %s \n", buff) != EOF)
        {
           tch = (struct char_data *) mm_get(dead_mob_pool);
+          ensure_pconly_pool();
           tch->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
           if(restoreCharOnly(tch, skip_spaces(buff)) >= 0) 
@@ -7227,7 +7228,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
        }
        fclose(flist);
     }
-    system("rm -f temp_letterfile");
+    unlink("temp_letterfile");
     snprintf(buff, MAX_STRING_LENGTH, "\r\nTotal money in game: &+W%ld platinum, &+Y%ld gold, &+w%ld silver, &+y%ld copper\r\n", total_p, total_g, total_s, total_c);
     send_to_char(buff, ch);
 }
@@ -7458,6 +7459,7 @@ void GetMIA(char *playerName, char *returned)
   }
 
   finger_foo = (struct char_data *) mm_get(dead_mob_pool);
+  ensure_pconly_pool();
   finger_foo->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
   if(restoreCharOnly(finger_foo, skip_spaces(playerName)) < 0 || !finger_foo)
@@ -7512,6 +7514,7 @@ void GetMIA2(char *playerName, char *returned)
   P_char   finger_foo;
 
   finger_foo = (struct char_data *) mm_get(dead_mob_pool);
+  ensure_pconly_pool();
   finger_foo->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
   if(restoreCharOnly(finger_foo, skip_spaces(playerName)) < 0 || !finger_foo)
   {
@@ -7567,6 +7570,7 @@ void do_finger(P_char ch, char *arg, int cmd)
     return;
   }
   finger_foo = (struct char_data *) mm_get(dead_mob_pool);
+  ensure_pconly_pool();
   finger_foo->only.pc = (struct pc_only_data *) mm_get(dead_pconly_pool);
 
   if(restoreCharOnly(finger_foo, skip_spaces(arg)) < 0 || !finger_foo)
@@ -7972,10 +7976,10 @@ struct obj_data *clone_obj(P_obj obj)
     }
   }
 
-  for (i = 0; i <= NUMB_OBJ_VALS; i++)
+  for (i = 0; i < ARRAY_SIZE(obj->value); i++)
     ocopy->value[i] = obj->value[i];
 
-  for (i = 0; i < 4; i++)
+  for (i = 0; i < ARRAY_SIZE(obj->timer); i++)
     ocopy->timer[i] = obj->timer[i];
 
   ocopy->wear_flags = obj->wear_flags;
