@@ -27,6 +27,7 @@ const char *god_list[] = {
   "Fotenak",
   "Xanadin",
   "Tyrus",
+  "Zyrkan",
   "\0"
 };
 

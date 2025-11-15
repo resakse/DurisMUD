@@ -952,7 +952,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_DWARF(ch)  (GET_RACE(ch) == RACE_MOUNTAIN || GET_RACE(ch) == RACE_DUERGAR)
 
-#define HAS_TAIL(ch) (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_PSBEAST(ch) || IS_KOBOLD(ch))
+#define HAS_TAIL(ch) (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_PSBEAST(ch) || IS_KOBOLD(ch) || IS_TIEFLING(ch))
 
 #define HAS_FOUR_HANDS(ch) ((GET_RACE(ch) == RACE_THRIKREEN) || \
                            (IS_AFFECTED3((ch), AFF3_FOUR_ARMS)))
