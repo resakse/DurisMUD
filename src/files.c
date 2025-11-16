@@ -1455,8 +1455,11 @@ bool writeObjectlist(P_obj obj, int loc)
 		  if (!IS_SET(w_obj->extra_flags, ITEM_NORENT))
       {
 		    ibuf += writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) 1, loc, ibuf);
+
+#ifdef ENABLE_JSON_PFILE
         nlohmann::json item = writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) 1, loc);
-        iarr.emplace_back(item);        
+        iarr.emplace_back(item);    
+  #endif    
       }
 
       if (obj_c)
@@ -1544,8 +1547,11 @@ bool writeObjectlist(P_obj obj, int loc)
   	if (!IS_SET(w_obj->extra_flags, ITEM_NORENT))
     {
       ibuf += writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) count, loc, ibuf);
+
+#ifdef ENABLE_JSON_PFILE
       nlohmann::json item = writeObject(w_obj, o_f_flag, o_u_flag, (ush_int) count, loc);
       iarr.emplace_back(item);
+#endif
     }
 
     if (obj_c)

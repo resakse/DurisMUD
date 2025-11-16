@@ -26,7 +26,7 @@
 #include "utils.h"
 
 /* defines */
-#define ENABLE_JSON_PFILE
+//#define ENABLE_JSON_PFILE
 
 #define SAFE_STRING(str) str == NULL ? "" : str
 
