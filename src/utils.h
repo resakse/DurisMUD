@@ -700,8 +700,12 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
   /* || IS_SET(ch->specials.act, PLR_DEBUG))*/
 
 #define IS_FIGHTING(ch) ( (ch)->specials.fighting != NULL )
-#define IS_DESTROYING(ch) ( (ch)->specials.destroying_obj != NULL )
 #define GET_OPPONENT(ch) (ch->specials.fighting)
+#ifdef SIEGE_ENABLED
+  #define IS_DESTROYING(ch) ( (ch)->specials.destroying_obj != NULL )
+#else
+  #define IS_DESTROYING(ch) false
+#endif
 
 /* Defining this to make life considerably easier - SKB 24 Mar 1995 */
 #define IS_CASTING(ch) (IS_SET((ch)->specials.affected_by2, AFF2_CASTING))
@@ -948,7 +952,7 @@ for ((IN_ROOM) = world[(PLAYER)->in_room].people; (IN_ROOM) != NULL; (IN_ROOM) =
 
 #define IS_DWARF(ch)  (GET_RACE(ch) == RACE_MOUNTAIN || GET_RACE(ch) == RACE_DUERGAR)
 
-#define HAS_TAIL(ch) (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_PSBEAST(ch) || IS_KOBOLD(ch))
+#define HAS_TAIL(ch) (IS_CENTAUR(ch) || IS_MINOTAUR(ch) || IS_PSBEAST(ch) || IS_KOBOLD(ch) || IS_TIEFLING(ch))
 
 #define HAS_FOUR_HANDS(ch) ((GET_RACE(ch) == RACE_THRIKREEN) || \
                            (IS_AFFECTED3((ch), AFF3_FOUR_ARMS)))

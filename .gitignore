@@ -8,8 +8,10 @@
 /gmon.out
 /areas/de/src/cscope.out
 cscope.out
+*.a
 *.o
 *.backup
+*~
 lib/information/leaderboard
 lib/information/leaderboardprod
 lib/information/hardcore_hall_of_fame

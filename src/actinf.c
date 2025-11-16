@@ -1346,10 +1346,9 @@ void show_char_to_char(P_char i, P_char ch, int mode)
 
     // If it's a quest mob
     if( IS_NPC(i) && (IS_NPC(ch) || PLR2_FLAGGED(ch, PLR2_SHOW_QUEST))
-      && (GET_LEVEL(ch) <= get_property("look.showquestgiver.maxlvl", 30)) )
+      && (GET_LEVEL(ch) <= get_property("look.showquestgiver.maxlvl", 30))
+      && (qi = find_quester_id(GET_RNUM(i))) >= 0)
     {
-      qi = find_quester_id( GET_RNUM(i) );
-
       if( mob_index[GET_RNUM(i)].func.mob
         && !strcmp(get_function_name((void*)mob_index[GET_RNUM(i)].func.mob), "world_quest") )
       {
@@ -5849,13 +5848,19 @@ void do_time(P_char ch, char *argument, int cmd)
   uptime = real_time_passed(ct, boot_time);
 
   //Auto Reboot - Drannak
-  if( (uptime.day * 24 + uptime.hour) > 65 )
+  // Read autoreboot settings from properties
+  int autoreboot_threshold_hours = get_property("autoreboot.threshold.hours", 65);
+  int autoreboot_delay_minutes = get_property("autoreboot.delay.minutes", 60);
+
+  if( (uptime.day * 24 + uptime.hour) > autoreboot_threshold_hours )
   {
-    // If no shutdown in progress, or shutdown is > 60 minutes out.
+    // If no shutdown in progress, or shutdown is > delay minutes out.
     if( shutdownData.reboot_time == 0
-      || shutdownData.reboot_time - time(NULL) > 60 * 60 )
+      || shutdownData.reboot_time - time(NULL) > autoreboot_delay_minutes * 60 )
     {
-      do_shutdown(ch, "autoreboot 60", 1);
+      char shutdown_cmd[100];
+      snprintf(shutdown_cmd, 100, "autoreboot %d", autoreboot_delay_minutes);
+      do_shutdown(ch, shutdown_cmd, 1);
     }
   }
 

@@ -4739,7 +4739,7 @@ int wear(P_char ch, P_obj obj_object, int keyword, bool showit )
 
   case 25: /* Horns */
     if( CAN_WEAR(obj_object, ITEM_WEAR_HORN)
-      && (IS_MINOTAUR(ch) || IS_HARPY(ch) || IS_PSBEAST(ch)) )
+      && (IS_MINOTAUR(ch) || IS_HARPY(ch) || IS_PSBEAST(ch) || IS_TIEFLING(ch)) )
     {
       return remove_and_wear(ch, obj_object, WEAR_HORN, keyword, comnd, showit);
     }

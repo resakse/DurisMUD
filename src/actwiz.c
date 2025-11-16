@@ -165,6 +165,15 @@ extern struct misfire_properties_struct misfire_properties;
 
 typedef void cmd_func(P_char, char *, int);
 
+void write_shutdown_info(const char *immortal_name, const char *reason)
+{
+  FILE *fp = fopen("logs/shutdown_info.txt", "w");
+  if (fp) {
+    fprintf(fp, "%s|%s\n", immortal_name, reason);
+    fclose(fp);
+  }
+}
+
 void apply_zone_modifier(P_char ch);
 static P_char load_locker_char(P_char ch, char *locker_name, int bValidateAccess);
 void shopping_stat( P_char ch, P_char keeper, char *arg, int cmd );
@@ -1531,9 +1540,9 @@ void stat_game(P_char ch)
   x = used_descs;
 
   /* clear out counters */
-  for (i = 0; i <= LAST_RACE + 1; i++)
+  for (i = 0; i < ARRAY_SIZE(race); i++)
     race[i] = 0.0;
-  for (i = 0; i <= CLASS_COUNT; i++)
+  for (i = 0; i < ARRAY_SIZE(m_class); i++)
     m_class[i] = 0.0;
   /* begin counting */
   for (d = descriptor_list; d; d = d->next)
@@ -2607,10 +2616,8 @@ void do_stat(P_char ch, char *argument, int cmd)
             move_regen(k, TRUE), GET_SILVER(k));
     if(IS_PC(k))
       snprintf(buf, MAX_STRING_LENGTH, "%s  &nSbank: %5d\n", buf, GET_BALANCE_SILVER(k));
-    else
+    else if ((qi = find_quester_id(GET_RNUM(k))) >= 0)
     {
-      qi = find_quester_id( GET_RNUM(k) );
-
       snprintf(buf, MAX_STRING_LENGTH, "%-52s  &+YQuest: &N%s\n", buf, mob_index[GET_RNUM(k)].qst_func
         ? (has_quest_complete( qi ) ? "&+BComplete&N"
         : ( has_quest_ask(qi) ? "&+RAsk&N" : "&+RRoomMsg&n" )) : "None" );
@@ -3928,7 +3935,7 @@ void do_wizmsg(P_char ch, char *arg, int cmd)
   }
 }
 
-TimedShutdownData shutdownData = {0, -1, TimedShutdownData::NONE};
+TimedShutdownData shutdownData = {0, -1, TimedShutdownData::NONE, "", ""};
 
 
 void timedShutdown(P_char ch, P_char, P_obj, void *data)
@@ -3953,6 +3960,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
+        write_shutdown_info(shutdownData.IssuedBy, shutdownData.Reason);
         shutdownflag = 1;
         break;
 
@@ -3961,6 +3969,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
+        write_shutdown_info(shutdownData.IssuedBy, shutdownData.Reason);
         shutdownflag = _reboot = 1;
         break;
 
@@ -3969,6 +3978,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         send_to_all(buf);
         logit(LOG_STATUS, buf);
         sql_log(ch, WIZLOG, buf);
+        write_shutdown_info(shutdownData.IssuedBy, shutdownData.Reason);
         shutdownflag = _copyover = 1;
         break;
 
@@ -4002,6 +4012,7 @@ void timedShutdown(P_char ch, P_char, P_obj, void *data)
         {
           logit(LOG_STATUS, "Successful wipe of SQL stuff." );
         }
+        write_shutdown_info(shutdownData.IssuedBy, shutdownData.Reason);
         shutdownflag = _pwipe = 1;
         break;
 
@@ -4141,18 +4152,40 @@ void do_shutdown(P_char ch, char *argument, int cmd)
 
   int mins_to_reboot = 0;
   const char *type = "reboot";
+  char reason[MAX_STRING_LENGTH];
+  strcpy(reason, "No reason given");  // Default reason
+
   if( shutdownData.eShutdownType == TimedShutdownData::OK
     || shutdownData.eShutdownType == TimedShutdownData::PWIPE )
   {
     type = "shutdown";
   }
-  if(argument)
-  {
-    while (isspace(*argument))
-      argument++;
-    if(argument[0])
-    {
-      mins_to_reboot = atol(argument);
+
+  // Parse: shutdown <type> [minutes] [reason...]
+  char temp_arg[MAX_INPUT_LENGTH];
+  const char *reason_start = argument;
+
+  if (argument && *argument) {
+    reason_start = one_argument(argument, temp_arg);
+
+    // If temp_arg is numeric, it's minutes
+    if (isdigit(temp_arg[0])) {
+      mins_to_reboot = atol(temp_arg);
+
+      // Skip whitespace to get to reason
+      while (isspace(*reason_start))
+        reason_start++;
+
+      // If there's text after minutes, that's the reason
+      if (reason_start && *reason_start) {
+        strncpy(reason, reason_start, MAX_STRING_LENGTH - 1);
+        reason[MAX_STRING_LENGTH - 1] = '\0';
+      }
+    }
+    // If temp_arg is NOT numeric, entire argument is the reason
+    else {
+      strncpy(reason, argument, MAX_STRING_LENGTH - 1);
+      reason[MAX_STRING_LENGTH - 1] = '\0';
     }
   }
 
@@ -4184,13 +4217,26 @@ void do_shutdown(P_char ch, char *argument, int cmd)
     shutdownData.eShutdownType = TimedShutdownData::NONE;
     wizlog(60, buf);
     sql_log( ch, WIZLOG, "Shutdown cancelled by %s", GET_NAME(ch) );
+    // Delete shutdown info file when cancelled
+    unlink("logs/shutdown_info.txt");
   }
 
   if( !*arg )
   {
-    send_to_char("Syntax: shutdown <ok | reboot | copyover>  [minutes to reboot].\r\n"
-                 "  Scheduled shutdowns are cancelled when the scheduler leaves the game or\r\n"
-                 "  uses the shutdown command again (even only to get this help)\r\n", ch);
+    send_to_char("Syntax: shutdown <ok | reboot | copyover> [minutes] [reason]\r\n"
+                 "\r\n"
+                 "Examples:\r\n"
+                 "  shutdown reboot                    - Immediate reboot (no reason given)\r\n"
+                 "  shutdown reboot 5                  - Reboot in 5 minutes (no reason given)\r\n"
+                 "  shutdown reboot updating new code  - Immediate reboot with reason\r\n"
+                 "  shutdown reboot 5 emergency patch  - Reboot in 5 minutes with reason\r\n"
+                 "  shutdown copyover fixing bug       - Hot restart with reason\r\n"
+                 "  shutdown ok server maintenance     - Shutdown (no restart) with reason\r\n"
+                 "\r\n"
+                 "Notes:\r\n"
+                 "  - Scheduled shutdowns are cancelled when the scheduler leaves the game\r\n"
+                 "    or uses the shutdown command again\r\n"
+                 "  - Reason is optional but recommended for tracking purposes\r\n", ch);
     return;
   }
 
@@ -4257,6 +4303,8 @@ void do_shutdown(P_char ch, char *argument, int cmd)
     type = "shutdown";
   }
   strcpy(shutdownData.IssuedBy, GET_NAME(ch));
+  strncpy(shutdownData.Reason, reason, 255);
+  shutdownData.Reason[255] = '\0';
   shutdownData.next_warning = -1;
   shutdownData.reboot_time = (time(0) + (mins_to_reboot * 60));
   snprintf(buf, MAX_STRING_LENGTH, "Scheduled %s initiated by %s in %d minutes.", type, GET_NAME(ch), mins_to_reboot);
@@ -7155,7 +7203,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
     {
        send_to_char("error reading association files.\r\n", ch);
        fclose(flist);
-       system("rm -f temp_assocsfile");
+       unlink("temp_assocsfile");
     }
     else 
     {
@@ -7183,7 +7231,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
        }
 
        fclose(flist);
-       system("rm -f temp_assocsfile");
+       unlink("temp_assocsfile");
     }
 
     // find player cash
@@ -7230,7 +7278,7 @@ void do_money_supply(P_char ch, char *argument, int cmd)
        }
        fclose(flist);
     }
-    system("rm -f temp_letterfile");
+    unlink("temp_letterfile");
     snprintf(buff, MAX_STRING_LENGTH, "\r\nTotal money in game: &+W%ld platinum, &+Y%ld gold, &+w%ld silver, &+y%ld copper\r\n", total_p, total_g, total_s, total_c);
     send_to_char(buff, ch);
 }
@@ -7978,10 +8026,10 @@ struct obj_data *clone_obj(P_obj obj)
     }
   }
 
-  for (i = 0; i <= NUMB_OBJ_VALS; i++)
+  for (i = 0; i < ARRAY_SIZE(obj->value); i++)
     ocopy->value[i] = obj->value[i];
 
-  for (i = 0; i < 4; i++)
+  for (i = 0; i < ARRAY_SIZE(obj->timer); i++)
     ocopy->timer[i] = obj->timer[i];
 
   ocopy->wear_flags = obj->wear_flags;
@@ -10471,8 +10519,9 @@ void newb_spellup(P_char ch, P_char victim)
     spell_agility(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
     spell_dexterity(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
     spell_accel_healing(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
+	spell_rest(61, ch, 0, SPELL_TYPE_SPELL, victim, 0);
 
-    send_to_char("\nEnjoy your blessings.\n", victim);
+	send_to_char("\nEnjoy your blessings.\n", victim);
 }
 
 void do_newb_spellup_all(P_char ch, char *arg, int cmd)
@@ -10483,7 +10532,7 @@ void do_newb_spellup_all(P_char ch, char *arg, int cmd)
   {
     if( d->connected == CON_PLAYING && ch != d->character )
     {
-      if (GET_LEVEL(d->character) <= 36)
+      if (GET_LEVEL(d->character) <= 60)
       {
         newb_spellup(ch, d->character);
       }

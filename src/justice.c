@@ -1941,6 +1941,14 @@ void PC_SET_TOWN_JUSTICE_FLAGS(P_char ch, int flag, int town)
     logit(LOG_EXIT, "make_just_flags - flag out of range!");
     raise(SIGSEGV);
   }
+
+  return;
+  // DISABLING: the code below has bit-rotten into uselessness
+  if ((town < 0) || (town >= 16))
+  {
+    printf("make_just_flags - town %d out of range!\n", town);
+    return;
+  }
   /*
    * okay... this will clear the flags... yes.. it IS messy.. but it
    * works.  what is does is take 3 (11 in binary), shift it over to the

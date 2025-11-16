@@ -9903,7 +9903,7 @@ int rentacleric(P_char ch, P_char vict, int cmd, char *argument)
     {
     SPELL_RESURRECT,     "&+WResurrection&n             ",       "resurrection",        5000},
     {
-     -1, "\r\n", -1},
+     -1, "\r\n", "", -1},
   };
 
   if (cmd == CMD_SET_PERIODIC)

@@ -602,6 +602,7 @@ void do_sethome(P_char, char *, int);
 void revert_sethome(P_char);
 void do_shutdow(P_char, char *, int);
 void do_shutdown(P_char, char *, int);
+void write_shutdown_info(const char *immortal_name, const char *reason);
 void do_silence(P_char, char *, int);
 void do_snoop(P_char, char *, int);
 void do_start(P_char, int);

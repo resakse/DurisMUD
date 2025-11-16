@@ -794,7 +794,6 @@ void ereglog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
   for (d = descriptor_list; d; d = d->next)
   {
     if (d->connected == CON_PLAYING &&
@@ -818,7 +817,6 @@ void wizlog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for (d = descriptor_list; d; d = d->next)
   {
@@ -843,7 +841,6 @@ void debug(const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
   for (i = descriptor_list; i; i = i->next)
     if (!i->connected && i->character &&
         IS_TRUSTED(i->character) &&
@@ -862,7 +859,6 @@ void logexp(const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
   for (i = descriptor_list; i; i = i->next)
     if (!i->connected && i->character &&
         IS_TRUSTED(i->character) &&
@@ -881,7 +877,6 @@ void loginlog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for (d = descriptor_list; d; d = d->next)
   {
@@ -907,7 +902,6 @@ void statuslog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for( d = descriptor_list; d; d = d->next )
   {
@@ -935,7 +929,6 @@ void epiclog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for( d = descriptor_list; d; d = d->next )
   {
@@ -962,7 +955,6 @@ void banlog(int level, const char *format, ...)
   va_start(args, format);
   vsprintf(lbuf + strlen(lbuf), format, args);
   strcat(lbuf, "\r\n");
-  lbuf[sizeof(lbuf)] = 0;
 
   for (d = descriptor_list; d; d = d->next)
   {
@@ -4050,7 +4042,7 @@ void boot_desc_data()
   do
   {
     fgets(buf, 100, f);
-    buf[strlen(buf) - 1] = '\0';
+    *strchrnul(buf, '\n') = '\0';
     appearance_descs[count] = str_dup(buf);
     count++;
   }
@@ -4652,8 +4644,14 @@ ClassSkillInfo SKILL_DATA_ALL(P_char ch, int skill)
 
     dummy = *highestClassEntry;
   }
+  else if (pri_class >= 0 && pri_class < CLASS_COUNT)
+  {
+    dummy = SKILL_DATA(ch, skill);
+  }
   else
   {
+    printf("Invalid m_class %x for %s\n", ch->player.m_class, J_NAME(ch));
+    ch->player.m_class = 1; // warrior
     dummy = SKILL_DATA(ch, skill);
   }
 

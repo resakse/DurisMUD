@@ -7,15 +7,9 @@ CC	= g++
 DEBUG	= -ggdb3
 #LDFLAGS	= -ggdb3
 
-ifdef USE_SHARED
-	LDFLAGS += -rdynamic
-endif
+LDFLAGS += -L/usr/lib/mysql
 
-LDFLAGS += -L/usr/lib/mysql -L./ships -fno-stack-protector
-
-OPTS    = -O0 -march=core2
-
-CFLAGS = -g -Wno-write-strings -fpermissive -fno-stack-protector -std=c++11 -Wno-error=address -Wno-format-truncation
+CFLAGS = -g -Wno-write-strings -std=c++14
 #CFLAGS += -D__NO_MYSQL__
 CFLAGS += -DTEST_MUD
 
@@ -34,9 +28,7 @@ ifdef EFENCE
 endif
 
 # GENERAL_LIBS += -lcygipc 
-LIBS += -lships $(GENERAL_LIBS)
-
-OUR_LIBS = libships.a
+LIBS += $(GENERAL_LIBS)
 
 # files that would be compiled as dynamic libs if USE_SHARED was defined
 #    make sure that they are NOT included in ANY form in OBJS!!!
@@ -45,9 +37,21 @@ OUR_LIBS = libships.a
 
 SH_LIBS 	=
 
-OPT_OBJS	= graph.o mm.o 
+SHIP_SRCS = \
+	ship_auto.c \
+	ship_base.c \
+	ship_cargo.c \
+	ship_combat.c \
+	ship_control.c \
+	ship_npc.c \
+	ship_npc_ai.c \
+	ship_shop.c \
+	ship_utils.c \
+	ship_variables.c \
 
-OBJS	=  \
+SHIP_OBJS = $(SHIP_SRCS:%.c=ships/%.o)
+
+OBJS =  $(SHIP_OBJS) \
 				 magic.o \
 				 achievements.o \
 				 account.o \
@@ -100,6 +104,7 @@ OBJS	=  \
 				 fraglist.o \
 				 forge_items.o \
 				 genrand.o \
+				 graph.o \
 				 group.o \
 				 guild.o \
 				 guildhall.o \
@@ -123,6 +128,7 @@ OBJS	=  \
 				 mccp.o \
 				 memorize.o \
 				 memory.o \
+				 mm.o \
 				 mobact.o \
 				 world_quest.o \
 				 mobcombat.o \
@@ -254,19 +260,16 @@ else
 	PROGS += $(SH_LIBS:.o=.so)
 endif
 
-SRCS	= $(OBJS:.o=.c) $(OPT_OBJS:.o=.c) $(SH_LIBS:.o=.c) $(PFILE_OBJS:.o=.c)
+SRCS	= $(OBJS:.o=.c) $(SH_LIBS:.o=.c) $(PFILE_OBJS:.o=.c)
 
 all: $(PROGS)
 
-libships.a:
-	cd ships && $(MAKE) -f Makefile.linux
-
-dms_new : $(DMS_OBJS) $(OPT_OBJS) $(OUR_LIBS)
-	$(CC) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(OPT_OBJS) $(LIBS)
+dms_new : $(DMS_OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -g -o dms_new $(DMS_OBJS) $(LIBS)
 	chmod a+rx dms_new
 
 pfile : $(PFILE_OBJS) $(SHARED_PFILE_OBJS) mm.o common.o
-	$(CC) $(LDFLAGS) -g -o pfile $(PFILE_OBJS) $(SHARED_PFILE_OBJS) common.o mm.o $(LIBS) 
+	$(CC) $(CFLAGS) $(LDFLAGS) -g -o pfile $(PFILE_OBJS) $(SHARED_PFILE_OBJS) common.o mm.o $(LIBS)
 
 $(DMS_OBJS): %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) $(DEBUG) -c $< -o $@
@@ -276,9 +279,6 @@ $(PFILE_OBJS): %.o: %.c
 
 $(SHARED_PFILE_OBJS): pf-%.o: %.c
 	$(CC) $(CFLAGS) -D_PFILE_ $(INCLUDES) $(DEBUG) -c $< -o $@
-
-$(OPT_OBJS): %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) $(OPTS) -c $< -o $@
 
 $(SH_LIBS:.o=.so): %.so: %.c
 	$(CC) $(CFLAGS) $(DEBUG) -fpic -c $< -o $*.o

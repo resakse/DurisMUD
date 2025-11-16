@@ -128,7 +128,7 @@ char    *bonus = NULL;
 char    *keepchar = NULL;
 char    *hometown_table = NULL;
 char    *alignment_table = NULL;
-char    *shutdown_message = NULL;
+const char    *shutdown_message = NULL;
 char    *artilist_mortal_main = NULL;
 char    *artilist_mortal_ioun = NULL;
 char    *artilist_mortal_unique = NULL;
@@ -799,10 +799,10 @@ void weather_setup(void)
   FILE    *fl;
 
   /* default conditions for season values */
-  const char winds[6] = { 2, 12, 30, 40, 50, 80 };
-  const char precip[9] = { 0, 1, 5, 10, 15, 25, 35, 45, 60 };
-  const char humid[9] = { 4, 10, 20, 30, 40, 50, 60, 75, 100 };
-  const char temps[11] = { -15, -8, 0, 10, 17, 27, 33, 40, 50, 75, 100 };
+  const byte winds[6] = { 2, 12, 30, 40, 50, 80 };
+  const byte precip[9] = { 0, 1, 5, 10, 15, 25, 35, 45, 60 };
+  const byte humid[9] = { 4, 10, 20, 30, 40, 50, 60, 75, 100 };
+  const byte temps[11] = { -15, -8, 0, 10, 17, 27, 33, 40, 50, 75, 100 };
 
   if (!(fl = fopen("areas/world.weather", "r")))
   {
@@ -844,19 +844,19 @@ void weather_setup(void)
 
     /* These use the default conditions above */
     sector_table[zon].conditions.windspeed =
-      winds[(int) sector_table[zon].climate.season_wind[s]];
+      ARR_GET(winds, sector_table[zon].climate.season_wind[s]);
 
     sector_table[zon].conditions.wind_dir =
       sector_table[zon].climate.season_wind_dir[s];
 
     sector_table[zon].conditions.precip_rate =
-      precip[(int) sector_table[zon].climate.season_precip[s]];
+      ARR_GET(precip, sector_table[zon].climate.season_precip[s]);
 
     sector_table[zon].conditions.temp =
-      temps[(int) sector_table[zon].climate.season_temp[s]];
+      ARR_GET(temps, sector_table[zon].climate.season_temp[s]);
 
     sector_table[zon].conditions.humidity =
-      humid[(int) sector_table[zon].climate.season_precip[s]];
+      ARR_GET(humid, sector_table[zon].climate.season_precip[s]);
 
     /* Set ambient light */
     calc_light_zone(zon);
@@ -3935,7 +3935,7 @@ void skip_fread(FILE * fl)
     }
     for (point = tmp + strlen(tmp) - 1; (point >= tmp) && isspace(*point);
          point--) ;
-    if (*point == '~')
+    if (point >= tmp && *point == '~')
       return;
   }
 }

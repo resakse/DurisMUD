@@ -45,7 +45,7 @@ extern const char *dirs[], *dirs2[];
 extern const int rev_dir[];
 extern P_desc descriptor_list;
 extern const struct race_names race_names_table[];
-extern const struct time_info_data time_info;
+extern struct time_info_data time_info;
 extern bool exit_wallable(int room, int dir, P_char ch);
 extern bool create_walls(int room, int exit, P_char ch, int level, int type,
                          int power, int decay, char *short_desc, char *desc,
@@ -3137,7 +3137,7 @@ void spell_rest( int level, P_char ch, char *arg, int type, P_char victim, P_obj
   af.type = TAG_RESTED;
   af.duration = 150;
   af.flags = AFFTYPE_PERM | AFFTYPE_NODISPEL | AFFTYPE_OFFLINE;
-  affect_to_char(ch, &af);
+  affect_to_char(victim, &af);
 
   act( "You give $N a rested bonus.", FALSE, ch, NULL, victim, TO_CHAR );
   debug( "%s gives %s a rested bonus!", J_NAME(ch), J_NAME(victim) );

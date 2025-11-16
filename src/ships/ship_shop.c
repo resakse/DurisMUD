@@ -2680,7 +2680,7 @@ int crew_shop_proc(int room, P_char ch, int cmd, char *arg)
 #define IS_MOONSTONE_CORE(obj)     (obj_index[obj->R_num].virtual_number == AUTOMATONS_MOONSTONE_CORE)
 #define IS_MOONSTONE_PART(obj)     (IS_MOONSTONE_FRAGMENT(obj) || IS_MOONSTONE_CORE(obj))
 
-bool moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument)
+int moonstone_fragment(P_obj obj, P_char ch, int cmd, char *argument)
 {
   if (cmd == CMD_SET_PERIODIC)
     return TRUE;

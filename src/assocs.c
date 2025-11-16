@@ -472,8 +472,8 @@ void Guild::save( )
 
   // Print the name first.
   snprintf(write_buf, MAX_STRING_LENGTH, "%s\n", name );
-  // Then the guild number and frag info.
-  snprintf(buf, MAX_STR_NORMAL, "%u %lu %lu %s\n", id_number, frags.frags, frags.top_frags, frags.topfragger );
+  // Then the guild racewar and frag info.
+  snprintf(buf, MAX_STR_NORMAL, "%u %lu %lu %s\n", racewar, frags.frags, frags.top_frags, frags.topfragger );
 
   strcat( write_buf, buf );
   // Then the default guild titles
@@ -521,7 +521,7 @@ bool Guild::load_guild( int guild_num )
   // Get the guild name.
   fgets( new_guild->name, ASC_MAX_STR, file );
   // Cut the carriage return off.
-  new_guild->name[strlen(new_guild->name) - 1] = '\0';
+  *strchrnul(new_guild->name, '\n') = '\0';
   // Then the guild number and frag info.
   fscanf( file, "%u %lu %lu %s\n", &(new_guild->racewar), &(new_guild->frags.frags), &(new_guild->frags.top_frags),
     new_guild->frags.topfragger );

@@ -86,7 +86,7 @@ extern const struct racial_data_type racial_data[LAST_RACE + 1];
 void interaction_to_new_wrapper(P_char, P_char, char *);
 void event_reset_zone(P_char ch, P_char victim, P_obj obj, void *data);
 void register_func_call(void* func, double time);
-char *get_function_name(void *func);
+const char *get_function_name(void *func);
 void release_mob_mem(P_char ch, P_char victim, P_obj obj, void *data);
 extern void event_mob_mundane(P_char, P_char, P_obj, void*);
 extern void event_spellcast(P_char, P_char, P_obj, void *);
@@ -931,7 +931,7 @@ void event_broken(struct char_link_data *cld)
   }
 }
 
-char *get_function_name(void *func)
+const char *get_function_name(void *func)
 {
   int      i;
 
