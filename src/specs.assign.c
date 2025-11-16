@@ -420,14 +420,8 @@ void assign_mobiles(void)
   /* Troll Hills */
   mob_index[real_mobile0(1919)].func.mob = bridge_troll;
 
-/*  mob_index[real_mobile0(6050)].func.mob = citizenship;*/
   mob_index[real_mobile0(36203)].func.mob =
     mob_index[real_mobile0(132599)].func.mob = rentacleric;
-  mob_index[real_mobile0(8336)].func.mob =
-    mob_index[real_mobile0(95551)].func.mob =
-    mob_index[real_mobile0(16512)].func.mob =
-    mob_index[real_mobile0(66046)].func.mob =
-    mob_index[real_mobile0(6109)].func.mob = justice_clerk;
 
   /* Evil Spec teachers */
   mob_index[real_mobile0(1520)].func.mob = 0;    // sorc
@@ -1847,10 +1841,6 @@ void assign_objects(void)
   /* Southern Verzanan */
   obj_index[real_object0(2998)].func.obj = clock_tower; /* WD clock */
 #endif
-
-  obj_index[real_object0(132571)].func.obj = jailtally;
-  obj_index[real_object0(8100)].func.obj = jailtally;
-  obj_index[real_object0(3068)].func.obj = jailtally;
 
   /* The Underworld */
   obj_index[real_object0(4505)].func.obj = hammer;

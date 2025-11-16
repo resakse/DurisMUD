@@ -1507,10 +1507,6 @@ int gain_condition(P_char ch, int condition, int value)
       if (IS_TRUSTED(ch))
         continue;
 
-      if (CHAR_IN_TOWN(ch) &&
-          ch->in_room == real_room(hometowns[CHAR_IN_TOWN(ch) - 1].jail_room))
-        continue;
-
       if (GET_RACE(ch) == RACE_ILLITHID && i != FULL)
         continue;
 

@@ -7978,14 +7978,6 @@ PROFILE_END(mundane_wakeup);
 PROFILE_END(mundane_wakeup);
 
 
-PROFILE_START(mundane_justice);
-  if(JusticeGuardAct(ch))  // Justice hook.
-  {// 0%
-PROFILE_END(mundane_justice);
-    goto normal;
-  }
-PROFILE_END(mundane_justice);
-
 PROFILE_START(mundane_commune);
   if(!IS_FIGHTING(ch) && !IS_DESTROYING(ch) && !number(0, 20)) // If not fighting, "mem"
   {// 5%
@@ -9701,10 +9693,7 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
 
   data = (hunt_data *)d;
   if(!data)
-  {
-    justice_hunt_cancel(ch);
     return;
-  }
 
   cur_room = ch->in_room;
 
@@ -9712,10 +9701,7 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
   {
     vict = data->targ.victim;
     if(!vict || !IS_ALIVE(vict))
-    {
-      justice_hunt_cancel(ch);
       return;
-    }
     targ_room = vict->in_room;
   }
   else
@@ -9737,25 +9723,18 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
           }
         }
       }
-      justice_hunt_cancel(ch);
       return;
     }
     vict = NULL;
   }
 
   if(targ_room == NOWHERE)
-  {
-    justice_hunt_cancel(ch);
     return;
-  }
   /*
    * fighting mobs cant hunt...
    */
   if(IS_FIGHTING(ch))
-  {
-    justice_hunt_cancel(ch);
     return;
-  }
   if(vict && (IS_AFFECTED(vict, AFF_WRAITHFORM)))
     return;
 
@@ -9855,10 +9834,7 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
    * mobs who don't live in a hometown, don't go in a hometown
    */
   if(CHAR_IN_TOWN(ch) != zone_table[world[targ_room].zone].hometown)
-  {
-    justice_hunt_cancel(ch);
     return;
-  }
   /*
    * okay.. mage type mobs will keep levitate or fly active while
    * moving.  This will facilitate several problems: dimming or
@@ -9918,7 +9894,6 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
      * very low level.  Either way, I suck badly, and need to worry
      * about something other then hunting
      */
-    justice_hunt_cancel(ch);
     return;
   }
   /*
@@ -9945,33 +9920,14 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
    */
 
   /*
-   * Was hunting a wanted criminal
-   */
-  if((next_step == BFS_ALREADY_THERE) &&
-     (data->hunt_type == HUNT_JUSTICE_ARREST))
-  {
-    justice_action_arrest(ch, vict);
-  }
-  /* for special justice hunts.. */
-  if((next_step == BFS_ALREADY_THERE) &&
-      ((data->hunt_type == HUNT_JUSTICE_SPECVICT) ||
-       (data->hunt_type == HUNT_JUSTICE_SPECROOM)))
-  {
-    JusticeGuardHunt(ch);
-    return;
-  }
-  /*
    * Was either hunting an invader, or just a normal hunt
    */
-  else if((next_step == BFS_ALREADY_THERE) &&
+  if((next_step == BFS_ALREADY_THERE) &&
            ((data->hunt_type == HUNT_HUNTER) ||
             (data->hunt_type == HUNT_JUSTICE_INVADER)))
   {
     if(IS_DISGUISE(vict) && (data->hunt_type == HUNT_JUSTICE_INVADER))
-    {
-      justice_hunt_cancel(ch);
       return;
-    }
     if(CAN_SEE(ch, vict) && !IS_AFFECTED(vict, AFF_HIDE))
     {
       MobStartFight(ch, vict);
@@ -10144,10 +10100,7 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
    * if I got an error on the find_path, just stop hunting this person
    */
   if(next_step < 0)
-  {
-    justice_hunt_cancel(ch);
     return;
-  }
   /*
    * note: find_first_step shouldn't lead me through SECRET or LOCKED
    * doors.
@@ -10159,10 +10112,7 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
   {
     /* animals don't open doors! */
     if(!CAN_SPEAK(ch) && !IS_GREATER_RACE(ch))
-    {
-      justice_hunt_cancel(ch);
       return;
-    }
     // okay.. closed door in the way.. just open it :)
 
     snprintf(buf, MAX_STRING_LENGTH, "%s", dirs[(int) next_step]);
@@ -10172,27 +10122,6 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
     return;
   }
 
-  // Why duplicate the above written code? Apr09 -Lucrot
-  // if(IS_SET(world[(cur_room)].dir_option[(int) next_step]->exit_info,
-             // EX_CLOSED))
-  // {
-    // /* animals don't open doors! */
-    // if(!CAN_SPEAK(ch))
-    // {
-      // justice_hunt_cancel(ch);
-      // return;
-    // }
-    // /*
-     // * okay.. closed door in the way.. just open it :)
-     // */
-    // snprintf(buf, MAX_STRING_LENGTH, "%s %s", EXIT(ch, (int) next_step)->keyword ?
-            // FirstWord(EXIT(ch, (int) next_step)->keyword) : "door",
-            // dirs[(int) next_step]);
-    // do_open(ch, buf, 0);
-    // add_event(event_mob_hunt, PULSE_MOB_HUNT, ch, NULL, NULL, 0, data, sizeof(hunt_data));
-    // return;
-  // }
-  
   if(IS_WALLED(cur_room, next_step))
   {
     if(MobDestroyWall(ch, next_step,  IS_SET(data->huntFlags, BFS_BREAK_WALLS)))
@@ -10212,10 +10141,7 @@ void event_mob_hunt(P_char ch, P_char victim, P_obj obj, void *d)
 
   if((data->retry < 5) || (data->retry_dir != next_step))
   {
-    if( (data->hunt_type == HUNT_JUSTICE_SPECVICT) || (data->hunt_type == HUNT_JUSTICE_SPECROOM) )
-      JusticeGuardMove(ch, NULL, exitnumb_to_cmd(next_step));
-    else
-      do_move(ch, NULL, exitnumb_to_cmd(next_step));
+    do_move(ch, NULL, exitnumb_to_cmd(next_step));
 
     if(!char_in_list(ch))
       return;

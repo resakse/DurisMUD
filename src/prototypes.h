@@ -1025,10 +1025,6 @@ void restoreSavedItems(void);
 void writeSavedItem(P_obj);
 void PurgeSavedItemFile(P_obj);
 void restore_allpets (void);
-int writeTownJustice(int town_nr);
-int deleteTownJustice(int id);
-int restoreTownJustice(int town_nr);
-void restore_town_justice(void);
 int deleteJailItems(P_char);
 int writeJailItems(P_char);
 int restoreJailItems(P_char);
@@ -1285,23 +1281,18 @@ int justice_send_guards(int, P_char, int, int);
 void do_sorta_yell (P_char, char *);
 void justice_hometown_echo(int, const char *);
 void do_justice(P_char, char *, int);
-int JusticeGuardAct(P_char);
 void JusticeGuardMove(P_char, char *, int);
 void JusticeGuardHunt(P_char);
 void justice_set_outcast(P_char ch, int town);
 int witness_remove(P_char, wtns_rec *);
 void do_report_crime(P_char, char *, int);
 int justice_is_criminal(P_char);
-void witness_destroy(P_char ch);
 void PC_SET_TOWN_JUSTICE_FLAGS(P_char ch, int flag, int town);
 void justice_action_invader(P_char ch);
 void event_justice_raiding(P_char, P_char, P_obj, void *);
 void justice_action_wanted(P_char ch);
 void justice_action_arrest(P_char, P_char);
 void justice_guard_remove(P_char ch);
-void justice_hunt_cancel(P_char ch);
-void justice_victim_remove(P_char ch);
-void justice_witness(P_char attacker, P_char victim, int crime);
 int shout_and_hunt(P_char ch, int max_distance, const char *shout_str,
                    int (*locator_proc)(P_char, P_char, int, char *),
                    int vnums[], ulong act_mask, ulong no_act_mask);
@@ -1314,7 +1305,6 @@ void load_justice_area(void);
 void witness_scan(P_char, P_char, int, int, int);
 void set_town_flag_justice(P_char, int);
 void clean_town_justice(void);
-void event_justice_engine(P_char ch, P_char victim, P_obj obj, void *data);
 
 /* languages.c */
 

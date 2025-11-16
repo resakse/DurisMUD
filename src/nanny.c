@@ -3694,7 +3694,6 @@ void enter_game(P_desc d)
   {
     do_start(ch, 0);
     load_obj_to_newbies(ch);
-    set_town_flag_justice(ch, TRUE);
   }
   else if (IS_SET(ch->specials.act2, PLR2_NEWBIEEQ) && !ch->carrying)
     load_obj_to_newbies(ch);
@@ -3777,28 +3776,6 @@ void enter_game(P_desc d)
 //      }
 //    }
 //  }
-
-  set_town_flag_justice(ch, FALSE);
-
-  /* clean up justice goofs */
-  /* ignore linkdead, camp, quit from fixing, to avoid clearing
-     cheaters. We dont care about rent, since there is no inn in jail */
-  if (d->rtype != RENT_QUIT && d->rtype != RENT_LINKDEAD &&
-      d->rtype != RENT_CAMPED && (CHAR_IN_TOWN(ch)))
-  {
-    while ((crec = crime_find(hometowns[CHAR_IN_TOWN(ch) - 1].crime_list,
-                              NULL, NULL, 0, NOWHERE, J_STATUS_JAIL_TIME,
-                              crec)))
-    {
-      crec->crime = CRIME_NONE;
-      crec->status = J_STATUS_DELETED;
-      if (ch->in_room == real_room(hometowns[CHAR_IN_TOWN(ch) - 1].jail_room))
-      {
-        char_from_room(ch);
-        char_to_room(ch, GET_BIRTHPLACE(ch), -1);
-      }
-    }
-  }
 
   // CTF - level them up, and setbit hardcore off them!
 #if defined(CTF_MUD) && (CTF_MUD == 1)

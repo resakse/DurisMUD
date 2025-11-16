@@ -1330,12 +1330,7 @@ int shop_keeper(P_char keeper, P_char ch, int cmd, char *arg)
       snprintf(argm, MAX_INPUT_LENGTH, "shout Guards! Come arrest %s for being a thief!",
               CAN_SEE(keeper, ch) ? J_NAME(ch) : "Someone");
       command_interpreter(keeper, argm);
-      if (CHAR_IN_TOWN(keeper))
-      {
-        justice_send_guards(NOWHERE, ch, MOB_SPEC_J_OUTCAST, 2);
-      }
-      else
-        act(MSG_NO_STEAL_HERE, FALSE, ch, 0, keeper, TO_CHAR);
+      act(MSG_NO_STEAL_HERE, FALSE, ch, 0, keeper, TO_CHAR);
       return (TRUE);
     }
   }

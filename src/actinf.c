@@ -4645,38 +4645,6 @@ void do_score(P_char ch, char *argument, int cmd)
             GET_BALANCE_GOLD(ch),
             GET_BALANCE_SILVER(ch), GET_BALANCE_COPPER(ch));
     send_to_char(buf, ch);
-    /* justice info */
-/*    found = FALSE;
-    strcpy(buf, "&+YWanted in:    &N");
-    for (i = 1; i <= LAST_HOME; i++)
-      if ((PC_TOWN_JUSTICE_FLAGS(ch, i) == JUSTICE_IS_WANTED) &&
-          !IS_TOWN_INVADER(ch, i)) {
-        found = TRUE;
-        strcat(buf, town_name_list[i]);
-        strcat(buf, ", ");
-      }
-    if (found) {
-      buf[strlen(buf) - 2] = '\0';
-      strcat(buf, "\n");
-      send_to_char(buf, ch);
-    }
-*/
-    found = FALSE;
-    strcpy(buf, "&+ROutcast from: &N");
-    for (i = 1; i <= LAST_HOME; i++)
-      if ((PC_TOWN_JUSTICE_FLAGS(ch, i) == JUSTICE_IS_OUTCAST) &&
-          !IS_TOWN_INVADER(ch, i))
-      {
-        found = TRUE;
-        strcat(buf, town_name_list[i]);
-        strcat(buf, ", ");
-      }
-    if (found)
-    {
-      buf[strlen(buf) - 2] = '\0';
-      strcat(buf, "\n");
-      send_to_char(buf, ch);
-    }
     /* playing time */
 #ifndef EQ_WIPE
     playing_time = real_time_passed((long) ((time(0) - ch->player.time.logon) + ch->player.time.played), 0);

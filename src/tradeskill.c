@@ -5235,7 +5235,7 @@ int get_ival_from_proc( obj_proc_type proc )
     || proc == arenaobj_proc || proc == burn_touch_obj || proc == drowcrusher || proc == hewards_mystical_organ
     || proc == mir_fire || proc == board || proc == random_tomb || proc == random_glass || proc == random_slab
     || proc == refreshing_fountain || proc == magical_fountain || proc == changelog || proc == wall_generic
-    || proc == huntsman_ward || proc == item_switch || proc == clock_tower || proc == jailtally
+    || proc == huntsman_ward || proc == item_switch || proc == clock_tower
     || proc == verzanan_portal || proc == die_roller || proc == elfgate || proc == guildwindow || proc == guildhome
     || proc == automaton_lever || proc == illithid_teleport_veil || proc == teleporting_pool || proc == llyms_altar
     || proc == newbie_sign1 || proc == newbie_sign2 || proc == vareena_statue || proc == wh_corpse_decay

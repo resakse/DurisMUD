@@ -268,11 +268,6 @@ int inn(int room, P_char ch, int cmd, char *arg)
       send_to_char("You are too deep in battle madness!\r\n", ch);
       return FALSE;
     }
-    if( (PC_JUSTICE_FLAGS(ch) == JUSTICE_IS_OUTCAST) || justice_is_criminal(ch) || IS_AFFECTED4(ch, AFF4_LOOTER) )
-    {
-      send_to_char("The innkeeper says 'I don't serve outlaws like you! Begone!'\r\n", ch);
-      return TRUE;
-    }
     // Allowing Illithids to rent in their own gh.
     if( IS_NOTWELCOME(ch) ) // || GET_RACE(ch) == RACE_ILLITHID )
     {
@@ -430,14 +425,6 @@ int undead_inn(int room, P_char ch, int cmd, char *arg)
   {
     send_to_char
       ("The innkeeper grins slyly and moans, 'We have no beds here!'\r\n",
-       ch);
-    return TRUE;
-  }
-  if ((PC_JUSTICE_FLAGS(ch) == JUSTICE_IS_OUTCAST) ||
-      justice_is_criminal(ch) || IS_AFFECTED4(ch, AFF4_LOOTER))
-  {
-    send_to_char
-      ("The innkeeper says 'I don't serve outlaws like you! Begone!'\r\n",
        ch);
     return TRUE;
   }

@@ -1268,48 +1268,6 @@ int ring_elemental_control(P_obj obj, P_char ch, int cmd, char *arg)
   return TRUE;
 }
 
-int jailtally(P_obj obj, P_char ch, int cmd, char *arg)
-{
-  P_obj    t_obj;
-  P_char   k;
-  int      room;
-  char     Gbuf1[MAX_STRING_LENGTH];
-
-  /*
-     check for periodic event calls
-   */
-  if (cmd == CMD_SET_PERIODIC)
-    return FALSE;
-
-  if (!ch)
-    return (FALSE);
-
-  if (((cmd == CMD_READ) || (cmd == CMD_LOOK)) && ch &&
-      MIN_POS(ch, POS_KNEELING + STAT_RESTING))
-  {
-    while (isspace(*arg))
-      arg++;
-    t_obj = get_obj_in_list_vis(ch, arg, world[ch->in_room].contents);
-    if (t_obj == obj)
-    {
-      room = real_room(hometowns[CHAR_IN_TOWN(ch) - 1].jail_room);
-      if (!world[room].people)
-        send_to_char("Nobody in jail for now!\n", ch);
-      else
-      {
-        send_to_char("The tally sheet lists the following inmates:\n", ch);
-        for (k = world[room].people; k; k = k->next_in_room)
-        {
-          snprintf(Gbuf1, MAX_STRING_LENGTH, "%s\n", J_NAME(k));
-          send_to_char(Gbuf1, ch);
-        }
-      }
-      return (TRUE);
-    }
-  }
-  return (FALSE);
-}
-
 // Allows holder to use decline/accept/ptell.
 int trustee_artifact(P_obj obj, P_char ch, int cmd, char *arg)
 {
@@ -11320,7 +11278,6 @@ int glowing_necklace(P_obj obj, P_char ch, int cmd, char *arg)
 
         GET_SIZE(watermental) = SIZE_MEDIUM;
         watermental->player.m_class = CLASS_WARRIOR;
-        justice_witness(ch, NULL, CRIME_SUMMON);
         watermental->player.level = 45;
         sum = dice(GET_LEVEL(watermental) * 4, 8) + (GET_LEVEL(watermental) * 3);
         while( watermental->affected )
@@ -11444,7 +11401,6 @@ int staff_shadow_summoning(P_obj obj, P_char ch, int cmd, char *arg)
 
         GET_SIZE(shadow) = SIZE_MEDIUM;
         shadow->player.m_class = CLASS_WARRIOR;
-        justice_witness(ch, NULL, CRIME_SUMMON);
         shadow->player.level = 40;
         sum = dice(GET_LEVEL(shadow) * 4, 8) + (GET_LEVEL(shadow) * 3);
         while( shadow->affected )

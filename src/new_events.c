@@ -797,11 +797,6 @@ void ne_init_events(void)
   add_event(generic_char_event, 20 * WAIT_SEC, NULL, NULL, NULL, 0, NULL, 0);
   //AddEvent(EVENT_SPECIAL, 20 * 4, FALSE, generic_char_event, 0);
 
-  /* justice main engine */
-  j = 1;
-  add_event(event_justice_engine, PULSES_IN_TICK, NULL, NULL, NULL, 0, &j, sizeof(j));
-  //AddEvent(EVENT_SPECIAL, PULSES_IN_TICK, TRUE, justice_engine1, NULL);
-
   /* rather than add a new function, set initial room light values here */
   for( j = 0; j < top_of_world; j++ )
     room_light(j, REAL);

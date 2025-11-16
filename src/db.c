@@ -717,9 +717,6 @@ void boot_db(int mini_mode)
 
   if (!mini_mode)
   {
-    logit(LOG_STATUS, "Reloading Town Justice.");
-    restore_town_justice();
-
     logit(LOG_STATUS, "Loading patrol Justice area.");
     load_justice_area();
   }
@@ -2477,13 +2474,6 @@ P_char read_mobile(int nr, int type)
         mob->base_stats.Cha += number(10, 20);
       if( GET_CLASS(mob, CLASS_ROGUE) && (!mob_index[GET_RNUM(mob)].func.mob) )
         mob_index[GET_RNUM(mob)].func.mob = thief;
-    }
-    if( strstr(mob->player.name, "bailiff") )
-    {
-      if (!mob_index[GET_RNUM(mob)].func.mob)
-      {
-        mob_index[GET_RNUM(mob)].func.mob = citizenship;
-      }
     }
 
     // Start at first class, run through CLASS_COUNT and make sure they meet minimum requirements.

@@ -1257,7 +1257,7 @@ bool char_to_room(P_char ch, int room, int dir)
   /*
    * justice hook
    */
-  if (IS_INVADER(ch) || IS_OUTCAST(ch))
+  if (IS_INVADER(ch))
   {
     justice_action_invader(ch);
     if( !IS_ALIVE(ch) )
@@ -2934,7 +2934,6 @@ void extract_char(P_char ch)
    */
 
   justice_guard_remove(ch);
-  justice_victim_remove(ch);
 
   if (ch->desc)
   {
@@ -3035,7 +3034,6 @@ void extract_char(P_char ch)
       }
     }
   }
-  witness_destroy(ch);
 
   char_from_room(ch);
 

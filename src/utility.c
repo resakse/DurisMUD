@@ -2539,9 +2539,7 @@ bool aggressive_to(P_char ch, P_char target)
 
     /* try to kill invaders on sight  */
 
-    if (IS_AGGROFLAG(ch, AGGR_OUTCASTS) && IS_PC(target) &&
-        ((IS_INVADER(target)) ||
-         ((PC_JUSTICE_FLAGS(target)) == JUSTICE_IS_OUTCAST)))
+    if (IS_AGGROFLAG(ch, AGGR_OUTCASTS) && IS_PC(target) && IS_INVADER(target))
       return TRUE;
 
     /* now, race-specific flags */
@@ -4962,7 +4960,6 @@ void cast_as_area(P_char ch, int spl, int level, char *arg)
         nch = tch->next_in_room;
         if (ch != tch && (!ch->group || (ch->group != tch->group)))
         {
-          justice_witness(ch, tch, CRIME_ATT_MURDER);
           ((*spell_func) (level, ch, arg, SPELL_TYPE_SPELL, tch, 0));
         }
       }

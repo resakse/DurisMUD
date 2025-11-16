@@ -3020,7 +3020,6 @@ void do_unbind(P_char ch, char *arg, int cmd)
 void capture(P_char ch, P_char victim)
 {
   int      percent, ch_chance, town;
-  bool     is_wanted = FALSE;
 
   if (!SanityCheck(ch, "capture"))
     return;
@@ -3217,16 +3216,6 @@ void capture(P_char ch, P_char victim)
     if (number(1, 25) > ch_chance)
       return;
 
-  for (town = 1; town <= LAST_HOME; town++)
-  {
-    if (!hometowns[town - 1].crime_list)
-      continue;
-
-    if (crime_find(hometowns[town - 1].crime_list, J_NAME(victim), NULL,
-                   0, NOWHERE, J_STATUS_WANTED, NULL))
-      is_wanted = TRUE;
-  }
-
   if ((percent > ch_chance) || IS_TRUSTED(victim))
   {
     if (!IS_TRUSTED(victim) && !number(0, 3))
@@ -3245,12 +3234,8 @@ void capture(P_char ch, P_char victim)
 
     CharWait(ch, PULSE_VIOLENCE * 5);
 
-    if (!is_wanted)
-    {
-      justice_witness(ch, victim, CRIME_ATT_MURDER);
-      if((GET_STAT(victim) > STAT_INCAP) && !IS_FIGHTING(ch) && !IS_DESTROYING(ch))
-        set_fighting(ch, victim);
-    }
+    if((GET_STAT(victim) > STAT_INCAP) && !IS_FIGHTING(ch) && !IS_DESTROYING(ch))
+      set_fighting(ch, victim);
   }
   else
   {
@@ -3279,9 +3264,6 @@ void capture(P_char ch, P_char victim)
     extract_obj(unequip_char(ch, HOLD), TRUE); // Arti rope?
 
     notch_skill(ch, SKILL_CAPTURE, 2.22);
-
-    if (!is_wanted)
-      justice_witness(ch, victim, CRIME_KIDNAPPING);
 
     return;
   }
