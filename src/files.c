@@ -300,6 +300,1332 @@ struct ship_reg_node *ship_reg_db = NULL;
  ((obj)->cost == (control)->cost) && \
  ((obj)->type == (control)->type))
 
+ #ifdef ENABLE_JSON_PFILE
+/*
+ * following are functions that write data to disk in json format (or prepare data for
+ * writing).  MWH
+ */
+
+void writeStatus(nlohmann::json& data, P_char ch, bool updateTime )
+{
+  int      tmp, i;
+  long     tmpl;
+
+  data["status"]["stat_version"]                  = SAV_STATVERS;
+  data["status"]["pid"]                           = GET_PID(ch);
+  
+  data["status"]["strings"]["name"]               = SAFE_STRING(GET_NAME(ch));
+  data["status"]["strings"]["pwd"]                = SAFE_STRING(ch->only.pc->pwd);
+  data["status"]["strings"]["short_descr"]        = SAFE_STRING(ch->player.short_descr);
+  data["status"]["strings"]["long_descr"]         = SAFE_STRING(ch->player.long_descr);
+  data["status"]["strings"]["description"]        = SAFE_STRING(ch->player.description);
+  data["status"]["strings"]["title"]              = SAFE_STRING(GET_TITLE(ch));
+  data["status"]["strings"]["poofIn"]             = SAFE_STRING(ch->only.pc->poofIn);
+  data["status"]["strings"]["poofOut"]            = SAFE_STRING(ch->only.pc->poofOut);
+  data["status"]["strings"]["poofInSound"]        = SAFE_STRING(ch->only.pc->poofInSound);
+  data["status"]["strings"]["poofOutSound"]       = SAFE_STRING(ch->only.pc->poofOutSound);
+
+  data["status"]["settings"]["screen_length"]     = ch->only.pc->screen_length;
+  
+  data["status"]["attributes"]["m_class"]         = ch->player.m_class;
+  data["status"]["attributes"]["secondary_class"] = ch->player.secondary_class;
+  data["status"]["attributes"]["spec"]            = ch->player.spec;
+  data["status"]["attributes"]["race"]            = GET_RACE(ch);
+  data["status"]["attributes"]["racewar"]         = GET_RACEWAR(ch);
+
+  data["status"]["attributes"]["sex"]             = GET_SEX(ch);
+  data["status"]["attributes"]["weight"]          = ch->player.weight;
+  data["status"]["attributes"]["height"]          = ch->player.height;
+  data["status"]["attributes"]["size"]            = GET_SIZE(ch);
+  data["status"]["attributes"]["home"]            = GET_HOME(ch);
+  data["status"]["attributes"]["alignment"]       = ch->specials.alignment;
+  data["status"]["attributes"]["prestige"]        = ch->only.pc->prestige;
+
+  data["status"]["birth"]["birthplace"]           = GET_BIRTHPLACE(ch);
+  data["status"]["birth"]["orig_birthplace"]      = GET_ORIG_BIRTHPLACE(ch);
+  data["status"]["birth"]["birth_time"]           = ch->player.time.birth;
+
+  data["status"]["stats"]["stat_str"]             = ch->base_stats.Str;
+  data["status"]["stats"]["stat_dex"]             = ch->base_stats.Dex;
+  data["status"]["stats"]["stat_agi"]             = ch->base_stats.Agi;
+  data["status"]["stats"]["stat_con"]             = ch->base_stats.Con;
+  data["status"]["stats"]["stat_pow"]             = ch->base_stats.Pow;
+  data["status"]["stats"]["stat_int"]             = ch->base_stats.Int;
+  data["status"]["stats"]["stat_wis"]             = ch->base_stats.Wis;
+  data["status"]["stats"]["stat_cha"]             = ch->base_stats.Cha;
+  data["status"]["stats"]["stat_kar"]             = ch->base_stats.Kar;
+  data["status"]["stats"]["stat_luk"]             = ch->base_stats.Luk;
+
+  data["status"]["stats"]["mana"]                 = GET_MANA(ch);
+  data["status"]["stats"]["base_mana"]            = ch->points.base_mana;
+  data["status"]["stats"]["hit"]                  = MAX(0, GET_MAX_HIT(ch)-GET_HIT(ch));
+  data["status"]["stats"]["base_hit"]             = ch->points.base_hit;
+  data["status"]["stats"]["vitality"]             = GET_VITALITY(ch);
+  data["status"]["stats"]["base_vitality"]        = ch->points.base_vitality;
+
+  data["status"]["bank"]["copper"]                = GET_COPPER(ch);
+  data["status"]["bank"]["silver"]                = GET_SILVER(ch);
+  data["status"]["bank"]["gold"]                  = GET_GOLD(ch);
+  data["status"]["bank"]["platinum"]              = GET_PLATINUM(ch);
+  data["status"]["bank"]["bank_copper"]           = GET_BALANCE_COPPER(ch);         /* bank account */
+  data["status"]["bank"]["bank_silver"]           = GET_BALANCE_SILVER(ch);         /* bank account */
+  data["status"]["bank"]["bank_gold"]             = GET_BALANCE_GOLD(ch);           /* bank account */
+  data["status"]["bank"]["bank_platinum"]         = GET_BALANCE_PLATINUM(ch);       /* bank account */
+
+  data["status"]["experience"]["level"]           = GET_LEVEL(ch);
+  data["status"]["experience"]["last_level"]      = 0;              //!!! last_level
+  data["status"]["experience"]["highest_level"]   = ch->only.pc->highest_level;
+  data["status"]["experience"]["exp"]             = GET_EXP(ch);
+  data["status"]["experience"]["epics"]           = ch->only.pc->epics;
+  data["status"]["experience"]["numb_deaths"]     = ch->only.pc->numb_deaths;
+
+  {
+      nlohmann::json arr = nlohmann::json::array();
+      for (i = 0; i < MAX_FORGE_ITEMS; i++)
+        arr.emplace_back(ch->only.pc->learned_forged_list[i]);
+
+    data["status"]["experience"]["learned_forged_list"] = arr;
+  }
+
+  data["status"]["spell"]["spells_memmed"]        = ch->only.pc->spells_memmed[MAX_CIRCLE];
+  data["status"]["spell"]["spell_bind_used"]      = ch->only.pc->spell_bind_used;
+
+  {
+    nlohmann::json arr = nlohmann::json::array();
+    for (i = 0; i < MAX_CIRCLE; i++)
+      arr.emplace_back(ch->specials.undead_spell_slots[i]);
+
+    data["status"]["spell"]["undead_spell_slots"] = arr;
+  }
+
+  data["status"]["skill"]["epic_skill_points"]    = ch->only.pc->epic_skill_points;
+  data["status"]["skill"]["skillpoints"]          = ch->only.pc->skillpoints;
+
+  data["status"]["flags"]["act"]                  = ch->specials.act;
+  data["status"]["flags"]["act2"]                 = ch->specials.act2;
+  data["status"]["flags"]["vote"]                 = ch->only.pc->vote;
+  data["status"]["flags"]["echo_toggle"]          = ch->only.pc->echo_toggle;
+  data["status"]["flags"]["prompt"]               = ch->only.pc->prompt;
+  data["status"]["flags"]["wiz_invis"]            = ch->only.pc->wiz_invis;
+  data["status"]["flags"]["law_flags"]            = ch->only.pc->law_flags;
+  data["status"]["flags"]["wimpy"]                = ch->only.pc->wimpy;
+  data["status"]["flags"]["aggressive"]           = ch->only.pc->aggressive;
+
+  {
+    nlohmann::json arr = nlohmann::json::array();
+    for (i = 0; i < MAX_COND; i++)
+      arr.emplace_back(ch->specials.conditions[i]);
+
+    data["status"]["flags"]["conditions"]         = arr;
+  }
+
+  {
+    nlohmann::json arr = nlohmann::json::array();
+    for (i = 0; i < ch->only.pc->numb_gcmd; i++)
+      arr.emplace_back(ch->only.pc->gcmd_arr[i]);
+
+    data["status"]["granted"]["numb_gcmd"]        = ch->only.pc->numb_gcmd;
+    data["status"]["granted"]["gcmds"]            = arr;
+  }
+
+  data["status"]["guild"]["guild_id"]             = ch->specials.guild->get_id();
+  data["status"]["guild"]["guild_status"]         = ch->specials.guild_status;
+  data["status"]["guild"]["time_left_guild"]      = ch->only.pc->time_left_guild;
+  data["status"]["guild"]["nb_left_guild"]        = ch->only.pc->nb_left_guild;
+
+  data["status"]["frags"]["frags"]                = ch->only.pc->frags;
+  data["status"]["frags"]["oldfrags"]             = ch->only.pc->oldfrags;
+
+  data["status"]["quest"]["quest_active"]         = ch->only.pc->quest_active;
+  data["status"]["quest"]["quest_mob_vnum"]       = ch->only.pc->quest_mob_vnum;
+  data["status"]["quest"]["quest_type"]           = ch->only.pc->quest_type;
+  data["status"]["quest"]["quest_accomplished"]   = ch->only.pc->quest_accomplished;
+  data["status"]["quest"]["quest_started"]        = ch->only.pc->quest_started;
+  data["status"]["quest"]["quest_zone_number"]    = ch->only.pc->quest_zone_number;
+  data["status"]["quest"]["quest_giver"]          = ch->only.pc->quest_giver;
+  data["status"]["quest"]["quest_level"]          = ch->only.pc->quest_level;
+  data["status"]["quest"]["quest_receiver"]       = ch->only.pc->quest_receiver;
+  data["status"]["quest"]["quest_shares_left"]    = ch->only.pc->quest_shares_left;
+  data["status"]["quest"]["quest_kill_how_many"]  = ch->only.pc->quest_kill_how_many;
+  data["status"]["quest"]["quest_kill_original"]  = ch->only.pc->quest_kill_original;
+  data["status"]["quest"]["quest_map_room"]       = ch->only.pc->quest_map_room ;
+  data["status"]["quest"]["quest_map_bought"]     = ch->only.pc->quest_map_bought;
+
+  data["status"]["time"]["time_unspecced"]        = ch->only.pc->time_unspecced;
+  data["status"]["time"]["time_perm_aging"]       = ch->player.time.perm_aging;
+
+  if( updateTime ) {
+    tmpl = time(0);
+    tmp = ch->player.time.played + (int) (tmpl - ch->player.time.logon);
+    data["status"]["time"]["time_played"]         = tmp;            /* player age in secs */
+    data["status"]["time"]["time_saved"]          = tmpl;           /* last save time */
+  }  else {
+    data["status"]["time"]["time_played"]         = ch->player.time.played;
+    data["status"]["time"]["time_saved"]          = ch->player.time.saved;
+  }
+
+  {
+    nlohmann::json arr = nlohmann::json::array();
+    for (i = 0; i < NUMB_PC_TIMERS; i++)
+      arr.emplace_back(ch->only.pc->pc_timer[i]);
+
+    data["status"]["time"]["pc_timers"] = arr;
+  }
+
+  {
+    nlohmann::json arr = nlohmann::json::array();
+    for (i = 0; i < MAX_TONGUE; i++)
+      arr.emplace_back(GET_LANGUAGE(ch, i));
+
+    data["status"]["language"]["max_tongue"]    = MAX_TONGUE;
+    data["status"]["language"]["languages"]     = arr;
+  }
+
+  {
+    nlohmann::json arr = nlohmann::json::array();
+    nlohmann::json arr1 = nlohmann::json::array();
+    for (i = 0; i < MAX_INTRO; i++) {
+      arr.emplace_back(ch->only.pc->introd_list[i]);
+      arr1.emplace_back(ch->only.pc->introd_times[i]);
+    }
+
+    data["status"]["intro"]["max_intro"]        = MAX_INTRO;
+    data["status"]["intro"]["introd_list"]      = arr;
+    data["status"]["intro"]["introd_times"]     = arr1;
+  }
+
+//  if (0 && ch->only.pc->trophy)
+//  {
+//    struct trophy_data *tr;
+//
+//    tmp = 0;
+//    for (tr = ch->only.pc->trophy; tr; tr = tr->next)
+//      tmp++;
+//    ADD_BYTE_JSON(data, "tropy_count", tmp);
+//    for (tr = ch->only.pc->trophy; tr; tr = tr->next)
+//    {
+//      ADD_INT_JSON(data, "trophy_vnum", tr->vnum);
+//      ADD_INT_JSON(data, "trophy_kills", tr->kills);
+//    }
+//  }
+//  else
+//  {
+//    ADD_BYTE_JSON(data, "trophy", 0);
+//  }
+
+    ch->player.time.saved = tmpl;
+}
+
+// Writes the list of affects starting with af to the string buf.
+// af->duration updated with updateShortAffects(ch); please make sure this is called,
+//   or you will have timers being reset each time a player rents out / re enters game.
+void writeAffects( nlohmann::json& data, struct affected_type *af )
+{
+  P_event  tmp;
+  signed short count = 0;
+  struct affected_type *first = af;
+  nlohmann::json arr = nlohmann::json::array();
+  
+  data["affects"]["affect_version"] = SAV_AFFVERS;
+
+  while( af )
+  {
+    if( !IS_SET(af->flags, AFFTYPE_NOSAVE) )
+    {
+      count++;
+    }
+    af = af->next;
+  }
+
+  data["affects"]["count"] = count;
+
+  for( af = first; af; af = af->next )
+  {
+    nlohmann::json obj = nlohmann::json::object();
+
+    byte     custom_messages = 0;       /* 0 - none, 1 - to_char, 2 - to_room, 3 - both */
+
+    if( IS_SET(af->flags, AFFTYPE_NOSAVE) )
+    {
+      continue;
+    }
+
+#ifndef _PFILE_
+    if (af->wear_off_message_index != 0)
+    {
+      if (skills[af->type].wear_off_char[af->wear_off_message_index]) ;
+      custom_messages = 1;
+      if (skills[af->type].wear_off_room[af->wear_off_message_index]) ;
+      custom_messages |= 2;
+    }
+#endif
+
+    obj["custom_messages"] = custom_messages;
+
+#ifndef _PFILE_
+    if (custom_messages & 1)
+    {
+      obj["wear_off_char_message"] = SAFE_STRING(skills[af->type].wear_off_char[af->wear_off_message_index]);
+    }
+    if (custom_messages & 2)
+    {
+      obj["wear_off_room_message"] = SAFE_STRING(skills[af->type].wear_off_char[af->wear_off_message_index]);
+    }
+#endif
+
+    obj["type"] = af->type;
+
+    if( IS_SET(af->flags, AFFTYPE_SHORT) )
+    {
+
+#ifndef _PFILE_
+      for (tmp = event_list; tmp; tmp = tmp->next_event)
+        if ((struct affected_type *) tmp->target.t_arg == af)
+          break;
+
+      if (tmp != NULL)
+      {
+        obj["event_time_pulses"] = event_time(tmp, T_PULSES);
+      }
+      else
+#endif
+      // af->duration updated with updateShortAffects(ch), but we want secs to save not pulses.
+      obj["event_time_seconds"] = af->duration/WAIT_SEC;
+    }
+    else
+    {
+      obj["duration"] = af->duration;
+    }
+
+    obj["flags"] = af->flags;
+    obj["modifier"] = af->modifier;
+    obj["location"] = af->location;
+    obj["bitvector"] = af->bitvector;
+    obj["bitvector2"] = af->bitvector2;
+    obj["bitvector3"] = af->bitvector3;
+    obj["bitvector4"] = af->bitvector4;
+    obj["bitvector5"] = af->bitvector5;
+    obj["bitvector6"] = 0;
+
+    arr.emplace_back(obj);
+  }
+
+    data["affects"]["aff_list"]         = arr;
+}
+
+void writeSkills( nlohmann::json& data, P_char ch, int num)
+{
+  int      i;
+  nlohmann::json arr = nlohmann::json::array();
+
+  data["skill"]["skill_version"] = SAV_SKILLVERS;
+  data["skill"]["count"] = num;
+
+  /* Save the spell memorized, and skill usages info -DCL */
+  for (i = 0; i < num; i++)
+  {
+    nlohmann::json skill = {
+      {"name",    skills[i].name                },
+      {"index",   i                             },
+      {"learned", ch->only.pc->skills[i].learned},
+      {"taught",  ch->only.pc->skills[i].taught },
+    };
+    arr.emplace_back(skill);
+  }
+
+  data["skill"]["skill_list"] = arr;
+}
+
+/* write witness record (TASFALEN) */
+
+void writeWitness(nlohmann::json& data, wtns_rec * rec)
+{
+  wtns_rec *first = rec;
+  int      count = 0;
+  nlohmann::json arr = nlohmann::json::array();
+
+  while (rec)
+  {
+    count++;
+    rec = rec->next;
+  }
+
+  data["witness"]["witness_version"]  = SAV_WTNSVERS;
+  data["witness"]["count"] = count;
+
+  rec = first;
+
+  while (rec)
+  {
+    nlohmann::json obj = {
+      {"attacker",  SAFE_STRING(rec->attacker)},
+      {"victim",    SAFE_STRING(rec->victim)  },
+      {"time",      rec->time                 },
+      {"crime",     rec->crime                },
+      {"room",      rec->room                 },
+    };
+    arr.emplace_back(obj);
+    rec = rec->next;
+  }
+
+  data["witness"]["witness_list"] = arr;
+}
+
+nlohmann::json writeObject(P_obj obj, int o_f_flag, ulong o_u_flag, int count, int loc)
+{
+  int      i;
+  struct extra_descr_data *tmp;
+  struct obj_affect *af;
+
+  if( !obj )
+    return FALSE;
+  
+  save_count += count;
+
+  nlohmann::json item = nlohmann::json::object();
+
+  item["flags"]["o_f_flag"] = o_f_flag;
+  item["virtual_number"] = obj_index[obj->R_num].virtual_number;
+  item["craftsmanship"] = obj->craftsmanship;
+  item["condition"] = obj->condition;
+
+  if (o_f_flag & O_F_WORN)
+    item["worn_location"] = loc;
+
+  if (o_f_flag & O_F_COUNT)
+    item["count"] = count;
+
+  if (o_f_flag & O_F_AFFECTS)
+  {
+    for (i = 0, af = obj->affects; af; af = af->next) i++;
+
+    item["affects"]["count"] = i;
+    
+    nlohmann::json affect_list = nlohmann::json::array();
+    for (af = obj->affects; af; af = af->next)
+    {
+      nlohmann::json affect = 
+      {
+        {"obj_affect_time", obj_affect_time(obj, af)},
+        {"type",            af->type                },
+        {"data",            af->data                },
+        {"extra2",          af->extra2              },
+      };
+
+      affect_list.emplace_back(affect);
+    }
+
+    item["affects"]["affect_list"] = affect_list;
+  }
+
+  if (o_u_flag)
+  {
+    item["flags"]["o_u_flag"] = o_u_flag;
+
+    if (o_u_flag & O_U_KEYS)
+      item["strings"]["name"] = SAFE_STRING(obj->name);
+
+    if (o_u_flag & O_U_DESC1)
+      item["strings"]["description"] = SAFE_STRING(obj->description);
+
+    if (o_u_flag & O_U_DESC2)
+      item["strings"]["short_description"] = SAFE_STRING(obj->short_description);
+
+    if (o_u_flag & O_U_DESC3)
+      item["strings"]["action_description"] = SAFE_STRING(obj->action_description);
+
+    if (o_u_flag & O_U_EDESC)
+    {
+      int nDescs = 0;
+      struct extra_descr_data *ed = obj->ex_description;
+      while (ed)
+      {
+        if (ed->keyword)
+          nDescs++;
+        ed = ed->next;
+      }
+      
+      // count.  foreach: keyword + desc
+      item["strings"]["ex_descriptions"]["count"] = nDescs;
+
+      ed = obj->ex_description;
+      nlohmann::json ex_descriptions = nlohmann::json::array();
+      while (ed)
+      {
+        if (ed->keyword)
+        {
+          nlohmann::json ex_description = 
+          {
+            {"keyword",     SAFE_STRING(ed->keyword)    },
+            {"description", SAFE_STRING(ed->description)},
+          };
+
+          ex_descriptions.emplace_back(ex_description);
+        }
+        ed = ed->next;
+      }
+      item["strings"]["ex_descriptions"]["ex_description_list"] = ex_descriptions;
+    }
+
+    for (i = 0; i < 4; i++)
+    {
+      if (o_u_flag & (1 << (i + 4)))
+      {
+        char buf[25];
+        snprintf(buf, 25, "value_%d", i);
+        item["values"][buf] = obj->value[i];
+      }
+    }
+
+    if (o_u_flag & O_U_VAL4)
+      item["values"]["value_4"] = obj->value[4];
+
+    if (o_u_flag & O_U_VAL5)
+      item["values"]["value_5"] = obj->value[5];
+
+    if (o_u_flag & O_U_VAL6)
+      item["values"]["value_6"] = obj->value[6];
+
+    if (o_u_flag & O_U_VAL7)
+      item["values"]["value_7"] = obj->value[7];
+
+    if (o_u_flag & O_U_TIMER)
+    {
+      for (i = 0; i < 4; i++)
+      {
+        char buf[25];
+        snprintf(buf, 25, "timer_%d", i);
+        item["timers"][buf] = obj->timer[i];
+      }
+    }
+
+    if (o_u_flag & O_U_TRAP)
+    {
+      item["trap"]["trap_eff"] = obj->trap_eff;
+      item["trap"]["trap_dam"] = obj->trap_dam;
+      item["trap"]["trap_charge"] = obj->trap_charge;
+      item["trap"]["trap_level"] = obj->trap_level;
+    }
+
+    if (o_u_flag & O_U_TYPE)
+      item["type"] = obj->type;
+
+    if (o_u_flag & O_U_WEAR)
+      item["wear_flags"] = obj->wear_flags;
+
+    if (o_u_flag & O_U_EXTRA)
+      item["extra_flags"] = obj->extra_flags;
+
+    if (o_u_flag & O_U_ANTI)
+      item["anti_flags"] = obj->anti_flags;
+
+    if (o_u_flag & O_U_ANTI2)
+      item["anti2_flags"] = obj->anti2_flags;
+
+    if (o_u_flag & O_U_EXTRA2)
+      item["extra2_flags"] = obj->extra2_flags;
+
+    if (o_u_flag & O_U_WEIGHT)
+      item["weight"] = obj->weight;
+
+    if (o_u_flag & O_U_MATERIAL)
+      item["material"] = obj->material;
+
+/*    if (o_u_flag & O_U_SPACE)
+        item["space"] = obj->space;
+*/
+    if (o_u_flag & O_U_COST)
+      item["cost"] = obj->cost;
+
+    if (o_u_flag & O_U_BV1)
+      item["bitvector"] = obj->bitvector;
+
+    if (o_u_flag & O_U_BV2)
+      item["bitvector2"] = obj->bitvector2;
+
+    if (o_u_flag & O_U_BV3)
+      item["bitvector3"] = obj->bitvector3;
+
+    if (o_u_flag & O_U_BV4)
+      item["bitvector4"] = obj->bitvector4;
+
+    if (o_u_flag & O_U_BV5)
+      item["bitvector5"] = obj->bitvector5;
+
+    if (o_u_flag & O_U_AFFS)
+    {
+      nlohmann::json obj_affects = nlohmann::json::array();
+      for (i = 0; i < MAX_OBJ_AFFECT; i++)
+      {
+        nlohmann::json obj_affect = {
+          {"location", obj->affected[i].location},
+          {"modifier", obj->affected[i].modifier},
+        };
+        obj_affects.emplace_back(obj_affect);
+      }
+
+      item["obj_affects"]["obj_affect_list"] = obj_affects;
+    }
+  }
+  if (o_f_flag & O_F_SPELLBOOK)
+  {
+    if (!(tmp = find_spell_description(obj)))
+    {                           /*
+                                 * this _SHOULD_
+                                 * not happen..
+                                 * but will it? we
+                                 * shall see.
+                                 */
+      //ADD_INT(ibuf, 0);
+    }
+    else
+    {
+      item["spellbook"]["count"] = (MAX_SKILLS / 8) + 1;
+      
+      nlohmann::json spells = nlohmann::json::array();
+      for (i = 0; i < (MAX_SKILLS / 8) + 1; i++)
+      {
+        nlohmann::json spell = 
+        { 
+          {"description", tmp->description[i]}
+        };
+        spells.emplace_back(spell);
+      }
+
+      item["spellbook"]["spell_list"] = spells;
+    }
+  }
+
+	return item;
+}
+
+bool restoreStatus(const nlohmann::json& data, P_char ch)
+{
+  byte     dummy_byte;
+  char     *str;
+  long     dummy_long;
+  int      tmp, tmp2, tmp3, dummy_int, i;
+  unsigned short s;             /*, dummy_short; */
+  struct trophy_data *tr, *tr2;
+  char     buffer[2056];
+
+  if(!data.contains("status")) 
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  stat_vers                     = data["status"]["stat_version"].get<int>();
+
+  if( stat_vers > (char) SAV_STATVERS )
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- bad version.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  ch->only.pc->pid              = data["status"]["pid"].get<int>();
+  ch->only.pc->screen_length    = (ubyte)data["status"]["settings"]["screen_length"].get<int>() ;
+
+  if(data["status"].contains("strings"))
+  {
+    std::string name            = data["status"]["strings"]["name"].get<std::string>();
+    std::string pwd             = data["status"]["strings"]["pwd"].get<std::string>();
+    std::string short_descr     = data["status"]["strings"]["short_descr"].get<std::string>();
+    std::string long_descr      = data["status"]["strings"]["long_descr"].get<std::string>();
+    std::string description     = data["status"]["strings"]["description"].get<std::string>();
+    std::string title           = data["status"]["strings"]["title"].get<std::string>();
+    std::string poofIn          = data["status"]["strings"]["poofIn"].get<std::string>();
+    std::string poofOut         = data["status"]["strings"]["poofOut"].get<std::string>();
+
+
+    ch->player.short_descr      = const_cast<char*>(short_descr.c_str());
+    ch->player.long_descr       = const_cast<char*>(long_descr.c_str());
+    ch->player.description      = const_cast<char*>(description.c_str());
+    ch->only.pc->poofIn         = const_cast<char*>(poofIn.c_str());
+    ch->only.pc->poofOut        = const_cast<char*>(poofOut.c_str());
+    GET_TITLE(ch)               = const_cast<char*>(title.c_str());
+    GET_NAME(ch)                = const_cast<char*>(name.c_str());
+    str                         = const_cast<char*>(pwd.c_str());
+
+    if (stat_vers > 10)
+    {
+      std::string poofInSound   = data["status"]["strings"]["poofInSound"].get<std::string>();
+      std::string poofOutSound  = data["status"]["strings"]["poofOutSound"].get<std::string>();
+
+      ch->only.pc->poofInSound  = const_cast<char*>(poofInSound.c_str());
+      ch->only.pc->poofOutSound = const_cast<char*>(poofOutSound.c_str());
+    }
+  }
+  else 
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Strings section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+#ifndef _PFILE_
+  if (!str)
+  {
+    send_to_char("How did you manage to nullify your password!??\r\nPlease contact a GOD!\r\n", ch);
+    fprintf(stderr, "%s somehow managed to clear out his/her password field!\n", GET_NAME(ch));
+    logit(LOG_FILE, "%s somehow managed to clear out his/her password field!", GET_NAME(ch));
+    return false;
+  }
+#endif
+  strcpy(ch->only.pc->pwd, str);
+  FREE(str);
+
+  if(data["status"].contains("attributes"))
+  {
+    if (stat_vers < 33)
+      ch->player.m_class          = 1 << (data["status"]["attributes"]["m_class"].get<int>() - 1);
+    else
+      ch->player.m_class          = data["status"]["attributes"]["m_class"].get<int>();
+  
+    if(stat_vers > 36)
+      ch->player.secondary_class  = data["status"]["attributes"]["secondary_class"].get<int>();
+  
+    if(stat_vers > 38)
+      ch->player.spec             = (char)data["status"]["attributes"]["spec"].get<int>();
+
+    if (IS_MULTICLASS_PC(ch))
+      ch->player.spec             = 0;
+
+    GET_RACE(ch)                  = (char)data["status"]["attributes"]["race"].get<int>();
+    GET_RACEWAR(ch)               = (char)data["status"]["attributes"]["racewar"].get<int>();
+    GET_SEX(ch)                   = (char)data["status"]["attributes"]["sex"].get<int>();
+    ch->player.weight             = (short)data["status"]["attributes"]["weight"].get<int>();
+    ch->player.height             = (short)data["status"]["attributes"]["height"].get<int>();
+    GET_SIZE(ch)                  = (char)data["status"]["attributes"]["size"].get<int>();
+    GET_HOME(ch)                  = (int)data["status"]["attributes"]["home"].get<int>();
+    ch->specials.alignment        = (int)data["status"]["attributes"]["alignment"].get<int>();
+    ch->only.pc->prestige         = (short)data["status"]["attributes"]["alignment"].get<short>();
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Attributes section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("birth"))
+  {
+    GET_BIRTHPLACE(ch)            = (int)data["status"]["birth"]["birthplace"].get<int>();
+    GET_ORIG_BIRTHPLACE(ch)       = (int)data["status"]["birth"]["orig_birthplace"].get<int>();
+    ch->player.time.birth         = (long)data["status"]["birth"]["birth_time"].get<long>();
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Birth section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("time"))
+  {
+    ch->player.time.played        = (long)data["status"]["time"]["time_played"].get<long>();
+    ch->player.time.saved         = (long)data["status"]["time"]["time_saved"].get<long>();        /* last save time */
+    ch->player.time.logon         = time(0);      /* set it */
+    ch->player.time.perm_aging    = (long)data["status"]["time"]["time_perm_aging"].get<long>();
+
+    if (stat_vers > 31)
+      ch->only.pc->time_unspecced = (long)data["status"]["time"]["time_unspecced"].get<long>();
+    else
+      ch->only.pc->time_unspecced = 0;
+
+    auto& arr = data["status"]["time"]["pc_timers"];
+    for (i = 0; i < NUMB_PC_TIMERS; i++) {
+      if(arr.size() > 0 && i < arr.size()) 
+        ch->only.pc->pc_timer[i]  = (time_t)arr[i].get<long long>();
+    }
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Time section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("spell"))
+  {
+    if(stat_vers > 40)
+      ch->only.pc->spell_bind_used = (int)data["status"]["spell"]["spell_bind_used"].get<int>();
+
+    ch->only.pc->spells_memmed[MAX_CIRCLE] = (char)data["status"]["spell"]["spells_memmed"].get<int>();
+
+    auto& arr = data["status"]["spell"]["undead_spell_slots"];
+    for (i = 0; i < MAX_CIRCLE + 1; i++)
+      if(arr.size() > 0 && i < arr.size()) 
+        ch->specials.undead_spell_slots[i] = (char)arr[i].get<short>();
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Spell section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  /* trophy stuff */
+//  ch->only.pc->trophy = NULL;
+//  if (!dead_trophy_pool)
+//    dead_trophy_pool = mm_create("TROPHY",
+//                                 sizeof(struct trophy_data),
+//                                 offsetof(struct trophy_data, next), 3);
+  ZONE_TROPHY(ch) = NULL;
+  load_zone_trophy(ch);
+
+  //if( stat_vers < 45 )
+  //{
+    // old trophy data
+    //tmp = GET_BYTE(buf);
+    //for (tmp2 = 0; tmp2 < tmp; tmp2++)
+    //{
+      //GET_INTE(buf);
+      //GET_INTE(buf);
+      //    tr = (struct trophy_data *) mm_get(dead_trophy_pool);
+      //    tr->vnum = GET_INTE(buf);
+      //    tr->kills = GET_INTE(buf);
+      //    tr->next = NULL;
+      //    /* add it to the END */
+      //    if (!ch->only.pc->trophy)
+      //    {
+      //      ch->only.pc->trophy = tr;
+      //    }
+      //    else
+      //    {
+      //      tr2 = ch->only.pc->trophy;
+      //      while (tr2->next)
+      //        tr2 = tr2->next;
+      //      tr2->next = tr;
+      //    
+    //}      
+  //}
+
+  if(data["status"].contains("language"))
+  {
+    s  = (short)data["status"]["language"]["max_tongue"].get<short>();           /* number of tongues */
+    auto& arr = data["status"]["language"]["languages"];
+    for (tmp = 0; tmp < MAX(s, MAX_TONGUE); tmp++)
+    {
+      if(tmp < MAX_TONGUE)
+        GET_LANGUAGE(ch, tmp) = 0;
+
+      if ((tmp < s) && (tmp < MAX_TONGUE))
+      {
+        /* valid language number was stored */
+        if(arr.size() > 0 && tmp < arr.size())
+          GET_LANGUAGE(ch, tmp) = (char)arr[i].get<int>();
+        else
+          GET_LANGUAGE(ch, tmp) = 0;
+      }
+    }
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Language section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("intro"))
+  {
+    /* intro stuff */
+    s = (short)data["status"]["intro"]["max_intro"].get<short>();
+    auto& arr = data["status"]["intro"]["introd_list"];
+    auto& arr1 = data["status"]["intro"]["introd_times"];
+    for (tmp = 0; tmp < MAX(s, MAX_INTRO); tmp++)
+    {
+      ch->only.pc->introd_list[tmp]   = 0;
+      ch->only.pc->introd_times[tmp]  = 0;
+
+      if ((tmp < s) && (tmp < MAX_INTRO))
+      {
+        if(arr.size() > 0 && tmp < arr.size())
+          ch->only.pc->introd_list[tmp]   = (int)arr[i].get<int>();
+        if(arr1.size() > 0 && tmp < arr1.size())
+          ch->only.pc->introd_times[tmp]  = (long)arr1[i].get<long>();
+      }
+    }
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Intro section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["stats"].contains("experience"))
+  {
+    GET_EXP(ch)                   = (int)data["status"]["experience"]["exp"].get<int>();
+    ch->only.pc->epics            = (int)data["status"]["experience"]["epics"].get<int>();    // Used for lvl withouth potion
+    ch->player.level              = (char)data["status"]["experience"]["level"].get<int>();
+    ch->only.pc->highest_level    = (char)data["status"]["experience"]["highest_level"].get<int>();
+    ch->only.pc->numb_deaths      = (long)data["status"]["experience"]["highest_level"].get<long>();
+
+    if (ch->player.level > MAXLVL) ch->player.level = 1;
+
+    if(stat_vers > 37 && stat_vers < 40)
+    {
+      auto& arr = data["status"]["experience"]["learned_forged_list"];
+      for (tmp = 0; tmp < 100; tmp++)
+        if(arr.size() > 0 && tmp < arr.size())
+          ch->only.pc->learned_forged_list[tmp] = (int)arr[tmp].get<int>();
+    }
+    if(stat_vers > 39)
+    {
+      auto& arr = data["status"]["experience"]["learned_forged_list"];
+      for (tmp = 0; tmp < MAX_FORGE_ITEMS; tmp++)
+        if(arr.size() > 0 && tmp < arr.size())
+          ch->only.pc->learned_forged_list[tmp] = (int)arr[tmp].get<int>();
+    }
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Experience section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("stats"))
+  {
+    ch->base_stats.Str          = (ubyte)data["status"]["stats"]["stat_str"].get<int>();
+    ch->base_stats.Dex          = (ubyte)data["status"]["stats"]["stat_dex"].get<int>();
+    ch->base_stats.Agi          = (ubyte)data["status"]["stats"]["stat_agi"].get<int>();
+    ch->base_stats.Con          = (ubyte)data["status"]["stats"]["stat_con"].get<int>();
+    ch->base_stats.Pow          = (ubyte)data["status"]["stats"]["stat_pow"].get<int>();
+    ch->base_stats.Int          = (ubyte)data["status"]["stats"]["stat_int"].get<int>();
+    ch->base_stats.Wis          = (ubyte)data["status"]["stats"]["stat_wis"].get<int>();
+    ch->base_stats.Cha          = (ubyte)data["status"]["stats"]["stat_cha"].get<int>();
+    ch->base_stats.Kar          = (ubyte)data["status"]["stats"]["stat_kar"].get<int>();
+    ch->base_stats.Luk          = (ubyte)data["status"]["stats"]["stat_luk"].get<int>();
+    ch->curr_stats              = ch->base_stats;
+
+    GET_MANA(ch)                = (short)data["status"]["stats"]["mana"].get<short>();
+    ch->points.base_mana        = (short)data["status"]["stats"]["base_mana"].get<short>();
+    GET_HIT(ch)                 = MAX((short)data["status"]["stats"]["hit"].get<short>(), 0);
+    ch->points.base_hit         = MAX((short)data["status"]["stats"]["base_hit"].get<short>(), 1);
+    GET_VITALITY(ch)            = (short)data["status"]["stats"]["vitality"].get<short>();
+    ch->points.base_vitality    = (short)data["status"]["stats"]["max_vitality"].get<short>();
+    ch->points.hit_reg          = 0;
+    ch->points.move_reg         = 0;
+    ch->points.mana_reg         = 0;
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Stats section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["stats"].contains("bank"))
+  {
+    GET_COPPER(ch)            = (int)data["status"]["bank"]["copper"].get<int>();
+    GET_SILVER(ch)            = (int)data["status"]["bank"]["silver"].get<int>();
+    GET_GOLD(ch)              = (int)data["status"]["bank"]["gold"].get<int>();
+    GET_PLATINUM(ch)          = (int)data["status"]["bank"]["platinum"].get<int>();
+
+    GET_BALANCE_COPPER(ch)    = (int)data["status"]["bank"]["bank_copper"].get<int>();
+    GET_BALANCE_SILVER(ch)    = (int)data["status"]["bank"]["bank_silver"].get<int>();
+    GET_BALANCE_GOLD(ch)      = (int)data["status"]["bank"]["bank_gold"].get<int>();
+    GET_BALANCE_PLATINUM(ch)  = (int)data["status"]["bank"]["bank_platinum"].get<int>();
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Bank section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+      "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("skill"))
+  {
+    ch->only.pc->epic_skill_points    = 0;
+    
+    if(stat_vers >= 44)
+      ch->only.pc->epic_skill_points  = (int)data["status"]["skill"]["epic_skill_points"].get<int>();
+
+    if(stat_vers > 46)
+      ch->only.pc->skillpoints        = (int)data["status"]["skill"]["skillpoints"].get<int>();
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Skill section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+      "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  SET_POS(ch, POS_STANDING + STAT_NORMAL);
+
+  if(data["status"].contains("flags"))
+  {
+    ch->specials.act          = (int)data["status"]["flags"]["act"].get<int>();
+    ch->specials.act2         = (int)data["status"]["flags"]["act2"].get<int>();
+    ch->only.pc->vote         = (int)data["status"]["flags"]["vote"].get<int>();
+    ch->only.pc->echo_toggle  = (char)data["status"]["flags"]["echo_toggle"].get<int>();
+    ch->only.pc->prompt       = (short)data["status"]["flags"]["prompt"].get<short>();
+    ch->only.pc->wiz_invis    = (long)data["status"]["flags"]["wiz_invis"].get<long>();
+    ch->only.pc->law_flags    = (ulong)data["status"]["flags"]["wiz_invis"].get<long>();
+    ch->only.pc->wimpy        = (short)data["status"]["flags"]["wimpy"].get<short>();
+    ch->only.pc->aggressive   = (short)data["status"]["flags"]["aggressive"].get<short>();
+    REMOVE_BIT(ch->specials.act2, PLR2_WAIT);
+
+    auto& arr = data["status"]["flags"]["conditions"];
+    for (tmp = 0; tmp < MAX_COND; tmp++)
+    {
+      if(arr.size() > 0 && tmp < arr.size())
+        ch->specials.conditions[tmp] = (char)arr[tmp].get<int>();
+      if ((ch->specials.conditions[tmp] < 0) && !IS_TRUSTED(ch))
+        ch->specials.conditions[tmp] = 0;
+    }
+  }
+  else
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Flags section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("guild"))
+  {
+    if( (tmp = (int)data["status"]["guild"]["guild_id"].get<int>()) > 0 )
+    {
+      ch->specials.guild = get_guild_from_id(tmp);
+
+      if( GET_ASSOC(ch) == NULL )
+      {
+        clear_title( ch );
+        send_to_char( "\n&+CYour guild no longer seems to exist.&n\n\n", ch );
+        // Reset guild bits.
+        GET_A_BITS(ch)              = 0;
+        // Set time left guild to now
+        GET_TIME_LEFT_GUILD(ch)     = time(0);
+        // Increment number of times left guild.
+        GET_NB_LEFT_GUILD(ch)       = (char)data["status"]["guild"]["nb_left_guild"].get<int>() + 1;
+      }
+      // Load guild info
+      else
+      {
+        GET_A_BITS(ch)              = (int)data["status"]["guild"]["guild_status"].get<int>();
+        GET_TIME_LEFT_GUILD(ch)     = (long)data["status"]["guild"]["time_left_guild"].get<long>();
+        GET_NB_LEFT_GUILD(ch)       = (char)data["status"]["guild"]["nb_left_guild"].get<int>();
+      }
+    }
+    // Not in a guild.
+    else
+    {
+      GET_ASSOC(ch)                 = NULL;
+      GET_A_BITS(ch)                = (int)data["status"]["guild"]["guild_status"].get<int>();
+      GET_TIME_LEFT_GUILD(ch)       = (long)data["status"]["guild"]["time_left_guild"].get<long>();
+      GET_NB_LEFT_GUILD(ch)         = (char)data["status"]["guild"]["nb_left_guild"].get<int>();
+    }
+  }
+  else 
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Guild section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("frags"))
+  {
+    ch->only.pc->frags            = 0;
+    ch->only.pc->oldfrags         = 0;
+
+    if(stat_vers >= 46)
+    {
+      ch->only.pc->frags          = (long)data["status"]["frags"]["frags"].get<long>();
+      ch->only.pc->oldfrags       = (long)data["status"]["frags"]["oldfrags"].get<long>();
+    }
+  }
+  else 
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Frags section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("quest"))
+  {
+    if (stat_vers > 41)
+    {
+      ch->only.pc->quest_active         = (int)data["status"]["quest"]["quest_active"].get<int>();
+      ch->only.pc->quest_mob_vnum       = (int)data["status"]["quest"]["quest_mob_vnum"].get<int>();
+      ch->only.pc->quest_type           = (int)data["status"]["quest"]["quest_type"].get<int>();
+      ch->only.pc->quest_accomplished   = (int)data["status"]["quest"]["quest_accomplished"].get<int>();
+      ch->only.pc->quest_started        = (int)data["status"]["quest"]["quest_started"].get<int>();
+      ch->only.pc->quest_zone_number    = (int)data["status"]["quest"]["quest_zone_number"].get<int>();
+      ch->only.pc->quest_giver          = (int)data["status"]["quest"]["quest_giver"].get<int>();
+      ch->only.pc->quest_level          = (int)data["status"]["quest"]["quest_level"].get<int>();
+      ch->only.pc->quest_receiver       = (int)data["status"]["quest"]["quest_receiver"].get<int>();
+      ch->only.pc->quest_shares_left    = (int)data["status"]["quest"]["quest_shares_left"].get<int>();
+      ch->only.pc->quest_kill_how_many  = (int)data["status"]["quest"]["quest_kill_how_many"].get<int>();
+      ch->only.pc->quest_kill_original  = (int)data["status"]["quest"]["quest_kill_original"].get<int>();
+      ch->only.pc->quest_map_room       = (int)data["status"]["quest"]["quest_map_room"].get<int>();
+      ch->only.pc->quest_map_bought     = (int)data["status"]["quest"]["quest_map_bought"].get<int>();
+    }
+  }
+  else 
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/Quest section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+
+  if(data["status"].contains("granted"))
+  {
+    ch->only.pc->numb_gcmd              = (int)data["status"]["granted"]["numb_gcmd"].get<int>();
+    if (ch->only.pc->numb_gcmd)
+    {
+      CREATE(ch->only.pc->gcmd_arr, int, ch->only.pc->numb_gcmd, MEM_TAG_ARRAY);
+
+      auto& arr = data["status"]["granted"]["gcmds"];
+      for (tmp = 0; tmp < ch->only.pc->numb_gcmd; tmp++)
+        if(arr.size() > 0 && tmp < arr.size())
+          ch->only.pc->gcmd_arr[tmp]    = (int)arr[tmp].get<int>();
+    }
+  }
+  else 
+  {
+    logit(LOG_FILE, "Save file for %s status restore failed -- No Status/zGranted section.", GET_NAME(ch));
+    send_to_char("Your character file is in a format which the game doesn't know how\r\n"
+       "to load. Please log on with another character and talk to a God.\r\n", ch);
+    return false;
+  }
+// -Foo Remove hunger/thirst
+#if 1
+  GET_COND(ch, FULL)                    = -1;
+  GET_COND(ch, THIRST)                  = -1;
+#endif
+
+  ch->specials.carry_weight             = 0;
+  ch->specials.carry_items              = 0;
+
+  ch->points.max_hit                    = 0; //ch->points.base_hit + calculate_hitpoints(ch);
+  ch->points.max_mana                   = ch->points.base_mana + calculate_mana(ch);
+  ch->points.max_vitality               = vitality_limit(ch);
+
+  return true;
+}
+
+int restoreCharOnlyJSON(P_char ch, char *name)
+{
+  nlohmann::json pfile;
+
+  struct stat statbuf;
+
+#ifndef _PFILE_
+  char     buff[SAV_MAXSIZE];
+  char    *buf;
+  int      skill_off, affect_off, item_off, surname;
+#endif
+  int      start, size, csize, type, room;
+  int      witness_off;
+  char     Gbuf1[MAX_STRING_LENGTH];
+  char     b_savevers;
+
+  if( !name || !ch )
+  {
+    return -1;
+  }
+
+  strcpy(buff, name);
+  for( buf = buff; *buf; buf++ )
+  {
+    *buf = LOWER(*buf);
+  }
+  buf = buff;
+  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.json", SAVE_DIR, *buff, buff);
+//  logit(LOG_FILE, "%s is the pfile string!", Gbuf1);
+#ifndef _PFILE_
+  if (stat(Gbuf1, &statbuf) != 0)
+  {
+    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.json", SAVE_DIR, *buff, name);
+    if (stat(Gbuf1, &statbuf) != 0)
+      return -1;
+  }
+#endif
+
+  std::ifstream fstream(Gbuf1);
+
+  if (!fstream.is_open()) 
+  {
+        logit(LOG_FILE, "Warning: JSON Save file not opened.");
+        fprintf(stderr, "Problem restoring save file of: %s\n", name);
+        logit(LOG_FILE, "Problem restoring save file of %s.", name);
+        send_to_char
+          ("There is something wrong with your save file!  Please talk to a God.\r\n",
+          ch);
+    return -2;
+  }
+
+  try 
+  {
+    pfile = nlohmann::json::parse(fstream);
+  }
+  catch (nlohmann::json::parse_error& e) 
+  {
+    fstream.close();
+    logit(LOG_FILE, "Warning: JSON Save file not parsed.");
+    fprintf(stderr, "Problem restoring save file of: %s\n", name);
+    logit(LOG_FILE, "Problem restoring save file of %s.", name);
+    send_to_char
+          ("There is something wrong with your save file!  Please talk to a God.\r\n",
+          ch);
+    return -2;
+  }
+
+  fstream.close();
+
+/* TASFALEN */
+
+
+
+/*  if (GET_BYTE(buf) != (char) SAV_SAVEVERS) {
+   logit(LOG_FILE, "Save file of %s is in an older format.", name);
+   send_to_char(
+   "Your character file is in an old format which the game doesn't know how\r\n"
+   "to load.  Please log on with another character and talk to a God.\r\n",
+   ch);
+   return -2;
+   }
+ */
+
+/* end TASFALEN */
+
+  // Read the type sizes from the save file
+  //int saved_short_size = pfile["header"]["short_size"].get<int>();
+  //int saved_int_size = pfile["header"]["int_size"].get<int>();
+  //int saved_long_size = pfile["header"]["long_size"].get<int>();
+
+  //logit(LOG_FILE, "restoreCharacter: %s - saved sizes: short=%d int=%d long=%d, current sizes: short=%d int=%d long=%d",
+  //  name, saved_short_size, saved_int_size, saved_long_size, short_size, int_size, long_size);
+
+  //if ((saved_short_size != short_size) || (saved_int_size != int_size) ||
+  //    (saved_long_size != long_size))
+  //{
+  //  logit(LOG_FILE, "Save file of %s has mismatched architecture.", name);
+  //  send_to_char
+  //    ("Your character file was created on a machine of a different architecture\r\n"
+  //     "type than the current one; loading such a file is not yet supported.\r\n"
+  //     "Please talk to a God.\r\n", ch);
+  //  return -2;
+  //}
+  //if (size < 5 * int_size + 5 * sizeof(char) + long_size)
+  //{
+  //  logit(LOG_FILE, "Warning: Save file is only %d bytes.", size);
+  //  fprintf(stderr, "Problem restoring save file of: %s\n", name);
+   // logit(LOG_FILE, "Problem restoring save file of %s.", name);
+  //  send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
+  //  return -2;
+  //}
+
+  if(pfile.contains("header"))
+  {
+    b_savevers          = pfile["header"]["save_version"].get<char>();
+    type                = pfile["header"]["type"].get<int>();
+    skill_off           = pfile["header"]["skill_off"].get<int>();
+    affect_off          = pfile["header"]["affect_off"].get<int>();
+    item_off            = pfile["header"]["item_off"].get<int>();
+    csize               = pfile["header"]["size_off"].get<int>();
+    room                = pfile["header"]["starting_room"].get<int>();   
+
+    if (b_savevers >= (char) SAV_WTNSVERS)                            /* no witness record save in file */
+      witness_off       = pfile["header"]["witness_off"].get<int>();  /* TASFALEN */
+
+    if( b_savevers > 4 )
+      ch->specials.act3 = pfile["header"]["surname"].get<int>();
+
+#ifndef _PFILE_
+      ch->in_room = real_room(room);
+#else
+      ch->in_room = room;
+#endif
+  }
+  else
+  {
+    logit(LOG_FILE, "Error: JSON Save file does not contain a header section.", size);
+    fprintf(stderr, "Problem restoring save file of: %s\n", name);
+    logit(LOG_FILE, "Problem restoring save file of %s.", name);
+    send_to_char("There is something wrong with your save file!  Please talk to a God.\r\n", ch);
+    return -2;
+  }
+
+  restoreStatus(pfile, ch);
+  logit(LOG_FILE, "restoreStatus debug: %s", name);
+
+  if (type == 4)                /*
+                                 * return from death, flaked out. JAB
+                                 */
+    SET_POS(ch, POS_PRONE + STAT_SLEEPING);
+
+// /* TASFALEN */
+
+//   if (b_savevers < (char) SAV_WTNSVERS)
+//   {                             /* no witness record save in file */
+
+//     if ((restoreSkills(buff + skill_off, ch, MAX_SKILLS) + skill_off) !=
+//         affect_off)
+//     {
+//       logit(LOG_FILE, "Warning: restoreSkills() not match offset.");
+//       fprintf(stderr, "Problem restoring save file of: %s\n", name);
+//       logit(LOG_FILE, "Problem restoring save file of %s.", name);
+//       send_to_char
+//         ("There is something wrong with your save file!  Please talk to a God.\r\n",
+//          ch);
+//       return -2;
+//     }
+//   }
+//   else
+//   {
+
+//     if ((restoreSkills(buff + skill_off, ch, MAX_SKILLS) + skill_off) !=
+//         witness_off)
+//     {
+//       logit(LOG_FILE, "Warning: restoreSkills() not match offset.");
+//       fprintf(stderr, "Problem restoring save file of: %s\n", name);
+//       logit(LOG_FILE, "Problem restoring save file of %s.", name);
+//       send_to_char
+//         ("There is something wrong with your save file!  Please talk to a God.\r\n",
+//          ch);
+//       return -2;
+//     }
+// #ifndef _PFILE_
+//     if ((restoreWitness(buff + witness_off, ch) + witness_off) != affect_off)
+//     {
+//       logit(LOG_FILE, "Warning: restoreWitness() not match offset.");
+//       fprintf(stderr, "Problem restoring save file of: %s\n", name);
+//       logit(LOG_FILE, "Problem restoring save file of %s.", name);
+//       send_to_char
+//         ("There is something wrong with your save file!  Please talk to a God.\r\n",
+//          ch);
+//       return -2;
+//     }
+// #endif
+//   }
+//   /* end TASFALEN */
+
+  return type;
+}
+#endif
+
 /*
  * following are functions that write data to disk (or prepare data for
  * writing).  JAB
@@ -497,598 +1823,9 @@ int writeStatus(char *buf, P_char ch, bool updateTime )
   ADD_INT(buf, ch->only.pc->quest_map_room );
   ADD_INT(buf, ch->only.pc->quest_map_bought );
 
-
   return (int) (buf - start);
 }
 
-#ifdef ENABLE_JSON_PFILE
-/*
- * following are functions that write data to disk in json format (or prepare data for
- * writing).  MWH
- */
-
-void writeStatus(nlohmann::json& data, P_char ch, bool updateTime )
-{
-  int      tmp, i;
-  long     tmpl;
-
-  data["status"]["stat_version"]                  = SAV_STATVERS;
-  data["status"]["pid"]                           = GET_PID(ch);
-  
-  data["status"]["strings"]["name"]               = SAFE_STRING(GET_NAME(ch));
-  data["status"]["strings"]["pwd"]                = SAFE_STRING(ch->only.pc->pwd);
-  data["status"]["strings"]["short_descr"]        = SAFE_STRING(ch->player.short_descr);
-  data["status"]["strings"]["long_descr"]         = SAFE_STRING(ch->player.long_descr);
-  data["status"]["strings"]["description"]        = SAFE_STRING(ch->player.description);
-  data["status"]["strings"]["title"]              = SAFE_STRING(GET_TITLE(ch));
-  data["status"]["strings"]["poofIn"]             = SAFE_STRING(ch->only.pc->poofIn);
-  data["status"]["strings"]["poofOut"]            = SAFE_STRING(ch->only.pc->poofOut);
-  data["status"]["strings"]["poofInSound"]        = SAFE_STRING(ch->only.pc->poofInSound);
-  data["status"]["strings"]["poofOutSound"]       = SAFE_STRING(ch->only.pc->poofOutSound);
-
-  data["status"]["settings"]["screen_length"]     = ch->only.pc->screen_length;
-  
-  data["status"]["attributes"]["m_class"]         = ch->player.m_class;
-  data["status"]["attributes"]["secondary_class"] = ch->player.secondary_class;
-  data["status"]["attributes"]["spec"]            = ch->player.spec;
-  data["status"]["attributes"]["race"]            = GET_RACE(ch);
-  data["status"]["attributes"]["racewar"]         = GET_RACEWAR(ch);
-
-  data["status"]["attributes"]["sex"]             = GET_SEX(ch);
-  data["status"]["attributes"]["weight"]          = ch->player.weight;
-  data["status"]["attributes"]["height"]          = ch->player.height;
-  data["status"]["attributes"]["size"]            = GET_SIZE(ch);
-  data["status"]["attributes"]["home"]            = GET_HOME(ch);
-  data["status"]["attributes"]["alignment"]       = ch->specials.alignment;
-  data["status"]["attributes"]["prestige"]        = ch->only.pc->prestige;
-
-  data["status"]["birth"]["birthplace"]           = GET_BIRTHPLACE(ch);
-  data["status"]["birth"]["orig_birthplace"]      = GET_ORIG_BIRTHPLACE(ch);
-  data["status"]["birth"]["birth_time"]           = ch->player.time.birth;
-
-  data["status"]["stats"]["stat_str"]             = ch->base_stats.Str;
-  data["status"]["stats"]["stat_dex"]             = ch->base_stats.Dex;
-  data["status"]["stats"]["stat_agi"]             = ch->base_stats.Agi;
-  data["status"]["stats"]["stat_con"]             = ch->base_stats.Con;
-  data["status"]["stats"]["stat_pow"]             = ch->base_stats.Pow;
-  data["status"]["stats"]["stat_int"]             = ch->base_stats.Int;
-  data["status"]["stats"]["stat_wis"]             = ch->base_stats.Wis;
-  data["status"]["stats"]["stat_cha"]             = ch->base_stats.Cha;
-  data["status"]["stats"]["stat_kar"]             = ch->base_stats.Kar;
-  data["status"]["stats"]["stat_luk"]             = ch->base_stats.Luk;
-
-  data["status"]["stats"]["mana"]                 = GET_MANA(ch);
-  data["status"]["stats"]["base_mana"]            = ch->points.base_mana;
-  data["status"]["stats"]["hit"]                  = MAX(0, GET_MAX_HIT(ch)-GET_HIT(ch));
-  data["status"]["stats"]["base_hit"]             = ch->points.base_hit;
-  data["status"]["stats"]["vitality"]             = GET_VITALITY(ch);
-  data["status"]["stats"]["base_vitality"]        = ch->points.base_vitality;
-
-  data["status"]["bank"]["copper"]                = GET_COPPER(ch);
-  data["status"]["bank"]["silver"]                = GET_SILVER(ch);
-  data["status"]["bank"]["gold"]                  = GET_GOLD(ch);
-  data["status"]["bank"]["platinum"]              = GET_PLATINUM(ch);
-  data["status"]["bank"]["bank_copper"]           = GET_BALANCE_COPPER(ch);         /* bank account */
-  data["status"]["bank"]["bank_silver"]           = GET_BALANCE_SILVER(ch);         /* bank account */
-  data["status"]["bank"]["bank_gold"]             = GET_BALANCE_GOLD(ch);           /* bank account */
-  data["status"]["bank"]["bank_platinum"]         = GET_BALANCE_PLATINUM(ch);       /* bank account */
-
-  data["status"]["experience"]["level"]           = GET_LEVEL(ch);
-  data["status"]["experience"]["last_level"]      = 0;              //!!! last_level
-  data["status"]["experience"]["highest_level"]   = ch->only.pc->highest_level;
-  data["status"]["experience"]["exp"]             = GET_EXP(ch);
-  data["status"]["experience"]["epics"]           = ch->only.pc->epics;
-  data["status"]["experience"]["numb_deaths"]     = ch->only.pc->numb_deaths;
-
-  {
-      nlohmann::json arr = nlohmann::json::array();
-      for (i = 0; i < MAX_FORGE_ITEMS; i++)
-        arr.emplace_back(ch->only.pc->learned_forged_list[i]);
-
-    data["status"]["experience"]["learned_forged_list"] = arr;
-  }
-
-  data["status"]["spell"]["spells_memmed"]        = ch->only.pc->spells_memmed[MAX_CIRCLE];
-  data["status"]["spell"]["spell_bind_used"]      = ch->only.pc->spell_bind_used;
-
-  {
-    nlohmann::json arr = nlohmann::json::array();
-    for (i = 0; i < MAX_CIRCLE; i++)
-      arr.emplace_back(ch->specials.undead_spell_slots[i]);
-
-    data["status"]["spell"]["undead_spell_slots"] = arr;
-  }
-
-  data["status"]["skill"]["epic_skill_points"]    = ch->only.pc->epic_skill_points;
-  data["status"]["skill"]["skillpoints"]          = ch->only.pc->skillpoints;
-
-  data["status"]["flags"]["act"]                  = ch->specials.act;
-  data["status"]["flags"]["act2"]                 = ch->specials.act2;
-  data["status"]["flags"]["vote"]                 = ch->only.pc->vote;
-  data["status"]["flags"]["echo_toggle"]          = ch->only.pc->echo_toggle;
-  data["status"]["flags"]["prompt"]               = ch->only.pc->prompt;
-  data["status"]["flags"]["wiz_invis"]            = ch->only.pc->wiz_invis;
-  data["status"]["flags"]["law_flags"]            = ch->only.pc->law_flags;
-  data["status"]["flags"]["wimpy"]                = ch->only.pc->wimpy;
-  data["status"]["flags"]["aggressive"]           = ch->only.pc->aggressive;
-
-  {
-    nlohmann::json arr = nlohmann::json::array();
-    for (i = 0; i < MAX_COND; i++)
-      arr.emplace_back(ch->specials.conditions[i]);
-
-    data["status"]["flags"]["conditions"]         = arr;
-  }
-
-  {
-    nlohmann::json arr = nlohmann::json::array();
-    for (i = 0; i < ch->only.pc->numb_gcmd; i++)
-      arr.emplace_back(ch->only.pc->gcmd_arr[i]);
-
-    data["status"]["granted"]["numb_gcmd"]        = ch->only.pc->numb_gcmd;
-    data["status"]["granted"]["gcmds"]            = arr;
-  }
-
-  data["status"]["guild"]["guild_id"]             = ch->specials.guild->get_id();
-  data["status"]["guild"]["guild_status"]         = ch->specials.guild_status;
-  data["status"]["guild"]["time_left_guild"]      = ch->only.pc->time_left_guild;
-  data["status"]["guild"]["nb_left_guild"]        = ch->only.pc->nb_left_guild;
-
-  data["status"]["frags"]["frags"]                = ch->only.pc->frags;
-  data["status"]["frags"]["oldfrags"]             = ch->only.pc->oldfrags;
-
-  data["status"]["quest"]["quest_active"]         = ch->only.pc->quest_active;
-  data["status"]["quest"]["quest_mob_vnum"]       = ch->only.pc->quest_mob_vnum;
-  data["status"]["quest"]["quest_type"]           = ch->only.pc->quest_type;
-  data["status"]["quest"]["quest_accomplished"]   = ch->only.pc->quest_accomplished;
-  data["status"]["quest"]["quest_started"]        = ch->only.pc->quest_started;
-  data["status"]["quest"]["quest_zone_number"]    = ch->only.pc->quest_zone_number;
-  data["status"]["quest"]["quest_giver"]          = ch->only.pc->quest_giver;
-  data["status"]["quest"]["quest_level"]          = ch->only.pc->quest_level;
-  data["status"]["quest"]["quest_receiver"]       = ch->only.pc->quest_receiver;
-  data["status"]["quest"]["quest_shares_left"]    = ch->only.pc->quest_shares_left;
-  data["status"]["quest"]["quest_kill_how_many"]  = ch->only.pc->quest_kill_how_many;
-  data["status"]["quest"]["quest_kill_original"]  = ch->only.pc->quest_kill_original;
-  data["status"]["quest"]["quest_map_room"]       = ch->only.pc->quest_map_room ;
-  data["status"]["quest"]["quest_map_bought"]     = ch->only.pc->quest_map_bought;
-
-  data["status"]["time"]["time_unspecced"]        = ch->only.pc->time_unspecced;
-  data["status"]["time"]["time_perm_aging"]       = ch->player.time.perm_aging;
-
-  if( updateTime ) {
-    tmpl = time(0);
-    tmp = ch->player.time.played + (int) (tmpl - ch->player.time.logon);
-    data["status"]["time"]["time_age_seconds"]    = tmp;            /* player age in secs */
-    data["status"]["time"]["time_last_save"]      = tmpl;           /* last save time */
-  }  else {
-    data["status"]["time"]["time_played"]         = ch->player.time.played;
-    data["status"]["time"]["time_saved"]          = ch->player.time.saved;
-  }
-
-  {
-    nlohmann::json arr = nlohmann::json::array();
-    for (i = 0; i < NUMB_PC_TIMERS; i++)
-      arr.emplace_back(ch->only.pc->pc_timer[i]);
-
-    data["status"]["time"]["pc_timers"] = arr;
-  }
-
-  {
-    nlohmann::json arr = nlohmann::json::array();
-    for (i = 0; i < MAX_TONGUE; i++)
-      arr.emplace_back(GET_LANGUAGE(ch, i));
-
-    data["status"]["language"]["max_tongue"]    = MAX_TONGUE;
-    data["status"]["language"]["languages"]     = arr;
-  }
-
-  {
-    nlohmann::json arr = nlohmann::json::array();
-    nlohmann::json arr1 = nlohmann::json::array();
-    for (i = 0; i < MAX_INTRO; i++) {
-      arr.emplace_back(ch->only.pc->introd_list[i]);
-      arr1.emplace_back(ch->only.pc->introd_times[i]);
-    }
-
-    data["status"]["intro"]["max_intro"]        = MAX_INTRO;
-    data["status"]["intro"]["introd_list"]      = arr;
-    data["status"]["intro"]["introd_times"]     = arr1;
-  }
-
-//  if (0 && ch->only.pc->trophy)
-//  {
-//    struct trophy_data *tr;
-//
-//    tmp = 0;
-//    for (tr = ch->only.pc->trophy; tr; tr = tr->next)
-//      tmp++;
-//    ADD_BYTE_JSON(data, "tropy_count", tmp);
-//    for (tr = ch->only.pc->trophy; tr; tr = tr->next)
-//    {
-//      ADD_INT_JSON(data, "trophy_vnum", tr->vnum);
-//      ADD_INT_JSON(data, "trophy_kills", tr->kills);
-//    }
-//  }
-//  else
-//  {
-//    ADD_BYTE_JSON(data, "trophy", 0);
-//  }
-
-    ch->player.time.saved = tmpl;
-}
-
-// Writes the list of affects starting with af to the string buf.
-// af->duration updated with updateShortAffects(ch); please make sure this is called,
-//   or you will have timers being reset each time a player rents out / re enters game.
-void writeAffects( nlohmann::json& data, struct affected_type *af )
-{
-  P_event  tmp;
-  signed short count = 0;
-  struct affected_type *first = af;
-  nlohmann::json arr = nlohmann::json::array();
-  
-  data["affects"]["affect_version"] = SAV_AFFVERS;
-
-  while( af )
-  {
-    if( !IS_SET(af->flags, AFFTYPE_NOSAVE) )
-    {
-      count++;
-    }
-    af = af->next;
-  }
-
-  data["affects"]["count"] = count;
-
-  for( af = first; af; af = af->next )
-  {
-    nlohmann::json obj = nlohmann::json::object();
-
-    byte     custom_messages = 0;       /* 0 - none, 1 - to_char, 2 - to_room, 3 - both */
-
-    if( IS_SET(af->flags, AFFTYPE_NOSAVE) )
-    {
-      continue;
-    }
-
-#ifndef _PFILE_
-    if (af->wear_off_message_index != 0)
-    {
-      if (skills[af->type].wear_off_char[af->wear_off_message_index]) ;
-      custom_messages = 1;
-      if (skills[af->type].wear_off_room[af->wear_off_message_index]) ;
-      custom_messages |= 2;
-    }
-#endif
-
-    obj["custom_messages"] = custom_messages;
-
-#ifndef _PFILE_
-    if (custom_messages & 1)
-    {
-      obj["wear_off_char_message"] = SAFE_STRING(skills[af->type].wear_off_char[af->wear_off_message_index]);
-    }
-    if (custom_messages & 2)
-    {
-      obj["wear_off_room_message"] = SAFE_STRING(skills[af->type].wear_off_char[af->wear_off_message_index]);
-    }
-#endif
-
-    obj["type"] = af->type;
-
-    if( IS_SET(af->flags, AFFTYPE_SHORT) )
-    {
-
-#ifndef _PFILE_
-      for (tmp = event_list; tmp; tmp = tmp->next_event)
-        if ((struct affected_type *) tmp->target.t_arg == af)
-          break;
-
-      if (tmp != NULL)
-      {
-        obj["event_time_pulses"] = event_time(tmp, T_PULSES);
-      }
-      else
-#endif
-      // af->duration updated with updateShortAffects(ch), but we want secs to save not pulses.
-      obj["event_time_seconds"] = af->duration/WAIT_SEC;
-    }
-    else
-    {
-      obj["duration"] = af->duration;
-    }
-
-    obj["flags"] = af->flags;
-    obj["modifier"] = af->modifier;
-    obj["location"] = af->location;
-    obj["bitvector"] = af->bitvector;
-    obj["bitvector2"] = af->bitvector2;
-    obj["bitvector3"] = af->bitvector3;
-    obj["bitvector4"] = af->bitvector4;
-    obj["bitvector5"] = af->bitvector5;
-    obj["bitvector6"] = 0;
-
-    arr.emplace_back(obj);
-  }
-
-    data["affects"]["aff_list"]         = arr;
-}
-
-void writeSkills( nlohmann::json& data, P_char ch, int num)
-{
-  int      i;
-  nlohmann::json arr = nlohmann::json::array();
-
-  data["skill"]["skill_version"] = SAV_SKILLVERS;
-  data["skill"]["count"] = num;
-
-  /* Save the spell memorized, and skill usages info -DCL */
-  for (i = 0; i < num; i++)
-  {
-    nlohmann::json obj = nlohmann::json::object();
-    obj["name"] = skills[i].name;
-    obj["index"] = i;
-    obj["learned"] = ch->only.pc->skills[i].learned;
-    obj["taught"] = ch->only.pc->skills[i].taught;
-    arr.emplace_back(obj);
-  }
-
-  data["skill"]["skill_list"] = arr;
-}
-
-/* write witness record (TASFALEN) */
-
-void writeWitness(nlohmann::json& data, wtns_rec * rec)
-{
-  wtns_rec *first = rec;
-  int      count = 0;
-  nlohmann::json arr = nlohmann::json::array();
-
-  while (rec)
-  {
-    count++;
-    rec = rec->next;
-  }
-
-  data["witness"]["witness_version"]  = SAV_WTNSVERS;
-  data["witness"]["count"] = count;
-
-  rec = first;
-
-  while (rec)
-  {
-    nlohmann::json obj = nlohmann::json::object();
-    obj["attacker"] = SAFE_STRING(rec->attacker);
-    obj["victim"] = SAFE_STRING(rec->victim);
-    obj["time"] = rec->time;
-    obj["crime"] = rec->crime;
-    obj["room"] = rec->room;
-    arr.emplace_back(obj);
-    rec = rec->next;
-  }
-
-  data["witness"]["witness_list"] = arr;
-}
-
-nlohmann::json writeObject(P_obj obj, int o_f_flag, ulong o_u_flag, int count, int loc)
-{
-  int      i;
-  struct extra_descr_data *tmp;
-  struct obj_affect *af;
-
-  if( !obj )
-    return FALSE;
-  
-  save_count += count;
-
-  nlohmann::json item = nlohmann::json::object();
-
-  item["flags"]["o_f_flag"] = o_f_flag;
-  item["virtual_number"] = obj_index[obj->R_num].virtual_number;
-  item["craftsmanship"] = obj->craftsmanship;
-  item["condition"] = obj->condition;
-
-  if (o_f_flag & O_F_WORN)
-    item["worn_location"] = loc;
-
-  if (o_f_flag & O_F_COUNT)
-    item["count"] = count;
-
-  if (o_f_flag & O_F_AFFECTS)
-  {
-    for (i = 0, af = obj->affects; af; af = af->next) i++;
-
-    item["affects"]["count"] = i;
-    
-    nlohmann::json affect_list = nlohmann::json::array();
-    for (af = obj->affects; af; af = af->next)
-    {
-      nlohmann::json affect = nlohmann::json::object();
-      affect["obj_affect_time"] = obj_affect_time(obj, af);
-      affect["type"] = af->type;
-      affect["data"] = af->data;
-      affect["extra2"] = af->extra2;
-      affect_list.emplace_back(affect);
-    }
-
-    item["affects"]["affect_list"] = affect_list;
-  }
-
-  if (o_u_flag)
-  {
-    item["flags"]["o_u_flag"] = o_u_flag;
-
-    if (o_u_flag & O_U_KEYS)
-      item["strings"]["name"] = SAFE_STRING(obj->name);
-
-    if (o_u_flag & O_U_DESC1)
-      item["strings"]["description"] = SAFE_STRING(obj->description);
-
-    if (o_u_flag & O_U_DESC2)
-      item["strings"]["short_description"] = SAFE_STRING(obj->short_description);
-
-    if (o_u_flag & O_U_DESC3)
-      item["strings"]["action_description"] = SAFE_STRING(obj->action_description);
-
-    if (o_u_flag & O_U_EDESC)
-    {
-      int nDescs = 0;
-      struct extra_descr_data *ed = obj->ex_description;
-      while (ed)
-      {
-        if (ed->keyword)
-          nDescs++;
-        ed = ed->next;
-      }
-      
-      // count.  foreach: keyword + desc
-      item["strings"]["ex_descriptions"]["count"] = nDescs;
-
-      ed = obj->ex_description;
-      nlohmann::json ex_descriptions = nlohmann::json::array();
-      while (ed)
-      {
-        nlohmann::json ex_description = nlohmann::json::object();
-        if (ed->keyword)
-        {
-          ex_description["keyword"] = SAFE_STRING(ed->keyword);
-          ex_description["description"] = SAFE_STRING(ed->description);
-          ex_descriptions.emplace_back(ex_description);
-        }
-        ed = ed->next;
-      }
-      item["strings"]["ex_descriptions"]["ex_description_list"] = ex_descriptions;
-    }
-
-    for (i = 0; i < 4; i++)
-    {
-      if (o_u_flag & (1 << (i + 4)))
-      {
-        char buf[25];
-        snprintf(buf, 25, "value_%d", i);
-        item["values"][buf] = obj->value[i];
-      }
-    }
-
-    if (o_u_flag & O_U_VAL4)
-      item["values"]["value_4"] = obj->value[4];
-
-    if (o_u_flag & O_U_VAL5)
-      item["values"]["value_5"] = obj->value[5];
-
-    if (o_u_flag & O_U_VAL6)
-      item["values"]["value_6"] = obj->value[6];
-
-    if (o_u_flag & O_U_VAL7)
-      item["values"]["value_7"] = obj->value[7];
-
-    if (o_u_flag & O_U_TIMER)
-    {
-      for (i = 0; i < 4; i++)
-      {
-        char buf[25];
-        snprintf(buf, 25, "timer_%d", i);
-        item["timers"][buf] = obj->timer[i];
-      }
-    }
-
-    if (o_u_flag & O_U_TRAP)
-    {
-      item["trap"]["trap_eff"] = obj->trap_eff;
-      item["trap"]["trap_dam"] = obj->trap_dam;
-      item["trap"]["trap_charge"] = obj->trap_charge;
-      item["trap"]["trap_level"] = obj->trap_level;
-    }
-
-    if (o_u_flag & O_U_TYPE)
-      item["type"] = obj->type;
-
-    if (o_u_flag & O_U_WEAR)
-      item["wear_flags"] = obj->wear_flags;
-
-    if (o_u_flag & O_U_EXTRA)
-      item["extra_flags"] = obj->extra_flags;
-
-    if (o_u_flag & O_U_ANTI)
-      item["anti_flags"] = obj->anti_flags;
-
-    if (o_u_flag & O_U_ANTI2)
-      item["anti2_flags"] = obj->anti2_flags;
-
-    if (o_u_flag & O_U_EXTRA2)
-      item["extra2_flags"] = obj->extra2_flags;
-
-    if (o_u_flag & O_U_WEIGHT)
-      item["weight"] = obj->weight;
-
-    if (o_u_flag & O_U_MATERIAL)
-      item["material"] = obj->material;
-
-/*    if (o_u_flag & O_U_SPACE)
-        item["space"] = obj->space;
-*/
-    if (o_u_flag & O_U_COST)
-      item["cost"] = obj->cost;
-
-    if (o_u_flag & O_U_BV1)
-      item["bitvector"] = obj->bitvector;
-
-    if (o_u_flag & O_U_BV2)
-      item["bitvector2"] = obj->bitvector2;
-
-    if (o_u_flag & O_U_BV3)
-      item["bitvector3"] = obj->bitvector3;
-
-    if (o_u_flag & O_U_BV4)
-      item["bitvector4"] = obj->bitvector4;
-
-    if (o_u_flag & O_U_BV5)
-      item["bitvector5"] = obj->bitvector5;
-
-    if (o_u_flag & O_U_AFFS)
-    {
-      nlohmann::json obj_affects = nlohmann::json::array();
-      for (i = 0; i < MAX_OBJ_AFFECT; i++)
-      {
-        nlohmann::json obj_affect = nlohmann::json::object();
-        obj_affect["location"] = obj->affected[i].location;
-        obj_affect["modifier"] = obj->affected[i].modifier;
-        obj_affects.emplace_back(obj_affect);
-      }
-
-      item["obj_affects"]["obj_affect_list"] = obj_affects;
-    }
-  }
-  if (o_f_flag & O_F_SPELLBOOK)
-  {
-    if (!(tmp = find_spell_description(obj)))
-    {                           /*
-                                 * this _SHOULD_
-                                 * not happen..
-                                 * but will it? we
-                                 * shall see.
-                                 */
-      //ADD_INT(ibuf, 0);
-    }
-    else
-    {
-      item["spellbook"]["count"] = (MAX_SKILLS / 8) + 1;
-      
-      nlohmann::json spells = nlohmann::json::array();
-      for (i = 0; i < (MAX_SKILLS / 8) + 1; i++)
-      {
-        nlohmann::json spell = nlohmann::json::object();
-        spell["description"] = tmp->description[i];
-        spells.emplace_back(spell);
-      }
-
-      item["spellbook"]["spell_list"] = spells;
-    }
-  }
-
-	return item;
-}
-#endif
 // This function updates ch's short affect durations for saving purposes.
 //   When called, it walks through ch's affects and finds the corresponding
 //   event for each short affect.  It then updates the duration of the affect
@@ -2368,6 +3105,10 @@ int writeCharacter(P_char ch, int type, int room)
   data["header"]["short_size"]    = short_size;
   data["header"]["int_size"]      = int_size;
   data["header"]["long_size"]     = long_size;
+  data["header"]["skill_off"]     = 0;
+  data["header"]["witness_off"]   = 0;
+  data["header"]["item_off"]      = 0;
+  data["header"]["size_off"]      = 0;
   data["header"]["restore_type"]  = type;
   data["header"]["surname"]       = ch->specials.act3;
   data["header"]["starting_room"] = room;
@@ -3658,7 +4399,6 @@ int restorePasswdOnly(P_char ch, char *name)
 int restoreCharOnly(P_char ch, char *name)
 {
   FILE    *f;
-
   struct stat statbuf;
 
 #ifndef _PFILE_
@@ -3683,6 +4423,7 @@ int restoreCharOnly(P_char ch, char *name)
   }
   buf = buff;
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *buff, buff);
+  
 //  logit(LOG_FILE, "%s is the pfile string!", Gbuf1);
 #ifndef _PFILE_
   if (stat(Gbuf1, &statbuf) != 0)
@@ -3697,6 +4438,7 @@ int restoreCharOnly(P_char ch, char *name)
     return -2;
   size = fread(buf, 1, SAV_MAXSIZE, f);
   fclose(f);
+
   if (size < 4)
   {
     logit(LOG_FILE, "Warning: Save file less than 4 bytes.");
@@ -7143,3 +7885,4 @@ void moveToBackup( char *name )
   snprintf(command, 1024, "mv -f %s %s.bak", filename, filename );
   system( command );
 }
+
