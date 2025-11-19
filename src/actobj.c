@@ -4990,7 +4990,9 @@ void do_wear(P_char ch, char *argument, int cmd)
         for( obj_object = ch->carrying; obj_object; obj_object = next_obj )
         {
 		  next_obj = obj_object->next_content;
-		  if (!CAN_SEE_OBJ(ch, obj_object) || !IS_NOSHOW(obj_object))
+		  // can't wear if you can't see, although mobs can wear !show items
+		  // unless they are PC pets
+		  if (!CAN_SEE_OBJ(ch, obj_object) || (IS_NOSHOW(obj_object) && IS_NPC(ch) && IS_PC_PET(ch)))
 		  {
 			continue;
 		  }

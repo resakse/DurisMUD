@@ -1535,7 +1535,8 @@ bool ac_can_see_obj(P_char sub, P_obj obj, int zrange )
   if( !IS_AWAKE(sub) )
     return FALSE;
 
-  if( IS_NOSHOW(obj) )
+  // !show items aren't meant for PCs to use
+  if( IS_NOSHOW(obj) && IS_PC(sub) )
     return FALSE;
 
   /* Check to see if object is invis */
