@@ -4989,17 +4989,21 @@ void do_wear(P_char ch, char *argument, int cmd)
         // Inner Loop
         for( obj_object = ch->carrying; obj_object; obj_object = next_obj )
         {
+		  next_obj = obj_object->next_content;
+		  if (!CAN_SEE_OBJ(ch, obj_object) || !IS_NOSHOW(obj_object))
+		  {
+			continue;
+		  }
           if (obj_index[obj_object->R_num].virtual_number == 400218 && IS_MULTICLASS_PC(ch))
           {
             send_to_char("&nThe power of this item is too great for a multiclassed character!&n\r\n", ch);
-            return;
-          }
-          if( IS_OBJ_STAT2(obj_object, ITEM2_SOULBIND) && !isname(GET_NAME(ch), obj_object->name) )
+			continue;
+		  }
+		  if( IS_OBJ_STAT2(obj_object, ITEM2_SOULBIND) && !isname(GET_NAME(ch), obj_object->name) )
           {
             send_to_char("&+LThis item is bound to someone elses &+Wsoul&+L, you may not wear it!&n\r\n", ch);
-            return;
+            continue;
           }
-          next_obj = obj_object->next_content;
           if (obj_object->type != ITEM_SPELLBOOK)
           {
             if (CAN_WEAR(obj_object, equipment_pos_table[loop][0]))
@@ -5031,7 +5035,7 @@ void do_wield(P_char ch, char *argument, int cmd)
   char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
   char     Gbuf3[MAX_STRING_LENGTH];
 
-  if (IS_ANIMAL(ch) || (IS_NPC(ch) && !IS_HUMANOID(ch)))
+  if (IS_ANIMAL(ch))
   {
     send_to_char("DUH!\r\n", ch);
     return;
