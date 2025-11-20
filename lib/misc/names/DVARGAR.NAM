@@ -1,9 +1,9 @@
 /*****************************************************/
 /* MALL.NAM                                          */
-/* Namnfil fîr namn frÜn xxxxxxxxxxx                 */
+/* Namnfil f√∂r namn fr√•n xxxxxxxxxxx                 */
 /* av Johan Danforth                                 */
-/* rader som bîrjar med / Ñr kommentar-rader         */
-/* varje section bîrjar med [xxx] enlig filen nedan  */
+/* rader som b√∂rjar med / √§r kommentar-rader         */
+/* varje section b√∂rjar med [xxx] enlig filen nedan  */
 /*****************************************************/
 /* balin durin bofur bifur bombur belin */
 [startstav]
@@ -27,7 +27,7 @@ T
 Tym
 V
 [mittstav]
-/* mittstavelser skall bîrja och sluta med en vokal som a,o,u,i,e,y etc... */
+/* mittstavelser skall b√∂rja och sluta med en vokal som a,o,u,i,e,y etc... */
 a
 e
 i
@@ -35,7 +35,7 @@ o
 oi
 u
 [slutstav]
-/* slutstavelser skall bîrja med en konsonant som b,k,t etc... */
+/* slutstavelser skall b√∂rja med en konsonant som b,k,t etc... */
 bur
 fur
 gan
@@ -53,4 +53,4 @@ sin
 sil
 sur
 [stop]
-/* hÑr Ñr filen slut */
+/* h√§r √§r filen slut */

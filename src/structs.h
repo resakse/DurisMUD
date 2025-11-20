@@ -1602,6 +1602,8 @@ struct txt_q {
 #define CON_SWAPSTAT                84
 #define CON_ACCT_CONFIRM_CHAR       85
 #define CON_ACCT_RMOTD              86  // Read MOTD after account login
+// lower layer but meh...
+#define CON_SSLNEGO                 87  // connected but not yet ready for sends
 
 #define TOTAL_CON 87
 
@@ -1619,6 +1621,8 @@ struct snoop_data {
   P_char snooping;              /* Who is this char snooping */
   snoop_by_data *snoop_by_list; /* And who is snooping on this char */
 };
+
+typedef struct gnutls_session_int *gnutls_session_t;
 
 struct descriptor_data {
   sh_int descriptor;            /* file descriptor for socket */
@@ -1662,6 +1666,7 @@ struct descriptor_data {
   int out_compress;             /* are we compressing output ? */
   char *out_compress_buf;       /* MCCP output buffer */
   z_stream *z_str;           /* zlib internal state */
+  gnutls_session_t sslses;      /* gnutls data, 0 if plain text */
   int movement_noise            ;
   char client_str[MAX_INPUT_LENGTH];/* CLIENT SPECIFIC STRING */
   int last_map_update           ;/* CLIENT SPECIFIC INT */
