@@ -12,7 +12,7 @@ void punt(char *msg)
     exit(-1);
 }
 
-main()
+int main()
 {
     FILE *area_list, *all_zon, *tmp_zon;
     char area[8192], buf[8192], area_name[80], zon_name[80];
@@ -88,4 +88,5 @@ main()
     system("chmod 600 tworld.zon");
 
     fprintf(stdout, "Done\n");
+    return 0;
 }

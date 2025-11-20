@@ -12,7 +12,7 @@ void punt(char *msg)
     exit(-1);
 }
 
-main()
+int main()
 {
     FILE *area_list, *all_wld, *tmp_wld;
     char area[8192], buf[8192], area_name[80], wld_name[80];
@@ -77,4 +77,5 @@ main()
     system("chmod 600 tworld.wld");
 
     fprintf(stdout, "Done\n");
+    return 0;
 }

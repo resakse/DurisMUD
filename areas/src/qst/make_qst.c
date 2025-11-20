@@ -12,7 +12,7 @@ void punt(char *msg)
     exit(-1);
 }
 
-main()
+int main()
 {
     FILE *quest_list, *all_qst, *tmp_qst;
     char quest[8192], buf[8192], quest_name[80], qst_name[80];
@@ -79,4 +79,5 @@ main()
     system("chmod 600 tworld.qst");
 
     fprintf(stdout, "Done\n");
+    return 0;
 }

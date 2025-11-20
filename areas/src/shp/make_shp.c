@@ -12,7 +12,7 @@ void punt(char *msg)
     exit(-1);
 }
 
-main()
+int main()
 {
     FILE *shop_list, *all_shp, *tmp_shp;
     char shop[8192], buf[8192], shop_name[80], shp_name[80];
@@ -79,4 +79,5 @@ main()
     system("chmod 600 tworld.shp");
 
     fprintf(stdout, "Done\n");
+    return 0;
 }
