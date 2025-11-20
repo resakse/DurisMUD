@@ -26,6 +26,9 @@
 #include "utils.h"
 
 /* defines */
+#define ENABLE_JSON_PFILE
+
+#define SAFE_STRING(str) str == NULL ? "" : str
 
 #define SAV_STATVERS  47
 #define SAV_SKILLVERS 2
@@ -118,6 +121,8 @@
                                           bcopy(s, buf, (int)l_); buf += l_; \
                                } else { ADD_SHORT(buf, 0); } }
 
+#define ADD_BYTE(buf, b) { *(char *)buf = b; buf++; }
+
 #define GET_BYTE(buf) (*(char *)((buf)++))
 #define GET_SHORT(buf) getShort(&buf)
 #define GET_INTE(buf) getInt(&buf)
@@ -126,6 +131,5 @@
 #endif
 #define GET_LONG(buf) getLong(&buf)
 #define GET_STRING(buf) getString(&buf)
-
-
+  
 #endif /* _SOJ_PFILES_H_ */
