@@ -2246,11 +2246,8 @@ int process_output(P_desc t)
       return (-1);
     }
   }
-//  if( realChar && IS_ANSI_TERM(t) && GET_LEVEL(
- // t->character) >= 1 && (STATE(t) != CON_TEXTED) )   arih: why remove color? its ugly!
 
-  if( IS_ANSI_TERM(t) && (STATE(t) != CON_TEXTED) &&
-      (!realChar || (t->character && GET_LEVEL(t->character) >= 1)))
+  if( IS_ANSI_TERM(t) && (!realChar || (t->character && GET_LEVEL(t->character) >= 1)))
   {
     flg = TRUE;
   }
