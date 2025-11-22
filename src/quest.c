@@ -858,8 +858,7 @@ int addQuestTropy(int questID)
 
   fclose(f);
   fclose(temp_f);
-  snprintf(sys, 200, "cp %s %s", TEMP_QUEST_FILE_TROPHY, QUEST_FILE_TROPHY);
-  system(sys);
+  rename(TEMP_QUEST_FILE_TROPHY, QUEST_FILE_TROPHY);
 
   return 0;
 }

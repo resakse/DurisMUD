@@ -338,6 +338,12 @@ void game_up_message(int port)
 
 }
 
+static void touch(const char *filename)
+{
+  // no need to check for failure, the next step will do
+  close(open(filename, O_WRONLY|O_CREAT, 0666));
+}
+
 /* Init sockets, run game, and cleanup sockets */
 
 void run_the_game(int port, int sslport)
@@ -419,12 +425,10 @@ void run_the_game(int port, int sslport)
 
   // This guarentees that files exist for reading.
   fprintf(stderr, "-- Touching leaderboard\r\n");
-  snprintf(buf, MAX_STRING_LENGTH, "touch %s", leaderboard_file );
-  system( buf );
+  touch(leaderboard_file);
   newLeaderBoard( NULL, "boot", 0 );
   fprintf(stderr, "-- Touching hall of fame\r\n");
-  snprintf(buf, MAX_STRING_LENGTH, "touch %s", halloffamelist_file );
-  system( buf );
+  touch(halloffamelist_file);
   newHardcoreBoard( NULL, "boot", 0 );
   init_ctf();
 

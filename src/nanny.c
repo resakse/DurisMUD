@@ -3115,8 +3115,9 @@ void perform_eq_wipe(P_char ch)
   // Delete the locker as well
   snprintf(Gbuf2, MAX_STRING_LENGTH, "%c%s", LOWER(*ch->player.name), ch->player.name + 1 );
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.locker", SAVE_DIR, *Gbuf2, Gbuf2 );
-  snprintf(Gbuf2, MAX_STRING_LENGTH, "rm -f %s %s.bak", Gbuf1, Gbuf1 );
-  system( Gbuf2 );
+  unlink(Gbuf1);
+  strcat(Gbuf1, ".bak");
+  unlink(Gbuf1);
 
   // Delete the ship too
 /* Not deleting ships this wipe.

@@ -1762,8 +1762,8 @@ void do_save_silent(P_char ch, int type)
           {
             sscanf(tmp_buf, "Name:    %s\n", tmp_buf2);
             strncpy(ch->desc->host2, tmp_buf2, 128);
-            snprintf(tmp_buf, MAX_STRING_LENGTH, "rm ../hosts/%d", ch->desc->descriptor);
-            system(tmp_buf);
+            snprintf(tmp_buf, sizeof tmp_buf, "../hosts/%d", ch->desc->descriptor);
+            unlink(tmp_buf);
           }
         }
 

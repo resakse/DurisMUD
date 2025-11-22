@@ -2028,52 +2028,33 @@ int deleteCharacter(P_char ch, bool bDeleteLocker)
     remove_char_from_list(ch->desc->account, ch->player.name);
 #endif
 
-  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s", SAVE_DIR, *name, name );
-  strcpy( Gbuf2, Gbuf1 );
-  snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.old", Gbuf1, Gbuf1 );
-  system( Gbuf2 );
+  snprintf(Gbuf1, sizeof Gbuf1, "%s/%c/%s", SAVE_DIR, *name, name);
+  snprintf(Gbuf2, sizeof Gbuf2, "%s.old", Gbuf1);
+  rename(Gbuf1, Gbuf2);
   if ((f = fopen( Gbuf1, "r" )))
   {
     debug( "deleteCharacter: Error: pfile (%s) still exists.", Gbuf1 );
     debug( "deleteCharacter: Command: (%s) failed.", Gbuf2 );
     fclose( f );
-    snprintf(Gbuf2, MAX_STRING_LENGTH, "rm -f %s", Gbuf1 );
-    system( Gbuf2 );
-    if ((f = fopen( Gbuf1, "r" )))
-    {
-      fclose( f );
-      debug( "deleteCharacter: Command: (%s) failed.", Gbuf2 );
-    }
+    unlink(Gbuf1);
   }
 
   if( bDeleteLocker )
   {
     // delete the locker as well
-    snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.locker", SAVE_DIR, LOWER(*ch->player.name), name );
-    snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
-    if ((f = fopen( Gbuf1, "r" )))
-    {
-      fclose( f );
-      system( Gbuf2 );
-    }
+    snprintf(Gbuf1, sizeof Gbuf1, "%s/%c/%s.locker", SAVE_DIR, LOWER(*ch->player.name), name);
+    snprintf(Gbuf2, sizeof Gbuf2, "%s.bak", Gbuf1);
+    rename(Gbuf1, Gbuf2);
   }
 
   // Delete file containing conjurable mobs.
-  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*ch->player.name), name);
-  if ((f = fopen( Gbuf1, "r" )))
-  {
-    fclose( f );
-    snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
-    system( Gbuf2 );
-  }
+  snprintf(Gbuf1, sizeof Gbuf1, "%s/%c/%s.spellbook", SAVE_DIR, LOWER(*ch->player.name), name);
+  snprintf(Gbuf2, sizeof Gbuf2, "%s.bak");
+  rename(Gbuf1, Gbuf2);
   // Delete file containing crafting/forging recipe list.
-  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*ch->player.name), name);
-  if ((f = fopen( Gbuf1, "r" )))
-  {
-    fclose( f );
-    snprintf(Gbuf2, MAX_STRING_LENGTH, "mv -f %s %s.bak", Gbuf1, Gbuf1 );
-    system( Gbuf2 );
-  }
+  snprintf(Gbuf1, sizeof Gbuf1, "%s/Tradeskills/%c/%s.crafting", SAVE_DIR, LOWER(*ch->player.name), name);
+  snprintf(Gbuf2, sizeof Gbuf2, "%s.bak");
+  rename(Gbuf1, Gbuf2);
 
   // Delete ship.
   delete_ship( GET_NAME(ch) );
@@ -4141,12 +4122,13 @@ int restoreItemsOnly(P_char ch, int flatrate)
 
 void restoreCorpses(void)
 {
-  FILE    *flist, *f;
+  FILE     *f;
   char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
   char     Gbuf3[MAX_STRING_LENGTH], buff[SAV_MAXSIZE], *buf;
   char     mybuf[MAX_STRING_LENGTH];
   int      size, csize, tmp, start, map, end;
   struct stat statbuf;
+  struct dirent *de;
 
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Corpses", SAVE_DIR);
   if (stat(Gbuf1, &statbuf) == -1)
@@ -4154,29 +4136,21 @@ void restoreCorpses(void)
     perror("Corpses dir");
     return;
   }
-  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s/corpse_list", SAVE_DIR);
-  if (stat(Gbuf2, &statbuf) == 0)
-  {
-    unlink(Gbuf2);
-  }
-  else if (errno != ENOENT)
-  {
-    perror("corpse_list");
-    return;
-  }
-  snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
-  system(Gbuf3);                /* ls a list of Corpses dir into corpse_list */
-  flist = fopen(Gbuf2, "r");
-  if (!flist)
-    return;
 
-  while (fscanf(flist, " %s \n", Gbuf2) != EOF)
+  DIR *dir = opendir(Gbuf1);
+  if (!dir)
+    return perror("corpse_list");
+
+  while ((de = readdir(dir)))
   {
-    snprintf(Gbuf3, MAX_STRING_LENGTH, "%s/%s", Gbuf1, Gbuf2);
+    if (de->d_name[0] == '.') // . .. .gitignore
+      continue;
+
+    snprintf(Gbuf3, MAX_STRING_LENGTH, "%s/%s", Gbuf1, de->d_name);
     f = fopen(Gbuf3, "r");
     if (!f)
     {
-      logit(LOG_CORPSE, "Could not restore Corpse file %s", Gbuf2);
+      logit(LOG_CORPSE, "Could not restore Corpse file %s", de->d_name);
       continue;
     }
     buf = buff;
@@ -4185,24 +4159,24 @@ void restoreCorpses(void)
 
     if (size < 4)
     {
-      fprintf(stderr, "Problem restoring corpse: %s\n", Gbuf2);
-      logit(LOG_FILE, "Problem restoring corpse: %s.", Gbuf2);
+      fprintf(stderr, "Problem restoring corpse: %s\n", de->d_name);
+      logit(LOG_FILE, "Problem restoring corpse: %s.", de->d_name);
       continue;
     }
 
     if ((GET_BYTE(buf) != short_size) || (GET_BYTE(buf) != int_size) ||
         (GET_BYTE(buf) != long_size))
     {
-      logit(LOG_FILE, "Save file %s in different machine format.", Gbuf2);
-      fprintf(stderr, "Problem restoring corpse: %s\n", Gbuf2);
-      logit(LOG_FILE, "Problem restoring corpse: %s.", Gbuf2);
+      logit(LOG_FILE, "Save file %s in different machine format.", de->d_name);
+      fprintf(stderr, "Problem restoring corpse: %s\n", de->d_name);
+      logit(LOG_FILE, "Problem restoring corpse: %s.", de->d_name);
       continue;
     }
     if (size < (5 * int_size + 5 * sizeof(char) + long_size))
     {
-      logit(LOG_FILE, "Corpse file %s is too small (%d).", Gbuf2, size);
-      fprintf(stderr, "Problem restoring corpse: %s\n", Gbuf2);
-      logit(LOG_FILE, "Problem restoring corpse: %s.", Gbuf2);
+      logit(LOG_FILE, "Corpse file %s is too small (%d).", de->d_name, size);
+      fprintf(stderr, "Problem restoring corpse: %s\n", de->d_name);
+      logit(LOG_FILE, "Problem restoring corpse: %s.", de->d_name);
       continue;
     }
     /*
@@ -4270,7 +4244,7 @@ void restoreCorpses(void)
     }
   }
 
-  fclose(flist);
+  closedir(dir);
 }
 
 /** Pet only functions below. Calls some from above. **/
@@ -5161,12 +5135,12 @@ P_char restoreShopKeeper(int id)
 
 void restore_shopkeepers(void)
 {
-  FILE    *flist;
   char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
   char     Gbuf3[MAX_STRING_LENGTH];
   int      load_room;
   P_char   mob, keeper2;
   struct stat statbuf;
+  struct dirent *de;
 
   snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/ShopKeepers", SAVE_DIR);
   if (stat(Gbuf1, &statbuf) == -1)
@@ -5174,25 +5148,17 @@ void restore_shopkeepers(void)
     perror("ShopKeepers dir");
     return;
   }
-  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s/shop_list", SAVE_DIR);
-  if (stat(Gbuf2, &statbuf) == 0)
-  {
-    unlink(Gbuf2);
-  }
-  else if (errno != ENOENT)
-  {
-    perror("shop_list");
-    return;
-  }
-  snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
-  system(Gbuf3);
-  flist = fopen(Gbuf2, "r");
-  if (!flist)
-    return;
+  DIR *dir = opendir(Gbuf1);
+  if (!dir)
+    return perror("shop_list");
 
-  while (fscanf(flist, " %s \n", Gbuf2) != EOF)
+  while ((de = readdir(dir)))
   {
-    if ((mob = restoreShopKeeper(atoi(Gbuf2))))
+    if (de->d_name[0] == '.') // . .. .gitignore
+      continue;
+
+    int num = atoi(de->d_name);
+    if ((mob = restoreShopKeeper(num)))
     {
       load_room = real_room(GET_BIRTHPLACE(mob));
       if (load_room != NOWHERE)
@@ -5209,68 +5175,17 @@ void restore_shopkeepers(void)
       else
       {
         logit(LOG_DEBUG,
-              "Could not load ShopKeeper #%s due to bad load_room!", Gbuf2);
+              "Could not load ShopKeeper #%d due to bad load_room!", num);
       }
-      deleteShopKeeper(atoi(Gbuf2));
+      deleteShopKeeper(num);
     }
     else
     {
-      logit(LOG_DEBUG, "Could not load ShopKeeper #%s!", Gbuf2);
-      return;
+      logit(LOG_DEBUG, "Could not load ShopKeeper #%s!", de->d_name);
+      break;
     }
   }
-}
-
-void restore_allpets(void)
-{
-  FILE    *flist;
-  char     Gbuf1[MAX_STRING_LENGTH], Gbuf2[MAX_STRING_LENGTH];
-  char     Gbuf3[MAX_STRING_LENGTH];
-  int      load_room;
-  P_char   mob;
-  struct stat statbuf;
-
-  snprintf(Gbuf1, MAX_STRING_LENGTH, "%s/Pets", SAVE_DIR);
-  if (stat(Gbuf1, &statbuf) == -1)
-  {
-    perror("Pets dir");
-    return;
-  }
-  snprintf(Gbuf2, MAX_STRING_LENGTH, "%s/pet_list", SAVE_DIR);
-  if (stat(Gbuf2, &statbuf) == 0)
-  {
-    unlink(Gbuf2);
-  }
-  else if (errno != ENOENT)
-  {
-    perror("pet_list");
-    return;
-  }
-  snprintf(Gbuf3, MAX_STRING_LENGTH, "/bin/ls -1 %s > %s", Gbuf1, Gbuf2);
-  system(Gbuf3);
-  flist = fopen(Gbuf2, "r");
-  if (!flist)
-    return;
-
-  while (fscanf(flist, "%s\n", Gbuf2) != EOF)
-  {
-    if ((mob = restorePet(Gbuf2)))
-    {
-
-      load_room = real_room(GET_BIRTHPLACE(mob));
-      if (load_room != NOWHERE)
-      {
-        char_to_room(mob, load_room, 0);
-      }
-      else
-      {
-        logit(LOG_DEBUG, "Could not load Pet #%s due to bad load_room!",
-              Gbuf2);
-      }
-      deletePet(Gbuf2);
-    }
-  }
-  return;
+  closedir(dir);
 }
 
 // old guildhalls (deprecated) - Torgal 1/2010
@@ -5777,12 +5692,12 @@ void moveToBackup( char *name )
 {
   char lowername[20];
   char filename[512];
-  char command[1024];
+  char newname[1024];
 
   strcpy( lowername, name );
   lowername[0] = LOWER(name[0]);
 
-  snprintf(filename, 512, "%s/%c/%s", SAVE_DIR, lowername[0], lowername );
-  snprintf(command, 1024, "mv -f %s %s.bak", filename, filename );
-  system( command );
+  snprintf(filename, sizeof filename, "%s/%c/%s", SAVE_DIR, lowername[0], lowername );
+  snprintf(newname, sizeof newname, "%s.bak", filename);
+  rename(filename, newname);
 }
