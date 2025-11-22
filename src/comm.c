@@ -2230,7 +2230,7 @@ int process_output(P_desc t)
 {
   char     buf[MAX_STRING_LENGTH + 1], buffer[MAX_STRING_LENGTH + 1];
   char     buf2[MAX_STRING_LENGTH];
-  bool     flg, bold = FALSE, blink = FALSE;
+  bool     bold = FALSE, blink = FALSE;
   int      ibuf = 0;
   int      i, j, k, bg = 0;
   snoop_by_data *snoop_by_ptr;
@@ -2245,15 +2245,6 @@ int process_output(P_desc t)
     {
       return (-1);
     }
-  }
-
-  if( IS_ANSI_TERM(t) && (!realChar || (t->character && GET_LEVEL(t->character) >= 1)))
-  {
-    flg = TRUE;
-  }
-  else
-  {
-    flg = FALSE;
   }
 
   /* Cycle thru output queue */
@@ -2298,19 +2289,13 @@ int process_output(P_desc t)
           break;
         case 'N':
         case 'n':
-          if (flg)
-          {
-            snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-            j += 4;
-          }
+          snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
+          j += 4;
           was_upper = FALSE;
           break;
         case 'L':
-          if (flg)
-          {
-            snprintf(&buffer[j], MAX_STRING_LENGTH, "\r\n");
-            j += 2;
-          }
+          snprintf(&buffer[j], MAX_STRING_LENGTH, "\r\n");
+          j += 2;
           break;
         case '+':
         case '-':
@@ -2324,21 +2309,18 @@ int process_output(P_desc t)
           k = find_color_entry(buf[i]);
           if (color_table[k].symbol != NULL)
           {
-            if (flg)
+            if (isupper(buf[i]))
+              was_upper = TRUE;
+            else if (was_upper)
             {
-              if (isupper(buf[i]))
-                was_upper = TRUE;
-              else if (was_upper)
-              {
-                snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-                j += 4;
-                was_upper = FALSE;
-              }
-              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%sm", bold ? "1;" : "",
-                      blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
-                      (bg ? color_table[k].bg_code : color_table[k].fg_code));
-              j += (5 + (bold ? 2 : 0) + (blink ? 2 : 0));
+              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
+              j += 4;
+              was_upper = FALSE;
             }
+            snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%sm", bold ? "1;" : "",
+                    blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
+                    (bg ? color_table[k].bg_code : color_table[k].fg_code));
+            j += (5 + (bold ? 2 : 0) + (blink ? 2 : 0));
           }
           else
           {
@@ -2363,21 +2345,18 @@ int process_output(P_desc t)
           if ((color_table[k].symbol != NULL)
               && (color_table[bg].symbol != NULL))
           {
-            if (flg)
+            if (isupper(buf[i]))
+              was_upper = TRUE;
+            else if (was_upper)
             {
-              if (isupper(buf[i]))
-                was_upper = TRUE;
-              else if (was_upper)
-              {
-                snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
-                j += 4;
-                was_upper = FALSE;
-              }
-              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%s;%sm", bold ? "1;" : "",
-                      blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
-                      color_table[bg].bg_code, color_table[k].fg_code);
-              j += (8 + (bold ? 2 : 0) + (blink ? 2 : 0));
+              snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m");
+              j += 4;
+              was_upper = FALSE;
             }
+            snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[%s%s%s;%sm", bold ? "1;" : "",
+                    blink ? (t->character && (PLR3_FLAGGED(t->character, PLR3_UNDERLINE)) ? "4;" : "5;") : "",
+                    color_table[bg].bg_code, color_table[k].fg_code);
+            j += (8 + (bold ? 2 : 0) + (blink ? 2 : 0));
           }
           else
           {
@@ -2392,7 +2371,7 @@ int process_output(P_desc t)
           break;
         }
       }
-      else if (flg && (buf[i] == '\n'))
+      else if (buf[i] == '\n')
       {
         /* Want normal color at EoLN */
         snprintf(&buffer[j], MAX_STRING_LENGTH, "\033[0m\n");

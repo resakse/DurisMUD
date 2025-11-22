@@ -7499,12 +7499,6 @@ void do_credits(P_char ch, char *argument, int cmd)
 
 void do_map(P_char ch, char *arg, int cmd)
 {
-//  return;
-//  if (IS_ANSI_TERM(ch->desc))
-//    page_string(ch->desc, worldmapa, 0);
-//  else
-//    page_string(ch->desc, worldmap, 0);
-
   if( !IS_TRUSTED(ch) )
   {
 //    send_to_char("Please visit http://www.durismud.com/map.php to see the world map.\r\n", ch);
