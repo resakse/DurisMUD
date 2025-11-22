@@ -820,6 +820,11 @@ void display_gain(P_char ch, int gain, int type)
   {
     logexp("%s gained %d (%d) experience. points.curr_exp = %d, needed for level = %d\n", GET_NAME(ch), gain, type, GET_EXP(ch), new_exp_table[GET_LEVEL(ch) + 1]);
   }
+  if (IS_SET(ch->specials.act2, PLR2_EXP) && type == EXP_KILL)
+  {
+    snprintf(buffer, MAX_STRING_LENGTH, "&+CEXP:&+G %d \r\n", gain);
+    send_to_char(buffer, ch);
+  }
 }
 
 void update_exp_table()
